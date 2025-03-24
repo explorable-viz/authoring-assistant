@@ -52,7 +52,7 @@ public class Main {
             String content = results.stream()
                     .map(result -> {
                         String[] values = {
-                                result.program().program().getTestCaseFileName(),
+                                result.query().program().getTestCaseFileName(),
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),

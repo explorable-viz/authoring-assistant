@@ -1,18 +1,26 @@
 {
   "variables": {
-    "random_var_1" : "RANDOM_STRING"
+    "random_var_1": "RANDOM_STRING"
   },
-  "datasets": [{
-    "var": "tableData",
-    "file": "datasets/test-dataset"
-  }],
+  "datasets": [
+    {
+      "var": "tableData",
+      "file": "datasets/test-dataset"
+    }
+  ],
   "imports": [],
-  "expected": {
-    "result1":"earlyScenario.scenario"
-  },
   "paragraph": [
     {
       "type": "literal",
-      "value" :"The scenario [REPLACE id=\"result1\" value=\"SSP3-7.0\"] outlines a more substantial risk, rendering the chance of exceeding the 2°C mark more likely than not. Meanwhile, SSP1-1.9 charts a different course, with a restrained 1.4 rise, making such an exceedance very unlikely."
-    }]
+      "value": "The scenario"
+    },
+    {
+      "type": "expression",
+      "expression": "earlyScenario.scenario"
+    },
+    {
+      "type": "literal",
+      "value": "outlines a more substantial risk, rendering the chance of exceeding the 2°C mark more likely than not. Meanwhile, SSP1-1.9 charts a different course, with a restrained 1.4 rise, making such an exceedance very unlikely."
+    }
+  ]
 }

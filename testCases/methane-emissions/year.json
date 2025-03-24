@@ -42,13 +42,14 @@
   "imports": [
     "methane"
   ],
-  "expected": {
-    "result1":"$emissions.result$"
-  },
   "paragraph": [
     {
       "type": "literal",
-      "value": "$emissions.type$ recorded its $emissions.record$ methane emissions in [REPLACE id=\"result1\"]."
+      "value": "$emissions.type$ recorded its $emissions.record$ methane emissions in "
+    },
+    {
+      "type": "expression",
+      "expression": "$emissions.result$"
     }
   ]
 }

@@ -26,13 +26,18 @@
   "imports": [
     "methane"
   ],
-  "expected": {
-    "result1":  "\"$emissions.result$\""
-  },
   "paragraph": [
     {
       "type": "literal",
-      "value": "The [REPLACE id=\"result1\"] source exhibited the highest percentage $emissions.change$ in methane emissions between $emissions.year1$ and $emissions.year2$"
+      "value": "The "
+    },
+    {
+      "type": "expression",
+      "expression": "\"$emissions.result$\""
+    },
+    {
+      "type": "literal",
+      "value": "source exhibited the highest percentage $emissions.change$ in methane emissions between $emissions.year1$ and $emissions.year2$"
     }
   ]
 }

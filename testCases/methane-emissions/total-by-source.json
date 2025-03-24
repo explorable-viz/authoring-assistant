@@ -28,13 +28,18 @@
     }
   ],
   "imports": ["methane"],
-  "expected": {
-    "result1": "record.emissions"
-  },
   "paragraph": [
     {
       "type": "literal",
-      "value": "The total methane emissions for the year $emissions.year$ are [REPLACE id=\"result1\"] for $emissions.article$ $emissions.type$"
+      "value": "The total methane emissions for the year $emissions.year$ are "
+    },
+    {
+      "type": "expression",
+      "expression": "record.emissions"
+    },
+    {
+      "type": "literal",
+      "value": " for $emissions.article$ $emissions.type$"
     }
   ]
 }

@@ -7,9 +7,6 @@
   ],
   "imports": [],
   "variables": {},
-  "expected": {
-    "result1": "a.number_of_errors_13_features / a.number_of_errors_39_features"
-  },
   "paragraph": [
     {
       "type": "literal",

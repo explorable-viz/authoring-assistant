@@ -8,7 +8,6 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Main {
     public static Logger logger = Logger.getLogger(Main.class.getName());
@@ -22,7 +21,7 @@ public class Main {
         final String agent = arguments.get("agent");
         try {
             Settings.init("settings.json");
-            inContextLearning = InContextLearning.importLearningCaseFromJSON(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
+            inContextLearning = InContextLearning.loadLerningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             queries = Query.loadQueries(Settings.getTestCaseFolder(), Settings.getNumTestToGenerate());
             final int queryLimit = Settings.getNumQueryToExecute().orElseGet(queries::size);
             final ArrayList<QueryResult> results = execute(inContextLearning, agent, queryLimit, queries);
@@ -61,7 +60,8 @@ public class Main {
                                 String.valueOf(result.attempt()),
                                 result.response() != null ? "OK" : "KO",
                                 String.valueOf(result.response()),
-                                result.query().getExpected().toString(),
+                                "0-0",
+//                                result.query().getExpected().toString(),
                                 String.valueOf(result.duration())
                         };
                         return String.join(";", values);
@@ -72,12 +72,13 @@ public class Main {
     }
 
     private static float computeAccuracy(List<QueryResult> results, List<Query> queries, int queryLimit) {
-        logger.info("Computing accuracy");
-        long count = IntStream.range(0, results.size()).filter(i -> {
-            logger.info(STR."I=\{i}exp=\{queries.get(i).getExpected()} obtained=\{results.get(i).response()}");
-            return queries.get(i).getExpected().equals(results.get(i).response());
-        }).count();
-        return (float) count / queryLimit;
+        return 0;
+//        logger.info("Computing accuracy");
+//        long count = IntStream.range(0, results.size()).filter(i -> {
+//            logger.info(STR."I=\{i}exp=\{queries.get(i).getExpected()} obtained=\{results.get(i).response()}");
+//            return queries.get(i).getExpected().equals(results.get(i).response());
+//        }).count();
+//        return (float) count / queryLimit;
     }
 
     private static ArrayList<QueryResult> execute(InContextLearning inContextLearning, String agent, int queryLimit, ArrayList<Query> queries) throws Exception {

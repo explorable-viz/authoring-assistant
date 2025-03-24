@@ -27,10 +27,10 @@ public class AuthoringAssistant {
         PromptList sessionPrompt = (PromptList) prompts.clone();
         int attempts;
         long start = System.currentTimeMillis();
-        if (query.toUserPrompt().contains("REPLACE value=\\\"?") && Settings.isReasoningEnabled()) {
+        if (Settings.isReasoningEnabled()) {
             addReasoningSteps(sessionPrompt, query);
         } else {
-            sessionPrompt.addUserPrompt(query.toUserPrompt());
+            sessionPrompt.addUserPrompt(query.toUserPrompt(0));
         }
         String response = null;
         for (attempts = 0; response == null && attempts <= limit; attempts++) {
@@ -68,7 +68,7 @@ public class AuthoringAssistant {
 
     private void addReasoningSteps(PromptList sessionPrompt, Query query) throws Exception {
         logger.info("enter in the reasoning prompting");
-        sessionPrompt.addPairPrompt(STR."\{query.toUserPrompt()}\nWhat does the task ask you to calculate?", llm.evaluate(sessionPrompt, ""));
+        sessionPrompt.addPairPrompt(STR."\{query.toUserPrompt(0)}\nWhat does the task ask you to calculate?", llm.evaluate(sessionPrompt, ""));
         sessionPrompt.addPairPrompt("What is the expected value that make the statement true? Reply only with the value", llm.evaluate(sessionPrompt, ""));
         sessionPrompt.addUserPrompt("What is the function that generates the value?");
     }

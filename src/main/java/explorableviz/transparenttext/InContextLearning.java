@@ -1,7 +1,7 @@
 package explorableviz.transparenttext;
 
+import explorableviz.transparenttext.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,17 +23,17 @@ public class InContextLearning {
         this.cases = cases;
     }
 
-    // TODO Maybe loadLearningCases? "JSON" seems redundant, and we "load" (rather than "importing") queries
-    public static InContextLearning importLearningCaseFromJSON(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
+    public static InContextLearning loadLerningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
         ArrayList<Query> learningCases = loadQueries(Settings.getLearningCaseFolder(), numCasesToGenerate);
         return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
     }
 
-    public PromptList toPromptList() throws Exception {
+    public PromptList toPromptList() {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
         for (Query query : this.cases) {
-            inContextLearning.addPairPrompt(query.toUserPrompt(), new JSONObject(query.getExpected()).toString());
+            for(int i = 0; i < query.getParagraph().getParagraphForQueries().size(); i++)
+                inContextLearning.addPairPrompt(query.toUserPrompt(i), (((Expression) query.getParagraph().get(1)).getExpr()));
         }
         return inContextLearning;
     }
@@ -45,8 +45,8 @@ public class InContextLearning {
         try (Stream<Path> paths = Files.walk(Paths.get(directoryPath))) {
             List<Path> fluidFiles = paths.filter(Files::isRegularFile)
                     .filter(path -> !path.getFileName().toString().equals("system-prompt.txt")).toList();
-            for(Path file : fluidFiles) {
-               fluidFileContents.add(Files.readString(file));
+            for (Path file : fluidFiles) {
+                fluidFileContents.add(Files.readString(file));
             }
         }
         return STR."\{systemPrompt}\n\{String.join("\n", fluidFileContents)}";

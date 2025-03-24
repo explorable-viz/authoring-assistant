@@ -16,7 +16,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.logging.Logger;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -30,13 +29,12 @@ public class Query {
     private final ArrayList<String> _loadedImports;
     private final String code;
     private final Paragraph paragraph;
-    private final java.util.Map<String, String> expected;
     private final java.util.Map<String, String> expectedValue;
     private final HashMap<String, String> _loadedDatasets;
     private final String testCaseFileName;
     private final String fluidFileName = "llmTest";
 
-    public Query(JSONArray paragraph, JSONArray datasets, JSONArray imports, JSONObject mapVariables, JSONObject expected, String testCaseFileName, Random random) throws IOException {
+    public Query(JSONArray paragraph, JSONArray datasets, JSONArray imports, JSONObject mapVariables, String testCaseFileName, Random random) throws IOException {
 
         Variables.Flat variables = expandVariables(Variables.fromJSON(mapVariables), random);
         this.datasets = IntStream.range(0, datasets.length())
@@ -58,21 +56,21 @@ public class Query {
         this._loadedImports = this.loadImports();
         this.code = replaceVariables(new String(Files.readAllBytes(Path.of(STR."\{testCaseFileName}.fld"))), variables);
 
-        this.expected = new HashMap<>();
-        expected.keySet().forEach(k -> this.expected.put(k, replaceVariables(expected.getString(k), variables)));
-
         this.testCaseFileName = testCaseFileName;
         this.expectedValue = new HashMap<>();
+
         //Validation of the created object
-        for (Map.Entry<String, String> entry : this.expected.entrySet()) {
-            writeFluidFiles(entry.getValue());
+        for(int i = 0; i < paragraph.length(); i++) {
+            if(paragraph.getJSONObject(i).getString("type").equals("literal")) continue;
+            String expression = paragraph.getJSONObject(i).getString("expression");
+            writeFluidFiles(expression);
             String commandLineResult = new FluidCLI(this.getDatasets(), this.getImports()).evaluate(fluidFileName);
-            this.expectedValue.put(entry.getKey(), computeValue(commandLineResult));
-            if (this.validate(commandLineResult, entry.getKey()).isPresent()) {
+            this.expectedValue.put(expression, computeValue(commandLineResult));
+            if (this.validate(commandLineResult, expression).isPresent()) {
                 //throw new RuntimeException(STR."[testCaseFile=\{testCaseFileName}] Invalid test exception\{this.validate(this.expectedValue.get(entry.getKey()), entry.getKey())}");
             }
         }
-        //Generate the paragraph replacing the value in ADD_VAL tag
+
         this.paragraph = new Paragraph(paragraph, variables, expectedValue);
     }
 
@@ -97,12 +95,12 @@ public class Query {
         return loadedImports;
     }
 
-    public String toUserPrompt() {
+    public String toUserPrompt(int n) {
         JSONObject object = new JSONObject();
         object.put("datasets", this.get_loadedDatasets());
         object.put("imports", this.get_loadedImports());
         object.put("code", this.getCode());
-        object.put("paragraph", this.paragraph.toString());
+        object.put("paragraph", this.paragraph.toStringWithReplace(n));
         return object.toString();
     }
 
@@ -161,76 +159,12 @@ public class Query {
                 .collect(Collectors.toSet());
         for (String casePath : casePaths) {
             JSONObject testCase = new JSONObject(new String(Files.readAllBytes(Path.of(STR."\{casePath}.json"))));
-            List<JSONArray> paragraphs = Settings.isSplitMultipleTagEnabled() ? toMultipleParagraphs(testCase.getJSONArray("paragraph")) : Collections.singletonList(testCase.getJSONArray("paragraph"));
-            for (JSONArray paragraph : paragraphs) {
-                for (int k = 0; k < numInstances; k++) {
-                    queries.add(new Query(paragraph, testCase.getJSONArray("datasets"), testCase.getJSONArray("imports"), testCase.getJSONObject("variables"), testCase.getJSONObject("expected"), casePath, new Random(k)));
-                }
+            for (int k = 0; k < numInstances; k++) {
+                queries.add(new Query(testCase.getJSONArray("paragraph"), testCase.getJSONArray("datasets"), testCase.getJSONArray("imports"), testCase.getJSONObject("variables"), casePath, new Random(k)));
             }
+
         }
         return queries;
-    }
-
-    private static List<JSONArray> toMultipleParagraphs(JSONArray paragraph) {
-        HashMap<Integer, List<JSONObject>> replacementsMap = getGeneratedLiterals(paragraph);
-
-        int maxVariants = replacementsMap.values().stream()
-                .mapToInt(List::size)
-                .max()
-                .orElse(1);
-
-        return IntStream.range(0, maxVariants)
-                .mapToObj(variantIndex -> {
-                    JSONArray newParagraph = new JSONArray();
-                    IntStream.range(0, paragraph.length())
-                            .forEach(i -> {
-                                if (replacementsMap.containsKey(i) && !replacementsMap.get(i).isEmpty()) {
-                                    List<JSONObject> options = replacementsMap.get(i);
-                                    newParagraph.put(variantIndex < options.size() ? options.get(variantIndex) : options.getFirst());
-                                } else {
-                                    newParagraph.put(paragraph.get(i));
-                                }
-                            });
-                    return newParagraph;
-                })
-                .collect(Collectors.toList());
-    }
-
-    private static HashMap<Integer, List<JSONObject>> getGeneratedLiterals(JSONArray paragraph) {
-        return IntStream.range(0, paragraph.length())
-                .mapToObj(i -> Map.entry(i, paragraph.getJSONObject(i)))
-                .filter(entry -> "literal".equals(entry.getValue().getString("type")))
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        entry -> {
-                            String value = entry.getValue().getString("value");
-                            List<String> replacements = Pattern.compile("\\[REPLACE id=\"(.*?)\"]")
-                                    .matcher(value)
-                                    .results()
-                                    .map(match -> match.group(1))
-                                    .collect(Collectors.toList());
-                            return replacements.stream()
-                                    .map(keepId -> {
-                                        JSONObject obj = new JSONObject();
-                                        obj.put("type", "literal");
-                                        obj.put("value", generateJSONParagraph(keepId, value, replacements));
-                                        return obj;
-                                    })
-                                    .collect(Collectors.toList());
-                        },
-                        (a, _) -> a,
-                        HashMap::new
-                ));
-    }
-
-    private static String generateJSONParagraph(String keepId, String input, List<String> ids) {
-        String modifiedText = input;
-        for (String id : ids) {
-            if (!id.equals(keepId))
-                //[ADD_VAL] will be replaced by the value at the Paragraph instantiation time
-                modifiedText = modifiedText.replaceAll(STR."\\[REPLACE id=\"\{id}\"]", STR."[ADD_VAL id=\"\{id}\"]");
-        }
-        return modifiedText;
     }
 
     public void writeFluidFiles(String response) throws IOException {
@@ -277,10 +211,6 @@ public class Query {
 
     public Paragraph getParagraph() {
         return paragraph;
-    }
-
-    public java.util.Map<String, String> getExpected() {
-        return expected;
     }
 
     public String getTestCaseFileName() {

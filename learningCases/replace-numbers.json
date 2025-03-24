@@ -10,13 +10,18 @@
     }
   ],
   "imports": [],
-  "expected": {
-    "result1": "[\"numToStr scenarioI.bE2140\"]"
-  },
   "paragraph": [
     {
       "type": "literal",
-      "value": "The scenario SSP1-1.9 charts a restricted temperature elevation up to [REPLACE id=\"result1\" value=\"1.5\"], ensuring an unlikely breach of the established 2°C limit. Contrastively, SSP5-8.5 exacerbates the potential for significant warming, making such an event practically certain."
+      "value": "The scenario SSP1-1.9 charts a restricted temperature elevation up to "
+    },
+    {
+      "type": "expression",
+      "expression": "numToStr scenarioI.bE2140"
+    },
+    {
+      "type": "literal",
+      "value": ", ensuring an unlikely breach of the established 2°C limit. Contrastively, SSP5-8.5 exacerbates the potential for significant warming, making such an event practically certain."
     }
   ]
 }

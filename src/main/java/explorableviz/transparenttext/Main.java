@@ -21,7 +21,7 @@ public class Main {
         final String agent = arguments.get("agent");
         try {
             Settings.init("settings.json");
-            inContextLearning = InContextLearning.loadLerningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
+            inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             queries = Query.loadQueries(Settings.getTestCaseFolder(), Settings.getNumTestToGenerate());
             final int queryLimit = Settings.getNumQueryToExecute().orElseGet(queries::size);
             final ArrayList<QueryResult> results = execute(inContextLearning, agent, queryLimit, queries);
@@ -52,7 +52,7 @@ public class Main {
             String content = results.stream()
                     .map(result -> {
                         String[] values = {
-                                result.query().getTestCaseFileName(),
+                                result.query().query().getTestCaseFileName(),
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
@@ -86,7 +86,8 @@ public class Main {
         AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent);
         for (int i = 0; i < queryLimit; i++) {
             logger.info(STR."Analysing query id=\{i}");
-            results.add(workflow.execute(queries.get(i)));
+            for(SubQuery q : queries.get(i).toSubQueries())
+                results.add(workflow.execute(q));
         }
         logger.info("Printing generated expression");
         for (QueryResult result : results) {

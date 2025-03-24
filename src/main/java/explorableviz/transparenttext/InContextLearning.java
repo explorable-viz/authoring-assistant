@@ -23,7 +23,7 @@ public class InContextLearning {
         this.cases = cases;
     }
 
-    public static InContextLearning loadLerningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
+    public static InContextLearning loadLearningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
         ArrayList<Query> learningCases = loadQueries(Settings.getLearningCaseFolder(), numCasesToGenerate);
         return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
     }
@@ -32,8 +32,9 @@ public class InContextLearning {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
         for (Query query : this.cases) {
-            for(int i = 0; i < query.getParagraph().getParagraphForQueries().size(); i++)
-                inContextLearning.addPairPrompt(query.toUserPrompt(i), (((Expression) query.getParagraph().get(1)).getExpr()));
+            List<SubQuery> subQueries = query.toSubQueries();
+            for (SubQuery subQuery : subQueries)
+                inContextLearning.addPairPrompt(subQuery.toUserPrompt(), (((Expression) query.getParagraph().get(1)).getExpr()));
         }
         return inContextLearning;
     }

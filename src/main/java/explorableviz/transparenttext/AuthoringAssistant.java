@@ -2,11 +2,9 @@ package explorableviz.transparenttext;
 
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Optional;
 import java.util.logging.Logger;
 
@@ -21,16 +19,16 @@ public class AuthoringAssistant {
         llm = initialiseAgent(agentClassName);
     }
 
-    public QueryResult execute(Query query) throws Exception {
+    public QueryResult execute(SubQuery subQuery) throws Exception {
         int limit = Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         PromptList sessionPrompt = (PromptList) prompts.clone();
         int attempts;
         long start = System.currentTimeMillis();
         if (Settings.isReasoningEnabled()) {
-            addReasoningSteps(sessionPrompt, query);
+            addReasoningSteps(sessionPrompt, subQuery);
         } else {
-            sessionPrompt.addUserPrompt(query.toUserPrompt(0));
+            sessionPrompt.addUserPrompt(subQuery.toUserPrompt());
         }
         String response = null;
         for (attempts = 0; response == null && attempts <= limit; attempts++) {
@@ -43,8 +41,8 @@ public class AuthoringAssistant {
             //Check each generated expressions
             for(String key : llmExpressions.keySet()) {
                 logger.info(STR."Received response: \{candidateExpr}");
-                query.writeFluidFiles(llmExpressions.getString(key));
-                Optional<String> errors = query.validate(new FluidCLI(query.getDatasets(), query.getImports()).evaluate(query.getFluidFileName()), key);
+                subQuery.query().writeFluidFiles(llmExpressions.getString(key));
+                Optional<String> errors = subQuery.query().validate(new FluidCLI(subQuery.query().getDatasets(), subQuery.query().getImports()).evaluate(subQuery.query().getFluidFileName()), key);
                 if (errors.isPresent()) {
                     errorMessage += (generateLoopBackMessage(candidateExpr, errors.get()));
                 }
@@ -61,14 +59,14 @@ public class AuthoringAssistant {
             logger.warning(STR."Expression validation failed after \{limit} attempts");
         } else {
             //query.getParagraph().spliceExpression(response);
-            logger.info(query.getParagraph().toString());
+            logger.info(subQuery.paragraph());
         }
-        return new QueryResult(response, attempts, query, end - start);
+        return new QueryResult(response, attempts, subQuery, end - start);
     }
 
-    private void addReasoningSteps(PromptList sessionPrompt, Query query) throws Exception {
+    private void addReasoningSteps(PromptList sessionPrompt, SubQuery subQuery) throws Exception {
         logger.info("enter in the reasoning prompting");
-        sessionPrompt.addPairPrompt(STR."\{query.toUserPrompt(0)}\nWhat does the task ask you to calculate?", llm.evaluate(sessionPrompt, ""));
+        sessionPrompt.addPairPrompt(STR."\{subQuery.toUserPrompt()}\nWhat does the task ask you to calculate?", llm.evaluate(sessionPrompt, ""));
         sessionPrompt.addPairPrompt("What is the expected value that make the statement true? Reply only with the value", llm.evaluate(sessionPrompt, ""));
         sessionPrompt.addUserPrompt("What is the function that generates the value?");
     }

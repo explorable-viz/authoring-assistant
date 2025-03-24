@@ -44,12 +44,14 @@ public class Paragraph extends ArrayList<TextFragment> {
                 .map(textFragment -> {
                     if (textFragment instanceof Literal) {
                         return STR."\{textFragment.getValue()} ";
+                    } else if (textFragment instanceof Expression){
+                        int currentK = k.getAndIncrement();
+                        return (currentK == n)
+                                ? STR."[REPLACE id=\"id_\{currentK + 1}\"]"
+                                : STR."\{textFragment.getValue()} ";
+                    } else {
+                        throw new RuntimeException("Illegal Textfragment Type");
                     }
-                    int currentK = k.get();
-                    k.incrementAndGet(); // Incremento solo per ExpressionFragment
-                    return (currentK == n)
-                            ? STR."[REPLACE id=\"id_\{currentK + 1}\"]"
-                            : STR."\{textFragment.getValue()} ";
                 })
                 .collect(Collectors.joining());
     }

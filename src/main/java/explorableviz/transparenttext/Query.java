@@ -29,7 +29,7 @@ public class Query {
     private final ArrayList<String> _loadedImports;
     private final String code;
     private final Paragraph paragraph;
-    private final java.util.Map<String, String> expectedValue;
+    private final java.util.Map<String, String> expectedValues;
     private final HashMap<String, String> _loadedDatasets;
     private final String testCaseFileName;
     private final String fluidFileName = "llmTest";
@@ -57,7 +57,7 @@ public class Query {
         this.code = replaceVariables(new String(Files.readAllBytes(Path.of(STR."\{testCaseFileName}.fld"))), variables);
 
         this.testCaseFileName = testCaseFileName;
-        this.expectedValue = new HashMap<>();
+        this.expectedValues = new HashMap<>();
 
         //Validation of the created object
         for(int i = 0; i < paragraph.length(); i++) {
@@ -65,13 +65,13 @@ public class Query {
             String expression = paragraph.getJSONObject(i).getString("expression");
             writeFluidFiles(expression);
             String commandLineResult = new FluidCLI(this.getDatasets(), this.getImports()).evaluate(fluidFileName);
-            this.expectedValue.put(expression, computeValue(commandLineResult));
+            this.expectedValues.put(expression, computeValue(commandLineResult));
             if (this.validate(commandLineResult, expression).isPresent()) {
                 //throw new RuntimeException(STR."[testCaseFile=\{testCaseFileName}] Invalid test exception\{this.validate(this.expectedValue.get(entry.getKey()), entry.getKey())}");
             }
         }
 
-        this.paragraph = new Paragraph(paragraph, variables, expectedValue);
+        this.paragraph = new Paragraph(paragraph, variables, expectedValues);
     }
 
     public HashMap<String, String> loadDatasets() throws IOException {
@@ -80,6 +80,14 @@ public class Query {
             loadedDatasets.put(dataset.getKey(), new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}.fld").toURI()))));
         }
         return loadedDatasets;
+    }
+
+    public List<SubQuery> toSubQueries() {
+        ArrayList<SubQuery> subQueries = new ArrayList<>();
+        for(String paragraphQuery : paragraph.getParagraphForQueries()) {
+            subQueries.add(new SubQuery(this, paragraphQuery));
+        }
+        return subQueries;
     }
 
     private ArrayList<String> loadImports() throws IOException {
@@ -93,15 +101,6 @@ public class Query {
             }
         }
         return loadedImports;
-    }
-
-    public String toUserPrompt(int n) {
-        JSONObject object = new JSONObject();
-        object.put("datasets", this.get_loadedDatasets());
-        object.put("imports", this.get_loadedImports());
-        object.put("code", this.getCode());
-        object.put("paragraph", this.paragraph.toStringWithReplace(n));
-        return object.toString();
     }
 
     public String computeValue(String commandLineResponse) {
@@ -121,11 +120,11 @@ public class Query {
             logger.info("Validation failed because interpreter error");
             return Optional.of(value);
         }
-        if (value.equals(this.expectedValue.get(expectedVarName)) || roundedEquals(value, this.expectedValue.get(expectedVarName))) {
+        if (value.equals(this.expectedValues.get(expectedVarName)) || roundedEquals(value, this.expectedValues.get(expectedVarName))) {
             logger.info("Validation passed");
             return Optional.empty();
         } else {
-            logger.info(STR."Validation failed: generated=\{value}, expected=\{this.expectedValue}");
+            logger.info(STR."Validation failed: generated=\{value}, expected=\{this.expectedValues}");
             return Optional.of(value);
         }
     }
@@ -187,7 +186,6 @@ public class Query {
             }
         }
     }
-
 
     public ArrayList<String> get_loadedImports() {
         return _loadedImports;

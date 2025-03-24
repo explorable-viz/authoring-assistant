@@ -1,5 +1,6 @@
 package explorableviz.transparenttext;
 
+import explorableviz.transparenttext.paragraph.Expression;
 import explorableviz.transparenttext.paragraph.Literal;
 import explorableviz.transparenttext.paragraph.Paragraph;
 import explorableviz.transparenttext.paragraph.TextFragment;
@@ -64,10 +65,10 @@ public class Program {
             if (paragraph.getJSONObject(i).getString("type").equals("literal")) {
                 this.paragraph.add(new Literal(paragraph.getJSONObject(i).getString("value")).replace(variables));
             } else {
-                String expression = paragraph.getJSONObject(i).getString("expression");
+                String expression = replaceVariables(paragraph.getJSONObject(i).getString("expression"), variables);
                 writeFluidFiles(expression);
                 String commandLineResult = new FluidCLI(this.getDatasets(), this.getImports()).evaluate(fluidFileName);
-                this.paragraph.add(TextFragment.of(paragraph.getJSONObject(i), computeValue(commandLineResult)).replace(variables));
+                this.paragraph.add(new Expression(expression, computeValue(commandLineResult)).replace(variables));
                 this.validate(commandLineResult, expression).ifPresent(value -> {
                     throw new RuntimeException(STR."[testCaseFile=\{testCaseFileName}] Invalid test exception\{value}");
                 });

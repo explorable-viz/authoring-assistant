@@ -16,13 +16,13 @@ public class Main {
         Map<String, String> arguments = parseArguments(args);
         logger.info("Arguments passed from command line");
         logger.info(arguments.toString().replace(",", "\n"));
-        final ArrayList<Query> queries;
+        final ArrayList<Program> queries;
         final InContextLearning inContextLearning;
         final String agent = arguments.get("agent");
         try {
             Settings.init("settings.json");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
-            queries = Query.loadQueries(Settings.getTestCaseFolder(), Settings.getNumTestToGenerate());
+            queries = Program.loadQueries(Settings.getTestCaseFolder(), Settings.getNumTestToGenerate());
             final int queryLimit = Settings.getNumQueryToExecute().orElseGet(queries::size);
             final ArrayList<QueryResult> results = execute(inContextLearning, agent, queryLimit, queries);
             float accuracy = computeAccuracy(results, queries, queryLimit);
@@ -52,7 +52,7 @@ public class Main {
             String content = results.stream()
                     .map(result -> {
                         String[] values = {
-                                result.query().query().getTestCaseFileName(),
+                                result.program().program().getTestCaseFileName(),
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
@@ -61,7 +61,7 @@ public class Main {
                                 result.response() != null ? "OK" : "KO",
                                 String.valueOf(result.response()),
                                 "0-0",
-//                                result.query().getExpected().toString(),
+//                                result.program().getExpected().toString(),
                                 String.valueOf(result.duration())
                         };
                         return String.join(";", values);
@@ -71,7 +71,7 @@ public class Main {
         }
     }
 
-    private static float computeAccuracy(List<QueryResult> results, List<Query> queries, int queryLimit) {
+    private static float computeAccuracy(List<QueryResult> results, List<Program> queries, int queryLimit) {
         return 0;
 //        logger.info("Computing accuracy");
 //        long count = IntStream.range(0, results.size()).filter(i -> {
@@ -81,12 +81,12 @@ public class Main {
 //        return (float) count / queryLimit;
     }
 
-    private static ArrayList<QueryResult> execute(InContextLearning inContextLearning, String agent, int queryLimit, ArrayList<Query> queries) throws Exception {
+    private static ArrayList<QueryResult> execute(InContextLearning inContextLearning, String agent, int queryLimit, ArrayList<Program> queries) throws Exception {
         final ArrayList<QueryResult> results = new ArrayList<>();
         AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent);
         for (int i = 0; i < queryLimit; i++) {
-            logger.info(STR."Analysing query id=\{i}");
-            for(SubQuery q : queries.get(i).toSubQueries())
+            logger.info(STR."Analysing program id=\{i}");
+            for(Query q : queries.get(i).toSubQueries())
                 results.add(workflow.execute(q));
         }
         logger.info("Printing generated expression");

@@ -2,7 +2,7 @@ package explorableviz.transparenttext.paragraph;
 
 import explorableviz.transparenttext.variable.Variables;
 
-import static explorableviz.transparenttext.Query.replaceVariables;
+import static explorableviz.transparenttext.Program.replaceVariables;
 
 public class Literal extends TextFragment {
 

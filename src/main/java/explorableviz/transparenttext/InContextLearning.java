@@ -11,30 +11,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static explorableviz.transparenttext.Query.loadQueries;
+import static explorableviz.transparenttext.Program.loadQueries;
 
 public class InContextLearning {
     private final String systemPrompt;
 
-    private final ArrayList<Query> cases;
+    private final ArrayList<Program> cases;
 
-    public InContextLearning(String systemPrompt, ArrayList<Query> cases) {
+    public InContextLearning(String systemPrompt, ArrayList<Program> cases) {
         this.systemPrompt = systemPrompt;
         this.cases = cases;
     }
 
     public static InContextLearning loadLearningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
-        ArrayList<Query> learningCases = loadQueries(Settings.getLearningCaseFolder(), numCasesToGenerate);
+        ArrayList<Program> learningCases = loadQueries(Settings.getLearningCaseFolder(), numCasesToGenerate);
         return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
     }
 
     public PromptList toPromptList() {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
-        for (Query query : this.cases) {
-            List<SubQuery> subQueries = query.toSubQueries();
-            for (SubQuery subQuery : subQueries)
-                inContextLearning.addPairPrompt(subQuery.toUserPrompt(), (((Expression) query.getParagraph().get(1)).getExpr()));
+        for (Program program : this.cases) {
+            List<Query> subQueries = program.toSubQueries();
+            for (Query query : subQueries)
+                inContextLearning.addPairPrompt(query.toUserPrompt(), (((Expression) program.getParagraph().get(1)).getExpr()));
         }
         return inContextLearning;
     }

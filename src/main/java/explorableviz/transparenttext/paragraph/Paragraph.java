@@ -1,33 +1,19 @@
 package explorableviz.transparenttext.paragraph;
 
 import explorableviz.transparenttext.LiteralParts;
-import explorableviz.transparenttext.variable.Variables;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import explorableviz.transparenttext.Settings;
+import kotlin.Pair;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Paragraph extends ArrayList<TextFragment> {
 
-    public Paragraph(JSONArray json_paragraph, Variables variables, Map<String, String> expectedValue) {
-        this.addAll(IntStream.range(0, json_paragraph.length())
-                .mapToObj(i -> {
-                    JSONObject paragraphElement = json_paragraph.getJSONObject(i);
-                    String type = paragraphElement.getString("type");
-
-                    return (switch (type) {
-                        case "literal" -> new Literal(paragraphElement.getString("value"));
-                        case "expression" ->
-                                new Expression(paragraphElement.getString("expression"), expectedValue.get(paragraphElement.getString("expression")));
-                        default -> throw new RuntimeException(STR."\{type} type is invalid");
-                    }).replace(variables);
-                })
-                .toList());
+    public Paragraph() {
     }
 
     public String toString() {
@@ -38,31 +24,33 @@ public class Paragraph extends ArrayList<TextFragment> {
         }).collect(Collectors.joining(","))}])";
     }
 
-    public String toStringWithReplace(int n) {
+    public String getValueFromExpression(String expression) {
+        return this.stream().filter(e -> e instanceof Expression && ((Expression) e).getExpr().equals(expression)).findFirst().get().getValue();
+    }
+
+    public Pair<String, String> toStringWithReplace(int n) {
         AtomicInteger k = new AtomicInteger(0);
-        return this.stream()
+        AtomicReference<String> expression = new AtomicReference<String>(null);
+        String paragraphWithReplace = this.stream()
                 .map(textFragment -> {
                     if (textFragment instanceof Literal) {
                         return STR."\{textFragment.getValue()} ";
-                    } else if (textFragment instanceof Expression){
+                    } else if (textFragment instanceof Expression) {
                         int currentK = k.getAndIncrement();
-                        return (currentK == n)
-                                ? STR."[REPLACE id=\"id_\{currentK + 1}\"]"
-                                : STR."\{textFragment.getValue()} ";
+                        if (currentK == n) {
+                            expression.set(((Expression) textFragment).getExpr());
+                            return STR."[REPLACE id=\"id_\{currentK}\" \{(Settings.isAddExpectedValueEnabled() ? STR."value=\"\{textFragment.getValue()}\"" : "")}]";
+                        } else {
+                            return STR."\{textFragment.getValue()} ";
+                        }
                     } else {
                         throw new RuntimeException("Illegal Textfragment Type");
                     }
                 })
                 .collect(Collectors.joining());
+        return new Pair<>(paragraphWithReplace, expression.get());
     }
 
-    public List<String> getParagraphForQueries() {
-        return IntStream.range(0, (int) this.stream()
-                        .filter(textFragment -> !(textFragment instanceof Literal))
-                        .count())
-                .mapToObj(this::toStringWithReplace)
-                .collect(Collectors.toList());
-    }
     public void spliceExpression(String expression) {
         List<TextFragment> paragraph = this;
         ListIterator<TextFragment> iterator = paragraph.listIterator();

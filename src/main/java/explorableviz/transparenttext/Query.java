@@ -2,7 +2,7 @@ package explorableviz.transparenttext;
 
 import org.json.JSONObject;
 
-public record Query(Program program, String paragraph) {
+public record Query(Program program, String paragraph, String expression) {
 
     public String toUserPrompt() {
         JSONObject object = new JSONObject();

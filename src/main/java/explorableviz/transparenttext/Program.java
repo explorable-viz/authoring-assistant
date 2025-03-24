@@ -1,6 +1,8 @@
 package explorableviz.transparenttext;
 
+import explorableviz.transparenttext.paragraph.Literal;
 import explorableviz.transparenttext.paragraph.Paragraph;
+import explorableviz.transparenttext.paragraph.TextFragment;
 import explorableviz.transparenttext.variable.ValueOptions;
 import explorableviz.transparenttext.variable.Variables;
 import org.json.JSONArray;
@@ -29,7 +31,6 @@ public class Program {
     private final ArrayList<String> _loadedImports;
     private final String code;
     private final Paragraph paragraph;
-    private final java.util.Map<String, String> expectedValues;
     private final HashMap<String, String> _loadedDatasets;
     private final String testCaseFileName;
     private final String fluidFileName = "llmTest";
@@ -55,23 +56,23 @@ public class Program {
                 )));
         this._loadedImports = this.loadImports();
         this.code = replaceVariables(new String(Files.readAllBytes(Path.of(STR."\{testCaseFileName}.fld"))), variables);
-
         this.testCaseFileName = testCaseFileName;
-        this.expectedValues = new HashMap<>();
 
-        //Validation of the created object
-        for(int i = 0; i < paragraph.length(); i++) {
-            if(paragraph.getJSONObject(i).getString("type").equals("literal")) continue;
-            String expression = paragraph.getJSONObject(i).getString("expression");
-            writeFluidFiles(expression);
-            String commandLineResult = new FluidCLI(this.getDatasets(), this.getImports()).evaluate(fluidFileName);
-            this.expectedValues.put(expression, computeValue(commandLineResult));
-            if (this.validate(commandLineResult, expression).isPresent()) {
-                //throw new RuntimeException(STR."[testCaseFile=\{testCaseFileName}] Invalid test exception\{this.validate(this.expectedValue.get(entry.getKey()), entry.getKey())}");
+        //Validation of the created object & paragraph construction
+        this.paragraph = new Paragraph();
+        for (int i = 0; i < paragraph.length(); i++) {
+            if (paragraph.getJSONObject(i).getString("type").equals("literal")) {
+                this.paragraph.add(new Literal(paragraph.getJSONObject(i).getString("value")).replace(variables));
+            } else {
+                String expression = paragraph.getJSONObject(i).getString("expression");
+                writeFluidFiles(expression);
+                String commandLineResult = new FluidCLI(this.getDatasets(), this.getImports()).evaluate(fluidFileName);
+                this.paragraph.add(TextFragment.of(paragraph.getJSONObject(i), computeValue(commandLineResult)).replace(variables));
+                this.validate(commandLineResult, expression).ifPresent(value -> {
+                    throw new RuntimeException(STR."[testCaseFile=\{testCaseFileName}] Invalid test exception\{value}");
+                });
             }
         }
-
-        this.paragraph = new Paragraph(paragraph, variables, expectedValues);
     }
 
     public HashMap<String, String> loadDatasets() throws IOException {
@@ -82,11 +83,13 @@ public class Program {
         return loadedDatasets;
     }
 
-    public List<Query> toSubQueries() {
+    public List<Query> toQueries() {
         ArrayList<Query> subQueries = new ArrayList<>();
-        for(String paragraphQuery : paragraph.getParagraphForQueries()) {
-            subQueries.add(new Query(this, paragraphQuery));
-        }
+        IntStream.range(0, (int) paragraph.stream()
+                        .filter(textFragment -> !(textFragment instanceof Literal))
+                        .count())
+                .mapToObj(paragraph::toStringWithReplace)
+                .forEach(str -> subQueries.add(new Query(this, str.component1(), str.component2())));
         return subQueries;
     }
 
@@ -120,11 +123,11 @@ public class Program {
             logger.info("Validation failed because interpreter error");
             return Optional.of(value);
         }
-        if (value.equals(this.expectedValues.get(expectedVarName)) || roundedEquals(value, this.expectedValues.get(expectedVarName))) {
+        if (value.equals(paragraph.getValueFromExpression(expectedVarName)) || roundedEquals(value, paragraph.getValueFromExpression(expectedVarName))) {
             logger.info("Validation passed");
             return Optional.empty();
         } else {
-            logger.info(STR."Validation failed: generated=\{value}, expected=\{this.expectedValues}");
+            logger.info(STR."Validation failed: generated=\{value}, expected=\{paragraph.getValueFromExpression(expectedVarName)}");
             return Optional.of(value);
         }
     }

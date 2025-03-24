@@ -86,7 +86,7 @@ public class Main {
         AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent);
         for (int i = 0; i < queryLimit; i++) {
             logger.info(STR."Analysing program id=\{i}");
-            for(Query q : queries.get(i).toSubQueries())
+            for(Query q : queries.get(i).toQueries())
                 results.add(workflow.execute(q));
         }
         logger.info("Printing generated expression");

@@ -1,6 +1,5 @@
 package explorableviz.transparenttext;
 
-import explorableviz.transparenttext.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 
 import java.io.IOException;
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static explorableviz.transparenttext.Program.loadQueries;
+import static explorableviz.transparenttext.Program.loadPrograms;
 
 public class InContextLearning {
     private final String systemPrompt;
@@ -24,7 +23,7 @@ public class InContextLearning {
     }
 
     public static InContextLearning loadLearningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
-        ArrayList<Program> learningCases = loadQueries(Settings.getLearningCaseFolder(), numCasesToGenerate);
+        ArrayList<Program> learningCases = loadPrograms(Settings.getLearningCaseFolder(), numCasesToGenerate);
         return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
     }
 

@@ -33,7 +33,7 @@ public class InContextLearning {
         for (Program program : this.cases) {
             List<Query> queries = program.toQueries();
             for (Query query : queries)
-                inContextLearning.addPairPrompt(query.toUserPrompt(), query.expression());
+                inContextLearning.addPairPrompt(query.toUserPrompt(), query.expression().getExpr());
         }
         return inContextLearning;
     }

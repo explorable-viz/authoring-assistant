@@ -42,7 +42,7 @@ public class AuthoringAssistant {
             for(String key : llmExpressions.keySet()) {
                 logger.info(STR."Received response: \{candidateExpr}");
                 query.program().writeFluidFiles(llmExpressions.getString(key));
-                Optional<String> errors = query.program().validate(new FluidCLI(query.program().getDatasets(), query.program().getImports()).evaluate(query.program().getFluidFileName()), key);
+                Optional<String> errors = query.program().validate(new FluidCLI(query.program().getDatasets(), query.program().getImports()).evaluate(query.program().getFluidFileName()), query.expression());
                 if (errors.isPresent()) {
                     errorMessage += (generateLoopBackMessage(candidateExpr, errors.get()));
                 }

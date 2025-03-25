@@ -28,9 +28,9 @@ public class Paragraph extends ArrayList<TextFragment> {
         return this.stream().filter(e -> e instanceof Expression && ((Expression) e).getExpr().equals(expression)).findFirst().get().getValue();
     }
 
-    public Pair<String, String> toStringWithReplace(int n) {
+    public Pair<String, Expression> toStringWithReplace(int n) {
         AtomicInteger k = new AtomicInteger(0);
-        AtomicReference<String> expression = new AtomicReference<String>(null);
+        AtomicReference<Expression> expression = new AtomicReference<>(null);
         String paragraphWithReplace = this.stream()
                 .map(textFragment -> {
                     if (textFragment instanceof Literal) {
@@ -38,7 +38,7 @@ public class Paragraph extends ArrayList<TextFragment> {
                     } else if (textFragment instanceof Expression) {
                         int currentK = k.getAndIncrement();
                         if (currentK == n) {
-                            expression.set(((Expression) textFragment).getExpr());
+                            expression.set(((Expression) textFragment));
                             return STR."[REPLACE id=\"id_\{currentK}\" \{(Settings.isAddExpectedValueEnabled() ? STR."value=\"\{textFragment.getValue()}\"" : "")}]";
                         } else {
                             return STR."\{textFragment.getValue()} ";

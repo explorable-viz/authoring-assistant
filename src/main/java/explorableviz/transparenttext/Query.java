@@ -1,8 +1,9 @@
 package explorableviz.transparenttext;
 
+import explorableviz.transparenttext.paragraph.Expression;
 import org.json.JSONObject;
 
-public record Query(Program program, String paragraph, String expression) {
+public record Query(Program program, String paragraph, Expression expression) {
 
     public String toUserPrompt() {
         JSONObject object = new JSONObject();

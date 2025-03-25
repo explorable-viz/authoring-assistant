@@ -5,7 +5,6 @@ import explorableviz.transparenttext.paragraph.Literal;
 import explorableviz.transparenttext.paragraph.Paragraph;
 import explorableviz.transparenttext.variable.ValueOptions;
 import explorableviz.transparenttext.variable.Variables;
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -56,30 +55,23 @@ public class Program {
                 String expression = paragraph.getJSONObject(i).getString("expression");
                 writeFluidFiles(expression);
                 String commandLineResult = new FluidCLI(this.getDatasets(), this.getImports()).evaluate(fluidFileName);
-                this.paragraph.add(new Expression(expression, extractValue(commandLineResult)));
-                this.validate(commandLineResult, expression).ifPresent(value -> {
+                Expression candidate = new Expression(expression, extractValue(commandLineResult));
+                this.paragraph.add(candidate);
+                this.validate(commandLineResult, candidate).ifPresent(value -> {
                     throw new RuntimeException(STR."[testCaseFile=\{testCaseFileName}] Invalid test exception\{value}");
                 });
             }
         }
     }
 
-    @NotNull
-    private static HashMap<String, String> loadDatasetsFile(Map<String,String> datasetMapping, Variables variables) throws IOException {
+    private static HashMap<String, String> loadDatasetsFiles(Map<String,String> datasetMapping, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
         for (Map.Entry<String, String> dataset : datasetMapping.entrySet()) {
-            loadedDatasets.put(dataset.getKey(), new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}.fld").toURI()))));
+            loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}.fld").toURI()))),variables));
         }
-        return new HashMap<>(loadedDatasets
-                .entrySet()
-                .stream()
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        entry -> replaceVariables(entry.getValue(), variables)
-                )));
+        return loadedDatasets;
     }
 
-    @NotNull
     private static Map<String, String> datasetMapping(JSONArray json_dataset) {
         return IntStream.range(0, json_dataset.length())
                 .boxed()
@@ -120,7 +112,7 @@ public class Program {
         return outputLines[1].replaceAll("^\"|\"$", "");
     }
 
-    public Optional<String> validate(String commandLineResponse, String expectedExpression) {
+    public Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
         logger.info(STR."Validating command line output: \{commandLineResponse}");
         String value = extractValue(commandLineResponse);
         //interpreter errors detection -
@@ -128,11 +120,11 @@ public class Program {
             logger.info("Validation failed because interpreter error");
             return Optional.of(value);
         }
-        if (value.equals(paragraph.getValueFromExpression(expectedExpression)) || roundedEquals(value, paragraph.getValueFromExpression(expectedExpression))) {
+        if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
             logger.info("Validation passed");
             return Optional.empty();
         } else {
-            logger.info(STR."Validation failed: generated=\{value}, expected=\{paragraph.getValueFromExpression(expectedExpression)}");
+            logger.info(STR."Validation failed: generated=\{value}, expected=\{expectedExpression.getValue()}");
             return Optional.of(value);
         }
     }
@@ -177,7 +169,7 @@ public class Program {
                         datasetMapping,
                         testCase.getJSONArray("imports"),
                         replaceVariables(fldContent, variables),
-                        loadDatasetsFile(datasetMapping, variables),
+                        loadDatasetsFiles(datasetMapping, variables),
                         casePath
                 ));
             }

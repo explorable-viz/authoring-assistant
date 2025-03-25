@@ -39,13 +39,14 @@
   "imports": [
     "methane"
   ],
-  "expected": {
-    "result1": "$emissions.result$"
-  },
   "paragraph": [
     {
       "type": "literal",
-      "value": "Between $emissions.year1$ and $emissions.year2$, methane emissions $emissions.change$ across most sources, with the largest absolute $emissions.extent$ seen in $emissions.article$ [REPLACE id=\"result1\"]."
+      "value": "Between $emissions.year1$ and $emissions.year2$, methane emissions $emissions.change$ across most sources, with the largest absolute $emissions.extent$ seen in $emissions.article$ "
+    },
+    {
+      "type": "expression",
+      "expression": "$emissions.result$"
     }
   ]
 }

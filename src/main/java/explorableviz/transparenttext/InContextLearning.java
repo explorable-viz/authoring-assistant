@@ -1,6 +1,5 @@
 package explorableviz.transparenttext;
 
-import explorableviz.transparenttext.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 
 import java.io.IOException;
@@ -11,29 +10,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static explorableviz.transparenttext.Query.loadQueries;
+import static explorableviz.transparenttext.Program.loadPrograms;
 
 public class InContextLearning {
     private final String systemPrompt;
 
-    private final ArrayList<Query> cases;
+    private final ArrayList<Program> cases;
 
-    public InContextLearning(String systemPrompt, ArrayList<Query> cases) {
+    public InContextLearning(String systemPrompt, ArrayList<Program> cases) {
         this.systemPrompt = systemPrompt;
         this.cases = cases;
     }
 
-    public static InContextLearning loadLerningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
-        ArrayList<Query> learningCases = loadQueries(Settings.getLearningCaseFolder(), numCasesToGenerate);
+    public static InContextLearning loadLearningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
+        ArrayList<Program> learningCases = loadPrograms(Settings.getLearningCaseFolder(), numCasesToGenerate);
         return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
     }
 
     public PromptList toPromptList() {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
-        for (Query query : this.cases) {
-            for(int i = 0; i < query.getParagraph().getParagraphForQueries().size(); i++)
-                inContextLearning.addPairPrompt(query.toUserPrompt(i), (((Expression) query.getParagraph().get(1)).getExpr()));
+        for (Program program : this.cases) {
+            List<Query> queries = program.toQueries();
+            for (Query query : queries)
+                inContextLearning.addPairPrompt(query.toUserPrompt(), query.expression().getExpr());
         }
         return inContextLearning;
     }

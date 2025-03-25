@@ -7,15 +7,34 @@
   ],
   "imports": [],
   "variables": {},
-  "expected": {
-    "trend_1880_2012_avg": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Average\") tableData))",
-    "trend_1880_2012_AR5": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"NOAAGlobalTemp\") tableData))",
-    "trend_1880_2012_CW": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Cowtan-Way\") tableData))"
-  },
   "paragraph": [
     {
       "type": "literal",
-      "value": "A further two datasets, Berkeley Earth (Rohde et al., 2013) and that of the Japan Meteorological Agency (JMA), are provided in Table 1.1. This working definition provides an updated estimate of [REPLACE id=\"trend_1880_2012_avg\"]°C for the warming over the period 1880–2012 based on a linear trend. This quantity was quoted as [REPLACE id=\"trend_1880_2012_AR5\"]°C in the AR5. Hence the inclusion of the Cowtan-Way dataset ([REPLACE id=\"trend_1880_2012_CW\"]°C) does not introduce any inconsistency with the AR5."
+      "value": "A further two datasets, Berkeley Earth (Rohde et al., 2013) and that of the Japan Meteorological Agency (JMA), are provided in Table 1.1. This working definition provides an updated estimate of "
+    },
+    {
+      "type": "expression",
+      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Average\") tableData))"
+    },
+    {
+      "type": "literal",
+      "value": "°C for the warming over the period 1880–2012 based on a linear trend. This quantity was quoted as "
+    },
+    {
+      "type": "expression",
+      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"NOAAGlobalTemp\") tableData))"
+    },
+    {
+      "type": "literal",
+      "value": "°C in the AR5. Hence the inclusion of the Cowtan-Way dataset ("
+    },
+    {
+      "type": "expression",
+      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Cowtan-Way\") tableData))"
+    },
+    {
+      "type": "literal",
+      "value": "does not introduce any inconsistency with the AR5."
     }
   ]
 }

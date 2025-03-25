@@ -27,14 +27,21 @@
       "file": "datasets/methane-emissions"
     }
   ],
-  "imports": ["methane"],
-  "expected": {
-    "result1":"\"$emissions.result$\""
-  },
+  "imports": [
+    "methane"
+  ],
   "paragraph": [
     {
       "type": "literal",
-      "value": "In $emissions.year$, the [REPLACE id=\"result1\"] had the $emissions.rank$ amount in methane emissions."
+      "value": "In $emissions.year$, the "
+    },
+    {
+      "type": "expression",
+      "expression": "\"$emissions.result$\""
+    },
+    {
+      "type": "literal",
+      "value": " had the $emissions.rank$ amount in methane emissions."
     }
   ]
 }

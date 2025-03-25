@@ -24,21 +24,17 @@ public class Paragraph extends ArrayList<TextFragment> {
         }).collect(Collectors.joining(","))}])";
     }
 
-    public String getValueFromExpression(String expression) {
-        return this.stream().filter(e -> e instanceof Expression && ((Expression) e).getExpr().equals(expression)).findFirst().get().getValue();
-    }
-
-    public Pair<String, Expression> toStringWithReplace(int n) {
+    public Pair<String, Expression> toStringWithReplaceAt(int n) {
         AtomicInteger k = new AtomicInteger(0);
         AtomicReference<Expression> expression = new AtomicReference<>(null);
         String paragraphWithReplace = this.stream()
                 .map(textFragment -> {
                     if (textFragment instanceof Literal) {
                         return STR."\{textFragment.getValue()} ";
-                    } else if (textFragment instanceof Expression) {
+                    } else if (textFragment instanceof Expression expr) {
                         int currentK = k.getAndIncrement();
                         if (currentK == n) {
-                            expression.set(((Expression) textFragment));
+                            expression.set(expr);
                             return STR."[REPLACE id=\"id_\{currentK}\" \{(Settings.isAddExpectedValueEnabled() ? STR."value=\"\{textFragment.getValue()}\"" : "")}]";
                         } else {
                             return STR."\{textFragment.getValue()} ";

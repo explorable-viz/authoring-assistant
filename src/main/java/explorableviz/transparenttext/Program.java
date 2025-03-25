@@ -86,7 +86,7 @@ public class Program {
         IntStream.range(0, (int) paragraph.stream()
                         .filter(textFragment -> !(textFragment instanceof Literal))
                         .count())
-                .mapToObj(paragraph::toStringWithReplace)
+                .mapToObj(paragraph::toStringWithReplaceAt)
                 .forEach(str -> subQueries.add(new Query(this, str.component1(), str.component2())));
         return subQueries;
     }

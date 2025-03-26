@@ -1,0 +1,41 @@
+let modelProbs = [
+     { model: "SSP1-1.9", probability: 0.92 }
+];
+let newDataTable offset = map (fun s -> { scenario: s.scenario, bE2140: s.bestEst2140 + offset, low2140: s.low2140, high2140: s.high2140, bE4160: s.bestEst4160, low4160: s.low4160, high4160: s.high4160, bE81100: s.bestEst81100, low81100: s.low81100, high81100: s.high81100}) tableData;
+let newModel offset = map (fun s -> { model: s.model, probability: s.probability + offset}) modelProbs;
+
+let getByScenario scenario data =
+   let helper [] = [];
+      helper (x: xs) =
+            if x.scenario == scenario
+            then x
+            else helper xs
+   in helper data;
+let likelihoods = [
+    { prob: 0.99, msg: "virtually certain" },
+    { prob: 0.9, msg: "very likely"},
+    { prob: 0.66, msg: "likely"},
+    { prob: 0.33, msg: "about as likely as not"},
+    { prob: 0.1, msg: "unlikely"},
+    { prob: 0.01, msg: "very unlikely"},
+    { prob: 0.0, msg: "exceptionally unlikely"}
+];
+let likelihoodMap prob =
+    let go (x:xs) =
+        if x.prob < prob
+        then x.msg
+        else go xs;
+        go [] = "not found"
+    in go likelihoods;
+
+let findLikelihood (min, max) target =
+    if target > max
+    then 0.0
+    else if target < min
+    then 1.0
+    else (target - min)/(max - min);
+let dataSet = newDataTable 16;
+    analysisModel = newModel 0.50;
+    stressedScenario = getByScenario "SSP3-7.0" dataSet;
+    highEmissionScenario = getByScenario "SSP5-8.5" dataSet
+in

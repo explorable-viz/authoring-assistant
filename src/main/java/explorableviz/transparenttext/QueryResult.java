@@ -1,3 +1,5 @@
 package explorableviz.transparenttext;
 
-public record QueryResult(String response, int attempt, Query query, long duration) {}
+import explorableviz.transparenttext.paragraph.Expression;
+
+public record QueryResult(Expression response, int attempt, Query query, long duration) {}

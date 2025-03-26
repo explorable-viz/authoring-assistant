@@ -1,5 +1,6 @@
 package explorableviz.transparenttext.llm;
 
+import explorableviz.transparenttext.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.Prompt;
 import org.json.JSONObject;
@@ -15,8 +16,8 @@ public class LLMDummyAgent extends LLMEvaluatorAgent {
     }
 
     @Override
-    public String evaluate(List<Prompt> list, String s) throws IOException {
+    public Expression evaluate(List<Prompt> list, String s) throws IOException {
         logger.info("Execution of the DummyAgent");
-        return "{\"key\":\"__dummy response__\"}";
+        return new Expression("dummy", null);
     }
 }

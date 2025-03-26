@@ -27,10 +27,6 @@ public class Settings {
         this.settings = new JSONObject(new String(Files.readAllBytes(Paths.get(new File(settingsPath).toURI()))));
     }
 
-//    private String get(String key) {
-//        return this.settings.getString(key);
-//    }
-
     public static JSONObject getSettings() {
         return getInstance().settings;
     }
@@ -98,5 +94,9 @@ public class Settings {
 
     public static Optional<Integer> getNumQueryToExecute() {
         return (getSettings().has("num-query-to-execute") && !getSettings().isNull("num-query-to-execute")) ? Optional.of(getSettings().getInt("num-query-to-execute")) : Optional.empty();
+    }
+
+    public static boolean isEditorLoopEnabled() {
+        return getSettings().getBoolean("enable-editor-loop");
     }
 }

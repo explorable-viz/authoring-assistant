@@ -82,13 +82,13 @@ public class Program {
     }
 
     public List<Query> toQueries() {
-        ArrayList<Query> subQueries = new ArrayList<>();
+        ArrayList<Query> queries = new ArrayList<>();
         IntStream.range(0, (int) paragraph.stream()
                         .filter(textFragment -> !(textFragment instanceof Literal))
                         .count())
                 .mapToObj(paragraph::toStringWithReplaceAt)
-                .forEach(str -> subQueries.add(new Query(this, str.component1(), str.component2())));
-        return subQueries;
+                .forEach(str -> queries.add(new Query(this, str.component1(), str.component2())));
+        return queries;
     }
 
     private ArrayList<String> loadImports() throws IOException {

@@ -22,53 +22,48 @@ public class AuthoringAssistant {
     public QueryResult execute(Query query) throws Exception {
         int limit = Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
-        PromptList sessionPrompt = (PromptList) prompts.clone();
+        PromptList sessionPrompt = (PromptList) this.prompts.clone();
         int attempts;
         long start = System.currentTimeMillis();
-        if (Settings.isReasoningEnabled()) {
-            addReasoningSteps(sessionPrompt, query);
-        } else {
-            sessionPrompt.addUserPrompt(query.toUserPrompt());
-        }
-        String response = null;
+        sessionPrompt.addUserPrompt(query.toUserPrompt());
+
+        Expression response = null;
         for (attempts = 0; response == null && attempts <= limit; attempts++) {
             logger.info(STR."Attempt #\{attempts}");
             // Send the query to the LLM to be processed
-            String candidateExpr = llm.evaluate(sessionPrompt, "");
-            sessionPrompt.addAssistantPrompt(candidateExpr);
-            JSONObject llmExpressions = new JSONObject(candidateExpr);
-            String errorMessage ="";
-            //Check each generated expressions
-            for(String key : llmExpressions.keySet()) {
-                logger.info(STR."Received response: \{candidateExpr}");
-                query.program().writeFluidFiles(llmExpressions.getString(key));
-                Optional<String> errors = query.program().validate(new FluidCLI(query.program().getDatasets(), query.program().getImports()).evaluate(query.program().getFluidFileName()), query.expression());
-                if (errors.isPresent()) {
-                    errorMessage += (generateLoopBackMessage(candidateExpr, errors.get()));
-                }
+            Expression candidate = null;
+            try {
+                candidate = (Expression) llm.evaluate(sessionPrompt, "");
+                sessionPrompt.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
+            } catch (Exception e) {
+                e.printStackTrace();
+                sessionPrompt.exportToJson(STR."logs/json/\{Path.of(query.program().getTestCaseFileName()).getFileName()}_\{System.currentTimeMillis()}.json");
+                System.exit(1);
             }
-            if(!errorMessage.isEmpty()) {
-                //Add the prev. expression to the SessionPrompt to say to the LLM that the response is wrong.
-                sessionPrompt.addUserPrompt(errorMessage);
+            //Check each generated expressions
+            logger.info(STR."Received response: \{candidate.getExpr()}");
+            query.program().writeFluidFiles(candidate.getExpr());
+            Optional<String> errors = query.program().validate(new FluidCLI(query.program().getDatasets(), query.program().getImports()).evaluate(query.program().getFluidFileName()), query.expression());
+            if (errors.isPresent()) {
+                sessionPrompt.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), errors.get()));
             } else {
-                response = candidateExpr;
+                response = candidate;
             }
         }
         long end = System.currentTimeMillis();
-        if (response == null) {
+        if (response == null || response.getExpr() == null) {
             logger.warning(STR."Expression validation failed after \{limit} attempts");
         } else {
             //query.getParagraph().spliceExpression(response);
+            //Add only the Q-A and not all the process.
+            if (Settings.isEditorLoopEnabled()) {
+                this.prompts.addUserPrompt(query.toUserPrompt());
+                this.prompts.addAssistantPrompt(response.getExpr());
+            }
             logger.info(query.paragraph());
         }
-        return new QueryResult(response, attempts, query, end - start);
-    }
 
-    private void addReasoningSteps(PromptList sessionPrompt, Query query) throws Exception {
-        logger.info("enter in the reasoning prompting");
-        sessionPrompt.addPairPrompt(STR."\{query.toUserPrompt()}\nWhat does the task ask you to calculate?", llm.evaluate(sessionPrompt, ""));
-        sessionPrompt.addPairPrompt("What is the expected value that make the statement true? Reply only with the value", llm.evaluate(sessionPrompt, ""));
-        sessionPrompt.addUserPrompt("What is the function that generates the value?");
+        return new QueryResult(response, attempts, query, end - start);
     }
 
     private LLMEvaluatorAgent initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {

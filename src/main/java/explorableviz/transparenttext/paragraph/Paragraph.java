@@ -19,10 +19,11 @@ public class Paragraph extends ArrayList<TextFragment> {
     public String toString() {
         return STR."Paragraph([\{stream().map(e -> {
             if (e instanceof Literal) return STR."\"\{e.getValue()}\"";
-            if (e instanceof Expression) return ((Expression) e).getExpr();
+            if (e instanceof Expression) return (STR."Text (\{((Expression) e).getExpr()})");
             throw new RuntimeException("Error, it is possible to have only String or Expression element");
         }).collect(Collectors.joining(","))}])";
     }
+
 
     public Pair<String, Expression> toStringWithReplaceAt(int n) {
         AtomicInteger k = new AtomicInteger(0);

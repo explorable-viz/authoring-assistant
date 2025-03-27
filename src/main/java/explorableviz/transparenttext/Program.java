@@ -91,6 +91,32 @@ public class Program {
         return queries;
     }
 
+    public Optional<Query> nextQuery(List<Expression> computed) {
+        Paragraph paragraph = new Paragraph();
+        Expression toCompute = null;
+        int k = 0;
+        for (explorableviz.transparenttext.paragraph.TextFragment textFragment : this.paragraph) {
+            if (textFragment instanceof Literal) {
+                paragraph.add(new Literal(textFragment.getValue()));
+            } else if (textFragment instanceof Expression expression) {
+                if (computed.size() > k) {
+                    //@todo If the LLM did not figure out with the expression (reached max attempts)
+                    //We can send the expected one.
+                    paragraph.add(computed.get(k) == null ? expression : computed.get(k));
+                    k++;
+                } else if (computed.size() == k) {
+                    toCompute = expression;
+                    k++;
+                    paragraph.add(new Literal(STR."[REPLACE id=\"id_\{k}\"]"));
+                } else {
+                    paragraph.add(new Literal(expression.getValue()));
+                }
+            }
+        }
+
+        return toCompute == null ? Optional.empty() : Optional.of(new Query(this, paragraph.toString(), toCompute));
+    }
+
     private ArrayList<String> loadImports() throws IOException {
         ArrayList<String> loadedImports = new ArrayList<>();
         for (String path : imports) {

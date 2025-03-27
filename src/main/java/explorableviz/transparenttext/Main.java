@@ -79,13 +79,12 @@ public class Main {
         return (float) count / results.size();
     }
 
-    private static ArrayList<QueryResult> execute(InContextLearning inContextLearning, String agent, int programLimit, List<Program> queries) throws Exception {
+    private static ArrayList<QueryResult> execute(InContextLearning inContextLearning, String agent, int programLimit, List<Program> programs) throws Exception {
         final ArrayList<QueryResult> results = new ArrayList<>();
         for (int i = 0; i < programLimit; i++) {
-            AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent);
+            AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, programs.get(i));
             logger.info(STR."Analysing program id=\{i}");
-            for(Query q : queries.get(i).toQueries())
-                results.add(workflow.execute(q));
+            results.addAll(workflow.executeProgram());
         }
         logger.info("Printing generated expression");
         for (QueryResult result : results) {

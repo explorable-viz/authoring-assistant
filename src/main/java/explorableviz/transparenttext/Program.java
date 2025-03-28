@@ -130,7 +130,7 @@ public class Program {
         if (outputLines.length < 2) {
             throw new RuntimeException("Output format is invalid");
         }
-        return outputLines[2].replaceAll("^\"|\"$", "");
+        return outputLines[1].replaceAll("^\"|\"$", "");
     }
 
     public Optional<String> validate(String commandLineResponse, Expression expectedExpression) {

@@ -39,7 +39,7 @@ public class Paragraph extends ArrayList<TextFragment> {
         }).collect(Collectors.toList());
 
         if (lastExprIndex.get() != -1) {
-            elements.set(lastExprIndex.get()-1, STR." [REPLACE id=\"\{lastExprIndex}]\"");
+            elements.set(lastExprIndex.get()-1, STR." [REPLACE id=\"\{lastExprIndex}\"]");
         }
         return STR."Paragraph([\{String.join(",", elements)}])";
     }

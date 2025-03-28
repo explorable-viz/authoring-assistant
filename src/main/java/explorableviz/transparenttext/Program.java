@@ -88,7 +88,7 @@ public class Program {
         int k = 0;
         for (TextFragment textFragment : this.paragraph) {
             if (textFragment instanceof Literal) {
-                lit.append(textFragment.getValue());
+                lit.append(STR." \{textFragment.getValue()}");
             } else if (textFragment instanceof Expression expression) {
                 if (computed.size() > k) {
                     //@todo If the LLM did not figure out with the expression (reached max attempts)
@@ -102,7 +102,7 @@ public class Program {
                     toCompute = expression;
                     paragraph.add(expression);
                 } else {
-                    lit.append(textFragment.getValue());
+                    lit.append(STR." \{textFragment.getValue()}");
                 }
                 k++;
             }
@@ -130,7 +130,8 @@ public class Program {
         if (outputLines.length < 2) {
             throw new RuntimeException("Output format is invalid");
         }
-        return outputLines[1].replaceAll("^\"|\"$", "");
+        int index = System.getProperty("os.name").toLowerCase().contains("win") ? 2 : 1;
+        return outputLines[index].replaceAll("^\"|\"$", "");
     }
 
     public Optional<String> validate(String commandLineResponse, Expression expectedExpression) {

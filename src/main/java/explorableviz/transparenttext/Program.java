@@ -3,6 +3,7 @@ package explorableviz.transparenttext;
 import explorableviz.transparenttext.paragraph.Expression;
 import explorableviz.transparenttext.paragraph.Literal;
 import explorableviz.transparenttext.paragraph.Paragraph;
+import explorableviz.transparenttext.paragraph.TextFragment;
 import explorableviz.transparenttext.variable.ValueOptions;
 import explorableviz.transparenttext.variable.Variables;
 import org.json.JSONArray;
@@ -80,41 +81,35 @@ public class Program {
                         i -> json_dataset.getJSONObject(i).getString("file")
                 ));
     }
-
-    public List<Query> toQueries() {
-        ArrayList<Query> queries = new ArrayList<>();
-        IntStream.range(0, (int) paragraph.stream()
-                        .filter(textFragment -> !(textFragment instanceof Literal))
-                        .count())
-                .mapToObj(paragraph::toStringWithReplaceAt)
-                .forEach(str -> queries.add(new Query(this, str.component1(), str.component2())));
-        return queries;
-    }
-
-    public Optional<Query> nextQuery(List<Expression> computed) {
+    public Optional<Query> nextQuery(List<Expression> computed, int num) {
         Paragraph paragraph = new Paragraph();
         Expression toCompute = null;
+        StringBuilder lit = new StringBuilder();
         int k = 0;
-        for (explorableviz.transparenttext.paragraph.TextFragment textFragment : this.paragraph) {
+        for (TextFragment textFragment : this.paragraph) {
             if (textFragment instanceof Literal) {
-                paragraph.add(new Literal(textFragment.getValue()));
+                lit.append(textFragment.getValue());
             } else if (textFragment instanceof Expression expression) {
                 if (computed.size() > k) {
                     //@todo If the LLM did not figure out with the expression (reached max attempts)
                     //We can send the expected one.
+                    paragraph.add(new Literal(lit.toString()));
+                    lit = new StringBuilder();
                     paragraph.add(computed.get(k) == null ? expression : computed.get(k));
-                    k++;
-                } else if (computed.size() == k) {
+                } else if ((computed.size() == k && num == -1) || k == num) {
+                    paragraph.add(new Literal(lit.toString()));
+                    lit = new StringBuilder();
                     toCompute = expression;
-                    k++;
-                    paragraph.add(new Literal(STR."[REPLACE id=\"id_\{k}\"]"));
+                    paragraph.add(expression);
                 } else {
-                    paragraph.add(new Literal(expression.getValue()));
+                    lit.append(textFragment.getValue());
                 }
+                k++;
             }
         }
+        paragraph.add(new Literal(lit.toString()));
 
-        return toCompute == null ? Optional.empty() : Optional.of(new Query(this, paragraph.toString(), toCompute));
+        return toCompute == null ? Optional.empty() : Optional.of(new Query(this, paragraph.toQueryString(), toCompute));
     }
 
     private ArrayList<String> loadImports() throws IOException {
@@ -135,7 +130,7 @@ public class Program {
         if (outputLines.length < 2) {
             throw new RuntimeException("Output format is invalid");
         }
-        return outputLines[1].replaceAll("^\"|\"$", "");
+        return outputLines[2].replaceAll("^\"|\"$", "");
     }
 
     public Optional<String> validate(String commandLineResponse, Expression expectedExpression) {

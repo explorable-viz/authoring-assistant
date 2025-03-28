@@ -24,33 +24,38 @@ public class FluidCLI {
     }
 
     private String buildCommand(String fluidFileName) {
-        String os = System.getProperty("os.name").toLowerCase();
-        String bashPrefix = os.contains("win") ? "cmd.exe /c " : "";
-        StringBuilder command = new StringBuilder(STR."\{bashPrefix}yarn fluid evaluate -l -p '\{Settings.getFluidTempFolder()}/' -f \{fluidFileName}");
-        datasets.forEach((key, path) -> command.append(STR." -d \"(\{key}, ./\{path})\""));
-        imports.forEach(path -> command.append(STR." -i \{path}"));
+        StringBuilder command = new StringBuilder();
+
+        command.append("yarn fluid evaluate -l -p \"")
+                .append(Settings.getFluidTempFolder())
+                .append("/\" -f ")
+                .append(fluidFileName);
+
+        datasets.forEach((key, path) -> command.append(" -d \"(")
+                .append(key)
+                .append(", ./")
+                .append(path)
+                .append(")\""));
+
+        imports.forEach(path -> command.append(" -i ")
+                .append(path));
+
         return command.toString();
     }
+
     private String executeCommand(String command) throws IOException, InterruptedException {
         String os = System.getProperty("os.name").toLowerCase();
-        Process process;
+        ProcessBuilder processBuilder;
         if (os.contains("win")) {
-            process = Runtime.getRuntime().exec(new String[]{"cmd.exe", "/c", command});
+            processBuilder = new ProcessBuilder("cmd.exe", "/c", command);
         } else {
-            process = Runtime.getRuntime().exec(new String[]{"/bin/bash", "-c", command});
+            processBuilder = new ProcessBuilder("/bin/bash", "-c", command);
         }
-        process.waitFor();
-
-        String output = new String(process.getInputStream().readAllBytes());
-        String errorOutput = new String(process.getErrorStream().readAllBytes());
-
-        logger.info(STR."Command output: \{output}");
-        if (!errorOutput.isEmpty()) {
-            logger.info(STR."Error output: \{errorOutput}");
-        }
-        FileUtils.deleteDirectory(new File(Settings.getFluidTempFolder()));
-        return output;
+        processBuilder.redirectErrorStream(true);
+        Process process = processBuilder.start();
+        return new String(process.getInputStream().readAllBytes());
     }
+
     public String evaluate(String fluidFileName) {
         try {
             return executeCommand(buildCommand(fluidFileName));

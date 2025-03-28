@@ -1,5 +1,7 @@
 package explorableviz.transparenttext;
 
+import kotlin.Pair;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,7 +27,7 @@ public class Main {
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.getNumTestToGenerate());
             final int queryLimit = Settings.getNumQueryToExecute().orElseGet(programs::size);
-            final ArrayList<QueryResult> results = execute(inContextLearning, agent, queryLimit, programs);
+            final ArrayList<Pair<Query,QueryResult>> results = execute(inContextLearning, agent, queryLimit, programs);
             float accuracy = computeAccuracy(results);
             writeLog(results, agent, inContextLearning.size());
             if (accuracy >= Settings.getThreshold()) {
@@ -42,7 +44,7 @@ public class Main {
 
     }
 
-    private static void writeLog(ArrayList<QueryResult> results, String agent, int learningContextSize) throws IOException {
+    private static void writeLog(ArrayList<Pair<Query,QueryResult>> results, String agent, int learningContextSize) throws IOException {
         Files.createDirectories(Paths.get(Settings.getLogFolder()));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{Settings.getLogFolder()}/log_\{System.currentTimeMillis()}.csv"))) {
             String[] headers = {
@@ -53,18 +55,18 @@ public class Main {
             String content = results.stream()
                     .map(result -> {
                         String[] values = {
-                                result.query().program().getTestCaseFileName(),
+                                result.component1().program().getTestCaseFileName(),
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
                                 String.valueOf(learningContextSize),
-                                result.query().paragraph(),
-                                String.valueOf(result.attempt()),
-                                result.response() != null ? "OK" : "KO",
-                                String.valueOf(result.response() != null ? result.response().getExpr() : "NULL"),
-                                result.query().expression().getExpr(),
-                                result.query().expression().getValue(),
-                                String.valueOf(result.duration())
+                                result.component1().paragraph(),
+                                String.valueOf(result.component2().attempt()),
+                                result.component2().response() != null ? "OK" : "KO",
+                                String.valueOf(result.component2().response() != null ? result.component2().response().getExpr() : "NULL"),
+                                result.component1().expression().getExpr(),
+                                result.component1().expression().getValue(),
+                                String.valueOf(result.component2().duration())
                         };
                         return String.join(";", Arrays.stream(values).map(s -> STR."\"\{s}\"").toList());
                     })
@@ -73,22 +75,22 @@ public class Main {
         }
     }
 
-    private static float computeAccuracy(List<QueryResult> results) {
+    private static float computeAccuracy(List<Pair<Query,QueryResult>> results) {
         logger.info("Computing accuracy");
-        long count = IntStream.range(0, results.size()).filter(i -> results.get(i).response() != null && results.get(i).query().expression().getExpr().equals(results.get(i).response().getExpr())).count();
+        long count = IntStream.range(0, results.size()).filter(i -> results.get(i).component2().response() != null && results.get(i).component1().expression().getExpr().equals(results.get(i).component2().response().getExpr())).count();
         return (float) count / results.size();
     }
 
-    private static ArrayList<QueryResult> execute(InContextLearning inContextLearning, String agent, int programLimit, List<Program> programs) throws Exception {
-        final ArrayList<QueryResult> results = new ArrayList<>();
+    private static ArrayList<Pair<Query, QueryResult>> execute(InContextLearning inContextLearning, String agent, int programLimit, List<Program> programs) throws Exception {
+        final ArrayList<Pair<Query, QueryResult>> results = new ArrayList<>();
         for (int i = 0; i < programLimit; i++) {
             AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, programs.get(i));
             logger.info(STR."Analysing program id=\{i}");
-            results.addAll(workflow.executeProgram());
+            results.addAll(workflow.executeQueries());
         }
         logger.info("Printing generated expression");
-        for (QueryResult result : results) {
-            logger.info(result.response() != null ? result.response().getExpr() : "NULL");
+        for (Pair<Query, QueryResult> result : results) {
+            logger.info(result.component2().response() != null ? result.component2().response().getExpr() : "NULL");
         }
         return results;
     }

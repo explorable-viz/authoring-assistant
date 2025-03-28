@@ -3,11 +3,10 @@ package explorableviz.transparenttext;
 import explorableviz.transparenttext.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
-import org.checkerframework.checker.units.qual.A;
+import kotlin.Pair;
 import org.json.JSONObject;
 
 import java.lang.reflect.InvocationTargetException;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -26,31 +25,29 @@ public class AuthoringAssistant {
         this.program = program;
     }
 
-    public List<QueryResult> executeProgram() throws Exception {
-        List<QueryResult> results = new ArrayList<>();
-        if (Settings.isEditorLoopEnabled()) {
-            List<Expression> computed = new ArrayList<>();
-            Optional<Query> query = program.nextQuery(computed);
-            while (query.isPresent()) {
-                results.add(execute(query.get(), (PromptList) prompts.clone()));
-                computed.add(results.getLast().response());
-                //this.prompts.addPairPrompt(query.get().toUserPrompt(), results.getLast().response().getExpr());
-                query = program.nextQuery(computed);
-
+    public List<Pair<Query, QueryResult>> executeQueries() throws Exception {
+        List<Pair<Query, QueryResult>> results = new ArrayList<>();
+        List<Expression> computed = new ArrayList<>();
+        int k = Settings.isEditorLoopEnabled() ? -1 : 0;
+        Optional<Query> query = program.nextQuery(computed, k);
+        while (query.isPresent()) {
+            results.add(execute(query.get()));
+            if (Settings.isEditorLoopEnabled()) {
+                computed.add(results.getLast().component2().response());
+            } else {
+                k++;
             }
-        } else {
-            for(Query query : program.toQueries()) {
-                results.add(execute(query, (PromptList) prompts.clone()));
-                //this.prompts.addPairPrompt(query.toUserPrompt(), results.getLast().response().getExpr());
-            }
+            query = program.nextQuery(computed, k);
         }
         return results;
     }
-    public QueryResult execute(Query query, PromptList sessionPrompts) throws Exception {
+
+    public Pair<Query, QueryResult> execute(Query query) throws Exception {
         int limit = Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
         long start = System.currentTimeMillis();
+        PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(query.toUserPrompt());
 
         for (attempts = 0; attempts <= limit; attempts++) {
@@ -65,11 +62,11 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
                 sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), errors.get()));
             } else {
-                return new QueryResult(candidate, attempts, query, System.currentTimeMillis() - start);
+                return new Pair<>(query, new QueryResult(candidate, attempts, System.currentTimeMillis() - start));
             }
         }
         logger.warning(STR."Expression validation failed after \{limit} attempts");
-        return new QueryResult(null, attempts, query, System.currentTimeMillis() - start);
+        return new Pair<>(query, new QueryResult(null, attempts, System.currentTimeMillis() - start));
     }
 
     private LLMEvaluatorAgent initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {

@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static explorableviz.transparenttext.Program.loadPrograms;
@@ -31,9 +32,12 @@ public class InContextLearning {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
         for (Program program : this.cases) {
-            List<Query> queries = program.toQueries();
-            for (Query query : queries)
-                inContextLearning.addPairPrompt(query.toUserPrompt(), query.expression().getExpr());
+            int k = 0;
+            Optional<Query> query = program.nextQuery(new ArrayList<>(), k++);
+            while (query.isPresent()) {
+                inContextLearning.addPairPrompt(query.get().toUserPrompt(), query.get().expression().getExpr());
+                query = program.nextQuery(new ArrayList<>(), k++);
+            }
         }
         return inContextLearning;
     }

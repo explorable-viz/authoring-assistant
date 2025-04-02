@@ -32,11 +32,9 @@ public class InContextLearning {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
         for (Program program : this.cases) {
-            int k = 0;
-            Optional<Query> query = program.nextQuery(new ArrayList<>(), k++);
-            while (query.isPresent()) {
-                inContextLearning.addPairPrompt(query.get().toUserPrompt(), query.get().expression().getExpr());
-                query = program.nextQuery(new ArrayList<>(), k++);
+            List<Query> queries = program.getParagraph().queries(program, new ArrayList<>());
+            for(Query query : queries) {
+                inContextLearning.addPairPrompt(query.toUserPrompt(), query.expression().getExpr());
             }
         }
         return inContextLearning;

@@ -28,16 +28,14 @@ public class AuthoringAssistant {
     public List<Pair<Query, QueryResult>> executeQueries() throws Exception {
         List<Pair<Query, QueryResult>> results = new ArrayList<>();
         List<Expression> computed = new ArrayList<>();
-        int k = Settings.isEditorLoopEnabled() ? -1 : 0;
-        Optional<Query> query = program.nextQuery(computed, k);
-        while (query.isPresent()) {
-            results.add(execute(query.get()));
-            if (Settings.isEditorLoopEnabled()) {
-                computed.add(results.getLast().component2().response());
-            } else {
-                k++;
-            }
-            query = program.nextQuery(computed, k);
+        List<Query> queries = program.getParagraph().queries(program, computed);
+        for(Query query : queries) {
+            results.add(execute(query));
+            computed.add(results.getLast().component2().response());
+            //Editor Loop
+            /*if(Settings.isEditorLoopEnabled()) {
+                queries.addAll(program.getParagraph().queries(program, computed));
+            }*/
         }
         return results;
     }

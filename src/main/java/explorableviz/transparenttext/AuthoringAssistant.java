@@ -41,12 +41,13 @@ public class AuthoringAssistant {
     }
 
     public Pair<Query, QueryResult> execute(Query query) throws Exception {
-        int limit = Settings.getLimit();
+        final int limit = Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
-        long start = System.currentTimeMillis();
-        PromptList sessionPrompts = (PromptList) prompts.clone();
+        final long start = System.currentTimeMillis();
+        final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(query.toUserPrompt());
+        final Program program = query.program();
 
         for (attempts = 0; attempts <= limit; attempts++) {
             logger.info(STR."Attempt #\{attempts}");
@@ -54,11 +55,12 @@ public class AuthoringAssistant {
             Expression candidate = (Expression) llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
             logger.info(STR."Received response: \{candidate.getExpr()}");
-            query.program().writeFluidFiles(candidate.getExpr());
-            Optional<String> errors = query.program().validate(new FluidCLI(query.program().getDatasets(), query.program().getImports()).evaluate(query.program().getFluidFileName()), query.expression());
-            if (errors.isPresent()) {
+            program.writeFluidFiles(candidate.getExpr());
+            final FluidCLI fluidCLI = new FluidCLI(program.getDatasets(), program.getImports());
+            Optional<String> error = program.validate(fluidCLI.evaluate(program.getFluidFileName()), query.expression());
+            if (error.isPresent()) {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
-                sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), errors.get()));
+                sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
             } else {
                 return new Pair<>(query, new QueryResult(candidate, attempts, System.currentTimeMillis() - start));
             }

@@ -15,6 +15,7 @@
 *.synctex(busy)
 benchmark/
 dist/
+fluid-temp/
 logs/
 node_modules
 output/

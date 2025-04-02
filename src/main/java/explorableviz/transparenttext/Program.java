@@ -81,37 +81,6 @@ public class Program {
                         i -> json_dataset.getJSONObject(i).getString("file")
                 ));
     }
-    public Optional<Query> nextQuery(List<Expression> computed, int num) {
-        Paragraph paragraph = new Paragraph();
-        Expression toCompute = null;
-        StringBuilder lit = new StringBuilder();
-        int k = 0;
-        for (TextFragment textFragment : this.paragraph) {
-            if (textFragment instanceof Literal) {
-                lit.append(STR." \{textFragment.getValue()}");
-            } else if (textFragment instanceof Expression expression) {
-                if (computed.size() > k) {
-                    //@todo If the LLM did not figure out with the expression (reached max attempts)
-                    //We can send the expected one.
-                    paragraph.add(new Literal(lit.toString()));
-                    lit = new StringBuilder();
-                    paragraph.add(computed.get(k) == null ? expression : computed.get(k));
-                } else if ((computed.size() == k && num == -1) || k == num) {
-                    paragraph.add(new Literal(lit.toString()));
-                    lit = new StringBuilder();
-                    toCompute = expression;
-                    paragraph.add(expression);
-                } else {
-                    lit.append(STR." \{textFragment.getValue()}");
-                }
-                k++;
-            }
-        }
-        paragraph.add(new Literal(lit.toString()));
-
-        return toCompute == null ? Optional.empty() : Optional.of(new Query(this, paragraph.toQueryString(), toCompute));
-    }
-
     private ArrayList<String> loadImports() throws IOException {
         ArrayList<String> loadedImports = new ArrayList<>();
         for (String path : imports) {

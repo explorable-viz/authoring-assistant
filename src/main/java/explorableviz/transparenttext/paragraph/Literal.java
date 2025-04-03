@@ -2,21 +2,23 @@ package explorableviz.transparenttext.paragraph;
 
 import explorableviz.transparenttext.variable.Variables;
 
+import java.util.Optional;
+
 import static explorableviz.transparenttext.Program.replaceVariables;
 
 public class Literal extends TextFragment {
 
-    public Literal(String value) {
+    private final Optional<SelectedRegion> selectedRegion;
+    public Literal(String value, Optional<SelectedRegion> selectedRegion) {
         super(value);
+        this.selectedRegion = selectedRegion;
     }
-
-    @Override
-    public Object clone() {
-        return new Literal(getValue());
-    }
-
     @Override
     public TextFragment replace(Variables computedVariables) {
-        return new Literal(replaceVariables(getValue(), computedVariables));
+        return new Literal(replaceVariables(getValue(), computedVariables), Optional.empty());
+    }
+
+    public Optional<SelectedRegion> getSelectedRegion() {
+        return selectedRegion;
     }
 }

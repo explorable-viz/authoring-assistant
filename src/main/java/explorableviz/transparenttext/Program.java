@@ -51,7 +51,7 @@ public class Program {
         this.paragraph = new Paragraph();
         for (int i = 0; i < paragraph.length(); i++) {
             if (paragraph.getJSONObject(i).getString("type").equals("literal")) {
-                this.paragraph.add(new Literal(paragraph.getJSONObject(i).getString("value")));
+                this.paragraph.add(new Literal(paragraph.getJSONObject(i).getString("value"), Optional.empty()));
             } else {
                 String expression = paragraph.getJSONObject(i).getString("expression");
                 writeFluidFiles(expression);

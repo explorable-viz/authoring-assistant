@@ -13,8 +13,5 @@ public abstract class TextFragment {
         return value;
     }
 
-    @Override
-    public abstract Object clone();
-
     public abstract TextFragment replace(Variables computedVariables);
 }

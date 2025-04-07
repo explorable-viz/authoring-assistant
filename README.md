@@ -66,7 +66,7 @@ where:
 - `testPath` is the path of the test cases file
 - `numTestToGenerate` is the number of test cases to generate from a single test case with variables
 - `numLearningCaseToGenerate` is the number of learning cases to generate from a single learning case with variables
-- `numQueryToExecute` is the maximum number of query which will be executed
+- `numQueryToExecute` is the maximum number of program which will be executed
 
 ### List of available agents
 

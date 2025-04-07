@@ -1,6 +1,6 @@
 {
   "name": "@explorable-viz/authoring-assistant",
-  "version": "0.1",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/explorable-viz/transparent-text.git"
@@ -22,7 +22,8 @@
     "serve": "npx http-serve dist/ar6-wg1-spm",
     "test": "./script/authoring-assistant.sh it.unisa.cluelab.lllm.llm.agents.Llama31EvaluatorAgent",
     "test-gpt4o": "./script/authoring-assistant.sh it.unisa.cluelab.lllm.llm.agents.Gpt4oEvaluationAgent",
-    "test-mock": "./script/authoring-assistant.sh explorableviz.transparenttext.llm.LLMDummyAgent"
+    "test-mock": "./script/authoring-assistant.sh explorableviz.transparenttext.llm.LLMDummyAgent",
+    "test-json-gpt": "./script/authoring-assistant.sh explorableviz.transparenttext.llm.FluidOpenAIGpt4oAgent"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "dependencies": {

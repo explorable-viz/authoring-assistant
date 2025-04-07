@@ -1,17 +1,10 @@
 package explorableviz.transparenttext.paragraph;
 
-import explorableviz.transparenttext.LiteralParts;
-import explorableviz.transparenttext.Program;
-import explorableviz.transparenttext.Query;
-import explorableviz.transparenttext.Settings;
 import kotlin.Pair;
-import org.checkerframework.checker.units.qual.A;
 
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -22,20 +15,19 @@ public class Paragraph extends ArrayList<TextFragment> {
 
     public String toString() {
         return STR."Paragraph([\{stream().map(e -> {
-            if (e instanceof Literal l && l.getSelectedRegion().isEmpty()) return STR."\"\{e.getValue()}\"";
-            if (e instanceof Literal l && l.getSelectedRegion().isPresent())
+            if (e instanceof Literal l && l.getSelectedRegion() != null)
             {
-                SelectedRegion region = l.getSelectedRegion().get();
-                return STR."\{e.getValue().substring(0, region.getStart())} [REPLACE]\{e.getValue().substring(region.getEnd())}";
+                return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE]\{e.getValue().substring(l.getSelectedRegion().end())}";
             }
-            if (e instanceof Expression) return (STR."Text (\{((Expression) e).getExpr()})");
+            else if (e instanceof Literal) return STR."\"\{e.getValue()}\"";
+            else if (e instanceof Expression) return (STR."Text (\{((Expression) e).getExpr()})");
             throw new RuntimeException("Error, it is possible to have only String, Expression or SelectedLiteral element");
         }).collect(Collectors.joining(","))}])";
     }
 
-    public List<Query> queries(Program program, List<Expression> computed) {
-        int nQueries = (int) stream().filter(Expression.class::isInstance).count() - computed.size();
-        return IntStream.range(0, nQueries)
+    public List<Pair<Expression,Paragraph>> programs(List<Expression> computed) {
+        int nPrograms = (int) stream().filter(Expression.class::isInstance).count() - computed.size();
+        return IntStream.range(0, nPrograms)
                 .mapToObj(i -> {
                     Paragraph p = new Paragraph();
                     Expression toCompute = null;
@@ -48,7 +40,7 @@ public class Paragraph extends ArrayList<TextFragment> {
                         } else if (element instanceof Expression expression) {
                             if (exprCount < computed.size()) {
                                 Expression computedExpr = computed.get(exprCount);
-                                p.add(new Literal(literalBuilder.toString(), Optional.empty()));
+                                p.add(new Literal(literalBuilder.toString(), null));
                                 literalBuilder.setLength(0);
                                 //@todo maybe the value?
                                 p.add(computedExpr != null ? computedExpr : expression);
@@ -63,9 +55,8 @@ public class Paragraph extends ArrayList<TextFragment> {
                             exprCount++;
                         }
                     }
-                    Literal finalLiteral = new Literal(literalBuilder.toString(), Optional.of(new SelectedRegion(replaceStart, replaceEnd)));
-                    p.add(finalLiteral);
-                    return new Query(program, p.toString(), toCompute);
+                    p.add(new Literal(literalBuilder.toString(), new Literal.SelectedRegion(replaceStart, replaceEnd)));
+                    return new Pair<>(toCompute, p);
                 })
                 .toList();
     }

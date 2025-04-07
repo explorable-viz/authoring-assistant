@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
-
+import explorableviz.transparenttext.Program.ProgramResult;
 public class AuthoringAssistant {
 
     public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
@@ -25,48 +25,43 @@ public class AuthoringAssistant {
         this.program = program;
     }
 
-    public List<Pair<Query, QueryResult>> executeQueries() throws Exception {
-        List<Pair<Query, QueryResult>> results = new ArrayList<>();
+    public List<Pair<Program, ProgramResult>> executeQueries() throws Exception {
+        List<Pair<Program, ProgramResult>> results = new ArrayList<>();
         List<Expression> computed = new ArrayList<>();
-        List<Query> queries = program.getParagraph().queries(program, computed);
-        for(Query query : queries) {
-            results.add(execute(query));
+        List<Program> programs = program.programs(computed);
+        for(Program p : programs) {
+            results.add(execute(p));
             computed.add(results.getLast().component2().response());
-            //Editor Loop
-            /*if(Settings.isEditorLoopEnabled()) {
-                queries.addAll(program.getParagraph().queries(program, computed));
-            }*/
         }
         return results;
     }
 
-    public Pair<Query, QueryResult> execute(Query query) throws Exception {
+    public Pair<Program, ProgramResult> execute(Program program) throws Exception {
         final int limit = Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
         final long start = System.currentTimeMillis();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
-        sessionPrompts.addUserPrompt(query.toUserPrompt());
-        final Program program = query.program();
+        sessionPrompts.addUserPrompt(program.toUserPrompt());
 
         for (attempts = 0; attempts <= limit; attempts++) {
             logger.info(STR."Attempt #\{attempts}");
-            // Send the query to the LLM to be processed
+            // Send the program to the LLM to be processed
             Expression candidate = (Expression) llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
             logger.info(STR."Received response: \{candidate.getExpr()}");
-            program.writeFluidFiles(candidate.getExpr());
+            //program.writeFluidFiles(candidate.getExpr());
             final FluidCLI fluidCLI = new FluidCLI(program.getDatasets(), program.getImports());
-            Optional<String> error = program.validate(fluidCLI.evaluate(program.getFluidFileName()), query.expression());
+            Optional<String> error = program.validate(fluidCLI.evaluate(program.getFluidFileName()), program.getToCompute());
             if (error.isPresent()) {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
                 sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
             } else {
-                return new Pair<>(query, new QueryResult(candidate, attempts, System.currentTimeMillis() - start));
+                return new Pair<>(program, new ProgramResult(candidate, attempts, System.currentTimeMillis() - start));
             }
         }
         logger.warning(STR."Expression validation failed after \{limit} attempts");
-        return new Pair<>(query, new QueryResult(null, attempts, System.currentTimeMillis() - start));
+        return new Pair<>(program, new ProgramResult(null, attempts, System.currentTimeMillis() - start));
     }
 
     private LLMEvaluatorAgent initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {

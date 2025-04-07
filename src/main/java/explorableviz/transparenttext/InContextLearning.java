@@ -28,13 +28,13 @@ public class InContextLearning {
         return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
     }
 
-    public PromptList toPromptList() {
+    public PromptList toPromptList() throws IOException {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
         for (Program program : this.cases) {
-            List<Query> queries = program.getParagraph().queries(program, new ArrayList<>());
-            for(Query query : queries) {
-                inContextLearning.addPairPrompt(query.toUserPrompt(), query.expression().getExpr());
+            List<Program> subPrograms = program.programs(new ArrayList<>());
+            for(Program subProgram : subPrograms) {
+                inContextLearning.addPairPrompt(subProgram.toUserPrompt(), subProgram.getToCompute().getExpr());
             }
         }
         return inContextLearning;

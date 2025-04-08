@@ -4,7 +4,6 @@ import kotlin.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -25,39 +24,67 @@ public class Paragraph extends ArrayList<TextFragment> {
         }).collect(Collectors.joining(","))}])";
     }
 
-    public List<Pair<Expression,Paragraph>> programs(List<Expression> computed) {
-        int nPrograms = (int) stream().filter(Expression.class::isInstance).count() - computed.size();
-        return IntStream.range(0, nPrograms)
-                .mapToObj(i -> {
-                    Paragraph p = new Paragraph();
-                    Expression toCompute = null;
-                    int exprCount = 0;
-                    StringBuilder literalBuilder = new StringBuilder();
-                    int replaceStart = -1, replaceEnd = -1;
-                    for (TextFragment element : this) {
-                        if (element instanceof Literal literal) {
-                            literalBuilder.append(STR." \{literal.getValue()}");
-                        } else if (element instanceof Expression expression) {
-                            if (exprCount < computed.size()) {
-                                Expression computedExpr = computed.get(exprCount);
-                                p.add(new Literal(literalBuilder.toString(), null));
-                                literalBuilder.setLength(0);
-                                //@todo maybe the value?
-                                p.add(computedExpr != null ? computedExpr : expression);
-                            } else if (exprCount == computed.size() + i) {
-                                replaceStart = literalBuilder.toString().length();
-                                literalBuilder.append(STR." \{expression.getValue()}");
-                                replaceEnd = literalBuilder.toString().length();
-                                toCompute = expression;
-                            } else {
-                                literalBuilder.append(STR." \{expression.getValue()}");
-                            }
-                            exprCount++;
-                        }
-                    }
-                    p.add(new Literal(literalBuilder.toString(), new Literal.SelectedRegion(replaceStart, replaceEnd)));
-                    return new Pair<>(toCompute, p);
-                })
+    public List<Pair<Expression, Paragraph>> testParagraphs(Paragraph referenceTemplate) {
+        final int numComputedExpr;
+        if (referenceTemplate == this) {
+            numComputedExpr = 0;
+        } else {
+            numComputedExpr = countExpressions(this);
+        }
+        return IntStream.range(0, countExpressions(referenceTemplate) - numComputedExpr)
+                .mapToObj(i -> buildParagraph(referenceTemplate, numComputedExpr, i))
                 .toList();
+    }
+
+    private int countExpressions(Paragraph paragraph) {
+        return (int) paragraph.stream().filter(Expression.class::isInstance).count();
+    }
+
+    private Pair<Expression, Paragraph> buildParagraph(Paragraph template, int numComputedExpr, int index) {
+        Paragraph p = new Paragraph();
+        Expression toCompute = null;
+        int exprCount = 0;
+        StringBuilder literalBuilder = new StringBuilder();
+        int replaceStart = -1, replaceEnd = -1;
+
+        for (int k = 0; k < template.size(); k++) {
+            var element = template.get(k);
+
+            if (element instanceof Literal literal) {
+                literalBuilder.append(" ").append(literal.getValue());
+            } else if (element instanceof Expression expression) {
+                if (exprCount < numComputedExpr) {
+                    Expression computedExpr = (Expression) this.get(k);
+                    p.add(new Literal(literalBuilder.toString(), null));
+                    literalBuilder.setLength(0);
+                    p.add(computedExpr != null ? computedExpr : expression);
+                } else if (exprCount == numComputedExpr + index) {
+                    replaceStart = literalBuilder.length();
+                    literalBuilder.append(" ").append(expression.getValue());
+                    replaceEnd = literalBuilder.length();
+                    toCompute = expression;
+                } else {
+                    literalBuilder.append(" ").append(expression.getValue());
+                }
+                exprCount++;
+            }
+        }
+
+        p.add(new Literal(literalBuilder.toString(), new Literal.SelectedRegion(replaceStart, replaceEnd)));
+        return new Pair<>(toCompute, p);
+    }
+
+    public Paragraph splice(Expression expression) {
+        Paragraph p = new Paragraph();
+        for (TextFragment t : this) {
+            if(t instanceof Literal l && l.getSelectedRegion() != null) {
+                p.add(new Literal(t.getValue().substring(0, l.getSelectedRegion().start()), null));
+                p.add(expression);
+                p.add(new Literal(t.getValue().substring(l.getSelectedRegion().end()), null));
+            } else {
+                p.add(t);
+            }
+        }
+        return p;
     }
 }

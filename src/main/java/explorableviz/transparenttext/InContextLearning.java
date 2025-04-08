@@ -32,7 +32,7 @@ public class InContextLearning {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
         for (Program program : this.cases) {
-            List<Program> subPrograms = program.programs(new ArrayList<>());
+            List<Program> subPrograms = program.programs(program);
             for(Program subProgram : subPrograms) {
                 inContextLearning.addPairPrompt(subProgram.toUserPrompt(), subProgram.getToCompute().getExpr());
             }

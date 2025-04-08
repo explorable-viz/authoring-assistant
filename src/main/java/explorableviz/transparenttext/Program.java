@@ -3,6 +3,7 @@ package explorableviz.transparenttext;
 import explorableviz.transparenttext.paragraph.Expression;
 import explorableviz.transparenttext.paragraph.Literal;
 import explorableviz.transparenttext.paragraph.Paragraph;
+import explorableviz.transparenttext.paragraph.TextFragment;
 import explorableviz.transparenttext.variable.ValueOptions;
 import explorableviz.transparenttext.variable.Variables;
 import kotlin.Pair;
@@ -174,12 +175,13 @@ public class Program {
         return paragraph;
     }
 
-    public List<Program> programs(List<Expression> computed) throws IOException {
-        List<Pair<Expression,Paragraph>> paragraphsToCompute = paragraph.programs(computed);
+    public List<Program> programs(Program template) throws IOException {
+        List<Pair<Expression,Paragraph>> paragraphsToCompute = paragraph.testParagraphs(template.paragraph);
         List<Program> programs = new ArrayList<>();
         for(Pair<Expression,Paragraph> p : paragraphsToCompute) {
             programs.add(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName, p.getFirst()));
         }
+        //togliere computed e passare lo stato del programma e il template
         return programs;
     }
 
@@ -203,7 +205,6 @@ public class Program {
             }
         }
     }
-
     public String toUserPrompt() {
         JSONObject object = new JSONObject();
         object.put("datasets", get_loadedDatasets());
@@ -235,6 +236,11 @@ public class Program {
 
     public Paragraph getParagraph() {
         return paragraph;
+    }
+
+    public void replaceParagraph(Paragraph paragraph) {
+        this.paragraph.clear();
+        this.paragraph.addAll(paragraph);
     }
 
     public String getTestCaseFileName() {

@@ -90,7 +90,7 @@ public class Main {
         for (int i = 0; i < programLimit; i++) {
             AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, programs.get(i));
             logger.info(STR."Analysing program id=\{i}");
-            results.addAll(workflow.executeQueries());
+            results.addAll(workflow.executePrograms());
         }
         logger.info("Printing generated expression");
         for (Pair<Program, ProgramResult> result : results) {

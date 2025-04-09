@@ -20,7 +20,7 @@ public class Paragraph extends ArrayList<TextFragment> {
             }
             else if (e instanceof Literal) return STR."\"\{e.getValue()}\"";
             else if (e instanceof Expression) return (STR."Text (\{((Expression) e).getExpr()})");
-            throw new RuntimeException("Error, it is possible to have only String, Expression or SelectedLiteral element");
+            throw new RuntimeException("Error, it is possible to have only String, Expression element");
         }).collect(Collectors.joining(","))}])";
     }
 
@@ -78,6 +78,7 @@ public class Paragraph extends ArrayList<TextFragment> {
         Paragraph p = new Paragraph();
         for (TextFragment t : this) {
             if(t instanceof Literal l && l.getSelectedRegion() != null) {
+                //@todo special cases - if the literal.lenght =0 - skip
                 p.add(new Literal(t.getValue().substring(0, l.getSelectedRegion().start()), null));
                 p.add(expression);
                 p.add(new Literal(t.getValue().substring(l.getSelectedRegion().end()), null));

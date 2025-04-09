@@ -10,7 +10,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.logging.Logger;
 import explorableviz.transparenttext.Program.ProgramResult;
 public class AuthoringAssistant {
@@ -26,7 +25,7 @@ public class AuthoringAssistant {
         this.templateProgram = templateProgram;
     }
 
-    public List<Pair<Program, ProgramResult>> executeQueries() throws Exception {
+    public List<Pair<Program, ProgramResult>> executePrograms() throws Exception {
         List<Pair<Program, ProgramResult>> results = new ArrayList<>();
         List<Program> subPrograms = templateProgram.programs(templateProgram);
         int i = 0;
@@ -50,7 +49,6 @@ public class AuthoringAssistant {
         final long start = System.currentTimeMillis();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
-
         for (attempts = 0; attempts <= limit; attempts++) {
             logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed

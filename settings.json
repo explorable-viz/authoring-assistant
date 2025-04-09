@@ -19,10 +19,10 @@
   "split-multiple-replace-tag": true,
   "add-expected-value": false,
   "learning-case-folder": "learningCases",
-  "enable-editor-loop": true,
-  "test-case-folder": "testCases/",
+  "enable-editor-loop": false,
+  "test-case-folder": "testCases/scigen-multiple-replace",
   "threshold": 0.0,
   "system-prompt-path":"system-prompt/",
   "num-test-to-generate":1,
-  "num-learning-case-to-generate": 1
+  "num-learning-case-to-generate": 0
 }

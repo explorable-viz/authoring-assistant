@@ -58,19 +58,21 @@ public class Main {
             out.println(String.join(";", headers));
             String content = results.stream()
                     .map(result -> {
+                        Program program = result.component1();
+                        ProgramResult programResult = result.component2();
                         String[] values = {
                                 result.component1().getTestCaseFileName(),
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
                                 String.valueOf(learningContextSize),
-                                result.component1().getParagraph().toString(),
-                                String.valueOf(result.component2().attempt()),
-                                result.component2().response() != null ? "OK" : "KO",
-                                String.valueOf(result.component2().response() != null ? result.component2().response().getExpr() : "NULL"),
-                                result.component1().getToCompute().getExpr(),
-                                result.component1().getToCompute().getValue(),
-                                String.valueOf(result.component2().duration())
+                                program.getParagraph().toString(),
+                                String.valueOf(programResult.attempt()),
+                                programResult.response() != null ? "OK" : "KO",
+                                String.valueOf(programResult.response() != null ? programResult.response().getExpr() : "NULL"),
+                                program.getToCompute().getExpr(),
+                                program.getToCompute().getValue(),
+                                String.valueOf(programResult.duration())
                         };
                         return String.join(";", Arrays.stream(values).map(s -> STR."\"\{s}\"").toList());
                     })

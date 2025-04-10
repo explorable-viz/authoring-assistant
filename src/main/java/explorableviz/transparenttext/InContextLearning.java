@@ -31,10 +31,10 @@ public class InContextLearning {
     public PromptList toPromptList() throws IOException {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
-        for (Program program : this.cases) {
-            List<Program> subPrograms = program.programs(program);
-            for(Program subProgram : subPrograms) {
-                inContextLearning.addPairPrompt(subProgram.toUserPrompt(), subProgram.getToCompute().getExpr());
+        for (Program initialStatesFromTemplate : this.cases) {
+            List<Program> initialProgramStates = initialStatesFromTemplate.programs(initialStatesFromTemplate);
+            for(Program initialProgramState : initialProgramStates) {
+                inContextLearning.addPairPrompt(initialProgramState.toUserPrompt(), initialProgramState.getToCompute().getExpr());
             }
         }
         return inContextLearning;

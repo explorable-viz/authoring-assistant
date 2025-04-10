@@ -3,7 +3,6 @@ package explorableviz.transparenttext;
 import explorableviz.transparenttext.paragraph.Expression;
 import explorableviz.transparenttext.paragraph.Literal;
 import explorableviz.transparenttext.paragraph.Paragraph;
-import explorableviz.transparenttext.paragraph.TextFragment;
 import explorableviz.transparenttext.variable.ValueOptions;
 import explorableviz.transparenttext.variable.Variables;
 import kotlin.Pair;
@@ -11,6 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
@@ -33,12 +33,11 @@ public class Program {
     private final ArrayList<String> _loadedImports;
     private final String code;
     private final Paragraph paragraph;
-    private final Expression toCompute;
     private final Map<String, String> _loadedDatasets;
     private final String testCaseFileName;
     private static final String fluidFileName = "llmTest";
 
-    public Program(Paragraph paragraph, Map<String,String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, Expression toCompute) throws IOException {
+    public Program(Paragraph paragraph, Map<String,String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName) throws IOException {
         this.datasets = datasets;
         this._loadedDatasets = loadedDataset;
         this.code = code;
@@ -46,7 +45,6 @@ public class Program {
         this.imports = imports;
         this._loadedImports = loadImports(imports);
         this.paragraph = paragraph;
-        this.toCompute = toCompute;
     }
 
     private static HashMap<String, String> loadDatasetsFiles(Map<String,String> datasetMapping, Variables variables) throws IOException {
@@ -142,27 +140,26 @@ public class Program {
                         .toList();
                 String code = replaceVariables(Files.readString(Path.of(STR."\{casePath}.fld")), variables);
                 programs.add(new Program(
-                        generateParagraph(testCase.getJSONArray("paragraph"), datasetMapping, variables, imports, code, casePaths),
+                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasetMapping, variables, imports, code, casePaths),
                         datasetMapping,
                         imports,
                         code,
                         loadDatasetsFiles(datasetMapping, variables),
-                        casePath,
-                        new Expression(null, null)
+                        casePath
                 ));
             }
         }
         return programs;
     }
 
-    private static Paragraph generateParagraph(JSONArray json_paragraph, Map<String, String> datasetMapping, Variables.Flat variables, List<String> imports, String code, Set<String> casePaths) throws IOException {
+    private static Paragraph paragraphFromJSON(JSONArray json_paragraph, Map<String, String> datasetMapping, Variables.Flat variables, List<String> imports, String code, Set<String> casePaths) throws IOException {
         Paragraph paragraph = new Paragraph();
         for (int i = 0; i < json_paragraph.length(); i++) {
             if (json_paragraph.getJSONObject(i).getString("type").equals("literal")) {
                 paragraph.add(new Literal(json_paragraph.getJSONObject(i).getString("value"), null));
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
-                writeFluidFiles(expression, datasetMapping, loadDatasetsFiles(datasetMapping, variables), imports, loadImports(imports), code);
+                writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping, loadDatasetsFiles(datasetMapping, variables), imports, loadImports(imports), code);
                 String commandLineResult = new FluidCLI(datasetMapping, imports).evaluate(fluidFileName);
                 Expression candidate = new Expression(expression, extractValue(commandLineResult));
                 paragraph.add(candidate);
@@ -174,32 +171,32 @@ public class Program {
         return paragraph;
     }
 
-    public List<Program> programs(Program template) throws IOException {
+    public List<Pair<Program, Expression>> programs(Program template) throws IOException {
         List<Pair<Expression,Paragraph>> paragraphsToCompute = paragraph.testParagraphs(template.paragraph);
-        List<Program> programs = new ArrayList<>();
+        List<Pair<Program, Expression>> programs = new ArrayList<>();
         for(Pair<Expression,Paragraph> p : paragraphsToCompute) {
-            programs.add(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName, p.getFirst()));
+            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName), p.getFirst()));
         }
         //togliere computed e passare lo stato del programma e il template
         return programs;
     }
 
-    public static void writeFluidFiles(String response, Map<String, String> datasets, Map<String, String> loadedDatasets, List<String> imports, List<String> loadedImports,  String code) throws IOException {
-        Files.createDirectories(Paths.get(Settings.getFluidTempFolder()));
+    public static void writeFluidFiles(String basePath, String fluidFileName, String response, Map<String, String> datasets, Map<String, String> loadedDatasets, List<String> imports, List<String> loadedImports,  String code) throws IOException {
+        Files.createDirectories(Paths.get(basePath));
         //Write temp fluid file
-        try (PrintWriter out = new PrintWriter(STR."\{Settings.getFluidTempFolder()}/\{fluidFileName}.fld")) {
+        try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}.fld")) {
             out.println(code);
             out.println(response);
         }
         for (int i = 0; i < loadedImports.size(); i++) {
-            Files.createDirectories(Paths.get(STR."\{Settings.getFluidTempFolder()}/\{imports.get(i)}.fld").getParent());
-            try (PrintWriter outData = new PrintWriter(STR."\{Settings.getFluidTempFolder()}/\{imports.get(i)}.fld")) {
+            Files.createDirectories(Paths.get(STR."\{basePath}/\{imports.get(i)}.fld").getParent());
+            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{imports.get(i)}.fld")) {
                 outData.println(loadedImports.get(i));
             }
         }
         for (Map.Entry<String, String> dataset : datasets.entrySet()) {
-            Files.createDirectories(Paths.get(STR."\{Settings.getFluidTempFolder()}/\{dataset.getValue()}.fld").getParent());
-            try (PrintWriter outData = new PrintWriter(STR."\{Settings.getFluidTempFolder()}/\{dataset.getValue()}.fld")) {
+            Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset.getValue()}.fld").getParent());
+            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset.getValue()}.fld")) {
                 outData.println(loadedDatasets.get(dataset.getKey()));
             }
         }
@@ -249,9 +246,6 @@ public class Program {
     public String getFluidFileName() {
         return fluidFileName;
     }
-    public Expression getToCompute() {
-        return toCompute;
-    }
+    public record ProgramResult(Expression response, Expression expected, int attempt, long duration) {}
 
-    public record ProgramResult(Expression response, int attempt, long duration) {}
 }

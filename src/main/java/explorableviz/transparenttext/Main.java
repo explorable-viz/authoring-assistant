@@ -32,7 +32,7 @@ public class Main {
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.getNumTestToGenerate());
             final int queryLimit = Settings.getNumQueryToExecute().orElseGet(programs::size);
             final ArrayList<Pair<Program, ProgramResult>> results = execute(inContextLearning, agent, queryLimit, programs);
-            float accuracy = computeAccuracy(results);
+            float accuracy = computeExactMatch(results);
             writeLog(results, agent, inContextLearning.size());
             if (accuracy >= Settings.getThreshold()) {
                 System.out.println(STR."Accuracy OK =\{accuracy}");
@@ -70,8 +70,8 @@ public class Main {
                                 String.valueOf(programResult.attempt()),
                                 programResult.response() != null ? "OK" : "KO",
                                 String.valueOf(programResult.response() != null ? programResult.response().getExpr() : "NULL"),
-                                program.getToCompute().getExpr(),
-                                program.getToCompute().getValue(),
+                                programResult.expected().getExpr(),
+                                programResult.expected().getValue(),
                                 String.valueOf(programResult.duration())
                         };
                         return String.join(";", Arrays.stream(values).map(s -> STR."\"\{s}\"").toList());
@@ -81,9 +81,9 @@ public class Main {
         }
     }
 
-    private static float computeAccuracy(List<Pair<Program, ProgramResult>> results) {
+    private static float computeExactMatch(List<Pair<Program, ProgramResult>> results) {
         logger.info("Computing accuracy");
-        long count = IntStream.range(0, results.size()).filter(i -> results.get(i).component2().response() != null && results.get(i).component1().getToCompute().getExpr().equals(results.get(i).component2().response().getExpr())).count();
+        long count = IntStream.range(0, results.size()).filter(i -> results.get(i).component2().response() != null && results.get(i).component2().expected().getExpr().equals(results.get(i).component2().response().getExpr())).count();
         return (float) count / results.size();
     }
 

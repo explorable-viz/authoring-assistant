@@ -27,26 +27,31 @@ public class AuthoringAssistant {
 
     public List<Pair<Program, ProgramResult>> executePrograms() throws Exception {
         List<Pair<Program, ProgramResult>> results = new ArrayList<>();
-        List<Program> subPrograms = templateProgram.programs(templateProgram);
+        List<Pair<Program, Expression>> subTests = templateProgram.programs(templateProgram);
         int i = 0;
-        while (i < subPrograms.size()) {
-            Program p = subPrograms.get(i);
-            ProgramResult result = execute(p);
-            p.replaceParagraph(p.getParagraph().splice(result.response() == null ? p.getToCompute() : result.response()));
-            results.add(new Pair<>(p, result));
+        while (!subTests.isEmpty()) {
+            Pair<Program, Expression> subTest = subTests.get(i);
+            Program subProgram = subTest.component1();
+            ProgramResult result = execute(subTest);
+
+            subProgram.replaceParagraph(subProgram.getParagraph().splice(result.response() == null ? subTest.component2() : result.response()));
+            results.add(new Pair<>(subProgram, result));
             if(Settings.isEditorLoopEnabled()) {
-                subPrograms.addAll(p.programs(templateProgram));
+                subTests.addAll(subProgram.programs(templateProgram));
+            } else {
+                subTests = subProgram.programs(templateProgram);
             }
-            i++;
         }
         return results;
     }
 
-    public ProgramResult execute(Program subProgram) throws Exception {
+    public ProgramResult execute(Pair<Program, Expression> test) throws Exception {
         final int limit = Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
         final long start = System.currentTimeMillis();
+        Program subProgram = test.component1();
+        Expression expected = test.component2();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         for (attempts = 0; attempts <= limit; attempts++) {
@@ -57,16 +62,16 @@ public class AuthoringAssistant {
             logger.info(STR."Received response: \{candidate.getExpr()}");
             //program.writeFluidFiles(candidate.getExpr());
             final FluidCLI fluidCLI = new FluidCLI(subProgram.getDatasets(), subProgram.getImports());
-            Optional<String> error = Program.validate(fluidCLI.evaluate(subProgram.getFluidFileName()), subProgram.getToCompute());
+            Optional<String> error = Program.validate(fluidCLI.evaluate(subProgram.getFluidFileName()), expected);
             if (error.isPresent()) {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
                 sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
             } else {
-                return new ProgramResult(candidate, attempts, System.currentTimeMillis() - start);
+                return new ProgramResult(candidate, expected, attempts, System.currentTimeMillis() - start);
             }
         }
         logger.warning(STR."Expression validation failed after \{limit} attempts");
-        return new ProgramResult(null, attempts, System.currentTimeMillis() - start);
+        return new ProgramResult(null, expected, attempts, System.currentTimeMillis() - start);
     }
 
     private LLMEvaluatorAgent initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {

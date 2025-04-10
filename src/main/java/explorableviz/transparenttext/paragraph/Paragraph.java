@@ -82,10 +82,11 @@ public class Paragraph extends ArrayList<TextFragment> {
         Paragraph p = new Paragraph();
         for (TextFragment t : this) {
             if(t instanceof Literal l && l.getSelectedRegion() != null) {
-                //@todo special cases - if the literal.lenght =0 - skip
-                p.add(new Literal(t.getValue().substring(0, l.getSelectedRegion().start()), null));
+                Literal start = new Literal(t.getValue().substring(0, l.getSelectedRegion().start()), null);
+                if(!start.getValue().isEmpty()) p.add(start);
                 p.add(expression);
-                p.add(new Literal(t.getValue().substring(l.getSelectedRegion().end()), null));
+                Literal end = new Literal(t.getValue().substring(l.getSelectedRegion().end()), null);
+                if(!end.getValue().isEmpty()) p.add(end);
             } else {
                 p.add(t);
             }

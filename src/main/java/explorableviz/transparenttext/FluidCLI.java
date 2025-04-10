@@ -26,7 +26,7 @@ public class FluidCLI {
     private String buildCommand(String fluidFileName) {
         StringBuilder command = new StringBuilder();
 
-        command.append("yarn fluid evaluate -l -p \"")
+        command.append(STR."yarn fluid evaluate -l -p \"")
                 .append(Settings.getFluidTempFolder())
                 .append("/\" -f ")
                 .append(fluidFileName);
@@ -44,16 +44,17 @@ public class FluidCLI {
     }
 
     private String executeCommand(String command) throws IOException, InterruptedException {
-        String os = System.getProperty("os.name").toLowerCase();
         ProcessBuilder processBuilder;
-        if (os.contains("win")) {
+        if (isWindows()) {
             processBuilder = new ProcessBuilder("cmd.exe", "/c", command);
         } else {
             processBuilder = new ProcessBuilder("/bin/bash", "-c", command);
         }
         processBuilder.redirectErrorStream(true);
         Process process = processBuilder.start();
-        return new String(process.getInputStream().readAllBytes());
+        String output = new String(process.getInputStream().readAllBytes());
+        FileUtils.deleteDirectory(new File(Settings.getFluidTempFolder()));
+        return output;
     }
 
     public String evaluate(String fluidFileName) {
@@ -62,5 +63,9 @@ public class FluidCLI {
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException("Error during the execution of the fluid evaluate command", e);
         }
+    }
+
+    public static boolean isWindows() {
+        return System.getProperty("os.name").toLowerCase().contains("win");
     }
 }

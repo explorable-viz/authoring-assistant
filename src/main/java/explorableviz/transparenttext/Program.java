@@ -83,8 +83,7 @@ public class Program {
         if (outputLines.length < 2) {
             throw new RuntimeException("Output format is invalid");
         }
-        int index = System.getProperty("os.name").toLowerCase().contains("win") ? 2 : 1;
-        return outputLines[index].replaceAll("^\"|\"$", "");
+        return outputLines[FluidCLI.isWindows() ? 2 : 1].replaceAll("^\"|\"$", "");
     }
 
     public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {

@@ -1,7 +1,5 @@
 package explorableviz.transparenttext.paragraph;
 
-import explorableviz.transparenttext.variable.Variables;
-
 public abstract class TextFragment {
     private final String value;
 
@@ -13,5 +11,4 @@ public abstract class TextFragment {
         return value;
     }
 
-    public abstract TextFragment replace(Variables computedVariables);
 }

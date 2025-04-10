@@ -21,7 +21,4 @@ public class Expression extends TextFragment {
         return new Expression(expr, getValue());
     }
 
-    public TextFragment replace(Variables computedVariables) {
-        return new Expression(replaceVariables(expr, computedVariables), getValue());
-    }
 }

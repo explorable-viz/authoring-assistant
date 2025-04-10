@@ -18,21 +18,25 @@ public class Paragraph extends ArrayList<TextFragment> {
             {
                 return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE]\{e.getValue().substring(l.getSelectedRegion().end())}";
             }
-            else if (e instanceof Literal) return STR."\"\{e.getValue()}\"";
-            else if (e instanceof Expression) return (STR."Text (\{((Expression) e).getExpr()})");
+            else if (e instanceof Literal) return STR."Text \"\{e.getValue()} \"";
+            else if (e instanceof Expression) {
+                if(e.getValue().matches("-?\\d+(\\.\\d+)?"))
+                    return (STR."Text(numToStr(\{((Expression) e).getExpr()}))");
+                else
+                    return (STR."Text(\{((Expression) e).getExpr()})");
+            }
             throw new RuntimeException("Error, it is possible to have only String, Expression element");
         }).collect(Collectors.joining(","))}])";
     }
-
-    public List<Pair<Expression, Paragraph>> testParagraphs(Paragraph referenceTemplate) {
+    public List<Pair<Expression, Paragraph>> testParagraphs(Paragraph template) {
         final int numComputedExpr;
-        if (referenceTemplate == this) {
+        if (template == this) {
             numComputedExpr = 0;
         } else {
             numComputedExpr = countExpressions(this);
         }
-        return IntStream.range(0, countExpressions(referenceTemplate) - numComputedExpr)
-                .mapToObj(i -> buildParagraph(referenceTemplate, numComputedExpr, i))
+        return IntStream.range(0, countExpressions(template) - numComputedExpr)
+                .mapToObj(i -> testParagraph(template, numComputedExpr, i))
                 .toList();
     }
 
@@ -40,7 +44,7 @@ public class Paragraph extends ArrayList<TextFragment> {
         return (int) paragraph.stream().filter(Expression.class::isInstance).count();
     }
 
-    private Pair<Expression, Paragraph> buildParagraph(Paragraph template, int numComputedExpr, int index) {
+    private Pair<Expression, Paragraph> testParagraph(Paragraph template, int numComputedExpr, int index) {
         Paragraph p = new Paragraph();
         Expression toCompute = null;
         int exprCount = 0;

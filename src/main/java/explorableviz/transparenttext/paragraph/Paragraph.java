@@ -1,5 +1,6 @@
 package explorableviz.transparenttext.paragraph;
 
+import explorableviz.transparenttext.Settings;
 import kotlin.Pair;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class Paragraph extends ArrayList<TextFragment> {
         return STR."Paragraph([\{stream().map(e -> {
             if (e instanceof Literal l && l.getSelectedRegion() != null)
             {
-                return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE]\{e.getValue().substring(l.getSelectedRegion().end())}";
+                return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue()}\"" : ""}]\{e.getValue().substring(l.getSelectedRegion().end())}";
             }
             else if (e instanceof Literal) return STR."Text \"\{e.getValue()} \"";
             else if (e instanceof Expression) {

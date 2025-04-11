@@ -18,7 +18,7 @@ public class AuthoringAssistant {
 
     public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
     private final PromptList prompts;
-    private final LLMEvaluatorAgent llm;
+    private final LLMEvaluatorAgent<Expression> llm;
     private final Program templateProgram;
 
     public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram) throws Exception {
@@ -40,6 +40,7 @@ public class AuthoringAssistant {
             programEdit.replaceParagraph(programEdit.getParagraph().splice(result.response() == null ? individualEdit.component2() : result.response()));
             results.add(new Pair<>(programEdit, result));
             programEdits = programEdit.asIndividualEdits(templateProgram);
+            programEdit.toWebsite();
         }
         return results;
     }
@@ -56,7 +57,7 @@ public class AuthoringAssistant {
         for (attempts = 0; attempts <= limit; attempts++) {
             logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed
-            Expression candidate = (Expression) llm.evaluate(sessionPrompts, "");
+            Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
             logger.info(STR."Received response: \{candidate.getExpr()}");
             //program.writeFluidFiles(candidate.getExpr());
@@ -73,11 +74,11 @@ public class AuthoringAssistant {
         return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start);
     }
 
-    private LLMEvaluatorAgent initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    private LLMEvaluatorAgent<Expression> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         logger.info(STR."Initializing agent: \{agentClassName}");
-        LLMEvaluatorAgent llmAgent;
+        LLMEvaluatorAgent<Expression> llmAgent;
         Class<?> agentClass = Class.forName(agentClassName);
-        llmAgent = (LLMEvaluatorAgent) agentClass
+        llmAgent = (LLMEvaluatorAgent<Expression>) agentClass
                 .getDeclaredConstructor(JSONObject.class)
                 .newInstance(Settings.getSettings());
 

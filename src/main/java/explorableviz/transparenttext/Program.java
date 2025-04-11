@@ -182,6 +182,7 @@ public class Program {
 
     public static void writeFluidFiles(String basePath, String fluidFileName, String response, Map<String, String> datasets, Map<String, String> loadedDatasets, List<String> imports, List<String> loadedImports,  String code) throws IOException {
         Files.createDirectories(Paths.get(basePath));
+        Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}"));
         //Write temp fluid file
         try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}.fld")) {
             out.println(code);

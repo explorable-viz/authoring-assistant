@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
 
-public class LLMDummyAgent extends LLMEvaluatorAgent {
+public class LLMDummyAgent extends LLMEvaluatorAgent<Expression> {
     public static Logger logger = Logger.getLogger(LLMDummyAgent.class.getName());
     public LLMDummyAgent(JSONObject settings) {
         super(settings);

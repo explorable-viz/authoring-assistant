@@ -8,6 +8,7 @@ import com.theokanning.openai.service.FunctionExecutor;
 import com.theokanning.openai.service.OpenAiService;
 import explorableviz.transparenttext.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.agents.Gpt4oEvaluationAgent;
+import it.unisa.cluelab.lllm.llm.agents.generic.OpenAIEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.Prompt;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
@@ -16,10 +17,12 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
 
-public class FluidOpenAIGpt4oAgent extends Gpt4oEvaluationAgent {
+public class FluidOpenAIGpt4oAgent extends OpenAIEvaluatorAgent<Expression> {
     public FluidOpenAIGpt4oAgent(JSONObject setttings) {
         super(setttings);
+        setModel("gpt-4o");
     }
+
 
     public Expression evaluate(List<Prompt> prompts, String grid) {
         OpenAiService service = new OpenAiService(getToken(), Duration.ofSeconds(90));

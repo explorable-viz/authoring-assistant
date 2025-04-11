@@ -35,7 +35,7 @@ public class Program {
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
     private final String testCaseFileName;
-    private static final String fluidFileName = "llmTest";
+    public static final String fluidFileName = "llmTest";
 
     public Program(Paragraph paragraph, Map<String,String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName) throws IOException {
         this.datasets = datasets;

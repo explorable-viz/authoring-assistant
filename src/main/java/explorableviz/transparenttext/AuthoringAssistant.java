@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 
 import explorableviz.transparenttext.Program.QueryResult;
 
+import static explorableviz.transparenttext.Program.writeFluidFiles;
+
 public class AuthoringAssistant {
 
     public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
@@ -60,7 +62,7 @@ public class AuthoringAssistant {
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
             logger.info(STR."Received response: \{candidate.getExpr()}");
-            //program.writeFluidFiles(candidate.getExpr());
+            writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, candidate.getExpr(), subProgram.getDatasets(), subProgram.get_loadedDatasets(), subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
             final FluidCLI fluidCLI = new FluidCLI(subProgram.getDatasets(), subProgram.getImports());
             Optional<String> error = Program.validate(fluidCLI.evaluate(subProgram.getFluidFileName()), expected);
             if (error.isPresent()) {

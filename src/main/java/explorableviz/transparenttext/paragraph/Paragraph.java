@@ -1,76 +1,97 @@
 package explorableviz.transparenttext.paragraph;
 
-import explorableviz.transparenttext.LiteralParts;
 import explorableviz.transparenttext.Settings;
 import kotlin.Pair;
 
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Paragraph extends ArrayList<TextFragment> {
 
     public Paragraph() {
     }
 
-    public String toString() {
+    public String toFluidSyntax() {
         return STR."Paragraph([\{stream().map(e -> {
-            if (e instanceof Literal) return STR."\"\{e.getValue()}\"";
-            if (e instanceof Expression) return ((Expression) e).getExpr();
-            throw new RuntimeException("Error, it is possible to have only String or Expression element");
+            if (e instanceof Literal l && l.getSelectedRegion() != null)
+            {
+                return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue()}\"" : ""}]\{e.getValue().substring(l.getSelectedRegion().end())}";
+            }
+            else if (e instanceof Literal) return STR."Text \"\{e.getValue()} \"";
+            else if (e instanceof Expression) {
+                if(e.getValue().matches("-?\\d+(\\.\\d+)?"))
+                    return (STR."Text(numToStr(\{((Expression) e).getExpr()}))");
+                else
+                    return (STR."Text(\{((Expression) e).getExpr()})");
+            }
+            throw new RuntimeException("Error, it is possible to have only String, Expression element");
         }).collect(Collectors.joining(","))}])";
     }
-
-    public Pair<String, Expression> toStringWithReplaceAt(int n) {
-        AtomicInteger k = new AtomicInteger(0);
-        AtomicReference<Expression> expression = new AtomicReference<>(null);
-        String paragraphWithReplace = this.stream()
-                .map(textFragment -> {
-                    if (textFragment instanceof Literal) {
-                        return STR."\{textFragment.getValue()} ";
-                    } else if (textFragment instanceof Expression expr) {
-                        int currentK = k.getAndIncrement();
-                        if (currentK == n) {
-                            expression.set(expr);
-                            return STR."[REPLACE id=\"id_\{currentK}\" \{(Settings.isAddExpectedValueEnabled() ? STR."value=\"\{textFragment.getValue()}\"" : "")}]";
-                        } else {
-                            return STR."\{textFragment.getValue()} ";
-                        }
-                    } else {
-                        throw new RuntimeException("Illegal Textfragment Type");
-                    }
-                })
-                .collect(Collectors.joining());
-        return new Pair<>(paragraphWithReplace, expression.get());
+    public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {
+        final int numComputedExpr;
+        if (template == this) {
+            numComputedExpr = 0;
+        } else {
+            numComputedExpr = countExpressions(this);
+        }
+        return IntStream.range(0, countExpressions(template) - numComputedExpr)
+                .mapToObj(i -> testParagraph(template, numComputedExpr, i))
+                .toList();
     }
 
-    public void spliceExpression(String expression) {
-        List<TextFragment> paragraph = this;
-        ListIterator<TextFragment> iterator = paragraph.listIterator();
+    private int countExpressions(Paragraph paragraph) {
+        return (int) paragraph.stream().filter(Expression.class::isInstance).count();
+    }
 
-        while (iterator.hasNext()) {
-            TextFragment textFragment = iterator.next();
-            if (textFragment instanceof Literal) {
-                splitLiteral(textFragment).ifPresentOrElse(expectedValue -> {
-                    iterator.remove();
-                    iterator.add(expectedValue.beforeTag());
-                    iterator.add(new Expression(expression, expectedValue.tag().getValue()));
-                    iterator.add(expectedValue.afterTag());
-                }, () -> {
-                    throw new RuntimeException("REPLACE tag not found");
-                });
+    private Pair<Expression, Paragraph> testParagraph(Paragraph template, int numComputedExpr, int index) {
+        Paragraph p = new Paragraph();
+        Expression toCompute = null;
+        int exprCount = 0;
+        StringBuilder literalBuilder = new StringBuilder();
+        int replaceStart = -1, replaceEnd = -1;
+
+        for (int k = 0; k < template.size(); k++) {
+            var element = template.get(k);
+
+            if (element instanceof Literal literal) {
+                literalBuilder.append(" ").append(literal.getValue());
+            } else if (element instanceof Expression expression) {
+                if (exprCount < numComputedExpr) {
+                    Expression computedExpr = (Expression) this.get(k);
+                    p.add(new Literal(literalBuilder.toString(), null));
+                    literalBuilder.setLength(0);
+                    p.add(computedExpr != null ? computedExpr : expression);
+                } else if (exprCount == numComputedExpr + index) {
+                    replaceStart = literalBuilder.length();
+                    literalBuilder.append(" ").append(expression.getValue());
+                    replaceEnd = literalBuilder.length();
+                    toCompute = expression;
+                } else {
+                    literalBuilder.append(" ").append(expression.getValue());
+                }
+                exprCount++;
             }
         }
+
+        p.add(new Literal(literalBuilder.toString(), new Literal.SelectedRegion(replaceStart, replaceEnd)));
+        return new Pair<>(toCompute, p);
     }
 
-    public static Optional<LiteralParts> splitLiteral(TextFragment literal) {
-        Matcher valueReplaceMatcher = Pattern.compile("(.*)\\[REPLACE id=\".*?\" value=\"(.*?)\"](.*)").matcher(literal.getValue());
-        if (!valueReplaceMatcher.find()) {
-            return Optional.empty();
+    public Paragraph splice(Expression expression) {
+        Paragraph p = new Paragraph();
+        for (TextFragment t : this) {
+            if(t instanceof Literal l && l.getSelectedRegion() != null) {
+                Literal start = new Literal(t.getValue().substring(0, l.getSelectedRegion().start()), null);
+                if(!start.getValue().isEmpty()) p.add(start);
+                p.add(expression);
+                Literal end = new Literal(t.getValue().substring(l.getSelectedRegion().end()), null);
+                if(!end.getValue().isEmpty()) p.add(end);
+            } else {
+                p.add(t);
+            }
         }
-        return Optional.of(new LiteralParts(new Literal(valueReplaceMatcher.group(1)), new Literal(valueReplaceMatcher.group(2)), new Literal(valueReplaceMatcher.group(3))));
+        return p;
     }
 }

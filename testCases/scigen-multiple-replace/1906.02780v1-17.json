@@ -18,7 +18,7 @@
     },
     {
       "type": "literal",
-      "value": ", while the speedup drops from [REPLACE id=\"num_2\"] "
+      "value": ", while the speedup drops from "
     },
     {
       "type": "expression",

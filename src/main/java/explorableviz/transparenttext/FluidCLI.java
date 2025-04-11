@@ -24,38 +24,48 @@ public class FluidCLI {
     }
 
     private String buildCommand(String fluidFileName) {
-        String os = System.getProperty("os.name").toLowerCase();
-        String bashPrefix = os.contains("win") ? "cmd.exe /c " : "";
-        StringBuilder command = new StringBuilder(STR."\{bashPrefix}yarn fluid evaluate -l -p '\{Settings.getFluidTempFolder()}/' -f \{fluidFileName}");
-        datasets.forEach((key, path) -> command.append(STR." -d \"(\{key}, ./\{path})\""));
-        imports.forEach(path -> command.append(STR." -i \{path}"));
+        StringBuilder command = new StringBuilder();
+
+        command.append(STR."yarn fluid evaluate -l -p \"")
+                .append(Settings.getFluidTempFolder())
+                .append("/\" -f ")
+                .append(fluidFileName);
+
+        datasets.forEach((key, path) -> command.append(" -d \"(")
+                .append(key)
+                .append(", ./")
+                .append(path)
+                .append(")\""));
+
+        imports.forEach(path -> command.append(" -i ")
+                .append(path));
+
         return command.toString();
     }
+
     private String executeCommand(String command) throws IOException, InterruptedException {
-        String os = System.getProperty("os.name").toLowerCase();
-        Process process;
-        if (os.contains("win")) {
-            process = Runtime.getRuntime().exec(new String[]{"cmd.exe", "/c", command});
+        ProcessBuilder processBuilder;
+        if (isWindows()) {
+            processBuilder = new ProcessBuilder("cmd.exe", "/c", command);
         } else {
-            process = Runtime.getRuntime().exec(new String[]{"/bin/bash", "-c", command});
+            processBuilder = new ProcessBuilder("/bin/bash", "-c", command);
         }
-        process.waitFor();
-
+        processBuilder.redirectErrorStream(true);
+        Process process = processBuilder.start();
         String output = new String(process.getInputStream().readAllBytes());
-        String errorOutput = new String(process.getErrorStream().readAllBytes());
-
-        logger.info(STR."Command output: \{output}");
-        if (!errorOutput.isEmpty()) {
-            logger.info(STR."Error output: \{errorOutput}");
-        }
         FileUtils.deleteDirectory(new File(Settings.getFluidTempFolder()));
         return output;
     }
+
     public String evaluate(String fluidFileName) {
         try {
             return executeCommand(buildCommand(fluidFileName));
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException("Error during the execution of the fluid evaluate command", e);
         }
+    }
+
+    public static boolean isWindows() {
+        return System.getProperty("os.name").toLowerCase().contains("win");
     }
 }

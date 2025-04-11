@@ -33,7 +33,7 @@
         <dependency>
             <groupId>it.unisa.cluelab</groupId>
             <artifactId>promptexecutorcli</artifactId>
-            <version>0.8.2</version>
+            <version>0.8.8</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>

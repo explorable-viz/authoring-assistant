@@ -1,6 +1,8 @@
 package explorableviz.transparenttext;
 
+import explorableviz.transparenttext.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
+import kotlin.Pair;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -27,13 +29,14 @@ public class InContextLearning {
         return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
     }
 
-    public PromptList toPromptList() {
+    public PromptList toPromptList() throws IOException {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
-        for (Program program : this.cases) {
-            List<Query> queries = program.toQueries();
-            for (Query query : queries)
-                inContextLearning.addPairPrompt(query.toUserPrompt(), query.expression().getExpr());
+        for (Program initialStatesFromTemplate : this.cases) {
+            List<Pair<Program, Expression>> initialProgramStates = initialStatesFromTemplate.asIndividualEdits(initialStatesFromTemplate);
+            for(Pair<Program, Expression> initialProgramState : initialProgramStates) {
+                inContextLearning.addPairPrompt(initialProgramState.component1().toUserPrompt(), initialProgramState.component2().getExpr());
+            }
         }
         return inContextLearning;
     }

@@ -8,7 +8,23 @@ import explorableviz.transparenttext.variable.Variables;
 import kotlin.Pair;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -182,8 +198,8 @@ public class Program {
 
     public static void writeFluidFiles(String basePath, String fluidFileName, String response, Map<String, String> datasets, Map<String, String> loadedDatasets, List<String> imports, List<String> loadedImports,  String code) throws IOException {
         Files.createDirectories(Paths.get(basePath));
-        Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}"));
-        //Write temp fluid file
+        Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}").getParent());
+
         try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}.fld")) {
             out.println(code);
             out.println(response);
@@ -267,7 +283,7 @@ public class Program {
         });
 
         imports.forEach(_import -> {
-            spec.getJSONArray("imports").put(STR."lib/\{_import}");
+            spec.getJSONArray("imports").put(_import);
         });
         spec.put("file", Path.of(this.testCaseFileName).getFileName());
         spec.put("inputs", new JSONArray("[\"tableData\"]"));
@@ -288,6 +304,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(path, STR."fluid/\{Path.of(this.testCaseFileName).getFileName().toString()}", paragraph.toFluidSyntax(), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{path}fluid/", Path.of(this.testCaseFileName).getFileName().toString(), paragraph.toFluidSyntax(), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
+
 }

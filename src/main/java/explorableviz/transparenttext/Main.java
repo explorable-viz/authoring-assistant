@@ -3,10 +3,26 @@ package explorableviz.transparenttext;
 import kotlin.Pair;
 
 import explorableviz.transparenttext.Program.QueryResult;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathFactory;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,6 +31,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Main {
     public static Logger logger = Logger.getLogger(Main.class.getName());
@@ -33,6 +50,7 @@ public class Main {
             final int queryLimit = Settings.getNumQueryToExecute().orElseGet(programs::size);
             final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, queryLimit, programs);
             float accuracy = computeExactMatch(results);
+            generateLinks();
             writeLog(results, agent, inContextLearning.size());
             if (accuracy >= Settings.getThreshold()) {
                 System.out.println(STR."Accuracy OK =\{accuracy}");
@@ -112,4 +130,53 @@ public class Main {
                         (_, replacement) -> replacement
                 ));
     }
+
+    public static void generateLinks() throws Exception {
+        String path = "website/authoring-assistant";
+        File htmlFile = new File(STR."\{path}/index.html");
+
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(false);
+        factory.setIgnoringElementContentWhitespace(true);
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document doc = builder.parse(htmlFile);
+
+        XPath xpath = XPathFactory.newInstance().newXPath();
+        Node linksDiv = (Node) xpath.evaluate("//div[@class='links']", doc, XPathConstants.NODE);
+        if (linksDiv == null) {
+            throw new RuntimeException("Element <div class='links'> not found.");
+        }
+
+        while (linksDiv.hasChildNodes()) {
+            linksDiv.removeChild(linksDiv.getFirstChild());
+        }
+
+        try (Stream<Path> paths = Files.list(Paths.get(path))) {
+            paths
+                    .filter(Files::isDirectory)
+                    .map(Path::getFileName)
+                    .map(Path::toString)
+                    .filter(name -> !name.equals("datasets") && !name.equals("fluid") && !name.equals("font") && !name.equals("css") && !name.equals("image") && !name.equals("shared"))
+                    .sorted()
+                    .forEach(name -> {
+                        Element a = doc.createElement("a");
+                        a.setAttribute("href", STR."\{name}/");
+                        a.setTextContent(name);
+                        Element br = doc.createElement("br");
+                        linksDiv.appendChild(a);
+                        linksDiv.appendChild(br);
+                    });
+        }
+
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(htmlFile);
+        transformer.transform(source, result);
+    }
+
 }

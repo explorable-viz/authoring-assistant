@@ -277,51 +277,9 @@ public class Program {
             e.printStackTrace();
         }
         /* html generation */
-        String html = "<!DOCTYPE html>\n" +
-                "<html lang=\"en\">\n" +
-                "<head>\n" +
-                "   <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n" +
-                "   <meta charset=\"UTF-8\">\n" +
-                "   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
-                "   <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n" +
-                "   <title>Fluid: "+Path.of(this.testCaseFileName).getParent().getFileName()+"</title>\n" +
-                "   <link href=\"../css/styles.css\" rel=\"stylesheet\" type=\"text/css\">\n" +
-                "   <link href=\"../css/view-styles.css\" rel=\"stylesheet\" type=\"text/css\">\n" +
-                "   <script src=\"https://kit.fontawesome.com/20cf8b42c0.js\" crossorigin=\"anonymous\"></script>\n" +
-                "   <script src=\"../shared/util.js\"></script>\n" +
-                "   <style>\n" +
-                "      .data-pane {\n" +
-                "         max-width: 400px;\n" +
-                "      }\n" +
-                "   </style>\n" +
-                "</head>\n" +
-                "<body>\n" +
-                "<div id=\"grid\" class=\"grid-container data-pane-hidden\">\n" +
-                "   <div></div>\n" +
-                "   <div></div>\n" +
-                "   <div class=\"flex-left-align\">\n" +
-                "      <h3>" + Path.of(this.testCaseFileName).getFileName() + "</h3>\n" +
-                "      <p>---</p>\n" +
-                "   </div>\n" +
-                "\n" +
-                "   <div class=\"flex-right-align data-pane\">\n" +
-                "      <div id=\"fig-input\"></div>\n" +
-                "   </div>\n" +
-                "   <div onclick=\"toggleDataPane('grid')\">\n" +
-                "      <i class=\"data-pane-button toggle-button fa-solid fa-eye-slash\"></i>\n" +
-                "   </div>\n" +
-                "   <div id=\"fig\">\n" +
-                "      <div class=\"fig-loading\">loading figure(s)</div>\n" +
-                "   </div>\n" +
-                "</div>\n" +
-                "\n" +
-                "<script type=\"module\">\n" +
-                "   import { drawCode, loadFigure } from \"../shared/load-figure.js\";\n" +
-                "   loadFigure(\"spec.json\")();\n" +
-                "</script>\n" +
-                "</body>\n" +
-                "</html>\n" +
-                "\n";
+        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{path}/template.html").toURI())));
+        html = html.replaceAll("##TITLE##", String.valueOf(Path.of(this.testCaseFileName).getParent().getFileName()));
+        html = html.replaceAll("##TEST_NAME##", String.valueOf(Path.of(this.testCaseFileName).getFileName()));
         try (FileWriter file = new FileWriter(STR."\{sitePath}/index.html")) {
             file.write(html);
             file.flush();

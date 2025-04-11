@@ -171,13 +171,12 @@ public class Program {
         return paragraph;
     }
 
-    public List<Pair<Program, Expression>> programs(Program template) throws IOException {
-        List<Pair<Expression,Paragraph>> paragraphsToCompute = paragraph.testParagraphs(template.paragraph);
+    public List<Pair<Program, Expression>> asIndividualEdits(Program template) throws IOException {
+        List<Pair<Expression,Paragraph>> paragraphsToCompute = paragraph.asIndividualEdits(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for(Pair<Expression,Paragraph> p : paragraphsToCompute) {
             programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName), p.getFirst()));
         }
-        //togliere computed e passare lo stato del programma e il template
         return programs;
     }
 
@@ -206,7 +205,7 @@ public class Program {
         object.put("datasets", get_loadedDatasets());
         object.put("imports", get_loadedImports());
         object.put("code", getCode());
-        object.put("paragraph", getParagraph().toString());
+        object.put("paragraph", getParagraph().toFluidSyntax());
         return object.toString();
     }
 
@@ -246,6 +245,90 @@ public class Program {
     public String getFluidFileName() {
         return fluidFileName;
     }
-    public record ProgramResult(Expression response, Expression expected, int attempt, long duration) {}
+    public record QueryResult(Expression response, Expression expected, int attempt, long duration) {}
 
+    public void toWebsite() throws IOException {
+        String path = "website/authoring-assistant/";
+        String sitePath = STR."\{path}\{Path.of(this.testCaseFileName).getParent().getFileName()}-\{Path.of(this.testCaseFileName).getFileName()}";
+        Files.createDirectories(Path.of(sitePath));
+
+        /* spec generation */
+        JSONObject spec = new JSONObject();
+        spec.put("fluidSrcPath", new JSONArray("[\"../fluid\"]"));
+        spec.put("datasets", new JSONArray());
+        spec.put("imports", new JSONArray());
+
+        datasets.forEach((k,v)-> {
+            JSONArray ds = new JSONArray();
+            ds.put(k);
+            ds.put(v);
+            spec.getJSONArray("datasets").put(ds);
+        });
+
+        imports.forEach(_import -> {
+            spec.getJSONArray("imports").put(STR."lib/\{_import}");
+        });
+        spec.put("file", Path.of(this.testCaseFileName).getFileName());
+        spec.put("inputs", new JSONArray("[\"tableData\"]"));
+        try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {
+            file.write(spec.toString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        /* html generation */
+        String html = "<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<head>\n" +
+                "   <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n" +
+                "   <meta charset=\"UTF-8\">\n" +
+                "   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+                "   <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n" +
+                "   <title>Fluid: "+Path.of(this.testCaseFileName).getParent().getFileName()+"</title>\n" +
+                "   <link href=\"../css/styles.css\" rel=\"stylesheet\" type=\"text/css\">\n" +
+                "   <link href=\"../css/view-styles.css\" rel=\"stylesheet\" type=\"text/css\">\n" +
+                "   <script src=\"https://kit.fontawesome.com/20cf8b42c0.js\" crossorigin=\"anonymous\"></script>\n" +
+                "   <script src=\"../shared/util.js\"></script>\n" +
+                "   <style>\n" +
+                "      .data-pane {\n" +
+                "         max-width: 400px;\n" +
+                "      }\n" +
+                "   </style>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<div id=\"grid\" class=\"grid-container data-pane-hidden\">\n" +
+                "   <div></div>\n" +
+                "   <div></div>\n" +
+                "   <div class=\"flex-left-align\">\n" +
+                "      <h3>" + Path.of(this.testCaseFileName).getFileName() + "</h3>\n" +
+                "      <p>---</p>\n" +
+                "   </div>\n" +
+                "\n" +
+                "   <div class=\"flex-right-align data-pane\">\n" +
+                "      <div id=\"fig-input\"></div>\n" +
+                "   </div>\n" +
+                "   <div onclick=\"toggleDataPane('grid')\">\n" +
+                "      <i class=\"data-pane-button toggle-button fa-solid fa-eye-slash\"></i>\n" +
+                "   </div>\n" +
+                "   <div id=\"fig\">\n" +
+                "      <div class=\"fig-loading\">loading figure(s)</div>\n" +
+                "   </div>\n" +
+                "</div>\n" +
+                "\n" +
+                "<script type=\"module\">\n" +
+                "   import { drawCode, loadFigure } from \"../shared/load-figure.js\";\n" +
+                "   loadFigure(\"spec.json\")();\n" +
+                "</script>\n" +
+                "</body>\n" +
+                "</html>\n" +
+                "\n";
+        try (FileWriter file = new FileWriter(STR."\{sitePath}/index.html")) {
+            file.write(html);
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        /* copy datasets  & lib */
+        writeFluidFiles(path, STR."fluid/\{Path.of(this.testCaseFileName).getFileName().toString()}", paragraph.toFluidSyntax(), datasets, _loadedDatasets, imports, _loadedImports, code);
+    }
 }

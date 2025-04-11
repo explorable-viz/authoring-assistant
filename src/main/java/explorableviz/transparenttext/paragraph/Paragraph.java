@@ -12,7 +12,7 @@ public class Paragraph extends ArrayList<TextFragment> {
     public Paragraph() {
     }
 
-    public String toString() {
+    public String toFluidSyntax() {
         return STR."Paragraph([\{stream().map(e -> {
             if (e instanceof Literal l && l.getSelectedRegion() != null)
             {
@@ -28,7 +28,7 @@ public class Paragraph extends ArrayList<TextFragment> {
             throw new RuntimeException("Error, it is possible to have only String, Expression element");
         }).collect(Collectors.joining(","))}])";
     }
-    public List<Pair<Expression, Paragraph>> testParagraphs(Paragraph template) {
+    public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {
         final int numComputedExpr;
         if (template == this) {
             numComputedExpr = 0;

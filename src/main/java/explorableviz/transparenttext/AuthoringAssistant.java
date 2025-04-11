@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
-import explorableviz.transparenttext.Program.ProgramResult;
+
+import explorableviz.transparenttext.Program.QueryResult;
+
 public class AuthoringAssistant {
 
     public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
@@ -25,27 +27,24 @@ public class AuthoringAssistant {
         this.templateProgram = templateProgram;
     }
 
-    public List<Pair<Program, ProgramResult>> executePrograms() throws Exception {
-        List<Pair<Program, ProgramResult>> results = new ArrayList<>();
-        List<Pair<Program, Expression>> subTests = templateProgram.programs(templateProgram);
+    public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
+        List<Pair<Program, QueryResult>> results = new ArrayList<>();
+        List<Pair<Program, Expression>> programEdits = templateProgram.asIndividualEdits(templateProgram);
         int i = 0;
-        while (!subTests.isEmpty()) {
-            Pair<Program, Expression> subTest = subTests.get(i);
-            Program subProgram = subTest.component1();
-            ProgramResult result = execute(subTest);
+        while (!programEdits.isEmpty()) {
+            Pair<Program, Expression> individualEdit = programEdits.get(i);
+            //selection
+            Program programEdit = individualEdit.component1();
+            QueryResult result = execute(individualEdit);
 
-            subProgram.replaceParagraph(subProgram.getParagraph().splice(result.response() == null ? subTest.component2() : result.response()));
-            results.add(new Pair<>(subProgram, result));
-            if(Settings.isEditorLoopEnabled()) {
-                subTests.addAll(subProgram.programs(templateProgram));
-            } else {
-                subTests = subProgram.programs(templateProgram);
-            }
+            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.response() == null ? individualEdit.component2() : result.response()));
+            results.add(new Pair<>(programEdit, result));
+            programEdits = programEdit.asIndividualEdits(templateProgram);
         }
         return results;
     }
 
-    public ProgramResult execute(Pair<Program, Expression> test) throws Exception {
+    public QueryResult execute(Pair<Program, Expression> test) throws Exception {
         final int limit = Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
@@ -67,11 +66,11 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
                 sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
             } else {
-                return new ProgramResult(candidate, expected, attempts, System.currentTimeMillis() - start);
+                return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start);
             }
         }
         logger.warning(STR."Expression validation failed after \{limit} attempts");
-        return new ProgramResult(null, expected, attempts, System.currentTimeMillis() - start);
+        return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start);
     }
 
     private LLMEvaluatorAgent initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {

@@ -10,7 +10,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Stream;
 
 import static explorableviz.transparenttext.Program.loadPrograms;
@@ -34,7 +33,7 @@ public class InContextLearning {
         PromptList inContextLearning = new PromptList();
         inContextLearning.addSystemPrompt(this.systemPrompt);
         for (Program initialStatesFromTemplate : this.cases) {
-            List<Pair<Program, Expression>> initialProgramStates = initialStatesFromTemplate.programs(initialStatesFromTemplate);
+            List<Pair<Program, Expression>> initialProgramStates = initialStatesFromTemplate.asIndividualEdits(initialStatesFromTemplate);
             for(Pair<Program, Expression> initialProgramState : initialProgramStates) {
                 inContextLearning.addPairPrompt(initialProgramState.component1().toUserPrompt(), initialProgramState.component2().getExpr());
             }

@@ -17,10 +17,7 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -133,50 +130,26 @@ public class Main {
 
     public static void generateLinks() throws Exception {
         String path = "website/authoring-assistant";
-        File htmlFile = new File(STR."\{path}/index.html");
+        File htmlFile = new File(STR."\{path}/template-index.html");
 
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(false);
-        factory.setIgnoringElementContentWhitespace(true);
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(htmlFile);
-
-        XPath xpath = XPathFactory.newInstance().newXPath();
-        Node linksDiv = (Node) xpath.evaluate("//div[@class='links']", doc, XPathConstants.NODE);
-        if (linksDiv == null) {
-            throw new RuntimeException("Element <div class='links'> not found.");
-        }
-
-        while (linksDiv.hasChildNodes()) {
-            linksDiv.removeChild(linksDiv.getFirstChild());
-        }
 
         try (Stream<Path> paths = Files.list(Paths.get(path))) {
-            paths
+            String links = paths
                     .filter(Files::isDirectory)
                     .map(Path::getFileName)
                     .map(Path::toString)
                     .filter(name -> !name.equals("datasets") && !name.equals("fluid") && !name.equals("font") && !name.equals("css") && !name.equals("image") && !name.equals("shared"))
                     .sorted()
-                    .forEach(name -> {
-                        Element a = doc.createElement("a");
-                        a.setAttribute("href", STR."\{name}/");
-                        a.setTextContent(name);
-                        Element br = doc.createElement("br");
-                        linksDiv.appendChild(a);
-                        linksDiv.appendChild(br);
-                    });
+                    .map(name -> STR."<a href=\"\{name}\">\{name}</a> <br />")
+                    .collect(Collectors.joining("\n"));
+            String html = new String(Files.readAllBytes(htmlFile.toPath()));
+            html = html.replaceAll("##LINKS##", links);
+            FileWriter file = new FileWriter(STR."\{path}/index.html");
+            file.write(html);
+            file.flush();
+            file.close();
         }
 
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        transformer.setOutputProperty(OutputKeys.METHOD, "xml");
-        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-
-        DOMSource source = new DOMSource(doc);
-        StreamResult result = new StreamResult(htmlFile);
-        transformer.transform(source, result);
     }
 
 }

@@ -27,7 +27,7 @@ public class Paragraph extends ArrayList<TextFragment> {
                     return (STR."Text(\{((Expression) e).getExpr()})");
             }
             throw new RuntimeException("Error, it is possible to have only String, Expression element");
-        }).collect(Collectors.joining(","))}])";
+        }).collect(Collectors.joining(",\n"))}])";
     }
     public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {
         final int numComputedExpr;

@@ -1,5 +1,6 @@
 package explorableviz.transparenttext;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import explorableviz.transparenttext.paragraph.Expression;
 import explorableviz.transparenttext.paragraph.Literal;
 import explorableviz.transparenttext.paragraph.Paragraph;
@@ -288,7 +289,9 @@ public class Program {
         spec.put("file", Path.of(this.testCaseFileName).getFileName());
         spec.put("inputs", new JSONArray("[\"tableData\"]"));
         try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {
-            file.write(spec.toString());
+            ObjectMapper objectMapper = new ObjectMapper();
+            Object jsonObject = objectMapper.readValue(spec.toString(), Object.class);
+            file.write(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject));
             file.flush();
         } catch (IOException e) {
             e.printStackTrace();

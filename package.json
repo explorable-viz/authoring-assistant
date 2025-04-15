@@ -19,7 +19,7 @@
     "ollama-install": "./script/ollama-install.sh",
     "ollama-serve": "./script/ollama-serve.sh",
     "ollama-run": "./script/ollama-steps.sh",
-    "serve": "npx http-serve dist/ar6-wg1-spm",
+    "serve": "./script/serve.sh",
     "test": "./script/authoring-assistant.sh it.unisa.cluelab.lllm.llm.agents.Llama31EvaluatorAgent",
     "test-gpt4o": "./script/authoring-assistant.sh it.unisa.cluelab.lllm.llm.agents.Gpt4oEvaluationAgent",
     "test-mock": "./script/authoring-assistant.sh explorableviz.transparenttext.llm.LLMDummyAgent",

@@ -14,7 +14,7 @@ public class Paragraph extends ArrayList<TextFragment> {
     }
 
     public String toFluidSyntax() {
-        return STR."Paragraph([\{stream().map(e -> {
+        return STR."Paragraph([\n\t\{stream().map(e -> {
             if (e instanceof Literal l && l.getSelectedRegion() != null)
             {
                 return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue()}\"" : ""}]\{e.getValue().substring(l.getSelectedRegion().end())}";
@@ -27,7 +27,7 @@ public class Paragraph extends ArrayList<TextFragment> {
                     return (STR."Text(\{((Expression) e).getExpr()})");
             }
             throw new RuntimeException("Error, it is possible to have only String, Expression element");
-        }).collect(Collectors.joining(",\t\n"))}])";
+        }).collect(Collectors.joining(",\n\t"))}\n])";
     }
     public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {
         final int numComputedExpr;

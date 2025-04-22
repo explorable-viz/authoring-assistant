@@ -19,7 +19,7 @@ public class Paragraph extends ArrayList<TextFragment> {
             {
                 return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue()}\"" : ""}]\{e.getValue().substring(l.getSelectedRegion().end())}";
             }
-            else if (e instanceof Literal) return STR."Text \"\{e.getValue()} \"";
+            else if (e instanceof Literal) return STR."Text \"\{e.getValue()}\"";
             else if (e instanceof Expression) {
                 if(e.getValue().matches("-?\\d+(\\.\\d+)?"))
                     return (STR."Text(numToStr(\{((Expression) e).getExpr()}))");
@@ -27,7 +27,7 @@ public class Paragraph extends ArrayList<TextFragment> {
                     return (STR."Text(\{((Expression) e).getExpr()})");
             }
             throw new RuntimeException("Error, it is possible to have only String, Expression element");
-        }).collect(Collectors.joining(",\n"))}])".replaceAll(" %", "%");
+        }).collect(Collectors.joining(",\t\n"))}])";
     }
     public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {
         final int numComputedExpr;

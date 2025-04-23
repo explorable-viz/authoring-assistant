@@ -36,6 +36,8 @@ install_dependencies() {
 
         brew update
         brew install maven
+        brew install python3
+
 
         # Verify installation
         mvn --version
@@ -44,6 +46,7 @@ install_dependencies() {
         # Debian/Ubuntu based
         sudo apt update
         sudo apt install -y default-jre default-jdk maven
+        sudo apt install -y python3 python3-pip python3-venv
     else
         echo "Error: neither apt nor yum found. Java installation failed."
         exit 1

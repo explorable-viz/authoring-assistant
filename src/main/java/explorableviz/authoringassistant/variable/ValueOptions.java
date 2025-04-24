@@ -1,6 +1,5 @@
 package explorableviz.transparenttext.variable;
 
-import com.google.errorprone.annotations.Var;
 import org.json.JSONObject;
 
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package explorableviz.transparenttext.paragraph;
+package explorableviz.authoringassistant.paragraph;
 
 public abstract class TextFragment {
     private final String value;

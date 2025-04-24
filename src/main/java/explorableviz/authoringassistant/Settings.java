@@ -1,4 +1,4 @@
-package explorableviz.transparenttext;
+package explorableviz.authoringassistant;
 
 import org.json.JSONObject;
 

@@ -1,11 +1,11 @@
-package explorableviz.transparenttext;
+package explorableviz.authoringassistant;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import explorableviz.transparenttext.paragraph.Expression;
-import explorableviz.transparenttext.paragraph.Literal;
-import explorableviz.transparenttext.paragraph.Paragraph;
-import explorableviz.transparenttext.variable.ValueOptions;
-import explorableviz.transparenttext.variable.Variables;
+import explorableviz.authoringassistant.paragraph.Expression;
+import explorableviz.authoringassistant.paragraph.Literal;
+import explorableviz.authoringassistant.paragraph.Paragraph;
+import explorableviz.authoringassistant.variable.ValueOptions;
+import explorableviz.authoringassistant.variable.Variables;
 import kotlin.Pair;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static explorableviz.transparenttext.variable.Variables.Flat.expandVariables;
+import static explorableviz.authoringassistant.variable.Variables.Flat.expandVariables;
 
 public class Program {
 

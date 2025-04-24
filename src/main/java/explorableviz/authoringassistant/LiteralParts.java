@@ -1,5 +1,5 @@
-package explorableviz.transparenttext;
+package explorableviz.authoringassistant;
 
-import explorableviz.transparenttext.paragraph.Literal;
+import explorableviz.authoringassistant.paragraph.Literal;
 
 public record LiteralParts(Literal beforeTag, Literal tag, Literal afterTag) {}

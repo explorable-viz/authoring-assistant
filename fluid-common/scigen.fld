@@ -17,8 +17,26 @@ let get_rank model_name td =
            then rank
            else helper xs (rank + 1)
    in helper sorted 1;
+
+let ordinalMap = [
+    { lastDigit: 1, suffix: "st" },
+    { lastDigit: 2, suffix: "nd" },
+    { lastDigit: 3, suffix: "rd" },
+    { lastDigit: 4, suffix: "th" }
+];
+
 let ordinal n =
- if n == 1 then "lowest"
- else if n == 2 then "2nd-lowest"
- else if n == 3 then "3rd-lowest"
- else numToStr n ++ "th-lowest";
+   if (n >= 10) `and` (n <= 20)
+      then "th"
+   else
+      let last = n `mod` 10;
+      let helper [] = "th";
+          helper (x: xs) =
+              if x.lastDigit == last then x.suffix else helper xs
+      in helper ordinalMap;
+
+let rankLabel word n =
+   if n == 1
+      then word
+   else
+      ordinal n ++ "-" ++ word;

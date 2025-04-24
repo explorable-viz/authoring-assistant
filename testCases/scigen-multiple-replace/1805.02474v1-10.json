@@ -72,7 +72,7 @@
     },
     {
       "type": "expression",
-      "expression": "let pos = get_rank \"CNN\" tableData in ordinal pos"
+      "expression": "let pos = get_rank \"CNN\" tableData in rankLabel \"lowest\" pos"
     },
     {
       "type": "literal",

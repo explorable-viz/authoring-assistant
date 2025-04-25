@@ -5,7 +5,7 @@
       "file": "datasets/scigen/1805.02474v1-14"
     }
   ],
-  "imports": [],
+  "imports": ["scigen"],
   "variables": {},
   "paragraph": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.f1) (filter (fun x -> x.model == \"S-LSTM\") tableData))"
+      "expression": "(findAndGet \"model\" \"S-LSTM\" tableData).f1"
     },
     {
       "type": "literal",
@@ -22,7 +22,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.f1) (filter (fun x -> x.model == \"yang2017transfer\") tableData))"
+      "expression": "(findAndGet \"model\" \"yang2017transfer\" tableData).f1"
     },
     {
       "type": "literal",

@@ -16,7 +16,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.time_s) (filter (fun x -> x.model == \"LSTM\") tableData))"
+      "expression": "(findAndGet \"model\" \"LSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -24,7 +24,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.time_s) (filter (fun x -> x.model == \"BiLSTM\") tableData))"
+      "expression": "(findAndGet \"model\" \"BiLSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -32,7 +32,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.time_s) (filter (fun x -> x.model == \"2 stacked BiLSTM\") tableData))"
+      "expression": "(findAndGet \"model\" \"2 stacked BiLSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -40,7 +40,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.acc) (filter (fun x -> x.model == \"S-LSTM\") tableData))"
+      "expression": "(findAndGet \"model\" \"S-LSTM\" tableData).acc"
     },
     {
       "type": "literal",
@@ -48,7 +48,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.time_s) (filter (fun x -> x.model == \"S-LSTM\") tableData))"
+      "expression": "(findAndGet \"model\" \"S-LSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -56,7 +56,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.model) (filter (fun x -> x.time_s == minimum (map (fun y -> y.time_s) tableData)) tableData))"
+      "expression": "(findAndGet \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model"
     },
     {
       "type": "literal",
@@ -64,7 +64,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.acc) (filter (fun x -> x.model == \"3 stacked CNN\") tableData))"
+      "expression": "(fromSome (findWithKey \"model\" \"3 stacked CNN\" tableData)).acc"
     },
     {
       "type": "literal",
@@ -72,7 +72,7 @@
     },
     {
       "type": "expression",
-      "expression": "let pos = get_rank \"CNN\" tableData in rankLabel \"lowest\" pos"
+      "expression": "let pos = findIndex \"CNN\" \"model\" (insertionSort cmpTime tableData) in rankLabel \"lowest\" pos\n"
     },
     {
       "type": "literal",

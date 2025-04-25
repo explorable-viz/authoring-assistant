@@ -5,7 +5,7 @@
       "file": "datasets/scigen/1904.12550v1-5"
     }
   ],
-  "imports": [],
+  "imports": ["scigen"],
   "variables": {},
   "paragraph": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.label___f) (filter (fun x -> x.concept_input____embeddings == \"Google\") tableData))"
+      "expression": "(findAndGet \"concept_input____embeddings\" \"Google\" tableData).label___f"
     },
     {
       "type": "literal",
@@ -22,7 +22,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.description___f) (filter (fun x -> x.concept_input____embeddings == \"GloVe\") tableData))"
+      "expression": "(findAndGet \"concept_input____embeddings\" \"GloVe\" tableData).description___f"
     },
     {
       "type": "literal",
@@ -30,7 +30,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.both___f) (filter (fun x -> x.concept_input____embeddings == \"fastText\") tableData))"
+      "expression": "(findAndGet \"concept_input____embeddings\" \"fastText\" tableData).both___f"
     },
     {
       "type": "literal",

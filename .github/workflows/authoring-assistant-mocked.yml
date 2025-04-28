@@ -32,3 +32,4 @@ jobs:
           yarn install
           yarn test-mock
           yarn generate-charts
+          yarn website-test authoring-assistant

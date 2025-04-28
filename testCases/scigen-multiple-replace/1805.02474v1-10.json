@@ -12,11 +12,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 3, BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch growing from "
+      "value": "As shown in Table 3, BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch "
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"model\" \"LSTM\" tableData).time_s"
+      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s \"growing from\" \"shrinking to\" \"equal to\""
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "type": "expression",
+      "expression": "(findWithKey' \"model\" \"LSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -24,7 +32,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"model\" \"BiLSTM\" tableData).time_s"
+      "expression": "(findWithKey' \"model\" \"BiLSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -32,7 +40,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"model\" \"2 stacked BiLSTM\" tableData).time_s"
+      "expression": "(findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -40,7 +48,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"model\" \"S-LSTM\" tableData).acc"
+      "expression": "(findWithKey' \"model\" \"S-LSTM\" tableData).acc"
     },
     {
       "type": "literal",
@@ -48,7 +56,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"model\" \"S-LSTM\" tableData).time_s"
+      "expression": "(findWithKey' \"model\" \"S-LSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -56,11 +64,19 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model"
+      "expression": "(findWithKey' \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model"
     },
     {
       "type": "literal",
-      "value": " is the most efficient among all models compared, with the smallest model size. On the other hand, a 3-layer stacked CNN gives an accuracy of "
+      "value": " is the most efficient among all models compared, with the  "
+    },
+    {
+      "type": "expression",
+      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpParam tableData) in rankLabel \"smallest\" pos\n"
+    },
+    {
+      "type": "literal",
+      "value": " model size. On the other hand, a 3-layer stacked CNN gives an accuracy of "
     },
     {
       "type": "expression",
@@ -72,7 +88,7 @@
     },
     {
       "type": "expression",
-      "expression": "let pos = findIndex \"CNN\" \"model\" (insertionSort cmpTime tableData) in rankLabel \"lowest\" pos\n"
+      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpTime tableData) in rankLabel \"lowest\" pos\n"
     },
     {
       "type": "literal",

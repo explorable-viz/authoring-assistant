@@ -39,7 +39,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"max_chunk_size\" \"k in {1...6}\" tableData).bleu - (findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).bleu"
+      "expression": "(findWithKey' \"max_chunk_size\" \"k in {1...6}\" tableData).bleu - (findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).bleu"
     },
     {
       "type": "literal",
@@ -55,7 +55,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"max_chunk_size\" \"k in {1...6}\" tableData).speedup"
+      "expression": "(findWithKey' \"max_chunk_size\" \"k in {1...6}\" tableData).speedup"
     }
   ]
 }

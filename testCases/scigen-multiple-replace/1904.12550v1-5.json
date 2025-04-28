@@ -14,7 +14,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"concept_input____embeddings\" \"Google\" tableData).label___f"
+      "expression": "(findWithKey' \"concept_input____embeddings\" \"Google\" tableData).label___f"
     },
     {
       "type": "literal",
@@ -22,7 +22,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"concept_input____embeddings\" \"GloVe\" tableData).description___f"
+      "expression": "(findWithKey' \"concept_input____embeddings\" \"GloVe\" tableData).description___f"
     },
     {
       "type": "literal",
@@ -30,7 +30,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findAndGet \"concept_input____embeddings\" \"fastText\" tableData).both___f"
+      "expression": "(findWithKey' \"concept_input____embeddings\" \"fastText\" tableData).both___f"
     },
     {
       "type": "literal",

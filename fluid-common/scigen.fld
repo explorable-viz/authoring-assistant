@@ -5,37 +5,38 @@ let insert cmp x sorted =
            then x : (y: ys)
            else y : helper ys
    in helper sorted;
+
 let insertionSort cmp lst =
    let helper [] sorted = sorted;
        helper (x: xs) sorted = helper xs (insert cmp x sorted)
    in helper lst [];
-let findIndex key name td =
+
+let findIndex fName x ys =
    let helper [] rank = -1;
-       helper (x: xs) rank =
-           if x.[name] == key
+       helper (y: ys') rank =
+           if y.[fName] == x
            then rank
-           else helper xs (rank + 1)
-   in helper td 1;
+           else helper ys' (rank + 1)
+   in helper ys 1;
+
 let ordinalMap = [
     { lastDigit: 1, suffix: "st" },
     { lastDigit: 2, suffix: "nd" },
-    { lastDigit: 3, suffix: "rd" },
-    { lastDigit: 4, suffix: "th" }
+    { lastDigit: 3, suffix: "rd" }
 ];
 
-let findAndGet fname fval table =
-   fromSome (findWithKey fname fval table);
+let findWithKey' fName x table =
+   fromSome (findWithKey fName x table);
 
 let ordinal n =
    if n <= 0 then
       error "n <= 0 not supported"
    else if (n < 4) then
-      (findAndGet "lastDigit" n ordinalMap).suffix
+      (findWithKey' "lastDigit" n ordinalMap).suffix
    else if (n >= 4) `and` (n <= 20) then
       "th"
    else
       error "n > 20 not supported";
-
 
 let rankLabel word n =
    if n == 1
@@ -43,7 +44,16 @@ let rankLabel word n =
    else
       ordinal n ++ "-" ++ word;
 
+let trendWord n1 n2 w1 w2 w3 =
+    if n1 > n2
+        then w1
+    else if n1 < n2
+        then w2
+    else
+        w3;
+
 let cmpTime a b = a.time_s < b.time_s;
+let cmpParam a b = a.param < b.param;
 
 let findWhere pred table =
    fromSome (find pred table);

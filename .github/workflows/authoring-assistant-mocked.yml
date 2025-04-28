@@ -32,4 +32,5 @@ jobs:
           yarn install
           yarn test-mock
           yarn generate-charts
+          yarn fluid bundle-website -w authoring-assistant -l
           yarn website-test authoring-assistant

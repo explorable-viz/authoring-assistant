@@ -33,4 +33,6 @@ jobs:
           yarn test-mock
           yarn generate-charts
           yarn fluid bundle-website -w authoring-assistant -l
+          yarn puppeteer browsers install chrome
+          yarn puppeteer browsers install firefox
           yarn website-test authoring-assistant

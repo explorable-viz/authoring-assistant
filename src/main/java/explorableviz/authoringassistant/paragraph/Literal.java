@@ -1,4 +1,4 @@
-package explorableviz.transparenttext.paragraph;
+package explorableviz.authoringassistant.paragraph;
 
 public class Literal extends TextFragment {
 

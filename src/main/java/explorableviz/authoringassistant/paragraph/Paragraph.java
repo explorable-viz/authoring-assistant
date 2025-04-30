@@ -1,6 +1,6 @@
-package explorableviz.transparenttext.paragraph;
+package explorableviz.authoringassistant.paragraph;
 
-import explorableviz.transparenttext.Settings;
+import explorableviz.authoringassistant.Settings;
 import kotlin.Pair;
 
 import java.util.ArrayList;

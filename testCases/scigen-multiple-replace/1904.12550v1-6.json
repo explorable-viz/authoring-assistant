@@ -5,7 +5,7 @@
       "file": "datasets/scigen/1904.12550v1-6"
     }
   ],
-  "imports": [],
+  "imports": ["scigen"],
   "variables": {},
   "paragraph": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.f_818) (filter (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData))"
+      "expression": "(findWhere (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData).f_818"
     },
     {
       "type": "literal",
@@ -22,3 +22,5 @@
     }
   ]
 }
+
+

@@ -1,8 +1,4 @@
-package explorableviz.transparenttext.paragraph;
-
-import explorableviz.transparenttext.variable.Variables;
-
-import static explorableviz.transparenttext.Program.replaceVariables;
+package explorableviz.authoringassistant.paragraph;
 
 public class Expression extends TextFragment {
 

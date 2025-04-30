@@ -1,22 +1,9 @@
-package explorableviz.transparenttext;
+package explorableviz.authoringassistant;
 
 import kotlin.Pair;
 
-import explorableviz.transparenttext.Program.QueryResult;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
+import explorableviz.authoringassistant.Program.QueryResult;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathFactory;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -67,8 +54,8 @@ public class Main {
         Files.createDirectories(Paths.get(Settings.getLogFolder()));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{Settings.getLogFolder()}/log_\{System.currentTimeMillis()}.csv"))) {
             String[] headers = {
-                    "test-case", "llm-agent", "temperature", "num-token", "in-context-learning-size", "query-paragraph",
-                    "attempts", "result", "generated-expression", "expected-expression", "expected-value", "duration(ms)"
+                    "test-case", "llm-agent", "temperature", "num-token", "in-context-learning-size",
+                    "attempts", "result", "generated-expression", "expected-value", "duration(ms)"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
@@ -81,11 +68,11 @@ public class Main {
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
                                 String.valueOf(learningContextSize),
-                                program.getParagraph().toFluidSyntax(),
+                                //program.getParagraph().toFluidSyntax(),
                                 String.valueOf(queryResult.attempt()),
                                 queryResult.response() != null ? "OK" : "KO",
-                                String.valueOf(queryResult.response() != null ? queryResult.response().getExpr() : "NULL"),
-                                queryResult.expected().getExpr(),
+                                String.valueOf(queryResult.response() != null ? "generated" : "NULL"),
+                                //queryResult.expected().getExpr(),
                                 queryResult.expected().getValue(),
                                 String.valueOf(queryResult.duration())
                         };

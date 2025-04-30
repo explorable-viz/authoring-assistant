@@ -1,6 +1,6 @@
-package explorableviz.transparenttext;
+package explorableviz.authoringassistant;
 
-import explorableviz.transparenttext.paragraph.Expression;
+import explorableviz.authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import kotlin.Pair;
@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
-import explorableviz.transparenttext.Program.QueryResult;
+import explorableviz.authoringassistant.Program.QueryResult;
 
-import static explorableviz.transparenttext.Program.writeFluidFiles;
+import static explorableviz.authoringassistant.Program.writeFluidFiles;
 
 public class AuthoringAssistant {
 

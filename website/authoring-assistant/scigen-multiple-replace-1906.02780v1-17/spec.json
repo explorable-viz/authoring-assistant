@@ -1,5 +1,5 @@
 {
-  "imports" : [ ],
+  "imports" : [ "scigen" ],
   "file" : "1906.02780v1-17",
   "inputs" : [ "tableData" ],
   "datasets" : [ [ "tableData", "datasets/scigen/1906.02780v1-17" ] ],

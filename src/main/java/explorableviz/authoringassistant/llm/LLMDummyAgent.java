@@ -1,6 +1,6 @@
-package explorableviz.transparenttext.llm;
+package explorableviz.authoringassistant.llm;
 
-import explorableviz.transparenttext.paragraph.Expression;
+import explorableviz.authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.Prompt;
 import org.json.JSONObject;

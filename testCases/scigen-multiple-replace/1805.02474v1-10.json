@@ -6,7 +6,7 @@
     }
   ],
   "imports": [
-    "scigen"
+    "scigen", "util"
   ],
   "variables": {},
   "paragraph": [

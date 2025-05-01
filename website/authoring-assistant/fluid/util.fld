@@ -1,0 +1,16 @@
+let insert cmp x sorted =
+   let helper [] = [x];
+       helper (y: ys) =
+           if cmp x y
+           then x : (y: ys)
+           else y : helper ys
+   in helper sorted;
+
+let insertionSort cmp lst =
+   let helper [] sorted = sorted;
+       helper (x: xs) sorted = helper xs (insert cmp x sorted)
+   in helper lst [];
+
+let cmpTime a b = a.time_s < b.time_s;
+let cmpParam a b = a.param < b.param;
+

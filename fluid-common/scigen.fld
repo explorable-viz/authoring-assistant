@@ -1,8 +1,7 @@
 let findIndex fName x ys =
    let helper [] rank = -1;
        helper (y: ys') rank =
-           if y.[fName] == x
-           then rank
+           if y.[fName] == x then rank
            else helper ys' (rank + 1)
    in helper ys 1;
 
@@ -16,28 +15,20 @@ let findWithKey' fName x table =
    fromSome (findWithKey fName x table);
 
 let ordinal n =
-   if n <= 0 then
-      error "n <= 0 not supported"
+   if n <= 0 then error "n <= 0 not supported"
    else if (n < 4) then
       (findWithKey' "lastDigit" n ordinalMap).suffix
-   else if (n >= 4) `and` (n <= 20) then
-      "th"
-   else
-      error "n > 20 not supported";
+   else if (n >= 4) `and` (n <= 20) then "th"
+   else error "n > 20 not supported";
 
 let rankLabel word n =
-   if n == 1
-      then word
-   else
-      ordinal n ++ "-" ++ word;
+   if n == 1 then word
+   else ordinal n ++ "-" ++ word;
 
 let trendWord n1 n2 w1 w2 w3 =
-    if n1 > n2
-        then w1
-    else if n1 < n2
-        then w2
-    else
-        w3;
+    if n1 > n2 then w1
+    else if n1 < n2 then w2
+    else w3;
 
 let findWhere pred table =
    fromSome (find pred table);

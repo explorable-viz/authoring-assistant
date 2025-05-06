@@ -19,7 +19,7 @@
       "file": "datasets/methane-emissions"
     }
   ],
-  "imports": ["scigen"],
+  "imports": ["util"],
   "paragraph": [
     {
       "type": "literal",

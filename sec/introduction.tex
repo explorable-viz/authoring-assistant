@@ -37,6 +37,8 @@ base. Perhaps just to aid their own comprehension, or to provide some kind of ju
 NLP aspect of the problem is potentially a big problem space in itself. We will restrict interest to certain
 idiomatic uses of natural language in making/justifying scientific claims. Examples:
 
+
+
 \begin{itemize}
 \item quantitative expressions
 \begin{itemize}
@@ -44,9 +46,41 @@ idiomatic uses of natural language in making/justifying scientific claims. Examp
    \item percentages
    \item rounded or normalised numbers
 \end{itemize}
+\item aggregation
+\begin{itemize}
+   \item average
+   \item totals
+   \item count
+\end{itemize}
+\item trends
+\begin{itemize}
+   \item comparisons
+   \item ranks
+\end{itemize}
 \item graded Adjectives (e.g.~\emph{virtually certain}, \emph{exceptionally unlikely})
 \item references to visual elements and their parts (mereology)
 \end{itemize}
+
+\begin{table}[!ht]
+   \centering
+   \tiny
+   \begin{tabular}{p{2cm}p{1.3cm}p{6.7cm}p{2cm}}
+      \toprule
+      Type & Category & Example & Status \\
+      \midrule
+      pure numerical values & Quantitative expressions & (findWithKey' "model" "LSTM" tableData).time\_s & Done \\
+      percentages & Quantitative expressions &  "The Energy Sector accounts for total methane emissions of", (record.emissions / sum(map (fun x -> x.emissions) (getByYear year tableData))) * 100 & Done \\
+      rounded or normalised numbers & Quantitative expressions & ~ & ~ \\
+      average & Aggregation & "The average methane emissions for the year 2024 is", (sumEmissions year tableData / length records) & Done \\
+      totals & Aggregation & "The total methane emissions for the year 2024 is", (sumEmissions year tableData) & Done \\
+      count & Aggregation & ~ & ~ \\
+      comparisons & Trends & trendWord (findWithKey' "model" "BiLSTM" tableData).time\_s (findWithKey' "model" "LSTM" tableData).time\_s "growing from" "shrinking to" "equal to" & Done \\
+      ranks & Trends & let pos = findIndex "model" "CNN" (insertionSort cmpTime tableData) in rankLabel "lowest" pos & Done \\
+      Graded adjectives  & Adjectives & ~ & ~ \\
+      References to visual elements and their parts (mereology) & ~ & ~ & ~ \\
+      \bottomrule
+   \end{tabular}
+\end{table}
 
 \subsection{Contributions}
 

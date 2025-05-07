@@ -1,10 +1,10 @@
 
 Paragraph([
-	Text " For TOP n COS SIM AVG, the tuning data results (Table 2) are somewhat more varied: First, there is no single best performing set of embeddings: Google yields the best F score for the Label setting (",
+	Text "For TOP n COS SIM AVG, the tuning data results (Table 2) are somewhat more varied: First, there is no single best performing set of embeddings: Google yields the best F score for the Label setting (",
 	Text(numToStr((findWithKey' "concept_input____embeddings" "Google" tableData).label___f)),
-	Text " ), while GloVe (though only barely) leads in the Description setting (",
+	Text "), while GloVe (though only barely) leads in the Description setting (",
 	Text(numToStr((findWithKey' "concept_input____embeddings" "GloVe" tableData).description___f)),
-	Text " ). This time, it is fastText which produces the best F score in the Both setting, which is also the best overall tuning data F score for TOP n COS SIM AVG (",
+	Text "). This time, it is fastText which produces the best F score in the Both setting, which is also the best overall tuning data F score for TOP n COS SIM AVG (",
 	Text(numToStr((findWithKey' "concept_input____embeddings" "fastText" tableData).both___f)),
-	Text " )."
+	Text ")."
 ])

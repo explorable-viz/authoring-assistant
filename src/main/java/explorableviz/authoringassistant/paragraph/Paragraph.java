@@ -56,7 +56,7 @@ public class Paragraph extends ArrayList<TextFragment> {
             var element = template.get(k);
 
             if (element instanceof Literal literal) {
-                literalBuilder.append(" ").append(literal.getValue());
+                literalBuilder.append(literal.getValue());
             } else if (element instanceof Expression expression) {
                 if (exprCount < numComputedExpr) {
                     Expression computedExpr = (Expression) this.get(k);
@@ -65,11 +65,11 @@ public class Paragraph extends ArrayList<TextFragment> {
                     p.add(computedExpr != null ? computedExpr : expression);
                 } else if (exprCount == numComputedExpr + index) {
                     replaceStart = literalBuilder.length();
-                    literalBuilder.append(" ").append(expression.getValue());
+                    literalBuilder.append(expression.getValue());
                     replaceEnd = literalBuilder.length();
                     toCompute = expression;
                 } else {
-                    literalBuilder.append(" ").append(expression.getValue());
+                    literalBuilder.append(expression.getValue());
                 }
                 exprCount++;
             }

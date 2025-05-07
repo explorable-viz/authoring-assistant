@@ -14,7 +14,7 @@
 \newlength\lstnumberwidth
 \setlength\lstnumberwidth{\widthof{\lstnumberstyle00}+\lstnumbersep+\lsthorizontalpadding}
 \lstset{
-    ,basicstyle=\linespread{0.9}\ttfamily%
+    ,basicstyle=\linespread{0.8}\ttfamily%
     ,breaklines=true%
     ,escapechar=\~
     ,tabsize=4%
@@ -29,11 +29,11 @@
     ,xrightmargin=\lsthorizontalpadding%
     ,framexrightmargin=\lsthorizontalpadding%
 %    ,backgroundcolor=\color{verylightgray}%
-    ,postbreak=XXXX\space%
+    ,postbreak=\space%
     ,mathescape=true%
 }
 \lstdefinelanguage{Fluid}{%
-   morekeywords={as,else,fun,if,in,let,match,then}%
+   morekeywords={as,else,fun,if,in,let,match,then,Paragraph,Text,error}%
   ,moredelim=[s][\itshape]{`}{`}
 }
 \lstnewenvironment{codecol}[1][]{\lstset{language=code,#1,moredelim=*[is][\textcolor{mediumgray}]{|}{|}}}{}

@@ -5,7 +5,7 @@
       "file": "datasets/scigen/1805.02474v1-14"
     }
   ],
-  "imports": ["scigen"],
+  "imports": ["scigen", "util"],
   "variables": {},
   "paragraph": [
     {

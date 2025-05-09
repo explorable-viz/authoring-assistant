@@ -36,10 +36,10 @@ public class AuthoringAssistant {
         while (!programEdits.isEmpty()) {
             Pair<Program, Expression> individualEdit = programEdits.get(i);
             //selection
-            Program programEdit = individualEdit.component1();
+            Program programEdit = individualEdit.getFirst();
             QueryResult result = execute(individualEdit);
 
-            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.response() == null ? individualEdit.component2() : result.response()));
+            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.response() == null ? individualEdit.getSecond() : result.response()));
             results.add(new Pair<>(programEdit, result));
             programEdits = programEdit.asIndividualEdits(templateProgram);
             programEdit.toWebsite();
@@ -52,8 +52,8 @@ public class AuthoringAssistant {
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
         final long start = System.currentTimeMillis();
-        Program subProgram = test.component1();
-        Expression expected = test.component2();
+        Program subProgram = test.getFirst();
+        Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         for (attempts = 0; attempts <= limit; attempts++) {

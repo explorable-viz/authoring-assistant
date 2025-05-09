@@ -35,7 +35,7 @@ public class InContextLearning {
         for (Program initialStatesFromTemplate : this.cases) {
             List<Pair<Program, Expression>> initialProgramStates = initialStatesFromTemplate.asIndividualEdits(initialStatesFromTemplate);
             for(Pair<Program, Expression> initialProgramState : initialProgramStates) {
-                inContextLearning.addPairPrompt(initialProgramState.component1().toUserPrompt(), initialProgramState.component2().getExpr());
+                inContextLearning.addPairPrompt(initialProgramState.getFirst().toUserPrompt(), initialProgramState.getSecond().getExpr());
             }
         }
         return inContextLearning;

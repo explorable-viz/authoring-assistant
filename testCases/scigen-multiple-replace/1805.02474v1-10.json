@@ -16,7 +16,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s \"growing from\" \"shrinking to\" \"equal to\""
+      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s"
     },
     {
       "type": "literal",

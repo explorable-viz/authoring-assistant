@@ -1,0 +1,5 @@
+
+Paragraph([
+	Text "Between 2015 and 2020, methane emissions increased across most sources, with the largest absolute rise seen in the ",
+	Text("Energy Sector")
+])

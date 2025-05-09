@@ -1,18 +1,8 @@
-let findIndex fName x ys =
-   let helper [] rank = -1;
-       helper (y: ys') rank =
-           if y.[fName] == x then rank
-           else helper ys' (rank + 1)
-   in helper ys 1;
-
 let ordinalMap = [
     { lastDigit: 1, suffix: "st" },
     { lastDigit: 2, suffix: "nd" },
     { lastDigit: 3, suffix: "rd" }
 ];
-
-let findWithKey' fName x table =
-   fromSome (findWithKey fName x table);
 
 let ordinal n =
    if n <= 0 then error "n <= 0 not supported"
@@ -25,11 +15,10 @@ let rankLabel word n =
    if n == 1 then word
    else ordinal n ++ "-" ++ word;
 
-let trendWord n1 n2 w1 w2 w3 =
-    if n1 > n2 then w1
-    else if n1 < n2 then w2
-    else w3;
+let trendWord n1 n2 growShrink =
+    growShrink (compare n1 n2);
 
-let findWhere pred table =
-   fromSome (find pred table);
+let growShrink EQ = "equal to";
+    growShrink LT = "shrinking to";
+    growShrink GT = "growing from";
 

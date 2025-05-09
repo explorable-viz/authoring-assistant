@@ -1,0 +1,9 @@
+let year = 2030;
+let record = getByCategory "Agriculture" year tableData
+in
+
+Paragraph([
+	Text "The total methane emissions for the year 2030 are ",
+	Text(numToStr(record.emissions)),
+	Text " for  Agriculture"
+])

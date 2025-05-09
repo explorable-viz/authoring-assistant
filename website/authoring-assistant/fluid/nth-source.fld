@@ -1,0 +1,6 @@
+
+Paragraph([
+	Text "In 2020, the ",
+	Text("Energy Sector"),
+	Text " had the highest amount in methane emissions."
+])

@@ -1,0 +1,12 @@
+let sumEmissions year data =
+   let records = getByYear year data;
+   let totals = sum(map (fun x -> x.emissions) records)
+   in totals;
+let year = 2030;
+let records = getByYear year tableData
+in
+
+Paragraph([
+	Text "The average methane emissions for the year 2030 is ",
+	Text(numToStr((sumEmissions year tableData / length records)))
+])

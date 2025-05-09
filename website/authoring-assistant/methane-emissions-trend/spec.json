@@ -1,0 +1,7 @@
+{
+  "imports" : [ "methane" ],
+  "file" : "trend",
+  "inputs" : [ "tableData" ],
+  "datasets" : [ [ "tableData", "datasets/methane-emissions" ] ],
+  "fluidSrcPath" : [ "../fluid" ]
+}

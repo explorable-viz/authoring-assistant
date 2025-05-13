@@ -5,6 +5,14 @@
       "file": "datasets/scigen/ipcc"
     }
   ],
+  "test-datasets": [
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/scigen/ipcc"
+      }
+    ]
+  ],
   "imports": [],
   "variables": {},
   "paragraph": [

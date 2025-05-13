@@ -5,8 +5,23 @@
       "file": "datasets/scigen/1805.02474v1-10"
     }
   ],
+  "test-datasets": [
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/scigen/1805.02474v1-10"
+      }
+    ],
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/scigen/1805.02474v1-10-2"
+      }
+    ]
+  ],
   "imports": [
-    "scigen", "util"
+    "scigen",
+    "util"
   ],
   "variables": {},
   "paragraph": [

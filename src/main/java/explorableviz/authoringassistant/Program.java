@@ -7,6 +7,7 @@ import explorableviz.authoringassistant.paragraph.Paragraph;
 import explorableviz.authoringassistant.variable.ValueOptions;
 import explorableviz.authoringassistant.variable.Variables;
 import kotlin.Pair;
+import org.checkerframework.checker.units.qual.A;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -30,6 +31,7 @@ public class Program {
 
     public final static Logger logger = Logger.getLogger(Program.class.getName());
     private final Map<String, String> datasets;
+    private final ArrayList<Map<String, String>> test_datasets;
     private final List<String> imports;
     private final ArrayList<String> _loadedImports;
     private final String code;
@@ -37,18 +39,21 @@ public class Program {
     private final Map<String, String> _loadedDatasets;
     private final String testCaseFileName;
     public static final String fluidFileName = "llmTest";
+    private final Variables.Flat variables;
 
-    public Program(Paragraph paragraph, Map<String,String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName) throws IOException {
+    public Program(Paragraph paragraph, Map<String,String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets, Variables.Flat variables) throws IOException {
         this.datasets = datasets;
         this._loadedDatasets = loadedDataset;
         this.code = code;
+        this.test_datasets = test_datasets;
         this.testCaseFileName = testCaseFileName;
         this.imports = imports;
         this._loadedImports = loadImports(imports);
         this.paragraph = paragraph;
+        this.variables = variables;
     }
 
-    private static HashMap<String, String> loadDatasetsFiles(Map<String,String> datasetMapping, Variables variables) throws IOException {
+    public static HashMap<String, String> loadDatasetsFiles(Map<String,String> datasetMapping, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
         for (Map.Entry<String, String> dataset : datasetMapping.entrySet()) {
             loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}.fld").toURI()))),variables));
@@ -136,6 +141,10 @@ public class Program {
                 JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
                 JSONArray json_imports = testCase.getJSONArray("imports");
                 Map<String, String> datasetMapping = datasetMapping(testCase.getJSONArray("datasets"));
+                ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
+                testCase.getJSONArray("test-datasets").forEach(configuration -> {
+                    test_configurations.add(datasetMapping((JSONArray) configuration));
+                });
                 List<String> imports = IntStream.range(0, json_imports.length())
                         .mapToObj(json_imports::getString)
                         .toList();
@@ -146,7 +155,9 @@ public class Program {
                         imports,
                         code,
                         loadDatasetsFiles(datasetMapping, variables),
-                        casePath
+                        casePath,
+                        test_configurations,
+                        variables
                 ));
             }
         }
@@ -176,7 +187,7 @@ public class Program {
         List<Pair<Expression,Paragraph>> paragraphsToCompute = paragraph.asIndividualEdits(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for(Pair<Expression,Paragraph> p : paragraphsToCompute) {
-            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName), p.getFirst()));
+            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName, this.test_datasets, variables), p.getFirst()));
         }
         return programs;
     }
@@ -240,6 +251,10 @@ public class Program {
         this.paragraph.addAll(paragraph);
     }
 
+    public ArrayList<Map<String, String>> getTest_datasets() {
+        return test_datasets;
+    }
+
     public String getTestCaseFileName() {
         return testCaseFileName;
     }
@@ -247,6 +262,11 @@ public class Program {
     public String getFluidFileName() {
         return fluidFileName;
     }
+
+    public Variables.Flat getVariables() {
+        return variables;
+    }
+
     public record QueryResult(Expression response, Expression expected, int attempt, long duration) {}
 
     public void toWebsite() throws IOException {

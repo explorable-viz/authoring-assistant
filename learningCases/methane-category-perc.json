@@ -19,6 +19,14 @@
       "file": "datasets/methane-emissions"
     }
   ],
+  "test-datasets": [
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/methane-emissions"
+      }
+    ]
+  ],
   "imports": ["util"],
   "paragraph": [
     {

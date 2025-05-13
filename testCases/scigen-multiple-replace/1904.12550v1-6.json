@@ -5,6 +5,14 @@
       "file": "datasets/scigen/1904.12550v1-6"
     }
   ],
+  "test-datasets": [
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/scigen/1904.12550v1-6"
+      }
+    ]
+  ],
   "imports": ["scigen", "util"],
   "variables": {},
   "paragraph": [

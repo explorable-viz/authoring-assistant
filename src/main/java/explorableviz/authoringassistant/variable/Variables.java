@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import java.util.SplittableRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -35,7 +36,7 @@ public class Variables extends HashMap<String, ValueOptions> {
     }
 
     public static class Flat extends Variables {
-        public static Variables.Flat expandVariables(Variables variables, Random random) {
+        public static Variables.Flat expandVariables(Variables variables, SplittableRandom random) {
             return variables.entrySet().stream()
                     .map(entry -> entry.getValue().expandVariable(random, entry.getKey()))
                     .reduce(new Variables.Flat(), (acc, map) -> {

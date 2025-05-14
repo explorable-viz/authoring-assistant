@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Set;
+import java.util.SplittableRandom;
 
 public abstract class ValueOptions {
     public abstract Object get();
@@ -26,7 +27,7 @@ public abstract class ValueOptions {
         }
         throw new IllegalArgumentException("Unsupported value type: " + value.getClass().getSimpleName());
     }
-    public abstract Variables expandVariable(Random random, String varName);
+    public abstract Variables expandVariable(SplittableRandom random, String varName);
 
     public static class StringValue extends ValueOptions {
         private final String value;
@@ -41,7 +42,7 @@ public abstract class ValueOptions {
         }
 
         @Override
-        public Variables expandVariable(Random random, String varName) {
+        public Variables expandVariable(SplittableRandom random, String varName) {
             Variables v = new Variables();
             v.put(varName, switch (value) {
                 case "RANDOM_INT" -> new ValueOptions.Number(random.nextInt(10));
@@ -66,7 +67,7 @@ public abstract class ValueOptions {
         }
 
         @Override
-        public Variables expandVariable(Random random, String varName) {
+        public Variables expandVariable(SplittableRandom random, String varName) {
             Variables v = new Variables();
             v.put(varName, this);
             return v;
@@ -90,7 +91,7 @@ public abstract class ValueOptions {
         }
 
         @Override
-        public Variables expandVariable(Random random, String varName) {
+        public Variables expandVariable(SplittableRandom random, String varName) {
             Variables v = new Variables();
             keySet().forEach(k -> v.put(STR."\{varName}.\{k}", new StringValue(value.get(k))));
             return v;
@@ -118,12 +119,12 @@ public abstract class ValueOptions {
         }
 
         @Override
-        public Variables expandVariable(Random random, String varName) {
+        public Variables expandVariable(SplittableRandom random, String varName) {
             return value.get(random.nextInt(value.size())).expandVariable(random, varName);
         }
     }
 
-    private static String getRandomString(int length, Random generator) {
+    private static String getRandomString(int length, SplittableRandom generator) {
         StringBuilder sb = new StringBuilder(length);
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         for (int i = 0; i < length; i++) {

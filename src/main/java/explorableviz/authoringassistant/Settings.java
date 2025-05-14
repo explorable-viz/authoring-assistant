@@ -88,6 +88,10 @@ public class Settings {
         return getSettings().getInt("num-test-to-generate");
     }
 
+    public static int getNumTestDataVariants() {
+        return getSettings().getInt("num-test-data-variants");
+    }
+
     public static int getNumLearningCaseToGenerate() {
         return getSettings().getInt("num-learning-case-to-generate");
     }

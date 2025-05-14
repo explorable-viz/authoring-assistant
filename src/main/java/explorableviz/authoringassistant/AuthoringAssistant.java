@@ -63,25 +63,25 @@ public class AuthoringAssistant {
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
-            for(Map<String, String> dataset : subProgram.getTest_datasets()) {
+            for (Map<String, String> dataset : subProgram.getTest_datasets()) {
                 final FluidCLI fluidCLI = new FluidCLI(dataset, subProgram.getImports());
                 logger.info(STR."Received response: \{candidate.getExpr()}");
                 //Compute expected value with the expected expression
-                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expected.getExpr(), dataset, Program.loadDatasetsFiles(dataset, subProgram.getVariables()), subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
+                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expected.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
                 String expectedValue = fluidCLI.evaluate(subProgram.getFluidFileName());
 
                 //Compute the value with the candidate expression
-                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, candidate.getExpr(), dataset, Program.loadDatasetsFiles(dataset, subProgram.getVariables()), subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
+                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, candidate.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
                 Optional<String> error = Program.validate(fluidCLI.evaluate(subProgram.getFluidFileName()), new Expression(expected.getExpr(), expectedValue));
 
                 if (error.isPresent()) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
                     sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
                     errors = true;
-                    //break;
+                    break;
                 }
             }
-            if(!errors) {
+            if (!errors) {
                 return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start);
             }
 

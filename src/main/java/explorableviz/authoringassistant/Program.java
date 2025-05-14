@@ -39,9 +39,8 @@ public class Program {
     private final Map<String, String> _loadedDatasets;
     private final String testCaseFileName;
     public static final String fluidFileName = "llmTest";
-    private final Variables.Flat variables;
 
-    public Program(Paragraph paragraph, Map<String,String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets, Variables.Flat variables) throws IOException {
+    public Program(Paragraph paragraph, Map<String,String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
         this.datasets = datasets;
         this._loadedDatasets = loadedDataset;
         this.code = code;
@@ -50,7 +49,6 @@ public class Program {
         this.imports = imports;
         this._loadedImports = loadImports(imports);
         this.paragraph = paragraph;
-        this.variables = variables;
     }
 
     public static HashMap<String, String> loadDatasetsFiles(Map<String,String> datasetMapping, Variables variables) throws IOException {
@@ -137,14 +135,15 @@ public class Program {
         for (String casePath : casePaths) {
             String jsonContent = Files.readString(Path.of(STR."\{casePath}.json"));
             for (int k = 0; k < numInstances; k++) {
-                Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new Random(k));
+                Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(k));
                 JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
                 JSONArray json_imports = testCase.getJSONArray("imports");
                 Map<String, String> datasetMapping = datasetMapping(testCase.getJSONArray("datasets"));
                 ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
-                testCase.getJSONArray("test-datasets").forEach(configuration -> {
-                    test_configurations.add(datasetMapping((JSONArray) configuration));
-                });
+                for(int n = 0; n < Settings.getNumTestDataVariants(); n++)
+                {
+                    test_configurations.add(loadDatasetsFiles(datasetMapping, expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(n))));
+                }
                 List<String> imports = IntStream.range(0, json_imports.length())
                         .mapToObj(json_imports::getString)
                         .toList();
@@ -156,8 +155,7 @@ public class Program {
                         code,
                         loadDatasetsFiles(datasetMapping, variables),
                         casePath,
-                        test_configurations,
-                        variables
+                        test_configurations
                 ));
             }
         }
@@ -187,7 +185,7 @@ public class Program {
         List<Pair<Expression,Paragraph>> paragraphsToCompute = paragraph.asIndividualEdits(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for(Pair<Expression,Paragraph> p : paragraphsToCompute) {
-            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName, this.test_datasets, variables), p.getFirst()));
+            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName, this.test_datasets), p.getFirst()));
         }
         return programs;
     }
@@ -261,10 +259,6 @@ public class Program {
 
     public String getFluidFileName() {
         return fluidFileName;
-    }
-
-    public Variables.Flat getVariables() {
-        return variables;
     }
 
     public record QueryResult(Expression response, Expression expected, int attempt, long duration) {}

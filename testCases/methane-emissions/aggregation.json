@@ -3,37 +3,31 @@
     "emissions": [
       {
         "year": "2030",
-        "result": "13.51",
         "operation": "average",
         "expected": "(sumEmissions year tableData / length records)"
       },
       {
         "year": "2015",
-        "result": "6.09",
         "operation": "average",
         "expected": "(sumEmissions year tableData / length records)"
       },
       {
         "year": "2020",
-        "result": "8.71",
         "operation": "average",
         "expected": "(sumEmissions year tableData / length records)"
       },
       {
         "year": "2030",
-        "result": "121.57",
         "operation": "total",
         "expected": "sumEmissions year tableData"
       },
       {
         "year": "2015",
-        "result": "54.82",
         "operation": "total",
         "expected": "sumEmissions year tableData"
       },
       {
         "year": "2020",
-        "result": "78.43",
         "operation": "total",
         "expected": "sumEmissions year tableData"
       }

@@ -10,7 +10,7 @@
     "util"
   ],
   "variables": {
-    "time_lstm": [67, 70, 80, 90, 81, 99, 100, 50]
+    "time_lstm": [67, 70, 80, 90]
   },
   "paragraph": [
     {

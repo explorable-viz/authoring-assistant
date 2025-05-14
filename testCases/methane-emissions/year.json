@@ -4,32 +4,27 @@
       {
         "type":"Agricultural Waste Burning",
         "result": "2030",
-        "peak": "highest",
-        "year": "?"
+        "record": "highest"
       },
       {
         "type":"Agriculture",
         "result": "2020",
-        "peak": "highest",
-        "year": "?"
+        "record": "highest"
       },
       {
         "type":"The Energy Sector",
         "result": "2030",
-        "peak": "highest",
-        "year": "?"
+        "record": "highest"
       },
       {
         "type":"Residential Commercial Other",
         "result": "2030",
-        "peak": "lowest",
-        "year": "?"
+        "record": "lowest"
       },
       {
         "type":"Grassland Burning",
         "result": "2020",
-        "peak": "lowest",
-        "year": "?"
+        "record": "lowest"
       }
     ]
   },

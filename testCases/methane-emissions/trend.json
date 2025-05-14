@@ -7,8 +7,7 @@
         "article": "the",
         "result": "\"Energy Sector\"",
         "change": "increased",
-        "extent": "rise",
-        "type": "?"
+        "extent": "rise"
       },
       {
         "year1": "2020",
@@ -16,8 +15,7 @@
         "article": "the",
         "result": "\"Energy Sector\"",
         "change": "increased",
-        "extent": "rise",
-        "type": "?"
+        "extent": "rise"
       },
       {
         "year1": "2015",
@@ -25,8 +23,7 @@
         "article": "",
         "result": "\"Residential Commercial Other\"",
         "change": "decreased",
-        "extent": "reduction",
-        "type": "?"
+        "extent": "reduction"
       }
     ]
   },

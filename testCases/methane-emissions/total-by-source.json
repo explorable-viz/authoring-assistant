@@ -4,19 +4,16 @@
       {
         "article": "",
         "type":"Agriculture",
-        "result":"37.74",
         "year": "2030"
       },
       {
         "article": "the",
         "type": "Energy Sector",
-        "result":"64.186",
         "year": "2030"
       },
       {
         "article": "the",
         "type": "Energy Sector",
-        "result":"?",
         "year": "2030"
       }
     ]

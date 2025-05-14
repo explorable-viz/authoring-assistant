@@ -23,7 +23,10 @@
     "scigen",
     "util"
   ],
-  "variables": {},
+  "variables": {
+
+
+  },
   "paragraph": [
     {
       "type": "literal",
@@ -31,7 +34,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s"
+      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s growShrink"
     },
     {
       "type": "literal",

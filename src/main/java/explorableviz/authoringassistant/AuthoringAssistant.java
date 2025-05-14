@@ -64,7 +64,7 @@ public class AuthoringAssistant {
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
             for (Map<String, String> dataset : subProgram.getTest_datasets()) {
-                final FluidCLI fluidCLI = new FluidCLI(dataset, subProgram.getImports());
+                final FluidCLI fluidCLI = new FluidCLI(subProgram.getDatasets(), subProgram.getImports());
                 logger.info(STR."Received response: \{candidate.getExpr()}");
                 //Compute expected value with the expected expression
                 writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expected.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());

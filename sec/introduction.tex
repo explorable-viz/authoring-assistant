@@ -1,6 +1,8 @@
 \section{Introduction}
 
 \begin{itemize}
+    \item Interactive visualization of data
+    \item Making the text transparent, with the possibility to highlight the data related to a specific sentence.
     \item Making sense of data-driven claims is hard, even if the evidence base (code/data) is open
     \item We see this in peer review, misinformation, retracted papers, …
 \end{itemize}
@@ -47,17 +49,21 @@ Examples \ref{tab:fluid_examples}
         \toprule
         \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
         \midrule
+        \rowcolor{gray!20}
         \multicolumn{3}{>{\raggedright\arraybackslash}c}{\textbf{Quantitative expressions.}} \\
         \midrule
         Numerical value
         & BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch growing from \hl{67} seconds to 106 seconds. &
         \begin{lstlisting}[language=Fluid,numbers=none]
-(findWithKey' "model" "LSTM" tableData).time\_s
+(findWithKey' "model" "LSTM" tableData).time_s
         \end{lstlisting} \\
         Percentage &
-        The Energy Sector accounts for total methane emissions of \hl{52.80\%} in 2030. &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-(record.emissions / sum(map (fun x -> x.emissions) (getByYear year tableData))) * 100
+        The Energy Sector accounts for total methane emissions of \hl{52.80\%} in 2030.
+        & \begin{lstlisting}[language=Fluid,numbers=none]
+(record.emissions /
+ sum (map (fun x -> x.emissions)
+          (getByYear year tableData))) * 100
+
         \end{lstlisting}  \\
         Rounded or normalised number & ~                & ~                             \\
         \multicolumn{3}{>{\raggedright\arraybackslash}c}{\textbf{Aggregation.}} \\
@@ -68,11 +74,16 @@ Examples \ref{tab:fluid_examples}
 (sumEmissions year tableData / length records)
         \end{lstlisting} \\
         Min                          & ~                & ~                             \\
-        Max                          & ~                & ~                             \\\
+        Max                          & ~                & ~                             \\
         Ranks &
         On the other hand, a 3-layer stacked CNN gives an accuracy of 81.46\%, which is also the \hl{lowest} compared with BiLSTM, hierarchical attention and S-LSTM  &
         \begin{lstlisting}[language=Fluid,numbers=none]
-let pos = findIndex "model" "CNN" (insertionSort cmpTime tableData) in rankLabel "lowest" pos
+let pos =
+  findIndex
+    "model"
+    "CNN"
+    (insertionSort cmpTime tableData)
+in rankLabel "lowest" pos
         \end{lstlisting} \\
         Total &
         The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
@@ -85,7 +96,10 @@ sumEmissions year tableData
         Comparisons
         & BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch \hl{growing from} 67 seconds to 106 seconds. &
         \begin{lstlisting}[language=Fluid,numbers=none]
-trendWord (findWithKey' "model" "BiLSTM" tableData).time\_s (findWithKey' "model" "LSTM" tableData).time\_s "growing from" "shrinking to" "equal to"
+trendWord
+ (findWithKey' "model" "BiLSTM" tableData).time_s
+ (findWithKey' "model" "LSTM" tableData).time_s
+ growShrink
         \end{lstlisting} \\
         *Graded adjective            & ~                & ~                             \\
         *Reference to visual element                            & ~                & ~                             \\

@@ -1,7 +1,7 @@
 
 Paragraph([
 	Text "As shown in Table 3, BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch ",
-	Text(trendWord (findWithKey' "model" "BiLSTM" tableData).time_s (findWithKey' "model" "LSTM" tableData).time_s),
+	Text(trendWord (findWithKey' "model" "BiLSTM" tableData).time_s (findWithKey' "model" "LSTM" tableData).time_s growShrink),
 	Text " ",
 	Text(numToStr((findWithKey' "model" "LSTM" tableData).time_s)),
 	Text " seconds to ",

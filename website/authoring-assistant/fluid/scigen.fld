@@ -15,8 +15,8 @@ let rankLabel word n =
    if n == 1 then word
    else ordinal n ++ "-" ++ word;
 
-let trendWord n1 n2 growShrink =
-    growShrink (compare n1 n2);
+let trendWord n1 n2 compareWord =
+    compareWord (compare n1 n2);
 
 let growShrink EQ = "equal to";
     growShrink LT = "shrinking to";

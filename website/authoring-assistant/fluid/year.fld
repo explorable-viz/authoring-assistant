@@ -1,5 +1,5 @@
 
 Paragraph([
-	Text "Agricultural Waste Burning recorded its $emissions.record$ methane emissions in ",
+	Text "Residential Commercial Other recorded its lowest methane emissions in ",
 	Text(numToStr(2030))
 ])

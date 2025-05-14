@@ -3,12 +3,10 @@
     "emissions": [
       {
         "source": "Agriculture",
-        "quantity": "31.05",
         "year": "2030"
       },
       {
         "source": "Energy Sector",
-        "quantity": "52.80",
         "year": "2030"
       }
     ]

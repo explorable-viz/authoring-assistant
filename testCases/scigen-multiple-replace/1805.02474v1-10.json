@@ -23,7 +23,7 @@
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " from "
     },
     {
       "type": "expression",

@@ -84,8 +84,8 @@ public class Settings {
         return getSettings().getString("system-prompt-path");
     }
 
-    public static int getNumTestToGenerate() {
-        return getSettings().getInt("num-test-to-generate");
+    public static int maxProgramVariants() {
+        return getSettings().getInt("max-program-variants");
     }
 
     public static int getNumTestDataVariants() {

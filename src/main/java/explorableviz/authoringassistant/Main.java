@@ -30,7 +30,7 @@ public class Main {
         try {
             Settings.init("settings.json");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
-            programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.getNumTestToGenerate());
+            programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             final int queryLimit = Settings.getNumQueryToExecute().orElseGet(programs::size);
             final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, queryLimit, programs);
             float accuracy = computeExactMatch(results);

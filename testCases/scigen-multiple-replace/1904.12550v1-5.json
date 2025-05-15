@@ -15,6 +15,7 @@
   ],
   "imports": ["scigen", "util"],
   "variables": {},
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",

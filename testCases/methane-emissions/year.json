@@ -28,6 +28,7 @@
       }
     ]
   },
+  "testing-variables": {},
   "datasets": [
     {
       "var": "tableData",

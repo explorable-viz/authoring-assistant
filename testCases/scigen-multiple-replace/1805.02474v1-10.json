@@ -9,9 +9,10 @@
     "scigen",
     "util"
   ],
-  "variables": {
+  "testing-variables": {
     "time_lstm": [67, 70, 80, 90, 81, 99, 100, 50]
   },
+  "variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -27,7 +28,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"LSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"LSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -35,7 +36,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"BiLSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"BiLSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -43,7 +44,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -51,7 +52,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"S-LSTM\" tableData).acc"
+      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).acc"
     },
     {
       "type": "literal",
@@ -59,7 +60,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"S-LSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).time_s"
     },
     {
       "type": "literal",
@@ -83,7 +84,7 @@
     },
     {
       "type": "expression",
-      "expression": "(fromSome (findWithKey \"model\" \"3 stacked CNN\" tableData)).acc"
+      "expression": "numToStr (fromSome (findWithKey \"model\" \"3 stacked CNN\" tableData)).acc"
     },
     {
       "type": "literal",

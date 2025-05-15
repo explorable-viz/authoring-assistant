@@ -15,6 +15,7 @@
   ],
   "imports": ["scigen", "util"],
   "variables": {},
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -22,7 +23,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWhere (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData).f_818"
+      "expression": "numToStr (findWhere (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData).f_818"
     },
     {
       "type": "literal",

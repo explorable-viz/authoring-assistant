@@ -23,7 +23,7 @@
   "test-case-folder": "testCases/scigen-multiple-replace",
   "threshold": 0.0,
   "system-prompt-path":"system-prompt/",
-  "num-test-to-generate":1,
+  "max-program-variants":1,
   "num-learning-case-to-generate": 1,
   "num-test-data-variants": 3
 }

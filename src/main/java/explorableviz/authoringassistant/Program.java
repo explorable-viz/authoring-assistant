@@ -175,9 +175,18 @@ public class Program {
                     e.printStackTrace();
                     System.exit(1);
                 }
-                Variables.Flat testVariables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("testing-variables")), new SplittableRandom(k));
-                for (int n = 0; n < Settings.getNumTestDataVariants(); n++) {
-                    test_configurations.add(loadDatasetsFiles(datasetMapping, testVariables));
+                Variables tv = Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("testing-variables"));
+                int maxVariants = 0;
+                for(Map.Entry<String, ValueOptions> entry : tv.entrySet() ) {
+                    if(entry.getValue() instanceof ValueOptions.List values) {
+                        maxVariants = Math.max(maxVariants, values.get().size());
+                    } else {
+                        maxVariants = 1;
+                    }
+                }
+                Variables.Flat testVariables = expandVariables(tv, new SplittableRandom(k));
+                for (int n = 0; n < maxVariants; n++) {
+                    test_configurations.add(loadDatasetsFiles(datasetMapping, expandVariables(tv, new SplittableRandom(n))));
                 }
                 List<String> imports = IntStream.range(0, json_imports.length())
                         .mapToObj(json_imports::getString)
@@ -188,7 +197,7 @@ public class Program {
                         datasetMapping,
                         imports,
                         replaceVariables(code, variables),
-                        loadDatasetsFiles(datasetMapping, variables),
+                        loadDatasetsFiles(datasetMapping, testVariables),
                         casePath,
                         test_configurations
                 ));

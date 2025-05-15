@@ -18,7 +18,7 @@ let rankLabel word n =
 let trendWord n1 n2 compareWord =
     compareWord (compare n1 n2);
 
-let growShrink EQ = "equal to";
-    growShrink LT = "shrinking to";
-    growShrink GT = "growing from";
+let growShrink EQ = "unchanging";
+    growShrink LT = "shrinking";
+    growShrink GT = "growing";
 

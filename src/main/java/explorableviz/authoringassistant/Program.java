@@ -176,12 +176,10 @@ public class Program {
                     System.exit(1);
                 }
                 Variables tv = Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("testing-variables"));
-                int maxVariants = 0;
+                int maxVariants = 1;
                 for(Map.Entry<String, ValueOptions> entry : tv.entrySet() ) {
                     if(entry.getValue() instanceof ValueOptions.List values) {
                         maxVariants = Math.max(maxVariants, values.get().size());
-                    } else {
-                        maxVariants = 1;
                     }
                 }
                 Variables.Flat testVariables = expandVariables(tv, new SplittableRandom(k));

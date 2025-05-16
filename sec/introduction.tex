@@ -50,8 +50,8 @@ Examples \ref{tab:fluid_examples}
         \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
         \midrule
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}c}{\textbf{Quantitative expressions.}} \\
-        \midrule
+        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions.}} \\
+
         Numerical value
         & BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch growing from \hl{67} seconds to 106 seconds. &
         \begin{lstlisting}[language=Fluid,numbers=none]
@@ -66,8 +66,8 @@ Examples \ref{tab:fluid_examples}
 
         \end{lstlisting}  \\
         Rounded or normalised number & ~                & ~                             \\
-        \multicolumn{3}{>{\raggedright\arraybackslash}c}{\textbf{Aggregation.}} \\
-        \midrule
+        \rowcolor{gray!20}
+        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation.}} \\
         Average
         & The average methane emissions for the year 2030 is \hl{13.51} &
         \begin{lstlisting}[language=Fluid,numbers=none]
@@ -79,9 +79,7 @@ Examples \ref{tab:fluid_examples}
         On the other hand, a 3-layer stacked CNN gives an accuracy of 81.46\%, which is also the \hl{lowest} compared with BiLSTM, hierarchical attention and S-LSTM  &
         \begin{lstlisting}[language=Fluid,numbers=none]
 let pos =
-  findIndex
-    "model"
-    "CNN"
+  findIndex "model" "CNN"
     (insertionSort cmpTime tableData)
 in rankLabel "lowest" pos
         \end{lstlisting} \\
@@ -91,10 +89,11 @@ in rankLabel "lowest" pos
 sumEmissions year tableData
         \end{lstlisting} \\
         *Count                       & ~                & ~                             \\
-        \multicolumn{3}{>{\raggedright\arraybackslash}c}{\textbf{Trends \& Adjectives.}} \\
-        \midrule
+        \rowcolor{gray!20}
+        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends \& Adjectives.}} \\
+
         Comparisons
-        & BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch \hl{growing from} 67 seconds to 106 seconds. &
+        & BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
         \begin{lstlisting}[language=Fluid,numbers=none]
 trendWord
  (findWithKey' "model" "BiLSTM" tableData).time_s

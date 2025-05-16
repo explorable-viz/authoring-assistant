@@ -1,5 +1,5 @@
 
-Paragraph[
+Paragraph [
 	Text "A further two datasets, Berkeley Earth (Rohde et al., 2013) and that of the Japan Meteorological Agency (JMA), are provided in Table 1.1. This working definition provides an updated estimate of ",
 	Text (numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == "Average") tableData)))),
 	Text "°C for the warming over the period 1880 - 2012 based on a linear trend. This quantity was quoted as ",

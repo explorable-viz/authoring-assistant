@@ -1,5 +1,5 @@
 
-Paragraph[
+Paragraph [
 	Text "Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only ",
 	Text (numToStr (last (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 5) `and` (x.max_chunk_size == "k=6")) tableData)) - head (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData)))),
 	Text ", while the speedup drops from ",

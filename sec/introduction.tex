@@ -50,10 +50,11 @@ Examples \ref{tab:fluid_examples}
         \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
         \midrule
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions.}} \\
+        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
 
         Numerical value
-        & BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch growing from \hl{67} seconds to 106 seconds. &
+        & the training time per epoch growing from \hl{67} seconds to 106 seconds.
+        &
         \begin{lstlisting}[language=Fluid,numbers=none]
 (findWithKey' "model" "LSTM" tableData).time_s
         \end{lstlisting} \\
@@ -65,18 +66,18 @@ Examples \ref{tab:fluid_examples}
           (getByYear year tableData))) * 100
 
         \end{lstlisting}  \\
-        Rounded or normalised number & ~                & ~                             \\
+        Rounding & ~                & ~                             \\
+        Cardinals \& Multiplicative & ~                & ~                             \\
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation.}} \\
+        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
         Average
         & The average methane emissions for the year 2030 is \hl{13.51} &
         \begin{lstlisting}[language=Fluid,numbers=none]
 (sumEmissions year tableData / length records)
         \end{lstlisting} \\
-        Min                          & ~                & ~                             \\
-        Max                          & ~                & ~                             \\
+        Min/Max                          & ~                & ~                             \\
         Ranks &
-        On the other hand, a 3-layer stacked CNN gives an accuracy of 81.46\%, which is also the \hl{lowest} compared with BiLSTM, hierarchical attention and S-LSTM  &
+        3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
         \begin{lstlisting}[language=Fluid,numbers=none]
 let pos =
   findIndex "model" "CNN"
@@ -90,10 +91,10 @@ sumEmissions year tableData
         \end{lstlisting} \\
         *Count                       & ~                & ~                             \\
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends \& Adjectives.}} \\
+        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
 
         Comparisons
-        & BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
+        & The training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
         \begin{lstlisting}[language=Fluid,numbers=none]
 trendWord
  (findWithKey' "model" "BiLSTM" tableData).time_s

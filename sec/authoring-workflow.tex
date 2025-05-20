@@ -8,15 +8,22 @@
 \end{figure}
 
 \subsection{System Prompt}
-Fig. \ref{fig:system-prompt} shows the system-prompt defined for the Authoring Assistant.
-\begin{figure}[h]
-    \small
-    {\lstinputlisting[language=Fluid]{system-prompt/system-prompt.txt}}
-    \vspace{-0.5em}
-    \caption{System-Prompt defined for the Authoring Assistant}
-    \label{fig:system-prompt}
-\end{figure}
+Fig. \ref{fig:system-prompt} shows the system prompt defined for the Authoring Assistant.
 
+\begin{table}[!ht]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{p{13cm}}
+        \toprule
+        \rowcolor{gray!20}
+        \input{system-prompt/system-prompt.txt}
+        \\
+        \bottomrule
+    \end{tabular}
+    \caption{System Prompt defined for the Authoring Assistant.}
+    \label{tab:system-prompt}
+    \renewcommand{\arraystretch}{1.0}
+\end{table}
 
 
 \subsection{Editor Loop}\label{subsec:editor-loop}

@@ -6,11 +6,11 @@ Input Structure:
 - code: A script that processes and manipulates the data.
 - paragraph: A description with embedded contextual information.
 Task: Identify any [REPLACE id= value=] tag and extract its value. The value can be:
-- A number or string → Generate an expression that produces exactly this value.
-- A ? symbol → Compute the expression that best fits the text context.
+- A number or string -> Generate an expression that produces exactly this value.
+- A ? symbol -> Compute the expression that best fits the text context.
 Output Format:
 A JSON Object where the ID of the "REPLACE" tag is the key, and the value is the generated expression.
 Constraints:
-- No comments—just return the output.
+- No comments; just return the output.
 - Ensure syntax correctness and alignment with the provided code.
 - Assume REPLACE is the only tag and always corresponds to the desired output.

@@ -7,6 +7,18 @@
     \caption{AI-assisted authoring workflow}\label{fig:architecture}
 \end{figure}
 
+\subsection{System Prompt}
+Fig. \ref{fig:system-prompt} shows the system-prompt defined for the Authoring Assistant.
+\begin{figure}[h]
+    \small
+    {\lstinputlisting[language=Fluid]{system-prompt/system-prompt.txt}}
+    \vspace{-0.5em}
+    \caption{System-Prompt defined for the Authoring Assistant}
+    \label{fig:system-prompt}
+\end{figure}
+
+
+
 \subsection{Editor Loop}\label{subsec:editor-loop}
 Design of main loop that would be integrated into an IDE. The configuration (state) that is being maintained
 is a \kw{Paragraph} the user is authoring in Fluid. Consists of a sequence of text fragments, some of which

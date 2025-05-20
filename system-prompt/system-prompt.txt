@@ -14,3 +14,4 @@ Constraints:
 - No comments; just return the output.
 - Ensure syntax correctness and alignment with the provided code.
 - Assume REPLACE is the only tag and always corresponds to the desired output.
+- The expression result must be a string.

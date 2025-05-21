@@ -8,22 +8,19 @@
 \end{figure}
 
 \subsection{System Prompt}
+\label{subsec:system-prompt}
 Fig. \ref{fig:system-prompt} shows the system prompt defined for the Authoring Assistant.
 
-\begin{table}[!ht]
+\begin{figure}[h]
     \centering
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{p{13cm}}
-        \toprule
-        \rowcolor{gray!20}
-        \input{system-prompt/system-prompt.txt}
-        \\
-        \bottomrule
-    \end{tabular}
-    \caption{System Prompt defined for the Authoring Assistant.}
-    \label{tab:system-prompt}
-    \renewcommand{\arraystretch}{1.0}
-\end{table}
+    \begin{tcolorbox}[colback=gray!10, colframe=gray!50, boxrule=0.5pt, arc=2pt,
+        left=6pt, right=6pt, top=4pt, bottom=4pt]
+        \VerbatimInput[fontsize=\small, formatcom=\normalfont]{system-prompt/system-prompt.txt}
+    \end{tcolorbox}
+    \vspace{-0.5em}
+    \caption{System-Prompt defined for the Authoring Assistant}
+    \label{fig:system-prompt}
+\end{figure}
 
 
 \subsection{Editor Loop}\label{subsec:editor-loop}

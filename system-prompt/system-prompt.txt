@@ -5,7 +5,7 @@ Input Structure:
 - imports: Libraries used in the code.
 - code: A script that processes and manipulates the data.
 - paragraph: A description with embedded contextual information.
-Task: Identify any [REPLACE id= value=] tag and extract its value. The value can be:
+Task: Identify any [REPLACE value=] tag and extract its value. The value can be:
 - A number or string -> Generate an expression that produces exactly this value.
 - A ? symbol -> Compute the expression that best fits the text context.
 Output Format:

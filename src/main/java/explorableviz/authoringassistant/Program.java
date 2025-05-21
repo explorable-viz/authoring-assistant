@@ -88,7 +88,7 @@ public class Program {
         if (outputLines.length < 2) {
             throw new RuntimeException("Output format is invalid");
         }
-        return outputLines[FluidCLI.isWindows() ? 2 : 1].replaceAll("^\"|\"$", "");
+        return outputLines[FluidCLI.isWindows() ? 2 : 1];
     }
 
     public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
@@ -98,6 +98,10 @@ public class Program {
         if (commandLineResponse.contains("Error: ")) {
             logger.info("Validation failed because interpreter error");
             return Optional.of(value);
+        }
+        //String error
+        if(!value.matches("^\".*\"$")) {
+            return Optional.of(STR."String expected. \{value} seems not a string");
         }
         if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
             logger.info("Validation passed");

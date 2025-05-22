@@ -80,7 +80,16 @@ Examples \ref{tab:fluid_examples}
         \begin{lstlisting}[language=Fluid,numbers=none]
 (sumEmissions year tableData / length records)
         \end{lstlisting} \\
-        Min/Max                          & ~                & ~                             \\
+        Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
+        \vspace{-5pt}
+        \begin{lstlisting}[language=Fluid,numbers=none]
+let maxEntry =
+    maximumBy (fun x -> x.emissions)
+              (filter
+                (fun x -> x.type == "Energy Sector")
+                tableData)
+in maxEntry.year
+        \end{lstlisting} \\                             \\
         Ranks &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
         \vspace{-5pt}

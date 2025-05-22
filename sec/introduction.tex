@@ -55,7 +55,7 @@ Examples \ref{tab:fluid_examples}
         Numerical value
         & the training time per epoch growing from \hl{67} seconds to 106 seconds.
         &%check with v-space
-        \vspace{-5pt}
+        \vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 (findWithKey' "model" "LSTM" tableData).time_s
         \end{lstlisting}
@@ -63,7 +63,7 @@ Examples \ref{tab:fluid_examples}
         Percentage &
         The Energy Sector accounts for total methane emissions of \hl{52.80\%} in 2030.
         &
-        \vspace{-5pt}
+        \vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 (record.emissions /
  sum (map (fun x -> x.emissions)
@@ -76,12 +76,12 @@ Examples \ref{tab:fluid_examples}
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
         Average
         & The average methane emissions for the year 2030 is \hl{13.51} &
-        \vspace{-5pt}
+        \vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 (sumEmissions year tableData / length records)
         \end{lstlisting} \\
         Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
-        \vspace{-5pt}
+        \vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 let maxEntry =
     maximumBy (fun x -> x.emissions)
@@ -92,7 +92,7 @@ in maxEntry.year
         \end{lstlisting} \\                             \\
         Ranks &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
-        \vspace{-5pt}
+        \vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 let pos =
   findIndex "model" "CNN"
@@ -101,7 +101,7 @@ in rankLabel "lowest" pos
         \end{lstlisting} \\
         Total &
         The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
-        \vspace{-5pt}
+        \vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 sumEmissions year tableData
         \end{lstlisting} \\

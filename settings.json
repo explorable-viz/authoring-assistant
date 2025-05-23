@@ -11,7 +11,7 @@
   "ollama-port": 11434,
   "log-folder": "logs/",
   "fluid-compiler-path": "./",
-  "fluid-temp-folder": "fluid-temp",
+  "fluid-temp-folder": "./fluid-temp",
   "agent-limit": 3,
   "base-path-library": "node_modules/@explorable-viz/fluid/dist/fluid/fluid",
   "fluid-common-folder": "./fluid-common",
@@ -22,8 +22,8 @@
   "enable-editor-loop": false,
   "test-case-folder": "testCases/scigen-multiple-replace",
   "threshold": 0.0,
-  "system-prompt-path":"system-prompt/",
-  "max-program-variants":1,
+  "system-prompt-path": "system-prompt/",
+  "max-program-variants": 1,
   "num-learning-case-to-generate": 1,
   "num-test-data-variants": 3
 }

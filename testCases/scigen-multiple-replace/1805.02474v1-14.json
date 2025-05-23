@@ -5,8 +5,20 @@
       "file": "datasets/scigen/1805.02474v1-14"
     }
   ],
-  "imports": ["scigen", "util"],
+  "test-datasets": [
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/scigen/1805.02474v1-14"
+      }
+    ]
+  ],
+  "imports": [
+    "scigen",
+    "util"
+  ],
   "variables": {},
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -14,7 +26,8 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"S-LSTM\" tableData).f1"
+      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).f1",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -22,7 +35,8 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"yang2017transfer\" tableData).f1"
+      "expression": "numToStr (findWithKey' \"model\" \"yang2017transfer\" tableData).f1",
+      "category": "quantitative"
     },
     {
       "type": "literal",

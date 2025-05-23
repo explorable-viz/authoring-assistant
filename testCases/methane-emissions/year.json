@@ -3,36 +3,32 @@
     "emissions": [
       {
         "type":"Agricultural Waste Burning",
-        "result": "2030",
-        "peak": "highest",
-        "year": "?"
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "record": "highest"
       },
       {
         "type":"Agriculture",
-        "result": "2020",
-        "peak": "highest",
-        "year": "?"
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "record": "highest"
       },
       {
         "type":"The Energy Sector",
-        "result": "2030",
-        "peak": "highest",
-        "year": "?"
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "record": "highest"
       },
       {
         "type":"Residential Commercial Other",
-        "result": "2030",
-        "peak": "lowest",
-        "year": "?"
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "record": "lowest"
       },
       {
         "type":"Grassland Burning",
-        "result": "2020",
-        "peak": "lowest",
-        "year": "?"
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "record": "lowest"
       }
     ]
   },
+  "testing-variables": {},
   "datasets": [
     {
       "var": "tableData",
@@ -40,7 +36,7 @@
     }
   ],
   "imports": [
-    "methane"
+    "methane", "scigen"
   ],
   "paragraph": [
     {
@@ -49,7 +45,8 @@
     },
     {
       "type": "expression",
-      "expression": "$emissions.result$"
+      "expression": "$emissions.result$",
+      "category": "aggregation"
     }
   ]
 }

@@ -4,17 +4,16 @@
       {
         "article": "",
         "type":"Agriculture",
-        "result":"31.05",
         "year": "2030"
       },
       {
         "article": "The",
         "type": "Energy Sector",
-        "result":"52.80",
         "year": "2030"
       }
     ]
   },
+  "testing-variables": {},
   "datasets": [
     {
       "var": "tableData",
@@ -29,7 +28,8 @@
     },
     {
       "type": "expression",
-      "expression": "(record.emissions / sum(map (fun x -> x.emissions) (getByYear year tableData))) * 100"
+      "expression": "numToStr ((record.emissions / sum(map (fun x -> x.emissions) (getByYear year tableData))) * 100)",
+      "category": "quantitative"
     },
     {
       "type": "literal",

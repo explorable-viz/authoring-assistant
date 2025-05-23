@@ -5,18 +5,17 @@
         "result":"Agricultural Waste Burning",
         "year1": "2015",
         "year2": "2020",
-        "change": "increase",
-        "type": "?"
+        "change": "increase"
       },
       {
         "result":"Residential Commercial Other",
         "year1": "2015",
         "year2": "2020",
-        "change": "decrease",
-        "type": "?"
+        "change": "decrease"
       }
     ]
   },
+  "testing-variables": {},
   "datasets": [
     {
       "var": "tableData",
@@ -33,7 +32,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"$emissions.result$\""
+      "expression": "\"$emissions.result$\"",
+      "category": "trend"
     },
     {
       "type": "literal",

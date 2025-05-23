@@ -7,6 +7,7 @@
   ],
   "imports": [],
   "variables": {},
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -14,7 +15,8 @@
     },
     {
       "type": "expression",
-      "expression": "(foldr (fun x acc -> if x.wer > acc.wer then x else acc) (head tableData) tableData).iteration"
+      "expression": "numToStr (foldr (fun x acc -> if x.wer > acc.wer then x else acc) (head tableData) tableData).iteration",
+      "category": "quantitative"
     },
     {
       "type": "literal",

@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.logging.Logger;
 
@@ -36,10 +37,10 @@ public class AuthoringAssistant {
         while (!programEdits.isEmpty()) {
             Pair<Program, Expression> individualEdit = programEdits.get(i);
             //selection
-            Program programEdit = individualEdit.component1();
+            Program programEdit = individualEdit.getFirst();
             QueryResult result = execute(individualEdit);
 
-            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.response() == null ? individualEdit.component2() : result.response()));
+            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.response() == null ? individualEdit.getSecond() : result.response()));
             results.add(new Pair<>(programEdit, result));
             programEdits = programEdit.asIndividualEdits(templateProgram);
             programEdit.toWebsite();
@@ -52,25 +53,38 @@ public class AuthoringAssistant {
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
         final long start = System.currentTimeMillis();
-        Program subProgram = test.component1();
-        Expression expected = test.component2();
+        Program subProgram = test.getFirst();
+        Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
+        boolean errors = false;
         for (attempts = 0; attempts <= limit; attempts++) {
             logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
-            logger.info(STR."Received response: \{candidate.getExpr()}");
-            writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, candidate.getExpr(), subProgram.getDatasets(), subProgram.get_loadedDatasets(), subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
-            final FluidCLI fluidCLI = new FluidCLI(subProgram.getDatasets(), subProgram.getImports());
-            Optional<String> error = Program.validate(fluidCLI.evaluate(subProgram.getFluidFileName()), expected);
-            if (error.isPresent()) {
-                sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
-                sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
-            } else {
+            for (Map<String, String> dataset : subProgram.getTest_datasets()) {
+                final FluidCLI fluidCLI = new FluidCLI(subProgram.getDatasets(), subProgram.getImports());
+                logger.info(STR."Received response: \{candidate.getExpr()}");
+                //Compute expected value with the expected expression
+                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expected.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
+                String expectedValue = fluidCLI.evaluate(subProgram.getFluidFileName());
+
+                //Compute the value with the candidate expression
+                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, candidate.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
+                Optional<String> error = Program.validate(fluidCLI.evaluate(subProgram.getFluidFileName()), new Expression(expected.getExpr(), expectedValue));
+
+                if (error.isPresent()) {
+                    sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
+                    sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
+                    errors = true;
+                    break;
+                }
+            }
+            if (!errors) {
                 return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start);
             }
+
         }
         logger.warning(STR."Expression validation failed after \{limit} attempts");
         return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start);

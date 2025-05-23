@@ -5,8 +5,17 @@
       "file": "datasets/scigen/1904.12550v1-6"
     }
   ],
+  "test-datasets": [
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/scigen/1904.12550v1-6"
+      }
+    ]
+  ],
   "imports": ["scigen", "util"],
   "variables": {},
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -14,7 +23,8 @@
     },
     {
       "type": "expression",
-      "expression": "(findWhere (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData).f_818"
+      "expression": "numToStr (findWhere (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData).f_818",
+      "category": "quantitative"
     },
     {
       "type": "literal",

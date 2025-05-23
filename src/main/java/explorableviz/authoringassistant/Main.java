@@ -30,7 +30,7 @@ public class Main {
         try {
             Settings.init("settings.json");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
-            programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.getNumTestToGenerate());
+            programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             final int queryLimit = Settings.getNumQueryToExecute().orElseGet(programs::size);
             final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, queryLimit, programs);
             float accuracy = computeExactMatch(results);
@@ -60,10 +60,10 @@ public class Main {
             out.println(String.join(";", headers));
             String content = results.stream()
                     .map(result -> {
-                        Program program = result.component1();
-                        QueryResult queryResult = result.component2();
+                        Program program = result.getFirst();
+                        QueryResult queryResult = result.getSecond();
                         String[] values = {
-                                result.component1().getTestCaseFileName(),
+                                result.getFirst().getTestCaseFileName(),
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
@@ -85,7 +85,7 @@ public class Main {
 
     private static float computeExactMatch(List<Pair<Program, QueryResult>> results) {
         logger.info("Computing accuracy");
-        long count = IntStream.range(0, results.size()).filter(i -> results.get(i).component2().response() != null && results.get(i).component2().expected().getExpr().equals(results.get(i).component2().response().getExpr())).count();
+        long count = IntStream.range(0, results.size()).filter(i -> results.get(i).getSecond().response() != null && results.get(i).getSecond().expected().getExpr().equals(results.get(i).getSecond().response().getExpr())).count();
         return (float) count / results.size();
     }
 
@@ -98,7 +98,7 @@ public class Main {
         }
         logger.info("Printing generated expression");
         for (Pair<Program, QueryResult> result : results) {
-            logger.info(result.component2().response() != null ? result.component2().response().getExpr() : "NULL");
+            logger.info(result.getSecond().response() != null ? result.getSecond().response().getExpr() : "NULL");
         }
         return results;
     }

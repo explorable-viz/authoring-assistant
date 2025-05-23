@@ -5,8 +5,17 @@
       "file": "datasets/scigen/ipcc"
     }
   ],
+  "test-datasets": [
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/scigen/ipcc"
+      }
+    ]
+  ],
   "imports": [],
   "variables": {},
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -14,7 +23,8 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Average\") tableData))"
+      "expression": "numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Average\") tableData)))",
+      "category": "aggregation"
     },
     {
       "type": "literal",
@@ -22,7 +32,8 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"NOAAGlobalTemp\") tableData))"
+      "expression": "numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"NOAAGlobalTemp\") tableData)))",
+      "category": "aggregation"
     },
     {
       "type": "literal",
@@ -30,7 +41,8 @@
     },
     {
       "type": "expression",
-      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Cowtan-Way\") tableData))"
+      "expression": "numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Cowtan-Way\") tableData)))",
+      "category": "aggregation"
     },
     {
       "type": "literal",

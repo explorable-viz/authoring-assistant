@@ -5,8 +5,17 @@
       "file": "datasets/scigen/1904.12550v1-5"
     }
   ],
+  "test-datasets": [
+    [
+      {
+        "var": "tableData",
+        "file": "datasets/scigen/1904.12550v1-5"
+      }
+    ]
+  ],
   "imports": ["scigen", "util"],
   "variables": {},
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -14,7 +23,8 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"concept_input____embeddings\" \"Google\" tableData).label___f"
+      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"Google\" tableData).label___f",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -22,7 +32,8 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"concept_input____embeddings\" \"GloVe\" tableData).description___f"
+      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"GloVe\" tableData).description___f",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -30,7 +41,8 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"concept_input____embeddings\" \"fastText\" tableData).both___f"
+      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"fastText\" tableData).both___f",
+      "category": "quantitative"
     },
     {
       "type": "literal",

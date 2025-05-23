@@ -6,25 +6,49 @@
     }
   ],
   "imports": [
-    "scigen", "util"
+    "scigen",
+    "util"
   ],
+  "testing-variables": {
+    "time_lstm": [
+      67,
+      70,
+      80,
+      90,
+      81,
+      99,
+      100,
+      50
+    ]
+  },
   "variables": {},
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 3, BiLSTM gives significantly better accuracies compared to uni-directional LSTM2, with the training time per epoch "
+      "value": "As shown in Table 3, BiLSTM gives significantly  "
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s \"growing from\" \"shrinking to\" \"equal to\""
+      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).acc (findWithKey' \"model\" \"LSTM\" tableData).acc betterWorse",
+      "category": "trend"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " accuracies compared to uni-directional LSTM2, with the training time per epoch "
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"LSTM\" tableData).time_s"
+      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s growShrink",
+      "category": "trend"
+    },
+    {
+      "type": "literal",
+      "value": " from "
+    },
+    {
+      "type": "expression",
+      "expression": "numToStr (findWithKey' \"model\" \"LSTM\" tableData).time_s",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -32,15 +56,27 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"BiLSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"BiLSTM\" tableData).time_s",
+      "category": "quantitative"
+
     },
     {
       "type": "literal",
-      "value": " seconds. Stacking 2 layers of BiLSTM gives further improvements to development results, with a larger time of "
+      "value": " seconds. Stacking 2 layers of BiLSTM gives further improvements to development results, with a  "
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s"
+      "expression": "trendWord (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s (findWithKey' \"model\" \"BiLSTM\" tableData).time_s smallerHigher",
+      "category": "trend"
+    },
+    {
+      "type": "literal",
+      "value": " time of "
+    },
+    {
+      "type": "expression",
+      "expression": "numToStr (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -48,15 +84,35 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"S-LSTM\" tableData).acc"
+      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).acc",
+      "category": "quantitative"
     },
     {
       "type": "literal",
-      "value": "%, which is significantly better compared to 2-layer stacked BiLSTM, with a smaller number of model parameters and a shorter time of "
+      "value": "%, which is significantly better compared to 2-layer stacked BiLSTM, with a "
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"model\" \"S-LSTM\" tableData).time_s"
+      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).param (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).param smallerHigher",
+      "category": "trend"
+    },
+    {
+      "type": "literal",
+      "value": " number of model parameters and a "
+    },
+    {
+      "type": "expression",
+      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).time_s (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s shorterLonger",
+      "category": "trend"
+    },
+    {
+      "type": "literal",
+      "value": "  time of "
+    },
+    {
+      "type": "expression",
+      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).time_s",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -64,7 +120,8 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model"
+      "expression": "(findWithKey' \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -72,7 +129,8 @@
     },
     {
       "type": "expression",
-      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpParam tableData) in rankLabel \"smallest\" pos"
+      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpParam tableData) in rankLabel \"smallest\" pos",
+      "category": "aggregation"
     },
     {
       "type": "literal",
@@ -80,7 +138,8 @@
     },
     {
       "type": "expression",
-      "expression": "(fromSome (findWithKey \"model\" \"3 stacked CNN\" tableData)).acc"
+      "expression": "numToStr (fromSome (findWithKey \"model\" \"3 stacked CNN\" tableData)).acc",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -88,11 +147,21 @@
     },
     {
       "type": "expression",
-      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpTime tableData) in rankLabel \"lowest\" pos"
+      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpTime tableData) in rankLabel \"lowest\" pos",
+      "category": "aggregation"
     },
     {
       "type": "literal",
-      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. The best performance of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. S-LSTM gives significantly better accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used  Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still outperforming BiLSTM significantly."
+      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. The best performance of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. S-LSTM gives significantly better accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used  Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still "
+    },
+    {
+      "type": "expression",
+      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).acc (findWithKey' \"model\" \"BiLSTM\" tableData).acc underOverPerforming",
+      "category": "trend"
+    },
+    {
+      "type": "literal",
+      "value": " BiLSTM significantly."
     }
   ]
 }

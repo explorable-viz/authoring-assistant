@@ -1,9 +1,2 @@
-let getByMethod method data =
-   let helper [] = [];
-         helper (x: xs) =
-               if x.creation_method == method
-               then x
-               else helper xs
-      in helper data;
-let a = getByMethod "simulation" tableData
+let a = (findWithKey' "creation_method" "simulation" tableData)
 in

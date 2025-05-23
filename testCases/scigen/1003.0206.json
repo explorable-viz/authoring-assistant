@@ -5,7 +5,7 @@
       "file": "datasets\/1003.0206"
     }
   ],
-  "imports": [],
+  "imports": ["scigen", "util"],
   "variables": {},
   "testing-variables": {},
   "paragraph": [

@@ -34,7 +34,17 @@ let betterWorse EQ = "equal";
     betterWorse LT = "worse";
     betterWorse GT = "better";
 
-let improveWorsed EQ = "equal performance to that of";
-    improveWorsed LT = "underperforming";
-    improveWorsed GT = "outperforming";
+let underOverPerforming EQ = "equal performance to that of";
+    underOverPerforming LT = "underperforming";
+    underOverPerforming GT = "outperforming";
+
+-- (a -> Number) -> List a -> a
+let maximumBy f lst =
+  let helper [] current = current;
+      helper (x: xs) current =
+        if f x > f current then helper xs x else helper xs current
+  in match lst as {
+    [] -> error "Empty list!";
+    (x: xs) -> helper xs x
+  };
 

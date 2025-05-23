@@ -29,6 +29,6 @@ Paragraph [
 	Text "%, which is also the ",
 	Text (let pos = findIndex "model" "CNN" (insertionSort cmpTime tableData) in rankLabel "lowest" pos),
 	Text " compared with BiLSTM, hierarchical attention and S-LSTM. The best performance of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. S-LSTM gives significantly better accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used  Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still ",
-	Text (trendWord (findWithKey' "model" "S-LSTM" tableData).acc (findWithKey' "model" "BiLSTM" tableData).acc improveWorsed),
+	Text (trendWord (findWithKey' "model" "S-LSTM" tableData).acc (findWithKey' "model" "BiLSTM" tableData).acc underOverPerforming),
 	Text " BiLSTM significantly."
 ]

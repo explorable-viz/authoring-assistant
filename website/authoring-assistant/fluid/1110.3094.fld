@@ -1,6 +1,6 @@
 
-Paragraph([
+Paragraph [
 	Text "Overall the SVM with polynomial degree 1 kernel outperformed all other kernels with other kernels generally offering better precision at a higher cost to recall. Precision (Positive predictive) values ranged from 82.0 to 93.8 for SVM (polynomial degree 1) and from 83.3 to ",
-	Text(numToStr(foldr (fun x acc -> if x > acc then x else acc) (head (map (fun x -> x.naive_bayes_p) tableData)) (map (fun x -> x.naive_bayes_p) tableData))),
+	Text (numToStr (foldr (fun x acc -> if x > acc then x else acc) (head (map (fun x -> x.naive_bayes_p) tableData)) (map (fun x -> x.naive_bayes_p) tableData))),
 	Text " for NB. Recall (sensitivity) values ranged from 58.3 to 96.2 for SVM (polynomial degree 1) and from 74.7 to 90.3 for NB. SVM tended to offer a reduced level of precision but better recall. In the case of one syndrome (Hemorrhagic) we noticed an unusually low level of recall for SVM but not for NB."
-])
+]

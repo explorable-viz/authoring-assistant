@@ -1,6 +1,6 @@
 
-Paragraph([
+Paragraph [
 	Text "The ",
-	Text("Residential Commercial Other"),
+	Text ("Residential Commercial Other"),
 	Text "source exhibited the highest percentage decrease in methane emissions between 2015 and 2020"
-])
+]

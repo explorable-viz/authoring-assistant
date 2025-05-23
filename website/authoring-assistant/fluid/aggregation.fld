@@ -6,7 +6,7 @@ let year = 2015;
 let records = getByYear year tableData
 in
 
-Paragraph([
+Paragraph [
 	Text "The total methane emissions for the year 2015 is ",
-	Text(numToStr(sumEmissions year tableData))
-])
+	Text (numToStr (sumEmissions year tableData))
+]

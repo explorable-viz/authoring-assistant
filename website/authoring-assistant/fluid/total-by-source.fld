@@ -2,8 +2,8 @@ let year = 2030;
 let record = getByCategory "Energy Sector" year tableData
 in
 
-Paragraph([
+Paragraph [
 	Text "The total methane emissions for the year 2030 are ",
-	Text(numToStr(record.emissions)),
+	Text (numToStr record.emissions),
 	Text " for the Energy Sector"
-])
+]

@@ -1,6 +1,6 @@
 
-Paragraph([
+Paragraph [
 	Text "In 2015, the ",
-	Text("Energy Sector"),
+	Text ("Energy Sector"),
 	Text " had the second highest amount in methane emissions."
-])
+]

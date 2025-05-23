@@ -4,32 +4,32 @@
       {
         "year": "2030",
         "operation": "average",
-        "expected": "(sumEmissions year tableData / length records)"
+        "expected": "numToStr (sumEmissions year tableData / length records)"
       },
       {
         "year": "2015",
         "operation": "average",
-        "expected": "(sumEmissions year tableData / length records)"
+        "expected": "numToStr (sumEmissions year tableData / length records)"
       },
       {
         "year": "2020",
         "operation": "average",
-        "expected": "(sumEmissions year tableData / length records)"
+        "expected": "numToStr (sumEmissions year tableData / length records)"
       },
       {
         "year": "2030",
         "operation": "total",
-        "expected": "sumEmissions year tableData"
+        "expected": "numToStr (sumEmissions year tableData)"
       },
       {
         "year": "2015",
         "operation": "total",
-        "expected": "sumEmissions year tableData"
+        "expected": "numToStr (sumEmissions year tableData)"
       },
       {
         "year": "2020",
         "operation": "total",
-        "expected": "sumEmissions year tableData"
+        "expected": "numToStr (sumEmissions year tableData)"
       }
     ]
   },
@@ -50,7 +50,8 @@
     },
     {
       "type": "expression",
-      "expression": "$emissions.expected$"
+      "expression": "$emissions.expected$",
+      "category": "aggregation"
     }
   ]
 }

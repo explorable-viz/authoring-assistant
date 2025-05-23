@@ -23,7 +23,8 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"Google\" tableData).label___f"
+      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"Google\" tableData).label___f",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -31,7 +32,8 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"GloVe\" tableData).description___f"
+      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"GloVe\" tableData).description___f",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -39,7 +41,8 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"fastText\" tableData).both___f"
+      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"fastText\" tableData).both___f",
+      "category": "quantitative"
     },
     {
       "type": "literal",

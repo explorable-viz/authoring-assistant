@@ -29,7 +29,8 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).acc (findWithKey' \"model\" \"LSTM\" tableData).acc betterWorse"
+      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).acc (findWithKey' \"model\" \"LSTM\" tableData).acc betterWorse",
+      "category": "trend"
     },
     {
       "type": "literal",
@@ -37,7 +38,8 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s growShrink"
+      "expression": "trendWord (findWithKey' \"model\" \"BiLSTM\" tableData).time_s (findWithKey' \"model\" \"LSTM\" tableData).time_s growShrink",
+      "category": "trend"
     },
     {
       "type": "literal",
@@ -45,7 +47,8 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"model\" \"LSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"LSTM\" tableData).time_s",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -53,7 +56,9 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"model\" \"BiLSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"BiLSTM\" tableData).time_s",
+      "category": "quantitative"
+
     },
     {
       "type": "literal",
@@ -61,7 +66,8 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s (findWithKey' \"model\" \"BiLSTM\" tableData).time_s smallerHigher"
+      "expression": "trendWord (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s (findWithKey' \"model\" \"BiLSTM\" tableData).time_s smallerHigher",
+      "category": "trend"
     },
     {
       "type": "literal",
@@ -69,7 +75,8 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -77,7 +84,8 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).acc"
+      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).acc",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -85,7 +93,8 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).param (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).param smallerHigher"
+      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).param (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).param smallerHigher",
+      "category": "trend"
     },
     {
       "type": "literal",
@@ -93,7 +102,8 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).time_s (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s shorterLonger"
+      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).time_s (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s shorterLonger",
+      "category": "trend"
     },
     {
       "type": "literal",
@@ -101,7 +111,8 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).time_s"
+      "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).time_s",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -109,7 +120,8 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model"
+      "expression": "(findWithKey' \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -117,7 +129,8 @@
     },
     {
       "type": "expression",
-      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpParam tableData) in rankLabel \"smallest\" pos"
+      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpParam tableData) in rankLabel \"smallest\" pos",
+      "category": "aggregation"
     },
     {
       "type": "literal",
@@ -125,7 +138,8 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (fromSome (findWithKey \"model\" \"3 stacked CNN\" tableData)).acc"
+      "expression": "numToStr (fromSome (findWithKey \"model\" \"3 stacked CNN\" tableData)).acc",
+      "category": "quantitative"
     },
     {
       "type": "literal",
@@ -133,7 +147,8 @@
     },
     {
       "type": "expression",
-      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpTime tableData) in rankLabel \"lowest\" pos"
+      "expression": "let pos = findIndex \"model\" \"CNN\" (insertionSort cmpTime tableData) in rankLabel \"lowest\" pos",
+      "category": "aggregation"
     },
     {
       "type": "literal",
@@ -141,7 +156,8 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).acc (findWithKey' \"model\" \"BiLSTM\" tableData).acc improveWorsed"
+      "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).acc (findWithKey' \"model\" \"BiLSTM\" tableData).acc underOverPerforming",
+      "category": "trend"
     },
     {
       "type": "literal",

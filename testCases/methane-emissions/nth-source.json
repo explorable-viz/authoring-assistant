@@ -35,7 +35,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"$emissions.result$\""
+      "expression": "\"$emissions.result$\"",
+      "category": "trend"
     },
     {
       "type": "literal",

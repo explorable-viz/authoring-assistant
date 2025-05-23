@@ -33,7 +33,8 @@
     },
     {
       "type": "expression",
-      "expression": "record.emissions"
+      "expression": "numToStr record.emissions",
+      "category": "quantitative"
     },
     {
       "type": "literal",

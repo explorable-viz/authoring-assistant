@@ -6,6 +6,7 @@ import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import kotlin.Pair;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,15 +65,12 @@ public class AuthoringAssistant {
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
             for (Map<String, String> dataset : subProgram.getTest_datasets()) {
-                final FluidCLI fluidCLI = new FluidCLI(subProgram.getDatasets(), subProgram.getImports());
-                logger.info(STR."Received response: \{candidate.getExpr()}");
-                //Compute expected value with the expected expression
-                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expected.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
-                String expectedValue = fluidCLI.evaluate(subProgram.getFluidFileName());
 
-                //Compute the value with the candidate expression
-                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, candidate.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
-                Optional<String> error = Program.validate(fluidCLI.evaluate(subProgram.getFluidFileName()), new Expression(expected.getExpr(), expectedValue));
+                logger.info(STR."Received response: \{candidate.getExpr()}");
+
+                Optional<String> error = Program.validate(
+                        evaluateExpression(subProgram, dataset, candidate),
+                        new Expression(expected.getExpr(), evaluateExpression(subProgram, dataset, expected), expected.getCategory()));
 
                 if (error.isPresent()) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
@@ -88,6 +86,12 @@ public class AuthoringAssistant {
         }
         logger.warning(STR."Expression validation failed after \{limit} attempts");
         return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start);
+    }
+
+    private static String evaluateExpression(Program p, Map<String, String> dataset, Expression expression) throws IOException {
+        final FluidCLI fluidCLI = new FluidCLI(p.getDatasets(), p.getImports());
+        writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expression.getExpr(), p.getDatasets(), dataset, p.getImports(), p.get_loadedImports(), p.getCode());
+        return fluidCLI.evaluate(p.getFluidFileName());
     }
 
     private LLMEvaluatorAgent<Expression> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {

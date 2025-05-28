@@ -1,13 +1,13 @@
 package explorableviz.authoringassistant;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import explorableviz.authoringassistant.paragraph.ExpressionCategory;
 import explorableviz.authoringassistant.paragraph.Expression;
 import explorableviz.authoringassistant.paragraph.Literal;
 import explorableviz.authoringassistant.paragraph.Paragraph;
 import explorableviz.authoringassistant.variable.ValueOptions;
 import explorableviz.authoringassistant.variable.Variables;
 import kotlin.Pair;
-import org.checkerframework.checker.units.qual.A;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -217,7 +217,7 @@ public class Program {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
                 writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping, loadDatasetsFiles(datasetMapping, testVariables), imports, loadImports(imports), code);
                 String commandLineResult = new FluidCLI(datasetMapping, imports).evaluate(fluidFileName);
-                Expression candidate = new Expression(expression, extractValue(commandLineResult));
+                Expression candidate = new Expression(expression, extractValue(commandLineResult), ExpressionCategory.of(json_paragraph.getJSONObject(i).getString("category")));
                 paragraph.add(candidate);
                 validate(commandLineResult, candidate).ifPresent(value -> {
                     throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test exception\{value}");
@@ -338,6 +338,7 @@ public class Program {
             ObjectMapper objectMapper = new ObjectMapper();
             Object jsonObject = objectMapper.readValue(spec.toString(), Object.class);
             file.write(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject));
+            file.write("\n");
             file.flush();
         } catch (IOException e) {
             e.printStackTrace();

@@ -8,10 +8,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -54,7 +51,7 @@ public class Main {
         Files.createDirectories(Paths.get(Settings.getLogFolder()));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{Settings.getLogFolder()}/log_\{System.currentTimeMillis()}.csv"))) {
             String[] headers = {
-                    "test-case", "llm-agent", "temperature", "num-token", "in-context-learning-size",
+                    "runId", "test-case", "llm-agent", "temperature", "num-token", "in-context-learning-size",
                     "attempts", "result", "expression-type", "generated-expression", "expected-value", "duration(ms)"
             };
             out.println(String.join(";", headers));
@@ -63,6 +60,7 @@ public class Main {
                         Program program = result.getFirst();
                         QueryResult queryResult = result.getSecond();
                         String[] values = {
+                                String.valueOf(queryResult.runId()),
                                 result.getFirst().getTestCaseFileName(),
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
@@ -92,10 +90,13 @@ public class Main {
 
     private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, int programLimit, List<Program> programs) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> results = new ArrayList<>();
-        for (int i = 0; i < programLimit; i++) {
-            AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, programs.get(i));
-            logger.info(STR."Analysing program id=\{i}");
-            results.addAll(workflow.executePrograms());
+        for(int k = 0; k < Settings.numOfTestExecution(); k++)
+        {
+            for (int i = 0; i < programLimit; i++) {
+                AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, programs.get(i), k);
+                logger.info(STR."Analysing program id=\{i}");
+                results.addAll(workflow.executePrograms());
+            }
         }
         logger.info("Printing generated expression");
         for (Pair<Program, QueryResult> result : results) {

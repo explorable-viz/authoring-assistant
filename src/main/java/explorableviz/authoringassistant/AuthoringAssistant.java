@@ -24,11 +24,12 @@ public class AuthoringAssistant {
     private final PromptList prompts;
     private final LLMEvaluatorAgent<Expression> llm;
     private final Program templateProgram;
-
-    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram) throws Exception {
+    private final int runId;
+    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, int runId) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
         this.templateProgram = templateProgram;
+        this.runId = runId;
     }
 
     public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
@@ -80,12 +81,12 @@ public class AuthoringAssistant {
                 }
             }
             if (!errors) {
-                return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start);
+                return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start, runId);
             }
 
         }
         logger.warning(STR."Expression validation failed after \{limit} attempts");
-        return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start);
+        return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> dataset, Expression expression) throws IOException {

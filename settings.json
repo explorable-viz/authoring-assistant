@@ -25,5 +25,6 @@
   "system-prompt-path": "system-prompt/",
   "max-program-variants": 1,
   "num-learning-case-to-generate": 1,
-  "num-test-data-variants": 3
+  "num-test-data-variants": 3,
+  "num-of-test-execution": 2
 }

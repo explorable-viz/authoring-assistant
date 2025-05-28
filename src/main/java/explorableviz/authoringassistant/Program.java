@@ -308,7 +308,7 @@ public class Program {
         return fluidFileName;
     }
 
-    public record QueryResult(Expression response, Expression expected, int attempt, long duration) {
+    public record QueryResult(Expression response, Expression expected, int attempt, long duration, int runId) {
     }
 
     public void toWebsite() throws IOException {

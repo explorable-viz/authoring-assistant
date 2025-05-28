@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import glob
@@ -69,6 +70,13 @@ def generate_aggregated_plot(df, plot):
     # Create custom x labels: "category (count)"
     summary["label"] = summary["expression-type"] + " (" + summary["count"].astype(str) + ")"
 
+    # Calculate 95% CI
+    z = 1.96  # for 95% CI
+    p = summary["success_rate"]
+    n = summary["count"]
+    ci = z * np.sqrt((p * (1 - p)) / n)
+    summary["ci"] = ci
+
     # Sort by success_rate
     summary = summary.sort_values("success_rate", ascending=False).reset_index(drop=True)
 
@@ -76,20 +84,20 @@ def generate_aggregated_plot(df, plot):
     sns.set(style="whitegrid")
 
     # Plot
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(6, 6))
     ax = sns.barplot(
         data=summary,
         x="label",
         y="success_rate",
         palette="Blues_d",
-        width=0.3  # Reduce bar width
+        width=0.7  # Reduce bar width
     )
 
     # Add error bars manually
     ax.errorbar(
         x=range(len(summary)),
         y=summary["success_rate"],
-        yerr=summary["std_dev"],
+        yerr=summary["ci"],
         fmt='none',
         ecolor='orange',
         capsize=5,
@@ -102,9 +110,9 @@ def generate_aggregated_plot(df, plot):
 
     # Labels and formatting
     plt.title(f"Success Rate by Linguistic Category (Max attempts = {limit})", fontsize=14)
-    plt.xlabel("Linguistic Category (Count)", fontsize=12)
-    plt.ylabel("Success Rate", fontsize=12)
-    plt.ylim(-1, 1.5)
+    plt.xlabel("Linguistic Category (Number of Examples)", fontsize=12)
+    plt.ylabel("Average Success Rate (CI)", fontsize=12)
+    plt.ylim(0, 1.2)
     plt.xticks(rotation=45, ha="right")
 
     # Final layout

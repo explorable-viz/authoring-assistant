@@ -19,11 +19,22 @@ We might want to distinguish ambiguity inherent in the problem domain (e.g.~unce
 specification of a particular code-generation query.
 
 \subsection{Success Rate by Testcase}
-To evaluate the system we used a sample of the Scigen dataset \cite{scigen_dataset_2021};
+To evaluate the system we used a sample of the Scigen dataset \cite{scigen_dataset_2021}.
+Figure \ref{fig:success_rate_by_test_case} shows the results obtained for each test case.
+
 \label{subsec:success_rate_by_test_case}
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.95\linewidth]{fig/success_rate_by_test_case}
     \caption{Success rate by testcases}\label{fig:success_rate_by_test_case}
+\end{figure}
+
+We also aggregated the generated expression in three categories: aggregation, trends, quantitative (See Table \ref{tab:fluid_examples}).
+Figure \ref{fig:success_rate_by_category} shows the results obtained in generating expression by categories.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.95\linewidth]{fig/success_rate_by_category}
+    \caption{Success rate by testcases}\label{fig:success_rate_by_category}
 \end{figure}

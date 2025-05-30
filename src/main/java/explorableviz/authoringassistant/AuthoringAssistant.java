@@ -65,13 +65,13 @@ public class AuthoringAssistant {
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
-            for (Map<String, String> dataset : subProgram.getTest_datasets()) {
+            for (Map<String, String> datasets : subProgram.getTest_datasets()) {
 
                 logger.info(STR."Received response: \{candidate.getExpr()}");
 
                 Optional<String> error = Program.validate(
-                        evaluateExpression(subProgram, dataset, candidate),
-                        new Expression(expected.getExpr(), evaluateExpression(subProgram, dataset, expected), expected.getCategory()));
+                        evaluateExpression(subProgram, datasets, candidate),
+                        new Expression(expected.getExpr(), evaluateExpression(subProgram, datasets, expected), expected.getCategory()));
 
                 if (error.isPresent()) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
@@ -89,9 +89,9 @@ public class AuthoringAssistant {
         return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId);
     }
 
-    private static String evaluateExpression(Program p, Map<String, String> dataset, Expression expression) throws IOException {
+    private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {
         final FluidCLI fluidCLI = new FluidCLI(p.getDatasets(), p.getImports());
-        writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expression.getExpr(), p.getDatasets(), dataset, p.getImports(), p.get_loadedImports(), p.getCode());
+        writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expression.getExpr(), p.getDatasets(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
         return fluidCLI.evaluate(p.getFluidFileName());
     }
 

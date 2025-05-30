@@ -28,8 +28,7 @@ public class Main {
             Settings.init("settings.json");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
-            final int queryLimit = Settings.getNumQueryToExecute().orElseGet(programs::size);
-            final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, queryLimit, programs);
+            final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, programs);
             float accuracy = computeExactMatch(results);
             generateLinks();
             writeLog(results, agent, inContextLearning.size());
@@ -88,13 +87,14 @@ public class Main {
         return (float) count / results.size();
     }
 
-    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, int programLimit, List<Program> programs) throws Exception {
+    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, List<Program> programs) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> results = new ArrayList<>();
-        for(int k = 0; k < Settings.numOfTestExecution(); k++)
+        for(int k = 0; k < Settings.numTestExecution(); k++)
         {
-            for (int i = 0; i < programLimit; i++) {
-                AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, programs.get(i), k);
-                logger.info(STR."Analysing program id=\{i}");
+            int programId = 0;
+            for (Program program : programs) {
+                AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, program, k);
+                logger.info(STR."Analysing program id=\{(programId++)}");
                 results.addAll(workflow.executePrograms());
             }
         }

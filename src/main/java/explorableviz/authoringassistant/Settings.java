@@ -96,8 +96,8 @@ public class Settings {
         return getSettings().getInt("num-learning-case-to-generate");
     }
 
-    public static int numOfTestExecution() {
-        return getSettings().getInt("num-of-test-execution");
+    public static int numTestExecution() {
+        return getSettings().getInt("num-test-execution");
     }
 
     public static Optional<Integer> getNumQueryToExecute() {

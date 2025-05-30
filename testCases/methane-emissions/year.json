@@ -2,28 +2,28 @@
   "variables": {
     "emissions": [
       {
-        "type": "Agricultural Waste Burning",
-        "result": "numToStr (foldr1 (fun x y -> if x.emissions > y.emissions then x else y) (filter (fun x -> x.type == \"$emissions.type$\") tableData)).year",
+        "type":"Agricultural Waste Burning",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
         "record": "highest"
       },
       {
-        "type": "Agriculture",
-        "result": "numToStr (foldr1 (fun x y -> if x.emissions > y.emissions then x else y) (filter (fun x -> x.type == \"$emissions.type$\") tableData)).year",
+        "type":"Agriculture",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
         "record": "highest"
       },
       {
-        "type": "The Energy Sector",
-        "result": "numToStr (foldr1 (fun x y -> if x.emissions > y.emissions then x else y) (filter (fun x -> x.type == \"$emissions.type$\") tableData)).year",
+        "type":"The Energy Sector",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
         "record": "highest"
       },
       {
-        "type": "Residential Commercial Other",
-        "result": "numToStr (foldr1 (fun x y -> if x.emissions > y.emissions then x else y) (filter (fun x -> x.type == \"$emissions.type$\") tableData)).year",
+        "type":"Residential Commercial Other",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
         "record": "lowest"
       },
       {
-        "type": "Grassland Burning",
-        "result": "numToStr (foldr1 (fun x y -> if x.emissions > y.emissions then x else y) (filter (fun x -> x.type == \"$emissions.type$\") tableData)).year",
+        "type":"Grassland Burning",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
         "record": "lowest"
       }
     ]
@@ -36,7 +36,7 @@
     }
   ],
   "imports": [
-    "methane"
+    "methane", "util"
   ],
   "paragraph": [
     {

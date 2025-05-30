@@ -36,7 +36,7 @@
     }
   ],
   "imports": [
-    "methane", "scigen"
+    "methane", "util"
   ],
   "paragraph": [
     {

@@ -26,3 +26,9 @@ let findWhere pred table =
 
 let cmpTime a b = a.time_s < b.time_s;
 let cmpParam a b = a.param < b.param;
+
+let maximumBy f [] = error "Empty list!";
+    maximumBy f [x] = x;
+    maximumBy f (x : x' : xs) =
+      let y = maximumBy f (x' : xs)
+      in if f x > f y then x else y;

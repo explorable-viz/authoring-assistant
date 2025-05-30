@@ -1,5 +1,5 @@
 {
-  "imports" : [ "methane", "scigen" ],
+  "imports" : [ "methane", "util" ],
   "file" : "year",
   "inputs" : [ "tableData" ],
   "datasets" : [ [ "tableData", "datasets/methane-emissions" ] ],

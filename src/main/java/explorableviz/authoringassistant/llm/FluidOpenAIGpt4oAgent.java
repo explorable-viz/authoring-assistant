@@ -41,7 +41,7 @@ public class FluidOpenAIGpt4oAgent extends OpenAIEvaluatorAgent<Expression> {
         return new FunctionExecutor(Collections.singletonList(ChatFunction.builder()
                 .name("generate_fluid_expression")
                 .description("Generate an Expression for Fluid")
-                .executor(ExpressionResponse.class, exp -> new Expression(exp.expression, ""))
+                .executor(ExpressionResponse.class, exp -> new Expression(exp.expression, "", null))
                 .build()));
     }
 

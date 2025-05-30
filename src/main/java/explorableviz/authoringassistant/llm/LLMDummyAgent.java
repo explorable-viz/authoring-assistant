@@ -18,6 +18,6 @@ public class LLMDummyAgent extends LLMEvaluatorAgent<Expression> {
     @Override
     public Expression evaluate(List<Prompt> list, String s) throws IOException {
         logger.info("Execution of the DummyAgent");
-        return new Expression("dummy", null);
+        return new Expression("dummy", null, null);
     }
 }

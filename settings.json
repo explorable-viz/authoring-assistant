@@ -20,10 +20,11 @@
   "add-expected-value": false,
   "learning-case-folder": "learningCases",
   "enable-editor-loop": false,
-  "test-case-folder": "testCases/scigen-multiple-replace",
+  "test-case-folder": "testCases/methane-emissions",
   "threshold": 0.0,
   "system-prompt-path": "system-prompt/",
   "max-program-variants": 1,
   "num-learning-case-to-generate": 1,
-  "num-test-data-variants": 3
+  "num-test-data-variants": 3,
+  "num-test-runs": 2
 }

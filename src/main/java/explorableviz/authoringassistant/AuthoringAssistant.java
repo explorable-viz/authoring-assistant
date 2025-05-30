@@ -6,6 +6,7 @@ import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import kotlin.Pair;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,11 +24,12 @@ public class AuthoringAssistant {
     private final PromptList prompts;
     private final LLMEvaluatorAgent<Expression> llm;
     private final Program templateProgram;
-
-    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram) throws Exception {
+    private final int runId;
+    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, int runId) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
         this.templateProgram = templateProgram;
+        this.runId = runId;
     }
 
     public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
@@ -63,16 +65,13 @@ public class AuthoringAssistant {
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
-            for (Map<String, String> dataset : subProgram.getTest_datasets()) {
-                final FluidCLI fluidCLI = new FluidCLI(subProgram.getDatasets(), subProgram.getImports());
-                logger.info(STR."Received response: \{candidate.getExpr()}");
-                //Compute expected value with the expected expression
-                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expected.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
-                String expectedValue = fluidCLI.evaluate(subProgram.getFluidFileName());
+            for (Map<String, String> datasets : subProgram.getTest_datasets()) {
 
-                //Compute the value with the candidate expression
-                writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, candidate.getExpr(), subProgram.getDatasets(), dataset, subProgram.getImports(), subProgram.get_loadedImports(), subProgram.getCode());
-                Optional<String> error = Program.validate(fluidCLI.evaluate(subProgram.getFluidFileName()), new Expression(expected.getExpr(), expectedValue));
+                logger.info(STR."Received response: \{candidate.getExpr()}");
+
+                Optional<String> error = Program.validate(
+                        evaluateExpression(subProgram, datasets, candidate),
+                        new Expression(expected.getExpr(), evaluateExpression(subProgram, datasets, expected), expected.getCategory()));
 
                 if (error.isPresent()) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
@@ -82,12 +81,18 @@ public class AuthoringAssistant {
                 }
             }
             if (!errors) {
-                return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start);
+                return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start, runId);
             }
 
         }
         logger.warning(STR."Expression validation failed after \{limit} attempts");
-        return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start);
+        return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId);
+    }
+
+    private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {
+        final FluidCLI fluidCLI = new FluidCLI(p.getDatasets(), p.getImports());
+        writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expression.getExpr(), p.getDatasets(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
+        return fluidCLI.evaluate(p.getFluidFileName());
     }
 
     private LLMEvaluatorAgent<Expression> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {

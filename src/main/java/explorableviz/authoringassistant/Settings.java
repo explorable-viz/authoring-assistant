@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Optional;
 
 public class Settings {
 
@@ -96,12 +95,8 @@ public class Settings {
         return getSettings().getInt("num-learning-case-to-generate");
     }
 
-    public static int numTestExecution() {
-        return getSettings().getInt("num-test-execution");
-    }
-
-    public static Optional<Integer> getNumQueryToExecute() {
-        return (getSettings().has("num-query-to-execute") && !getSettings().isNull("num-query-to-execute")) ? Optional.of(getSettings().getInt("num-query-to-execute")) : Optional.empty();
+    public static int numTestRuns() {
+        return getSettings().getInt("num-test-runs");
     }
 
     public static boolean isEditorLoopEnabled() {

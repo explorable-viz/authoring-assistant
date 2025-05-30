@@ -89,7 +89,7 @@ public class Main {
 
     private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, List<Program> programs) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> results = new ArrayList<>();
-        for(int k = 0; k < Settings.numTestExecution(); k++)
+        for(int k = 0; k < Settings.numTestRuns(); k++)
         {
             int programId = 0;
             for (Program program : programs) {

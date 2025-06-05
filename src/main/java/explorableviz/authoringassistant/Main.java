@@ -68,7 +68,7 @@ public class Main {
                                 //program.getParagraph().toFluidSyntax(),
                                 String.valueOf(queryResult.attempt()),
                                 queryResult.response() != null ? "OK" : "KO",
-                                queryResult.expected().getCategory().label,
+                                queryResult.expected().getCategories().toString(),
                                 queryResult.response() != null ? "generated" : "NULL",
                                 //queryResult.expected().getExpr(),
                                 queryResult.expected().getValue(),

@@ -1,20 +1,22 @@
 package explorableviz.authoringassistant.paragraph;
 
+import java.util.Set;
+
 public class Expression extends TextFragment {
 
     private final String expr;
-    private final ExpressionCategory category;
-    public Expression(String expr, String value, ExpressionCategory category) {
+    private final Set<ExpressionCategory> categories;
+    public Expression(String expr, String value, Set<ExpressionCategory> categories) {
         super(value);
         this.expr = expr;
-        this.category = category;
+        this.categories = categories;
     }
 
     public String getExpr() {
         return expr;
     }
 
-    public ExpressionCategory getCategory() {
-        return category;
+    public Set<ExpressionCategory> getCategories() {
+        return categories;
     }
 }

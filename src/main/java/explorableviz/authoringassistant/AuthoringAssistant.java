@@ -71,7 +71,7 @@ public class AuthoringAssistant {
 
                 Optional<String> error = Program.validate(
                         evaluateExpression(subProgram, datasets, candidate),
-                        new Expression(expected.getExpr(), evaluateExpression(subProgram, datasets, expected), expected.getCategory()));
+                        new Expression(expected.getExpr(), evaluateExpression(subProgram, datasets, expected), expected.getCategories()));
 
                 if (error.isPresent()) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());

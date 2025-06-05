@@ -16,7 +16,7 @@
     {
       "type": "expression",
       "expression": "numToStr (foldr (fun x acc -> if x.wer > acc.wer then x else acc) (head tableData) tableData).iteration",
-      "category": "quantitative"
+      "categories": ["quantitative"]
     },
     {
       "type": "literal",

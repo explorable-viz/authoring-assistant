@@ -27,7 +27,7 @@
     {
       "type": "expression",
       "expression": "numToStr (findWithKey' \"model\" \"S-LSTM\" tableData).f1",
-      "category": "quantitative"
+      "categories": ["quantitative"]
     },
     {
       "type": "literal",
@@ -36,7 +36,7 @@
     {
       "type": "expression",
       "expression": "numToStr (findWithKey' \"model\" \"yang2017transfer\" tableData).f1",
-      "category": "quantitative"
+      "categories": ["quantitative"]
     },
     {
       "type": "literal",

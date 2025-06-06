@@ -51,7 +51,7 @@ Examples \ref{tab:fluid_examples}
 \begin{table}[!ht]
     \centering
     \footnotesize
-    \renewcommand{\arraystretch}{1.0}
+    \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{>{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6cm}}
         \toprule
         \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
@@ -60,8 +60,7 @@ Examples \ref{tab:fluid_examples}
 
         Numerical value
         & the training time per epoch growing from \hl{67} seconds to 106 seconds.
-        &%check with v-space
-        %\vspace{-8pt}
+        &
         \begin{lstlisting}[language=Fluid,numbers=none]
 (findWithKey' "model" "LSTM" tableData).time_s
         \end{lstlisting}
@@ -69,7 +68,6 @@ Examples \ref{tab:fluid_examples}
         Percentage &
         The Energy Sector accounts for total methane emissions of \hl{52.80\%} in 2030.
         &
-        %\vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 (record.emissions /
  sum (map (fun x -> x.emissions)
@@ -77,17 +75,16 @@ Examples \ref{tab:fluid_examples}
 
         \end{lstlisting}  \\
         Rounding & ~                & ~                             \\
-        Cardinals \& Multiplicative & ~                & ~                             \\
+        Cardinal  & ~                & ~                             \\
+        Multiplicative  & ~                & ~                             \\
         \rowcolor{gray!20}
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
         Average
         & The average methane emissions for the year 2030 is \hl{13.51} &
-        %\vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 (sumEmissions year tableData / length records)
         \end{lstlisting} \\
         Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
-        %\vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 let maxEntry =
     maximumBy (fun x -> x.emissions)
@@ -96,17 +93,15 @@ let maxEntry =
                 tableData)
 in maxEntry.year
         \end{lstlisting} \\
-        Ranks &
+        Rank &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
-%        \vspace{-15pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 let pos =
   findIndex "model" "CNN"
     (insertionSort cmpTime tableData)
-in rankLabel "lowest" pos \end{lstlisting} \\\hline
+in rankLabel "lowest" pos \end{lstlisting} \\
         Total &
         The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
-        %\vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 sumEmissions year tableData
         \end{lstlisting} \\
@@ -114,9 +109,8 @@ sumEmissions year tableData
         \rowcolor{gray!20}
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
 
-        Comparisons
+        Comparison
         & The training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
-        %\vspace{-8pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 trendWord
  (findWithKey' "model" "BiLSTM" tableData).time_s

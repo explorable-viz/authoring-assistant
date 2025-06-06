@@ -1,10 +1,10 @@
 \section{Introduction}
 
 \lstset{
-    aboveskip=-2.3pt,    % riduce lo spazio sopra
-    belowskip=-2pt,    % riduce lo spazio sotto
-    xleftmargin=0pt,   % riduce il margine sinistro
-    xrightmargin=0pt   % riduce il margine destro
+    aboveskip=-7pt,
+    belowskip=-8.5pt,
+    xleftmargin=0pt,
+    xrightmargin=0pt
 }
 
 \begin{itemize}
@@ -51,11 +51,10 @@ Examples \ref{tab:fluid_examples}
 \begin{table}[!ht]
     \centering
     \footnotesize
-    \renewcommand{\arraystretch}{0.9}
+    \renewcommand{\arraystretch}{1.0}
     \begin{tabular}{>{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6cm}}
         \toprule
         \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
-        \midrule
         \rowcolor{gray!20}
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
 
@@ -99,13 +98,12 @@ in maxEntry.year
         \end{lstlisting} \\
         Ranks &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
-        %\vspace{-10pt}
+%        \vspace{-15pt}
         \begin{lstlisting}[language=Fluid,numbers=none]
 let pos =
   findIndex "model" "CNN"
     (insertionSort cmpTime tableData)
-in rankLabel "lowest" pos
-        \end{lstlisting} \\
+in rankLabel "lowest" pos \end{lstlisting} \\\hline
         Total &
         The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
         %\vspace{-8pt}

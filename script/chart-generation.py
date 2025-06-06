@@ -54,19 +54,24 @@ def generate_summary_test_case_plot(df, plot):
     plt.close()
 
 def generate_aggregated_plot(df, plot):
+    df['expression-type'] = df['expression-type'].str.strip('[]').str.split(',')
+    df_exploded = df.explode('expression-type')
+    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
+    
     summary = (
-        df.groupby("expression-type")
+        df_exploded.groupby("expression-type")
         .agg(
             success_rate=("success", "mean"),
             std_dev=("success", "std"),
-            avg_attempts=("attempts", "mean"),
             count=("success", "size")
         )
         .reset_index()
     )
+    
     with open("settings.json", "r") as f:
         config = json.load(f)
     limit = config.get("agent-limit", "N/A")  # Use "N/A" if limit not found
+    
     # Create custom x labels: "category (count)"
     summary["label"] = summary["expression-type"] + " (" + summary["count"].astype(str) + ")"
 
@@ -75,8 +80,12 @@ def generate_aggregated_plot(df, plot):
     p = summary["success_rate"]
     n = summary["count"]
     ci = z * np.sqrt((p * (1 - p)) / n)
-    summary["ci"] = ci
-
+    
+    # IC limit error-bar.
+    lower_bound = np.maximum(0, p - ci)
+    upper_bound = np.minimum(1, p + ci)
+    yerr = np.array([p - lower_bound, upper_bound - p])
+    
     # Sort by success_rate
     summary = summary.sort_values("success_rate", ascending=False).reset_index(drop=True)
 
@@ -93,11 +102,11 @@ def generate_aggregated_plot(df, plot):
         width=0.7  # Reduce bar width
     )
 
-    # Add error bars manually
+    # Add error bars manually with limited CI
     ax.errorbar(
         x=range(len(summary)),
         y=summary["success_rate"],
-        yerr=summary["ci"],
+        yerr=yerr,
         fmt='none',
         ecolor='orange',
         capsize=5,

@@ -169,7 +169,7 @@ def generate_success_rate_by_category_count(df, plot):
     
     # Add error bars with limited confidence intervals
     ax.errorbar(
-        x=range(1),
+        x=range(len(summary)),
         y=summary["success_rate"],
         yerr=yerr,
         fmt='none',

@@ -85,9 +85,6 @@ def generate_aggregated_plot(df, plot):
     lower_bound = np.maximum(0, p - ci)
     upper_bound = np.minimum(1, p + ci)
     yerr = np.array([p - lower_bound, upper_bound - p])
-    
-    # Sort by success_rate
-    summary = summary.sort_values("success_rate", ascending=False).reset_index(drop=True)
 
     # Set style
     sns.set(style="whitegrid")

@@ -24,7 +24,7 @@
     {
       "type": "expression",
       "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"Google\" tableData).label___f",
-      "categories": ["quantitative"]
+      "categories": ["data_retrieval"]
     },
     {
       "type": "literal",
@@ -33,7 +33,7 @@
     {
       "type": "expression",
       "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"GloVe\" tableData).description___f",
-      "categories": ["quantitative"]
+      "categories": ["data_retrieval"]
     },
     {
       "type": "literal",
@@ -42,7 +42,7 @@
     {
       "type": "expression",
       "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"fastText\" tableData).both___f",
-      "categories": ["quantitative"]
+      "categories": ["data_retrieval"]
     },
     {
       "type": "literal",

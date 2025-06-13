@@ -51,7 +51,7 @@
     {
       "type": "expression",
       "expression": "$emissions.expected$",
-      "categories": ["aggregation"]
+      "categories": ["total"]
     }
   ]
 }

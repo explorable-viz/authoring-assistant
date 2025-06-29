@@ -233,18 +233,12 @@ public class Program {
 
     private static Set<ExpressionCategory> parseCategories(JSONObject jsonObj) {
         Set<ExpressionCategory> categories = new HashSet<>();
-        
-        if (jsonObj.has("category")) {
-            // Supporto per il vecchio formato con singola categoria
-            categories.add(ExpressionCategory.of(jsonObj.getString("category")));
-        } else if (jsonObj.has("categories")) {
-            // Nuovo formato con array di categorie
+         if (jsonObj.has("categories")) {
             JSONArray categoryArray = jsonObj.getJSONArray("categories");
             for (int i = 0; i < categoryArray.length(); i++) {
                 categories.add(ExpressionCategory.of(categoryArray.getString(i)));
             }
         }
-        
         return categories;
     }
 

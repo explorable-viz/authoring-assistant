@@ -1,9 +1,12 @@
 package explorableviz.authoringassistant.paragraph;
 
 public enum ExpressionCategory {
-    TREND("Trend"),
-    AGGREGATION("Aggregation"),
-    QUANTITATIVE("Quantitative");
+    COMPARISON("Comparison"),
+    RANK("Rank"),
+    PERCENTAGE("Percentage"),
+    DATA_RETRIEVAL("Data Retrieval"),
+    DIFFERENCE("Difference"),
+    TOTAL("Total");
 
     public final String label;
     ExpressionCategory(String label) {
@@ -16,6 +19,6 @@ public enum ExpressionCategory {
                 return cat;
             }
         }
-        throw new IllegalArgumentException(STR."Invalid Expression: \{category}");
+        throw new IllegalArgumentException(STR."Invalid Category: \{category}");
     }
 }

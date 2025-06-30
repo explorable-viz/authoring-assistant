@@ -24,7 +24,7 @@
     {
       "type": "expression",
       "expression": "numToStr (findWhere (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData).f_818",
-      "category": "quantitative"
+      "categories": ["data_retrieval"]
     },
     {
       "type": "literal",

@@ -18,7 +18,7 @@ Some ways we might explore these axes:
 We might want to distinguish ambiguity inherent in the problem domain (e.g.~uncertainty) vs.~ambiguity in the
 specification of a particular code-generation query.
 
-\subsection{Success Rate by Testcase}
+\subsection{Success Rate by Category}
 To evaluate the system we used a sample of the Scigen dataset \cite{scigen_dataset_2021}.
 
 We aggregated the generated expression in three categories: aggregation, trends, quantitative (See Table \ref{tab:fluid_examples}).
@@ -26,6 +26,17 @@ Figure \ref{fig:success_rate_by_category} shows the results obtained in generati
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.95\linewidth]{fig/success_rate_by_category}
+    \includegraphics[width=0.55\linewidth]{fig/success_rate_by_category}
     \caption{Success rate by testcases}\label{fig:success_rate_by_category}
+\end{figure}
+
+\subsection{Success Rate Category Count}
+
+There are expressions which fall in more than one category.
+Figure \ref{fig:success_rate_by_category_count} shows the results obtained in generating expression by the number of categories.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.55\linewidth]{fig/success_rate_by_category_count}
+    \caption{Success rate by testcases}\label{fig:success_rate_by_category_count}
 \end{figure}

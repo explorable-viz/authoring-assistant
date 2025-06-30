@@ -54,19 +54,24 @@ def generate_summary_test_case_plot(df, plot):
     plt.close()
 
 def generate_aggregated_plot(df, plot):
+    df['expression-type'] = df['expression-type'].str.strip('[]').str.split(',')
+    df_exploded = df.explode('expression-type')
+    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
+    
     summary = (
-        df.groupby("expression-type")
+        df_exploded.groupby("expression-type")
         .agg(
             success_rate=("success", "mean"),
             std_dev=("success", "std"),
-            avg_attempts=("attempts", "mean"),
             count=("success", "size")
         )
         .reset_index()
     )
+    
     with open("settings.json", "r") as f:
         config = json.load(f)
     limit = config.get("agent-limit", "N/A")  # Use "N/A" if limit not found
+    
     # Create custom x labels: "category (count)"
     summary["label"] = summary["expression-type"] + " (" + summary["count"].astype(str) + ")"
 
@@ -75,10 +80,11 @@ def generate_aggregated_plot(df, plot):
     p = summary["success_rate"]
     n = summary["count"]
     ci = z * np.sqrt((p * (1 - p)) / n)
-    summary["ci"] = ci
-
-    # Sort by success_rate
-    summary = summary.sort_values("success_rate", ascending=False).reset_index(drop=True)
+    
+    # IC limit error-bar.
+    lower_bound = np.maximum(0, p - ci)
+    upper_bound = np.minimum(1, p + ci)
+    yerr = np.array([p - lower_bound, upper_bound - p])
 
     # Set style
     sns.set(style="whitegrid")
@@ -93,11 +99,11 @@ def generate_aggregated_plot(df, plot):
         width=0.7  # Reduce bar width
     )
 
-    # Add error bars manually
+    # Add error bars manually with limited CI
     ax.errorbar(
         x=range(len(summary)),
         y=summary["success_rate"],
-        yerr=summary["ci"],
+        yerr=yerr,
         fmt='none',
         ecolor='orange',
         capsize=5,
@@ -120,6 +126,71 @@ def generate_aggregated_plot(df, plot):
     plt.savefig("fig/success_rate_by_category.png")
     plt.close()
 
+def generate_success_rate_by_category_count(df, plot):
+    # Count the number of categories for each test
+    df['category_count'] = df['expression-type'].str.len()
+    
+    # Calculate summary for each category count
+    summary = (
+        df.groupby("category_count")
+        .agg(
+            success_rate=("success", "mean"),
+            count=("success", "size")
+        )
+        .reset_index()
+    )
+    
+    # Calculate confidence intervals
+    z = 1.96
+    p = summary["success_rate"]
+    n = summary["count"]
+    ci = z * np.sqrt((p * (1 - p)) / n)
+    
+    # Limit confidence intervals between 0 and 1
+    lower_bound = np.maximum(0, p - ci)
+    upper_bound = np.minimum(1, p + ci)
+    yerr = np.array([p - lower_bound, upper_bound - p])
+    
+    # Create custom x labels: "number_of_categories (count)"
+    summary["label"] = summary["category_count"].astype(str) + " (" + summary["count"].astype(str) + ")"
+    
+    # Plot
+    plt.figure(figsize=(6, 6))
+    ax = sns.barplot(
+        data=summary,
+        x="label",
+        y="success_rate",
+        palette="Blues_d",
+        width=0.7
+    )
+    
+    # Add error bars with limited confidence intervals
+    ax.errorbar(
+        x=range(len(summary)),
+        y=summary["success_rate"],
+        yerr=yerr,
+        fmt='none',
+        ecolor='orange',
+        capsize=5,
+        linewidth=1.3
+    )
+    
+    # Annotate bars with success rate values
+    for i, row in summary.iterrows():
+        ax.text(i, row.success_rate + 0.01, f"{row.success_rate:.2f}", ha='center', va='bottom', fontsize=9)
+    
+    # Labels and formatting
+    plt.title("Success Rate by Number of Categories", fontsize=14)
+    plt.xlabel("Number of Categories (Number of Examples)", fontsize=12)
+    plt.ylabel("Average Success Rate (CI)", fontsize=12)
+    plt.ylim(0, 1.2)
+    plt.xticks(rotation=45, ha="right")
+    
+    # Final layout
+    plt.tight_layout()
+    plt.savefig("fig/success_rate_by_category_count.png")
+    plt.close()
+
 #Average on the totals of the runs (prob. in the settings).
 
 def generate_charts():
@@ -135,5 +206,6 @@ def generate_charts():
     generate_success_rate_test_case_plot(df, plt)
     generate_summary_test_case_plot(df, plt)
     generate_aggregated_plot(df, plt)
+    generate_success_rate_by_category_count(df, plt)
 
 generate_charts()

@@ -2,7 +2,7 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets\/1003.0206"
+      "file": "datasets/1003.0206"
     }
   ],
   "imports": ["scigen", "util"],
@@ -16,7 +16,7 @@
     {
       "type": "expression",
       "expression": "numToStr (a.number_of_errors_13_features / a.number_of_errors_39_features)",
-      "category": "quantitative"
+      "categories": ["quantitative", "comparative"]
     },
     {
       "type": "literal",

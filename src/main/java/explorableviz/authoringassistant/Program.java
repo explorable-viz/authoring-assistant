@@ -217,7 +217,11 @@ public class Program {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
                 writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping, loadDatasetsFiles(datasetMapping, testVariables), imports, loadImports(imports), code);
                 String commandLineResult = new FluidCLI(datasetMapping, imports).evaluate(fluidFileName);
-                Expression candidate = new Expression(expression, extractValue(commandLineResult), ExpressionCategory.of(json_paragraph.getJSONObject(i).getString("category")));
+                Expression candidate = new Expression(
+                    expression,
+                    extractValue(commandLineResult),
+                    parseCategories(json_paragraph.getJSONObject(i))
+                );
                 paragraph.add(candidate);
                 validate(commandLineResult, candidate).ifPresent(value -> {
                     throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test exception\{value}");
@@ -225,6 +229,17 @@ public class Program {
             }
         }
         return paragraph;
+    }
+
+    private static Set<ExpressionCategory> parseCategories(JSONObject jsonObj) {
+        Set<ExpressionCategory> categories = new HashSet<>();
+         if (jsonObj.has("categories")) {
+            JSONArray categoryArray = jsonObj.getJSONArray("categories");
+            for (int i = 0; i < categoryArray.length(); i++) {
+                categories.add(ExpressionCategory.of(categoryArray.getString(i)));
+            }
+        }
+        return categories;
     }
 
     public List<Pair<Program, Expression>> asIndividualEdits(Program template) throws IOException {

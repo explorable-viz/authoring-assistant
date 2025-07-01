@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -81,10 +82,12 @@ public class AuthoringAssistant {
                 }
             }
             if (!errors) {
+                sessionPrompts.exportToJson(STR."./logs/json/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{System.currentTimeMillis()}.json");
                 return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start, runId);
             }
 
         }
+        sessionPrompts.exportToJson(STR."./logs/json/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{System.currentTimeMillis()}.json");
         logger.warning(STR."Expression validation failed after \{limit} attempts");
         return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId);
     }

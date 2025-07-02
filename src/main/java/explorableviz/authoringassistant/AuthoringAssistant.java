@@ -17,6 +17,7 @@ import java.util.logging.Logger;
 
 import explorableviz.authoringassistant.Program.QueryResult;
 
+import static explorableviz.authoringassistant.Program.extractValue;
 import static explorableviz.authoringassistant.Program.writeFluidFiles;
 
 public class AuthoringAssistant {
@@ -72,7 +73,7 @@ public class AuthoringAssistant {
 
                 Optional<String> error = Program.validate(
                         evaluateExpression(subProgram, datasets, candidate),
-                        new Expression(expected.getExpr(), evaluateExpression(subProgram, datasets, expected), expected.getCategories()));
+                        new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
 
                 if (error.isPresent()) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());

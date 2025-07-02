@@ -103,7 +103,7 @@
     {
       "type": "expression",
       "expression": "trendWord (findWithKey' \"model\" \"S-LSTM\" tableData).time_s (findWithKey' \"model\" \"2 stacked BiLSTM\" tableData).time_s shorterLonger",
-      "categories": ["comparison"]
+      "categories": ["comparison", "data_retrieval", "data_retrieval"]
     },
     {
       "type": "literal",

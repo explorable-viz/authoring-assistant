@@ -14,18 +14,15 @@ let insertionSort cmp lst =
 let findIndex fName x ys =
    let helper [] rank = -1;
        helper (y: ys') rank =
-           if y.[fName] == x then rank
+           if y.[fName] == x then rank + 1
            else helper ys' (rank + 1)
-   in helper ys 1;
+   in helper ys 0;
 
 let findWithKey' fName x table =
    fromSome (findWithKey fName x table);
 
 let findWhere pred table =
    fromSome (find pred table);
-
-let cmpTime a b = a.time_s < b.time_s;
-let cmpParam a b = a.param < b.param;
 
 -- (a -> Number) -> List a -> a
 let maximumBy f lst =

@@ -12,8 +12,7 @@ let ordinal n =
    else error "n > 20 not supported";
 
 let rankLabel word n =
-   if n == 1 then word
-   else ordinal n ++ "-" ++ word;
+   (if n == 1 then "" else ordinal n ++ "-") ++ word;
 
 let trendWord n1 n2 compareWord =
     compareWord (compare n1 n2);

@@ -33,8 +33,8 @@ let betterWorse EQ = "equal";
     betterWorse LT = "worse";
     betterWorse GT = "better";
 
-let underOverPerforming EQ = "equal performance to that of";
-    underOverPerforming LT = "underperforming";
+let underOverPerforming EQ = "performing the same as";
+    underOverPerforming LT = "performing worse than";
     underOverPerforming GT = "outperforming";
 
 -- (a -> Number) -> List a -> a

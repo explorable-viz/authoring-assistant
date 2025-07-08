@@ -20,7 +20,7 @@
   "add-expected-value": false,
   "learning-case-folder": "learningCases",
   "enable-editor-loop": false,
-  "test-case-folder": "testCases",
+  "test-case-folder": "testCases/scigen-multiple-replace",
   "threshold": 0.0,
   "system-prompt-path": "system-prompt/",
   "max-program-variants": 1,

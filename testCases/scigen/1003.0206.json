@@ -16,7 +16,7 @@
     {
       "type": "expression",
       "expression": "numToStr (a.number_of_errors_13_features / a.number_of_errors_39_features)",
-      "categories": ["quantitative", "comparative"]
+      "categories": ["data_retrieval", "comparison"]
     },
     {
       "type": "literal",

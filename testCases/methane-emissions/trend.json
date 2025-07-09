@@ -45,7 +45,7 @@
     {
       "type": "expression",
       "expression": "$emissions.result$",
-      "categories": ["quantitative"]
+      "categories": ["data_retrieval"]
     }
   ]
 }

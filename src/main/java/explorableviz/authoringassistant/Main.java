@@ -26,6 +26,8 @@ public class Main {
         final String agent = arguments.get("agent");
         try {
             Settings.init("settings.json");
+            //Create directory for logs and json
+            Files.createDirectories(Paths.get(STR."\{Settings.getLogFolder()}/json"));
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, programs);
@@ -47,7 +49,6 @@ public class Main {
     }
 
     private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String agent, int learningContextSize) throws IOException {
-        Files.createDirectories(Paths.get(Settings.getLogFolder()));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{Settings.getLogFolder()}/log_\{System.currentTimeMillis()}.csv"))) {
             String[] headers = {
                     "runId", "test-case", "llm-agent", "temperature", "num-token", "in-context-learning-size",

@@ -1,0 +1,12 @@
+
+Paragraph [
+	Text "As shown in Table 3,",
+	Text ("BiLSTM"),
+	Text " gives significantly better accuracies compared to uni-directional",
+	Text ("LSTM2"),
+	Text " with the training time per epoch growing from",
+	Text ("99"),
+	Text " seconds to ",
+	Text ("106"),
+	Text " seconds."
+]

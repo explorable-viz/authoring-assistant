@@ -278,7 +278,8 @@ public class Program {
         object.put("datasets", get_loadedDatasets());
         object.put("imports", get_loadedImports());
         object.put("code", getCode());
-        object.put("paragraph", getParagraph().toFluidSyntax());
+        object.put("paragraph", getParagraph().toFluidSyntax(false));
+        object.put("paragraphValue", getParagraph().toFluidSyntax(true));
         return object.toString();
     }
 
@@ -369,7 +370,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{path}fluid/", Path.of(this.testCaseFileName).getFileName().toString(), paragraph.toFluidSyntax(), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{path}fluid/", Path.of(this.testCaseFileName).getFileName().toString(), paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
 }

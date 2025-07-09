@@ -14,25 +14,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 3, BiLSTM gives significantly "
+      "value": "As shown in Table 3,"
     },
     {
       "type": "expression",
-      "expression": "\"worse\"",
+      "expression": "\"BiLSTM\"",
       "categories": ["comparison"]
     },
     {
       "type": "literal",
-      "value": " accuracies compared to uni-directional LSTM2, with the training time per epoch "
+      "value": " gives significantly better accuracies compared to uni-directional"
     },
     {
       "type": "expression",
-      "expression": "\"growing\"",
+      "expression": "\"LSTM2\"",
       "categories": ["comparison"]
     },
     {
       "type": "literal",
-      "value": " from "
+      "value": " with the training time per epoch growing from"
     },
     {
       "type": "expression",

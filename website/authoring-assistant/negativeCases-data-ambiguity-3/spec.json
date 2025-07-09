@@ -1,0 +1,7 @@
+{
+  "imports" : [ "scigen", "util" ],
+  "file" : "data-ambiguity-3",
+  "inputs" : [ "tableData" ],
+  "datasets" : [ [ "tableData", "datasets/counterfactual/result-ambiguity" ] ],
+  "fluidSrcPath" : [ "../fluid" ]
+}

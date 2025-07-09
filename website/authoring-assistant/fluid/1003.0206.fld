@@ -1,4 +1,4 @@
-let a = (findWithKey' "creation_method" "simulation" tableData)
+let a = findWithKey' "creation_method" "simulation" tableData
 in
 
 Paragraph [

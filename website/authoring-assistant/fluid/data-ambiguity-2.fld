@@ -1,0 +1,6 @@
+
+Paragraph [
+	Text "LSTM is the fastest model with overall time taken being 90 seconds",
+	Text ("90"),
+	Text "seconds"
+]

@@ -1,0 +1,12 @@
+
+Paragraph [
+	Text "As shown in Table 3, BiLSTM gives significantly  ",
+	Text ("worse"),
+	Text " accuracies compared to uni-directional LSTM2, with the training time per epoch ",
+	Text ("shrinking"),
+	Text " from ",
+	Text ("99"),
+	Text " seconds to ",
+	Text ("106"),
+	Text " seconds."
+]

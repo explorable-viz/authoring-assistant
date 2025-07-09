@@ -1,0 +1,8 @@
+
+Paragraph [
+	Text "We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), ",
+	Text ("BiLSTM"),
+	Text " is the most efficient among all models compared, with the ",
+	Text ("highest"),
+	Text " model size."
+]

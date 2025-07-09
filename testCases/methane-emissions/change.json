@@ -33,7 +33,7 @@
     {
       "type": "expression",
       "expression": "\"$emissions.result$\"",
-      "categories": ["trend"]
+      "categories": ["comparison"]
     },
     {
       "type": "literal",

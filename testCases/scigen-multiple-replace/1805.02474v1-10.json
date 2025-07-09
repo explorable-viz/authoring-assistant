@@ -66,7 +66,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model \"2 stacked BiLSTM\" tableData).time_s (model \"BiLSTM\" tableData).time_s improve",
+      "expression": "trendWord (model \"2 stacked BiLSTM\" tableData).acc (model \"BiLSTM\" tableData).acc improve",
       "categories": ["comparison"]
     },
     {

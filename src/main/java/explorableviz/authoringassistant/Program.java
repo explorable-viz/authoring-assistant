@@ -378,7 +378,7 @@ public class Program {
         Path directoryPath = Paths.get(path);
 
         try (var paths = Files.walk(directoryPath)) {
-            paths.filter(p -> !p.equals(directoryPath) && Files.isDirectory(p))
+            paths.filter(p -> !p.equals(directoryPath) && Files.isDirectory(p) && !Files.isSymbolicLink(p))
                     .forEach(dir -> {
                         try {
                             FileUtils.deleteDirectory(dir.toFile());

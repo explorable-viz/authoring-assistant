@@ -44,7 +44,7 @@ public class AuthoringAssistant {
             Program programEdit = individualEdit.getFirst();
             QueryResult result = execute(individualEdit);
 
-            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.response() == null ? individualEdit.getSecond() : result.response()));
+            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.correctResponse() == null ? individualEdit.getSecond() : result.correctResponse()));
             results.add(new Pair<>(programEdit, result));
             programEdits = programEdit.asIndividualEdits(templateProgram);
             programEdit.toWebsite();

@@ -8,6 +8,7 @@ import explorableviz.authoringassistant.paragraph.Paragraph;
 import explorableviz.authoringassistant.variable.ValueOptions;
 import explorableviz.authoringassistant.variable.Variables;
 import kotlin.Pair;
+import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -324,7 +325,7 @@ public class Program {
         return fluidFileName;
     }
 
-    public record QueryResult(Expression response, Expression expected, int attempt, long duration, int runId) {
+    public record QueryResult(Expression correctResponse, Expression expected, int attempt, long duration, int runId) {
     }
 
     public void toWebsite() throws IOException {
@@ -371,6 +372,23 @@ public class Program {
         }
         /* copy datasets  & lib */
         writeFluidFiles(STR."\{path}fluid/", Path.of(this.testCaseFileName).getFileName().toString(), paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+    }
+
+    public static void cleanWebsiteFolders(String path) {
+        Path directoryPath = Paths.get(path);
+
+        try (var paths = Files.walk(directoryPath)) {
+            paths.filter(p -> !p.equals(directoryPath) && Files.isDirectory(p))
+                    .forEach(dir -> {
+                        try {
+                            FileUtils.deleteDirectory(dir.toFile());
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+        } catch (IOException e) {
+            System.err.println(STR."Errore during cleanup of website folder: \{e.getMessage()}");
+        }
     }
 
 }

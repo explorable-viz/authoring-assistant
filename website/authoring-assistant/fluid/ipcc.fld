@@ -4,7 +4,5 @@ Paragraph [
 	Text (numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == "Average") tableData)))),
 	Text "°C for the warming over the period 1880 - 2012 based on a linear trend. This quantity was quoted as ",
 	Text (numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == "NOAAGlobalTemp") tableData)))),
-	Text "°C in the AR5. Hence the inclusion of the Cowtan-Way dataset (",
-	Text (numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == "Cowtan-Way") tableData)))),
-	Text "does not introduce any inconsistency with the AR5."
+	Text "°C in the AR5. Hence the inclusion of the Cowtan-Way dataset ("0.8800000000000001"does not introduce any inconsistency with the AR5."
 ]

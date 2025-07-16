@@ -1,7 +1,0 @@
-
-Paragraph [
-	Text "LSTM gives better results compared to CNN from",
-	Text ("70"),
-	Text "to",
-	Text ("80")
-]

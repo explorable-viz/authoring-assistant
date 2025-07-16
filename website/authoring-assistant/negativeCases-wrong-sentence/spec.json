@@ -1,7 +1,0 @@
-{
-  "imports" : [ "scigen", "util" ],
-  "file" : "wrong-sentence",
-  "inputs" : [ "tableData" ],
-  "datasets" : [ [ "tableData", "datasets/counterfactual/1805.02474v1-10" ] ],
-  "fluidSrcPath" : [ "../fluid" ]
-}

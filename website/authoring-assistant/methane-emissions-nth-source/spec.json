@@ -1,7 +1,0 @@
-{
-  "imports" : [ "methane" ],
-  "file" : "nth-source",
-  "inputs" : [ "tableData" ],
-  "datasets" : [ [ "tableData", "datasets/methane-emissions" ] ],
-  "fluidSrcPath" : [ "../fluid" ]
-}

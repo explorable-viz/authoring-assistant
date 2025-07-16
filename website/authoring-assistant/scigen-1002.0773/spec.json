@@ -1,7 +1,0 @@
-{
-  "imports" : [ ],
-  "file" : "1002.0773",
-  "inputs" : [ "tableData" ],
-  "datasets" : [ [ "tableData", "datasets/1002.0773" ] ],
-  "fluidSrcPath" : [ "../fluid" ]
-}

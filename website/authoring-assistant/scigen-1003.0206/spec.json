@@ -1,7 +1,0 @@
-{
-  "imports" : [ "scigen", "util" ],
-  "file" : "1003.0206",
-  "inputs" : [ "tableData" ],
-  "datasets" : [ [ "tableData", "datasets/1003.0206" ] ],
-  "fluidSrcPath" : [ "../fluid" ]
-}

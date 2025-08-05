@@ -188,16 +188,16 @@
     },
     {
       "type": "literal",
-      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. "
+      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. The "
     },
     {
       "type": "expression",
-      "expression": "let pos = findIndex \"model\" \"S-LSTM+Attention\" (insertionSort (fun a b -> b.acc < a.acc) tableData) in rankLabel \"The best performance\" pos",
+      "expression": "let pos = findIndex \"model\" \"S-LSTM+Attention\" (insertionSort (fun a b -> b.acc < a.acc) tableData) in rankLabel \"best\" pos",
       "categories": ["comparison", "data_retrieval"]
     },
     {
       "type": "literal",
-      "value": " of hierarchical attention is obtained by S-LSTM+Attention in terms of both accuracy and efficiency. S-LSTM gives significantly "
+      "value": " performance of hierarchical attention is obtained by S-LSTM+Attention in terms of both accuracy and efficiency. S-LSTM gives significantly "
     },
     {
       "type": "expression",

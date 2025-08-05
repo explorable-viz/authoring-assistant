@@ -31,7 +31,7 @@ jobs:
       run: |
         yarn install
         set -x -e
-        yarn bundle-website
+        yarn bundle-website ar6-wg1-spm
         export PUPPETEER_CACHE_DIR=$GITHUB_WORKSPACE/
         # requires Puppeteer to be installed at same version as used in Fluid
         yarn puppeteer browsers install chrome
@@ -49,7 +49,7 @@ jobs:
         run: |
           yarn install
           set -x -e
-          yarn bundle-website
+          yarn bundle-website ar6-wg1-spm
       - name: gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:

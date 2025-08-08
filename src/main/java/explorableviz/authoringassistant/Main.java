@@ -26,6 +26,7 @@ public class Main {
         final ArrayList<Program> programs;
         final InContextLearning inContextLearning;
         final String agent = arguments.get("agent");
+        final String recognitionAgent = arguments.get("recognitionAgent");
         try {
             Settings.init("settings.json");
             //Create directory for logs and json
@@ -33,7 +34,7 @@ public class Main {
             cleanWebsiteFolders("website/authoring-assistant/");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
-            final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, programs);
+            final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, recognitionAgent, programs);
             float accuracy = computeAccuracy(results);
             generateLinks();
             writeLog(results, agent, inContextLearning.size());
@@ -95,13 +96,13 @@ public class Main {
         return (float) count / results.size();
     }
 
-    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, List<Program> programs) throws Exception {
+    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, String recognitionAgent, List<Program> programs) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> results = new ArrayList<>();
         for(int k = 0; k < Settings.numTestRuns(); k++)
         {
             int programId = 0;
             for (Program program : programs) {
-                AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, program, k);
+                AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, program, recognitionAgent, k);
                 logger.info(STR."Analysing program id=\{(programId++)}");
                 results.addAll(workflow.executePrograms());
             }

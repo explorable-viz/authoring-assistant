@@ -102,4 +102,7 @@ public class Settings {
     public static boolean isEditorLoopEnabled() {
         return getSettings().getBoolean("enable-editor-loop");
     }
+    public static boolean isRecognitionAgentEnabled() {
+        return getSettings().getBoolean("enable-recognition-agent");
+    }
 }

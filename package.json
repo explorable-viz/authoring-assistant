@@ -21,7 +21,7 @@
     "serve": "./script/serve.sh",
     "test": "./script/authoring-assistant.sh it.unisa.cluelab.lllm.llm.agents.Llama31EvaluatorAgent",
     "test-gpt4o": "./script/authoring-assistant.sh it.unisa.cluelab.lllm.llm.agents.Gpt4oEvaluationAgent",
-    "test-mock": "./script/authoring-assistant.sh explorableviz.authoringassistant.llm.LLMDummyAgent",
+    "test-mock": "./script/authoring-assistant.sh explorableviz.authoringassistant.llm.LLMDummyAgent explorableviz.authoringassistant.llm.recognition.RecognitionDummyAgent",
     "test-json-gpt": "./script/authoring-assistant.sh explorableviz.authoringassistant.llm.FluidOpenAIGpt4oAgent",
     "test-deepseek": "./script/authoring-assistant.sh explorableviz.authoringassistant.llm.DeepSeekAgent",
     "generate-charts": "./script/py-install-requirements-and-gen.sh"

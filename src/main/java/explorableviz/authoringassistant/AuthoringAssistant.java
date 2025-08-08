@@ -25,19 +25,27 @@ public class AuthoringAssistant {
     public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
     private final PromptList prompts;
     private final LLMEvaluatorAgent<Expression> llm;
+    private final RecognitionAgent recogitionAgent;
     private final Program templateProgram;
     private final int runId;
-    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, int runId) throws Exception {
+    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String recognitionAgentClassName, int runId) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
+        this.recogitionAgent = new RecognitionAgent(recognitionAgentClassName);
         this.templateProgram = templateProgram;
         this.runId = runId;
     }
 
     public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
-        List<Pair<Program, Expression>> programEdits = templateProgram.asIndividualEdits(templateProgram);
+        List<Pair<Program, Expression>> programEdits; // = templateProgram.asIndividualEdits(templateProgram);
         int i = 0;
+        if(Settings.isRecognitionAgentEnabled()) {
+            programEdits = recogitionAgent.function(templateProgram);
+        } else {
+            programEdits = templateProgram.asIndividualEdits(templateProgram);
+        }
+
         while (!programEdits.isEmpty()) {
             Pair<Program, Expression> individualEdit = programEdits.get(i);
             //selection
@@ -61,24 +69,31 @@ public class AuthoringAssistant {
         Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
-        boolean errors = false;
+
         for (attempts = 0; attempts <= limit; attempts++) {
+            boolean errors = false;
             logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
+            if(candidate == null) {
+                sessionPrompts.addUserPrompt("NULL Expression Error.");
+                logger.info("rigenero per null expr");
+                continue;
+            }
             //Check each generated expressions
+            logger.info(STR."Received response: \{candidate.getExpr()}");
+
             for (Map<String, String> datasets : subProgram.getTest_datasets()) {
-
-                logger.info(STR."Received response: \{candidate.getExpr()}");
-
                 Optional<String> error = Program.validate(
                         evaluateExpression(subProgram, datasets, candidate),
                         new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
 
                 if (error.isPresent()) {
-                    sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
+                    //sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
+                    logger.info(STR."Error in counterfactual dataset: \{error.get()}");
                     sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
                     errors = true;
+                    logger.info("rigenero per controfattuale");
                     break;
                 }
             }

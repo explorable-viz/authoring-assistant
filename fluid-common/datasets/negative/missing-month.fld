@@ -1,0 +1,17 @@
+-- This dataset contains methane emissions for the region of Africa and the Middle East.
+-- Model: REMIND; Scenario: MAGPIE-SSP5-8.5
+[
+   -- 2015
+
+   { year: 2015, month: "January", emissions: 0.41125300 },
+   { year: 2015, month: "February", emissions: 8.17094166 },
+   { year: 2015, month: "March", emissions: 29.76188165 },
+   { year: 2015, month: "April", emissions: 0.51736129 },
+   { year: 2015, month: "May", emissions: 4.12193675 },
+   { year: 2015, month: "June", emissions: 0.09559156 },
+   { year: 2015, month: "July", emissions: 2.69146350 },
+   { year: 2015, month: "August", emissions: 0.06519554 },
+   { year: 2015, month: "September", emissions: 8.98732911 },
+   { year: 2015, month: "October", emissions: 8.98732911 },
+   { year: 2015, month: "December", emissions: 8.98732911 }
+]

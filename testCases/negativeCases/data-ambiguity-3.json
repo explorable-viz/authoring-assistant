@@ -2,7 +2,7 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/counterfactual/result-ambiguity"
+      "file": "datasets/negative/result-ambiguity"
     }
   ],
   "imports": [

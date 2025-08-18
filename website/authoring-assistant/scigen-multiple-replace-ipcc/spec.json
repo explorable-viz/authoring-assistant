@@ -1,7 +1,7 @@
 {
-  "imports" : [ ],
-  "file" : "ipcc",
   "inputs" : [ "tableData" ],
-  "datasets" : [ [ "tableData", "datasets/scigen/ipcc" ] ],
-  "fluidSrcPath" : [ "../fluid" ]
+  "datasets" : [ [ "tableData", "datasets/scigen/ipcc.fld" ] ],
+  "fluidSrcPath" : [ "../fluid" ],
+  "query" : false,
+  "linking" : true
 }

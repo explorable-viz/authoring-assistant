@@ -2,14 +2,14 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/scigen/1805.02474v1-14"
+      "file": "datasets/scigen/1805.02474v1-14.fld"
     }
   ],
   "test-datasets": [
     [
       {
         "var": "tableData",
-        "file": "datasets/scigen/1805.02474v1-14"
+        "file": "datasets/scigen/1805.02474v1-14.fld"
       }
     ]
   ],

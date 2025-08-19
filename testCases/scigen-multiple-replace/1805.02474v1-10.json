@@ -2,7 +2,7 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/scigen/1805.02474v1-10"
+      "file": "datasets/scigen/1805.02474v1-10.fld"
     }
   ],
   "imports": [

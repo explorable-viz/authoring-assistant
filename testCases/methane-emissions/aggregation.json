@@ -37,7 +37,7 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/methane-emissions"
+      "file": "datasets/methane-emissions.fld"
     }
   ],
   "imports": [
@@ -55,4 +55,3 @@
     }
   ]
 }
-

@@ -2,14 +2,14 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/scigen/ipcc"
+      "file": "datasets/scigen/ipcc.fld"
     }
   ],
   "test-datasets": [
     [
       {
         "var": "tableData",
-        "file": "datasets/scigen/ipcc"
+        "file": "datasets/scigen/ipcc.fld"
       }
     ]
   ],

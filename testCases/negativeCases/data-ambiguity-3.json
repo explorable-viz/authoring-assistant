@@ -2,7 +2,7 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/negative/result-ambiguity"
+      "file": "datasets/negative/result-ambiguity.fld"
     }
   ],
   "imports": [

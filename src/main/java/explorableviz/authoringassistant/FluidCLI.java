@@ -23,17 +23,16 @@ public class FluidCLI {
 
         command.append(STR."yarn fluid evaluate -l -p \"")
                 .append(Settings.getFluidTempFolder())
-                .append("/\" -f ")
+                .append("\" -f ")
                 .append(fluidFileName);
 
         datasets.forEach((key, path) -> command.append(" -d \"(")
                 .append(key)
-                .append(", ./")
+                .append(", ")
                 .append(path)
                 .append(")\""));
 
-        imports.forEach(path -> command.append(" -i ")
-                .append(path));
+ 
 
         return command.toString();
     }

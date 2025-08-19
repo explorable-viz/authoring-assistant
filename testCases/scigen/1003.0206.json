@@ -2,7 +2,7 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/1003.0206"
+      "file": "datasets/1003.0206.fld"
     }
   ],
   "imports": ["scigen", "util"],

@@ -2,7 +2,7 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/negative/missing-month"
+      "file": "datasets/negative/missing-month.fld"
     }
   ],
   "imports": [

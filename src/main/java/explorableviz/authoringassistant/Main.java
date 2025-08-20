@@ -25,10 +25,11 @@ public class Main {
         logger.info(arguments.toString().replace(",", "\n"));
         final ArrayList<Program> programs;
         final InContextLearning inContextLearning;
-        final String agent = arguments.get("agent");
-        final String recognitionAgent = arguments.get("recognitionAgent");
+
         try {
             Settings.init("settings.json");
+            final String agent = Settings.getAuthoringAgentName();
+            final String recognitionAgent = Settings.getRecognitionAgentName();
             //Create directory for logs and json
             Files.createDirectories(Paths.get(STR."\{Settings.getLogFolder()}/json"));
             cleanWebsiteFolders("website/authoring-assistant/");

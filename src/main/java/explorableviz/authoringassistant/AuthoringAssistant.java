@@ -26,8 +26,9 @@ public class AuthoringAssistant {
     private final PromptList prompts;
     private final LLMEvaluatorAgent<Expression> llm;
     private final RecognitionAgent recogitionAgent;
-    private final Program templateProgram;
+    private Program templateProgram;
     private final int runId;
+
     public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String recognitionAgentClassName, int runId) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
@@ -40,11 +41,14 @@ public class AuthoringAssistant {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
         List<Pair<Program, Expression>> programEdits; // = templateProgram.asIndividualEdits(templateProgram);
         int i = 0;
-        if(Settings.isRecognitionAgentEnabled()) {
-            programEdits = recogitionAgent.function(templateProgram);
-        } else {
-            programEdits = templateProgram.asIndividualEdits(templateProgram);
+        /**
+         * @todo - merge these two 'behaviours'
+         */
+        if (Settings.isRecognitionAgentEnabled()) {
+            templateProgram = recogitionAgent.generateTemplateProgram(templateProgram);
         }
+        programEdits = templateProgram.asIndividualEdits(templateProgram);
+
 
         while (!programEdits.isEmpty()) {
             Pair<Program, Expression> individualEdit = programEdits.get(i);
@@ -55,7 +59,7 @@ public class AuthoringAssistant {
             programEdit.replaceParagraph(programEdit.getParagraph().splice(result.correctResponse() == null ? individualEdit.getSecond() : result.correctResponse()));
             results.add(new Pair<>(programEdit, result));
             programEdits = programEdit.asIndividualEdits(templateProgram);
-            programEdit.toWebsite();
+            //programEdit.toWebsite();
         }
         return results;
     }
@@ -75,7 +79,7 @@ public class AuthoringAssistant {
             logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
-            if(candidate == null) {
+            if (candidate == null) {
                 sessionPrompts.addUserPrompt("NULL Expression Error.");
                 logger.info("rigenero per null expr");
                 continue;

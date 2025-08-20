@@ -105,4 +105,11 @@ public class Settings {
     public static boolean isRecognitionAgentEnabled() {
         return getSettings().getBoolean("enable-recognition-agent");
     }
+
+    public static String getRecognitionAgentName() {
+        return getSettings().getString("recognition-agent-class");
+    }
+    public static String getAuthoringAgentName() {
+        return getSettings().getString("authoring-agent-class");
+    }
 }

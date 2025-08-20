@@ -1,6 +1,5 @@
 package explorableviz.authoringassistant;
 
-import explorableviz.authoringassistant.llm.recognition.CodeLLamaAgent;
 import explorableviz.authoringassistant.paragraph.Expression;
 import explorableviz.authoringassistant.paragraph.Literal;
 import explorableviz.authoringassistant.paragraph.Paragraph;
@@ -17,6 +16,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RecognitionAgent {
@@ -29,17 +29,44 @@ public class RecognitionAgent {
         llm = initialiseAgent(agent);
     }
 
-    public List<Pair<Program, Expression>> function(Program p) throws IOException {
-        String text = extractText(p);
+    public Program generateTemplateProgram(Program p) throws IOException {
+        String text;
+        if(p.getTestCaseFileName().equals("web-case")) {
+            text = p.getParagraph().getFirst().getValue();
+        } else
+        {
+            text = extractText(p);
+        }
         PromptList prompts = buildPrompts(text);
         String result = llm.evaluate(prompts, null);
+        Paragraph paragraph = parseParagraph(result);
+        return new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCaseFileName(),p.getTest_datasets());
+    }
 
-        List<Pair<Paragraph, Expression>>  paragraphs = generateParagraphs(result);
-        List<Pair<Program, Expression>> programs = new ArrayList<>();
-        for (Pair<Paragraph, Expression> paragraph : paragraphs) {
-            programs.add(new Pair<>(new Program(paragraph.getFirst(), p.getDatasets(), p.getImports(), p.getCode(), p.get_loadedDatasets(), p.getTestCaseFileName(), p.getTest_datasets()), paragraph.getSecond()));
+    private Paragraph parseParagraph(String text) {
+        Paragraph paragraph = new Paragraph();
+        Matcher matcher = REPLACE.matcher(text);
+
+        int lastIndex = 0;
+        while (matcher.find()) {
+            // Literal prima del replace
+            if (matcher.start() > lastIndex) {
+                String literalText = text.substring(lastIndex, matcher.start());
+                paragraph.add(new Literal(literalText, null));
+            }
+            // Expression
+            String exprValue = matcher.group(1);
+            paragraph.add(new Expression(STR."\"\{exprValue}\"", exprValue, new HashSet<>()));
+
+            lastIndex = matcher.end();
         }
-        return programs;
+
+        // Eventuale literal finale
+        if (lastIndex < text.length()) {
+            paragraph.add(new Literal(text.substring(lastIndex), null));
+        }
+
+        return paragraph;
     }
 
     private static String extractText(Program p) throws IOException {

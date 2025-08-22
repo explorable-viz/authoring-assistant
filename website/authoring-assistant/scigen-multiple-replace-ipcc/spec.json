@@ -1,0 +1,6 @@
+{
+  "imports" : [ ],
+  "inputs" : [ "tableData" ],
+  "datasets" : [ [ "tableData", "datasets/scigen/ipcc.fld" ] ],
+  "fluidSrcPath" : [ "../fluid" ]
+}

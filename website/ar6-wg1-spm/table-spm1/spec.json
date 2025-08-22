@@ -1,6 +1,7 @@
 {
     "fluidSrcPath": ["../fluid"],
     "datasets": [["tableData", "explainable-table.fld"], ["likelihoods", "likelihoods.fld"]],
-    "file": "table-spm-1.fld",
-    "inputs": ["tableData", "likelihoods"]
+    "inputs": ["tableData", "likelihoods"],
+    "query": false,
+    "linking": true
 }

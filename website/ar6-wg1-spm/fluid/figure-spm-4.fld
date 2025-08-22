@@ -1,4 +1,4 @@
-import lib/stats
+import lib.stats
 
 let stackedBarHeight stackedBar = sum [ bar.z | bar <- stackedBar.bars ];
 

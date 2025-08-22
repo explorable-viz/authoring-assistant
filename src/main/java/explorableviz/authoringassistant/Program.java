@@ -342,7 +342,6 @@ public class Program {
         String fluidSrcPath = "../fluid";
         spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
         spec.put("datasets", new JSONArray());
-        spec.put("imports", new JSONArray());
 
         datasets.forEach((k, v) -> {
             JSONArray ds = new JSONArray();
@@ -351,9 +350,6 @@ public class Program {
             spec.getJSONArray("datasets").put(ds);
         });
 
-        imports.forEach(_import -> {
-            spec.getJSONArray("imports").put(_import);
-        });
         spec.put("inputs", new JSONArray("[\"tableData\"]"));
         try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {
             ObjectMapper objectMapper = new ObjectMapper();

@@ -1,5 +1,4 @@
 {
-  "imports" : [ "scigen", "util" ],
   "inputs" : [ "tableData" ],
   "datasets" : [ [ "tableData", "datasets/negative/missing-month.fld" ] ],
   "fluidSrcPath" : [ "../fluid" ]

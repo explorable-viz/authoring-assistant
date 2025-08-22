@@ -24,19 +24,20 @@ To evaluate the system we used a sample of the Scigen dataset \cite{scigen_datas
 We aggregated the generated expression in three categories: aggregation, trends, quantitative (See Table \ref{tab:fluid_examples}).
 Figure \ref{fig:success_rate_by_category} shows the results obtained in generating expression by categories.
 
-\begin{figure}[!h]
+\begin{figure}
     \centering
-    \includegraphics[width=0.55\linewidth]{fig/success_rate_by_category}
-    \caption{Success rate by testcases}\label{fig:success_rate_by_category}
-\end{figure}
-
-\subsection{Success Rate Category Count}
-
-There are expressions which fall in more than one category.
-Figure \ref{fig:success_rate_by_category_count} shows the results obtained in generating expression by the number of categories.
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.55\linewidth]{fig/success_rate_by_category_count}
-    \caption{Success rate by testcases}\label{fig:success_rate_by_category_count}
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/success_rate_by_category}
+        \caption{Success rate by testcases}
+        \label{fig:success_rate_by_category}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/success_rate_by_category_count}
+        \caption{Success rate by category count}
+        \label{fig:success_rate_by_category_count}
+    \end{subfigure}
+    \caption{Comparison of success rates}
+    \label{fig:success_rate_comparison}
 \end{figure}

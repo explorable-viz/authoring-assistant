@@ -335,7 +335,8 @@ public class Program {
 
         /* spec generation */
         JSONObject spec = new JSONObject();
-        spec.put("fluidSrcPath", new JSONArray("[\"../fluid\"]"));
+        String fluidSrcPath = "../fluid";
+        spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
         spec.put("datasets", new JSONArray());
         spec.put("imports", new JSONArray());
 
@@ -349,7 +350,6 @@ public class Program {
         imports.forEach(_import -> {
             spec.getJSONArray("imports").put(_import);
         });
-        spec.put("file", Path.of(this.testCaseFileName).getFileName());
         spec.put("inputs", new JSONArray("[\"tableData\"]"));
         try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -364,6 +364,7 @@ public class Program {
         String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{path}/template.html").toURI())));
         html = html.replaceAll("##TITLE##", String.valueOf(Path.of(this.testCaseFileName).getParent().getFileName()));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(Path.of(this.testCaseFileName).getFileName()));
+        html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{Path.of(this.testCaseFileName).getFileName()}.fld\"");
         try (FileWriter file = new FileWriter(STR."\{sitePath}/index.html")) {
             file.write(html);
             file.flush();
@@ -387,7 +388,7 @@ public class Program {
                         }
                     });
         } catch (IOException e) {
-            System.err.println(STR."Errore during cleanup of website folder: \{e.getMessage()}");
+            System.err.println(STR."Error during clean of website folder: \{e.getMessage()}");
         }
     }
 

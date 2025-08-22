@@ -57,7 +57,7 @@ public class Program {
     public static HashMap<String, String> loadDatasetsFiles(Map<String, String> datasetMapping, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
         for (Map.Entry<String, String> dataset : datasetMapping.entrySet()) {
-            loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}.fld").toURI()))), variables));
+            loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}").toURI()))), variables));
         }
         return loadedDatasets;
     }
@@ -137,7 +137,7 @@ public class Program {
         usedVars.addAll(extractVariables(paragraph, pattern));
         usedVars.addAll(extractVariables(code, pattern));
         for (Map.Entry<String, String> dataset : datasets.entrySet()) {
-            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.getFluidCommonFolder(), STR."\{dataset.getValue()}.fld")), pattern));
+            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.getFluidCommonFolder(), dataset.getValue())), pattern));
         }
         for (Map.Entry<String, ValueOptions> variable : variables.entrySet()) {
             if (!usedVars.contains(variable.getKey())) {
@@ -217,7 +217,7 @@ public class Program {
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
                 writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping, loadDatasetsFiles(datasetMapping, testVariables), imports, loadImports(imports), code);
-                String commandLineResult = new FluidCLI(datasetMapping, imports).evaluate(fluidFileName);
+                String commandLineResult = new FluidCLI(datasetMapping).evaluate(fluidFileName);
                 Expression candidate = new Expression(
                     expression,
                     extractValue(commandLineResult),
@@ -267,8 +267,8 @@ public class Program {
             }
         }
         for (Map.Entry<String, String> dataset : datasets.entrySet()) {
-            Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset.getValue()}.fld").getParent());
-            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset.getValue()}.fld")) {
+            Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset.getValue()}").getParent());
+            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset.getValue()}")) {
                 outData.println(loadedDatasets.get(dataset.getKey()));
             }
         }

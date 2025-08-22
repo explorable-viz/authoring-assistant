@@ -1,6 +1,6 @@
 import lib.stats
 
-let stackedBarHeight stackedBar = sum [ bar.z | bar <- stackedBar.bars ];
+let stackedBarHeight stackedBar = sum [ bar.z | bar <- stackedBar.segments ];
 
 let get x (BarChart record) = fromSome (findWithKey "x" x record.stackedBars);
 
@@ -8,10 +8,10 @@ let mkBarChart scenName table =
     BarChart {
         caption: "Example bar chart for scenario " ++ scenName,
         size: { width: 275, height: 185 },
-        stackedBars: map (fun record -> { x: record.type, bars: [ { y: "emissions", z: record.emissions } ]}) table
+        stackedBars: map (fun record -> { x: record.type, segments: [ { y: "emissions", z: record.emissions } ]}) table
     };
 
-let getHeight offset bar = (head bar.bars).z + offset;
+let getHeight offset bar = (head bar.segments).z + offset;
 
 let ssp119 = mkBarChart "SSP1-1.9" ssp119Source;
     ssp245 = mkBarChart "SSP2-4.5" ssp245Source;

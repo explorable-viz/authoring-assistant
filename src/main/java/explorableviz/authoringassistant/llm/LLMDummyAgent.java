@@ -3,6 +3,7 @@ package explorableviz.authoringassistant.llm;
 import explorableviz.authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.Prompt;
+import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -16,7 +17,7 @@ public class LLMDummyAgent extends LLMEvaluatorAgent<Expression> {
     }
 
     @Override
-    public Expression evaluate(List<Prompt> list, String s) throws IOException {
+    public Expression evaluate(PromptList list, String s) throws IOException {
         logger.info("Execution of the DummyAgent");
         return new Expression("dummy", null, null);
     }

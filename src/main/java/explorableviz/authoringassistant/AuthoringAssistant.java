@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +17,7 @@ import java.util.logging.Logger;
 
 import explorableviz.authoringassistant.Program.QueryResult;
 
+import static explorableviz.authoringassistant.Program.extractValue;
 import static explorableviz.authoringassistant.Program.writeFluidFiles;
 
 public class AuthoringAssistant {
@@ -42,7 +44,7 @@ public class AuthoringAssistant {
             Program programEdit = individualEdit.getFirst();
             QueryResult result = execute(individualEdit);
 
-            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.response() == null ? individualEdit.getSecond() : result.response()));
+            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.correctResponse() == null ? individualEdit.getSecond() : result.correctResponse()));
             results.add(new Pair<>(programEdit, result));
             programEdits = programEdit.asIndividualEdits(templateProgram);
             programEdit.toWebsite();
@@ -71,7 +73,7 @@ public class AuthoringAssistant {
 
                 Optional<String> error = Program.validate(
                         evaluateExpression(subProgram, datasets, candidate),
-                        new Expression(expected.getExpr(), evaluateExpression(subProgram, datasets, expected), expected.getCategories()));
+                        new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
 
                 if (error.isPresent()) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
@@ -81,10 +83,12 @@ public class AuthoringAssistant {
                 }
             }
             if (!errors) {
+                sessionPrompts.exportToJson(STR."./logs/json/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{System.currentTimeMillis()}.json");
                 return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start, runId);
             }
 
         }
+        sessionPrompts.exportToJson(STR."./logs/json/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{System.currentTimeMillis()}.json");
         logger.warning(STR."Expression validation failed after \{limit} attempts");
         return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId);
     }

@@ -1,0 +1,39 @@
+{
+  "datasets": [
+    {
+      "var": "tableData",
+      "file": "datasets/negative/1805.02474v1-10"
+    }
+  ],
+  "imports": [
+    "scigen",
+    "util"
+  ],
+  "testing-variables": {
+  },
+  "variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), "
+    },
+    {
+      "type": "expression",
+      "expression": "\"BiLSTM\"",
+      "categories": ["data_retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " is the most efficient among all models compared, with the "
+    },
+    {
+      "type": "expression",
+      "expression": "\"highest\"",
+      "categories": ["rank", "data_retrieval", "comparison"]
+    },
+    {
+      "type": "literal",
+      "value": " model size."
+    }
+  ]
+}

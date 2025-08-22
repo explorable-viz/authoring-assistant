@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "var": "tableData",
+      "file": "datasets/negative/1805.02474v1-10"
+    }
+  ],
+  "imports": [
+    "scigen",
+    "util"
+  ],
+  "testing-variables": {},
+  "variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 3,"
+    },
+    {
+      "type": "expression",
+      "expression": "\"BiLSTM\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": " gives significantly better accuracies compared to uni-directional"
+    },
+    {
+      "type": "expression",
+      "expression": "\"LSTM2\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": " with the training time per epoch growing from"
+    },
+    {
+      "type": "expression",
+      "expression": "\"99\"",
+      "categories": ["data_retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " seconds to "
+    },
+    {
+      "type": "expression",
+      "expression": "\"106\"",
+      "categories": ["data_retrieval"]
+
+    },
+    {
+      "type": "literal",
+      "value": " seconds."
+    }
+  ]
+}

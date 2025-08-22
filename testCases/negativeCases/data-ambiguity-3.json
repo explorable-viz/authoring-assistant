@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "var": "tableData",
+      "file": "datasets/negative/result-ambiguity"
+    }
+  ],
+  "imports": [
+    "scigen",
+    "util"
+  ],
+  "testing-variables": {
+  },
+  "variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "LSTM gives better results compared to CNN from"
+    },
+    {
+      "type": "expression",
+      "expression": "\"70\"",
+      "categories": ["data_retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "to"
+    },
+    {
+      "type": "expression",
+      "expression": "\"80\"",
+      "categories": ["data_retrieval"]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "datasets": [
+    {
+      "var": "tableData",
+      "file": "datasets/negative/missing-month"
+    }
+  ],
+  "imports": [
+    "scigen",
+    "util"
+  ],
+  "testing-variables": {
+  },
+  "variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The average methane emissions for the year 2015 is"
+    },
+    {
+      "type": "expression",
+      "expression": "\"1.0\"",
+      "categories": ["total"]
+    }
+  ]
+}

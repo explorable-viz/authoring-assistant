@@ -98,7 +98,7 @@ folders under `website`.
 ### Bundling/Testing Websites
 
 To bundle a website:
-1. Run `yarn fluid bundle-website -w $WEBSITE_NAME -l`
+1. Run `yarn bundle-website $WEBSITE_NAME`
 
 This will create a folder in `dist` with a Lisp-cased version of `$WEBSITE_NAME`.
 

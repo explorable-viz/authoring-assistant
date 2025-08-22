@@ -13,6 +13,6 @@
  {model: "Transformer (N=8)", time_s: 174, acc: 81.86, param: 7615},
  {model: "Transformer (N=10)", time_s: 214, acc: 81.63, param: 8004},
  {model: "BiLSTM+Attention", time_s: 126, acc: 82.37, param: 7419},
- {model: "S-LSTM+Attention", time_s: 87, acc: "83.07*", param: 8858}
+ {model: "S-LSTM+Attention", time_s: 87, acc: 83.07, param: 8858}
  ]
 

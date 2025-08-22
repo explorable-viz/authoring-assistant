@@ -7,8 +7,8 @@ let ordinalMap = [
 let ordinal n =
    if n <= 0 then error "n <= 0 not supported"
    else if (n < 4) then
-      (findWithKey' "lastDigit" n ordinalMap).suffix
-   else if (n >= 4) `and` (n <= 20) then "th"
+      numToStr n ++ (findWithKey' "lastDigit" n ordinalMap).suffix
+   else if (n >= 4) `and` (n <= 20) then numToStr n ++ "th"
    else error "n > 20 not supported";
 
 let rankLabel word n =
@@ -26,6 +26,10 @@ let smallerHigher EQ = "equal";
     smallerHigher LT = "smaller";
     smallerHigher GT = "larger";
 
+let improve EQ = "does not further improve";
+    improve LT = "does not further improve";
+    improve GT = "further improves";
+
 let shorterLonger EQ = "equal";
     shorterLonger LT = "shorter";
     shorterLonger GT = "longer";
@@ -34,6 +38,6 @@ let betterWorse EQ = "equal";
     betterWorse LT = "worse";
     betterWorse GT = "better";
 
-let underOverPerforming EQ = "equal performance to that of";
-    underOverPerforming LT = "underperforming";
+let underOverPerforming EQ = "performing the same as";
+    underOverPerforming LT = "performing worse than";
     underOverPerforming GT = "outperforming";

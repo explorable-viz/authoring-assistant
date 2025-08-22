@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static explorableviz.authoringassistant.Program.cleanWebsiteFolders;
+
 public class Main {
     public static Logger logger = Logger.getLogger(Main.class.getName());
 
@@ -26,10 +28,13 @@ public class Main {
         final String agent = arguments.get("agent");
         try {
             Settings.init("settings.json");
+            //Create directory for logs and json
+            Files.createDirectories(Paths.get(STR."\{Settings.getLogFolder()}/json"));
+            cleanWebsiteFolders("website/authoring-assistant/");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, programs);
-            float accuracy = computeExactMatch(results);
+            float accuracy = computeAccuracy(results);
             generateLinks();
             writeLog(results, agent, inContextLearning.size());
             if (accuracy >= Settings.getThreshold()) {
@@ -47,10 +52,9 @@ public class Main {
     }
 
     private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String agent, int learningContextSize) throws IOException {
-        Files.createDirectories(Paths.get(Settings.getLogFolder()));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{Settings.getLogFolder()}/log_\{System.currentTimeMillis()}.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "temperature", "num-token", "in-context-learning-size",
+                    "runId", "test-case", "llm-agent", "temperature", "num-token", "is-negative", "in-context-learning-size",
                     "attempts", "result", "expression-type", "generated-expression", "expected-value", "duration(ms)"
             };
             out.println(String.join(";", headers));
@@ -64,12 +68,13 @@ public class Main {
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
+                                String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
                                 String.valueOf(learningContextSize),
                                 //program.getParagraph().toFluidSyntax(),
                                 String.valueOf(queryResult.attempt()),
-                                queryResult.response() != null ? "OK" : "KO",
+                                queryResult.correctResponse() != null ? "OK" : "KO",
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
-                                queryResult.response() != null ? "generated" : "NULL",
+                                queryResult.correctResponse() != null ? "generated" : "NULL",
                                 //queryResult.expected().getExpr(),
                                 queryResult.expected().getValue(),
                                 String.valueOf(queryResult.duration())
@@ -81,9 +86,12 @@ public class Main {
         }
     }
 
-    private static float computeExactMatch(List<Pair<Program, QueryResult>> results) {
+    private static float computeAccuracy(List<Pair<Program, QueryResult>> results) {
         logger.info("Computing accuracy");
-        long count = IntStream.range(0, results.size()).filter(i -> results.get(i).getSecond().response() != null && results.get(i).getSecond().expected().getExpr().equals(results.get(i).getSecond().response().getExpr())).count();
+        long count = IntStream.range(0, results.size()).filter(i -> {
+            QueryResult result = results.get(i).getSecond();
+            return  result.correctResponse() != null && result.expected().getExpr().equals(result.correctResponse().getExpr());
+        }).count();
         return (float) count / results.size();
     }
 
@@ -100,7 +108,7 @@ public class Main {
         }
         logger.info("Printing generated expression");
         for (Pair<Program, QueryResult> result : results) {
-            logger.info(result.getSecond().response() != null ? result.getSecond().response().getExpr() : "NULL");
+            logger.info(result.getSecond().correctResponse() != null ? result.getSecond().correctResponse().getExpr() : "NULL");
         }
         return results;
     }

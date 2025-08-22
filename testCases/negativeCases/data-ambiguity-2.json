@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "var": "tableData",
+      "file": "datasets/negative/time-ambiguity"
+    }
+  ],
+  "imports": [
+    "scigen",
+    "util"
+  ],
+  "testing-variables": {
+  },
+  "variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "LSTM is the fastest model with overall time taken being 90 seconds"
+    },
+    {
+      "type": "expression",
+      "expression": "\"90\"",
+      "categories": ["data_retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "seconds"
+    }
+  ]
+}

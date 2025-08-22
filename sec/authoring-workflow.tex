@@ -1,11 +1,24 @@
 \section{AI-Assisted Authoring Workflow}
 \label{sec:authoring-workflow}
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=0.95\linewidth]{fig/authoring-assistant-architecture.png}
-    \caption{AI-assisted authoring workflow}\label{fig:architecture}
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/entire-workflow}
+        \caption{Workflow}
+        \label{fig:architecture}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/data-flow}
+        \caption{Data flow}
+        \label{fig:dataflow}
+    \end{subfigure}
+    \caption{AI-assisted authoring process: workflow (a) and data flow (b).}
+    \label{fig:overall}
 \end{figure}
+
 
 \subsection{System Prompt}
 \label{subsec:system-prompt}

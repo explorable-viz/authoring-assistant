@@ -41,7 +41,7 @@ public class Program {
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
     private final String testCaseFileName;
-    public static final String fluidFileName = "llmTest";
+    public static final String fluidFileName = "llmTest.fld";
 
     public Program(Paragraph paragraph, Map<String, String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
         this.datasets = datasets;
@@ -137,6 +137,7 @@ public class Program {
         usedVars.addAll(extractVariables(paragraph, pattern));
         usedVars.addAll(extractVariables(code, pattern));
         for (Map.Entry<String, String> dataset : datasets.entrySet()) {
+            logger.info(dataset.getValue());
             usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.getFluidCommonFolder(), dataset.getValue())), pattern));
         }
         for (Map.Entry<String, ValueOptions> variable : variables.entrySet()) {
@@ -256,7 +257,10 @@ public class Program {
         Files.createDirectories(Paths.get(basePath));
         Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}").getParent());
 
-        try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}.fld")) {
+        try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}")) {
+            for (String import_: imports) {
+                out.println(STR."import \{import_}");
+            }
             out.println(code);
             out.println(response);
         }

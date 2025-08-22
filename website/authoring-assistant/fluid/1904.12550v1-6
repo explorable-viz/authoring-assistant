@@ -1,8 +1,0 @@
-import scigen
-import util
-
-Paragraph [
-	Text "The results can be found in Table 3. For comparison, the two top rows provide the best results of Gong et al. (2018). The first interesting finding is that the AVG COS SIM measure again performs very well: In all three settings, it beats both the system based on general-purpose embeddings (topic wiki) and the one that is adapted to the science domain (topic science), with again the Both setting yielding the best overall result (",
-	Text (numToStr (findWhere (fun x -> (x.gong_et_al == "AVG_COS_SIM") `and` (x.topic_science == "Both")) tableData).f_818),
-	Text "). Note that our Both setting is probably the one most similar to the concept input used by Gong et al. (2018)."
-]

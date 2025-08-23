@@ -7,7 +7,7 @@ let get x (BarChart record) = fromSome (findWithKey "x" x record.stackedBars);
 let mkBarChart scenName table = 
     BarChart {
         caption: "Example bar chart for scenario " ++ scenName,
-        size: { width: 275, height: 185 },
+        size: { width: 300, height: 185 },
         stackedBars: map (fun record -> { x: record.type, segments: [ { y: "emissions", z: record.emissions } ]}) table
     };
 

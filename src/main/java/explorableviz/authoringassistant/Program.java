@@ -342,6 +342,8 @@ public class Program {
         String fluidSrcPath = "../fluid";
         spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
         spec.put("datasets", new JSONArray());
+        spec.put("linking", true);
+        spec.put("query", false);
 
         datasets.forEach((k, v) -> {
             JSONArray ds = new JSONArray();
@@ -372,7 +374,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{path}fluid/", Path.of(this.testCaseFileName).getFileName().toString(), paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {

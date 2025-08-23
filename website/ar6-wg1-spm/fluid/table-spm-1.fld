@@ -6,14 +6,14 @@ let getByScenario data scenario = fromSome (findWithKey "scenario" scenario data
 
 let probAsText = likelihoodMap likelihoods;
 
-let mean list = (sum list) / (length list); 
+let mean xs = sum xs / length xs;
 
 let calcLikelihood (min, max) target = 
     if max < target
     then 0.05
     else if target <= min
     then 0.95
-    else (target - min)/(max - min);
+    else (target - min) / (max - min);
 
 let realTable = newDataTable 0;
     getByScenario' = getByScenario realTable;
@@ -22,11 +22,11 @@ let realTable = newDataTable 0;
 in MultiView {
     explanation119:
         Paragraph [ Text "Under the low GHG emissions scenario (SSP1-1.9), global warming of 2°C would ",
-                      Text (probAsText (calcLikelihood ssp119.longRange 2.0)), 
-                     Text " be exceeded at the end of the 21st century." ],
+                    Text (probAsText (calcLikelihood ssp119.longRange 2.0)),
+                    Text " be exceeded at the end of the 21st century." ],
     explanation245:
         Paragraph [ Text "Under the intermediate GHG emissions scenario (SSP2-4.5), global warming of 2°C would ",
-                     Text (probAsText (calcLikelihood ssp245.longRange 2.0)),
-                     Text " be exceeded by the end of the 21st century. In the mid-term period (2041-2060)",
-                     Text " crossing the 2°C mark is ", Text (probAsText (calcLikelihood ssp245.midRange 2.0)), Text "to occur" ]
+                    Text (probAsText (calcLikelihood ssp245.longRange 2.0)),
+                    Text " be exceeded by the end of the 21st century. In the mid-term period (2041-2060)",
+                    Text " crossing the 2°C mark is ", Text (probAsText (calcLikelihood ssp245.midRange 2.0)), Text " to occur" ]
     }

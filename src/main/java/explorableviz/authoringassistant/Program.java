@@ -342,6 +342,8 @@ public class Program {
         String fluidSrcPath = "../fluid";
         spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
         spec.put("datasets", new JSONArray());
+        spec.put("linking", true);
+        spec.put("query", false);
 
         datasets.forEach((k, v) -> {
             JSONArray ds = new JSONArray();

@@ -1,0 +1,7 @@
+import methane
+import util
+
+Paragraph [
+	Text "Residential Commercial Other recorded its lowest methane emissions in ",
+	Text (let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == "Residential Commercial Other") tableData) in numToStr maxEntry.year)
+]

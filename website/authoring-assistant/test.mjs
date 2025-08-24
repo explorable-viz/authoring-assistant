@@ -1,4 +1,4 @@
-import { runTests, testURL, waitForFigure, waitFor } from "./shared/webtest-lib.js";
+import { runTests, testURL, waitFor } from "./shared/webtest-lib.js";
 
 export const main = async () => {
     await runTests(testURL("scigen-multiple-replace-1805.02474v1-10")([ page => waitFor("div#fig-output")(page) ]))();

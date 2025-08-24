@@ -233,6 +233,14 @@ var intercalate = function(separator) {
 var showString = { show: showStringImpl };
 var showNumber = { show: showNumberImpl };
 var showInt = { show: showIntImpl };
+var showBoolean = {
+  show: (v) => {
+    if (v) {
+      return "true";
+    }
+    return "false";
+  }
+};
 
 // output-es/Affjax.RequestHeader/index.js
 var $RequestHeader = (tag, _1, _2) => ({ tag, _1, _2 });
@@ -4108,9 +4116,9 @@ function creator_default(name3) {
 // node_modules/d3-selection/src/selector.js
 function none() {
 }
-function selector_default(selector) {
-  return selector == null ? none : function() {
-    return this.querySelector(selector);
+function selector_default(selector2) {
+  return selector2 == null ? none : function() {
+    return this.querySelector(selector2);
   };
 }
 
@@ -4139,9 +4147,9 @@ function array(x2) {
 function empty2() {
   return [];
 }
-function selectorAll_default(selector) {
-  return selector == null ? empty2 : function() {
-    return this.querySelectorAll(selector);
+function selectorAll_default(selector2) {
+  return selector2 == null ? empty2 : function() {
+    return this.querySelectorAll(selector2);
   };
 }
 
@@ -4168,14 +4176,14 @@ function selectAll_default(select2) {
 }
 
 // node_modules/d3-selection/src/matcher.js
-function matcher_default(selector) {
+function matcher_default(selector2) {
   return function() {
-    return this.matches(selector);
+    return this.matches(selector2);
   };
 }
-function childMatcher(selector) {
+function childMatcher(selector2) {
   return function(node) {
-    return node.matches(selector);
+    return node.matches(selector2);
   };
 }
 
@@ -4245,11 +4253,11 @@ EnterNode.prototype = {
   insertBefore: function(child, next) {
     return this._parent.insertBefore(child, next);
   },
-  querySelector: function(selector) {
-    return this._parent.querySelector(selector);
+  querySelector: function(selector2) {
+    return this._parent.querySelector(selector2);
   },
-  querySelectorAll: function(selector) {
-    return this._parent.querySelectorAll(selector);
+  querySelectorAll: function(selector2) {
+    return this._parent.querySelectorAll(selector2);
   }
 };
 
@@ -4900,8 +4908,8 @@ Selection.prototype = selection.prototype = {
 var selection_default = selection;
 
 // node_modules/d3-selection/src/select.js
-function select_default2(selector) {
-  return typeof selector === "string" ? new Selection([[document.querySelector(selector)]], [document.documentElement]) : new Selection([[selector]], root);
+function select_default2(selector2) {
+  return typeof selector2 === "string" ? new Selection([[document.querySelector(selector2)]], [document.documentElement]) : new Selection([[selector2]], root);
 }
 
 // node_modules/d3-color/src/define.js
@@ -9999,8 +10007,8 @@ var StyleModule = class {
   constructor(spec, options) {
     this.rules = [];
     let { finish } = options || {};
-    function splitSelector(selector) {
-      return /^@/.test(selector) ? [selector] : selector.split(/,\s*/);
+    function splitSelector(selector2) {
+      return /^@/.test(selector2) ? [selector2] : selector2.split(/,\s*/);
     }
     function render(selectors, spec2, target, isKeyframes) {
       let local = [], isAt = /^@(\w+)\b/.exec(selectors[0]), keyframes = isAt && isAt[1] == "keyframes";
@@ -22467,6 +22475,11 @@ var boolConj = function(b1) {
     return b1 && b2;
   };
 };
+var boolDisj = function(b1) {
+  return function(b2) {
+    return b1 || b2;
+  };
+};
 var boolNot = function(b) {
   return !b;
 };
@@ -22514,6 +22527,7 @@ var identity21 = (x2) => x2;
 var meetSemilatticeUnit = { meet: (v) => identity21 };
 var meetSemilatticeBoolean = { meet: boolConj };
 var joinSemilatticeUnit = { join: (v) => identity21 };
+var joinSemilatticeBoolean = { join: boolDisj };
 var boundedMeetSemilatticeUni = { top: void 0, MeetSemilattice0: () => meetSemilatticeUnit };
 var boundedMeetSemilatticeBoo = { top: true, MeetSemilattice0: () => meetSemilatticeBoolean };
 var boundedJoinSemilatticeUni = { bot: void 0, JoinSemilattice0: () => joinSemilatticeUnit };
@@ -34681,6 +34695,7 @@ var removeDocWS = (v) => ({
   height: v.height,
   lines: arrayMap((x2) => foldlArray((curr) => (v$1) => replaceAll(v$1._1)(v$1._2)(curr))(drop(length2(take3(1)(x2)))(x2))(pattRepPairs))(v.lines)
 });
+var prettyP = (dictPretty) => (x2) => intercalate4("\n")(removeDocWS(dictPretty.pretty(x2)).lines);
 var nil2 = /* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" []"));
 var intersperse$p = (v) => (v1) => {
   if (v.tag === "Cons") {
@@ -35390,6 +35405,17 @@ var highlightableVertex = {
   highlightIf: (v) => (doc2) => beside(beside(doc2)(checkOneLine(split("\n")(" _"))))(checkOneLine(split("\n")(" \u27E8" + v + "\u27E9")))
 };
 var highlightableUnit = { highlightIf: (v) => identity28 };
+var highlightableBoolean = {
+  highlightIf: (v) => {
+    if (!v) {
+      return identity28;
+    }
+    if (v) {
+      return (doc2) => beside(beside(checkOneLine(split("\n")(" \u2E28")))(doc2))(checkOneLine(split("\n")(" \u2E29")));
+    }
+    fail();
+  }
+};
 var functorMatrixDim = { map: (f) => (m) => $Tuple(m._1, f(m._2)) };
 var functorVal = { map: (f) => (m) => $Val(f(m._1), functorDocOpt(functorVal).map(f)(m._2), functorBaseVal.map(f)(m._3)) };
 var functorMatrixRep = {
@@ -36469,6 +36495,22 @@ function type_(e) {
 var $SelState = (tag, _1) => ({ tag, _1 });
 var $SelectionType = (tag) => tag;
 var $\u{1D54A} = (tag) => tag;
+var genericShowSum6 = /* @__PURE__ */ (() => {
+  const $0 = genericShowConstructor(genericShowArgsNoArguments)({ reflectSymbol: () => "Inert" });
+  return (dictGenericShow1) => ({
+    "genericShow'": (v) => {
+      if (v.tag === "Inl") {
+        return $0["genericShow'"](v._1);
+      }
+      if (v.tag === "Inr") {
+        return dictGenericShow1["genericShow'"](v._1);
+      }
+      fail();
+    }
+  });
+})();
+var ReactiveIsSymbol = { reflectSymbol: () => "Reactive" };
+var SelStatesIsSymbol = { reflectSymbol: () => "SelStates" };
 var sequence = /* @__PURE__ */ (() => traversableArray.traverse(applicativeAff)(identity5))();
 var sequence_ = /* @__PURE__ */ traverse_(applicativeEffect)(foldableArray)(identity4);
 var clamp = (low) => (hi) => (x2) => {
@@ -36521,6 +36563,49 @@ var meetSemilatticeSelStates = (dictMeetSemilattice) => ({
     fail();
   }
 });
+var highlightableSelStates = (dictHighlightable) => (dictJoinSemilattice) => ({
+  highlightIf: (v) => {
+    if (v.tag === "Inert") {
+      return highlightableBoolean.highlightIf(false);
+    }
+    if (v.tag === "Reactive") {
+      return dictHighlightable.highlightIf(dictJoinSemilattice.join(v._1.persistent)(v._1.transient));
+    }
+    fail();
+  }
+});
+var prettyP2 = /* @__PURE__ */ prettyP(/* @__PURE__ */ prettyVal(/* @__PURE__ */ highlightableSelStates(highlightableBoolean)(joinSemilatticeBoolean)));
+var genericShow1 = (dictGenericShow) => (x2) => dictGenericShow["genericShow'"]((() => {
+  if (x2.tag === "Inert") {
+    return $Sum("Inl", NoArguments);
+  }
+  if (x2.tag === "Reactive") {
+    return $Sum("Inr", x2._1);
+  }
+  fail();
+})());
+var showSelState = (dictShow) => ({ show: genericShow1(genericShowSum6(genericShowConstructor({ genericShowArgs: (v) => [dictShow.show(v)] })(ReactiveIsSymbol))) });
+var showSelStates = (dictShow) => ({
+  show: (() => {
+    const $0 = genericShowConstructor((() => {
+      const $02 = showSelState({
+        show: (record) => {
+          const v = cons(intercalate(": ")(["persistent", dictShow.show(record.persistent)]))(cons(intercalate(": ")([
+            "transient",
+            dictShow.show(record.transient)
+          ]))([]));
+          if (v.length === 0) {
+            return "{}";
+          }
+          return intercalate(" ")(["{", intercalate(", ")(v), "}"]);
+        }
+      });
+      return { genericShowArgs: (v) => [$02.show(v)] };
+    })())(SelStatesIsSymbol);
+    return (x2) => $0["genericShow'"](x2);
+  })()
+});
+var show1 = /* @__PURE__ */ (() => showSelStates(showBoolean).show)();
 var functorSelState = {
   map: (f) => (m) => {
     if (m.tag === "Inert") {
@@ -36591,25 +36676,25 @@ var to\u{1D539} = (v) => {
   }
   fail();
 };
-var selector$p = (v) => (v1) => $Tuple(
-  functorVal.map((v3) => {
-    if (v3.tag === "Inert") {
+var selector = (v) => (v1) => $Tuple(
+  functorVal.map((x2) => spyWhen(true)("to ")(show1)((() => {
+    if (x2.tag === "Inert") {
       return Inert;
     }
-    if (v3.tag === "Reactive") {
+    if (x2.tag === "Reactive") {
       if (v === "mousedown") {
-        return $SelState("Reactive", { persistent: !v3._1.persistent, transient: v3._1.transient });
+        return $SelState("Reactive", { persistent: !x2._1.persistent, transient: x2._1.transient });
       }
       if (v === "mouseenter") {
-        return $SelState("Reactive", { transient: true, persistent: v3._1.persistent });
+        return $SelState("Reactive", { transient: true, persistent: x2._1.persistent });
       }
       if (v === "mouseleave") {
-        return $SelState("Reactive", { transient: false, persistent: v3._1.persistent });
+        return $SelState("Reactive", { transient: false, persistent: x2._1.persistent });
       }
       return throwException(error("Unsupported event type"))();
     }
     fail();
-  })(v1),
+  })()))(spyWhen(true)("Setting selStates of ")(prettyP2)(v1)),
   (() => {
     if (v === "mousedown") {
       return Persistent;
@@ -36693,7 +36778,7 @@ var getSel = (selType) => (s) => {
   fail();
 };
 var eventData = (x2) => definitely("absurd")(nullable(_target(x2), Nothing, Just)).__data__;
-var selectionEventData$p = /* @__PURE__ */ fanout(categoryFn)(strongFn)(eventData)((x2) => selector$p(type_(x2)));
+var selectionEventData$p = /* @__PURE__ */ fanout(categoryFn)(strongFn)(eventData)((x2) => selector(type_(x2)));
 var dict = (toDict) => (v) => toDict(v._3.tag === "Dictionary" ? v._3._1 : typeError(v._3)("Dictionary"));
 var css = {
   sel: {
@@ -37025,6 +37110,11 @@ function computed(element, prop) {
 function canvasFont(el) {
   return `${computed(el, "font-weight")} ${computed(el, "font-size")} ${computed(el, "font-family")}`;
 }
+function assertNonEmpty(sel) {
+  if (sel.empty()) {
+    throw new Error("Assertion failed: D3 selection is empty");
+  }
+}
 function textDimensions(class_) {
   return (text2) => {
     const element = document.createElement("text");
@@ -37110,23 +37200,24 @@ function isEmpty3(sel) {
     return sel.empty();
   };
 }
-function rootSelect(selector) {
+function rootSelect(selector2) {
   return () => {
-    return select_default2(selector);
+    return select_default2(selector2);
   };
 }
-function select(selector) {
+function select(selector2) {
   return (sel) => {
+    assertNonEmpty(sel);
     return () => {
-      return sel.select(selector);
+      return sel.select(selector2);
     };
   };
 }
-function selectAll2(selector) {
+function selectAll2(selector2) {
   return (sel) => {
     return () => {
       const sels = [];
-      sel.selectAll(selector).each(function() {
+      sel.selectAll(selector2).each(function() {
         sels.push(select_default2(this));
       });
       return sels;
@@ -37197,6 +37288,7 @@ function setDatum(d) {
 function on(eventType) {
   return (listener) => {
     return (sel) => {
+      assertNonEmpty(sel);
       return () => {
         return sel.on(eventType, (e) => {
           if (e.button == 0) {
@@ -38232,25 +38324,32 @@ var viewBarChartUnit = {
 // output-es/App.View.Paragraph/index.js
 var $Paragraph = (_1, _2) => ({ tag: "Paragraph", _1, _2 });
 var sequence_2 = /* @__PURE__ */ traverse_(applicativeEffect)(foldableArray)(identity4);
-var setSelStates$p = (v) => (select2) => (rootElement) => {
-  const $0 = v._1;
-  return sequence_2(zipWith((i) => (view2) => view2((dictView) => (v1) => dictView.setSelection()(v1)((() => {
-    const $1 = $0 ? docElement(i) : (x2) => constrArg("Paragraph")(0)(listElement(i)(x2));
-    return (x2) => select2($1(x2));
-  })())(rootElement)))(range(0)(v._2.length - 1 | 0))(v._2));
+var viewParagraphUnit = {
+  createElement: (v) => (v1) => (parent) => {
+    const $0 = v1._2;
+    const $1 = createChild(parent)(showElementType.show(Div))(fromFoldable9([
+      $Tuple("class", "para-text")
+    ]));
+    return () => {
+      const rootElement = $1();
+      sequence_2(arrayMap((view2) => view2((dictView) => (v2) => dictView.createElement()(v2)(rootElement)))($0))();
+      return rootElement;
+    };
+  },
+  setSelection: (v) => (v1) => (select2) => (rootElement) => {
+    const $0 = v1._1;
+    return sequence_2(zipWith((i) => (view2) => {
+      const $1 = select(":scope > :nth-child(" + showIntImpl(i + 1 | 0) + ")")(rootElement);
+      return () => {
+        const child = $1();
+        return view2((dictView) => (v2) => dictView.setSelection()(v2)((() => {
+          const $2 = $0 ? docElement(i) : (x2) => constrArg("Paragraph")(0)(listElement(i)(x2));
+          return (x2) => select2($2(x2));
+        })())(child))();
+      };
+    })(range(0)(v1._2.length - 1 | 0))(v1._2));
+  }
 };
-var createRootElement$p = (v) => (parent) => {
-  const $0 = v._2;
-  const $1 = createChild(parent)(showElementType.show(Div))(fromFoldable9([
-    $Tuple("class", "para-text")
-  ]));
-  return () => {
-    const rootElement = $1();
-    sequence_2(arrayMap((view2) => view2((dictView) => (v1) => dictView.createElement()(v1)(rootElement)))($0))();
-    return rootElement;
-  };
-};
-var viewParagraphUnit = { createElement: (v) => createRootElement$p, setSelection: (v) => setSelStates$p };
 
 // output-es/App.View.DocView/index.js
 var viewDocViewUnit = {
@@ -38261,7 +38360,7 @@ var viewDocViewUnit = {
       return () => {
         const rootElement = $1();
         v1.view((dictView) => (v3) => dictView.createElement()(v3)(rootElement))();
-        createRootElement$p($0)(rootElement)();
+        viewParagraphUnit.createElement()($0)(rootElement)();
         return rootElement;
       };
     }
@@ -38273,12 +38372,12 @@ var viewDocViewUnit = {
   setSelection: (v) => (v1) => (v2) => (v3) => {
     if (v1.doc.tag === "Just") {
       const $0 = v1.doc._1;
-      const $1 = select(":nth-child(1)")(v3);
+      const $1 = select(":scope > :nth-child(1)")(v3);
       return () => {
         const viewElem = $1();
         v1.view((dictView) => (v4) => dictView.setSelection()(v4)(v2)(viewElem))();
-        const docElem = select(":nth-child(2)")(v3)();
-        setSelStates$p($0)(v2)(docElem)();
+        const docElem = select(":scope > :nth-child(2)")(v3)();
+        viewParagraphUnit.setSelection()($0)(v2)(docElem)();
       };
     }
     if (v1.doc.tag === "Nothing") {
@@ -38714,29 +38813,30 @@ var matrixRep = (v) => ({
 
 // output-es/App.View.MultiView/index.js
 var $MultiView = (_1) => ({ tag: "MultiView", _1 });
-var toUnfoldable9 = /* @__PURE__ */ toAscUnfoldable(unfoldableArray);
 var sequence_3 = /* @__PURE__ */ traverse_(applicativeEffect)(foldableArray)(identity4);
-var setSelStates$p2 = (v) => (select2) => (rootElement) => sequence_3((() => {
-  const $0 = toUnfoldable9(v._1);
-  return zipWith((i) => (v1) => {
-    const $1 = v1._1;
-    const $2 = select("svg:nth-child(" + showIntImpl(i + 1 | 0) + ")")(rootElement);
+var toUnfoldable9 = /* @__PURE__ */ toAscUnfoldable(unfoldableArray);
+var viewMultiViewUnit = {
+  createElement: (v) => (v1) => (parent) => {
+    const $0 = v1._1;
+    const $1 = createChild(parent)(showElementType.show(Div))(fromFoldable9([]));
     return () => {
-      const child = $2();
-      v1._2((dictView) => (v2) => dictView.setSelection()(v2)((x2) => select2(multiViewEntry($1)(x2)))(child))();
+      const rootElement = $1();
+      sequence_3(arrayMap((v2) => v2._2((dictView) => (v3) => dictView.createElement()(v3)(rootElement)))(toUnfoldable9($0)))();
+      return rootElement;
     };
-  })(range(0)($0.length - 1 | 0))($0);
-})());
-var createRootElement$p2 = (v) => (parent) => {
-  const views$p = toUnfoldable9(v._1);
-  const $0 = createChild(parent)(showElementType.show(Div))(fromFoldable9([]));
-  return () => {
-    const rootElement = $0();
-    sequence_3(arrayMap((v1) => v1._2((dictView) => (v2) => dictView.createElement()(v2)(rootElement)))(views$p))();
-    return rootElement;
-  };
+  },
+  setSelection: (v) => (v1) => (select2) => (rootElement) => sequence_3((() => {
+    const $0 = toUnfoldable9(v1._1);
+    return zipWith((i) => (v2) => {
+      const $1 = v2._1;
+      const $2 = select(":scope > :nth-child(" + showIntImpl(i + 1 | 0) + ")")(rootElement);
+      return () => {
+        const child = $2();
+        v2._2((dictView) => (v3) => dictView.setSelection()(v3)((x2) => select2(multiViewEntry($1)(x2)))(child))();
+      };
+    })(range(0)($0.length - 1 | 0))($0);
+  })())
 };
-var viewMultiViewUnit = { createElement: (v) => createRootElement$p2, setSelection: (v) => setSelStates$p2 };
 
 // output-es/App.View.ScatterPlot/foreign.js
 function setSelection_2({ point_attrs, eventListener: eventListener2, withScatterPlotPoint }, {
@@ -39118,9 +39218,9 @@ var viewTableViewUnit = {
 var arrayDictToArray2 = (x2) => arrayMap((a) => arrayMap((a$1) => $$get2(showString)(mapDictString)(a$1)(a))(x2));
 
 // output-es/App.View.Text/index.js
-var textualString = { getText: (x2) => $Tuple(x2, Inert) };
-var textAttrs = (dictTextual) => (x2) => {
-  const $0 = dictTextual.getText(x2);
+var textualText = { getText: unsafeCoerce };
+var textAttrs = (dictTextual) => (text2) => {
+  const $0 = dictTextual.getText(text2);
   return [
     $Tuple("border-bottom", isTransient($0._2) ? "1px solid blue" : "none"),
     $Tuple(
@@ -39158,14 +39258,12 @@ var viewTextUnit = {
       return setText($0)(rootElement)();
     };
   },
-  setSelection: (v) => (v1) => (redraw) => (rootElement) => {
-    const $0 = v1._1;
-    const $1 = select(":nth-child(1)")(rootElement);
+  setSelection: (v) => (text2) => (redraw) => (rootElement) => {
+    const $0 = eventListener((x2) => redraw(selectionEventData$p(x2)._2));
     return () => {
-      const elem3 = $1();
-      const listener = eventListener((x2) => redraw(selectionEventData$p(x2)._2))();
-      const $2 = styles(elem3)(fromFoldable9(textAttrs(textualString)($0)))();
-      return for_2(["mousedown", "mouseenter", "mouseleave"])((ev) => on(ev)(listener)($2))();
+      const listener = $0();
+      const $1 = styles(rootElement)(fromFoldable9(textAttrs(textualText)(text2)))();
+      return for_2(["mousedown", "mouseenter", "mouseleave"])((ev) => on(ev)(listener)($1))();
     };
   }
 };
@@ -40847,13 +40945,13 @@ var string3 = (str) => consumeWith((input) => {
 });
 
 // output-es/Parsing.String.Basic/index.js
-var show1 = /* @__PURE__ */ showArrayImpl(showCharImpl);
+var show12 = /* @__PURE__ */ showArrayImpl(showCharImpl);
 var satisfyCP = (p) => satisfy((x2) => p(toCharCode(x2)));
 var space = /* @__PURE__ */ withErrorMessage(/* @__PURE__ */ satisfyCP(isSpace))("space");
 var upper2 = /* @__PURE__ */ withErrorMessage(/* @__PURE__ */ satisfyCP(isUpper))("uppercase letter");
-var oneOf = (ss) => withLazyErrorMessage(satisfy((a) => elem(eqChar)(a)(ss)))((v) => "one of " + show1(ss));
+var oneOf = (ss) => withLazyErrorMessage(satisfy((a) => elem(eqChar)(a)(ss)))((v) => "one of " + show12(ss));
 var octDigit = /* @__PURE__ */ withErrorMessage(/* @__PURE__ */ satisfyCP(isOctDigit))("oct digit");
-var noneOf = (ss) => withLazyErrorMessage(satisfy((a) => notElem(eqChar)(a)(ss)))((v) => "none of " + show1(ss));
+var noneOf = (ss) => withLazyErrorMessage(satisfy((a) => notElem(eqChar)(a)(ss)))((v) => "none of " + show12(ss));
 var letter = /* @__PURE__ */ withErrorMessage(/* @__PURE__ */ satisfyCP(isAlpha))("letter");
 var hexDigit = /* @__PURE__ */ withErrorMessage(/* @__PURE__ */ satisfyCP(isHexDigit))("hex digit");
 var digit = /* @__PURE__ */ withErrorMessage(/* @__PURE__ */ satisfyCP(isDecDigit))("digit");

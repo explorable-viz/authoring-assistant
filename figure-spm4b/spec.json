@@ -1,7 +1,0 @@
-{
-    "fluidSrcPath": ["../fluid"],
-    "datasets": [["likelihoods", "likelihoods.fld"], ["ssp119Source", "left-barchart-table.fld"], ["ssp245Source", "right-barchart-table.fld"]],
-    "inputs": [ "ssp119Source", "ssp245Source" ],
-    "query": false,
-    "linking": true
-}

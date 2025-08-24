@@ -1,0 +1,7 @@
+{
+  "linking" : true,
+  "inputs" : [ "tableData" ],
+  "query" : false,
+  "datasets" : [ [ "tableData", "datasets/scigen/ipcc.fld" ] ],
+  "fluidSrcPath" : [ "../fluid" ]
+}

@@ -1,28 +1,57 @@
 name: AuthoringAssistant
+
 on:
   workflow_dispatch:
-
+  push:
 jobs:
-  prompt-test-ubuntu:
-    runs-on: ubuntu-latest
+  test:
+    strategy:
+      matrix:
+        os: [ ubuntu-22.04, macos-14 ]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
+      - uses: s4u/maven-settings-action@v3.1.0
         with:
           node-version: 22
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '22'
-      - name: Deploy LLM Tool
+      - name: Install dependencies
+        run: |
+          yarn install-dependencies
+      - name: Build LLM Tool
         run: |
           yarn build
         env:
           GITHUB_TOKEN: ${{ secrets.LLM_PROMPT_EXECUTOR_TOKEN }}
-      - name: Ollama Installation and model pull
-        run: |
-          yarn ollama-run
       - name: Launch Prompt Tests
         run: |
           yarn install
-          yarn test
+          yarn test-mock
+          yarn generate-charts
+          export PUPPETEER_CACHE_DIR=$GITHUB_WORKSPACE/
+          # requires Puppeteer to be installed at same version as used in Fluid
+          yarn puppeteer browsers install chrome
+          yarn puppeteer browsers install firefox
+          yarn test-websites
+
+  deploy-website:
+    runs-on: ubuntu-22.04
+    needs: test
+    # Use branch 'website' to experiment with deploy-website
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/website'
+    steps:
+      - uses: actions/checkout@v4
+      - name: build
+        run: |
+          yarn install
+          yarn bundle-website authoring-assistant
+      - name: gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/authoring-assistant
+          keep_files: false

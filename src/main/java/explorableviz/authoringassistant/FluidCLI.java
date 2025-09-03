@@ -11,11 +11,9 @@ public class FluidCLI {
 
     public final Logger logger = Logger.getLogger(this.getClass().getName());
     private final Map<String, String> datasets;
-    private final List<String> imports;
 
-    public FluidCLI(Map<String, String> datasets, List<String> imports) {
+    public FluidCLI(Map<String, String> datasets) {
         this.datasets = datasets;
-        this.imports = imports;
     }
 
     private String buildCommand(String fluidFileName) {
@@ -28,12 +26,9 @@ public class FluidCLI {
 
         datasets.forEach((key, path) -> command.append(" -d \"(")
                 .append(key)
-                .append(", ./")
+                .append(", /")
                 .append(path)
                 .append(")\""));
-
-        imports.forEach(path -> command.append(" -i ")
-                .append(path));
 
         return command.toString();
     }

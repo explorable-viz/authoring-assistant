@@ -1,3 +1,5 @@
+import scigen
+import util
 
 Paragraph [
 	Text "As shown in Table 3, BiLSTM gives significantly  ",
@@ -36,7 +38,9 @@ Paragraph [
 	Text (numToStr (model "3 stacked CNN" tableData).acc),
 	Text "%, which is also the ",
 	Text (let pos = findIndex "model" "CNN" (insertionSort (fun a b -> a.time_s < b.time_s) tableData) in rankLabel "lowest" pos),
-	Text " compared with BiLSTM, hierarchical attention and S-LSTM. The best performance of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. S-LSTM gives significantly  ",
+	Text " compared with BiLSTM, hierarchical attention and S-LSTM. The ",
+	Text (let pos = findIndex "model" "S-LSTM+Attention" (insertionSort (fun a b -> b.acc < a.acc) tableData) in rankLabel "best" pos),
+	Text " performance of hierarchical attention is obtained by S-LSTM+Attention in terms of both accuracy and efficiency. S-LSTM gives significantly ",
 	Text (trendWord (model "S-LSTM" tableData).acc (model "CNN" tableData).acc betterWorse),
 	Text " accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used  Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still ",
 	Text (trendWord (model "S-LSTM" tableData).acc (model "BiLSTM" tableData).acc underOverPerforming),

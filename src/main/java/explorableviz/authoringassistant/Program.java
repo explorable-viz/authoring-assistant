@@ -41,7 +41,7 @@ public class Program {
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
     private final String testCaseFileName;
-    public static final String fluidFileName = "llmTest";
+    public static final String fluidFileName = "llmTest.fld";
 
     public Program(Paragraph paragraph, Map<String, String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
         this.datasets = datasets;
@@ -57,7 +57,7 @@ public class Program {
     public static HashMap<String, String> loadDatasetsFiles(Map<String, String> datasetMapping, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
         for (Map.Entry<String, String> dataset : datasetMapping.entrySet()) {
-            loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}.fld").toURI()))), variables));
+            loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}").toURI()))), variables));
         }
         return loadedDatasets;
     }
@@ -137,7 +137,8 @@ public class Program {
         usedVars.addAll(extractVariables(paragraph, pattern));
         usedVars.addAll(extractVariables(code, pattern));
         for (Map.Entry<String, String> dataset : datasets.entrySet()) {
-            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.getFluidCommonFolder(), STR."\{dataset.getValue()}.fld")), pattern));
+            logger.info(dataset.getValue());
+            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.getFluidCommonFolder(), dataset.getValue())), pattern));
         }
         for (Map.Entry<String, ValueOptions> variable : variables.entrySet()) {
             if (!usedVars.contains(variable.getKey())) {
@@ -217,7 +218,7 @@ public class Program {
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
                 writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping, loadDatasetsFiles(datasetMapping, testVariables), imports, loadImports(imports), code);
-                String commandLineResult = new FluidCLI(datasetMapping, imports).evaluate(fluidFileName);
+                String commandLineResult = new FluidCLI(datasetMapping).evaluate(fluidFileName);
                 Expression candidate = new Expression(
                     expression,
                     extractValue(commandLineResult),
@@ -256,7 +257,10 @@ public class Program {
         Files.createDirectories(Paths.get(basePath));
         Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}").getParent());
 
-        try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}.fld")) {
+        try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}")) {
+            for (String import_: imports) {
+                out.println(STR."import \{import_}");
+            }
             out.println(code);
             out.println(response);
         }
@@ -267,8 +271,8 @@ public class Program {
             }
         }
         for (Map.Entry<String, String> dataset : datasets.entrySet()) {
-            Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset.getValue()}.fld").getParent());
-            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset.getValue()}.fld")) {
+            Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset.getValue()}").getParent());
+            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset.getValue()}")) {
                 outData.println(loadedDatasets.get(dataset.getKey()));
             }
         }
@@ -335,9 +339,11 @@ public class Program {
 
         /* spec generation */
         JSONObject spec = new JSONObject();
-        spec.put("fluidSrcPath", new JSONArray("[\"../fluid\"]"));
+        String fluidSrcPath = "../fluid";
+        spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
         spec.put("datasets", new JSONArray());
-        spec.put("imports", new JSONArray());
+        spec.put("linking", true);
+        spec.put("query", false);
 
         datasets.forEach((k, v) -> {
             JSONArray ds = new JSONArray();
@@ -346,10 +352,6 @@ public class Program {
             spec.getJSONArray("datasets").put(ds);
         });
 
-        imports.forEach(_import -> {
-            spec.getJSONArray("imports").put(_import);
-        });
-        spec.put("file", Path.of(this.testCaseFileName).getFileName());
         spec.put("inputs", new JSONArray("[\"tableData\"]"));
         try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -364,6 +366,7 @@ public class Program {
         String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{path}/template.html").toURI())));
         html = html.replaceAll("##TITLE##", String.valueOf(Path.of(this.testCaseFileName).getParent().getFileName()));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(Path.of(this.testCaseFileName).getFileName()));
+        html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{Path.of(this.testCaseFileName).getFileName()}.fld\"");
         try (FileWriter file = new FileWriter(STR."\{sitePath}/index.html")) {
             file.write(html);
             file.flush();
@@ -371,7 +374,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{path}fluid/", Path.of(this.testCaseFileName).getFileName().toString(), paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {
@@ -387,7 +390,7 @@ public class Program {
                         }
                     });
         } catch (IOException e) {
-            System.err.println(STR."Errore during cleanup of website folder: \{e.getMessage()}");
+            System.err.println(STR."Error during clean of website folder: \{e.getMessage()}");
         }
     }
 

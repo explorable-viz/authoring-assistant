@@ -6,6 +6,8 @@ import glob
 import os
 import json
 
+fig_dir = "paper/fig"
+
 def get_latest_csv(folder_path):
     csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
 
@@ -29,7 +31,7 @@ def generate_success_rate_test_case_plot(df, plot):
     plt.ylabel("Test Case")
     plt.xlim(0, 1)
     plt.tight_layout()
-    plt.savefig("fig/success_rate_by_test_case.png")
+    plt.savefig(f"{fig_dir}/success_rate_by_test_case.png")
     plt.close()
 
 def generate_summary_test_case_plot(df, plot):
@@ -50,7 +52,7 @@ def generate_summary_test_case_plot(df, plot):
     plt.tick_params(left=False)
     plt.title("Test Outcome per Test Case (OK = Success, KO = Failure). Max Attempts = 4", pad=20)
     plt.tight_layout()
-    plt.savefig("fig/per_row_checkmarks.png")
+    plt.savefig(f"{fig_dir}/per_row_checkmarks.png")
     plt.close()
 
 def generate_aggregated_plot(df, plot):
@@ -123,7 +125,7 @@ def generate_aggregated_plot(df, plot):
 
     # Final layout
     plt.tight_layout()
-    plt.savefig("fig/success_rate_by_category.png")
+    plt.savefig(f"{fig_dir}/success_rate_by_category.png")
     plt.close()
 
 def generate_success_rate_by_category_count(df, plot):
@@ -188,7 +190,7 @@ def generate_success_rate_by_category_count(df, plot):
     
     # Final layout
     plt.tight_layout()
-    plt.savefig("fig/success_rate_by_category_count.png")
+    plt.savefig(f"{fig_dir}/success_rate_by_category_count.png")
     plt.close()
 
 #Average on the totals of the runs (prob. in the settings).

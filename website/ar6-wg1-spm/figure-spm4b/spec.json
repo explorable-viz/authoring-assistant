@@ -1,7 +1,0 @@
-{
-    "fluidSrcPath": ["../fluid"],
-    "datasets": [["likelihoods", "likelihoods"], ["ssp119Source", "left-barchart-table"], ["ssp245Source", "right-barchart-table"]],
-    "imports": [ "lib/stats" ],
-    "file": "figure-spm-4",
-    "inputs": [ "ssp119Source", "ssp245Source" ]
-}

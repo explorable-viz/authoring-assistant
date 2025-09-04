@@ -26,5 +26,5 @@ let maximumBy f [] = error "Empty list!";
     maximumBy f (x : xs) =
       let helper [] current = current;
           helper (y : ys) current =
-            if f y > f current then helper ys y else helper ys current
+            helper ys (if f y > f current then y else current)
       in helper xs x;

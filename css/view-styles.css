@@ -60,7 +60,7 @@ td.table-cell {
 }
 
 .table-cell.selected-secondary-transient {
-   color: royalblue;
+   /* color: royalblue; */
 }
 
 .table-row {

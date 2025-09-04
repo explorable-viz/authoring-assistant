@@ -1,6 +1,21 @@
 \section{AI-Assisted Authoring Workflow}
 \label{sec:authoring-workflow}
 
+Figure~\ref{fig:overall-architecture} shows the system architecture and an example flow.
+The system is composed of two agents:
+
+\begin{itemize}
+    \item \textbf{SuggestionAgent}. Based on an LLM, the SuggestionAgent receives as input the initial text and the reference data, and returns the elements in the text that can be replaced with expressions in the Fluid language.
+    \item \textbf{InterpretationAgent}. Also based on an LLM, the InterpretationAgent receives as input a selection (either obtained from the SuggestionAgent or manually defined by the author) and generates an interpretation of the text as a Fluid expression.
+\end{itemize}
+
+Figure~\ref{fig:architecture} shows the overall architecture of the system.
+The author initially provides the text and accompanying data.
+The SuggestionAgent analyses the input and identifies candidate fragments of natural language which could be replaced by Fluid expressions.
+The user highlightes a fragment of interest, which is then sent to the InterpretationAgent, which generates a corresponding candidate expression.
+Internally the InterpretationAgent uses a compiler-in-the-loop validation process to ensure the expression is well-formed.
+The user is then able to accept the expression (in which case it is incorporated into the program) or reject and leave the text uninterpreted.
+
 \begin{figure}[ht]
     \centering
     \begin{subfigure}{0.48\linewidth}
@@ -16,7 +31,7 @@
         \label{fig:dataflow}
     \end{subfigure}
     \caption{AI-assisted authoring process: workflow (a) and data flow (b).}
-    \label{fig:overall}
+    \label{fig:overall-architecture}
 \end{figure}
 
 

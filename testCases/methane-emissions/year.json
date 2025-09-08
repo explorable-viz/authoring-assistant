@@ -29,15 +29,8 @@
     ]
   },
   "testing-variables": {},
-  "datasets": [
-    {
-      "var": "tableData",
-      "file": "datasets/methane-emissions.json"
-    }
-  ],
-  "imports": [
-    "methane", "util", "datasets/methane_emissions"
-  ],
+  "datasets": [ "datasets/methane-emissions.json" ],
+  "imports": [ "methane", "util", "datasets/methane_emissions" ],
   "paragraph": [
     {
       "type": "literal",
@@ -50,4 +43,3 @@
     }
   ]
 }
-

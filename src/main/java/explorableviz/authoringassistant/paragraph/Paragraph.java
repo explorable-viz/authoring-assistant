@@ -13,6 +13,12 @@ public class Paragraph extends ArrayList<TextFragment> {
     public Paragraph() {
     }
 
+    public String toFluidSyntax_new(boolean onlyValue) {
+        return STR."\"\"\n\t\{stream().map(e -> {
+            return "hello";
+        })}\"\"\"";
+    }
+
     public String toFluidSyntax(boolean onlyValue) {
         return STR."Paragraph [\n\t\{stream().map(e -> {
             if (!onlyValue && e instanceof Literal l && l.getSelectedRegion() != null) {

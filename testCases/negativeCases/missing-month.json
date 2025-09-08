@@ -1,10 +1,5 @@
 {
-  "datasets": [
-    {
-      "var": "tableData",
-      "file": "datasets/negative/missing-month.json"
-    }
-  ],
+  "datasets": [ "datasets/negative/missing-month.json" ],
   "imports": [
     "scigen",
     "util",

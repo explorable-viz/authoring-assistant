@@ -1,10 +1,5 @@
 {
-  "datasets": [
-    {
-      "var": "tableData",
-      "file": "datasets/1003.0206.json"
-    }
-  ],
+  "datasets": [ "datasets/1003.0206.json" ],
   "imports": ["scigen", "util", "datasets/_1003_0206"],
   "variables": {},
   "testing-variables": {},

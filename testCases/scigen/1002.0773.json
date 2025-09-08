@@ -1,10 +1,5 @@
 {
-  "datasets": [
-    {
-      "var": "tableData",
-      "file": "datasets/1002.0773.json"
-    }
-  ],
+  "datasets": [ "datasets/1002.0773.json" ],
   "imports": ["datasets/_1002_0773"],
   "variables": {},
   "testing-variables": {},

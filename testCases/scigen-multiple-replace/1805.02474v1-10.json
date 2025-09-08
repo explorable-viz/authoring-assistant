@@ -21,7 +21,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 3, BiLSTM gives significantly  "
+      "value": "As shown in Table 3, BiLSTM gives significantly"
     },
     {
       "type": "expression",
@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " accuracies compared to uni-directional LSTM2, with the training time per epoch "
+      "value": "accuracies compared to uni-directional LSTM2, with the training time per epoch"
     },
     {
       "type": "expression",
@@ -39,7 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " from "
+      "value": "from"
     },
     {
       "type": "expression",
@@ -48,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " seconds to "
+      "value": "seconds to"
     },
     {
       "type": "expression",
@@ -58,7 +58,7 @@
     },
     {
       "type": "literal",
-      "value": " seconds. Stacking 2 layers of BiLSTM gives  "
+      "value": "seconds. Stacking 2 layers of BiLSTM gives"
     },
     {
       "type": "expression",
@@ -67,7 +67,7 @@
     },
     {
       "type": "literal",
-      "value": " to development results, with a  "
+      "value": "to development results, with a"
     },
     {
       "type": "expression",
@@ -76,7 +76,7 @@
     },
     {
       "type": "literal",
-      "value": " time of "
+      "value": "time of"
     },
     {
       "type": "expression",
@@ -85,7 +85,7 @@
     },
     {
       "type": "literal",
-      "value": " seconds. 3 layers of stacked BiLSTM "
+      "value": "seconds. 3 layers of stacked BiLSTM"
     },
     {
       "type": "expression",
@@ -94,7 +94,7 @@
     },
     {
       "type": "literal",
-      "value": " the results. In contrast, S-LSTM gives a development result of "
+      "value": "the results. In contrast, S-LSTM gives a development result of"
     },
     {
       "type": "expression",
@@ -103,7 +103,7 @@
     },
     {
       "type": "literal",
-      "value": "%, which is significantly "
+      "value": "%, which is significantly"
     },
     {
       "type": "expression",
@@ -112,7 +112,7 @@
     },
     {
       "type": "literal",
-      "value": " compared to 2-layer stacked BiLSTM, with a "
+      "value": "compared to 2-layer stacked BiLSTM, with a"
     },
     {
       "type": "expression",
@@ -121,7 +121,7 @@
     },
     {
       "type": "literal",
-      "value": " number of model parameters and a "
+      "value": "number of model parameters and a"
     },
     {
       "type": "expression",
@@ -130,7 +130,7 @@
     },
     {
       "type": "literal",
-      "value": "  time of "
+      "value": "time of"
     },
     {
       "type": "expression",
@@ -139,7 +139,7 @@
     },
     {
       "type": "literal",
-      "value": " seconds.  We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), "
+      "value": "seconds.  We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows),"
     },
     {
       "type": "expression",
@@ -148,7 +148,7 @@
     },
     {
       "type": "literal",
-      "value": " is the "
+      "value": "is the"
     },
     {
       "type": "expression",
@@ -157,7 +157,7 @@
     },
     {
       "type": "literal",
-      "value": " among all models compared, with the  "
+      "value": "among all models compared, with the"
     },
     {
       "type": "expression",
@@ -166,7 +166,7 @@
     },
     {
       "type": "literal",
-      "value": " model size. On the other hand, a 3-layer stacked CNN gives an accuracy of "
+      "value": "model size. On the other hand, a 3-layer stacked CNN gives an accuracy of"
     },
     {
       "type": "expression",
@@ -175,7 +175,7 @@
     },
     {
       "type": "literal",
-      "value": "%, which is also the "
+      "value": "%, which is also the"
     },
     {
       "type": "expression",
@@ -184,7 +184,7 @@
     },
     {
       "type": "literal",
-      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. The "
+      "value": "compared with BiLSTM, hierarchical attention and S-LSTM. The"
     },
     {
       "type": "expression",
@@ -193,7 +193,7 @@
     },
     {
       "type": "literal",
-      "value": " performance of hierarchical attention is obtained by S-LSTM+Attention in terms of both accuracy and efficiency. S-LSTM gives significantly "
+      "value": "performance of hierarchical attention is obtained by S-LSTM+Attention in terms of both accuracy and efficiency. S-LSTM gives significantly"
     },
     {
       "type": "expression",
@@ -202,7 +202,7 @@
     },
     {
       "type": "literal",
-      "value": " accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used  Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still "
+      "value": "accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used  Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still"
     },
     {
       "type": "expression",
@@ -211,7 +211,7 @@
     },
     {
       "type": "literal",
-      "value": " BiLSTM significantly."
+      "value": "BiLSTM significantly."
     }
   ]
 }

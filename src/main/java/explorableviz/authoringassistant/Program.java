@@ -365,7 +365,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax_new(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {

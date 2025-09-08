@@ -4,8 +4,6 @@ let year = 2030;
 let record = getByCategory "Energy Sector" year tableData
 in
 
-Paragraph [
-	Text "The Energy Sector accounts for total methane emissions of ",
-	Text (numToStr ((record.emissions / sum(map (fun x -> x.emissions) (getByYear year tableData))) * 100)),
-	Text "% in 2030."
-]
+"""
+	The Energy Sector accounts for total methane emissions of  ${numToStr ((record.emissions / sum(map (fun x -> x.emissions) (getByYear year tableData))) * 100)} % in 2030.
+"""

@@ -2,17 +2,6 @@ import scigen
 import util
 import datasets.scigen._1906_02780v1_17
 
-Paragraph [
-	Text "Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only ",
-	Text (numToStr (last (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 5) `and` (x.max_chunk_size == "k=6")) tableData)) - head (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData)))),
-	Text ", while the speedup drops from ",
-	Text ((findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData).speedup),
-	Text "to ",
-	Text ((findWhere (fun x -> (x.layers == 5)) tableData).speedup),
-	Text ". The final row of Table 4 shows that exposing the parse decoder to multiple possible chunking of the same sentence during training allows it to choose a sequence of chunks that has a higher likelihood at test time, improving BLEU by ",
-	Text (numToStr ((findWithKey' "max_chunk_size" "k in {1...6}" tableData).bleu - (findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData).bleu)),
-	Text " while decreasing the speedup from ",
-	Text ((findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData).speedup),
-	Text " to ",
-	Text ((findWithKey' "max_chunk_size" "k in {1...6}" tableData).speedup)
-]
+"""
+	Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only  ${numToStr (last (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 5) `and` (x.max_chunk_size == "k=6")) tableData)) - head (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData)))} , while the speedup drops from  ${(findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData).speedup} to  ${(findWhere (fun x -> (x.layers == 5)) tableData).speedup} . The final row of Table 4 shows that exposing the parse decoder to multiple possible chunking of the same sentence during training allows it to choose a sequence of chunks that has a higher likelihood at test time, improving BLEU by  ${numToStr ((findWithKey' "max_chunk_size" "k in {1...6}" tableData).bleu - (findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData).bleu)}  while decreasing the speedup from  ${(findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == "k=6")) tableData).speedup}  to  ${(findWithKey' "max_chunk_size" "k in {1...6}" tableData).speedup}
+"""

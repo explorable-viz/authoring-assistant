@@ -2,9 +2,6 @@ import scigen
 import util
 import datasets.negative.result_ambiguity
 
-Paragraph [
-	Text "LSTM gives better results compared to CNN from",
-	Text ("70"),
-	Text "to",
-	Text ("80")
-]
+"""
+	LSTM gives better results compared to CNN from ${"70"} to ${"80"}
+"""

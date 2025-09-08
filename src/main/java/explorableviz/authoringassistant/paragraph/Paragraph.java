@@ -14,9 +14,28 @@ public class Paragraph extends ArrayList<TextFragment> {
     }
 
     public String toFluidSyntax_new(boolean onlyValue) {
-        return STR."\"\"\n\t\{stream().map(e -> {
-            return "hello";
-        })}\"\"\"";
+        return STR."\"\"\"\n\t\{stream().map(e -> {
+            if (e instanceof Literal l) {
+                if (!onlyValue && l.getSelectedRegion() != null) {
+                    final String replace = Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
+                    return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{replace}]\{e.getValue().substring(l.getSelectedRegion().end())}";
+                }
+                else {
+                    return e.getValue();
+                }
+            }
+            else if (e instanceof Expression e_) {
+                if (!onlyValue) {
+                    return (STR."${\{e_.getExpr()}}");
+                } else if (Settings.isAddExpectedValueEnabled()) {
+                    return e.getValue();
+                } else {
+                    return ("${?}");
+                }
+            } else {
+                throw new RuntimeException("Literal or expression expected.");
+            }
+        }).collect(Collectors.joining(" "))}\n\"\"\"";
     }
 
     public String toFluidSyntax(boolean onlyValue) {

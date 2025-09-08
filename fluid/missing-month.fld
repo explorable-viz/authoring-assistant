@@ -2,7 +2,6 @@ import scigen
 import util
 import datasets.negative.missing_month
 
-Paragraph [
-	Text "The average methane emissions for the year 2015 is",
-	Text ("1.0")
-]
+"""
+	The average methane emissions for the year 2015 is ${"1.0"}
+"""

@@ -1,8 +1,6 @@
 import methane
 import datasets.methane_emissions
 
-Paragraph [
-	Text "In 2015, the ",
-	Text ("Energy Sector"),
-	Text " had the second highest amount in methane emissions."
-]
+"""
+	In 2015, the  ${"Energy Sector"}  had the second highest amount in methane emissions.
+"""

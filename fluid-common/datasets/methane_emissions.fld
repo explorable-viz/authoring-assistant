@@ -1,1 +1,1 @@
-let tableData = loadJson "datasets/methane_emissions.fld";
+let tableData = loadJson "datasets/methane-emissions.json";

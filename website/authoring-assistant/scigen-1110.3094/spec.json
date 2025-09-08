@@ -1,7 +1,0 @@
-{
-  "linking" : true,
-  "inputs" : [ "tableData" ],
-  "query" : false,
-  "datasets" : [ [ "tableData", "datasets/1110.3094.fld" ] ],
-  "fluidSrcPath" : [ "../fluid" ]
-}

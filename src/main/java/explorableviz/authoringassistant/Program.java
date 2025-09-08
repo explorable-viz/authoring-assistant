@@ -175,6 +175,7 @@ public class Program {
                 ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
                 String code = Files.readString(Path.of(STR."\{casePath}.fld"));
                 try {
+                    logger.info(STR."Validating test case \{casePath}");
                     isValidTestCase(jsonContent, code, datasetMapping, variables);
                 } catch (RuntimeException e) {
                     System.err.println(STR."Error in \{casePath}");
@@ -218,7 +219,7 @@ public class Program {
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
                 writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping, loadDatasetsFiles(datasetMapping, testVariables), imports, loadImports(imports), code);
-                String commandLineResult = new FluidCLI(datasetMapping).evaluate(fluidFileName);
+                String commandLineResult = new FluidCLI().evaluate(fluidFileName);
                 Expression candidate = new Expression(
                     expression,
                     extractValue(commandLineResult),
@@ -259,6 +260,7 @@ public class Program {
 
         try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}")) {
             for (String import_: imports) {
+                import_ = import_.replace('/', '.');
                 out.println(STR."import \{import_}");
             }
             out.println(code);

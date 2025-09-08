@@ -10,10 +10,8 @@ import java.util.logging.Logger;
 public class FluidCLI {
 
     public final Logger logger = Logger.getLogger(this.getClass().getName());
-    private final Map<String, String> datasets;
 
-    public FluidCLI(Map<String, String> datasets) {
-        this.datasets = datasets;
+    public FluidCLI() {
     }
 
     private String buildCommand(String fluidFileName) {
@@ -23,12 +21,6 @@ public class FluidCLI {
                 .append(Settings.getFluidTempFolder())
                 .append("/\" -f ")
                 .append(fluidFileName);
-
-        datasets.forEach((key, path) -> command.append(" -d \"(")
-                .append(key)
-                .append(", /")
-                .append(path)
-                .append(")\""));
 
         return command.toString();
     }
@@ -43,7 +35,7 @@ public class FluidCLI {
         processBuilder.redirectErrorStream(true);
         Process process = processBuilder.start();
         String output = new String(process.getInputStream().readAllBytes());
-        FileUtils.deleteDirectory(new File(Settings.getFluidTempFolder()));
+//        FileUtils.deleteDirectory(new File(Settings.getFluidTempFolder()));
         return output;
     }
 

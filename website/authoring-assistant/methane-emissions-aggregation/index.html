@@ -36,8 +36,15 @@
 </div>
 
 <script type="module">
-    import { loadFigure } from "../shared/load-figure.js"
-    loadFigure("spec.json")("../fluid/aggregation.fld")()
+    import { loadFigureSpec } from "../shared/load-figure.js"
+    const jsonSpec = {
+       "fluidSrcPath": ["../fluid"],
+       "inputs": ["tableData"],
+       "query": false,
+       "linking": true
+   }
+
+    loadFigureSpec(jsonSpec)("../fluid/aggregation.fld")()
 </script>
 </body>
 </html>

@@ -11,7 +11,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), "
+      "value": "We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows),"
     },
     {
       "type": "expression",
@@ -20,7 +20,7 @@
     },
     {
       "type": "literal",
-      "value": " is the most efficient among all models compared, with the "
+      "value": "is the most efficient among all models compared, with the"
     },
     {
       "type": "expression",
@@ -29,7 +29,7 @@
     },
     {
       "type": "literal",
-      "value": " model size. On the other hand, a 3-layer stacked CNN gives an accuracy of "
+      "value": "model size. On the other hand, a 3-layer stacked CNN gives an accuracy of"
     },
     {
       "type": "expression",
@@ -38,7 +38,7 @@
     },
     {
       "type": "literal",
-      "value": "%, which is also the "
+      "value": "%, which is also the"
     },
     {
       "type": "expression",
@@ -47,7 +47,7 @@
     },
     {
       "type": "literal",
-      "value": " compared with BiLSTM, hierarchical attention and S-LSTM."
+      "value": "compared with BiLSTM, hierarchical attention and S-LSTM."
     }
   ]
 }

@@ -24,7 +24,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The total methane emissions for the year $emissions.year$ are "
+      "value": "The total methane emissions for the year $emissions.year$ are"
     },
     {
       "type": "expression",
@@ -33,7 +33,7 @@
     },
     {
       "type": "literal",
-      "value": " for $emissions.article$ $emissions.type$"
+      "value": " for $emissions.article$ $emissions.type$."
     }
   ]
 }

@@ -6,7 +6,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only "
+      "value": "Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only"
     },
     {
       "type": "expression",
@@ -15,7 +15,7 @@
     },
     {
       "type": "literal",
-      "value": ", while the speedup drops from "
+      "value": ", while the speedup drops from"
     },
     {
       "type": "expression",
@@ -24,7 +24,7 @@
     },
     {
       "type": "literal",
-      "value": "to "
+      "value": "to"
     },
     {
       "type": "expression",
@@ -33,7 +33,7 @@
     },
     {
       "type": "literal",
-      "value": ". The final row of Table 4 shows that exposing the parse decoder to multiple possible chunking of the same sentence during training allows it to choose a sequence of chunks that has a higher likelihood at test time, improving BLEU by "
+      "value": ". The final row of Table 4 shows that exposing the parse decoder to multiple possible chunking of the same sentence during training allows it to choose a sequence of chunks that has a higher likelihood at test time, improving BLEU by"
     },
     {
       "type": "expression",
@@ -42,7 +42,7 @@
     },
     {
       "type": "literal",
-      "value": " while decreasing the speedup from "
+      "value": "while decreasing the speedup from"
     },
     {
       "type": "expression",
@@ -51,7 +51,7 @@
     },
     {
       "type": "literal",
-      "value": " to "
+      "value": "to"
     },
     {
       "type": "expression",

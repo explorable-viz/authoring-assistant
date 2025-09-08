@@ -19,7 +19,7 @@
     },
     {
       "type": "literal",
-      "value": " gives significantly better accuracies compared to uni-directional"
+      "value": "gives significantly better accuracies compared to uni-directional"
     },
     {
       "type": "expression",
@@ -28,7 +28,7 @@
     },
     {
       "type": "literal",
-      "value": " with the training time per epoch growing from"
+      "value": "with the training time per epoch growing from"
     },
     {
       "type": "expression",
@@ -37,7 +37,7 @@
     },
     {
       "type": "literal",
-      "value": " seconds to "
+      "value": "seconds to "
     },
     {
       "type": "expression",
@@ -47,7 +47,7 @@
     },
     {
       "type": "literal",
-      "value": " seconds."
+      "value": "seconds."
     }
   ]
 }

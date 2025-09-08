@@ -11,7 +11,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), "
+      "value": "We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows),"
     },
     {
       "type": "expression",
@@ -20,7 +20,7 @@
     },
     {
       "type": "literal",
-      "value": " is the most efficient among all models compared, with the "
+      "value": " is the most efficient among all models compared, with the"
     },
     {
       "type": "expression",
@@ -29,7 +29,7 @@
     },
     {
       "type": "literal",
-      "value": " model size."
+      "value": "model size."
     }
   ]
 }

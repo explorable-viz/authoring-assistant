@@ -34,7 +34,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "$emissions.type$ recorded its $emissions.record$ methane emissions in "
+      "value": "$emissions.type$ recorded its $emissions.record$ methane emissions in"
     },
     {
       "type": "expression",

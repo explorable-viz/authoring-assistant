@@ -2,12 +2,13 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/negative/time-ambiguity.fld"
+      "file": "datasets/negative/time-ambiguity.json"
     }
   ],
   "imports": [
     "scigen",
-    "util"
+    "util",
+    "datasets/negative/time_ambiguity"
   ],
   "testing-variables": {
   },

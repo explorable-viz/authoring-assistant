@@ -2,6 +2,6 @@
   "linking" : true,
   "inputs" : [ "tableData" ],
   "query" : false,
-  "datasets" : [ [ "tableData", "datasets/negative/missing-month.fld" ] ],
+  "datasets" : [ [ "tableData", "datasets/negative/missing-month.json" ] ],
   "fluidSrcPath" : [ "../fluid" ]
 }

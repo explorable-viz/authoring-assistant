@@ -2,6 +2,6 @@
   "linking" : true,
   "inputs" : [ "tableData" ],
   "query" : false,
-  "datasets" : [ [ "tableData", "datasets/negative/time-ambiguity.fld" ] ],
+  "datasets" : [ [ "tableData", "datasets/negative/time-ambiguity.json" ] ],
   "fluidSrcPath" : [ "../fluid" ]
 }

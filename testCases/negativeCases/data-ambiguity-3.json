@@ -2,12 +2,13 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/negative/result-ambiguity.fld"
+      "file": "datasets/negative/result-ambiguity.json"
     }
   ],
   "imports": [
     "scigen",
-    "util"
+    "util",
+    "datasets/negative/result_ambiguity"
   ],
   "testing-variables": {
   },

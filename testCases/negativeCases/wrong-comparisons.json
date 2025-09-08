@@ -2,12 +2,13 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/negative/1805.02474v1-10.fld"
+      "file": "datasets/negative/1805.02474v1-10.json"
     }
   ],
   "imports": [
     "scigen",
-    "util"
+    "util",
+    "datasets/negative/_1805_02474v1_10"
   ],
   "testing-variables": {},
   "variables": {},

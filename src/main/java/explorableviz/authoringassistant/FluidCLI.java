@@ -35,7 +35,7 @@ public class FluidCLI {
         processBuilder.redirectErrorStream(true);
         Process process = processBuilder.start();
         String output = new String(process.getInputStream().readAllBytes());
-//        FileUtils.deleteDirectory(new File(Settings.getFluidTempFolder()));
+        FileUtils.deleteDirectory(new File(Settings.getFluidTempFolder()));
         return output;
     }
 

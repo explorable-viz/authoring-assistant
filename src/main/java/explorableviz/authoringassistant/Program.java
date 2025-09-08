@@ -64,8 +64,8 @@ public class Program {
 
     private static Collection<String> datasets(JSONArray files) {
         return IntStream.range(0, files.length())
-               .mapToObj(i -> files.getString(i))
-               .collect(Collectors.toList());
+                .mapToObj(i -> files.getString(i))
+                .collect(Collectors.toList());
     }
 
     private static ArrayList<String> loadImports(List<String> imports) throws IOException {
@@ -98,7 +98,7 @@ public class Program {
             return Optional.of(value);
         }
         //String error
-        if(!value.matches("^\".*\"$")) {
+        if (!value.matches("^\".*\"$")) {
             return Optional.of(STR."String expected. \{value} seems not a string");
         }
         if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
@@ -181,8 +181,8 @@ public class Program {
                 }
                 Variables tv = Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("testing-variables"));
                 int maxVariants = 1;
-                for(Map.Entry<String, ValueOptions> entry : tv.entrySet() ) {
-                    if(entry.getValue() instanceof ValueOptions.List values) {
+                for (Map.Entry<String, ValueOptions> entry : tv.entrySet()) {
+                    if (entry.getValue() instanceof ValueOptions.List values) {
                         maxVariants = Math.max(maxVariants, values.get().size());
                     }
                 }
@@ -218,9 +218,9 @@ public class Program {
                 writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasets, loadDatasetsFiles(datasets, testVariables), imports, loadImports(imports), code);
                 String commandLineResult = new FluidCLI().evaluate(fluidFileName);
                 Expression candidate = new Expression(
-                    expression,
-                    extractValue(commandLineResult),
-                    parseCategories(json_paragraph.getJSONObject(i))
+                        expression,
+                        extractValue(commandLineResult),
+                        parseCategories(json_paragraph.getJSONObject(i))
                 );
                 paragraph.add(candidate);
                 validate(commandLineResult, candidate).ifPresent(value -> {
@@ -233,7 +233,7 @@ public class Program {
 
     private static Set<ExpressionCategory> parseCategories(JSONObject jsonObj) {
         Set<ExpressionCategory> categories = new HashSet<>();
-         if (jsonObj.has("categories")) {
+        if (jsonObj.has("categories")) {
             JSONArray categoryArray = jsonObj.getJSONArray("categories");
             for (int i = 0; i < categoryArray.length(); i++) {
                 categories.add(ExpressionCategory.of(categoryArray.getString(i)));
@@ -256,24 +256,26 @@ public class Program {
         Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}").getParent());
 
         try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}")) {
-            for (String import_: imports) {
+            for (String import_ : imports) {
                 import_ = import_.replace('/', '.');
                 out.println(STR."import \{import_}");
             }
+
+
+            for (int i = 0; i < loadedImports.size(); i++) {
+                Files.createDirectories(Paths.get(STR."\{basePath}/\{imports.get(i)}.fld").getParent());
+                try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{imports.get(i)}.fld")) {
+                    outData.println(loadedImports.get(i));
+                }
+            }
+            for (String dataset : datasets) {
+                Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset}").getParent());
+                try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset}")) {
+                    outData.println(loadedDatasets.get(dataset));
+                }
+            }
             out.println(code);
             out.println(response);
-        }
-        for (int i = 0; i < loadedImports.size(); i++) {
-            Files.createDirectories(Paths.get(STR."\{basePath}/\{imports.get(i)}.fld").getParent());
-            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{imports.get(i)}.fld")) {
-                outData.println(loadedImports.get(i));
-            }
-        }
-        for (String dataset : datasets) {
-            Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset}").getParent());
-            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset}")) {
-                outData.println(loadedDatasets.get(dataset));
-            }
         }
     }
 
@@ -344,20 +346,16 @@ public class Program {
         spec.put("query", false);
 
         spec.put("inputs", new JSONArray("[\"tableData\"]"));
-        try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {
-            ObjectMapper objectMapper = new ObjectMapper();
-            Object jsonObject = objectMapper.readValue(spec.toString(), Object.class);
-            file.write(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject));
-            file.write("\n");
-            file.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        Object jsonObject = objectMapper.readValue(spec.toString(4), Object.class);
+
         /* html generation */
         String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{path}/template.html").toURI())));
         html = html.replaceAll("##TITLE##", String.valueOf(Path.of(this.testCaseFileName).getParent().getFileName()));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(Path.of(this.testCaseFileName).getFileName()));
         html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{Path.of(this.testCaseFileName).getFileName()}.fld\"");
+        html = html.replaceAll("##JSON_SPEC##", STR."const jsonSpec = \{jsonObject};");
         try (FileWriter file = new FileWriter(STR."\{sitePath}/index.html")) {
             file.write(html);
             file.flush();

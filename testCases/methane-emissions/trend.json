@@ -30,7 +30,6 @@
   "testing-variables": {},
   "datasets": [
     {
-      "var": "tableData",
       "file": "datasets/methane-emissions.json"
     }
   ],

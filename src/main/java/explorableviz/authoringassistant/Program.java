@@ -62,13 +62,10 @@ public class Program {
         return loadedDatasets;
     }
 
-    private static Map<String, String> datasetMapping(JSONArray json_dataset) {
-        return IntStream.range(0, json_dataset.length())
-                .boxed()
-                .collect(Collectors.toMap(
-                        i -> json_dataset.getJSONObject(i).getString("var"),
-                        i -> json_dataset.getJSONObject(i).getString("file")
-                ));
+    private static Collection<String> datasets(JSONArray objects) {
+        return IntStream.range(0, objects.length())
+               .mapToObj(i -> objects.getJSONObject(i).getString("file"))
+               .collect(Collectors.toList());
     }
 
     private static ArrayList<String> loadImports(List<String> imports) throws IOException {
@@ -171,12 +168,12 @@ public class Program {
                 Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(k));
                 JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
                 JSONArray json_imports = testCase.getJSONArray("imports");
-                Map<String, String> datasetMapping = datasetMapping(testCase.getJSONArray("datasets"));
+                Collection<String> datasets = datasets(testCase.getJSONArray("datasets"));
                 ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
                 String code = Files.readString(Path.of(STR."\{casePath}.fld"));
                 try {
                     logger.info(STR."Validating test case \{casePath}");
-                    isValidTestCase(jsonContent, code, datasetMapping.values(), variables);
+                    isValidTestCase(jsonContent, code, datasets, variables);
                 } catch (RuntimeException e) {
                     System.err.println(STR."Error in \{casePath}");
                     e.printStackTrace();
@@ -191,18 +188,18 @@ public class Program {
                 }
                 Variables.Flat testVariables = expandVariables(tv, new SplittableRandom(k));
                 for (int n = 0; n < maxVariants; n++) {
-                    test_configurations.add(loadDatasetsFiles(datasetMapping.values(), expandVariables(tv, new SplittableRandom(n))));
+                    test_configurations.add(loadDatasetsFiles(datasets, expandVariables(tv, new SplittableRandom(n))));
                 }
                 List<String> imports = IntStream.range(0, json_imports.length())
                         .mapToObj(json_imports::getString)
                         .toList();
 
                 programs.add(new Program(
-                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasetMapping, testVariables, imports, replaceVariables(code, variables), casePath),
-                        datasetMapping.values(),
+                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath),
+                        datasets,
                         imports,
                         replaceVariables(code, variables),
-                        loadDatasetsFiles(datasetMapping.values(), testVariables),
+                        loadDatasetsFiles(datasets, testVariables),
                         casePath,
                         test_configurations
                 ));
@@ -211,14 +208,14 @@ public class Program {
         return programs;
     }
 
-    private static Paragraph paragraphFromJSON(JSONArray json_paragraph, Map<String, String> datasetMapping, Variables.Flat testVariables, List<String> imports, String code, String casePath) throws IOException {
+    private static Paragraph paragraphFromJSON(JSONArray json_paragraph, Collection<String> datasets, Variables.Flat testVariables, List<String> imports, String code, String casePath) throws IOException {
         Paragraph paragraph = new Paragraph();
         for (int i = 0; i < json_paragraph.length(); i++) {
             if (json_paragraph.getJSONObject(i).getString("type").equals("literal")) {
                 paragraph.add(new Literal(json_paragraph.getJSONObject(i).getString("value"), null));
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
-                writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping.values(), loadDatasetsFiles(datasetMapping.values(), testVariables), imports, loadImports(imports), code);
+                writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasets, loadDatasetsFiles(datasets, testVariables), imports, loadImports(imports), code);
                 String commandLineResult = new FluidCLI().evaluate(fluidFileName);
                 Expression candidate = new Expression(
                     expression,

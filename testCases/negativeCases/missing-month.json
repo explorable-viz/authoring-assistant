@@ -1,7 +1,6 @@
 {
   "datasets": [
     {
-      "var": "tableData",
       "file": "datasets/negative/missing-month.json"
     }
   ],

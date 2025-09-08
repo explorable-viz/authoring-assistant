@@ -1,7 +1,6 @@
 {
   "datasets": [
     {
-      "var": "tableData",
       "file": "datasets/1002.0773.json"
     }
   ],

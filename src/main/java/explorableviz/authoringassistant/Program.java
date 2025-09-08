@@ -33,7 +33,7 @@ import static explorableviz.authoringassistant.variable.Variables.Flat.expandVar
 public class Program {
 
     public final static Logger logger = Logger.getLogger(Program.class.getName());
-    private final Map<String, String> datasets;
+    private final Collection<String> datasets;
     private final ArrayList<Map<String, String>> test_datasets;
     private final List<String> imports;
     private final ArrayList<String> _loadedImports;
@@ -43,7 +43,7 @@ public class Program {
     private final String testCaseFileName;
     public static final String fluidFileName = "llmTest.fld";
 
-    public Program(Paragraph paragraph, Map<String, String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
+    public Program(Paragraph paragraph, Collection<String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
         this.datasets = datasets;
         this._loadedDatasets = loadedDataset;
         this.code = code;
@@ -199,7 +199,7 @@ public class Program {
 
                 programs.add(new Program(
                         paragraphFromJSON(testCase.getJSONArray("paragraph"), datasetMapping, testVariables, imports, replaceVariables(code, variables), casePath),
-                        datasetMapping,
+                        datasetMapping.values(),
                         imports,
                         replaceVariables(code, variables),
                         loadDatasetsFiles(datasetMapping.values(), testVariables),
@@ -302,7 +302,7 @@ public class Program {
         return code;
     }
 
-    public Map<String, String> getDatasets() {
+    public Collection<String> getDatasets() {
         return datasets;
     }
 
@@ -368,7 +368,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax(false), datasets.values(), _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {

@@ -1,5 +1,6 @@
 import scigen
 import util
+import datasets.negative._1805_02474v1_10
 
 Paragraph [
 	Text "We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), ",

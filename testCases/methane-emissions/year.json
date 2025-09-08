@@ -32,11 +32,11 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/methane-emissions.fld"
+      "file": "datasets/methane-emissions.json"
     }
   ],
   "imports": [
-    "methane", "util"
+    "methane", "util", "datasets/methane_emissions"
   ],
   "paragraph": [
     {

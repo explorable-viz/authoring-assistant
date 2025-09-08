@@ -1,5 +1,6 @@
 import scigen
 import util
+import datasets.negative.result_ambiguity
 
 Paragraph [
 	Text "LSTM gives better results compared to CNN from",

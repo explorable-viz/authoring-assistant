@@ -2,12 +2,13 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/negative/missing-month.fld"
+      "file": "datasets/negative/missing-month.json"
     }
   ],
   "imports": [
     "scigen",
-    "util"
+    "util",
+    "datasets/negative/missing_month"
   ],
   "testing-variables": {
   },

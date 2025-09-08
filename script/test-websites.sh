@@ -3,4 +3,4 @@
 set -xe
 
 yarn bundle-website authoring-assistant
-yarn website-test authoring-assistant
+yarn test-website authoring-assistant

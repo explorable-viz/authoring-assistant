@@ -54,9 +54,9 @@ public class Program {
         this.paragraph = paragraph;
     }
 
-    public static HashMap<String, String> loadDatasetsFiles(Map<String, String> datasetMapping, Variables variables) throws IOException {
+    public static HashMap<String, String> loadDatasetsFiles(Map<String, String> datasets, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
-        for (Map.Entry<String, String> dataset : datasetMapping.entrySet()) {
+        for (Map.Entry<String, String> dataset : datasets.entrySet()) {
             loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}").toURI()))), variables));
         }
         return loadedDatasets;
@@ -175,6 +175,7 @@ public class Program {
                 ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
                 String code = Files.readString(Path.of(STR."\{casePath}.fld"));
                 try {
+                    logger.info(STR."Validating test case \{casePath}");
                     isValidTestCase(jsonContent, code, datasetMapping, variables);
                 } catch (RuntimeException e) {
                     System.err.println(STR."Error in \{casePath}");
@@ -218,7 +219,7 @@ public class Program {
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
                 writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping, loadDatasetsFiles(datasetMapping, testVariables), imports, loadImports(imports), code);
-                String commandLineResult = new FluidCLI(datasetMapping).evaluate(fluidFileName);
+                String commandLineResult = new FluidCLI().evaluate(fluidFileName);
                 Expression candidate = new Expression(
                     expression,
                     extractValue(commandLineResult),
@@ -259,6 +260,7 @@ public class Program {
 
         try (PrintWriter out = new PrintWriter(STR."\{basePath}/\{fluidFileName}")) {
             for (String import_: imports) {
+                import_ = import_.replace('/', '.');
                 out.println(STR."import \{import_}");
             }
             out.println(code);
@@ -341,16 +343,8 @@ public class Program {
         JSONObject spec = new JSONObject();
         String fluidSrcPath = "../fluid";
         spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
-        spec.put("datasets", new JSONArray());
         spec.put("linking", true);
         spec.put("query", false);
-
-        datasets.forEach((k, v) -> {
-            JSONArray ds = new JSONArray();
-            ds.put(k);
-            ds.put(v);
-            spec.getJSONArray("datasets").put(ds);
-        });
 
         spec.put("inputs", new JSONArray("[\"tableData\"]"));
         try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {

@@ -1,4 +1,5 @@
 import methane
+import datasets.methane_emissions
 
 Paragraph [
 	Text "The ",

@@ -1,4 +1,0 @@
-[
-    {model: "LSTM", accuracy: 80, execution_time: 80, param: 5977},
-    {model: "LSTM", accuracy: 70, execution_time: 70, param: 5000}
- ]

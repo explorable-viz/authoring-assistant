@@ -337,26 +337,36 @@ public class Program {
         Files.createDirectories(Path.of(sitePath));
 
         /* spec generation */
-        JSONObject spec = new JSONObject();
+//        JSONObject spec = new JSONObject();
         String fluidSrcPath = "../fluid";
-        spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
-        spec.put("linking", true);
-        spec.put("query", false);
+//        spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
+//        spec.put("linking", true);
+//        spec.put("query", false);
+//        spec.put("inputs", new JSONArray("[\"tableData\"]"));
 
-        spec.put("inputs", new JSONArray("[\"tableData\"]"));
-        try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {
-            ObjectMapper objectMapper = new ObjectMapper();
-            Object jsonObject = objectMapper.readValue(spec.toString(), Object.class);
-            file.write(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject));
-            file.write("\n");
-            file.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        final String jsonSpec = STR."""
+        const jsonSpec = {
+               \"fluidSrcPath\": [\"\{fluidSrcPath}\"],
+               \"inputs\": [\"tableData\"],
+               \"query\": false,
+               \"linking\": true
+           }
+        """;
+
+  //      try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {
+  //          ObjectMapper objectMapper = new ObjectMapper();
+  //          Object jsonObject = objectMapper.readValue(spec.toString(), Object.class);
+  //          file.write(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonObject));
+  //          file.write("\n");
+  //          file.flush();
+  //      } catch (IOException e) {
+  //          e.printStackTrace();
+  //      }
         /* html generation */
         String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{path}/template.html").toURI())));
         html = html.replaceAll("##TITLE##", String.valueOf(Path.of(this.testCaseFileName).getParent().getFileName()));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(Path.of(this.testCaseFileName).getFileName()));
+        html = html.replaceAll("##JSON_SPEC##", jsonSpec);
         html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{Path.of(this.testCaseFileName).getFileName()}.fld\"");
         try (FileWriter file = new FileWriter(STR."\{sitePath}/index.html")) {
             file.write(html);

@@ -22,12 +22,10 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/methane-emissions.fld"
+      "file": "datasets/methane-emissions.json"
     }
   ],
-  "imports": [
-    "methane"
-  ],
+  "imports": [ "methane", "datasets/methane_emissions" ],
   "paragraph": [
     {
       "type": "literal",

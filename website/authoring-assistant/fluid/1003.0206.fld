@@ -1,0 +1,11 @@
+import scigen
+import util
+import datasets._1003_0206
+let a = findWithKey' "creation_method" "simulation" tableData
+in
+
+Paragraph [
+	Text "The low number of errors in the simulation results imply that there is surprisingly little overlap in the models in 39 or 13 dimensions. Likewise, the resampling results show that there is surprisingly little overlap in the test frames in 39 or 13 dimensions. In both cases the number of errors increases by a factor of ",
+	Text (numToStr (a.number_of_errors_13_features / a.number_of_errors_39_features)),
+	Text " as we move from 39 dimensions to 13 dimensions which implies that there must be more separation in the models and the data in the 39-dimensional space."
+]

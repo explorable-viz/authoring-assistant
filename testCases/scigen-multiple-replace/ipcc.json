@@ -2,18 +2,18 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets/scigen/ipcc.fld"
+      "file": "datasets/scigen/ipcc.json"
     }
   ],
   "test-datasets": [
     [
       {
         "var": "tableData",
-        "file": "datasets/scigen/ipcc.fld"
+        "file": "datasets/scigen/ipcc.json"
       }
     ]
   ],
-  "imports": [],
+  "imports": ["datasets/scigen/ipcc_"],
   "variables": {},
   "testing-variables": {},
   "paragraph": [

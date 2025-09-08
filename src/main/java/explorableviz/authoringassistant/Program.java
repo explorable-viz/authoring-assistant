@@ -54,10 +54,10 @@ public class Program {
         this.paragraph = paragraph;
     }
 
-    public static HashMap<String, String> loadDatasetsFiles(Map<String, String> datasets, Variables variables) throws IOException {
+    public static HashMap<String, String> loadDatasetsFiles(Collection<String> datasets, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
-        for (Map.Entry<String, String> dataset : datasets.entrySet()) {
-            loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}").toURI()))), variables));
+        for (String dataset : datasets) {
+            loadedDatasets.put(dataset, replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset}").toURI()))), variables));
         }
         return loadedDatasets;
     }
@@ -131,14 +131,14 @@ public class Program {
         return textToReplace;
     }
 
-    public static void isValidTestCase(String paragraph, String code, Map<String, String> datasets, Variables variables) throws IOException {
+    public static void isValidTestCase(String paragraph, String code, Collection<String> datasets, Variables variables) throws IOException {
         Set<String> usedVars = new HashSet<>();
         Pattern pattern = Pattern.compile("\\$([a-zA-Z0-9_]+\\.?[a-zA-Z0-9_]+)\\$");
         usedVars.addAll(extractVariables(paragraph, pattern));
         usedVars.addAll(extractVariables(code, pattern));
-        for (Map.Entry<String, String> dataset : datasets.entrySet()) {
-            logger.info(dataset.getValue());
-            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.getFluidCommonFolder(), dataset.getValue())), pattern));
+        for (String dataset : datasets) {
+            logger.info(dataset);
+            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.getFluidCommonFolder(), dataset)), pattern));
         }
         for (Map.Entry<String, ValueOptions> variable : variables.entrySet()) {
             if (!usedVars.contains(variable.getKey())) {
@@ -176,7 +176,7 @@ public class Program {
                 String code = Files.readString(Path.of(STR."\{casePath}.fld"));
                 try {
                     logger.info(STR."Validating test case \{casePath}");
-                    isValidTestCase(jsonContent, code, datasetMapping, variables);
+                    isValidTestCase(jsonContent, code, datasetMapping.values(), variables);
                 } catch (RuntimeException e) {
                     System.err.println(STR."Error in \{casePath}");
                     e.printStackTrace();
@@ -191,7 +191,7 @@ public class Program {
                 }
                 Variables.Flat testVariables = expandVariables(tv, new SplittableRandom(k));
                 for (int n = 0; n < maxVariants; n++) {
-                    test_configurations.add(loadDatasetsFiles(datasetMapping, expandVariables(tv, new SplittableRandom(n))));
+                    test_configurations.add(loadDatasetsFiles(datasetMapping.values(), expandVariables(tv, new SplittableRandom(n))));
                 }
                 List<String> imports = IntStream.range(0, json_imports.length())
                         .mapToObj(json_imports::getString)
@@ -202,7 +202,7 @@ public class Program {
                         datasetMapping,
                         imports,
                         replaceVariables(code, variables),
-                        loadDatasetsFiles(datasetMapping, testVariables),
+                        loadDatasetsFiles(datasetMapping.values(), testVariables),
                         casePath,
                         test_configurations
                 ));
@@ -218,7 +218,7 @@ public class Program {
                 paragraph.add(new Literal(json_paragraph.getJSONObject(i).getString("value"), null));
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
-                writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping, loadDatasetsFiles(datasetMapping, testVariables), imports, loadImports(imports), code);
+                writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasetMapping.values(), loadDatasetsFiles(datasetMapping.values(), testVariables), imports, loadImports(imports), code);
                 String commandLineResult = new FluidCLI().evaluate(fluidFileName);
                 Expression candidate = new Expression(
                     expression,
@@ -254,7 +254,7 @@ public class Program {
         return programs;
     }
 
-    public static void writeFluidFiles(String basePath, String fluidFileName, String response, Map<String, String> datasets, Map<String, String> loadedDatasets, List<String> imports, List<String> loadedImports, String code) throws IOException {
+    public static void writeFluidFiles(String basePath, String fluidFileName, String response, Collection<String> datasets, Map<String, String> loadedDatasets, List<String> imports, List<String> loadedImports, String code) throws IOException {
         Files.createDirectories(Paths.get(basePath));
         Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}").getParent());
 
@@ -272,10 +272,10 @@ public class Program {
                 outData.println(loadedImports.get(i));
             }
         }
-        for (Map.Entry<String, String> dataset : datasets.entrySet()) {
-            Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset.getValue()}").getParent());
-            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset.getValue()}")) {
-                outData.println(loadedDatasets.get(dataset.getKey()));
+        for (String dataset : datasets) {
+            Files.createDirectories(Paths.get(STR."\{basePath}/\{dataset}").getParent());
+            try (PrintWriter outData = new PrintWriter(STR."\{basePath}/\{dataset}")) {
+                outData.println(loadedDatasets.get(dataset));
             }
         }
     }
@@ -368,7 +368,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax(false), datasets.values(), _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {

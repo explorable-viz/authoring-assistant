@@ -1,5 +1,5 @@
 [
-{model: "LSTM", time_s: $time_lstm$, acc: 80.72, param: 5977},
+ {model: "LSTM", time_s: $time_lstm$, acc: 80.72, param: 5977},
  {model: "BiLSTM", time_s: 106, acc: 81.73, param: 7059},
  {model: "2 stacked BiLSTM", time_s: 207, acc: 81.97, param: 9221},
  {model: "3 stacked BiLSTM", time_s: 310, acc: 81.53, param: 11383},

@@ -2,6 +2,5 @@
   "linking" : true,
   "inputs" : [ "tableData" ],
   "query" : false,
-  "datasets" : [ [ "tableData", "datasets/negative/1805.02474v1-10.json" ] ],
   "fluidSrcPath" : [ "../fluid" ]
 }

@@ -54,9 +54,9 @@ public class Program {
         this.paragraph = paragraph;
     }
 
-    public static HashMap<String, String> loadDatasetsFiles(Map<String, String> datasetMapping, Variables variables) throws IOException {
+    public static HashMap<String, String> loadDatasetsFiles(Map<String, String> datasets, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
-        for (Map.Entry<String, String> dataset : datasetMapping.entrySet()) {
+        for (Map.Entry<String, String> dataset : datasets.entrySet()) {
             loadedDatasets.put(dataset.getKey(), replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset.getValue()}").toURI()))), variables));
         }
         return loadedDatasets;
@@ -343,16 +343,8 @@ public class Program {
         JSONObject spec = new JSONObject();
         String fluidSrcPath = "../fluid";
         spec.put("fluidSrcPath", new JSONArray(STR."[\"\{fluidSrcPath}\"]"));
-        spec.put("datasets", new JSONArray());
         spec.put("linking", true);
         spec.put("query", false);
-
-        datasets.forEach((k, v) -> {
-            JSONArray ds = new JSONArray();
-            ds.put(k);
-            ds.put(v);
-            spec.getJSONArray("datasets").put(ds);
-        });
 
         spec.put("inputs", new JSONArray("[\"tableData\"]"));
         try (FileWriter file = new FileWriter(STR."\{sitePath}/spec.json")) {

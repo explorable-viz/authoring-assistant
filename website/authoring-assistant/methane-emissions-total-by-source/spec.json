@@ -2,6 +2,5 @@
   "linking" : true,
   "inputs" : [ "tableData" ],
   "query" : false,
-  "datasets" : [ [ "tableData", "datasets/methane-emissions.json" ] ],
   "fluidSrcPath" : [ "../fluid" ]
 }

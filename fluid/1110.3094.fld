@@ -1,3 +1,4 @@
+import datasets._1110_3094
 
 Paragraph [
 	Text "Overall the SVM with polynomial degree 1 kernel outperformed all other kernels with other kernels generally offering better precision at a higher cost to recall. Precision (Positive predictive) values ranged from 82.0 to 93.8 for SVM (polynomial degree 1) and from 83.3 to ",

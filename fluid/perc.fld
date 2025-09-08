@@ -1,4 +1,5 @@
 import methane
+import datasets.methane_emissions
 let year = 2030;
 let record = getByCategory "Energy Sector" year tableData
 in

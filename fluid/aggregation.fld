@@ -1,4 +1,5 @@
 import methane
+import datasets.methane_emissions
 let sumEmissions year data =
    let records = getByYear year data;
    let totals = sum(map (fun x -> x.emissions) records)

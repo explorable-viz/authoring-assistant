@@ -2,6 +2,5 @@
   "linking" : true,
   "inputs" : [ "tableData" ],
   "query" : false,
-  "datasets" : [ [ "tableData", "datasets/scigen/1904.12550v1-6.fld" ] ],
   "fluidSrcPath" : [ "../fluid" ]
 }

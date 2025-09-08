@@ -19,10 +19,8 @@ function fail() {
   throw new Error("Failed pattern match");
 }
 function intDiv(x2, y2) {
-  if (y2 > 0)
-    return Math.floor(x2 / y2);
-  if (y2 < 0)
-    return -Math.floor(x2 / -y2);
+  if (y2 > 0) return Math.floor(x2 / y2);
+  if (y2 < 0) return -Math.floor(x2 / -y2);
   return 0;
 }
 
@@ -59,11 +57,9 @@ var eqStringImpl = refEq;
 var eqArrayImpl = function(f) {
   return function(xs) {
     return function(ys) {
-      if (xs.length !== ys.length)
-        return false;
+      if (xs.length !== ys.length) return false;
       for (var i = 0; i < xs.length; i++) {
-        if (!f(xs[i])(ys[i]))
-          return false;
+        if (!f(xs[i])(ys[i])) return false;
       }
       return true;
     };
@@ -183,6 +179,7 @@ var showStringImpl = function(s) {
   var l = s.length;
   return '"' + s.replace(
     /[\0-\x1F\x7F"\\]/g,
+    // eslint-disable-line no-control-regex
     function(c, i) {
       switch (c) {
         case '"':
@@ -271,6 +268,35 @@ var functorMaybe = {
     }
     return Nothing;
   }
+};
+var ordMaybe = (dictOrd) => {
+  const $0 = dictOrd.Eq0();
+  const eqMaybe1 = {
+    eq: (x2) => (y2) => {
+      if (x2.tag === "Nothing") {
+        return y2.tag === "Nothing";
+      }
+      return x2.tag === "Just" && y2.tag === "Just" && $0.eq(x2._1)(y2._1);
+    }
+  };
+  return {
+    compare: (x2) => (y2) => {
+      if (x2.tag === "Nothing") {
+        if (y2.tag === "Nothing") {
+          return EQ;
+        }
+        return LT;
+      }
+      if (y2.tag === "Nothing") {
+        return GT;
+      }
+      if (x2.tag === "Just" && y2.tag === "Just") {
+        return dictOrd.compare(x2._1)(y2._1);
+      }
+      fail();
+    },
+    Eq0: () => eqMaybe1
+  };
 };
 var applyMaybe = {
   apply: (v) => (v1) => {
@@ -687,55 +713,6 @@ function copyImpl(xs) {
   };
 }
 var thaw = copyImpl;
-var sortByImpl = function() {
-  function mergeFromTo(compare2, fromOrdering, xs1, xs2, from, to) {
-    var mid;
-    var i;
-    var j;
-    var k;
-    var x2;
-    var y2;
-    var c;
-    mid = from + (to - from >> 1);
-    if (mid - from > 1)
-      mergeFromTo(compare2, fromOrdering, xs2, xs1, from, mid);
-    if (to - mid > 1)
-      mergeFromTo(compare2, fromOrdering, xs2, xs1, mid, to);
-    i = from;
-    j = mid;
-    k = from;
-    while (i < mid && j < to) {
-      x2 = xs2[i];
-      y2 = xs2[j];
-      c = fromOrdering(compare2(x2)(y2));
-      if (c > 0) {
-        xs1[k++] = y2;
-        ++j;
-      } else {
-        xs1[k++] = x2;
-        ++i;
-      }
-    }
-    while (i < mid) {
-      xs1[k++] = xs2[i++];
-    }
-    while (j < to) {
-      xs1[k++] = xs2[j++];
-    }
-  }
-  return function(compare2) {
-    return function(fromOrdering) {
-      return function(xs) {
-        return function() {
-          if (xs.length < 2)
-            return xs;
-          mergeFromTo(compare2, fromOrdering, xs, xs.slice(0), 0, xs.length);
-          return xs;
-        };
-      };
-    };
-  };
-}();
 
 // output-es/Data.Array.ST/index.js
 var push = (a) => pushAll([a]);
@@ -787,6 +764,38 @@ var for_ = (dictApplicative) => {
   };
 };
 var foldableTuple = { foldr: (f) => (z) => (v) => f(v._2)(z), foldl: (f) => (z) => (v) => f(z)(v._2), foldMap: (dictMonoid) => (f) => (v) => f(v._2) };
+var foldableMaybe = {
+  foldr: (v) => (v1) => (v2) => {
+    if (v2.tag === "Nothing") {
+      return v1;
+    }
+    if (v2.tag === "Just") {
+      return v(v2._1)(v1);
+    }
+    fail();
+  },
+  foldl: (v) => (v1) => (v2) => {
+    if (v2.tag === "Nothing") {
+      return v1;
+    }
+    if (v2.tag === "Just") {
+      return v(v1)(v2._1);
+    }
+    fail();
+  },
+  foldMap: (dictMonoid) => {
+    const mempty = dictMonoid.mempty;
+    return (v) => (v1) => {
+      if (v1.tag === "Nothing") {
+        return mempty;
+      }
+      if (v1.tag === "Just") {
+        return v(v1._1);
+      }
+      fail();
+    };
+  }
+};
 var foldableArray = {
   foldr: foldrArray,
   foldl: foldlArray,
@@ -812,7 +821,7 @@ var unsafeCoerce = function(x2) {
 };
 
 // output-es/Data.Traversable/foreign.js
-var traverseArrayImpl = function() {
+var traverseArrayImpl = /* @__PURE__ */ (function() {
   function array1(a) {
     return [a];
   }
@@ -859,7 +868,7 @@ var traverseArrayImpl = function() {
       };
     };
   };
-}();
+})();
 
 // output-es/Data.Traversable/index.js
 var identity5 = (x2) => x2;
@@ -868,6 +877,28 @@ var traversableTuple = {
   sequence: (dictApplicative) => (v) => dictApplicative.Apply0().Functor0().map(Tuple(v._1))(v._2),
   Functor0: () => functorTuple,
   Foldable1: () => foldableTuple
+};
+var traversableMaybe = {
+  traverse: (dictApplicative) => (v) => (v1) => {
+    if (v1.tag === "Nothing") {
+      return dictApplicative.pure(Nothing);
+    }
+    if (v1.tag === "Just") {
+      return dictApplicative.Apply0().Functor0().map(Just)(v(v1._1));
+    }
+    fail();
+  },
+  sequence: (dictApplicative) => (v) => {
+    if (v.tag === "Nothing") {
+      return dictApplicative.pure(Nothing);
+    }
+    if (v.tag === "Just") {
+      return dictApplicative.Apply0().Functor0().map(Just)(v._1);
+    }
+    fail();
+  },
+  Functor0: () => functorMaybe,
+  Foldable1: () => foldableMaybe
 };
 var traversableArray = {
   traverse: (dictApplicative) => {
@@ -913,7 +944,7 @@ var replicatePolyfill = function(count) {
   };
 };
 var replicate = typeof Array.prototype.fill === "function" ? replicateFill : replicatePolyfill;
-var fromFoldableImpl = function() {
+var fromFoldableImpl = /* @__PURE__ */ (function() {
   function Cons2(head, tail4) {
     this.head = head;
     this.tail = tail4;
@@ -939,7 +970,7 @@ var fromFoldableImpl = function() {
       return listToArray(foldr2(curryCons)(emptyList)(xs));
     };
   };
-}();
+})();
 var unconsImpl = function(empty4) {
   return function(next) {
     return function(xs) {
@@ -961,8 +992,7 @@ var findIndexImpl = function(just) {
     return function(f) {
       return function(xs) {
         for (var i = 0, l = xs.length; i < l; i++) {
-          if (f(xs[i]))
-            return just(i);
+          if (f(xs[i])) return just(i);
         }
         return nothing;
       };
@@ -974,8 +1004,7 @@ var _updateAt = function(just) {
     return function(i) {
       return function(a) {
         return function(l) {
-          if (i < 0 || i >= l.length)
-            return nothing;
+          if (i < 0 || i >= l.length) return nothing;
           var l1 = l.slice();
           l1[i] = a;
           return just(l1);
@@ -1030,7 +1059,7 @@ var scanl = function(f) {
     };
   };
 };
-var sortByImpl2 = function() {
+var sortByImpl2 = /* @__PURE__ */ (function() {
   function mergeFromTo(compare2, fromOrdering, xs1, xs2, from, to) {
     var mid;
     var i;
@@ -1040,10 +1069,8 @@ var sortByImpl2 = function() {
     var y2;
     var c;
     mid = from + (to - from >> 1);
-    if (mid - from > 1)
-      mergeFromTo(compare2, fromOrdering, xs2, xs1, from, mid);
-    if (to - mid > 1)
-      mergeFromTo(compare2, fromOrdering, xs2, xs1, mid, to);
+    if (mid - from > 1) mergeFromTo(compare2, fromOrdering, xs2, xs1, from, mid);
+    if (to - mid > 1) mergeFromTo(compare2, fromOrdering, xs2, xs1, mid, to);
     i = from;
     j = mid;
     k = from;
@@ -1070,15 +1097,14 @@ var sortByImpl2 = function() {
     return function(fromOrdering) {
       return function(xs) {
         var out;
-        if (xs.length < 2)
-          return xs;
+        if (xs.length < 2) return xs;
         out = xs.slice(0);
         mergeFromTo(compare2, fromOrdering, out, xs.slice(0), 0, xs.length);
         return out;
       };
     };
   };
-}();
+})();
 var slice = function(s) {
   return function(e) {
     return function(l) {
@@ -1211,8 +1237,7 @@ var unfoldr1ArrayImpl = function(isNothing2) {
               var tuple = f(value);
               result.push(fst2(tuple));
               var maybe = snd2(tuple);
-              if (isNothing2(maybe))
-                return result;
+              if (isNothing2(maybe)) return result;
               value = fromJust3(maybe);
             }
           };
@@ -1242,8 +1267,7 @@ var unfoldrArrayImpl = function(isNothing2) {
             var value = b;
             while (true) {
               var maybe = f(value);
-              if (isNothing2(maybe))
-                return result;
+              if (isNothing2(maybe)) return result;
               var tuple = fromJust3(maybe);
               result.push(fst2(tuple));
               value = snd2(tuple);
@@ -1316,8 +1340,7 @@ function _foldM(bind) {
 function all2(f) {
   return function(m) {
     for (var k in m) {
-      if (hasOwnProperty.call(m, k) && !f(k)(m[k]))
-        return false;
+      if (hasOwnProperty.call(m, k) && !f(k)(m[k])) return false;
     }
     return true;
   };
@@ -1381,10 +1404,10 @@ var insert = (k) => (v) => mutate(($0) => () => {
 var functorObject = { map: (f) => (m) => _fmapObject(m, f) };
 var functorWithIndexObject = { mapWithIndex: mapWithKey, Functor0: () => functorObject };
 var fromFoldable = (dictFoldable) => {
-  const fromFoldable113 = fromFoldableImpl(dictFoldable.foldr);
+  const fromFoldable112 = fromFoldableImpl(dictFoldable.foldr);
   return (l) => {
     const s = {};
-    for (const v of fromFoldable113(l)) {
+    for (const v of fromFoldable112(l)) {
       s[v._1] = v._2;
     }
     return s;
@@ -1476,23 +1499,19 @@ function stringify(j) {
   return JSON.stringify(j);
 }
 function _caseJson(isNull2, isBool, isNum, isStr, isArr, isObj, j) {
-  if (j == null)
-    return isNull2();
-  else if (typeof j === "boolean")
-    return isBool(j);
-  else if (typeof j === "number")
-    return isNum(j);
-  else if (typeof j === "string")
-    return isStr(j);
+  if (j == null) return isNull2();
+  else if (typeof j === "boolean") return isBool(j);
+  else if (typeof j === "number") return isNum(j);
+  else if (typeof j === "string") return isStr(j);
   else if (Object.prototype.toString.call(j) === "[object Array]")
     return isArr(j);
-  else
-    return isObj(j);
+  else return isObj(j);
 }
 
 // output-es/Data.Argonaut.Core/index.js
 var jsonEmptyObject = /* @__PURE__ */ id(empty);
 var caseJsonString = (d) => (f) => (j) => _caseJson((v) => d, (v) => d, (v) => d, f, (v) => d, (v) => d, j);
+var caseJson = (a) => (b) => (c) => (d) => (e) => (f) => (json) => _caseJson(a, b, c, d, e, f, json);
 
 // output-es/Data.Argonaut.Parser/foreign.js
 function _jsonParser(fail3, succ, s) {
@@ -1540,15 +1559,13 @@ var numSub = function(n1) {
 // output-es/Data.EuclideanRing/foreign.js
 var intDiv2 = function(x2) {
   return function(y2) {
-    if (y2 === 0)
-      return 0;
+    if (y2 === 0) return 0;
     return y2 > 0 ? Math.floor(x2 / y2) : -Math.floor(x2 / -y2);
   };
 };
 var intMod = function(x2) {
   return function(y2) {
-    if (y2 === 0)
-      return 0;
+    if (y2 === 0) return 0;
     var yy = Math.abs(y2);
     return (x2 % yy + yy) % yy;
   };
@@ -2159,7 +2176,7 @@ var _crashWith = function(msg) {
 };
 
 // output-es/Effect.Aff/foreign.js
-var Aff = function() {
+var Aff = (function() {
   var EMPTY = {};
   var PURE = "Pure";
   var THROW = "Throw";
@@ -2221,7 +2238,7 @@ var Aff = function() {
       return nonCanceler2;
     }
   }
-  var Scheduler = function() {
+  var Scheduler = (function() {
     var limit = 1024;
     var size4 = 0;
     var ix = 0;
@@ -2257,7 +2274,7 @@ var Aff = function() {
         }
       }
     };
-  }();
+  })();
   function Supervisor(util2) {
     var fibers = {};
     var fiberId = 0;
@@ -2427,6 +2444,8 @@ var Aff = function() {
                 fail3 = util2.left(step._1);
                 step = null;
                 break;
+              // Enqueue the Catch so that we can call the error handler later on
+              // in case of an exception.
               case CATCH:
                 if (bhead === null) {
                   attempts = new Aff2(CONS, step, attempts, interrupt);
@@ -2438,6 +2457,8 @@ var Aff = function() {
                 status = CONTINUE;
                 step = step._1;
                 break;
+              // Enqueue the Bracket so that we can call the appropriate handlers
+              // after resource acquisition.
               case BRACKET:
                 bracketCount++;
                 if (bhead === null) {
@@ -2478,6 +2499,9 @@ var Aff = function() {
               attempt = attempts._1;
               attempts = attempts._2;
               switch (attempt.tag) {
+                // We cannot recover from an unmasked interrupt. Otherwise we should
+                // continue stepping, or run the exception handler if an exception
+                // was raised.
                 case CATCH:
                   if (interrupt && interrupt !== tmp && bracketCount === 0) {
                     status = RETURN;
@@ -2487,6 +2511,7 @@ var Aff = function() {
                     fail3 = null;
                   }
                   break;
+                // We cannot resume from an unmasked interrupt or exception.
                 case RESUME:
                   if (interrupt && interrupt !== tmp && bracketCount === 0 || fail3) {
                     status = RETURN;
@@ -2497,6 +2522,10 @@ var Aff = function() {
                     step = util2.fromRight(step);
                   }
                   break;
+                // If we have a bracket, we should enqueue the handlers,
+                // and continue with the success branch only if the fiber has
+                // not been interrupted. If the bracket acquisition failed, we
+                // should not run either.
                 case BRACKET:
                   bracketCount--;
                   if (fail3 === null) {
@@ -2508,6 +2537,8 @@ var Aff = function() {
                     }
                   }
                   break;
+                // Enqueue the appropriate handler. We increase the bracket count
+                // because it should not be cancelled.
                 case RELEASE:
                   attempts = new Aff2(CONS, new Aff2(FINALIZED, step, fail3), attempts, interrupt);
                   status = CONTINUE;
@@ -2676,46 +2707,45 @@ var Aff = function() {
       var count = 0;
       var kills2 = {};
       var tmp, kid;
-      loop:
-        while (true) {
-          tmp = null;
-          switch (step.tag) {
-            case FORKED:
-              if (step._3 === EMPTY) {
-                tmp = fibers[step._1];
-                kills2[count++] = tmp.kill(error3, function(result) {
-                  return function() {
-                    count--;
-                    if (count === 0) {
-                      cb2(result)();
-                    }
-                  };
-                });
-              }
-              if (head === null) {
-                break loop;
-              }
-              step = head._2;
-              if (tail4 === null) {
-                head = null;
-              } else {
-                head = tail4._1;
-                tail4 = tail4._2;
-              }
-              break;
-            case MAP:
-              step = step._2;
-              break;
-            case APPLY:
-            case ALT:
-              if (head) {
-                tail4 = new Aff2(CONS, head, tail4);
-              }
-              head = step;
-              step = step._1;
-              break;
-          }
+      loop: while (true) {
+        tmp = null;
+        switch (step.tag) {
+          case FORKED:
+            if (step._3 === EMPTY) {
+              tmp = fibers[step._1];
+              kills2[count++] = tmp.kill(error3, function(result) {
+                return function() {
+                  count--;
+                  if (count === 0) {
+                    cb2(result)();
+                  }
+                };
+              });
+            }
+            if (head === null) {
+              break loop;
+            }
+            step = head._2;
+            if (tail4 === null) {
+              head = null;
+            } else {
+              head = tail4._1;
+              tail4 = tail4._2;
+            }
+            break;
+          case MAP:
+            step = step._2;
+            break;
+          case APPLY:
+          case ALT:
+            if (head) {
+              tail4 = new Aff2(CONS, head, tail4);
+            }
+            head = step;
+            step = step._1;
+            break;
         }
+      }
       if (count === 0) {
         cb2(util2.right(void 0))();
       } else {
@@ -2736,101 +2766,100 @@ var Aff = function() {
         step = result;
         fail3 = null;
       }
-      loop:
-        while (true) {
-          lhs = null;
-          rhs = null;
-          tmp = null;
-          kid = null;
-          if (interrupt !== null) {
-            return;
-          }
-          if (head === null) {
-            cb(fail3 || step)();
-            return;
-          }
-          if (head._3 !== EMPTY) {
-            return;
-          }
-          switch (head.tag) {
-            case MAP:
-              if (fail3 === null) {
-                head._3 = util2.right(head._1(util2.fromRight(step)));
-                step = head._3;
-              } else {
-                head._3 = fail3;
-              }
-              break;
-            case APPLY:
-              lhs = head._1._3;
-              rhs = head._2._3;
-              if (fail3) {
-                head._3 = fail3;
-                tmp = true;
-                kid = killId++;
-                kills[kid] = kill(early, fail3 === lhs ? head._2 : head._1, function() {
-                  return function() {
-                    delete kills[kid];
-                    if (tmp) {
-                      tmp = false;
-                    } else if (tail4 === null) {
-                      join4(fail3, null, null);
-                    } else {
-                      join4(fail3, tail4._1, tail4._2);
-                    }
-                  };
-                });
-                if (tmp) {
-                  tmp = false;
-                  return;
-                }
-              } else if (lhs === EMPTY || rhs === EMPTY) {
-                return;
-              } else {
-                step = util2.right(util2.fromRight(lhs)(util2.fromRight(rhs)));
-                head._3 = step;
-              }
-              break;
-            case ALT:
-              lhs = head._1._3;
-              rhs = head._2._3;
-              if (lhs === EMPTY && util2.isLeft(rhs) || rhs === EMPTY && util2.isLeft(lhs)) {
-                return;
-              }
-              if (lhs !== EMPTY && util2.isLeft(lhs) && rhs !== EMPTY && util2.isLeft(rhs)) {
-                fail3 = step === lhs ? rhs : lhs;
-                step = null;
-                head._3 = fail3;
-              } else {
-                head._3 = step;
-                tmp = true;
-                kid = killId++;
-                kills[kid] = kill(early, step === lhs ? head._2 : head._1, function() {
-                  return function() {
-                    delete kills[kid];
-                    if (tmp) {
-                      tmp = false;
-                    } else if (tail4 === null) {
-                      join4(step, null, null);
-                    } else {
-                      join4(step, tail4._1, tail4._2);
-                    }
-                  };
-                });
-                if (tmp) {
-                  tmp = false;
-                  return;
-                }
-              }
-              break;
-          }
-          if (tail4 === null) {
-            head = null;
-          } else {
-            head = tail4._1;
-            tail4 = tail4._2;
-          }
+      loop: while (true) {
+        lhs = null;
+        rhs = null;
+        tmp = null;
+        kid = null;
+        if (interrupt !== null) {
+          return;
         }
+        if (head === null) {
+          cb(fail3 || step)();
+          return;
+        }
+        if (head._3 !== EMPTY) {
+          return;
+        }
+        switch (head.tag) {
+          case MAP:
+            if (fail3 === null) {
+              head._3 = util2.right(head._1(util2.fromRight(step)));
+              step = head._3;
+            } else {
+              head._3 = fail3;
+            }
+            break;
+          case APPLY:
+            lhs = head._1._3;
+            rhs = head._2._3;
+            if (fail3) {
+              head._3 = fail3;
+              tmp = true;
+              kid = killId++;
+              kills[kid] = kill(early, fail3 === lhs ? head._2 : head._1, function() {
+                return function() {
+                  delete kills[kid];
+                  if (tmp) {
+                    tmp = false;
+                  } else if (tail4 === null) {
+                    join4(fail3, null, null);
+                  } else {
+                    join4(fail3, tail4._1, tail4._2);
+                  }
+                };
+              });
+              if (tmp) {
+                tmp = false;
+                return;
+              }
+            } else if (lhs === EMPTY || rhs === EMPTY) {
+              return;
+            } else {
+              step = util2.right(util2.fromRight(lhs)(util2.fromRight(rhs)));
+              head._3 = step;
+            }
+            break;
+          case ALT:
+            lhs = head._1._3;
+            rhs = head._2._3;
+            if (lhs === EMPTY && util2.isLeft(rhs) || rhs === EMPTY && util2.isLeft(lhs)) {
+              return;
+            }
+            if (lhs !== EMPTY && util2.isLeft(lhs) && rhs !== EMPTY && util2.isLeft(rhs)) {
+              fail3 = step === lhs ? rhs : lhs;
+              step = null;
+              head._3 = fail3;
+            } else {
+              head._3 = step;
+              tmp = true;
+              kid = killId++;
+              kills[kid] = kill(early, step === lhs ? head._2 : head._1, function() {
+                return function() {
+                  delete kills[kid];
+                  if (tmp) {
+                    tmp = false;
+                  } else if (tail4 === null) {
+                    join4(step, null, null);
+                  } else {
+                    join4(step, tail4._1, tail4._2);
+                  }
+                };
+              });
+              if (tmp) {
+                tmp = false;
+                return;
+              }
+            }
+            break;
+        }
+        if (tail4 === null) {
+          head = null;
+        } else {
+          head = tail4._1;
+          tail4 = tail4._2;
+        }
+      }
     }
     function resolve(fiber) {
       return function(result) {
@@ -2847,71 +2876,70 @@ var Aff = function() {
       var head = null;
       var tail4 = null;
       var tmp, fid;
-      loop:
-        while (true) {
-          tmp = null;
-          fid = null;
-          switch (status) {
-            case CONTINUE:
-              switch (step.tag) {
-                case MAP:
-                  if (head) {
-                    tail4 = new Aff2(CONS, head, tail4);
-                  }
-                  head = new Aff2(MAP, step._1, EMPTY, EMPTY);
-                  step = step._2;
-                  break;
-                case APPLY:
-                  if (head) {
-                    tail4 = new Aff2(CONS, head, tail4);
-                  }
-                  head = new Aff2(APPLY, EMPTY, step._2, EMPTY);
-                  step = step._1;
-                  break;
-                case ALT:
-                  if (head) {
-                    tail4 = new Aff2(CONS, head, tail4);
-                  }
-                  head = new Aff2(ALT, EMPTY, step._2, EMPTY);
-                  step = step._1;
-                  break;
-                default:
-                  fid = fiberId++;
-                  status = RETURN;
-                  tmp = step;
-                  step = new Aff2(FORKED, fid, new Aff2(CONS, head, tail4), EMPTY);
-                  tmp = Fiber(util2, supervisor, tmp);
-                  tmp.onComplete({
-                    rethrow: false,
-                    handler: resolve(step)
-                  })();
-                  fibers[fid] = tmp;
-                  if (supervisor) {
-                    supervisor.register(tmp);
-                  }
-              }
-              break;
-            case RETURN:
-              if (head === null) {
-                break loop;
-              }
-              if (head._1 === EMPTY) {
-                head._1 = step;
-                status = CONTINUE;
-                step = head._2;
-                head._2 = EMPTY;
-              } else {
-                head._2 = step;
-                step = head;
-                if (tail4 === null) {
-                  head = null;
-                } else {
-                  head = tail4._1;
-                  tail4 = tail4._2;
+      loop: while (true) {
+        tmp = null;
+        fid = null;
+        switch (status) {
+          case CONTINUE:
+            switch (step.tag) {
+              case MAP:
+                if (head) {
+                  tail4 = new Aff2(CONS, head, tail4);
                 }
+                head = new Aff2(MAP, step._1, EMPTY, EMPTY);
+                step = step._2;
+                break;
+              case APPLY:
+                if (head) {
+                  tail4 = new Aff2(CONS, head, tail4);
+                }
+                head = new Aff2(APPLY, EMPTY, step._2, EMPTY);
+                step = step._1;
+                break;
+              case ALT:
+                if (head) {
+                  tail4 = new Aff2(CONS, head, tail4);
+                }
+                head = new Aff2(ALT, EMPTY, step._2, EMPTY);
+                step = step._1;
+                break;
+              default:
+                fid = fiberId++;
+                status = RETURN;
+                tmp = step;
+                step = new Aff2(FORKED, fid, new Aff2(CONS, head, tail4), EMPTY);
+                tmp = Fiber(util2, supervisor, tmp);
+                tmp.onComplete({
+                  rethrow: false,
+                  handler: resolve(step)
+                })();
+                fibers[fid] = tmp;
+                if (supervisor) {
+                  supervisor.register(tmp);
+                }
+            }
+            break;
+          case RETURN:
+            if (head === null) {
+              break loop;
+            }
+            if (head._1 === EMPTY) {
+              head._1 = step;
+              status = CONTINUE;
+              step = head._2;
+              head._2 = EMPTY;
+            } else {
+              head._2 = step;
+              step = head;
+              if (tail4 === null) {
+                head = null;
+              } else {
+                head = tail4._1;
+                tail4 = tail4._2;
               }
-          }
+            }
         }
+      }
       root2 = step;
       for (fid = 0; fid < fiberId; fid++) {
         fibers[fid].run();
@@ -2979,7 +3007,7 @@ var Aff = function() {
   Aff2.Scheduler = Scheduler;
   Aff2.nonCanceler = nonCanceler2;
   return Aff2;
-}();
+})();
 var _pure = Aff.Pure;
 var _throwError = Aff.Throw;
 function _catchError(aff) {
@@ -3010,34 +3038,6 @@ function _makeFiber(util2, aff) {
     return Aff.Fiber(util2, null, aff);
   };
 }
-var _delay = function() {
-  function setDelay(n, k) {
-    if (n === 0 && typeof setImmediate !== "undefined") {
-      return setImmediate(k);
-    } else {
-      return setTimeout(k, n);
-    }
-  }
-  function clearDelay(n, t2) {
-    if (n === 0 && typeof clearImmediate !== "undefined") {
-      return clearImmediate(t2);
-    } else {
-      return clearTimeout(t2);
-    }
-  }
-  return function(right2, ms) {
-    return Aff.Async(function(cb) {
-      return function() {
-        var timer2 = setDelay(ms, cb(right2()));
-        return function() {
-          return Aff.Sync(function() {
-            return right2(clearDelay(ms, timer2));
-          });
-        };
-      };
-    });
-  };
-}();
 var _sequential = Aff.Seq;
 
 // output-es/Effect.Aff/index.js
@@ -3192,8 +3192,7 @@ var ceil2 = (x2) => unsafeClamp(ceil(x2));
 // output-es/Data.String.Unsafe/foreign.js
 var charAt = function(i) {
   return function(s) {
-    if (i >= 0 && i < s.length)
-      return s.charAt(i);
+    if (i >= 0 && i < s.length) return s.charAt(i);
     throw new Error("Data.String.Unsafe.charAt: Invalid index.");
   };
 };
@@ -3346,7 +3345,7 @@ function _ajax(platformSpecificDriver, timeoutErrorMessageIdent, requestFailedMe
 var $$$Error = (tag, _1, _2) => ({ tag, _1, _2 });
 var pure = /* @__PURE__ */ (() => applicativeExceptT(monadIdentity).pure)();
 var alt = /* @__PURE__ */ (() => altExceptT(semigroupNonEmptyList)(monadIdentity).alt)();
-var any2 = /* @__PURE__ */ (() => foldableArray.foldMap((() => {
+var any2 = /* @__PURE__ */ (() => foldableArray.foldMap(/* @__PURE__ */ (() => {
   const semigroupDisj1 = { append: (v) => (v1) => v || v1 };
   return { mempty: false, Semigroup0: () => semigroupDisj1 };
 })()))();
@@ -3721,28 +3720,22 @@ function bisector(f) {
   }
   function left2(a, x2, lo = 0, hi = a.length) {
     if (lo < hi) {
-      if (compare1(x2, x2) !== 0)
-        return hi;
+      if (compare1(x2, x2) !== 0) return hi;
       do {
         const mid = lo + hi >>> 1;
-        if (compare2(a[mid], x2) < 0)
-          lo = mid + 1;
-        else
-          hi = mid;
+        if (compare2(a[mid], x2) < 0) lo = mid + 1;
+        else hi = mid;
       } while (lo < hi);
     }
     return lo;
   }
   function right2(a, x2, lo = 0, hi = a.length) {
     if (lo < hi) {
-      if (compare1(x2, x2) !== 0)
-        return hi;
+      if (compare1(x2, x2) !== 0) return hi;
       do {
         const mid = lo + hi >>> 1;
-        if (compare2(a[mid], x2) <= 0)
-          lo = mid + 1;
-        else
-          hi = mid;
+        if (compare2(a[mid], x2) <= 0) lo = mid + 1;
+        else hi = mid;
       } while (lo < hi);
     }
     return lo;
@@ -3774,9 +3767,7 @@ var InternMap = class extends Map {
   constructor(entries, key = keyof) {
     super();
     Object.defineProperties(this, { _intern: { value: /* @__PURE__ */ new Map() }, _key: { value: key } });
-    if (entries != null)
-      for (const [key2, value] of entries)
-        this.set(key2, value);
+    if (entries != null) for (const [key2, value] of entries) this.set(key2, value);
   }
   get(key) {
     return super.get(intern_get(this, key));
@@ -3797,8 +3788,7 @@ function intern_get({ _intern, _key }, value) {
 }
 function intern_set({ _intern, _key }, value) {
   const key = _key(value);
-  if (_intern.has(key))
-    return _intern.get(key);
+  if (_intern.has(key)) return _intern.get(key);
   _intern.set(key, value);
   return value;
 }
@@ -3825,48 +3815,32 @@ function tickSpec(start2, stop, count) {
     inc = Math.pow(10, -power) / factor;
     i1 = Math.round(start2 * inc);
     i2 = Math.round(stop * inc);
-    if (i1 / inc < start2)
-      ++i1;
-    if (i2 / inc > stop)
-      --i2;
+    if (i1 / inc < start2) ++i1;
+    if (i2 / inc > stop) --i2;
     inc = -inc;
   } else {
     inc = Math.pow(10, power) * factor;
     i1 = Math.round(start2 / inc);
     i2 = Math.round(stop / inc);
-    if (i1 * inc < start2)
-      ++i1;
-    if (i2 * inc > stop)
-      --i2;
+    if (i1 * inc < start2) ++i1;
+    if (i2 * inc > stop) --i2;
   }
-  if (i2 < i1 && 0.5 <= count && count < 2)
-    return tickSpec(start2, stop, count * 2);
+  if (i2 < i1 && 0.5 <= count && count < 2) return tickSpec(start2, stop, count * 2);
   return [i1, i2, inc];
 }
 function ticks(start2, stop, count) {
   stop = +stop, start2 = +start2, count = +count;
-  if (!(count > 0))
-    return [];
-  if (start2 === stop)
-    return [start2];
+  if (!(count > 0)) return [];
+  if (start2 === stop) return [start2];
   const reverse3 = stop < start2, [i1, i2, inc] = reverse3 ? tickSpec(stop, start2, count) : tickSpec(start2, stop, count);
-  if (!(i2 >= i1))
-    return [];
+  if (!(i2 >= i1)) return [];
   const n = i2 - i1 + 1, ticks2 = new Array(n);
   if (reverse3) {
-    if (inc < 0)
-      for (let i = 0; i < n; ++i)
-        ticks2[i] = (i2 - i) / -inc;
-    else
-      for (let i = 0; i < n; ++i)
-        ticks2[i] = (i2 - i) * inc;
+    if (inc < 0) for (let i = 0; i < n; ++i) ticks2[i] = (i2 - i) / -inc;
+    else for (let i = 0; i < n; ++i) ticks2[i] = (i2 - i) * inc;
   } else {
-    if (inc < 0)
-      for (let i = 0; i < n; ++i)
-        ticks2[i] = (i1 + i) / -inc;
-    else
-      for (let i = 0; i < n; ++i)
-        ticks2[i] = (i1 + i) * inc;
+    if (inc < 0) for (let i = 0; i < n; ++i) ticks2[i] = (i1 + i) / -inc;
+    else for (let i = 0; i < n; ++i) ticks2[i] = (i1 + i) * inc;
   }
   return ticks2;
 }
@@ -3912,8 +3886,7 @@ function number2(scale) {
 }
 function center(scale, offset) {
   offset = Math.max(0, scale.bandwidth() - offset * 2) / 2;
-  if (scale.round())
-    offset = Math.round(offset);
+  if (scale.round()) offset = Math.round(offset);
   return (d) => +scale(d) + offset;
 }
 function entering() {
@@ -3996,8 +3969,7 @@ var noop = { value: () => {
 } };
 function dispatch() {
   for (var i = 0, n = arguments.length, _ = {}, t2; i < n; ++i) {
-    if (!(t2 = arguments[i] + "") || t2 in _ || /[\s.]/.test(t2))
-      throw new Error("illegal type: " + t2);
+    if (!(t2 = arguments[i] + "") || t2 in _ || /[\s.]/.test(t2)) throw new Error("illegal type: " + t2);
     _[t2] = [];
   }
   return new Dispatch(_);
@@ -4008,10 +3980,8 @@ function Dispatch(_) {
 function parseTypenames(typenames, types2) {
   return typenames.trim().split(/^|\s+/).map(function(t2) {
     var name3 = "", i = t2.indexOf(".");
-    if (i >= 0)
-      name3 = t2.slice(i + 1), t2 = t2.slice(0, i);
-    if (t2 && !types2.hasOwnProperty(t2))
-      throw new Error("unknown type: " + t2);
+    if (i >= 0) name3 = t2.slice(i + 1), t2 = t2.slice(0, i);
+    if (t2 && !types2.hasOwnProperty(t2)) throw new Error("unknown type: " + t2);
     return { type: t2, name: name3 };
   });
 }
@@ -4020,42 +3990,29 @@ Dispatch.prototype = dispatch.prototype = {
   on: function(typename, callback) {
     var _ = this._, T = parseTypenames(typename + "", _), t2, i = -1, n = T.length;
     if (arguments.length < 2) {
-      while (++i < n)
-        if ((t2 = (typename = T[i]).type) && (t2 = get(_[t2], typename.name)))
-          return t2;
+      while (++i < n) if ((t2 = (typename = T[i]).type) && (t2 = get(_[t2], typename.name))) return t2;
       return;
     }
-    if (callback != null && typeof callback !== "function")
-      throw new Error("invalid callback: " + callback);
+    if (callback != null && typeof callback !== "function") throw new Error("invalid callback: " + callback);
     while (++i < n) {
-      if (t2 = (typename = T[i]).type)
-        _[t2] = set(_[t2], typename.name, callback);
-      else if (callback == null)
-        for (t2 in _)
-          _[t2] = set(_[t2], typename.name, null);
+      if (t2 = (typename = T[i]).type) _[t2] = set(_[t2], typename.name, callback);
+      else if (callback == null) for (t2 in _) _[t2] = set(_[t2], typename.name, null);
     }
     return this;
   },
   copy: function() {
     var copy2 = {}, _ = this._;
-    for (var t2 in _)
-      copy2[t2] = _[t2].slice();
+    for (var t2 in _) copy2[t2] = _[t2].slice();
     return new Dispatch(copy2);
   },
   call: function(type2, that) {
-    if ((n = arguments.length - 2) > 0)
-      for (var args = new Array(n), i = 0, n, t2; i < n; ++i)
-        args[i] = arguments[i + 2];
-    if (!this._.hasOwnProperty(type2))
-      throw new Error("unknown type: " + type2);
-    for (t2 = this._[type2], i = 0, n = t2.length; i < n; ++i)
-      t2[i].value.apply(that, args);
+    if ((n = arguments.length - 2) > 0) for (var args = new Array(n), i = 0, n, t2; i < n; ++i) args[i] = arguments[i + 2];
+    if (!this._.hasOwnProperty(type2)) throw new Error("unknown type: " + type2);
+    for (t2 = this._[type2], i = 0, n = t2.length; i < n; ++i) t2[i].value.apply(that, args);
   },
   apply: function(type2, that, args) {
-    if (!this._.hasOwnProperty(type2))
-      throw new Error("unknown type: " + type2);
-    for (var t2 = this._[type2], i = 0, n = t2.length; i < n; ++i)
-      t2[i].value.apply(that, args);
+    if (!this._.hasOwnProperty(type2)) throw new Error("unknown type: " + type2);
+    for (var t2 = this._[type2], i = 0, n = t2.length; i < n; ++i) t2[i].value.apply(that, args);
   }
 };
 function get(type2, name3) {
@@ -4072,8 +4029,7 @@ function set(type2, name3, callback) {
       break;
     }
   }
-  if (callback != null)
-    type2.push({ name: name3, value: callback });
+  if (callback != null) type2.push({ name: name3, value: callback });
   return type2;
 }
 var dispatch_default = dispatch;
@@ -4091,8 +4047,7 @@ var namespaces_default = {
 // node_modules/d3-selection/src/namespace.js
 function namespace_default(name3) {
   var prefix = name3 += "", i = prefix.indexOf(":");
-  if (i >= 0 && (prefix = name3.slice(0, i)) !== "xmlns")
-    name3 = name3.slice(i + 1);
+  if (i >= 0 && (prefix = name3.slice(0, i)) !== "xmlns") name3 = name3.slice(i + 1);
   return namespaces_default.hasOwnProperty(prefix) ? { space: namespaces_default[prefix], local: name3 } : name3;
 }
 
@@ -4124,13 +4079,11 @@ function selector_default(selector2) {
 
 // node_modules/d3-selection/src/selection/select.js
 function select_default(select2) {
-  if (typeof select2 !== "function")
-    select2 = selector_default(select2);
+  if (typeof select2 !== "function") select2 = selector_default(select2);
   for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
     for (var group2 = groups[j], n = group2.length, subgroup = subgroups[j] = new Array(n), node, subnode, i = 0; i < n; ++i) {
       if ((node = group2[i]) && (subnode = select2.call(node, node.__data__, i, group2))) {
-        if ("__data__" in node)
-          subnode.__data__ = node.__data__;
+        if ("__data__" in node) subnode.__data__ = node.__data__;
         subgroup[i] = subnode;
       }
     }
@@ -4160,10 +4113,8 @@ function arrayAll(select2) {
   };
 }
 function selectAll_default(select2) {
-  if (typeof select2 === "function")
-    select2 = arrayAll(select2);
-  else
-    select2 = selectorAll_default(select2);
+  if (typeof select2 === "function") select2 = arrayAll(select2);
+  else select2 = selectorAll_default(select2);
   for (var groups = this._groups, m = groups.length, subgroups = [], parents = [], j = 0; j < m; ++j) {
     for (var group2 = groups[j], n = group2.length, node, i = 0; i < n; ++i) {
       if (node = group2[i]) {
@@ -4217,8 +4168,7 @@ function selectChildren_default(match4) {
 
 // node_modules/d3-selection/src/selection/filter.js
 function filter_default(match4) {
-  if (typeof match4 !== "function")
-    match4 = matcher_default(match4);
+  if (typeof match4 !== "function") match4 = matcher_default(match4);
   for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
     for (var group2 = groups[j], n = group2.length, subgroup = subgroups[j] = [], node, i = 0; i < n; ++i) {
       if ((node = group2[i]) && match4.call(node, node.__data__, i, group2)) {
@@ -4317,20 +4267,16 @@ function datum(node) {
   return node.__data__;
 }
 function data_default(value, key) {
-  if (!arguments.length)
-    return Array.from(this, datum);
+  if (!arguments.length) return Array.from(this, datum);
   var bind = key ? bindKey : bindIndex, parents = this._parents, groups = this._groups;
-  if (typeof value !== "function")
-    value = constant_default(value);
+  if (typeof value !== "function") value = constant_default(value);
   for (var m = groups.length, update3 = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
     var parent = parents[j], group2 = groups[j], groupLength = group2.length, data = arraylike(value.call(parent, parent && parent.__data__, j, parents)), dataLength = data.length, enterGroup = enter[j] = new Array(dataLength), updateGroup = update3[j] = new Array(dataLength), exitGroup = exit[j] = new Array(groupLength);
     bind(parent, group2, enterGroup, updateGroup, exitGroup, data, key);
     for (var i0 = 0, i1 = 0, previous, next; i0 < dataLength; ++i0) {
       if (previous = enterGroup[i0]) {
-        if (i0 >= i1)
-          i1 = i0 + 1;
-        while (!(next = updateGroup[i1]) && ++i1 < dataLength)
-          ;
+        if (i0 >= i1) i1 = i0 + 1;
+        while (!(next = updateGroup[i1]) && ++i1 < dataLength) ;
         previous._next = next || null;
       }
     }
@@ -4354,20 +4300,16 @@ function join_default(onenter, onupdate, onexit) {
   var enter = this.enter(), update3 = this, exit = this.exit();
   if (typeof onenter === "function") {
     enter = onenter(enter);
-    if (enter)
-      enter = enter.selection();
+    if (enter) enter = enter.selection();
   } else {
     enter = enter.append(onenter + "");
   }
   if (onupdate != null) {
     update3 = onupdate(update3);
-    if (update3)
-      update3 = update3.selection();
+    if (update3) update3 = update3.selection();
   }
-  if (onexit == null)
-    exit.remove();
-  else
-    onexit(exit);
+  if (onexit == null) exit.remove();
+  else onexit(exit);
   return enter && update3 ? enter.merge(update3).order() : update3;
 }
 
@@ -4392,8 +4334,7 @@ function order_default() {
   for (var groups = this._groups, j = -1, m = groups.length; ++j < m; ) {
     for (var group2 = groups[j], i = group2.length - 1, next = group2[i], node; --i >= 0; ) {
       if (node = group2[i]) {
-        if (next && node.compareDocumentPosition(next) ^ 4)
-          next.parentNode.insertBefore(node, next);
+        if (next && node.compareDocumentPosition(next) ^ 4) next.parentNode.insertBefore(node, next);
         next = node;
       }
     }
@@ -4403,8 +4344,7 @@ function order_default() {
 
 // node_modules/d3-selection/src/selection/sort.js
 function sort_default(compare2) {
-  if (!compare2)
-    compare2 = ascending2;
+  if (!compare2) compare2 = ascending2;
   function compareNode(a, b) {
     return a && b ? compare2(a.__data__, b.__data__) : !a - !b;
   }
@@ -4440,8 +4380,7 @@ function node_default() {
   for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {
     for (var group2 = groups[j], i = 0, n = group2.length; i < n; ++i) {
       var node = group2[i];
-      if (node)
-        return node;
+      if (node) return node;
     }
   }
   return null;
@@ -4450,8 +4389,7 @@ function node_default() {
 // node_modules/d3-selection/src/selection/size.js
 function size_default() {
   let size4 = 0;
-  for (const node of this)
-    ++size4;
+  for (const node of this) ++size4;
   return size4;
 }
 
@@ -4464,8 +4402,7 @@ function empty_default() {
 function each_default(callback) {
   for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {
     for (var group2 = groups[j], i = 0, n = group2.length, node; i < n; ++i) {
-      if (node = group2[i])
-        callback.call(node, node.__data__, i, group2);
+      if (node = group2[i]) callback.call(node, node.__data__, i, group2);
     }
   }
   return this;
@@ -4495,19 +4432,15 @@ function attrConstantNS(fullname, value) {
 function attrFunction(name3, value) {
   return function() {
     var v = value.apply(this, arguments);
-    if (v == null)
-      this.removeAttribute(name3);
-    else
-      this.setAttribute(name3, v);
+    if (v == null) this.removeAttribute(name3);
+    else this.setAttribute(name3, v);
   };
 }
 function attrFunctionNS(fullname, value) {
   return function() {
     var v = value.apply(this, arguments);
-    if (v == null)
-      this.removeAttributeNS(fullname.space, fullname.local);
-    else
-      this.setAttributeNS(fullname.space, fullname.local, v);
+    if (v == null) this.removeAttributeNS(fullname.space, fullname.local);
+    else this.setAttributeNS(fullname.space, fullname.local, v);
   };
 }
 function attr_default(name3, value) {
@@ -4538,10 +4471,8 @@ function styleConstant(name3, value, priority) {
 function styleFunction(name3, value, priority) {
   return function() {
     var v = value.apply(this, arguments);
-    if (v == null)
-      this.style.removeProperty(name3);
-    else
-      this.style.setProperty(name3, v, priority);
+    if (v == null) this.style.removeProperty(name3);
+    else this.style.setProperty(name3, v, priority);
   };
 }
 function style_default(name3, value, priority) {
@@ -4565,10 +4496,8 @@ function propertyConstant(name3, value) {
 function propertyFunction(name3, value) {
   return function() {
     var v = value.apply(this, arguments);
-    if (v == null)
-      delete this[name3];
-    else
-      this[name3] = v;
+    if (v == null) delete this[name3];
+    else this[name3] = v;
   };
 }
 function property_default(name3, value) {
@@ -4607,13 +4536,11 @@ ClassList.prototype = {
 };
 function classedAdd(node, names) {
   var list = classList(node), i = -1, n = names.length;
-  while (++i < n)
-    list.add(names[i]);
+  while (++i < n) list.add(names[i]);
 }
 function classedRemove(node, names) {
   var list = classList(node), i = -1, n = names.length;
-  while (++i < n)
-    list.remove(names[i]);
+  while (++i < n) list.remove(names[i]);
 }
 function classedTrue(names) {
   return function() {
@@ -4634,9 +4561,7 @@ function classed_default(name3, value) {
   var names = classArray(name3 + "");
   if (arguments.length < 2) {
     var list = classList(this.node()), i = -1, n = names.length;
-    while (++i < n)
-      if (!list.contains(names[i]))
-        return false;
+    while (++i < n) if (!list.contains(names[i])) return false;
     return true;
   }
   return this.each((typeof value === "function" ? classedFunction : value ? classedTrue : classedFalse)(names, value));
@@ -4682,8 +4607,7 @@ function html_default(value) {
 
 // node_modules/d3-selection/src/selection/raise.js
 function raise() {
-  if (this.nextSibling)
-    this.parentNode.appendChild(this);
+  if (this.nextSibling) this.parentNode.appendChild(this);
 }
 function raise_default() {
   return this.each(raise);
@@ -4691,8 +4615,7 @@ function raise_default() {
 
 // node_modules/d3-selection/src/selection/lower.js
 function lower() {
-  if (this.previousSibling)
-    this.parentNode.insertBefore(this, this.parentNode.firstChild);
+  if (this.previousSibling) this.parentNode.insertBefore(this, this.parentNode.firstChild);
 }
 function lower_default() {
   return this.each(lower);
@@ -4720,8 +4643,7 @@ function insert_default(name3, before) {
 // node_modules/d3-selection/src/selection/remove.js
 function remove() {
   var parent = this.parentNode;
-  if (parent)
-    parent.removeChild(this);
+  if (parent) parent.removeChild(this);
 }
 function remove_default() {
   return this.each(remove);
@@ -4754,16 +4676,14 @@ function contextListener(listener) {
 function parseTypenames2(typenames) {
   return typenames.trim().split(/^|\s+/).map(function(t2) {
     var name3 = "", i = t2.indexOf(".");
-    if (i >= 0)
-      name3 = t2.slice(i + 1), t2 = t2.slice(0, i);
+    if (i >= 0) name3 = t2.slice(i + 1), t2 = t2.slice(0, i);
     return { type: t2, name: name3 };
   });
 }
 function onRemove(typename) {
   return function() {
     var on2 = this.__on;
-    if (!on2)
-      return;
+    if (!on2) return;
     for (var j = 0, i = -1, m = on2.length, o; j < m; ++j) {
       if (o = on2[j], (!typename.type || o.type === typename.type) && o.name === typename.name) {
         this.removeEventListener(o.type, o.listener, o.options);
@@ -4771,49 +4691,42 @@ function onRemove(typename) {
         on2[++i] = o;
       }
     }
-    if (++i)
-      on2.length = i;
-    else
-      delete this.__on;
+    if (++i) on2.length = i;
+    else delete this.__on;
   };
 }
 function onAdd(typename, value, options) {
   return function() {
     var on2 = this.__on, o, listener = contextListener(value);
-    if (on2)
-      for (var j = 0, m = on2.length; j < m; ++j) {
-        if ((o = on2[j]).type === typename.type && o.name === typename.name) {
-          this.removeEventListener(o.type, o.listener, o.options);
-          this.addEventListener(o.type, o.listener = listener, o.options = options);
-          o.value = value;
-          return;
-        }
+    if (on2) for (var j = 0, m = on2.length; j < m; ++j) {
+      if ((o = on2[j]).type === typename.type && o.name === typename.name) {
+        this.removeEventListener(o.type, o.listener, o.options);
+        this.addEventListener(o.type, o.listener = listener, o.options = options);
+        o.value = value;
+        return;
       }
+    }
     this.addEventListener(typename.type, listener, options);
     o = { type: typename.type, name: typename.name, value, listener, options };
-    if (!on2)
-      this.__on = [o];
-    else
-      on2.push(o);
+    if (!on2) this.__on = [o];
+    else on2.push(o);
   };
 }
 function on_default(typename, value, options) {
   var typenames = parseTypenames2(typename + ""), i, n = typenames.length, t2;
   if (arguments.length < 2) {
     var on2 = this.node().__on;
-    if (on2)
-      for (var j = 0, m = on2.length, o; j < m; ++j) {
-        for (i = 0, o = on2[j]; i < n; ++i) {
-          if ((t2 = typenames[i]).type === o.type && t2.name === o.name) {
-            return o.value;
-          }
+    if (on2) for (var j = 0, m = on2.length, o; j < m; ++j) {
+      for (i = 0, o = on2[j]; i < n; ++i) {
+        if ((t2 = typenames[i]).type === o.type && t2.name === o.name) {
+          return o.value;
         }
       }
+    }
     return;
   }
   on2 = value ? onAdd : onRemove;
-  for (i = 0; i < n; ++i)
-    this.each(on2(typenames[i], value, options));
+  for (i = 0; i < n; ++i) this.each(on2(typenames[i], value, options));
   return this;
 }
 
@@ -4824,10 +4737,8 @@ function dispatchEvent(node, type2, params) {
     event = new event(type2, params);
   } else {
     event = window2.document.createEvent("Event");
-    if (params)
-      event.initEvent(type2, params.bubbles, params.cancelable), event.detail = params.detail;
-    else
-      event.initEvent(type2, false, false);
+    if (params) event.initEvent(type2, params.bubbles, params.cancelable), event.detail = params.detail;
+    else event.initEvent(type2, false, false);
   }
   node.dispatchEvent(event);
 }
@@ -4849,8 +4760,7 @@ function dispatch_default2(type2, params) {
 function* iterator_default() {
   for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {
     for (var group2 = groups[j], i = 0, n = group2.length, node; i < n; ++i) {
-      if (node = group2[i])
-        yield node;
+      if (node = group2[i]) yield node;
     }
   }
 }
@@ -4919,8 +4829,7 @@ function define_default(constructor, factory, prototype) {
 }
 function extend(parent, definition) {
   var prototype = Object.create(parent.prototype);
-  for (var key in definition)
-    prototype[key] = definition[key];
+  for (var key in definition) prototype[key] = definition[key];
   return prototype;
 }
 
@@ -5097,6 +5006,7 @@ define_default(Color, color, {
     return this.rgb().displayable();
   },
   hex: color_formatHex,
+  // Deprecated! Use color.formatHex.
   formatHex: color_formatHex,
   formatHex8: color_formatHex8,
   formatHsl: color_formatHsl,
@@ -5124,15 +5034,12 @@ function rgbn(n) {
   return new Rgb(n >> 16 & 255, n >> 8 & 255, n & 255, 1);
 }
 function rgba(r, g, b, a) {
-  if (a <= 0)
-    r = g = b = NaN;
+  if (a <= 0) r = g = b = NaN;
   return new Rgb(r, g, b, a);
 }
 function rgbConvert(o) {
-  if (!(o instanceof Color))
-    o = color(o);
-  if (!o)
-    return new Rgb();
+  if (!(o instanceof Color)) o = color(o);
+  if (!o) return new Rgb();
   o = o.rgb();
   return new Rgb(o.r, o.g, o.b, o.opacity);
 }
@@ -5164,6 +5071,7 @@ define_default(Rgb, rgb, extend(Color, {
     return -0.5 <= this.r && this.r < 255.5 && (-0.5 <= this.g && this.g < 255.5) && (-0.5 <= this.b && this.b < 255.5) && (0 <= this.opacity && this.opacity <= 1);
   },
   hex: rgb_formatHex,
+  // Deprecated! Use color.formatHex.
   formatHex: rgb_formatHex,
   formatHex8: rgb_formatHex8,
   formatRgb: rgb_formatRgb,
@@ -5190,32 +5098,22 @@ function hex(value) {
   return (value < 16 ? "0" : "") + value.toString(16);
 }
 function hsla(h, s, l, a) {
-  if (a <= 0)
-    h = s = l = NaN;
-  else if (l <= 0 || l >= 1)
-    h = s = NaN;
-  else if (s <= 0)
-    h = NaN;
+  if (a <= 0) h = s = l = NaN;
+  else if (l <= 0 || l >= 1) h = s = NaN;
+  else if (s <= 0) h = NaN;
   return new Hsl(h, s, l, a);
 }
 function hslConvert(o) {
-  if (o instanceof Hsl)
-    return new Hsl(o.h, o.s, o.l, o.opacity);
-  if (!(o instanceof Color))
-    o = color(o);
-  if (!o)
-    return new Hsl();
-  if (o instanceof Hsl)
-    return o;
+  if (o instanceof Hsl) return new Hsl(o.h, o.s, o.l, o.opacity);
+  if (!(o instanceof Color)) o = color(o);
+  if (!o) return new Hsl();
+  if (o instanceof Hsl) return o;
   o = o.rgb();
   var r = o.r / 255, g = o.g / 255, b = o.b / 255, min3 = Math.min(r, g, b), max6 = Math.max(r, g, b), h = NaN, s = max6 - min3, l = (max6 + min3) / 2;
   if (s) {
-    if (r === max6)
-      h = (g - b) / s + (g < b) * 6;
-    else if (g === max6)
-      h = (b - r) / s + 2;
-    else
-      h = (r - g) / s + 4;
+    if (r === max6) h = (g - b) / s + (g < b) * 6;
+    else if (g === max6) h = (b - r) / s + 2;
+    else h = (r - g) / s + 4;
     s /= l < 0.5 ? max6 + min3 : 2 - max6 - min3;
     h *= 60;
   } else {
@@ -5319,7 +5217,7 @@ function nogamma(a, b) {
 }
 
 // node_modules/d3-interpolate/src/rgb.js
-var rgb_default = function rgbGamma(y2) {
+var rgb_default = (function rgbGamma(y2) {
   var color2 = gamma(y2);
   function rgb2(start2, end) {
     var r = color2((start2 = rgb(start2)).r, (end = rgb(end)).r), g = color2(start2.g, end.g), b = color2(start2.b, end.b), opacity = nogamma(start2.opacity, end.opacity);
@@ -5333,7 +5231,7 @@ var rgb_default = function rgbGamma(y2) {
   }
   rgb2.gamma = rgbGamma;
   return rgb2;
-}(1);
+})(1);
 function rgbSpline(spline) {
   return function(colors) {
     var n = colors.length, r = new Array(n), g = new Array(n), b = new Array(n), i, color2;
@@ -5360,12 +5258,10 @@ var rgbBasisClosed = rgbSpline(basisClosed_default);
 
 // node_modules/d3-interpolate/src/numberArray.js
 function numberArray_default(a, b) {
-  if (!b)
-    b = [];
+  if (!b) b = [];
   var n = a ? Math.min(b.length, a.length) : 0, c = b.slice(), i;
   return function(t2) {
-    for (i = 0; i < n; ++i)
-      c[i] = a[i] * (1 - t2) + b[i] * t2;
+    for (i = 0; i < n; ++i) c[i] = a[i] * (1 - t2) + b[i] * t2;
     return c;
   };
 }
@@ -5376,20 +5272,17 @@ function isNumberArray(x2) {
 // node_modules/d3-interpolate/src/array.js
 function genericArray(a, b) {
   var nb = b ? b.length : 0, na = a ? Math.min(nb, a.length) : 0, x2 = new Array(na), c = new Array(nb), i;
-  for (i = 0; i < na; ++i)
-    x2[i] = value_default(a[i], b[i]);
-  for (; i < nb; ++i)
-    c[i] = b[i];
+  for (i = 0; i < na; ++i) x2[i] = value_default(a[i], b[i]);
+  for (; i < nb; ++i) c[i] = b[i];
   return function(t2) {
-    for (i = 0; i < na; ++i)
-      c[i] = x2[i](t2);
+    for (i = 0; i < na; ++i) c[i] = x2[i](t2);
     return c;
   };
 }
 
 // node_modules/d3-interpolate/src/date.js
 function date_default(a, b) {
-  var d = new Date();
+  var d = /* @__PURE__ */ new Date();
   return a = +a, b = +b, function(t2) {
     return d.setTime(a * (1 - t2) + b * t2), d;
   };
@@ -5405,10 +5298,8 @@ function number_default(a, b) {
 // node_modules/d3-interpolate/src/object.js
 function object_default(a, b) {
   var i = {}, c = {}, k;
-  if (a === null || typeof a !== "object")
-    a = {};
-  if (b === null || typeof b !== "object")
-    b = {};
+  if (a === null || typeof a !== "object") a = {};
+  if (b === null || typeof b !== "object") b = {};
   for (k in b) {
     if (k in a) {
       i[k] = value_default(a[k], b[k]);
@@ -5417,8 +5308,7 @@ function object_default(a, b) {
     }
   }
   return function(t2) {
-    for (k in i)
-      c[k] = i[k](t2);
+    for (k in i) c[k] = i[k](t2);
     return c;
   };
 }
@@ -5442,16 +5332,12 @@ function string_default(a, b) {
   while ((am = reA.exec(a)) && (bm = reB.exec(b))) {
     if ((bs = bm.index) > bi) {
       bs = b.slice(bi, bs);
-      if (s[i])
-        s[i] += bs;
-      else
-        s[++i] = bs;
+      if (s[i]) s[i] += bs;
+      else s[++i] = bs;
     }
     if ((am = am[0]) === (bm = bm[0])) {
-      if (s[i])
-        s[i] += bm;
-      else
-        s[++i] = bm;
+      if (s[i]) s[i] += bm;
+      else s[++i] = bm;
     } else {
       s[++i] = null;
       q.push({ i, x: number_default(am, bm) });
@@ -5460,14 +5346,11 @@ function string_default(a, b) {
   }
   if (bi < b.length) {
     bs = b.slice(bi);
-    if (s[i])
-      s[i] += bs;
-    else
-      s[++i] = bs;
+    if (s[i]) s[i] += bs;
+    else s[++i] = bs;
   }
   return s.length < 2 ? q[0] ? one(q[0].x) : zero2(b) : (b = q.length, function(t2) {
-    for (var i2 = 0, o; i2 < b; ++i2)
-      s[(o = q[i2]).i] = o.x(t2);
+    for (var i2 = 0, o; i2 < b; ++i2) s[(o = q[i2]).i] = o.x(t2);
     return s.join("");
   });
 }
@@ -5497,14 +5380,10 @@ var identity9 = {
 };
 function decompose_default(a, b, c, d, e, f) {
   var scaleX, scaleY, skewX;
-  if (scaleX = Math.sqrt(a * a + b * b))
-    a /= scaleX, b /= scaleX;
-  if (skewX = a * c + b * d)
-    c -= a * skewX, d -= b * skewX;
-  if (scaleY = Math.sqrt(c * c + d * d))
-    c /= scaleY, d /= scaleY, skewX /= scaleY;
-  if (a * d < b * c)
-    a = -a, b = -b, skewX = -skewX, scaleX = -scaleX;
+  if (scaleX = Math.sqrt(a * a + b * b)) a /= scaleX, b /= scaleX;
+  if (skewX = a * c + b * d) c -= a * skewX, d -= b * skewX;
+  if (scaleY = Math.sqrt(c * c + d * d)) c /= scaleY, d /= scaleY, skewX /= scaleY;
+  if (a * d < b * c) a = -a, b = -b, skewX = -skewX, scaleX = -scaleX;
   return {
     translateX: e,
     translateY: f,
@@ -5522,13 +5401,10 @@ function parseCss(value) {
   return m.isIdentity ? identity9 : decompose_default(m.a, m.b, m.c, m.d, m.e, m.f);
 }
 function parseSvg(value) {
-  if (value == null)
-    return identity9;
-  if (!svgNode)
-    svgNode = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  if (value == null) return identity9;
+  if (!svgNode) svgNode = document.createElementNS("http://www.w3.org/2000/svg", "g");
   svgNode.setAttribute("transform", value);
-  if (!(value = svgNode.transform.baseVal.consolidate()))
-    return identity9;
+  if (!(value = svgNode.transform.baseVal.consolidate())) return identity9;
   value = value.matrix;
   return decompose_default(value.a, value.b, value.c, value.d, value.e, value.f);
 }
@@ -5548,10 +5424,8 @@ function interpolateTransform(parse2, pxComma, pxParen, degParen) {
   }
   function rotate(a, b, s, q) {
     if (a !== b) {
-      if (a - b > 180)
-        b += 360;
-      else if (b - a > 180)
-        a += 360;
+      if (a - b > 180) b += 360;
+      else if (b - a > 180) a += 360;
       q.push({ i: s.push(pop2(s) + "rotate(", null, degParen) - 2, x: number_default(a, b) });
     } else if (b) {
       s.push(pop2(s) + "rotate(" + b + degParen);
@@ -5582,8 +5456,7 @@ function interpolateTransform(parse2, pxComma, pxParen, degParen) {
     a = b = null;
     return function(t2) {
       var i = -1, n = q.length, o;
-      while (++i < n)
-        s[(o = q[i]).i] = o.x(t2);
+      while (++i < n) s[(o = q[i]).i] = o.x(t2);
       return s.join("");
     };
   };
@@ -5617,14 +5490,11 @@ function Timer() {
 Timer.prototype = timer.prototype = {
   constructor: Timer,
   restart: function(callback, delay, time2) {
-    if (typeof callback !== "function")
-      throw new TypeError("callback is not a function");
+    if (typeof callback !== "function") throw new TypeError("callback is not a function");
     time2 = (time2 == null ? now() : +time2) + (delay == null ? 0 : +delay);
     if (!this._next && taskTail !== this) {
-      if (taskTail)
-        taskTail._next = this;
-      else
-        taskHead = this;
+      if (taskTail) taskTail._next = this;
+      else taskHead = this;
       taskTail = this;
     }
     this._call = callback;
@@ -5649,8 +5519,7 @@ function timerFlush() {
   ++frame;
   var t2 = taskHead, e;
   while (t2) {
-    if ((e = clockNow - t2._time) >= 0)
-      t2._call.call(void 0, e);
+    if ((e = clockNow - t2._time) >= 0) t2._call.call(void 0, e);
     t2 = t2._next;
   }
   --frame;
@@ -5668,15 +5537,13 @@ function wake() {
 }
 function poke2() {
   var now3 = clock.now(), delay = now3 - clockLast;
-  if (delay > pokeDelay)
-    clockSkew -= delay, clockLast = now3;
+  if (delay > pokeDelay) clockSkew -= delay, clockLast = now3;
 }
 function nap() {
   var t0, t1 = taskHead, t2, time2 = Infinity;
   while (t1) {
     if (t1._call) {
-      if (time2 > t1._time)
-        time2 = t1._time;
+      if (time2 > t1._time) time2 = t1._time;
       t0 = t1, t1 = t1._next;
     } else {
       t2 = t1._next, t1._next = null;
@@ -5687,19 +5554,14 @@ function nap() {
   sleep(time2);
 }
 function sleep(time2) {
-  if (frame)
-    return;
-  if (timeout)
-    timeout = clearTimeout(timeout);
+  if (frame) return;
+  if (timeout) timeout = clearTimeout(timeout);
   var delay = time2 - clockNow;
   if (delay > 24) {
-    if (time2 < Infinity)
-      timeout = setTimeout(wake, time2 - clock.now() - clockSkew);
-    if (interval)
-      interval = clearInterval(interval);
+    if (time2 < Infinity) timeout = setTimeout(wake, time2 - clock.now() - clockSkew);
+    if (interval) interval = clearInterval(interval);
   } else {
-    if (!interval)
-      clockLast = clock.now(), interval = setInterval(poke2, pokeDelay);
+    if (!interval) clockLast = clock.now(), interval = setInterval(poke2, pokeDelay);
     frame = 1, setFrame(wake);
   }
 }
@@ -5727,14 +5589,14 @@ var ENDING = 5;
 var ENDED = 6;
 function schedule_default(node, name3, id3, index3, group2, timing) {
   var schedules = node.__transition;
-  if (!schedules)
-    node.__transition = {};
-  else if (id3 in schedules)
-    return;
+  if (!schedules) node.__transition = {};
+  else if (id3 in schedules) return;
   create(node, id3, {
     name: name3,
     index: index3,
+    // For context during callback.
     group: group2,
+    // For context during callback.
     on: emptyOn,
     tween: emptyTween,
     time: timing.time,
@@ -5747,20 +5609,17 @@ function schedule_default(node, name3, id3, index3, group2, timing) {
 }
 function init2(node, id3) {
   var schedule = get2(node, id3);
-  if (schedule.state > CREATED)
-    throw new Error("too late; already scheduled");
+  if (schedule.state > CREATED) throw new Error("too late; already scheduled");
   return schedule;
 }
 function set2(node, id3) {
   var schedule = get2(node, id3);
-  if (schedule.state > STARTED)
-    throw new Error("too late; already running");
+  if (schedule.state > STARTED) throw new Error("too late; already running");
   return schedule;
 }
 function get2(node, id3) {
   var schedule = node.__transition;
-  if (!schedule || !(schedule = schedule[id3]))
-    throw new Error("transition not found");
+  if (!schedule || !(schedule = schedule[id3])) throw new Error("transition not found");
   return schedule;
 }
 function create(node, id3, self) {
@@ -5770,19 +5629,15 @@ function create(node, id3, self) {
   function schedule(elapsed) {
     self.state = SCHEDULED;
     self.timer.restart(start2, self.delay, self.time);
-    if (self.delay <= elapsed)
-      start2(elapsed - self.delay);
+    if (self.delay <= elapsed) start2(elapsed - self.delay);
   }
   function start2(elapsed) {
     var i, j, n, o;
-    if (self.state !== SCHEDULED)
-      return stop();
+    if (self.state !== SCHEDULED) return stop();
     for (i in schedules) {
       o = schedules[i];
-      if (o.name !== self.name)
-        continue;
-      if (o.state === STARTED)
-        return timeout_default(start2);
+      if (o.name !== self.name) continue;
+      if (o.state === STARTED) return timeout_default(start2);
       if (o.state === RUNNING) {
         o.state = ENDED;
         o.timer.stop();
@@ -5804,8 +5659,7 @@ function create(node, id3, self) {
     });
     self.state = STARTING;
     self.on.call("start", node, node.__data__, self.index, self.group);
-    if (self.state !== STARTING)
-      return;
+    if (self.state !== STARTING) return;
     self.state = STARTED;
     tween = new Array(n = self.tween.length);
     for (i = 0, j = -1; i < n; ++i) {
@@ -5829,8 +5683,7 @@ function create(node, id3, self) {
     self.state = ENDED;
     self.timer.stop();
     delete schedules[id3];
-    for (var i in schedules)
-      return;
+    for (var i in schedules) return;
     delete node.__transition;
   }
 }
@@ -5838,8 +5691,7 @@ function create(node, id3, self) {
 // node_modules/d3-transition/src/interrupt.js
 function interrupt_default(node, name3) {
   var schedules = node.__transition, schedule, active, empty4 = true, i;
-  if (!schedules)
-    return;
+  if (!schedules) return;
   name3 = name3 == null ? null : name3 + "";
   for (i in schedules) {
     if ((schedule = schedules[i]).name !== name3) {
@@ -5852,8 +5704,7 @@ function interrupt_default(node, name3) {
     schedule.on.call(active ? "interrupt" : "cancel", node, node.__data__, schedule.index, schedule.group);
     delete schedules[i];
   }
-  if (empty4)
-    delete node.__transition;
+  if (empty4) delete node.__transition;
 }
 
 // node_modules/d3-transition/src/selection/interrupt.js
@@ -5883,8 +5734,7 @@ function tweenRemove(id3, name3) {
 }
 function tweenFunction(id3, name3, value) {
   var tween0, tween1;
-  if (typeof value !== "function")
-    throw new Error();
+  if (typeof value !== "function") throw new Error();
   return function() {
     var schedule = set2(this, id3), tween = schedule.tween;
     if (tween !== tween0) {
@@ -5895,8 +5745,7 @@ function tweenFunction(id3, name3, value) {
           break;
         }
       }
-      if (i === n)
-        tween1.push(t2);
+      if (i === n) tween1.push(t2);
     }
     schedule.tween = tween1;
   };
@@ -5961,8 +5810,7 @@ function attrFunction2(name3, interpolate, value) {
   var string00, string10, interpolate0;
   return function() {
     var string0, value1 = value(this), string1;
-    if (value1 == null)
-      return void this.removeAttribute(name3);
+    if (value1 == null) return void this.removeAttribute(name3);
     string0 = this.getAttribute(name3);
     string1 = value1 + "";
     return string0 === string1 ? null : string0 === string00 && string1 === string10 ? interpolate0 : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
@@ -5972,8 +5820,7 @@ function attrFunctionNS2(fullname, interpolate, value) {
   var string00, string10, interpolate0;
   return function() {
     var string0, value1 = value(this), string1;
-    if (value1 == null)
-      return void this.removeAttributeNS(fullname.space, fullname.local);
+    if (value1 == null) return void this.removeAttributeNS(fullname.space, fullname.local);
     string0 = this.getAttributeNS(fullname.space, fullname.local);
     string1 = value1 + "";
     return string0 === string1 ? null : string0 === string00 && string1 === string10 ? interpolate0 : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
@@ -5999,8 +5846,7 @@ function attrTweenNS(fullname, value) {
   var t0, i0;
   function tween() {
     var i = value.apply(this, arguments);
-    if (i !== i0)
-      t0 = (i0 = i) && attrInterpolateNS(fullname, i);
+    if (i !== i0) t0 = (i0 = i) && attrInterpolateNS(fullname, i);
     return t0;
   }
   tween._value = value;
@@ -6010,8 +5856,7 @@ function attrTween(name3, value) {
   var t0, i0;
   function tween() {
     var i = value.apply(this, arguments);
-    if (i !== i0)
-      t0 = (i0 = i) && attrInterpolate(name3, i);
+    if (i !== i0) t0 = (i0 = i) && attrInterpolate(name3, i);
     return t0;
   }
   tween._value = value;
@@ -6019,12 +5864,9 @@ function attrTween(name3, value) {
 }
 function attrTween_default(name3, value) {
   var key = "attr." + name3;
-  if (arguments.length < 2)
-    return (key = this.tween(key)) && key._value;
-  if (value == null)
-    return this.tween(key, null);
-  if (typeof value !== "function")
-    throw new Error();
+  if (arguments.length < 2) return (key = this.tween(key)) && key._value;
+  if (value == null) return this.tween(key, null);
+  if (typeof value !== "function") throw new Error();
   var fullname = namespace_default(name3);
   return this.tween(key, (fullname.local ? attrTweenNS : attrTween)(fullname, value));
 }
@@ -6063,8 +5905,7 @@ function duration_default(value) {
 
 // node_modules/d3-transition/src/transition/ease.js
 function easeConstant(id3, value) {
-  if (typeof value !== "function")
-    throw new Error();
+  if (typeof value !== "function") throw new Error();
   return function() {
     set2(this, id3).ease = value;
   };
@@ -6078,21 +5919,18 @@ function ease_default(value) {
 function easeVarying(id3, value) {
   return function() {
     var v = value.apply(this, arguments);
-    if (typeof v !== "function")
-      throw new Error();
+    if (typeof v !== "function") throw new Error();
     set2(this, id3).ease = v;
   };
 }
 function easeVarying_default(value) {
-  if (typeof value !== "function")
-    throw new Error();
+  if (typeof value !== "function") throw new Error();
   return this.each(easeVarying(this._id, value));
 }
 
 // node_modules/d3-transition/src/transition/filter.js
 function filter_default2(match4) {
-  if (typeof match4 !== "function")
-    match4 = matcher_default(match4);
+  if (typeof match4 !== "function") match4 = matcher_default(match4);
   for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
     for (var group2 = groups[j], n = group2.length, subgroup = subgroups[j] = [], node, i = 0; i < n; ++i) {
       if ((node = group2[i]) && match4.call(node, node.__data__, i, group2)) {
@@ -6105,8 +5943,7 @@ function filter_default2(match4) {
 
 // node_modules/d3-transition/src/transition/merge.js
 function merge_default2(transition2) {
-  if (transition2._id !== this._id)
-    throw new Error();
+  if (transition2._id !== this._id) throw new Error();
   for (var groups0 = this._groups, groups1 = transition2._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
     for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {
       if (node = group0[i] || group1[i]) {
@@ -6124,8 +5961,7 @@ function merge_default2(transition2) {
 function start(name3) {
   return (name3 + "").trim().split(/^|\s+/).every(function(t2) {
     var i = t2.indexOf(".");
-    if (i >= 0)
-      t2 = t2.slice(0, i);
+    if (i >= 0) t2 = t2.slice(0, i);
     return !t2 || t2 === "start";
   });
 }
@@ -6133,8 +5969,7 @@ function onFunction(id3, name3, listener) {
   var on0, on1, sit = start(name3) ? init2 : set2;
   return function() {
     var schedule = sit(this, id3), on2 = schedule.on;
-    if (on2 !== on0)
-      (on1 = (on0 = on2).copy()).on(name3, listener);
+    if (on2 !== on0) (on1 = (on0 = on2).copy()).on(name3, listener);
     schedule.on = on1;
   };
 }
@@ -6147,11 +5982,8 @@ function on_default2(name3, listener) {
 function removeFunction(id3) {
   return function() {
     var parent = this.parentNode;
-    for (var i in this.__transition)
-      if (+i !== id3)
-        return;
-    if (parent)
-      parent.removeChild(this);
+    for (var i in this.__transition) if (+i !== id3) return;
+    if (parent) parent.removeChild(this);
   };
 }
 function remove_default2() {
@@ -6161,13 +5993,11 @@ function remove_default2() {
 // node_modules/d3-transition/src/transition/select.js
 function select_default3(select2) {
   var name3 = this._name, id3 = this._id;
-  if (typeof select2 !== "function")
-    select2 = selector_default(select2);
+  if (typeof select2 !== "function") select2 = selector_default(select2);
   for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
     for (var group2 = groups[j], n = group2.length, subgroup = subgroups[j] = new Array(n), node, subnode, i = 0; i < n; ++i) {
       if ((node = group2[i]) && (subnode = select2.call(node, node.__data__, i, group2))) {
-        if ("__data__" in node)
-          subnode.__data__ = node.__data__;
+        if ("__data__" in node) subnode.__data__ = node.__data__;
         subgroup[i] = subnode;
         schedule_default(subgroup[i], name3, id3, i, subgroup, get2(node, id3));
       }
@@ -6179,8 +6009,7 @@ function select_default3(select2) {
 // node_modules/d3-transition/src/transition/selectAll.js
 function selectAll_default2(select2) {
   var name3 = this._name, id3 = this._id;
-  if (typeof select2 !== "function")
-    select2 = selectorAll_default(select2);
+  if (typeof select2 !== "function") select2 = selectorAll_default(select2);
   for (var groups = this._groups, m = groups.length, subgroups = [], parents = [], j = 0; j < m; ++j) {
     for (var group2 = groups[j], n = group2.length, node, i = 0; i < n; ++i) {
       if (node = group2[i]) {
@@ -6227,8 +6056,7 @@ function styleFunction2(name3, interpolate, value) {
   var string00, string10, interpolate0;
   return function() {
     var string0 = styleValue(this, name3), value1 = value(this), string1 = value1 + "";
-    if (value1 == null)
-      string1 = value1 = (this.style.removeProperty(name3), styleValue(this, name3));
+    if (value1 == null) string1 = value1 = (this.style.removeProperty(name3), styleValue(this, name3));
     return string0 === string1 ? null : string0 === string00 && string1 === string10 ? interpolate0 : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
   };
 }
@@ -6236,8 +6064,7 @@ function styleMaybeRemove(id3, name3) {
   var on0, on1, listener0, key = "style." + name3, event = "end." + key, remove4;
   return function() {
     var schedule = set2(this, id3), on2 = schedule.on, listener = schedule.value[key] == null ? remove4 || (remove4 = styleRemove2(name3)) : void 0;
-    if (on2 !== on0 || listener0 !== listener)
-      (on1 = (on0 = on2).copy()).on(event, listener0 = listener);
+    if (on2 !== on0 || listener0 !== listener) (on1 = (on0 = on2).copy()).on(event, listener0 = listener);
     schedule.on = on1;
   };
 }
@@ -6256,8 +6083,7 @@ function styleTween(name3, value, priority) {
   var t2, i0;
   function tween() {
     var i = value.apply(this, arguments);
-    if (i !== i0)
-      t2 = (i0 = i) && styleInterpolate(name3, i, priority);
+    if (i !== i0) t2 = (i0 = i) && styleInterpolate(name3, i, priority);
     return t2;
   }
   tween._value = value;
@@ -6265,12 +6091,9 @@ function styleTween(name3, value, priority) {
 }
 function styleTween_default(name3, value, priority) {
   var key = "style." + (name3 += "");
-  if (arguments.length < 2)
-    return (key = this.tween(key)) && key._value;
-  if (value == null)
-    return this.tween(key, null);
-  if (typeof value !== "function")
-    throw new Error();
+  if (arguments.length < 2) return (key = this.tween(key)) && key._value;
+  if (value == null) return this.tween(key, null);
+  if (typeof value !== "function") throw new Error();
   return this.tween(key, styleTween(name3, value, priority == null ? "" : priority));
 }
 
@@ -6300,8 +6123,7 @@ function textTween(value) {
   var t0, i0;
   function tween() {
     var i = value.apply(this, arguments);
-    if (i !== i0)
-      t0 = (i0 = i) && textInterpolate(i);
+    if (i !== i0) t0 = (i0 = i) && textInterpolate(i);
     return t0;
   }
   tween._value = value;
@@ -6309,12 +6131,9 @@ function textTween(value) {
 }
 function textTween_default(value) {
   var key = "text";
-  if (arguments.length < 1)
-    return (key = this.tween(key)) && key._value;
-  if (value == null)
-    return this.tween(key, null);
-  if (typeof value !== "function")
-    throw new Error();
+  if (arguments.length < 1) return (key = this.tween(key)) && key._value;
+  if (value == null) return this.tween(key, null);
+  if (typeof value !== "function") throw new Error();
   return this.tween(key, textTween(value));
 }
 
@@ -6342,8 +6161,7 @@ function end_default() {
   var on0, on1, that = this, id3 = that._id, size4 = that.size();
   return new Promise(function(resolve, reject) {
     var cancel = { value: reject }, end = { value: function() {
-      if (--size4 === 0)
-        resolve();
+      if (--size4 === 0) resolve();
     } };
     that.each(function() {
       var schedule = set2(this, id3), on2 = schedule.on;
@@ -6355,8 +6173,7 @@ function end_default() {
       }
       schedule.on = on1;
     });
-    if (size4 === 0)
-      resolve();
+    if (size4 === 0) resolve();
   });
 }
 
@@ -6416,6 +6233,7 @@ function cubicInOut(t2) {
 // node_modules/d3-transition/src/selection/transition.js
 var defaultTiming = {
   time: null,
+  // Set on use.
   delay: 0,
   duration: 250,
   ease: cubicInOut
@@ -6505,10 +6323,8 @@ function append(strings) {
 }
 function appendRound(digits) {
   let d = Math.floor(digits);
-  if (!(d >= 0))
-    throw new Error(`invalid digits: ${digits}`);
-  if (d > 15)
-    return append;
+  if (!(d >= 0)) throw new Error(`invalid digits: ${digits}`);
+  if (d > 15) return append;
   const k = 10 ** d;
   return function(strings) {
     this._ += strings[0];
@@ -6519,7 +6335,8 @@ function appendRound(digits) {
 }
 var Path = class {
   constructor(digits) {
-    this._x0 = this._y0 = this._x1 = this._y1 = null;
+    this._x0 = this._y0 = // start of current subpath
+    this._x1 = this._y1 = null;
     this._ = "";
     this._append = digits == null ? append : appendRound(digits);
   }
@@ -6543,13 +6360,11 @@ var Path = class {
   }
   arcTo(x1, y1, x2, y2, r) {
     x1 = +x1, y1 = +y1, x2 = +x2, y2 = +y2, r = +r;
-    if (r < 0)
-      throw new Error(`negative radius: ${r}`);
+    if (r < 0) throw new Error(`negative radius: ${r}`);
     let x0 = this._x1, y0 = this._y1, x21 = x2 - x1, y21 = y2 - y1, x01 = x0 - x1, y01 = y0 - y1, l01_2 = x01 * x01 + y01 * y01;
     if (this._x1 === null) {
       this._append`M${this._x1 = x1},${this._y1 = y1}`;
-    } else if (!(l01_2 > epsilon2))
-      ;
+    } else if (!(l01_2 > epsilon2)) ;
     else if (!(Math.abs(y01 * x21 - y21 * x01) > epsilon2) || !r) {
       this._append`L${this._x1 = x1},${this._y1 = y1}`;
     } else {
@@ -6562,18 +6377,15 @@ var Path = class {
   }
   arc(x2, y2, r, a0, a1, ccw) {
     x2 = +x2, y2 = +y2, r = +r, ccw = !!ccw;
-    if (r < 0)
-      throw new Error(`negative radius: ${r}`);
+    if (r < 0) throw new Error(`negative radius: ${r}`);
     let dx = r * Math.cos(a0), dy = r * Math.sin(a0), x0 = x2 + dx, y0 = y2 + dy, cw = 1 ^ ccw, da = ccw ? a0 - a1 : a1 - a0;
     if (this._x1 === null) {
       this._append`M${x0},${y0}`;
     } else if (Math.abs(this._x1 - x0) > epsilon2 || Math.abs(this._y1 - y0) > epsilon2) {
       this._append`L${x0},${y0}`;
     }
-    if (!r)
-      return;
-    if (da < 0)
-      da = da % tau + tau;
+    if (!r) return;
+    if (da < 0) da = da % tau + tau;
     if (da > tauEpsilon) {
       this._append`A${r},${r},0,1,${cw},${x2 - dx},${y2 - dy}A${r},${r},0,1,${cw},${this._x1 = x0},${this._y1 = y0}`;
     } else if (da > epsilon2) {
@@ -6597,8 +6409,7 @@ function formatDecimal_default(x2) {
   return Math.abs(x2 = Math.round(x2)) >= 1e21 ? x2.toLocaleString("en").replace(/,/g, "") : x2.toString(10);
 }
 function formatDecimalParts(x2, p) {
-  if ((i = (x2 = p ? x2.toExponential(p - 1) : x2.toExponential()).indexOf("e")) < 0)
-    return null;
+  if ((i = (x2 = p ? x2.toExponential(p - 1) : x2.toExponential()).indexOf("e")) < 0) return null;
   var i, coefficient = x2.slice(0, i);
   return [
     coefficient.length > 1 ? coefficient[0] + coefficient.slice(2) : coefficient,
@@ -6616,11 +6427,9 @@ function formatGroup_default(grouping, thousands) {
   return function(value, width) {
     var i = value.length, t2 = [], j = 0, g = grouping[0], length6 = 0;
     while (i > 0 && g > 0) {
-      if (length6 + g + 1 > width)
-        g = Math.max(1, width - length6);
+      if (length6 + g + 1 > width) g = Math.max(1, width - length6);
       t2.push(value.substring(i -= g, i + g));
-      if ((length6 += g + 1) > width)
-        break;
+      if ((length6 += g + 1) > width) break;
       g = grouping[j = (j + 1) % grouping.length];
     }
     return t2.reverse().join(thousands);
@@ -6639,8 +6448,7 @@ function formatNumerals_default(numerals) {
 // node_modules/d3-format/src/formatSpecifier.js
 var re = /^(?:(.)?([<>=^]))?([+\-( ])?([$#])?(0)?(\d+)?(,)?(\.\d+)?(~)?([a-z%])?$/i;
 function formatSpecifier(specifier) {
-  if (!(match4 = re.exec(specifier)))
-    throw new Error("invalid format: " + specifier);
+  if (!(match4 = re.exec(specifier))) throw new Error("invalid format: " + specifier);
   var match4;
   return new FormatSpecifier({
     fill: match4[1],
@@ -6674,25 +6482,21 @@ FormatSpecifier.prototype.toString = function() {
 
 // node_modules/d3-format/src/formatTrim.js
 function formatTrim_default(s) {
-  out:
-    for (var n = s.length, i = 1, i0 = -1, i1; i < n; ++i) {
-      switch (s[i]) {
-        case ".":
-          i0 = i1 = i;
-          break;
-        case "0":
-          if (i0 === 0)
-            i0 = i;
-          i1 = i;
-          break;
-        default:
-          if (!+s[i])
-            break out;
-          if (i0 > 0)
-            i0 = 0;
-          break;
-      }
+  out: for (var n = s.length, i = 1, i0 = -1, i1; i < n; ++i) {
+    switch (s[i]) {
+      case ".":
+        i0 = i1 = i;
+        break;
+      case "0":
+        if (i0 === 0) i0 = i;
+        i1 = i;
+        break;
+      default:
+        if (!+s[i]) break out;
+        if (i0 > 0) i0 = 0;
+        break;
     }
+  }
   return i0 > 0 ? s.slice(0, i0) + s.slice(i1 + 1) : s;
 }
 
@@ -6700,8 +6504,7 @@ function formatTrim_default(s) {
 var prefixExponent;
 function formatPrefixAuto_default(x2, p) {
   var d = formatDecimalParts(x2, p);
-  if (!d)
-    return x2 + "";
+  if (!d) return x2 + "";
   var coefficient = d[0], exponent = d[1], i = exponent - (prefixExponent = Math.max(-8, Math.min(8, Math.floor(exponent / 3))) * 3) + 1, n = coefficient.length;
   return i === n ? coefficient : i > n ? coefficient + new Array(i - n + 1).join("0") : i > 0 ? coefficient.slice(0, i) + "." + coefficient.slice(i) : "0." + new Array(1 - i).join("0") + formatDecimalParts(x2, Math.max(0, p + i - 1))[0];
 }
@@ -6709,8 +6512,7 @@ function formatPrefixAuto_default(x2, p) {
 // node_modules/d3-format/src/formatRounded.js
 function formatRounded_default(x2, p) {
   var d = formatDecimalParts(x2, p);
-  if (!d)
-    return x2 + "";
+  if (!d) return x2 + "";
   var coefficient = d[0], exponent = d[1];
   return exponent < 0 ? "0." + new Array(-exponent).join("0") + coefficient : coefficient.length > exponent + 1 ? coefficient.slice(0, exponent + 1) + "." + coefficient.slice(exponent + 1) : coefficient + new Array(exponent - coefficient.length + 2).join("0");
 }
@@ -6745,12 +6547,9 @@ function locale_default(locale2) {
   function newFormat(specifier) {
     specifier = formatSpecifier(specifier);
     var fill = specifier.fill, align = specifier.align, sign2 = specifier.sign, symbol = specifier.symbol, zero3 = specifier.zero, width = specifier.width, comma2 = specifier.comma, precision = specifier.precision, trim2 = specifier.trim, type2 = specifier.type;
-    if (type2 === "n")
-      comma2 = true, type2 = "g";
-    else if (!formatTypes_default[type2])
-      precision === void 0 && (precision = 12), trim2 = true, type2 = "g";
-    if (zero3 || fill === "0" && align === "=")
-      zero3 = true, fill = "0", align = "=";
+    if (type2 === "n") comma2 = true, type2 = "g";
+    else if (!formatTypes_default[type2]) precision === void 0 && (precision = 12), trim2 = true, type2 = "g";
+    if (zero3 || fill === "0" && align === "=") zero3 = true, fill = "0", align = "=";
     var prefix = symbol === "$" ? currencyPrefix : symbol === "#" && /[boxX]/.test(type2) ? "0" + type2.toLowerCase() : "", suffix = symbol === "$" ? currencySuffix : /[%p]/.test(type2) ? percent : "";
     var formatType = formatTypes_default[type2], maybeSuffix = /[defgprs%]/.test(type2);
     precision = precision === void 0 ? 6 : /[gprs]/.test(type2) ? Math.max(1, Math.min(21, precision)) : Math.max(0, Math.min(20, precision));
@@ -6763,10 +6562,8 @@ function locale_default(locale2) {
         value = +value;
         var valueNegative = value < 0 || 1 / value < 0;
         value = isNaN(value) ? nan2 : formatType(Math.abs(value), precision);
-        if (trim2)
-          value = formatTrim_default(value);
-        if (valueNegative && +value === 0 && sign2 !== "+")
-          valueNegative = false;
+        if (trim2) value = formatTrim_default(value);
+        if (valueNegative && +value === 0 && sign2 !== "+") valueNegative = false;
         valuePrefix = (valueNegative ? sign2 === "(" ? sign2 : minus : sign2 === "-" || sign2 === "(" ? "" : sign2) + valuePrefix;
         valueSuffix = (type2 === "s" ? prefixes[8 + prefixExponent / 3] : "") + valueSuffix + (valueNegative && sign2 === "(" ? ")" : "");
         if (maybeSuffix) {
@@ -6780,11 +6577,9 @@ function locale_default(locale2) {
           }
         }
       }
-      if (comma2 && !zero3)
-        value = group2(value, Infinity);
+      if (comma2 && !zero3) value = group2(value, Infinity);
       var length6 = valuePrefix.length + value.length + valueSuffix.length, padding = length6 < width ? new Array(width - length6 + 1).join(fill) : "";
-      if (comma2 && zero3)
-        value = group2(padding + value, padding.length ? width - valueSuffix.length : Infinity), padding = "";
+      if (comma2 && zero3) value = group2(padding + value, padding.length ? width - valueSuffix.length : Infinity), padding = "";
       switch (align) {
         case "<":
           value = valuePrefix + value + valueSuffix + padding;
@@ -6872,19 +6667,16 @@ function ordinal() {
   function scale(d) {
     let i = index3.get(d);
     if (i === void 0) {
-      if (unknown !== implicit)
-        return unknown;
+      if (unknown !== implicit) return unknown;
       index3.set(d, i = domain.push(d) - 1);
     }
     return range5[i % range5.length];
   }
   scale.domain = function(_) {
-    if (!arguments.length)
-      return domain.slice();
+    if (!arguments.length) return domain.slice();
     domain = [], index3 = new InternMap();
     for (const value of _) {
-      if (index3.has(value))
-        continue;
+      if (index3.has(value)) continue;
       index3.set(value, domain.push(value) - 1);
     }
     return scale;
@@ -6909,12 +6701,10 @@ function band() {
   function rescale() {
     var n = domain().length, reverse3 = r1 < r0, start2 = reverse3 ? r1 : r0, stop = reverse3 ? r0 : r1;
     step = (stop - start2) / Math.max(1, n - paddingInner + paddingOuter * 2);
-    if (round2)
-      step = Math.floor(step);
+    if (round2) step = Math.floor(step);
     start2 += (stop - start2 - step * (n - paddingInner)) * align;
     bandwidth2 = step * (1 - paddingInner);
-    if (round2)
-      start2 = Math.round(start2), bandwidth2 = Math.round(bandwidth2);
+    if (round2) start2 = Math.round(start2), bandwidth2 = Math.round(bandwidth2);
     var values2 = range3(n).map(function(i) {
       return start2 + step * i;
     });
@@ -6980,18 +6770,15 @@ function normalize(a, b) {
 }
 function clamper(a, b) {
   var t2;
-  if (a > b)
-    t2 = a, a = b, b = t2;
+  if (a > b) t2 = a, a = b, b = t2;
   return function(x2) {
     return Math.max(a, Math.min(b, x2));
   };
 }
 function bimap(domain, range5, interpolate) {
   var d0 = domain[0], d1 = domain[1], r0 = range5[0], r1 = range5[1];
-  if (d1 < d0)
-    d0 = normalize(d1, d0), r0 = interpolate(r1, r0);
-  else
-    d0 = normalize(d0, d1), r0 = interpolate(r0, r1);
+  if (d1 < d0) d0 = normalize(d1, d0), r0 = interpolate(r1, r0);
+  else d0 = normalize(d0, d1), r0 = interpolate(r0, r1);
   return function(x2) {
     return r0(d0(x2));
   };
@@ -7018,8 +6805,7 @@ function transformer() {
   var domain = unit, range5 = unit, interpolate = value_default, transform2, untransform, unknown, clamp3 = identity10, piecewise, output, input;
   function rescale() {
     var n = Math.min(domain.length, range5.length);
-    if (clamp3 !== identity10)
-      clamp3 = clamper(domain[0], domain[n - 1]);
+    if (clamp3 !== identity10) clamp3 = clamper(domain[0], domain[n - 1]);
     piecewise = n > 2 ? polymap : bimap;
     output = input = null;
     return scale;
@@ -7064,8 +6850,7 @@ function tickFormat(start2, stop, count, specifier) {
   switch (specifier.type) {
     case "s": {
       var value = Math.max(Math.abs(start2), Math.abs(stop));
-      if (specifier.precision == null && !isNaN(precision = precisionPrefix_default(step, value)))
-        specifier.precision = precision;
+      if (specifier.precision == null && !isNaN(precision = precisionPrefix_default(step, value))) specifier.precision = precision;
       return formatPrefix(specifier, value);
     }
     case "":
@@ -7073,14 +6858,12 @@ function tickFormat(start2, stop, count, specifier) {
     case "g":
     case "p":
     case "r": {
-      if (specifier.precision == null && !isNaN(precision = precisionRound_default(step, Math.max(Math.abs(start2), Math.abs(stop)))))
-        specifier.precision = precision - (specifier.type === "e");
+      if (specifier.precision == null && !isNaN(precision = precisionRound_default(step, Math.max(Math.abs(start2), Math.abs(stop))))) specifier.precision = precision - (specifier.type === "e");
       break;
     }
     case "f":
     case "%": {
-      if (specifier.precision == null && !isNaN(precision = precisionFixed_default(step)))
-        specifier.precision = precision - (specifier.type === "%") * 2;
+      if (specifier.precision == null && !isNaN(precision = precisionFixed_default(step))) specifier.precision = precision - (specifier.type === "%") * 2;
       break;
     }
   }
@@ -7099,8 +6882,7 @@ function linearish(scale) {
     return tickFormat(d[0], d[d.length - 1], count == null ? 10 : count, specifier);
   };
   scale.nice = function(count) {
-    if (count == null)
-      count = 10;
+    if (count == null) count = 10;
     var d = domain();
     var i0 = 0;
     var i1 = d.length - 1;
@@ -7146,8 +6928,7 @@ function linear2() {
 // node_modules/d3-scale-chromatic/src/colors.js
 function colors_default(specifier) {
   var n = specifier.length / 6 | 0, colors = new Array(n), i = 0;
-  while (i < n)
-    colors[i] = "#" + specifier.slice(i * 6, ++i * 6);
+  while (i < n) colors[i] = "#" + specifier.slice(i * 6, ++i * 6);
   return colors;
 }
 
@@ -7168,14 +6949,12 @@ function constant_default4(x2) {
 function withPath(shape) {
   let digits = 3;
   shape.digits = function(_) {
-    if (!arguments.length)
-      return digits;
+    if (!arguments.length) return digits;
     if (_ == null) {
       digits = null;
     } else {
       const d = Math.floor(_);
-      if (!(d >= 0))
-        throw new RangeError(`invalid digits: ${_}`);
+      if (!(d >= 0)) throw new RangeError(`invalid digits: ${_}`);
       digits = d;
     }
     return shape;
@@ -7204,8 +6983,7 @@ Linear.prototype = {
     this._point = 0;
   },
   lineEnd: function() {
-    if (this._line || this._line !== 0 && this._point === 1)
-      this._context.closePath();
+    if (this._line || this._line !== 0 && this._point === 1) this._context.closePath();
     this._line = 1 - this._line;
   },
   point: function(x2, y2) {
@@ -7217,6 +6995,7 @@ Linear.prototype = {
         break;
       case 1:
         this._point = 2;
+      // falls through
       default:
         this._context.lineTo(x2, y2);
         break;
@@ -7242,20 +7021,15 @@ function line_default(x2, y2) {
   y2 = typeof y2 === "function" ? y2 : y2 === void 0 ? y : constant_default4(y2);
   function line2(data) {
     var i, n = (data = array_default(data)).length, d, defined0 = false, buffer;
-    if (context == null)
-      output = curve(buffer = path2());
+    if (context == null) output = curve(buffer = path2());
     for (i = 0; i <= n; ++i) {
       if (!(i < n && defined2(d = data[i], i, data)) === defined0) {
-        if (defined0 = !defined0)
-          output.lineStart();
-        else
-          output.lineEnd();
+        if (defined0 = !defined0) output.lineStart();
+        else output.lineEnd();
       }
-      if (defined0)
-        output.point(+x2(d, i, data), +y2(d, i, data));
+      if (defined0) output.point(+x2(d, i, data), +y2(d, i, data));
     }
-    if (buffer)
-      return output = null, buffer + "" || null;
+    if (buffer) return output = null, buffer + "" || null;
   }
   line2.x = function(_) {
     return arguments.length ? (x2 = typeof _ === "function" ? _ : constant_default4(+_), line2) : x2;
@@ -7320,42 +7094,79 @@ Transform.prototype = {
 var identity11 = new Transform(1, 0, 0);
 transform.prototype = Transform.prototype;
 function transform(node) {
-  while (!node.__zoom)
-    if (!(node = node.parentNode))
-      return identity11;
+  while (!node.__zoom) if (!(node = node.parentNode)) return identity11;
   return node.__zoom;
 }
 
 // node_modules/@codemirror/state/dist/index.js
-var Text = class {
+var Text = class _Text {
+  /**
+  @internal
+  */
   constructor() {
   }
+  /**
+  Get the line description around the given position.
+  */
   lineAt(pos) {
     if (pos < 0 || pos > this.length)
       throw new RangeError(`Invalid position ${pos} in document of length ${this.length}`);
     return this.lineInner(pos, false, 1, 0);
   }
+  /**
+  Get the description for the given (1-based) line number.
+  */
   line(n) {
     if (n < 1 || n > this.lines)
       throw new RangeError(`Invalid line number ${n} in ${this.lines}-line document`);
     return this.lineInner(n, true, 1, 0);
   }
+  /**
+  Replace a range of the text with the given content.
+  */
   replace(from, to, text2) {
     let parts = [];
-    this.decompose(0, from, parts, 2);
+    this.decompose(
+      0,
+      from,
+      parts,
+      2
+      /* Open.To */
+    );
     if (text2.length)
-      text2.decompose(0, text2.length, parts, 1 | 2);
-    this.decompose(to, this.length, parts, 1);
+      text2.decompose(
+        0,
+        text2.length,
+        parts,
+        1 | 2
+        /* Open.To */
+      );
+    this.decompose(
+      to,
+      this.length,
+      parts,
+      1
+      /* Open.From */
+    );
     return TextNode.from(parts, this.length - (to - from) + text2.length);
   }
+  /**
+  Append another document to this one.
+  */
   append(other) {
     return this.replace(this.length, this.length, other);
   }
+  /**
+  Retrieve the text between the given points.
+  */
   slice(from, to = this.length) {
     let parts = [];
     this.decompose(from, to, parts, 0);
     return TextNode.from(parts, to - from);
   }
+  /**
+  Test whether this text is equal to another instance.
+  */
   eq(other) {
     if (other == this)
       return true;
@@ -7374,12 +7185,28 @@ var Text = class {
         return true;
     }
   }
+  /**
+  Iterate over the text. When `dir` is `-1`, iteration happens
+  from end to start. This will return lines and the breaks between
+  them as separate strings.
+  */
   iter(dir = 1) {
     return new RawTextCursor(this, dir);
   }
+  /**
+  Iterate over a range of the text. When `from` > `to`, the
+  iterator will run in reverse.
+  */
   iterRange(from, to = this.length) {
     return new PartialTextCursor(this, from, to);
   }
+  /**
+  Return a cursor that iterates over the given range of lines,
+  _without_ returning the line breaks between, and yielding empty
+  strings for empty lines.
+  
+  When `from` and `to` are given, they should be 1-based line numbers.
+  */
   iterLines(from, to) {
     let inner;
     if (from == null) {
@@ -7392,23 +7219,33 @@ var Text = class {
     }
     return new LineCursor(inner);
   }
+  /**
+  @internal
+  */
   toString() {
     return this.sliceString(0);
   }
+  /**
+  Convert the document to an array of lines (which can be
+  deserialized again via [`Text.of`](https://codemirror.net/6/docs/ref/#state.Text^of)).
+  */
   toJSON() {
     let lines = [];
     this.flatten(lines);
     return lines;
   }
+  /**
+  Create a `Text` instance for the given array of lines.
+  */
   static of(text2) {
     if (text2.length == 0)
       throw new RangeError("A document must have at least one line");
     if (text2.length == 1 && !text2[0])
-      return Text.empty;
+      return _Text.empty;
     return text2.length <= 32 ? new TextLeaf(text2) : TextNode.from(TextLeaf.split(text2, []));
   }
 };
-var TextLeaf = class extends Text {
+var TextLeaf = class _TextLeaf extends Text {
   constructor(text2, length6 = textLength(text2)) {
     super();
     this.text = text2;
@@ -7430,28 +7267,28 @@ var TextLeaf = class extends Text {
     }
   }
   decompose(from, to, target, open) {
-    let text2 = from <= 0 && to >= this.length ? this : new TextLeaf(sliceText(this.text, from, to), Math.min(to, this.length) - Math.max(0, from));
+    let text2 = from <= 0 && to >= this.length ? this : new _TextLeaf(sliceText(this.text, from, to), Math.min(to, this.length) - Math.max(0, from));
     if (open & 1) {
       let prev = target.pop();
       let joined = appendText(text2.text, prev.text.slice(), 0, text2.length);
       if (joined.length <= 32) {
-        target.push(new TextLeaf(joined, prev.length + text2.length));
+        target.push(new _TextLeaf(joined, prev.length + text2.length));
       } else {
         let mid = joined.length >> 1;
-        target.push(new TextLeaf(joined.slice(0, mid)), new TextLeaf(joined.slice(mid)));
+        target.push(new _TextLeaf(joined.slice(0, mid)), new _TextLeaf(joined.slice(mid)));
       }
     } else {
       target.push(text2);
     }
   }
   replace(from, to, text2) {
-    if (!(text2 instanceof TextLeaf))
+    if (!(text2 instanceof _TextLeaf))
       return super.replace(from, to, text2);
     let lines = appendText(this.text, appendText(text2.text, sliceText(this.text, 0, from)), to);
     let newLen = this.length + text2.length - (to - from);
     if (lines.length <= 32)
-      return new TextLeaf(lines, newLen);
-    return TextNode.from(TextLeaf.split(lines, []), newLen);
+      return new _TextLeaf(lines, newLen);
+    return TextNode.from(_TextLeaf.split(lines, []), newLen);
   }
   sliceString(from, to = this.length, lineSep = "\n") {
     let result = "";
@@ -7478,17 +7315,17 @@ var TextLeaf = class extends Text {
       part.push(line2);
       len += line2.length + 1;
       if (part.length == 32) {
-        target.push(new TextLeaf(part, len));
+        target.push(new _TextLeaf(part, len));
         part = [];
         len = -1;
       }
     }
     if (len > -1)
-      target.push(new TextLeaf(part, len));
+      target.push(new _TextLeaf(part, len));
     return target;
   }
 };
-var TextNode = class extends Text {
+var TextNode = class _TextNode extends Text {
   constructor(children2, length6) {
     super();
     this.children = children2;
@@ -7529,7 +7366,7 @@ var TextNode = class extends Text {
           if (updated.lines < totalLines >> 5 - 1 && updated.lines > totalLines >> 5 + 1) {
             let copy2 = this.children.slice();
             copy2[i] = updated;
-            return new TextNode(copy2, this.length - (to - from) + text2.length);
+            return new _TextNode(copy2, this.length - (to - from) + text2.length);
           }
           return super.replace(pos, end, updated);
         }
@@ -7554,7 +7391,7 @@ var TextNode = class extends Text {
       child.flatten(target);
   }
   scanIdentical(other, dir) {
-    if (!(other instanceof TextNode))
+    if (!(other instanceof _TextNode))
       return 0;
     let length6 = 0;
     let [iA, iB, eA, eB] = dir > 0 ? [0, 0, this.children.length, other.children.length] : [this.children.length - 1, other.children.length - 1, -1, -1];
@@ -7577,11 +7414,15 @@ var TextNode = class extends Text {
         ch.flatten(flat);
       return new TextLeaf(flat, length6);
     }
-    let chunk = Math.max(32, lines >> 5), maxChunk = chunk << 1, minChunk = chunk >> 1;
+    let chunk = Math.max(
+      32,
+      lines >> 5
+      /* Tree.BranchShift */
+    ), maxChunk = chunk << 1, minChunk = chunk >> 1;
     let chunked = [], currentLines = 0, currentLen = -1, currentChunk = [];
     function add(child) {
       let last2;
-      if (child.lines > maxChunk && child instanceof TextNode) {
+      if (child.lines > maxChunk && child instanceof _TextNode) {
         for (let node of child.children)
           add(node);
       } else if (child.lines > minChunk && (currentLines > minChunk || !currentLines)) {
@@ -7602,14 +7443,14 @@ var TextNode = class extends Text {
     function flush() {
       if (currentLines == 0)
         return;
-      chunked.push(currentChunk.length == 1 ? currentChunk[0] : TextNode.from(currentChunk, currentLen));
+      chunked.push(currentChunk.length == 1 ? currentChunk[0] : _TextNode.from(currentChunk, currentLen));
       currentLen = -1;
       currentLines = currentChunk.length = 0;
     }
     for (let child of children2)
       add(child);
     flush();
-    return chunked.length == 1 ? chunked[0] : new TextNode(chunked, length6);
+    return chunked.length == 1 ? chunked[0] : new _TextNode(chunked, length6);
   }
 };
 Text.empty = /* @__PURE__ */ new TextLeaf([""], 0);
@@ -7778,12 +7619,18 @@ if (typeof Symbol != "undefined") {
   };
 }
 var Line = class {
+  /**
+  @internal
+  */
   constructor(from, to, number6, text2) {
     this.from = from;
     this.to = to;
     this.number = number6;
     this.text = text2;
   }
+  /**
+  The length of the line (not including any line break after it).
+  */
   get length() {
     return this.to - this.from;
   }
@@ -7860,23 +7707,37 @@ function codePointSize(code) {
   return code < 65536 ? 1 : 2;
 }
 var DefaultSplit = /\r\n?|\n/;
-var MapMode = /* @__PURE__ */ function(MapMode2) {
+var MapMode = /* @__PURE__ */ (function(MapMode2) {
   MapMode2[MapMode2["Simple"] = 0] = "Simple";
   MapMode2[MapMode2["TrackDel"] = 1] = "TrackDel";
   MapMode2[MapMode2["TrackBefore"] = 2] = "TrackBefore";
   MapMode2[MapMode2["TrackAfter"] = 3] = "TrackAfter";
   return MapMode2;
-}(MapMode || (MapMode = {}));
-var ChangeDesc = class {
+})(MapMode || (MapMode = {}));
+var ChangeDesc = class _ChangeDesc {
+  // Sections are encoded as pairs of integers. The first is the
+  // length in the current document, and the second is -1 for
+  // unaffected sections, and the length of the replacement content
+  // otherwise. So an insertion would be (0, n>0), a deletion (n>0,
+  // 0), and a replacement two positive numbers.
+  /**
+  @internal
+  */
   constructor(sections) {
     this.sections = sections;
   }
+  /**
+  The length of the document before the change.
+  */
   get length() {
     let result = 0;
     for (let i = 0; i < this.sections.length; i += 2)
       result += this.sections[i];
     return result;
   }
+  /**
+  The length of the document after the change.
+  */
   get newLength() {
     let result = 0;
     for (let i = 0; i < this.sections.length; i += 2) {
@@ -7885,9 +7746,17 @@ var ChangeDesc = class {
     }
     return result;
   }
+  /**
+  False when there are actual changes in this set.
+  */
   get empty() {
     return this.sections.length == 0 || this.sections.length == 2 && this.sections[1] < 0;
   }
+  /**
+  Iterate over the unchanged parts left by these changes. `posA`
+  provides the position of the range in the old document, `posB`
+  the new position in the changed document.
+  */
   iterGaps(f) {
     for (let i = 0, posA = 0, posB = 0; i < this.sections.length; ) {
       let len = this.sections[i++], ins = this.sections[i++];
@@ -7900,9 +7769,24 @@ var ChangeDesc = class {
       posA += len;
     }
   }
+  /**
+  Iterate over the ranges changed by these changes. (See
+  [`ChangeSet.iterChanges`](https://codemirror.net/6/docs/ref/#state.ChangeSet.iterChanges) for a
+  variant that also provides you with the inserted text.)
+  `fromA`/`toA` provides the extent of the change in the starting
+  document, `fromB`/`toB` the extent of the replacement in the
+  changed document.
+  
+  When `individual` is true, adjacent changes (which are kept
+  separate for [position mapping](https://codemirror.net/6/docs/ref/#state.ChangeDesc.mapPos)) are
+  reported separately.
+  */
   iterChangedRanges(f, individual = false) {
     iterChanges(this, f, individual);
   }
+  /**
+  Get a description of the inverted form of these changes.
+  */
   get invertedDesc() {
     let sections = [];
     for (let i = 0; i < this.sections.length; ) {
@@ -7912,11 +7796,22 @@ var ChangeDesc = class {
       else
         sections.push(ins, len);
     }
-    return new ChangeDesc(sections);
+    return new _ChangeDesc(sections);
   }
+  /**
+  Compute the combined effect of applying another set of changes
+  after this one. The length of the document after this set should
+  match the length before `other`.
+  */
   composeDesc(other) {
     return this.empty ? other : other.empty ? this : composeSets(this, other);
   }
+  /**
+  Map this description, which should start with the same document
+  as `other`, over another set of changes, so that it can be
+  applied after it. When `before` is true, map as if the changes
+  in `other` happened before the ones in `this`.
+  */
   mapDesc(other, before = false) {
     return other.empty ? this : mapSet(this, other, before);
   }
@@ -7941,6 +7836,11 @@ var ChangeDesc = class {
       throw new RangeError(`Position ${pos} is out of range for changeset of length ${posA}`);
     return posB;
   }
+  /**
+  Check whether these changes touch a given range. When one of the
+  changes entirely covers the range, the string `"cover"` is
+  returned.
+  */
   touchesRange(from, to = from) {
     for (let i = 0, pos = 0; i < this.sections.length && pos <= to; ) {
       let len = this.sections[i++], ins = this.sections[i++], end = pos + len;
@@ -7950,6 +7850,9 @@ var ChangeDesc = class {
     }
     return false;
   }
+  /**
+  @internal
+  */
   toString() {
     let result = "";
     for (let i = 0; i < this.sections.length; ) {
@@ -7958,33 +7861,53 @@ var ChangeDesc = class {
     }
     return result;
   }
+  /**
+  Serialize this change desc to a JSON-representable value.
+  */
   toJSON() {
     return this.sections;
   }
+  /**
+  Create a change desc from its JSON representation (as produced
+  by [`toJSON`](https://codemirror.net/6/docs/ref/#state.ChangeDesc.toJSON).
+  */
   static fromJSON(json) {
     if (!Array.isArray(json) || json.length % 2 || json.some((a) => typeof a != "number"))
       throw new RangeError("Invalid JSON representation of ChangeDesc");
-    return new ChangeDesc(json);
+    return new _ChangeDesc(json);
   }
+  /**
+  @internal
+  */
   static create(sections) {
-    return new ChangeDesc(sections);
+    return new _ChangeDesc(sections);
   }
 };
-var ChangeSet = class extends ChangeDesc {
+var ChangeSet = class _ChangeSet extends ChangeDesc {
   constructor(sections, inserted) {
     super(sections);
     this.inserted = inserted;
   }
-  apply(doc2) {
-    if (this.length != doc2.length)
+  /**
+  Apply the changes to a document, returning the modified
+  document.
+  */
+  apply(doc3) {
+    if (this.length != doc3.length)
       throw new RangeError("Applying change set to a document with the wrong length");
-    iterChanges(this, (fromA, toA, fromB, _toB, text2) => doc2 = doc2.replace(fromB, fromB + (toA - fromA), text2), false);
-    return doc2;
+    iterChanges(this, (fromA, toA, fromB, _toB, text2) => doc3 = doc3.replace(fromB, fromB + (toA - fromA), text2), false);
+    return doc3;
   }
   mapDesc(other, before = false) {
     return mapSet(this, other, before, true);
   }
-  invert(doc2) {
+  /**
+  Given the document as it existed _before_ the changes, return a
+  change set that represents the inverse of this set, which could
+  be used to go from the document created by the changes back to
+  the document as it existed before the changes.
+  */
+  invert(doc3) {
     let sections = this.sections.slice(), inserted = [];
     for (let i = 0, pos = 0; i < sections.length; i += 2) {
       let len = sections[i], ins = sections[i + 1];
@@ -7994,58 +7917,95 @@ var ChangeSet = class extends ChangeDesc {
         let index3 = i >> 1;
         while (inserted.length < index3)
           inserted.push(Text.empty);
-        inserted.push(len ? doc2.slice(pos, pos + len) : Text.empty);
+        inserted.push(len ? doc3.slice(pos, pos + len) : Text.empty);
       }
       pos += len;
     }
-    return new ChangeSet(sections, inserted);
+    return new _ChangeSet(sections, inserted);
   }
+  /**
+  Combine two subsequent change sets into a single set. `other`
+  must start in the document produced by `this`. If `this` goes
+  `docA` → `docB` and `other` represents `docB` → `docC`, the
+  returned value will represent the change `docA` → `docC`.
+  */
   compose(other) {
     return this.empty ? other : other.empty ? this : composeSets(this, other, true);
   }
+  /**
+  Given another change set starting in the same document, maps this
+  change set over the other, producing a new change set that can be
+  applied to the document produced by applying `other`. When
+  `before` is `true`, order changes as if `this` comes before
+  `other`, otherwise (the default) treat `other` as coming first.
+  
+  Given two changes `A` and `B`, `A.compose(B.map(A))` and
+  `B.compose(A.map(B, true))` will produce the same document. This
+  provides a basic form of [operational
+  transformation](https://en.wikipedia.org/wiki/Operational_transformation),
+  and can be used for collaborative editing.
+  */
   map(other, before = false) {
     return other.empty ? this : mapSet(this, other, before, true);
   }
+  /**
+  Iterate over the changed ranges in the document, calling `f` for
+  each, with the range in the original document (`fromA`-`toA`)
+  and the range that replaces it in the new document
+  (`fromB`-`toB`).
+  
+  When `individual` is true, adjacent changes are reported
+  separately.
+  */
   iterChanges(f, individual = false) {
     iterChanges(this, f, individual);
   }
+  /**
+  Get a [change description](https://codemirror.net/6/docs/ref/#state.ChangeDesc) for this change
+  set.
+  */
   get desc() {
     return ChangeDesc.create(this.sections);
   }
+  /**
+  @internal
+  */
   filter(ranges) {
     let resultSections = [], resultInserted = [], filteredSections = [];
     let iter = new SectionIter(this);
-    done:
-      for (let i = 0, pos = 0; ; ) {
-        let next = i == ranges.length ? 1e9 : ranges[i++];
-        while (pos < next || pos == next && iter.len == 0) {
-          if (iter.done)
-            break done;
-          let len = Math.min(iter.len, next - pos);
-          addSection(filteredSections, len, -1);
-          let ins = iter.ins == -1 ? -1 : iter.off == 0 ? iter.ins : 0;
-          addSection(resultSections, len, ins);
-          if (ins > 0)
-            addInsert(resultInserted, resultSections, iter.text);
-          iter.forward(len);
-          pos += len;
-        }
-        let end = ranges[i++];
-        while (pos < end) {
-          if (iter.done)
-            break done;
-          let len = Math.min(iter.len, end - pos);
-          addSection(resultSections, len, -1);
-          addSection(filteredSections, len, iter.ins == -1 ? -1 : iter.off == 0 ? iter.ins : 0);
-          iter.forward(len);
-          pos += len;
-        }
+    done: for (let i = 0, pos = 0; ; ) {
+      let next = i == ranges.length ? 1e9 : ranges[i++];
+      while (pos < next || pos == next && iter.len == 0) {
+        if (iter.done)
+          break done;
+        let len = Math.min(iter.len, next - pos);
+        addSection(filteredSections, len, -1);
+        let ins = iter.ins == -1 ? -1 : iter.off == 0 ? iter.ins : 0;
+        addSection(resultSections, len, ins);
+        if (ins > 0)
+          addInsert(resultInserted, resultSections, iter.text);
+        iter.forward(len);
+        pos += len;
       }
+      let end = ranges[i++];
+      while (pos < end) {
+        if (iter.done)
+          break done;
+        let len = Math.min(iter.len, end - pos);
+        addSection(resultSections, len, -1);
+        addSection(filteredSections, len, iter.ins == -1 ? -1 : iter.off == 0 ? iter.ins : 0);
+        iter.forward(len);
+        pos += len;
+      }
+    }
     return {
-      changes: new ChangeSet(resultSections, resultInserted),
+      changes: new _ChangeSet(resultSections, resultInserted),
       filtered: ChangeDesc.create(filteredSections)
     };
   }
+  /**
+  Serialize this change set to a JSON-representable value.
+  */
   toJSON() {
     let parts = [];
     for (let i = 0; i < this.sections.length; i += 2) {
@@ -8059,6 +8019,10 @@ var ChangeSet = class extends ChangeDesc {
     }
     return parts;
   }
+  /**
+  Create a change set for the given changes, for a document of the
+  given length, using `lineSep` as line separator.
+  */
   static of(changes, length6, lineSep) {
     let sections = [], inserted = [], pos = 0;
     let total = null;
@@ -8067,7 +8031,7 @@ var ChangeSet = class extends ChangeDesc {
         return;
       if (pos < length6)
         addSection(sections, length6 - pos, -1);
-      let set3 = new ChangeSet(sections, inserted);
+      let set3 = new _ChangeSet(sections, inserted);
       total = total ? total.compose(set3.map(total)) : set3;
       sections = [];
       inserted = [];
@@ -8077,7 +8041,7 @@ var ChangeSet = class extends ChangeDesc {
       if (Array.isArray(spec)) {
         for (let sub of spec)
           process(sub);
-      } else if (spec instanceof ChangeSet) {
+      } else if (spec instanceof _ChangeSet) {
         if (spec.length != length6)
           throw new RangeError(`Mismatched change set length (got ${spec.length}, expected ${length6})`);
         flush();
@@ -8103,9 +8067,16 @@ var ChangeSet = class extends ChangeDesc {
     flush(!total);
     return total;
   }
+  /**
+  Create an empty changeset of the given length.
+  */
   static empty(length6) {
-    return new ChangeSet(length6 ? [length6, -1] : [], []);
+    return new _ChangeSet(length6 ? [length6, -1] : [], []);
   }
+  /**
+  Create a changeset from its JSON representation (as produced by
+  [`toJSON`](https://codemirror.net/6/docs/ref/#state.ChangeSet.toJSON).
+  */
   static fromJSON(json) {
     if (!Array.isArray(json))
       throw new RangeError("Invalid JSON representation of ChangeSet");
@@ -8125,10 +8096,13 @@ var ChangeSet = class extends ChangeDesc {
         sections.push(part[0], inserted[i].length);
       }
     }
-    return new ChangeSet(sections, inserted);
+    return new _ChangeSet(sections, inserted);
   }
+  /**
+  @internal
+  */
   static createSet(sections, inserted) {
-    return new ChangeSet(sections, inserted);
+    return new _ChangeSet(sections, inserted);
   }
 };
 function addSection(sections, len, ins, forceJoin = false) {
@@ -8322,32 +8296,63 @@ var SectionIter = class {
     }
   }
 };
-var SelectionRange = class {
+var SelectionRange = class _SelectionRange {
   constructor(from, to, flags) {
     this.from = from;
     this.to = to;
     this.flags = flags;
   }
+  /**
+  The anchor of the range—the side that doesn't move when you
+  extend it.
+  */
   get anchor() {
     return this.flags & 16 ? this.to : this.from;
   }
+  /**
+  The head of the range, which is moved when the range is
+  [extended](https://codemirror.net/6/docs/ref/#state.SelectionRange.extend).
+  */
   get head() {
     return this.flags & 16 ? this.from : this.to;
   }
+  /**
+  True when `anchor` and `head` are at the same position.
+  */
   get empty() {
     return this.from == this.to;
   }
+  /**
+  If this is a cursor that is explicitly associated with the
+  character on one of its sides, this returns the side. -1 means
+  the character before its position, 1 the character after, and 0
+  means no association.
+  */
   get assoc() {
     return this.flags & 4 ? -1 : this.flags & 8 ? 1 : 0;
   }
+  /**
+  The bidirectional text level associated with this cursor, if
+  any.
+  */
   get bidiLevel() {
     let level = this.flags & 3;
     return level == 3 ? null : level;
   }
+  /**
+  The goal column (stored vertical offset) associated with a
+  cursor. This is used to preserve the vertical position when
+  [moving](https://codemirror.net/6/docs/ref/#view.EditorView.moveVertically) across
+  lines of different length.
+  */
   get goalColumn() {
     let value = this.flags >> 5;
     return value == 33554431 ? void 0 : value;
   }
+  /**
+  Map this range through a change, producing a valid range in the
+  updated document.
+  */
   map(change, assoc = -1) {
     let from, to;
     if (this.empty) {
@@ -8356,39 +8361,62 @@ var SelectionRange = class {
       from = change.mapPos(this.from, 1);
       to = change.mapPos(this.to, -1);
     }
-    return from == this.from && to == this.to ? this : new SelectionRange(from, to, this.flags);
+    return from == this.from && to == this.to ? this : new _SelectionRange(from, to, this.flags);
   }
+  /**
+  Extend this range to cover at least `from` to `to`.
+  */
   extend(from, to = from) {
     if (from <= this.anchor && to >= this.anchor)
       return EditorSelection.range(from, to);
     let head = Math.abs(from - this.anchor) > Math.abs(to - this.anchor) ? from : to;
     return EditorSelection.range(this.anchor, head);
   }
+  /**
+  Compare this range to another range.
+  */
   eq(other) {
     return this.anchor == other.anchor && this.head == other.head;
   }
+  /**
+  Return a JSON-serializable object representing the range.
+  */
   toJSON() {
     return { anchor: this.anchor, head: this.head };
   }
+  /**
+  Convert a JSON representation of a range to a `SelectionRange`
+  instance.
+  */
   static fromJSON(json) {
     if (!json || typeof json.anchor != "number" || typeof json.head != "number")
       throw new RangeError("Invalid JSON representation for SelectionRange");
     return EditorSelection.range(json.anchor, json.head);
   }
+  /**
+  @internal
+  */
   static create(from, to, flags) {
-    return new SelectionRange(from, to, flags);
+    return new _SelectionRange(from, to, flags);
   }
 };
-var EditorSelection = class {
+var EditorSelection = class _EditorSelection {
   constructor(ranges, mainIndex) {
     this.ranges = ranges;
     this.mainIndex = mainIndex;
   }
+  /**
+  Map a selection through a change. Used to adjust the selection
+  position for changes.
+  */
   map(change, assoc = -1) {
     if (change.empty)
       return this;
-    return EditorSelection.create(this.ranges.map((r) => r.map(change, assoc)), this.mainIndex);
+    return _EditorSelection.create(this.ranges.map((r) => r.map(change, assoc)), this.mainIndex);
   }
+  /**
+  Compare this selection to another selection.
+  */
   eq(other) {
     if (this.ranges.length != other.ranges.length || this.mainIndex != other.mainIndex)
       return false;
@@ -8397,49 +8425,89 @@ var EditorSelection = class {
         return false;
     return true;
   }
+  /**
+  Get the primary selection range. Usually, you should make sure
+  your code applies to _all_ ranges, by using methods like
+  [`changeByRange`](https://codemirror.net/6/docs/ref/#state.EditorState.changeByRange).
+  */
   get main() {
     return this.ranges[this.mainIndex];
   }
+  /**
+  Make sure the selection only has one range. Returns a selection
+  holding only the main range from this selection.
+  */
   asSingle() {
-    return this.ranges.length == 1 ? this : new EditorSelection([this.main], 0);
+    return this.ranges.length == 1 ? this : new _EditorSelection([this.main], 0);
   }
+  /**
+  Extend this selection with an extra range.
+  */
   addRange(range5, main = true) {
-    return EditorSelection.create([range5].concat(this.ranges), main ? 0 : this.mainIndex + 1);
+    return _EditorSelection.create([range5].concat(this.ranges), main ? 0 : this.mainIndex + 1);
   }
+  /**
+  Replace a given range with another range, and then normalize the
+  selection to merge and sort ranges if necessary.
+  */
   replaceRange(range5, which = this.mainIndex) {
     let ranges = this.ranges.slice();
     ranges[which] = range5;
-    return EditorSelection.create(ranges, this.mainIndex);
+    return _EditorSelection.create(ranges, this.mainIndex);
   }
+  /**
+  Convert this selection to an object that can be serialized to
+  JSON.
+  */
   toJSON() {
     return { ranges: this.ranges.map((r) => r.toJSON()), main: this.mainIndex };
   }
+  /**
+  Create a selection from a JSON representation.
+  */
   static fromJSON(json) {
     if (!json || !Array.isArray(json.ranges) || typeof json.main != "number" || json.main >= json.ranges.length)
       throw new RangeError("Invalid JSON representation for EditorSelection");
-    return new EditorSelection(json.ranges.map((r) => SelectionRange.fromJSON(r)), json.main);
+    return new _EditorSelection(json.ranges.map((r) => SelectionRange.fromJSON(r)), json.main);
   }
+  /**
+  Create a selection holding a single range.
+  */
   static single(anchor, head = anchor) {
-    return new EditorSelection([EditorSelection.range(anchor, head)], 0);
+    return new _EditorSelection([_EditorSelection.range(anchor, head)], 0);
   }
+  /**
+  Sort and merge the given set of ranges, creating a valid
+  selection.
+  */
   static create(ranges, mainIndex = 0) {
     if (ranges.length == 0)
       throw new RangeError("A selection needs at least one range");
     for (let pos = 0, i = 0; i < ranges.length; i++) {
       let range5 = ranges[i];
       if (range5.empty ? range5.from <= pos : range5.from < pos)
-        return EditorSelection.normalized(ranges.slice(), mainIndex);
+        return _EditorSelection.normalized(ranges.slice(), mainIndex);
       pos = range5.to;
     }
-    return new EditorSelection(ranges, mainIndex);
+    return new _EditorSelection(ranges, mainIndex);
   }
+  /**
+  Create a cursor selection range at the given position. You can
+  safely ignore the optional arguments in most situations.
+  */
   static cursor(pos, assoc = 0, bidiLevel, goalColumn) {
     return SelectionRange.create(pos, pos, (assoc == 0 ? 0 : assoc < 0 ? 4 : 8) | (bidiLevel == null ? 3 : Math.min(2, bidiLevel)) | (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 33554431) << 5);
   }
+  /**
+  Create a selection range.
+  */
   static range(anchor, head, goalColumn, bidiLevel) {
     let flags = (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 33554431) << 5 | (bidiLevel == null ? 3 : Math.min(2, bidiLevel));
     return head < anchor ? SelectionRange.create(head, anchor, 16 | 8 | flags) : SelectionRange.create(anchor, head, (head > anchor ? 4 : 0) | flags);
   }
+  /**
+  @internal
+  */
   static normalized(ranges, mainIndex = 0) {
     let main = ranges[mainIndex];
     ranges.sort((a, b) => a.from - b.from);
@@ -8450,10 +8518,10 @@ var EditorSelection = class {
         let from = prev.from, to = Math.max(range5.to, prev.to);
         if (i <= mainIndex)
           mainIndex--;
-        ranges.splice(--i, 2, range5.anchor > range5.head ? EditorSelection.range(to, from) : EditorSelection.range(from, to));
+        ranges.splice(--i, 2, range5.anchor > range5.head ? _EditorSelection.range(to, from) : _EditorSelection.range(from, to));
       }
     }
-    return new EditorSelection(ranges, mainIndex);
+    return new _EditorSelection(ranges, mainIndex);
   }
 };
 function checkSelection(selection2, docLength) {
@@ -8462,7 +8530,7 @@ function checkSelection(selection2, docLength) {
       throw new RangeError("Selection points outside of document");
 }
 var nextID = 0;
-var Facet = class {
+var Facet = class _Facet {
   constructor(combine, compareInput, compare2, isStatic, enables) {
     this.combine = combine;
     this.compareInput = compareInput;
@@ -8472,17 +8540,36 @@ var Facet = class {
     this.default = combine([]);
     this.extensions = typeof enables == "function" ? enables(this) : enables;
   }
+  /**
+  Define a new facet.
+  */
   static define(config = {}) {
-    return new Facet(config.combine || ((a) => a), config.compareInput || ((a, b) => a === b), config.compare || (!config.combine ? sameArray : (a, b) => a === b), !!config.static, config.enables);
+    return new _Facet(config.combine || ((a) => a), config.compareInput || ((a, b) => a === b), config.compare || (!config.combine ? sameArray : (a, b) => a === b), !!config.static, config.enables);
   }
+  /**
+  Returns an extension that adds the given value to this facet.
+  */
   of(value) {
     return new FacetProvider([], this, 0, value);
   }
+  /**
+  Create an extension that computes a value for the facet from a
+  state. You must take care to declare the parts of the state that
+  this value depends on, since your function is only called again
+  for a new state when one of those parts changed.
+  
+  In cases where your value depends only on a single field, you'll
+  want to use the [`from`](https://codemirror.net/6/docs/ref/#state.Facet.from) method instead.
+  */
   compute(deps, get3) {
     if (this.isStatic)
       throw new Error("Can't compute a static facet");
     return new FacetProvider(deps, this, 1, get3);
   }
+  /**
+  Create an extension that computes zero or more values for this
+  facet from a state.
+  */
   computeN(deps, get3) {
     if (this.isStatic)
       throw new Error("Can't compute a static facet");
@@ -8619,7 +8706,7 @@ function dynamicFacetSlot(addresses2, facet, providers) {
   };
 }
 var initField = /* @__PURE__ */ Facet.define({ static: true });
-var StateField = class {
+var StateField = class _StateField {
   constructor(id3, createF, updateF, compareF, spec) {
     this.id = id3;
     this.createF = createF;
@@ -8628,8 +8715,11 @@ var StateField = class {
     this.spec = spec;
     this.provides = void 0;
   }
+  /**
+  Define a state field.
+  */
   static define(config) {
-    let field2 = new StateField(nextID++, config.create, config.update, config.compare || ((a, b) => a === b), config);
+    let field2 = new _StateField(nextID++, config.create, config.update, config.compare || ((a, b) => a === b), config);
     if (config.provide)
       field2.provides = config.provide(field2);
     return field2;
@@ -8638,6 +8728,9 @@ var StateField = class {
     let init6 = state.facet(initField).find((i) => i.field == this);
     return ((init6 === null || init6 === void 0 ? void 0 : init6.create) || this.createF)(state);
   }
+  /**
+  @internal
+  */
   slot(addresses2) {
     let idx = addresses2[this.id] >> 1;
     return {
@@ -8663,9 +8756,19 @@ var StateField = class {
       }
     };
   }
+  /**
+  Returns an extension that enables this field and overrides the
+  way it is initialized. Can be useful when you need to provide a
+  non-default starting value for the field.
+  */
   init(create2) {
     return [this, initField.of({ field: this, create: create2 })];
   }
+  /**
+  State field instances can be used as
+  [`Extension`](https://codemirror.net/6/docs/ref/#state.Extension) values to enable the field in a
+  given state.
+  */
   get extension() {
     return this;
   }
@@ -8675,10 +8778,29 @@ function prec(value) {
   return (ext) => new PrecExtension(ext, value);
 }
 var Prec = {
+  /**
+  The highest precedence level, for extensions that should end up
+  near the start of the precedence ordering.
+  */
   highest: /* @__PURE__ */ prec(Prec_.highest),
+  /**
+  A higher-than-default precedence, for extensions that should
+  come before those with default precedence.
+  */
   high: /* @__PURE__ */ prec(Prec_.high),
+  /**
+  The default precedence, which is also used for extensions
+  without an explicit precedence.
+  */
   default: /* @__PURE__ */ prec(Prec_.default),
+  /**
+  A lower-than-default precedence.
+  */
   low: /* @__PURE__ */ prec(Prec_.low),
+  /**
+  The lowest precedence level. Meant for things that should end up
+  near the end of the extension order.
+  */
   lowest: /* @__PURE__ */ prec(Prec_.lowest)
 };
 var PrecExtension = class {
@@ -8687,13 +8809,25 @@ var PrecExtension = class {
     this.prec = prec2;
   }
 };
-var Compartment = class {
+var Compartment = class _Compartment {
+  /**
+  Create an instance of this compartment to add to your [state
+  configuration](https://codemirror.net/6/docs/ref/#state.EditorStateConfig.extensions).
+  */
   of(ext) {
     return new CompartmentInstance(this, ext);
   }
+  /**
+  Create an [effect](https://codemirror.net/6/docs/ref/#state.TransactionSpec.effects) that
+  reconfigures this compartment.
+  */
   reconfigure(content2) {
-    return Compartment.reconfigure.of({ compartment: this, extension: content2 });
+    return _Compartment.reconfigure.of({ compartment: this, extension: content2 });
   }
+  /**
+  Get the current content of the compartment in the state, or
+  `undefined` if it isn't present.
+  */
   get(state) {
     return state.config.compartments.get(this);
   }
@@ -8704,7 +8838,7 @@ var CompartmentInstance = class {
     this.inner = inner;
   }
 };
-var Configuration = class {
+var Configuration = class _Configuration {
   constructor(base2, compartments, dynamicSlots, address, staticValues, facets) {
     this.base = base2;
     this.compartments = compartments;
@@ -8714,7 +8848,10 @@ var Configuration = class {
     this.facets = facets;
     this.statusTemplate = [];
     while (this.statusTemplate.length < dynamicSlots.length)
-      this.statusTemplate.push(0);
+      this.statusTemplate.push(
+        0
+        /* SlotStatus.Unresolved */
+      );
   }
   staticFacet(facet) {
     let addr = this.address[facet.id];
@@ -8741,7 +8878,10 @@ var Configuration = class {
     for (let id3 in facets) {
       let providers = facets[id3], facet = providers[0].facet;
       let oldProviders = oldFacets && oldFacets[id3] || [];
-      if (providers.every((p) => p.type == 0)) {
+      if (providers.every(
+        (p) => p.type == 0
+        /* Provider.Static */
+      )) {
         address[facet.id] = staticValues.length << 1 | 1;
         if (sameArray(oldProviders, providers)) {
           staticValues.push(oldState.facet(facet));
@@ -8764,7 +8904,7 @@ var Configuration = class {
       }
     }
     let dynamic = dynamicSlots.map((f) => f(address));
-    return new Configuration(base2, newCompartments, dynamic, address, staticValues, facets);
+    return new _Configuration(base2, newCompartments, dynamic, address, staticValues, facets);
   }
 };
 function flatten(extension, compartments, newCompartments) {
@@ -8843,42 +8983,76 @@ var readOnly = /* @__PURE__ */ Facet.define({
   combine: (values2) => values2.length ? values2[0] : false
 });
 var Annotation = class {
+  /**
+  @internal
+  */
   constructor(type2, value) {
     this.type = type2;
     this.value = value;
   }
+  /**
+  Define a new type of annotation.
+  */
   static define() {
     return new AnnotationType();
   }
 };
 var AnnotationType = class {
+  /**
+  Create an instance of this annotation.
+  */
   of(value) {
     return new Annotation(this, value);
   }
 };
 var StateEffectType = class {
+  /**
+  @internal
+  */
   constructor(map3) {
     this.map = map3;
   }
+  /**
+  Create a [state effect](https://codemirror.net/6/docs/ref/#state.StateEffect) instance of this
+  type.
+  */
   of(value) {
     return new StateEffect(this, value);
   }
 };
-var StateEffect = class {
+var StateEffect = class _StateEffect {
+  /**
+  @internal
+  */
   constructor(type2, value) {
     this.type = type2;
     this.value = value;
   }
+  /**
+  Map this effect through a position mapping. Will return
+  `undefined` when that ends up deleting the effect.
+  */
   map(mapping) {
     let mapped = this.type.map(this.value, mapping);
-    return mapped === void 0 ? void 0 : mapped == this.value ? this : new StateEffect(this.type, mapped);
+    return mapped === void 0 ? void 0 : mapped == this.value ? this : new _StateEffect(this.type, mapped);
   }
+  /**
+  Tells you whether this effect object is of a given
+  [type](https://codemirror.net/6/docs/ref/#state.StateEffectType).
+  */
   is(type2) {
     return this.type == type2;
   }
+  /**
+  Define a new effect type. The type parameter indicates the type
+  of values that his effect holds.
+  */
   static define(spec = {}) {
     return new StateEffectType(spec.map || ((v) => v));
   }
+  /**
+  Map an array of effects through a change set.
+  */
   static mapEffects(effects, mapping) {
     if (!effects.length)
       return effects;
@@ -8893,7 +9067,7 @@ var StateEffect = class {
 };
 StateEffect.reconfigure = /* @__PURE__ */ StateEffect.define();
 StateEffect.appendConfig = /* @__PURE__ */ StateEffect.define();
-var Transaction = class {
+var Transaction = class _Transaction {
   constructor(startState2, changes, selection2, effects, annotations, scrollIntoView2) {
     this.startState = startState2;
     this.changes = changes;
@@ -8905,37 +9079,79 @@ var Transaction = class {
     this._state = null;
     if (selection2)
       checkSelection(selection2, changes.newLength);
-    if (!annotations.some((a) => a.type == Transaction.time))
-      this.annotations = annotations.concat(Transaction.time.of(Date.now()));
+    if (!annotations.some((a) => a.type == _Transaction.time))
+      this.annotations = annotations.concat(_Transaction.time.of(Date.now()));
   }
+  /**
+  @internal
+  */
   static create(startState2, changes, selection2, effects, annotations, scrollIntoView2) {
-    return new Transaction(startState2, changes, selection2, effects, annotations, scrollIntoView2);
+    return new _Transaction(startState2, changes, selection2, effects, annotations, scrollIntoView2);
   }
+  /**
+  The new document produced by the transaction. Contrary to
+  [`.state`](https://codemirror.net/6/docs/ref/#state.Transaction.state)`.doc`, accessing this won't
+  force the entire new state to be computed right away, so it is
+  recommended that [transaction
+  filters](https://codemirror.net/6/docs/ref/#state.EditorState^transactionFilter) use this getter
+  when they need to look at the new document.
+  */
   get newDoc() {
     return this._doc || (this._doc = this.changes.apply(this.startState.doc));
   }
+  /**
+  The new selection produced by the transaction. If
+  [`this.selection`](https://codemirror.net/6/docs/ref/#state.Transaction.selection) is undefined,
+  this will [map](https://codemirror.net/6/docs/ref/#state.EditorSelection.map) the start state's
+  current selection through the changes made by the transaction.
+  */
   get newSelection() {
     return this.selection || this.startState.selection.map(this.changes);
   }
+  /**
+  The new state created by the transaction. Computed on demand
+  (but retained for subsequent access), so it is recommended not to
+  access it in [transaction
+  filters](https://codemirror.net/6/docs/ref/#state.EditorState^transactionFilter) when possible.
+  */
   get state() {
     if (!this._state)
       this.startState.applyTransaction(this);
     return this._state;
   }
+  /**
+  Get the value of the given annotation type, if any.
+  */
   annotation(type2) {
     for (let ann of this.annotations)
       if (ann.type == type2)
         return ann.value;
     return void 0;
   }
+  /**
+  Indicates whether the transaction changed the document.
+  */
   get docChanged() {
     return !this.changes.empty;
   }
+  /**
+  Indicates whether this transaction reconfigures the state
+  (through a [configuration compartment](https://codemirror.net/6/docs/ref/#state.Compartment) or
+  with a top-level configuration
+  [effect](https://codemirror.net/6/docs/ref/#state.StateEffect^reconfigure).
+  */
   get reconfigured() {
     return this.startState.config != this.state.config;
   }
+  /**
+  Returns true if the transaction has a [user
+  event](https://codemirror.net/6/docs/ref/#state.Transaction^userEvent) annotation that is equal to
+  or more specific than `event`. For example, if the transaction
+  has `"select.pointer"` as user event, `"select"` and
+  `"select.pointer"` will match it.
+  */
   isUserEvent(event) {
-    let e = this.annotation(Transaction.userEvent);
+    let e = this.annotation(_Transaction.userEvent);
     return !!(e && (e == event || e.length > event.length && e.slice(0, event.length) == event && e[event.length] == "."));
   }
 };
@@ -9055,12 +9271,12 @@ var none2 = [];
 function asArray(value) {
   return value == null ? none2 : Array.isArray(value) ? value : [value];
 }
-var CharCategory = /* @__PURE__ */ function(CharCategory2) {
+var CharCategory = /* @__PURE__ */ (function(CharCategory2) {
   CharCategory2[CharCategory2["Word"] = 0] = "Word";
   CharCategory2[CharCategory2["Space"] = 1] = "Space";
   CharCategory2[CharCategory2["Other"] = 2] = "Other";
   return CharCategory2;
-}(CharCategory || (CharCategory = {}));
+})(CharCategory || (CharCategory = {}));
 var nonASCIISingleCaseWordChar = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
 var wordChar;
 try {
@@ -9089,10 +9305,10 @@ function makeCategorizer(wordChars) {
     return CharCategory.Other;
   };
 }
-var EditorState = class {
-  constructor(config, doc2, selection2, values2, computeSlot, tr) {
+var EditorState = class _EditorState {
+  constructor(config, doc3, selection2, values2, computeSlot, tr) {
     this.config = config;
-    this.doc = doc2;
+    this.doc = doc3;
     this.selection = selection2;
     this.values = values2;
     this.status = config.statusTemplate.slice();
@@ -9113,9 +9329,27 @@ var EditorState = class {
     ensureAddr(this, addr);
     return getAddr(this, addr);
   }
+  /**
+  Create a [transaction](https://codemirror.net/6/docs/ref/#state.Transaction) that updates this
+  state. Any number of [transaction specs](https://codemirror.net/6/docs/ref/#state.TransactionSpec)
+  can be passed. Unless
+  [`sequential`](https://codemirror.net/6/docs/ref/#state.TransactionSpec.sequential) is set, the
+  [changes](https://codemirror.net/6/docs/ref/#state.TransactionSpec.changes) (if any) of each spec
+  are assumed to start in the _current_ document (not the document
+  produced by previous specs), and its
+  [selection](https://codemirror.net/6/docs/ref/#state.TransactionSpec.selection) and
+  [effects](https://codemirror.net/6/docs/ref/#state.TransactionSpec.effects) are assumed to refer
+  to the document created by its _own_ changes. The resulting
+  transaction contains the combined effect of all the different
+  specs. For [selection](https://codemirror.net/6/docs/ref/#state.TransactionSpec.selection), later
+  specs take precedence over earlier ones.
+  */
   update(...specs) {
     return resolveTransaction(this, specs, true);
   }
+  /**
+  @internal
+  */
   applyTransaction(tr) {
     let conf = this.config, { base: base2, compartments } = conf;
     for (let effect of tr.effects) {
@@ -9137,13 +9371,17 @@ var EditorState = class {
     let startValues;
     if (!conf) {
       conf = Configuration.resolve(base2, compartments, this);
-      let intermediateState = new EditorState(conf, this.doc, this.selection, conf.dynamicSlots.map(() => null), (state, slot) => slot.reconfigure(state, this), null);
+      let intermediateState = new _EditorState(conf, this.doc, this.selection, conf.dynamicSlots.map(() => null), (state, slot) => slot.reconfigure(state, this), null);
       startValues = intermediateState.values;
     } else {
       startValues = tr.startState.values.slice();
     }
-    new EditorState(conf, tr.newDoc, tr.newSelection, startValues, (state, slot) => slot.update(state, tr), tr);
+    new _EditorState(conf, tr.newDoc, tr.newSelection, startValues, (state, slot) => slot.update(state, tr), tr);
   }
+  /**
+  Create a [transaction spec](https://codemirror.net/6/docs/ref/#state.TransactionSpec) that
+  replaces every selection range with the given content.
+  */
   replaceSelection(text2) {
     if (typeof text2 == "string")
       text2 = this.toText(text2);
@@ -9152,6 +9390,17 @@ var EditorState = class {
       range: EditorSelection.cursor(range5.from + text2.length)
     }));
   }
+  /**
+  Create a set of changes and a new selection by running the given
+  function for each range in the active selection. The function
+  can return an optional set of changes (in the coordinate space
+  of the start document), plus an updated range (in the coordinate
+  space of the document produced by the call's own changes). This
+  method will merge all the changes and ranges into a single
+  changeset and selection, and return it as a [transaction
+  spec](https://codemirror.net/6/docs/ref/#state.TransactionSpec), which can be passed to
+  [`update`](https://codemirror.net/6/docs/ref/#state.EditorState.update).
+  */
   changeByRange(f) {
     let sel = this.selection;
     let result1 = f(sel.ranges[0]);
@@ -9173,17 +9422,33 @@ var EditorState = class {
       effects
     };
   }
+  /**
+  Create a [change set](https://codemirror.net/6/docs/ref/#state.ChangeSet) from the given change
+  description, taking the state's document length and line
+  separator into account.
+  */
   changes(spec = []) {
     if (spec instanceof ChangeSet)
       return spec;
-    return ChangeSet.of(spec, this.doc.length, this.facet(EditorState.lineSeparator));
+    return ChangeSet.of(spec, this.doc.length, this.facet(_EditorState.lineSeparator));
   }
+  /**
+  Using the state's [line
+  separator](https://codemirror.net/6/docs/ref/#state.EditorState^lineSeparator), create a
+  [`Text`](https://codemirror.net/6/docs/ref/#state.Text) instance from the given string.
+  */
   toText(string4) {
-    return Text.of(string4.split(this.facet(EditorState.lineSeparator) || DefaultSplit));
+    return Text.of(string4.split(this.facet(_EditorState.lineSeparator) || DefaultSplit));
   }
+  /**
+  Return the given range of the document as a string.
+  */
   sliceDoc(from = 0, to = this.doc.length) {
     return this.doc.sliceString(from, to, this.lineBreak);
   }
+  /**
+  Get the value of a state [facet](https://codemirror.net/6/docs/ref/#state.Facet).
+  */
   facet(facet) {
     let addr = this.config.address[facet.id];
     if (addr == null)
@@ -9191,6 +9456,12 @@ var EditorState = class {
     ensureAddr(this, addr);
     return getAddr(this, addr);
   }
+  /**
+  Convert this state to a JSON-serializable object. When custom
+  fields should be serialized, you can pass them in as an object
+  mapping property names (in the resulting object, which should
+  not use `doc` or `selection`) to fields.
+  */
   toJSON(fields) {
     let result = {
       doc: this.sliceDoc(),
@@ -9204,6 +9475,12 @@ var EditorState = class {
       }
     return result;
   }
+  /**
+  Deserialize a state from its JSON representation. When custom
+  fields should be deserialized, pass the same object you passed
+  to [`toJSON`](https://codemirror.net/6/docs/ref/#state.EditorState.toJSON) when serializing as
+  third argument.
+  */
   static fromJSON(json, config = {}, fields) {
     if (!json || typeof json.doc != "string")
       throw new RangeError("Invalid JSON representation for EditorState");
@@ -9215,32 +9492,59 @@ var EditorState = class {
           fieldInit.push(field2.init((state) => field2.spec.fromJSON(value, state)));
         }
       }
-    return EditorState.create({
+    return _EditorState.create({
       doc: json.doc,
       selection: EditorSelection.fromJSON(json.selection),
       extensions: config.extensions ? fieldInit.concat([config.extensions]) : fieldInit
     });
   }
+  /**
+  Create a new state. You'll usually only need this when
+  initializing an editor—updated states are created by applying
+  transactions.
+  */
   static create(config = {}) {
     let configuration = Configuration.resolve(config.extensions || [], /* @__PURE__ */ new Map());
-    let doc2 = config.doc instanceof Text ? config.doc : Text.of((config.doc || "").split(configuration.staticFacet(EditorState.lineSeparator) || DefaultSplit));
+    let doc3 = config.doc instanceof Text ? config.doc : Text.of((config.doc || "").split(configuration.staticFacet(_EditorState.lineSeparator) || DefaultSplit));
     let selection2 = !config.selection ? EditorSelection.single(0) : config.selection instanceof EditorSelection ? config.selection : EditorSelection.single(config.selection.anchor, config.selection.head);
-    checkSelection(selection2, doc2.length);
+    checkSelection(selection2, doc3.length);
     if (!configuration.staticFacet(allowMultipleSelections))
       selection2 = selection2.asSingle();
-    return new EditorState(configuration, doc2, selection2, configuration.dynamicSlots.map(() => null), (state, slot) => slot.create(state), null);
+    return new _EditorState(configuration, doc3, selection2, configuration.dynamicSlots.map(() => null), (state, slot) => slot.create(state), null);
   }
+  /**
+  The size (in columns) of a tab in the document, determined by
+  the [`tabSize`](https://codemirror.net/6/docs/ref/#state.EditorState^tabSize) facet.
+  */
   get tabSize() {
-    return this.facet(EditorState.tabSize);
+    return this.facet(_EditorState.tabSize);
   }
+  /**
+  Get the proper [line-break](https://codemirror.net/6/docs/ref/#state.EditorState^lineSeparator)
+  string for this state.
+  */
   get lineBreak() {
-    return this.facet(EditorState.lineSeparator) || "\n";
+    return this.facet(_EditorState.lineSeparator) || "\n";
   }
+  /**
+  Returns true when the editor is
+  [configured](https://codemirror.net/6/docs/ref/#state.EditorState^readOnly) to be read-only.
+  */
   get readOnly() {
     return this.facet(readOnly);
   }
+  /**
+  Look up a translation for the given phrase (via the
+  [`phrases`](https://codemirror.net/6/docs/ref/#state.EditorState^phrases) facet), or return the
+  original string if no translation is found.
+  
+  If additional arguments are passed, they will be inserted in
+  place of markers like `$1` (for the first value) and `$2`, etc.
+  A single `$` is equivalent to `$1`, and `$$` will produce a
+  literal dollar sign.
+  */
   phrase(phrase, ...insert4) {
-    for (let map3 of this.facet(EditorState.phrases))
+    for (let map3 of this.facet(_EditorState.phrases))
       if (Object.prototype.hasOwnProperty.call(map3, phrase)) {
         phrase = map3[phrase];
         break;
@@ -9254,6 +9558,22 @@ var EditorState = class {
       });
     return phrase;
   }
+  /**
+  Find the values for a given language data field, provided by the
+  the [`languageData`](https://codemirror.net/6/docs/ref/#state.EditorState^languageData) facet.
+  
+  Examples of language data fields are...
+  
+  - [`"commentTokens"`](https://codemirror.net/6/docs/ref/#commands.CommentTokens) for specifying
+    comment syntax.
+  - [`"autocomplete"`](https://codemirror.net/6/docs/ref/#autocomplete.autocompletion^config.override)
+    for providing language-specific completion sources.
+  - [`"wordChars"`](https://codemirror.net/6/docs/ref/#state.EditorState.charCategorizer) for adding
+    characters that should be considered part of words in this
+    language.
+  - [`"closeBrackets"`](https://codemirror.net/6/docs/ref/#autocomplete.CloseBracketConfig) controls
+    bracket closing behavior.
+  */
   languageDataAt(name3, pos, side = -1) {
     let values2 = [];
     for (let provider of this.facet(languageData)) {
@@ -9264,9 +9584,26 @@ var EditorState = class {
     }
     return values2;
   }
+  /**
+  Return a function that can categorize strings (expected to
+  represent a single [grapheme cluster](https://codemirror.net/6/docs/ref/#state.findClusterBreak))
+  into one of:
+  
+   - Word (contains an alphanumeric character or a character
+     explicitly listed in the local language's `"wordChars"`
+     language data, which should be a string)
+   - Space (contains only whitespace)
+   - Other (anything else)
+  */
   charCategorizer(at) {
     return makeCategorizer(this.languageDataAt("wordChars", at).join(""));
   }
+  /**
+  Find the word at the given position, meaning the range
+  containing all [word](https://codemirror.net/6/docs/ref/#state.CharCategory.Word) characters
+  around it. If no word characters are adjacent to the position,
+  this returns null.
+  */
   wordAt(pos) {
     let { text: text2, from, length: length6 } = this.doc.lineAt(pos);
     let cat = this.charCategorizer(pos);
@@ -9310,8 +9647,7 @@ function combineConfig(configs, defaults, combine = {}) {
       let value = config[key], current = result[key];
       if (current === void 0)
         result[key] = value;
-      else if (current === value || value === void 0)
-        ;
+      else if (current === value || value === void 0) ;
       else if (Object.hasOwnProperty.call(combine, key))
         result[key] = combine[key](current, value);
       else
@@ -9323,9 +9659,19 @@ function combineConfig(configs, defaults, combine = {}) {
   return result;
 }
 var RangeValue = class {
+  /**
+  Compare this value with another value. Used when comparing
+  rangesets. The default implementation compares by identity.
+  Unless you are only creating a fixed number of unique instances
+  of your value type, it is a good idea to implement this
+  properly.
+  */
   eq(other) {
     return this == other;
   }
+  /**
+  Create a [range](https://codemirror.net/6/docs/ref/#state.Range) with this value.
+  */
   range(from, to = from) {
     return Range.create(from, to, this);
   }
@@ -9333,20 +9679,23 @@ var RangeValue = class {
 RangeValue.prototype.startSide = RangeValue.prototype.endSide = 0;
 RangeValue.prototype.point = false;
 RangeValue.prototype.mapMode = MapMode.TrackDel;
-var Range = class {
+var Range = class _Range {
   constructor(from, to, value) {
     this.from = from;
     this.to = to;
     this.value = value;
   }
+  /**
+  @internal
+  */
   static create(from, to, value) {
-    return new Range(from, to, value);
+    return new _Range(from, to, value);
   }
 };
 function cmpRange(a, b) {
   return a.from - b.from || a.value.startSide - b.value.startSide;
 }
-var Chunk = class {
+var Chunk = class _Chunk {
   constructor(from, to, value, maxPoint) {
     this.from = from;
     this.to = to;
@@ -9356,6 +9705,8 @@ var Chunk = class {
   get length() {
     return this.to[this.to.length - 1];
   }
+  // Find the index of the given position and side. Use the ranges'
+  // `from` pos when `end == false`, `to` when `end == true`.
   findIndex(pos, side, end, startAt = 0) {
     let arr = end ? this.to : this.from;
     for (let lo = startAt, hi = arr.length; ; ) {
@@ -9406,23 +9757,32 @@ var Chunk = class {
       from.push(newFrom - newPos);
       to.push(newTo - newPos);
     }
-    return { mapped: value.length ? new Chunk(from, to, value, maxPoint) : null, pos: newPos };
+    return { mapped: value.length ? new _Chunk(from, to, value, maxPoint) : null, pos: newPos };
   }
 };
-var RangeSet = class {
+var RangeSet = class _RangeSet {
   constructor(chunkPos, chunk, nextLayer, maxPoint) {
     this.chunkPos = chunkPos;
     this.chunk = chunk;
     this.nextLayer = nextLayer;
     this.maxPoint = maxPoint;
   }
+  /**
+  @internal
+  */
   static create(chunkPos, chunk, nextLayer, maxPoint) {
-    return new RangeSet(chunkPos, chunk, nextLayer, maxPoint);
+    return new _RangeSet(chunkPos, chunk, nextLayer, maxPoint);
   }
+  /**
+  @internal
+  */
   get length() {
     let last2 = this.chunk.length - 1;
     return last2 < 0 ? 0 : Math.max(this.chunkEnd(last2), this.nextLayer.length);
   }
+  /**
+  The number of ranges in the set.
+  */
   get size() {
     if (this.isEmpty)
       return 0;
@@ -9431,9 +9791,21 @@ var RangeSet = class {
       size4 += chunk.value.length;
     return size4;
   }
+  /**
+  @internal
+  */
   chunkEnd(index3) {
     return this.chunkPos[index3] + this.chunk[index3].length;
   }
+  /**
+  Update the range set, optionally adding new ranges or filtering
+  out existing ones.
+  
+  (Note: The type parameter is just there as a kludge to work
+  around TypeScript variance issues that prevented `RangeSet<X>`
+  from being a subtype of `RangeSet<Y>` when `X` is a subtype of
+  `Y`.)
+  */
   update(updateSpec) {
     let { add = [], sort = false, filterFrom = 0, filterTo = this.length } = updateSpec;
     let filter6 = updateSpec.filter;
@@ -9442,7 +9814,7 @@ var RangeSet = class {
     if (sort)
       add = add.slice().sort(cmpRange);
     if (this.isEmpty)
-      return add.length ? RangeSet.of(add) : this;
+      return add.length ? _RangeSet.of(add) : this;
     let cur = new LayerCursor(this, null, -1).goto(0), i = 0, spill = [];
     let builder = new RangeSetBuilder();
     while (cur.value || i < add.length) {
@@ -9460,8 +9832,11 @@ var RangeSet = class {
         cur.next();
       }
     }
-    return builder.finishInner(this.nextLayer.isEmpty && !spill.length ? RangeSet.empty : this.nextLayer.update({ add: spill, filter: filter6, filterFrom, filterTo }));
+    return builder.finishInner(this.nextLayer.isEmpty && !spill.length ? _RangeSet.empty : this.nextLayer.update({ add: spill, filter: filter6, filterFrom, filterTo }));
   }
+  /**
+  Map this range set through a set of changes, return the new set.
+  */
   map(changes) {
     if (changes.empty || this.isEmpty)
       return this;
@@ -9483,8 +9858,14 @@ var RangeSet = class {
       }
     }
     let next = this.nextLayer.map(changes);
-    return chunks.length == 0 ? next : new RangeSet(chunkPos, chunks, next || RangeSet.empty, maxPoint);
+    return chunks.length == 0 ? next : new _RangeSet(chunkPos, chunks, next || _RangeSet.empty, maxPoint);
   }
+  /**
+  Iterate over the ranges that touch the region `from` to `to`,
+  calling `f` for each. There is no guarantee that the ranges will
+  be reported in any specific order. When the callback returns
+  `false`, iteration stops.
+  */
   between(from, to, f) {
     if (this.isEmpty)
       return;
@@ -9495,15 +9876,30 @@ var RangeSet = class {
     }
     this.nextLayer.between(from, to, f);
   }
+  /**
+  Iterate over the ranges in this set, in order, including all
+  ranges that end at or after `from`.
+  */
   iter(from = 0) {
     return HeapCursor.from([this]).goto(from);
   }
+  /**
+  @internal
+  */
   get isEmpty() {
     return this.nextLayer == this;
   }
+  /**
+  Iterate over the ranges in a collection of sets, in order,
+  starting from `from`.
+  */
   static iter(sets, from = 0) {
     return HeapCursor.from(sets).goto(from);
   }
+  /**
+  Iterate over two groups of sets, calling methods on `comparator`
+  to notify it of possible differences.
+  */
   static compare(oldSets, newSets, textDiff, comparator, minPointSize = -1) {
     let a = oldSets.filter((set3) => set3.maxPoint > 0 || !set3.isEmpty && set3.maxPoint >= minPointSize);
     let b = newSets.filter((set3) => set3.maxPoint > 0 || !set3.isEmpty && set3.maxPoint >= minPointSize);
@@ -9514,6 +9910,10 @@ var RangeSet = class {
     if (textDiff.empty && textDiff.length == 0)
       compare(sideA, 0, sideB, 0, 0, comparator);
   }
+  /**
+  Compare the contents of two groups of range sets, returning true
+  if they are equivalent in the given range.
+  */
   static eq(oldSets, newSets, from = 0, to) {
     if (to == null)
       to = 1e9 - 1;
@@ -9534,6 +9934,13 @@ var RangeSet = class {
       sideB.next();
     }
   }
+  /**
+  Iterate over a group of range sets at the same time, notifying
+  the iterator about the ranges covering every given piece of
+  content. Returns the open count (see
+  [`SpanIterator.span`](https://codemirror.net/6/docs/ref/#state.SpanIterator.span)) at the end
+  of the iteration.
+  */
   static spans(sets, from, to, iterator, minPointSize = -1) {
     let cursor = new SpanCursor(sets, null, minPointSize).goto(from), pos = from;
     let openRanges = cursor.openStart;
@@ -9554,6 +9961,13 @@ var RangeSet = class {
       cursor.next();
     }
   }
+  /**
+  Create a range set for the given range or array of ranges. By
+  default, this expects the ranges to be _sorted_ (by start
+  position and, if two start at the same position,
+  `value.startSide`). You can pass `true` as second argument to
+  cause the method to sort them.
+  */
   static of(ranges, sort = false) {
     let build = new RangeSetBuilder();
     for (let range5 of ranges instanceof Range ? [ranges] : sort ? lazySort(ranges) : ranges)
@@ -9573,7 +9987,10 @@ function lazySort(ranges) {
   return ranges;
 }
 RangeSet.empty.nextLayer = RangeSet.empty;
-var RangeSetBuilder = class {
+var RangeSetBuilder = class _RangeSetBuilder {
+  /**
+  Create an empty builder.
+  */
   constructor() {
     this.chunks = [];
     this.chunkPos = [];
@@ -9600,10 +10017,17 @@ var RangeSetBuilder = class {
       this.value = [];
     }
   }
+  /**
+  Add a range. Ranges should be added in sorted (by `from` and
+  `value.startSide`) order.
+  */
   add(from, to, value) {
     if (!this.addInner(from, to, value))
-      (this.nextLayer || (this.nextLayer = new RangeSetBuilder())).add(from, to, value);
+      (this.nextLayer || (this.nextLayer = new _RangeSetBuilder())).add(from, to, value);
   }
+  /**
+  @internal
+  */
   addInner(from, to, value) {
     let diff = from - this.lastTo || value.startSide - this.last.endSide;
     if (diff <= 0 && (from - this.lastFrom || value.startSide - this.last.startSide) < 0)
@@ -9624,6 +10048,9 @@ var RangeSetBuilder = class {
       this.maxPoint = Math.max(this.maxPoint, to - from);
     return true;
   }
+  /**
+  @internal
+  */
   addChunk(from, chunk) {
     if ((from - this.lastTo || chunk.value[0].startSide - this.last.endSide) < 0)
       return false;
@@ -9638,9 +10065,16 @@ var RangeSetBuilder = class {
     this.lastTo = chunk.to[last2] + from;
     return true;
   }
+  /**
+  Finish the range set. Returns the new set. The builder can't be
+  used anymore after this has been called.
+  */
   finish() {
     return this.finishInner(RangeSet.empty);
   }
+  /**
+  @internal
+  */
   finishInner(next) {
     if (this.from.length)
       this.finishChunk(false);
@@ -9742,7 +10176,7 @@ var LayerCursor = class {
     return this.from - other.from || this.startSide - other.startSide || this.rank - other.rank || this.to - other.to || this.endSide - other.endSide;
   }
 };
-var HeapCursor = class {
+var HeapCursor = class _HeapCursor {
   constructor(heap) {
     this.heap = heap;
   }
@@ -9754,7 +10188,7 @@ var HeapCursor = class {
           heap.push(new LayerCursor(cur, skip, minPoint, i));
       }
     }
-    return heap.length == 1 ? heap[0] : new HeapCursor(heap);
+    return heap.length == 1 ? heap[0] : new _HeapCursor(heap);
   }
   get startSide() {
     return this.value ? this.value.startSide : 0;
@@ -9856,6 +10290,8 @@ var SpanCursor = class {
       insert2(trackOpen, i, this.cursor.from);
     this.minActive = findMinIndex(this.active, this.activeTo);
   }
+  // After calling this, if `this.point` != null, the next range is a
+  // point. Otherwise, it's a regular range, covered by `this.active`.
   next() {
     let from = this.to, wasPoint = this.point;
     this.point = null;
@@ -10004,6 +10440,11 @@ var COUNT = typeof Symbol == "undefined" ? "__" + C : Symbol.for(C);
 var SET = typeof Symbol == "undefined" ? "__styleSet" + Math.floor(Math.random() * 1e8) : Symbol("styleSet");
 var top2 = typeof globalThis != "undefined" ? globalThis : typeof window != "undefined" ? window : {};
 var StyleModule = class {
+  // :: (Object<Style>, ?{finish: ?(string) → string})
+  // Create a style module from the given spec.
+  //
+  // When `finish` is given, it is called on regular (non-`@`)
+  // selectors (after `&` expansion) to compute the final selector.
   constructor(spec, options) {
     this.rules = [];
     let { finish } = options || {};
@@ -10012,8 +10453,7 @@ var StyleModule = class {
     }
     function render(selectors, spec2, target, isKeyframes) {
       let local = [], isAt = /^@(\w+)\b/.exec(selectors[0]), keyframes = isAt && isAt[1] == "keyframes";
-      if (isAt && spec2 == null)
-        return target.push(selectors[0] + ";");
+      if (isAt && spec2 == null) return target.push(selectors[0] + ";");
       for (let prop in spec2) {
         let value = spec2[prop];
         if (/&/.test(prop)) {
@@ -10023,8 +10463,7 @@ var StyleModule = class {
             target
           );
         } else if (value && typeof value == "object") {
-          if (!isAt)
-            throw new RangeError("The value of a property (" + prop + ") should be a primitive value.");
+          if (!isAt) throw new RangeError("The value of a property (" + prop + ") should be a primitive value.");
           render(splitSelector(prop), value, local, keyframes);
         } else if (value != null) {
           local.push(prop.replace(/_.*/, "").replace(/[A-Z]/g, (l) => "-" + l.toLowerCase()) + ": " + value + ";");
@@ -10034,17 +10473,33 @@ var StyleModule = class {
         target.push((finish && !isAt && !isKeyframes ? selectors.map(finish) : selectors).join(", ") + " {" + local.join(" ") + "}");
       }
     }
-    for (let prop in spec)
-      render(splitSelector(prop), spec[prop], this.rules);
+    for (let prop in spec) render(splitSelector(prop), spec[prop], this.rules);
   }
+  // :: () → string
+  // Returns a string containing the module's CSS rules.
   getRules() {
     return this.rules.join("\n");
   }
+  // :: () → string
+  // Generate a new unique CSS class name.
   static newName() {
     let id3 = top2[COUNT] || 1;
     top2[COUNT] = id3 + 1;
     return C + id3.toString(36);
   }
+  // :: (union<Document, ShadowRoot>, union<[StyleModule], StyleModule>)
+  //
+  // Mount the given set of modules in the given DOM root, which ensures
+  // that the CSS rules defined by the module are available in that
+  // context.
+  //
+  // Rules are only added to the document once per root.
+  //
+  // Rule order will follow the order of the modules, so that rules from
+  // modules later in the array take precedence of those from earlier
+  // modules. If you call this function multiple times for the same root
+  // in a way that changes the order of already mounted modules, the old
+  // order will be changed.
   static mount(root2, modules) {
     (root2[SET] || new StyleSet(root2)).mount(Array.isArray(modules) ? modules : [modules]);
   }
@@ -10080,12 +10535,10 @@ var StyleSet = class {
       }
       if (index3 == -1) {
         this.modules.splice(j++, 0, mod);
-        if (sheet)
-          for (let k = 0; k < mod.rules.length; k++)
-            sheet.insertRule(mod.rules[k], pos++);
+        if (sheet) for (let k = 0; k < mod.rules.length; k++)
+          sheet.insertRule(mod.rules[k], pos++);
       } else {
-        while (j < index3)
-          pos += this.modules[j++].rules.length;
+        while (j < index3) pos += this.modules[j++].rules.length;
         pos += mod.rules.length;
         j++;
       }
@@ -10185,36 +10638,26 @@ var gecko = typeof navigator != "undefined" && /Gecko\/\d+/.test(navigator.userA
 var mac = typeof navigator != "undefined" && /Mac/.test(navigator.platform);
 var ie = typeof navigator != "undefined" && /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(navigator.userAgent);
 var brokenModifierNames = mac || chrome && +chrome[1] < 57;
-for (i = 0; i < 10; i++)
-  base[48 + i] = base[96 + i] = String(i);
+for (i = 0; i < 10; i++) base[48 + i] = base[96 + i] = String(i);
 var i;
-for (i = 1; i <= 24; i++)
-  base[i + 111] = "F" + i;
+for (i = 1; i <= 24; i++) base[i + 111] = "F" + i;
 var i;
 for (i = 65; i <= 90; i++) {
   base[i] = String.fromCharCode(i + 32);
   shift[i] = String.fromCharCode(i);
 }
 var i;
-for (code in base)
-  if (!shift.hasOwnProperty(code))
-    shift[code] = base[code];
+for (code in base) if (!shift.hasOwnProperty(code)) shift[code] = base[code];
 var code;
 function keyName(event) {
   var ignoreKey = brokenModifierNames && (event.ctrlKey || event.altKey || event.metaKey) || ie && event.shiftKey && event.key && event.key.length == 1 || event.key == "Unidentified";
   var name3 = !ignoreKey && event.key || (event.shiftKey ? shift : base)[event.keyCode] || event.key || "Unidentified";
-  if (name3 == "Esc")
-    name3 = "Escape";
-  if (name3 == "Del")
-    name3 = "Delete";
-  if (name3 == "Left")
-    name3 = "ArrowLeft";
-  if (name3 == "Up")
-    name3 = "ArrowUp";
-  if (name3 == "Right")
-    name3 = "ArrowRight";
-  if (name3 == "Down")
-    name3 = "ArrowDown";
+  if (name3 == "Esc") name3 = "Escape";
+  if (name3 == "Del") name3 = "Delete";
+  if (name3 == "Left") name3 = "ArrowLeft";
+  if (name3 == "Up") name3 = "ArrowUp";
+  if (name3 == "Right") name3 = "ArrowRight";
+  if (name3 == "Down") name3 = "ArrowDown";
   return name3;
 }
 
@@ -10231,8 +10674,8 @@ function getSelection(root2) {
 function contains(dom, node) {
   return node ? dom == node || dom.contains(node.nodeType != 1 ? node.parentNode : node) : false;
 }
-function deepActiveElement(doc2) {
-  let elt = doc2.activeElement;
+function deepActiveElement(doc3) {
+  let elt = doc3.activeElement;
   while (elt && elt.shadowRoot)
     elt = elt.shadowRoot.activeElement;
   return elt;
@@ -10303,10 +10746,10 @@ function windowRect(win) {
   };
 }
 function scrollRectIntoView(dom, rect, side, x2, y2, xMargin, yMargin, ltr) {
-  let doc2 = dom.ownerDocument, win = doc2.defaultView || window;
+  let doc3 = dom.ownerDocument, win = doc3.defaultView || window;
   for (let cur = dom; cur; ) {
     if (cur.nodeType == 1) {
-      let bounding, top3 = cur == doc2.body;
+      let bounding, top3 = cur == doc3.body;
       if (top3) {
         bounding = windowRect(win);
       } else {
@@ -10390,9 +10833,9 @@ function scrollRectIntoView(dom, rect, side, x2, y2, xMargin, yMargin, ltr) {
   }
 }
 function scrollableParent(dom) {
-  let doc2 = dom.ownerDocument;
+  let doc3 = dom.ownerDocument;
   for (let cur = dom.parentNode; cur; ) {
-    if (cur == doc2.body) {
+    if (cur == doc3.body) {
       break;
     } else if (cur.nodeType == 1) {
       if (cur.scrollHeight > cur.clientHeight || cur.scrollWidth > cur.clientWidth)
@@ -10484,7 +10927,7 @@ function clearAttributes(node) {
   while (node.attributes.length)
     node.removeAttributeNode(node.attributes[0]);
 }
-function atElementStart(doc2, selection2) {
+function atElementStart(doc3, selection2) {
   let node = selection2.focusNode, offset = selection2.focusOffset;
   if (!node || selection2.anchorNode != node || selection2.anchorOffset != offset)
     return false;
@@ -10499,7 +10942,7 @@ function atElementStart(doc2, selection2) {
         node = prev;
         offset = maxOffset(node);
       }
-    } else if (node == doc2) {
+    } else if (node == doc3) {
       return true;
     } else {
       offset = domIndex(node);
@@ -10507,21 +10950,21 @@ function atElementStart(doc2, selection2) {
     }
   }
 }
-var DOMPos = class {
+var DOMPos = class _DOMPos {
   constructor(node, offset, precise = true) {
     this.node = node;
     this.offset = offset;
     this.precise = precise;
   }
   static before(dom, precise) {
-    return new DOMPos(dom.parentNode, domIndex(dom), precise);
+    return new _DOMPos(dom.parentNode, domIndex(dom), precise);
   }
   static after(dom, precise) {
-    return new DOMPos(dom.parentNode, domIndex(dom) + 1, precise);
+    return new _DOMPos(dom.parentNode, domIndex(dom) + 1, precise);
   }
 };
 var noChildren = [];
-var ContentView = class {
+var ContentView = class _ContentView {
   constructor() {
     this.parent = null;
     this.dom = null;
@@ -10548,6 +10991,9 @@ var ContentView = class {
   posAfter(view2) {
     return this.posBefore(view2) + view2.length;
   }
+  // Will return a rectangle directly before (when side < 0), after
+  // (side > 0) or directly on (when the browser supports it) the
+  // given position.
   coordsAt(_pos, _side) {
     return null;
   }
@@ -10558,7 +11004,7 @@ var ContentView = class {
       for (let child of this.children) {
         if (child.dirty) {
           if (!child.dom && (next = prev ? prev.nextSibling : parent.firstChild)) {
-            let contentView = ContentView.get(next);
+            let contentView = _ContentView.get(next);
             if (!contentView || !contentView.parent && contentView.canReuseDOM(child))
               child.reuseDOM(next);
           }
@@ -10616,7 +11062,7 @@ var ContentView = class {
     }
     if (after == this.dom.firstChild)
       return 0;
-    while (after && !ContentView.get(after))
+    while (after && !_ContentView.get(after))
       after = after.nextSibling;
     if (!after)
       return this.length;
@@ -10732,6 +11178,9 @@ var ContentView = class {
   canReuseDOM(other) {
     return other.constructor == this.constructor;
   }
+  // When this is a zero-length view with a side, this should return a
+  // number <= 0 to indicate it is before its position, or a
+  // number > 0 when after its position.
   getSide() {
     return 0;
   }
@@ -10860,7 +11309,7 @@ var browser = {
   tabSize: doc.documentElement.style.tabSize != null ? "tab-size" : "-moz-tab-size"
 };
 var MaxJoinLen = 256;
-var TextView = class extends ContentView {
+var TextView = class _TextView extends ContentView {
   constructor(text2) {
     super();
     this.text = text2;
@@ -10885,14 +11334,14 @@ var TextView = class extends ContentView {
       this.createDOM(dom);
   }
   merge(from, to, source2) {
-    if (source2 && (!(source2 instanceof TextView) || this.length - (to - from) + source2.length > MaxJoinLen))
+    if (source2 && (!(source2 instanceof _TextView) || this.length - (to - from) + source2.length > MaxJoinLen))
       return false;
     this.text = this.text.slice(0, from) + (source2 ? source2.text : "") + this.text.slice(to);
     this.markDirty();
     return true;
   }
   split(from) {
-    let result = new TextView(this.text.slice(from));
+    let result = new _TextView(this.text.slice(from));
     this.text = this.text.slice(0, from);
     this.markDirty();
     return result;
@@ -10910,7 +11359,7 @@ var TextView = class extends ContentView {
     return textCoords(this.dom, pos, side);
   }
 };
-var MarkView = class extends ContentView {
+var MarkView = class _MarkView extends ContentView {
   constructor(mark, children2 = [], length6 = 0) {
     super();
     this.mark = mark;
@@ -10942,7 +11391,7 @@ var MarkView = class extends ContentView {
     super.sync(view2, track);
   }
   merge(from, to, source2, _hasStart, openStart, openEnd) {
-    if (source2 && (!(source2 instanceof MarkView && source2.mark.eq(this.mark)) || from && openStart <= 0 || to < this.length && openEnd <= 0))
+    if (source2 && (!(source2 instanceof _MarkView && source2.mark.eq(this.mark)) || from && openStart <= 0 || to < this.length && openEnd <= 0))
       return false;
     mergeChildrenInto(this, from, to, source2 ? source2.children : [], openStart - 1, openEnd - 1);
     this.markDirty();
@@ -10965,7 +11414,7 @@ var MarkView = class extends ContentView {
       this.children.length = detachFrom;
       this.markDirty();
     }
-    return new MarkView(this.mark, result, length6);
+    return new _MarkView(this.mark, result, length6);
   }
   domAtPos(pos) {
     return inlineDOMAtPos(this, pos);
@@ -11003,7 +11452,7 @@ function textCoords(text2, pos, side) {
     rect = Array.prototype.find.call(rects, (r) => r.width) || rect;
   return flatten2 ? flattenRect(rect, flatten2 < 0) : rect || null;
 }
-var WidgetView = class extends ContentView {
+var WidgetView = class _WidgetView extends ContentView {
   constructor(widget, length6, side) {
     super();
     this.widget = widget;
@@ -11012,10 +11461,10 @@ var WidgetView = class extends ContentView {
     this.prevWidget = null;
   }
   static create(widget, length6, side) {
-    return new (widget.customView || WidgetView)(widget, length6, side);
+    return new (widget.customView || _WidgetView)(widget, length6, side);
   }
   split(from) {
-    let result = WidgetView.create(this.widget, this.length - from, this.side);
+    let result = _WidgetView.create(this.widget, this.length - from, this.side);
     this.length -= from;
     return result;
   }
@@ -11032,13 +11481,13 @@ var WidgetView = class extends ContentView {
     return this.side;
   }
   merge(from, to, source2, hasStart, openStart, openEnd) {
-    if (source2 && (!(source2 instanceof WidgetView) || !this.widget.compare(source2.widget) || from > 0 && openStart <= 0 || to < this.length && openEnd <= 0))
+    if (source2 && (!(source2 instanceof _WidgetView) || !this.widget.compare(source2.widget) || from > 0 && openStart <= 0 || to < this.length && openEnd <= 0))
       return false;
     this.length = from + (source2 ? source2.length : 0) + (this.length - to);
     return true;
   }
   become(other) {
-    if (other.length == this.length && other instanceof WidgetView && other.side == this.side) {
+    if (other.length == this.length && other instanceof _WidgetView && other.side == this.side) {
       if (this.widget.constructor == other.widget.constructor) {
         if (!this.widget.eq(other.widget))
           this.markDirty(true);
@@ -11167,7 +11616,7 @@ function posFromDOMInCompositionTree(node, offset, view2, text2) {
   }
   return view2.localPosFromDOM(node, offset);
 }
-var WidgetBufferView = class extends ContentView {
+var WidgetBufferView = class _WidgetBufferView extends ContentView {
   constructor(side) {
     super();
     this.side = side;
@@ -11179,10 +11628,10 @@ var WidgetBufferView = class extends ContentView {
     return false;
   }
   become(other) {
-    return other instanceof WidgetBufferView && other.side == this.side;
+    return other instanceof _WidgetBufferView && other.side == this.side;
   }
   split() {
-    return new WidgetBufferView(this.side);
+    return new _WidgetBufferView(this.side);
   }
   sync() {
     if (!this.dom) {
@@ -11343,34 +11792,71 @@ function updateAttrs(dom, prev, attrs2) {
   return !!changed;
 }
 var WidgetType = class {
+  /**
+  Compare this instance to another instance of the same type.
+  (TypeScript can't express this, but only instances of the same
+  specific class will be passed to this method.) This is used to
+  avoid redrawing widgets when they are replaced by a new
+  decoration of the same type. The default implementation just
+  returns `false`, which will cause new instances of the widget to
+  always be redrawn.
+  */
   eq(widget) {
     return false;
   }
+  /**
+  Update a DOM element created by a widget of the same type (but
+  different, non-`eq` content) to reflect this widget. May return
+  true to indicate that it could update, false to indicate it
+  couldn't (in which case the widget will be redrawn). The default
+  implementation just returns false.
+  */
   updateDOM(dom, view2) {
     return false;
   }
+  /**
+  @internal
+  */
   compare(other) {
     return this == other || this.constructor == other.constructor && this.eq(other);
   }
+  /**
+  The estimated height this widget will have, to be used when
+  estimating the height of content that hasn't been drawn. May
+  return -1 to indicate you don't know. The default implementation
+  returns -1.
+  */
   get estimatedHeight() {
     return -1;
   }
+  /**
+  Can be used to configure which kinds of events inside the widget
+  should be ignored by the editor. The default is to ignore all
+  events.
+  */
   ignoreEvent(event) {
     return true;
   }
+  /**
+  @internal
+  */
   get customView() {
     return null;
   }
+  /**
+  This is called when the an instance of the widget is removed
+  from the editor view.
+  */
   destroy(dom) {
   }
 };
-var BlockType = /* @__PURE__ */ function(BlockType2) {
+var BlockType = /* @__PURE__ */ (function(BlockType2) {
   BlockType2[BlockType2["Text"] = 0] = "Text";
   BlockType2[BlockType2["WidgetBefore"] = 1] = "WidgetBefore";
   BlockType2[BlockType2["WidgetAfter"] = 2] = "WidgetAfter";
   BlockType2[BlockType2["WidgetRange"] = 3] = "WidgetRange";
   return BlockType2;
-}(BlockType || (BlockType = {}));
+})(BlockType || (BlockType = {}));
 var Decoration = class extends RangeValue {
   constructor(startSide, endSide, widget, spec) {
     super();
@@ -11379,17 +11865,37 @@ var Decoration = class extends RangeValue {
     this.widget = widget;
     this.spec = spec;
   }
+  /**
+  @internal
+  */
   get heightRelevant() {
     return false;
   }
+  /**
+  Create a mark decoration, which influences the styling of the
+  content in its range. Nested mark decorations will cause nested
+  DOM elements to be created. Nesting order is determined by
+  precedence of the [facet](https://codemirror.net/6/docs/ref/#view.EditorView^decorations), with
+  the higher-precedence decorations creating the inner DOM nodes.
+  Such elements are split on line boundaries and on the boundaries
+  of lower-precedence decorations.
+  */
   static mark(spec) {
     return new MarkDecoration(spec);
   }
+  /**
+  Create a widget decoration, which displays a DOM element at the
+  given position.
+  */
   static widget(spec) {
     let side = spec.side || 0, block = !!spec.block;
     side += block ? side > 0 ? 3e8 : -4e8 : side > 0 ? 1e8 : -1e8;
     return new PointDecoration(spec, side, side, block, spec.widget || null, false);
   }
+  /**
+  Create a replace decoration which replaces the given range with
+  a widget, or simply hides it.
+  */
   static replace(spec) {
     let block = !!spec.block, startSide, endSide;
     if (spec.isBlockGap) {
@@ -11402,18 +11908,30 @@ var Decoration = class extends RangeValue {
     }
     return new PointDecoration(spec, startSide, endSide, block, spec.widget || null, true);
   }
+  /**
+  Create a line decoration, which can add DOM attributes to the
+  line starting at the given position.
+  */
   static line(spec) {
     return new LineDecoration(spec);
   }
+  /**
+  Build a [`DecorationSet`](https://codemirror.net/6/docs/ref/#view.DecorationSet) from the given
+  decorated range or ranges. If the ranges aren't already sorted,
+  pass `true` for `sort` to make the library sort them for you.
+  */
   static set(of, sort = false) {
     return RangeSet.of(of, sort);
   }
+  /**
+  @internal
+  */
   hasHeight() {
     return this.widget ? this.widget.estimatedHeight > -1 : false;
   }
 };
 Decoration.none = RangeSet.empty;
-var MarkDecoration = class extends Decoration {
+var MarkDecoration = class _MarkDecoration extends Decoration {
   constructor(spec) {
     let { start: start2, end } = getInclusive(spec);
     super(start2 ? -1 : 5e8, end ? 1 : -6e8, null, spec);
@@ -11422,7 +11940,7 @@ var MarkDecoration = class extends Decoration {
     this.attrs = spec.attributes || null;
   }
   eq(other) {
-    return this == other || other instanceof MarkDecoration && this.tagName == other.tagName && this.class == other.class && attrsEq(this.attrs, other.attrs);
+    return this == other || other instanceof _MarkDecoration && this.tagName == other.tagName && this.class == other.class && attrsEq(this.attrs, other.attrs);
   }
   range(from, to = from) {
     if (from >= to)
@@ -11431,12 +11949,12 @@ var MarkDecoration = class extends Decoration {
   }
 };
 MarkDecoration.prototype.point = false;
-var LineDecoration = class extends Decoration {
+var LineDecoration = class _LineDecoration extends Decoration {
   constructor(spec) {
     super(-2e8, -2e8, null, spec);
   }
   eq(other) {
-    return other instanceof LineDecoration && this.spec.class == other.spec.class && attrsEq(this.spec.attributes, other.spec.attributes);
+    return other instanceof _LineDecoration && this.spec.class == other.spec.class && attrsEq(this.spec.attributes, other.spec.attributes);
   }
   range(from, to = from) {
     if (to != from)
@@ -11446,13 +11964,14 @@ var LineDecoration = class extends Decoration {
 };
 LineDecoration.prototype.mapMode = MapMode.TrackBefore;
 LineDecoration.prototype.point = true;
-var PointDecoration = class extends Decoration {
+var PointDecoration = class _PointDecoration extends Decoration {
   constructor(spec, startSide, endSide, block, widget, isReplace) {
     super(startSide, endSide, widget, spec);
     this.block = block;
     this.isReplace = isReplace;
     this.mapMode = !block ? MapMode.TrackDel : startSide <= 0 ? MapMode.TrackBefore : MapMode.TrackAfter;
   }
+  // Only relevant when this.block == true
   get type() {
     return this.startSide < this.endSide ? BlockType.WidgetRange : this.startSide <= 0 ? BlockType.WidgetBefore : BlockType.WidgetAfter;
   }
@@ -11460,7 +11979,7 @@ var PointDecoration = class extends Decoration {
     return this.block || !!this.widget && this.widget.estimatedHeight >= 5;
   }
   eq(other) {
-    return other instanceof PointDecoration && widgetsEq(this.widget, other.widget) && this.block == other.block && this.startSide == other.startSide && this.endSide == other.endSide;
+    return other instanceof _PointDecoration && widgetsEq(this.widget, other.widget) && this.block == other.block && this.startSide == other.startSide && this.endSide == other.endSide;
   }
   range(from, to = from) {
     if (this.isReplace && (from > to || from == to && this.startSide > 0 && this.endSide <= 0))
@@ -11489,7 +12008,7 @@ function addRange(from, to, ranges, margin = 0) {
   else
     ranges.push(from, to);
 }
-var LineView = class extends ContentView {
+var LineView = class _LineView extends ContentView {
   constructor() {
     super(...arguments);
     this.children = [];
@@ -11498,9 +12017,10 @@ var LineView = class extends ContentView {
     this.attrs = null;
     this.breakAfter = 0;
   }
+  // Consumes source
   merge(from, to, source2, hasStart, openStart, openEnd) {
     if (source2) {
-      if (!(source2 instanceof LineView))
+      if (!(source2 instanceof _LineView))
         return false;
       if (!this.dom)
         source2.transferDOM(this);
@@ -11511,7 +12031,7 @@ var LineView = class extends ContentView {
     return true;
   }
   split(at) {
-    let end = new LineView();
+    let end = new _LineView();
     end.breakAfter = this.breakAfter;
     if (this.length == 0)
       return end;
@@ -11551,6 +12071,7 @@ var LineView = class extends ContentView {
   append(child, openStart) {
     joinInlineInto(this, child, openStart);
   }
+  // Only called when building a line view in ContentBuilder
   addLineDeco(deco) {
     let attrs2 = deco.spec.attributes, cls = deco.spec.class;
     if (attrs2)
@@ -11633,7 +12154,7 @@ var LineView = class extends ContentView {
     for (let i = 0, off = 0; i < docView.children.length; i++) {
       let block = docView.children[i], end = off + block.length;
       if (end >= pos) {
-        if (block instanceof LineView)
+        if (block instanceof _LineView)
           return block;
         if (end > pos)
           break;
@@ -11643,7 +12164,7 @@ var LineView = class extends ContentView {
     return null;
   }
 };
-var BlockWidgetView = class extends ContentView {
+var BlockWidgetView = class _BlockWidgetView extends ContentView {
   constructor(widget, length6, type2) {
     super();
     this.widget = widget;
@@ -11653,7 +12174,7 @@ var BlockWidgetView = class extends ContentView {
     this.prevWidget = null;
   }
   merge(from, to, source2, _takeDeco, openStart, openEnd) {
-    if (source2 && (!(source2 instanceof BlockWidgetView) || !this.widget.compare(source2.widget) || from > 0 && openStart <= 0 || to < this.length && openEnd <= 0))
+    if (source2 && (!(source2 instanceof _BlockWidgetView) || !this.widget.compare(source2.widget) || from > 0 && openStart <= 0 || to < this.length && openEnd <= 0))
       return false;
     this.length = from + (source2 ? source2.length : 0) + (this.length - to);
     return true;
@@ -11664,7 +12185,7 @@ var BlockWidgetView = class extends ContentView {
   split(at) {
     let len = this.length - at;
     this.length = at;
-    let end = new BlockWidgetView(this.widget, len, this.type);
+    let end = new _BlockWidgetView(this.widget, len, this.type);
     end.breakAfter = this.breakAfter;
     return end;
   }
@@ -11687,7 +12208,7 @@ var BlockWidgetView = class extends ContentView {
     return null;
   }
   become(other) {
-    if (other instanceof BlockWidgetView && other.type == this.type && other.widget.constructor == this.widget.constructor) {
+    if (other instanceof _BlockWidgetView && other.type == this.type && other.widget.constructor == this.widget.constructor) {
       if (!other.widget.eq(this.widget))
         this.markDirty(true);
       if (this.dom && !this.prevWidget)
@@ -11717,9 +12238,9 @@ var BlockWidgetView = class extends ContentView {
       this.widget.destroy(this.dom);
   }
 };
-var ContentBuilder = class {
-  constructor(doc2, pos, end, disallowBlockEffectsFor) {
-    this.doc = doc2;
+var ContentBuilder = class _ContentBuilder {
+  constructor(doc3, pos, end, disallowBlockEffectsFor) {
+    this.doc = doc3;
     this.pos = pos;
     this.end = end;
     this.disallowBlockEffectsFor = disallowBlockEffectsFor;
@@ -11733,7 +12254,7 @@ var ContentBuilder = class {
     this.openEnd = -1;
     this.text = "";
     this.textOff = 0;
-    this.cursor = doc2.iter();
+    this.cursor = doc3.iter();
     this.skip = pos;
   }
   posCovered() {
@@ -11792,7 +12313,12 @@ var ContentBuilder = class {
           this.textOff = 0;
         }
       }
-      let take4 = Math.min(this.text.length - this.textOff, length6, 512);
+      let take4 = Math.min(
+        this.text.length - this.textOff,
+        length6,
+        512
+        /* T.Chunk */
+      );
       this.flushBuffer(active.slice(active.length - openStart));
       this.getLine().append(wrapMarks(new TextView(this.text.slice(this.textOff, this.textOff + take4)), active), openStart);
       this.atCursorPos = true;
@@ -11856,7 +12382,7 @@ var ContentBuilder = class {
       this.openStart = openStart;
   }
   static build(text2, from, to, decorations2, dynamicDecorationMap) {
-    let builder = new ContentBuilder(text2, from, to, dynamicDecorationMap);
+    let builder = new _ContentBuilder(text2, from, to, dynamicDecorationMap);
     builder.openEnd = RangeSet.spans(decorations2, from, to, builder);
     if (builder.openStart < 0)
       builder.openStart = builder.openEnd;
@@ -11897,7 +12423,7 @@ var perLineTextDirection = /* @__PURE__ */ Facet.define({
 var nativeSelectionHidden = /* @__PURE__ */ Facet.define({
   combine: (values2) => values2.some((x2) => x2)
 });
-var ScrollTarget = class {
+var ScrollTarget = class _ScrollTarget {
   constructor(range5, y2 = "nearest", x2 = "nearest", yMargin = 5, xMargin = 5) {
     this.range = range5;
     this.y = y2;
@@ -11906,7 +12432,7 @@ var ScrollTarget = class {
     this.xMargin = xMargin;
   }
   map(changes) {
-    return changes.empty ? this : new ScrollTarget(this.range.map(changes), this.y, this.x, this.yMargin, this.xMargin);
+    return changes.empty ? this : new _ScrollTarget(this.range.map(changes), this.y, this.x, this.yMargin, this.xMargin);
   }
 };
 var scrollIntoView = /* @__PURE__ */ StateEffect.define({ map: (t2, ch) => t2.map(ch) });
@@ -11924,16 +12450,20 @@ function logException(state, exception, context) {
 var editable = /* @__PURE__ */ Facet.define({ combine: (values2) => values2.length ? values2[0] : true });
 var nextPluginID = 0;
 var viewPlugin = /* @__PURE__ */ Facet.define();
-var ViewPlugin = class {
+var ViewPlugin = class _ViewPlugin {
   constructor(id3, create2, domEventHandlers, buildExtensions) {
     this.id = id3;
     this.create = create2;
     this.domEventHandlers = domEventHandlers;
     this.extension = buildExtensions(this);
   }
+  /**
+  Define a plugin from a constructor function that creates the
+  plugin's value, given an editor view.
+  */
   static define(create2, spec) {
     const { eventHandlers, provide, decorations: deco } = spec || {};
-    return new ViewPlugin(nextPluginID++, create2, eventHandlers, (plugin) => {
+    return new _ViewPlugin(nextPluginID++, create2, eventHandlers, (plugin) => {
       let ext = [viewPlugin.of(plugin)];
       if (deco)
         ext.push(decorations.of((view2) => {
@@ -11945,8 +12475,12 @@ var ViewPlugin = class {
       return ext;
     });
   }
+  /**
+  Create a plugin for a class whose constructor takes a single
+  editor view as argument.
+  */
   static fromClass(cls, spec) {
-    return ViewPlugin.define((view2) => new cls(view2), spec);
+    return _ViewPlugin.define((view2) => new cls(view2), spec);
   }
 };
 var PluginInstance = class {
@@ -12004,7 +12538,7 @@ var decorations = /* @__PURE__ */ Facet.define();
 var atomicRanges = /* @__PURE__ */ Facet.define();
 var scrollMargins = /* @__PURE__ */ Facet.define();
 var styleModule = /* @__PURE__ */ Facet.define();
-var ChangedRange = class {
+var ChangedRange = class _ChangedRange {
   constructor(fromA, toA, fromB, toB) {
     this.fromA = fromA;
     this.toA = toA;
@@ -12012,7 +12546,7 @@ var ChangedRange = class {
     this.toB = toB;
   }
   join(other) {
-    return new ChangedRange(Math.min(this.fromA, other.fromA), Math.max(this.toA, other.toA), Math.min(this.fromB, other.fromB), Math.max(this.toB, other.toB));
+    return new _ChangedRange(Math.min(this.fromA, other.fromA), Math.max(this.toA, other.toA), Math.min(this.fromB, other.fromB), Math.max(this.toB, other.toB));
   }
   addToSet(set3) {
     let i = set3.length, me = this;
@@ -12039,7 +12573,7 @@ var ChangedRange = class {
         let from = ranges[rI], to = ranges[rI + 1];
         let fromB = Math.max(posB, from), toB = Math.min(end, to);
         if (fromB <= toB)
-          new ChangedRange(fromB + off, toB + off, fromB, toB).addToSet(result);
+          new _ChangedRange(fromB + off, toB + off, fromB, toB).addToSet(result);
         if (to > end)
           break;
         else
@@ -12047,13 +12581,13 @@ var ChangedRange = class {
       }
       if (!next)
         return result;
-      new ChangedRange(next.fromA, next.toA, next.fromB, next.toB).addToSet(result);
+      new _ChangedRange(next.fromA, next.toA, next.fromB, next.toB).addToSet(result);
       posA = next.toA;
       posB = next.toB;
     }
   }
 };
-var ViewUpdate = class {
+var ViewUpdate = class _ViewUpdate {
   constructor(view2, state, transactions) {
     this.view = view2;
     this.state = state;
@@ -12067,36 +12601,64 @@ var ViewUpdate = class {
     this.changes.iterChangedRanges((fromA, toA, fromB, toB) => changedRanges.push(new ChangedRange(fromA, toA, fromB, toB)));
     this.changedRanges = changedRanges;
   }
+  /**
+  @internal
+  */
   static create(view2, state, transactions) {
-    return new ViewUpdate(view2, state, transactions);
+    return new _ViewUpdate(view2, state, transactions);
   }
+  /**
+  Tells you whether the [viewport](https://codemirror.net/6/docs/ref/#view.EditorView.viewport) or
+  [visible ranges](https://codemirror.net/6/docs/ref/#view.EditorView.visibleRanges) changed in this
+  update.
+  */
   get viewportChanged() {
     return (this.flags & 4) > 0;
   }
+  /**
+  Indicates whether the height of a block element in the editor
+  changed in this update.
+  */
   get heightChanged() {
     return (this.flags & 2) > 0;
   }
+  /**
+  Returns true when the document was modified or the size of the
+  editor, or elements within the editor, changed.
+  */
   get geometryChanged() {
     return this.docChanged || (this.flags & (8 | 2)) > 0;
   }
+  /**
+  True when this update indicates a focus change.
+  */
   get focusChanged() {
     return (this.flags & 1) > 0;
   }
+  /**
+  Whether the document changed in this update.
+  */
   get docChanged() {
     return !this.changes.empty;
   }
+  /**
+  Whether the selection was explicitly set in this update.
+  */
   get selectionSet() {
     return this.transactions.some((tr) => tr.selection);
   }
+  /**
+  @internal
+  */
   get empty() {
     return this.flags == 0 && this.transactions.length == 0;
   }
 };
-var Direction = /* @__PURE__ */ function(Direction2) {
+var Direction = /* @__PURE__ */ (function(Direction2) {
   Direction2[Direction2["LTR"] = 0] = "LTR";
   Direction2[Direction2["RTL"] = 1] = "RTL";
   return Direction2;
-}(Direction || (Direction = {}));
+})(Direction || (Direction = {}));
 var LTR = Direction.LTR;
 var RTL = Direction.RTL;
 function dec(str) {
@@ -12119,17 +12681,29 @@ function charType(ch) {
 }
 var BidiRE = /[\u0590-\u05f4\u0600-\u06ff\u0700-\u08ac\ufb50-\ufdff]/;
 var BidiSpan = class {
+  /**
+  @internal
+  */
   constructor(from, to, level) {
     this.from = from;
     this.to = to;
     this.level = level;
   }
+  /**
+  The direction of this span.
+  */
   get dir() {
     return this.level % 2 ? RTL : LTR;
   }
+  /**
+  @internal
+  */
   side(end, dir) {
     return this.dir == dir == end ? this.to : this.from;
   }
+  /**
+  @internal
+  */
   static find(order, index3, level, assoc) {
     let maybe = -1;
     for (let i = 0; i < order.length; i++) {
@@ -12426,6 +13000,10 @@ var DocView = class extends ContentView {
   get length() {
     return this.view.state.doc.length;
   }
+  // Update the document view to a given state. scrollIntoView can be
+  // used as a hint to compute a new viewport that includes that
+  // position, if we know the editor is going to scroll that position
+  // into view.
   update(update3) {
     let changedRanges = update3.changedRanges;
     if (this.minWidth > 0 && changedRanges.length) {
@@ -12454,6 +13032,8 @@ var DocView = class extends ContentView {
       return true;
     }
   }
+  // Used by update and the constructor do perform the actual DOM
+  // update
   updateInner(changes, oldLength) {
     this.view.viewState.mustMeasureContent = true;
     this.updateChildren(changes, oldLength);
@@ -12489,6 +13069,7 @@ var DocView = class extends ContentView {
       replaceRange(this, fromI, fromOff, toI, toOff, content2, breakAtStart, openStart, openEnd);
     }
   }
+  // Sync the DOM selection to this.state.selection
   updateSelection(mustRead = false, fromPointer = false) {
     if (mustRead || !this.view.observer.selectionRange.focusNode)
       this.view.observer.readSelectionRange();
@@ -12513,8 +13094,7 @@ var DocView = class extends ContentView {
           this.dom.focus({ preventScroll: true });
         }
         let rawSel = getSelection(this.view.root);
-        if (!rawSel)
-          ;
+        if (!rawSel) ;
         else if (main.empty) {
           if (browser.gecko) {
             let nextTo = nextToUneditable(anchor.node, anchor.offset);
@@ -13047,8 +13627,8 @@ function posAtCoords(view2, coords, precise, bias = -1) {
     return view2.viewport.from == 0 ? 0 : precise ? null : posAtCoordsImprecise(view2, content2, block, x2, y2);
   if (lineStart > view2.viewport.to)
     return view2.viewport.to == view2.state.doc.length ? view2.state.doc.length : precise ? null : posAtCoordsImprecise(view2, content2, block, x2, y2);
-  let doc2 = view2.dom.ownerDocument;
-  let root2 = view2.root.elementFromPoint ? view2.root : doc2;
+  let doc3 = view2.dom.ownerDocument;
+  let root2 = view2.root.elementFromPoint ? view2.root : doc3;
   let element = root2.elementFromPoint(x2, y2);
   if (element && !view2.contentDOM.contains(element))
     element = null;
@@ -13060,12 +13640,12 @@ function posAtCoords(view2, coords, precise, bias = -1) {
   }
   let node, offset = -1;
   if (element && ((_a2 = view2.docView.nearest(element)) === null || _a2 === void 0 ? void 0 : _a2.isEditable) != false) {
-    if (doc2.caretPositionFromPoint) {
-      let pos = doc2.caretPositionFromPoint(x2, y2);
+    if (doc3.caretPositionFromPoint) {
+      let pos = doc3.caretPositionFromPoint(x2, y2);
       if (pos)
         ({ offsetNode: node, offset } = pos);
-    } else if (doc2.caretRangeFromPoint) {
-      let range5 = doc2.caretRangeFromPoint(x2, y2);
+    } else if (doc3.caretRangeFromPoint) {
+      let range5 = doc3.caretRangeFromPoint(x2, y2);
       if (range5) {
         ({ startContainer: node, startOffset: offset } = range5);
         if (!view2.contentDOM.contains(node) || browser.safari && isSuspiciousSafariCaretResult(node, offset, x2) || browser.chrome && isSuspiciousChromeCaretResult(node, offset, x2))
@@ -13404,9 +13984,9 @@ var MouseSelection = class {
     this.scrolling = -1;
     this.lastEvent = startEvent;
     this.scrollParent = scrollableParent(view2.contentDOM);
-    let doc2 = view2.contentDOM.ownerDocument;
-    doc2.addEventListener("mousemove", this.move = this.move.bind(this));
-    doc2.addEventListener("mouseup", this.up = this.up.bind(this));
+    let doc3 = view2.contentDOM.ownerDocument;
+    doc3.addEventListener("mousemove", this.move = this.move.bind(this));
+    doc3.addEventListener("mouseup", this.up = this.up.bind(this));
     this.extend = startEvent.shiftKey;
     this.multiple = view2.state.facet(EditorState.allowMultipleSelections) && addsSelectionRange(view2, startEvent);
     this.dragMove = dragMovesSelection(view2, startEvent);
@@ -13446,9 +14026,9 @@ var MouseSelection = class {
   }
   destroy() {
     this.setScrollSpeed(0, 0);
-    let doc2 = this.view.contentDOM.ownerDocument;
-    doc2.removeEventListener("mousemove", this.move);
-    doc2.removeEventListener("mouseup", this.up);
+    let doc3 = this.view.contentDOM.ownerDocument;
+    doc3.removeEventListener("mousemove", this.move);
+    doc3.removeEventListener("mouseup", this.up);
     this.view.inputState.mouseSelection = null;
   }
   setScrollSpeed(sx, sy) {
@@ -13906,8 +14486,8 @@ var HeightOracle = class {
     let lines = 1 + Math.max(0, Math.ceil((length6 - this.lineLength) / (this.lineLength - 5)));
     return lines * this.lineHeight;
   }
-  setDoc(doc2) {
-    this.doc = doc2;
+  setDoc(doc3) {
+    this.doc = doc3;
     return this;
   }
   mustRefreshForWrapping(whiteSpace) {
@@ -13957,7 +14537,10 @@ var MeasuredHeights = class {
     return this.index < this.heights.length;
   }
 };
-var BlockInfo = class {
+var BlockInfo = class _BlockInfo {
+  /**
+  @internal
+  */
   constructor(from, length6, top3, height, type2) {
     this.from = from;
     this.length = length6;
@@ -13965,25 +14548,34 @@ var BlockInfo = class {
     this.height = height;
     this.type = type2;
   }
+  /**
+  The end of the element as a document position.
+  */
   get to() {
     return this.from + this.length;
   }
+  /**
+  The bottom position of the element.
+  */
   get bottom() {
     return this.top + this.height;
   }
+  /**
+  @internal
+  */
   join(other) {
     let detail = (Array.isArray(this.type) ? this.type : [this]).concat(Array.isArray(other.type) ? other.type : [other]);
-    return new BlockInfo(this.from, this.length + other.length, this.top, this.height + other.height, detail);
+    return new _BlockInfo(this.from, this.length + other.length, this.top, this.height + other.height, detail);
   }
 };
-var QueryType = /* @__PURE__ */ function(QueryType2) {
+var QueryType = /* @__PURE__ */ (function(QueryType2) {
   QueryType2[QueryType2["ByPos"] = 0] = "ByPos";
   QueryType2[QueryType2["ByHeight"] = 1] = "ByHeight";
   QueryType2[QueryType2["ByPosNoHeight"] = 2] = "ByPosNoHeight";
   return QueryType2;
-}(QueryType || (QueryType = {}));
+})(QueryType || (QueryType = {}));
 var Epsilon = 1e-3;
-var HeightMap = class {
+var HeightMap = class _HeightMap {
   constructor(length6, height, flags = 2) {
     this.length = length6;
     this.height = height;
@@ -14002,9 +14594,13 @@ var HeightMap = class {
       this.height = height;
     }
   }
+  // Base case is to replace a leaf node, which simply builds a tree
+  // from the new nodes and returns that (HeightMapBranch and
+  // HeightMapGap override this to actually use from/to)
   replace(_from, _to, nodes) {
-    return HeightMap.of(nodes);
+    return _HeightMap.of(nodes);
   }
+  // Again, these are base cases, and are overridden for branch and gap nodes.
   decomposeLeft(_to, result) {
     result.push(this);
   }
@@ -14012,7 +14608,7 @@ var HeightMap = class {
     result.push(this);
   }
   applyChanges(decorations2, oldDoc, oracle, changes) {
-    let me = this, doc2 = oracle.doc;
+    let me = this, doc3 = oracle.doc;
     for (let i = changes.length - 1; i >= 0; i--) {
       let { fromA, toA, fromB, toB } = changes[i];
       let start2 = me.lineAt(fromA, QueryType.ByPosNoHeight, oracle.setDoc(oldDoc), 0, 0);
@@ -14028,7 +14624,7 @@ var HeightMap = class {
       }
       fromB += start2.from - fromA;
       fromA = start2.from;
-      let nodes = NodeBuilder.build(oracle.setDoc(doc2), decorations2, fromB, toB);
+      let nodes = NodeBuilder.build(oracle.setDoc(doc3), decorations2, fromB, toB);
       me = me.replace(fromA, toA, nodes);
     }
     return me.updateHeight(oracle, 0);
@@ -14036,6 +14632,10 @@ var HeightMap = class {
   static empty() {
     return new HeightMapText(0, 0);
   }
+  // nodes uses null values to indicate the position of line breaks.
+  // There are never line breaks at the start or end of the array, or
+  // two line breaks next to each other, and the array isn't allowed
+  // to be empty (same restrictions as return value from the builder).
   static of(nodes) {
     if (nodes.length == 1)
       return nodes[0];
@@ -14079,7 +14679,7 @@ var HeightMap = class {
       brk = 1;
       j++;
     }
-    return new HeightMapBranch(HeightMap.of(nodes.slice(0, i)), brk, HeightMap.of(nodes.slice(j)));
+    return new HeightMapBranch(_HeightMap.of(nodes.slice(0, i)), brk, _HeightMap.of(nodes.slice(j)));
   }
 };
 HeightMap.prototype.size = 1;
@@ -14108,7 +14708,7 @@ var HeightMapBlock = class extends HeightMap {
     return `block(${this.length})`;
   }
 };
-var HeightMapText = class extends HeightMapBlock {
+var HeightMapText = class _HeightMapText extends HeightMapBlock {
   constructor(length6, height) {
     super(length6, height, BlockType.Text);
     this.collapsed = 0;
@@ -14116,9 +14716,9 @@ var HeightMapText = class extends HeightMapBlock {
   }
   replace(_from, _to, nodes) {
     let node = nodes[0];
-    if (nodes.length == 1 && (node instanceof HeightMapText || node instanceof HeightMapGap && node.flags & 4) && Math.abs(this.length - node.length) < 10) {
+    if (nodes.length == 1 && (node instanceof _HeightMapText || node instanceof HeightMapGap && node.flags & 4) && Math.abs(this.length - node.length) < 10) {
       if (node instanceof HeightMapGap)
-        node = new HeightMapText(node.length, this.height);
+        node = new _HeightMapText(node.length, this.height);
       else
         node.height = this.height;
       if (!this.outdated)
@@ -14140,7 +14740,7 @@ var HeightMapText = class extends HeightMapBlock {
     return `line(${this.length}${this.collapsed ? -this.collapsed : ""}${this.widgetHeight ? ":" + this.widgetHeight : ""})`;
   }
 };
-var HeightMapGap = class extends HeightMap {
+var HeightMapGap = class _HeightMapGap extends HeightMap {
   constructor(length6) {
     super(length6, 0);
   }
@@ -14203,32 +14803,32 @@ var HeightMapGap = class extends HeightMap {
     let after = this.length - to;
     if (after > 0) {
       let last2 = nodes[nodes.length - 1];
-      if (last2 instanceof HeightMapGap)
-        nodes[nodes.length - 1] = new HeightMapGap(last2.length + after);
+      if (last2 instanceof _HeightMapGap)
+        nodes[nodes.length - 1] = new _HeightMapGap(last2.length + after);
       else
-        nodes.push(null, new HeightMapGap(after - 1));
+        nodes.push(null, new _HeightMapGap(after - 1));
     }
     if (from > 0) {
       let first = nodes[0];
-      if (first instanceof HeightMapGap)
-        nodes[0] = new HeightMapGap(from + first.length);
+      if (first instanceof _HeightMapGap)
+        nodes[0] = new _HeightMapGap(from + first.length);
       else
-        nodes.unshift(new HeightMapGap(from - 1), null);
+        nodes.unshift(new _HeightMapGap(from - 1), null);
     }
     return HeightMap.of(nodes);
   }
   decomposeLeft(to, result) {
-    result.push(new HeightMapGap(to - 1), null);
+    result.push(new _HeightMapGap(to - 1), null);
   }
   decomposeRight(from, result) {
-    result.push(null, new HeightMapGap(this.length - from - 1));
+    result.push(null, new _HeightMapGap(this.length - from - 1));
   }
   updateHeight(oracle, offset = 0, force2 = false, measured) {
     let end = offset + this.length;
     if (measured && measured.from <= offset + this.length && measured.more) {
       let nodes = [], pos = Math.max(offset, measured.from), singleHeight = -1;
       if (measured.from > offset)
-        nodes.push(new HeightMapGap(measured.from - offset - 1).updateHeight(oracle, offset));
+        nodes.push(new _HeightMapGap(measured.from - offset - 1).updateHeight(oracle, offset));
       while (pos <= end && measured.more) {
         let len = oracle.doc.lineAt(pos).length;
         if (nodes.length)
@@ -14244,7 +14844,7 @@ var HeightMapGap = class extends HeightMap {
         pos += len + 1;
       }
       if (pos <= end)
-        nodes.push(null, new HeightMapGap(end - pos).updateHeight(oracle, pos));
+        nodes.push(null, new _HeightMapGap(end - pos).updateHeight(oracle, pos));
       let result = HeightMap.of(nodes);
       if (singleHeight < 0 || Math.abs(result.height - this.height) >= Epsilon || Math.abs(singleHeight - this.heightMetrics(oracle, offset).perLine) >= Epsilon)
         oracle.heightChanged = true;
@@ -14383,7 +14983,7 @@ function mergeGaps(nodes, around) {
     nodes.splice(around - 1, 3, new HeightMapGap(before.length + 1 + after.length));
 }
 var relevantWidgetHeight = 5;
-var NodeBuilder = class {
+var NodeBuilder = class _NodeBuilder {
   constructor(pos, oracle) {
     this.pos = pos;
     this.oracle = oracle;
@@ -14489,8 +15089,13 @@ var NodeBuilder = class {
     }
     return this.nodes;
   }
+  // Always called with a region that on both sides either stretches
+  // to a line break or the end of the document.
+  // The returned array uses null to indicate line breaks, but never
+  // starts or ends in a line break, or has multiple line breaks next
+  // to each other.
   static build(oracle, decorations2, from, to) {
-    let builder = new NodeBuilder(from, oracle);
+    let builder = new _NodeBuilder(from, oracle);
     RangeSet.spans(decorations2, from, to, builder, 0);
     return builder.finish(from);
   }
@@ -14513,10 +15118,10 @@ var DecorationComparator = class {
 };
 function visiblePixelRange(dom, paddingTop) {
   let rect = dom.getBoundingClientRect();
-  let doc2 = dom.ownerDocument, win = doc2.defaultView || window;
+  let doc3 = dom.ownerDocument, win = doc3.defaultView || window;
   let left2 = Math.max(0, rect.left), right2 = Math.min(win.innerWidth, rect.right);
   let top3 = Math.max(0, rect.top), bottom2 = Math.min(win.innerHeight, rect.bottom);
-  for (let parent = dom.parentNode; parent && parent != doc2.body; ) {
+  for (let parent = dom.parentNode; parent && parent != doc3.body; ) {
     if (parent.nodeType == 1) {
       let elt = parent;
       let style = window.getComputedStyle(elt);
@@ -14777,13 +15382,23 @@ var ViewState = class {
     let from = changes.mapPos(viewport.from, -1), to = changes.mapPos(viewport.to, 1);
     return new Viewport(this.heightMap.lineAt(from, QueryType.ByPos, this.heightOracle, 0, 0).from, this.heightMap.lineAt(to, QueryType.ByPos, this.heightOracle, 0, 0).to);
   }
+  // Checks if a given viewport covers the visible part of the
+  // document and not too much beyond that.
   viewportIsAppropriate({ from, to }, bias = 0) {
     if (!this.inView)
       return true;
     let { top: top3 } = this.heightMap.lineAt(from, QueryType.ByPos, this.heightOracle, 0, 0);
     let { bottom: bottom2 } = this.heightMap.lineAt(to, QueryType.ByPos, this.heightOracle, 0, 0);
     let { visibleTop, visibleBottom } = this;
-    return (from == 0 || top3 <= visibleTop - Math.max(10, Math.min(-bias, 250))) && (to == this.state.doc.length || bottom2 >= visibleBottom + Math.max(10, Math.min(bias, 250))) && (top3 > visibleTop - 2 * 1e3 && bottom2 < visibleBottom + 2 * 1e3);
+    return (from == 0 || top3 <= visibleTop - Math.max(10, Math.min(
+      -bias,
+      250
+      /* VP.MaxCoverMargin */
+    ))) && (to == this.state.doc.length || bottom2 >= visibleBottom + Math.max(10, Math.min(
+      bias,
+      250
+      /* VP.MaxCoverMargin */
+    ))) && (top3 > visibleTop - 2 * 1e3 && bottom2 < visibleBottom + 2 * 1e3);
   }
   mapLineGaps(gaps, changes) {
     if (!gaps.length || changes.empty)
@@ -14794,6 +15409,13 @@ var ViewState = class {
         mapped.push(new LineGap(changes.mapPos(gap.from), changes.mapPos(gap.to), gap.size));
     return mapped;
   }
+  // Computes positions in the viewport where the start or end of a
+  // line should be hidden, trying to reuse existing line gaps when
+  // appropriate to avoid unneccesary redraws.
+  // Uses crude character-counting for the positioning and sizing,
+  // since actual DOM coordinates aren't always available and
+  // predictable. Relies on generous margins (see LG.Margin) to hide
+  // the artifacts this might produce from the user.
   ensureLineGaps(current, mayMeasure) {
     let wrapping = this.heightOracle.lineWrapping;
     let margin = wrapping ? 1e4 : 2e3, halfMargin = margin >> 1, doubleMargin = margin << 1;
@@ -15048,6 +15670,14 @@ var baseTheme$1 = /* @__PURE__ */ buildTheme("." + baseThemeID, {
     position: "relative !important",
     boxSizing: "border-box",
     "&.cm-focused": {
+      // Provide a simple default outline to make sure a focused
+      // editor is visually distinct. Can't leave the default behavior
+      // because that will apply to the content element, which is
+      // inside the scrollable container and doesn't include the
+      // gutters. We also can't use an 'auto' outline, since those
+      // are, for some reason, drawn behind the element content, which
+      // will cause things like the active line background to cover
+      // the outline (#297).
       outline: "1px dotted #212121"
     },
     display: "flex !important",
@@ -15117,6 +15747,9 @@ var baseTheme$1 = /* @__PURE__ */ buildTheme("." + baseThemeID, {
   "&.cm-focused .cm-cursorLayer": {
     animation: "steps(1) cm-blink 1.2s infinite"
   },
+  // Two animations defined so that we can switch between them to
+  // restart the animation without forcing another style
+  // recomputation.
   "@keyframes cm-blink": { "0%": {}, "50%": { opacity: 0 }, "100%": {} },
   "@keyframes cm-blink2": { "0%": {}, "50%": { opacity: 0 }, "100%": {} },
   ".cm-cursor, .cm-dropCursor": {
@@ -15358,7 +15991,11 @@ function applyDOMChange(view2, domChange) {
           if (range5.from == sel.from && range5.to == sel.to)
             return { changes, range: mainSel || range5.map(changes) };
           let to = range5.to - offset, from = to - replaced.length;
-          if (range5.to - range5.from != size4 || view2.state.sliceDoc(from, to) != replaced || compositionRange && range5.to >= compositionRange.from && range5.from <= compositionRange.to)
+          if (range5.to - range5.from != size4 || view2.state.sliceDoc(from, to) != replaced || // Unfortunately, there's no way to make multiple
+          // changes in the same node work without aborting
+          // composition, so cursors in the composition range are
+          // ignored.
+          compositionRange && range5.to >= compositionRange.from && range5.from <= compositionRange.to)
             return { range: range5 };
           let rangeChanges = startState2.changes({ from, to, insert: change.insert }), selOff = range5.to - sel.to;
           return {
@@ -15570,7 +16207,8 @@ var DOMObserver = class {
         this.selectionChanged = false;
       return;
     }
-    if ((browser.ie && browser.ie_version <= 11 || browser.android && browser.chrome) && !view2.state.selection.main.empty && sel.focusNode && isEquivalentPosition(sel.focusNode, sel.focusOffset, sel.anchorNode, sel.anchorOffset))
+    if ((browser.ie && browser.ie_version <= 11 || browser.android && browser.chrome) && !view2.state.selection.main.empty && // (Selection.isCollapsed isn't reliable on IE)
+    sel.focusNode && isEquivalentPosition(sel.focusNode, sel.focusOffset, sel.anchorNode, sel.anchorOffset))
       this.flushSoon();
     else
       this.flush(false);
@@ -15652,11 +16290,20 @@ var DOMObserver = class {
     if (useCharData)
       this.dom.removeEventListener("DOMCharacterDataModified", this.onCharData);
   }
+  // Throw away any pending changes
   clear() {
     this.processRecords();
     this.queue.length = 0;
     this.selectionChanged = false;
   }
+  // Chrome Android, especially in combination with GBoard, not only
+  // doesn't reliably fire regular key events, but also often
+  // surrounds the effect of enter or backspace with a bunch of
+  // composition events that, when interrupted, cause text duplication
+  // or other kinds of corruption. This hack makes the editor back off
+  // from handling DOM changes for a moment when such a key is
+  // detected (via beforeinput or keydown), and then tries to flush
+  // them or, if that has no effect, dispatches the given key.
   delayAndroidKey(key, keyCode) {
     var _a2;
     if (!this.delayedAndroidKey) {
@@ -15674,6 +16321,10 @@ var DOMObserver = class {
       this.delayedAndroidKey = {
         key,
         keyCode,
+        // Only run the key handler when no changes are detected if
+        // this isn't coming right after another change, in which case
+        // it is probably part of a weird chain of updates, and should
+        // be ignored if it returns the DOM to its previous state.
         force: this.lastChange < Date.now() - 50 || !!((_a2 = this.delayedAndroidKey) === null || _a2 === void 0 ? void 0 : _a2.force)
       };
   }
@@ -15729,6 +16380,7 @@ var DOMObserver = class {
     this.selectionChanged = false;
     return new DOMChange(this.view, from, to, typeOver);
   }
+  // Apply pending changes, if any
   flush(readSelection = true) {
     if (this.delayedFlush >= 0 || this.delayedAndroidKey)
       return false;
@@ -15828,7 +16480,12 @@ function safariSelectionRangeHack(view2) {
     [anchorNode, anchorOffset, focusNode, focusOffset] = [focusNode, focusOffset, anchorNode, anchorOffset];
   return { anchorNode, anchorOffset, focusNode, focusOffset };
 }
-var EditorView = class {
+var EditorView = class _EditorView {
+  /**
+  Construct a new view. You'll want to either provide a `parent`
+  option, or put `view.dom` into your document after creating a
+  view, so that the user can see the editor.
+  */
   constructor(config = {}) {
     this.plugins = [];
     this.pluginMap = /* @__PURE__ */ new Map();
@@ -15868,33 +16525,80 @@ var EditorView = class {
     if (config.parent)
       config.parent.appendChild(this.dom);
   }
+  /**
+  The current editor state.
+  */
   get state() {
     return this.viewState.state;
   }
+  /**
+  To be able to display large documents without consuming too much
+  memory or overloading the browser, CodeMirror only draws the
+  code that is visible (plus a margin around it) to the DOM. This
+  property tells you the extent of the current drawn viewport, in
+  document positions.
+  */
   get viewport() {
     return this.viewState.viewport;
   }
+  /**
+  When there are, for example, large collapsed ranges in the
+  viewport, its size can be a lot bigger than the actual visible
+  content. Thus, if you are doing something like styling the
+  content in the viewport, it is preferable to only do so for
+  these ranges, which are the subset of the viewport that is
+  actually drawn.
+  */
   get visibleRanges() {
     return this.viewState.visibleRanges;
   }
+  /**
+  Returns false when the editor is entirely scrolled out of view
+  or otherwise hidden.
+  */
   get inView() {
     return this.viewState.inView;
   }
+  /**
+  Indicates whether the user is currently composing text via
+  [IME](https://en.wikipedia.org/wiki/Input_method), and at least
+  one change has been made in the current composition.
+  */
   get composing() {
     return this.inputState.composing > 0;
   }
+  /**
+  Indicates whether the user is currently in composing state. Note
+  that on some platforms, like Android, this will be the case a
+  lot, since just putting the cursor on a word starts a
+  composition there.
+  */
   get compositionStarted() {
     return this.inputState.composing >= 0;
   }
+  /**
+  The document or shadow root that the view lives in.
+  */
   get root() {
     return this._root;
   }
+  /**
+  @internal
+  */
   get win() {
     return this.dom.ownerDocument.defaultView || window;
   }
   dispatch(...input) {
     this._dispatch(input.length == 1 && input[0] instanceof Transaction ? input[0] : this.state.update(...input));
   }
+  /**
+  Update the view for the given array of transactions. This will
+  update the visible document and selection to match the state
+  produced by the transactions, and notify view plugins of the
+  change. You should usually call
+  [`dispatch`](https://codemirror.net/6/docs/ref/#view.EditorView.dispatch) instead, which uses this
+  as a primitive.
+  */
   update(transactions) {
     if (this.updateState != 0)
       throw new Error("Calls to EditorView.update are not allowed while an update is in progress");
@@ -15978,6 +16682,13 @@ var EditorView = class {
         }
       });
   }
+  /**
+  Reset the view to the given state. (This will cause the entire
+  document to be redrawn and all view plugins to be reinitialized,
+  so you should probably only use it when the new state isn't
+  derived from the old state. Otherwise, use
+  [`dispatch`](https://codemirror.net/6/docs/ref/#view.EditorView.dispatch) instead.)
+  */
   setState(newState) {
     if (this.updateState != 0)
       throw new Error("Calls to EditorView.setState are not allowed while an update is in progress");
@@ -16034,6 +16745,9 @@ var EditorView = class {
     for (let i = 0; i < this.plugins.length; i++)
       this.plugins[i].update(this);
   }
+  /**
+  @internal
+  */
   measure(flush = true) {
     if (this.destroyed)
       return;
@@ -16117,6 +16831,9 @@ var EditorView = class {
       for (let listener of this.state.facet(updateListener))
         listener(updated);
   }
+  /**
+  Get the CSS classes for the currently active editor themes.
+  */
   get themeClasses() {
     return baseThemeID + " " + (this.state.facet(darkTheme) ? baseDarkID : baseLightID) + " " + this.state.facet(theme);
   }
@@ -16151,7 +16868,7 @@ var EditorView = class {
     let first = true;
     for (let tr of trs)
       for (let effect of tr.effects)
-        if (effect.is(EditorView.announce)) {
+        if (effect.is(_EditorView.announce)) {
           if (first)
             this.announceDOM.textContent = "";
           first = false;
@@ -16169,6 +16886,14 @@ var EditorView = class {
     if (this.updateState == 0 && this.measureScheduled > -1)
       this.measure(false);
   }
+  /**
+  Schedule a layout measurement, optionally providing callbacks to
+  do custom DOM measuring followed by a DOM write phase. Using
+  this is preferable reading DOM layout directly from, for
+  example, an event handler, because it'll make sure measuring and
+  drawing done by other components is synchronized, avoiding
+  unnecessary DOM layout computations.
+  */
   requestMeasure(request2) {
     if (this.measureScheduled < 0)
       this.measureScheduled = this.win.requestAnimationFrame(() => this.measure());
@@ -16185,50 +16910,148 @@ var EditorView = class {
       this.measureRequests.push(request2);
     }
   }
+  /**
+  Get the value of a specific plugin, if present. Note that
+  plugins that crash can be dropped from a view, so even when you
+  know you registered a given plugin, it is recommended to check
+  the return value of this method.
+  */
   plugin(plugin) {
     let known = this.pluginMap.get(plugin);
     if (known === void 0 || known && known.spec != plugin)
       this.pluginMap.set(plugin, known = this.plugins.find((p) => p.spec == plugin) || null);
     return known && known.update(this).value;
   }
+  /**
+  The top position of the document, in screen coordinates. This
+  may be negative when the editor is scrolled down. Points
+  directly to the top of the first line, not above the padding.
+  */
   get documentTop() {
     return this.contentDOM.getBoundingClientRect().top + this.viewState.paddingTop;
   }
+  /**
+  Reports the padding above and below the document.
+  */
   get documentPadding() {
     return { top: this.viewState.paddingTop, bottom: this.viewState.paddingBottom };
   }
+  /**
+  Find the text line or block widget at the given vertical
+  position (which is interpreted as relative to the [top of the
+  document](https://codemirror.net/6/docs/ref/#view.EditorView.documentTop)).
+  */
   elementAtHeight(height) {
     this.readMeasured();
     return this.viewState.elementAtHeight(height);
   }
+  /**
+  Find the line block (see
+  [`lineBlockAt`](https://codemirror.net/6/docs/ref/#view.EditorView.lineBlockAt) at the given
+  height, again interpreted relative to the [top of the
+  document](https://codemirror.net/6/docs/ref/#view.EditorView.documentTop).
+  */
   lineBlockAtHeight(height) {
     this.readMeasured();
     return this.viewState.lineBlockAtHeight(height);
   }
+  /**
+  Get the extent and vertical position of all [line
+  blocks](https://codemirror.net/6/docs/ref/#view.EditorView.lineBlockAt) in the viewport. Positions
+  are relative to the [top of the
+  document](https://codemirror.net/6/docs/ref/#view.EditorView.documentTop);
+  */
   get viewportLineBlocks() {
     return this.viewState.viewportLines;
   }
+  /**
+  Find the line block around the given document position. A line
+  block is a range delimited on both sides by either a
+  non-[hidden](https://codemirror.net/6/docs/ref/#view.Decoration^replace) line breaks, or the
+  start/end of the document. It will usually just hold a line of
+  text, but may be broken into multiple textblocks by block
+  widgets.
+  */
   lineBlockAt(pos) {
     return this.viewState.lineBlockAt(pos);
   }
+  /**
+  The editor's total content height.
+  */
   get contentHeight() {
     return this.viewState.contentHeight;
   }
+  /**
+  Move a cursor position by [grapheme
+  cluster](https://codemirror.net/6/docs/ref/#state.findClusterBreak). `forward` determines whether
+  the motion is away from the line start, or towards it. In
+  bidirectional text, the line is traversed in visual order, using
+  the editor's [text direction](https://codemirror.net/6/docs/ref/#view.EditorView.textDirection).
+  When the start position was the last one on the line, the
+  returned position will be across the line break. If there is no
+  further line, the original position is returned.
+  
+  By default, this method moves over a single cluster. The
+  optional `by` argument can be used to move across more. It will
+  be called with the first cluster as argument, and should return
+  a predicate that determines, for each subsequent cluster,
+  whether it should also be moved over.
+  */
   moveByChar(start2, forward, by) {
     return skipAtoms(this, start2, moveByChar(this, start2, forward, by));
   }
+  /**
+  Move a cursor position across the next group of either
+  [letters](https://codemirror.net/6/docs/ref/#state.EditorState.charCategorizer) or non-letter
+  non-whitespace characters.
+  */
   moveByGroup(start2, forward) {
     return skipAtoms(this, start2, moveByChar(this, start2, forward, (initial) => byGroup(this, start2.head, initial)));
   }
+  /**
+  Move to the next line boundary in the given direction. If
+  `includeWrap` is true, line wrapping is on, and there is a
+  further wrap point on the current line, the wrap point will be
+  returned. Otherwise this function will return the start or end
+  of the line.
+  */
   moveToLineBoundary(start2, forward, includeWrap = true) {
     return moveToLineBoundary(this, start2, forward, includeWrap);
   }
+  /**
+  Move a cursor position vertically. When `distance` isn't given,
+  it defaults to moving to the next line (including wrapped
+  lines). Otherwise, `distance` should provide a positive distance
+  in pixels.
+  
+  When `start` has a
+  [`goalColumn`](https://codemirror.net/6/docs/ref/#state.SelectionRange.goalColumn), the vertical
+  motion will use that as a target horizontal position. Otherwise,
+  the cursor's own horizontal position is used. The returned
+  cursor will have its goal column set to whichever column was
+  used.
+  */
   moveVertically(start2, forward, distance) {
     return skipAtoms(this, start2, moveVertically(this, start2, forward, distance));
   }
+  /**
+  Find the DOM parent node and offset (child offset if `node` is
+  an element, character offset when it is a text node) at the
+  given document position.
+  
+  Note that for positions that aren't currently in
+  `visibleRanges`, the resulting DOM position isn't necessarily
+  meaningful (it may just point before or after a placeholder
+  element).
+  */
   domAtPos(pos) {
     return this.docView.domAtPos(pos);
   }
+  /**
+  Find the document position at the given DOM node. Can be useful
+  for associating positions with DOM events. Will raise an error
+  when `node` isn't part of the editor content.
+  */
   posAtDOM(node, offset = 0) {
     return this.docView.posFromDOM(node, offset);
   }
@@ -16236,6 +17059,13 @@ var EditorView = class {
     this.readMeasured();
     return posAtCoords(this, coords, precise);
   }
+  /**
+  Get the screen coordinates at the given document position.
+  `side` determines whether the coordinates are based on the
+  element before (-1) or after (1) the position (if no element is
+  available on the given side, the method will transparently use
+  another strategy to get reasonable coordinates).
+  */
   coordsAtPos(pos, side = 1) {
     this.readMeasured();
     let rect = this.docView.coordsAt(pos, side);
@@ -16245,15 +17075,38 @@ var EditorView = class {
     let span3 = order[BidiSpan.find(order, pos - line2.from, -1, side)];
     return flattenRect(rect, span3.dir == Direction.LTR == side > 0);
   }
+  /**
+  The default width of a character in the editor. May not
+  accurately reflect the width of all characters (given variable
+  width fonts or styling of invididual ranges).
+  */
   get defaultCharacterWidth() {
     return this.viewState.heightOracle.charWidth;
   }
+  /**
+  The default height of a line in the editor. May not be accurate
+  for all lines.
+  */
   get defaultLineHeight() {
     return this.viewState.heightOracle.lineHeight;
   }
+  /**
+  The text direction
+  ([`direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/direction)
+  CSS property) of the editor's content element.
+  */
   get textDirection() {
     return this.viewState.defaultTextDirection;
   }
+  /**
+  Find the text direction of the block at the given position, as
+  assigned by CSS. If
+  [`perLineTextDirection`](https://codemirror.net/6/docs/ref/#view.EditorView^perLineTextDirection)
+  isn't enabled, or the given position is outside of the viewport,
+  this will always return the same as
+  [`textDirection`](https://codemirror.net/6/docs/ref/#view.EditorView.textDirection). Note that
+  this may trigger a DOM layout.
+  */
   textDirectionAt(pos) {
     let perLine = this.state.facet(perLineTextDirection);
     if (!perLine || pos < this.viewport.from || pos > this.viewport.to)
@@ -16261,9 +17114,23 @@ var EditorView = class {
     this.readMeasured();
     return this.docView.textDirectionAt(pos);
   }
+  /**
+  Whether this editor [wraps lines](https://codemirror.net/6/docs/ref/#view.EditorView.lineWrapping)
+  (as determined by the
+  [`white-space`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
+  CSS property of its content element).
+  */
   get lineWrapping() {
     return this.viewState.heightOracle.lineWrapping;
   }
+  /**
+  Returns the bidirectional text structure of the given line
+  (which should be in the current document) as an array of span
+  objects. The order of these spans matches the [text
+  direction](https://codemirror.net/6/docs/ref/#view.EditorView.textDirection)—if that is
+  left-to-right, the leftmost spans come first, otherwise the
+  rightmost spans come first.
+  */
   bidiSpans(line2) {
     if (line2.length > MaxBidiLine)
       return trivialOrder(line2.length);
@@ -16275,16 +17142,26 @@ var EditorView = class {
     this.bidiCache.push(new CachedOrder(line2.from, line2.to, dir, order));
     return order;
   }
+  /**
+  Check whether the editor has focus.
+  */
   get hasFocus() {
     var _a2;
     return (this.dom.ownerDocument.hasFocus() || browser.safari && ((_a2 = this.inputState) === null || _a2 === void 0 ? void 0 : _a2.lastContextMenu) > Date.now() - 3e4) && this.root.activeElement == this.contentDOM;
   }
+  /**
+  Put focus on the editor.
+  */
   focus() {
     this.observer.ignore(() => {
       focusPreventScroll(this.contentDOM);
       this.docView.updateSelection();
     });
   }
+  /**
+  Update the [root](https://codemirror.net/6/docs/ref/##view.EditorViewConfig.root) in which the editor lives. This is only
+  necessary when moving the editor's existing DOM to a new window or shadow root.
+  */
   setRoot(root2) {
     if (this._root != root2) {
       this._root = root2;
@@ -16292,6 +17169,12 @@ var EditorView = class {
       this.mountStyles();
     }
   }
+  /**
+  Clean up this editor view, removing its element from the
+  document, unregistering event handlers, and notifying
+  plugins. The view instance can no longer be used after
+  calling this.
+  */
   destroy() {
     for (let plugin of this.plugins)
       plugin.destroy(this);
@@ -16303,12 +17186,47 @@ var EditorView = class {
       this.win.cancelAnimationFrame(this.measureScheduled);
     this.destroyed = true;
   }
+  /**
+  Returns an effect that can be
+  [added](https://codemirror.net/6/docs/ref/#state.TransactionSpec.effects) to a transaction to
+  cause it to scroll the given position or range into view.
+  */
   static scrollIntoView(pos, options = {}) {
     return scrollIntoView.of(new ScrollTarget(typeof pos == "number" ? EditorSelection.cursor(pos) : pos, options.y, options.x, options.yMargin, options.xMargin));
   }
+  /**
+  Returns an extension that can be used to add DOM event handlers.
+  The value should be an object mapping event names to handler
+  functions. For any given event, such functions are ordered by
+  extension precedence, and the first handler to return true will
+  be assumed to have handled that event, and no other handlers or
+  built-in behavior will be activated for it. These are registered
+  on the [content element](https://codemirror.net/6/docs/ref/#view.EditorView.contentDOM), except
+  for `scroll` handlers, which will be called any time the
+  editor's [scroll element](https://codemirror.net/6/docs/ref/#view.EditorView.scrollDOM) or one of
+  its parent nodes is scrolled.
+  */
   static domEventHandlers(handlers2) {
     return ViewPlugin.define(() => ({}), { eventHandlers: handlers2 });
   }
+  /**
+  Create a theme extension. The first argument can be a
+  [`style-mod`](https://github.com/marijnh/style-mod#documentation)
+  style spec providing the styles for the theme. These will be
+  prefixed with a generated class for the style.
+  
+  Because the selectors will be prefixed with a scope class, rule
+  that directly match the editor's [wrapper
+  element](https://codemirror.net/6/docs/ref/#view.EditorView.dom)—to which the scope class will be
+  added—need to be explicitly differentiated by adding an `&` to
+  the selector for that element—for example
+  `&.cm-focused`.
+  
+  When `dark` is set to true, the theme will be marked as dark,
+  which will cause the `&dark` rules from [base
+  themes](https://codemirror.net/6/docs/ref/#view.EditorView^baseTheme) to be used (as opposed to
+  `&light` when a light theme is active).
+  */
   static theme(spec, options) {
     let prefix = StyleModule.newName();
     let result = [theme.of(prefix), styleModule.of(buildTheme(`.${prefix}`, spec))];
@@ -16316,9 +17234,20 @@ var EditorView = class {
       result.push(darkTheme.of(true));
     return result;
   }
+  /**
+  Create an extension that adds styles to the base theme. Like
+  with [`theme`](https://codemirror.net/6/docs/ref/#view.EditorView^theme), use `&` to indicate the
+  place of the editor wrapper element when directly targeting
+  that. You can also use `&dark` or `&light` instead to only
+  target editors with a dark or light theme.
+  */
   static baseTheme(spec) {
     return Prec.lowest(styleModule.of(buildTheme("." + baseThemeID, spec, lightDarkIDs)));
   }
+  /**
+  Retrieve an editor view instance from the view's DOM
+  representation.
+  */
   static findFromDOM(dom) {
     var _a2;
     let content2 = dom.querySelector(".cm-content");
@@ -16346,7 +17275,7 @@ EditorView.lineWrapping = /* @__PURE__ */ EditorView.contentAttributes.of({ "cla
 EditorView.announce = /* @__PURE__ */ StateEffect.define();
 var MaxBidiLine = 4096;
 var BadMeasure = {};
-var CachedOrder = class {
+var CachedOrder = class _CachedOrder {
   constructor(from, to, dir, order) {
     this.from = from;
     this.to = to;
@@ -16360,7 +17289,7 @@ var CachedOrder = class {
     for (let i = Math.max(0, cache.length - 10); i < cache.length; i++) {
       let entry = cache[i];
       if (entry.dir == lastDir && !changes.touchesRange(entry.from, entry.to))
-        result.push(new CachedOrder(changes.mapPos(entry.from, 1), changes.mapPos(entry.to, -1), entry.dir, entry.order));
+        result.push(new _CachedOrder(changes.mapPos(entry.from, 1), changes.mapPos(entry.to, -1), entry.dir, entry.order));
     }
     return result;
   }
@@ -16521,7 +17450,8 @@ function runHandlers(map3, event, view2, scope) {
   if (scopeObj) {
     if (runFor(scopeObj[prefix + modifiers(name3, event, !isChar)]))
       return true;
-    if (isChar && (event.altKey || event.metaKey || event.ctrlKey) && !(browser.windows && event.ctrlKey && event.altKey) && (baseName = base[event.keyCode]) && baseName != name3) {
+    if (isChar && (event.altKey || event.metaKey || event.ctrlKey) && // Ctrl-Alt may be used for AltGr on Windows
+    !(browser.windows && event.ctrlKey && event.altKey) && (baseName = base[event.keyCode]) && baseName != name3) {
       if (runFor(scopeObj[prefix + modifiers(baseName, event, true)]))
         return true;
       else if (event.shiftKey && (shiftName = shift[event.keyCode]) != name3 && shiftName != baseName && runFor(scopeObj[prefix + modifiers(shiftName, event, false)]))
@@ -16608,12 +17538,22 @@ var baseTheme = /* @__PURE__ */ EditorView.baseTheme({
   }
 });
 var GutterMarker = class extends RangeValue {
+  /**
+  @internal
+  */
   compare(other) {
     return this == other || this.constructor == other.constructor && this.eq(other);
   }
+  /**
+  Compare this marker to another marker of the same type.
+  */
   eq(other) {
     return false;
   }
+  /**
+  Called if the marker has a `toDOM` method and its representation
+  was removed from a gutter.
+  */
   destroy(dom) {
   }
 };
@@ -16980,6 +17920,7 @@ var Range2 = class {
   }
 };
 var NodeProp = class {
+  /// Create a new node prop type.
   constructor(config = {}) {
     this.id = nextPropID++;
     this.perNode = !!config.perNode;
@@ -16987,6 +17928,13 @@ var NodeProp = class {
       throw new Error("This node type doesn't define a deserialize function");
     });
   }
+  /// This is meant to be used with
+  /// [`NodeSet.extend`](#common.NodeSet.extend) or
+  /// [`LRParser.configure`](#lr.ParserConfig.props) to compute
+  /// prop values for each node type in the set. Takes a [match
+  /// object](#common.NodeType^match) or function that returns undefined
+  /// if the node type doesn't get this prop, and the prop's value if
+  /// it does.
   add(match4) {
     if (this.perNode)
       throw new RangeError("Can't add per-node props to node types");
@@ -17005,17 +17953,19 @@ NodeProp.contextHash = new NodeProp({ perNode: true });
 NodeProp.lookAhead = new NodeProp({ perNode: true });
 NodeProp.mounted = new NodeProp({ perNode: true });
 var noProps = /* @__PURE__ */ Object.create(null);
-var NodeType = class {
+var NodeType = class _NodeType {
+  /// @internal
   constructor(name3, props, id3, flags = 0) {
     this.name = name3;
     this.props = props;
     this.id = id3;
     this.flags = flags;
   }
+  /// Define a node type.
   static define(spec) {
     let props = spec.props && spec.props.length ? /* @__PURE__ */ Object.create(null) : noProps;
     let flags = (spec.top ? 1 : 0) | (spec.skipped ? 2 : 0) | (spec.error ? 4 : 0) | (spec.name == null ? 8 : 0);
-    let type2 = new NodeType(spec.name || "", props, spec.id, flags);
+    let type2 = new _NodeType(spec.name || "", props, spec.id, flags);
     if (spec.props)
       for (let src of spec.props) {
         if (!Array.isArray(src))
@@ -17028,21 +17978,30 @@ var NodeType = class {
       }
     return type2;
   }
+  /// Retrieves a node prop for this type. Will return `undefined` if
+  /// the prop isn't present on this node.
   prop(prop) {
     return this.props[prop.id];
   }
+  /// True when this is the top node of a grammar.
   get isTop() {
     return (this.flags & 1) > 0;
   }
+  /// True when this node is produced by a skip rule.
   get isSkipped() {
     return (this.flags & 2) > 0;
   }
+  /// Indicates whether this is an error node.
   get isError() {
     return (this.flags & 4) > 0;
   }
+  /// When true, this node type doesn't correspond to a user-declared
+  /// named node, for example because it is used to cache repetition.
   get isAnonymous() {
     return (this.flags & 8) > 0;
   }
+  /// Returns true when this node's name or one of its
+  /// [groups](#common.NodeProp^group) matches the given string.
   is(name3) {
     if (typeof name3 == "string") {
       if (this.name == name3)
@@ -17052,6 +18011,12 @@ var NodeType = class {
     }
     return this.id == name3;
   }
+  /// Create a function from node types to arbitrary values by
+  /// specifying an object whose property names are node or
+  /// [group](#common.NodeProp^group) names. Often useful with
+  /// [`NodeProp.add`](#common.NodeProp.add). You can put multiple
+  /// names, separated by spaces, in a single property name to map
+  /// multiple node names to a single value.
   static match(map3) {
     let direct = /* @__PURE__ */ Object.create(null);
     for (let prop in map3)
@@ -17066,7 +18031,13 @@ var NodeType = class {
     };
   }
 };
-NodeType.none = new NodeType("", /* @__PURE__ */ Object.create(null), 0, 8);
+NodeType.none = new NodeType(
+  "",
+  /* @__PURE__ */ Object.create(null),
+  0,
+  8
+  /* NodeFlag.Anonymous */
+);
 var CachedNode = /* @__PURE__ */ new WeakMap();
 var CachedInnerNode = /* @__PURE__ */ new WeakMap();
 var IterMode;
@@ -17076,7 +18047,8 @@ var IterMode;
   IterMode2[IterMode2["IgnoreMounts"] = 4] = "IgnoreMounts";
   IterMode2[IterMode2["IgnoreOverlays"] = 8] = "IgnoreOverlays";
 })(IterMode || (IterMode = {}));
-var Tree = class {
+var Tree = class _Tree {
+  /// Construct a new tree. See also [`Tree.build`](#common.Tree^build).
   constructor(type2, children2, positions, length6, props) {
     this.type = type2;
     this.children = children2;
@@ -17089,6 +18061,7 @@ var Tree = class {
         this.props[typeof prop == "number" ? prop : prop.id] = value;
     }
   }
+  /// @internal
   toString() {
     let mounted = this.prop(NodeProp.mounted);
     if (mounted && !mounted.overlay)
@@ -17104,9 +18077,15 @@ var Tree = class {
     }
     return !this.type.name ? children2 : (/\W/.test(this.type.name) && !this.type.isError ? JSON.stringify(this.type.name) : this.type.name) + (children2.length ? "(" + children2 + ")" : "");
   }
+  /// Get a [tree cursor](#common.TreeCursor) positioned at the top of
+  /// the tree. Mode can be used to [control](#common.IterMode) which
+  /// nodes the cursor visits.
   cursor(mode = 0) {
     return new TreeCursor(this.topNode, mode);
   }
+  /// Get a [tree cursor](#common.TreeCursor) pointing into this tree
+  /// at the given position and side (see
+  /// [`moveTo`](#common.TreeCursor.moveTo).
   cursorAt(pos, side = 0, mode = 0) {
     let scope = CachedNode.get(this) || this.topNode;
     let cursor = new TreeCursor(scope);
@@ -17114,19 +18093,40 @@ var Tree = class {
     CachedNode.set(this, cursor._tree);
     return cursor;
   }
+  /// Get a [syntax node](#common.SyntaxNode) object for the top of the
+  /// tree.
   get topNode() {
     return new TreeNode(this, 0, 0, null);
   }
+  /// Get the [syntax node](#common.SyntaxNode) at the given position.
+  /// If `side` is -1, this will move into nodes that end at the
+  /// position. If 1, it'll move into nodes that start at the
+  /// position. With 0, it'll only enter nodes that cover the position
+  /// from both sides.
+  ///
+  /// Note that this will not enter
+  /// [overlays](#common.MountedTree.overlay), and you often want
+  /// [`resolveInner`](#common.Tree.resolveInner) instead.
   resolve(pos, side = 0) {
     let node = resolveNode(CachedNode.get(this) || this.topNode, pos, side, false);
     CachedNode.set(this, node);
     return node;
   }
+  /// Like [`resolve`](#common.Tree.resolve), but will enter
+  /// [overlaid](#common.MountedTree.overlay) nodes, producing a syntax node
+  /// pointing into the innermost overlaid tree at the given position
+  /// (with parent links going through all parent structure, including
+  /// the host trees).
   resolveInner(pos, side = 0) {
     let node = resolveNode(CachedInnerNode.get(this) || this.topNode, pos, side, true);
     CachedInnerNode.set(this, node);
     return node;
   }
+  /// Iterate over the tree and its children, calling `enter` for any
+  /// node that touches the `from`/`to` region (if given) before
+  /// running over such a node's children, and `leave` (if given) when
+  /// leaving the node. When `enter` returns `false`, that node will
+  /// not have its children iterated over (or `leave` called).
   iterate(spec) {
     let { enter, leave, from = 0, to = this.length } = spec;
     for (let c = this.cursor((spec.mode || 0) | IterMode.IncludeAnonymous); ; ) {
@@ -17147,9 +18147,14 @@ var Tree = class {
       }
     }
   }
+  /// Get the value of the given [node prop](#common.NodeProp) for this
+  /// node. Works with both per-node and per-type props.
   prop(prop) {
     return !prop.perNode ? this.type.prop(prop) : this.props ? this.props[prop.id] : void 0;
   }
+  /// Returns the node's [per-node props](#common.NodeProp.perNode) in a
+  /// format that can be passed to the [`Tree`](#common.Tree)
+  /// constructor.
   get propValues() {
     let result = [];
     if (this.props)
@@ -17157,15 +18162,20 @@ var Tree = class {
         result.push([+id3, this.props[id3]]);
     return result;
   }
+  /// Balance the direct children of this tree, producing a copy of
+  /// which may have children grouped into subtrees with type
+  /// [`NodeType.none`](#common.NodeType^none).
   balance(config = {}) {
-    return this.children.length <= 8 ? this : balanceRange(NodeType.none, this.children, this.positions, 0, this.children.length, 0, this.length, (children2, positions, length6) => new Tree(this.type, children2, positions, length6, this.propValues), config.makeTree || ((children2, positions, length6) => new Tree(NodeType.none, children2, positions, length6)));
+    return this.children.length <= 8 ? this : balanceRange(NodeType.none, this.children, this.positions, 0, this.children.length, 0, this.length, (children2, positions, length6) => new _Tree(this.type, children2, positions, length6, this.propValues), config.makeTree || ((children2, positions, length6) => new _Tree(NodeType.none, children2, positions, length6)));
   }
+  /// Build a tree from a postfix-ordered buffer of node information,
+  /// or a cursor over such a buffer.
   static build(data) {
     return buildTree(data);
   }
 };
 Tree.empty = new Tree(NodeType.none, [], [], 0);
-var FlatBufferCursor = class {
+var FlatBufferCursor = class _FlatBufferCursor {
   constructor(buffer, index3) {
     this.buffer = buffer;
     this.index = index3;
@@ -17189,18 +18199,21 @@ var FlatBufferCursor = class {
     this.index -= 4;
   }
   fork() {
-    return new FlatBufferCursor(this.buffer, this.index);
+    return new _FlatBufferCursor(this.buffer, this.index);
   }
 };
-var TreeBuffer = class {
+var TreeBuffer = class _TreeBuffer {
+  /// Create a tree buffer.
   constructor(buffer, length6, set3) {
     this.buffer = buffer;
     this.length = length6;
     this.set = set3;
   }
+  /// @internal
   get type() {
     return NodeType.none;
   }
+  /// @internal
   toString() {
     let result = [];
     for (let index3 = 0; index3 < this.buffer.length; ) {
@@ -17209,6 +18222,7 @@ var TreeBuffer = class {
     }
     return result.join(",");
   }
+  /// @internal
   childString(index3) {
     let id3 = this.buffer[index3], endIndex = this.buffer[index3 + 3];
     let type2 = this.set.types[id3], result = type2.name;
@@ -17224,6 +18238,7 @@ var TreeBuffer = class {
     }
     return result + "(" + children2.join(",") + ")";
   }
+  /// @internal
   findChild(startIndex, endIndex, dir, pos, side) {
     let { buffer } = this, pick = -1;
     for (let i = startIndex; i != endIndex; i = buffer[i + 3]) {
@@ -17235,6 +18250,7 @@ var TreeBuffer = class {
     }
     return pick;
   }
+  /// @internal
   slice(startI, endI, from) {
     let b = this.buffer;
     let copy2 = new Uint16Array(endI - startI), len = 0;
@@ -17245,7 +18261,7 @@ var TreeBuffer = class {
       copy2[j++] = b[i++] - startI;
       len = Math.max(len, to);
     }
-    return new TreeBuffer(copy2, len, this.set);
+    return new _TreeBuffer(copy2, len, this.set);
   }
 };
 function checkSide(side, pos, from, to) {
@@ -17300,7 +18316,7 @@ function resolveNode(node, pos, side, overlays) {
     node = inner;
   }
 }
-var TreeNode = class {
+var TreeNode = class _TreeNode {
   constructor(_tree, from, index3, _parent) {
     this._tree = _tree;
     this.from = from;
@@ -17331,8 +18347,8 @@ var TreeNode = class {
         } else if (mode & IterMode.IncludeAnonymous || (!next.type.isAnonymous || hasChild(next))) {
           let mounted;
           if (!(mode & IterMode.IgnoreMounts) && next.props && (mounted = next.prop(NodeProp.mounted)) && !mounted.overlay)
-            return new TreeNode(mounted.tree, start2, i, parent);
-          let inner = new TreeNode(next, start2, i, parent);
+            return new _TreeNode(mounted.tree, start2, i, parent);
+          let inner = new _TreeNode(next, start2, i, parent);
           return mode & IterMode.IncludeAnonymous || !inner.type.isAnonymous ? inner : inner.nextChild(dir < 0 ? next.children.length - 1 : 0, dir, pos, side);
         }
       }
@@ -17348,16 +18364,40 @@ var TreeNode = class {
     }
   }
   get firstChild() {
-    return this.nextChild(0, 1, 0, 4);
+    return this.nextChild(
+      0,
+      1,
+      0,
+      4
+      /* Side.DontCare */
+    );
   }
   get lastChild() {
-    return this.nextChild(this._tree.children.length - 1, -1, 0, 4);
+    return this.nextChild(
+      this._tree.children.length - 1,
+      -1,
+      0,
+      4
+      /* Side.DontCare */
+    );
   }
   childAfter(pos) {
-    return this.nextChild(0, 1, pos, 2);
+    return this.nextChild(
+      0,
+      1,
+      pos,
+      2
+      /* Side.After */
+    );
   }
   childBefore(pos) {
-    return this.nextChild(this._tree.children.length - 1, -1, pos, -2);
+    return this.nextChild(
+      this._tree.children.length - 1,
+      -1,
+      pos,
+      -2
+      /* Side.Before */
+    );
   }
   enter(pos, side, mode = 0) {
     let mounted;
@@ -17365,7 +18405,7 @@ var TreeNode = class {
       let rPos = pos - this.from;
       for (let { from, to } of mounted.overlay) {
         if ((side > 0 ? from <= rPos : from < rPos) && (side < 0 ? to >= rPos : to > rPos))
-          return new TreeNode(mounted.tree, mounted.overlay[0].from + this.from, -1, this);
+          return new _TreeNode(mounted.tree, mounted.overlay[0].from + this.from, -1, this);
       }
     }
     return this.nextChild(0, 1, pos, side, mode);
@@ -17380,10 +18420,22 @@ var TreeNode = class {
     return this._parent ? this._parent.nextSignificantParent() : null;
   }
   get nextSibling() {
-    return this._parent && this.index >= 0 ? this._parent.nextChild(this.index + 1, 1, 0, 4) : null;
+    return this._parent && this.index >= 0 ? this._parent.nextChild(
+      this.index + 1,
+      1,
+      0,
+      4
+      /* Side.DontCare */
+    ) : null;
   }
   get prevSibling() {
-    return this._parent && this.index >= 0 ? this._parent.nextChild(this.index - 1, -1, 0, 4) : null;
+    return this._parent && this.index >= 0 ? this._parent.nextChild(
+      this.index - 1,
+      -1,
+      0,
+      4
+      /* Side.DontCare */
+    ) : null;
   }
   cursor(mode = 0) {
     return new TreeCursor(this, mode);
@@ -17410,6 +18462,7 @@ var TreeNode = class {
   getChildren(type2, before = null, after = null) {
     return getChildren(this, type2, before, after);
   }
+  /// @internal
   toString() {
     return this._tree.toString();
   }
@@ -17458,7 +18511,7 @@ var BufferContext = class {
     this.start = start2;
   }
 };
-var BufferNode = class {
+var BufferNode = class _BufferNode {
   get name() {
     return this.type.name;
   }
@@ -17477,38 +18530,64 @@ var BufferNode = class {
   child(dir, pos, side) {
     let { buffer } = this.context;
     let index3 = buffer.findChild(this.index + 4, buffer.buffer[this.index + 3], dir, pos - this.context.start, side);
-    return index3 < 0 ? null : new BufferNode(this.context, this, index3);
+    return index3 < 0 ? null : new _BufferNode(this.context, this, index3);
   }
   get firstChild() {
-    return this.child(1, 0, 4);
+    return this.child(
+      1,
+      0,
+      4
+      /* Side.DontCare */
+    );
   }
   get lastChild() {
-    return this.child(-1, 0, 4);
+    return this.child(
+      -1,
+      0,
+      4
+      /* Side.DontCare */
+    );
   }
   childAfter(pos) {
-    return this.child(1, pos, 2);
+    return this.child(
+      1,
+      pos,
+      2
+      /* Side.After */
+    );
   }
   childBefore(pos) {
-    return this.child(-1, pos, -2);
+    return this.child(
+      -1,
+      pos,
+      -2
+      /* Side.Before */
+    );
   }
   enter(pos, side, mode = 0) {
     if (mode & IterMode.ExcludeBuffers)
       return null;
     let { buffer } = this.context;
     let index3 = buffer.findChild(this.index + 4, buffer.buffer[this.index + 3], side > 0 ? 1 : -1, pos - this.context.start, side);
-    return index3 < 0 ? null : new BufferNode(this.context, this, index3);
+    return index3 < 0 ? null : new _BufferNode(this.context, this, index3);
   }
   get parent() {
     return this._parent || this.context.parent.nextSignificantParent();
   }
   externalSibling(dir) {
-    return this._parent ? null : this.context.parent.nextChild(this.context.index + dir, dir, 0, 4);
+    return this._parent ? null : this.context.parent.nextChild(
+      this.context.index + dir,
+      dir,
+      0,
+      4
+      /* Side.DontCare */
+    );
   }
   get nextSibling() {
     let { buffer } = this.context;
     let after = buffer.buffer[this.index + 3];
     if (after < (this._parent ? buffer.buffer[this._parent.index + 3] : buffer.buffer.length))
-      return new BufferNode(this.context, this._parent, after);
+      return new _BufferNode(this.context, this._parent, after);
     return this.externalSibling(1);
   }
   get prevSibling() {
@@ -17516,7 +18595,14 @@ var BufferNode = class {
     let parentStart = this._parent ? this._parent.index + 4 : 0;
     if (this.index == parentStart)
       return this.externalSibling(-1);
-    return new BufferNode(this.context, this._parent, buffer.findChild(parentStart, this.index, -1, 0, 4));
+    return new _BufferNode(this.context, this._parent, buffer.findChild(
+      parentStart,
+      this.index,
+      -1,
+      0,
+      4
+      /* Side.DontCare */
+    ));
   }
   cursor(mode = 0) {
     return new TreeCursor(this, mode);
@@ -17544,6 +18630,7 @@ var BufferNode = class {
   enterUnfinishedNodesBefore(pos) {
     return enterUnfinishedNodesBefore(this, pos);
   }
+  /// @internal
   toString() {
     return this.context.buffer.childString(this.index);
   }
@@ -17562,9 +18649,11 @@ var BufferNode = class {
   }
 };
 var TreeCursor = class {
+  /// Shorthand for `.type.name`.
   get name() {
     return this.type.name;
   }
+  /// @internal
   constructor(node, mode = 0) {
     this.mode = mode;
     this.buffer = null;
@@ -17609,9 +18698,11 @@ var TreeCursor = class {
     this.buffer = node.context;
     return this.yieldBuf(node.index, node.type);
   }
+  /// @internal
   toString() {
     return this.buffer ? this.buffer.buffer.childString(this.index) : this._tree.toString();
   }
+  /// @internal
   enterChild(dir, pos, side) {
     if (!this.buffer)
       return this.yield(this._tree.nextChild(dir < 0 ? this._tree._tree.children.length - 1 : 0, dir, pos, side, this.mode));
@@ -17622,23 +18713,54 @@ var TreeCursor = class {
     this.stack.push(this.index);
     return this.yieldBuf(index3);
   }
+  /// Move the cursor to this node's first child. When this returns
+  /// false, the node has no child, and the cursor has not been moved.
   firstChild() {
-    return this.enterChild(1, 0, 4);
+    return this.enterChild(
+      1,
+      0,
+      4
+      /* Side.DontCare */
+    );
   }
+  /// Move the cursor to this node's last child.
   lastChild() {
-    return this.enterChild(-1, 0, 4);
+    return this.enterChild(
+      -1,
+      0,
+      4
+      /* Side.DontCare */
+    );
   }
+  /// Move the cursor to the first child that ends after `pos`.
   childAfter(pos) {
-    return this.enterChild(1, pos, 2);
+    return this.enterChild(
+      1,
+      pos,
+      2
+      /* Side.After */
+    );
   }
+  /// Move to the last child that starts before `pos`.
   childBefore(pos) {
-    return this.enterChild(-1, pos, -2);
+    return this.enterChild(
+      -1,
+      pos,
+      -2
+      /* Side.Before */
+    );
   }
+  /// Move the cursor to the child around `pos`. If side is -1 the
+  /// child may end at that position, when 1 it may start there. This
+  /// will also enter [overlaid](#common.MountedTree.overlay)
+  /// [mounted](#common.NodeProp^mounted) trees unless `overlays` is
+  /// set to false.
   enter(pos, side, mode = this.mode) {
     if (!this.buffer)
       return this.yield(this._tree.enter(pos, side, mode));
     return mode & IterMode.ExcludeBuffers ? false : this.enterChild(1, pos, side);
   }
+  /// Move to the node's parent node, if this isn't the top node.
   parent() {
     if (!this.buffer)
       return this.yieldNode(this.mode & IterMode.IncludeAnonymous ? this._tree._parent : this._tree.parent);
@@ -17648,6 +18770,7 @@ var TreeCursor = class {
     this.buffer = null;
     return this.yieldNode(parent);
   }
+  /// @internal
   sibling(dir) {
     if (!this.buffer)
       return !this._tree._parent ? false : this.yield(this._tree.index < 0 ? null : this._tree._parent.nextChild(this._tree.index + dir, dir, 0, 4, this.mode));
@@ -17655,7 +18778,14 @@ var TreeCursor = class {
     if (dir < 0) {
       let parentStart = d < 0 ? 0 : this.stack[d] + 4;
       if (this.index != parentStart)
-        return this.yieldBuf(buffer.findChild(parentStart, this.index, -1, 0, 4));
+        return this.yieldBuf(buffer.findChild(
+          parentStart,
+          this.index,
+          -1,
+          0,
+          4
+          /* Side.DontCare */
+        ));
     } else {
       let after = buffer.buffer[this.index + 3];
       if (after < (d < 0 ? buffer.buffer.length : buffer.buffer[this.stack[d] + 3]))
@@ -17663,9 +18793,11 @@ var TreeCursor = class {
     }
     return d < 0 ? this.yield(this.buffer.parent.nextChild(this.buffer.index + dir, dir, 0, 4, this.mode)) : false;
   }
+  /// Move to this node's next sibling, if any.
   nextSibling() {
     return this.sibling(1);
   }
+  /// Move to this node's previous sibling, if any.
   prevSibling() {
     return this.sibling(-1);
   }
@@ -17695,7 +18827,12 @@ var TreeCursor = class {
     return true;
   }
   move(dir, enter) {
-    if (enter && this.enterChild(dir, 0, 4))
+    if (enter && this.enterChild(
+      dir,
+      0,
+      4
+      /* Side.DontCare */
+    ))
       return true;
     for (; ; ) {
       if (this.sibling(dir))
@@ -17704,12 +18841,24 @@ var TreeCursor = class {
         return false;
     }
   }
+  /// Move to the next node in a
+  /// [pre-order](https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR)
+  /// traversal, going from a node to its first child or, if the
+  /// current node is empty or `enter` is false, its next sibling or
+  /// the next sibling of the first parent node that has one.
   next(enter = true) {
     return this.move(1, enter);
   }
+  /// Move to the next node in a last-to-first pre-order traveral. A
+  /// node is followed by its last child or, if it has none, its
+  /// previous sibling or the previous sibling of the first parent
+  /// node that has one.
   prev(enter = true) {
     return this.move(-1, enter);
   }
+  /// Move the cursor to the innermost node that covers `pos`. If
+  /// `side` is -1, it will enter nodes that end at `pos`. If it is 1,
+  /// it will enter nodes that start at `pos`.
   moveTo(pos, side = 0) {
     while (this.from == this.to || (side < 1 ? this.from >= pos : this.from > pos) || (side > -1 ? this.to <= pos : this.to < pos))
       if (!this.parent())
@@ -17718,31 +18867,39 @@ var TreeCursor = class {
     }
     return this;
   }
+  /// Get a [syntax node](#common.SyntaxNode) at the cursor's current
+  /// position.
   get node() {
     if (!this.buffer)
       return this._tree;
     let cache = this.bufferNode, result = null, depth = 0;
     if (cache && cache.context == this.buffer) {
-      scan:
-        for (let index3 = this.index, d = this.stack.length; d >= 0; ) {
-          for (let c = cache; c; c = c._parent)
-            if (c.index == index3) {
-              if (index3 == this.index)
-                return c;
-              result = c;
-              depth = d + 1;
-              break scan;
-            }
-          index3 = this.stack[--d];
-        }
+      scan: for (let index3 = this.index, d = this.stack.length; d >= 0; ) {
+        for (let c = cache; c; c = c._parent)
+          if (c.index == index3) {
+            if (index3 == this.index)
+              return c;
+            result = c;
+            depth = d + 1;
+            break scan;
+          }
+        index3 = this.stack[--d];
+      }
     }
     for (let i = depth; i < this.stack.length; i++)
       result = new BufferNode(this.buffer, result, this.stack[i]);
     return this.bufferNode = new BufferNode(this.buffer, result, this.index);
   }
+  /// Get the [tree](#common.Tree) that represents the current node, if
+  /// any. Will return null when the node is in a [tree
+  /// buffer](#common.TreeBuffer).
   get tree() {
     return this.buffer ? null : this._tree._tree;
   }
+  /// Iterate over the current node and all its descendants, calling
+  /// `enter` when entering a node and `leave`, if given, when leaving
+  /// one. When `enter` returns `false`, any children of that node are
+  /// skipped, and `leave` isn't called for it.
   iterate(enter, leave) {
     for (let depth = 0; ; ) {
       let mustLeave = false;
@@ -17768,6 +18925,9 @@ var TreeCursor = class {
       }
     }
   }
+  /// Test whether the current node matches a given context—a sequence
+  /// of direct parent node names. Empty strings in the context array
+  /// are treated as wildcards.
   matchContext(context) {
     if (!this.buffer)
       return matchNodeContext(this.node, context);
@@ -17891,39 +19051,38 @@ function buildTree(data) {
     let fork = cursor.fork();
     let size4 = 0, start2 = 0, skip = 0, minStart = fork.end - maxBufferLength;
     let result = { size: 0, start: 0, skip: 0 };
-    scan:
-      for (let minPos = fork.pos - maxSize; fork.pos > minPos; ) {
-        let nodeSize2 = fork.size;
-        if (fork.id == inRepeat && nodeSize2 >= 0) {
-          result.size = size4;
-          result.start = start2;
-          result.skip = skip;
-          skip += 4;
-          size4 += 4;
-          fork.next();
-          continue;
-        }
-        let startPos = fork.pos - nodeSize2;
-        if (nodeSize2 < 0 || startPos < minPos || fork.start < minStart)
-          break;
-        let localSkipped = fork.id >= minRepeatType ? 4 : 0;
-        let nodeStart = fork.start;
+    scan: for (let minPos = fork.pos - maxSize; fork.pos > minPos; ) {
+      let nodeSize2 = fork.size;
+      if (fork.id == inRepeat && nodeSize2 >= 0) {
+        result.size = size4;
+        result.start = start2;
+        result.skip = skip;
+        skip += 4;
+        size4 += 4;
         fork.next();
-        while (fork.pos > startPos) {
-          if (fork.size < 0) {
-            if (fork.size == -3)
-              localSkipped += 4;
-            else
-              break scan;
-          } else if (fork.id >= minRepeatType) {
-            localSkipped += 4;
-          }
-          fork.next();
-        }
-        start2 = nodeStart;
-        size4 += nodeSize2;
-        skip += localSkipped;
+        continue;
       }
+      let startPos = fork.pos - nodeSize2;
+      if (nodeSize2 < 0 || startPos < minPos || fork.start < minStart)
+        break;
+      let localSkipped = fork.id >= minRepeatType ? 4 : 0;
+      let nodeStart = fork.start;
+      fork.next();
+      while (fork.pos > startPos) {
+        if (fork.size < 0) {
+          if (fork.size == -3)
+            localSkipped += 4;
+          else
+            break scan;
+        } else if (fork.id >= minRepeatType) {
+          localSkipped += 4;
+        }
+        fork.next();
+      }
+      start2 = nodeStart;
+      size4 += nodeSize2;
+      skip += localSkipped;
+    }
     if (inRepeat < 0 || size4 == maxSize) {
       result.size = size4;
       result.start = start2;
@@ -17980,7 +19139,10 @@ function balanceRange(balanceType, children2, positions, from, to, start2, lengt
   let total = 0;
   for (let i = from; i < to; i++)
     total += nodeSize(balanceType, children2[i]);
-  let maxChild = Math.ceil(total * 1.5 / 8);
+  let maxChild = Math.ceil(
+    total * 1.5 / 8
+    /* Balance.BranchFactor */
+  );
   let localChildren = [], localPositions = [];
   function divide2(children3, positions2, from2, to2, offset) {
     for (let i = from2; i < to2; ) {
@@ -18009,7 +19171,11 @@ function balanceRange(balanceType, children2, positions, from, to, start2, lengt
   divide2(children2, positions, from, to, 0);
   return (mkTop || mkTree)(localChildren, localPositions, length6);
 }
-var TreeFragment = class {
+var TreeFragment = class _TreeFragment {
+  /// Construct a tree fragment. You'll usually want to use
+  /// [`addTree`](#common.TreeFragment^addTree) and
+  /// [`applyChanges`](#common.TreeFragment^applyChanges) instead of
+  /// calling this directly.
   constructor(from, to, tree, offset, openStart = false, openEnd = false) {
     this.from = from;
     this.to = to;
@@ -18017,19 +19183,34 @@ var TreeFragment = class {
     this.offset = offset;
     this.open = (openStart ? 1 : 0) | (openEnd ? 2 : 0);
   }
+  /// Whether the start of the fragment represents the start of a
+  /// parse, or the end of a change. (In the second case, it may not
+  /// be safe to reuse some nodes at the start, depending on the
+  /// parsing algorithm.)
   get openStart() {
     return (this.open & 1) > 0;
   }
+  /// Whether the end of the fragment represents the end of a
+  /// full-document parse, or the start of a change.
   get openEnd() {
     return (this.open & 2) > 0;
   }
+  /// Create a set of fragments from a freshly parsed tree, or update
+  /// an existing set of fragments by replacing the ones that overlap
+  /// with a tree with content from the new tree. When `partial` is
+  /// true, the parse is treated as incomplete, and the resulting
+  /// fragment has [`openEnd`](#common.TreeFragment.openEnd) set to
+  /// true.
   static addTree(tree, fragments = [], partial = false) {
-    let result = [new TreeFragment(0, tree.length, tree, 0, false, partial)];
+    let result = [new _TreeFragment(0, tree.length, tree, 0, false, partial)];
     for (let f of fragments)
       if (f.to > tree.length)
         result.push(f);
     return result;
   }
+  /// Apply a set of edits to an array of fragments, removing or
+  /// splitting fragments as necessary to remove edited ranges, and
+  /// adjusting offsets for fragments that moved.
   static applyChanges(fragments, changes, minGap = 128) {
     if (!changes.length)
       return fragments;
@@ -18043,7 +19224,7 @@ var TreeFragment = class {
           let cut = nextF;
           if (pos >= cut.from || nextPos <= cut.to || off) {
             let fFrom = Math.max(cut.from, pos) - off, fTo = Math.min(cut.to, nextPos) - off;
-            cut = fFrom >= fTo ? null : new TreeFragment(fFrom, fTo, cut.tree, cut.offset + off, cI > 0, !!nextC);
+            cut = fFrom >= fTo ? null : new _TreeFragment(fFrom, fTo, cut.tree, cut.offset + off, cI > 0, !!nextC);
           }
           if (cut)
             result.push(cut);
@@ -18060,12 +19241,21 @@ var TreeFragment = class {
   }
 };
 var Parser = class {
+  /// Start a parse, returning a [partial parse](#common.PartialParse)
+  /// object. [`fragments`](#common.TreeFragment) can be passed in to
+  /// make the parse incremental.
+  ///
+  /// By default, the entire input is parsed. You can pass `ranges`,
+  /// which should be a sorted array of non-empty, non-overlapping
+  /// ranges, to parse only those ranges. The tree returned in that
+  /// case will start at `ranges[0].from`.
   startParse(input, fragments, ranges) {
     if (typeof input == "string")
       input = new StringInput(input);
     ranges = !ranges ? [new Range2(0, input.length)] : ranges.length ? ranges.map((r) => new Range2(r.from, r.to)) : [new Range2(0, 0)];
     return this.createParse(input, fragments || [], ranges);
   }
+  /// Run a full parse, returning the resulting tree.
   parse(input, fragments, ranges) {
     let parse2 = this.startParse(input, fragments, ranges);
     for (; ; ) {
@@ -18096,23 +19286,39 @@ var stoppedInner = new NodeProp({ perNode: true });
 
 // node_modules/@lezer/highlight/dist/index.js
 var nextTagID = 0;
-var Tag = class {
+var Tag = class _Tag {
+  /// @internal
   constructor(set3, base2, modified) {
     this.set = set3;
     this.base = base2;
     this.modified = modified;
     this.id = nextTagID++;
   }
+  /// Define a new tag. If `parent` is given, the tag is treated as a
+  /// sub-tag of that parent, and
+  /// [highlighters](#highlight.tagHighlighter) that don't mention
+  /// this tag will try to fall back to the parent tag (or grandparent
+  /// tag, etc).
   static define(parent) {
     if (parent === null || parent === void 0 ? void 0 : parent.base)
       throw new Error("Can not derive from a modified tag");
-    let tag = new Tag([], null, []);
+    let tag = new _Tag([], null, []);
     tag.set.push(tag);
     if (parent)
       for (let t2 of parent.set)
         tag.set.push(t2);
     return tag;
   }
+  /// Define a tag _modifier_, which is a function that, given a tag,
+  /// will return a tag that is a subtag of the original. Applying the
+  /// same modifier to a twice tag will return the same value (`m1(t1)
+  /// == m1(t1)`) and applying multiple modifiers will, regardless or
+  /// order, produce the same tag (`m1(m2(t1)) == m2(m1(t1))`).
+  ///
+  /// When multiple modifiers are applied to a given base tag, each
+  /// smaller set of modifiers is registered as a parent, so that for
+  /// example `m1(m2(m3(t1)))` is a subtype of `m1(m2(t1))`,
+  /// `m1(m3(t1)`, and so on.
   static defineModifier() {
     let mod = new Modifier();
     return (tag) => {
@@ -18123,7 +19329,7 @@ var Tag = class {
   }
 };
 var nextModifierID = 0;
-var Modifier = class {
+var Modifier = class _Modifier {
   constructor() {
     this.instances = [];
     this.id = nextModifierID++;
@@ -18141,7 +19347,7 @@ var Modifier = class {
     for (let parent of base2.set)
       if (!parent.modified.length)
         for (let config of configs)
-          set3.push(Modifier.get(parent, config));
+          set3.push(_Modifier.get(parent, config));
     return tag;
   }
 };
@@ -18266,89 +19472,201 @@ var punctuation = t();
 var bracket = t(punctuation);
 var meta = t();
 var tags = {
+  /// A comment.
   comment,
+  /// A line [comment](#highlight.tags.comment).
   lineComment: t(comment),
+  /// A block [comment](#highlight.tags.comment).
   blockComment: t(comment),
+  /// A documentation [comment](#highlight.tags.comment).
   docComment: t(comment),
+  /// Any kind of identifier.
   name: name2,
+  /// The [name](#highlight.tags.name) of a variable.
   variableName: t(name2),
+  /// A type [name](#highlight.tags.name).
   typeName,
+  /// A tag name (subtag of [`typeName`](#highlight.tags.typeName)).
   tagName: t(typeName),
+  /// A property or field [name](#highlight.tags.name).
   propertyName,
+  /// An attribute name (subtag of [`propertyName`](#highlight.tags.propertyName)).
   attributeName: t(propertyName),
+  /// The [name](#highlight.tags.name) of a class.
   className: t(name2),
+  /// A label [name](#highlight.tags.name).
   labelName: t(name2),
+  /// A namespace [name](#highlight.tags.name).
   namespace: t(name2),
+  /// The [name](#highlight.tags.name) of a macro.
   macroName: t(name2),
+  /// A literal value.
   literal,
+  /// A string [literal](#highlight.tags.literal).
   string,
+  /// A documentation [string](#highlight.tags.string).
   docString: t(string),
+  /// A character literal (subtag of [string](#highlight.tags.string)).
   character: t(string),
+  /// An attribute value (subtag of [string](#highlight.tags.string)).
   attributeValue: t(string),
+  /// A number [literal](#highlight.tags.literal).
   number: number4,
+  /// An integer [number](#highlight.tags.number) literal.
   integer: t(number4),
+  /// A floating-point [number](#highlight.tags.number) literal.
   float: t(number4),
+  /// A boolean [literal](#highlight.tags.literal).
   bool: t(literal),
+  /// Regular expression [literal](#highlight.tags.literal).
   regexp: t(literal),
+  /// An escape [literal](#highlight.tags.literal), for example a
+  /// backslash escape in a string.
   escape: t(literal),
+  /// A color [literal](#highlight.tags.literal).
   color: t(literal),
+  /// A URL [literal](#highlight.tags.literal).
   url: t(literal),
+  /// A language keyword.
   keyword,
+  /// The [keyword](#highlight.tags.keyword) for the self or this
+  /// object.
   self: t(keyword),
+  /// The [keyword](#highlight.tags.keyword) for null.
   null: t(keyword),
+  /// A [keyword](#highlight.tags.keyword) denoting some atomic value.
   atom: t(keyword),
+  /// A [keyword](#highlight.tags.keyword) that represents a unit.
   unit: t(keyword),
+  /// A modifier [keyword](#highlight.tags.keyword).
   modifier: t(keyword),
+  /// A [keyword](#highlight.tags.keyword) that acts as an operator.
   operatorKeyword: t(keyword),
+  /// A control-flow related [keyword](#highlight.tags.keyword).
   controlKeyword: t(keyword),
+  /// A [keyword](#highlight.tags.keyword) that defines something.
   definitionKeyword: t(keyword),
+  /// A [keyword](#highlight.tags.keyword) related to defining or
+  /// interfacing with modules.
   moduleKeyword: t(keyword),
+  /// An operator.
   operator,
+  /// An [operator](#highlight.tags.operator) that dereferences something.
   derefOperator: t(operator),
+  /// Arithmetic-related [operator](#highlight.tags.operator).
   arithmeticOperator: t(operator),
+  /// Logical [operator](#highlight.tags.operator).
   logicOperator: t(operator),
+  /// Bit [operator](#highlight.tags.operator).
   bitwiseOperator: t(operator),
+  /// Comparison [operator](#highlight.tags.operator).
   compareOperator: t(operator),
+  /// [Operator](#highlight.tags.operator) that updates its operand.
   updateOperator: t(operator),
+  /// [Operator](#highlight.tags.operator) that defines something.
   definitionOperator: t(operator),
+  /// Type-related [operator](#highlight.tags.operator).
   typeOperator: t(operator),
+  /// Control-flow [operator](#highlight.tags.operator).
   controlOperator: t(operator),
+  /// Program or markup punctuation.
   punctuation,
+  /// [Punctuation](#highlight.tags.punctuation) that separates
+  /// things.
   separator: t(punctuation),
+  /// Bracket-style [punctuation](#highlight.tags.punctuation).
   bracket,
+  /// Angle [brackets](#highlight.tags.bracket) (usually `<` and `>`
+  /// tokens).
   angleBracket: t(bracket),
+  /// Square [brackets](#highlight.tags.bracket) (usually `[` and `]`
+  /// tokens).
   squareBracket: t(bracket),
+  /// Parentheses (usually `(` and `)` tokens). Subtag of
+  /// [bracket](#highlight.tags.bracket).
   paren: t(bracket),
+  /// Braces (usually `{` and `}` tokens). Subtag of
+  /// [bracket](#highlight.tags.bracket).
   brace: t(bracket),
+  /// Content, for example plain text in XML or markup documents.
   content,
+  /// [Content](#highlight.tags.content) that represents a heading.
   heading,
+  /// A level 1 [heading](#highlight.tags.heading).
   heading1: t(heading),
+  /// A level 2 [heading](#highlight.tags.heading).
   heading2: t(heading),
+  /// A level 3 [heading](#highlight.tags.heading).
   heading3: t(heading),
+  /// A level 4 [heading](#highlight.tags.heading).
   heading4: t(heading),
+  /// A level 5 [heading](#highlight.tags.heading).
   heading5: t(heading),
+  /// A level 6 [heading](#highlight.tags.heading).
   heading6: t(heading),
+  /// A prose separator (such as a horizontal rule).
   contentSeparator: t(content),
+  /// [Content](#highlight.tags.content) that represents a list.
   list: t(content),
+  /// [Content](#highlight.tags.content) that represents a quote.
   quote: t(content),
+  /// [Content](#highlight.tags.content) that is emphasized.
   emphasis: t(content),
+  /// [Content](#highlight.tags.content) that is styled strong.
   strong: t(content),
+  /// [Content](#highlight.tags.content) that is part of a link.
   link: t(content),
+  /// [Content](#highlight.tags.content) that is styled as code or
+  /// monospace.
   monospace: t(content),
+  /// [Content](#highlight.tags.content) that has a strike-through
+  /// style.
   strikethrough: t(content),
+  /// Inserted text in a change-tracking format.
   inserted: t(),
+  /// Deleted text.
   deleted: t(),
+  /// Changed text.
   changed: t(),
+  /// An invalid or unsyntactic element.
   invalid: t(),
+  /// Metadata or meta-instruction.
   meta,
+  /// [Metadata](#highlight.tags.meta) that applies to the entire
+  /// document.
   documentMeta: t(meta),
+  /// [Metadata](#highlight.tags.meta) that annotates or adds
+  /// attributes to a given syntactic element.
   annotation: t(meta),
+  /// Processing instruction or preprocessor directive. Subtag of
+  /// [meta](#highlight.tags.meta).
   processingInstruction: t(meta),
+  /// [Modifier](#highlight.Tag^defineModifier) that indicates that a
+  /// given element is being defined. Expected to be used with the
+  /// various [name](#highlight.tags.name) tags.
   definition: Tag.defineModifier(),
+  /// [Modifier](#highlight.Tag^defineModifier) that indicates that
+  /// something is constant. Mostly expected to be used with
+  /// [variable names](#highlight.tags.variableName).
   constant: Tag.defineModifier(),
+  /// [Modifier](#highlight.Tag^defineModifier) used to indicate that
+  /// a [variable](#highlight.tags.variableName) or [property
+  /// name](#highlight.tags.propertyName) is being called or defined
+  /// as a function.
   function: Tag.defineModifier(),
+  /// [Modifier](#highlight.Tag^defineModifier) that can be applied to
+  /// [names](#highlight.tags.name) to indicate that they belong to
+  /// the language's standard environment.
   standard: Tag.defineModifier(),
+  /// [Modifier](#highlight.Tag^defineModifier) that indicates a given
+  /// [names](#highlight.tags.name) is local to some scope.
   local: Tag.defineModifier(),
+  /// A generic variant [modifier](#highlight.Tag^defineModifier) that
+  /// can be used to tag language-specific alternative variants of
+  /// some common tag. It is recommended for themes to define special
+  /// forms of at least the [string](#highlight.tags.string) and
+  /// [variable name](#highlight.tags.variableName) tags, since those
+  /// come up a lot.
   special: Tag.defineModifier()
 };
 var classHighlighter = tagHighlighter([
@@ -18389,6 +19707,13 @@ var _a;
 var languageDataProp = /* @__PURE__ */ new NodeProp();
 var sublanguageProp = /* @__PURE__ */ new NodeProp();
 var Language = class {
+  /**
+  Construct a language object. If you need to invoke this
+  directly, first define a data facet with
+  [`defineLanguageFacet`](https://codemirror.net/6/docs/ref/#language.defineLanguageFacet), and then
+  configure your parser to [attach](https://codemirror.net/6/docs/ref/#language.languageDataProp) it
+  to the language's outer syntax node.
+  */
   constructor(data, parser, extraExtensions = [], name3 = "") {
     this.data = data;
     this.name = name3;
@@ -18416,9 +19741,17 @@ var Language = class {
       })
     ].concat(extraExtensions);
   }
+  /**
+  Query whether this language is active at the given position.
+  */
   isActiveAt(state, pos, side = -1) {
     return topNodeAt(state, pos, side).type.prop(languageDataProp) == this.data;
   }
+  /**
+  Find the document regions that were parsed using this language.
+  The returned regions will _include_ any nested languages rooted
+  in this language, when those exist.
+  */
   findRegions(state) {
     let lang = state.facet(language);
     if ((lang === null || lang === void 0 ? void 0 : lang.data) == this.data)
@@ -18456,6 +19789,10 @@ var Language = class {
     explore(syntaxTree(state), 0);
     return result;
   }
+  /**
+  Indicates whether this language allows nested languages. The
+  default implementation returns true.
+  */
   get allowsNesting() {
     return true;
   }
@@ -18475,11 +19812,11 @@ function syntaxTree(state) {
   return field2 ? field2.tree : Tree.empty;
 }
 var DocInput = class {
-  constructor(doc2) {
-    this.doc = doc2;
+  constructor(doc3) {
+    this.doc = doc3;
     this.cursorPos = 0;
     this.string = "";
-    this.cursor = doc2.iter();
+    this.cursor = doc3.iter();
   }
   get length() {
     return this.doc.length;
@@ -18505,7 +19842,7 @@ var DocInput = class {
   }
 };
 var currentContext = null;
-var ParseContext = class {
+var ParseContext = class _ParseContext {
   constructor(parser, state, fragments = [], tree, treeLen, viewport, skipped, scheduleOn) {
     this.parser = parser;
     this.state = state;
@@ -18518,12 +19855,18 @@ var ParseContext = class {
     this.parse = null;
     this.tempSkipped = [];
   }
+  /**
+  @internal
+  */
   static create(parser, state, viewport) {
-    return new ParseContext(parser, state, [], Tree.empty, 0, viewport, [], null);
+    return new _ParseContext(parser, state, [], Tree.empty, 0, viewport, [], null);
   }
   startParse() {
     return this.parser.startParse(new DocInput(this.state.doc), this.fragments);
   }
+  /**
+  @internal
+  */
   work(until, upto) {
     if (upto != null && upto >= this.state.doc.length)
       upto = void 0;
@@ -18558,6 +19901,9 @@ var ParseContext = class {
       }
     });
   }
+  /**
+  @internal
+  */
   takeTree() {
     let pos, tree;
     if (this.parse && (pos = this.parse.parsedPos) >= this.treeLen) {
@@ -18587,6 +19933,9 @@ var ParseContext = class {
       fragments = cutFragments(fragments, r.from, r.to);
     return fragments;
   }
+  /**
+  @internal
+  */
   changes(changes, newState) {
     let { fragments, tree, treeLen, viewport, skipped } = this;
     this.takeTree();
@@ -18606,8 +19955,11 @@ var ParseContext = class {
         }
       }
     }
-    return new ParseContext(this.parser, newState, fragments, tree, treeLen, viewport, skipped, this.scheduleOn);
+    return new _ParseContext(this.parser, newState, fragments, tree, treeLen, viewport, skipped, this.scheduleOn);
   }
+  /**
+  @internal
+  */
   updateViewport(viewport) {
     if (this.viewport.from == viewport.from && this.viewport.to == viewport.to)
       return false;
@@ -18625,15 +19977,32 @@ var ParseContext = class {
     this.reset();
     return true;
   }
+  /**
+  @internal
+  */
   reset() {
     if (this.parse) {
       this.takeTree();
       this.parse = null;
     }
   }
+  /**
+  Notify the parse scheduler that the given region was skipped
+  because it wasn't in view, and the parse should be restarted
+  when it comes into view.
+  */
   skipUntilInView(from, to) {
     this.skipped.push({ from, to });
   }
+  /**
+  Returns a parser intended to be used as placeholder when
+  asynchronously loading a nested parser. It'll skip its input and
+  mark it as not-really-parsed, so that the next update will parse
+  it again.
+  
+  When `until` is given, a reparse will be scheduled when that
+  promise resolves.
+  */
   static getSkippingParser(until) {
     return new class extends Parser {
       createParse(input, fragments, ranges) {
@@ -18659,11 +20028,18 @@ var ParseContext = class {
       }
     }();
   }
+  /**
+  @internal
+  */
   isDone(upto) {
     upto = Math.min(upto, this.state.doc.length);
     let frags = this.fragments;
     return this.treeLen >= upto && frags.length && frags[0].from == 0 && frags[0].to >= upto;
   }
+  /**
+  Get the context for the current parse, or `null` if no editor
+  parse is in progress.
+  */
   static get() {
     return currentContext;
   }
@@ -18671,7 +20047,7 @@ var ParseContext = class {
 function cutFragments(fragments, from, to) {
   return TreeFragment.applyChanges(fragments, [{ fromA: from, toA: to, fromB: from, toB: to }]);
 }
-var LanguageState = class {
+var LanguageState = class _LanguageState {
   constructor(context) {
     this.context = context;
     this.tree = context.tree;
@@ -18683,14 +20059,14 @@ var LanguageState = class {
     let upto = this.context.treeLen == tr.startState.doc.length ? void 0 : Math.max(tr.changes.mapPos(this.context.treeLen), newCx.viewport.to);
     if (!newCx.work(20, upto))
       newCx.takeTree();
-    return new LanguageState(newCx);
+    return new _LanguageState(newCx);
   }
   static init(state) {
     let vpTo = Math.min(3e3, state.doc.length);
     let parseState = ParseContext.create(state.facet(language).parser, state, { from: 0, to: vpTo });
     if (!parseState.work(20, vpTo))
       parseState.takeTree();
-    return new LanguageState(parseState);
+    return new _LanguageState(parseState);
   }
 };
 Language.state = /* @__PURE__ */ StateField.define({
@@ -18705,14 +20081,25 @@ Language.state = /* @__PURE__ */ StateField.define({
   }
 });
 var requestIdle = (callback) => {
-  let timeout2 = setTimeout(() => callback(), 500);
+  let timeout2 = setTimeout(
+    () => callback(),
+    500
+    /* Work.MaxPause */
+  );
   return () => clearTimeout(timeout2);
 };
 if (typeof requestIdleCallback != "undefined")
   requestIdle = (callback) => {
-    let idle = -1, timeout2 = setTimeout(() => {
-      idle = requestIdleCallback(callback, { timeout: 500 - 100 });
-    }, 100);
+    let idle = -1, timeout2 = setTimeout(
+      () => {
+        idle = requestIdleCallback(callback, {
+          timeout: 500 - 100
+          /* Work.MinPause */
+        });
+      },
+      100
+      /* Work.MinPause */
+    );
     return () => idle < 0 ? clearTimeout(timeout2) : cancelIdleCallback(idle);
   };
 var isInputPending = typeof navigator != "undefined" && ((_a = navigator.scheduling) === null || _a === void 0 ? void 0 : _a.isInputPending) ? () => navigator.scheduling.isInputPending() : null;
@@ -18754,7 +20141,10 @@ var parseWorker = /* @__PURE__ */ ViewPlugin.fromClass(class ParseWorker {
     if (this.chunkBudget <= 0)
       return;
     let { state, viewport: { to: vpTo } } = this.view, field2 = state.field(Language.state);
-    if (field2.tree == field2.context.tree && field2.context.isDone(vpTo + 1e5))
+    if (field2.tree == field2.context.tree && field2.context.isDone(
+      vpTo + 1e5
+      /* Work.MaxParseAhead */
+    ))
       return;
     let endTime = Date.now() + Math.min(this.chunkBudget, 100, deadline && !isInputPending ? Math.max(25, deadline.timeRemaining() - 5) : 1e9);
     let viewportFirst = field2.context.treeLen < vpTo && state.doc.length > vpTo + 1e3;
@@ -18842,11 +20232,22 @@ function getIndentation(context, pos) {
   return tree ? syntaxIndentation(context, tree, pos) : null;
 }
 var IndentContext = class {
+  /**
+  Create an indent context.
+  */
   constructor(state, options = {}) {
     this.state = state;
     this.options = options;
     this.unit = getIndentUnit(state);
   }
+  /**
+  Get a description of the line at the given position, taking
+  [simulated line
+  breaks](https://codemirror.net/6/docs/ref/#language.IndentContext.constructor^options.simulateBreak)
+  into account. If there is such a break at `pos`, the `bias`
+  argument determines whether the part of the line line before or
+  after the break is used.
+  */
   lineAt(pos, bias = 1) {
     let line2 = this.state.doc.lineAt(pos);
     let { simulateBreak, simulateDoubleBreak } = this.options;
@@ -18860,12 +20261,19 @@ var IndentContext = class {
     }
     return line2;
   }
+  /**
+  Get the text directly after `pos`, either the entire line
+  or the next 100 characters, whichever is shorter.
+  */
   textAfterPos(pos, bias = 1) {
     if (this.options.simulateDoubleBreak && pos == this.options.simulateBreak)
       return "";
     let { text: text2, from } = this.lineAt(pos, bias);
     return text2.slice(pos - from, Math.min(text2.length, pos + 100 - from));
   }
+  /**
+  Find the column for the given position.
+  */
   column(pos, bias = 1) {
     let { text: text2, from } = this.lineAt(pos, bias);
     let result = this.countColumn(text2, pos - from);
@@ -18874,9 +20282,16 @@ var IndentContext = class {
       result += override - this.countColumn(text2, text2.search(/\S|$/));
     return result;
   }
+  /**
+  Find the column position (taking tabs into account) of the given
+  position in the given string.
+  */
   countColumn(line2, pos = line2.length) {
     return countColumn(line2, this.state.tabSize, pos);
   }
+  /**
+  Find the indentation column of the line at the given point.
+  */
   lineIndent(pos, bias = 1) {
     let { text: text2, from } = this.lineAt(pos, bias);
     let override = this.options.overrideIndentation;
@@ -18887,6 +20302,11 @@ var IndentContext = class {
     }
     return this.countColumn(text2, text2.search(/\S|$/));
   }
+  /**
+  Returns the [simulated line
+  break](https://codemirror.net/6/docs/ref/#language.IndentContext.constructor^options.simulateBreak)
+  for this context, if any.
+  */
   get simulatedBreak() {
     return this.options.simulateBreak || null;
   }
@@ -18920,19 +20340,33 @@ function indentFrom(node, pos, base2) {
 function topIndent() {
   return 0;
 }
-var TreeIndentContext = class extends IndentContext {
+var TreeIndentContext = class _TreeIndentContext extends IndentContext {
   constructor(base2, pos, node) {
     super(base2.state, base2.options);
     this.base = base2;
     this.pos = pos;
     this.node = node;
   }
+  /**
+  @internal
+  */
   static create(base2, pos, node) {
-    return new TreeIndentContext(base2, pos, node);
+    return new _TreeIndentContext(base2, pos, node);
   }
+  /**
+  Get the text directly after `this.pos`, either the entire line
+  or the next 100 characters, whichever is shorter.
+  */
   get textAfter() {
     return this.textAfterPos(this.pos);
   }
+  /**
+  Get the indentation at the reference line for `this.node`, which
+  is the line on which it starts, unless there is a node that is
+  _not_ a parent of this node covering the start of that line. If
+  so, the line at the start of that node is tried, again skipping
+  on if it is covered by another such node.
+  */
   get baseIndent() {
     let line2 = this.state.doc.lineAt(this.node.from);
     for (; ; ) {
@@ -18945,6 +20379,10 @@ var TreeIndentContext = class extends IndentContext {
     }
     return this.lineIndent(line2.from);
   }
+  /**
+  Continue looking for indentations in the node's parent nodes,
+  and return the result of that.
+  */
   continue() {
     let parent = this.node.parent;
     return parent ? indentFrom(parent, this.pos, this.base) : 0;
@@ -18981,7 +20419,7 @@ function delimitedStrategy(context, align, units, closing, closedAt) {
     return closed ? context.column(aligned.from) : context.column(aligned.to);
   return context.baseIndent + (closed ? 0 : context.unit * units);
 }
-var HighlightStyle = class {
+var HighlightStyle = class _HighlightStyle {
   constructor(specs, options) {
     this.specs = specs;
     let modSpec;
@@ -19002,8 +20440,23 @@ var HighlightStyle = class {
     this.module = modSpec ? new StyleModule(modSpec) : null;
     this.themeType = options.themeType;
   }
+  /**
+  Create a highlighter style that associates the given styles to
+  the given tags. The specs must be objects that hold a style tag
+  or array of tags in their `tag` property, and either a single
+  `class` property providing a static CSS class (for highlighter
+  that rely on external styling), or a
+  [`style-mod`](https://github.com/marijnh/style-mod#documentation)-style
+  set of CSS properties (which define the styling for those tags).
+  
+  The CSS rules created for a highlighter will be emitted in the
+  order of the spec's properties. That means that for elements that
+  have multiple tags associated with them, styles defined further
+  down in the list will have a higher CSS precedence than styles
+  defined earlier.
+  */
   static define(specs, options) {
-    return new HighlightStyle(specs, options || {});
+    return new _HighlightStyle(specs, options || {});
   }
 };
 var defaultHighlightStyle = /* @__PURE__ */ HighlightStyle.define([
@@ -19241,9 +20694,21 @@ function command(f, option) {
     return true;
   };
 }
-var toggleLineComment = /* @__PURE__ */ command(changeLineComment, 0);
-var toggleBlockComment = /* @__PURE__ */ command(changeBlockComment, 0);
-var toggleBlockCommentByLine = /* @__PURE__ */ command((o, s) => changeBlockComment(o, s, selectedLineRanges(s)), 0);
+var toggleLineComment = /* @__PURE__ */ command(
+  changeLineComment,
+  0
+  /* CommentOption.Toggle */
+);
+var toggleBlockComment = /* @__PURE__ */ command(
+  changeBlockComment,
+  0
+  /* CommentOption.Toggle */
+);
+var toggleBlockCommentByLine = /* @__PURE__ */ command(
+  (o, s) => changeBlockComment(o, s, selectedLineRanges(s)),
+  0
+  /* CommentOption.Toggle */
+);
 function getConfig(state, pos) {
   let data = state.languageDataAt("commentTokens", pos);
   return data.length ? data[0] : {};
@@ -19369,7 +20834,7 @@ function changeLineComment(option, state, ranges = state.selection.ranges) {
 }
 var fromHistory = /* @__PURE__ */ Annotation.define();
 var invertedEffects = /* @__PURE__ */ Facet.define();
-var HistEvent = class {
+var HistEvent = class _HistEvent {
   constructor(changes, effects, mapped, startSelection, selectionsAfter) {
     this.changes = changes;
     this.effects = effects;
@@ -19378,7 +20843,7 @@ var HistEvent = class {
     this.selectionsAfter = selectionsAfter;
   }
   setSelAfter(after) {
-    return new HistEvent(this.changes, this.effects, this.mapped, this.startSelection, after);
+    return new _HistEvent(this.changes, this.effects, this.mapped, this.startSelection, after);
   }
   toJSON() {
     var _a2, _b, _c;
@@ -19390,8 +20855,11 @@ var HistEvent = class {
     };
   }
   static fromJSON(json) {
-    return new HistEvent(json.changes && ChangeSet.fromJSON(json.changes), [], json.mapped && ChangeDesc.fromJSON(json.mapped), json.startSelection && EditorSelection.fromJSON(json.startSelection), json.selectionsAfter.map(EditorSelection.fromJSON));
+    return new _HistEvent(json.changes && ChangeSet.fromJSON(json.changes), [], json.mapped && ChangeDesc.fromJSON(json.mapped), json.startSelection && EditorSelection.fromJSON(json.startSelection), json.selectionsAfter.map(EditorSelection.fromJSON));
   }
+  // This does not check `addToHistory` and such, it assumes the
+  // transaction needs to be converted to an item. Returns null when
+  // there are no changes or effects in the transaction.
   static fromTransaction(tr, selection2) {
     let effects = none3;
     for (let invert of tr.startState.facet(invertedEffects)) {
@@ -19401,10 +20869,10 @@ var HistEvent = class {
     }
     if (!effects.length && tr.changes.empty)
       return null;
-    return new HistEvent(tr.changes.invert(tr.startState.doc), effects, void 0, selection2 || tr.startState.selection, none3);
+    return new _HistEvent(tr.changes.invert(tr.startState.doc), effects, void 0, selection2 || tr.startState.selection, none3);
   }
   static selection(selections) {
-    return new HistEvent(void 0, none3, void 0, void 0, selections);
+    return new _HistEvent(void 0, none3, void 0, void 0, selections);
   }
 };
 function updateBranch(branch, to, maxLen, newEvent) {
@@ -19478,7 +20946,7 @@ function mapEvent(event, mapping, extraSelections) {
   return new HistEvent(mappedChanges, StateEffect.mapEffects(event.effects, mapping), fullMapping, event.startSelection.map(before), selections);
 }
 var joinableUserEvent = /^(input\.type|delete)($|\.)/;
-var HistoryState = class {
+var HistoryState = class _HistoryState {
   constructor(done, undone, prevTime = 0, prevUserEvent = void 0) {
     this.done = done;
     this.undone = undone;
@@ -19486,25 +20954,26 @@ var HistoryState = class {
     this.prevUserEvent = prevUserEvent;
   }
   isolate() {
-    return this.prevTime ? new HistoryState(this.done, this.undone) : this;
+    return this.prevTime ? new _HistoryState(this.done, this.undone) : this;
   }
   addChanges(event, time2, userEvent, config, tr) {
     let done = this.done, lastEvent = done[done.length - 1];
-    if (lastEvent && lastEvent.changes && !lastEvent.changes.empty && event.changes && (!userEvent || joinableUserEvent.test(userEvent)) && (!lastEvent.selectionsAfter.length && time2 - this.prevTime < config.newGroupDelay && config.joinToEvent(tr, isAdjacent(lastEvent.changes, event.changes)) || userEvent == "input.type.compose")) {
+    if (lastEvent && lastEvent.changes && !lastEvent.changes.empty && event.changes && (!userEvent || joinableUserEvent.test(userEvent)) && (!lastEvent.selectionsAfter.length && time2 - this.prevTime < config.newGroupDelay && config.joinToEvent(tr, isAdjacent(lastEvent.changes, event.changes)) || // For compose (but not compose.start) events, always join with previous event
+    userEvent == "input.type.compose")) {
       done = updateBranch(done, done.length - 1, config.minDepth, new HistEvent(event.changes.compose(lastEvent.changes), conc(event.effects, lastEvent.effects), lastEvent.mapped, lastEvent.startSelection, none3));
     } else {
       done = updateBranch(done, done.length, config.minDepth, event);
     }
-    return new HistoryState(done, none3, time2, userEvent);
+    return new _HistoryState(done, none3, time2, userEvent);
   }
   addSelection(selection2, time2, userEvent, newGroupDelay) {
     let last2 = this.done.length ? this.done[this.done.length - 1].selectionsAfter : none3;
     if (last2.length > 0 && time2 - this.prevTime < newGroupDelay && userEvent == this.prevUserEvent && userEvent && /^select($|\.)/.test(userEvent) && eqSelectionShape(last2[last2.length - 1], selection2))
       return this;
-    return new HistoryState(addSelection(this.done, selection2), this.undone, time2, userEvent);
+    return new _HistoryState(addSelection(this.done, selection2), this.undone, time2, userEvent);
   }
   addMapping(mapping) {
-    return new HistoryState(addMappingToBranch(this.done, mapping), addMappingToBranch(this.undone, mapping), this.prevTime, this.prevUserEvent);
+    return new _HistoryState(addMappingToBranch(this.done, mapping), addMappingToBranch(this.undone, mapping), this.prevTime, this.prevUserEvent);
   }
   pop(side, state, selection2) {
     let branch = side == 0 ? this.done : this.undone;
@@ -20685,8 +22154,7 @@ var difference = (dictEq) => {
 var defer = function(thunk) {
   var v = null;
   return function() {
-    if (thunk === void 0)
-      return v;
+    if (thunk === void 0) return v;
     v = thunk();
     thunk = void 0;
     return v;
@@ -21772,10 +23240,10 @@ var eqMap = (dictEq) => (dictEq1) => {
 };
 var fromFoldable2 = (dictOrd) => (dictFoldable) => dictFoldable.foldl((m) => (v) => insert3(dictOrd)(v._1)(v._2)(m))(Leaf2);
 var filterWithKey2 = (dictOrd) => {
-  const fromFoldable113 = fromFoldable2(dictOrd)(foldableList2);
+  const fromFoldable112 = fromFoldable2(dictOrd)(foldableList2);
   return (predicate) => {
     const $0 = filter3((v) => predicate(v._1)(v._2));
-    return (x2) => fromFoldable113($0(toUnfoldable3(unfoldableList2)(x2)));
+    return (x2) => fromFoldable112($0(toUnfoldable3(unfoldableList2)(x2)));
   };
 };
 var $$delete3 = (dictOrd) => (k) => (m) => {
@@ -21886,61 +23354,6 @@ var foldl1Impl = function(f) {
     return acc;
   };
 };
-var traverse1Impl = function() {
-  function Cont(fn) {
-    this.fn = fn;
-  }
-  var emptyList = {};
-  var ConsCell = function(head, tail4) {
-    this.head = head;
-    this.tail = tail4;
-  };
-  function finalCell(head) {
-    return new ConsCell(head, emptyList);
-  }
-  function consList(x2) {
-    return function(xs) {
-      return new ConsCell(x2, xs);
-    };
-  }
-  function listToArray(list) {
-    var arr = [];
-    var xs = list;
-    while (xs !== emptyList) {
-      arr.push(xs.head);
-      xs = xs.tail;
-    }
-    return arr;
-  }
-  return function(apply3) {
-    return function(map3) {
-      return function(f) {
-        var buildFrom = function(x2, ys) {
-          return apply3(map3(consList)(f(x2)))(ys);
-        };
-        var go = function(acc, currentLen, xs) {
-          if (currentLen === 0) {
-            return acc;
-          } else {
-            var last2 = xs[currentLen - 1];
-            return new Cont(function() {
-              var built = go(buildFrom(last2, acc), currentLen - 1, xs);
-              return built;
-            });
-          }
-        };
-        return function(array2) {
-          var acc = map3(finalCell)(f(array2[array2.length - 1]));
-          var result = go(acc, array2.length - 1, array2);
-          while (result instanceof Cont) {
-            result = result.fn();
-          }
-          return map3(listToArray)(result);
-        };
-      };
-    };
-  };
-}();
 
 // output-es/Data.Array.NonEmpty.Internal/index.js
 var foldable1NonEmptyArray = {
@@ -22130,13 +23543,13 @@ var difference2 = (dictOrd) => (s1) => (s2) => {
 
 // output-es/Debug/foreign.js
 var req = typeof module === "undefined" ? void 0 : module.require;
-var util = function() {
+var util = (function() {
   try {
     return req === void 0 ? void 0 : req("util");
   } catch (e) {
     return void 0;
   }
-}();
+})();
 function _trace(x2, k) {
   if (util !== void 0) {
     console.log(util.inspect(x2, { depth: null, colors: true }));
@@ -22145,7 +23558,7 @@ function _trace(x2, k) {
   }
   return k({});
 }
-var now2 = function() {
+var now2 = (function() {
   var perf;
   if (typeof performance !== "undefined") {
     perf = performance;
@@ -22155,10 +23568,10 @@ var now2 = function() {
     } catch (e) {
     }
   }
-  return function() {
+  return (function() {
     return (perf || Date).now();
-  };
-}();
+  });
+})();
 
 // output-es/Util/index.js
 var intercalate3 = (sep) => (xs) => {
@@ -22370,9 +23783,9 @@ var mapFObjectString = {
   mapWithKey
 };
 var asMaplet = (dictMap) => {
-  const toUnfoldable16 = dictMap.toUnfoldable(unfoldableList);
+  const toUnfoldable17 = dictMap.toUnfoldable(unfoldableList);
   return (m) => assertWith("")(dictMap.Set0().size(m) === 1)(definitely("singleton map")((() => {
-    const $0 = toUnfoldable16(m);
+    const $0 = toUnfoldable17(m);
     if ($0.tag === "Nil") {
       return Nothing;
     }
@@ -22593,16 +24006,13 @@ var _codePointAt = function(fallback) {
         return function(index3) {
           return function(str) {
             var length6 = str.length;
-            if (index3 < 0 || index3 >= length6)
-              return Nothing2;
+            if (index3 < 0 || index3 >= length6) return Nothing2;
             if (hasStringIterator) {
               var iter = str[Symbol.iterator]();
               for (var i = index3; ; --i) {
                 var o = iter.next();
-                if (o.done)
-                  return Nothing2;
-                if (i === 0)
-                  return Just2(unsafeCodePointAt02(o.value));
+                if (o.done) return Nothing2;
+                if (i === 0) return Just2(unsafeCodePointAt02(o.value));
               }
             }
             return fallback(index3)(str);
@@ -22633,8 +24043,7 @@ var _take = function(fallback) {
         var iter = str[Symbol.iterator]();
         for (var i = 0; i < n; ++i) {
           var o = iter.next();
-          if (o.done)
-            return accum;
+          if (o.done) return accum;
           accum += o.value;
         }
         return accum;
@@ -28755,6 +30164,25 @@ var sepBy = (p) => (sep) => (v2, $0, $1, $2, $3) => {
     (state2, a) => $0((v2$1) => $3(state2, $List("Cons", a._1, a._2)))
   )));
 };
+var optionMaybe = (p) => (v2, $0, $1, $2, $3) => {
+  const $4 = v2._1;
+  const $5 = v2._2;
+  return $0((v3) => $0((v1) => p(
+    $ParseState($4, $5, false),
+    $0,
+    $1,
+    (v4, $6) => {
+      const $7 = v4._3;
+      return $0((v5) => {
+        if ($7) {
+          return $2(v4, $6);
+        }
+        return $3(v2, Nothing);
+      });
+    },
+    (state2, a) => $0((v2$1) => $3(state2, $Maybe("Just", a)))
+  )));
+};
 var notFollowedBy = (p) => (v1, $0, $1, $2, $3) => {
   const $4 = v1._3;
   const $5 = v1._1;
@@ -29274,399 +30702,10 @@ var bitraversableTuple = {
 // output-es/Data.Unit/index.js
 var showUnit = { show: (v) => "unit" };
 
-// output-es/Doc/index.js
-var $DocCommentElem = (tag, _1) => ({ tag, _1 });
-var $DocOpt = (tag, _1) => ({ tag, _1 });
-var unions = /* @__PURE__ */ (() => {
-  const go = (go$a0$copy) => (go$a1$copy) => {
-    let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
-    while (go$c) {
-      const b = go$a0, v = go$a1;
-      if (v.tag === "Nil") {
-        go$c = false;
-        go$r = b;
-        continue;
-      }
-      if (v.tag === "Cons") {
-        go$a0 = unionWith2(ordDVertex$p)($$const)(b)(v._1);
-        go$a1 = v._2;
-        continue;
-      }
-      fail();
-    }
-    return go$r;
-  };
-  return go(Leaf2);
-})();
-var identity26 = (x2) => x2;
-var Unquote = (value0) => $DocCommentElem("Unquote", value0);
-var None = /* @__PURE__ */ $DocOpt("None");
-var Doc = (value0) => $DocOpt("Doc", value0);
-var verticesDocOptVertex = (dictVertices) => ({
-  vertices: (v) => {
-    if (v.tag === "None") {
-      return Leaf2;
-    }
-    if (v.tag === "Doc") {
-      return unions(listMap((v$1) => {
-        if (v$1.tag === "Token") {
-          return Leaf2;
-        }
-        if (v$1.tag === "Unquote") {
-          return dictVertices.vertices(v$1._1);
-        }
-        fail();
-      })(v._1));
-    }
-    fail();
-  }
-});
-var showDocCommentElem = (dictShow) => ({
-  show: (v) => {
-    if (v.tag === "Token") {
-      return "Token " + showStringImpl(v._1);
-    }
-    if (v.tag === "Unquote") {
-      return "Unquote " + dictShow.show(v._1);
-    }
-    fail();
-  }
-});
-var showDocOpt = (dictShow) => ({
-  show: (v) => {
-    if (v.tag === "None") {
-      return "None";
-    }
-    if (v.tag === "Doc") {
-      return "Doc " + showList(showDocCommentElem(dictShow)).show(v._1);
-    }
-    fail();
-  }
-});
-var semigroupDocOpt = {
-  append: (v) => (v1) => {
-    if (v1.tag === "None") {
-      return v;
-    }
-    if (v.tag === "None") {
-      return v1;
-    }
-    if (v.tag === "Doc" && v1.tag === "Doc") {
-      return $DocOpt("Doc", foldableList.foldr(Cons)(v1._1)(v._1));
-    }
-    fail();
-  }
-};
-var functorDocOpt = (dictFunctor) => ({
-  map: (f) => (m) => {
-    if (m.tag === "None") {
-      return None;
-    }
-    if (m.tag === "Doc") {
-      return $DocOpt(
-        "Doc",
-        listMap((m$1) => {
-          if (m$1.tag === "Token") {
-            return $DocCommentElem("Token", m$1._1);
-          }
-          if (m$1.tag === "Unquote") {
-            return $DocCommentElem("Unquote", dictFunctor.map(f)(m$1._1));
-          }
-          fail();
-        })(m._1)
-      );
-    }
-    fail();
-  }
-});
-var foldableDocOpt = (dictFoldable) => ({
-  foldl: (f) => (z) => (m) => {
-    if (m.tag === "None") {
-      return z;
-    }
-    if (m.tag === "Doc") {
-      const go = (go$a0$copy) => (go$a1$copy) => {
-        let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
-        while (go$c) {
-          const b = go$a0, v = go$a1;
-          if (v.tag === "Nil") {
-            go$c = false;
-            go$r = b;
-            continue;
-          }
-          if (v.tag === "Cons") {
-            go$a0 = (() => {
-              if (v._1.tag === "Token") {
-                return b;
-              }
-              if (v._1.tag === "Unquote") {
-                return dictFoldable.foldl(f)(b)(v._1._1);
-              }
-              fail();
-            })();
-            go$a1 = v._2;
-            continue;
-          }
-          fail();
-        }
-        return go$r;
-      };
-      return go(z)(m._1);
-    }
-    fail();
-  },
-  foldr: (f) => (z) => (m) => {
-    if (m.tag === "None") {
-      return z;
-    }
-    if (m.tag === "Doc") {
-      return foldableList.foldr((b) => (a) => {
-        if (b.tag === "Token") {
-          return a;
-        }
-        if (b.tag === "Unquote") {
-          return dictFoldable.foldr(f)(a)(b._1);
-        }
-        fail();
-      })(z)(m._1);
-    }
-    fail();
-  },
-  foldMap: (dictMonoid) => {
-    const mempty = dictMonoid.mempty;
-    const foldMap22 = foldableList.foldMap(dictMonoid);
-    const mempty$1 = dictMonoid.mempty;
-    const foldMap2$1 = dictFoldable.foldMap(dictMonoid);
-    return (f) => (m) => {
-      if (m.tag === "None") {
-        return mempty;
-      }
-      if (m.tag === "Doc") {
-        return foldMap22((m$1) => {
-          if (m$1.tag === "Token") {
-            return mempty$1;
-          }
-          if (m$1.tag === "Unquote") {
-            return foldMap2$1(f)(m$1._1);
-          }
-          fail();
-        })(m._1);
-      }
-      fail();
-    };
-  }
-});
-var traversableDocCommentElem = (dictTraversable) => {
-  const $0 = dictTraversable.Functor0();
-  const functorDocCommentElem1 = {
-    map: (f) => (m) => {
-      if (m.tag === "Token") {
-        return $DocCommentElem("Token", m._1);
-      }
-      if (m.tag === "Unquote") {
-        return $DocCommentElem("Unquote", $0.map(f)(m._1));
-      }
-      fail();
-    }
-  };
-  const $1 = dictTraversable.Foldable1();
-  const foldableDocCommentElem1 = {
-    foldl: (f) => (z) => (m) => {
-      if (m.tag === "Token") {
-        return z;
-      }
-      if (m.tag === "Unquote") {
-        return $1.foldl(f)(z)(m._1);
-      }
-      fail();
-    },
-    foldr: (f) => (z) => (m) => {
-      if (m.tag === "Token") {
-        return z;
-      }
-      if (m.tag === "Unquote") {
-        return $1.foldr(f)(z)(m._1);
-      }
-      fail();
-    },
-    foldMap: (dictMonoid) => {
-      const mempty = dictMonoid.mempty;
-      const foldMap22 = $1.foldMap(dictMonoid);
-      return (f) => (m) => {
-        if (m.tag === "Token") {
-          return mempty;
-        }
-        if (m.tag === "Unquote") {
-          return foldMap22(f)(m._1);
-        }
-        fail();
-      };
-    }
-  };
-  return {
-    traverse: (dictApplicative) => {
-      const traverse22 = dictTraversable.traverse(dictApplicative);
-      return (f) => (m) => {
-        if (m.tag === "Token") {
-          return dictApplicative.pure($DocCommentElem("Token", m._1));
-        }
-        if (m.tag === "Unquote") {
-          return dictApplicative.Apply0().Functor0().map((v1) => $DocCommentElem("Unquote", v1))(traverse22(f)(m._1));
-        }
-        fail();
-      };
-    },
-    sequence: (dictApplicative) => (v) => traversableDocCommentElem(dictTraversable).traverse(dictApplicative)(identity26)(v),
-    Functor0: () => functorDocCommentElem1,
-    Foldable1: () => foldableDocCommentElem1
-  };
-};
-var traversableDocOpt = (dictTraversable) => {
-  const functorDocOpt1 = functorDocOpt(dictTraversable.Functor0());
-  const foldableDocOpt1 = foldableDocOpt(dictTraversable.Foldable1());
-  return {
-    traverse: (dictApplicative) => {
-      const traverse22 = traversableList.traverse(dictApplicative);
-      const traverse3 = traversableDocCommentElem(dictTraversable).traverse(dictApplicative);
-      return (f) => (m) => {
-        if (m.tag === "None") {
-          return dictApplicative.pure(None);
-        }
-        if (m.tag === "Doc") {
-          return dictApplicative.Apply0().Functor0().map((v1) => $DocOpt("Doc", v1))(traverse22(traverse3(f))(m._1));
-        }
-        fail();
-      };
-    },
-    sequence: (dictApplicative) => (v) => traversableDocOpt(dictTraversable).traverse(dictApplicative)(identity26)(v),
-    Functor0: () => functorDocOpt1,
-    Foldable1: () => foldableDocOpt1
-  };
-};
-var eqDocOpt = (dictEq) => ({
-  eq: (x2) => (y2) => {
-    if (x2.tag === "None") {
-      return y2.tag === "None";
-    }
-    return x2.tag === "Doc" && y2.tag === "Doc" && (() => {
-      const go = (v) => (v1) => (v2) => {
-        if (!v2) {
-          return false;
-        }
-        if (v.tag === "Nil") {
-          return v1.tag === "Nil" && v2;
-        }
-        return v.tag === "Cons" && v1.tag === "Cons" && go(v._2)(v1._2)(v1._1.tag === "Token" ? v2 && v._1.tag === "Token" && v1._1._1 === v._1._1 : v2 && v1._1.tag === "Unquote" && v._1.tag === "Unquote" && dictEq.eq(v1._1._1)(v._1._1));
-      };
-      return go(x2._1)(y2._1)(true);
-    })();
-  }
-});
-var ordDocCommentElem = (dictOrd) => {
-  const $0 = dictOrd.Eq0();
-  const eqDocCommentElem1 = {
-    eq: (v) => (v1) => {
-      if (v.tag === "Token") {
-        return v1.tag === "Token" && v._1 === v1._1;
-      }
-      return v.tag === "Unquote" && v1.tag === "Unquote" && $0.eq(v._1)(v1._1);
-    }
-  };
-  return {
-    compare: (v) => (v1) => {
-      if (v.tag === "Token") {
-        if (v1.tag === "Token") {
-          return ordString.compare(v._1)(v1._1);
-        }
-        if (v1.tag === "Unquote") {
-          return LT;
-        }
-        fail();
-      }
-      if (v.tag === "Unquote") {
-        if (v1.tag === "Unquote") {
-          return dictOrd.compare(v._1)(v1._1);
-        }
-        if (v1.tag === "Token") {
-          return GT;
-        }
-      }
-      fail();
-    },
-    Eq0: () => eqDocCommentElem1
-  };
-};
-var ordDocOpt = (dictOrd) => {
-  const eqDocOpt1 = eqDocOpt(dictOrd.Eq0());
-  return {
-    compare: (x2) => (y2) => {
-      if (x2.tag === "None") {
-        if (y2.tag === "None") {
-          return EQ;
-        }
-        return LT;
-      }
-      if (y2.tag === "None") {
-        return GT;
-      }
-      if (x2.tag === "Doc" && y2.tag === "Doc") {
-        return ordList(ordDocCommentElem(dictOrd)).compare(x2._1)(y2._1);
-      }
-      fail();
-    },
-    Eq0: () => eqDocOpt1
-  };
-};
-var applyDocCommentElem = (dictApply) => {
-  const $0 = dictApply.Functor0();
-  const functorDocCommentElem1 = {
-    map: (f) => (m) => {
-      if (m.tag === "Token") {
-        return $DocCommentElem("Token", m._1);
-      }
-      if (m.tag === "Unquote") {
-        return $DocCommentElem("Unquote", $0.map(f)(m._1));
-      }
-      fail();
-    }
-  };
-  return {
-    apply: (v) => (v1) => {
-      if (v.tag === "Token") {
-        if (v1.tag === "Token") {
-          return $DocCommentElem("Token", mustEq(eqString)(showString)(v._1)(v1._1));
-        }
-        return throwException(error(throwException(error("Shape mismatch"))()))();
-      }
-      if (v.tag === "Unquote" && v1.tag === "Unquote") {
-        return $DocCommentElem("Unquote", dictApply.apply(v._1)(v1._1));
-      }
-      return throwException(error(throwException(error("Shape mismatch"))()))();
-    },
-    Functor0: () => functorDocCommentElem1
-  };
-};
-var applyDocOpt = (dictApply) => {
-  const apply3 = applyDocCommentElem(dictApply).apply;
-  const functorDocOpt1 = functorDocOpt(dictApply.Functor0());
-  return {
-    apply: (v) => (v1) => {
-      if (v.tag === "None") {
-        return None;
-      }
-      if (v.tag === "Doc" && v1.tag === "Doc") {
-        return $DocOpt("Doc", zipWith2(apply3)(v._1)(v1._1));
-      }
-      return throwException(error(throwException(error("Shape mismatch"))()))();
-    },
-    Functor0: () => functorDocOpt1
-  };
-};
-
 // output-es/Expr/index.js
 var $Cont = (tag, _1) => ({ tag, _1 });
 var $Elim = (tag, _1, _2) => ({ tag, _1, _2 });
-var $Expr = (tag, _1, _2, _3, _4, _5) => ({ tag, _1, _2, _3, _4, _5 });
+var $Expr = (tag, _1, _2, _3, _4) => ({ tag, _1, _2, _3, _4 });
 var $RecDefs = (_1, _2) => ({ tag: "RecDefs", _1, _2 });
 var $VarDef = (_1, _2) => ({ tag: "VarDef", _1, _2 });
 var union5 = /* @__PURE__ */ (() => setSet(ordDVertex$p).union)();
@@ -29691,7 +30730,7 @@ var unions12 = /* @__PURE__ */ (() => {
   };
   return go(Leaf2);
 })();
-var identity27 = (x2) => x2;
+var identity26 = (x2) => x2;
 var compare3 = /* @__PURE__ */ (() => ordTuple(ordString)(ordString).compare)();
 var compare4 = /* @__PURE__ */ (() => ordSet(ordString).compare)();
 var setSet2 = /* @__PURE__ */ setSet(ordString);
@@ -29719,13 +30758,13 @@ var unions3 = /* @__PURE__ */ (() => {
 })();
 var asMaplet2 = /* @__PURE__ */ asMaplet(mapDictString);
 var ContExpr = (value0) => $Cont("ContExpr", value0);
-var Dictionary = (value0) => (value1) => (value2) => $Expr("Dictionary", value0, value1, value2);
-var Constr = (value0) => (value1) => (value2) => (value3) => $Expr("Constr", value0, value1, value2, value3);
-var Matrix = (value0) => (value1) => (value2) => (value3) => (value4) => $Expr("Matrix", value0, value1, value2, value3, value4);
+var Dictionary = (value0) => (value1) => $Expr("Dictionary", value0, value1);
+var Constr = (value0) => (value1) => (value2) => $Expr("Constr", value0, value1, value2);
+var Matrix = (value0) => (value1) => (value2) => (value3) => $Expr("Matrix", value0, value1, value2, value3);
 var Lambda = (value0) => (value1) => $Expr("Lambda", value0, value1);
-var Project = (value0) => (value1) => (value2) => $Expr("Project", value0, value1, value2);
-var DProject = (value0) => (value1) => (value2) => $Expr("DProject", value0, value1, value2);
-var App2 = (value0) => (value1) => (value2) => $Expr("App", value0, value1, value2);
+var Project = (value0) => (value1) => $Expr("Project", value0, value1);
+var DProject = (value0) => (value1) => $Expr("DProject", value0, value1);
+var App2 = (value0) => (value1) => $Expr("App", value0, value1);
 var Let = (value0) => (value1) => $Expr("Let", value0, value1);
 var LetRec = (value0) => (value1) => $Expr("LetRec", value0, value1);
 var ElimVar = (value0) => (value1) => $Elim("ElimVar", value0, value1);
@@ -29750,40 +30789,43 @@ var verticesExprVertex = {
       return Leaf2;
     }
     if (v.tag === "Int") {
-      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(verticesDocOptVertex(verticesExprVertex).vertices(v._2));
+      return $$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2);
     }
     if (v.tag === "Float") {
-      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(verticesDocOptVertex(verticesExprVertex).vertices(v._2));
+      return $$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2);
     }
     if (v.tag === "Str") {
-      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(verticesDocOptVertex(verticesExprVertex).vertices(v._2));
+      return $$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2);
     }
     if (v.tag === "Dictionary") {
-      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(union5(unions12(listMap((v1) => union5(verticesExprVertex.vertices(v1._1))(verticesExprVertex.vertices(v1._2)))(v._3)))(verticesDocOptVertex(verticesExprVertex).vertices(v._2)));
+      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(unions12(listMap((v1) => union5(verticesExprVertex.vertices(v1._1))(verticesExprVertex.vertices(v1._2)))(v._2)));
     }
     if (v.tag === "Constr") {
-      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(union5(unions12(listMap(verticesExprVertex.vertices)(v._4)))(verticesDocOptVertex(verticesExprVertex).vertices(v._2)));
+      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(unions12(listMap(verticesExprVertex.vertices)(v._3)));
     }
     if (v.tag === "Matrix") {
-      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(union5(verticesExprVertex.vertices(v._3))(union5(verticesExprVertex.vertices(v._5))(verticesDocOptVertex(verticesExprVertex).vertices(v._2))));
+      return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(union5(verticesExprVertex.vertices(v._2))(verticesExprVertex.vertices(v._4)));
     }
     if (v.tag === "Lambda") {
       return union5($$$Map("Two", Leaf2, $Tuple(v._1, pack12(v)), void 0, Leaf2))(verticesElimVertex.vertices(v._2));
     }
     if (v.tag === "Project") {
-      return union5(verticesDocOptVertex(verticesExprVertex).vertices(v._1))(verticesExprVertex.vertices(v._2));
+      return verticesExprVertex.vertices(v._1);
     }
     if (v.tag === "DProject") {
-      return union5(verticesExprVertex.vertices(v._2))(union5(verticesExprVertex.vertices(v._3))(verticesDocOptVertex(verticesExprVertex).vertices(v._1)));
+      return union5(verticesExprVertex.vertices(v._1))(verticesExprVertex.vertices(v._2));
     }
     if (v.tag === "App") {
-      return union5(verticesExprVertex.vertices(v._2))(union5(verticesExprVertex.vertices(v._3))(verticesDocOptVertex(verticesExprVertex).vertices(v._1)));
+      return union5(verticesExprVertex.vertices(v._1))(verticesExprVertex.vertices(v._2));
     }
     if (v.tag === "Let") {
       return union5(verticesVarDefVertex.vertices(v._1))(verticesExprVertex.vertices(v._2));
     }
     if (v.tag === "LetRec") {
       return union5(verticesRecDefsVertex.vertices(v._1))(verticesExprVertex.vertices(v._2));
+    }
+    if (v.tag === "DocExpr") {
+      return union5(verticesExprVertex.vertices(v._1))(verticesExprVertex.vertices(v._2));
     }
     fail();
   }
@@ -29835,48 +30877,50 @@ var functorExpr = {
       return $Expr("Op", m._1);
     }
     if (m.tag === "Int") {
-      return $Expr("Int", f(m._1), functorDocOpt(functorExpr).map(f)(m._2), m._3);
+      return $Expr("Int", f(m._1), m._2);
     }
     if (m.tag === "Float") {
-      return $Expr("Float", f(m._1), functorDocOpt(functorExpr).map(f)(m._2), m._3);
+      return $Expr("Float", f(m._1), m._2);
     }
     if (m.tag === "Str") {
-      return $Expr("Str", f(m._1), functorDocOpt(functorExpr).map(f)(m._2), m._3);
+      return $Expr("Str", f(m._1), m._2);
     }
     if (m.tag === "Dictionary") {
       return $Expr(
         "Dictionary",
         f(m._1),
-        functorDocOpt(functorExpr).map(f)(m._2),
         listMap((() => {
           const $0 = functorExpr.map(f);
           return (v) => $Pair($0(v._1), $0(v._2));
-        })())(m._3)
+        })())(m._2)
       );
     }
     if (m.tag === "Constr") {
-      return $Expr("Constr", f(m._1), functorDocOpt(functorExpr).map(f)(m._2), m._3, listMap(functorExpr.map(f))(m._4));
+      return $Expr("Constr", f(m._1), m._2, listMap(functorExpr.map(f))(m._3));
     }
     if (m.tag === "Matrix") {
-      return $Expr("Matrix", f(m._1), functorDocOpt(functorExpr).map(f)(m._2), functorExpr.map(f)(m._3), m._4, functorExpr.map(f)(m._5));
+      return $Expr("Matrix", f(m._1), functorExpr.map(f)(m._2), m._3, functorExpr.map(f)(m._4));
     }
     if (m.tag === "Lambda") {
       return $Expr("Lambda", f(m._1), functorElim.map(f)(m._2));
     }
     if (m.tag === "Project") {
-      return $Expr("Project", functorDocOpt(functorExpr).map(f)(m._1), functorExpr.map(f)(m._2), m._3);
+      return $Expr("Project", functorExpr.map(f)(m._1), m._2);
     }
     if (m.tag === "DProject") {
-      return $Expr("DProject", functorDocOpt(functorExpr).map(f)(m._1), functorExpr.map(f)(m._2), functorExpr.map(f)(m._3));
+      return $Expr("DProject", functorExpr.map(f)(m._1), functorExpr.map(f)(m._2));
     }
     if (m.tag === "App") {
-      return $Expr("App", functorDocOpt(functorExpr).map(f)(m._1), functorExpr.map(f)(m._2), functorExpr.map(f)(m._3));
+      return $Expr("App", functorExpr.map(f)(m._1), functorExpr.map(f)(m._2));
     }
     if (m.tag === "Let") {
       return $Expr("Let", functorVarDef.map(f)(m._1), functorExpr.map(f)(m._2));
     }
     if (m.tag === "LetRec") {
       return $Expr("LetRec", functorRecDefs.map(f)(m._1), functorExpr.map(f)(m._2));
+    }
+    if (m.tag === "DocExpr") {
+      return $Expr("DocExpr", functorExpr.map(f)(m._1), functorExpr.map(f)(m._2));
     }
     fail();
   }
@@ -29948,13 +30992,13 @@ var foldableExpr = {
       return z;
     }
     if (m.tag === "Int") {
-      return foldableDocOpt(foldableExpr).foldl(f)(f(z)(m._1))(m._2);
+      return f(z)(m._1);
     }
     if (m.tag === "Float") {
-      return foldableDocOpt(foldableExpr).foldl(f)(f(z)(m._1))(m._2);
+      return f(z)(m._1);
     }
     if (m.tag === "Str") {
-      return foldableDocOpt(foldableExpr).foldl(f)(f(z)(m._1))(m._2);
+      return f(z)(m._1);
     }
     if (m.tag === "Dictionary") {
       const $0 = foldableExpr.foldl(f);
@@ -29976,7 +31020,7 @@ var foldableExpr = {
         }
         return go$r;
       };
-      return go(foldableDocOpt(foldableExpr).foldl(f)(f(z)(m._1))(m._2))(m._3);
+      return go(f(z)(m._1))(m._2);
     }
     if (m.tag === "Constr") {
       const $0 = foldableExpr.foldl(f);
@@ -29998,28 +31042,31 @@ var foldableExpr = {
         }
         return go$r;
       };
-      return go(foldableDocOpt(foldableExpr).foldl(f)(f(z)(m._1))(m._2))(m._4);
+      return go(f(z)(m._1))(m._3);
     }
     if (m.tag === "Matrix") {
-      return foldableExpr.foldl(f)(foldableExpr.foldl(f)(foldableDocOpt(foldableExpr).foldl(f)(f(z)(m._1))(m._2))(m._3))(m._5);
+      return foldableExpr.foldl(f)(foldableExpr.foldl(f)(f(z)(m._1))(m._2))(m._4);
     }
     if (m.tag === "Lambda") {
       return foldableElim.foldl(f)(f(z)(m._1))(m._2);
     }
     if (m.tag === "Project") {
-      return foldableExpr.foldl(f)(foldableDocOpt(foldableExpr).foldl(f)(z)(m._1))(m._2);
+      return foldableExpr.foldl(f)(z)(m._1);
     }
     if (m.tag === "DProject") {
-      return foldableExpr.foldl(f)(foldableExpr.foldl(f)(foldableDocOpt(foldableExpr).foldl(f)(z)(m._1))(m._2))(m._3);
+      return foldableExpr.foldl(f)(foldableExpr.foldl(f)(z)(m._1))(m._2);
     }
     if (m.tag === "App") {
-      return foldableExpr.foldl(f)(foldableExpr.foldl(f)(foldableDocOpt(foldableExpr).foldl(f)(z)(m._1))(m._2))(m._3);
+      return foldableExpr.foldl(f)(foldableExpr.foldl(f)(z)(m._1))(m._2);
     }
     if (m.tag === "Let") {
       return foldableExpr.foldl(f)(foldableVarDef.foldl(f)(z)(m._1))(m._2);
     }
     if (m.tag === "LetRec") {
       return foldableExpr.foldl(f)(foldableRecDefs.foldl(f)(z)(m._1))(m._2);
+    }
+    if (m.tag === "DocExpr") {
+      return foldableExpr.foldl(f)(foldableExpr.foldl(f)(z)(m._1))(m._2);
     }
     fail();
   },
@@ -30031,47 +31078,50 @@ var foldableExpr = {
       return z;
     }
     if (m.tag === "Int") {
-      return f(m._1)(foldableDocOpt(foldableExpr).foldr(f)(z)(m._2));
+      return f(m._1)(z);
     }
     if (m.tag === "Float") {
-      return f(m._1)(foldableDocOpt(foldableExpr).foldr(f)(z)(m._2));
+      return f(m._1)(z);
     }
     if (m.tag === "Str") {
-      return f(m._1)(foldableDocOpt(foldableExpr).foldr(f)(z)(m._2));
+      return f(m._1)(z);
     }
     if (m.tag === "Dictionary") {
-      return f(m._1)(foldableDocOpt(foldableExpr).foldr(f)(foldableList.foldr((() => {
+      return f(m._1)(foldableList.foldr((() => {
         const $0 = foldableExpr.foldr(f);
         const $1 = foldrDefault(foldablePair)((b) => (a) => $0(a)(b));
         return (b) => (a) => $1(a)(b);
-      })())(z)(m._3))(m._2));
+      })())(z)(m._2));
     }
     if (m.tag === "Constr") {
-      return f(m._1)(foldableDocOpt(foldableExpr).foldr(f)(foldableList.foldr((() => {
+      return f(m._1)(foldableList.foldr((() => {
         const $0 = foldableExpr.foldr(f);
         return (b) => (a) => $0(a)(b);
-      })())(z)(m._4))(m._2));
+      })())(z)(m._3));
     }
     if (m.tag === "Matrix") {
-      return f(m._1)(foldableDocOpt(foldableExpr).foldr(f)(foldableExpr.foldr(f)(foldableExpr.foldr(f)(z)(m._5))(m._3))(m._2));
+      return f(m._1)(foldableExpr.foldr(f)(foldableExpr.foldr(f)(z)(m._4))(m._2));
     }
     if (m.tag === "Lambda") {
       return f(m._1)(foldableElim.foldr(f)(z)(m._2));
     }
     if (m.tag === "Project") {
-      return foldableDocOpt(foldableExpr).foldr(f)(foldableExpr.foldr(f)(z)(m._2))(m._1);
+      return foldableExpr.foldr(f)(z)(m._1);
     }
     if (m.tag === "DProject") {
-      return foldableDocOpt(foldableExpr).foldr(f)(foldableExpr.foldr(f)(foldableExpr.foldr(f)(z)(m._3))(m._2))(m._1);
+      return foldableExpr.foldr(f)(foldableExpr.foldr(f)(z)(m._2))(m._1);
     }
     if (m.tag === "App") {
-      return foldableDocOpt(foldableExpr).foldr(f)(foldableExpr.foldr(f)(foldableExpr.foldr(f)(z)(m._3))(m._2))(m._1);
+      return foldableExpr.foldr(f)(foldableExpr.foldr(f)(z)(m._2))(m._1);
     }
     if (m.tag === "Let") {
       return foldableVarDef.foldr(f)(foldableExpr.foldr(f)(z)(m._2))(m._1);
     }
     if (m.tag === "LetRec") {
       return foldableRecDefs.foldr(f)(foldableExpr.foldr(f)(z)(m._2))(m._1);
+    }
+    if (m.tag === "DocExpr") {
+      return foldableExpr.foldr(f)(foldableExpr.foldr(f)(z)(m._2))(m._1);
     }
     fail();
   },
@@ -30087,40 +31137,43 @@ var foldableExpr = {
         return mempty;
       }
       if (m.tag === "Int") {
-        return $0.append(f(m._1))(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._2));
+        return f(m._1);
       }
       if (m.tag === "Float") {
-        return $0.append(f(m._1))(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._2));
+        return f(m._1);
       }
       if (m.tag === "Str") {
-        return $0.append(f(m._1))(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._2));
+        return f(m._1);
       }
       if (m.tag === "Dictionary") {
-        return $0.append(f(m._1))($0.append(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._2))(foldMap3(foldablePair.foldMap(dictMonoid)(foldableExpr.foldMap(dictMonoid)(f)))(m._3)));
+        return $0.append(f(m._1))(foldMap3(foldablePair.foldMap(dictMonoid)(foldableExpr.foldMap(dictMonoid)(f)))(m._2));
       }
       if (m.tag === "Constr") {
-        return $0.append(f(m._1))($0.append(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._2))(foldMap3(foldableExpr.foldMap(dictMonoid)(f))(m._4)));
+        return $0.append(f(m._1))(foldMap3(foldableExpr.foldMap(dictMonoid)(f))(m._3));
       }
       if (m.tag === "Matrix") {
-        return $0.append(f(m._1))($0.append(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._2))($0.append(foldableExpr.foldMap(dictMonoid)(f)(m._3))(foldableExpr.foldMap(dictMonoid)(f)(m._5))));
+        return $0.append(f(m._1))($0.append(foldableExpr.foldMap(dictMonoid)(f)(m._2))(foldableExpr.foldMap(dictMonoid)(f)(m._4)));
       }
       if (m.tag === "Lambda") {
         return $0.append(f(m._1))(foldableElim.foldMap(dictMonoid)(f)(m._2));
       }
       if (m.tag === "Project") {
-        return $0.append(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._1))(foldableExpr.foldMap(dictMonoid)(f)(m._2));
+        return foldableExpr.foldMap(dictMonoid)(f)(m._1);
       }
       if (m.tag === "DProject") {
-        return $0.append(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._1))($0.append(foldableExpr.foldMap(dictMonoid)(f)(m._2))(foldableExpr.foldMap(dictMonoid)(f)(m._3)));
+        return $0.append(foldableExpr.foldMap(dictMonoid)(f)(m._1))(foldableExpr.foldMap(dictMonoid)(f)(m._2));
       }
       if (m.tag === "App") {
-        return $0.append(foldableDocOpt(foldableExpr).foldMap(dictMonoid)(f)(m._1))($0.append(foldableExpr.foldMap(dictMonoid)(f)(m._2))(foldableExpr.foldMap(dictMonoid)(f)(m._3)));
+        return $0.append(foldableExpr.foldMap(dictMonoid)(f)(m._1))(foldableExpr.foldMap(dictMonoid)(f)(m._2));
       }
       if (m.tag === "Let") {
         return $0.append(foldableVarDef.foldMap(dictMonoid)(f)(m._1))(foldableExpr.foldMap(dictMonoid)(f)(m._2));
       }
       if (m.tag === "LetRec") {
         return $0.append(foldableRecDefs.foldMap(dictMonoid)(f)(m._1))(foldableExpr.foldMap(dictMonoid)(f)(m._2));
+      }
+      if (m.tag === "DocExpr") {
+        return $0.append(foldableExpr.foldMap(dictMonoid)(f)(m._1))(foldableExpr.foldMap(dictMonoid)(f)(m._2));
       }
       fail();
     };
@@ -30204,7 +31257,7 @@ var traversableVarDef = {
     const Apply0 = dictApplicative.Apply0();
     return (f) => (m) => Apply0.apply(Apply0.Functor0().map((v2) => (v3) => $VarDef(v2, v3))(traversableElim.traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2));
   },
-  sequence: (dictApplicative) => (v) => traversableVarDef.traverse(dictApplicative)(identity27)(v),
+  sequence: (dictApplicative) => (v) => traversableVarDef.traverse(dictApplicative)(identity26)(v),
   Functor0: () => functorVarDef,
   Foldable1: () => foldableVarDef
 };
@@ -30214,7 +31267,7 @@ var traversableRecDefs = {
     const traverse5 = traversableDict.traverse(dictApplicative);
     return (f) => (m) => Apply0.apply(Apply0.Functor0().map((v2) => (v3) => $RecDefs(v2, v3))(f(m._1)))(traverse5(traversableElim.traverse(dictApplicative)(f))(m._2));
   },
-  sequence: (dictApplicative) => (v) => traversableRecDefs.traverse(dictApplicative)(identity27)(v),
+  sequence: (dictApplicative) => (v) => traversableRecDefs.traverse(dictApplicative)(identity26)(v),
   Functor0: () => functorRecDefs,
   Foldable1: () => foldableRecDefs
 };
@@ -30232,40 +31285,40 @@ var traversableExpr = {
         return dictApplicative.pure($Expr("Op", m._1));
       }
       if (m.tag === "Int") {
-        const $1 = m._3;
-        return Apply0.apply($0.map((v3) => (v4) => $Expr("Int", v3, v4, $1))(f(m._1)))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._2));
+        const $1 = m._2;
+        return $0.map((v2) => $Expr("Int", v2, $1))(f(m._1));
       }
       if (m.tag === "Float") {
-        const $1 = m._3;
-        return Apply0.apply($0.map((v3) => (v4) => $Expr("Float", v3, v4, $1))(f(m._1)))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._2));
+        const $1 = m._2;
+        return $0.map((v2) => $Expr("Float", v2, $1))(f(m._1));
       }
       if (m.tag === "Str") {
-        const $1 = m._3;
-        return Apply0.apply($0.map((v3) => (v4) => $Expr("Str", v3, v4, $1))(f(m._1)))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._2));
+        const $1 = m._2;
+        return $0.map((v2) => $Expr("Str", v2, $1))(f(m._1));
       }
       if (m.tag === "Dictionary") {
-        return Apply0.apply(Apply0.apply($0.map((v3) => (v4) => (v5) => $Expr("Dictionary", v3, v4, v5))(f(m._1)))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._2)))(traverse5(traverse6(traversableExpr.traverse(dictApplicative)(f)))(m._3));
+        return Apply0.apply($0.map((v2) => (v3) => $Expr("Dictionary", v2, v3))(f(m._1)))(traverse5(traverse6(traversableExpr.traverse(dictApplicative)(f)))(m._2));
       }
       if (m.tag === "Constr") {
-        const $1 = m._3;
-        return Apply0.apply(Apply0.apply($0.map((v4) => (v5) => (v6) => $Expr("Constr", v4, v5, $1, v6))(f(m._1)))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._2)))(traverse5(traversableExpr.traverse(dictApplicative)(f))(m._4));
+        const $1 = m._2;
+        return Apply0.apply($0.map((v3) => (v4) => $Expr("Constr", v3, $1, v4))(f(m._1)))(traverse5(traversableExpr.traverse(dictApplicative)(f))(m._3));
       }
       if (m.tag === "Matrix") {
-        const $1 = m._4;
-        return Apply0.apply(Apply0.apply(Apply0.apply($0.map((v5) => (v6) => (v7) => (v8) => $Expr("Matrix", v5, v6, v7, $1, v8))(f(m._1)))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._2)))(traversableExpr.traverse(dictApplicative)(f)(m._3)))(traversableExpr.traverse(dictApplicative)(f)(m._5));
+        const $1 = m._3;
+        return Apply0.apply(Apply0.apply($0.map((v4) => (v5) => (v6) => $Expr("Matrix", v4, v5, $1, v6))(f(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2)))(traversableExpr.traverse(dictApplicative)(f)(m._4));
       }
       if (m.tag === "Lambda") {
         return Apply0.apply($0.map((v2) => (v3) => $Expr("Lambda", v2, v3))(f(m._1)))(traversableElim.traverse(dictApplicative)(f)(m._2));
       }
       if (m.tag === "Project") {
-        const $1 = m._3;
-        return Apply0.apply($0.map((v3) => (v4) => $Expr("Project", v3, v4, $1))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2));
+        const $1 = m._2;
+        return $0.map((v2) => $Expr("Project", v2, $1))(traversableExpr.traverse(dictApplicative)(f)(m._1));
       }
       if (m.tag === "DProject") {
-        return Apply0.apply(Apply0.apply($0.map((v3) => (v4) => (v5) => $Expr("DProject", v3, v4, v5))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2)))(traversableExpr.traverse(dictApplicative)(f)(m._3));
+        return Apply0.apply($0.map((v2) => (v3) => $Expr("DProject", v2, v3))(traversableExpr.traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2));
       }
       if (m.tag === "App") {
-        return Apply0.apply(Apply0.apply($0.map((v3) => (v4) => (v5) => $Expr("App", v3, v4, v5))(traversableDocOpt(traversableExpr).traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2)))(traversableExpr.traverse(dictApplicative)(f)(m._3));
+        return Apply0.apply($0.map((v2) => (v3) => $Expr("App", v2, v3))(traversableExpr.traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2));
       }
       if (m.tag === "Let") {
         return Apply0.apply($0.map((v2) => (v3) => $Expr("Let", v2, v3))(traversableVarDef.traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2));
@@ -30273,10 +31326,13 @@ var traversableExpr = {
       if (m.tag === "LetRec") {
         return Apply0.apply($0.map((v2) => (v3) => $Expr("LetRec", v2, v3))(traversableRecDefs.traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2));
       }
+      if (m.tag === "DocExpr") {
+        return Apply0.apply($0.map((v2) => (v3) => $Expr("DocExpr", v2, v3))(traversableExpr.traverse(dictApplicative)(f)(m._1)))(traversableExpr.traverse(dictApplicative)(f)(m._2));
+      }
       fail();
     };
   },
-  sequence: (dictApplicative) => (v) => traversableExpr.traverse(dictApplicative)(identity27)(v),
+  sequence: (dictApplicative) => (v) => traversableExpr.traverse(dictApplicative)(identity26)(v),
   Functor0: () => functorExpr,
   Foldable1: () => foldableExpr
 };
@@ -30299,7 +31355,7 @@ var traversableElim = {
       fail();
     };
   },
-  sequence: (dictApplicative) => (v) => traversableElim.traverse(dictApplicative)(identity27)(v),
+  sequence: (dictApplicative) => (v) => traversableElim.traverse(dictApplicative)(identity26)(v),
   Functor0: () => functorElim,
   Foldable1: () => foldableElim
 };
@@ -30316,7 +31372,7 @@ var traversableCont = {
       fail();
     };
   },
-  sequence: (dictApplicative) => (v) => traversableCont.traverse(dictApplicative)(identity27)(v),
+  sequence: (dictApplicative) => (v) => traversableCont.traverse(dictApplicative)(identity26)(v),
   Functor0: () => functorCont,
   Foldable1: () => foldableCont
 };
@@ -30331,18 +31387,18 @@ var eqExpr = (dictEq) => ({
       return y2.tag === "Op" && x2._1 === y2._1;
     }
     if (x2.tag === "Int") {
-      return y2.tag === "Int" && dictEq.eq(x2._1)(y2._1) && eqDocOpt(eqExpr(dictEq)).eq(x2._2)(y2._2) && x2._3 === y2._3;
+      return y2.tag === "Int" && dictEq.eq(x2._1)(y2._1) && x2._2 === y2._2;
     }
     if (x2.tag === "Float") {
-      return y2.tag === "Float" && dictEq.eq(x2._1)(y2._1) && eqDocOpt(eqExpr(dictEq)).eq(x2._2)(y2._2) && x2._3 === y2._3;
+      return y2.tag === "Float" && dictEq.eq(x2._1)(y2._1) && x2._2 === y2._2;
     }
     if (x2.tag === "Str") {
-      return y2.tag === "Str" && dictEq.eq(x2._1)(y2._1) && eqDocOpt(eqExpr(dictEq)).eq(x2._2)(y2._2) && x2._3 === y2._3;
+      return y2.tag === "Str" && dictEq.eq(x2._1)(y2._1) && x2._2 === y2._2;
     }
     if (x2.tag === "Dictionary") {
       return y2.tag === "Dictionary" && (() => {
         const $0 = eqExpr(dictEq);
-        return dictEq.eq(x2._1)(y2._1) && eqDocOpt(eqExpr(dictEq)).eq(x2._2)(y2._2) && (() => {
+        return dictEq.eq(x2._1)(y2._1) && (() => {
           const go = (v) => (v1) => (v2) => {
             if (!v2) {
               return false;
@@ -30352,14 +31408,14 @@ var eqExpr = (dictEq) => ({
             }
             return v.tag === "Cons" && v1.tag === "Cons" && go(v._2)(v1._2)(v2 && $0.eq(v1._1._1)(v._1._1) && $0.eq(v1._1._2)(v._1._2));
           };
-          return go(x2._3)(y2._3)(true);
+          return go(x2._2)(y2._2)(true);
         })();
       })();
     }
     if (x2.tag === "Constr") {
       return y2.tag === "Constr" && (() => {
         const $0 = eqExpr(dictEq);
-        return dictEq.eq(x2._1)(y2._1) && eqDocOpt(eqExpr(dictEq)).eq(x2._2)(y2._2) && x2._3 === y2._3 && (() => {
+        return dictEq.eq(x2._1)(y2._1) && x2._2 === y2._2 && (() => {
           const go = (v) => (v1) => (v2) => {
             if (!v2) {
               return false;
@@ -30369,29 +31425,32 @@ var eqExpr = (dictEq) => ({
             }
             return v.tag === "Cons" && v1.tag === "Cons" && go(v._2)(v1._2)(v2 && $0.eq(v1._1)(v._1));
           };
-          return go(x2._4)(y2._4)(true);
+          return go(x2._3)(y2._3)(true);
         })();
       })();
     }
     if (x2.tag === "Matrix") {
-      return y2.tag === "Matrix" && dictEq.eq(x2._1)(y2._1) && eqDocOpt(eqExpr(dictEq)).eq(x2._2)(y2._2) && eqExpr(dictEq).eq(x2._3)(y2._3) && x2._4._1 === y2._4._1 && x2._4._2 === y2._4._2 && eqExpr(dictEq).eq(x2._5)(y2._5);
+      return y2.tag === "Matrix" && dictEq.eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2) && x2._3._1 === y2._3._1 && x2._3._2 === y2._3._2 && eqExpr(dictEq).eq(x2._4)(y2._4);
     }
     if (x2.tag === "Lambda") {
       return y2.tag === "Lambda" && dictEq.eq(x2._1)(y2._1) && eqElim(dictEq).eq(x2._2)(y2._2);
     }
     if (x2.tag === "Project") {
-      return y2.tag === "Project" && eqDocOpt(eqExpr(dictEq)).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2) && x2._3 === y2._3;
+      return y2.tag === "Project" && eqExpr(dictEq).eq(x2._1)(y2._1) && x2._2 === y2._2;
     }
     if (x2.tag === "DProject") {
-      return y2.tag === "DProject" && eqDocOpt(eqExpr(dictEq)).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2) && eqExpr(dictEq).eq(x2._3)(y2._3);
+      return y2.tag === "DProject" && eqExpr(dictEq).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2);
     }
     if (x2.tag === "App") {
-      return y2.tag === "App" && eqDocOpt(eqExpr(dictEq)).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2) && eqExpr(dictEq).eq(x2._3)(y2._3);
+      return y2.tag === "App" && eqExpr(dictEq).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2);
     }
     if (x2.tag === "Let") {
       return y2.tag === "Let" && eqVarDef(dictEq).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2);
     }
-    return x2.tag === "LetRec" && y2.tag === "LetRec" && eqRecDefs(dictEq).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2);
+    if (x2.tag === "LetRec") {
+      return y2.tag === "LetRec" && eqRecDefs(dictEq).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2);
+    }
+    return x2.tag === "DocExpr" && y2.tag === "DocExpr" && eqExpr(dictEq).eq(x2._1)(y2._1) && eqExpr(dictEq).eq(x2._2)(y2._2);
   }
 });
 var eqElim = (dictEq) => ({
@@ -30476,14 +31535,7 @@ var ordExpr = (dictOrd) => {
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordDocOpt(ordExpr(dictOrd)).compare(x2._2)(y2._2);
-          if (v1 === "LT") {
-            return LT;
-          }
-          if (v1 === "GT") {
-            return GT;
-          }
-          return ordInt.compare(x2._3)(y2._3);
+          return ordInt.compare(x2._2)(y2._2);
         }
         return LT;
       }
@@ -30499,14 +31551,7 @@ var ordExpr = (dictOrd) => {
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordDocOpt(ordExpr(dictOrd)).compare(x2._2)(y2._2);
-          if (v1 === "LT") {
-            return LT;
-          }
-          if (v1 === "GT") {
-            return GT;
-          }
-          return ordNumber.compare(x2._3)(y2._3);
+          return ordNumber.compare(x2._2)(y2._2);
         }
         return LT;
       }
@@ -30522,14 +31567,7 @@ var ordExpr = (dictOrd) => {
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordDocOpt(ordExpr(dictOrd)).compare(x2._2)(y2._2);
-          if (v1 === "LT") {
-            return LT;
-          }
-          if (v1 === "GT") {
-            return GT;
-          }
-          return ordString.compare(x2._3)(y2._3);
+          return ordString.compare(x2._2)(y2._2);
         }
         return LT;
       }
@@ -30545,14 +31583,7 @@ var ordExpr = (dictOrd) => {
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordDocOpt(ordExpr(dictOrd)).compare(x2._2)(y2._2);
-          if (v1 === "LT") {
-            return LT;
-          }
-          if (v1 === "GT") {
-            return GT;
-          }
-          return ordList(ordPair(ordExpr(dictOrd))).compare(x2._3)(y2._3);
+          return ordList(ordPair(ordExpr(dictOrd))).compare(x2._2)(y2._2);
         }
         return LT;
       }
@@ -30568,21 +31599,14 @@ var ordExpr = (dictOrd) => {
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordDocOpt(ordExpr(dictOrd)).compare(x2._2)(y2._2);
+          const v1 = ordString.compare(x2._2)(y2._2);
           if (v1 === "LT") {
             return LT;
           }
           if (v1 === "GT") {
             return GT;
           }
-          const v2 = ordString.compare(x2._3)(y2._3);
-          if (v2 === "LT") {
-            return LT;
-          }
-          if (v2 === "GT") {
-            return GT;
-          }
-          return ordList(ordExpr(dictOrd)).compare(x2._4)(y2._4);
+          return ordList(ordExpr(dictOrd)).compare(x2._3)(y2._3);
         }
         return LT;
       }
@@ -30598,28 +31622,21 @@ var ordExpr = (dictOrd) => {
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordDocOpt(ordExpr(dictOrd)).compare(x2._2)(y2._2);
+          const v1 = ordExpr(dictOrd).compare(x2._2)(y2._2);
           if (v1 === "LT") {
             return LT;
           }
           if (v1 === "GT") {
             return GT;
           }
-          const v2 = ordExpr(dictOrd).compare(x2._3)(y2._3);
+          const v2 = compare3(x2._3)(y2._3);
           if (v2 === "LT") {
             return LT;
           }
           if (v2 === "GT") {
             return GT;
           }
-          const v3 = compare3(x2._4)(y2._4);
-          if (v3 === "LT") {
-            return LT;
-          }
-          if (v3 === "GT") {
-            return GT;
-          }
-          return ordExpr(dictOrd).compare(x2._5)(y2._5);
+          return ordExpr(dictOrd).compare(x2._4)(y2._4);
         }
         return LT;
       }
@@ -30644,21 +31661,14 @@ var ordExpr = (dictOrd) => {
       }
       if (x2.tag === "Project") {
         if (y2.tag === "Project") {
-          const v = ordDocOpt(ordExpr(dictOrd)).compare(x2._1)(y2._1);
+          const v = ordExpr(dictOrd).compare(x2._1)(y2._1);
           if (v === "LT") {
             return LT;
           }
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordExpr(dictOrd).compare(x2._2)(y2._2);
-          if (v1 === "LT") {
-            return LT;
-          }
-          if (v1 === "GT") {
-            return GT;
-          }
-          return ordString.compare(x2._3)(y2._3);
+          return ordString.compare(x2._2)(y2._2);
         }
         return LT;
       }
@@ -30667,21 +31677,14 @@ var ordExpr = (dictOrd) => {
       }
       if (x2.tag === "DProject") {
         if (y2.tag === "DProject") {
-          const v = ordDocOpt(ordExpr(dictOrd)).compare(x2._1)(y2._1);
+          const v = ordExpr(dictOrd).compare(x2._1)(y2._1);
           if (v === "LT") {
             return LT;
           }
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordExpr(dictOrd).compare(x2._2)(y2._2);
-          if (v1 === "LT") {
-            return LT;
-          }
-          if (v1 === "GT") {
-            return GT;
-          }
-          return ordExpr(dictOrd).compare(x2._3)(y2._3);
+          return ordExpr(dictOrd).compare(x2._2)(y2._2);
         }
         return LT;
       }
@@ -30690,21 +31693,14 @@ var ordExpr = (dictOrd) => {
       }
       if (x2.tag === "App") {
         if (y2.tag === "App") {
-          const v = ordDocOpt(ordExpr(dictOrd)).compare(x2._1)(y2._1);
+          const v = ordExpr(dictOrd).compare(x2._1)(y2._1);
           if (v === "LT") {
             return LT;
           }
           if (v === "GT") {
             return GT;
           }
-          const v1 = ordExpr(dictOrd).compare(x2._2)(y2._2);
-          if (v1 === "LT") {
-            return LT;
-          }
-          if (v1 === "GT") {
-            return GT;
-          }
-          return ordExpr(dictOrd).compare(x2._3)(y2._3);
+          return ordExpr(dictOrd).compare(x2._2)(y2._2);
         }
         return LT;
       }
@@ -30727,8 +31723,24 @@ var ordExpr = (dictOrd) => {
       if (y2.tag === "Let") {
         return GT;
       }
-      if (x2.tag === "LetRec" && y2.tag === "LetRec") {
-        const v = ordRecDefs(dictOrd).compare(x2._1)(y2._1);
+      if (x2.tag === "LetRec") {
+        if (y2.tag === "LetRec") {
+          const v = ordRecDefs(dictOrd).compare(x2._1)(y2._1);
+          if (v === "LT") {
+            return LT;
+          }
+          if (v === "GT") {
+            return GT;
+          }
+          return ordExpr(dictOrd).compare(x2._2)(y2._2);
+        }
+        return LT;
+      }
+      if (y2.tag === "LetRec") {
+        return GT;
+      }
+      if (x2.tag === "DocExpr" && y2.tag === "DocExpr") {
+        const v = ordExpr(dictOrd).compare(x2._1)(y2._1);
         if (v === "LT") {
           return LT;
         }
@@ -30827,42 +31839,31 @@ var applyExpr = {
     }
     if (v.tag === "Int") {
       if (v1.tag === "Int") {
-        return $Expr("Int", v._1(v1._1), applyDocOpt(applyExpr).apply(v._2)(v1._2), mustEq(eqInt)(showInt)(v._3)(v1._3));
+        return $Expr("Int", v._1(v1._1), mustEq(eqInt)(showInt)(v._2)(v1._2));
       }
       return throwException(error("Shape mismatch"))();
     }
     if (v.tag === "Float") {
       if (v1.tag === "Float") {
-        return $Expr("Float", v._1(v1._1), applyDocOpt(applyExpr).apply(v._2)(v1._2), mustEq(eqNumber)(showNumber)(v._3)(v1._3));
+        return $Expr("Float", v._1(v1._1), mustEq(eqNumber)(showNumber)(v._2)(v1._2));
       }
       return throwException(error("Shape mismatch"))();
     }
     if (v.tag === "Str") {
       if (v1.tag === "Str") {
-        return $Expr("Str", v._1(v1._1), applyDocOpt(applyExpr).apply(v._2)(v1._2), mustEq(eqString)(showString)(v._3)(v1._3));
+        return $Expr("Str", v._1(v1._1), mustEq(eqString)(showString)(v._2)(v1._2));
       }
       return throwException(error("Shape mismatch"))();
     }
     if (v.tag === "Dictionary") {
       if (v1.tag === "Dictionary") {
-        return $Expr(
-          "Dictionary",
-          v._1(v1._1),
-          applyDocOpt(applyExpr).apply(v._2)(v1._2),
-          zipWith2((a) => (b) => $Pair(applyExpr.apply(a._1)(b._1), applyExpr.apply(a._2)(b._2)))(v._3)(v1._3)
-        );
+        return $Expr("Dictionary", v._1(v1._1), zipWith2((a) => (b) => $Pair(applyExpr.apply(a._1)(b._1), applyExpr.apply(a._2)(b._2)))(v._2)(v1._2));
       }
       return throwException(error("Shape mismatch"))();
     }
     if (v.tag === "Constr") {
       if (v1.tag === "Constr") {
-        return $Expr(
-          "Constr",
-          v._1(v1._1),
-          applyDocOpt(applyExpr).apply(v._2)(v1._2),
-          mustEq(eqString)(showString)(v._3)(v1._3),
-          zipWith2(applyExpr.apply)(v._4)(v1._4)
-        );
+        return $Expr("Constr", v._1(v1._1), mustEq(eqString)(showString)(v._2)(v1._2), zipWith2(applyExpr.apply)(v._3)(v1._3));
       }
       return throwException(error("Shape mismatch"))();
     }
@@ -30871,10 +31872,9 @@ var applyExpr = {
         return $Expr(
           "Matrix",
           v._1(v1._1),
-          applyDocOpt(applyExpr).apply(v._2)(v1._2),
-          applyExpr.apply(v._3)(v1._3),
-          $Tuple(mustEq(eqString)(showString)(v._4._1)(v1._4._1), mustEq(eqString)(showString)(v._4._2)(v1._4._2)),
-          applyExpr.apply(v._5)(v1._5)
+          applyExpr.apply(v._2)(v1._2),
+          $Tuple(mustEq(eqString)(showString)(v._3._1)(v1._3._1), mustEq(eqString)(showString)(v._3._2)(v1._3._2)),
+          applyExpr.apply(v._4)(v1._4)
         );
       }
       return throwException(error("Shape mismatch"))();
@@ -30887,13 +31887,19 @@ var applyExpr = {
     }
     if (v.tag === "Project") {
       if (v1.tag === "Project") {
-        return $Expr("Project", applyDocOpt(applyExpr).apply(v._1)(v1._1), applyExpr.apply(v._2)(v1._2), v._3);
+        return $Expr("Project", applyExpr.apply(v._1)(v1._1), v._2);
+      }
+      return throwException(error("Shape mismatch"))();
+    }
+    if (v.tag === "DProject") {
+      if (v1.tag === "DProject") {
+        return $Expr("DProject", applyExpr.apply(v._1)(v1._1), applyExpr.apply(v._2)(v1._2));
       }
       return throwException(error("Shape mismatch"))();
     }
     if (v.tag === "App") {
       if (v1.tag === "App") {
-        return $Expr("App", applyDocOpt(applyExpr).apply(v._1)(v1._1), applyExpr.apply(v._2)(v1._2), applyExpr.apply(v._3)(v1._3));
+        return $Expr("App", applyExpr.apply(v._1)(v1._1), applyExpr.apply(v._2)(v1._2));
       }
       return throwException(error("Shape mismatch"))();
     }
@@ -30909,8 +31915,8 @@ var applyExpr = {
       }
       return throwException(error("Shape mismatch"))();
     }
-    if (v.tag === "DProject" && v1.tag === "DProject") {
-      return $Expr("DProject", applyDocOpt(applyExpr).apply(v._1)(v1._1), applyExpr.apply(v._2)(v1._2), applyExpr.apply(v._3)(v1._3));
+    if (v.tag === "DocExpr" && v1.tag === "DocExpr") {
+      return $Expr("DocExpr", applyExpr.apply(v._1)(v1._1), applyExpr.apply(v._2)(v1._2));
     }
     return throwException(error("Shape mismatch"))();
   },
@@ -31089,31 +32095,34 @@ var fVExpr = {
       return Leaf2;
     }
     if (v.tag === "Dictionary") {
-      return setSet2.union(fVDocOptExpr.fv(v._2))(unions3(listMap((v1) => setSet2.union(fVExpr.fv(v1._1))(fVExpr.fv(v1._2)))(v._3)));
+      return unions3(listMap((v1) => setSet2.union(fVExpr.fv(v1._1))(fVExpr.fv(v1._2)))(v._2));
     }
     if (v.tag === "Constr") {
-      return setSet2.union(fVDocOptExpr.fv(v._2))(unions3(listMap(fVExpr.fv)(v._4)));
+      return unions3(listMap(fVExpr.fv)(v._3));
     }
     if (v.tag === "Matrix") {
-      return setSet2.union(fVDocOptExpr.fv(v._2))(setSet2.union(fVExpr.fv(v._3))(fVExpr.fv(v._5)));
+      return setSet2.union(fVExpr.fv(v._2))(fVExpr.fv(v._4));
     }
     if (v.tag === "Lambda") {
       return fVElim.fv(v._2);
     }
     if (v.tag === "Project") {
-      return setSet2.union(fVDocOptExpr.fv(v._1))(fVExpr.fv(v._2));
+      return fVExpr.fv(v._1);
     }
     if (v.tag === "DProject") {
-      return setSet2.union(fVDocOptExpr.fv(v._1))(setSet2.union(fVExpr.fv(v._2))(fVExpr.fv(v._3)));
+      return setSet2.union(fVExpr.fv(v._1))(fVExpr.fv(v._2));
     }
     if (v.tag === "App") {
-      return setSet2.union(fVDocOptExpr.fv(v._1))(setSet2.union(fVExpr.fv(v._2))(fVExpr.fv(v._3)));
+      return setSet2.union(fVExpr.fv(v._1))(fVExpr.fv(v._2));
     }
     if (v.tag === "Let") {
       return setSet2.union(fVExpr.fv(v._1._2))(setSet2.difference(fVExpr.fv(v._2))(bVElim.bv(v._1._1)));
     }
     if (v.tag === "LetRec") {
       return setSet2.union(fVDict(fVElim).fv(v._1._2))(fVExpr.fv(v._2));
+    }
+    if (v.tag === "DocExpr") {
+      return setSet2.union(fVExpr.fv(v._1))(fVExpr.fv(v._2));
     }
     fail();
   }
@@ -31128,28 +32137,6 @@ var fVElim = {
     }
     if (v.tag === "ElimDict") {
       return fVCont.fv(v._2);
-    }
-    fail();
-  }
-};
-var fVDocOptExpr = {
-  fv: (v) => {
-    if (v.tag === "None") {
-      return Leaf2;
-    }
-    if (v.tag === "Doc") {
-      return unions3(listMap(fVDocCommentElem.fv)(v._1));
-    }
-    fail();
-  }
-};
-var fVDocCommentElem = {
-  fv: (v) => {
-    if (v.tag === "Token") {
-      return Leaf2;
-    }
-    if (v.tag === "Unquote") {
-      return fVExpr.fv(v._1);
     }
     fail();
   }
@@ -31174,12 +32161,13 @@ var asElim = (v) => {
 
 // output-es/SExpr/index.js
 var $DictEntry = (tag, _1, _2) => ({ tag, _1, _2 });
-var $Expr2 = (tag, _1, _2, _3, _4, _5) => ({ tag, _1, _2, _3, _4, _5 });
+var $Expr2 = (tag, _1, _2, _3, _4) => ({ tag, _1, _2, _3, _4 });
 var $ListRest = (tag, _1, _2, _3) => ({ tag, _1, _2, _3 });
 var $ListRestPattern = (tag, _1, _2) => ({ tag, _1, _2 });
 var $Module = (_1) => ({ tag: "Module", _1 });
+var $ParagraphElem = (tag, _1) => ({ tag, _1 });
 var $Pattern = (tag, _1, _2) => ({ tag, _1, _2 });
-var $Qualifier = (tag, _1, _2, _3) => ({ tag, _1, _2, _3 });
+var $Qualifier = (tag, _1, _2) => ({ tag, _1, _2 });
 var $VarDef2 = (_1, _2) => ({ tag: "VarDef", _1, _2 });
 var genericShowArgsArgument = { genericShowArgs: (v) => [showStringImpl(v)] };
 var genericShowSum = /* @__PURE__ */ (() => {
@@ -31247,9 +32235,24 @@ var VarDefIsSymbol = { reflectSymbol: () => "VarDef" };
 var ListCompGuardIsSymbol = { reflectSymbol: () => "ListCompGuard" };
 var ListCompGenIsSymbol = { reflectSymbol: () => "ListCompGen" };
 var ListCompDeclIsSymbol = { reflectSymbol: () => "ListCompDecl" };
+var genericShowSum4 = /* @__PURE__ */ (() => {
+  const $0 = genericShowConstructor(genericShowArgsArgument)({ reflectSymbol: () => "Token" });
+  return (dictGenericShow1) => ({
+    "genericShow'": (v) => {
+      if (v.tag === "Inl") {
+        return $0["genericShow'"](v._1);
+      }
+      if (v.tag === "Inr") {
+        return dictGenericShow1["genericShow'"](v._1);
+      }
+      fail();
+    }
+  });
+})();
+var UnquoteIsSymbol = { reflectSymbol: () => "Unquote" };
 var EndIsSymbol = { reflectSymbol: () => "End" };
 var NextIsSymbol = { reflectSymbol: () => "Next" };
-var genericShowSum4 = /* @__PURE__ */ (() => {
+var genericShowSum5 = /* @__PURE__ */ (() => {
   const $0 = genericShowConstructor(genericShowArgsArgument)({ reflectSymbol: () => "Var" });
   return (dictGenericShow1) => ({
     "genericShow'": (v) => {
@@ -31263,7 +32266,7 @@ var genericShowSum4 = /* @__PURE__ */ (() => {
     }
   });
 })();
-var genericShowSum5 = /* @__PURE__ */ (() => {
+var genericShowSum6 = /* @__PURE__ */ (() => {
   const $0 = genericShowConstructor(genericShowArgsArgument)({ reflectSymbol: () => "Op" });
   return (dictGenericShow1) => ({
     "genericShow'": (v) => {
@@ -31296,12 +32299,14 @@ var AppIsSymbol = { reflectSymbol: () => "App" };
 var BinaryAppIsSymbol = { reflectSymbol: () => "BinaryApp" };
 var MatchAsIsSymbol = { reflectSymbol: () => "MatchAs" };
 var IfElseIsSymbol = { reflectSymbol: () => "IfElse" };
+var ParagraphIsSymbol = { reflectSymbol: () => "Paragraph" };
 var ListEmptyIsSymbol = { reflectSymbol: () => "ListEmpty" };
 var ListNonEmptyIsSymbol = { reflectSymbol: () => "ListNonEmpty" };
 var ListEnumIsSymbol = { reflectSymbol: () => "ListEnum" };
 var ListCompIsSymbol = { reflectSymbol: () => "ListComp" };
 var LetIsSymbol = { reflectSymbol: () => "Let" };
 var LetRecIsSymbol = { reflectSymbol: () => "LetRec" };
+var DocExprIsSymbol = { reflectSymbol: () => "DocExpr" };
 var ExprKeyIsSymbol = { reflectSymbol: () => "ExprKey" };
 var VarKeyIsSymbol = { reflectSymbol: () => "VarKey" };
 var ClausesIsSymbol = { reflectSymbol: () => "Clauses" };
@@ -31319,24 +32324,21 @@ var PConstr = (value0) => (value1) => $Pattern("PConstr", value0, value1);
 var PListEmpty = /* @__PURE__ */ $Pattern("PListEmpty");
 var PListNonEmpty = (value0) => (value1) => $Pattern("PListNonEmpty", value0, value1);
 var Clause = (x2) => x2;
-var Int = (value0) => (value1) => (value2) => $Expr2("Int", value0, value1, value2);
-var Float = (value0) => (value1) => (value2) => $Expr2("Float", value0, value1, value2);
-var Str = (value0) => (value1) => (value2) => $Expr2("Str", value0, value1, value2);
-var Constr2 = (value0) => (value1) => (value2) => (value3) => $Expr2("Constr", value0, value1, value2, value3);
-var Dictionary2 = (value0) => (value1) => (value2) => $Expr2("Dictionary", value0, value1, value2);
-var Matrix2 = (value0) => (value1) => (value2) => (value3) => (value4) => $Expr2("Matrix", value0, value1, value2, value3, value4);
-var Project2 = (value0) => (value1) => (value2) => $Expr2("Project", value0, value1, value2);
-var DProject2 = (value0) => (value1) => (value2) => $Expr2("DProject", value0, value1, value2);
+var Str = (value0) => (value1) => $Expr2("Str", value0, value1);
+var Constr2 = (value0) => (value1) => (value2) => $Expr2("Constr", value0, value1, value2);
+var Dictionary2 = (value0) => (value1) => $Expr2("Dictionary", value0, value1);
+var Matrix2 = (value0) => (value1) => (value2) => (value3) => $Expr2("Matrix", value0, value1, value2, value3);
+var Project2 = (value0) => (value1) => $Expr2("Project", value0, value1);
+var DProject2 = (value0) => (value1) => $Expr2("DProject", value0, value1);
 var MatchAs = (value0) => (value1) => $Expr2("MatchAs", value0, value1);
 var IfElse = (value0) => (value1) => (value2) => $Expr2("IfElse", value0, value1, value2);
-var ListNonEmpty = (value0) => (value1) => (value2) => (value3) => $Expr2("ListNonEmpty", value0, value1, value2, value3);
-var ListEnum = (value0) => (value1) => $Expr2("ListEnum", value0, value1);
-var ListComp = (value0) => (value1) => (value2) => (value3) => $Expr2("ListComp", value0, value1, value2, value3);
+var ListNonEmpty = (value0) => (value1) => (value2) => $Expr2("ListNonEmpty", value0, value1, value2);
+var ListComp = (value0) => (value1) => (value2) => $Expr2("ListComp", value0, value1, value2);
 var Let2 = (value0) => (value1) => $Expr2("Let", value0, value1);
 var LetRec2 = (value0) => (value1) => $Expr2("LetRec", value0, value1);
 var VarKey = (value0) => (value1) => $DictEntry("VarKey", value0, value1);
 var Next = (value0) => (value1) => (value2) => $ListRest("Next", value0, value1, value2);
-var ListCompGen = (value0) => (value1) => (value2) => $Qualifier("ListCompGen", value0, value1, value2);
+var ListCompGen = (value0) => (value1) => $Qualifier("ListCompGen", value0, value1);
 var VarDef2 = (value0) => (value1) => $VarDef2(value0, value1);
 var RecDef = (x2) => x2;
 var genericPattern_ = {
@@ -31471,34 +32473,27 @@ var genericExpr_ = {
       }
       if (x2._1.tag === "Inr") {
         if (x2._1._1.tag === "Inl") {
-          return $Expr2("Int", x2._1._1._1._1, x2._1._1._1._2._1, x2._1._1._1._2._2);
+          return $Expr2("Int", x2._1._1._1._1, x2._1._1._1._2);
         }
         if (x2._1._1.tag === "Inr") {
           if (x2._1._1._1.tag === "Inl") {
-            return $Expr2("Float", x2._1._1._1._1._1, x2._1._1._1._1._2._1, x2._1._1._1._1._2._2);
+            return $Expr2("Float", x2._1._1._1._1._1, x2._1._1._1._1._2);
           }
           if (x2._1._1._1.tag === "Inr") {
             if (x2._1._1._1._1.tag === "Inl") {
-              return $Expr2("Str", x2._1._1._1._1._1._1, x2._1._1._1._1._1._2._1, x2._1._1._1._1._1._2._2);
+              return $Expr2("Str", x2._1._1._1._1._1._1, x2._1._1._1._1._1._2);
             }
             if (x2._1._1._1._1.tag === "Inr") {
               if (x2._1._1._1._1._1.tag === "Inl") {
-                return $Expr2("Constr", x2._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._2._1, x2._1._1._1._1._1._1._2._2._1, x2._1._1._1._1._1._1._2._2._2);
+                return $Expr2("Constr", x2._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._2._1, x2._1._1._1._1._1._1._2._2);
               }
               if (x2._1._1._1._1._1.tag === "Inr") {
                 if (x2._1._1._1._1._1._1.tag === "Inl") {
-                  return $Expr2("Dictionary", x2._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._2._1, x2._1._1._1._1._1._1._1._2._2);
+                  return $Expr2("Dictionary", x2._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._2);
                 }
                 if (x2._1._1._1._1._1._1.tag === "Inr") {
                   if (x2._1._1._1._1._1._1._1.tag === "Inl") {
-                    return $Expr2(
-                      "Matrix",
-                      x2._1._1._1._1._1._1._1._1._1,
-                      x2._1._1._1._1._1._1._1._1._2._1,
-                      x2._1._1._1._1._1._1._1._1._2._2._1,
-                      x2._1._1._1._1._1._1._1._1._2._2._2._1,
-                      x2._1._1._1._1._1._1._1._1._2._2._2._2
-                    );
+                    return $Expr2("Matrix", x2._1._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._1._2._1, x2._1._1._1._1._1._1._1._1._2._2._1, x2._1._1._1._1._1._1._1._1._2._2._2);
                   }
                   if (x2._1._1._1._1._1._1._1.tag === "Inr") {
                     if (x2._1._1._1._1._1._1._1._1.tag === "Inl") {
@@ -31506,15 +32501,15 @@ var genericExpr_ = {
                     }
                     if (x2._1._1._1._1._1._1._1._1.tag === "Inr") {
                       if (x2._1._1._1._1._1._1._1._1._1.tag === "Inl") {
-                        return $Expr2("Project", x2._1._1._1._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._1._1._1._2._1, x2._1._1._1._1._1._1._1._1._1._1._2._2);
+                        return $Expr2("Project", x2._1._1._1._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._1._1._1._2);
                       }
                       if (x2._1._1._1._1._1._1._1._1._1.tag === "Inr") {
                         if (x2._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
-                          return $Expr2("DProject", x2._1._1._1._1._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._1._1._1._1._2._1, x2._1._1._1._1._1._1._1._1._1._1._1._2._2);
+                          return $Expr2("DProject", x2._1._1._1._1._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._1._1._1._1._2);
                         }
                         if (x2._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
                           if (x2._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
-                            return $Expr2("App", x2._1._1._1._1._1._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._1._1._1._1._1._2._1, x2._1._1._1._1._1._1._1._1._1._1._1._1._2._2);
+                            return $Expr2("App", x2._1._1._1._1._1._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._1._1._1._1._1._2);
                           }
                           if (x2._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
                             if (x2._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
@@ -31540,50 +32535,62 @@ var genericExpr_ = {
                                 }
                                 if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
                                   if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
-                                    return $Expr2("ListEmpty", x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1, x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2);
+                                    return $Expr2("Paragraph", x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
                                   }
                                   if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
                                     if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
-                                      return $Expr2(
-                                        "ListNonEmpty",
-                                        x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1,
-                                        x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._1,
-                                        x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._2._1,
-                                        x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._2._2
-                                      );
+                                      return $Expr2("ListEmpty", x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
                                     }
                                     if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
                                       if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
                                         return $Expr2(
-                                          "ListEnum",
+                                          "ListNonEmpty",
                                           x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1,
-                                          x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2
+                                          x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._1,
+                                          x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._2
                                         );
                                       }
                                       if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
                                         if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
                                           return $Expr2(
-                                            "ListComp",
+                                            "ListEnum",
                                             x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1,
-                                            x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._1,
-                                            x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._2._1,
-                                            x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._2._2
+                                            x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2
                                           );
                                         }
                                         if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
                                           if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
                                             return $Expr2(
-                                              "Let",
+                                              "ListComp",
                                               x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1,
-                                              x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2
+                                              x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._1,
+                                              x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2._2
                                             );
                                           }
                                           if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
-                                            return $Expr2(
-                                              "LetRec",
-                                              x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1,
-                                              x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2
-                                            );
+                                            if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                              return $Expr2(
+                                                "Let",
+                                                x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1,
+                                                x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2
+                                              );
+                                            }
+                                            if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                              if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                                return $Expr2(
+                                                  "LetRec",
+                                                  x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1,
+                                                  x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2
+                                                );
+                                              }
+                                              if (x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                                return $Expr2(
+                                                  "DocExpr",
+                                                  x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1,
+                                                  x2._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._2
+                                                );
+                                              }
+                                            }
                                           }
                                         }
                                       }
@@ -31614,24 +32621,15 @@ var genericExpr_ = {
       return $Sum("Inr", $Sum("Inl", x2._1));
     }
     if (x2.tag === "Int") {
-      return $Sum(
-        "Inr",
-        $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3))))
-      );
+      return $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))));
     }
     if (x2.tag === "Float") {
-      return $Sum(
-        "Inr",
-        $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3)))))
-      );
+      return $Sum("Inr", $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2)))));
     }
     if (x2.tag === "Str") {
       return $Sum(
         "Inr",
-        $Sum(
-          "Inr",
-          $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3)))))
-        )
+        $Sum("Inr", $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2)))))
       );
     }
     if (x2.tag === "Constr") {
@@ -31643,10 +32641,7 @@ var genericExpr_ = {
             "Inr",
             $Sum(
               "Inr",
-              $Sum(
-                "Inr",
-                $Sum("Inl", $Product(x2._1, $Product(x2._2, $Product(x2._3, x2._4))))
-              )
+              $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3))))
             )
           )
         )
@@ -31659,13 +32654,7 @@ var genericExpr_ = {
           "Inr",
           $Sum(
             "Inr",
-            $Sum(
-              "Inr",
-              $Sum(
-                "Inr",
-                $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3))))
-              )
-            )
+            $Sum("Inr", $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2)))))
           )
         )
       );
@@ -31685,10 +32674,7 @@ var genericExpr_ = {
                   "Inr",
                   $Sum(
                     "Inr",
-                    $Sum(
-                      "Inl",
-                      $Product(x2._1, $Product(x2._2, $Product(x2._3, $Product(x2._4, x2._5))))
-                    )
+                    $Sum("Inl", $Product(x2._1, $Product(x2._2, $Product(x2._3, x2._4))))
                   )
                 )
               )
@@ -31727,10 +32713,7 @@ var genericExpr_ = {
                   "Inr",
                   $Sum(
                     "Inr",
-                    $Sum(
-                      "Inr",
-                      $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3))))
-                    )
+                    $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
                   )
                 )
               )
@@ -31756,10 +32739,7 @@ var genericExpr_ = {
                     "Inr",
                     $Sum(
                       "Inr",
-                      $Sum(
-                        "Inr",
-                        $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3))))
-                      )
+                      $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
                     )
                   )
                 )
@@ -31788,10 +32768,7 @@ var genericExpr_ = {
                       "Inr",
                       $Sum(
                         "Inr",
-                        $Sum(
-                          "Inr",
-                          $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3))))
-                        )
+                        $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
                       )
                     )
                   )
@@ -31916,6 +32893,45 @@ var genericExpr_ = {
         )
       );
     }
+    if (x2.tag === "Paragraph") {
+      return $Sum(
+        "Inr",
+        $Sum(
+          "Inr",
+          $Sum(
+            "Inr",
+            $Sum(
+              "Inr",
+              $Sum(
+                "Inr",
+                $Sum(
+                  "Inr",
+                  $Sum(
+                    "Inr",
+                    $Sum(
+                      "Inr",
+                      $Sum(
+                        "Inr",
+                        $Sum(
+                          "Inr",
+                          $Sum(
+                            "Inr",
+                            $Sum(
+                              "Inr",
+                              $Sum("Inr", $Sum("Inr", $Sum("Inr", $Sum("Inl", x2._1))))
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
     if (x2.tag === "ListEmpty") {
       return $Sum(
         "Inr",
@@ -31943,7 +32959,7 @@ var genericExpr_ = {
                               "Inr",
                               $Sum(
                                 "Inr",
-                                $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
+                                $Sum("Inr", $Sum("Inr", $Sum("Inr", $Sum("Inl", x2._1))))
                               )
                             )
                           )
@@ -31991,7 +33007,7 @@ var genericExpr_ = {
                                     "Inr",
                                     $Sum(
                                       "Inr",
-                                      $Sum("Inl", $Product(x2._1, $Product(x2._2, $Product(x2._3, x2._4))))
+                                      $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3))))
                                     )
                                   )
                                 )
@@ -32040,7 +33056,10 @@ var genericExpr_ = {
                                   "Inr",
                                   $Sum(
                                     "Inr",
-                                    $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
+                                    $Sum(
+                                      "Inr",
+                                      $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
+                                    )
                                   )
                                 )
                               )
@@ -32094,10 +33113,7 @@ var genericExpr_ = {
                                         "Inr",
                                         $Sum(
                                           "Inr",
-                                          $Sum(
-                                            "Inl",
-                                            $Product(x2._1, $Product(x2._2, $Product(x2._3, x2._4)))
-                                          )
+                                          $Sum("Inr", $Sum("Inl", $Product(x2._1, $Product(x2._2, x2._3))))
                                         )
                                       )
                                     )
@@ -32152,7 +33168,10 @@ var genericExpr_ = {
                                       "Inr",
                                       $Sum(
                                         "Inr",
-                                        $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
+                                        $Sum(
+                                          "Inr",
+                                          $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
+                                        )
                                       )
                                     )
                                   )
@@ -32206,7 +33225,73 @@ var genericExpr_ = {
                                       "Inr",
                                       $Sum(
                                         "Inr",
-                                        $Sum("Inr", $Sum("Inr", $Sum("Inr", $Product(x2._1, x2._2))))
+                                        $Sum(
+                                          "Inr",
+                                          $Sum(
+                                            "Inr",
+                                            $Sum("Inr", $Sum("Inr", $Sum("Inl", $Product(x2._1, x2._2))))
+                                          )
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+    if (x2.tag === "DocExpr") {
+      return $Sum(
+        "Inr",
+        $Sum(
+          "Inr",
+          $Sum(
+            "Inr",
+            $Sum(
+              "Inr",
+              $Sum(
+                "Inr",
+                $Sum(
+                  "Inr",
+                  $Sum(
+                    "Inr",
+                    $Sum(
+                      "Inr",
+                      $Sum(
+                        "Inr",
+                        $Sum(
+                          "Inr",
+                          $Sum(
+                            "Inr",
+                            $Sum(
+                              "Inr",
+                              $Sum(
+                                "Inr",
+                                $Sum(
+                                  "Inr",
+                                  $Sum(
+                                    "Inr",
+                                    $Sum(
+                                      "Inr",
+                                      $Sum(
+                                        "Inr",
+                                        $Sum(
+                                          "Inr",
+                                          $Sum(
+                                            "Inr",
+                                            $Sum("Inr", $Sum("Inr", $Sum("Inr", $Product(x2._1, x2._2))))
+                                          )
+                                        )
                                       )
                                     )
                                   )
@@ -32240,13 +33325,10 @@ var showQualifier = (dictShow) => ({
       const $02 = showExpr(dictShow);
       return { genericShowArgs: (v) => [$02.show(v)] };
     })())(ListCompGuardIsSymbol);
-    const $1 = genericShowConstructor(genericShowArgsProduct((() => {
-      const $12 = showDocOpt(showExpr(dictShow));
-      return { genericShowArgs: (v) => [$12.show(v)] };
-    })())(genericShowArgsProduct({ genericShowArgs: (v) => [showPattern1.show(v)] })((() => {
+    const $1 = genericShowConstructor(genericShowArgsProduct({ genericShowArgs: (v) => [showPattern1.show(v)] })((() => {
       const $12 = showExpr(dictShow);
       return { genericShowArgs: (v) => [$12.show(v)] };
-    })())))(ListCompGenIsSymbol);
+    })()))(ListCompGenIsSymbol);
     const $2 = genericShowConstructor((() => {
       const $22 = showVarDef(dictShow);
       return { genericShowArgs: (v) => [$22.show(v)] };
@@ -32255,13 +33337,27 @@ var showQualifier = (dictShow) => ({
       return $0["genericShow'"](c._1);
     }
     if (c.tag === "ListCompGen") {
-      return $1["genericShow'"]($Product(c._1, $Product(c._2, c._3)));
+      return $1["genericShow'"]($Product(c._1, c._2));
     }
     if (c.tag === "ListCompDecl") {
       return $2["genericShow'"](c._1);
     }
     fail();
   }
+});
+var showParagraphElem = (dictShow) => ({
+  show: (c) => genericShowSum4(genericShowConstructor((() => {
+    const $0 = showExpr(dictShow);
+    return { genericShowArgs: (v) => [$0.show(v)] };
+  })())(UnquoteIsSymbol))["genericShow'"]((() => {
+    if (c.tag === "Token") {
+      return $Sum("Inl", c._1);
+    }
+    if (c.tag === "Unquote") {
+      return $Sum("Inr", c._1);
+    }
+    fail();
+  })())
 });
 var showListRest = (dictShow) => {
   const genericShowArgsArgument3 = { genericShowArgs: (v) => [dictShow.show(v)] };
@@ -32286,377 +33382,226 @@ var showListRest = (dictShow) => {
   };
 };
 var showExpr = (dictShow) => {
-  const genericShowArgsProduct3 = genericShowArgsProduct({ genericShowArgs: (v) => [dictShow.show(v)] });
+  const genericShowArgsArgument3 = { genericShowArgs: (v) => [dictShow.show(v)] };
+  const $0 = genericShowConstructor(genericShowArgsProduct(genericShowArgsArgument3)(genericShowArgsArgument1))(IntIsSymbol);
+  const $1 = genericShowConstructor(genericShowArgsProduct(genericShowArgsArgument3)(genericShowArgsArgument2))(FloatIsSymbol);
+  const $2 = genericShowConstructor(genericShowArgsProduct(genericShowArgsArgument3)(genericShowArgsArgument))(StrIsSymbol);
+  const $3 = genericShowConstructor(genericShowArgsArgument3)(ListEmptyIsSymbol);
   return {
-    show: (c) => genericShowSum4(genericShowSum5((() => {
-      const $0 = genericShowConstructor(genericShowArgsProduct3(genericShowArgsProduct((() => {
-        const $02 = showDocOpt(showExpr(dictShow));
-        return { genericShowArgs: (v) => [$02.show(v)] };
-      })())(genericShowArgsArgument1)))(IntIsSymbol);
-      const $1 = genericShowConstructor(genericShowArgsProduct3(genericShowArgsProduct((() => {
-        const $12 = showDocOpt(showExpr(dictShow));
-        return { genericShowArgs: (v) => [$12.show(v)] };
-      })())(genericShowArgsArgument2)))(FloatIsSymbol);
-      const $2 = (() => {
-        const $22 = genericShowConstructor(genericShowArgsProduct3(genericShowArgsProduct((() => {
-          const $23 = showDocOpt(showExpr(dictShow));
-          return { genericShowArgs: (v) => [$23.show(v)] };
-        })())(genericShowArgsArgument)))(StrIsSymbol);
-        const $3 = (() => {
-          const $32 = genericShowConstructor(genericShowArgsProduct3(genericShowArgsProduct((() => {
-            const $33 = showDocOpt(showExpr(dictShow));
-            return { genericShowArgs: (v) => [$33.show(v)] };
-          })())(genericShowArgsProduct(genericShowArgsArgument)((() => {
-            const $33 = showList(showExpr(dictShow));
-            return { genericShowArgs: (v) => [$33.show(v)] };
-          })()))))(ConstrIsSymbol);
-          const $4 = (() => {
-            const $42 = genericShowConstructor(genericShowArgsProduct3(genericShowArgsProduct((() => {
-              const $43 = showDocOpt(showExpr(dictShow));
-              return { genericShowArgs: (v) => [$43.show(v)] };
-            })())((() => {
-              const $43 = showList((() => {
-                const $44 = showDictEntry(dictShow);
-                const $52 = showExpr(dictShow);
-                return { show: (v) => "(Tuple " + $44.show(v._1) + " " + $52.show(v._2) + ")" };
-              })());
-              return { genericShowArgs: (v) => [$43.show(v)] };
-            })())))(DictionaryIsSymbol);
-            const $5 = (() => {
-              const $52 = genericShowConstructor(genericShowArgsProduct3(genericShowArgsProduct((() => {
-                const $53 = showDocOpt(showExpr(dictShow));
-                return { genericShowArgs: (v) => [$53.show(v)] };
-              })())(genericShowArgsProduct((() => {
-                const $53 = showExpr(dictShow);
-                return { genericShowArgs: (v) => [$53.show(v)] };
-              })())(genericShowArgsProduct1((() => {
-                const $53 = showExpr(dictShow);
-                return { genericShowArgs: (v) => [$53.show(v)] };
-              })())))))(MatrixIsSymbol);
-              const $6 = (() => {
-                const $62 = genericShowConstructor((() => {
-                  const $63 = showClauses(dictShow);
-                  return { genericShowArgs: (v) => [$63.show(v)] };
-                })())(LambdaIsSymbol);
-                const $7 = (() => {
-                  const $72 = genericShowConstructor(genericShowArgsProduct((() => {
-                    const $73 = showDocOpt(showExpr(dictShow));
-                    return { genericShowArgs: (v) => [$73.show(v)] };
-                  })())(genericShowArgsProduct((() => {
-                    const $73 = showExpr(dictShow);
-                    return { genericShowArgs: (v) => [$73.show(v)] };
-                  })())(genericShowArgsArgument)))(ProjectIsSymbol);
-                  const $8 = (() => {
-                    const $82 = genericShowConstructor(genericShowArgsProduct((() => {
-                      const $83 = showDocOpt(showExpr(dictShow));
-                      return { genericShowArgs: (v) => [$83.show(v)] };
-                    })())(genericShowArgsProduct((() => {
-                      const $83 = showExpr(dictShow);
-                      return { genericShowArgs: (v) => [$83.show(v)] };
-                    })())((() => {
-                      const $83 = showExpr(dictShow);
-                      return { genericShowArgs: (v) => [$83.show(v)] };
-                    })())))(DProjectIsSymbol);
-                    const $9 = (() => {
-                      const $92 = genericShowConstructor(genericShowArgsProduct((() => {
-                        const $93 = showDocOpt(showExpr(dictShow));
-                        return { genericShowArgs: (v) => [$93.show(v)] };
-                      })())(genericShowArgsProduct((() => {
-                        const $93 = showExpr(dictShow);
-                        return { genericShowArgs: (v) => [$93.show(v)] };
-                      })())((() => {
-                        const $93 = showExpr(dictShow);
-                        return { genericShowArgs: (v) => [$93.show(v)] };
-                      })())))(AppIsSymbol);
-                      const $10 = (() => {
-                        const $102 = genericShowConstructor(genericShowArgsProduct((() => {
-                          const $103 = showExpr(dictShow);
-                          return { genericShowArgs: (v) => [$103.show(v)] };
-                        })())(genericShowArgsProduct(genericShowArgsArgument)((() => {
-                          const $103 = showExpr(dictShow);
-                          return { genericShowArgs: (v) => [$103.show(v)] };
-                        })())))(BinaryAppIsSymbol);
-                        const $11 = (() => {
-                          const $112 = genericShowConstructor(genericShowArgsProduct((() => {
-                            const $113 = showExpr(dictShow);
-                            return { genericShowArgs: (v) => [$113.show(v)] };
-                          })())((() => {
-                            const $113 = showNonEmptyList(showTuple1(showExpr(dictShow)));
-                            return { genericShowArgs: (v) => [$113.show(v)] };
-                          })()))(MatchAsIsSymbol);
-                          const $12 = (() => {
-                            const $122 = genericShowConstructor(genericShowArgsProduct((() => {
-                              const $123 = showExpr(dictShow);
-                              return { genericShowArgs: (v) => [$123.show(v)] };
-                            })())(genericShowArgsProduct((() => {
-                              const $123 = showExpr(dictShow);
-                              return { genericShowArgs: (v) => [$123.show(v)] };
-                            })())((() => {
-                              const $123 = showExpr(dictShow);
-                              return { genericShowArgs: (v) => [$123.show(v)] };
-                            })())))(IfElseIsSymbol);
-                            const $13 = (() => {
-                              const $132 = genericShowConstructor(genericShowArgsProduct3((() => {
-                                const $133 = showDocOpt(showExpr(dictShow));
-                                return { genericShowArgs: (v) => [$133.show(v)] };
-                              })()))(ListEmptyIsSymbol);
-                              const $14 = (() => {
-                                const $142 = genericShowConstructor(genericShowArgsProduct3(genericShowArgsProduct((() => {
-                                  const $143 = showDocOpt(showExpr(dictShow));
-                                  return { genericShowArgs: (v) => [$143.show(v)] };
-                                })())(genericShowArgsProduct((() => {
-                                  const $143 = showExpr(dictShow);
-                                  return { genericShowArgs: (v) => [$143.show(v)] };
-                                })())((() => {
-                                  const $143 = showListRest(dictShow);
-                                  return { genericShowArgs: (v) => [$143.show(v)] };
-                                })()))))(ListNonEmptyIsSymbol);
-                                const $15 = (() => {
-                                  const $152 = genericShowConstructor(genericShowArgsProduct((() => {
-                                    const $153 = showExpr(dictShow);
-                                    return { genericShowArgs: (v) => [$153.show(v)] };
-                                  })())((() => {
-                                    const $153 = showExpr(dictShow);
-                                    return { genericShowArgs: (v) => [$153.show(v)] };
-                                  })()))(ListEnumIsSymbol);
-                                  const $16 = (() => {
-                                    const $162 = genericShowConstructor(genericShowArgsProduct3(genericShowArgsProduct((() => {
-                                      const $163 = showDocOpt(showExpr(dictShow));
-                                      return { genericShowArgs: (v) => [$163.show(v)] };
-                                    })())(genericShowArgsProduct((() => {
-                                      const $163 = showExpr(dictShow);
-                                      return { genericShowArgs: (v) => [$163.show(v)] };
-                                    })())((() => {
-                                      const $163 = showList(showQualifier(dictShow));
-                                      return { genericShowArgs: (v) => [$163.show(v)] };
-                                    })()))))(ListCompIsSymbol);
-                                    const $17 = (() => {
-                                      const $172 = genericShowConstructor(genericShowArgsProduct((() => {
-                                        const $173 = showNonEmptyList(showVarDef(dictShow));
-                                        return { genericShowArgs: (v) => [$173.show(v)] };
-                                      })())((() => {
-                                        const $173 = showExpr(dictShow);
-                                        return { genericShowArgs: (v) => [$173.show(v)] };
-                                      })()))(LetIsSymbol);
-                                      const $18 = (() => {
-                                        const $182 = genericShowConstructor(genericShowArgsProduct((() => {
-                                          const $183 = showNonEmptyList(showTuple(showClause(dictShow)));
-                                          return { genericShowArgs: (v) => [$183.show(v)] };
-                                        })())((() => {
-                                          const $183 = showExpr(dictShow);
-                                          return { genericShowArgs: (v) => [$183.show(v)] };
-                                        })()))(LetRecIsSymbol);
-                                        return {
-                                          "genericShow'": (v) => {
-                                            if (v.tag === "Inl") {
-                                              return $172["genericShow'"](v._1);
-                                            }
-                                            if (v.tag === "Inr") {
-                                              return $182["genericShow'"](v._1);
-                                            }
-                                            fail();
-                                          }
-                                        };
-                                      })();
-                                      return {
-                                        "genericShow'": (v) => {
-                                          if (v.tag === "Inl") {
-                                            return $162["genericShow'"](v._1);
-                                          }
-                                          if (v.tag === "Inr") {
-                                            return $18["genericShow'"](v._1);
-                                          }
-                                          fail();
-                                        }
-                                      };
-                                    })();
-                                    return {
-                                      "genericShow'": (v) => {
-                                        if (v.tag === "Inl") {
-                                          return $152["genericShow'"](v._1);
-                                        }
-                                        if (v.tag === "Inr") {
-                                          return $17["genericShow'"](v._1);
-                                        }
-                                        fail();
-                                      }
-                                    };
-                                  })();
-                                  return {
-                                    "genericShow'": (v) => {
-                                      if (v.tag === "Inl") {
-                                        return $142["genericShow'"](v._1);
-                                      }
-                                      if (v.tag === "Inr") {
-                                        return $16["genericShow'"](v._1);
-                                      }
-                                      fail();
-                                    }
-                                  };
-                                })();
-                                return {
-                                  "genericShow'": (v) => {
-                                    if (v.tag === "Inl") {
-                                      return $132["genericShow'"](v._1);
-                                    }
-                                    if (v.tag === "Inr") {
-                                      return $15["genericShow'"](v._1);
-                                    }
-                                    fail();
-                                  }
-                                };
-                              })();
-                              return {
-                                "genericShow'": (v) => {
-                                  if (v.tag === "Inl") {
-                                    return $122["genericShow'"](v._1);
-                                  }
-                                  if (v.tag === "Inr") {
-                                    return $14["genericShow'"](v._1);
-                                  }
-                                  fail();
-                                }
-                              };
-                            })();
-                            return {
-                              "genericShow'": (v) => {
-                                if (v.tag === "Inl") {
-                                  return $112["genericShow'"](v._1);
-                                }
-                                if (v.tag === "Inr") {
-                                  return $13["genericShow'"](v._1);
-                                }
-                                fail();
-                              }
-                            };
-                          })();
-                          return {
-                            "genericShow'": (v) => {
-                              if (v.tag === "Inl") {
-                                return $102["genericShow'"](v._1);
-                              }
-                              if (v.tag === "Inr") {
-                                return $12["genericShow'"](v._1);
-                              }
-                              fail();
-                            }
-                          };
-                        })();
-                        return {
-                          "genericShow'": (v) => {
-                            if (v.tag === "Inl") {
-                              return $92["genericShow'"](v._1);
-                            }
-                            if (v.tag === "Inr") {
-                              return $11["genericShow'"](v._1);
-                            }
-                            fail();
-                          }
-                        };
-                      })();
-                      return {
-                        "genericShow'": (v) => {
-                          if (v.tag === "Inl") {
-                            return $82["genericShow'"](v._1);
-                          }
-                          if (v.tag === "Inr") {
-                            return $10["genericShow'"](v._1);
-                          }
-                          fail();
-                        }
-                      };
-                    })();
-                    return {
-                      "genericShow'": (v) => {
-                        if (v.tag === "Inl") {
-                          return $72["genericShow'"](v._1);
-                        }
-                        if (v.tag === "Inr") {
-                          return $9["genericShow'"](v._1);
-                        }
-                        fail();
-                      }
-                    };
-                  })();
-                  return {
-                    "genericShow'": (v) => {
-                      if (v.tag === "Inl") {
-                        return $62["genericShow'"](v._1);
-                      }
-                      if (v.tag === "Inr") {
-                        return $8["genericShow'"](v._1);
-                      }
-                      fail();
-                    }
-                  };
-                })();
-                return {
-                  "genericShow'": (v) => {
-                    if (v.tag === "Inl") {
-                      return $52["genericShow'"](v._1);
-                    }
-                    if (v.tag === "Inr") {
-                      return $7["genericShow'"](v._1);
-                    }
-                    fail();
-                  }
-                };
-              })();
-              return {
-                "genericShow'": (v) => {
-                  if (v.tag === "Inl") {
-                    return $42["genericShow'"](v._1);
-                  }
-                  if (v.tag === "Inr") {
-                    return $6["genericShow'"](v._1);
-                  }
-                  fail();
-                }
-              };
-            })();
-            return {
-              "genericShow'": (v) => {
-                if (v.tag === "Inl") {
-                  return $32["genericShow'"](v._1);
-                }
-                if (v.tag === "Inr") {
-                  return $5["genericShow'"](v._1);
-                }
-                fail();
-              }
-            };
-          })();
-          return {
-            "genericShow'": (v) => {
-              if (v.tag === "Inl") {
-                return $22["genericShow'"](v._1);
-              }
-              if (v.tag === "Inr") {
-                return $4["genericShow'"](v._1);
-              }
-              fail();
-            }
-          };
-        })();
-        return {
-          "genericShow'": (v) => {
-            if (v.tag === "Inl") {
-              return $1["genericShow'"](v._1);
-            }
-            if (v.tag === "Inr") {
-              return $3["genericShow'"](v._1);
-            }
-            fail();
-          }
-        };
-      })();
+    show: (c) => genericShowSum5(genericShowSum6((() => {
+      const $4 = genericShowConstructor(genericShowArgsProduct(genericShowArgsArgument3)(genericShowArgsProduct(genericShowArgsArgument)((() => {
+        const $42 = showList(showExpr(dictShow));
+        return { genericShowArgs: (v) => [$42.show(v)] };
+      })())))(ConstrIsSymbol);
+      const $5 = genericShowConstructor(genericShowArgsProduct(genericShowArgsArgument3)((() => {
+        const $52 = showList((() => {
+          const $53 = showDictEntry(dictShow);
+          const $62 = showExpr(dictShow);
+          return { show: (v) => "(Tuple " + $53.show(v._1) + " " + $62.show(v._2) + ")" };
+        })());
+        return { genericShowArgs: (v) => [$52.show(v)] };
+      })()))(DictionaryIsSymbol);
+      const $6 = genericShowConstructor(genericShowArgsProduct(genericShowArgsArgument3)(genericShowArgsProduct((() => {
+        const $62 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$62.show(v)] };
+      })())(genericShowArgsProduct1((() => {
+        const $62 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$62.show(v)] };
+      })()))))(MatrixIsSymbol);
+      const $7 = genericShowConstructor((() => {
+        const $72 = showClauses(dictShow);
+        return { genericShowArgs: (v) => [$72.show(v)] };
+      })())(LambdaIsSymbol);
+      const $8 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $82 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$82.show(v)] };
+      })())(genericShowArgsArgument))(ProjectIsSymbol);
+      const $9 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $92 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$92.show(v)] };
+      })())((() => {
+        const $92 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$92.show(v)] };
+      })()))(DProjectIsSymbol);
+      const $10 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $102 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$102.show(v)] };
+      })())((() => {
+        const $102 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$102.show(v)] };
+      })()))(AppIsSymbol);
+      const $11 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $112 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$112.show(v)] };
+      })())(genericShowArgsProduct(genericShowArgsArgument)((() => {
+        const $112 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$112.show(v)] };
+      })())))(BinaryAppIsSymbol);
+      const $12 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $122 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$122.show(v)] };
+      })())((() => {
+        const $122 = showNonEmptyList(showTuple1(showExpr(dictShow)));
+        return { genericShowArgs: (v) => [$122.show(v)] };
+      })()))(MatchAsIsSymbol);
+      const $13 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $132 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$132.show(v)] };
+      })())(genericShowArgsProduct((() => {
+        const $132 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$132.show(v)] };
+      })())((() => {
+        const $132 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$132.show(v)] };
+      })())))(IfElseIsSymbol);
+      const $14 = genericShowConstructor((() => {
+        const $142 = showList(showParagraphElem(dictShow));
+        return { genericShowArgs: (v) => [$142.show(v)] };
+      })())(ParagraphIsSymbol);
+      const $15 = genericShowConstructor(genericShowArgsProduct(genericShowArgsArgument3)(genericShowArgsProduct((() => {
+        const $152 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$152.show(v)] };
+      })())((() => {
+        const $152 = showListRest(dictShow);
+        return { genericShowArgs: (v) => [$152.show(v)] };
+      })())))(ListNonEmptyIsSymbol);
+      const $16 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $162 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$162.show(v)] };
+      })())((() => {
+        const $162 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$162.show(v)] };
+      })()))(ListEnumIsSymbol);
+      const $17 = genericShowConstructor(genericShowArgsProduct(genericShowArgsArgument3)(genericShowArgsProduct((() => {
+        const $172 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$172.show(v)] };
+      })())((() => {
+        const $172 = showList(showQualifier(dictShow));
+        return { genericShowArgs: (v) => [$172.show(v)] };
+      })())))(ListCompIsSymbol);
+      const $18 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $182 = showNonEmptyList(showVarDef(dictShow));
+        return { genericShowArgs: (v) => [$182.show(v)] };
+      })())((() => {
+        const $182 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$182.show(v)] };
+      })()))(LetIsSymbol);
+      const $19 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $192 = showNonEmptyList(showTuple(showClause(dictShow)));
+        return { genericShowArgs: (v) => [$192.show(v)] };
+      })())((() => {
+        const $192 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$192.show(v)] };
+      })()))(LetRecIsSymbol);
+      const $20 = genericShowConstructor(genericShowArgsProduct((() => {
+        const $202 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$202.show(v)] };
+      })())((() => {
+        const $202 = showExpr(dictShow);
+        return { genericShowArgs: (v) => [$202.show(v)] };
+      })()))(DocExprIsSymbol);
       return {
         "genericShow'": (v) => {
           if (v.tag === "Inl") {
             return $0["genericShow'"](v._1);
           }
           if (v.tag === "Inr") {
-            return $2["genericShow'"](v._1);
+            if (v._1.tag === "Inl") {
+              return $1["genericShow'"](v._1._1);
+            }
+            if (v._1.tag === "Inr") {
+              if (v._1._1.tag === "Inl") {
+                return $2["genericShow'"](v._1._1._1);
+              }
+              if (v._1._1.tag === "Inr") {
+                if (v._1._1._1.tag === "Inl") {
+                  return $4["genericShow'"](v._1._1._1._1);
+                }
+                if (v._1._1._1.tag === "Inr") {
+                  if (v._1._1._1._1.tag === "Inl") {
+                    return $5["genericShow'"](v._1._1._1._1._1);
+                  }
+                  if (v._1._1._1._1.tag === "Inr") {
+                    if (v._1._1._1._1._1.tag === "Inl") {
+                      return $6["genericShow'"](v._1._1._1._1._1._1);
+                    }
+                    if (v._1._1._1._1._1.tag === "Inr") {
+                      if (v._1._1._1._1._1._1.tag === "Inl") {
+                        return $7["genericShow'"](v._1._1._1._1._1._1._1);
+                      }
+                      if (v._1._1._1._1._1._1.tag === "Inr") {
+                        if (v._1._1._1._1._1._1._1.tag === "Inl") {
+                          return $8["genericShow'"](v._1._1._1._1._1._1._1._1);
+                        }
+                        if (v._1._1._1._1._1._1._1.tag === "Inr") {
+                          if (v._1._1._1._1._1._1._1._1.tag === "Inl") {
+                            return $9["genericShow'"](v._1._1._1._1._1._1._1._1._1);
+                          }
+                          if (v._1._1._1._1._1._1._1._1.tag === "Inr") {
+                            if (v._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                              return $10["genericShow'"](v._1._1._1._1._1._1._1._1._1._1);
+                            }
+                            if (v._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                              if (v._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                return $11["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1);
+                              }
+                              if (v._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                if (v._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                  return $12["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1);
+                                }
+                                if (v._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                  if (v._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                    return $13["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                  }
+                                  if (v._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                    if (v._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                      return $14["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                    }
+                                    if (v._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                      if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                        return $3["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                      }
+                                      if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                        if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                          return $15["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                        }
+                                        if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                          if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                            return $16["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                          }
+                                          if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                            if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                              return $17["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                            }
+                                            if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                              if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                                return $18["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                              }
+                                              if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                                if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inl") {
+                                                  return $19["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                                }
+                                                if (v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1.tag === "Inr") {
+                                                  return $20["genericShow'"](v._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1._1);
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
           fail();
         }
@@ -32702,10 +33647,21 @@ var functorQualifier = {
       return $Qualifier("ListCompGuard", functorExpr2.map(f)(m._1));
     }
     if (m.tag === "ListCompGen") {
-      return $Qualifier("ListCompGen", functorDocOpt(functorExpr2).map(f)(m._1), m._2, functorExpr2.map(f)(m._3));
+      return $Qualifier("ListCompGen", m._1, functorExpr2.map(f)(m._2));
     }
     if (m.tag === "ListCompDecl") {
       return $Qualifier("ListCompDecl", $VarDef2(m._1._1, functorExpr2.map(f)(m._1._2)));
+    }
+    fail();
+  }
+};
+var functorParagraphElem = {
+  map: (f) => (m) => {
+    if (m.tag === "Token") {
+      return $ParagraphElem("Token", m._1);
+    }
+    if (m.tag === "Unquote") {
+      return $ParagraphElem("Unquote", functorExpr2.map(f)(m._1));
     }
     fail();
   }
@@ -32730,43 +33686,42 @@ var functorExpr2 = {
       return $Expr2("Op", m._1);
     }
     if (m.tag === "Int") {
-      return $Expr2("Int", f(m._1), functorDocOpt(functorExpr2).map(f)(m._2), m._3);
+      return $Expr2("Int", f(m._1), m._2);
     }
     if (m.tag === "Float") {
-      return $Expr2("Float", f(m._1), functorDocOpt(functorExpr2).map(f)(m._2), m._3);
+      return $Expr2("Float", f(m._1), m._2);
     }
     if (m.tag === "Str") {
-      return $Expr2("Str", f(m._1), functorDocOpt(functorExpr2).map(f)(m._2), m._3);
+      return $Expr2("Str", f(m._1), m._2);
     }
     if (m.tag === "Constr") {
-      return $Expr2("Constr", f(m._1), functorDocOpt(functorExpr2).map(f)(m._2), m._3, listMap(functorExpr2.map(f))(m._4));
+      return $Expr2("Constr", f(m._1), m._2, listMap(functorExpr2.map(f))(m._3));
     }
     if (m.tag === "Dictionary") {
       return $Expr2(
         "Dictionary",
         f(m._1),
-        functorDocOpt(functorExpr2).map(f)(m._2),
         listMap((() => {
           const $0 = functorDictEntry.map(f);
           const $1 = functorExpr2.map(f);
           return (v) => $Tuple($0(v._1), $1(v._2));
-        })())(m._3)
+        })())(m._2)
       );
     }
     if (m.tag === "Matrix") {
-      return $Expr2("Matrix", f(m._1), functorDocOpt(functorExpr2).map(f)(m._2), functorExpr2.map(f)(m._3), m._4, functorExpr2.map(f)(m._5));
+      return $Expr2("Matrix", f(m._1), functorExpr2.map(f)(m._2), m._3, functorExpr2.map(f)(m._4));
     }
     if (m.tag === "Lambda") {
       return $Expr2("Lambda", functorClauses.map(f)(m._1));
     }
     if (m.tag === "Project") {
-      return $Expr2("Project", functorDocOpt(functorExpr2).map(f)(m._1), functorExpr2.map(f)(m._2), m._3);
+      return $Expr2("Project", functorExpr2.map(f)(m._1), m._2);
     }
     if (m.tag === "DProject") {
-      return $Expr2("DProject", functorDocOpt(functorExpr2).map(f)(m._1), functorExpr2.map(f)(m._2), functorExpr2.map(f)(m._3));
+      return $Expr2("DProject", functorExpr2.map(f)(m._1), functorExpr2.map(f)(m._2));
     }
     if (m.tag === "App") {
-      return $Expr2("App", functorDocOpt(functorExpr2).map(f)(m._1), functorExpr2.map(f)(m._2), functorExpr2.map(f)(m._3));
+      return $Expr2("App", functorExpr2.map(f)(m._1), functorExpr2.map(f)(m._2));
     }
     if (m.tag === "BinaryApp") {
       return $Expr2("BinaryApp", functorExpr2.map(f)(m._1), m._2, functorExpr2.map(f)(m._3));
@@ -32784,17 +33739,20 @@ var functorExpr2 = {
     if (m.tag === "IfElse") {
       return $Expr2("IfElse", functorExpr2.map(f)(m._1), functorExpr2.map(f)(m._2), functorExpr2.map(f)(m._3));
     }
+    if (m.tag === "Paragraph") {
+      return $Expr2("Paragraph", listMap(functorParagraphElem.map(f))(m._1));
+    }
     if (m.tag === "ListEmpty") {
-      return $Expr2("ListEmpty", f(m._1), functorDocOpt(functorExpr2).map(f)(m._2));
+      return $Expr2("ListEmpty", f(m._1));
     }
     if (m.tag === "ListNonEmpty") {
-      return $Expr2("ListNonEmpty", f(m._1), functorDocOpt(functorExpr2).map(f)(m._2), functorExpr2.map(f)(m._3), functorListRest.map(f)(m._4));
+      return $Expr2("ListNonEmpty", f(m._1), functorExpr2.map(f)(m._2), functorListRest.map(f)(m._3));
     }
     if (m.tag === "ListEnum") {
       return $Expr2("ListEnum", functorExpr2.map(f)(m._1), functorExpr2.map(f)(m._2));
     }
     if (m.tag === "ListComp") {
-      return $Expr2("ListComp", f(m._1), functorDocOpt(functorExpr2).map(f)(m._2), functorExpr2.map(f)(m._3), listMap(functorQualifier.map(f))(m._4));
+      return $Expr2("ListComp", f(m._1), functorExpr2.map(f)(m._2), listMap(functorQualifier.map(f))(m._3));
     }
     if (m.tag === "Let") {
       return $Expr2(
@@ -32812,6 +33770,9 @@ var functorExpr2 = {
         })(),
         functorExpr2.map(f)(m._2)
       );
+    }
+    if (m.tag === "DocExpr") {
+      return $Expr2("DocExpr", functorExpr2.map(f)(m._1), functorExpr2.map(f)(m._2));
     }
     fail();
   }
@@ -33276,7 +34237,7 @@ var forConstrBwd = (v) => (v1) => {
   fail();
 };
 var elimBool = (\u03BA) => (\u03BA$p) => $Elim("ElimConstr", fromFoldable7([$Tuple("True", \u03BA), $Tuple("False", \u03BA$p)]));
-var econs = (\u03B1) => (doc2) => (e) => (e$p) => $Expr("Constr", \u03B1, doc2, ":", $List("Cons", e, $List("Cons", e$p, Nil)));
+var econs = (\u03B1) => (e) => (e$p) => $Expr("Constr", \u03B1, ":", $List("Cons", e, $List("Cons", e$p, Nil)));
 var ctrFor = (v) => {
   if (v.tag === "Left") {
     if (v._1.tag === "PVar") {
@@ -33560,7 +34521,7 @@ var orElseFwd = (\u03B1) => (v) => {
       $4($3($1._1)),
       foldableList.foldr(Cons)(listMap((p$p) => $Tuple(
         $List("Cons", p$p, listMap(anon)($0)),
-        $Expr2("ListEmpty", \u03B1, None)
+        $Expr2("ListEmpty", \u03B1)
       ))(unless(v._1._1)))(listMap($4)(listMap(($5) => $3($5))($1._2)))
     );
   }
@@ -33572,10 +34533,10 @@ var desugarableListRestExpr = {
     const Apply0 = Monad0.Bind1().Apply0();
     return (v) => {
       if (v.tag === "End") {
-        return Monad0.Applicative0().pure($Expr("Constr", v._1, None, "Nil", Nil));
+        return Monad0.Applicative0().pure($Expr("Constr", v._1, "Nil", Nil));
       }
       if (v.tag === "Next") {
-        return Apply0.apply(Apply0.Functor0().map(econs(v._1)(None))(desugarableExprExpr.desug(dictMonadError)(dictBoundedLattice)(v._2)))(desugarableListRestExpr.desug(dictMonadError)(dictBoundedLattice)(v._3));
+        return Apply0.apply(Apply0.Functor0().map(econs(v._1))(desugarableExprExpr.desug(dictMonadError)(dictBoundedLattice)(v._2)))(desugarableListRestExpr.desug(dictMonadError)(dictBoundedLattice)(v._3));
       }
       fail();
     };
@@ -33585,12 +34546,12 @@ var desugarableListRestExpr = {
       if (v1.tag === "End") {
         return $ListRest("End", v._1);
       }
-      if (v._4.tag === "Cons" && v._4._2.tag === "Cons" && v._4._2._2.tag === "Nil" && v1.tag === "Next") {
+      if (v._3.tag === "Cons" && v._3._2.tag === "Cons" && v._3._2._2.tag === "Nil" && v1.tag === "Next") {
         return $ListRest(
           "Next",
           v._1,
-          desugarableExprExpr.desugBwd(dictBoundedJoinSemilattice)(v._4._1)(v1._2),
-          desugarableListRestExpr.desugBwd(dictBoundedJoinSemilattice)(v._4._2._1)(v1._3)
+          desugarableExprExpr.desugBwd(dictBoundedJoinSemilattice)(v._3._1)(v1._2),
+          desugarableListRestExpr.desugBwd(dictBoundedJoinSemilattice)(v._3._2._1)(v1._3)
         );
       }
     }
@@ -33611,7 +34572,7 @@ var desugarableDictEntryExpr = {
       return exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1);
     }
     if (v.tag === "VarKey") {
-      return dictMonadError.MonadThrow0().Monad0().Applicative0().pure($Expr("Str", v._1, None, v._2));
+      return dictMonadError.MonadThrow0().Monad0().Applicative0().pure($Expr("Str", v._1, v._2));
     }
     fail();
   },
@@ -33672,7 +34633,7 @@ var varDefFwd = (dictMonadError) => {
   return (dictBoundedLattice) => {
     const top3 = dictBoundedLattice.BoundedMeetSemilattice1().top;
     return (v) => Apply0.apply(Apply0.Functor0().map(VarDef)(desugarableClausesElim.desug(dictMonadError)(dictBoundedLattice)($NonEmpty(
-      $Tuple($NonEmpty(v._1, Nil), $Expr2("Dictionary", top3, None, Nil)),
+      $Tuple($NonEmpty(v._1, Nil), $Expr2("Dictionary", top3, Nil)),
       Nil
     ))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2));
   };
@@ -33720,25 +34681,105 @@ var recDefBwd = (dictBoundedJoinSemilattice) => (v) => (v1) => {
   ))));
   return $NonEmpty($Tuple($0, $1._1), listMap((v2) => $Tuple($0, v2))($1._2));
 };
+var paragraphFwd = (dictBoundedLattice) => {
+  const bot2 = dictBoundedLattice.BoundedJoinSemilattice0().bot;
+  return (dictMonadError) => {
+    const Monad0 = dictMonadError.MonadThrow0().Monad0();
+    return (elems) => Monad0.Bind1().bind(paragraphElemsFwd(dictBoundedLattice)(dictMonadError)(elems))((es) => Monad0.Applicative0().pure($Expr(
+      "Constr",
+      bot2,
+      "Paragraph",
+      $List("Cons", es, Nil)
+    )));
+  };
+};
+var paragraphElemsFwd = (dictBoundedLattice) => {
+  const bot2 = dictBoundedLattice.BoundedJoinSemilattice0().bot;
+  return (dictMonadError) => {
+    const Monad0 = dictMonadError.MonadThrow0().Monad0();
+    const $0 = Monad0.Bind1();
+    const $1 = Monad0.Applicative0();
+    return foldableList.foldr((v) => (v1) => {
+      if (v.tag === "Token") {
+        const $2 = v._1;
+        return $0.bind(v1)((acc) => $1.pure($Expr(
+          "Constr",
+          bot2,
+          ":",
+          $List(
+            "Cons",
+            $Expr("Constr", bot2, "Text", $List("Cons", $Expr("Str", bot2, $2), Nil)),
+            $List("Cons", acc, Nil)
+          )
+        )));
+      }
+      if (v.tag === "Unquote") {
+        const $2 = v._1;
+        return $0.bind(v1)((acc) => $0.bind(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($2))((e$p) => $1.pure($Expr(
+          "Constr",
+          bot2,
+          ":",
+          $List(
+            "Cons",
+            $Expr("Constr", bot2, "Text", $List("Cons", e$p, Nil)),
+            $List("Cons", acc, Nil)
+          )
+        ))));
+      }
+      fail();
+    })($1.pure($Expr("Constr", bot2, "Nil", Nil)));
+  };
+};
+var paragraphElemsBwd = (dictBoundedJoinSemilattice) => (v) => (v1) => {
+  if (v.tag === "Constr") {
+    if (v1.tag === "Nil") {
+      if (v._3.tag === "Nil" && v._2 === "Nil") {
+        return Nil;
+      }
+      return throwException(error("absurd"))();
+    }
+    if (v._3.tag === "Cons" && v._3._2.tag === "Cons" && v._3._2._2.tag === "Nil" && v1.tag === "Cons" && v._2 === ":") {
+      return $List(
+        "Cons",
+        (() => {
+          if (v._3._1.tag === "Constr" && v._3._1._3.tag === "Cons" && v._3._1._3._2.tag === "Nil") {
+            if (v._3._1._3._1.tag === "Str" && v1._1.tag === "Token") {
+              if (v._3._1._2 === "Text") {
+                return $ParagraphElem("Token", v._3._1._3._1._2);
+              }
+              return throwException(error("absurd"))();
+            }
+            if (v1._1.tag === "Unquote" && v._3._1._2 === "Text") {
+              return $ParagraphElem("Unquote", exprBwd(dictBoundedJoinSemilattice)(v._3._1._3._1)(v1._1._1));
+            }
+          }
+          return throwException(error("absurd"))();
+        })(),
+        paragraphElemsBwd(dictBoundedJoinSemilattice)(v._3._2._1)(v1._2)
+      );
+    }
+  }
+  return throwException(error("absurd"))();
+};
 var listCompFwd = (dictMonadError) => {
   const Bind1 = dictMonadError.MonadThrow0().Monad0().Bind1();
   const Functor0 = Bind1.Apply0().Functor0();
   return (dictBoundedLattice) => (v) => {
     if (v._2._1.tag === "Nil") {
-      return Functor0.map((f) => f($Expr("Constr", v._1, None, "Nil", Nil)))(Functor0.map(econs(v._1)(None))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2._2)));
+      return Functor0.map((f) => f($Expr("Constr", v._1, "Nil", Nil)))(Functor0.map(econs(v._1))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2._2)));
     }
     if (v._2._1.tag === "Cons") {
       if (v._2._1._1.tag === "ListCompGuard") {
         const $0 = v._2._1._1._1;
         const $1 = v._1;
-        return Bind1.bind(listCompFwd(dictMonadError)(dictBoundedLattice)($Tuple($1, $Tuple(v._2._1._2, v._2._2))))((e) => Functor0.map(App2(None)($Expr(
+        return Bind1.bind(listCompFwd(dictMonadError)(dictBoundedLattice)($Tuple($1, $Tuple(v._2._1._2, v._2._2))))((e) => Functor0.map(App2($Expr(
           "Lambda",
           $1,
           $Elim(
             "ElimConstr",
             fromFoldable7([
               $Tuple("True", $Cont("ContExpr", e)),
-              $Tuple("False", $Cont("ContExpr", $Expr("Constr", $1, None, "Nil", Nil)))
+              $Tuple("False", $Cont("ContExpr", $Expr("Constr", $1, "Nil", Nil)))
             ])
           )
         )))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0)));
@@ -33750,32 +34791,29 @@ var listCompFwd = (dictMonadError) => {
           "Cons",
           $Tuple(
             $List("Cons", $Either("Left", v._2._1._1._1._1), Nil),
-            $Tuple(Nil, $Expr2("ListComp", $1, None, v._2._2, v._2._1._2))
+            $Tuple(Nil, $Expr2("ListComp", $1, v._2._2, v._2._1._2))
           ),
           Nil
-        )))((\u03C3) => Functor0.map(App2(None)($Expr(
-          "Lambda",
-          $1,
-          \u03C3.tag === "ContElim" ? \u03C3._1 : throwException(error("Eliminator expected"))()
-        )))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0)));
+        )))((\u03C3) => Functor0.map(App2($Expr("Lambda", $1, \u03C3.tag === "ContElim" ? \u03C3._1 : throwException(error("Eliminator expected"))())))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0)));
       }
       if (v._2._1._1.tag === "ListCompGen") {
-        const $0 = v._2._1._1._3;
+        const $0 = v._2._1._1._2;
         const $1 = v._1;
-        const ks = orElseFwd($1)($Tuple(
-          $List("Cons", $Either("Left", v._2._1._1._2), Nil),
-          $Expr2("ListComp", $1, None, v._2._2, v._2._1._2)
-        ));
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._2._1._1._1))((edoc) => Bind1.bind(clausesStateFwd(dictBoundedLattice)(dictMonadError)($List(
-          "Cons",
-          $Tuple(ks._1._1, $Tuple(Nil, ks._1._2)),
-          listMap((m) => $Tuple(m._1, $Tuple(Nil, m._2)))(ks._2)
-        )))((\u03C3) => Functor0.map(App2(edoc)($Expr(
+        return Bind1.bind(clausesStateFwd(dictBoundedLattice)(dictMonadError)((() => {
+          const $2 = orElseFwd($1)($Tuple(
+            $List("Cons", $Either("Left", v._2._1._1._1), Nil),
+            $Expr2("ListComp", $1, v._2._2, v._2._1._2)
+          ));
+          return $List(
+            "Cons",
+            $Tuple($2._1._1, $Tuple(Nil, $2._1._2)),
+            listMap((m) => $Tuple(m._1, $Tuple(Nil, m._2)))($2._2)
+          );
+        })()))((\u03C3) => Functor0.map(App2($Expr(
           "App",
-          None,
           $Expr("Var", "concatMap"),
           $Expr("Lambda", $1, \u03C3.tag === "ContElim" ? \u03C3._1 : throwException(error("Eliminator expected"))())
-        )))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0))));
+        )))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0)));
       }
     }
     fail();
@@ -33790,58 +34828,58 @@ var listCompBwd = (dictBoundedJoinSemilattice) => {
         "Cons",
         $Tuple(
           $List("Cons", $Either("Left", p), Nil),
-          $Tuple(Nil, $Expr2("ListComp", void 0, None, s0$p, qs))
+          $Tuple(Nil, $Expr2("ListComp", void 0, s0$p, qs))
         ),
         Nil
       ));
-      if ($12.tag === "Cons" && $12._1._1.tag === "Cons" && $12._1._1._1.tag === "Left" && $12._1._1._2.tag === "Nil" && $12._1._2._1.tag === "Nil" && $12._1._2._2.tag === "ListComp" && $12._1._2._2._2.tag === "None" && $12._2.tag === "Nil") {
+      if ($12.tag === "Cons" && $12._1._1.tag === "Cons" && $12._1._1._1.tag === "Left" && $12._1._1._2.tag === "Nil" && $12._1._2._1.tag === "Nil" && $12._1._2._2.tag === "ListComp" && $12._2.tag === "Nil") {
         return $Tuple(
           $0.join($12._1._2._2._1)(\u03B1$p),
-          $Tuple($List("Cons", $Qualifier("ListCompDecl", $VarDef2(p, exprBwd(dictBoundedJoinSemilattice)(e)(s0))), $12._1._2._2._4), $12._1._2._2._3)
+          $Tuple($List("Cons", $Qualifier("ListCompDecl", $VarDef2(p, exprBwd(dictBoundedJoinSemilattice)(e)(s0))), $12._1._2._2._3), $12._1._2._2._2)
         );
       }
       fail();
     };
     if (v.tag === "Constr") {
-      if (v._4.tag === "Cons" && v._4._2.tag === "Cons" && v._4._2._1.tag === "Constr" && v._4._2._1._4.tag === "Nil" && v._4._2._2.tag === "Nil" && v1._1.tag === "Nil" && v._3 === ":" && v._4._2._1._3 === "Nil") {
-        return $Tuple($0.join(v._4._2._1._1)(v._1), $Tuple(Nil, exprBwd(dictBoundedJoinSemilattice)(v._4._1)(v1._2)));
+      if (v._3.tag === "Cons" && v._3._2.tag === "Cons" && v._3._2._1.tag === "Constr" && v._3._2._1._3.tag === "Nil" && v._3._2._2.tag === "Nil" && v1._1.tag === "Nil" && v._2 === ":" && v._3._2._1._2 === "Nil") {
+        return $Tuple($0.join(v._3._2._1._1)(v._1), $Tuple(Nil, exprBwd(dictBoundedJoinSemilattice)(v._3._1)(v1._2)));
       }
       return throwException(error("absurd"))();
     }
     if (v.tag === "App" && v1._1.tag === "Cons") {
-      if (v._2.tag === "Lambda") {
-        if (v._2._2.tag === "ElimConstr" && v1._1._1.tag === "ListCompGuard") {
+      if (v._1.tag === "Lambda") {
+        if (v._1._2.tag === "ElimConstr" && v1._1._1.tag === "ListCompGuard") {
           const $2 = listCompBwd(dictBoundedJoinSemilattice)((() => {
-            const $22 = $$get2(showString)(mapDictString)("True")(v._2._2._1);
+            const $22 = $$get2(showString)(mapDictString)("True")(v._1._2._1);
             if ($22.tag === "ContExpr") {
               return $22._1;
             }
             return throwException(error("Expression expected"))();
           })())($Tuple(v1._1._2, v1._2));
-          const $3 = $$get2(showString)(mapDictString)("False")(v._2._2._1);
+          const $3 = $$get2(showString)(mapDictString)("False")(v._1._2._1);
           const $4 = $3.tag === "ContExpr" ? $3._1 : throwException(error("Expression expected"))();
-          if ($4.tag === "Constr" && $4._4.tag === "Nil" && $4._3 === "Nil") {
+          if ($4.tag === "Constr" && $4._3.tag === "Nil" && $4._2 === "Nil") {
             return $Tuple(
-              $0.join($0.join($2._1)(v._2._1))($4._1),
-              $Tuple($List("Cons", $Qualifier("ListCompGuard", exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._1._1._1)), $2._2._1), $2._2._2)
+              $0.join($0.join($2._1)(v._1._1))($4._1),
+              $Tuple($List("Cons", $Qualifier("ListCompGuard", exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._1._1._1)), $2._2._1), $2._2._2)
             );
           }
           fail();
         }
         if (v1._1._1.tag === "ListCompDecl") {
-          return $1(v._3, v1._1._1._1._1, v1._1._2, v1._1._1._1._2, v1._2, v._2._1, v._2._2);
+          return $1(v._2, v1._1._1._1._1, v1._1._2, v1._1._1._1._2, v1._2, v._1._1, v._1._2);
         }
         return throwException(error("absurd"))();
       }
-      if (v._2.tag === "App" && v._2._2.tag === "Var" && v._2._2._1 === "concatMap" && v._2._3.tag === "Lambda" && v1._1._1.tag === "ListCompGen") {
+      if (v._1.tag === "App" && v._1._1.tag === "Var" && v._1._1._1 === "concatMap" && v._1._2.tag === "Lambda" && v1._1._1.tag === "ListCompGen") {
         const $2 = orElseBwd1($Tuple(
-          $List("Cons", $Either("Left", v1._1._1._2), Nil),
-          $Expr2("ListComp", void 0, None, v1._2, v1._1._2)
+          $List("Cons", $Either("Left", v1._1._1._1), Nil),
+          $Expr2("ListComp", void 0, v1._2, v1._1._2)
         ))((() => {
-          const $22 = nonEmptyListNonEmptyList.nonEmpty(clausesStateBwd(dictBoundedJoinSemilattice)($Cont("ContElim", v._2._3._2))((() => {
+          const $22 = nonEmptyListNonEmptyList.nonEmpty(clausesStateBwd(dictBoundedJoinSemilattice)($Cont("ContElim", v._1._2._2))((() => {
             const $23 = orElseFwd()($Tuple(
-              $List("Cons", $Either("Left", v1._1._1._2), Nil),
-              $Expr2("ListComp", void 0, None, v1._2, v1._1._2)
+              $List("Cons", $Either("Left", v1._1._1._1), Nil),
+              $Expr2("ListComp", void 0, v1._2, v1._1._2)
             ));
             return $List(
               "Cons",
@@ -33866,11 +34904,8 @@ var listCompBwd = (dictBoundedJoinSemilattice) => {
         })());
         if ($2._2.tag === "ListComp") {
           return $Tuple(
-            $0.join($0.join($2._2._1)(v._2._3._1))($2._1),
-            $Tuple(
-              $List("Cons", $Qualifier("ListCompGen", None, v1._1._1._2, exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._1._1._3)), $2._2._4),
-              $2._2._3
-            )
+            $0.join($0.join($2._2._1)(v._1._2._1))($2._1),
+            $Tuple($List("Cons", $Qualifier("ListCompGen", v1._1._1._1, exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._1._1._2)), $2._2._3), $2._2._2)
           );
         }
         fail();
@@ -33881,6 +34916,7 @@ var listCompBwd = (dictBoundedJoinSemilattice) => {
 };
 var exprFwd = (dictBoundedLattice) => {
   const top3 = dictBoundedLattice.BoundedMeetSemilattice1().top;
+  const JoinSemilattice0 = dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0();
   return (dictMonadError) => {
     const Monad0 = dictMonadError.MonadThrow0().Monad0();
     const Applicative0 = Monad0.Applicative0();
@@ -33896,101 +34932,85 @@ var exprFwd = (dictBoundedLattice) => {
         return Applicative0.pure($Expr("Op", v._1));
       }
       if (v.tag === "Int") {
-        const $0 = v._3;
-        const $1 = v._1;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._2))((edoc) => Applicative0.pure($Expr("Int", $1, edoc, $0)));
+        return Applicative0.pure($Expr("Int", v._1, v._2));
       }
       if (v.tag === "Float") {
-        const $0 = v._3;
-        const $1 = v._1;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._2))((edoc) => Applicative0.pure($Expr("Float", $1, edoc, $0)));
+        return Applicative0.pure($Expr("Float", v._1, v._2));
       }
       if (v.tag === "Str") {
-        const $0 = v._3;
-        const $1 = v._1;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._2))((edoc) => Applicative0.pure($Expr("Str", $1, edoc, $0)));
+        return Applicative0.pure($Expr("Str", v._1, v._2));
       }
       if (v.tag === "Constr") {
-        const $0 = v._3;
-        const $1 = v._4;
-        const $2 = v._1;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._2))((edoc) => Functor0.map(Constr($2)(edoc)($0))(traverse22(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0()))($1)));
+        return Functor0.map(Constr(v._1)(v._2))(traverse22(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0()))(v._3));
       }
       if (v.tag === "Dictionary") {
-        const $0 = v._2;
-        const $1 = v._1;
-        const v1 = unzip(v._3);
-        const $2 = v1._2;
-        return Bind1.bind(traverse22(desugarableDictEntryExpr.desug(dictMonadError)(dictBoundedLattice))(v1._1))((ks$p) => Bind1.bind(traverse22(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0()))($2))((es) => Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)($0))((edoc) => Functor0.map(Dictionary($1)(edoc))(Applicative0.pure(zipWith2((k) => (v2) => $Pair(
-          k,
-          v2
-        ))(ks$p)(es))))));
+        const $0 = v._1;
+        const v1 = unzip(v._2);
+        const $1 = v1._2;
+        return Bind1.bind(traverse22(desugarableDictEntryExpr.desug(dictMonadError)(dictBoundedLattice))(v1._1))((ks$p) => Bind1.bind(traverse22(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0()))($1))((es) => Functor0.map(Dictionary($0))(Applicative0.pure(zipWith2(Pair)(ks$p)(es)))));
       }
       if (v.tag === "Matrix") {
-        const $0 = v._3;
-        const $1 = v._5;
-        const $2 = v._4._1;
-        const $3 = v._4._2;
-        const $4 = v._1;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._2))((edoc) => Apply0.apply(Functor0.map((f) => f($Tuple($2, $3)))(Functor0.map(Matrix($4)(edoc))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($1)));
+        return Apply0.apply(Functor0.map((f) => f($Tuple(v._3._1, v._3._2)))(Functor0.map(Matrix(v._1))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._4));
       }
       if (v.tag === "Lambda") {
         return Functor0.map(Lambda(top3))(desugarableClausesElim.desug(dictMonadError)(dictBoundedLattice)(v._1));
       }
       if (v.tag === "Project") {
         const $0 = v._2;
-        const $1 = v._3;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._1))((edoc) => Functor0.map((f) => f($1))(Functor0.map(Project(edoc))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0))));
+        return Functor0.map((f) => f($0))(Functor0.map(Project)(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1)));
       }
       if (v.tag === "DProject") {
-        const $0 = v._2;
-        const $1 = v._3;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._1))((edoc) => Apply0.apply(Functor0.map(DProject(edoc))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0)))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($1)));
+        return Apply0.apply(Functor0.map(DProject)(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1)))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2));
       }
       if (v.tag === "App") {
-        const $0 = v._2;
-        const $1 = v._3;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._1))((edoc) => Apply0.apply(Functor0.map(App2(edoc))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($0)))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($1)));
+        return Apply0.apply(Functor0.map(App2)(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1)))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2));
       }
       if (v.tag === "BinaryApp") {
-        return Apply0.apply(Functor0.map(App2(None))(Functor0.map(App2(None)($Expr("Op", v._2)))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._3));
+        return Apply0.apply(Functor0.map(App2)(Functor0.map(App2($Expr("Op", v._2)))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._3));
       }
       if (v.tag === "MatchAs") {
-        return Apply0.apply(Functor0.map(App2(None))(Functor0.map(Lambda(top3))(desugarableClausesElim.desug(dictMonadError)(dictBoundedLattice)($NonEmpty(
+        return Apply0.apply(Functor0.map(App2)(Functor0.map(Lambda(top3))(desugarableClausesElim.desug(dictMonadError)(dictBoundedLattice)($NonEmpty(
           $Tuple($NonEmpty(v._2._1._1, Nil), v._2._1._2),
           listMap((x2) => $Tuple($NonEmpty(x2._1, Nil), x2._2))(v._2._2)
         )))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1));
       }
       if (v.tag === "IfElse") {
-        return Apply0.apply(Functor0.map(App2(None))(Functor0.map(Lambda(top3))(Apply0.apply(Functor0.map(elimBool)(Functor0.map(ContExpr)(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2))))(Functor0.map(ContExpr)(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._3))))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1));
+        return Apply0.apply(Functor0.map(App2)(Functor0.map(Lambda(top3))(Apply0.apply(Functor0.map(elimBool)(Functor0.map(ContExpr)(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2))))(Functor0.map(ContExpr)(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._3))))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1));
+      }
+      if (v.tag === "Paragraph") {
+        return paragraphFwd(dictBoundedLattice)(dictMonadError)(v._1);
       }
       if (v.tag === "ListEmpty") {
-        const $0 = v._1;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._2))((edoc) => Applicative0.pure($Expr("Constr", $0, edoc, "Nil", Nil)));
+        return Applicative0.pure($Expr("Constr", v._1, "Nil", Nil));
       }
       if (v.tag === "ListNonEmpty") {
-        const $0 = v._4;
-        const $1 = v._3;
-        const $2 = v._1;
-        return Bind1.bind(desugComment(dictBoundedLattice)(dictMonadError)(v._2))((edoc) => Apply0.apply(Functor0.map(econs($2)(edoc))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())($1)))(desugarableListRestExpr.desug(dictMonadError)(dictBoundedLattice)($0)));
+        return Apply0.apply(Functor0.map(econs(v._1))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2)))(desugarableListRestExpr.desug(dictMonadError)(dictBoundedLattice)(v._3));
       }
       if (v.tag === "ListEnum") {
-        return Apply0.apply(Functor0.map(App2(None))(Functor0.map(App2(None)($Expr("Var", "enumFromTo")))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2));
+        return Apply0.apply(Functor0.map(App2)(Functor0.map(App2($Expr("Var", "enumFromTo")))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._1))))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2));
       }
       if (v.tag === "ListComp") {
-        if (v._4.tag === "Cons" && v._4._1.tag === "ListCompGen") {
+        if (v._3.tag === "Cons" && v._3._1.tag === "ListCompGen") {
           return listCompFwd(dictMonadError)(dictBoundedLattice)($Tuple(
             v._1,
-            $Tuple($List("Cons", $Qualifier("ListCompGen", v._2, v._4._1._2, v._4._1._3), v._4._2), v._3)
+            $Tuple($List("Cons", $Qualifier("ListCompGen", v._3._1._1, v._3._1._2), v._3._2), v._2)
           ));
         }
-        return listCompFwd(dictMonadError)(dictBoundedLattice)($Tuple(v._1, $Tuple(v._4, v._3)));
+        return listCompFwd(dictMonadError)(dictBoundedLattice)($Tuple(v._1, $Tuple(v._3, v._2)));
       }
       if (v.tag === "Let") {
         return varDefsFwd(dictMonadError)(dictBoundedLattice)($Tuple(v._1, v._2));
       }
       if (v.tag === "LetRec") {
         return Apply0.apply(Functor0.map(LetRec)(recDefsFwd(dictMonadError)(dictBoundedLattice)(v._1)))(exprFwd(dictBoundedLattice)(dictMonadError)(dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0())(v._2));
+      }
+      if (v.tag === "DocExpr") {
+        const $0 = v._2;
+        return Bind1.bind(exprFwd(dictBoundedLattice)(dictMonadError)(JoinSemilattice0)(v._1))((e) => Bind1.bind(exprFwd(dictBoundedLattice)(dictMonadError)(JoinSemilattice0)($0))((e$p) => Applicative0.pure($Expr(
+          "DocExpr",
+          e,
+          e$p
+        ))));
       }
       fail();
     };
@@ -34002,187 +35022,188 @@ var exprBwd = (dictBoundedJoinSemilattice) => {
     return (v) => $02;
   })());
   return (v) => (v1) => {
-    const $1 = (doc2, doc$p, e, q, qs, s) => {
+    const $1 = (e, q, qs, s) => {
       const v2 = listCompBwd(dictBoundedJoinSemilattice)(e)($Tuple($List("Cons", q, qs), s));
-      return $Expr2("ListComp", v2._1, desugCommentBwd(dictBoundedJoinSemilattice)(doc2)(doc$p), v2._2._2, v2._2._1);
+      return $Expr2("ListComp", v2._1, v2._2._2, v2._2._1);
     };
     const $2 = (e, qs, s) => {
       const v2 = listCompBwd(dictBoundedJoinSemilattice)(e)($Tuple(qs, s));
-      return $Expr2("ListComp", v2._1, None, v2._2._2, v2._2._1);
+      return $Expr2("ListComp", v2._1, v2._2._2, v2._2._1);
     };
     if (v.tag === "Var") {
       if (v1.tag === "Var") {
         return $Expr2("Var", v1._1);
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Op") {
       if (v1.tag === "Op") {
         return $Expr2("Op", v1._1);
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Int") {
       if (v1.tag === "Int") {
-        return $Expr2("Int", v._1, desugCommentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2), v1._3);
+        return $Expr2("Int", v._1, v1._2);
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Float") {
       if (v1.tag === "Float") {
-        return $Expr2("Float", v._1, desugCommentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2), v1._3);
+        return $Expr2("Float", v._1, v1._2);
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Str") {
       if (v1.tag === "Str") {
-        return $Expr2("Str", v._1, desugCommentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2), v1._3);
+        return $Expr2("Str", v._1, v1._2);
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Constr") {
       if (v1.tag === "Constr") {
         return $Expr2(
           "Constr",
           v._1,
-          desugCommentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2),
-          v1._3,
+          v1._2,
           listMap((() => {
             const $3 = exprBwd(dictBoundedJoinSemilattice);
             return (v$1) => $3(v$1._1)(v$1._2);
-          })())(zipWith2(Tuple)(v._4)(v1._4))
+          })())(zipWith2(Tuple)(v._3)(v1._3))
         );
       }
-      if (v._4.tag === "Nil") {
-        if (v1.tag === "ListEmpty") {
-          return $Expr2("ListEmpty", v._1, desugCommentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2));
+      if (v._3.tag === "Cons") {
+        if (v._3._2.tag === "Nil") {
+          if (v1.tag === "Paragraph") {
+            if (v._2 === "Paragraph") {
+              return $Expr2("Paragraph", paragraphElemsBwd(dictBoundedJoinSemilattice)(v._3._1)(v1._1));
+            }
+            return throwException(error("ExprBwd failed, s: " + show2(v1)))();
+          }
+          if (v1.tag === "ListComp") {
+            return $2(v, v1._3, v1._2);
+          }
+          return throwException(error("ExprBwd failed, s: " + show2(v1)))();
+        }
+        if (v._3._2.tag === "Cons" && v._3._2._2.tag === "Nil" && v1.tag === "ListNonEmpty") {
+          return $Expr2("ListNonEmpty", v._1, exprBwd(dictBoundedJoinSemilattice)(v._3._1)(v1._2), desugarableListRestExpr.desugBwd(dictBoundedJoinSemilattice)(v._3._2._1)(v1._3));
         }
         if (v1.tag === "ListComp") {
-          return $2(v, v1._4, v1._3);
+          return $2(v, v1._3, v1._2);
         }
-        return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+        return throwException(error("ExprBwd failed, s: " + show2(v1)))();
       }
-      if (v._4.tag === "Cons" && v._4._2.tag === "Cons" && v._4._2._2.tag === "Nil" && v1.tag === "ListNonEmpty") {
-        return $Expr2(
-          "ListNonEmpty",
-          v._1,
-          desugCommentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2),
-          exprBwd(dictBoundedJoinSemilattice)(v._4._1)(v1._3),
-          desugarableListRestExpr.desugBwd(dictBoundedJoinSemilattice)(v._4._2._1)(v1._4)
-        );
+      if (v._3.tag === "Nil" && v1.tag === "ListEmpty") {
+        return $Expr2("ListEmpty", v._1);
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Dictionary") {
       if (v1.tag === "Dictionary") {
         return $Expr2(
           "Dictionary",
           v._1,
-          desugCommentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2),
           zipWith2((v2) => {
             const $3 = v2._1;
             const $4 = v2._2;
             return (v3) => $Tuple(desugarableDictEntryExpr.desugBwd(dictBoundedJoinSemilattice)($3)(v3._1), exprBwd(dictBoundedJoinSemilattice)($4)(v3._2));
-          })(v._3)(v1._3)
+          })(v._2)(v1._2)
         );
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Matrix") {
       if (v1.tag === "Matrix") {
-        return $Expr2(
-          "Matrix",
-          v._1,
-          desugCommentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2),
-          exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._3),
-          $Tuple(v1._4._1, v1._4._2),
-          exprBwd(dictBoundedJoinSemilattice)(v._5)(v1._5)
-        );
+        return $Expr2("Matrix", v._1, exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2), $Tuple(v1._3._1, v1._3._2), exprBwd(dictBoundedJoinSemilattice)(v._4)(v1._4));
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Lambda") {
       if (v1.tag === "Lambda") {
         return $Expr2("Lambda", toClausesStateBwd(clausesStateBwd(dictBoundedJoinSemilattice)($Cont("ContElim", v._2))(toClausesStateFwd(v1._1))));
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "Project") {
       if (v1.tag === "Project") {
-        return $Expr2("Project", desugCommentBwd(dictBoundedJoinSemilattice)(v._1)(v1._1), exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2), v._3);
+        return $Expr2("Project", exprBwd(dictBoundedJoinSemilattice)(v._1)(v1._1), v._2);
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
+    }
+    if (v.tag === "DProject") {
+      if (v1.tag === "DProject") {
+        return $Expr2("DProject", exprBwd(dictBoundedJoinSemilattice)(v._1)(v1._1), exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2));
+      }
+      if (v1.tag === "ListComp") {
+        return $2(v, v1._3, v1._2);
+      }
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "App") {
       if (v1.tag === "App") {
-        return $Expr2(
-          "App",
-          desugCommentBwd(dictBoundedJoinSemilattice)(v._1)(v1._1),
-          exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2),
-          exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._3)
-        );
+        return $Expr2("App", exprBwd(dictBoundedJoinSemilattice)(v._1)(v1._1), exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2));
       }
-      if (v._2.tag === "App") {
-        if (v._2._2.tag === "Op") {
+      if (v._1.tag === "App") {
+        if (v._1._1.tag === "Op") {
           if (v1.tag === "BinaryApp") {
-            return $Expr2("BinaryApp", exprBwd(dictBoundedJoinSemilattice)(v._2._3)(v1._1), v1._2, exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._3));
+            return $Expr2("BinaryApp", exprBwd(dictBoundedJoinSemilattice)(v._1._2)(v1._1), v1._2, exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._3));
           }
           if (v1.tag === "ListComp") {
-            if (v1._4.tag === "Cons" && v1._4._1.tag === "ListCompGen") {
-              return $1(v._1, v1._2, v, v1._4._1, v1._4._2, v1._3);
+            if (v1._3.tag === "Cons" && v1._3._1.tag === "ListCompGen") {
+              return $1(v, v1._3._1, v1._3._2, v1._2);
             }
-            return $2(v, v1._4, v1._3);
+            return $2(v, v1._3, v1._2);
           }
-          return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+          return throwException(error("ExprBwd failed, s: " + show2(v1)))();
         }
-        if (v._2._2.tag === "Var" && v._2._2._1 === "enumFromTo" && v1.tag === "ListEnum") {
-          return $Expr2("ListEnum", exprBwd(dictBoundedJoinSemilattice)(v._2._3)(v1._1), exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._2));
+        if (v._1._1.tag === "Var" && v._1._1._1 === "enumFromTo" && v1.tag === "ListEnum") {
+          return $Expr2("ListEnum", exprBwd(dictBoundedJoinSemilattice)(v._1._2)(v1._1), exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2));
         }
         if (v1.tag === "ListComp") {
-          if (v1._4.tag === "Cons" && v1._4._1.tag === "ListCompGen") {
-            return $1(v._1, v1._2, v, v1._4._1, v1._4._2, v1._3);
+          if (v1._3.tag === "Cons" && v1._3._1.tag === "ListCompGen") {
+            return $1(v, v1._3._1, v1._3._2, v1._2);
           }
-          return $2(v, v1._4, v1._3);
+          return $2(v, v1._3, v1._2);
         }
-        return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+        return throwException(error("ExprBwd failed, s: " + show2(v1)))();
       }
-      if (v._2.tag === "Lambda") {
+      if (v._1.tag === "Lambda") {
         if (v1.tag === "MatchAs") {
           return $Expr2(
             "MatchAs",
-            exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._1),
+            exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._1),
             (() => {
-              const $3 = toClausesStateBwd(clausesStateBwd(dictBoundedJoinSemilattice)($Cont("ContElim", v._2._2))(toClausesStateFwd($NonEmpty(
+              const $3 = toClausesStateBwd(clausesStateBwd(dictBoundedJoinSemilattice)($Cont("ContElim", v._1._2))(toClausesStateFwd($NonEmpty(
                 $Tuple($NonEmpty(v1._2._1._1, Nil), v1._2._1._2),
                 listMap((x2) => $Tuple($NonEmpty(x2._1, Nil), x2._2))(v1._2._2)
               ))));
@@ -34190,19 +35211,19 @@ var exprBwd = (dictBoundedJoinSemilattice) => {
             })()
           );
         }
-        if (v._2._2.tag === "ElimConstr" && v1.tag === "IfElse") {
+        if (v._1._2.tag === "ElimConstr" && v1.tag === "IfElse") {
           return $Expr2(
             "IfElse",
-            exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._1),
-            Object.hasOwn(v._2._2._1, "True") ? exprBwd(dictBoundedJoinSemilattice)((() => {
-              const $3 = $$get2(showString)(mapDictString)("True")(v._2._2._1);
+            exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._1),
+            Object.hasOwn(v._1._2._1, "True") ? exprBwd(dictBoundedJoinSemilattice)((() => {
+              const $3 = $$get2(showString)(mapDictString)("True")(v._1._2._1);
               if ($3.tag === "ContExpr") {
                 return $3._1;
               }
               return throwException(error("Expression expected"))();
             })())(v1._2) : $0(v1._2),
-            Object.hasOwn(v._2._2._1, "False") ? exprBwd(dictBoundedJoinSemilattice)((() => {
-              const $3 = $$get2(showString)(mapDictString)("False")(v._2._2._1);
+            Object.hasOwn(v._1._2._1, "False") ? exprBwd(dictBoundedJoinSemilattice)((() => {
+              const $3 = $$get2(showString)(mapDictString)("False")(v._1._2._1);
               if ($3.tag === "ContExpr") {
                 return $3._1;
               }
@@ -34212,120 +35233,31 @@ var exprBwd = (dictBoundedJoinSemilattice) => {
         }
       }
       if (v1.tag === "ListComp") {
-        return $2(v, v1._4, v1._3);
+        return $2(v, v1._3, v1._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v1.tag === "ListComp") {
-      return $2(v, v1._4, v1._3);
+      return $2(v, v1._3, v1._2);
     }
     if (v.tag === "Let") {
       if (v1.tag === "Let") {
-        const $3 = varDefsBwd(dictBoundedJoinSemilattice)($Expr("Let", v._1, v._2))($Tuple(v1._1, v1._2));
-        return $Expr2("Let", $3._1, $3._2);
+        const v2 = varDefsBwd(dictBoundedJoinSemilattice)($Expr("Let", v._1, v._2))($Tuple(v1._1, v1._2));
+        return $Expr2("Let", v2._1, v2._2);
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
     if (v.tag === "LetRec") {
       if (v1.tag === "LetRec") {
         return $Expr2("LetRec", recDefsBwd(dictBoundedJoinSemilattice)(v._1)(v1._1), exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2));
       }
-      return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+      return throwException(error("ExprBwd failed, s: " + show2(v1)))();
     }
-    if (v.tag === "DProject" && v1.tag === "DProject") {
-      return $Expr2(
-        "DProject",
-        desugCommentBwd(dictBoundedJoinSemilattice)(v._1)(v1._1),
-        exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2),
-        exprBwd(dictBoundedJoinSemilattice)(v._3)(v1._3)
-      );
+    if (v.tag === "DocExpr" && v1.tag === "DocExpr") {
+      return $Expr2("DocExpr", exprBwd(dictBoundedJoinSemilattice)(v._1)(v1._1), exprBwd(dictBoundedJoinSemilattice)(v._2)(v1._2));
     }
-    return throwException(error("ExprBwd failed, Right: " + show2(v1)))();
+    return throwException(error("ExprBwd failed, s: " + show2(v1)))();
   };
-};
-var desugCommentBwd = (dictBoundedJoinSemilattice) => (v) => (v1) => {
-  if (v.tag === "None") {
-    if (v1.tag === "None") {
-      return None;
-    }
-    if (v1.tag === "Doc") {
-      return throwException(error("E Doc.None S Doc"))();
-    }
-    fail();
-  }
-  if (v.tag === "Doc") {
-    if (v1.tag === "Doc") {
-      return $DocOpt("Doc", commentBwd(dictBoundedJoinSemilattice)(v._1)(v1._1));
-    }
-    if (v1.tag === "None") {
-      return throwException(error("E Doc S Doc.None"))();
-    }
-  }
-  fail();
-};
-var desugComment = (dictBoundedLattice) => (dictMonadError) => {
-  const Monad0 = dictMonadError.MonadThrow0().Monad0();
-  return (v) => {
-    if (v.tag === "None") {
-      return Monad0.Applicative0().pure(None);
-    }
-    if (v.tag === "Doc") {
-      return Monad0.Bind1().Apply0().Functor0().map(Doc)(commentFwd(dictBoundedLattice)(dictMonadError)(v._1));
-    }
-    fail();
-  };
-};
-var commentFwd = (dictBoundedLattice) => (dictMonadError) => {
-  const Monad0 = dictMonadError.MonadThrow0().Monad0();
-  const Apply0 = Monad0.Bind1().Apply0();
-  return (v) => {
-    if (v.tag === "Cons") {
-      return Apply0.apply(Apply0.Functor0().map(Cons)(commentElemFwd(dictBoundedLattice)(dictMonadError)(v._1)))(commentFwd(dictBoundedLattice)(dictMonadError)(v._2));
-    }
-    if (v.tag === "Nil") {
-      return Monad0.Applicative0().pure(Nil);
-    }
-    fail();
-  };
-};
-var commentElemFwd = (dictBoundedLattice) => {
-  const JoinSemilattice0 = dictBoundedLattice.BoundedJoinSemilattice0().JoinSemilattice0();
-  return (dictMonadError) => {
-    const Monad0 = dictMonadError.MonadThrow0().Monad0();
-    return (v) => {
-      if (v.tag === "Token") {
-        return Monad0.Applicative0().pure($DocCommentElem("Token", v._1));
-      }
-      if (v.tag === "Unquote") {
-        return Monad0.Bind1().Apply0().Functor0().map(Unquote)(exprFwd(dictBoundedLattice)(dictMonadError)(JoinSemilattice0)(v._1));
-      }
-      fail();
-    };
-  };
-};
-var commentElemBwd = (dictBoundedJoinSemilattice) => (v) => (v1) => {
-  if (v.tag === "Token") {
-    if (v1.tag === "Token") {
-      return $DocCommentElem("Token", v1._1);
-    }
-    return throwException(error("commentElemBwd mismatch"))();
-  }
-  if (v.tag === "Unquote" && v1.tag === "Unquote") {
-    return $DocCommentElem("Unquote", exprBwd(dictBoundedJoinSemilattice)(v._1)(v1._1));
-  }
-  return throwException(error("commentElemBwd mismatch"))();
-};
-var commentBwd = (dictBoundedJoinSemilattice) => (v) => (v1) => {
-  if (v.tag === "Cons") {
-    if (v1.tag === "Cons") {
-      return $List("Cons", commentElemBwd(dictBoundedJoinSemilattice)(v._1)(v1._1), commentBwd(dictBoundedJoinSemilattice)(v._2)(v1._2));
-    }
-    return throwException(error("commentBwd mismatch"))();
-  }
-  if (v.tag === "Nil" && v1.tag === "Nil") {
-    return Nil;
-  }
-  return throwException(error("commentBwd mismatch"))();
 };
 var clausesStateFwd = (dictBoundedLattice) => {
   const top3 = dictBoundedLattice.BoundedMeetSemilattice1().top;
@@ -34553,15 +35485,26 @@ var hcat = /* @__PURE__ */ (() => foldableList.foldMap(monoidColumns)(unsafeCoer
 var hcat1 = /* @__PURE__ */ (() => foldableArray.foldMap(monoidColumns)(unsafeCoerce))();
 var toUnfoldable8 = /* @__PURE__ */ toUnfoldable4(unfoldableList);
 var toUnfoldable13 = /* @__PURE__ */ toAscUnfoldable(unfoldableList);
-var isSimpleVal = {
-  isSimple: (v) => {
-    if (v._3.tag === "Constr") {
-      return v._3._2.tag !== "Cons";
+var rootOpExpr = {
+  rootOp: (v) => {
+    if (v.tag === "Constr" && v._2 === ":") {
+      return $Maybe("Just", ":");
     }
-    if (v._3.tag === "Fun" && v._3._1.tag === "PartialConstr") {
-      return v._3._1._2.tag !== "Cons";
+    return Nothing;
+  }
+};
+var rootOpExpr1 = {
+  rootOp: (v) => {
+    if (v.tag === "Constr") {
+      if (v._2 === ":") {
+        return $Maybe("Just", ":");
+      }
+      return Nothing;
     }
-    return true;
+    if (v.tag === "BinaryApp") {
+      return $Maybe("Just", v._2);
+    }
+    return Nothing;
   }
 };
 var isSimpleExpr = {
@@ -34582,7 +35525,7 @@ var isSimpleExpr = {
       return true;
     }
     if (v.tag === "Constr") {
-      return v._4.tag === "Nil";
+      return v._3.tag === "Nil";
     }
     return v.tag === "Dictionary" || v.tag === "Matrix" || v.tag === "Project" || v.tag === "DProject";
   }
@@ -34605,13 +35548,24 @@ var isSimpleExpr1 = {
       return true;
     }
     if (v.tag === "Constr") {
-      return v._4.tag === "Nil";
+      return v._3.tag === "Nil";
     }
-    return v.tag === "Dictionary" || v.tag === "Matrix" || v.tag === "Project" || v.tag === "DProject" || v.tag === "ListEmpty" || v.tag === "ListNonEmpty" || v.tag === "ListEnum" || v.tag === "ListComp";
+    return v.tag === "Dictionary" || v.tag === "Matrix" || v.tag === "Project" || v.tag === "DProject" || v.tag === "Paragraph" || v.tag === "ListEmpty" || v.tag === "ListNonEmpty" || v.tag === "ListEnum" || v.tag === "ListComp";
+  }
+};
+var isSimpleBaseVal = {
+  isSimple: (v) => {
+    if (v.tag === "Constr") {
+      return v._2.tag !== "Cons";
+    }
+    if (v.tag === "Fun" && v._1.tag === "PartialConstr") {
+      return v._1._2.tag !== "Cons";
+    }
+    return true;
   }
 };
 var vert = (dictFoldable) => {
-  const fromFoldable27 = dictFoldable.foldr(Cons)(Nil);
+  const fromFoldable28 = dictFoldable.foldr(Cons)(Nil);
   return (delim) => {
     const vert$p = (v) => {
       if (v.tag === "Nil") {
@@ -34627,11 +35581,25 @@ var vert = (dictFoldable) => {
       }
       fail();
     };
-    return (x2) => vert$p(fromFoldable27(x2));
+    return (x2) => vert$p(fromFoldable28(x2));
   };
 };
 var vert1 = /* @__PURE__ */ vert(foldableArray);
 var semi = /* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" ;"));
+var rootOpVal = {
+  rootOp: (v) => {
+    if (v._2.tag === "Nothing") {
+      if (v._3.tag === "Constr" && v._3._1 === ":") {
+        return $Maybe("Just", ":");
+      }
+      return Nothing;
+    }
+    if (v._2.tag === "Just") {
+      return Nothing;
+    }
+    fail();
+  }
+};
 var replacement = [
   /* @__PURE__ */ $Tuple("( ", "("),
   /* @__PURE__ */ $Tuple(" )", ")"),
@@ -34650,45 +35618,6 @@ var replacement = [
   /* @__PURE__ */ $Tuple(" \u2E29", "\u2E29"),
   /* @__PURE__ */ $Tuple(" @", "@")
 ];
-var prettyDocCommentElem = (dictPretty) => ({
-  pretty: (v) => {
-    if (v.tag === "Token") {
-      return checkOneLine(split("\n")(" " + v._1));
-    }
-    if (v.tag === "Unquote") {
-      return beside(beside(checkOneLine(split("\n")(" ${")))(dictPretty.pretty(v._1)))(checkOneLine(split("\n")(" }")));
-    }
-    fail();
-  }
-});
-var prettyListDocCommentElem = (dictPretty) => {
-  const $0 = prettyDocCommentElem(dictPretty);
-  return {
-    pretty: (v) => {
-      if (v.tag === "Cons") {
-        if (v._2.tag === "Nil") {
-          return beside($0.pretty(v._1))(checkOneLine(split("\n")(' """')));
-        }
-        return beside($0.pretty(v._1))(prettyListDocCommentElem(dictPretty).pretty(v._2));
-      }
-      if (v.tag === "Nil") {
-        return empty3;
-      }
-      fail();
-    }
-  };
-};
-var prettyDocOpt = (dictPretty) => ({
-  pretty: (v) => {
-    if (v.tag === "Doc") {
-      return beside(checkOneLine(split("\n")(' """')))(prettyListDocCommentElem(dictPretty).pretty(v._1));
-    }
-    if (v.tag === "None") {
-      return empty3;
-    }
-    fail();
-  }
-});
 var pattRepPairs = /* @__PURE__ */ arrayMap((v) => $Tuple(v._1, v._2))(replacement);
 var removeDocWS = (v) => ({
   width: v.width,
@@ -34697,6 +35626,23 @@ var removeDocWS = (v) => ({
 });
 var prettyP = (dictPretty) => (x2) => intercalate4("\n")(removeDocWS(dictPretty.pretty(x2)).lines);
 var nil2 = /* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" []"));
+var isSimpleVal = {
+  isSimple: (v) => {
+    if (v._2.tag === "Nothing") {
+      if (v._3.tag === "Constr") {
+        return v._3._2.tag !== "Cons";
+      }
+      if (v._3.tag === "Fun" && v._3._1.tag === "PartialConstr") {
+        return v._3._1._2.tag !== "Cons";
+      }
+      return true;
+    }
+    if (v._2.tag === "Just") {
+      return false;
+    }
+    fail();
+  }
+};
 var intersperse$p = (v) => (v1) => {
   if (v.tag === "Cons") {
     if (v._2.tag === "Nil") {
@@ -34731,49 +35677,53 @@ var hcomma = (dictFoldable) => {
 var hcomma1 = /* @__PURE__ */ hcomma(foldableList);
 var hcomma2 = /* @__PURE__ */ hcomma(foldableArray);
 var hcomma3 = /* @__PURE__ */ hcomma(foldableDict);
-var prettyRecordOrDict = (dictPretty) => (sep) => (kdelim) => (bracify) => (prettyKey) => (xvs) => bracify(hcomma1(listMap((v) => hcat1([
-  beside(v._1)(sep),
-  dictPretty.pretty(v._2)
-]))(listMap((v) => $Tuple(kdelim(prettyKey(v._1)), v._2))(xvs))));
-var between2 = (l) => (r) => (doc2) => beside(beside(l)(doc2))(r);
+var between2 = (l) => (r) => (doc3) => beside(beside(l)(doc3))(r);
 var brackets = /* @__PURE__ */ between2(/* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" [")))(/* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" ]")));
 var curlyBraces = /* @__PURE__ */ between2(/* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" {")))(/* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" }")));
+var prettyDict = (dictPretty) => (prettyKey) => (xvs) => curlyBraces(hcomma1(listMap((v) => hcat1([
+  beside(v._1)(checkOneLine(split("\n")(" :"))),
+  dictPretty.pretty(v._2)
+]))(listMap((v) => $Tuple(prettyKey(v._1), v._2))(xvs))));
 var keyBracks = /* @__PURE__ */ between2(/* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" [")))(/* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" ]")));
 var parentheses = /* @__PURE__ */ between2(/* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" (")))(/* @__PURE__ */ checkOneLine(/* @__PURE__ */ split("\n")(" )")));
+var prettyConsArg = (dictRootOp) => (dictPretty) => (e) => {
+  const v = dictRootOp.rootOp(e);
+  if (v.tag === "Nothing") {
+    return dictPretty.pretty(e);
+  }
+  if (v.tag === "Just") {
+    if (getPrec(v._1) <= getPrec(":")) {
+      return parentheses(dictPretty.pretty(e));
+    }
+    return dictPretty.pretty(e);
+  }
+  fail();
+};
 var prettySimple = (dictIsSimple) => (dictPretty) => (s) => {
   if (dictIsSimple.isSimple(s)) {
     return dictPretty.pretty(s);
   }
   return parentheses(dictPretty.pretty(s));
 };
-var prettyConstr = (dictIsSimple) => (dictPretty) => (v) => (v1) => {
-  const $0 = (c, xs) => hcat($List(
+var prettyConstr = (dictRootOp) => (dictIsSimple) => (dictPretty) => (v) => (v1) => {
+  const $0 = (c, es) => hcat($List(
     "Cons",
     checkOneLine(split("\n")(" " + showCtr(c))),
-    listMap(prettySimple(dictIsSimple)(dictPretty))(xs)
+    listMap(prettySimple(dictIsSimple)(dictPretty))(es)
   ));
-  if (v1.tag === "Cons") {
-    if (v1._2.tag === "Cons") {
-      if (v === "Pair") {
-        return assertWith("")(v1._2._2.tag === "Nil")(parentheses(hcomma2([dictPretty.pretty(v1._1), dictPretty.pretty(v1._2._1)])));
-      }
-      if (v === "Nil") {
-        return assertWith("")(v1.tag === "Nil")(nil2);
-      }
-      if (v === ":") {
-        return assertWith("")(v1._2._2.tag === "Nil")(parentheses(hcat1([
-          dictPretty.pretty(v1._1),
-          checkOneLine(split("\n")(" :")),
-          dictPretty.pretty(v1._2._1)
-        ])));
-      }
-      return $0(v, v1);
+  if (v1.tag === "Cons" && v1._2.tag === "Cons") {
+    if (v === "Pair") {
+      return assertWith("")(v1._2._2.tag === "Nil")(parentheses(hcomma2([dictPretty.pretty(v1._1), dictPretty.pretty(v1._2._1)])));
     }
     if (v === "Nil") {
       return assertWith("")(v1.tag === "Nil")(nil2);
     }
-    if (v1._2.tag === "Nil") {
-      return beside(checkOneLine(split("\n")(" " + showCtr(v))))(prettySimple(dictIsSimple)(dictPretty)(v1._1));
+    if (v === ":") {
+      return assertWith("")(v1._2._2.tag === "Nil")(hcat1([
+        prettyConsArg(dictRootOp)(dictPretty)(v1._1),
+        checkOneLine(split("\n")(" :")),
+        prettyConsArg(dictRootOp)(dictPretty)(v1._2._1)
+      ]));
     }
     return $0(v, v1);
   }
@@ -34874,22 +35824,22 @@ var prettyExpr = (dictHighlightable) => ({
       return checkOneLine(split("\n")(" " + v._1));
     }
     if (v.tag === "Int") {
-      return beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._2))(dictHighlightable.highlightIf(v._1)(checkOneLine(split("\n")(" " + showIntImpl(v._3)))));
+      return dictHighlightable.highlightIf(v._1)(checkOneLine(split("\n")(" " + showIntImpl(v._2))));
     }
     if (v.tag === "Float") {
-      return beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._2))(dictHighlightable.highlightIf(v._1)(checkOneLine(split("\n")(" " + showNumberImpl(v._3)))));
+      return dictHighlightable.highlightIf(v._1)(checkOneLine(split("\n")(" " + showNumberImpl(v._2))));
     }
     if (v.tag === "Str") {
-      return beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._2))(dictHighlightable.highlightIf(v._1)(checkOneLine(split("\n")(" " + showStringImpl(v._3)))));
+      return dictHighlightable.highlightIf(v._1)(checkOneLine(split("\n")(" " + showStringImpl(v._2))));
     }
     if (v.tag === "Dictionary") {
-      return beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._2))(dictHighlightable.highlightIf(v._1)(prettyRecordOrDict(prettyExpr(dictHighlightable))(checkOneLine(split("\n")(" :")))(keyBracks)(curlyBraces)(prettyExpr(dictHighlightable).pretty)(listMap(toTuple)(v._3))));
+      return dictHighlightable.highlightIf(v._1)(prettyDict(prettyExpr(dictHighlightable))((x2) => keyBracks(prettyExpr(dictHighlightable).pretty(x2)))(listMap(toTuple)(v._2)));
     }
     if (v.tag === "Constr") {
-      return beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._2))(dictHighlightable.highlightIf(v._1)(prettyConstr(isSimpleExpr)(prettyExpr(dictHighlightable))(v._3)(v._4)));
+      return dictHighlightable.highlightIf(v._1)(prettyConstr(rootOpExpr)(isSimpleExpr)(prettyExpr(dictHighlightable))(v._2)(v._3));
     }
     if (v.tag === "Matrix") {
-      return beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._2))(dictHighlightable.highlightIf(v._1)(prettyMatrix(dictHighlightable)(v._3)(v._4._1)(v._4._2)(v._5)));
+      return dictHighlightable.highlightIf(v._1)(prettyMatrix(dictHighlightable)(v._2)(v._3._1)(v._3._2)(v._4));
     }
     if (v.tag === "Lambda") {
       return hcat1([dictHighlightable.highlightIf(v._1)(checkOneLine(split("\n")(" fun"))), prettyElim(dictHighlightable).pretty(v._2)]);
@@ -34914,16 +35864,16 @@ var prettyExpr = (dictHighlightable) => ({
       ]))(prettyExpr(dictHighlightable).pretty(v._2));
     }
     if (v.tag === "Project") {
-      return beside(beside(beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._1))(prettyExpr(dictHighlightable).pretty(v._2)))(checkOneLine(split("\n")(" ."))))(checkOneLine(split("\n")(" " + v._3)));
+      return beside(beside(prettyExpr(dictHighlightable).pretty(v._1))(checkOneLine(split("\n")(" ."))))(checkOneLine(split("\n")(" " + v._2)));
     }
     if (v.tag === "DProject") {
-      return beside(beside(beside(beside(beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._1))(prettyExpr(dictHighlightable).pretty(v._2)))(checkOneLine(split("\n")(" ."))))(checkOneLine(split("\n")(" ["))))(prettyExpr(dictHighlightable).pretty(v._3)))(checkOneLine(split("\n")(" ]")));
+      return beside(beside(beside(beside(prettyExpr(dictHighlightable).pretty(v._1))(checkOneLine(split("\n")(" ."))))(checkOneLine(split("\n")(" ["))))(prettyExpr(dictHighlightable).pretty(v._2)))(checkOneLine(split("\n")(" ]")));
     }
     if (v.tag === "App") {
-      return beside(prettyDocOpt(prettyExpr(dictHighlightable)).pretty(v._1))(hcat1([
-        prettyExpr(dictHighlightable).pretty(v._2),
-        prettyExpr(dictHighlightable).pretty(v._3)
-      ]));
+      return hcat1([prettyExpr(dictHighlightable).pretty(v._1), prettyExpr(dictHighlightable).pretty(v._2)]);
+    }
+    if (v.tag === "DocExpr") {
+      return beside(beside(checkOneLine(split("\n")(" @doc")))(parentheses(prettyExpr(dictHighlightable).pretty(v._1))))(prettyExpr(dictHighlightable).pretty(v._2));
     }
     fail();
   }
@@ -34986,7 +35936,17 @@ var prettyBindElim = (dictHighlightable) => ({
   ])
 });
 var prettyMatrix = (dictHighlightable) => (e1) => (i) => (j) => (e22) => arrayBrackets(beside(beside(beside(beside(prettyExpr(dictHighlightable).pretty(e1))(checkOneLine(split("\n")(" <-"))))(checkOneLine(split("\n")(" " + i + "\xD7" + j))))(checkOneLine(split("\n")(" in"))))(prettyExpr(dictHighlightable).pretty(e22)));
-var prettyVal = (dictHighlightable) => ({ pretty: (v) => beside(prettyDocOpt(prettyVal(dictHighlightable)).pretty(v._2))(dictHighlightable.highlightIf(v._1)(prettyBaseVal(dictHighlightable).pretty(v._3))) });
+var prettyVal = (dictHighlightable) => ({
+  pretty: (v) => {
+    if (v._2.tag === "Nothing") {
+      return dictHighlightable.highlightIf(v._1)(prettyBaseVal(dictHighlightable).pretty(v._3));
+    }
+    if (v._2.tag === "Just") {
+      return beside(prettyDoc(dictHighlightable)(v._2._1))(dictHighlightable.highlightIf(v._1)(prettySimple(isSimpleBaseVal)(prettyBaseVal(dictHighlightable))(v._3)));
+    }
+    fail();
+  }
+});
 var prettyFun = (dictHighlightable) => ({
   pretty: (v) => {
     if (v.tag === "Closure") {
@@ -34996,7 +35956,7 @@ var prettyFun = (dictHighlightable) => ({
       return checkOneLine(split("\n")(" " + v._1._1));
     }
     if (v.tag === "PartialConstr") {
-      return prettyConstr(isSimpleVal)(prettyVal(dictHighlightable))(v._1)(v._2);
+      return prettyConstr(rootOpVal)(isSimpleVal)(prettyVal(dictHighlightable))(v._1)(v._2);
     }
     fail();
   }
@@ -35027,13 +35987,13 @@ var prettyBaseVal = (dictHighlightable) => ({
       return checkOneLine(split("\n")(" " + showStringImpl(v._1)));
     }
     if (v.tag === "Dictionary") {
-      return prettyRecordOrDict(prettyVal(dictHighlightable))(checkOneLine(split("\n")(" :")))(keyBracks)(curlyBraces)((v1) => dictHighlightable.highlightIf(v1._2)(checkOneLine(split("\n")(" " + showStringImpl(v1._1)))))(listMap((v1) => $Tuple(
+      return prettyDict(prettyVal(dictHighlightable))((v1) => dictHighlightable.highlightIf(v1._2)(checkOneLine(split("\n")(" " + v1._1))))(listMap((v1) => $Tuple(
         $Tuple(v1._1, v1._2._1),
         v1._2._2
       ))(toUnfoldable13(v._1)));
     }
     if (v.tag === "Constr") {
-      return prettyConstr(isSimpleVal)(prettyVal(dictHighlightable))(v._1)(v._2);
+      return prettyConstr(rootOpVal)(isSimpleVal)(prettyVal(dictHighlightable))(v._1)(v._2);
     }
     if (v.tag === "Matrix") {
       return vert1(comma)(arrayMap((() => {
@@ -35047,6 +36007,7 @@ var prettyBaseVal = (dictHighlightable) => ({
     fail();
   }
 });
+var prettyDoc = (dictHighlightable) => (v) => beside(checkOneLine(split("\n")(" @doc")))(parentheses(prettyVal(dictHighlightable).pretty(v)));
 var prettyVarDefs = (dictAnn) => ({
   pretty: (ds) => intersperse$p((() => {
     const $0 = prettyVarDef(dictAnn);
@@ -35055,6 +36016,17 @@ var prettyVarDefs = (dictAnn) => ({
 });
 var prettyVarDef = (dictAnn) => ({
   pretty: (v) => beside(beside(prettyPattern.pretty(v._1))(checkOneLine(split("\n")(" ="))))(prettyExpr1(dictAnn).pretty(v._2))
+});
+var prettyParagraphElem = (dictAnn) => ({
+  pretty: (v) => {
+    if (v.tag === "Token") {
+      return checkOneLine(split("\n")(" " + v._1));
+    }
+    if (v.tag === "Unquote") {
+      return beside(beside(checkOneLine(split("\n")(" ${")))(prettyExpr1(dictAnn).pretty(v._1)))(checkOneLine(split("\n")(" }")));
+    }
+    fail();
+  }
 });
 var prettyNonEmptyListPattern = (dictAnn) => ({
   pretty: (pss) => intersperse$p(listMap(prettyClause(dictAnn)(checkOneLine(split("\n")(" ->"))))(listMap(Clause)((() => {
@@ -35080,7 +36052,7 @@ var prettyListRest = (dictAnn) => {
     pretty: (v) => {
       if (v.tag === "Next") {
         if (v._2.tag === "Dictionary") {
-          return atop(beside($0.highlightIf(v._1)(checkOneLine(split("\n")(" ,"))))($0.highlightIf(v._1)(curlyBraces(prettyDictEntries(dictAnn)(beside)(v._2._3)))))(prettyListRest(dictAnn).pretty(v._3));
+          return atop(beside($0.highlightIf(v._1)(checkOneLine(split("\n")(" ,"))))($0.highlightIf(v._1)(curlyBraces(prettyDictEntries(dictAnn)(beside)(v._2._2)))))(prettyListRest(dictAnn).pretty(v._3));
         }
         return beside(beside($0.highlightIf(v._1)(checkOneLine(split("\n")(" ,"))))(prettyExpr1(dictAnn).pretty(v._2)))(prettyListRest(dictAnn).pretty(v._3));
       }
@@ -35103,7 +36075,7 @@ var prettyListQualifier = (dictAnn) => ({
           return beside(checkOneLine(split("\n")(" let")))(prettyVarDef(dictAnn).pretty(v._1._1));
         }
         if (v._1.tag === "ListCompGen") {
-          return beside(beside(beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._1._1))(prettyPattern.pretty(v._1._2)))(checkOneLine(split("\n")(" <-"))))(prettyExpr1(dictAnn).pretty(v._1._3));
+          return beside(beside(prettyPattern.pretty(v._1._1))(checkOneLine(split("\n")(" <-"))))(prettyExpr1(dictAnn).pretty(v._1._2));
         }
       }
       return $0(v._1, v._2);
@@ -35113,6 +36085,9 @@ var prettyListQualifier = (dictAnn) => ({
     }
     fail();
   }
+});
+var prettyListParagraphElem = (dictAnn) => ({
+  pretty: (xs) => beside(beside(checkOneLine(split("\n")(' """')))(hcat(listMap(prettyParagraphElem(dictAnn).pretty)(xs))))(checkOneLine(split("\n")(' """')))
 });
 var prettyFirstGroup = (dictAnn) => ({ pretty: (v) => prettyNonEmptyListNonEmpt(dictAnn).pretty(wrappedOperation("groupBy")(groupBy((p) => (q) => p._1 === q._1))(v)) });
 var prettyExpr1 = (dictAnn) => {
@@ -35126,34 +36101,34 @@ var prettyExpr1 = (dictAnn) => {
         return parentheses(checkOneLine(split("\n")(" " + v._1)));
       }
       if (v.tag === "Int") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(checkOneLine(split("\n")(" " + showIntImpl(v._3)))));
+        return $0.highlightIf(v._1)(checkOneLine(split("\n")(" " + showIntImpl(v._2))));
       }
       if (v.tag === "Float") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(checkOneLine(split("\n")(" " + showNumberImpl(v._3)))));
+        return $0.highlightIf(v._1)(checkOneLine(split("\n")(" " + showNumberImpl(v._2))));
       }
       if (v.tag === "Str") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(checkOneLine(split("\n")(' "' + v._3 + '"'))));
+        return $0.highlightIf(v._1)(checkOneLine(split("\n")(' "' + v._2 + '"')));
       }
       if (v.tag === "Constr") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(prettyConstr(isSimpleExpr1)(prettyExpr1(dictAnn))(v._3)(v._4)));
+        return $0.highlightIf(v._1)(prettyConstr(rootOpExpr1)(isSimpleExpr1)(prettyExpr1(dictAnn))(v._2)(v._3));
       }
       if (v.tag === "Dictionary") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(curlyBraces(prettyDictEntries(dictAnn)(atop)(v._3))));
+        return $0.highlightIf(v._1)(curlyBraces(prettyDictEntries(dictAnn)(atop)(v._2)));
       }
       if (v.tag === "Matrix") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(arrayBrackets(beside(beside(beside(beside(prettyExpr1(dictAnn).pretty(v._3))(checkOneLine(split("\n")(" |"))))(parentheses(beside(beside(checkOneLine(split("\n")(" " + v._4._1)))(checkOneLine(split("\n")(" ,"))))(checkOneLine(split("\n")(" " + v._4._2))))))(checkOneLine(split("\n")(" in"))))(prettyExpr1(dictAnn).pretty(v._5)))));
+        return $0.highlightIf(v._1)(arrayBrackets(beside(beside(beside(beside(prettyExpr1(dictAnn).pretty(v._2))(checkOneLine(split("\n")(" |"))))(parentheses(beside(beside(checkOneLine(split("\n")(" " + v._3._1)))(checkOneLine(split("\n")(" ,"))))(checkOneLine(split("\n")(" " + v._3._2))))))(checkOneLine(split("\n")(" in"))))(prettyExpr1(dictAnn).pretty(v._4))));
       }
       if (v.tag === "Lambda") {
         return beside(checkOneLine(split("\n")(" fun")))(prettyClauses(dictAnn).pretty(v._1));
       }
       if (v.tag === "Project") {
-        return beside(beside(beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._1))(prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v._2)))(checkOneLine(split("\n")(" ."))))(checkOneLine(split("\n")(" " + v._3)));
+        return beside(beside(prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v._1))(checkOneLine(split("\n")(" ."))))(checkOneLine(split("\n")(" " + v._2)));
       }
       if (v.tag === "DProject") {
-        return beside(beside(beside(beside(beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._1))(prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v._2)))(checkOneLine(split("\n")(" ."))))(checkOneLine(split("\n")(" ["))))(prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v._3)))(checkOneLine(split("\n")(" ]")));
+        return beside(beside(beside(beside(prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v._1))(checkOneLine(split("\n")(" ."))))(checkOneLine(split("\n")(" ["))))(prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v._2)))(checkOneLine(split("\n")(" ]")));
       }
       if (v.tag === "App") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._1))(prettyAppChain(dictAnn)($Expr2("App", v._1, v._2, v._3)));
+        return prettyAppChain(dictAnn)($Expr2("App", v._1, v._2));
       }
       if (v.tag === "BinaryApp") {
         return prettyBinApp(dictAnn)(0)($Expr2("BinaryApp", v._1, v._2, v._3));
@@ -35165,25 +36140,31 @@ var prettyExpr1 = (dictAnn) => {
         return beside(beside(beside(beside(beside(checkOneLine(split("\n")(" if")))(prettyExpr1(dictAnn).pretty(v._1)))(checkOneLine(split("\n")(" then"))))(prettyExpr1(dictAnn).pretty(v._2)))(checkOneLine(split("\n")(" else"))))(prettyExpr1(dictAnn).pretty(v._3));
       }
       if (v.tag === "ListEmpty") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(brackets(empty3)));
+        return $0.highlightIf(v._1)(brackets(empty3));
       }
       if (v.tag === "ListNonEmpty") {
-        if (v._3.tag === "Dictionary") {
-          return atop(beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))(beside($0.highlightIf(v._1)(checkOneLine(split("\n")(" ["))))($0.highlightIf(v._1)(curlyBraces(prettyDictEntries(dictAnn)(beside)(v._3._3))))))(prettyListRest(dictAnn).pretty(v._4));
+        if (v._2.tag === "Dictionary") {
+          return atop(beside($0.highlightIf(v._1)(checkOneLine(split("\n")(" ["))))($0.highlightIf(v._1)(curlyBraces(prettyDictEntries(dictAnn)(beside)(v._2._2)))))(prettyListRest(dictAnn).pretty(v._3));
         }
-        return beside(beside(beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(checkOneLine(split("\n")(" [")))))(prettyExpr1(dictAnn).pretty(v._3)))(prettyListRest(dictAnn).pretty(v._4));
+        return beside(beside($0.highlightIf(v._1)(checkOneLine(split("\n")(" ["))))(prettyExpr1(dictAnn).pretty(v._2)))(prettyListRest(dictAnn).pretty(v._3));
       }
       if (v.tag === "ListEnum") {
         return brackets(beside(beside(prettyExpr1(dictAnn).pretty(v._1))(checkOneLine(split("\n")(" .."))))(prettyExpr1(dictAnn).pretty(v._2)));
       }
       if (v.tag === "ListComp") {
-        return beside(prettyDocOpt(prettyExpr1(dictAnn)).pretty(v._2))($0.highlightIf(v._1)(brackets(beside(beside(prettyExpr1(dictAnn).pretty(v._3))(checkOneLine(split("\n")(" |"))))(prettyListQualifier(dictAnn).pretty(v._4)))));
+        return $0.highlightIf(v._1)(brackets(beside(beside(prettyExpr1(dictAnn).pretty(v._2))(checkOneLine(split("\n")(" |"))))(prettyListQualifier(dictAnn).pretty(v._3))));
       }
       if (v.tag === "Let") {
         return atop(beside(beside(checkOneLine(split("\n")(" let")))(prettyVarDefs(dictAnn).pretty(v._1)))(checkOneLine(split("\n")(" in"))))(prettyExpr1(dictAnn).pretty(v._2));
       }
       if (v.tag === "LetRec") {
         return atop(beside(beside(checkOneLine(split("\n")(" let")))(prettyFirstGroup(dictAnn).pretty(v._1)))(checkOneLine(split("\n")(" in"))))(prettyExpr1(dictAnn).pretty(v._2));
+      }
+      if (v.tag === "Paragraph") {
+        return prettyListParagraphElem(dictAnn).pretty(v._1);
+      }
+      if (v.tag === "DocExpr") {
+        return beside(beside(checkOneLine(split("\n")(" @doc")))(parentheses(prettyExpr1(dictAnn).pretty(v._1))))(prettyExpr1(dictAnn).pretty(v._2));
       }
       fail();
     }
@@ -35240,7 +36221,7 @@ var prettyBinApp = (dictAnn) => (v) => (v1) => {
 };
 var prettyAppChain = (dictAnn) => (v) => {
   if (v.tag === "App") {
-    return beside(prettyAppChain(dictAnn)(v._2))(prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v._3));
+    return beside(prettyAppChain(dictAnn)(v._1))(prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v._2));
   }
   return prettySimple(isSimpleExpr1)(prettyExpr1(dictAnn))(v);
 };
@@ -35252,7 +36233,7 @@ var $ForeignOp$p = (_1) => ({ tag: "ForeignOp'", _1 });
 var $Fun = (tag, _1, _2, _3) => ({ tag, _1, _2, _3 });
 var $Val = (_1, _2, _3) => ({ tag: "Val", _1, _2, _3 });
 var setSet3 = /* @__PURE__ */ setSet(ordDVertex$p);
-var unions2 = /* @__PURE__ */ foldlArray(/* @__PURE__ */ union3(ordDVertex$p))(Leaf2);
+var unions = /* @__PURE__ */ foldlArray(/* @__PURE__ */ union3(ordDVertex$p))(Leaf2);
 var vertices = /* @__PURE__ */ (() => verticesDict(verticesElimVertex).vertices)();
 var unions13 = /* @__PURE__ */ (() => {
   const go = (go$a0$copy) => (go$a1$copy) => {
@@ -35276,18 +36257,18 @@ var unions13 = /* @__PURE__ */ (() => {
   return go(Leaf2);
 })();
 var foldMap2 = /* @__PURE__ */ foldMap({ mempty: Leaf2, Semigroup0: () => ({ append: union3(ordDVertex$p) }) });
-var identity28 = (x2) => x2;
+var identity27 = (x2) => x2;
 var ordTuple3 = /* @__PURE__ */ ordTuple(ordInt);
 var boundedLattice = { BoundedJoinSemilattice0: () => boundedJoinSemilatticeUni, BoundedMeetSemilattice1: () => boundedMeetSemilatticeUni };
-var show3 = /* @__PURE__ */ (() => showSet(showString).show)();
 var setSet1 = /* @__PURE__ */ setSet(ordString);
+var show3 = /* @__PURE__ */ (() => showSet(showString).show)();
 var toUnfoldable14 = /* @__PURE__ */ toUnfoldable4(unfoldableList);
 var intersection2 = /* @__PURE__ */ intersection(ordString);
 var fromFoldable8 = /* @__PURE__ */ (() => foldableSet.foldl((m) => (a) => insert3(ordString)(a)()(m))(Leaf2))();
 var MatrixRep = (x2) => x2;
 var Val = (value0) => (value1) => (value2) => $Val(value0, value1, value2);
-var Int2 = (value0) => $BaseVal("Int", value0);
-var Float2 = (value0) => $BaseVal("Float", value0);
+var Int = (value0) => $BaseVal("Int", value0);
+var Float = (value0) => $BaseVal("Float", value0);
 var Str2 = (value0) => $BaseVal("Str", value0);
 var Dictionary3 = (value0) => $BaseVal("Dictionary", value0);
 var DictRep = (x2) => x2;
@@ -35302,7 +36283,7 @@ var verticesValVertex = {
   vertices: (v) => setSet3.union($$$Map("Two", Leaf2, $Tuple(v._1, pack2(v)), void 0, Leaf2))(verticesBaseValVertex.vertices(v._3))
 };
 var verticesMatrixRepVertex = {
-  vertices: (v) => setSet3.union(unions2(concat(arrayMap(arrayMap(verticesValVertex.vertices))(v._1))))(setSet3.union($$$Map(
+  vertices: (v) => setSet3.union(unions(concat(arrayMap(arrayMap(verticesValVertex.vertices))(v._1))))(setSet3.union($$$Map(
     "Two",
     Leaf2,
     $Tuple(v._2._1._2, pack13(v._2._1)),
@@ -35402,22 +36383,34 @@ var mapEnvStringVal = {
   Set0: () => setEnvString
 };
 var highlightableVertex = {
-  highlightIf: (v) => (doc2) => beside(beside(doc2)(checkOneLine(split("\n")(" _"))))(checkOneLine(split("\n")(" \u27E8" + v + "\u27E9")))
+  highlightIf: (v) => (doc3) => beside(beside(doc3)(checkOneLine(split("\n")(" _"))))(checkOneLine(split("\n")(" \u27E8" + v + "\u27E9")))
 };
-var highlightableUnit = { highlightIf: (v) => identity28 };
+var highlightableUnit = { highlightIf: (v) => identity27 };
 var highlightableBoolean = {
   highlightIf: (v) => {
     if (!v) {
-      return identity28;
+      return identity27;
     }
     if (v) {
-      return (doc2) => beside(beside(checkOneLine(split("\n")(" \u2E28")))(doc2))(checkOneLine(split("\n")(" \u2E29")));
+      return (doc3) => beside(beside(checkOneLine(split("\n")(" \u2E28")))(doc3))(checkOneLine(split("\n")(" \u2E29")));
     }
     fail();
   }
 };
 var functorMatrixDim = { map: (f) => (m) => $Tuple(m._1, f(m._2)) };
-var functorVal = { map: (f) => (m) => $Val(f(m._1), functorDocOpt(functorVal).map(f)(m._2), functorBaseVal.map(f)(m._3)) };
+var functorVal = {
+  map: (f) => (m) => $Val(
+    f(m._1),
+    (() => {
+      const $0 = functorVal.map(f);
+      if (m._2.tag === "Just") {
+        return $Maybe("Just", $0(m._2._1));
+      }
+      return Nothing;
+    })(),
+    functorBaseVal.map(f)(m._3)
+  )
+};
 var functorMatrixRep = {
   map: (f) => (m) => $Tuple(
     arrayMap(arrayMap(functorVal.map(f)))(m._1),
@@ -35470,16 +36463,46 @@ var functorEnvExpr = { map: (f) => (m) => $EnvExpr(_fmapObject(m._1, functorVal.
 var foldableMatrixDim = { foldl: (f) => (z) => (m) => f(z)(m._2), foldr: (f) => (z) => (m) => f(m._2)(z), foldMap: (dictMonoid) => (f) => (m) => f(m._2) };
 var traversableMatrixDim = {
   traverse: (dictApplicative) => (f) => (m) => dictApplicative.Apply0().Functor0().map((v1) => v1)(traversableTuple.traverse(dictApplicative)(f)(m)),
-  sequence: (dictApplicative) => (v) => traversableMatrixDim.traverse(dictApplicative)(identity28)(v),
+  sequence: (dictApplicative) => (v) => traversableMatrixDim.traverse(dictApplicative)(identity27)(v),
   Functor0: () => functorMatrixDim,
   Foldable1: () => foldableMatrixDim
 };
 var foldableVal = {
-  foldl: (f) => (z) => (m) => foldableBaseVal.foldl(f)(foldableDocOpt(foldableVal).foldl(f)(f(z)(m._1))(m._2))(m._3),
-  foldr: (f) => (z) => (m) => f(m._1)(foldableDocOpt(foldableVal).foldr(f)(foldableBaseVal.foldr(f)(z)(m._3))(m._2)),
+  foldl: (f) => (z) => (m) => foldableBaseVal.foldl(f)((() => {
+    const $0 = foldableVal.foldl(f);
+    const $1 = f(z)(m._1);
+    if (m._2.tag === "Nothing") {
+      return $1;
+    }
+    if (m._2.tag === "Just") {
+      return $0($1)(m._2._1);
+    }
+    fail();
+  })())(m._3),
+  foldr: (f) => (z) => (m) => f(m._1)((() => {
+    const $0 = foldableVal.foldr(f);
+    const $1 = foldableBaseVal.foldr(f)(z)(m._3);
+    if (m._2.tag === "Nothing") {
+      return $1;
+    }
+    if (m._2.tag === "Just") {
+      return $0($1)(m._2._1);
+    }
+    fail();
+  })()),
   foldMap: (dictMonoid) => {
     const $0 = dictMonoid.Semigroup0();
-    return (f) => (m) => $0.append(f(m._1))($0.append(foldableDocOpt(foldableVal).foldMap(dictMonoid)(f)(m._2))(foldableBaseVal.foldMap(dictMonoid)(f)(m._3)));
+    const mempty = dictMonoid.mempty;
+    return (f) => (m) => $0.append(f(m._1))($0.append((() => {
+      const $1 = foldableVal.foldMap(dictMonoid)(f);
+      if (m._2.tag === "Nothing") {
+        return mempty;
+      }
+      if (m._2.tag === "Just") {
+        return $1(m._2._1);
+      }
+      fail();
+    })())(foldableBaseVal.foldMap(dictMonoid)(f)(m._3)));
   }
 };
 var foldableMatrixRep = {
@@ -35551,20 +36574,20 @@ var foldableFun = {
   foldMap: (dictMonoid) => {
     const $0 = dictMonoid.Semigroup0();
     const foldMap1 = foldMap(dictMonoid);
-    const foldMap8 = foldableElim.foldMap(dictMonoid);
-    const foldMap9 = foldableList.foldMap(dictMonoid);
+    const foldMap9 = foldableElim.foldMap(dictMonoid);
+    const foldMap10 = foldableList.foldMap(dictMonoid);
     return (f) => (m) => {
       if (m.tag === "Closure") {
         return $0.append(foldableEnv.foldMap(dictMonoid)(f)(m._1))($0.append((() => {
-          const $1 = foldMap8(f);
+          const $1 = foldMap9(f);
           return foldMap1((v) => $1)(m._2);
-        })())(foldMap8(f)(m._3)));
+        })())(foldMap9(f)(m._3)));
       }
       if (m.tag === "Foreign") {
-        return foldMap9(foldableVal.foldMap(dictMonoid)(f))(m._2);
+        return foldMap10(foldableVal.foldMap(dictMonoid)(f))(m._2);
       }
       if (m.tag === "PartialConstr") {
-        return foldMap9(foldableVal.foldMap(dictMonoid)(f))(m._2);
+        return foldMap10(foldableVal.foldMap(dictMonoid)(f))(m._2);
       }
       fail();
     };
@@ -35655,7 +36678,7 @@ var foldableBaseVal = {
   },
   foldMap: (dictMonoid) => {
     const mempty = dictMonoid.mempty;
-    const foldMap7 = foldableList.foldMap(dictMonoid);
+    const foldMap8 = foldableList.foldMap(dictMonoid);
     return (f) => (m) => {
       if (m.tag === "Int") {
         return mempty;
@@ -35667,7 +36690,7 @@ var foldableBaseVal = {
         return mempty;
       }
       if (m.tag === "Constr") {
-        return foldMap7(foldableVal.foldMap(dictMonoid)(f))(m._2);
+        return foldMap8(foldableVal.foldMap(dictMonoid)(f))(m._2);
       }
       if (m.tag === "Dictionary") {
         return foldableDictRep.foldMap(dictMonoid)(f)(m._1);
@@ -35686,25 +36709,25 @@ var foldableEnvExpr = {
   foldl: (f) => (z) => (m) => foldableExpr.foldl(f)(fold((z$1) => (v) => foldableVal.foldl(f)(z$1))(z)(m._1))(m._2),
   foldr: (f) => (z) => (m) => foldableEnv.foldr(f)(foldableExpr.foldr(f)(z)(m._2))(m._1),
   foldMap: (dictMonoid) => {
-    const foldMap7 = foldableEnv.foldMap(dictMonoid);
-    const foldMap8 = foldableExpr.foldMap(dictMonoid);
-    return (f) => (m) => dictMonoid.Semigroup0().append(foldMap7(f)(m._1))(foldMap8(f)(m._2));
+    const foldMap8 = foldableEnv.foldMap(dictMonoid);
+    const foldMap9 = foldableExpr.foldMap(dictMonoid);
+    return (f) => (m) => dictMonoid.Semigroup0().append(foldMap8(f)(m._1))(foldMap9(f)(m._2));
   }
 };
 var traversableVal = {
   traverse: (dictApplicative) => {
     const Apply0 = dictApplicative.Apply0();
-    return (f) => (m) => Apply0.apply(Apply0.apply(Apply0.Functor0().map((v3) => (v4) => (v5) => $Val(v3, v4, v5))(f(m._1)))(traversableDocOpt(traversableVal).traverse(dictApplicative)(f)(m._2)))(traversableBaseVal.traverse(dictApplicative)(f)(m._3));
+    return (f) => (m) => Apply0.apply(Apply0.apply(Apply0.Functor0().map((v3) => (v4) => (v5) => $Val(v3, v4, v5))(f(m._1)))(traversableMaybe.traverse(dictApplicative)(traversableVal.traverse(dictApplicative)(f))(m._2)))(traversableBaseVal.traverse(dictApplicative)(f)(m._3));
   },
-  sequence: (dictApplicative) => (v) => traversableVal.traverse(dictApplicative)(identity28)(v),
+  sequence: (dictApplicative) => (v) => traversableVal.traverse(dictApplicative)(identity27)(v),
   Functor0: () => functorVal,
   Foldable1: () => foldableVal
 };
 var traversableMatrixRep = {
   traverse: (dictApplicative) => {
     const bitraverse1 = bitraversableTuple.bitraverse(dictApplicative);
-    const traverse8 = traversableArray.traverse(dictApplicative);
-    return (f) => (v) => dictApplicative.Apply0().Functor0().map(MatrixRep)(bitraverse1(traverse8(traverse8(traversableVal.traverse(dictApplicative)(f))))(bitraverse1(traversableMatrixDim.traverse(dictApplicative)(f))(traversableMatrixDim.traverse(dictApplicative)(f)))(v));
+    const traverse9 = traversableArray.traverse(dictApplicative);
+    return (f) => (v) => dictApplicative.Apply0().Functor0().map(MatrixRep)(bitraverse1(traverse9(traverse9(traversableVal.traverse(dictApplicative)(f))))(bitraverse1(traversableMatrixDim.traverse(dictApplicative)(f))(traversableMatrixDim.traverse(dictApplicative)(f)))(v));
   },
   sequence: (dictApplicative) => traversableMatrixRep.traverse(dictApplicative)(identity5),
   Functor0: () => functorMatrixRep,
@@ -35714,42 +36737,42 @@ var traversableFun = {
   traverse: (dictApplicative) => {
     const Apply0 = dictApplicative.Apply0();
     const $0 = Apply0.Functor0();
-    const traverse8 = traversableDict.traverse(dictApplicative);
-    const traverse9 = traversableElim.traverse(dictApplicative);
-    const traverse10 = traversableList.traverse(dictApplicative);
+    const traverse9 = traversableDict.traverse(dictApplicative);
+    const traverse10 = traversableElim.traverse(dictApplicative);
+    const traverse11 = traversableList.traverse(dictApplicative);
     return (f) => (m) => {
       if (m.tag === "Closure") {
-        return Apply0.apply(Apply0.apply($0.map((v3) => (v4) => (v5) => $Fun("Closure", v3, v4, v5))(traversableEnv.traverse(dictApplicative)(f)(m._1)))(traverse8(traverse9(f))(m._2)))(traverse9(f)(m._3));
+        return Apply0.apply(Apply0.apply($0.map((v3) => (v4) => (v5) => $Fun("Closure", v3, v4, v5))(traversableEnv.traverse(dictApplicative)(f)(m._1)))(traverse9(traverse10(f))(m._2)))(traverse10(f)(m._3));
       }
       if (m.tag === "Foreign") {
         const $1 = m._1;
-        return $0.map((v2) => $Fun("Foreign", $1, v2))(traverse10(traversableVal.traverse(dictApplicative)(f))(m._2));
+        return $0.map((v2) => $Fun("Foreign", $1, v2))(traverse11(traversableVal.traverse(dictApplicative)(f))(m._2));
       }
       if (m.tag === "PartialConstr") {
         const $1 = m._1;
-        return $0.map((v2) => $Fun("PartialConstr", $1, v2))(traverse10(traversableVal.traverse(dictApplicative)(f))(m._2));
+        return $0.map((v2) => $Fun("PartialConstr", $1, v2))(traverse11(traversableVal.traverse(dictApplicative)(f))(m._2));
       }
       fail();
     };
   },
-  sequence: (dictApplicative) => (v) => traversableFun.traverse(dictApplicative)(identity28)(v),
+  sequence: (dictApplicative) => (v) => traversableFun.traverse(dictApplicative)(identity27)(v),
   Functor0: () => functorFun,
   Foldable1: () => foldableFun
 };
 var traversableEnv = {
   traverse: (dictApplicative) => {
-    const traverse8 = traversableDict.traverse(dictApplicative);
-    return (f) => (m) => dictApplicative.Apply0().Functor0().map((v1) => v1)(traverse8(traversableVal.traverse(dictApplicative)(f))(m));
+    const traverse9 = traversableDict.traverse(dictApplicative);
+    return (f) => (m) => dictApplicative.Apply0().Functor0().map((v1) => v1)(traverse9(traversableVal.traverse(dictApplicative)(f))(m));
   },
-  sequence: (dictApplicative) => (v) => traversableEnv.traverse(dictApplicative)(identity28)(v),
+  sequence: (dictApplicative) => (v) => traversableEnv.traverse(dictApplicative)(identity27)(v),
   Functor0: () => functorEnv,
   Foldable1: () => foldableEnv
 };
 var traversableDictRep = {
   traverse: (dictApplicative) => {
-    const traverse8 = traversableDict.traverse(dictApplicative);
+    const traverse9 = traversableDict.traverse(dictApplicative);
     const bitraverse1 = bitraversableTuple.bitraverse(dictApplicative);
-    return (f) => (v) => dictApplicative.Apply0().Functor0().map(DictRep)(traverse8(bitraverse1(f)(traversableVal.traverse(dictApplicative)(f)))(v));
+    return (f) => (v) => dictApplicative.Apply0().Functor0().map(DictRep)(traverse9(bitraverse1(f)(traversableVal.traverse(dictApplicative)(f)))(v));
   },
   sequence: (dictApplicative) => traversableDictRep.traverse(dictApplicative)(identity5),
   Functor0: () => functorDictRep,
@@ -35758,7 +36781,7 @@ var traversableDictRep = {
 var traversableBaseVal = {
   traverse: (dictApplicative) => {
     const $0 = dictApplicative.Apply0().Functor0();
-    const traverse8 = traversableList.traverse(dictApplicative);
+    const traverse9 = traversableList.traverse(dictApplicative);
     return (f) => (m) => {
       if (m.tag === "Int") {
         return dictApplicative.pure($BaseVal("Int", m._1));
@@ -35771,7 +36794,7 @@ var traversableBaseVal = {
       }
       if (m.tag === "Constr") {
         const $1 = m._1;
-        return $0.map((v2) => $BaseVal("Constr", $1, v2))(traverse8(traversableVal.traverse(dictApplicative)(f))(m._2));
+        return $0.map((v2) => $BaseVal("Constr", $1, v2))(traverse9(traversableVal.traverse(dictApplicative)(f))(m._2));
       }
       if (m.tag === "Dictionary") {
         return $0.map((v1) => $BaseVal("Dictionary", v1))(traversableDictRep.traverse(dictApplicative)(f)(m._1));
@@ -35785,7 +36808,7 @@ var traversableBaseVal = {
       fail();
     };
   },
-  sequence: (dictApplicative) => (v) => traversableBaseVal.traverse(dictApplicative)(identity28)(v),
+  sequence: (dictApplicative) => (v) => traversableBaseVal.traverse(dictApplicative)(identity27)(v),
   Functor0: () => functorBaseVal,
   Foldable1: () => foldableBaseVal
 };
@@ -35794,7 +36817,12 @@ var ordMatrixDim = (dictOrd) => {
   const eqMatrixDim1 = { eq: (x2) => (y2) => x2._1 === y2._1 && $0.eq(x2._2)(y2._2) };
   return { compare: (x2) => (y2) => ordTuple3(dictOrd).compare(x2)(y2), Eq0: () => eqMatrixDim1 };
 };
-var eqVal = (dictEq) => ({ eq: (x2) => (y2) => dictEq.eq(x2._1)(y2._1) && eqDocOpt(eqVal(dictEq)).eq(x2._2)(y2._2) && eqBaseVal(dictEq).eq(x2._3)(y2._3) });
+var eqVal = (dictEq) => ({
+  eq: (x2) => (y2) => {
+    const $0 = eqVal(dictEq);
+    return dictEq.eq(x2._1)(y2._1) && (x2._2.tag === "Nothing" ? y2._2.tag === "Nothing" : x2._2.tag === "Just" && y2._2.tag === "Just" && $0.eq(x2._2._1)(y2._2._1)) && eqBaseVal(dictEq).eq(x2._3)(y2._3);
+  }
+});
 var eqMatrixRep = (dictEq) => ({
   eq: (x2) => (y2) => eqArrayImpl(eqArrayImpl(eqVal(dictEq).eq))(x2._1)(y2._1) && x2._2._1._1 === y2._2._1._1 && dictEq.eq(x2._2._1._2)(y2._2._1._2) && x2._2._2._1 === y2._2._2._1 && dictEq.eq(x2._2._2._2)(y2._2._2._2)
 });
@@ -35895,7 +36923,7 @@ var ordVal = (dictOrd) => {
       if (v === "GT") {
         return GT;
       }
-      const v1 = ordDocOpt(ordVal(dictOrd)).compare(x2._2)(y2._2);
+      const v1 = ordMaybe(ordVal(dictOrd)).compare(x2._2)(y2._2);
       if (v1 === "LT") {
         return LT;
       }
@@ -36056,7 +37084,21 @@ var ordBaseVal = (dictOrd) => {
   };
 };
 var applyMatrixDim = { apply: (v) => (v1) => $Tuple(mustEq(eqInt)(showInt)(v._1)(v1._1), v._2(v1._2)), Functor0: () => functorMatrixDim };
-var applyVal = { apply: (v) => (v1) => $Val(v._1(v1._1), applyDocOpt(applyVal).apply(v._2)(v1._2), applyBaseVal.apply(v._3)(v1._3)), Functor0: () => functorVal };
+var applyVal = {
+  apply: (v) => (v1) => {
+    if (v._2.tag === "Nothing") {
+      if (v1._2.tag === "Nothing") {
+        return $Val(v._1(v1._1), Nothing, applyBaseVal.apply(v._3)(v1._3));
+      }
+      return throwException(error("Shape mismatch"))();
+    }
+    if (v._2.tag === "Just" && v1._2.tag === "Just") {
+      return $Val(v._1(v1._1), $Maybe("Just", applyVal.apply(v._2._1)(v1._2._1)), applyBaseVal.apply(v._3)(v1._3));
+    }
+    return throwException(error("Shape mismatch"))();
+  },
+  Functor0: () => functorVal
+};
 var applyMatrixRep = {
   apply: (v) => (v1) => $Tuple(
     zipWith(zipWith(applyVal.apply))(v._1)(v1._1),
@@ -36148,16 +37190,19 @@ var applyEnvExpr = {
   Functor0: () => functorEnvExpr
 };
 var annUnit = { Highlightable0: () => highlightableUnit, BoundedLattice1: () => boundedLattice };
-var unrestrictGC = (dictBoundedMeetSemilattice) => (\u03B3) => (xs) => assertWith(show3(xs) + " are in environment ")(difference2(ordString)(xs)(mapObjectString.keys(\u03B3)).tag === "Leaf")({
-  fwd: (\u03B3$p) => assertWith("")(difference2(ordString)(mapObjectString.keys(\u03B3$p))(mapObjectString.keys(\u03B3)).tag === "Leaf")(union(\u03B3$p)(setObjectString.difference((() => {
-    const $0 = dictBoundedMeetSemilattice.top;
-    return _fmapObject(\u03B3, functorVal.map((v) => $0));
-  })())(\u03B3$p))),
-  bwd: (\u03B3$p) => assertWith("")(eqMap(eqString)(eqUnit).eq(mapObjectString.keys(\u03B3$p))(mapObjectString.keys(\u03B3)))(filterWithKey((x2) => {
-    const $0 = setSet(ordString).member(x2)(xs);
-    return (v) => $0;
-  })(\u03B3$p))
-});
+var unrestrictGC = (dictBoundedMeetSemilattice) => (\u03B3) => (xs) => {
+  const xs$p = setSet1.difference(xs)(mapObjectString.keys(\u03B3));
+  return assertWith(show3(xs$p) + " are in environment ")(xs$p.tag === "Leaf")({
+    fwd: (\u03B3$p) => assertWith("")(difference2(ordString)(mapObjectString.keys(\u03B3$p))(mapObjectString.keys(\u03B3)).tag === "Leaf")(union(\u03B3$p)(setObjectString.difference((() => {
+      const $0 = dictBoundedMeetSemilattice.top;
+      return _fmapObject(\u03B3, functorVal.map((v) => $0));
+    })())(\u03B3$p))),
+    bwd: (\u03B3$p) => assertWith("")(eqMap(eqString)(eqUnit).eq(mapObjectString.keys(\u03B3$p))(mapObjectString.keys(\u03B3)))(filterWithKey((x2) => {
+      const $0 = setSet(ordString).member(x2)(xs);
+      return (v) => $0;
+    })(\u03B3$p))
+  });
+};
 var reaches = (\u03C1) => (xs) => {
   const dom_\u03C1 = mapObjectString.keys(\u03C1);
   const go = (go$a0$copy) => (go$a1$copy) => {
@@ -36226,7 +37271,7 @@ var unary = (dictBoundedJoinSemilattice) => {
     id3,
     $Val(
       bot2,
-      None,
+      Nothing,
       $BaseVal(
         "Fun",
         $Fun(
@@ -36237,7 +37282,7 @@ var unary = (dictBoundedJoinSemilattice) => {
               arity: 1,
               op: (dictMonadWithGraphAlloc) => {
                 const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
-                return (dictMonadError) => (dictMonadReader) => (dictLoadFile) => (v) => {
+                return (dictMonadError) => (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
                   if (v.tag === "Cons" && v._2.tag === "Nil") {
                     const $0 = v._1._2;
                     return $$new((a) => Val(a)($0))($$$Map("Two", Leaf2, v._1._1, void 0, Leaf2))(f.o.pack(f.fwd(f.i.unpack(v._1._3))));
@@ -36265,7 +37310,7 @@ var string2 = {
   }
 };
 var number5 = {
-  pack: Float2,
+  pack: Float,
   unpack: (v) => {
     if (v.tag === "Float") {
       return v._1;
@@ -36322,7 +37367,7 @@ var intOrNumber = {
   }
 };
 var $$int = {
-  pack: Int2,
+  pack: Int,
   unpack: (v) => {
     if (v.tag === "Int") {
       return v._1;
@@ -36336,8 +37381,8 @@ var intPair = {
     "Pair",
     $List(
       "Cons",
-      $Val(v._1._2, None, $BaseVal("Int", v._1._1)),
-      $List("Cons", $Val(v._2._2, None, $BaseVal("Int", v._2._1)), Nil)
+      $Val(v._1._2, Nothing, $BaseVal("Int", v._1._1)),
+      $List("Cons", $Val(v._2._2, Nothing, $BaseVal("Int", v._2._1)), Nil)
     )
   ),
   unpack: (v) => {
@@ -36375,7 +37420,7 @@ var binaryZero = (dictBoundedJoinSemilattice) => {
     id3,
     $Val(
       bot2,
-      None,
+      Nothing,
       $BaseVal(
         "Fun",
         $Fun(
@@ -36386,11 +37431,11 @@ var binaryZero = (dictBoundedJoinSemilattice) => {
               arity: 2,
               op: (dictMonadWithGraphAlloc) => {
                 const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
-                return (dictMonadError) => (dictMonadReader) => (dictLoadFile) => (v) => {
+                return (dictMonadError) => (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
                   if (v.tag === "Cons" && v._2.tag === "Cons" && v._2._2.tag === "Nil") {
                     const $0 = f.i.unpack(v._1._3);
                     const $1 = f.i.unpack(v._2._1._3);
-                    return $$new((a) => Val(a)(None))((() => {
+                    return $$new((a) => Val(a)(Nothing))((() => {
                       if (dictIsZero.isZero($0)) {
                         return $$$Map("Two", Leaf2, v._1._1, void 0, Leaf2);
                       }
@@ -36423,7 +37468,7 @@ var binary = (dictBoundedJoinSemilattice) => {
     id3,
     $Val(
       bot2,
-      None,
+      Nothing,
       $BaseVal(
         "Fun",
         $Fun(
@@ -36434,9 +37479,9 @@ var binary = (dictBoundedJoinSemilattice) => {
               arity: 2,
               op: (dictMonadWithGraphAlloc) => {
                 const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
-                return (dictMonadError) => (dictMonadReader) => (dictLoadFile) => (v) => {
+                return (dictMonadError) => (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
                   if (v.tag === "Cons" && v._2.tag === "Cons" && v._2._2.tag === "Nil") {
-                    return $$new((a) => Val(a)(None))(insert3(ordVertex)(v._2._1._1)()($$$Map(
+                    return $$new((a) => Val(a)(Nothing))(insert3(ordVertex)(v._2._1._1)()($$$Map(
                       "Two",
                       Leaf2,
                       v._1._1,
@@ -36495,7 +37540,7 @@ function type_(e) {
 var $SelState = (tag, _1) => ({ tag, _1 });
 var $SelectionType = (tag) => tag;
 var $\u{1D54A} = (tag) => tag;
-var genericShowSum6 = /* @__PURE__ */ (() => {
+var genericShowSum7 = /* @__PURE__ */ (() => {
   const $0 = genericShowConstructor(genericShowArgsNoArguments)({ reflectSymbol: () => "Inert" });
   return (dictGenericShow1) => ({
     "genericShow'": (v) => {
@@ -36539,7 +37584,7 @@ var clamp = (low) => (hi) => (x2) => {
   }
   fail();
 };
-var None2 = /* @__PURE__ */ $\u{1D54A}("None");
+var None = /* @__PURE__ */ $\u{1D54A}("None");
 var Secondary = /* @__PURE__ */ $\u{1D54A}("Secondary");
 var Primary = /* @__PURE__ */ $\u{1D54A}("Primary");
 var Persistent = /* @__PURE__ */ $SelectionType("Persistent");
@@ -36584,7 +37629,7 @@ var genericShow1 = (dictGenericShow) => (x2) => dictGenericShow["genericShow'"](
   }
   fail();
 })());
-var showSelState = (dictShow) => ({ show: genericShow1(genericShowSum6(genericShowConstructor({ genericShowArgs: (v) => [dictShow.show(v)] })(ReactiveIsSymbol))) });
+var showSelState = (dictShow) => ({ show: genericShow1(genericShowSum7(genericShowConstructor({ genericShowArgs: (v) => [dictShow.show(v)] })(ReactiveIsSymbol))) });
 var showSelStates = (dictShow) => ({
   show: (() => {
     const $0 = genericShowConstructor((() => {
@@ -36665,7 +37710,7 @@ var to\u{1D54A} = (v) => {
   if (v) {
     return Primary;
   }
-  return None2;
+  return None;
 };
 var to\u{1D539} = (v) => {
   if (v.tag === "Inert") {
@@ -36677,7 +37722,7 @@ var to\u{1D539} = (v) => {
   fail();
 };
 var selector = (v) => (v1) => $Tuple(
-  functorVal.map((x2) => spyWhen(true)("to ")(show1)((() => {
+  functorVal.map((x2) => spyWhen(false)("to ")(show1)((() => {
     if (x2.tag === "Inert") {
       return Inert;
     }
@@ -36694,7 +37739,7 @@ var selector = (v) => (v1) => $Tuple(
       return throwException(error("Unsupported event type"))();
     }
     fail();
-  })()))(spyWhen(true)("Setting selStates of ")(prettyP2)(v1)),
+  })()))(spyWhen(false)("Setting selStates of ")(prettyP2)(v1)),
   (() => {
     if (v === "mousedown") {
       return Persistent;
@@ -36739,7 +37784,7 @@ var primary = (dictApply) => (x2) => dictApply.Functor0().map((v) => {
     return Inert;
   }
   if (v.tag === "Reactive") {
-    return $SelState("Reactive", v._1 ? Primary : None2);
+    return $SelState("Reactive", v._1 ? Primary : None);
   }
   fail();
 })(x2);
@@ -36854,25 +37899,25 @@ var joinSemilattice\u{1D54A} = {
     fail();
   }
 };
-var boundedJoinSemilattice\u{1D54A} = { bot: None2, JoinSemilattice0: () => joinSemilattice\u{1D54A} };
+var boundedJoinSemilattice\u{1D54A} = { bot: None, JoinSemilattice0: () => joinSemilattice\u{1D54A} };
 var isPersistent = (x2) => compare$p((() => {
   if (x2.tag === "Inert") {
-    return None2;
+    return None;
   }
   if (x2.tag === "Reactive") {
     return x2._1.persistent;
   }
   fail();
-})())(None2) !== "EQ";
+})())(None) !== "EQ";
 var isTransient = (x2) => compare$p((() => {
   if (x2.tag === "Inert") {
-    return None2;
+    return None;
   }
   if (x2.tag === "Reactive") {
     return x2._1.transient;
   }
   fail();
-})())(None2) !== "EQ";
+})())(None) !== "EQ";
 var selClassesFor = (v) => {
   if (v.tag === "Inert") {
     return "inert";
@@ -36881,7 +37926,7 @@ var selClassesFor = (v) => {
     (() => {
       const v1 = (() => {
         if (v.tag === "Inert") {
-          return None2;
+          return None;
         }
         if (v.tag === "Reactive") {
           return v._1.persistent;
@@ -36902,7 +37947,7 @@ var selClassesFor = (v) => {
     (() => {
       const v1 = (() => {
         if (v.tag === "Inert") {
-          return None2;
+          return None;
         }
         if (v.tag === "Reactive") {
           return v._1.transient;
@@ -36948,7 +37993,7 @@ var classes = /* @__PURE__ */ (() => {
 var as\u{1D54A} = (v) => (v1) => {
   if (!v) {
     if (!v1) {
-      return None2;
+      return None;
     }
     if (v1) {
       return Secondary;
@@ -36957,7 +38002,7 @@ var as\u{1D54A} = (v) => (v1) => {
   }
   if (v) {
     if (!v1) {
-      return None2;
+      return None;
     }
     if (v1) {
       return Primary;
@@ -37021,28 +38066,6 @@ var envVal = (x2) => (\u03B4v) => (\u03B3) => assertWith("")(Object.hasOwn(\u03B
     $0._2
   );
 })());
-var docElement = (v) => (v1) => (v2) => {
-  if (v2._2.tag === "None") {
-    return throwException(error("absurd"))();
-  }
-  if (v2._2.tag === "Doc") {
-    const $0 = definitely("absurd")((() => {
-      const $02 = index2(v2._2._1)(v);
-      if ($02.tag === "Just") {
-        const $1 = updateAt2(v)($02._1.tag === "Unquote" ? $DocCommentElem("Unquote", v1($02._1._1)._1) : throwException(error("absurd"))()._1)(v2._2._1);
-        if ($1.tag === "Just") {
-          return $Maybe(
-            "Just",
-            $Tuple($1._1, $02._1.tag === "Unquote" ? v1($02._1._1)._2 : throwException(error("absurd"))()._2)
-          );
-        }
-      }
-      return Nothing;
-    })());
-    return $Tuple($Val(v2._1, $DocOpt("Doc", $0._1), v2._3), $0._2);
-  }
-  fail();
-};
 var dictVal = (s) => (\u03B4v) => (v) => {
   if (v._3.tag === "Dictionary") {
     const $0 = \u03B4v($$get2(showString)(mapDictString)(s)(v._3._1)._2);
@@ -38075,7 +39098,7 @@ var viewSegmentSegmentContext = {
     const $0 = v.y_index;
     const $$transient = (() => {
       if (v1.z._2.tag === "Inert") {
-        return None2;
+        return None;
       }
       if (v1.z._2.tag === "Reactive") {
         return v1.z._2._1.transient;
@@ -38084,7 +39107,7 @@ var viewSegmentSegmentContext = {
     })();
     const persistent = (() => {
       if (v1.z._2.tag === "Inert") {
-        return None2;
+        return None;
       }
       if (v1.z._2.tag === "Reactive") {
         return v1.z._2._1.persistent;
@@ -38128,7 +39151,7 @@ var viewSegmentSegmentContext = {
         $Tuple("stroke-linecap", "round"),
         $Tuple(
           "stroke",
-          compare$p(persistent)(None2) !== "EQ" || compare$p($$transient)(None2) !== "EQ" ? colorShade(col$p)(-70) : col$p
+          compare$p(persistent)(None) !== "EQ" || compare$p($$transient)(None) !== "EQ" ? colorShade(col$p)(-70) : col$p
         )
       ];
     })();
@@ -38336,19 +39359,13 @@ var viewParagraphUnit = {
       return rootElement;
     };
   },
-  setSelection: (v) => (v1) => (select2) => (rootElement) => {
-    const $0 = v1._1;
-    return sequence_2(zipWith((i) => (view2) => {
-      const $1 = select(":scope > :nth-child(" + showIntImpl(i + 1 | 0) + ")")(rootElement);
-      return () => {
-        const child = $1();
-        return view2((dictView) => (v2) => dictView.setSelection()(v2)((() => {
-          const $2 = $0 ? docElement(i) : (x2) => constrArg("Paragraph")(0)(listElement(i)(x2));
-          return (x2) => select2($2(x2));
-        })())(child))();
-      };
-    })(range(0)(v1._2.length - 1 | 0))(v1._2));
-  }
+  setSelection: (v) => (v1) => (select2) => (rootElement) => sequence_2(zipWith((i) => (view2) => {
+    const $0 = select(":scope > :nth-child(" + showIntImpl(i + 1 | 0) + ")")(rootElement);
+    return () => {
+      const child = $0();
+      return view2((dictView) => (v2) => dictView.setSelection()(v2)((x2) => select2(constrArg("Paragraph")(0)(listElement(i)(x2))))(child))();
+    };
+  })(range(0)(v1._2.length - 1 | 0))(v1._2))
 };
 
 // output-es/App.View.DocView/index.js
@@ -38388,7 +39405,7 @@ var viewDocViewUnit = {
 };
 
 // output-es/App.View.LineChart/index.js
-var identity29 = (x2) => x2;
+var identity28 = (x2) => x2;
 var join = (v) => (v1) => {
   if (v1.tag === "Inert") {
     return v;
@@ -38442,7 +39459,7 @@ var viewLineChartUnit = {
           const $3 = attrs(point2)(fromFoldable9((() => {
             const $32 = definitely("index within bounds")(index(v3.points)(point$p.j));
             const sel = join($32.x._2)($32.y._2);
-            const fill$p = (isPersistent(sel) ? (a) => colorShade(a)(-30) : identity29)(nameCol(definitely("absurd")((() => {
+            const fill$p = (isPersistent(sel) ? ((a) => colorShade(a)(-30)) : identity28)(nameCol(definitely("absurd")((() => {
               const $4 = v3.name._1;
               return findIndex((v$1) => v$1 === $4)(arrayMap((x2) => x2.name._1)($0));
             })())));
@@ -38483,7 +39500,7 @@ var viewLineChartUnit = {
             return [
               $Tuple(
                 "stroke",
-                (isTransient(sel) ? (a) => colorShade(a)(-30) : identity29)((isPersistent(sel) ? (a) => colorShade(a)(-30) : identity29)(nameCol(definitely("absurd")((() => {
+                (isTransient(sel) ? ((a) => colorShade(a)(-30)) : identity28)((isPersistent(sel) ? ((a) => colorShade(a)(-30)) : identity28)(nameCol(definitely("absurd")((() => {
                   const $3 = v3.name._1;
                   return findIndex((v$1) => v$1 === $3)(arrayMap((x2) => x2.name._1)($0));
                 })()))))
@@ -39356,10 +40373,9 @@ var pack32 = (x2) => (v) => v(viewScatterPlotUnit)(x2);
 var pack4 = (x2) => (v) => v(viewMultiViewUnit)(x2);
 var pack5 = (x2) => (v) => v(viewParagraphUnit)(x2);
 var pack6 = (x2) => (v) => v(viewLinkUnit)(x2);
-var identity30 = (x2) => x2;
+var identity29 = (x2) => x2;
 var pack7 = (x2) => (v) => v(viewTableViewUnit)(x2);
 var pack8 = (x2) => (v) => v(viewMatrixViewUnit)(x2);
-var fromFoldable11 = /* @__PURE__ */ (() => fromFoldableImpl(foldableList.foldr))();
 var pack9 = (x2) => (v) => v(viewDocViewUnit)(x2);
 var reflectValSelStates\u{1D54A}Text = {
   from: () => (v) => {
@@ -39544,11 +40560,11 @@ var view = () => (v) => (v1) => (v2) => {
           return pack4($MultiView(intersectionWith_Object(apply)(vws)(_fmapObject(vws, (v$1) => Nothing))));
         }
         if (v1._3._1 === "Paragraph") {
-          const vws = arrayMap(view()(v))(reflectValSelStates\u{1D54A}Array.from()(v1._3._2._1));
+          const vws = arrayMap(view()(""))(reflectValSelStates\u{1D54A}Array.from()(v1._3._2._1));
           return pack5($Paragraph(false, zipWith(apply)(vws)(arrayMap((v$1) => Nothing)(vws))));
         }
         if (v1._3._1 === "Nil" || v1._3._1 === ":") {
-          const records = arrayMap(dict(identity30))(reflectValSelStates\u{1D54A}Array.from()(v1));
+          const records = arrayMap(dict(identity29))(reflectValSelStates\u{1D54A}Array.from()(v1));
           const colNames = headers(records);
           return pack7({
             title: v,
@@ -39564,7 +40580,7 @@ var view = () => (v) => (v1) => (v2) => {
       }
     }
     if (v1._3._1 === "Nil" || v1._3._1 === ":") {
-      const records = arrayMap(dict(identity30))(reflectValSelStates\u{1D54A}Array.from()(v1));
+      const records = arrayMap(dict(identity29))(reflectValSelStates\u{1D54A}Array.from()(v1));
       const colNames = headers(records);
       return pack7({
         title: v,
@@ -39580,36 +40596,17 @@ var view = () => (v) => (v1) => (v2) => {
   }
   fail();
 };
-var viewPara = () => (v) => {
-  if (v.tag === "None") {
-    return Nothing;
-  }
-  if (v.tag === "Doc") {
-    const formatPara = (v1) => {
-      if (v1.tag === "Nil") {
-        return Nil;
-      }
-      if (v1.tag === "Cons") {
-        if (v1._1.tag === "Token") {
-          if (v1._2.tag === "Cons" && v1._2._1.tag === "Token") {
-            return formatPara($List("Cons", $DocCommentElem("Token", v1._1._1 + " " + v1._2._1._1), v1._2._2));
-          }
-          return $List("Cons", pack3($Tuple(v1._1._1, Inert)), formatPara(v1._2));
-        }
-        if (v1._1.tag === "Unquote") {
-          if (v1._1._1._3.tag === "Int") {
-            return $List("Cons", pack3($Tuple(showIntImpl(v1._1._1._3._1), v1._1._1._1)), formatPara(v1._2));
-          }
-          return $List("Cons", view()("")(v1._1._1)(Nothing), formatPara(v1._2));
-        }
-      }
-      fail();
-    };
-    return $Maybe("Just", $Paragraph(true, fromFoldable11(formatPara(v._1))));
+var viewParagraph = () => (v) => {
+  if (v._3.tag === "Constr" && v._3._2.tag === "Cons" && v._3._2._2.tag === "Nil" && v._3._1 === "Paragraph") {
+    const vws = arrayMap(view()(""))(reflectValSelStates\u{1D54A}Array.from()(v._3._2._1));
+    return $Paragraph(false, zipWith(apply)(vws)(arrayMap((v$1) => Nothing)(vws)));
   }
   fail();
 };
-var view$p = () => (title2) => (v) => (v1) => pack9({ doc: viewPara()(v._2), view: view()(title2)(v)(Nothing) });
+var view$p = () => (title2) => (v) => (v1) => pack9({
+  doc: v._2.tag === "Just" ? $Maybe("Just", viewParagraph()(v._2._1)) : Nothing,
+  view: view()(title2)(v)(Nothing)
+});
 
 // output-es/Control.Monad.State.Trans/index.js
 var bindStateT = (dictMonad) => ({ bind: (v) => (f) => (s) => dictMonad.Bind1().bind(v(s))((v1) => f(v1._1)(v1._2)), Apply0: () => applyStateT(dictMonad) });
@@ -39698,7 +40695,7 @@ var withReaderT = (f) => (v) => (x2) => v(f(x2));
 var bindReaderT = (dictBind) => {
   const $0 = dictBind.Apply0();
   const $1 = $0.Functor0();
-  const applyReaderT1 = (() => {
+  const applyReaderT1 = /* @__PURE__ */ (() => {
     const functorReaderT1 = {
       map: (x2) => {
         const $2 = $1.map(x2);
@@ -39790,7 +40787,7 @@ var monadAffState = (dictMonadAff) => {
 };
 
 // output-es/Graph.WithGraph/index.js
-var fromFoldable17 = /* @__PURE__ */ (() => {
+var fromFoldable11 = /* @__PURE__ */ (() => {
   const go = (go$a0$copy) => (go$a1$copy) => {
     let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
     while (go$c) {
@@ -39837,7 +40834,7 @@ var monadAllocAllocT = (dictMonad) => {
 var runAllocT = (dictMonad) => (m) => (n) => dictMonad.Bind1().bind(m(n))((v) => dictMonad.Applicative0().pure($Tuple(
   v._2,
   $Tuple(
-    fromFoldable17(listMap((x2) => showIntImpl(x2))((() => {
+    fromFoldable11(listMap((x2) => showIntImpl(x2))((() => {
       const $0 = n + 1 | 0;
       if (v._2 < $0) {
         return Nil;
@@ -39915,7 +40912,7 @@ var pure2 = /* @__PURE__ */ (() => applicativeStateT(monadIdentity).pure)();
 var extend3 = /* @__PURE__ */ (() => monadWithGraphWithGraphT(monadIdentity).extend)();
 var tailRecM = /* @__PURE__ */ (() => monadRecStateT(monadRecIdentity).tailRecM)();
 var member4 = /* @__PURE__ */ (() => setSet(ordVertex).member)();
-var fromFoldable18 = /* @__PURE__ */ (() => foldableSet.foldr(Cons)(Nil))();
+var fromFoldable17 = /* @__PURE__ */ (() => foldableSet.foldr(Cons)(Nil))();
 var fwdSlice = (dictGraph) => {
   const runWithGraph_spy = runWithGraphT_spy1(dictGraph);
   return (v) => {
@@ -39984,7 +40981,7 @@ var bwdSlice = (dictGraph) => {
           "Loop",
           {
             visited: v1.visited,
-            "\u03B1s": foldableList.foldr(Cons)(v1["\u03B1s"]._2)(fromFoldable18(\u03B2s)),
+            "\u03B1s": foldableList.foldr(Cons)(v1["\u03B1s"]._2)(fromFoldable17(\u03B2s)),
             pending: $List("Cons", $Tuple($Tuple(v1["\u03B1s"]._1, dictGraph.vertexData($0)(v1["\u03B1s"]._1)), \u03B2s), v1.pending)
           }
         ));
@@ -39992,7 +40989,7 @@ var bwdSlice = (dictGraph) => {
       fail();
     })({
       visited: Leaf2,
-      "\u03B1s": fromFoldable18(assertWhen(true)("inputs are sinks")((v$1) => difference2(ordVertex)($1)(addresses2($0)).tag === "Leaf")($1)),
+      "\u03B1s": fromFoldable17(assertWhen(true)("inputs are sinks")((v$1) => difference2(ordVertex)($1)(addresses2($0)).tag === "Leaf")($1)),
       pending: Nil
     }))(Leaf2)._1;
   };
@@ -40001,23 +40998,18 @@ var bwdSlice = (dictGraph) => {
 // output-es/EvalGraph/index.js
 var setSet4 = /* @__PURE__ */ setSet(ordVertex);
 var disjointUnion2 = /* @__PURE__ */ disjointUnion(mapEnvStringVal);
-var fromFoldable19 = /* @__PURE__ */ (() => foldableSet.foldl((m) => (a) => insert3(ordString)(a)()(m))(Leaf2))();
+var fromFoldable18 = /* @__PURE__ */ (() => foldableSet.foldl((m) => (a) => insert3(ordString)(a)()(m))(Leaf2))();
 var show22 = /* @__PURE__ */ (() => showSet(showString).show)();
 var toUnfoldable11 = /* @__PURE__ */ toUnfoldable4(unfoldableList);
 var union1 = /* @__PURE__ */ (() => setSet(ordString).union)();
 var fv = /* @__PURE__ */ (() => fVDict(fVElim).fv)();
-var pack10 = (x2) => (k) => k(typeNameVal)(x2);
-var fromFoldable110 = /* @__PURE__ */ fromFoldable(foldableList);
+var fromFoldable19 = /* @__PURE__ */ fromFoldable(foldableList);
 var greaterThanOrEq = /* @__PURE__ */ (() => {
   const $0 = ordTuple(ordInt)(ordInt);
   return (a1) => (a2) => $0.compare(a1)(a2) !== "LT";
 })();
 var show32 = (v) => "(Tuple " + showIntImpl(v._1) + " " + showIntImpl(v._2) + ")";
 var traverse2 = /* @__PURE__ */ (() => traversableList.traverse(applicativeMaybe))();
-var concatM = (dictMonad) => foldableList.foldr((() => {
-  const $0 = dictMonad.Bind1();
-  return (f) => (g) => (a) => $0.bind(f(a))(g);
-})())(dictMonad.Applicative0().pure);
 var fwdSlice2 = /* @__PURE__ */ fwdSlice(graphGraphImpl);
 var bwdSlice2 = /* @__PURE__ */ bwdSlice(graphGraphImpl);
 var matchMany = (dictMonadWithGraphAlloc) => {
@@ -40115,7 +41107,7 @@ var match = (dictMonadWithGraphAlloc) => {
         const $2 = v._3._1;
         const $3 = v._1;
         const $4 = v1._2;
-        return Bind1.bind(check(MonadThrow0)(difference2(ordString)($1)(fromFoldable19(mapObjectString.keys($2))).tag === "Leaf")("Pattern mismatch: found " + show22(mapObjectString.keys($2)) + ", expected " + show22($1)))(() => Bind1.bind(matchMany(dictMonadWithGraphAlloc)(listMap((k) => $$get2(showString)(mapObjectString)(k)($2)._2)(toUnfoldable11($1)))($4))((v2) => $0.pure($Tuple(
+        return Bind1.bind(check(MonadThrow0)(difference2(ordString)($1)(fromFoldable18(mapObjectString.keys($2))).tag === "Leaf")("Pattern mismatch: found " + show22(mapObjectString.keys($2)) + ", expected " + show22($1)))(() => Bind1.bind(matchMany(dictMonadWithGraphAlloc)(listMap((k) => $$get2(showString)(mapObjectString)(k)($2)._2)(toUnfoldable11($1)))($4))((v2) => $0.pure($Tuple(
           v2._1,
           $Tuple(v2._2._1, insert3(ordVertex)($3)()(v2._2._2))
         ))));
@@ -40161,7 +41153,7 @@ var closeDefs = (dictMonadWithGraphAlloc) => {
   const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
   return (\u03B3) => (\u03C1) => (\u03B1s) => Monad0.Bind1().Apply0().Functor0().map(Env)(traverse2$1((\u03C3) => {
     const \u03C1$p = forDefs(\u03C1)(\u03C3);
-    return $$new((a) => Val(a)(None))(\u03B1s)($BaseVal(
+    return $$new((a) => Val(a)(Nothing))(\u03B1s)($BaseVal(
       "Fun",
       $Fun(
         "Closure",
@@ -40178,67 +41170,22 @@ var closeDefs = (dictMonadWithGraphAlloc) => {
     ));
   })(\u03C1));
 };
-var new$p = (dictMonadWithGraphAlloc) => {
-  const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
-  const fresh = dictMonadWithGraphAlloc.MonadAlloc0().fresh;
-  return (dictMonadReader) => {
-    const Monad0 = dictMonadReader.MonadAsk0().Monad0();
-    const Bind1 = Monad0.Bind1();
-    return (dictLoadFile) => (v) => (v1) => (v2) => (v3) => {
-      if (v2.tag === "None") {
-        return $$new((\u03B1s$p) => (u$p) => $Val(\u03B1s$p, None, u$p))(v1)(v3);
-      }
-      return Bind1.bind(fresh)((\u03B1) => Bind1.bind(evalDocOpt(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(unionWith((v$1) => identity19)(v)((() => {
-        const $0 = {};
-        $0.this = $Val(\u03B1, None, v3);
-        return $0;
-      })()))(v2))((vdoc) => Bind1.bind(dictMonadWithGraphAlloc.MonadWithGraph2().extend($Tuple(\u03B1, pack10($Val(\u03B1, vdoc, v3))))(v1))(() => Monad0.Applicative0().pure($Val(
-        \u03B1,
-        vdoc,
-        v3
-      )))));
-    };
-  };
-};
-var evalDocOpt = (dictMonadWithGraphAlloc) => (dictMonadReader) => {
-  const Monad0 = dictMonadReader.MonadAsk0().Monad0();
-  const Applicative0 = Monad0.Applicative0();
-  const $0 = Monad0.Bind1().Apply0().Functor0();
-  const sequence2 = traversableList.traverse(Applicative0)(identity7);
-  return (dictLoadFile) => (v) => (v1) => {
-    if (v1.tag === "None") {
-      return Applicative0.pure(None);
-    }
-    if (v1.tag === "Doc") {
-      return $0.map(Doc)(sequence2(listMap((v2) => {
-        if (v2.tag === "Token") {
-          return Applicative0.pure($DocCommentElem("Token", v2._1));
-        }
-        if (v2.tag === "Unquote") {
-          return $0.map(Unquote)($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(v2._1)(setSet4.empty));
-        }
-        fail();
-      })(v1._1)));
-    }
-    fail();
-  };
-};
 var $$eval = (dictMonadWithGraphAlloc) => {
   const MonadError1 = dictMonadWithGraphAlloc.MonadError1();
   const withMsg2 = withMsg(MonadError1);
   const MonadThrow0 = MonadError1.MonadThrow0();
-  const checkArity2 = checkArity(MonadError1);
   const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
+  const checkArity2 = checkArity(MonadError1);
   const match1 = match(dictMonadWithGraphAlloc);
   const closeDefs1 = closeDefs(dictMonadWithGraphAlloc);
-  return (dictMonadReader) => {
-    const Monad0 = dictMonadReader.MonadAsk0().Monad0();
+  return (dictMonadReader) => (dictMonadAff) => {
+    const Monad0 = dictMonadAff.MonadEffect0().Monad0();
     const Bind1 = Monad0.Bind1();
     const $0 = Bind1.Apply0().Functor0();
     const Applicative0 = Monad0.Applicative0();
     const traverse3 = traversableList.traverse(Applicative0);
     const traverse4 = traversablePair.traverse(Applicative0);
-    const sequence2 = traversableArray.traverse(Applicative0)(identity5);
+    const sequence1 = traversableArray.traverse(Applicative0)(identity5);
     return (dictLoadFile) => (v) => (v1) => (v2) => {
       if (v1.tag === "Var") {
         return withMsg2("Variable lookup")(lookup$p(MonadThrow0)(showString)(mapEnvStringVal)(v1._1)(v));
@@ -40247,33 +41194,31 @@ var $$eval = (dictMonadWithGraphAlloc) => {
         return withMsg2("Variable lookup")(lookup$p(MonadThrow0)(showString)(mapEnvStringVal)(v1._1)(v));
       }
       if (v1.tag === "Int") {
-        return new$p(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(insert3(ordVertex)(v1._1)()(v2))(v1._2)($BaseVal("Int", v1._3));
+        return $$new((a) => Val(a)(Nothing))(insert3(ordVertex)(v1._1)()(v2))($BaseVal("Int", v1._2));
       }
       if (v1.tag === "Float") {
-        return new$p(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(insert3(ordVertex)(v1._1)()(v2))(v1._2)($BaseVal("Float", v1._3));
+        return $$new((a) => Val(a)(Nothing))(insert3(ordVertex)(v1._1)()(v2))($BaseVal("Float", v1._2));
       }
       if (v1.tag === "Str") {
-        return new$p(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(insert3(ordVertex)(v1._1)()(v2))(v1._2)($BaseVal("Str", v1._3));
+        return $$new((a) => Val(a)(Nothing))(insert3(ordVertex)(v1._1)()(v2))($BaseVal("Str", v1._2));
       }
       if (v1.tag === "Dictionary") {
-        const $1 = v1._2;
-        const $2 = v1._1;
+        const $1 = v1._1;
         return Bind1.bind($0.map(unzip3)(traverse3(traverse4((() => {
-          const $3 = $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v);
-          return (a) => $3(a)(v2);
-        })()))(v1._3)))((v3) => {
+          const $2 = $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v);
+          return (a) => $2(a)(v2);
+        })()))(v1._2)))((v3) => {
           const v4 = unzip(listMap((v$1) => $Tuple(v$1._3.tag === "Str" ? v$1._3._1 : typeError(v$1._3)("Str"), v$1._1))(v3._1));
-          return new$p(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(insert3(ordVertex)($2)()(v2))($1)($BaseVal(
+          return $$new((a) => Val(a)(Nothing))(insert3(ordVertex)($1)()(v2))($BaseVal(
             "Dictionary",
-            fromFoldable110(zipWith2(Tuple)(v4._1)(zipWith2(Tuple)(v4._2)(v3._2)))
+            fromFoldable19(zipWith2(Tuple)(v4._1)(zipWith2(Tuple)(v4._2)(v3._2)))
           ));
         });
       }
       if (v1.tag === "Constr") {
-        const $1 = v1._3;
-        const $2 = v1._2;
-        const $3 = v1._4;
-        const $4 = v1._1;
+        const $1 = v1._2;
+        const $2 = v1._3;
+        const $3 = v1._1;
         return Bind1.bind(checkArity2($1)((() => {
           const go = (go$a0$copy) => (go$a1$copy) => {
             let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
@@ -40293,47 +41238,46 @@ var $$eval = (dictMonadWithGraphAlloc) => {
             }
             return go$r;
           };
-          return go(0)($3);
+          return go(0)($2);
         })()))(() => Bind1.bind(traverse3((() => {
-          const $5 = $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v);
-          return (a) => $5(a)(v2);
-        })())($3))((vs) => new$p(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(insert3(ordVertex)($4)()(v2))($2)($BaseVal("Constr", $1, vs))));
+          const $4 = $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v);
+          return (a) => $4(a)(v2);
+        })())($2))((vs) => $$new((a) => Val(a)(Nothing))(insert3(ordVertex)($3)()(v2))($BaseVal("Constr", $1, vs))));
       }
       if (v1.tag === "Matrix") {
         const $1 = v1._2;
-        const $2 = v1._3;
-        const $3 = v1._4._1;
-        const $4 = v1._4._2;
-        const $5 = v1._1;
-        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(v1._5)(v2))((v3) => {
+        const $2 = v1._3._1;
+        const $3 = v1._3._2;
+        const $4 = v1._1;
+        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v)(v1._4)(v2))((v3) => {
           const v5 = intPair.unpack(v3._3);
-          const $6 = v5._1._1;
-          const $7 = v5._2._1;
-          const $8 = v5._1._2;
-          const $9 = v5._2._2;
-          return Bind1.bind(check(MonadThrow0)(greaterThanOrEq($Tuple($6, $7))($Tuple(1, 1)))("array must be at least (" + show32($Tuple(
+          const $5 = v5._1._1;
+          const $6 = v5._2._1;
+          const $7 = v5._1._2;
+          const $8 = v5._2._2;
+          return Bind1.bind(check(MonadThrow0)(greaterThanOrEq($Tuple($5, $6))($Tuple(1, 1)))("array must be at least (" + show32($Tuple(
             1,
             1
-          )) + "); got (" + show32($Tuple($6, $7)) + ")"))(() => Bind1.bind(sequence2(arrayBind(range(1)($6))((i) => [
-            sequence2(arrayBind(range(1)($7))((j) => [
-              $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(unionWith((v$1) => identity19)(v)(disjointUnion2((() => {
-                const $10 = {};
-                $10[$3] = $Val($8, None, $BaseVal("Int", i));
-                return $10;
+          )) + "); got (" + show32($Tuple($5, $6)) + ")"))(() => Bind1.bind(sequence1(arrayBind(range(1)($5))((i) => [
+            sequence1(arrayBind(range(1)($6))((j) => [
+              $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(unionWith((v$1) => identity19)(v)(disjointUnion2((() => {
+                const $9 = {};
+                $9[$2] = $Val($7, Nothing, $BaseVal("Int", i));
+                return $9;
               })())((() => {
-                const $10 = {};
-                $10[$4] = $Val($9, None, $BaseVal("Int", j));
-                return $10;
-              })())))($2)(v2)
+                const $9 = {};
+                $9[$3] = $Val($8, Nothing, $BaseVal("Int", j));
+                return $9;
+              })())))($1)(v2)
             ]))
-          ])))((vss) => new$p(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(insert3(ordVertex)($5)()(v2))($1)($BaseVal(
+          ])))((vss) => $$new((a) => Val(a)(Nothing))(insert3(ordVertex)($4)()(v2))($BaseVal(
             "Matrix",
-            $Tuple(vss, $Tuple($Tuple($6, $8), $Tuple($7, $9)))
+            $Tuple(vss, $Tuple($Tuple($5, $7), $Tuple($6, $8)))
           ))));
         });
       }
       if (v1.tag === "Lambda") {
-        return $$new((a) => Val(a)(None))(insert3(ordVertex)(v1._1)()(v2))($BaseVal(
+        return $$new((a) => Val(a)(Nothing))(insert3(ordVertex)(v1._1)()(v2))($BaseVal(
           "Fun",
           $Fun(
             "Closure",
@@ -40350,34 +41294,32 @@ var $$eval = (dictMonadWithGraphAlloc) => {
         ));
       }
       if (v1.tag === "Project") {
-        const $1 = v1._1;
-        const $2 = v1._3;
-        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(v1._2)(v2))((v3) => {
+        const $1 = v1._2;
+        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v)(v1._1)(v2))((v3) => {
           if (v3._3.tag === "Dictionary") {
-            return Bind1.bind(withMsg2("Dict lookup")(orElse(MonadThrow0)('Key "' + $2 + '" not found')((() => {
-              const $3 = _lookup(Nothing, Just, $2, v3._3._1);
-              if ($3.tag === "Just") {
-                return $Maybe("Just", $3._1._2);
+            return withMsg2("Dict lookup")(orElse(MonadThrow0)('Key "' + $1 + '" not found')((() => {
+              const $2 = _lookup(Nothing, Just, $1, v3._3._1);
+              if ($2.tag === "Just") {
+                return $Maybe("Just", $2._1._2);
               }
               return Nothing;
-            })())))((v$p) => concatDocs(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(v$p)($1));
+            })()));
           }
           return MonadThrow0.throwError(error("Found " + intercalate4("\n")(removeDocWS(prettyVal(highlightableVertex).pretty(v3)).lines) + ", expected dictionary"));
         });
       }
       if (v1.tag === "DProject") {
-        const $1 = v1._1;
-        const $2 = v1._3;
-        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(v1._2)(v2))((v3) => Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)($2)(v2))((v$p) => {
+        const $1 = v1._2;
+        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v)(v1._1)(v2))((v3) => Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v)($1)(v2))((v$p) => {
           if (v3._3.tag === "Dictionary") {
             if (v$p._3.tag === "Str") {
-              return Bind1.bind(withMsg2("Dict lookup")(orElse(MonadThrow0)('Key "' + v$p._3._1 + '" not found')((() => {
-                const $3 = _lookup(Nothing, Just, v$p._3._1, v3._3._1);
-                if ($3.tag === "Just") {
-                  return $Maybe("Just", $3._1._2);
+              return withMsg2("Dict lookup")(orElse(MonadThrow0)('Key "' + v$p._3._1 + '" not found')((() => {
+                const $2 = _lookup(Nothing, Just, v$p._3._1, v3._3._1);
+                if ($2.tag === "Just") {
+                  return $Maybe("Just", $2._1._2);
                 }
                 return Nothing;
-              })())))((v$p$p) => concatDocs(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(v$p$p)($1));
+              })()));
             }
             return MonadThrow0.throwError(error("Found " + intercalate4("\n")(removeDocWS(prettyVal(highlightableVertex).pretty(v$p)).lines) + ", expected string"));
           }
@@ -40385,43 +41327,33 @@ var $$eval = (dictMonadWithGraphAlloc) => {
         }));
       }
       if (v1.tag === "App") {
-        const $1 = v1._1;
-        const $2 = v1._3;
-        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(v1._2)(v2))((v3) => Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)($2)(v2))((v$p) => Bind1.bind(apply2(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v3)(v$p))((v4) => {
-          const $3 = v4._3;
-          const $4 = v4._1;
-          return Bind1.bind(evalDocOpt(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(unionWith((v$1) => identity19)(v)((() => {
-            const $5 = {};
-            $5.this = v4;
-            return $5;
-          })()))($1))((vdoc) => Applicative0.pure($Val($4, vdoc, $3)));
-        })));
+        const $1 = v1._2;
+        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v)(v1._1)(v2))((v3) => Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v)($1)(v2))((v$p) => apply2(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v3)(v$p)));
       }
       if (v1.tag === "Let") {
         const $1 = v1._2;
         const $2 = v1._1._1;
-        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(v)(v1._1._2)(v2))((v3) => Bind1.bind(match1(v3)($2))((v4) => $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(unionWith((v$1) => identity19)(v)(v4._1))($1)(v4._2._2)));
+        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v)(v1._1._2)(v2))((v3) => Bind1.bind(match1(v3)($2))((v4) => $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(unionWith((v$1) => identity19)(v)(v4._1))($1)(v4._2._2)));
       }
       if (v1.tag === "LetRec") {
         const $1 = v1._2;
         const $2 = v1._1._1;
-        return Bind1.bind(closeDefs1(v)(v1._1._2)(insert3(ordVertex)($2)()(v2)))((\u03B3$p) => $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(unionWith((v$1) => identity19)(v)(\u03B3$p))($1)(insert3(ordVertex)($2)()(v2)));
+        return Bind1.bind(closeDefs1(v)(v1._1._2)(insert3(ordVertex)($2)()(v2)))((\u03B3$p) => $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(unionWith((v$1) => identity19)(v)(\u03B3$p))($1)(insert3(ordVertex)($2)()(v2)));
+      }
+      if (v1.tag === "DocExpr") {
+        const $1 = v1._1;
+        return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(v)(v1._2)(v2))((v3) => {
+          const $2 = v3._3;
+          const $3 = v3._1;
+          return Bind1.bind($$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(unionWith((v$1) => identity19)(v)((() => {
+            const $4 = {};
+            $4.this = $Val($3, Nothing, $2);
+            return $4;
+          })()))($1)(v2))((v4) => Applicative0.pure($Val($3, $Maybe("Just", v4), $2)));
+        });
       }
       fail();
     };
-  };
-};
-var concatDocs = (dictMonadWithGraphAlloc) => (dictMonadReader) => {
-  const Monad0 = dictMonadReader.MonadAsk0().Monad0();
-  return (dictLoadFile) => (\u03B3) => (v) => (doc2) => {
-    const $0 = v._3;
-    const $1 = v._2;
-    const $2 = v._1;
-    return Monad0.Bind1().bind(evalDocOpt(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(unionWith((v$1) => identity19)(\u03B3)((() => {
-      const $3 = {};
-      $3.this = $Val($2, None, $0);
-      return $3;
-    })()))(doc2))((vdoc$p) => Monad0.Applicative0().pure($Val($2, semigroupDocOpt.append(vdoc$p)($1), $0)));
   };
 };
 var apply2 = (dictMonadWithGraphAlloc) => {
@@ -40430,8 +41362,8 @@ var apply2 = (dictMonadWithGraphAlloc) => {
   const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
   const MonadError1 = dictMonadWithGraphAlloc.MonadError1();
   const MonadThrow0 = MonadError1.MonadThrow0();
-  return (dictMonadReader) => {
-    const Bind1 = dictMonadReader.MonadAsk0().Monad0().Bind1();
+  return (dictMonadReader) => (dictMonadAff) => {
+    const Bind1 = dictMonadAff.MonadEffect0().Monad0().Bind1();
     return (dictLoadFile) => (v) => (v1) => {
       const $0 = (v2) => MonadThrow0.throwError(error("Found " + intercalate4("\n")(removeDocWS(prettyVal(highlightableVertex).pretty(v2)).lines) + ", expected function"));
       if (v._3.tag === "Fun") {
@@ -40439,7 +41371,7 @@ var apply2 = (dictMonadWithGraphAlloc) => {
           const $1 = v._1;
           const $2 = v._3._1._1;
           const $3 = v._3._1._3;
-          return Bind1.bind(closeDefs1($2)(v._3._1._2)($$$Map("Two", Leaf2, $1, void 0, Leaf2)))((\u03B32) => Bind1.bind(match1(v1)($3))((v3) => $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictLoadFile)(unionWith((v$1) => identity19)(unionWith((v$1) => identity19)($2)(\u03B32))(v3._1))(v3._2._1.tag === "ContExpr" ? v3._2._1._1 : throwException(error("Expression expected"))())(insert3(ordVertex)($1)()(v3._2._2))));
+          return Bind1.bind(closeDefs1($2)(v._3._1._2)($$$Map("Two", Leaf2, $1, void 0, Leaf2)))((\u03B32) => Bind1.bind(match1(v1)($3))((v3) => $$eval(dictMonadWithGraphAlloc)(dictMonadReader)(dictMonadAff)(dictLoadFile)(unionWith((v$1) => identity19)(unionWith((v$1) => identity19)($2)(\u03B32))(v3._1))(v3._2._1.tag === "ContExpr" ? v3._2._1._1 : throwException(error("Expression expected"))())(insert3(ordVertex)($1)()(v3._2._2))));
         }
         if (v._3._1.tag === "Foreign") {
           const $1 = v._3._1._1._2;
@@ -40465,12 +41397,12 @@ var apply2 = (dictMonadWithGraphAlloc) => {
             };
             return $1._1.arity > go(0)(vs$p);
           })()) {
-            return $$new((a) => Val(a)(None))($$$Map("Two", Leaf2, v._1, void 0, Leaf2))($BaseVal(
+            return $$new((a) => Val(a)(Nothing))($$$Map("Two", Leaf2, v._1, void 0, Leaf2))($BaseVal(
               "Fun",
               $Fun("Foreign", $Tuple(v._3._1._1._1, $1), vs$p)
             ));
           }
-          return $1._1.op(dictMonadWithGraphAlloc)(MonadError1)(dictMonadReader)(dictLoadFile)(vs$p);
+          return $1._1.op(dictMonadWithGraphAlloc)(MonadError1)(dictMonadAff)(dictMonadReader)(dictLoadFile)(vs$p);
         }
         if (v._3._1.tag === "PartialConstr") {
           const $1 = v._1;
@@ -40527,7 +41459,7 @@ var apply2 = (dictMonadWithGraphAlloc) => {
               return go$r;
             };
             return go(0)(v._3._1._2) < n;
-          })())("Too many arguments to " + showCtr(v._3._1._1)))(() => $$new((a) => Val(a)(None))($$$Map(
+          })())("Too many arguments to " + showCtr(v._3._1._1)))(() => $$new((a) => Val(a)(Nothing))($$$Map(
             "Two",
             Leaf2,
             $1,
@@ -40545,79 +41477,100 @@ var eval_module = (dictMonadWithGraphAlloc) => {
   const match1 = match(dictMonadWithGraphAlloc);
   const closeDefs1 = closeDefs(dictMonadWithGraphAlloc);
   return (dictMonadReader) => {
-    const Monad0 = dictMonadReader.MonadAsk0().Monad0();
-    const $0 = Monad0.Bind1();
     const eval2 = eval1(dictMonadReader);
-    return (dictLoadFile) => {
-      const eval3 = eval2(dictLoadFile);
-      return (\u03B3) => {
-        const go = (v) => (v1) => (v2) => {
-          if (v1.tag === "Nil") {
-            return Monad0.Applicative0().pure(v);
-          }
-          if (v1.tag === "Cons") {
-            if (v1._1.tag === "Left") {
-              const $1 = v1._2;
-              const $2 = v1._1._1._1;
-              return $0.bind(eval3(unionWith((v$1) => identity19)(\u03B3)(v))(v1._1._1._2)(v2))((v3) => $0.bind(match1(v3)($2))((v4) => go(unionWith((v$1) => identity19)(v)(v4._1))($1)(v4._2._2)));
+    return (dictMonadAff) => {
+      const Monad0 = dictMonadAff.MonadEffect0().Monad0();
+      const $0 = Monad0.Bind1();
+      const eval3 = eval2(dictMonadAff);
+      return (dictLoadFile) => {
+        const eval4 = eval3(dictLoadFile);
+        return (\u03B3) => {
+          const go = (v) => (v1) => (v2) => {
+            if (v1.tag === "Nil") {
+              return Monad0.Applicative0().pure(v);
             }
-            if (v1._1.tag === "Right") {
-              const $1 = v1._2;
-              return $0.bind(closeDefs1(unionWith((v$1) => identity19)(\u03B3)(v))(v1._1._1._2)(insert3(ordVertex)(v1._1._1._1)()(v2)))((\u03B3$p$p) => go(unionWith((v$1) => identity19)(v)(\u03B3$p$p))($1)(v2));
+            if (v1.tag === "Cons") {
+              if (v1._1.tag === "Left") {
+                const $1 = v1._2;
+                const $2 = v1._1._1._1;
+                return $0.bind(eval4(unionWith((v$1) => identity19)(\u03B3)(v))(v1._1._1._2)(v2))((v3) => $0.bind(match1(v3)($2))((v4) => go(unionWith((v$1) => identity19)(v)(v4._1))($1)(v4._2._2)));
+              }
+              if (v1._1.tag === "Right") {
+                const $1 = v1._2;
+                return $0.bind(closeDefs1(unionWith((v$1) => identity19)(\u03B3)(v))(v1._1._1._2)(insert3(ordVertex)(v1._1._1._1)()(v2)))((\u03B3$p$p) => go(unionWith((v$1) => identity19)(v)(\u03B3$p$p))($1)(v2));
+              }
             }
-          }
-          fail();
+            fail();
+          };
+          return go(empty);
         };
-        return go(empty);
       };
     };
   };
 };
 var eval_progCxt = (dictMonadWithGraphAlloc) => {
   const eval_module1 = eval_module(dictMonadWithGraphAlloc);
-  const eval1 = $$eval(dictMonadWithGraphAlloc);
   return (dictMonadReader) => {
-    const Monad0 = dictMonadReader.MonadAsk0().Monad0();
-    const $0 = Monad0.Bind1();
     const eval_module2 = eval_module1(dictMonadReader);
-    const $1 = Monad0.Applicative0();
-    const eval2 = eval1(dictMonadReader);
-    const concatM1 = concatM(Monad0);
-    return (dictLoadFile) => {
-      const eval_module3 = eval_module2(dictLoadFile);
-      const eval3 = eval2(dictLoadFile);
-      return (v) => (v1) => {
-        const $2 = v.datasets;
-        const $3 = v1.graph;
-        const $4 = v1.modules;
-        const $5 = v.primitives;
-        const $6 = v1.roots;
-        return $0.bind(foldM3(Monad0)((\u03B3s) => (name3) => {
-          const v2 = definitely("deps evaluated")((() => {
-            const $7 = lookup2(ordString)(name3)($3);
-            if ($7.tag === "Just") {
-              const $8 = traverse2((dep) => lookup2(ordString)(dep)(\u03B3s))($7._1);
-              if ($8.tag === "Just") {
-                const $9 = lookup2(ordString)(name3)($4);
-                if ($9.tag === "Just") {
-                  return $Maybe("Just", $Tuple($9._1, $8._1));
+    return (dictMonadAff) => {
+      const Monad0 = dictMonadAff.MonadEffect0().Monad0();
+      const $0 = Monad0.Bind1();
+      const eval_module3 = eval_module2(dictMonadAff);
+      const $1 = Monad0.Applicative0();
+      return (dictLoadFile) => {
+        const eval_module4 = eval_module3(dictLoadFile);
+        return (v) => (v1) => {
+          const $2 = v1.graph;
+          const $3 = v1.modules;
+          const $4 = v.primitives;
+          const $5 = v1.roots;
+          return $0.bind(foldM3(Monad0)((\u03B3s) => (name3) => {
+            const v2 = definitely("deps evaluated")((() => {
+              const $6 = lookup2(ordString)(name3)($2);
+              if ($6.tag === "Just") {
+                const $7 = traverse2((dep) => lookup2(ordString)(dep)(\u03B3s))($6._1);
+                if ($7.tag === "Just") {
+                  const $8 = lookup2(ordString)(name3)($3);
+                  if ($8.tag === "Just") {
+                    return $Maybe("Just", $Tuple($8._1, $7._1));
+                  }
+                  if ($8.tag === "Nothing") {
+                    return Nothing;
+                  }
+                  fail();
                 }
-                if ($9.tag === "Nothing") {
+                if ($7.tag === "Nothing") {
                   return Nothing;
                 }
                 fail();
               }
-              if ($8.tag === "Nothing") {
+              if ($6.tag === "Nothing") {
                 return Nothing;
               }
               fail();
-            }
-            if ($7.tag === "Nothing") {
-              return Nothing;
-            }
-            fail();
-          })());
-          return $0.bind(eval_module3((() => {
+            })());
+            return $0.bind(eval_module4((() => {
+              const go = (go$a0$copy) => (go$a1$copy) => {
+                let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
+                while (go$c) {
+                  const b = go$a0, v$1 = go$a1;
+                  if (v$1.tag === "Nil") {
+                    go$c = false;
+                    go$r = b;
+                    continue;
+                  }
+                  if (v$1.tag === "Cons") {
+                    go$a0 = unionWith((v$2) => identity19)(b)(v$1._1);
+                    go$a1 = v$1._2;
+                    continue;
+                  }
+                  fail();
+                }
+                return go$r;
+              };
+              return go($4)(v2._2);
+            })())(v2._1)(setSet4.empty))((\u03B3$p) => $1.pure(insert3(ordString)(name3)(\u03B3$p)(\u03B3s)));
+          })(Leaf2)(v1.topsorted))((\u03B3s) => $1.pure((() => {
             const go = (go$a0$copy) => (go$a1$copy) => {
               let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
               while (go$c) {
@@ -40636,36 +41589,9 @@ var eval_progCxt = (dictMonadWithGraphAlloc) => {
               }
               return go$r;
             };
-            return go($5)(v2._2);
-          })())(v2._1)(setSet4.empty))((\u03B3$p) => $1.pure(insert3(ordString)(name3)(\u03B3$p)(\u03B3s)));
-        })(Leaf2)(v1.topsorted))((\u03B3s) => {
-          const go = (go$a0$copy) => (go$a1$copy) => {
-            let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
-            while (go$c) {
-              const b = go$a0, v$1 = go$a1;
-              if (v$1.tag === "Nil") {
-                go$c = false;
-                go$r = b;
-                continue;
-              }
-              if (v$1.tag === "Cons") {
-                go$a0 = unionWith((v$2) => identity19)(b)(v$1._1);
-                go$a1 = v$1._2;
-                continue;
-              }
-              fail();
-            }
-            return go$r;
-          };
-          return concatM1(listMap((v2) => (\u03B3) => {
-            const $7 = v2._1;
-            return $0.bind(eval3(\u03B3)(v2._2)(setSet4.empty))((v3) => $1.pure(unionWith((v$1) => identity19)(\u03B3)((() => {
-              const $8 = {};
-              $8[$7] = v3;
-              return $8;
-            })())));
-          })(reverse2($2)))(go($5)(listMap((dep) => definitely("has env")(lookup2(ordString)(dep)(\u03B3s)))($6)));
-        });
+            return go($4)(listMap((dep) => definitely("has env")(lookup2(ordString)(dep)(\u03B3s)))($5));
+          })()));
+        };
       };
     };
   };
@@ -40680,12 +41606,14 @@ var graphEval = (dictMonadAff) => {
     Applicative0: () => applicativeStateT(Monad0),
     Bind1: () => bindStateT(Monad0)
   })(graphGraphImpl);
-  const $1 = monadAffState(dictMonadAff).MonadEffect0().Monad0();
+  const monadAffState2 = monadAffState(dictMonadAff);
+  const monadAffState1 = monadAffState(monadAffState2);
+  const $1 = monadAffState2.MonadEffect0().Monad0();
   const $2 = dictMonadAff.MonadEffect0().Monad0();
   return (dictMonadReader) => {
     const monadReaderStateT2 = monadReaderStateT(monadReaderStateT(dictMonadReader));
     return (dictLoadFile) => (dictMonadError) => {
-      const eval1 = $$eval(monadWithGraphAllocWithGr(dictMonadError))(monadReaderStateT2)((() => {
+      const eval1 = $$eval(monadWithGraphAllocWithGr(dictMonadError))(monadReaderStateT2)(monadAffState1)((() => {
         const loadFileFromPath1 = dictLoadFile.loadFileFromPath(dictMonadError)(dictMonadAff);
         return {
           loadFileFromPath: (dictMonadError1) => (dictMonadAff1) => (x2) => {
@@ -40966,7 +41894,7 @@ var toLowerSimple = /* @__PURE__ */ convert(uTowlower);
 var toUpperSimple = /* @__PURE__ */ convert(uTowupper);
 
 // output-es/Parsing.Token/index.js
-var identity31 = (x2) => x2;
+var identity30 = (x2) => x2;
 var choice3 = /* @__PURE__ */ choice(foldableArray);
 var toUnfoldable15 = /* @__PURE__ */ toUnfoldable2(unfoldableArray);
 var theReservedNames = (v) => {
@@ -41279,10 +42207,10 @@ var makeTokenParser = (v) => {
                 if ($132) {
                   return $42(v4$1, $122);
                 }
-                return $52(v2, identity31);
+                return $52(v2, identity30);
               });
             },
-            (state2, a) => $22((v2$1) => $52(state2, identity31))
+            (state2, a) => $22((v2$1) => $52(state2, identity30))
           )));
         });
       },
@@ -42541,14 +43469,15 @@ var sepBy_try = (p) => (sep) => {
 
 // output-es/Parse/index.js
 var fromFoldable20 = /* @__PURE__ */ (() => fromFoldableImpl(foldableList.foldr))();
-var fromFoldable111 = /* @__PURE__ */ (() => fromFoldableImpl(foldableNonEmptyList.foldr))();
+var fromFoldable110 = /* @__PURE__ */ (() => fromFoldableImpl(foldableNonEmptyList.foldr))();
 var onlyIf = (b) => (a) => {
-  const $0 = b ? (state1, v, v1, v2, done) => done(state1, void 0) : fail2("No alternative");
+  const $0 = b ? ((state1, v, v1, v2, done) => done(state1, void 0)) : fail2("No alternative");
   return (state1, more, lift12, $$throw2, done) => more((v1) => $0(state1, more, lift12, $$throw2, (state2, a$1) => more((v2) => done(state2, a))));
 };
 var choose2 = /* @__PURE__ */ choose(altParserT);
 var fanin3 = /* @__PURE__ */ fanin(categoryFn)(choiceFn);
-var identity32 = (x2) => x2;
+var identity31 = (x2) => x2;
+var paragraphLetter = /* @__PURE__ */ satisfy((c) => c !== '"' && c !== "$" && !isSpace(toCharCode(c)));
 var operators = (binaryOp) => fromFoldable20(listMap(arrayMap((v) => $Operator(
   "Infix",
   (() => {
@@ -42559,7 +43488,7 @@ var operators = (binaryOp) => fromFoldable20(listMap(arrayMap((v) => $Operator(
     };
   })(),
   v.assoc
-)))(listMap(fromFoldable111)(groupBy((x2) => (y2) => x2.prec === y2.prec)(sortBy2((x2) => (x$1) => {
+)))(listMap(fromFoldable110)(groupBy((x2) => (y2) => x2.prec === y2.prec)(sortBy2((x2) => (x$1) => {
   const $0 = ordInt.compare(x2.prec)(x$1.prec);
   if ($0 === "GT") {
     return LT;
@@ -42572,12 +43501,8 @@ var operators = (binaryOp) => fromFoldable20(listMap(arrayMap((v) => $Operator(
   }
   fail();
 })(foldableMap.foldr(Cons)(Nil)(opDefs))))));
-var letters = ($$char) => {
-  const $0 = some(alternativeParserT)(lazyParserT)($$char);
-  return (state1, more, lift12, $$throw2, done) => more((v1) => $0(state1, more, lift12, $$throw2, (state2, a) => more((v2) => done(state2, fromCharArray(a)))));
-};
 var languageDef = /* @__PURE__ */ (() => {
-  const opChar = oneOf([":", "!", "#", "$", "%", "&", "*", "+", ".", "/", "<", "=", ">", "?", "@", "\\", "^", "|", "-", "~"]);
+  const opChar = oneOf([":", "!", "#", "$", "%", "&", "*", "+", ".", "/", "<", "=", ">", "?", "\\", "^", "|", "-", "~"]);
   return {
     commentStart: "{-",
     commentEnd: "-}",
@@ -42635,6 +43560,45 @@ var languageDef = /* @__PURE__ */ (() => {
   };
 })();
 var token = /* @__PURE__ */ makeTokenParser(languageDef);
+var paragraphElem = (expr$p) => token.lexeme((() => {
+  const $0 = some(alternativeParserT)(lazyParserT)(paragraphLetter);
+  return (v2, $1, $2, $3, $4) => {
+    const $5 = v2._1;
+    const $6 = v2._2;
+    return $1((v3) => $1((v1) => $1((v1$1) => $0(
+      $ParseState($5, $6, false),
+      $1,
+      $2,
+      (v2$1, $7) => $1((v5) => $1((v2$2) => $1((v1$2) => string3("$")(
+        v2,
+        $1,
+        $2,
+        $3,
+        (state2, a) => $1((v2$3) => $1((v3$1) => $1((v1$3) => between(string3("{"))(string3("}"))(expr$p)(
+          state2,
+          $1,
+          $2,
+          $3,
+          (state2$1, a$1) => $1((v2$4) => $1((v4) => $4(state2$1, $ParagraphElem("Unquote", a$1))))
+        ))))
+      )))),
+      (state2, a) => $1((v2$1) => {
+        const $7 = fromCharArray(a);
+        return $1((v2$2) => $4(state2, $ParagraphElem("Token", $7)));
+      })
+    ))));
+  };
+})());
+var paragraph = (expr$p) => token.lexeme(between(string3('"""'))(string3('"""'))((() => {
+  const $0 = many2(alternativeParserT)(lazyParserT)(paragraphElem(expr$p));
+  return (state1, more, lift12, $$throw2, done) => more((v2) => more((v1) => token.whiteSpace(
+    state1,
+    more,
+    lift12,
+    $$throw2,
+    (state2, a) => more((v2$1) => more((v3) => $0(state2, more, lift12, $$throw2, (state3, a$1) => more((v4) => done(state3, a$1)))))
+  )));
+})()));
 var rArrow = /* @__PURE__ */ (() => token.reservedOp("->"))();
 var rBracket = /* @__PURE__ */ (() => {
   const $0 = token.symbol("]");
@@ -42679,7 +43643,7 @@ var imports_ = /* @__PURE__ */ manyRec2(/* @__PURE__ */ (() => {
       lift12,
       $$throw2,
       (state2$1, a$1) => more((v2$2) => {
-        const $3 = $1(fromFoldable111(a$1));
+        const $3 = $1(fromFoldable110(a$1));
         return more((v4) => done(state2$1, $3));
       })
     ))))
@@ -42736,14 +43700,20 @@ var patternDelim = (v2, $0, $1, $2, $3) => {
   ));
 };
 var ellipsis = /* @__PURE__ */ (() => token.reservedOp(".."))();
-var docCommentLetter = /* @__PURE__ */ satisfy((c) => c !== '"' && c !== "$" && !isSpace(toCharCode(c)));
-var docCommentDelim = (state1, more, lift12, $$throw2, done) => more((v1) => string3('"""')(
-  state1,
-  more,
-  lift12,
-  $$throw2,
-  (state2, a) => more((v2) => done(state2, void 0))
-));
+var doc2 = (expr$p) => {
+  const $0 = token.symbol("@doc");
+  const $1 = token.parens(expr$p);
+  return (v1, $2, $3, $4, $5) => {
+    const $6 = v1._3;
+    return $2((v2) => $2((v1$1) => $0(
+      v1,
+      $2,
+      $3,
+      (v2$1, $7) => $4($ParseState(v2$1._1, v2$1._2, $6), $7),
+      (state2, a) => $2((v2$1) => $2((v3) => $1(state2, $2, $3, (v2$2, $7) => $4($ParseState(v2$2._1, v2$2._2, $6), $7), (state3, a$1) => $2((v4) => $5(state3, a$1)))))
+    )));
+  };
+};
 var ctr = (state1, more, lift12, $$throw2, done) => more((v1) => token.identifier(
   state1,
   more,
@@ -42992,55 +43962,6 @@ var varDefs = (expr$p) => {
     (state2, a) => more((v2$1) => more((v3) => $1(state2, more, lift12, $$throw2, (state3, a$1) => more((v4) => done(state3, a$1)))))
   )));
 };
-var commentToken = /* @__PURE__ */ (() => {
-  const $0 = letters(docCommentLetter);
-  return (state1, more, lift12, $$throw2, done) => more((v1) => $0(state1, more, lift12, $$throw2, (state2, a) => more((v2) => done(state2, $DocCommentElem("Token", a)))));
-})();
-var commentExpr = (expr$p) => (state1, more, lift12, $$throw2, done) => more((v2) => more((v1) => string3("$")(
-  state1,
-  more,
-  lift12,
-  $$throw2,
-  (state2, a) => more((v2$1) => more((v3) => more((v1$1) => between(string3("{"))(string3("}"))(expr$p)(
-    state2,
-    more,
-    lift12,
-    $$throw2,
-    (state2$1, a$1) => more((v2$2) => more((v4) => done(state2$1, $DocCommentElem("Unquote", a$1))))
-  ))))
-)));
-var docCommentToken = (expr$p) => (state1, more, lift12, $$throw2, done) => more((v2) => more((v1) => {
-  const $0 = (state2, a) => more((v2$1) => more((v3) => token.whiteSpace(state2, more, lift12, $$throw2, (state3, a$1) => more((v4) => done(state3, a)))));
-  return more((v2$1) => more((v1$1) => token.whiteSpace(
-    state1,
-    more,
-    lift12,
-    $$throw2,
-    (state2, a) => more((v2$2) => more((v3) => {
-      const $1 = state2._1;
-      const $2 = state2._2;
-      return more((v3$1) => commentToken(
-        $ParseState($1, $2, false),
-        more,
-        lift12,
-        (v2$3, $3) => more((v5) => commentExpr(expr$p)(state2, more, lift12, $$throw2, (state3, a$1) => more((v4) => $0(state3, a$1)))),
-        (state3, a$1) => more((v4) => $0(state3, a$1))
-      ));
-    }))
-  )));
-}));
-var docComment$p = (expr$p) => token.lexeme(withErrorMessage((() => {
-  const $0 = between(docCommentDelim)(withErrorMessage(docCommentDelim)("end of docComment"))(many2(alternativeParserT)(lazyParserT)(docCommentToken(expr$p)));
-  return (state1, more, lift12, $$throw2, done) => more((v1) => $0(state1, more, lift12, $$throw2, (state2, a) => more((v2) => done(state2, a))));
-})())("docComment"));
-var docComment = (expr$p) => {
-  const $0 = docComment$p(expr$p);
-  return (v2, $1, $2, $3, $4) => {
-    const $5 = v2._1;
-    const $6 = v2._2;
-    return $1((v3) => $1((v1) => $0($ParseState($5, $6, false), $1, $2, (v2$1, $7) => $1((v5) => $4(v2, None)), (state2, a) => $1((v2$1) => $4(state2, $DocOpt("Doc", a))))));
-  };
-};
 var clause_uncurried = (expr$p) => (delim) => (state1, more, lift12, $$throw2, done) => more((v2) => more((v1) => pattern(
   state1,
   more,
@@ -43153,914 +44074,1041 @@ var backtick = /* @__PURE__ */ (() => {
   return (state1, more, lift12, $$throw2, done) => more((v1) => $0(state1, more, lift12, $$throw2, (state2, a) => more((v2) => done(state2, void 0))));
 })();
 var expr_$lazy = /* @__PURE__ */ binding(() => {
-  const $0 = buildExprParser([
-    [
-      $Operator(
-        "Infix",
-        (state1, more, lift12, $$throw2, done) => more((v1) => between(backtick)(backtick)(ident)(
-          state1,
-          more,
-          lift12,
-          $$throw2,
-          (state2, a) => more((v2) => done(state2, (e) => (e$p) => $Expr2("BinaryApp", e, a, e$p)))
-        )),
-        AssocLeft
-      )
-    ],
-    ...operators((op) => (state1, more, lift12, $$throw2, done) => more((v1) => token.operator(
+  const backtickOp = $Operator(
+    "Infix",
+    (state1, more, lift12, $$throw2, done) => more((v1) => between(backtick)(backtick)(ident)(
       state1,
       more,
       lift12,
       $$throw2,
-      (state2, a) => more((v2) => onlyIf(op === a)((() => {
-        if (op === ".") {
-          return (e) => (e$p) => {
-            if (e$p.tag === "Var") {
-              return $Expr2("Project", None, e, e$p._1);
-            }
-            return throwException(error('Field names are not first class; got "' + intercalate4("\n")(removeDocWS(prettyExpr1(annUnit).pretty(e$p)).lines) + '".'))();
-          };
-        }
-        if (":" === definitely("absurd")(charAt2(0)(a))) {
-          return (e) => (e$p) => $Expr2("Constr", void 0, None, a, $List("Cons", e, $List("Cons", e$p, Nil)));
-        }
-        return (e) => (e$p) => $Expr2("BinaryApp", e, op, e$p);
-      })())(state2, more, lift12, $$throw2, done))
-    )))
-  ]);
-  const go$lazy = binding(() => lazyParserT.defer((v) => $0((() => {
-    const $1 = keyword2("match");
-    const $2 = keyword2("as");
-    const $3 = branches(go$lazy())(clause_uncurried);
-    const $4 = keyword2("if");
-    const $5 = keyword2("then");
-    const $6 = keyword2("else");
-    const $7 = keyword2("fun");
-    const $8 = branches(go$lazy())(clause_curried);
-    const $9 = sepBy1(defs(go$lazy()))(token.semi);
-    const simpleExprOrProjection = (doc2) => {
-      const $102 = withErrorMessage(satisfy((v$1) => v$1 === "-"))("'-'");
-      const $11 = withErrorMessage(satisfy((v$1) => v$1 === "+"))("'+'");
-      const $12 = withErrorMessage(satisfy((v$1) => v$1 === "-"))("'-'");
-      const $13 = withErrorMessage(satisfy((v$1) => v$1 === "+"))("'+'");
-      const $14 = between(token.symbol("[|"))(token.symbol("|]"))((() => {
-        const $142 = Matrix2()(doc2);
-        const $152 = token.parens((state1, more, lift12, $$throw2, done) => more((v2) => more((v1) => ident(
-          state1,
-          more,
-          lift12,
-          $$throw2,
-          (state2, a) => more((v2$1) => {
-            const $153 = Tuple(a);
-            return more((v3) => more((v2$2) => more((v1$1) => token.comma(
-              state2,
-              more,
-              lift12,
-              $$throw2,
-              (state2$1, a$1) => more((v2$3) => more((v3$1) => ident(state2$1, more, lift12, $$throw2, (state3, a$2) => more((v4) => more((v4$1) => done(state3, $153(a$2)))))))
-            ))));
-          })
-        ))));
-        const $162 = keyword2("in");
-        return (state1, more, lift12, $$throw2, done) => more((v2) => more((v2$1) => more((v1) => more((v2$2) => more((v1$1) => go$lazy()(
-          state1,
-          more,
-          lift12,
-          $$throw2,
-          (state2, a) => more((v2$3) => more((v3) => bar(
-            state2,
-            more,
-            lift12,
-            $$throw2,
-            (state3, a$1) => more((v4) => more((v2$4) => {
-              const $172 = $142(a);
-              return more((v3$1) => $152(
-                state3,
-                more,
-                lift12,
-                $$throw2,
-                (state3$1, a$2) => more((v4$1) => {
-                  const $182 = $172(a$2);
-                  return more((v3$2) => more((v2$5) => more((v1$2) => $162(
-                    state3$1,
-                    more,
-                    lift12,
-                    $$throw2,
-                    (state2$1, a$3) => more((v2$6) => more((v3$3) => go$lazy()(state2$1, more, lift12, $$throw2, (state3$2, a$4) => more((v4$2) => more((v4$3) => done(state3$2, $182(a$4)))))))
+      (state2, a) => more((v2) => done(state2, (e) => (e$p) => $Expr2("BinaryApp", e, a, e$p)))
+    )),
+    AssocLeft
+  );
+  const go$lazy = binding(() => lazyParserT.defer((v) => {
+    const $0 = optionMaybe(doc2(go$lazy()));
+    return (state1, more, lift12, $$throw2, done) => more((v1) => $0(
+      state1,
+      more,
+      lift12,
+      $$throw2,
+      (state2, a) => more((v2) => {
+        const $1 = keyword2("match");
+        const $2 = foldlArray(makeParser)((() => {
+          const $22 = keyword2("as");
+          const $3 = branches(go$lazy())(clause_uncurried);
+          const $4 = keyword2("if");
+          const $5 = keyword2("then");
+          const $6 = keyword2("else");
+          const $7 = keyword2("fun");
+          const $8 = branches(go$lazy())(clause_curried);
+          const $9 = sepBy1(defs(go$lazy()))(token.semi);
+          const $10 = (() => {
+            const $102 = paragraph(go$lazy());
+            const $11 = between(token.symbol("[|"))(token.symbol("|]"))((() => {
+              const $112 = Matrix2();
+              const $122 = token.parens((state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v2$1) => more$1((v1$1) => ident(
+                state1$1,
+                more$1,
+                lift1$1,
+                throw$1,
+                (state2$1, a$1) => more$1((v2$2) => {
+                  const $123 = Tuple(a$1);
+                  return more$1((v3) => more$1((v2$3) => more$1((v1$2) => token.comma(
+                    state2$1,
+                    more$1,
+                    lift1$1,
+                    throw$1,
+                    (state2$2, a$2) => more$1((v2$4) => more$1((v3$1) => ident(
+                      state2$2,
+                      more$1,
+                      lift1$1,
+                      throw$1,
+                      (state3, a$3) => more$1((v4) => more$1((v4$1) => done$1(state3, $123(a$3))))
+                    )))
                   ))));
                 })
-              ));
-            }))
-          )))
-        ))))));
-      })());
-      const $15 = token.brackets((state1, v$1, v1, v2, done) => done(state1, $Expr2("ListEmpty", void 0, doc2)));
-      const $16 = ListNonEmpty()(doc2);
-      const go$1$lazy = binding(() => lazyParserT.defer((v$1) => {
-        const $172 = Next();
-        return (v2, $182, $192, $202, $21) => {
-          const $22 = v2._1;
-          const $23 = v2._2;
-          return $182((v3) => $182((v2$1) => $182((v1) => rBracket(
-            $ParseState($22, $23, false),
-            $182,
-            $192,
-            (v4, $24) => {
-              const $25 = v4._3;
-              return $182((v5) => {
-                if ($25) {
-                  return $202(v4, $24);
-                }
-                return $182((v2$2) => $182((v1$1) => token.comma(
-                  v2,
-                  $182,
-                  $192,
-                  $202,
-                  (state2, a) => $182((v2$3) => $182((v3$1) => $182((v2$4) => $182((v1$2) => go$lazy()(
-                    state2,
-                    $182,
-                    $192,
-                    $202,
-                    (state2$1, a$1) => $182((v2$5) => {
-                      const $26 = $172(a$1);
-                      return $182((v3$2) => go$1$lazy()(
-                        state2$1,
-                        $182,
-                        $192,
-                        $202,
-                        (state3, a$2) => $182((v4$1) => {
-                          const $27 = $26(a$2);
-                          return $182((v4$2) => $21(state3, $27));
-                        })
-                      ));
-                    })
-                  )))))
-                )));
-              });
-            },
-            (state2, a) => $182((v2$2) => $182((v3$1) => $182((v4) => $21(state2, $ListRest("End", void 0)))))
-          ))));
-        };
-      }));
-      const go$1 = go$1$lazy();
-      const $17 = Constr2()(doc2);
-      const $18 = token.braces((() => {
-        const $182 = sepBy((() => {
-          const $183 = token.brackets((state1, more, lift12, $$throw2, done) => more((v1) => go$lazy()(
-            state1,
-            more,
-            lift12,
-            $$throw2,
-            (state2, a) => more((v2) => done(state2, $DictEntry("ExprKey", a)))
-          )));
-          const $193 = VarKey();
-          return (v2, $202, $21, $22, $23) => {
-            const $24 = v2._1;
-            const $25 = v2._2;
-            return $202((v3) => {
-              const $26 = (v4, $262) => {
-                const $27 = v4._3;
-                return $202((v5) => {
-                  if ($27) {
-                    return $22(v4, $262);
-                  }
-                  return $202((v2$1) => $202((v1) => $202((v2$2) => $202((v1$1) => $202((v1$2) => ident(
-                    v2,
-                    $202,
-                    $21,
-                    $22,
-                    (state2, a) => $202((v2$3) => {
-                      const $28 = $193(a);
-                      return $202((v2$4) => $202((v3$1) => token.colon(
-                        state2,
-                        $202,
-                        $21,
-                        $22,
-                        (state3, a$1) => $202((v4$1) => $202((v2$5) => {
-                          const $29 = Tuple($28);
-                          return $202((v3$2) => go$lazy()(state3, $202, $21, $22, (state3$1, a$2) => $202((v4$2) => $23(state3$1, $29(a$2)))));
-                        }))
-                      )));
-                    })
-                  ))))));
-                });
-              };
-              return $202((v2$1) => $202((v1) => $202((v2$2) => $202((v1$1) => $183(
-                $ParseState($24, $25, false),
-                $202,
-                $21,
-                $26,
-                (state2, a) => $202((v2$3) => $202((v3$1) => token.colon(
-                  state2,
-                  $202,
-                  $21,
-                  $26,
-                  (state3, a$1) => $202((v4) => $202((v2$4) => {
-                    const $27 = Tuple(a);
-                    return $202((v3$2) => go$lazy()(state3, $202, $21, $26, (state3$1, a$2) => $202((v4$1) => $23(state3$1, $27(a$2)))));
+              ))));
+              const $132 = keyword2("in");
+              return (state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v2$1) => more$1((v2$2) => more$1((v1$1) => more$1((v2$3) => more$1((v1$2) => expr_$lazy()(
+                state1$1,
+                more$1,
+                lift1$1,
+                throw$1,
+                (state2$1, a$1) => more$1((v2$4) => more$1((v3) => bar(
+                  state2$1,
+                  more$1,
+                  lift1$1,
+                  throw$1,
+                  (state3, a$2) => more$1((v4) => more$1((v2$5) => {
+                    const $14 = $112(a$1);
+                    return more$1((v3$1) => $122(
+                      state3,
+                      more$1,
+                      lift1$1,
+                      throw$1,
+                      (state3$1, a$3) => more$1((v4$1) => {
+                        const $15 = $14(a$3);
+                        return more$1((v3$2) => more$1((v2$6) => more$1((v1$3) => $132(
+                          state3$1,
+                          more$1,
+                          lift1$1,
+                          throw$1,
+                          (state2$2, a$4) => more$1((v2$7) => more$1((v3$3) => expr_$lazy()(
+                            state2$2,
+                            more$1,
+                            lift1$1,
+                            throw$1,
+                            (state3$2, a$5) => more$1((v4$2) => more$1((v4$3) => done$1(state3$2, $15(a$5))))
+                          )))
+                        ))));
+                      })
+                    ));
                   }))
                 )))
-              )))));
-            });
-          };
-        })())(token.comma);
-        const $192 = Dictionary2()(doc2);
-        return (state1, more, lift12, $$throw2, done) => more((v1) => $182(state1, more, lift12, $$throw2, (state2, a) => more((v2) => done(state2, $192(a)))));
-      })());
-      const $19 = Str()(doc2);
-      const $20 = (() => {
-        const $202 = token.parens((state1, more, lift12, $$throw2, done) => more((v2) => more((v2$1) => more((v3) => more((v2$2) => more((v1) => go$lazy()(
-          state1,
-          more,
-          lift12,
-          $$throw2,
-          (state2, a) => more((v2$3) => more((v3$1) => token.comma(
-            state2,
-            more,
-            lift12,
-            $$throw2,
-            (state3, a$1) => more((v4) => more((v4$1) => more((v3$2) => go$lazy()(
-              state3,
-              more,
-              lift12,
-              $$throw2,
-              (state3$1, a$2) => more((v4$2) => done(
-                state3$1,
-                $Expr2("Constr", void 0, doc2, "Pair", $List("Cons", a, $List("Cons", a$2, Nil)))
-              ))
-            ))))
-          )))
-        )))))));
-        const $21 = token.brackets((() => {
-          const $212 = ListComp()(doc2);
-          const $222 = sepBy1((() => {
-            const $223 = ListCompGen(None);
-            const $232 = keyword2("let");
-            return (v2, $242, $25, $26, $27) => {
-              const $28 = v2._1;
-              const $29 = v2._2;
-              return $242((v3) => {
-                const $30 = (v4, $302) => {
-                  const $31 = v4._3;
-                  return $242((v5) => {
-                    if ($31) {
-                      return $26(v4, $302);
-                    }
-                    const $32 = v2._1;
-                    const $33 = v2._2;
-                    return $242((v3$1) => $242((v1) => {
-                      const $34 = (v4$1, $342) => {
-                        const $35 = v4$1._3;
-                        return $242((v5$1) => {
-                          if ($35) {
-                            return $26(v4$1, $342);
-                          }
-                          return $242((v1$1) => go$lazy()(v2, $242, $25, $26, (state2, a) => $242((v2$1) => $27(state2, $Qualifier("ListCompGuard", a)))));
-                        });
-                      };
-                      return $242((v2$1) => $242((v1$1) => $242((v2$2) => $242((v1$2) => $242((v2$3) => $242((v1$3) => $232(
-                        $ParseState($32, $33, false),
-                        $242,
-                        $25,
-                        $34,
-                        (state2, a) => $242((v2$4) => $242((v3$2) => pattern(
-                          state2,
-                          $242,
-                          $25,
-                          $34,
-                          (state3, a$1) => $242((v4$1) => $242((v2$5) => $242((v3$3) => equals(
-                            state3,
-                            $242,
-                            $25,
-                            $34,
-                            (state3$1, a$2) => $242((v4$2) => $242((v2$6) => {
-                              const $35 = VarDef2(a$1);
-                              return $242((v3$4) => go$lazy()(
-                                state3$1,
-                                $242,
-                                $25,
-                                $34,
-                                (state3$2, a$3) => $242((v4$3) => {
-                                  const $36 = $35(a$3);
-                                  return $242((v2$7) => $27(state3$2, $Qualifier("ListCompDecl", $36)));
+              ))))));
+            })());
+            const $12 = token.brackets((state1$1, v$1, v1$1, v2$1, done$1) => done$1(state1$1, $Expr2("ListEmpty", void 0)));
+            const $13 = (() => {
+              const $132 = ListNonEmpty();
+              const go$1$lazy = binding(() => lazyParserT.defer((v$1) => {
+                const $142 = Next();
+                return (v2$1, $152, $162, $17, $18) => {
+                  const $19 = v2$1._1;
+                  const $20 = v2$1._2;
+                  return $152((v3) => $152((v2$2) => $152((v1$1) => rBracket(
+                    $ParseState($19, $20, false),
+                    $152,
+                    $162,
+                    (v4, $21) => {
+                      const $222 = v4._3;
+                      return $152((v5) => {
+                        if ($222) {
+                          return $17(v4, $21);
+                        }
+                        return $152((v2$3) => $152((v1$2) => token.comma(
+                          v2$1,
+                          $152,
+                          $162,
+                          $17,
+                          (state2$1, a$1) => $152((v2$4) => $152((v3$1) => $152((v2$5) => $152((v1$3) => expr_$lazy()(
+                            state2$1,
+                            $152,
+                            $162,
+                            $17,
+                            (state2$2, a$2) => $152((v2$6) => {
+                              const $23 = $142(a$2);
+                              return $152((v3$2) => go$1$lazy()(
+                                state2$2,
+                                $152,
+                                $162,
+                                $17,
+                                (state3, a$3) => $152((v4$1) => {
+                                  const $24 = $23(a$3);
+                                  return $152((v4$2) => $18(state3, $24));
                                 })
                               ));
-                            }))
-                          ))))
-                        )))
-                      )))))));
-                    }));
-                  });
+                            })
+                          )))))
+                        )));
+                      });
+                    },
+                    (state2$1, a$1) => $152((v2$3) => $152((v3$1) => $152((v4) => $18(state2$1, $ListRest("End", void 0)))))
+                  ))));
                 };
-                return $242((v2$1) => $242((v2$2) => $242((v1) => $242((v1$1) => pattern(
-                  $ParseState($28, $29, false),
-                  $242,
-                  $25,
-                  $30,
-                  (state2, a) => $242((v2$3) => {
-                    const $31 = $223(a);
-                    return $242((v2$4) => $242((v3$1) => lArrow(
-                      state2,
-                      $242,
-                      $25,
-                      $30,
-                      (state3, a$1) => $242((v4) => $242((v3$2) => go$lazy()(state3, $242, $25, $30, (state3$1, a$2) => $242((v4$1) => $27(state3$1, $31(a$2))))))
-                    )));
-                  })
-                )))));
-              });
-            };
-          })())(token.comma);
-          return (state1, more, lift12, $$throw2, done) => more((v2) => more((v2$1) => more((v1) => more((v2$2) => more((v3) => go$lazy()(
-            state1,
-            more,
-            lift12,
-            $$throw2,
-            (state3, a) => more((v4) => {
-              const $232 = $212(a);
-              return more((v2$3) => more((v3$1) => bar(
-                state3,
-                more,
-                lift12,
-                $$throw2,
-                (state3$1, a$1) => more((v4$1) => more((v3$2) => more((v1$1) => $222(
-                  state3$1,
-                  more,
-                  lift12,
-                  $$throw2,
-                  (state2, a$2) => more((v2$4) => {
-                    const $242 = $List("Cons", a$2._1, a$2._2);
-                    return more((v4$2) => done(state2, $232($242)));
-                  })
-                ))))
-              )));
-            })
-          ))))));
-        })());
-        const $22 = token.parens(go$lazy());
-        const $23 = token.brackets((state1, more, lift12, $$throw2, done) => more((v2) => more((v2$1) => more((v1) => more((v2$2) => more((v3) => go$lazy()(
-          state1,
-          more,
-          lift12,
-          $$throw2,
-          (state3, a) => more((v4) => {
-            const $232 = ListEnum(a);
-            return more((v2$3) => more((v3$1) => ellipsis(
-              state3,
-              more,
-              lift12,
-              $$throw2,
-              (state3$1, a$1) => more((v4$1) => more((v3$2) => go$lazy()(state3$1, more, lift12, $$throw2, (state3$2, a$2) => more((v4$2) => done(state3$2, $232(a$2))))))
-            )));
-          })
-        )))))));
-        const $24 = token.parens(token.operator);
-        return (v2, $25, $26, $27, $28) => {
-          const $29 = v2._1;
-          const $30 = v2._2;
-          return $25((v3) => {
-            const $31 = (v4, $312) => {
-              const $32 = v4._3;
-              return $25((v5) => {
-                if ($32) {
-                  return $27(v4, $312);
-                }
-                const $33 = v2._1;
-                const $34 = v2._2;
-                return $25((v3$1) => $25((v1) => ident(
-                  $ParseState($33, $34, false),
-                  $25,
-                  $26,
-                  (v2$1, $35) => $25((v5$1) => {
-                    const $36 = v2._1;
-                    const $37 = v2._2;
-                    return $25((v3$2) => $22(
-                      $ParseState($36, $37, false),
-                      $25,
-                      $26,
-                      (v2$2, $38) => $25((v5$2) => {
-                        const $39 = v2._1;
-                        const $40 = v2._2;
-                        return $25((v3$3) => $23(
-                          $ParseState($39, $40, false),
-                          $25,
-                          $26,
-                          (v4$1, $41) => {
-                            const $42 = v4$1._3;
-                            return $25((v5$3) => {
-                              if ($42) {
-                                return $27(v4$1, $41);
-                              }
-                              const $43 = v2._3;
-                              return $25((v1$1) => $24(
-                                v2,
-                                $25,
-                                $26,
-                                (v2$3, $44) => $27($ParseState(v2$3._1, v2$3._2, $43), $44),
-                                (state2, a) => $25((v2$3) => $28(state2, $Expr2("Op", a)))
-                              ));
-                            });
-                          },
-                          $28
-                        ));
-                      }),
-                      $28
-                    ));
-                  }),
-                  (state2, a) => $25((v2$1) => $28(state2, $Expr2("Var", a)))
-                )));
-              });
-            };
-            return $25((v3$1) => $14(
-              $ParseState($29, $30, false),
-              $25,
-              $26,
-              (v4, $32) => {
-                const $33 = v4._3;
-                return $25((v5) => {
-                  if ($33) {
-                    return $31(v4, $32);
-                  }
-                  return $25((v3$2) => $15(
-                    $ParseState($29, $30, false),
-                    $25,
-                    $26,
-                    (v2$1, $34) => $25((v5$1) => $25((v3$3) => {
-                      const $35 = (v4$1, $352) => {
-                        const $36 = v4$1._3;
-                        return $25((v5$2) => {
-                          if ($36) {
-                            return $31(v4$1, $352);
+              }));
+              const go$1 = go$1$lazy();
+              const $14 = Constr2();
+              const $15 = token.braces((() => {
+                const $152 = sepBy((() => {
+                  const $153 = token.brackets((state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v1$1) => go$lazy()(
+                    state1$1,
+                    more$1,
+                    lift1$1,
+                    throw$1,
+                    (state2$1, a$1) => more$1((v2$1) => done$1(state2$1, $DictEntry("ExprKey", a$1)))
+                  )));
+                  const $163 = VarKey();
+                  return (v2$1, $17, $18, $19, $20) => {
+                    const $21 = v2$1._1;
+                    const $222 = v2$1._2;
+                    return $17((v3) => {
+                      const $23 = (v4, $232) => {
+                        const $24 = v4._3;
+                        return $17((v5) => {
+                          if ($24) {
+                            return $19(v4, $232);
                           }
-                          return $25((v3$4) => $25((v1) => $25((v1$1) => ctr(
-                            $ParseState($29, $30, false),
-                            $25,
-                            $26,
-                            (v2$2, $37) => $25((v5$3) => $25((v3$5) => $18(
-                              $ParseState($29, $30, false),
-                              $25,
-                              $26,
-                              (v4$2, $38) => {
-                                const $39 = v4$2._3;
-                                return $25((v5$4) => {
-                                  if ($39) {
-                                    return $31(v4$2, $38);
-                                  }
-                                  return $25((v3$6) => {
-                                    const $40 = (v4$3, $402) => {
-                                      const $41 = v4$3._3;
-                                      return $25((v5$5) => {
-                                        if ($41) {
-                                          return $31(v4$3, $402);
-                                        }
-                                        return $25((v3$7) => {
-                                          const $42 = (v4$4, $422) => {
-                                            const $43 = v4$4._3;
-                                            return $25((v5$6) => {
-                                              if ($43) {
-                                                return $31(v4$4, $422);
-                                              }
-                                              return $25((v3$8) => $25((v1$2) => token.stringLiteral(
-                                                $ParseState($29, $30, false),
-                                                $25,
-                                                $26,
-                                                (v4$5, $44) => {
-                                                  const $45 = v4$5._3;
-                                                  return $25((v5$7) => {
-                                                    if ($45) {
-                                                      return $31(v4$5, $44);
-                                                    }
-                                                    return $25((v3$9) => $202(
-                                                      $ParseState($29, $30, false),
-                                                      $25,
-                                                      $26,
-                                                      (v2$3, $46) => $25((v5$8) => $21($ParseState($29, $30, false), $25, $26, $31, $28)),
-                                                      $28
-                                                    ));
-                                                  });
-                                                },
-                                                (state2, a) => $25((v2$3) => $28(state2, $19(a)))
-                                              )));
-                                            });
-                                          };
-                                          return $25((v1$2) => {
-                                            const $43 = (state2, a) => $25((v2$3) => {
-                                              const $432 = Int()(doc2);
-                                              return $25((v1$3) => token.natural(
-                                                state2,
-                                                $25,
-                                                $26,
-                                                (v2$4, $44) => $42($ParseState(v2$4._1, v2$4._2, false), $44),
-                                                (state2$1, a$1) => $25((v2$4) => $28(state2$1, $432(a(a$1))))
-                                              ));
-                                            });
-                                            return $25((v3$8) => $25((v1$3) => $102(
-                                              $ParseState($29, $30, false),
-                                              $25,
-                                              $26,
-                                              (v4$4, $44) => {
-                                                const $45 = v4$4._3;
-                                                return $25((v5$6) => {
-                                                  if ($45) {
-                                                    return $42($ParseState(v4$4._1, v4$4._2, false), $44);
-                                                  }
-                                                  return $25((v3$9) => $25((v1$4) => $11(
-                                                    $ParseState($29, $30, false),
+                          return $17((v2$2) => $17((v1$1) => $17((v2$3) => $17((v1$2) => $17((v1$3) => ident(
+                            v2$1,
+                            $17,
+                            $18,
+                            $19,
+                            (state2$1, a$1) => $17((v2$4) => {
+                              const $25 = $163(a$1);
+                              return $17((v2$5) => $17((v3$1) => token.colon(
+                                state2$1,
+                                $17,
+                                $18,
+                                $19,
+                                (state3, a$2) => $17((v4$1) => $17((v2$6) => {
+                                  const $26 = Tuple($25);
+                                  return $17((v3$2) => expr_$lazy()(state3, $17, $18, $19, (state3$1, a$3) => $17((v4$2) => $20(state3$1, $26(a$3)))));
+                                }))
+                              )));
+                            })
+                          ))))));
+                        });
+                      };
+                      return $17((v2$2) => $17((v1$1) => $17((v2$3) => $17((v1$2) => $153(
+                        $ParseState($21, $222, false),
+                        $17,
+                        $18,
+                        $23,
+                        (state2$1, a$1) => $17((v2$4) => $17((v3$1) => token.colon(
+                          state2$1,
+                          $17,
+                          $18,
+                          $23,
+                          (state3, a$2) => $17((v4) => $17((v2$5) => {
+                            const $24 = Tuple(a$1);
+                            return $17((v3$2) => expr_$lazy()(state3, $17, $18, $23, (state3$1, a$3) => $17((v4$1) => $20(state3$1, $24(a$3)))));
+                          }))
+                        )))
+                      )))));
+                    });
+                  };
+                })())(token.comma);
+                const $162 = Dictionary2();
+                return (state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v1$1) => $152(
+                  state1$1,
+                  more$1,
+                  lift1$1,
+                  throw$1,
+                  (state2$1, a$1) => more$1((v2$1) => done$1(state2$1, $162(a$1)))
+                ));
+              })());
+              const $16 = (() => {
+                const $162 = withErrorMessage(satisfy((v$1) => v$1 === "-"))("'-'");
+                const $17 = (() => {
+                  const simpleExprOrProjection = (() => {
+                    const $172 = (() => {
+                      const $173 = (() => {
+                        const $174 = withErrorMessage(satisfy((v$1) => v$1 === "+"))("'+'");
+                        const $182 = (() => {
+                          const $183 = withErrorMessage(satisfy((v$1) => v$1 === "-"))("'-'");
+                          const $192 = (() => {
+                            const $193 = withErrorMessage(satisfy((v$1) => v$1 === "+"))("'+'");
+                            const $202 = (() => {
+                              const $203 = Str();
+                              const $21 = (() => {
+                                const $212 = token.parens((state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v2$1) => more$1((v2$2) => more$1((v3) => more$1((v2$3) => more$1((v1$1) => go$lazy()(
+                                  state1$1,
+                                  more$1,
+                                  lift1$1,
+                                  throw$1,
+                                  (state2$1, a$1) => more$1((v2$4) => more$1((v3$1) => token.comma(
+                                    state2$1,
+                                    more$1,
+                                    lift1$1,
+                                    throw$1,
+                                    (state3, a$2) => more$1((v4) => more$1((v4$1) => more$1((v3$2) => expr_$lazy()(
+                                      state3,
+                                      more$1,
+                                      lift1$1,
+                                      throw$1,
+                                      (state3$1, a$3) => more$1((v4$2) => done$1(
+                                        state3$1,
+                                        $Expr2("Constr", void 0, "Pair", $List("Cons", a$1, $List("Cons", a$3, Nil)))
+                                      ))
+                                    ))))
+                                  )))
+                                )))))));
+                                const $222 = (() => {
+                                  const $223 = (() => {
+                                    const $224 = token.brackets((() => {
+                                      const $225 = ListComp();
+                                      const $23 = sepBy1((() => {
+                                        const $232 = keyword2("let");
+                                        return (v2$1, $24, $25, $26, $27) => {
+                                          const $28 = v2$1._1;
+                                          const $29 = v2$1._2;
+                                          return $24((v3) => {
+                                            const $30 = (v4, $302) => {
+                                              const $31 = v4._3;
+                                              return $24((v5) => {
+                                                if ($31) {
+                                                  return $26(v4, $302);
+                                                }
+                                                const $32 = v2$1._1;
+                                                const $33 = v2$1._2;
+                                                return $24((v3$1) => $24((v1$1) => {
+                                                  const $34 = (v4$1, $342) => {
+                                                    const $35 = v4$1._3;
+                                                    return $24((v5$1) => {
+                                                      if ($35) {
+                                                        return $26(v4$1, $342);
+                                                      }
+                                                      return $24((v1$2) => expr_$lazy()(
+                                                        v2$1,
+                                                        $24,
+                                                        $25,
+                                                        $26,
+                                                        (state2$1, a$1) => $24((v2$2) => $27(state2$1, $Qualifier("ListCompGuard", a$1)))
+                                                      ));
+                                                    });
+                                                  };
+                                                  return $24((v2$2) => $24((v1$2) => $24((v2$3) => $24((v1$3) => $24((v2$4) => $24((v1$4) => $232(
+                                                    $ParseState($32, $33, false),
+                                                    $24,
                                                     $25,
-                                                    $26,
-                                                    (v4$5, $46) => {
-                                                      const $47 = v4$5._3;
-                                                      return $25((v5$7) => {
-                                                        if ($47) {
-                                                          return $42($ParseState(v4$5._1, v4$5._2, false), $46);
-                                                        }
-                                                        return $43($ParseState($29, $30, false), identity32);
-                                                      });
-                                                    },
-                                                    (state2, a) => $25((v2$3) => $43(state2, identity32))
-                                                  )));
-                                                });
-                                              },
-                                              (state2, a) => $25((v2$3) => $43(state2, (a$1) => -a$1))
-                                            )));
+                                                    $34,
+                                                    (state2$1, a$1) => $24((v2$5) => $24((v3$2) => pattern(
+                                                      state2$1,
+                                                      $24,
+                                                      $25,
+                                                      $34,
+                                                      (state3, a$2) => $24((v4$1) => $24((v2$6) => $24((v3$3) => equals(
+                                                        state3,
+                                                        $24,
+                                                        $25,
+                                                        $34,
+                                                        (state3$1, a$3) => $24((v4$2) => $24((v2$7) => {
+                                                          const $35 = VarDef2(a$2);
+                                                          return $24((v3$4) => expr_$lazy()(
+                                                            state3$1,
+                                                            $24,
+                                                            $25,
+                                                            $34,
+                                                            (state3$2, a$4) => $24((v4$3) => {
+                                                              const $36 = $35(a$4);
+                                                              return $24((v2$8) => $27(state3$2, $Qualifier("ListCompDecl", $36)));
+                                                            })
+                                                          ));
+                                                        }))
+                                                      ))))
+                                                    )))
+                                                  )))))));
+                                                }));
+                                              });
+                                            };
+                                            return $24((v2$2) => $24((v2$3) => $24((v1$1) => $24((v1$2) => pattern(
+                                              $ParseState($28, $29, false),
+                                              $24,
+                                              $25,
+                                              $30,
+                                              (state2$1, a$1) => $24((v2$4) => {
+                                                const $31 = ListCompGen(a$1);
+                                                return $24((v2$5) => $24((v3$1) => lArrow(
+                                                  state2$1,
+                                                  $24,
+                                                  $25,
+                                                  $30,
+                                                  (state3, a$2) => $24((v4) => $24((v3$2) => expr_$lazy()(
+                                                    state3,
+                                                    $24,
+                                                    $25,
+                                                    $30,
+                                                    (state3$1, a$3) => $24((v4$1) => $27(state3$1, $31(a$3)))
+                                                  )))
+                                                )));
+                                              })
+                                            )))));
                                           });
+                                        };
+                                      })())(token.comma);
+                                      return (state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v2$1) => more$1((v2$2) => more$1((v1$1) => more$1((v1$2) => expr_$lazy()(
+                                        state1$1,
+                                        more$1,
+                                        lift1$1,
+                                        throw$1,
+                                        (state2$1, a$1) => more$1((v2$3) => {
+                                          const $24 = $225(a$1);
+                                          return more$1((v2$4) => more$1((v3) => bar(
+                                            state2$1,
+                                            more$1,
+                                            lift1$1,
+                                            throw$1,
+                                            (state3, a$2) => more$1((v4) => more$1((v3$1) => more$1((v1$3) => $23(
+                                              state3,
+                                              more$1,
+                                              lift1$1,
+                                              throw$1,
+                                              (state2$2, a$3) => more$1((v2$5) => {
+                                                const $25 = $List("Cons", a$3._1, a$3._2);
+                                                return more$1((v4$1) => done$1(state2$2, $24($25)));
+                                              })
+                                            ))))
+                                          )));
+                                        })
+                                      )))));
+                                    })());
+                                    return (v2$1, $23, $24, $25, $26) => {
+                                      const $27 = v2$1._1;
+                                      const $28 = v2$1._2;
+                                      return $23((v3) => {
+                                        const $29 = (v4, $292) => {
+                                          const $30 = v4._3;
+                                          return $23((v5) => {
+                                            if ($30) {
+                                              return $25(v4, $292);
+                                            }
+                                            const $31 = v2$1._1;
+                                            const $32 = v2$1._2;
+                                            return $23((v3$1) => {
+                                              const $33 = (v4$1, $332) => {
+                                                const $34 = v4$1._3;
+                                                return $23((v5$1) => {
+                                                  if ($34) {
+                                                    return $25(v4$1, $332);
+                                                  }
+                                                  const $35 = v2$1._1;
+                                                  const $36 = v2$1._2;
+                                                  return $23((v3$2) => {
+                                                    const $37 = (v4$2, $372) => {
+                                                      const $38 = v4$2._3;
+                                                      return $23((v5$2) => {
+                                                        if ($38) {
+                                                          return $25(v4$2, $372);
+                                                        }
+                                                        const $39 = v2$1._1;
+                                                        const $40 = v2$1._2;
+                                                        return $23((v3$3) => $212(
+                                                          $ParseState($39, $40, false),
+                                                          $23,
+                                                          $24,
+                                                          (v2$2, $41) => $23((v5$3) => $224(v2$1, $23, $24, $25, $26)),
+                                                          $26
+                                                        ));
+                                                      });
+                                                    };
+                                                    return $23((v1$1) => $23((v2$2) => $23((v1$2) => notFollowedBy(string3('"""'))(
+                                                      $ParseState($35, $36, false),
+                                                      $23,
+                                                      $24,
+                                                      (v2$3, $38) => $37($ParseState(v2$3._1, v2$3._2, false), $38),
+                                                      (state2$1, a$1) => $23((v2$3) => $23((v3$3) => token.stringLiteral(
+                                                        state2$1,
+                                                        $23,
+                                                        $24,
+                                                        $37,
+                                                        (state3, a$2) => $23((v4$2) => $23((v2$4) => $26(state3, $203(a$2))))
+                                                      )))
+                                                    ))));
+                                                  });
+                                                });
+                                              };
+                                              return $23((v1$1) => {
+                                                const $34 = (state2$1, a$1) => $23((v2$2) => $23((v1$2) => token.natural(
+                                                  state2$1,
+                                                  $23,
+                                                  $24,
+                                                  (v2$3, $342) => $33($ParseState(v2$3._1, v2$3._2, false), $342),
+                                                  (state2$2, a$2) => $23((v2$3) => $26(state2$2, $Expr2("Int", void 0, a$1(a$2))))
+                                                )));
+                                                return $23((v3$2) => $23((v1$2) => $183(
+                                                  $ParseState($31, $32, false),
+                                                  $23,
+                                                  $24,
+                                                  (v4$1, $35) => {
+                                                    const $36 = v4$1._3;
+                                                    return $23((v5$1) => {
+                                                      if ($36) {
+                                                        return $33($ParseState(v4$1._1, v4$1._2, false), $35);
+                                                      }
+                                                      return $23((v3$3) => $23((v1$3) => $193(
+                                                        $ParseState($31, $32, false),
+                                                        $23,
+                                                        $24,
+                                                        (v4$2, $37) => {
+                                                          const $38 = v4$2._3;
+                                                          return $23((v5$2) => {
+                                                            if ($38) {
+                                                              return $33($ParseState(v4$2._1, v4$2._2, false), $37);
+                                                            }
+                                                            return $34($ParseState($31, $32, false), identity31);
+                                                          });
+                                                        },
+                                                        (state2$1, a$1) => $23((v2$2) => $34(state2$1, identity31))
+                                                      )));
+                                                    });
+                                                  },
+                                                  (state2$1, a$1) => $23((v2$2) => $34(state2$1, (a$2) => -a$2))
+                                                )));
+                                              });
+                                            });
+                                          });
+                                        };
+                                        return $23((v1$1) => {
+                                          const $30 = (state2$1, a$1) => $23((v2$2) => $23((v1$2) => token.float(
+                                            state2$1,
+                                            $23,
+                                            $24,
+                                            (v2$3, $302) => $29($ParseState(v2$3._1, v2$3._2, false), $302),
+                                            (state2$2, a$2) => $23((v2$3) => $26(state2$2, $Expr2("Float", void 0, a$1(a$2))))
+                                          )));
+                                          return $23((v3$1) => $23((v1$2) => $162(
+                                            $ParseState($27, $28, false),
+                                            $23,
+                                            $24,
+                                            (v4, $31) => {
+                                              const $32 = v4._3;
+                                              return $23((v5) => {
+                                                if ($32) {
+                                                  return $29($ParseState(v4._1, v4._2, false), $31);
+                                                }
+                                                return $23((v3$2) => $23((v1$3) => $174(
+                                                  $ParseState($27, $28, false),
+                                                  $23,
+                                                  $24,
+                                                  (v4$1, $33) => {
+                                                    const $34 = v4$1._3;
+                                                    return $23((v5$1) => {
+                                                      if ($34) {
+                                                        return $29($ParseState(v4$1._1, v4$1._2, false), $33);
+                                                      }
+                                                      return $30($ParseState($27, $28, false), identity31);
+                                                    });
+                                                  },
+                                                  (state2$1, a$1) => $23((v2$2) => $30(state2$1, identity31))
+                                                )));
+                                              });
+                                            },
+                                            (state2$1, a$1) => $23((v2$2) => $30(state2$1, (a$2) => -a$2))
+                                          )));
                                         });
                                       });
                                     };
-                                    return $25((v1$2) => {
-                                      const $41 = (state2, a) => $25((v2$3) => {
-                                        const $412 = Float()(doc2);
-                                        return $25((v1$3) => token.float(
-                                          state2,
-                                          $25,
-                                          $26,
-                                          (v2$4, $42) => $40($ParseState(v2$4._1, v2$4._2, false), $42),
-                                          (state2$1, a$1) => $25((v2$4) => $28(state2$1, $412(a(a$1))))
-                                        ));
-                                      });
-                                      return $25((v3$7) => $25((v1$3) => $12(
-                                        $ParseState($29, $30, false),
-                                        $25,
-                                        $26,
-                                        (v4$3, $42) => {
-                                          const $43 = v4$3._3;
-                                          return $25((v5$5) => {
-                                            if ($43) {
-                                              return $40($ParseState(v4$3._1, v4$3._2, false), $42);
-                                            }
-                                            return $25((v3$8) => $25((v1$4) => $13(
-                                              $ParseState($29, $30, false),
-                                              $25,
-                                              $26,
-                                              (v4$4, $44) => {
-                                                const $45 = v4$4._3;
-                                                return $25((v5$6) => {
-                                                  if ($45) {
-                                                    return $40($ParseState(v4$4._1, v4$4._2, false), $44);
-                                                  }
-                                                  return $41($ParseState($29, $30, false), identity32);
-                                                });
-                                              },
-                                              (state2, a) => $25((v2$3) => $41(state2, identity32))
-                                            )));
-                                          });
-                                        },
-                                        (state2, a) => $25((v2$3) => $41(state2, (a$1) => -a$1))
-                                      )));
+                                  })();
+                                  return (v2$1, $23, $24, $25, $26) => {
+                                    const $27 = v2$1._1;
+                                    const $28 = v2$1._2;
+                                    return $23((v3) => $15(
+                                      $ParseState($27, $28, false),
+                                      $23,
+                                      $24,
+                                      (v4, $29) => {
+                                        const $30 = v4._3;
+                                        return $23((v5) => {
+                                          if ($30) {
+                                            return $25(v4, $29);
+                                          }
+                                          return $223(v2$1, $23, $24, $25, $26);
+                                        });
+                                      },
+                                      $26
+                                    ));
+                                  };
+                                })();
+                                return (v2$1, $23, $24, $25, $26) => {
+                                  const $27 = v2$1._1;
+                                  const $28 = v2$1._2;
+                                  return $23((v3) => $23((v1$1) => $23((v1$2) => ctr(
+                                    $ParseState($27, $28, false),
+                                    $23,
+                                    $24,
+                                    (v2$2, $29) => $23((v5) => $222(v2$1, $23, $24, $25, $26)),
+                                    (state2$1, a$1) => $23((v2$2) => {
+                                      const $29 = $14(a$1);
+                                      return $23((v2$3) => $26(state2$1, $29(Nil)));
+                                    })
+                                  ))));
+                                };
+                              })();
+                              return (v2$1, $222, $23, $24, $25) => {
+                                const $26 = v2$1._1;
+                                const $27 = v2$1._2;
+                                return $222((v3) => {
+                                  const $28 = (v4, $282) => {
+                                    const $29 = v4._3;
+                                    return $222((v5) => {
+                                      if ($29) {
+                                        return $24(v4, $282);
+                                      }
+                                      return $21(v2$1, $222, $23, $24, $25);
                                     });
-                                  });
+                                  };
+                                  return $222((v2$2) => $222((v1$1) => lBracket(
+                                    $ParseState($26, $27, false),
+                                    $222,
+                                    $23,
+                                    $28,
+                                    (state2$1, a$1) => $222((v2$3) => $222((v3$1) => $222((v2$4) => $222((v1$2) => expr_$lazy()(
+                                      state2$1,
+                                      $222,
+                                      $23,
+                                      $28,
+                                      (state2$2, a$2) => $222((v2$5) => {
+                                        const $29 = $132(a$2);
+                                        return $222((v3$2) => go$1(
+                                          state2$2,
+                                          $222,
+                                          $23,
+                                          $28,
+                                          (state3, a$3) => $222((v4) => {
+                                            const $30 = $29(a$3);
+                                            return $222((v4$1) => $25(state3, $30));
+                                          })
+                                        ));
+                                      })
+                                    )))))
+                                  )));
+                                });
+                              };
+                            })();
+                            return (v2$1, $21, $222, $23, $24) => {
+                              const $25 = v2$1._1;
+                              const $26 = v2$1._2;
+                              return $21((v3) => $12($ParseState($25, $26, false), $21, $222, (v2$2, $27) => $21((v5) => $202(v2$1, $21, $222, $23, $24)), $24));
+                            };
+                          })();
+                          return (v2$1, $202, $21, $222, $23) => {
+                            const $24 = v2$1._1;
+                            const $25 = v2$1._2;
+                            return $202((v3) => $11(
+                              $ParseState($24, $25, false),
+                              $202,
+                              $21,
+                              (v4, $26) => {
+                                const $27 = v4._3;
+                                return $202((v5) => {
+                                  if ($27) {
+                                    return $222(v4, $26);
+                                  }
+                                  return $192(v2$1, $202, $21, $222, $23);
                                 });
                               },
-                              $28
-                            ))),
-                            (state2, a) => $25((v2$2) => {
-                              const $37 = $17(a);
-                              return $25((v2$3) => $28(state2, $37(Nil)));
-                            })
-                          ))));
-                        });
-                      };
-                      return $25((v2$2) => $25((v1) => lBracket(
-                        $ParseState($29, $30, false),
-                        $25,
-                        $26,
-                        $35,
-                        (state2, a) => $25((v2$3) => $25((v3$4) => $25((v2$4) => $25((v1$1) => go$lazy()(
-                          state2,
-                          $25,
-                          $26,
-                          $35,
-                          (state2$1, a$1) => $25((v2$5) => {
-                            const $36 = $16(a$1);
-                            return $25((v3$5) => go$1(
-                              state2$1,
-                              $25,
-                              $26,
-                              $35,
-                              (state3, a$2) => $25((v4$1) => {
-                                const $37 = $36(a$2);
-                                return $25((v4$2) => $28(state3, $37));
-                              })
+                              $23
                             ));
-                          })
-                        )))))
+                          };
+                        })();
+                        return (v2$1, $192, $202, $21, $222) => {
+                          const $23 = v2$1._1;
+                          const $24 = v2$1._2;
+                          return $192((v3) => $192((v1$1) => $102(
+                            $ParseState($23, $24, false),
+                            $192,
+                            $202,
+                            (v2$2, $25) => $192((v5) => $182(v2$1, $192, $202, $21, $222)),
+                            (state2$1, a$1) => $192((v2$2) => $222(state2$1, $Expr2("Paragraph", a$1)))
+                          )));
+                        };
+                      })();
+                      const $18 = token.parens(expr_$lazy());
+                      const $19 = token.brackets((state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v1$1) => expr_$lazy()(
+                        state1$1,
+                        more$1,
+                        lift1$1,
+                        throw$1,
+                        (state2$1, a$1) => more$1((v2$1) => more$1((v1$2) => ellipsis(
+                          state2$1,
+                          more$1,
+                          lift1$1,
+                          throw$1,
+                          (state2$2, a$2) => more$1((v2$2) => more$1((v1$3) => expr_$lazy()(
+                            state2$2,
+                            more$1,
+                            lift1$1,
+                            throw$1,
+                            (state2$3, a$3) => more$1((v2$3) => done$1(state2$3, $Expr2("ListEnum", a$1, a$3)))
+                          )))
+                        )))
                       )));
-                    })),
-                    $28
-                  ));
-                });
-              },
-              $28
-            ));
-          });
-        };
-      })();
-      return (state1, more, lift12, $$throw2, done) => more((v1) => $20(
-        state1,
-        more,
-        lift12,
-        $$throw2,
-        (state2, a) => more((v2) => {
-          const $21 = DProject2(doc2)(a);
-          const $22 = token.reservedOp(".");
-          const $23 = token.brackets(expr_$lazy());
-          const $24 = Project2(doc2)(a);
-          const $25 = token.reservedOp(".");
-          const $26 = state2._1;
-          const $27 = state2._2;
-          return more((v3) => {
-            const $28 = (v4, $282) => {
-              const $29 = v4._3;
-              return more((v5) => {
-                if ($29) {
-                  return $$throw2(v4, $282);
-                }
-                const $30 = state2._1;
-                const $31 = state2._2;
-                return more((v3$1) => {
-                  const $32 = (v4$1, $322) => {
-                    const $33 = v4$1._3;
-                    return more((v5$1) => {
-                      if ($33) {
-                        return $$throw2(v4$1, $322);
-                      }
-                      return done(state2, a);
-                    });
-                  };
-                  return more((v1$1) => more((v2$1) => more((v1$2) => $25(
-                    $ParseState($30, $31, false),
-                    more,
-                    lift12,
-                    $32,
-                    (state2$1, a$1) => more((v2$2) => more((v3$2) => ident(state2$1, more, lift12, $32, (state3, a$2) => more((v4$1) => more((v2$3) => done(state3, $24(a$2)))))))
-                  ))));
-                });
-              });
-            };
-            return more((v1$1) => more((v2$1) => more((v1$2) => $22(
-              $ParseState($26, $27, false),
-              more,
-              lift12,
-              $28,
-              (state2$1, a$1) => more((v2$2) => more((v3$1) => $23(state2$1, more, lift12, $28, (state3, a$2) => more((v4) => more((v2$3) => done(state3, $21(a$2)))))))
-            ))));
-          });
-        })
-      ));
-    };
-    const rest = (v$1) => (v1) => {
-      if (v1.tag === "Constr") {
-        const $103 = v1._3;
-        const $11 = v1._2;
-        const $12 = v1._4;
-        const $13 = v1._1;
-        const $14 = docComment(go$lazy());
-        return (v2, $15, $16, $17, $18) => {
-          const $19 = v2._1;
-          const $20 = v2._2;
-          return $15((v3) => {
-            const $21 = (v4, $212) => {
-              const $22 = v4._3;
-              return $15((v5) => {
-                if ($22) {
-                  return $17(v4, $212);
-                }
-                return $18(v2, v1);
-              });
-            };
-            return $15((v1$1) => $14(
-              $ParseState($19, $20, false),
-              $15,
-              $16,
-              $21,
-              (state2, a) => $15((v2$1) => {
-                const $22 = simpleExprOrProjection(a);
-                return $15((v1$2) => $22(
-                  state2,
-                  $15,
-                  $16,
-                  $21,
-                  (state2$1, a$1) => $15((v2$2) => rest(a)($Expr2(
-                    "Constr",
-                    $13,
-                    $11,
-                    $103,
-                    foldableList.foldr(Cons)($List("Cons", a$1, Nil))($12)
-                  ))(state2$1, $15, $16, $21, $18))
-                ));
-              })
-            ));
-          });
-        };
-      }
-      const $102 = docComment(go$lazy());
-      return (v2, $11, $12, $13, $14) => {
-        const $15 = v2._1;
-        const $16 = v2._2;
-        return $11((v3) => {
-          const $17 = (v4, $172) => {
-            const $18 = v4._3;
-            return $11((v5) => {
-              if ($18) {
-                return $13(v4, $172);
-              }
-              return $14(v2, v1);
-            });
-          };
-          return $11((v1$1) => $11((v1$2) => $102(
-            $ParseState($15, $16, false),
-            $11,
-            $12,
-            $17,
-            (state2, a) => $11((v2$1) => simpleExprOrProjection(a)(
-              state2,
-              $11,
-              $12,
-              $17,
-              (state2$1, a$1) => $11((v2$2) => rest(v$1)($Expr2("App", v$1, v1, a$1))(state2$1, $11, $12, $17, $14))
-            ))
-          )));
-        });
-      };
-    };
-    const $10 = docComment(go$lazy());
-    return (v2, $11, $12, $13, $14) => {
-      const $15 = v2._1;
-      const $16 = v2._2;
-      return $11((v3) => {
-        const $17 = (v4, $172) => {
-          const $18 = v4._3;
-          return $11((v5) => {
-            if ($18) {
-              return $13(v4, $172);
-            }
-            const $19 = v2._1;
-            const $20 = v2._2;
-            return $11((v3$1) => {
-              const $21 = (v4$1, $212) => {
-                const $22 = v4$1._3;
-                return $11((v5$1) => {
-                  if ($22) {
-                    return $13(v4$1, $212);
-                  }
-                  const $23 = v2._1;
-                  const $24 = v2._2;
-                  return $11((v3$2) => {
-                    const $25 = (v4$2, $252) => {
-                      const $26 = v4$2._3;
-                      return $11((v5$2) => {
-                        if ($26) {
-                          return $13(v4$2, $252);
-                        }
-                        const $27 = v2._1;
-                        const $28 = v2._2;
-                        return $11((v3$3) => {
-                          const $29 = (v4$3, $292) => {
-                            const $30 = v4$3._3;
-                            return $11((v5$3) => {
-                              if ($30) {
-                                return $13(v4$3, $292);
+                      const $20 = token.parens(token.operator);
+                      return (v2$1, $21, $222, $23, $24) => {
+                        const $25 = v2$1._1;
+                        const $26 = v2$1._2;
+                        return $21((v3) => $173(
+                          $ParseState($25, $26, false),
+                          $21,
+                          $222,
+                          (v4, $27) => {
+                            const $28 = v4._3;
+                            return $21((v5) => {
+                              if ($28) {
+                                return $23(v4, $27);
                               }
-                              return $11((v1) => $10(
-                                v2,
-                                $11,
-                                $12,
-                                $13,
-                                (state2, a) => $11((v2$1) => {
-                                  const $31 = simpleExprOrProjection(a);
-                                  const $32 = rest(a);
-                                  return $11((v1$1) => $31(state2, $11, $12, $13, (state2$1, a$1) => $11((v2$2) => $32(a$1)(state2$1, $11, $12, $13, $14))));
-                                })
-                              ));
+                              const $29 = v2$1._1;
+                              const $30 = v2$1._2;
+                              return $21((v3$1) => $21((v1$1) => ident(
+                                $ParseState($29, $30, false),
+                                $21,
+                                $222,
+                                (v2$2, $31) => $21((v5$1) => {
+                                  const $32 = v2$1._1;
+                                  const $33 = v2$1._2;
+                                  return $21((v3$2) => $18(
+                                    $ParseState($32, $33, false),
+                                    $21,
+                                    $222,
+                                    (v2$3, $34) => $21((v5$2) => {
+                                      const $35 = v2$1._1;
+                                      const $36 = v2$1._2;
+                                      return $21((v3$3) => $19(
+                                        $ParseState($35, $36, false),
+                                        $21,
+                                        $222,
+                                        (v4$1, $37) => {
+                                          const $38 = v4$1._3;
+                                          return $21((v5$3) => {
+                                            if ($38) {
+                                              return $23(v4$1, $37);
+                                            }
+                                            const $39 = v2$1._3;
+                                            return $21((v1$2) => $20(
+                                              v2$1,
+                                              $21,
+                                              $222,
+                                              (v2$4, $40) => $23($ParseState(v2$4._1, v2$4._2, $39), $40),
+                                              (state2$1, a$1) => $21((v2$4) => $24(state2$1, $Expr2("Op", a$1)))
+                                            ));
+                                          });
+                                        },
+                                        $24
+                                      ));
+                                    }),
+                                    $24
+                                  ));
+                                }),
+                                (state2$1, a$1) => $21((v2$2) => $24(state2$1, $Expr2("Var", a$1)))
+                              )));
+                            });
+                          },
+                          $24
+                        ));
+                      };
+                    })();
+                    return (state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v1$1) => $172(
+                      state1$1,
+                      more$1,
+                      lift1$1,
+                      throw$1,
+                      (state2$1, a$1) => more$1((v2$1) => {
+                        const $18 = DProject2(a$1);
+                        const $19 = token.reservedOp(".");
+                        const $20 = token.brackets(expr_$lazy());
+                        const $21 = Project2(a$1);
+                        const $222 = token.reservedOp(".");
+                        const $23 = state2$1._1;
+                        const $24 = state2$1._2;
+                        return more$1((v3) => {
+                          const $25 = (v4, $252) => {
+                            const $26 = v4._3;
+                            return more$1((v5) => {
+                              if ($26) {
+                                return throw$1(v4, $252);
+                              }
+                              const $27 = state2$1._1;
+                              const $28 = state2$1._2;
+                              return more$1((v3$1) => {
+                                const $29 = (v4$1, $292) => {
+                                  const $30 = v4$1._3;
+                                  return more$1((v5$1) => {
+                                    if ($30) {
+                                      return throw$1(v4$1, $292);
+                                    }
+                                    return done$1(state2$1, a$1);
+                                  });
+                                };
+                                return more$1((v1$2) => more$1((v2$2) => more$1((v1$3) => $222(
+                                  $ParseState($27, $28, false),
+                                  more$1,
+                                  lift1$1,
+                                  $29,
+                                  (state2$2, a$2) => more$1((v2$3) => more$1((v3$2) => ident(
+                                    state2$2,
+                                    more$1,
+                                    lift1$1,
+                                    $29,
+                                    (state3, a$3) => more$1((v4$1) => more$1((v2$4) => done$1(state3, $21(a$3))))
+                                  )))
+                                ))));
+                              });
                             });
                           };
-                          return $11((v1) => $11((v1$1) => $9(
-                            $ParseState($27, $28, false),
-                            $11,
-                            $12,
-                            $29,
-                            (state2, a) => $11((v2$1) => {
-                              const $30 = bindList.bind($List("Cons", a._1, a._2))(identity13);
-                              return $11((v2$2) => {
-                                const $31 = foldableList.foldr((def) => fanin3(Let2)(LetRec2)(def));
-                                const $32 = keyword2("in");
-                                return $11((v1$2) => $11((v1$3) => $11((v2$3) => $11((v1$4) => $32(
-                                  state2,
-                                  $11,
-                                  $12,
-                                  $29,
-                                  (state2$1, a$1) => $11((v2$4) => $11((v3$4) => go$lazy()(
-                                    state2$1,
-                                    $11,
-                                    $12,
-                                    $29,
-                                    (state3, a$2) => $11((v4$3) => $11((v2$5) => {
-                                      const $33 = $31(a$2);
-                                      return $11((v2$6) => $14(state3, $33($30)));
-                                    }))
-                                  )))
-                                )))));
-                              });
-                            })
-                          )));
+                          return more$1((v1$2) => more$1((v2$2) => more$1((v1$3) => $19(
+                            $ParseState($23, $24, false),
+                            more$1,
+                            lift1$1,
+                            $25,
+                            (state2$2, a$2) => more$1((v2$3) => more$1((v3$1) => $20(
+                              state2$2,
+                              more$1,
+                              lift1$1,
+                              $25,
+                              (state3, a$3) => more$1((v4) => more$1((v2$4) => done$1(state3, $18(a$3))))
+                            )))
+                          ))));
                         });
+                      })
+                    ));
+                  })();
+                  const rest = (v$1) => {
+                    if (v$1.tag === "Constr") {
+                      const $172 = v$1._2;
+                      const $18 = v$1._3;
+                      const $19 = v$1._1;
+                      return (v2$1, $20, $21, $222, $23) => {
+                        const $24 = v2$1._1;
+                        const $25 = v2$1._2;
+                        return $20((v3) => {
+                          const $26 = (v4, $262) => {
+                            const $27 = v4._3;
+                            return $20((v5) => {
+                              if ($27) {
+                                return $222(v4, $262);
+                              }
+                              return $23(v2$1, v$1);
+                            });
+                          };
+                          return $20((v1$1) => simpleExprOrProjection(
+                            $ParseState($24, $25, false),
+                            $20,
+                            $21,
+                            $26,
+                            (state2$1, a$1) => $20((v2$2) => rest($Expr2(
+                              "Constr",
+                              $19,
+                              $172,
+                              foldableList.foldr(Cons)($List("Cons", a$1, Nil))($18)
+                            ))(state2$1, $20, $21, $26, $23))
+                          ));
+                        });
+                      };
+                    }
+                    return (v2$1, $172, $18, $19, $20) => {
+                      const $21 = v2$1._1;
+                      const $222 = v2$1._2;
+                      return $172((v3) => {
+                        const $23 = (v4, $232) => {
+                          const $24 = v4._3;
+                          return $172((v5) => {
+                            if ($24) {
+                              return $19(v4, $232);
+                            }
+                            return $20(v2$1, v$1);
+                          });
+                        };
+                        return $172((v1$1) => simpleExprOrProjection(
+                          $ParseState($21, $222, false),
+                          $172,
+                          $18,
+                          $23,
+                          (state2$1, a$1) => $172((v2$2) => rest($Expr2("App", v$1, a$1))(state2$1, $172, $18, $23, $20))
+                        ));
                       });
                     };
-                    return $11((v1) => $11((v2$1) => $11((v1$1) => $7(
-                      $ParseState($23, $24, false),
-                      $11,
-                      $12,
-                      $25,
-                      (state2, a) => $11((v2$2) => $11((v3$3) => $8(state2, $11, $12, $25, (state3, a$1) => $11((v4$2) => $11((v2$3) => $14(state3, $Expr2("Lambda", a$1)))))))
-                    ))));
+                  };
+                  return (state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v1$1) => simpleExprOrProjection(
+                    state1$1,
+                    more$1,
+                    lift1$1,
+                    throw$1,
+                    (state2$1, a$1) => more$1((v2$1) => rest(a$1)(state2$1, more$1, lift1$1, throw$1, done$1))
+                  ));
+                })();
+                return (v2$1, $18, $19, $20, $21) => {
+                  const $222 = v2$1._1;
+                  const $23 = v2$1._2;
+                  return $18((v3) => {
+                    const $24 = (v4, $242) => {
+                      const $25 = v4._3;
+                      return $18((v5) => {
+                        if ($25) {
+                          return $20(v4, $242);
+                        }
+                        return $17(v2$1, $18, $19, $20, $21);
+                      });
+                    };
+                    return $18((v1$1) => $18((v1$2) => $9(
+                      $ParseState($222, $23, false),
+                      $18,
+                      $19,
+                      $24,
+                      (state2$1, a$1) => $18((v2$2) => {
+                        const $25 = bindList.bind($List("Cons", a$1._1, a$1._2))(identity13);
+                        return $18((v2$3) => {
+                          const $26 = foldableList.foldr((def) => (e) => fanin3(Let2)(LetRec2)(def)(e));
+                          const $27 = keyword2("in");
+                          return $18((v1$3) => $18((v1$4) => $18((v2$4) => $18((v1$5) => $27(
+                            state2$1,
+                            $18,
+                            $19,
+                            $24,
+                            (state2$2, a$2) => $18((v2$5) => $18((v3$1) => go$lazy()(
+                              state2$2,
+                              $18,
+                              $19,
+                              $24,
+                              (state3, a$3) => $18((v4) => $18((v2$6) => {
+                                const $28 = $26(a$3);
+                                return $18((v2$7) => $21(state3, $28($25)));
+                              }))
+                            )))
+                          )))));
+                        });
+                      })
+                    )));
                   });
+                };
+              })();
+              return (v2$1, $17, $18, $19, $20) => {
+                const $21 = v2$1._1;
+                const $222 = v2$1._2;
+                return $17((v3) => {
+                  const $23 = (v4, $232) => {
+                    const $24 = v4._3;
+                    return $17((v5) => {
+                      if ($24) {
+                        return $19(v4, $232);
+                      }
+                      return $16(v2$1, $17, $18, $19, $20);
+                    });
+                  };
+                  return $17((v1$1) => $17((v2$2) => $17((v1$2) => $7(
+                    $ParseState($21, $222, false),
+                    $17,
+                    $18,
+                    $23,
+                    (state2$1, a$1) => $17((v2$3) => $17((v3$1) => $8(state2$1, $17, $18, $23, (state3, a$2) => $17((v4) => $17((v2$4) => $20(state3, $Expr2("Lambda", a$2)))))))
+                  ))));
                 });
               };
-              return $11((v2$1) => $11((v2$2) => $11((v1) => $11((v2$3) => $11((v2$4) => $11((v1$1) => $11((v2$5) => $11((v3$2) => $11((v2$6) => $11((v1$2) => $4(
-                $ParseState($19, $20, false),
+            })();
+            return (v2$1, $14, $15, $16, $17) => {
+              const $18 = v2$1._1;
+              const $19 = v2$1._2;
+              return $14((v3) => {
+                const $20 = (v4, $202) => {
+                  const $21 = v4._3;
+                  return $14((v5) => {
+                    if ($21) {
+                      return $16(v4, $202);
+                    }
+                    return $13(v2$1, $14, $15, $16, $17);
+                  });
+                };
+                return $14((v2$2) => $14((v2$3) => $14((v1$1) => $14((v2$4) => $14((v2$5) => $14((v1$2) => $14((v2$6) => $14((v3$1) => $14((v2$7) => $14((v1$3) => $4(
+                  $ParseState($18, $19, false),
+                  $14,
+                  $15,
+                  $20,
+                  (state2$1, a$1) => $14((v2$8) => $14((v3$2) => go$lazy()(
+                    state2$1,
+                    $14,
+                    $15,
+                    $20,
+                    (state3, a$2) => $14((v4) => $14((v4$1) => {
+                      const $21 = IfElse(a$2);
+                      return $14((v2$9) => $14((v3$3) => $5(
+                        state3,
+                        $14,
+                        $15,
+                        $20,
+                        (state3$1, a$3) => $14((v4$2) => $14((v3$4) => go$lazy()(
+                          state3$1,
+                          $14,
+                          $15,
+                          $20,
+                          (state3$2, a$4) => $14((v4$3) => {
+                            const $222 = $21(a$4);
+                            return $14((v2$10) => $14((v3$5) => $6(
+                              state3$2,
+                              $14,
+                              $15,
+                              $20,
+                              (state3$3, a$5) => $14((v4$4) => $14((v3$6) => go$lazy()(state3$3, $14, $15, $20, (state3$4, a$6) => $14((v4$5) => $17(state3$4, $222(a$6))))))
+                            )));
+                          })
+                        )))
+                      )));
+                    }))
+                  )))
+                )))))))))));
+              });
+            };
+          })();
+          return (v2$1, $11, $12, $13, $14) => {
+            const $15 = v2$1._1;
+            const $16 = v2$1._2;
+            return $11((v3) => {
+              const $17 = (v4, $172) => {
+                const $18 = v4._3;
+                return $11((v5) => {
+                  if ($18) {
+                    return $13(v4, $172);
+                  }
+                  return $10(v2$1, $11, $12, $13, $14);
+                });
+              };
+              return $11((v2$2) => $11((v1$1) => $11((v2$3) => $11((v1$2) => $11((v2$4) => $11((v1$3) => $1(
+                $ParseState($15, $16, false),
                 $11,
                 $12,
-                $21,
-                (state2, a) => $11((v2$7) => $11((v3$3) => go$lazy()(
-                  state2,
+                $17,
+                (state2$1, a$1) => $11((v2$5) => $11((v3$1) => go$lazy()(
+                  state2$1,
                   $11,
                   $12,
-                  $21,
-                  (state3, a$1) => $11((v4$1) => $11((v4$2) => {
-                    const $22 = IfElse(a$1);
-                    return $11((v2$8) => $11((v3$4) => $5(
-                      state3,
-                      $11,
-                      $12,
-                      $21,
-                      (state3$1, a$2) => $11((v4$3) => $11((v3$5) => go$lazy()(
-                        state3$1,
-                        $11,
-                        $12,
-                        $21,
-                        (state3$2, a$3) => $11((v4$4) => {
-                          const $23 = $22(a$3);
-                          return $11((v2$9) => $11((v3$6) => $6(
-                            state3$2,
-                            $11,
-                            $12,
-                            $21,
-                            (state3$3, a$4) => $11((v4$5) => $11((v3$7) => go$lazy()(state3$3, $11, $12, $21, (state3$4, a$5) => $11((v4$6) => $14(state3$4, $23(a$5))))))
-                          )));
-                        })
-                      )))
-                    )));
-                  }))
+                  $17,
+                  (state3, a$2) => $11((v4) => $11((v2$6) => $11((v3$2) => $22(
+                    state3,
+                    $11,
+                    $12,
+                    $17,
+                    (state3$1, a$3) => $11((v4$1) => $11((v2$7) => {
+                      const $18 = MatchAs(a$2);
+                      return $11((v3$3) => $3(state3$1, $11, $12, $17, (state3$2, a$4) => $11((v4$2) => $14(state3$2, $18(a$4)))));
+                    }))
+                  ))))
                 )))
-              )))))))))));
+              )))))));
             });
-          });
-        };
-        return $11((v2$1) => $11((v1) => $11((v2$2) => $11((v1$1) => $11((v2$3) => $11((v1$2) => $1(
-          $ParseState($15, $16, false),
-          $11,
-          $12,
-          $17,
-          (state2, a) => $11((v2$4) => $11((v3$1) => go$lazy()(
-            state2,
-            $11,
-            $12,
-            $17,
-            (state3, a$1) => $11((v4) => $11((v2$5) => $11((v3$2) => $2(
-              state3,
-              $11,
-              $12,
-              $17,
-              (state3$1, a$2) => $11((v4$1) => $11((v2$6) => {
-                const $18 = MatchAs(a$1);
-                return $11((v3$3) => $3(state3$1, $11, $12, $17, (state3$2, a$3) => $11((v4$2) => $14(state3$2, $18(a$3)))));
-              }))
-            ))))
+          };
+        })())([
+          [backtickOp],
+          ...operators((op) => (state1$1, more$1, lift1$1, throw$1, done$1) => more$1((v1$1) => token.operator(
+            state1$1,
+            more$1,
+            lift1$1,
+            throw$1,
+            (state2$1, a$1) => more$1((v2$1) => onlyIf(op === a$1)((() => {
+              if (op === ".") {
+                return (e) => (e$p) => {
+                  if (e$p.tag === "Var") {
+                    return $Expr2("Project", e, e$p._1);
+                  }
+                  return throwException(error('Field names are not first class; got "' + intercalate4("\n")(removeDocWS(prettyExpr1(annUnit).pretty(e$p)).lines) + '".'))();
+                };
+              }
+              if (":" === definitely("absurd")(charAt2(0)(a$1))) {
+                return (e) => (e$p) => $Expr2("Constr", void 0, a$1, $List("Cons", e, $List("Cons", e$p, Nil)));
+              }
+              return (e) => (e$p) => $Expr2("BinaryApp", e, op, e$p);
+            })())(state2$1, more$1, lift1$1, throw$1, done$1))
           )))
-        )))))));
-      });
-    };
-  })())));
+        ]);
+        return more((v1$1) => $2(
+          state2,
+          more,
+          lift12,
+          $$throw2,
+          (state2$1, a$1) => more((v2$1) => done(
+            state2$1,
+            (() => {
+              if (a.tag === "Nothing") {
+                return a$1;
+              }
+              if (a.tag === "Just") {
+                return $Expr2("DocExpr", a._1, a$1);
+              }
+              fail();
+            })()
+          ))
+        ));
+      })
+    ));
+  }));
   const go = go$lazy();
   return go;
 });
@@ -44079,7 +45127,54 @@ var module_ = /* @__PURE__ */ withImports(/* @__PURE__ */ (() => {
   ))));
 })());
 
+// output-es/Data.Argonaut.Decode.Error/index.js
+var $JsonDecodeError = (tag, _1, _2) => ({ tag, _1, _2 });
+var AtIndex = (value0) => (value1) => $JsonDecodeError("AtIndex", value0, value1);
+var AtKey = (value0) => (value1) => $JsonDecodeError("AtKey", value0, value1);
+var Named = (value0) => (value1) => $JsonDecodeError("Named", value0, value1);
+var MissingValue = /* @__PURE__ */ $JsonDecodeError("MissingValue");
+var showJsonDecodeError = {
+  show: (v) => {
+    if (v.tag === "TypeMismatch") {
+      return "(TypeMismatch " + showStringImpl(v._1) + ")";
+    }
+    if (v.tag === "UnexpectedValue") {
+      return "(UnexpectedValue " + stringify(v._1) + ")";
+    }
+    if (v.tag === "AtIndex") {
+      return "(AtIndex " + showIntImpl(v._1) + " " + showJsonDecodeError.show(v._2) + ")";
+    }
+    if (v.tag === "AtKey") {
+      return "(AtKey " + showStringImpl(v._1) + " " + showJsonDecodeError.show(v._2) + ")";
+    }
+    if (v.tag === "Named") {
+      return "(Named " + showStringImpl(v._1) + " " + showJsonDecodeError.show(v._2) + ")";
+    }
+    if (v.tag === "MissingValue") {
+      return "MissingValue";
+    }
+    fail();
+  }
+};
+
+// output-es/Data.Argonaut.Decode.Parser/index.js
+var parseJson = (x2) => {
+  const $0 = _jsonParser(Left, Right, x2);
+  if ($0.tag === "Left") {
+    return $Either("Left", $JsonDecodeError("TypeMismatch", "JSON"));
+  }
+  if ($0.tag === "Right") {
+    return $Either("Right", $0._1);
+  }
+  fail();
+};
+
 // output-es/Primitive.Defs/index.js
+var toUnfoldable16 = /* @__PURE__ */ (() => {
+  const $0 = toArrayWithKey(Tuple);
+  return (x2) => toUnfoldable(unfoldableArray)($0(x2));
+})();
+var fromFoldable21 = /* @__PURE__ */ fromFoldable(foldableArray);
 var foldM4 = (dictMonad) => (f) => (b0) => foldableDict.foldl((b) => (a) => dictMonad.Bind1().bind(b)((a$1) => f(a$1)(a)))(dictMonad.Applicative0().pure(b0));
 var disjointUnion3 = /* @__PURE__ */ disjointUnion(mapDictString);
 var unary2 = /* @__PURE__ */ unary(boundedJoinSemilatticeUni);
@@ -44106,10 +45201,10 @@ var matrixUpdate = /* @__PURE__ */ $Tuple(
       const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
       return (dictMonadError) => {
         const $$throw2 = $$throw(dictMonadError.MonadThrow0());
-        return (dictMonadReader) => (dictLoadFile) => (v) => {
+        return (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
           if (v.tag === "Cons" && v._1._3.tag === "Matrix" && v._2.tag === "Cons" && v._2._1._3.tag === "Constr" && v._2._1._3._2.tag === "Cons" && v._2._1._3._2._1._3.tag === "Int" && v._2._1._3._2._2.tag === "Cons" && v._2._1._3._2._2._1._3.tag === "Int" && v._2._1._3._2._2._2.tag === "Nil" && v._2._2.tag === "Cons" && v._2._2._2.tag === "Nil" && v._2._1._3._1 === "Pair") {
             const $0 = v._2._2._1;
-            return $$new((a) => Val(a)(None))($$$Map("Two", Leaf2, v._1._1, void 0, Leaf2))($BaseVal(
+            return $$new((a) => Val(a)(Nothing))($$$Map("Two", Leaf2, v._1._1, void 0, Leaf2))($BaseVal(
               "Matrix",
               matrixPut(v._2._1._3._2._1._3._1)(v._2._1._3._2._2._1._3._1)((v$1) => $0)(v._1._3._1)
             ));
@@ -44125,12 +45220,12 @@ var matrixLookup = /* @__PURE__ */ $Tuple(
   /* @__PURE__ */ $ForeignOp$p({
     arity: 2,
     op: (dictMonadWithGraphAlloc) => (dictMonadError) => {
-      const MonadThrow0 = dictMonadError.MonadThrow0();
-      return (dictMonadReader) => (dictLoadFile) => (v) => {
+      const $$throw2 = $$throw(dictMonadError.MonadThrow0());
+      return (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
         if (v.tag === "Cons" && v._1._3.tag === "Matrix" && v._2.tag === "Cons" && v._2._1._3.tag === "Constr" && v._2._1._3._2.tag === "Cons" && v._2._1._3._2._1._3.tag === "Int" && v._2._1._3._2._2.tag === "Cons" && v._2._1._3._2._2._1._3.tag === "Int" && v._2._1._3._2._2._2.tag === "Nil" && v._2._2.tag === "Nil" && v._2._1._3._1 === "Pair") {
-          return MonadThrow0.Monad0().Applicative0().pure(matrixGet(v._2._1._3._2._1._3._1)(v._2._1._3._2._2._1._3._1)(v._1._3._1));
+          return dictMonadAff.MonadEffect0().Monad0().Applicative0().pure(matrixGet(v._2._1._3._2._1._3._1)(v._2._1._3._2._2._1._3._1)(v._1._3._1));
         }
-        return MonadThrow0.throwError(error("Matrix and pair of integers expected"));
+        return $$throw2("Matrix and pair of integers expected");
       };
     }
   })
@@ -44148,9 +45243,94 @@ var lessThanEquals = /* @__PURE__ */ union6(asBooleanBoolean)(asBooleanBoolean)(
 var lessThan = /* @__PURE__ */ union6(asBooleanBoolean)(asBooleanBoolean)(asIntNumberOrString)(asIntNumberOrString)((a1) => (a2) => a1 < a2)(/* @__PURE__ */ union6(asBooleanBoolean)(asBooleanBoolean)(asNumberString)(asNumberString)((a1) => (a2) => a1 < a2)((a1) => (a2) => a1 < a2));
 var greaterThanEquals = /* @__PURE__ */ union6(asBooleanBoolean)(asBooleanBoolean)(asIntNumberOrString)(asIntNumberOrString)((a1) => (a2) => a1 >= a2)(/* @__PURE__ */ union6(asBooleanBoolean)(asBooleanBoolean)(asNumberString)(asNumberString)((a1) => (a2) => a1 >= a2)((a1) => (a2) => a1 >= a2));
 var greaterThan = /* @__PURE__ */ union6(asBooleanBoolean)(asBooleanBoolean)(asIntNumberOrString)(asIntNumberOrString)((a1) => (a2) => a1 > a2)(/* @__PURE__ */ union6(asBooleanBoolean)(asBooleanBoolean)(asNumberString)(asNumberString)((a1) => (a2) => a1 > a2)((a1) => (a2) => a1 > a2));
+var fromJsonVal = (dictMonadWithGraphAlloc) => {
+  const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
+  return (dictMonadEffect) => {
+    const Monad0 = dictMonadEffect.Monad0();
+    const Bind1 = Monad0.Bind1();
+    const Applicative0 = Monad0.Applicative0();
+    const traverse22 = traversableArray.traverse(Applicative0);
+    const $0 = dictMonadEffect.Monad0().Applicative0();
+    const toList = (v) => {
+      if (v.tag === "Nil") {
+        return $$new((a) => Val(a)(Nothing))(Leaf2)($BaseVal("Constr", "Nil", Nil));
+      }
+      if (v.tag === "Cons") {
+        const $1 = v._1;
+        return Bind1.bind(toList(v._2))((tailV) => $$new((a) => Val(a)(Nothing))(Leaf2)($BaseVal(
+          "Constr",
+          ":",
+          $List("Cons", $1, $List("Cons", tailV, Nil))
+        )));
+      }
+      fail();
+    };
+    return caseJson((v) => throwException(error("Error, Null JSON value cannot be converted to Val Vertex"))())((b) => $$new((a) => Val(a)(Nothing))(Leaf2)($BaseVal(
+      "Constr",
+      b ? "True" : "False",
+      Nil
+    )))((n) => {
+      const v = fromNumber(n);
+      if (v.tag === "Just") {
+        return $$new((a) => Val(a)(Nothing))(Leaf2)($BaseVal("Int", v._1));
+      }
+      if (v.tag === "Nothing") {
+        return $$new((a) => Val(a)(Nothing))(Leaf2)($BaseVal("Float", n));
+      }
+      fail();
+    })((s) => $$new((a) => Val(a)(Nothing))(Leaf2)($BaseVal("Str", s)))((arr) => Bind1.bind(traverse22(fromJsonVal(dictMonadWithGraphAlloc)(dictMonadEffect))(arr))((vs) => Bind1.bind(toList(toUnfoldable(unfoldableList)(vs)))((v) => Bind1.bind($0.pure())(() => Applicative0.pure(v)))))((obj) => Bind1.bind(traverse22((v) => {
+      const $1 = v._1;
+      const $2 = v._2;
+      return Bind1.bind($$new((a) => Val(a)(Nothing))(Leaf2)($BaseVal("Str", $1)))((v1) => {
+        const $3 = v1._1;
+        return Bind1.bind(fromJsonVal(dictMonadWithGraphAlloc)(dictMonadEffect)($2))((v2) => Applicative0.pure($Tuple($1, $Tuple($3, v2))));
+      });
+    })(toUnfoldable16(obj)))((entries) => $$new((a) => Val(a)(Nothing))(Leaf2)($BaseVal("Dictionary", fromFoldable21(entries)))));
+  };
+};
+var loadJson = /* @__PURE__ */ $Tuple(
+  "loadJson",
+  /* @__PURE__ */ $ForeignOp$p({
+    arity: 1,
+    op: (dictMonadWithGraphAlloc) => {
+      const fromJsonVal1 = fromJsonVal(dictMonadWithGraphAlloc);
+      return (dictMonadError) => {
+        const $$throw2 = $$throw(dictMonadError.MonadThrow0());
+        return (dictMonadAff) => {
+          const MonadEffect0 = dictMonadAff.MonadEffect0();
+          const Monad0 = MonadEffect0.Monad0();
+          const $0 = Monad0.Bind1();
+          const fromJsonVal2 = fromJsonVal1(MonadEffect0);
+          return (dictMonadReader) => {
+            const ask = dictMonadReader.MonadAsk0().ask;
+            return (dictLoadFile) => {
+              const loadFile2 = loadFile(dictLoadFile)(Monad0)(dictMonadError)(dictMonadAff);
+              return (v) => {
+                if (v.tag === "Cons" && v._1._3.tag === "Str" && v._2.tag === "Nil") {
+                  const $1 = v._1._3._1;
+                  return $0.bind(ask)((v1) => $0.bind(loadFile2(v1.fluidSrcPaths)($1))((str) => {
+                    const v2 = parseJson(str);
+                    if (v2.tag === "Left") {
+                      return $$throw2("Failed to parse JSON: " + showJsonDecodeError.show(v2._1));
+                    }
+                    if (v2.tag === "Right") {
+                      return fromJsonVal2(v2._1);
+                    }
+                    fail();
+                  }));
+                }
+                return $$throw2("String expected");
+              };
+            };
+          };
+        };
+      };
+    }
+  })
+);
 var extern = (dictBoundedJoinSemilattice) => {
   const bot2 = dictBoundedJoinSemilattice.bot;
-  return (v) => $Tuple(v._1, $Val(bot2, None, $BaseVal("Fun", $Fun("Foreign", $Tuple(v._1, v._2), Nil))));
+  return (v) => $Tuple(v._1, $Val(bot2, Nothing, $BaseVal("Fun", $Fun("Foreign", $Tuple(v._1, v._2), Nil))));
 };
 var extern1 = /* @__PURE__ */ extern(boundedJoinSemilatticeUni);
 var error_ = /* @__PURE__ */ $Tuple(
@@ -44158,12 +45338,12 @@ var error_ = /* @__PURE__ */ $Tuple(
   /* @__PURE__ */ $ForeignOp$p({
     arity: 1,
     op: (dictMonadWithGraphAlloc) => (dictMonadError) => {
-      const MonadThrow0 = dictMonadError.MonadThrow0();
-      return (dictMonadReader) => (dictLoadFile) => (v) => {
+      const $$throw2 = $$throw(dictMonadError.MonadThrow0());
+      return (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
         if (v.tag === "Cons" && v._1._3.tag === "Str" && v._2.tag === "Nil") {
-          return MonadThrow0.Monad0().Applicative0().pure(throwException(error(v._1._3._1))());
+          return dictMonadAff.MonadEffect0().Monad0().Applicative0().pure(throwException(error(v._1._3._1))());
         }
-        return MonadThrow0.throwError(error("String expected"));
+        return $$throw2("String expected");
       };
     }
   })
@@ -44176,26 +45356,36 @@ var dims = /* @__PURE__ */ $Tuple(
     op: (dictMonadWithGraphAlloc) => {
       const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
       return (dictMonadError) => {
-        const MonadThrow0 = dictMonadError.MonadThrow0();
-        const $0 = MonadThrow0.Monad0().Bind1();
-        return (dictMonadReader) => (dictLoadFile) => (v) => {
-          if (v.tag === "Cons" && v._1._3.tag === "Matrix" && v._2.tag === "Nil") {
-            const $1 = v._1._3._1._2._2._1;
-            const $2 = v._1._1;
-            const $3 = v._1._3._1._2._2._2;
-            return $0.bind($$new((a) => Val(a)(None))($$$Map("Two", Leaf2, v._1._3._1._2._1._2, void 0, Leaf2))($BaseVal(
-              "Int",
-              v._1._3._1._2._1._1
-            )))((v1) => $0.bind($$new((a) => Val(a)(None))($$$Map("Two", Leaf2, $3, void 0, Leaf2))($BaseVal(
-              "Int",
-              $1
-            )))((v2) => $$new((a) => Val(a)(None))($$$Map("Two", Leaf2, $2, void 0, Leaf2))($BaseVal(
-              "Constr",
-              "Pair",
-              $List("Cons", v1, $List("Cons", v2, Nil))
-            ))));
-          }
-          return MonadThrow0.throwError(error("Matrix expected"));
+        const $$throw2 = $$throw(dictMonadError.MonadThrow0());
+        return (dictMonadAff) => {
+          const $0 = dictMonadAff.MonadEffect0().Monad0().Bind1();
+          return (dictMonadReader) => (dictLoadFile) => (v) => {
+            if (v.tag === "Cons" && v._1._3.tag === "Matrix" && v._2.tag === "Nil") {
+              const $1 = v._1._3._1._2._2._1;
+              const $2 = v._1._1;
+              const $3 = v._1._3._1._2._2._2;
+              return $0.bind($$new((a) => Val(a)(Nothing))($$$Map(
+                "Two",
+                Leaf2,
+                v._1._3._1._2._1._2,
+                void 0,
+                Leaf2
+              ))($BaseVal("Int", v._1._3._1._2._1._1)))((v1) => $0.bind($$new((a) => Val(a)(Nothing))($$$Map(
+                "Two",
+                Leaf2,
+                $3,
+                void 0,
+                Leaf2
+              ))($BaseVal("Int", $1)))((v2) => $$new((a) => Val(a)(Nothing))($$$Map(
+                "Two",
+                Leaf2,
+                $2,
+                void 0,
+                Leaf2
+              ))($BaseVal("Constr", "Pair", $List("Cons", v1, $List("Cons", v2, Nil))))));
+            }
+            return $$throw2("Matrix expected");
+          };
         };
       };
     }
@@ -44209,27 +45399,32 @@ var dict_map = /* @__PURE__ */ $Tuple(
       const apply3 = apply2(dictMonadWithGraphAlloc);
       const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
       return (dictMonadError) => {
-        const MonadThrow0 = dictMonadError.MonadThrow0();
-        const Monad0 = MonadThrow0.Monad0();
-        const Bind1 = Monad0.Bind1();
-        const traverse1 = traversableDict.traverse(Monad0.Applicative0());
-        return (dictMonadReader) => {
-          const apply1 = apply3(dictMonadReader);
-          return (dictLoadFile) => {
-            const apply22 = apply1(dictLoadFile);
-            return (v) => {
-              if (v.tag === "Cons" && v._2.tag === "Cons" && v._2._1._3.tag === "Dictionary" && v._2._2.tag === "Nil") {
-                const $0 = v._1;
-                const $1 = v._2._1._1;
-                return Bind1.bind(traverse1((v2) => {
-                  const $2 = v2._1;
-                  return Bind1.Apply0().Functor0().map((v3) => $Tuple($2, v3))(apply22($0)(v2._2));
-                })(v._2._1._3._1))((d$p) => $$new((a) => Val(a)(None))($$$Map("Two", Leaf2, $1, void 0, Leaf2))($BaseVal(
-                  "Dictionary",
-                  d$p
-                )));
-              }
-              return MonadThrow0.throwError(error("Function and dictionary expected"));
+        const $$throw2 = $$throw(dictMonadError.MonadThrow0());
+        return (dictMonadAff) => {
+          const Monad0 = dictMonadAff.MonadEffect0().Monad0();
+          const Bind1 = Monad0.Bind1();
+          const traverse22 = traversableDict.traverse(Monad0.Applicative0());
+          return (dictMonadReader) => {
+            const apply1 = apply3(dictMonadReader)(dictMonadAff);
+            return (dictLoadFile) => {
+              const apply22 = apply1(dictLoadFile);
+              return (v) => {
+                if (v.tag === "Cons" && v._2.tag === "Cons" && v._2._1._3.tag === "Dictionary" && v._2._2.tag === "Nil") {
+                  const $0 = v._1;
+                  const $1 = v._2._1._1;
+                  return Bind1.bind(traverse22((v2) => {
+                    const $2 = v2._1;
+                    return Bind1.Apply0().Functor0().map((v3) => $Tuple($2, v3))(apply22($0)(v2._2));
+                  })(v._2._1._3._1))((d$p) => $$new((a) => Val(a)(Nothing))($$$Map(
+                    "Two",
+                    Leaf2,
+                    $1,
+                    void 0,
+                    Leaf2
+                  ))($BaseVal("Dictionary", d$p)));
+                }
+                return $$throw2("Function and dictionary expected");
+              };
             };
           };
         };
@@ -44245,40 +45440,42 @@ var dict_intersectionWith = /* @__PURE__ */ $Tuple(
       const apply3 = apply2(dictMonadWithGraphAlloc);
       const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
       return (dictMonadError) => {
-        const MonadThrow0 = dictMonadError.MonadThrow0();
-        const Monad0 = MonadThrow0.Monad0();
-        const Bind1 = Monad0.Bind1();
-        const Applicative0 = Monad0.Applicative0();
-        const $0 = Bind1.Apply0().Functor0();
-        return (dictMonadReader) => {
-          const apply1 = apply3(dictMonadReader);
-          return (dictLoadFile) => {
-            const apply22 = apply1(dictLoadFile);
-            return (v) => {
-              if (v.tag === "Cons" && v._2.tag === "Cons" && v._2._1._3.tag === "Dictionary" && v._2._2.tag === "Cons" && v._2._2._1._3.tag === "Dictionary" && v._2._2._2.tag === "Nil") {
-                const $1 = v._1;
-                const $2 = v._2._1._1;
-                const $3 = v._2._2._1._1;
-                return Bind1.bind($0.map(Dictionary3)($0.map(DictRep)(traversableDict.traverse(Applicative0)(identity20)(intersectionWith_Object((v2) => (v3) => {
-                  const $4 = v3._2;
-                  const $5 = v2._1;
-                  const $6 = v3._1;
-                  return Bind1.bind(Bind1.bind(apply22($1)(v2._2))((a) => apply22(a)($4)))((v4) => Bind1.bind($$new((a) => Val(a)(None))(insert3(ordVertex)($6)()($$$Map(
+        const $$throw2 = $$throw(dictMonadError.MonadThrow0());
+        return (dictMonadAff) => {
+          const Monad0 = dictMonadAff.MonadEffect0().Monad0();
+          const Bind1 = Monad0.Bind1();
+          const Applicative0 = Monad0.Applicative0();
+          const $0 = Bind1.Apply0().Functor0();
+          return (dictMonadReader) => {
+            const apply1 = apply3(dictMonadReader)(dictMonadAff);
+            return (dictLoadFile) => {
+              const apply22 = apply1(dictLoadFile);
+              return (v) => {
+                if (v.tag === "Cons" && v._2.tag === "Cons" && v._2._1._3.tag === "Dictionary" && v._2._2.tag === "Cons" && v._2._2._1._3.tag === "Dictionary" && v._2._2._2.tag === "Nil") {
+                  const $1 = v._1;
+                  const $2 = v._2._1._1;
+                  const $3 = v._2._2._1._1;
+                  return Bind1.bind($0.map(Dictionary3)($0.map(DictRep)(traversableDict.traverse(Applicative0)(identity20)(intersectionWith_Object((v2) => (v3) => {
+                    const $4 = v3._2;
+                    const $5 = v2._1;
+                    const $6 = v3._1;
+                    return Bind1.bind(Bind1.bind(apply22($1)(v2._2))((a) => apply22(a)($4)))((v4) => Bind1.bind($$new((a) => Val(a)(Nothing))(insert3(ordVertex)($6)()($$$Map(
+                      "Two",
+                      Leaf2,
+                      $5,
+                      void 0,
+                      Leaf2
+                    )))(v4._3))((v5) => Applicative0.pure($Tuple(v5._1, v4))));
+                  })(v._2._1._3._1)(v._2._2._1._3._1)))))((v$p) => $$new((a) => Val(a)(Nothing))(insert3(ordVertex)($3)()($$$Map(
                     "Two",
                     Leaf2,
-                    $5,
+                    $2,
                     void 0,
                     Leaf2
-                  )))(v4._3))((v5) => Applicative0.pure($Tuple(v5._1, v4))));
-                })(v._2._1._3._1)(v._2._2._1._3._1)))))((v$p) => $$new((a) => Val(a)(None))(insert3(ordVertex)($3)()($$$Map(
-                  "Two",
-                  Leaf2,
-                  $2,
-                  void 0,
-                  Leaf2
-                )))(v$p));
-              }
-              return MonadThrow0.throwError(error("Function and two dictionaries expected"));
+                  )))(v$p));
+                }
+                return $$throw2("Function and two dictionaries expected");
+              };
             };
           };
         };
@@ -44292,7 +45489,7 @@ var dict_get = /* @__PURE__ */ $Tuple(
     arity: 2,
     op: (dictMonadWithGraphAlloc) => (dictMonadError) => {
       const MonadThrow0 = dictMonadError.MonadThrow0();
-      return (dictMonadReader) => (dictLoadFile) => (v) => {
+      return (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
         if (v.tag === "Cons" && v._1._3.tag === "Str" && v._2.tag === "Cons" && v._2._1._3.tag === "Dictionary" && v._2._2.tag === "Nil") {
           return orElse(MonadThrow0)('Key "' + v._1._3._1 + '" not found')((() => {
             const $0 = _lookup(Nothing, Just, v._1._3._1, v._2._1._3._1);
@@ -44314,21 +45511,23 @@ var dict_foldl = /* @__PURE__ */ $Tuple(
     op: (dictMonadWithGraphAlloc) => {
       const apply3 = apply2(dictMonadWithGraphAlloc);
       return (dictMonadError) => {
-        const MonadThrow0 = dictMonadError.MonadThrow0();
-        const Monad0 = MonadThrow0.Monad0();
-        return (dictMonadReader) => {
-          const apply1 = apply3(dictMonadReader);
-          return (dictLoadFile) => {
-            const apply22 = apply1(dictLoadFile);
-            return (v) => {
-              if (v.tag === "Cons" && v._2.tag === "Cons" && v._2._2.tag === "Cons" && v._2._2._1._3.tag === "Dictionary" && v._2._2._2.tag === "Nil") {
-                const $0 = v._1;
-                return foldM4(Monad0)((u1) => (v2) => {
-                  const $1 = v2._2;
-                  return Monad0.Bind1().bind(apply22($0)(u1))((a) => apply22(a)($1));
-                })(v._2._1)(v._2._2._1._3._1);
-              }
-              return MonadThrow0.throwError(error("Function, value and dictionary expected"));
+        const $$throw2 = $$throw(dictMonadError.MonadThrow0());
+        return (dictMonadAff) => {
+          const Monad0 = dictMonadAff.MonadEffect0().Monad0();
+          return (dictMonadReader) => {
+            const apply1 = apply3(dictMonadReader)(dictMonadAff);
+            return (dictLoadFile) => {
+              const apply22 = apply1(dictLoadFile);
+              return (v) => {
+                if (v.tag === "Cons" && v._2.tag === "Cons" && v._2._2.tag === "Cons" && v._2._2._1._3.tag === "Dictionary" && v._2._2._2.tag === "Nil") {
+                  const $0 = v._1;
+                  return foldM4(Monad0)((u1) => (v2) => {
+                    const $1 = v2._2;
+                    return Monad0.Bind1().bind(apply22($0)(u1))((a) => apply22(a)($1));
+                  })(v._2._1)(v._2._2._1._3._1);
+                }
+                return $$throw2("Function, value and dictionary expected");
+              };
             };
           };
         };
@@ -44344,9 +45543,9 @@ var dict_disjointUnion = /* @__PURE__ */ $Tuple(
       const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
       return (dictMonadError) => {
         const $$throw2 = $$throw(dictMonadError.MonadThrow0());
-        return (dictMonadReader) => (dictLoadFile) => (v) => {
+        return (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
           if (v.tag === "Cons" && v._1._3.tag === "Dictionary" && v._2.tag === "Cons" && v._2._1._3.tag === "Dictionary" && v._2._2.tag === "Nil") {
-            return $$new((a) => Val(a)(None))(insert3(ordVertex)(v._2._1._1)()($$$Map(
+            return $$new((a) => Val(a)(Nothing))(insert3(ordVertex)(v._2._1._1)()($$$Map(
               "Two",
               Leaf2,
               v._1._1,
@@ -44368,9 +45567,9 @@ var dict_difference = /* @__PURE__ */ $Tuple(
       const $$new = dictMonadWithGraphAlloc.new(typeNameVal);
       return (dictMonadError) => {
         const $$throw2 = $$throw(dictMonadError.MonadThrow0());
-        return (dictMonadReader) => (dictLoadFile) => (v) => {
+        return (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
           if (v.tag === "Cons" && v._1._3.tag === "Dictionary" && v._2.tag === "Cons" && v._2._1._3.tag === "Dictionary" && v._2._2.tag === "Nil") {
-            return $$new((a) => Val(a)(None))(insert3(ordVertex)(v._2._1._1)()($$$Map(
+            return $$new((a) => Val(a)(Nothing))(insert3(ordVertex)(v._2._1._1)()($$$Map(
               "Two",
               Leaf2,
               v._1._1,
@@ -44389,26 +45588,27 @@ var debugLog = /* @__PURE__ */ $Tuple(
   /* @__PURE__ */ $ForeignOp$p({
     arity: 1,
     op: (dictMonadWithGraphAlloc) => (dictMonadError) => {
-      const MonadThrow0 = dictMonadError.MonadThrow0();
-      return (dictMonadReader) => (dictLoadFile) => (v) => {
+      const $$throw2 = $$throw(dictMonadError.MonadThrow0());
+      return (dictMonadAff) => (dictMonadReader) => (dictLoadFile) => (v) => {
         if (v.tag === "Cons" && v._2.tag === "Nil") {
           const $0 = v._1;
-          return MonadThrow0.Monad0().Applicative0().pure(_trace($0, (v$1) => $0));
+          return dictMonadAff.MonadEffect0().Monad0().Applicative0().pure(_trace($0, (v$1) => $0));
         }
-        return MonadThrow0.throwError(error("Single value expected"));
+        return $$throw2("Single value expected");
       };
     }
   })
 );
-var primitives = /* @__PURE__ */ fromFoldable(foldableArray)([
+var primitives = /* @__PURE__ */ fromFoldable21([
   /* @__PURE__ */ $Tuple(
     ":",
-    /* @__PURE__ */ $Val(void 0, None, /* @__PURE__ */ $BaseVal("Fun", /* @__PURE__ */ $Fun("PartialConstr", ":", Nil)))
+    /* @__PURE__ */ $Val(void 0, Nothing, /* @__PURE__ */ $BaseVal("Fun", /* @__PURE__ */ $Fun("PartialConstr", ":", Nil)))
   ),
   /* @__PURE__ */ unary2("ceiling")({ i: number5, o: $$int, fwd: ceil2 }),
   /* @__PURE__ */ extern1(debugLog),
   /* @__PURE__ */ extern1(dims),
   /* @__PURE__ */ extern1(error_),
+  /* @__PURE__ */ extern1(loadJson),
   /* @__PURE__ */ unary2("floor")({ i: number5, o: $$int, fwd: floor2 }),
   /* @__PURE__ */ unary2("log")({ i: intOrNumber, o: number5, fwd: log3 }),
   /* @__PURE__ */ unary2("numToStr")({ i: intOrNumber, o: string2, fwd: numToStr }),
@@ -44459,7 +45659,7 @@ var primitives = /* @__PURE__ */ fromFoldable(foldableArray)([
 
 // output-es/ProgCxt/index.js
 var union7 = /* @__PURE__ */ (() => setSet(ordDVertex$p).union)();
-var unions4 = /* @__PURE__ */ (() => {
+var unions2 = /* @__PURE__ */ (() => {
   const go = (go$a0$copy) => (go$a1$copy) => {
     let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
     while (go$c) {
@@ -44480,16 +45680,12 @@ var unions4 = /* @__PURE__ */ (() => {
   };
   return go(Leaf2);
 })();
-var identity33 = (x2) => x2;
+var identity32 = (x2) => x2;
 var verticesProgCxtVertex = {
-  vertices: (v) => union7(unions13(listMap(verticesValVertex.vertices)(mapObjectString.values(v.primitives))))(union7(unions4(listMap(verticesModuleVertex.vertices)(v.mods)))(unions4(listMap((x2) => verticesExprVertex.vertices(x2._2))(v.datasets))))
+  vertices: (v) => union7(unions13(listMap(verticesValVertex.vertices)(mapObjectString.values(v.primitives))))(unions2(listMap(verticesModuleVertex.vertices)(v.mods)))
 };
 var functorProgCxt = {
-  map: (f) => (m) => ({
-    primitives: _fmapObject(m.primitives, functorVal.map(f)),
-    mods: listMap(functorModule.map(f))(m.mods),
-    datasets: listMap((m$1) => $Tuple(m$1._1, functorExpr.map(f)(m$1._2)))(m.datasets)
-  })
+  map: (f) => (m) => ({ primitives: _fmapObject(m.primitives, functorVal.map(f)), mods: listMap(functorModule.map(f))(m.mods) })
 };
 var foldableProgCxt = {
   foldl: (f) => (z) => (m) => {
@@ -44511,72 +45707,46 @@ var foldableProgCxt = {
       }
       return go$r;
     };
-    return fold((z$1) => (v) => foldableVal.foldl(f)(z$1))(go((() => {
-      const go$1 = (go$1$a0$copy) => (go$1$a1$copy) => {
-        let go$1$a0 = go$1$a0$copy, go$1$a1 = go$1$a1$copy, go$1$c = true, go$1$r;
-        while (go$1$c) {
-          const b = go$1$a0, v = go$1$a1;
-          if (v.tag === "Nil") {
-            go$1$c = false;
-            go$1$r = b;
-            continue;
-          }
-          if (v.tag === "Cons") {
-            go$1$a0 = foldableExpr.foldl(f)(b)(v._1._2);
-            go$1$a1 = v._2;
-            continue;
-          }
-          fail();
-        }
-        return go$1$r;
-      };
-      return go$1(z)(m.datasets);
-    })())(m.mods))(m.primitives);
+    return fold((z$1) => (v) => foldableVal.foldl(f)(z$1))(go(z)(m.mods))(m.primitives);
   },
-  foldr: (f) => (z) => (m) => foldableList.foldr((b) => (a) => foldableExpr.foldr(f)(a)(b._2))(foldableList.foldr((() => {
+  foldr: (f) => (z) => (m) => foldableList.foldr((() => {
     const $0 = foldrDefault(foldableModule)(f);
     return (b) => (a) => $0(a)(b);
-  })())(foldableEnv.foldr(f)(z)(m.primitives))(m.mods))(m.datasets),
+  })())(foldableEnv.foldr(f)(z)(m.primitives))(m.mods),
   foldMap: (dictMonoid) => {
-    const $0 = dictMonoid.Semigroup0();
-    const foldMap5 = foldableList.foldMap(dictMonoid);
-    const foldMap7 = foldableExpr.foldMap(dictMonoid);
-    const foldMap9 = foldableEnv.foldMap(dictMonoid);
-    return (f) => (m) => $0.append(foldMap5((() => {
-      const $1 = foldMap7(f);
-      return (v) => $1(v._2);
-    })())(m.datasets))($0.append(foldMap5(foldableModule.foldMap(dictMonoid)(f))(m.mods))(foldMap9(f)(m.primitives)));
+    const foldMap3 = foldableList.foldMap(dictMonoid);
+    const foldMap5 = foldableEnv.foldMap(dictMonoid);
+    return (f) => (m) => dictMonoid.Semigroup0().append(foldMap3(foldableModule.foldMap(dictMonoid)(f))(m.mods))(foldMap5(f)(m.primitives));
   }
 };
 var traversableProgCxt = {
   traverse: (dictApplicative) => {
     const Apply0 = dictApplicative.Apply0();
-    const traverse5 = traversableList.traverse(dictApplicative);
-    const traverse7 = traversableExpr.traverse(dictApplicative);
-    const traverse8 = traversableModule.traverse(dictApplicative);
-    const traverse9 = traversableEnv.traverse(dictApplicative);
-    return (f) => (m) => Apply0.apply(Apply0.apply(Apply0.Functor0().map((v1) => (v2) => (v3) => ({ primitives: v3, mods: v2, datasets: v1 }))(traverse5(traversableTuple.traverse(dictApplicative)(traverse7(f)))(m.datasets)))(traverse5(traverse8(f))(m.mods)))(traverse9(f)(m.primitives));
+    const traverse3 = traversableList.traverse(dictApplicative);
+    const traverse4 = traversableModule.traverse(dictApplicative);
+    const traverse5 = traversableEnv.traverse(dictApplicative);
+    return (f) => (m) => Apply0.apply(Apply0.Functor0().map((v1) => (v2) => ({ primitives: v2, mods: v1 }))(traverse3(traverse4(f))(m.mods)))(traverse5(f)(m.primitives));
   },
-  sequence: (dictApplicative) => (v) => traversableProgCxt.traverse(dictApplicative)(identity33)(v),
+  sequence: (dictApplicative) => (v) => traversableProgCxt.traverse(dictApplicative)(identity32)(v),
   Functor0: () => functorProgCxt,
   Foldable1: () => foldableProgCxt
 };
 
 // output-es/Module/index.js
-var all3 = /* @__PURE__ */ (() => foldableList.foldMap((() => {
+var all3 = /* @__PURE__ */ (() => foldableList.foldMap(/* @__PURE__ */ (() => {
   const semigroupConj1 = { append: (v) => (v1) => v && v1 };
   return { mempty: true, Semigroup0: () => semigroupConj1 };
 })()))();
 var elem2 = /* @__PURE__ */ (() => {
-  const any1 = foldableList.foldMap((() => {
+  const any1 = foldableList.foldMap(/* @__PURE__ */ (() => {
     const semigroupDisj1 = { append: (v) => (v1) => v || v1 };
     return { mempty: false, Semigroup0: () => semigroupDisj1 };
   })());
   return (x2) => any1(($0) => x2 === $0);
 })();
-var fromFoldable21 = /* @__PURE__ */ (() => foldableSet.foldr(Cons)(Nil))();
+var fromFoldable25 = /* @__PURE__ */ (() => foldableSet.foldr(Cons)(Nil))();
 var boundedLattice2 = { BoundedJoinSemilattice0: () => boundedJoinSemilatticeUni, BoundedMeetSemilattice1: () => boundedMeetSemilatticeUni };
-var unions5 = /* @__PURE__ */ (() => {
+var unions4 = /* @__PURE__ */ (() => {
   const go = (go$a0$copy) => (go$a1$copy) => {
     let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
     while (go$c) {
@@ -44598,10 +45768,6 @@ var unions5 = /* @__PURE__ */ (() => {
   return go(Leaf2);
 })();
 var union8 = /* @__PURE__ */ (() => setSet(ordDVertex$p).union)();
-var concatM2 = (dictMonad) => foldrArray((() => {
-  const $0 = dictMonad.Bind1();
-  return (f) => (g) => (a) => $0.bind(f(a))(g);
-})())(dictMonad.Applicative0().pure);
 var parse = (dictMonadError) => {
   const $0 = dictMonadError.MonadThrow0();
   const $1 = $0.Monad0().Applicative0().pure;
@@ -44619,6 +45785,10 @@ var parse = (dictMonadError) => {
     };
   };
 };
+var loadProgCxt = (dictMonadAff) => (dictMonadError) => (dictMonadReader) => (dictLoadFile) => dictMonadAff.MonadEffect0().Monad0().Applicative0().pure({
+  primitives,
+  mods: Nil
+});
 var loadModuleGraph = (dictMonadAff) => {
   const Monad0 = dictMonadAff.MonadEffect0().Monad0();
   const $0 = Monad0.Bind1();
@@ -44696,7 +45866,7 @@ var loadModuleGraph = (dictMonadAff) => {
                   }
                   return go$r;
                 };
-                return go(fromFoldable21(functorMap.map((v$1) => {
+                return go(fromFoldable25(functorMap.map((v$1) => {
                 })($2)))(Nil);
               })(),
               graph: $2,
@@ -44722,12 +45892,14 @@ var initialConfig = (dictMonadAff) => {
     Applicative0: () => applicativeStateT(Monad0),
     Bind1: () => bindStateT(Monad0)
   })(graphGraphImpl);
-  const $2 = monadAffState(dictMonadAff).MonadEffect0().Monad0();
+  const monadAffState2 = monadAffState(dictMonadAff);
+  const monadAffState1 = monadAffState(monadAffState2);
+  const $2 = monadAffState2.MonadEffect0().Monad0();
   const $3 = dictMonadAff.MonadEffect0().Monad0();
   return (dictMonadError) => {
     const eval_progCxt2 = eval_progCxt(monadWithGraphAllocWithGr(dictMonadError));
     return (dictMonadReader) => {
-      const eval_progCxt1 = eval_progCxt2(monadReaderStateT(monadReaderStateT(dictMonadReader)));
+      const eval_progCxt1 = eval_progCxt2(monadReaderStateT(monadReaderStateT(dictMonadReader)))(monadAffState1);
       return (dictLoadFile) => {
         const eval_progCxt22 = eval_progCxt1((() => {
           const loadFileFromPath1 = dictLoadFile.loadFileFromPath(dictMonadError)(dictMonadAff);
@@ -44746,7 +45918,7 @@ var initialConfig = (dictMonadAff) => {
           graph: moduleCxt.graph,
           roots: moduleCxt.roots,
           topsorted: moduleCxt.topsorted
-        }))(union8(verticesProgCxtVertex.vertices(progCxt$p))(unions5(listMap(verticesModuleVertex.vertices)(foldableMap.foldr(Cons)(Nil)(modules$p))))))((v) => applicativeStateT2.pure($Tuple(
+        }))(union8(verticesProgCxtVertex.vertices(progCxt$p))(unions4(listMap(verticesModuleVertex.vertices)(foldableMap.foldr(Cons)(Nil)(modules$p))))))((v) => applicativeStateT2.pure($Tuple(
           progCxt$p,
           $Tuple(
             modules$p,
@@ -44790,56 +45962,14 @@ var prepConfig = (dictMonadAff) => {
     };
   };
 };
-var datasetAs = (dictMonadAff) => {
-  const Monad0 = dictMonadAff.MonadEffect0().Monad0();
-  const Bind1 = Monad0.Bind1();
-  return (dictMonadError) => {
-    const desug1 = exprFwd(boundedLattice2)(dictMonadError)(joinSemilatticeUnit);
-    return (dictLoadFile) => {
-      const loadFile2 = loadFile(dictLoadFile)(Monad0)(dictMonadError)(dictMonadAff);
-      return (folders) => (v) => (v1) => {
-        const $0 = v1.datasets;
-        const $1 = v._1;
-        return Bind1.bind(loadFile2(folders)(v._2))((src) => Bind1.bind(Bind1.bind(Bind1.Apply0().Functor0().map(fst)(parse(dictMonadError)(src)(withImports(expr_))))(desug1))((e\u03B1) => Monad0.Applicative0().pure({
-          primitives: v1.primitives,
-          mods: v1.mods,
-          datasets: $List("Cons", $Tuple($1, e\u03B1), $0)
-        })));
-      };
-    };
-  };
-};
-var loadProgCxt = (dictMonadAff) => {
-  const Monad0 = dictMonadAff.MonadEffect0().Monad0();
-  const $0 = Monad0.Bind1();
-  const concatM1 = concatM2(Monad0);
-  const datasetAs1 = datasetAs(dictMonadAff);
-  return (dictMonadError) => {
-    const datasetAs2 = datasetAs1(dictMonadError);
-    return (dictMonadReader) => {
-      const ask = dictMonadReader.MonadAsk0().ask;
-      return (dictLoadFile) => {
-        const datasetAs3 = datasetAs2(dictLoadFile);
-        return (datasets) => $0.bind(ask)((v) => $0.bind(Monad0.Applicative0().pure({
-          primitives,
-          mods: Nil,
-          datasets: Nil
-        }))(concatM1(arrayMap((() => {
-          const $1 = datasetAs3(v.fluidSrcPaths);
-          return (x2) => $1($Tuple(x2._1, x2._2));
-        })())(datasets))));
-      };
-    };
-  };
-};
 
 // output-es/App.Fig/index.js
-var fromFoldable25 = /* @__PURE__ */ fromFoldable(foldableSet);
+var fromFoldable26 = /* @__PURE__ */ fromFoldable(foldableSet);
 var ordVal2 = /* @__PURE__ */ ordVal(ordVertex);
 var botOf2 = /* @__PURE__ */ (() => ({ botOf: functorSelStates.map((v) => false) }))();
 var select\u{1D539}s = /* @__PURE__ */ (() => select\u03B1s\u{1D539}Vertex(applyVal)(foldableVal)["select\u{1D539}s"])();
-var fromFoldable112 = /* @__PURE__ */ fromFoldable(foldableDict);
-var fromFoldable26 = /* @__PURE__ */ foldlArray((m) => (a) => insert3(ordString)(a)()(m))(Leaf2);
+var fromFoldable111 = /* @__PURE__ */ fromFoldable(foldableDict);
+var fromFoldable27 = /* @__PURE__ */ foldlArray((m) => (a) => insert3(ordString)(a)()(m))(Leaf2);
 var graphGC2 = /* @__PURE__ */ graphGC(graphGraphImpl);
 var graphGC1 = /* @__PURE__ */ graphGC2(applyVal)(applyEnvExpr)(foldableVal)(foldableEnvExpr);
 var graphGC22 = /* @__PURE__ */ graphGC2(applyEnvExpr)(applyVal)(foldableEnvExpr)(foldableVal);
@@ -44863,7 +45993,7 @@ var \u03B9from\u03B1s = (dictGraph) => (g) => {
     }
     return Nothing;
   });
-  return (x2) => fromFoldable25($0(x2));
+  return (x2) => fromFoldable26($0(x2));
 };
 var unprojExpr = (dictBoundedMeetSemilattice) => (v) => {
   const $0 = v._2;
@@ -45159,7 +46289,7 @@ var selectInput = (x2) => (\u03B4v) => (v) => {
     inerts: v.inerts
   };
 };
-var rebuild\u03B9 = (inerts) => (\u03B1s) => (\u03B9) => fromFoldable112(intersectionWith_Object(apply)(_fmapObject(
+var rebuild\u03B9 = (inerts) => (\u03B1s) => (\u03B9) => fromFoldable111(intersectionWith_Object(apply)(_fmapObject(
   _fmapObject(\u03B9, (v) => select\u{1D539}s(v)(inerts)),
   (inert) => (v) => $Tuple(v._1, applyVal.apply(applyVal.apply(functorVal.map(selStates)(inert))(v._2.persistent))(v._2.transient))
 ))(_fmapObject(\u03B9, (v) => $Tuple(v._1, { persistent: select\u{1D539}s(v)(\u03B1s.persistent), transient: select\u{1D539}s(v)(\u03B1s.transient) }))));
@@ -45175,24 +46305,21 @@ var lift2 = /* @__PURE__ */ lift(applyVal)(applyEnv);
 var loadFig = (dictMonadAff) => {
   const Monad0 = dictMonadAff.MonadEffect0().Monad0();
   const $0 = Monad0.Bind1();
-  const loadProgCxt2 = loadProgCxt(dictMonadAff);
   const prepConfig2 = prepConfig(dictMonadAff);
   const graphEval2 = graphEval(dictMonadAff);
   return (dictMonadError) => {
-    const loadProgCxt1 = loadProgCxt2(dictMonadError);
     const prepConfig1 = prepConfig2(dictMonadError);
     return (dictMonadReader) => {
-      const loadProgCxt22 = loadProgCxt1(dictMonadReader);
       const prepConfig22 = prepConfig1(dictMonadReader);
       const graphEval1 = graphEval2(dictMonadReader);
       return (dictLoadFile) => {
-        const loadProgCxt3 = loadProgCxt22(dictLoadFile);
+        const loadProgCxt3 = loadProgCxt(dictMonadAff)(dictMonadError)(dictMonadReader)(dictLoadFile);
         const prepConfig3 = prepConfig22(dictLoadFile);
         const graphEval22 = graphEval1(dictLoadFile)(dictMonadError);
         return (v) => (fluidSrc) => {
           const $1 = v.inputs;
           const $2 = v.linking;
-          return $0.bind(loadProgCxt3(v.datasets))((progCxt) => $0.bind(prepConfig3(progCxt)(fluidSrc))((v1) => {
+          return $0.bind(loadProgCxt3)((progCxt) => $0.bind(prepConfig3(progCxt)(fluidSrc))((v1) => {
             const $3 = v1.s;
             return $0.bind(graphEval22(v1.gconfig)(v1.e))((v2) => {
               const $4 = v2.g;
@@ -45205,7 +46332,7 @@ var loadFig = (dictMonadAff) => {
                 "in\u03B1": v2["out\u03B1"],
                 "out\u03B1": v2["in\u03B1"]
               };
-              const inputs$p = fromFoldable26($1);
+              const inputs$p = fromFoldable27($1);
               const v3 = functorEnvExpr.map((v$1) => {
               })(v2["in\u03B1"]);
               const $7 = unrestrictGC(boundedMeetSemilatticeBoo)(v3._1)(inputs$p);
@@ -45449,36 +46576,6 @@ var drawFile = (v) => {
   };
 };
 
-// output-es/Data.Argonaut.Decode.Error/index.js
-var $JsonDecodeError = (tag, _1, _2) => ({ tag, _1, _2 });
-var AtIndex = (value0) => (value1) => $JsonDecodeError("AtIndex", value0, value1);
-var AtKey = (value0) => (value1) => $JsonDecodeError("AtKey", value0, value1);
-var Named = (value0) => (value1) => $JsonDecodeError("Named", value0, value1);
-var MissingValue = /* @__PURE__ */ $JsonDecodeError("MissingValue");
-var showJsonDecodeError = {
-  show: (v) => {
-    if (v.tag === "TypeMismatch") {
-      return "(TypeMismatch " + showStringImpl(v._1) + ")";
-    }
-    if (v.tag === "UnexpectedValue") {
-      return "(UnexpectedValue " + stringify(v._1) + ")";
-    }
-    if (v.tag === "AtIndex") {
-      return "(AtIndex " + showIntImpl(v._1) + " " + showJsonDecodeError.show(v._2) + ")";
-    }
-    if (v.tag === "AtKey") {
-      return "(AtKey " + showStringImpl(v._1) + " " + showJsonDecodeError.show(v._2) + ")";
-    }
-    if (v.tag === "Named") {
-      return "(Named " + showStringImpl(v._1) + " " + showJsonDecodeError.show(v._2) + ")";
-    }
-    if (v.tag === "MissingValue") {
-      return "MissingValue";
-    }
-    fail();
-  }
-};
-
 // output-es/Data.Argonaut.Decode.Decoders/index.js
 var traverseWithIndex = /* @__PURE__ */ (() => traversableWithIndexArray.traverseWithIndex(applicativeEither))();
 var decodeJArray = (x2) => {
@@ -45530,38 +46627,6 @@ var decodeArray = (decoder) => {
     }
     fail();
   };
-};
-var decodeTuple = (decoderA) => (decoderB) => (json) => {
-  const $0 = decodeArray(Right)(json);
-  return (() => {
-    if ($0.tag === "Left") {
-      const $1 = $0._1;
-      return (v) => $Either("Left", $1);
-    }
-    if ($0.tag === "Right") {
-      const $1 = $0._1;
-      return (f) => f($1);
-    }
-    fail();
-  })()((v) => {
-    if (v.length === 2) {
-      const $1 = decoderA(v[0]);
-      if ($1.tag === "Left") {
-        return $Either("Left", $1._1);
-      }
-      if ($1.tag === "Right") {
-        const $2 = decoderB(v[1]);
-        if ($2.tag === "Left") {
-          return $Either("Left", $2._1);
-        }
-        if ($2.tag === "Right") {
-          return $Either("Right", $Tuple($1._1, $2._1));
-        }
-      }
-      fail();
-    }
-    return $Either("Left", $JsonDecodeError("TypeMismatch", "Tuple"));
-  });
 };
 
 // output-es/Data.Argonaut.Decode.Class/index.js
@@ -45653,22 +46718,9 @@ var gDecodeJsonCons1 = /* @__PURE__ */ gDecodeJsonCons({
     return Nothing;
   }
 });
-var decodeJson = /* @__PURE__ */ (() => decodeRecord(gDecodeJsonCons((() => {
-  const $0 = decodeArray(decodeTuple(caseJsonString($Either(
-    "Left",
-    $JsonDecodeError("TypeMismatch", "String")
-  ))(Right))(caseJsonString($Either("Left", $JsonDecodeError("TypeMismatch", "String")))(Right)));
-  return {
-    decodeJsonField: (j) => {
-      if (j.tag === "Just") {
-        return $Maybe("Just", $0(j._1));
-      }
-      return Nothing;
-    }
-  };
-})())(gDecodeJsonCons2(gDecodeJsonCons2(gDecodeJsonCons1(gDecodeJsonCons1(gDecodeJsonNil)({ reflectSymbol: () => "query" })()())({
-  reflectSymbol: () => "linking"
-})()())({ reflectSymbol: () => "inputs" })()())({ reflectSymbol: () => "fluidSrcPath" })()())({ reflectSymbol: () => "datasets" })()())().decodeJson)();
+var decodeJson = /* @__PURE__ */ (() => decodeRecord(gDecodeJsonCons2(gDecodeJsonCons2(gDecodeJsonCons1(gDecodeJsonCons1(gDecodeJsonNil)({
+  reflectSymbol: () => "query"
+})()())({ reflectSymbol: () => "linking" })()())({ reflectSymbol: () => "inputs" })()())({ reflectSymbol: () => "fluidSrcPath" })()())().decodeJson)();
 var loadFig2 = /* @__PURE__ */ loadFig(/* @__PURE__ */ monadAffReader(monadAffAff))(/* @__PURE__ */ monadErrorReaderT(monadErrorAff))(/* @__PURE__ */ monadReaderReaderT(monadAff))({
   loadFileFromPath: (dictMonadError1) => (dictMonadAff1) => (x2) => {
     const $0 = loadFileAff.loadFileFromPath(monadErrorAff)(monadAffAff)(x2);
@@ -45686,14 +46738,13 @@ var loadSpec = (filename) => _bind($$get(driver)($ResponseFormat("Json", identit
 });
 var figSpecFromJson = (v) => ({
   fluidSrcPaths: arrayMap(Folder)(v.fluidSrcPath),
-  datasets: v.datasets,
   inputs: v.inputs,
   query: v.query ? $Maybe(
     "Just",
     (a) => {
       const $0 = asVal(a);
       if ($0.tag === "Just") {
-        if ($0._1._2.tag === "Doc") {
+        if ($0._1._2.tag === "Just") {
           return $Maybe("Just", $Tuple($0._1._1, $0._1));
         }
         return Nothing;

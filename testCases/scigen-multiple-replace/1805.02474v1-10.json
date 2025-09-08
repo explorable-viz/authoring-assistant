@@ -1,9 +1,5 @@
 {
-  "datasets": [
-    {
-      "file": "datasets/scigen/1805.02474v1-10.json"
-    }
-  ],
+  "datasets": [ "datasets/scigen/1805.02474v1-10.json" ],
   "imports": [
     "scigen",
     "util",

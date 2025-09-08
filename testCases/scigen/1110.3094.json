@@ -1,9 +1,5 @@
 {
-  "datasets": [
-    {
-      "file": "datasets/1110.3094.json"
-    }
-  ],
+  "datasets": [ "datasets/1110.3094.json" ],
   "imports": ["datasets/_1110_3094"],
   "variables": {},
   "testing-variables": {},

@@ -12,11 +12,7 @@
     ]
   },
   "testing-variables": {},
-  "datasets": [
-    {
-      "file": "datasets/methane-emissions.json"
-    }
-  ],
+  "datasets": [ "datasets/methane-emissions.json" ],
   "test-datasets": [
     [
       {

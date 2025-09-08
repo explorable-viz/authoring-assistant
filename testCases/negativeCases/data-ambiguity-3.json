@@ -1,9 +1,5 @@
 {
-  "datasets": [
-    {
-      "file": "datasets/negative/result-ambiguity.json"
-    }
-  ],
+  "datasets": [ "datasets/negative/result-ambiguity.json" ],
   "imports": [
     "scigen",
     "util",

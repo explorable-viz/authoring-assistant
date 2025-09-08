@@ -1,9 +1,5 @@
 {
-  "datasets": [
-    {
-      "file": "datasets/scigen/1904.12550v1-6.json"
-    }
-  ],
+  "datasets": [ "datasets/scigen/1904.12550v1-6.json" ],
   "test-datasets": [
     [
       {

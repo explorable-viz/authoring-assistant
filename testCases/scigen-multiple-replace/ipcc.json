@@ -1,9 +1,5 @@
 {
-  "datasets": [
-    {
-      "file": "datasets/scigen/ipcc.json"
-    }
-  ],
+  "datasets": [ "datasets/scigen/ipcc.json" ],
   "test-datasets": [
     [
       {

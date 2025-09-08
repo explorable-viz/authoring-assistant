@@ -62,9 +62,9 @@ public class Program {
         return loadedDatasets;
     }
 
-    private static Collection<String> datasets(JSONArray objects) {
-        return IntStream.range(0, objects.length())
-               .mapToObj(i -> objects.getJSONObject(i).getString("file"))
+    private static Collection<String> datasets(JSONArray files) {
+        return IntStream.range(0, files.length())
+               .mapToObj(i -> files.getString(i))
                .collect(Collectors.toList());
     }
 
@@ -168,11 +168,11 @@ public class Program {
                 Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(k));
                 JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
                 JSONArray json_imports = testCase.getJSONArray("imports");
+                logger.info(STR."Loading test case \{casePath}.json");
                 Collection<String> datasets = datasets(testCase.getJSONArray("datasets"));
                 ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
                 String code = Files.readString(Path.of(STR."\{casePath}.fld"));
                 try {
-                    logger.info(STR."Validating test case \{casePath}");
                     isValidTestCase(jsonContent, code, datasets, variables);
                 } catch (RuntimeException e) {
                     System.err.println(STR."Error in \{casePath}");

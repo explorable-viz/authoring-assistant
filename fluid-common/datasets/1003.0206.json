@@ -1,0 +1,4 @@
+[
+ {"creation_method":"simulation", "number_of_errors_39_features":16, "number_of_errors_13_features":49},
+ {"creation_method":"resampling", "number_of_errors_39_features":52, "number_of_errors_13_features":133}
+]

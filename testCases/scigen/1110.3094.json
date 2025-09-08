@@ -2,7 +2,7 @@
   "datasets": [
     {
       "var": "tableData",
-      "file": "datasets\/1110.3094.fld"
+      "file": "datasets/1110.3094.fld"
     }
   ],
   "imports": [],

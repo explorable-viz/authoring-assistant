@@ -13,7 +13,7 @@ public class Paragraph extends ArrayList<TextFragment> {
     public Paragraph() {
     }
 
-    public String toFluidSyntax_new(boolean onlyValue) {
+    public String toFluidSyntax(boolean onlyValue) {
         return STR."\"\"\"\n\t\{stream().map(e -> {
             if (e instanceof Literal l) {
                 if (!onlyValue && l.getSelectedRegion() != null) {
@@ -36,25 +36,6 @@ public class Paragraph extends ArrayList<TextFragment> {
                 throw new RuntimeException("Literal or expression expected.");
             }
         }).collect(Collectors.joining(" "))}\n\"\"\"";
-    }
-
-    public String toFluidSyntax(boolean onlyValue) {
-        return STR."Paragraph [\n\t\{stream().map(e -> {
-            if (!onlyValue && e instanceof Literal l && l.getSelectedRegion() != null) {
-                return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : ""}]\{e.getValue().substring(l.getSelectedRegion().end())}";
-            } else if (e instanceof Literal) return STR."Text \"\{e.getValue()}\"";
-            else if (e instanceof Expression && !onlyValue) {
-                return (STR."Text (\{((Expression) e).getExpr()})");
-            }
-            //onlyValue = true
-            else if (e instanceof Expression && Settings.isAddExpectedValueEnabled()) {
-                return (STR."Text (\{e.getValue()})");
-            }
-            else if (e instanceof Expression) {
-                return ("Text (?)");
-            }
-            throw new RuntimeException("Error, it is possible to have only String, Expression element");
-        }).collect(Collectors.joining(",\n\t"))}\n]";
     }
 
     public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {

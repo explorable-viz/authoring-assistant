@@ -3,5 +3,5 @@ import util
 import datasets.negative._1805_02474v1_10
 
 """
-	As shown in Table 3, BiLSTM gives significantly   ${"worse"}  accuracies compared to uni-directional LSTM2, with the training time per epoch  ${"shrinking"}  from  ${"99"}  seconds to  ${"106"}  seconds.
+	As shown in Table 3, BiLSTM gives significantly ${"worse"} accuracies compared to uni-directional LSTM2, with the training time per epoch ${"shrinking"} from ${"99"} seconds to ${"106"} seconds.
 """

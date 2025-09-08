@@ -2,5 +2,5 @@ import methane
 import datasets.methane_emissions
 
 """
-	Between 2020 and 2030, methane emissions increased across most sources, with the largest absolute rise seen in the  ${"Energy Sector"}
+	Between 2020 and 2030, methane emissions increased across most sources, with the largest absolute rise seen in the ${"Energy Sector"}
 """

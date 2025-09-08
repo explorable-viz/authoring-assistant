@@ -1,13 +1,5 @@
 {
   "datasets": [ "datasets/scigen/1904.12550v1-5.json" ],
-  "test-datasets": [
-    [
-      {
-        "var": "tableData",
-        "file": "datasets/scigen/1904.12550v1-5.json"
-      }
-    ]
-  ],
   "imports": ["scigen", "util", "datasets/scigen/_1904_12550v1_5"],
   "variables": {},
   "testing-variables": {},

@@ -13,14 +13,6 @@
   },
   "testing-variables": {},
   "datasets": [ "datasets/methane-emissions.json" ],
-  "test-datasets": [
-    [
-      {
-        "var": "tableData",
-        "file": "datasets/methane-emissions.fld"
-      }
-    ]
-  ],
   "imports": ["util", "datasets/methane_emissions"],
   "paragraph": [
     {

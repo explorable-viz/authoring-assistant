@@ -1,13 +1,5 @@
 {
   "datasets": [ "datasets/scigen/ipcc.json" ],
-  "test-datasets": [
-    [
-      {
-        "var": "tableData",
-        "file": "datasets/scigen/ipcc.json"
-      }
-    ]
-  ],
   "imports": ["datasets/scigen/ipcc_"],
   "variables": {},
   "testing-variables": {},

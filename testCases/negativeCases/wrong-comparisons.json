@@ -10,7 +10,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 3, BiLSTM gives significantly  "
+      "value": "As shown in Table 3, BiLSTM gives significantly"
     },
     {
       "type": "expression",
@@ -19,7 +19,7 @@
     },
     {
       "type": "literal",
-      "value": " accuracies compared to uni-directional LSTM2, with the training time per epoch "
+      "value": "accuracies compared to uni-directional LSTM2, with the training time per epoch"
     },
     {
       "type": "expression",
@@ -28,7 +28,7 @@
     },
     {
       "type": "literal",
-      "value": " from "
+      "value": "from"
     },
     {
       "type": "expression",
@@ -37,7 +37,7 @@
     },
     {
       "type": "literal",
-      "value": " seconds to "
+      "value": "seconds to"
     },
     {
       "type": "expression",
@@ -47,7 +47,7 @@
     },
     {
       "type": "literal",
-      "value": " seconds."
+      "value": "seconds."
     }
   ]
 }

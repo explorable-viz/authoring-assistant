@@ -13,29 +13,29 @@ public class Paragraph extends ArrayList<TextFragment> {
     public Paragraph() {
     }
 
-    public String toFluidSyntax_new(boolean onlyValue) {
-        return STR."\"\"\n\t\{stream().map(e -> {
-            return "hello";
-        })}\"\"\"";
-    }
-
     public String toFluidSyntax(boolean onlyValue) {
-        return STR."Paragraph [\n\t\{stream().map(e -> {
-            if (!onlyValue && e instanceof Literal l && l.getSelectedRegion() != null) {
-                return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : ""}]\{e.getValue().substring(l.getSelectedRegion().end())}";
-            } else if (e instanceof Literal) return STR."Text \"\{e.getValue()}\"";
-            else if (e instanceof Expression && !onlyValue) {
-                return (STR."Text (\{((Expression) e).getExpr()})");
+        return STR."\"\"\"\n\t\{stream().map(e -> {
+            if (e instanceof Literal l) {
+                if (!onlyValue && l.getSelectedRegion() != null) {
+                    final String replace = Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
+                    return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{replace}]\{e.getValue().substring(l.getSelectedRegion().end())}";
+                }
+                else {
+                    return e.getValue();
+                }
             }
-            //onlyValue = true
-            else if (e instanceof Expression && Settings.isAddExpectedValueEnabled()) {
-                return (STR."Text (\{e.getValue()})");
+            else if (e instanceof Expression e_) {
+                if (!onlyValue) {
+                    return (STR."${\{e_.getExpr()}}");
+                } else if (Settings.isAddExpectedValueEnabled()) {
+                    return e.getValue();
+                } else {
+                    return ("${?}");
+                }
+            } else {
+                throw new RuntimeException("Literal or expression expected.");
             }
-            else if (e instanceof Expression) {
-                return ("Text (?)");
-            }
-            throw new RuntimeException("Error, it is possible to have only String, Expression element");
-        }).collect(Collectors.joining(",\n\t"))}\n]";
+        }).collect(Collectors.joining(" "))}\n\"\"\"";
     }
 
     public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {

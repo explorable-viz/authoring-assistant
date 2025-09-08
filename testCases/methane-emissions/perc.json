@@ -19,7 +19,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "$emissions.article$ $emissions.type$ accounts for total methane emissions of "
+      "value": "$emissions.article$ $emissions.type$ accounts for total methane emissions of"
     },
     {
       "type": "expression",
@@ -32,4 +32,3 @@
     }
   ]
 }
-

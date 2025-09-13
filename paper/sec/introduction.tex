@@ -14,7 +14,9 @@
     \item We see this in peer review, misinformation, retracted papers, …
 \end{itemize}
 
-\subsection{Self-Certifying Text}
+\subsection{Transparent Text}
+
+Recent work
 
 \begin{itemize}
     \item Introduce basic idea, as complementary to transparent visualisations
@@ -41,82 +43,8 @@ NLP aspect of the problem is potentially a big problem space in itself. We will 
 idiomatic uses of natural language in making/justifying scientific claims.
 Examples \ref{tab:fluid_examples}
 
-\begin{table}[!ht]
-    \centering
-    \footnotesize
-    \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{>{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6cm}}
-        \hline
-        \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
-        \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
+\input{fig/natural-language-forms}
 
-        Numerical value
-        & the training time per epoch growing from \hl{67} seconds to 106 seconds.
-        &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-(findWithKey' "model" "LSTM" tableData).time_s
-        \end{lstlisting}
-        \\
-        Percentage &
-        The Energy Sector accounts for total methane emissions of \hl{52.80\%} in 2030.
-        &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-(record.emissions /
- sum (map (fun x -> x.emissions)
-          (getByYear year tableData))) * 100
-
-        \end{lstlisting}  \\
-        Rounding* & about 2 degrees warmer                & ~                             \\
-        Cardinal* & three                & ~                             \\
-        Multiplicative* & three times                & ~                             \\
-        \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
-        Average
-        & The average methane emissions for the year 2030 is \hl{13.51} &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-(sumEmissions year tableData / length records)
-        \end{lstlisting} \\
-        Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-let maxEntry =
-    maximumBy (fun x -> x.emissions)
-              (filter
-                (fun x -> x.type == "Energy Sector")
-                tableData)
-in maxEntry.year
-        \end{lstlisting} \\                             \\
-        Rank &
-        3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-let pos =
-  findIndex "model" "CNN"
-    (insertionSort cmpTime tableData)
-in rankLabel "lowest" pos \end{lstlisting} \\
-        Total &
-        The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-sumEmissions year tableData
-        \end{lstlisting} \\
-        Count*                       & ~                & ~                             \\
-        \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
-
-        Comparison
-        & The training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-trendWord
- (findWithKey' "model" "BiLSTM" tableData).time_s
- (findWithKey' "model" "LSTM" tableData).time_s
- growShrink
-        \end{lstlisting} \\
-        Graded adjective*            & \hl{extremely likely} to be exceeded in the 20th century               & ~                             \\
-        Reference to visual element*                            & ~                & ~                             \\
-        \hline
-    \end{tabular}
-    \caption{Quantitative/semi-quantitative natural language forms considered in this paper}
-    \label{tab:fluid_examples}
-\end{table}
 \subsection{Contributions}
 
 \begin{itemize}

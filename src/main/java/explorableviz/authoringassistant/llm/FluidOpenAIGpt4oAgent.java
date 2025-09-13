@@ -9,6 +9,7 @@ import com.theokanning.openai.service.OpenAiService;
 import explorableviz.authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.agents.generic.OpenAIEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.Prompt;
+import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
@@ -23,7 +24,7 @@ public class FluidOpenAIGpt4oAgent extends OpenAIEvaluatorAgent<Expression> {
     }
 
 
-    public Expression evaluate(List<Prompt> prompts, String grid) {
+    public Expression evaluate(PromptList prompts, String grid) {
         OpenAiService service = new OpenAiService(getToken(), Duration.ofSeconds(90));
         ChatMessage responseMessage = service.createChatCompletion(getChatCompletionRequest(prompts)).getChoices().get(0).getMessage();
         ChatFunctionCall functionCall = responseMessage.getFunctionCall();

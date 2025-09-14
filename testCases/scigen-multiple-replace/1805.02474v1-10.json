@@ -25,7 +25,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model \"BiLSTM\" tableData).acc (model \"LSTM\" tableData).acc betterWorse",
+      "expression": "trendWord model_BiLSTM.acc (model \"LSTM\" tableData).acc betterWorse",
       "categories": ["comparison"]
     },
     {
@@ -34,7 +34,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model \"BiLSTM\" tableData).time_s (model \"LSTM\" tableData).time_s growShrink",
+      "expression": "trendWord model_BiLSTM.time_s (model \"LSTM\" tableData).time_s growShrink",
       "categories": ["comparison"]
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (model \"BiLSTM\" tableData).time_s",
+      "expression": "numToStr model_BiLSTM.time_s",
       "categories": ["data_retrieval"]
 
     },
@@ -62,7 +62,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model \"2 stacked BiLSTM\" tableData).acc (model \"BiLSTM\" tableData).acc improve",
+      "expression": "trendWord (model \"2 stacked BiLSTM\" tableData).acc model_BiLSTM.acc improve",
       "categories": ["comparison"]
     },
     {
@@ -71,7 +71,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model \"2 stacked BiLSTM\" tableData).time_s (model \"BiLSTM\" tableData).time_s smallerHigher",
+      "expression": "trendWord (model \"2 stacked BiLSTM\" tableData).time_s model_BiLSTM.time_s smallerHigher",
       "categories": ["comparison"]
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model \"3 stacked BiLSTM\" tableData).acc (model \"BiLSTM\" tableData).acc improve",
+      "expression": "trendWord (model \"3 stacked BiLSTM\" tableData).acc model_BiLSTM.acc improve",
       "categories": ["data_retrieval"]
     },
     {
@@ -206,7 +206,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model \"S-LSTM\" tableData).acc (model \"BiLSTM\" tableData).acc underOverPerforming",
+      "expression": "trendWord (model \"S-LSTM\" tableData).acc model_BiLSTM.acc underOverPerforming",
       "categories": ["comparison", "data_retrieval"]
     },
     {

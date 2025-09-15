@@ -10,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"Google\" tableData).label___f",
+      "expression": "numToStr (findWithKey_ \"concept_input____embeddings\" \"Google\" tableData).label___f",
       "categories": ["data_retrieval"]
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"GloVe\" tableData).description___f",
+      "expression": "numToStr (findWithKey_ \"concept_input____embeddings\" \"GloVe\" tableData).description___f",
       "categories": ["data_retrieval"]
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (findWithKey' \"concept_input____embeddings\" \"fastText\" tableData).both___f",
+      "expression": "numToStr (findWithKey_ \"concept_input____embeddings\" \"fastText\" tableData).both___f",
       "categories": ["data_retrieval"]
     },
     {

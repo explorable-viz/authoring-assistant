@@ -3,6 +3,9 @@ name: AuthoringAssistant
 on:
   workflow_dispatch:
   push:
+    paths-ignore:
+      - 'README.md'
+      - 'paper/**'
 jobs:
   test:
     strategy:

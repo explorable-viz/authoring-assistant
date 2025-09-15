@@ -7,7 +7,7 @@ let ordinalMap = [
 let ordinal n =
    if n <= 0 then error "n <= 0 not supported"
    else if (n < 4) then
-      numToStr n ++ (findWithKey' "lastDigit" n ordinalMap).suffix
+      numToStr n ++ (findWithKey_ "lastDigit" n ordinalMap).suffix
    else if (n >= 4) `and` (n <= 20) then numToStr n ++ "th"
    else error "n > 20 not supported";
 

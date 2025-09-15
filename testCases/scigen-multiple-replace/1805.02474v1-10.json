@@ -143,7 +143,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey' \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model",
+      "expression": "(findWithKey_ \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model",
       "categories": ["data_retrieval"]
     },
     {

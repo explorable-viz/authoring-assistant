@@ -12,7 +12,7 @@
         & the training time per epoch growing from \hl{67} seconds to 106 seconds.
         &
         \begin{lstlisting}[language=Fluid,numbers=none]
-(findWithKey' "model" "LSTM" tableData).time_s
+(findWithKey_ "model" "LSTM" tableData).time_s
         \end{lstlisting}
         \\
         Percentage &
@@ -63,8 +63,8 @@ sumEmissions year tableData
         & The training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
         \begin{lstlisting}[language=Fluid,numbers=none]
 trendWord
- (findWithKey' "model" "BiLSTM" tableData).time_s
- (findWithKey' "model" "LSTM" tableData).time_s
+ (findWithKey_ "model" "BiLSTM" tableData).time_s
+ (findWithKey_ "model" "LSTM" tableData).time_s
  growShrink
         \end{lstlisting} \\
         Graded adjective*            & \hl{extremely likely} to be exceeded in the 20th century               & ~                             \\

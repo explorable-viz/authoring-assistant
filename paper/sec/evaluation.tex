@@ -66,35 +66,31 @@ Figure \ref{fig:success_rate_by_category} shows the results obtained in generati
     \centering
     \small
     \begin{tabular}{p{3cm} p{6cm} p{4cm}}
-        \toprule
+        \hline
         \textbf{Ambiguity Type} & \textbf{Example} & \textbf{Explanation} \\
-        \midrule
+        \hline
 
         ambiguous referent &
         As shown in Table 3 \hl{BiLSTM} gives significantly better accuracies compared to uni-directional LSTM with the training time per epoch growing from 99 seconds to 106 seconds &
         There are three models that have 99 seconds as their time; the assistant would not know which one to choose. \\
 
-        \midrule
         missing-data &
         The average methane emissions for the year 2015 is \hl{1.0} &
         November is missing to calculate the average correctly. \\
 
-        \midrule
         false statement &
         We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), BiLSTM is \hl{the most efficient} among all models compared, with the highest model size &
         BiLSTM is not the most efficient, nor does it have the largest size. \\
 
-        \midrule
         incorrect numerical value &
         LSTM is the fastest model with overall time taken being \hl{90} seconds &
         It is not 90 but 106. \\
 
-        \midrule
         ambiguous referent &
         LSTM is the fastest model with overall time taken being \hl{90} seconds &
         There are two type of time in the dataset (training\_time, execution\_time), both with a value of 90 seconds. \\
 
-        \bottomrule
+        \hline
     \end{tabular}
     \caption{Negative cases example without the \emph{Data} column.}
     \label{tab:ambiguita}

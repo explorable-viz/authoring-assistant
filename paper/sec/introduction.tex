@@ -8,31 +8,48 @@
 }
 
 \begin{itemize}
-    \item Interactive visualization of data
     \item Making the text transparent, with the possibility to highlight the data related to a specific sentence.
     \item Making sense of data-driven claims is hard, even if the evidence base (code/data) is open
     \item We see this in peer review, misinformation, retracted papers, …
 \end{itemize}
 
-\subsection{Self-Certifying Text}
+\subsection{Transparent Text via Interactive Provenance Queries}
 
-\begin{itemize}
-    \item Introduce basic idea, as complementary to transparent visualisations
-\end{itemize}
+Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} integrating
+interactive provenance queries into charts and figures using \emph{transparent programming languages} which
+track data provenance automatically as data flows through a computation. Visual outputs produced using these
+platforms allow readers to interact with visual elements to see the relevant data. In most article charts and
+figures usually only play a supporting role, however, with the main claims usually presented in natural
+language. This language makes quantitative claims and refers to ``behind the scenes'' data analyses.
+
+In principle transparent programming languages can also be used to create natural language which is bidirectly
+linked to data, by computing key fragments of natural language from data. For example, using the language
+presented in this paper,
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-with-pointer.png}
+    \caption{\emph{Transparent text} links fragments of natural language to underlying data, via queries}\label{fig:scigen-example-website}
+\end{figure}
+
+\input{fig/scigen-1805.02474v1-10-src}
+
+\rpnote{Small example here}
 
 \subsection{Use cases}
 Two potential scenarios for this sort of technology:
 
-\paragraph{Authoring transparent text.} Someone authoring content for an online article, wants to create text
+\begin{enumerate}
+\item \textbf{Authoring transparent text.} Someone authoring content for an online article, wants to create text
 linked to raw data (and derivative data such as charts or tabular summaries), so that the evidence base for
 the claims made in the text can be explored \emph{in situ}, by interacting with the text.
 
-\paragraph{Interpreting text after the fact.} Someone reading textual claims derived from open data (e.g. a
+\item \textbf{Interpreting text after the fact.} Someone reading textual claims derived from open data (e.g. a
 scientific paper or climate report), wants to retroactively link the text to queries over the available data
 and gradually ``rationally reconstruct'' the relationship between the claims in the paper and the evidence
 base. Perhaps just to aid their own comprehension, or to provide some kind of justified peer review.
+\end{enumerate}
 
-\vspace{2mm}
 \noindent Here we focus on the first one because the second one requires a certain amount of additional setup.
 
 \subsubsection{Target idioms of natural language}
@@ -41,82 +58,8 @@ NLP aspect of the problem is potentially a big problem space in itself. We will 
 idiomatic uses of natural language in making/justifying scientific claims.
 Examples \ref{tab:fluid_examples}
 
-\begin{table}[!ht]
-    \centering
-    \footnotesize
-    \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{>{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6cm}}
-        \hline
-        \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
-        \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
+\input{fig/natural-language-forms}
 
-        Numerical value
-        & the training time per epoch growing from \hl{67} seconds to 106 seconds.
-        &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-(findWithKey' "model" "LSTM" tableData).time_s
-        \end{lstlisting}
-        \\
-        Percentage &
-        The Energy Sector accounts for total methane emissions of \hl{52.80\%} in 2030.
-        &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-(record.emissions /
- sum (map (fun x -> x.emissions)
-          (getByYear year tableData))) * 100
-
-        \end{lstlisting}  \\
-        Rounding* & about 2 degrees warmer                & ~                             \\
-        Cardinal* & three                & ~                             \\
-        Multiplicative* & three times                & ~                             \\
-        \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
-        Average
-        & The average methane emissions for the year 2030 is \hl{13.51} &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-(sumEmissions year tableData / length records)
-        \end{lstlisting} \\
-        Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-let maxEntry =
-    maximumBy (fun x -> x.emissions)
-              (filter
-                (fun x -> x.type == "Energy Sector")
-                tableData)
-in maxEntry.year
-        \end{lstlisting} \\                             \\
-        Rank &
-        3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-let pos =
-  findIndex "model" "CNN"
-    (insertionSort cmpTime tableData)
-in rankLabel "lowest" pos \end{lstlisting} \\
-        Total &
-        The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-sumEmissions year tableData
-        \end{lstlisting} \\
-        Count*                       & ~                & ~                             \\
-        \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
-
-        Comparison
-        & The training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-trendWord
- (findWithKey' "model" "BiLSTM" tableData).time_s
- (findWithKey' "model" "LSTM" tableData).time_s
- growShrink
-        \end{lstlisting} \\
-        Graded adjective*            & \hl{extremely likely} to be exceeded in the 20th century               & ~                             \\
-        Reference to visual element*                            & ~                & ~                             \\
-        \hline
-    \end{tabular}
-    \caption{Quantitative/semi-quantitative natural language forms considered in this paper}
-    \label{tab:fluid_examples}
-\end{table}
 \subsection{Contributions}
 
 \begin{itemize}
@@ -124,9 +67,3 @@ trendWord
     (\secref{authoring-workflow})
     \item Empirical evaluation of how effective current LLMs are at providing the ``AI-assisted'' part
 \end{itemize}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\linewidth]{fig/scigen-mr-1906.02780-10.png}
-    \caption{Sample text with interpretation generated by Authoring Assistant}\label{fig:scigen-example-website}
-\end{figure}

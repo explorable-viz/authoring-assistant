@@ -1,8 +1,2 @@
-let model_BiLSTM = model "BiLSTM" tableData;
-    model_LSTM = model "LSTM" tableData;
-    model_2_stacked_BiLSTM = model "2 stacked BiLSTM" tableData;
-    model_3_stacked_BiLSTM = model "3 stacked BiLSTM" tableData;
-    model_S_LSTM = model "S-LSTM" tableData;
-    model_CNN = model "CNN" tableData;
-    model_3_stacked_CNN = model "3 stacked CNN" tableData
+let model_ name = model name tableData
 in

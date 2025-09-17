@@ -1,12 +1,18 @@
 \begin{abstract}
-We present an agent-based LLM framework for authoring \emph{transparent text}, web-based scholarly articles
-which allow a reader to explore the relationship to the underlying data by hovering over fragments of text.
-Our approach builds on recent developments in data provenance techniques for general-purpose programming
-languages, and tasks LLM agents with identifying fragments of text which can be computed from data, including
-numerical values computed by aggregations like sum and mean, comparatives and superlatives like ``better
-than'' and ``largest'', and trend-adjectives like ``growing''. We evaluate our approach on a subset of SciGen,
-a dataset consisting of tables from scientific articles and their corresponding descriptions, which we extend
-with hand-generated counterfactual test cases for evaluating how machine-generated expressions generalise in
-the presence of changes to the underlying data. Our results show that some state-of-the-art models are able to
-synthesis compound expressions that generate data-driven text that agrees with gold solutions.
+We introduce the idea of \emph{transparent text}, web-based data-driven scholarly articles which allow a
+reader to explore the relationship to the data set by hovering over fragments of text, and present an
+agent-based LLM framework for authoring transparent text. Our approach builds on recent developments in
+integrated data provenance for general-purpose programming languages. Our system uses the open source
+programming language Fluid, which uses provenance tracking to link visual elements to data, and show how Fluid
+can also be used as host platform for transparent text. Our architecture consists of two LLM agents which
+support the human author during the creation of a transparent document. A SuggestionAgent identifies fragments
+of text which could in principle be computed from data, including numerical values selected from records or
+computed by aggregations like sum and mean; comparatives and superlatives like ``better than'' and
+``largest''; trend-adjectives like ``growing''; and other idiomatic quantitative or semi-quantitative phrases.
+An InterpretationAgent synthesises suitable Fluid queries over the data. We evaluate our approach on a subset
+of SciGen, a dataset consisting of tables from scientific articles and their corresponding descriptions, which
+we extend with hand-generated counterfactual test cases for evaluating how machine-generated expressions
+generalise in the presence of changes to the underlying data. Our results show that some state-of-the-art
+models are able to synthesise compound expressions that generate data-driven text that agrees with gold
+solutions.
 \end{abstract}

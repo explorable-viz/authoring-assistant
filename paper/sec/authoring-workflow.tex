@@ -5,8 +5,9 @@ Figure~\ref{fig:overall-architecture} shows the system architecture and an examp
 The system is composed of two agents:
 
 \begin{itemize}
-    \item \textbf{SuggestionAgent}. Based on an LLM, the SuggestionAgent receives as input the initial text and the reference data, and returns the elements in the text that can be replaced with expressions in the Fluid language.
-    \item \textbf{InterpretationAgent}. Also based on an LLM, the InterpretationAgent receives as input a selection (either obtained from the SuggestionAgent or manually defined by the author) and generates an interpretation of the text as a Fluid expression.
+    \item \textbf{SuggestionAgent}. LLM-based agent which identifies text fragments potentially computable from data.
+    \item \textbf{InterpretationAgent}. LLM-based agent which, for a given text fragment (provided by
+    SuggestionAgent or by the author), attempts to synthesise a Fluid expression computing the target text.
 \end{itemize}
 
 \begin{figure}
@@ -54,7 +55,7 @@ Fig. \ref{fig:system-prompt} shows the system prompt defined for the Authoring A
         \VerbatimInput[fontsize=\small, formatcom=\normalfont]{../system-prompt/system-prompt.txt}
     \end{tcolorbox}
     \vspace{-0.5em}
-    \caption{System-Prompt defined for the Authoring Assistant}
+    \caption{System Prompt defined for the Authoring Assistant}
     \label{fig:system-prompt}
 \end{figure}
 

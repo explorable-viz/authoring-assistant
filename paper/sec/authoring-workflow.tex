@@ -95,12 +95,9 @@ of errors are handled:
 \begin{itemize}
     \item \textbf{Invalid Program}. Evaluation fails due a syntax error, undeclared identifer, division by
     zero, array index out of bounds or other runtime problem.
-    \item \textbf{Invalid Output Type}.
-    According to the \textit{System Prompt} (Fig.~\ref{fig:system-prompt}), the expression is expected to return a string value.
-    If the returned value is of a different type, an \textit{Invalid Output Type} error is raised.
-    \item \textbf{Invalid Output Value}.
-    The output produced by the generated expression is compared against the highlighted target text.
-    If the values do not match, an \textit{Invalid Output Value} error is reported.
+    \item \textbf{Invalid Expression Type}. The value of the expression is not a string.
+    \item \textbf{Mismatching String}. The value of the expression is a string, but is not equal to
+    highlighted target text.
 \end{itemize}
 
 \subsection{Paragraph with generated expression}

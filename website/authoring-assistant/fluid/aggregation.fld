@@ -9,5 +9,5 @@ let records = getByYear year tableData
 in
 
 """
-	The total methane emissions for the year 2015 is  ${numToStr (sumEmissions year tableData)}
+	The total methane emissions for the year 2015 is  ${(sumEmissions year tableData)}
 """

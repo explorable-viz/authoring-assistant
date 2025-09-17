@@ -10,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (a.number_of_errors_13_features / a.number_of_errors_39_features)",
+      "expression": "(a.number_of_errors_13_features / a.number_of_errors_39_features)",
       "categories": ["data_retrieval", "comparison"]
     },
     {

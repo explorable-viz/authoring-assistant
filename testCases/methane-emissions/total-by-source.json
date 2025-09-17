@@ -28,7 +28,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr record.emissions",
+      "expression": "record.emissions",
       "categories": ["data_retrieval"]
     },
     {
@@ -37,4 +37,3 @@
     }
   ]
 }
-

@@ -10,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (last (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 5) `and` (x.max_chunk_size == \"k=6\")) tableData)) - head (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData)))",
+      "expression": "(last (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 5) `and` (x.max_chunk_size == \"k=6\")) tableData)) - head (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData)))",
       "categories": ["data_retrieval"]
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr ((findWithKey_ \"max_chunk_size\" \"k in {1...6}\" tableData).bleu - (findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).bleu)",
+      "expression": "((findWithKey_ \"max_chunk_size\" \"k in {1...6}\" tableData).bleu - (findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).bleu)",
       "categories": ["difference", "data_retrieval"]
     },
     {

@@ -62,7 +62,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"2 stacked BiLSTM\").acc (model_ \"BiLSTM\").acc improve",
+      "expression": "trendWord (model_ \"2 stacked BiLSTM\").acc (model_ \"BiLSTM\").acc improvements",
       "categories": ["data_retrieval", "data_retrieval", "comparison"]
     },
     {

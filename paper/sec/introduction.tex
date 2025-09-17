@@ -1,17 +1,12 @@
 \section{Introduction}
 
-\lstset{
-    aboveskip=-7pt,
-    belowskip=-8.5pt,
-    xleftmargin=0pt,
-    xrightmargin=0pt
-}
-
 \begin{itemize}
     \item Making the text transparent, with the possibility to highlight the data related to a specific sentence.
     \item Making sense of data-driven claims is hard, even if the evidence base (code/data) is open
     \item We see this in peer review, misinformation, retracted papers, …
 \end{itemize}
+
+\rpnote{Small example here}
 
 \subsection{Transparent Text via Interactive Provenance Queries}
 
@@ -34,23 +29,18 @@ linked to data, by computing key fragments of natural language from data. The fo
 
 \input{fig/scigen-1805.02474v1-10-src}
 
-\rpnote{Small example here}
-
-\subsection{Use cases}
-Two potential scenarios for this sort of technology:
+We envisage two possible use cases for transparent text:
 
 \begin{enumerate}
-\item \textbf{Authoring transparent text.} Someone authoring content for an online article, wants to create text
+\item \textbf{Authoring.} Someone authoring content for an online article, wants to create text
 linked to raw data (and derivative data such as charts or tabular summaries), so that the evidence base for
 the claims made in the text can be explored \emph{in situ}, by interacting with the text.
 
-\item \textbf{Interpreting text after the fact.} Someone reading textual claims derived from open data (e.g. a
+\item \textbf{Reading or reviewing.} Someone reading textual claims derived from open data (e.g. a
 scientific paper or climate report), wants to retroactively link the text to queries over the available data
 and gradually ``rationally reconstruct'' the relationship between the claims in the paper and the evidence
 base. Perhaps just to aid their own comprehension, or to provide some kind of justified peer review.
 \end{enumerate}
-
-\noindent Here we focus on the first one because the second one requires a certain amount of additional setup.
 
 \subsubsection{Target idioms of natural language}
 

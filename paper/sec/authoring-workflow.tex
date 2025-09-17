@@ -5,8 +5,9 @@ Figure~\ref{fig:overall-architecture} shows the system architecture and an examp
 The system is composed of two agents:
 
 \begin{itemize}
-    \item \textbf{SuggestionAgent}. Based on an LLM, the SuggestionAgent receives as input the initial text and the reference data, and returns the elements in the text that can be replaced with expressions in the Fluid language.
-    \item \textbf{InterpretationAgent}. Also based on an LLM, the InterpretationAgent receives as input a selection (either obtained from the SuggestionAgent or manually defined by the author) and generates an interpretation of the text as a Fluid expression.
+    \item \textbf{SuggestionAgent}. LLM-based agent which identifies text fragments potentially computable from data.
+    \item \textbf{InterpretationAgent}. LLM-based agent which, for a given text fragment (provided by
+    SuggestionAgent or by the author), attempts to synthesise a Fluid expression computing the target text.
 \end{itemize}
 
 \begin{figure}
@@ -27,16 +28,18 @@ The user is then able to accept the expression (in which case it is incorporated
     \begin{subfigure}{0.50\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/data-flow-correct}
-        \caption{Author Acceptance Dataflow}
+        \caption{Author Acceptance workflow}
         \label{fig:data-flow-correct}
     \end{subfigure}\hfill
     \begin{subfigure}{0.50\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/data-flow-error}
-        \caption{Author Rejection Dataflow}
+        \caption{Author Rejection workflow}
         \label{fig:dataflow-error}
     \end{subfigure}
-    \caption{Two workflows of the Interpretation Agent. In Fig. \ref{fig:data-flow-correct}, the author accepts the generated expression after verifying its correctness online. In Fig. \ref{fig:dataflow-error}, the author identifies an error (the expression mentions accuracy, while the article highlights timing) and rejects it.}
+    \caption{Two possible paths through the basic editing loop: (a) author accepts generated expression after
+    interactively verifying its correctness; (b) author rejects proposed expression, having identified an
+    error (natural language mentions accuracy, while interaction reveals use of timing data).}
     \label{fig:overall-architecture}
 \end{figure}
 
@@ -52,7 +55,7 @@ Fig. \ref{fig:system-prompt} shows the system prompt defined for the Authoring A
         \VerbatimInput[fontsize=\small, formatcom=\normalfont]{../system-prompt/system-prompt.txt}
     \end{tcolorbox}
     \vspace{-0.5em}
-    \caption{System-Prompt defined for the Authoring Assistant}
+    \caption{System Prompt defined for the Authoring Assistant}
     \label{fig:system-prompt}
 \end{figure}
 

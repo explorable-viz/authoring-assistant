@@ -43,7 +43,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (model_ \"LSTM\").time_s",
+      "expression": "(model_ \"LSTM\").time_s",
       "categories": ["data_retrieval"]
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (model_ \"BiLSTM\").time_s",
+      "expression": "(model_ \"BiLSTM\").time_s",
       "categories": ["data_retrieval"]
 
     },
@@ -80,7 +80,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (model_ \"2 stacked BiLSTM\").time_s",
+      "expression": "(model_ \"2 stacked BiLSTM\").time_s",
       "categories": ["data_retrieval"]
     },
     {
@@ -98,7 +98,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (model_ \"S-LSTM\").acc",
+      "expression": "(model_ \"S-LSTM\").acc",
       "categories": ["data_retrieval"]
     },
     {
@@ -134,7 +134,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (model_ \"S-LSTM\").time_s",
+      "expression": "(model_ \"S-LSTM\").time_s",
       "categories": ["data_retrieval"]
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (model \"3 stacked CNN\" tableData).acc",
+      "expression": "(model \"3 stacked CNN\" tableData).acc",
       "categories": ["data_retrieval"]
     },
     {

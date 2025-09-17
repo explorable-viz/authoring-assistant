@@ -10,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Average\") tableData)))",
+      "expression": "(head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Average\") tableData)))",
       "categories": ["data_retrieval"]
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"NOAAGlobalTemp\") tableData)))",
+      "expression": "(head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"NOAAGlobalTemp\") tableData)))",
       "categories": ["data_retrieval"]
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Cowtan-Way\") tableData)))",
+      "expression": "(head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Cowtan-Way\") tableData)))",
       "categories": ["data_retrieval"]
     },
     {

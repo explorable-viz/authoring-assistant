@@ -12,7 +12,7 @@
   "log-folder": "logs/",
   "fluid-compiler-path": "./",
   "fluid-temp-folder": "./fluid-temp",
-  "agent-limit": 0,
+  "agent-limit": 3,
   "base-path-library": "node_modules/@explorable-viz/fluid/dist/fluid/fluid",
   "fluid-common-folder": "./fluid-common",
   "enable-reasoning": true,

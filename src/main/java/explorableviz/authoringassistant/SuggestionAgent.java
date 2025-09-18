@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 public class SuggestionAgent {
 
     private static final Pattern REPLACE = Pattern.compile("\\[REPLACE value=\"?(.*?)\"?]");
-    private static final Path SYSTEM_PROMPT_PATH = Path.of("suggestion-agent", "system-prompt.txt");
+    private static final Path SYSTEM_PROMPT_PATH = Path.of("system-prompt", "suggestion-agent", "system-prompt.txt");
     private final LLMEvaluatorAgent<String> llm;
 
     public SuggestionAgent(String agent) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {

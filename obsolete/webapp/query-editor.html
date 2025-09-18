@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container py-5">
+    <h1 class="text-center mb-4">JSON Generator</h1>
+
+    <!-- Actions Section -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body text-end">
+            <button class="btn btn-danger me-2" onclick="clearAll()">Clear All</button>
+            <button class="btn btn-secondary me-2" data-bs-toggle="modal" data-bs-target="#importModal">Import JSON</button>
+            <button class="btn btn-secondary me-2" onclick="exportJson()">Export JSON</button>
+            <button class="btn btn-success" onclick="execute()">Execute</button>
+        </div>
+    </div>
+
+    <!-- Entry List Section -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h3 class="h6">Entries <span id="entry-count" class="text-muted">(0 entries)</span></h3>
+            <div id="entry-list">
+                <!-- Entries will be dynamically added here -->
+                <p class="text-muted">No entries added yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Entry Button -->
+    <div class="text-end">
+        <button class="btn btn-primary" onclick="addEntry()">Add Entry</button>
+    </div>
+</div>
+
+<!-- Import JSON Modal -->
+<div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="importModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="importModalLabel">Import JSON</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <textarea id="json-input" class="form-control" rows="10" placeholder="Paste your JSON here..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="importJson()">Import</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let entryCount = 0;
+
+    // Function to clear all entries
+    function clearAll() {
+        document.getElementById('entry-list').innerHTML = '<p class="text-muted">No entries added yet.</p>';
+        entryCount = 0;
+        document.getElementById('entry-count').textContent = `(0 entries)`;
+    }
+
+    // Function to add a new entry
+    function addEntry(data = '', code = '', caption = '') {
+        entryCount++;
+
+        // Create new entry elements
+        const row = document.createElement('div');
+        row.className = 'row g-3 align-items-start mb-3';
+
+        // Data Column
+        const dataCol = document.createElement('div');
+        dataCol.className = 'col-md-4';
+        dataCol.innerHTML = `
+            <label class="form-label">Data #${entryCount}</label>
+            <textarea class="form-control" rows="8" placeholder="Enter data...">${data}</textarea>
+        `;
+
+        // Code Column
+        const codeCol = document.createElement('div');
+        codeCol.className = 'col-md-4';
+        codeCol.innerHTML = `
+            <label class="form-label">Code #${entryCount}</label>
+            <textarea class="form-control" rows="8" placeholder="Enter code...">${code}</textarea>
+        `;
+
+        // Caption Column
+        const captionCol = document.createElement('div');
+        captionCol.className = 'col-md-4';
+        captionCol.innerHTML = `
+            <label class="form-label">Caption #${entryCount}</label>
+            <textarea class="form-control" rows="8" placeholder="Enter caption...">${caption}</textarea>
+        `;
+
+        // Append columns to the row
+        row.appendChild(dataCol);
+        row.appendChild(codeCol);
+        row.appendChild(captionCol);
+
+        // Add a separator (line) before each new entry
+        const separator = document.createElement('hr');
+
+        // Add the new row and separator to the entry list
+        const entryList = document.getElementById('entry-list');
+        const placeholder = entryList.querySelector('p.text-muted');
+        if (placeholder) placeholder.remove(); // Remove placeholder if it exists
+        entryList.appendChild(separator);
+        entryList.appendChild(row);
+
+        // Update entry count
+        document.getElementById('entry-count').textContent = `(${entryCount} entries)`;
+    }
+
+    // Function to import JSON and populate entries
+    function importJson() {
+        const jsonInput = document.getElementById('json-input').value;
+
+        try {
+            const parsedData = JSON.parse(jsonInput);
+
+            if (!Array.isArray(parsedData)) {
+                throw new Error('Invalid JSON structure: should be an array.');
+            }
+
+            clearAll(); // Clear existing data
+
+            parsedData.forEach(entry => {
+                addEntry(entry.data || '', entry.code || '', entry.caption || '');
+            });
+
+            // Close modal
+            const importModal = bootstrap.Modal.getInstance(document.getElementById('importModal'));
+            if (importModal) importModal.hide();
+
+        } catch (error) {
+            alert('Error importing JSON: ' + error.message);
+        }
+    }
+
+    // Function to export entries as JSON
+    function exportJson() {
+        const entryList = document.querySelectorAll('#entry-list .row');
+        const entries = [];
+
+        entryList.forEach(row => {
+            const data = row.querySelectorAll('textarea')[0].value.trim();
+            const code = row.querySelectorAll('textarea')[1].value.trim();
+            const caption = row.querySelectorAll('textarea')[2].value.trim();
+
+            entries.push({ data, code, caption });
+        });
+
+        const jsonOutput = JSON.stringify(entries, null, 2);
+        const blob = new Blob([jsonOutput], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'entries.json';
+        link.click();
+
+        URL.revokeObjectURL(url);
+    }
+
+    // Placeholder function for "Execute" button
+    function execute() {
+        alert('Execute functionality to be implemented.');
+    }
+</script>
+</body>
+</html>

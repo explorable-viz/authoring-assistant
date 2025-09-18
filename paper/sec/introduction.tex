@@ -28,7 +28,7 @@ than another at solving a problem --- are computed from the relevant data, and t
 provenance queries that reveal to a reader or reviewer the specific data elements that support the claim.
 
 \figref{scigen-example-website}, adapted from \cite{zhang18}, shows how a transparent document appears to a
-user.
+user. \rpnote{Make important point about counterfactuals/generalisability}
 
 \begin{figure}%[h]
     \centering
@@ -41,8 +41,6 @@ user.
     \label{fig:scigen-example-website}
 \end{figure}
 
-\rpnote{Need to illustrate counterfactual/generalisability}
-
 \paragraph{Contributions.} Our specific contributions are:
 
 \begin{itemize}
@@ -52,11 +50,7 @@ associated data set into a transparent, data-driven counterpart
 interpretation and code synthesis problems
 \end{itemize}
 
-We leave implementing a full IDE authoring plugin (based on VSCode or Cursor, for example) for future work.
-
-Our contribution is an agent-based tool which identifies text fragments which are candidates for being made
-data-driven, generates the corresponding Fluid code, and then incrementally incorporates the code into a
-data-driven version of the original document.
+We leave implementing a full authoring plugin for an IDE such as VSCode or Cursor for future work.
 
 We envisage two possible use cases for transparent text:
 

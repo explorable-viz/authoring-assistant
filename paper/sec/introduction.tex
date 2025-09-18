@@ -5,19 +5,18 @@ domain. A key challenge lies in tracing specific claims back to the underlying d
 example, empirical claims typically lack author-supplied links to data, making it hard for reviewers to check
 them directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to
 simple errors in data management or analysis~\citep{hu25}. Large language models (LLMs) can assist with
-fact-checking~\citep{abu-ahmad25} and interpretation of charts and figures~\citep{roberts24}, but currently
-LLM interfaces do not support direct interrogation of visual outputs.
+fact-checking~\citep{abu-ahmad25} and interpretation of charts and figures~\citep{roberts24}, but current LLM
+interfaces do not support direct interrogation of visual or other outputs.
 
 Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25}, on the other
-hand, approaches the transparency problem from this direction, through software infrastructure which
-transparently connections charts and figures to their data sources. \rpnote{Contrast with LLM-based approach
--- trusted infrastructure.} This enables visual outputs to provide interactive \emph{provenance queries}, user
-interactions (e.g. mousing over a visual element) that allow readers to explore how visual features relate to
-data. The value proposition of these approaches is that the interactions are provided automatically via
-trusted infrastructure, namely an underlying programming language (say query language or general-purpose
-language) which tracks dependencies as data flows through a computation. However, these approaches are limited
-to outputs computed from data, which usually precludes natural language, despite the fact that the main claims
-of a paper are usually made using natural language, with charts and figures only playing a supporting role.
+hand, takes a more infrastructural approach to the transparency problem, by linking visualisations to their
+data sources directly. This allows visual outputs to support in situ \emph{provenance queries}, user
+interactions (e.g. mousing over a visual element) that reveal how visual features relate to data. The value
+proposition of these approaches is that the interactions are provided automatically via trusted
+infrastructure, namely a query language or general-purpose programming language which tracks dependencies as
+data flows through a computation. However, these approaches to transparency only support direct interrogation
+of outputs computed from data, such as visualisations. The accompanying natural language, which often plays a
+central role in making the claims of the paper, remains hard to interpret.
 
 In this paper, we make the case for combining these two approaches, leveraging the ability of LLMs to
 understand complex technical natural language and to synthesise programs that express the analyses that

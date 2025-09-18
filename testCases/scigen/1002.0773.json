@@ -10,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr (foldr (fun x acc -> if x.wer > acc.wer then x else acc) (head tableData) tableData).iteration",
+      "expression": "(foldr (fun x acc -> if x.wer > acc.wer then x else acc) (head tableData) tableData).iteration",
       "categories": ["data_retrieval"]
     },
     {

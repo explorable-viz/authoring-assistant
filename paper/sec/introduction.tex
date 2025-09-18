@@ -7,25 +7,29 @@ for example in quantity extraction~\citep{bolucu23}, scientific fact-checking~\c
 scientific figure interpretation~\citep{roberts24}.
 
 Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} attempts to
-address this issue through software infrastructure for ``transparent'' charts and figures. \rpnote{Contrast
-with LLM-based approach -- trusted infrastructure.} These are visual outputs that provide interactive
-\emph{provenance queries}, user interactions (e.g. mousing over a visual element) that allow readers to
-explore how visual features relate to data. In these approaches the interactions are provided automatically
-via an underlying programming language (either a query language or general-purpose language) which tracks
-dependencies as data flows through a computation.
+address this issue through software infrastructure which transparently connections charts and figures to their
+data sources. \rpnote{Contrast with LLM-based approach -- trusted infrastructure.} This enables visual outputs
+to provide interactive \emph{provenance queries}, user interactions (e.g. mousing over a visual element) that
+allow readers to explore how visual features relate to data. The key value proposition of these approaches is
+that the interactions are provided automatically via an underlying programming language (query language or
+general-purpose language) which tracks dependencies as data flows through a computation.
 
 In this paper, we extend interactive provenance queries to the natural language that accompanies the charts
 and figures. We believe this is an important step because in most articles, charts and figures usually only
 play a supporting role. The main claims are usually presented in natural language, language which also makes
 quantitative statements and contains substantial implicit analytic content. In principle transparent
 programming languages can also be used to create natural language which is bidirectly linked to data, by
-computing key fragments of natural language from data. The following example, adapted from \cite{moosavi21},
-shows how the language presented in this paper can be used to achieve this:
+computing key fragments of natural language from data. The following example, adapted from \cite{zhang18} via
+\cite{moosavi21}, shows how the language presented in this paper can be used to achieve this \rpnote{Need to
+illustrate counterfactual/generalisability}:
 
 \begin{figure}%[h]
     \centering
     \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-with-pointer.png}
-    \caption{\emph{Transparent text} links fragments of natural language to underlying data, via queries}\label{fig:scigen-example-website}
+    \vspace{1mm}
+    \hrule
+    \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-counterfactual-with-pointer.png}
+    \caption{\emph{Transparent document} example, showing counterfactual behaviour}\label{fig:scigen-example-website}
 \end{figure}
 
 We envisage two possible use cases for transparent text:

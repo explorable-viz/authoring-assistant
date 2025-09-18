@@ -1,5 +1,6 @@
 package explorableviz.authoringassistant;
 
+import explorableviz.authoringassistant.llm.LLMDummyAgent;
 import explorableviz.authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
@@ -25,19 +26,25 @@ public class AuthoringAssistant {
     public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
     private final PromptList prompts;
     private final LLMEvaluatorAgent<Expression> llm;
-    private final Program templateProgram;
+    private Program templateProgram;
+    private final SuggestionAgent recogitionAgent;
     private final int runId;
-    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, int runId) throws Exception {
+    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String recognitionAgentClassName, int runId) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
+        this.recogitionAgent = new SuggestionAgent(recognitionAgentClassName);
         this.templateProgram = templateProgram;
         this.runId = runId;
     }
 
     public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
-        List<Pair<Program, Expression>> programEdits = templateProgram.asIndividualEdits(templateProgram);
+        List<Pair<Program, Expression>> programEdits;
         int i = 0;
+        if (Settings.isRecognitionAgentEnabled()) {
+            templateProgram = recogitionAgent.generateTemplateProgram(templateProgram);
+        }
+        programEdits = templateProgram.asIndividualEdits(templateProgram);
         while (!programEdits.isEmpty()) {
             Pair<Program, Expression> individualEdit = programEdits.get(i);
             //selection
@@ -53,7 +60,7 @@ public class AuthoringAssistant {
     }
 
     public QueryResult execute(Pair<Program, Expression> test) throws Exception {
-        final int limit = Settings.getLimit();
+        final int limit = llm instanceof LLMDummyAgent ? 1 : Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
         final long start = System.currentTimeMillis();
@@ -62,11 +69,17 @@ public class AuthoringAssistant {
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         boolean errors = false;
+
         for (attempts = 0; attempts <= limit; attempts++) {
             logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
+            if(candidate == null) {
+                sessionPrompts.addAssistantPrompt("NULL");
+                sessionPrompts.addUserPrompt("Null Expression");
+                continue;
+            }
             for (Map<String, String> datasets : subProgram.getTest_datasets()) {
 
                 logger.info(STR."Received response: \{candidate.getExpr()}");

@@ -1,6 +1,8 @@
-\newcommand*{\apnote}[1]{{\textbf{\textcolor{magenta}{AP: #1}}}}
-\newcommand*{\cdnote}[1]{{\textbf{\textcolor{magenta}{CD: #1}}}}
-\newcommand*{\rpnote}[1]{{\textbf{\textcolor{magenta}{RP: #1}}}}
+\newcommand*{\note}[3]{{\textbf{\textcolor{#1}{\{#2: #3\}}}}}
+\newcommand*{\apnote}[1]{\note{red}{AP}{#1}}
+\newcommand*{\cdnote}[1]{\note{green}{CD}{#1}}
+\newcommand*{\fnnote}[1]{\note{magenta}{FN}{#1}}
+\newcommand*{\rpnote}[1]{\note{blue}{RP}{#1}}
 
 \newcommand*{\SuggestionAgent}{SuggestionAgent\xspace}
 \newcommand*{\InterpretationAgent}{InterpretationAgent\xspace}

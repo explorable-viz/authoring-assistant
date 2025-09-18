@@ -3,27 +3,27 @@
     "emissions": [
       {
         "type":"Agricultural Waste Burning",
-        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in maxEntry.year",
         "record": "highest"
       },
       {
         "type":"Agriculture",
-        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in maxEntry.year",
         "record": "highest"
       },
       {
         "type":"The Energy Sector",
-        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in maxEntry.year",
         "record": "highest"
       },
       {
         "type":"Residential Commercial Other",
-        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in maxEntry.year",
         "record": "lowest"
       },
       {
         "type":"Grassland Burning",
-        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in numToStr maxEntry.year",
+        "result": "let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == \"$emissions.type$\") tableData) in maxEntry.year",
         "record": "lowest"
       }
     ]

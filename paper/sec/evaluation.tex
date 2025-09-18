@@ -7,15 +7,15 @@
 The validation process is structured in two phases
 
 \paragraph{Initial validation}
-In the initial phase, the generated expression is executed via Fluid CLI.
-If the execution is successful, the result obtained is compared with the expected result.
-In case of error, the output is forwarded to the interpretation agent, which proceeds to regenerate the expression.
+In the initial phase, the generated expression is executed via Fluid CLI. If the execution is successful, the
+result obtained is compared with the expected result. In case of error, the output is forwarded to the
+\InterpretationAgent, which proceeds to regenerate the expression.
 
 \paragraph{Validation via counterfactual testing}
-In the second phase, the data used for execution is deliberately modified in order to verify the consistency of the behaviours.
-Both the expected and generated expressions are executed again and the results are compared.
-If discrepancies emerge, the error is forwarded to the interpretation agent.
-If there are no differences, the expression is considered valid and is returned to the user.
+In the second phase, the data used for execution is deliberately modified in order to verify the consistency
+of the behaviours. Both the expected and generated expressions are executed again and the results are
+compared. If discrepancies emerge, the error is forwarded to the \InterpretationAgent. If there are no
+differences, the expression is considered valid and is returned to the user.
 
 \subsection{Research questions}
 
@@ -65,16 +65,16 @@ Figure \ref{fig:success_rate_by_category} shows the results obtained in generati
 \begin{table}[t]
     \centering
     \small
-    \begin{tabular}{p{3cm} p{6cm} p{4cm}}
+    \begin{tabular}{l p{6cm} p{4cm}}
         \hline
-        \textbf{Ambiguity Type} & \textbf{Example} & \textbf{Explanation} \\
+        \textbf{Problem Type} & \textbf{Example} & \textbf{Explanation} \\
         \hline
 
         ambiguous referent &
         As shown in Table 3 \hl{BiLSTM} gives significantly better accuracies compared to uni-directional LSTM with the training time per epoch growing from 99 seconds to 106 seconds &
         There are three models that have 99 seconds as their time; the assistant would not know which one to choose. \\
 
-        missing-data &
+        missing data &
         The average methane emissions for the year 2015 is \hl{1.0} &
         November is missing to calculate the average correctly. \\
 
@@ -92,7 +92,7 @@ Figure \ref{fig:success_rate_by_category} shows the results obtained in generati
 
         \hline
     \end{tabular}
-    \caption{Negative cases example without the \emph{Data} column.}
+    \caption{Categories of problematic example}
     \label{tab:ambiguita}
 \end{table}
 

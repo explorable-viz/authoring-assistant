@@ -37,7 +37,16 @@
     },
     {
       "type": "expression",
-      "expression": "minToMax (getTableColumn \"svm1_p\" tableData)",
+      "expression": "minimum (getTableColumn \"svm1_p\" tableData)",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "type": "expression",
+      "expression": "maximum (getTableColumn \"svm1_p\" tableData)",
       "categories": ["comparison"]
     },
     {
@@ -46,17 +55,34 @@
     },
     {
       "type": "expression",
-      "expression": "minToMax (getTableColumn \"naive_bayes_p\" tableData)",
+      "expression": "minimum (getTableColumn \"naive_bayes_p\" tableData)",
       "categories": ["comparison"]
     },
-
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "type": "expression",
+      "expression": "maximum (getTableColumn \"naive_bayes_p\" tableData)",
+      "categories": ["comparison"]
+    },
     {
       "type": "literal",
       "value": "for NB. Recall (sensitivity) values ranged from"
     },
     {
       "type": "expression",
-      "expression": "minToMax (getTableColumn \"svm1_r\" tableData)",
+      "expression": "minimum (getTableColumn \"svm1_r\" tableData)",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "type": "expression",
+      "expression": "maximum (getTableColumn \"svm1_r\" tableData)",
       "categories": ["comparison"]
     },
     {
@@ -65,7 +91,16 @@
     },
     {
       "type": "expression",
-      "expression": "minToMax (getTableColumn \"naive_bayes_r\" tableData)",
+      "expression": "minimum (getTableColumn \"naive_bayes_r\" tableData)",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "type": "expression",
+      "expression": "maximum (getTableColumn \"naive_bayes_r\" tableData)",
       "categories": ["comparison"]
     },
     {

@@ -31,8 +31,6 @@ let maximumBy f [] = error "Empty list!";
 
 let mean xs = sum xs / length xs;
 
-let minToMax xs = """${minimum xs} to ${maximum xs}""";
-
 let getTableColumn columnName [] = Nil;
    getTableColumn columnName (x : xs) = (x.[columnName] : getTableColumn columnName xs) ;
 

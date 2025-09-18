@@ -1,6 +1,5 @@
-package explorableviz.authoringassistant.llm.recognition;
+package explorableviz.authoringassistant.llm.suggestion;
 
-import explorableviz.authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import org.json.JSONObject;

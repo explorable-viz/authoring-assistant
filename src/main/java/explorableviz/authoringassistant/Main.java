@@ -137,7 +137,7 @@ public class Main {
                     .filter(Files::isDirectory)
                     .map(Path::getFileName)
                     .map(Path::toString)
-                    .filter(name -> !name.equals("datasets") && !name.equals("fluid") && !name.equals("font") && !name.equals("css") && !name.equals("image") && !name.equals("shared"))
+                    .filter(name -> !name.equals("datasets") && !name.equals("fluid") && !name.equals("css") && !name.equals("shared"))
                     .sorted()
                     .map(name -> STR."<a href=\"\{name}\">\{name}</a> <br />")
                     .collect(Collectors.joining("\n"));

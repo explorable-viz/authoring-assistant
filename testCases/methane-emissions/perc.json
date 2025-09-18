@@ -23,7 +23,7 @@
     },
     {
       "type": "expression",
-      "expression": "numToStr ((record.emissions / sum(map (fun x -> x.emissions) (getByYear year tableData))) * 100)",
+      "expression": "(record.emissions / sum(map (fun x -> x.emissions) (getByYear year tableData))) * 100",
       "categories": ["data_retrieval"]
     },
     {

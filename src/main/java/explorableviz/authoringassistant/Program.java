@@ -97,10 +97,7 @@ public class Program {
             logger.info("Validation failed because interpreter error");
             return Optional.of(value);
         }
-        //String error
-        if(!value.matches("^\".*\"$")) {
-            return Optional.of(STR."String expected. \{value} seems not a string");
-        }
+
         if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
             logger.info("Validation passed");
             return Optional.empty();

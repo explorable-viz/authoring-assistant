@@ -10,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "(foldr (fun x acc -> if x > acc then x else acc) (head (map (fun x -> x.naive_bayes_p) tableData)) (map (fun x -> x.naive_bayes_p) tableData))",
+      "expression": "foldr (fun x acc -> if x > acc then x else acc) (head (map (fun x -> x.naive_bayes_p) tableData)) (map (fun x -> x.naive_bayes_p) tableData)",
       "categories": ["data_retrieval"]
     },
     {

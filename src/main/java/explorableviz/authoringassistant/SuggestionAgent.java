@@ -1,5 +1,6 @@
 package explorableviz.authoringassistant;
 
+import explorableviz.authoringassistant.llm.suggestion.RecognitionDummyAgent;
 import explorableviz.authoringassistant.paragraph.Expression;
 import explorableviz.authoringassistant.paragraph.Literal;
 import explorableviz.authoringassistant.paragraph.Paragraph;
@@ -39,6 +40,9 @@ public class SuggestionAgent {
         }
         PromptList prompts = buildPrompts(text);
         String result = llm.evaluate(prompts, null);
+        if(result == null) {
+            return p;
+        }
         Paragraph paragraph = parseParagraph(result);
         return new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCaseFileName(),p.getTest_datasets());
     }

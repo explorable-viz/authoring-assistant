@@ -17,6 +17,6 @@ public class RecognitionDummyAgent extends LLMEvaluatorAgent<String> {
     public String evaluate(PromptList list, String s) throws IOException {
         logger.info("Execution of the DummyAgent");
         list.addSystemPrompt("dummy");
-        return "Test paragraph with one replace tag with value [REPLACE value=\"10\"].";
+        return null;
     }
 }

@@ -8,8 +8,8 @@ simple errors in data management or analysis~\citep{hu25}. Large language models
 fact-checking~\citep{abu-ahmad25} and interpretation of charts and figures~\citep{roberts24}, but current LLM
 interfaces do not support direct interrogation of visual or other outputs.
 
-Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25}, on the other
-hand, takes a more infrastructural approach to the transparency problem, linking visualisations to their data
+Recent work on data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
+takes a more infrastructural approach to the transparency problem, linking computed outputs to their data
 sources directly. This allows visual outputs to support \emph{provenance queries}, user interactions (e.g.
 mousing over a visual element) that reveal how visual features relate to data. The advantage of this approach
 is that the interactions are provided automatically via trusted infrastructure, namely a query language or
@@ -18,17 +18,17 @@ these approaches are limited to outputs computed from data, such as visualisatio
 to extend these ``direct interrogation'' features to natural language itself, where the main claims of most
 scholarly articles are actually made.
 
-In this paper, we make the case that progress can be made on this problem by combining these two approaches.
-We introduce the idea of \emph{transparent documents}, web-based scholarly articles where key fragments of
-natural language are computed from data, like visualisations and other summaries, and that support interactive
-provenance queries that reveal how key quantitative statements in the document relate to the data. We report
-on a proof-of-concept LLM-based tool which supports a human-in-the-loop workflow for iteratively transforming
-a preexisting opaque document into a transparent, data-driven counterpart. Our approach leverages the ability
-of LLMs to understand technical language and synthesise code, and also the provenance-tracking runtime of an
-open source programming language called Fluid, which we use as our target platform.
+In this paper, we this gap by combining these two approaches, leveraging the ability of LLMs to understand
+technical language and synthesise queries over data, and utilising the provenance-tracking infrastructure of
+an open source programming language called Fluid (\url{https://f.luid.org/}) designed originally for
+transparent visualisations~\citep{perera22,bond25}. We show how these two technologies can together support
+the creation and deployment of \emph{transparent documents}, web-based scholarly articles where key
+quantitative claims expressed in natural language --- such as the claim that one software system is faster
+than another at solving a problem --- are computed from the relevant data, and that support interactive
+provenance queries that reveal to a reader or reviewer the specific data elements that support the claim.
 
-The following example, adapted from \cite{zhang18} via \cite{moosavi21}, shows how the language presented in
-this paper can be used to achieve this \rpnote{Need to illustrate counterfactual/generalisability}:
+\figref{scigen-example-website}, adapted from \cite{zhang18}, shows how a transparent document appears to a
+user.
 
 \begin{figure}%[h]
     \centering
@@ -37,8 +37,28 @@ this paper can be used to achieve this \rpnote{Need to illustrate counterfactual
     \hrule
     \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-counterfactual-with-pointer.png}
     \caption{\emph{Transparent document} example, showing data-driven natural language (top
-    vs.~bottom)}\label{fig:scigen-example-website}
+    vs.~bottom)}
+    \label{fig:scigen-example-website}
 \end{figure}
+
+\rpnote{Need to illustrate counterfactual/generalisability}
+
+\paragraph{Contributions}
+
+Our specific contributions are:
+
+\begin{itemize}
+\item a proof-of-concept LLM-based tool for iteratively transforming a preexisting opaque document and
+associated data set into a transparent, data-driven counterpart
+\item an empirical evaluation of how well state-of-the-art models are able to solve the associated
+interpretation and code synthesis problems
+\end{itemize}
+
+We leave implementing a full IDE authoring plugin (based on VSCode or Cursor, for example) for future work.
+
+Our contribution is an agent-based tool which identifies text fragments which are candidates for being made
+data-driven, generates the corresponding Fluid code, and then incrementally incorporates the code into a
+data-driven version of the original document.
 
 We envisage two possible use cases for transparent text:
 

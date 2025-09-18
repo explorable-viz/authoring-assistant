@@ -5,8 +5,8 @@ Figure~\ref{fig:overall-architecture} shows the system architecture and an examp
 The system is composed of two agents:
 
 \begin{itemize}
-    \item \textbf{SuggestionAgent}. LLM-based agent which identifies text fragments potentially computable from data.
-    \item \textbf{InterpretationAgent}. LLM-based agent which, for a given text fragment (provided by
+    \item \textbf{\SuggestionAgent}. LLM-based agent which identifies text fragments potentially computable from data.
+    \item \textbf{\InterpretationAgent}. LLM-based agent which, for a given text fragment (provided by
     SuggestionAgent or by the author), attempts to synthesise a Fluid expression computing the target text.
 \end{itemize}
 
@@ -16,12 +16,13 @@ The system is composed of two agents:
     \caption{Workflow}\label{fig:architecture}
 \end{figure}
 
-Figure~\ref{fig:architecture} shows the overall architecture of the system.
-The author initially provides the text and accompanying data.
-The SuggestionAgent analyses the input and identifies candidate fragments of natural language which could be replaced by Fluid expressions.
-The user highlightes a fragment of interest, which is then sent to the InterpretationAgent, which generates a corresponding candidate expression.
-Internally the InterpretationAgent uses a compiler-in-the-loop validation process to ensure the expression is well-formed.
-The user is then able to accept the expression (in which case it is incorporated into the program) or reject and leave the text uninterpreted.
+Figure~\ref{fig:architecture} shows the overall architecture of the system. The author initially provides the
+text and accompanying data. The \SuggestionAgent analyses the input and identifies candidate fragments of
+natural language which could be replaced by Fluid expressions. The user highlightes a fragment of interest,
+which is then sent to the \InterpretationAgent, which generates a corresponding candidate expression.
+Internally the \InterpretationAgent uses a compiler-in-the-loop validation process to ensure the expression is
+well-formed. The user is then able to accept the expression (in which case it is incorporated into the
+program) or reject and leave the text uninterpreted.
 
 \begin{figure}[ht]
     \centering

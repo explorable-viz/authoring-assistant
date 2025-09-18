@@ -7,15 +7,15 @@
 The validation process is structured in two phases
 
 \paragraph{Initial validation}
-In the initial phase, the generated expression is executed via Fluid CLI.
-If the execution is successful, the result obtained is compared with the expected result.
-In case of error, the output is forwarded to the interpretation agent, which proceeds to regenerate the expression.
+In the initial phase, the generated expression is executed via Fluid CLI. If the execution is successful, the
+result obtained is compared with the expected result. In case of error, the output is forwarded to the
+\InterpretationAgent, which proceeds to regenerate the expression.
 
 \paragraph{Validation via counterfactual testing}
-In the second phase, the data used for execution is deliberately modified in order to verify the consistency of the behaviours.
-Both the expected and generated expressions are executed again and the results are compared.
-If discrepancies emerge, the error is forwarded to the interpretation agent.
-If there are no differences, the expression is considered valid and is returned to the user.
+In the second phase, the data used for execution is deliberately modified in order to verify the consistency
+of the behaviours. Both the expected and generated expressions are executed again and the results are
+compared. If discrepancies emerge, the error is forwarded to the \InterpretationAgent. If there are no
+differences, the expression is considered valid and is returned to the user.
 
 \subsection{Research questions}
 

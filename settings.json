@@ -29,5 +29,5 @@
   "num-test-data-variants": 1,
   "num-test-runs": 1,
   "authoring-agent-class": "explorableviz.authoringassistant.llm.LLMDummyAgent",
-  "suggestion-agent-class": "explorableviz.authoringassistant.llm.suggestion.RecognitionDummyAgent"
+  "suggestion-agent-class": "explorableviz.authoringassistant.llm.suggestion.SuggestionDummyAgent"
 }

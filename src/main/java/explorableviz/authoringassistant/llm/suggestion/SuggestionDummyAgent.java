@@ -7,9 +7,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-public class RecognitionDummyAgent extends LLMEvaluatorAgent<String> {
-    public static Logger logger = Logger.getLogger(RecognitionDummyAgent.class.getName());
-    public RecognitionDummyAgent(JSONObject settings) {
+public class SuggestionDummyAgent extends LLMEvaluatorAgent<String> {
+    public static Logger logger = Logger.getLogger(SuggestionDummyAgent.class.getName());
+    public SuggestionDummyAgent(JSONObject settings) {
         super(settings);
     }
 

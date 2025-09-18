@@ -29,10 +29,10 @@ public class AuthoringAssistant {
     private Program templateProgram;
     private final SuggestionAgent recogitionAgent;
     private final int runId;
-    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String recognitionAgentClassName, int runId) throws Exception {
+    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
-        this.recogitionAgent = new SuggestionAgent(recognitionAgentClassName);
+        this.recogitionAgent = new SuggestionAgent(suggestionAgentClassName);
         this.templateProgram = templateProgram;
         this.runId = runId;
     }
@@ -41,7 +41,7 @@ public class AuthoringAssistant {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
         List<Pair<Program, Expression>> programEdits;
         int i = 0;
-        if (Settings.isRecognitionAgentEnabled()) {
+        if (Settings.isSuggestionAgentEnabled()) {
             templateProgram = recogitionAgent.generateTemplateProgram(templateProgram);
         }
         programEdits = templateProgram.asIndividualEdits(templateProgram);

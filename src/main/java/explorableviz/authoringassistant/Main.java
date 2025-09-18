@@ -25,15 +25,17 @@ public class Main {
         logger.info(arguments.toString().replace(",", "\n"));
         final ArrayList<Program> programs;
         final InContextLearning inContextLearning;
-        final String agent = arguments.get("agent");
+
         try {
             Settings.init("settings.json");
+            final String agent = Settings.getAuthoringAgentName();
+            final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json
             Files.createDirectories(Paths.get(STR."\{Settings.getLogFolder()}/json"));
             cleanWebsiteFolders("website/authoring-assistant/");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
-            final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, programs);
+            final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, suggestionAgent, programs);
             float accuracy = computeAccuracy(results);
             generateLinks();
             writeLog(results, agent, inContextLearning.size());
@@ -95,13 +97,13 @@ public class Main {
         return (float) count / results.size();
     }
 
-    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, List<Program> programs) throws Exception {
+    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, String suggestionAgent, List<Program> programs) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> results = new ArrayList<>();
         for(int k = 0; k < Settings.numTestRuns(); k++)
         {
             int programId = 0;
             for (Program program : programs) {
-                AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, program, k);
+                AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, program, suggestionAgent, k);
                 logger.info(STR."Analysing program id=\{(programId++)}");
                 results.addAll(workflow.executePrograms());
             }
@@ -135,7 +137,7 @@ public class Main {
                     .filter(Files::isDirectory)
                     .map(Path::getFileName)
                     .map(Path::toString)
-                    .filter(name -> !name.equals("fluid") && !name.equals("css") && !name.equals("shared"))
+                    .filter(name -> !name.equals("datasets") && !name.equals("fluid") && !name.equals("css") && !name.equals("shared"))
                     .sorted()
                     .map(name -> STR."<a href=\"\{name}\">\{name}</a> <br />")
                     .collect(Collectors.joining("\n"));

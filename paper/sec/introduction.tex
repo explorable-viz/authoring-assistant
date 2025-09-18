@@ -1,19 +1,22 @@
 \section{Introduction: Transparent, Data-Driven Documents}
 
-Making sense of and verifying data-driven claims is hard, even when the evidence base (data sets and related
-analyses) is in the public domain. Expert reviewers often struggle to evaluate empirical claims without author
--supplied annotations that provide access to underlying data~\citep{weber20}; paper retractions are frequently
-attributable to (non-fraudulent but significant) errors in data management and analysis~\citep{hu25}. The
-ability of LLMs to assist with these challenges has received considerable attention recently, for example in
-scientific fact-checking~\citep{abu-ahmad25} and figure interpretation~\citep{roberts24}.
+Making sense of and verifying data-driven claims is hard, even when the evidence base lives in the public
+domain, because of the difficulty in tracing specific claims back to the data. Peer review of empirical claims
+without author-supplied traceability to the underlying data can be challenging~\citep{weber20}; paper
+retractions are often attributable to (non-fraudulent but significant) errors in data management and
+analysis~\citep{hu25}. The use of LLMs to assist with these challenges has received considerable attention
+recently, on problems ranging from fact-checking~\citep{abu-ahmad25} to interpretation of charts and
+figures~\citep{roberts24}, LLM interfaces do not support direct interrogation of visual outputs.
 
-Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} attempts to
-address this issue through software infrastructure which transparently connections charts and figures to their
-data sources. \rpnote{Contrast with LLM-based approach -- trusted infrastructure.} This enables visual outputs
-to provide interactive \emph{provenance queries}, user interactions (e.g. mousing over a visual element) that
-allow readers to explore how visual features relate to data. The key value proposition of these approaches is
-that the interactions are provided automatically via an underlying programming language (query language or
-general-purpose language) which tracks dependencies as data flows through a computation.
+Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} approaches the
+transparency problem from this direction, through software infrastructure which transparently connections
+charts and figures to their data sources. \rpnote{Contrast with LLM-based approach -- trusted infrastructure.}
+This enables visual outputs to provide interactive \emph{provenance queries}, user interactions (e.g. mousing
+over a visual element) that allow readers to explore how visual features relate to data. The value proposition
+of these approaches is that the interactions are provided automatically via trusted infrastructure, namely an
+underlying programming language (say query language or general-purpose language) which tracks dependencies as
+data flows through a computation. However, these approaches are limited to outputs computed from data, such as
+visualisations.
 
 In this paper, we extend interactive provenance queries to the natural language that accompanies the charts
 and figures. We believe this is an important step because in most articles, charts and figures usually only
@@ -30,7 +33,8 @@ illustrate counterfactual/generalisability}:
     \vspace{1mm}
     \hrule
     \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-counterfactual-with-pointer.png}
-    \caption{\emph{Transparent document} example (top); counterfactual behaviour (bottom)}\label{fig:scigen-example-website}
+    \caption{\emph{Transparent document} example, showing data-driven natural language (top
+    vs.~bottom)}\label{fig:scigen-example-website}
 \end{figure}
 
 We envisage two possible use cases for transparent text:

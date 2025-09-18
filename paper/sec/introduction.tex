@@ -1,23 +1,23 @@
 \section{Introduction: Transparent, Data-Driven Documents}
 
 Making sense of and verifying data-driven claims is hard, even when the evidence base lives in the public
-domain, because of the difficulty in tracing specific claims back to the data. Peer review of empirical claims
-without author-supplied traceability to the underlying data can be challenging~\citep{weber20}; paper
-retractions are often attributable to (non-fraudulent but significant) errors in data management and
-analysis~\citep{hu25}. The use of LLMs to assist with these challenges has received considerable attention
-recently, on problems ranging from fact-checking~\citep{abu-ahmad25} to interpretation of charts and
-figures~\citep{roberts24}, LLM interfaces do not support direct interrogation of visual outputs.
+domain. A key challenge lies in tracing specific claims back to the underlying data. In peer review, for
+example, empirical claims typically lack author-supplied links to data, making it hard for reviewers to check
+them directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to
+simple errors in data management or analysis~\citep{hu25}. Large language models (LLMs) can assist with
+fact-checking~\citep{abu-ahmad25} and interpretation of charts and figures~\citep{roberts24}, but currently
+LLM interfaces do not support direct interrogation of visual outputs.
 
-Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} approaches the
-transparency problem from this direction, through software infrastructure which transparently connections
-charts and figures to their data sources. \rpnote{Contrast with LLM-based approach -- trusted infrastructure.}
-This enables visual outputs to provide interactive \emph{provenance queries}, user interactions (e.g. mousing
-over a visual element) that allow readers to explore how visual features relate to data. The value proposition
-of these approaches is that the interactions are provided automatically via trusted infrastructure, namely an
-underlying programming language (say query language or general-purpose language) which tracks dependencies as
-data flows through a computation. However, these approaches are limited to outputs computed from data, which
-usually precludes natural language, despite the fact that the main claims of a paper are usually made using
-natural language, with charts and figures only playing a supporting role.
+Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25}, on the other
+hand, approaches the transparency problem from this direction, through software infrastructure which
+transparently connections charts and figures to their data sources. \rpnote{Contrast with LLM-based approach
+-- trusted infrastructure.} This enables visual outputs to provide interactive \emph{provenance queries}, user
+interactions (e.g. mousing over a visual element) that allow readers to explore how visual features relate to
+data. The value proposition of these approaches is that the interactions are provided automatically via
+trusted infrastructure, namely an underlying programming language (say query language or general-purpose
+language) which tracks dependencies as data flows through a computation. However, these approaches are limited
+to outputs computed from data, which usually precludes natural language, despite the fact that the main claims
+of a paper are usually made using natural language, with charts and figures only playing a supporting role.
 
 In this paper, we make the case for combining these two approaches, leveraging the ability of LLMs to
 understand complex technical natural language and to synthesise programs that express the analyses that

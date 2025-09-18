@@ -9,11 +9,12 @@ identify fragments of text which could plausibly be computed from data, includin
 from records or computed by aggregations like sum and mean, comparatives and superlatives like ``better than''
 and ``largest'', trend-adjectives like ``growing'', and other idiomatic quantitative or semi-quantitative
 phrases. An \InterpretationAgent, given such a fragment, then attempts to synthesise a suitable Fluid query
-over the data which will generate the target string. Our tool then interprets the resulting expression in the
-context of an interactive web page, which turns the generated text into an interactable element able to reveal
-the relevant data. We evaluate our approach on a subset of SciGen, an open source dataset consisting of tables
-from scientific articles and their corresponding descriptions, which we extend with hand-generated
-counterfactual test cases to evaluate how well machine-generated expressions generalise in the presence of
-changes to the underlying data. Our results show that some state-of-the-art models are often able to
-synthesise compound expressions that are extensionally compatible with our gold solutions.
+over the data which will generate the target string. The resulting expression is spliced into the source code
+for an interactive web page, turning the static text fragment into an interactable data-driven element able to
+reveal the data that underwrites the natural language claim. We evaluate our approach on a subset of SciGen,
+an open source dataset consisting of tables from scientific articles and their corresponding descriptions,
+which we extend with hand-generated counterfactual test cases to evaluate how well machine-generated
+expressions generalise in the presence of changes to the data. Our results show that some state-of-the-art
+models are often able to synthesise compound expressions that are extensionally compatible with our gold
+solutions.
 \end{abstract}

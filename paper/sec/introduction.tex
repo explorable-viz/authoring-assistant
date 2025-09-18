@@ -15,17 +15,18 @@ This enables visual outputs to provide interactive \emph{provenance queries}, us
 over a visual element) that allow readers to explore how visual features relate to data. The value proposition
 of these approaches is that the interactions are provided automatically via trusted infrastructure, namely an
 underlying programming language (say query language or general-purpose language) which tracks dependencies as
-data flows through a computation. However, these approaches are limited to outputs computed from data, such as
-visualisations.
+data flows through a computation. However, these approaches are limited to outputs computed from data, which
+usually precludes natural language, despite the fact that the main claims of a paper are usually made using
+natural language, with charts and figures only playing a supporting role.
 
-In this paper, we extend interactive provenance queries to the natural language that accompanies the charts
-and figures. We believe this is an important step because in most articles, charts and figures usually only
-play a supporting role. The main claims are usually presented in natural language, language which also makes
-quantitative statements and contains substantial implicit analytic content. In principle transparent
-programming languages can also be used to create natural language which is bidirectly linked to data, by
-computing key fragments of natural language from data. The following example, adapted from \cite{zhang18} via
-\cite{moosavi21}, shows how the language presented in this paper can be used to achieve this \rpnote{Need to
-illustrate counterfactual/generalisability}:
+In this paper, we make the case for combining these two approaches, leveraging the ability of LLMs to
+understand complex technical natural language and to synthesise programs that express the analyses that
+underwrite those claims, and extend interactive provenance queries to the natural language that accompanies
+the charts and figures.  ..language which also makes quantitative statements and contains substantial implicit
+analytic content. In principle transparent programming languages can also be used to create natural language
+which is bidirectly linked to data, by computing key fragments of natural language from data. The following
+example, adapted from \cite{zhang18} via \cite{moosavi21}, shows how the language presented in this paper can
+be used to achieve this \rpnote{Need to illustrate counterfactual/generalisability}:
 
 \begin{figure}%[h]
     \centering

@@ -21,10 +21,13 @@
   "learning-case-folder": "learningCases",
   "enable-editor-loop": false,
   "test-case-folder": "testCases",
+  "enable-suggestion-agent": true,
   "threshold": 0.0,
   "system-prompt-path": "system-prompt/",
   "max-program-variants": 1,
   "num-learning-case-to-generate": 1,
   "num-test-data-variants": 1,
-  "num-test-runs": 1
+  "num-test-runs": 1,
+  "authoring-agent-class": "explorableviz.authoringassistant.llm.LLMDummyAgent",
+  "suggestion-agent-class": "explorableviz.authoringassistant.llm.suggestion.RecognitionDummyAgent"
 }

@@ -102,4 +102,14 @@ public class Settings {
     public static boolean isEditorLoopEnabled() {
         return getSettings().getBoolean("enable-editor-loop");
     }
+    public static boolean isRecognitionAgentEnabled() {
+        return getSettings().getBoolean("enable-suggestion-agent");
+    }
+
+    public static String getRecognitionAgentName() {
+        return getSettings().getString("suggestion-agent-class");
+    }
+    public static String getAuthoringAgentName() {
+        return getSettings().getString("authoring-agent-class");
+    }
 }

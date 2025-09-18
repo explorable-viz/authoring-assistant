@@ -9,17 +9,17 @@ fact-checking~\citep{abu-ahmad25} and interpretation of charts and figures~\cite
 interfaces do not support direct interrogation of visual or other outputs.
 
 Recent work on data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
-takes a more infrastructural approach to the transparency problem, linking computed outputs to their data
-sources directly. This allows visual outputs to support \emph{provenance queries}, user interactions (e.g.
-mousing over a visual element) that reveal how visual features relate to data. The advantage of this approach
-is that the interactions are provided automatically via trusted infrastructure, namely a query language or
-general-purpose programming language which tracks dependencies as data flows through a computation. However,
-these approaches are limited to outputs computed from data, such as visualisations. What is missing is a way
-to extend these ``direct interrogation'' features to natural language itself, where the main claims of most
-scholarly articles are actually made.
+takes a more infrastructural approach to the transparency problem. These approaches link computed outputs to
+their data sources directly, by tracking dependency information. This allows visual outputs to support
+\emph{provenance queries}, user interactions (e.g. mousing over a visual element) that reveal how visual
+features relate to data. The advantage of this approach is that the interactions are provided automatically
+via trusted infrastructure, namely a query language or general-purpose programming language which tracks how
+data flows through a computation. However, these approaches are limited to outputs computed from data, such as
+visualisations. What is missing is a way to extend these ``direct interrogation'' features to natural language
+itself, where the main claims of most scholarly articles are actually made.
 
-In this paper, we this gap by combining these two approaches, leveraging the ability of LLMs to understand
-technical language and synthesise queries over data, and utilising the provenance-tracking infrastructure of
+In this paper, we address this gap by combining these two approaches, leveraging the ability of LLMs to
+understand technical language and synthesise queries over data, plus the provenance-tracking infrastructure of
 an open source programming language called Fluid (\url{https://f.luid.org/}) designed originally for
 transparent visualisations~\citep{perera22,bond25}. We show how these two technologies can together support
 the creation and deployment of \emph{transparent documents}, web-based scholarly articles where key

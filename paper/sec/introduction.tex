@@ -2,30 +2,33 @@
 
 Making sense of and verifying data-driven claims is hard, even when the evidence base lives in the public
 domain. A key challenge lies in tracing specific claims back to the underlying data. In peer review, for
-example, empirical claims typically lack author-supplied links to data, making it hard for reviewers to check
-them directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to
+example, empirical claims typically lack author-supplied links to data, making them hard for reviewers to
+check directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to
 simple errors in data management or analysis~\citep{hu25}. Large language models (LLMs) can assist with
 fact-checking~\citep{abu-ahmad25} and interpretation of charts and figures~\citep{roberts24}, but current LLM
 interfaces do not support direct interrogation of visual or other outputs.
 
 Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25}, on the other
-hand, takes a more infrastructural approach to the transparency problem, by linking visualisations to their
-data sources directly. This allows visual outputs to support in situ \emph{provenance queries}, user
-interactions (e.g. mousing over a visual element) that reveal how visual features relate to data. The value
-proposition of these approaches is that the interactions are provided automatically via trusted
-infrastructure, namely a query language or general-purpose programming language which tracks dependencies as
-data flows through a computation. However, these approaches to transparency only support direct interrogation
-of outputs computed from data, such as visualisations. The accompanying natural language, which often plays a
-central role in making the claims of the paper, remains hard to interpret.
+hand, takes a more infrastructural approach to the transparency problem, linking visualisations to their data
+sources directly. This allows visual outputs to support \emph{provenance queries}, user interactions (e.g.
+mousing over a visual element) that reveal how visual features relate to data. The advantage of this approach
+is that the interactions are provided automatically via trusted infrastructure, namely a query language or
+general-purpose programming language which tracks dependencies as data flows through a computation. However,
+these approaches are limited to outputs computed from data, such as visualisations. What is missing is a way
+to extend these ``direct interrogation'' features to natural language itself, where the main claims of most
+scholarly articles are actually made.
 
-In this paper, we make the case for combining these two approaches, leveraging the ability of LLMs to
-understand complex technical natural language and to synthesise programs that express the analyses that
-underwrite those claims, and extend interactive provenance queries to the natural language that accompanies
-the charts and figures.  ..language which also makes quantitative statements and contains substantial implicit
-analytic content. In principle transparent programming languages can also be used to create natural language
-which is bidirectly linked to data, by computing key fragments of natural language from data. The following
-example, adapted from \cite{zhang18} via \cite{moosavi21}, shows how the language presented in this paper can
-be used to achieve this \rpnote{Need to illustrate counterfactual/generalisability}:
+In this paper, we make the case that progress can be made on this problem by combining these two approaches.
+We introduce the idea of \emph{transparent documents}, web-based scholarly articles where key fragments of
+natural language are computed from data, like visualisations and other summaries, and that support interactive
+provenance queries that reveal how key quantitative statements in the document relate to the data. We report
+on a proof-of-concept LLM-based tool which supports a human-in-the-loop workflow for iteratively transforming
+a preexisting opaque document into a transparent, data-driven counterpart. Our approach leverages the ability
+of LLMs to understand technical language and synthesise code, and also the provenance-tracking runtime of an
+open source programming language called Fluid, which we use as our target platform.
+
+The following example, adapted from \cite{zhang18} via \cite{moosavi21}, shows how the language presented in
+this paper can be used to achieve this \rpnote{Need to illustrate counterfactual/generalisability}:
 
 \begin{figure}%[h]
     \centering

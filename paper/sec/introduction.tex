@@ -1,36 +1,31 @@
 \section{Introduction: Transparent Documents}
 
-Making sense of data-driven claims is hard, even if the evidence base (data sets and related analyses) is
-open. We see this in peer review, misinformation, retracted papers, \rpnote{supporting citations}.
-\rpnote{Small example here?}
+Making sense of and verifying data-driven claims is hard, even when the evidence base (data sets and related
+analyses) is open. We see this in peer review, misinformation, retracted papers, \rpnote{supporting
+citations}. The ability of LLMs to assist with these challenges has received considerable attention recently,
+for example in quantity extraction~\citep{bolucu23}, scientific fact-checking~\citep{abu-ahmad25}, and
+scientific figure interpretation~\citep{roberts24}.
 
-Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} proposed more
-transparent charts and figures by integrating interactive ``provenance queries'' directly into visual outputs.
-These interactive queries allow readers to interact with visual elements to see the data relevant to those
-elements. The key feature of these approaches is that the interactions are provided automatically, via
-\emph{transparent programming languages} (either query languages or general-purpose languages) which track
-dependencies as data flows through a computation.
+Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} attempts to
+address this issue through software infrastructure for ``transparent'' charts and figures. These are visual
+outputs that provide interactive \emph{provenance queries}, user interactions (e.g. mousing over a visual
+element) that allow readers to explore how visual features relate to data. In these approaches the
+interactions are provided automatically via an underlying programming language (either a query language or
+general-purpose language) which tracks dependencies as data flows through a computation.
 
-\begin{itemize}
-    \item Making the text transparent, with the possibility to highlight the data related to a specific sentence.
-\end{itemize}
+In this paper, we extend interactive provenance queries to the natural language that accompanies the charts
+and figures. We believe this is an important step because in most articles, charts and figures usually only
+play a supporting role. The main claims are usually presented in natural language, language which also makes
+quantitative statements and contains substantial implicit analytic content. In principle transparent
+programming languages can also be used to create natural language which is bidirectly linked to data, by
+computing key fragments of natural language from data. The following example, adapted from \cite{moosavi21},
+shows how the language presented in this paper can be used to achieve this:
 
-\subsection{Transparent Text via Interactive Provenance Queries}
-
-In most articles, however, charts and figures usually only play a supporting role. The main claims are usually
-presented in natural language, language which also makes quantitative statements and refers to ``behind the
-scenes'' data analyses. In principle transparent programming languages can also be used to create natural
-language which is bidirectly linked to data, by computing key fragments of natural language from data. The
-following example, adapted from \cite{moosavi21}, shows how the language presented in this paper can be used
-to achieve this:
-
-\begin{figure}[h]
+\begin{figure}%[h]
     \centering
     \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-with-pointer.png}
     \caption{\emph{Transparent text} links fragments of natural language to underlying data, via queries}\label{fig:scigen-example-website}
 \end{figure}
-
-\input{fig/scigen-1805.02474v1-10-src}
 
 We envisage two possible use cases for transparent text:
 
@@ -44,6 +39,8 @@ scientific paper or climate report), wants to retroactively link the text to que
 and gradually ``rationally reconstruct'' the relationship between the claims in the paper and the evidence
 base. Perhaps just to aid their own comprehension, or to provide some kind of justified peer review.
 \end{enumerate}
+
+\input{fig/scigen-1805.02474v1-10-src}
 
 \subsubsection{Target idioms of natural language}
 

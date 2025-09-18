@@ -29,6 +29,10 @@ let improve EQ = "does not further improve";
     improve LT = "does not further improve";
     improve GT = "further improves";
 
+let improved EQ = "equal";
+    improved LT = "not improved";
+    improved GT = "improved";
+
 let improvements EQ = "no further improvements";
     improvements LT = "no further improvements";
     improvements GT = "further improvements";

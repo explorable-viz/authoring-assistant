@@ -202,7 +202,16 @@
     },
     {
       "type": "literal",
-      "value": "accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used. Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still"
+      "value": "accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used. Attention leads to "
+    },
+    {
+      "type": "expression",
+      "expression": "trendWord (0.5 * sum [(model_ \"BiLSTM+Attention\").acc, (model_ \"S-LSTM+Attention\").acc ]) (0.5 * sum [(model_ \"BiLSTM\").acc, (model_ \"S-LSTM\").acc ]) improved",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": "accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still"
     },
     {
       "type": "expression",

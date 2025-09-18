@@ -10,16 +10,19 @@
 
 \subsection{Transparent Text via Interactive Provenance Queries}
 
-Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} integrating
-interactive provenance queries into charts and figures using \emph{transparent programming languages} which
-track data provenance automatically as data flows through a computation. Visual outputs produced using these
-platforms allow readers to interact with visual elements to see the relevant data. In most article charts and
-figures usually only play a supporting role, however, with the main claims usually presented in natural
-language. This language makes quantitative claims and refers to ``behind the scenes'' data analyses.
+Recent work on data provenance and data visualisation~\citep{psallidas18smoke,perera22,bond25} proposed
+integrating interactive ``provenance queries'' directly into charts and figures. These interactive queries
+allow readers to interact with visual elements to see the data relevant to those elements. The key feature of
+these approaches is that the interactions are provided automatically, via \emph{transparent programming
+languages} (either query languages or general-purpose languages) which track dependencies as data flows
+through a computation.
 
-In principle transparent programming languages can also be used to create natural language which is bidirectly
-linked to data, by computing key fragments of natural language from data. The following example, adapted from
-\cite{moosavi21}, shows how the language presented in this paper can be used to achieve this:
+In most articles, however, charts and figures usually only play a supporting role. The main claims are usually
+presented in natural language, language which also makes quantitative statements and refers to ``behind the
+scenes'' data analyses. In principle transparent programming languages can also be used to create natural
+language which is bidirectly linked to data, by computing key fragments of natural language from data. The
+following example, adapted from \cite{moosavi21}, shows how the language presented in this paper can be used
+to achieve this:
 
 \begin{figure}[h]
     \centering

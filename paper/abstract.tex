@@ -1,20 +1,19 @@
 \begin{abstract}
-We introduce the idea of \emph{transparent documents}, web-based data-driven scholarly articles which allow
-readers to explore the relationship to the underlying data by hovering over fragments of text. We present an
-agent-based LLM framework for authoring transparent documents, building on recent developments in data
-provenance for general-purpose programming languages. Our implementation uses Fluid, an open source functional
-programming language with a provenance-tracking runtime, as a target platform. Our tool consists of two LLM
-agents which support a human author during the creation of a transparent document. A \SuggestionAgent helps
-identify fragments of text which could plausibly be computed from data, including numerical values selected
-from records or computed by aggregations like sum and mean, comparatives and superlatives like ``better than''
-and ``largest'', trend-adjectives like ``growing'', and other idiomatic quantitative or semi-quantitative
-phrases. An \InterpretationAgent, given such a fragment, then attempts to synthesise a suitable Fluid query
-over the data which will generate the target string. The resulting expression is spliced into the source code
-for an interactive web page, turning the static text fragment into an interactable data-driven element able to
-reveal the data that underwrites the natural language claim. We evaluate our approach on a subset of SciGen,
-an open source dataset consisting of tables from scientific articles and their corresponding descriptions,
-which we extend with hand-generated counterfactual test cases to evaluate how well machine-generated
-expressions generalise in the presence of changes to the data. Our results show that some state-of-the-art
-models are often able to synthesise compound expressions that are extensionally compatible with our gold
-solutions.
+We introduce \emph{transparent documents}, interactive web-based scholarly articles which allow readers to
+explore the relationship to the underlying data by hovering over fragments of text. We present an agent-based
+LLM framework for authoring transparent documents, building on recent developments in data provenance for
+general-purpose programming languages. Our implementation uses Fluid, an open source functional programming
+language with a provenance-tracking runtime, as a target platform. Our tool consists of two LLM agents which
+support a human author during the creation of a transparent document. A \SuggestionAgent helps identify
+fragments of text which could plausibly be computed from data, including numerical values selected from
+records or computed by aggregations like sum and mean, comparatives and superlatives like ``better than'' and
+``largest'', trend-adjectives like ``growing'', and other idiomatic quantitative or semi-quantitative phrases.
+An \InterpretationAgent, given such a fragment, then attempts to synthesise a suitable Fluid query over the
+data which will generate the target string. The resulting expression is spliced into the source code for an
+interactive web page, turning the static text fragment into an interactable data-driven element able to reveal
+the data that underwrites the natural language claim. We evaluate our approach on a subset of SciGen, an open
+source dataset consisting of tables from scientific articles and their corresponding descriptions, which we
+extend with hand-generated counterfactual test cases to evaluate how well machine-generated expressions
+generalise in the presence of changes to the data. Our results show that some state-of-the-art models are
+often able to synthesise compound expressions extensionally compatible with our gold solutions.
 \end{abstract}

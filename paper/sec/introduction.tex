@@ -1,34 +1,46 @@
 \section{Introduction: Transparent, Data-Driven Documents}
 
-Making sense of and verifying data-driven claims is hard, even when the evidence base lives in the public
-domain. A key challenge lies in tracing specific claims back to the underlying data. In peer review, for
-example, empirical claims typically lack author-supplied links to data, making them hard for reviewers to
-check directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to
-simple errors in data management or analysis~\citep{hu25}. Large language models (LLMs) can assist with
-fact-checking~\citep{abu-ahmad25} and interpretation of charts and figures~\citep{roberts24}, but current LLM
-interfaces do not support direct interrogation of visual or other outputs.
+Making sense of and verifying data-driven claims is hard, even when the evidence base is open and accessible.
+A key challenge lies in tracing specific claims back to the underlying data. In peer review, for example,
+empirical claims typically lack author-supplied links to data, making them hard for reviewers to check
+directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to simple
+errors in data management or analysis~\citep{hu25}. The use of large language models (LLMs) to interpret
+scholarly documents has seen considerable attention recently, from fact-checking~\citep{abu-ahmad25} to
+interpretation of charts and figures~\citep{roberts24}, but current LLM interfaces do not support direct
+interrogation of visual or other outputs.
 
 Recent work on data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
-takes a more infrastructural approach to the transparency problem. These approaches link computed outputs to
-their data sources directly, by tracking dependency information. This allows visual outputs to support
-\emph{provenance queries}, user interactions (e.g. mousing over a visual element) that reveal how visual
-features relate to data. The advantage of this approach is that the interactions are provided automatically
-via trusted infrastructure, namely a query language or general-purpose programming language which tracks how
-data flows through a computation. However, these approaches are limited to outputs computed from data, such as
-visualisations. What is missing is a way to extend these ``direct interrogation'' features to natural language
-itself, where the main claims of most scholarly articles are actually made.
+takes a more infrastructural approach to tracing outputs back to data. These approaches link computed outputs
+to their data sources directly, by tracking dependency information. This allows visual outputs to support
+\emph{provenance queries}, user interactions (e.g. mousing over visual elements) that reveal how output
+features relate to data. The advantage of this approach is that the relationships to data sources are exposed
+automatically via trusted infrastructure, typically a query language or general-purpose programming language
+which tracks how data flows through a computation. However, these approaches are limited to outputs computed
+from data, such as visualisations. What is missing is a way to extend these ``direct interrogation'' features
+to natural language itself, where the main claims of most scholarly articles are actually made.
 
-In this paper, we address this gap by combining these two approaches, leveraging the ability of LLMs to
+In this paper, we address this gap by combining two complementary approaches: the ability of LLMs to
 understand technical language and synthesise queries over data, plus the provenance-tracking infrastructure of
-an open source programming language called Fluid (\url{https://f.luid.org/}) designed originally for
-transparent visualisations~\citep{perera22,bond25}. We show how these two technologies can together support
-the creation and deployment of \emph{transparent documents}, web-based scholarly articles where key
-quantitative claims expressed in natural language --- such as the claim that one software system is faster
-than another at solving a problem --- are computed from the relevant data, and that support interactive
-provenance queries that reveal to a reader or reviewer the specific data elements that support the claim.
+an open source programming language called Fluid (\url{https://f.luid.org/})~\citep{perera22,bond25}.
+Together, these two technologies enable the creation of \emph{transparent documents}, web-based scholarly
+articles with two key transparency features:
+\begin{enumerate}
+\item \textbf{Data-driven:} Quantitative statements expressed in natural language --- e.g.~that system $X$ is
+faster than system $Y$ on some task --- are computed from the relevant data, rather than occurring
+merely as static fragments of text.
 
-\figref{scigen-example-website}, adapted from \cite{zhang18}, shows how a transparent document appears to a
-user. \rpnote{Make important point about counterfactuals/generalisability}
+\item \textbf{Data linking:} Readers and reviewers can interactively trace such claims back to the specific
+data elements that support them, through embedded provenance queries.
+\end{enumerate}
+
+\figref{scigen-example-website}, generated from our implementation, illustrates these two features. The upper
+section shows an excerpt from a research paper comparing text encoding techniques~\citep{zhang18}. When a
+reader hovers over the phrase ``does not further improve'', the corresponding data entries are highlighted in
+blue on the left. Other fragments (e.g. ``better than'', ``further improvements'') that refer to the same data
+are also marked, allowing readers to explore supporting and contrasting evidence. The lower section shows a
+counterfactual situation where we imagine the authors' experiments had produced different results: here the
+phrase ``does not further improve'' is replaced by the ``further improves''. Transparent documents thus turn
+static text into interactable, data-driven content able to expose the evidential basis of scholarly claims.
 
 \begin{figure}%[h]
     \centering

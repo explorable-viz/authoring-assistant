@@ -24,9 +24,6 @@
           (getByYear year tableData))) * 100
 
         \end{lstlisting}  \\
-        Rounding* & about 2 degrees warmer                & ~                             \\
-        Cardinal* & three                & ~                             \\
-        Multiplicative* & three times                & ~                             \\
         \rowcolor{gray!20}
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
         Average
@@ -55,7 +52,6 @@ in rankLabel "lowest" pos \end{lstlisting} \\
         \begin{lstlisting}[language=Fluid,numbers=none]
 sumEmissions year tableData
         \end{lstlisting} \\
-        Count*                       & ~                & ~                             \\
         \rowcolor{gray!20}
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
 
@@ -67,8 +63,20 @@ trendWord
  (findWithKey_ "model" "LSTM" tableData).time_s
  growShrink
         \end{lstlisting} \\
-        Graded adjective*            & \hl{extremely likely} to be exceeded in the 20th century               & ~                             \\
-        Reference to visual element*                            & ~                & ~                             \\
+        Pairwise Comparisons
+        & Overall the SVM with polynomial degree 1 kernel outperformed all other kernels with other kernels generally offering \hl{better} precision at a higher cost to recall. &
+        \begin{lstlisting}[language=Fluid,numbers=none]
+trendWord
+(mean (getTableColumn \"svm1_p\" tableData))
+(mean
+[ mean (getTableColumn \"naive_bayes_p\" tableData),
+  mean (getTableColumn \"svm2_p\" tableData),
+  mean (getTableColumn \"svm3_p\" tableData),
+  mean (getTableColumn \"svmr_p\" tableData)
+])
+betterWorse
+
+        \end{lstlisting} \\
         \hline
     \end{tabular}
     \caption{Quantitative/semi-quantitative natural language forms considered in this paper}

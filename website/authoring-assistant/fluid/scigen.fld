@@ -14,6 +14,26 @@ let ordinal n =
 let rankLabel word n =
    (if n == 1 then "" else ordinal n ++ "-") ++ word;
 
+let count val xs = length (filter (fun x -> x == val) xs);
+
+let orderToStr EQ = "EQ";
+    orderToStr LT = "LT";
+    orderToStr GT = "GT";
+
+let overallComparison orders = 
+        let countEQ = count "EQ" orders;
+        let countLT = count "LT" orders;
+        let countGT = count "GT" orders
+        in if (countEQ >= countLT) `and` (countEQ >= countGT) then EQ
+           else if countLT > countGT then LT
+           else GT;
+
+let pairwiseCompareColumns columnA columnB tableData = map (fun x -> orderToStr (compare x.[columnA] x.[columnB])) tableData;
+
+let pairwiseTrendWord val xs compareWord =  
+   let orders = map (fun x -> orderToStr (compare val x)) xs
+   in compareWord (overallComparison orders);
+
 let trendWord n1 n2 compareWord =
     compareWord (compare n1 n2);
 
@@ -44,4 +64,8 @@ let betterWorse EQ = "equal";
 let underOverPerforming EQ = "performing the same as";
     underOverPerforming LT = "performing worse than";
     underOverPerforming GT = "outperforming";
+
+let aHigherLower EQ = "an equivalent";
+    aHigherLower LT = "a lower";
+    aHigherLower GT = "a higher";
 

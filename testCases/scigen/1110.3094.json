@@ -1,6 +1,6 @@
 {
   "datasets": [ "datasets/1110.3094.json" ],
-  "imports": ["util", "datasets/_1110_3094"],
+  "imports": ["scigen", "util", "datasets/_1110_3094"],
   "variables": {},
   "testing-variables": {},
   "paragraph": [
@@ -19,7 +19,7 @@
     },
     {
       "type": "expression",
-      "expression": "\"better\"",
+      "expression": "betterWorse (overallComparison [ orderToStr (overallComparison (pairwiseCompareColumns \"svm1_p\" \"naive_bayes_p\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm1_p\" \"svm2_p\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm1_p\" \"svm3_p\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm1_p\" \"svmr_p\" tableData))])",
       "categories": ["comparison"]
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "type": "expression",
-      "expression": "\"higher\"",
+      "expression": "aHigherLower (overallComparison [ orderToStr (overallComparison (pairwiseCompareColumns \"naive_bayes_r\" \"svm1_r\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm2_r\" \"svm1_r\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm3_r\" \"svm1_r\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svmr_r\" \"svm1_r\" tableData))])",
       "categories": ["comparison"]
     },
     {

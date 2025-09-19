@@ -1,11 +1,20 @@
 \section{Related Work}
 \label{sec:related}
 
+\paragraph{Argument mining.}
+For over fifteen years the field of NLP has been exploring the problem of argument mining, which involves identifying argumentative structures in text, such as claims, premises, and conclusions, and
+mapping them to formal representations~\citep{}. Early work in this area focused on rule-based approaches, while more recent work has leveraged machine learning and deep learning techniques to improve
+performance~\citep{}. The field has also focused on defining annotation schemes for the task, such as the Argumentative Zoning framework~\citep{}.
+Argument mining remains a challenging task, particularly when it comes to handling implicit arguments and reasoning about the relationships between different argumentative
+components~\citep{}. While earlier work focused on specific domains such as legal texts or online resources such as Debatepedia, the community has also started engaging with work that explores the use of argument mining in scientific texts~\citep{liakata2012automatic,...} to better understand the structure of scientific arguments and the relationships between different claims and evidence. 
+
+\paragraph{NLP and scientific writing.} The intersection of NLP and scientific writing has gained increasing attention in recent years, with a focus on improving the clarity, coherence, and overall quality of scientific texts. Various approaches have been proposed, including the use of automated writing assistants, text simplification techniques, and tools for enhancing the argumentative structure of scientific papers~\citep{..,}. These efforts aim to support researchers in effectively communicating their findings and engaging with the broader scientific community.
+
 \paragraph{Interpretable NLP.}
 
 As we saw earlier \todo{ref}, scientific texts routinely make use of comparatives like ``faster'' while
 leaving one of the argument slots implicit, with the context determining the omitted referent. LLMs
-demonstrate considerable competence in resolving these and other more syntatic forms of anaphor such as
+demonstrate considerable competence in resolving these and other more syntactic forms of anaphora such as
 pronouns~\citep{zhu25}, but the resolved referent itself -- concretely, what was being referred to -- remains
 implicit. Interpretable NLP is a recent research direction which aims to support comprehension (and
 production) of text in a more explicit and transparent way~\citep{yulan23}. By generating code that formalises

@@ -4,11 +4,11 @@
  {"model": "huang2015bidirectional", "f1": 90.10, "train_s": "-", "test_s": "-"},
  {"model": "lample2016neural", "f1": 90.94, "train_s": "-", "test_s": "-"},
  {"model": "ma2016end", "f1": 91.21, "train_s": "-", "test_s": "-"},
- {"model": "yang2017transfer", "f1": 91.26, "train_s": "-", "test_s": "-"},
+ {"model": "yang2017transfer", "f1": 91.26000213623047, "train_s": "-", "test_s": "-"},
  {"model": "rei:2017:Long", "f1": 86.26, "train_s": "-", "test_s": "-"},
  {"model": "peters2017semi", "f1":  91.93, "train_s": "-", "test_s": "-"},
- {"model": "BiLSTM", "f1": 90.96, "train_s": 82, "test_s": 9.89},
+ {"model": "BiLSTM", "f1": 90.96, "train_s": 85.0, "test_s": 9.699999809265137},
  {"model": "2 stacked BiLSTM", "f1": 91.02, "train_s": 159, "test_s": 18.88},
  {"model": "3 stacked BiLSTM", "f1": 91.06, "train_s": 235, "test_s": 30.97},
- {"model": "S-LSTM", "f1": 91.57, "train_s": 79, "test_s": 9.78}]
+ {"model": "S-LSTM", "f1": 91.62999725341797, "train_s": 79, "test_s": 9.78}]
 

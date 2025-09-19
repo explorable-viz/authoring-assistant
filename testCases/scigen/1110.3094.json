@@ -1,6 +1,6 @@
 {
   "datasets": [ "datasets/1110.3094.json" ],
-  "imports": ["datasets/_1110_3094"],
+  "imports": ["util", "datasets/_1110_3094"],
   "variables": {},
   "testing-variables": {},
   "paragraph": [
@@ -37,8 +37,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"82.0\"",
-      "categories": ["comparison"]
+      "expression": "minimum (getColumn \"svm1_p\" tableData)",
+      "categories": ["min_max"]
     },
     {
       "type": "literal",
@@ -46,8 +46,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"93.8\"",
-      "categories": ["comparison"]
+      "expression": "maximum (getColumn \"svm1_p\" tableData)",
+      "categories": ["min_max"]
     },
     {
       "type": "literal",
@@ -55,8 +55,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"83.3\"",
-      "categories": ["comparison"]
+      "expression": "minimum (getColumn \"naive_bayes_p\" tableData)",
+      "categories": ["min_max"]
     },
     {
       "type": "literal",
@@ -64,8 +64,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"99.0\"",
-      "categories": ["comparison"]
+      "expression": "maximum (getColumn \"naive_bayes_p\" tableData)",
+      "categories": ["min_max"]
     },
     {
       "type": "literal",
@@ -73,8 +73,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"58.3\"",
-      "categories": ["comparison"]
+      "expression": "minimum (getColumn \"svm1_r\" tableData)",
+      "categories": ["min_max"]
     },
     {
       "type": "literal",
@@ -82,8 +82,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"96.2\"",
-      "categories": ["comparison"]
+      "expression": "maximum (getColumn \"svm1_r\" tableData)",
+      "categories": ["min_max"]
     },
     {
       "type": "literal",
@@ -91,8 +91,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"74.7\"",
-      "categories": ["comparison"]
+      "expression": "minimum (getColumn \"naive_bayes_r\" tableData)",
+      "categories": ["min_max"]
     },
     {
       "type": "literal",
@@ -100,8 +100,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"90.3\"",
-      "categories": ["comparison"]
+      "expression": "maximum (getColumn \"naive_bayes_r\" tableData)",
+      "categories": ["min_max"]
     },
     {
       "type": "literal",

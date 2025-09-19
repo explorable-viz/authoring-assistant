@@ -6,8 +6,8 @@ public enum ExpressionCategory {
     PERCENTAGE("Percentage"),
     DATA_RETRIEVAL("Data Retrieval"),
     DIFFERENCE("Difference"),
-    TOTAL("Total");
-    MINMAX("Min Max")
+    TOTAL("Total"),
+    MINMAX("Minmax");
 
     public final String label;
     ExpressionCategory(String label) {

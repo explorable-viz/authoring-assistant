@@ -1,0 +1,80 @@
+{
+  "datasets": [ "datasets/scigen/1807.07279v3-23.json" ],
+  "imports": ["util", "datasets/scigen/_1807_07279v3_23"],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The correlation scores for 13 different similarity test sets and their averages are reported in Table VI. We observe that, let alone a"
+    },
+    {
+      "type": "expression",
+      "expression": "\"reduction\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": "in performance, the obtained scores indicate an almost uniform"
+    },
+    {
+      "type": "expression",
+      "expression": "\"improvement\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": "in the correlation values for the proposed algorithm,"
+    },
+    {
+      "type": "expression",
+      "expression": "\"outperforming\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": "all the alternatives except Word2Vec baseline on average. Although Word2Sense performed slightly"
+    },
+    {
+      "type": "expression",
+      "expression": "\"better\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": "on some of the test sets, it should be noted that it is trained on a significantly"
+    },
+    {
+      "type": "expression",
+      "expression": "\"larger\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": " corpus. Categories from Roget's thesaurus are groupings of words that are similar in some sense which the original embedding algorithm may fail to capture. These test results signify that the semantic information injected into the algorithm by the additional cost term is"
+    },
+    {
+      "type": "expression",
+      "expression": "\"significant\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": "enough to result in a measurable improvement. It should also be noted that scores obtained by SPINE is unacceptably"
+    },
+    {
+      "type": "expression",
+      "expression": "\"low\"",
+      "categories": ["comparison"]
+    },
+    {
+      "type": "literal",
+      "value": "on almost all tests indicating that it has achieved its interpretability performance at the cost of losing its semantic functions."
+    },
+    {
+      "type": "expression",
+      "expression": "(findWithKey_ \"dataset\" \"SIMLEX-999\" tableData).dataset",
+      "categories": ["comparison"]
+    }
+  ]
+}

@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.negative.result_ambiguity
-
-"""
-	LSTM gives better results compared to CNN from ${"70"} to ${"80"}
-"""

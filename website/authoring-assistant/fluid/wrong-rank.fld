@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.negative._1805_02474v1_10
-
-"""
-	We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), ${"CNN"} is the most efficient among all models compared, with the ${"highest"} model size. On the other hand, a 3-layer stacked CNN gives an accuracy of ${"81.46"} %, which is also the ${"maximum"} compared with BiLSTM, hierarchical attention and S-LSTM.
-"""

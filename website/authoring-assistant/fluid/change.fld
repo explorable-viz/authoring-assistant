@@ -1,6 +1,0 @@
-import methane
-import datasets.methane_emissions
-
-"""
-	The  ${"Residential Commercial Other"} source exhibited the highest percentage decrease in methane emissions between 2015 and 2020
-"""

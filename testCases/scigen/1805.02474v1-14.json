@@ -6,7 +6,36 @@
     "datasets/scigen/_1805_02474v1_14"
   ],
   "variables": {},
-  "testing-variables": {},
+  "testing-variables": {
+    "f1_slstm": [
+      91.40,
+      91.50,
+      91.57,
+      91.63,
+      91.70
+    ],
+    "f1_yang2017transfer": [
+      91.20,
+      91.24,
+      91.26,
+      91.30,
+      91.35
+    ],
+    "train_bilstm": [
+      78,
+      80,
+      82,
+      85,
+      88
+    ],
+    "test_bilstm": [
+      9.5,
+      9.7,
+      9.89,
+      10.1,
+      10.3
+    ]
+  },
   "paragraph": [
     {
       "type": "literal",

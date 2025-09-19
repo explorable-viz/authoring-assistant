@@ -21,6 +21,10 @@ let growShrink EQ = "unchanging";
     growShrink LT = "shrinking";
     growShrink GT = "growing";
 
+let reducedIncreased EQ = "equal";
+    reducedIncreased LT = "reduced";
+    reducedIncreased GT = "increased";
+
 let smallerHigher EQ = "equal";
     smallerHigher LT = "smaller";
     smallerHigher GT = "larger";
@@ -44,3 +48,15 @@ let betterWorse EQ = "equal";
 let underOverPerforming EQ = "performing the same as";
     underOverPerforming LT = "performing worse than";
     underOverPerforming GT = "outperforming";
+
+let underOverPerformed EQ = "performed the same as";
+    underOverPerformed LT = "performed worse than";
+    underOverPerformed GT = "outperformed";
+
+let highlow EQ = "same";
+    highlow LT = "low";
+    highlow GT = "high";
+
+let higherlower EQ = "same as";
+    higherlower LT = "lower";
+    higherlower GT = "higher";

@@ -25,6 +25,9 @@ public abstract class ValueOptions {
         if (value instanceof Float num) {
             return new ValueOptions.Number(num);
         }
+        if (value instanceof BigDecimal num) {
+            return new ValueOptions.Number(num.floatValue());
+        }
         throw new IllegalArgumentException("Unsupported value type: " + value.getClass().getSimpleName());
     }
     public abstract Variables expandVariable(SplittableRandom random, String varName);

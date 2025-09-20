@@ -29,6 +29,5 @@ let maximumBy f [] = error "Empty list!";
             helper ys (if f y > f current then y else current)
       in helper xs x;
 
-
 let getColumn columnName = map (fun x -> x.[columnName]);
 

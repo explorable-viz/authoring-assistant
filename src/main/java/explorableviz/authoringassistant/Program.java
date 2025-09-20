@@ -1,6 +1,5 @@
 package explorableviz.authoringassistant;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import explorableviz.authoringassistant.paragraph.ExpressionCategory;
 import explorableviz.authoringassistant.paragraph.Expression;
 import explorableviz.authoringassistant.paragraph.Literal;
@@ -196,7 +195,7 @@ public class Program {
                         datasets,
                         imports,
                         replaceVariables(code, variables),
-                        loadDatasetsFiles(datasets, testVariables),
+                        loadDatasetsFiles(datasets, expandVariables(tv, null)),
                         casePath,
                         test_configurations
                 ));

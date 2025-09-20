@@ -123,7 +123,8 @@ public abstract class ValueOptions {
 
         @Override
         public Variables expandVariable(SplittableRandom random, String varName) {
-            return value.get(random.nextInt(value.size())).expandVariable(random, varName);
+            int index = random == null ? 0 : random.nextInt(value.size());
+            return value.get(index).expandVariable(random, varName);
         }
     }
 

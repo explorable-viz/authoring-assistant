@@ -12,23 +12,18 @@ The system is composed of two agents:
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{fig/entire-workflow}
-    \caption{Workflow}\label{fig:architecture}
-\end{figure}
-
-\begin{figure}
-    \centering
     \includegraphics[width=0.8\linewidth]{fig/interpretation-agent}
     \caption{Human-in-the-Loop \InterpretationAgent workflow (Author intervention states in grey)}
+    \label{fig:interpretation-agent}
 \end{figure}
 
-Figure~\ref{fig:architecture} shows the overall architecture of the system. The author initially provides the
-text and accompanying data. The \SuggestionAgent analyses the input and identifies candidate fragments of
-natural language which could be replaced by Fluid expressions. The user highlightes a fragment of interest,
-which is then sent to the \InterpretationAgent, which generates a corresponding candidate expression.
-Internally the \InterpretationAgent uses a compiler-in-the-loop validation process to ensure the expression is
-well-formed. The user is then able to accept the expression (in which case it is incorporated into the
-program) or reject and leave the text uninterpreted.
+Figure~\ref{fig:interpretation-agent} shows the overall architecture of the \InterpretationAgent. The author
+initially provides the text and accompanying data. The \SuggestionAgent analyses the input and identifies
+candidate fragments of natural language which could be replaced by Fluid expressions. The user highlightes a
+fragment of interest, which is then sent to the \InterpretationAgent, which generates a corresponding
+candidate expression. Internally the \InterpretationAgent uses a compiler-in-the-loop validation process to
+ensure the expression is well-formed. The user is then able to accept the expression (in which case it is
+incorporated into the program) or reject and leave the text uninterpreted.
 
 \begin{figure}[ht]
     \centering

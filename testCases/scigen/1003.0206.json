@@ -2,7 +2,14 @@
   "datasets": [ "datasets/1003.0206.json" ],
   "imports": ["scigen", "util", "datasets/_1003_0206"],
   "variables": {},
-  "testing-variables": {},
+  "testing-variables": {
+    "sim_errors_39": [16, 16, 16, 16, 16],
+    "sim_errors_13": [49, 49, 49, 49, 49],
+    "resamp_errors_39": [52, 52, 52, 52, 52],
+    "resamp_errors_13": [133, 133, 133, 133, 133],
+    "sim_factor": [3.06, 3.06, 3.06, 3.06, 3.06],
+    "resamp_factor": [2.56, 2.56, 2.56, 2.56, 2.56]
+  },
   "paragraph": [
     {
       "type": "literal",

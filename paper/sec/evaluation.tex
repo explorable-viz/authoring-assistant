@@ -72,10 +72,20 @@ Results show that the success rate was 75\% for simple expressions (one category
 and dropped to 58\% when three categories were involved.
 
 
-
-
 \subsection{Negative Cases}
 \label{subsec:negative-cases}
+
+Table~\ref{tab:problematic_cases} presents examples of problematic cases in which the system was asked to generate a valid
+fluid expression.
+In these cases, producing a valid expression is challenging because the input data (or the NL query) contains ambiguities
+that prevent the construction of a well-formed expression.
+
+For instance, in the \textit{missing-data} problem, the \InterpretationAgent should generate a function to compute
+ the average of the emissions. However, the input data does not provide information for all months.
+
+In such cases, the system was unable to generate a general expression and instead produced the expected value directly.
+
+
 
 \begin{table}[t]
     \centering
@@ -108,7 +118,7 @@ and dropped to 58\% when three categories were involved.
         \hline
     \end{tabular}
     \caption{Categories of problematic example}
-    \label{tab:ambiguita}
+    \label{tab:problematic_cases}
 \end{table}
 
 

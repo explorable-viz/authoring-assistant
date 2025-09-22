@@ -90,6 +90,12 @@ public class AuthoringAssistant {
                 sessionPrompts.addUserPrompt("Null Expression");
                 continue;
             }
+            if(candidate.getExpr().equals(expected.getValue())) {
+                sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
+                sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
+                        "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
+                continue;
+            }
             for (Map<String, String> datasets : subProgram.getTest_datasets()) {
 
                 logger.info(STR."Received response: \{candidate.getExpr()}");

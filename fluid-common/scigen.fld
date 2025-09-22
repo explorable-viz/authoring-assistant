@@ -35,7 +35,7 @@ let improvements EQ = "no further improvements";
     improvements LT = "no further improvements";
     improvements GT = "further improvements";
 
-let shorterLonger EQ = "equal";
+let shorterLonger EQ = "identical";
     shorterLonger LT = "shorter";
     shorterLonger GT = "longer";
 

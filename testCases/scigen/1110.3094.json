@@ -19,7 +19,7 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (overallComparison [ orderToStr (overallComparison (pairwiseCompareColumns \"svm1_p\" \"naive_bayes_p\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm1_p\" \"svm2_p\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm1_p\" \"svm3_p\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm1_p\" \"svmr_p\" tableData))])",
+      "expression": "betterWorse (overallComparison (concat [ pairwiseCompareColumns \"svm1_p\" \"naive_bayes_p\" tableData , pairwiseCompareColumns \"svm1_p\" \"svm2_p\" tableData, pairwiseCompareColumns \"svm1_p\" \"svm3_p\" tableData, pairwiseCompareColumns \"svm1_p\" \"svmr_p\" tableData]))",
       "categories": ["comparison"]
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "type": "expression",
-      "expression": "aHigherLower (overallComparison [ orderToStr (overallComparison (pairwiseCompareColumns \"naive_bayes_r\" \"svm1_r\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm2_r\" \"svm1_r\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svm3_r\" \"svm1_r\" tableData)), orderToStr( overallComparison (pairwiseCompareColumns \"svmr_r\" \"svm1_r\" tableData))])",
+      "expression": "aHigherLower (overallComparison (concat [ pairwiseCompareColumns \"naive_bayes_r\" \"svm1_r\" tableData, pairwiseCompareColumns \"svm2_r\" \"svm1_r\" tableData, pairwiseCompareColumns \"svm3_r\" \"svm1_r\" tableData, pairwiseCompareColumns \"svmr_r\" \"svm1_r\" tableData]))",
       "categories": ["comparison"]
     },
     {

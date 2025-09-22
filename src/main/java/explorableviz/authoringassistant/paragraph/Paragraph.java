@@ -68,7 +68,8 @@ public class Paragraph extends ArrayList<TextFragment> {
                 literalBuilder.append(literal.getValue());
             } else if (element instanceof Expression expression) {
                 if (exprCount < numComputedExpr) {
-                    Expression computedExpr = (Expression) this.get(k);
+                    TextFragment fragment = this.get(k);
+                    Expression computedExpr = fragment instanceof Expression ? (Expression) fragment : null;
                     p.add(new Literal(literalBuilder.toString(), null));
                     literalBuilder.setLength(0);
                     p.add(computedExpr != null ? computedExpr : expression);

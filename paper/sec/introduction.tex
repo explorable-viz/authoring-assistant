@@ -81,8 +81,34 @@ base. Perhaps just to aid their own comprehension, or to provide some kind of ju
 
 \subsection{Target idioms of natural language}
 
-NLP aspect of the problem is potentially a big problem space in itself. We will restrict interest to certain
-idiomatic uses of natural language in making/justifying scientific claims. Table~\ref{tab:fluid_examples}
+Table~\ref{tab:fluid_examples} summarises the natural language idioms we have studied in this paper. In the
+realm of traditional quantitative expressions, and when using state-of-the-art models like gpt4o and gpt5, our
+system is able to recognise direct numerical values, percentages, averages, minima and maxima, ranks, and
+totals, each mapped to a corresponding computation over the source dataset. For example, phrases such as ``the
+Energy Sector accounts for 52.80\% of total emissions'' or ``the expected projected methane emissions for 2030
+is 13.5'' are interpreted as division and aggregation operations over data values. Similarly, ``recorded its
+highest emissions in 2030'' is interpreted as a `maximumBy` query, while rank-based statements such as ``CNN
+gives the lowest accuracy'' are interpreted as ranking computations.
+
+We also consider \emph{trend} expressions, which include relative or comparative natural language phrases
+describing how some property evolves over time. These include single comparisons (e.g.~``training time growing
+from 67 to 106 seconds'') and pairwise comparisons (e.g. “SVM outperformed all other kernels, offering better
+precision”). Such idioms are mapped to higher-level operators like trendWord, growShrink, and betterWorse,
+which combine statistical aggregation with semantic markers of relative performance. Taken together, these
+categories cover a substantial portion of the numerical reasoning idioms found in empirical scientific
+writing.
+
+Notably, the current coverage omits several common linguistic forms. We have yet to study the ability of LLMs
+to interpret approximate quantitative terms like ``around 50\%'' or ``roughly 100 instances'', nor
+interval-based descriptions such as ``between 30 and 40\%” or ``within 5–10 seconds''. We have no reason for
+thinking these will present specific difficulties. ``Graded'' modal adjectives like ``slightly better'',
+``significantly higher'' present more of a challenge linguistically~\cite{lassiter17}. Likewise, idioms
+expressing trends over time in nuanced or qualified ways (e.g. ``steady increase'', ``sharp decline'') or
+distributional descriptors like ``most models'', ``the majority of cases'', or ``usually performs better
+than'' present significant challenges to formal interpretation because of their reliance on non-standard
+quantifiers. Extending coverage to these idioms would substantially deepen our tool's ability to bridge
+natural language reporting with interpretation in terms of the underlying dataset. We discuss this further in
+\secref{future-work}.
 
 \input{fig/natural-language-forms}
 

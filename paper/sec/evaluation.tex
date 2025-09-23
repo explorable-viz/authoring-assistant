@@ -59,9 +59,61 @@ Figure \ref{fig:success_rate_by_category} shows the results obtained in generati
 \end{figure}
 
 \subsection{Results}
-In this section, we present the experimental results.
+
+\begin{table}[h!]
+    \scriptsize
+
+    \centering
+    \begin{subtable}{0.45\linewidth}
+        \centering
+        \begin{tabular}{lcccc}
+            \hline
+            & \multicolumn{2}{c}{\textbf{gpt4o}} & \multicolumn{2}{c}{\textbf{gpt5}} \\
+            & \textbf{Success Rate} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
+            \hline
+            Comparison     & 74   & 3 & 77.4 & 2 \\
+            Data Retrieval & 76   & 3 & 77.4 & 2 \\
+            Difference     & 80   & 3 & 77.4 & 2 \\
+            Min/max        & 50   & 3 & 77.4 & 2 \\
+            Rank           & 44   & 3 & 77.4 & 2 \\
+            Total          & 33   & 3 & 77.4 & 2 \\
+            Overall        & 74.9 & 3 & 77.4 & 2 \\
+            \hline
+        \end{tabular}
+        \caption{Results with target-value = true}
+        \label{tab:results_true}
+    \end{subtable}%
+    \hfill
+    \begin{subtable}{0.45\linewidth}
+        \centering
+        \begin{tabular}{lcccc}
+            \hline
+            & \multicolumn{2}{c}{\textbf{gpt4o}} & \multicolumn{2}{c}{\textbf{gpt5}} \\
+            & \textbf{Success Rate} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
+            \hline
+            Comparison     & -- & -- & -- & -- \\
+            Data Retrieval & -- & -- & -- & -- \\
+            Difference     & -- & -- & -- & -- \\
+            Min/max        & -- & -- & -- & -- \\
+            Rank           & -- & -- & -- & -- \\
+            Total          & -- & -- & -- & -- \\
+            Overall        & -- & -- & -- & -- \\
+            \hline
+        \end{tabular}
+        \caption{Results without target-value}
+        \label{tab:results_no_target}
+    \end{subtable}
+    \caption{Comparison of success rates (with standard deviation) between \textbf{gpt4o} and \textbf{gpt5} across different task categories, reported with and without the use of target-values.}
+    \label{tab:results_combined}
+\end{table}
+
+In this section, we report the experimental results.
+Table \ref{tab:results_combined} summarizes the performance of \textit{gpt4o} and the most recent OpenAI model, \textit{gpt5}, under two different settings: with target-value sharing enabled and without target-value sharing.
 Overall, the system produced a valid fluid expression in 74.9\% of the cases (S.D. 3\%).
-Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category.
+
+Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and without target-value sharing.
+The results show that providing the target value is crucial for achieving a high success rate.
+Moreover, the \InterpretationAgent generates a correct expression in approximately XX\% of the cases.
 
 The system achieved performance above 70\% in comparison, data retrieval, and min/max search tasks.
 In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (50\%).
@@ -71,9 +123,14 @@ Fluid instructions combining multiple operations were associated with multiple c
 Results show that the success rate was 75\% for simple expressions (one category), increased to 85\% for two categories,
 and dropped to 58\% when three categories were involved.
 
+In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
+correct expression when no reference string was given.
+On the SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
+Without the target string, performance decreased moderately to 39.4\%, indicating that the model retains substantial
+ability to reconstruct valid solutions even without explicit guidance
 
-\subsection{Negative Cases}
-\label{subsec:negative-cases}
+\subsection{Problematic Cases}
+\label{subsec:problematic-cases}
 
 Table~\ref{tab:problematic_cases} presents examples of problematic cases in which the system was asked to generate a valid
 fluid expression.

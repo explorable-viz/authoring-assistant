@@ -1,17 +1,17 @@
 \section{Introduction: Transparent, Data-Driven Documents}
 
-Making sense of and verifying data-driven claims is hard, even when the evidence base is open and accessible.
-A key challenge lies in tracing specific claims back to the underlying data. In peer review, for example,
-empirical claims typically lack author-supplied links to data, making them hard for reviewers to check
+Making sense of and verifying data-driven claims is hard even with open and accessible data. A key challenge
+lies in tracing specific claims back to the relevant data. In peer review, for example, empirical claims
+typically lack author-supplied links to data, making them hard for reviewers to check
 directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to simple
 errors in data management or analysis~\citep{hu25}. The use of large language models (LLMs) to interpret
 scholarly documents has seen considerable attention recently, from fact-checking~\citep{abu-ahmad25} to
 interpretation of charts and figures~\citep{roberts24}, but current LLM interfaces do not support direct
-interrogation of visual or other outputs.
+interrogation of visual or other outputs for traceability to inputs.
 
-Recent work on data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
-takes a more infrastructural approach to tracing outputs back to data. These approaches link computed outputs
-to their data sources directly, by tracking dependency information. This allows visual outputs to support
+Recent advances in data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
+have pushed in this direction using a more infrastructural approach. These approaches link computed outputs
+to their data sources directly by tracking dependency information. This allows visual outputs to support
 \emph{provenance queries}, user interactions (e.g. mousing over visual elements) that reveal how output
 features relate to data. The advantage of this approach is that the relationships to data sources are exposed
 automatically via trusted infrastructure, typically a query language or general-purpose programming language

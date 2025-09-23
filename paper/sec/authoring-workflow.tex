@@ -48,7 +48,21 @@ incorporated into the program) or reject and leave the text uninterpreted.
 
 \subsection{System Prompt}
 \label{subsec:system-prompt}
-Fig. \ref{fig:system-prompt} shows the system prompt defined for the Authoring Assistant.
+
+In the system prompt used to guide the Interpretation Assistant in replacing placeholder tags in user-authored
+paragraphs with executable Fluid expressions, we include the following information about the transparent
+document under construction, the exact task to perform, and constraints on the expected output. The full
+system prompt is given in \appref{system-prompt:interpretation-agent}.
+
+\begin{itemize}
+\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
+the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
+indicating the text fragment to replace, plus the full text for the paragraph.
+\item \textbf{Task description:} description of the LLM task, namely to identify the placeholder, generate a
+Fluid expression that produces the target string using supplied dataset and definitions in scope.
+\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
+with no extraneous content (such as comments).
+\end{itemize}
 
 \begin{figure}[h]
     \centering

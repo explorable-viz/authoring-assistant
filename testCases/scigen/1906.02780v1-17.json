@@ -2,7 +2,14 @@
   "datasets": [ "datasets/scigen/1906.02780v1-17.json" ],
   "imports": ["scigen", "util", "datasets/scigen/_1906_02780v1_17"],
   "variables": {},
-  "testing-variables": {},
+  "testing-variables": {
+    "layers_1_bleu": [23.82, 24.10, 23.50, 24.20, 23.90],
+    "layers_5_bleu": [24.34, 24.60, 24.00, 24.80, 24.20],
+    "layers_1_speedup": ["3.8x", "3.9x", "3.6x", "4.0x", "3.7x"],
+    "layers_5_speedup": ["1.4x", "1.5x", "1.3x", "1.6x", "1.4x"],
+    "k_variable_bleu": [25.31, 25.50, 25.00, 25.80, 25.20],
+    "k_variable_speedup": ["3.1x", "3.2x", "2.9x", "3.3x", "3.0x"]
+  },
   "paragraph": [
     {
       "type": "literal",

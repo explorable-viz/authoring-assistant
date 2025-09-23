@@ -3,9 +3,9 @@
 { "gong_et_al": "Method", "topic_science": "Conc. Input", "p_758": "", "p_012": "", "r_885": "", "r_071": "", "f_818": "", "f_028": ""},
 { "gong_et_al": "AVG_COS_SIM", "topic_science": "Label", "p_758": 0.939, "p_012": " .043", "r_885": 0.839, "r_071": " .067", "f_818": 0.884, "f_028": " .038"},
 { "gong_et_al": "AVG_COS_SIM", "topic_science": "Description", "p_758": 0.870, "p_012": " .068", "r_885": 0.834, "r_071": " .048", "f_818": 0.849, "f_028": " .038"},
-{ "gong_et_al": "AVG_COS_SIM", "topic_science": "Both", "p_758": 0.915, "p_012": " .040", "r_885": 0.938, "r_071": " .047", "f_818":  0.926, "f_028": " .038"},
+{ "gong_et_al": "AVG_COS_SIM", "topic_science": "Both", "p_758": 0.915, "p_012": " .040", "r_885": 0.938, "r_071": " .047", "f_818": 0.926, "f_028": " .038"},
 { "gong_et_al": "TOP_n_COS_SIM_AVG", "topic_science": "Label", "p_758": 0.854, "p_012": " .077", "r_885": 0.861, "r_071": " .044", "f_818": 0.856, "f_028": " .054"},
-{ "gong_et_al": "TOP_n_COS_SIM_AVG", "topic_science": "Description", "p_758": 0.799, "p_012": " .063", "r_885": 0.766, "r_071": " .094", "f_818": 0.780, "f_028": " .068"},
-{ "gong_et_al": "TOP_n_COS_SIM_AVG", "topic_science": "Both", "p_758": 0.850, "p_012": " .059", "r_885": 0.918, "r_071": " .049", "f_818":  0.881, "f_028": " .037"}
+{ "gong_et_al": "TOP_n_COS_SIM_AVG", "topic_science": "Description", "p_758": 0.799, "p_012": " .063", "r_885": 0.766, "r_071": " .094", "f_818": 0.78, "f_028": " .068"},
+{ "gong_et_al": "TOP_n_COS_SIM_AVG", "topic_science": "Both", "p_758": 0.850, "p_012": " .059", "r_885": 0.918, "r_071": " .049", "f_818": 0.881, "f_028": " .037"}
 ]
 

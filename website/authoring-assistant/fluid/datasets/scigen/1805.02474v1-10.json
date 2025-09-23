@@ -1,6 +1,6 @@
 [
- {"model": "LSTM", "time_s": 80.0, "acc": 80.72, "param": 5977},
- {"model": "BiLSTM", "time_s": 106.0, "acc": 81.73, "param": 7059},
+ {"model": "LSTM", "time_s": 67, "acc": 80.72, "param": 5977},
+ {"model": "BiLSTM", "time_s": 106, "acc": 81.73, "param": 7059},
  {"model": "2 stacked BiLSTM", "time_s": 207, "acc": 81.97, "param": 9221},
  {"model": "3 stacked BiLSTM", "time_s": 310, "acc": 81.53, "param": 11383},
  {"model": "4 stacked BiLSTM", "time_s": 411, "acc": 81.37, "param": 13546},
@@ -15,4 +15,4 @@
  {"model": "BiLSTM+Attention", "time_s": 126, "acc": 82.37, "param": 7419},
  {"model": "S-LSTM+Attention", "time_s": 87, "acc": 83.07, "param": 8858}
 ]
-
+]

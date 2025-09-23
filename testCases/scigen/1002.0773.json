@@ -2,7 +2,12 @@
   "datasets": [ "datasets/1002.0773.json" ],
   "imports": ["datasets/_1002_0773"],
   "variables": {},
-  "testing-variables": {},
+  "testing-variables": {
+    "peak_wer": [12.5, 12.5, 12.5, 12.5, 12.5],
+    "final_wer": [12.3, 12.3, 12.3, 12.3, 12.3],
+    "initial_wer": [17.4, 17.4, 17.4, 17.4, 17.4],
+    "mid_wer": [13.3, 13.3, 13.3, 13.3, 13.3]
+  },
   "paragraph": [
     {
       "type": "literal",

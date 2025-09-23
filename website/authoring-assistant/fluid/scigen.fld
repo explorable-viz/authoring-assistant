@@ -1,3 +1,5 @@
+import util
+
 let ordinalMap = [
     { lastDigit: 1, suffix: "st" },
     { lastDigit: 2, suffix: "nd" },
@@ -33,7 +35,7 @@ let improvements EQ = "no further improvements";
     improvements LT = "no further improvements";
     improvements GT = "further improvements";
 
-let shorterLonger EQ = "equal";
+let shorterLonger EQ = "identical";
     shorterLonger LT = "shorter";
     shorterLonger GT = "longer";
 
@@ -44,4 +46,8 @@ let betterWorse EQ = "equal";
 let underOverPerforming EQ = "performing the same as";
     underOverPerforming LT = "performing worse than";
     underOverPerforming GT = "outperforming";
+
+let underOverPerformed EQ = "performed the same as";
+    underOverPerformed LT = "performed worse than";
+    underOverPerformed GT = "outperformed";
 

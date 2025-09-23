@@ -35,12 +35,13 @@ data elements that support them, through embedded provenance queries.
 
 \figref{scigen-example-website}, generated from our implementation, illustrates these two features. The upper
 section shows an excerpt from a research paper comparing text encoding techniques~\citep{zhang18}. When a
-reader hovers over the phrase ``does not further improve'', the corresponding data entries are highlighted in
-blue on the left. Other fragments (e.g. ``better than'', ``further improvements'') that refer to the same data
-are also marked, allowing readers to explore supporting and contrasting evidence. The lower section shows a
-counterfactual situation where we imagine the authors' experiments had produced different results: here the
-phrase ``does not further improve'' is replaced by the ``further improves''. Transparent documents thus turn
-static text into interactable, data-driven content able to expose the evidential basis of scholarly claims.
+reader hovers over the phrase \textfrag{does not further improve}, the corresponding data entries are
+highlighted in blue on the left. Other fragments (e.g. \textfrag{better than}, \textfrag{further
+improvements}) that refer to the same data are also marked, allowing readers to explore supporting and
+contrasting evidence. The lower section shows a counterfactual situation where we imagine the authors'
+experiments had produced different results: here the phrase \textfrag{does not further improve} is replaced by
+\textfrag{further improves}. Transparent documents thus turn static text into interactable, data-driven
+content able to expose the evidential basis of scholarly claims.
 
 \begin{figure}%[h]
     \centering
@@ -81,34 +82,36 @@ base. Perhaps just to aid their own comprehension, or to provide some kind of ju
 
 \subsection{Target idioms of natural language}
 
-Table~\ref{tab:fluid_examples} summarises the natural language idioms we study in this paper. When using
+Table~\ref{tab:fluid_examples} summarises the natural language idioms studied in this paper. With
 state-of-the-art models like gpt4o and gpt5, our system is able to resolve basic table lookups of direct
 numerical values, as well as computations of percentages, averages, minima and maxima, and totals, each mapped
-to a corresponding aggregation over the source dataset. For example, phrases such as ``the Energy Sector
-accounts for 52.80\% of total emissions'' or ``the expected projected methane emissions for 2030 is 13.5'' are
-interpreted as division and averaging operations over the relevant data values. Similarly, ``recorded its
-highest emissions in 2030'' is interpreted as a \kw{maximumBy} query, while rank-based statements such as
-``CNN gives the lowest accuracy'' are interpreted as ranking computations.
+to the corresponding aggregation over the source data. For example, phrases such as \textfrag{the Energy
+Sector accounts for 52.80\% of total emissions} or \textfrag{average methane emissions for 2030 is 13.51} are
+interpreted in terms of sum and mean operations respectively over the relevant data values. Similarly,
+\textfrag{recorded its highest emissions in 2030} is interpreted as a \kw{maximumBy} query, while a statement
+such as \textfrag{CNN gives the lowest accuracy} is interpreted as an explicit computation of rank.
 
-We also consider \emph{trend} expressions, which include relative or comparative natural language phrases
-describing how some property evolves over time. These include single comparisons (e.g.~``training time growing
-from 67 to 106 seconds'') and universally quantified comparisons (e.g.~``SVM outperformed all other
-kernels''). Such idioms are mapped to higher-level operators like \kw{trendWord} which are parameterised on
-helper functions such as \kw{growShrink} and \kw{betterWorse} which maps comparisons to appropriate natural
-language phrases. Taken together, these categories cover a substantial portion of the numerical reasoning
-idioms found in empirical scientific writing.
+We also consider \emph{trend} expressions, which comparative natural language phrases describing how a data
+attribute evolves over time, such as \textfrag{training time growing from 67 to 106 seconds}. Such idioms are
+mapped to higher-order functions like \kw{trendWord} which are parameterised on additional helper functions
+such as \kw{growShrink} and \kw{betterWorse} (\figref{}) which map comparisons to appropriate natural language
+phrases.
 
-Notably, the current coverage omits several common linguistic forms. We have yet to study the ability of LLMs
-to interpret approximate quantitative terms like \textbf{around 50\%} or \textbf{roughly 100 instances}, nor
-interval-based descriptions such as \textbf{between 30 and 40}\% or \textbf{within 5–10 seconds}. We have no
-reason for thinking these will present specific difficulties, however. So-called \emph{graded} modal
-adjectives which express comparatives and other adjectives in nuanced or qualified ways -- like
-\textbf{slightly better} and \textbf{significantly higher} -- are likely to be more
-challenging~\cite{lassiter17}, especially when combined with trends over time, as in \textbf{steady increase}
-or \textbf{sharp decline}. Distributional descriptors like ``most models'', ``the majority of cases'', or
-``usually performs better than'' present significant challenges to formal interpretation because of their
-reliance on non-standard quantifiers. Extending coverage to these idioms would substantially deepen our tool's
-ability to bridge natural language reporting with interpretation in terms of the underlying dataset. We
+\input{fig/scigen-lib}
+
+Taken together, these categories cover a representative portion of the numerical reasoning idioms found in the
+SciGen benchmark. However, some common linguistic forms are not covered in our analysis. We have yet to study
+approximate quantitative terms like \textfrag{around 50\%} or \textfrag{roughly 100 instances}, nor
+interval-based descriptions such as \textfrag{between 30 and 40\%} or \textfrag{within 5–10 seconds}. We have
+no reason for thinking these will present specific difficulties, however. Other forms are likely to be more
+challenging. So-called \emph{graded} modal adverbs~\citep{lassiter17} which modify adjectival comparatives
+like ``better`` -- like \textfrag{slightly better} and \textfrag{significantly higher} -- especially when
+combined with trends over time, as in \textfrag{steadily increasing} or \textfrag{sharply declining}, because
+the interpretation of these qualifiers is quite subjective and contextual. Adverbial quantifiers like
+\textfrag{generally} and \textfrag{usually} also present challenges because colloquial use (``most'' meaning
+``greater than any other alternative proportion'' may differ from more formal uses (``most'' meaning a
+majority, i.e.~greater than 50\% of cases). Extending coverage to these idioms would substantially deepen our
+tool's ability to bridge natural language reporting with interpretation in terms of the underlying dataset. We
 discuss this further in \secref{future-work}.
 
 \input{fig/natural-language-forms}

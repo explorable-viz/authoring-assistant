@@ -19,12 +19,28 @@ The system is composed of two LLM-based agents:
 
 The author initially provides the text and accompanying data. The \SuggestionAgent analyses the inputs and
 identifies candidate fragments of natural language which could be replaced by Fluid expressions.
-Figure~\ref{fig:interpretation-agent} then shows the overall workflow of the \InterpretationAgent, with the
-human author in the loop. The user highlights a fragment of interest, which is then sent to the
-\InterpretationAgent, which generates a corresponding candidate expression. Internally the
-\InterpretationAgent uses a compiler-in-the-loop validation process to ensure the expression is well-formed.
-The user is then able to accept the expression (in which case it is incorporated into the program) or reject
-and leave the text uninterpreted.
+Figure~\ref{fig:interpretation-agent} then shows the human-in-the loop workflow of the \InterpretationAgent.
+The entry point is the selection by the author of a fragment of text $s$ to interpret, a fragment which may or
+may not have been highlighted previously by the \SuggestionAgent. The system then generates a candidate Fluid
+expression $e$ by prompting the LLM (\secref{prompt-design} below). The expression is validated through a
+closed loop program synthesis step to check that it is well-formed, and, if so, that it evaluates to the
+target fragment of text $s$. If $e$ indeed evaluates to $s$, then the system replaces $s$ in the original
+top-level string with the interpolation expression \kw{\{$e$\}}. This is the primary successful path through
+the loop and returns the system to the ideal state where it is waiting for another top-level interaction from
+the author.
+
+Otherwise, the Fluid command-line either returned an error (either a syntax error or runtime error), or it
+succeeded but $e$ evaluated to some other string $s' \neq s$. Both cases trigger prompt augmentation with an
+appropriate error message, and the system retries generation. In cases where the expression remains invalid or
+mismatched, the user may intervene by resolving the mismatch manually or rejecting the candidate. Once a valid
+expression is approved, the updated text is spliced back into the document, and any downstream interactions
+(e.g. reloading the web page) are checked. This closed-loop design combines automated synthesis with
+validation and author oversight, ensuring both correctness and usability of the generated code.
+
+The user highlights a fragment of interest, which is then sent to the \InterpretationAgent, which generates a
+corresponding candidate expression. Internally the \InterpretationAgent uses a compiler-in-the-loop validation
+process to ensure the expression is well-formed. The user is then able to accept the expression (in which case
+it is incorporated into the program) or reject and leave the text uninterpreted.
 
 \begin{figure}[ht]
     \centering
@@ -47,8 +63,8 @@ and leave the text uninterpreted.
 \end{figure}
 
 
-\subsection{System Prompt}
-\label{subsec:system-prompt}
+\subsection{Prompt Design}
+\label{sec:prompt-design}
 
 In the system prompt used to guide the Interpretation Assistant in replacing placeholder tags in user-authored
 paragraphs with executable Fluid expressions, we include the following information about the transparent

@@ -2,12 +2,12 @@
 \label{sec:authoring-workflow}
 
 Figure~\ref{fig:overall-architecture} shows the system architecture and an example flow.
-The system is composed of two agents:
+The system is composed of two LLM-based agents:
 
 \begin{itemize}
-    \item \textbf{\SuggestionAgent}. LLM-based agent which identifies text fragments potentially computable from data.
-    \item \textbf{\InterpretationAgent}. LLM-based agent which, for a given text fragment (provided by
-    SuggestionAgent or by the author), attempts to synthesise a Fluid expression computing the target text.
+    \item \textbf{\SuggestionAgent}. Identifies text fragments potentially computable from data.
+    \item \textbf{\InterpretationAgent}. For a given text fragment (provided by SuggestionAgent or author),
+    attempts to synthesise Fluid expression computing target fragment.
 \end{itemize}
 
 \begin{figure}
@@ -17,13 +17,14 @@ The system is composed of two agents:
     \label{fig:interpretation-agent}
 \end{figure}
 
-Figure~\ref{fig:interpretation-agent} shows the overall architecture of the \InterpretationAgent. The author
-initially provides the text and accompanying data. The \SuggestionAgent analyses the input and identifies
-candidate fragments of natural language which could be replaced by Fluid expressions. The user highlightes a
-fragment of interest, which is then sent to the \InterpretationAgent, which generates a corresponding
-candidate expression. Internally the \InterpretationAgent uses a compiler-in-the-loop validation process to
-ensure the expression is well-formed. The user is then able to accept the expression (in which case it is
-incorporated into the program) or reject and leave the text uninterpreted.
+The author initially provides the text and accompanying data. The \SuggestionAgent analyses the inputs and
+identifies candidate fragments of natural language which could be replaced by Fluid expressions.
+Figure~\ref{fig:interpretation-agent} then shows the overall workflow of the \InterpretationAgent, with the
+human author in the loop. The user highlights a fragment of interest, which is then sent to the
+\InterpretationAgent, which generates a corresponding candidate expression. Internally the
+\InterpretationAgent uses a compiler-in-the-loop validation process to ensure the expression is well-formed.
+The user is then able to accept the expression (in which case it is incorporated into the program) or reject
+and leave the text uninterpreted.
 
 \begin{figure}[ht]
     \centering

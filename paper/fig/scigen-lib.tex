@@ -1,4 +1,5 @@
 \begin{figure}[t]
+\begin{minipage}[t]{0.48\textwidth}
     \small
 \begin{lstlisting}
 let ordinalMap = [
@@ -10,13 +11,19 @@ let ordinalMap = [
 let ordinal n =
    if n <= 0 then error "n <= 0 not supported"
    else if (n < 4) then
-      numToStr n ++ (findWithKey_ "lastDigit" n ordinalMap).suffix
-   else if (n >= 4) `and` (n <= 20) then numToStr n ++ "th"
+      numToStr n ++
+      (findWithKey_ "lastDigit" n ordinalMap).suffix
+   else if (n >= 4) `and` (n <= 20) then
+      numToStr n ++ "th"
    else error "n > 20 not supported";
 
 let rankLabel word n =
    (if n == 1 then "" else ordinal n ++ "-") ++ word;
-
+\end{lstlisting}
+\end{minipage}%
+\hspace{12mm}%
+\begin{minipage}[t]{0.43\textwidth}
+\begin{lstlisting}[firstnumber=19]
 let trendWord n1 n2 compareWord =
     compareWord (compare n1 n2);
 
@@ -32,6 +39,7 @@ let improvements EQ = "no further improvements";
     improvements LT = "no further improvements";
     improvements GT = "further improvements";
 \end{lstlisting}
+\end{minipage}
     \caption{SciGen helper functions (representative examples)}
     \label{fig:fluid-scigen}
 \end{figure}

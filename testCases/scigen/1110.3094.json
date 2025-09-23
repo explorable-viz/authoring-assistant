@@ -2,7 +2,12 @@
   "datasets": [ "datasets/1110.3094.json" ],
   "imports": ["scigen", "util", "datasets/_1110_3094"],
   "variables": {},
-  "testing-variables": {},
+  "testing-variables": {
+    "resp_svm1_precision": [85.4, 85.9, 83.2, 82.0, 93.8],
+    "gast_naive_bayes_recall": [75.5, 74.7, 76.1, 90.3, 82.4],
+    "neur_svm2_f1": [86.9, 83.4, 66.7, 76.5, 85.4],
+    "hem_svm1_recall": [58.3, 50.0, 43.8, 60.0, 55.0]
+  },
   "paragraph": [
     {
       "type": "literal",
@@ -10,7 +15,7 @@
     },
     {
       "type": "expression",
-      "expression": "\"outperformed\"",
+      "expression": "underOverPerformed ( let s1 = sum (getColumn \"svm1_f1\" tableData); s2 = sum (getColumn \"svm2_f1\" tableData); s3 = sum (getColumn \"svm3_f1\" tableData); sr = sum (getColumn \"svmr_f1\" tableData); bestOther = max s2 (max s3 sr) in if s1 == bestOther then EQ else if s1 < bestOther then LT else GT )\n",
       "categories": ["comparison"]
     },
     {

@@ -29,12 +29,14 @@ public class AuthoringAssistant {
     private Program templateProgram;
     private final SuggestionAgent suggestionAgent;
     private final int runId;
-    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId) throws Exception {
+    private final String jsonLogFolder;
+    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
         this.suggestionAgent = new SuggestionAgent(suggestionAgentClassName);
         this.templateProgram = templateProgram;
         this.runId = runId;
+        this.jsonLogFolder = jsonLogFolder;
     }
 
     public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
@@ -45,21 +47,29 @@ public class AuthoringAssistant {
             templateProgram = suggestionAgent.generateTemplateProgram(templateProgram);
         }
         programEdits = templateProgram.asIndividualEdits(templateProgram);
+        int editId = 0;
         while (!programEdits.isEmpty()) {
-            Pair<Program, Expression> individualEdit = programEdits.get(i);
-            //selection
-            Program programEdit = individualEdit.getFirst();
-            QueryResult result = execute(individualEdit);
+            try {
+                Pair<Program, Expression> individualEdit = programEdits.get(i);
+                //selection
+                Program programEdit = individualEdit.getFirst();
+                QueryResult result = execute(individualEdit, editId++);
 
-            programEdit.replaceParagraph(programEdit.getParagraph().splice(result.correctResponse() == null ? individualEdit.getSecond() : result.correctResponse()));
-            results.add(new Pair<>(programEdit, result));
-            programEdits = programEdit.asIndividualEdits(templateProgram);
-            programEdit.toWebsite();
+                programEdit.replaceParagraph(programEdit.getParagraph().splice(result.correctResponse() == null ? individualEdit.getSecond() : result.correctResponse()));
+                results.add(new Pair<>(programEdit, result));
+                programEdits = programEdit.asIndividualEdits(templateProgram);
+                programEdit.toWebsite();
+            } catch (Exception e) {
+                logger.severe("Error executing program edit: " + e.getMessage());
+                logger.info("Returning partial results obtained so far: " + results.size() + " results");
+                // Restituisce i risultati parziali invece di propagare l'eccezione
+                return results;
+            }
         }
         return results;
     }
 
-    public QueryResult execute(Pair<Program, Expression> test) throws Exception {
+    public QueryResult execute(Pair<Program, Expression> test, int editId) throws Exception {
         final int limit = llm instanceof LLMDummyAgent ? 1 : Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
@@ -68,9 +78,9 @@ public class AuthoringAssistant {
         Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
-        boolean errors = false;
 
         for (attempts = 0; attempts <= limit; attempts++) {
+            boolean errors = false;
             logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
@@ -96,12 +106,12 @@ public class AuthoringAssistant {
                 }
             }
             if (!errors) {
-                sessionPrompts.exportToJson(STR."./logs/json/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{System.currentTimeMillis()}.json");
+                sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{editId}.json");
                 return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start, runId);
             }
 
         }
-        sessionPrompts.exportToJson(STR."./logs/json/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{System.currentTimeMillis()}.json");
+        sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{editId}.json");
         logger.warning(STR."Expression validation failed after \{limit} attempts");
         return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId);
     }
@@ -131,10 +141,10 @@ public class AuthoringAssistant {
                             "Check the code and regenerate the expression. Remember: reply only with the expression, without any other comment.",
                     response
             );
-        } else if (errorDetails.toLowerCase().contains("parseerror")) {
+        } else if (errorDetails.toLowerCase().contains("parseerror") || errorDetails.toLowerCase().contains("error:")) {
             errorMessage = String.format(
                     "SyntacticError. The generated expression %s caused the following error: \n%s. " +
-                            "Check the code and regenerate the expression. Remember: reply only with the expression, without any other comment.",
+                            "Check the code, the parenthesis and regenerate the expression. Remember: reply only with the expression, without any other comment.",
                     response, errorDetails
             );
         } else {

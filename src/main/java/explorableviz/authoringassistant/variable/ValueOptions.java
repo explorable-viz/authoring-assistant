@@ -20,7 +20,7 @@ public abstract class ValueOptions {
             return new ValueOptions.StringValue(str);
         }
         if (value instanceof Integer num) {
-            return new ValueOptions.Number(num);
+            return new ValueOptions.IntNumber(num);
         }
         if (value instanceof Float num) {
             return new ValueOptions.Number(num);
@@ -58,14 +58,33 @@ public abstract class ValueOptions {
     }
 
     public static class Number extends ValueOptions {
-        private final BigDecimal value;
+        private final float value;
 
         public Number(float value) {
-            this.value = BigDecimal.valueOf(value);
+            this.value = value;
         }
 
         @Override
-        public BigDecimal get() {
+        public Float get() {
+            return value;
+        }
+
+        @Override
+        public Variables expandVariable(SplittableRandom random, String varName) {
+            Variables v = new Variables();
+            v.put(varName, this);
+            return v;
+        }
+    }
+    public static class IntNumber extends ValueOptions {
+        private final Integer value;
+
+        public IntNumber(int value) {
+            this.value = value;
+        }
+
+        @Override
+        public Integer get() {
             return value;
         }
 
@@ -123,7 +142,8 @@ public abstract class ValueOptions {
 
         @Override
         public Variables expandVariable(SplittableRandom random, String varName) {
-            return value.get(random.nextInt(value.size())).expandVariable(random, varName);
+            int index = random == null ? 0 : random.nextInt(value.size());
+            return value.get(index).expandVariable(random, varName);
         }
     }
 

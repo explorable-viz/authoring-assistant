@@ -9,14 +9,18 @@ Our authoring tool is composed of two LLM-based agents:
     attempts to synthesise Fluid expression computing target fragment.
 \end{itemize}
 
-\paragraph{Initial configuration.} The author initially imports the text and accompanying data into the
-system, which creates a Fluid representation of the target document. Initially that representation is just a
-string literal of the form \kw{"""..."""}, where the triple quotes are the Fluid syntax for an
-\emph{interpolated string}, i.e.~a string literal where expressions of the form \kw{\{$e$\}} are permitted
-within the string. The \SuggestionAgent analyses the inputs and identifies candidate fragments of natural
-language which could be replaced by Fluid expressions.
+The high-level workflow is as follows:
 
-\paragraph{Authoring workflow.} The system then enters the human-in-the loop authoring workflow shown in
+\begin{enumerate}
+
+\item \textbf{Initial configuration.} Author imports text and accompanying data into the system, creating a
+programmatic representation of the target document. Initially this representation is isomorphic to the target
+text, namely a string literal of the form \kw{"""..."""}, where the triple quotes are Fluid syntax for an
+\emph{interpolated string}, i.e.~a string literal where expressions of the form \kw{\{$e$\}} are permitted
+within the string. The \SuggestionAgent analyses these inputs and identifies any fragments of natural language
+which are candidates for being computed instead of remaining as literal substrings.
+
+\item \textbf{Authoring workflow.} The system then enters the human-in-the loop authoring workflow shown in
 Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The system
 initially waits for the author to select a fragment of text $s$ to interpret, a fragment which may or may not
 have been highlighted previously by the \SuggestionAgent. The system then generates a candidate Fluid
@@ -26,6 +30,8 @@ $s$. If this process succeeds, the system replaces the selected substring $s$ wi
 expression \kw{\{$e$\}}, creating a new document configuration. This is the primary successful path through
 the workflow and returns the system to the entry state where it is waiting for another top-level interaction
 from the author.
+
+\end{enumerate}
 
 Otherwise, the Fluid command-line either returned an error (either a syntax error or runtime error), or
 succeeded but $e$ evaluated to some other string $s' \neq s$. Both cases trigger prompt augmentation with an

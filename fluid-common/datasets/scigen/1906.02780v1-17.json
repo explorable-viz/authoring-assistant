@@ -1,6 +1,6 @@
-[{"layers": 1, "max_chunk_size": "k=6", "speedup": "3.8x", "bleu": 23.82},
+[{"layers": 1, "max_chunk_size": "k=6", "speedup": "$layers_1_speedup$", "bleu": $layers_1_bleu$},
  {"layers": 2, "max_chunk_size": "k=6", "speedup": "2.8x", "bleu": 23.98},
  {"layers": 3, "max_chunk_size": "k=6", "speedup": "2.2x", "bleu": 24.54},
  {"layers": 4, "max_chunk_size": "k=6", "speedup": "1.8x", "bleu": 24.04},
- {"layers": 5, "max_chunk_size": "k=6", "speedup": "1.4x", "bleu": 24.34},
- {"layers": 1, "max_chunk_size": "k in {1...6}", "speedup": "3.1x", "bleu": 25.31}]
+ {"layers": 5, "max_chunk_size": "k=6", "speedup": "$layers_5_speedup$", "bleu": $layers_5_bleu$},
+ {"layers": 1, "max_chunk_size": "k in {1...6}", "speedup": "$k_variable_speedup$", "bleu": $k_variable_bleu$}]

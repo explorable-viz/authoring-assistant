@@ -4,7 +4,7 @@
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{>{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6cm}}
         \hline
-        \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
+        \textbf{Type}                & \textbf{Example} & \textbf{Gold Solution} \\
         \rowcolor{gray!20}
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
 
@@ -16,7 +16,7 @@
         \end{lstlisting}
         \\
         Percentage &
-        The Energy Sector accounts for total methane emissions of \hl{52.80\%} in 2030.
+        The Energy Sector accounts for total methane emissions of \hl{52.80}\% in 2030.
         &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 (record.emissions /
@@ -33,17 +33,16 @@
         \end{lstlisting} \\
         Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-let maxEntry = maximumBy (fun x -> x.emissions)
-              (filter
-                (fun x -> x.type == "Energy Sector")
-                tableData)
+let maxEntry = maximumBy
+   (fun x -> x.emissions)
+   (filter (fun x -> x.type == "Energy Sector")
+      tableData)
 in maxEntry.year
         \end{lstlisting} \\                             \\
         Rank &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-let pos =
-  findIndex "model" "CNN"
+let pos = findIndex "model" "CNN"
     (insertionSort cmpTime tableData)
 in rankLabel "lowest" pos \end{lstlisting} \\
         Total &

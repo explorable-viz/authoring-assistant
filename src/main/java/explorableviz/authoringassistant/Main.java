@@ -78,7 +78,7 @@ public class Main {
 //                                queryResult.correctResponse() != null ? "generated" : "NULL",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr() : "NULL",
                                 queryResult.expected().getValue(),
-                                queryResult.expected().getExpr(),
+                                queryResult.expected().getExpr().replaceAll("\n", "[NEWLINE]"),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),
                                 String.valueOf(queryResult.nullExpressions()),

@@ -56,7 +56,7 @@ public class Main {
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{Settings.getLogFolder()}/log_\{System.currentTimeMillis()}.csv"))) {
             String[] headers = {
                     "runId", "test-case", "llm-agent", "temperature", "num-token", "is-negative", "in-context-learning-size",
-                    "attempts", "result", "expression-type", "generated-expression", "expected-value", "duration(ms)"
+                    "attempts", "result", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "nullExpressions", "onlyLiteralExpressions", "duration(ms)"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
@@ -78,6 +78,11 @@ public class Main {
 //                                queryResult.correctResponse() != null ? "generated" : "NULL",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr() : "NULL",
                                 queryResult.expected().getValue(),
+                                queryResult.expected().getExpr(),
+                                String.valueOf(queryResult.parseErrors()),
+                                String.valueOf(queryResult.counterfactualFails()),
+                                String.valueOf(queryResult.nullExpressions()),
+                                String.valueOf(queryResult.onlyLiteralExpressions()),
                                 String.valueOf(queryResult.duration())
                         };
                         return String.join(";", Arrays.stream(values).map(s -> STR."\"\{s}\"").toList());

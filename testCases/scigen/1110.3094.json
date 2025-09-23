@@ -19,8 +19,8 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (overallComparison (concat [ pairwiseCompareColumns \"svm1_p\" \"naive_bayes_p\" tableData , pairwiseCompareColumns \"svm1_p\" \"svm2_p\" tableData, pairwiseCompareColumns \"svm1_p\" \"svm3_p\" tableData, pairwiseCompareColumns \"svm1_p\" \"svmr_p\" tableData]))",
-      "categories": ["comparison"]
+      "expression": "betterWorse (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm2_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm3_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svmr_p\") tableData)])",
+      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -28,8 +28,8 @@
     },
     {
       "type": "expression",
-      "expression": "aHigherLower (overallComparison (concat [ pairwiseCompareColumns \"naive_bayes_r\" \"svm1_r\" tableData, pairwiseCompareColumns \"svm2_r\" \"svm1_r\" tableData, pairwiseCompareColumns \"svm3_r\" \"svm1_r\" tableData, pairwiseCompareColumns \"svmr_r\" \"svm1_r\" tableData]))",
-      "categories": ["comparison"]
+      "expression": "aHigherLower (overallComparison [ overallComparison (map (compareCols \"naive_bayes_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svm2_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svm3_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svmr_r\" \"svm1_r\") tableData)])",
+      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -38,7 +38,7 @@
     {
       "type": "expression",
       "expression": "minimum (getColumn \"svm1_p\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -47,7 +47,7 @@
     {
       "type": "expression",
       "expression": "maximum (getColumn \"svm1_p\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -56,7 +56,7 @@
     {
       "type": "expression",
       "expression": "minimum (getColumn \"naive_bayes_p\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -65,7 +65,7 @@
     {
       "type": "expression",
       "expression": "maximum (getColumn \"naive_bayes_p\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -74,7 +74,7 @@
     {
       "type": "expression",
       "expression": "minimum (getColumn \"svm1_r\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -83,7 +83,7 @@
     {
       "type": "expression",
       "expression": "maximum (getColumn \"svm1_r\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -92,7 +92,7 @@
     {
       "type": "expression",
       "expression": "minimum (getColumn \"naive_bayes_r\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -101,7 +101,7 @@
     {
       "type": "expression",
       "expression": "maximum (getColumn \"naive_bayes_r\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",

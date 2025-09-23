@@ -25,7 +25,7 @@ let overallComparison orders =
         else if countLT > countGT then LT
         else GT;
 
-let pairwiseCompareColumns columnA columnB tableData = map (fun x -> compare x.[columnA] x.[columnB]) tableData;
+let compareCols columnA columnB tableRow = compare tableRow.[columnA] tableRow.[columnB];
 
 let trendWord n1 n2 compareWord =
     compareWord (compare n1 n2);

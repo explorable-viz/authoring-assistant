@@ -13,36 +13,36 @@ The main components of the workflow are as follows:
 
 \begin{enumerate}
 
-\item \textbf{Initial configuration.} The author imports the target text and accompanying data into the
-system, creating a programmatic representation of the target document. Initially this is simply isomorphic to
-the target text, taking the form of a string literal \kw{"""..."""}, where the triple quotes are Fluid syntax
-for a Python or JavaScript-style \emph{interpolated string}, i.e.~a literal where expressions of the form
-\kw{\{$e$\}} are permitted within the string. The \SuggestionAgent analyses these inputs and identifies any
-fragments of natural language which are candidates for being computed instead of remaining as literal
-substrings.
+\item \textbf{Initial configuration.} The author imports the target text and accompanying data into the system
+to create a programmatic representation of the target document. Initially this is simply isomorphic to the
+target text, taking the form of a string literal \kw{"""..."""}, where the triple quotes are Fluid syntax for
+a Python or JavaScript-style \emph{interpolated string}, i.e.~a literal where expressions of the form
+\kw{\{$e$\}} are permitted within the string. The \SuggestionAgent analyses the target text and identifies any
+fragments which are candidates for being computed instead of remaining as literal substrings.
 
 \item \textbf{High-level Authoring workflow.} The system then enters the human-in-the loop authoring workflow
 shown in Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The
-system initially waits for the author to select a fragment of text $s$ to interpret (perhaps but not
-necessarily highlighted by the \SuggestionAgent). The system then attempts to generates a candidate Fluid
-expression $e$ using the closed-loop synthesis step (3) below. If this process succeeds with an expression
-$e$, the system proceeds to the manual validation step (4) below. If the code generation step fails with no
-expression, no remedial action is open to the author; this is considered an unsuccessful path through the
-workflow and returns the system to the start state. Otherwise the code generation step fails with a mismatched
-string $s' \neq s$ outcome, and the user can choose to manually abort and return to the entry state, or
-optionally to \emph{revise the goal}, replacing $s$ with $s'$ in the target document and retaining $e$ as the
-candidate expression. This is intended to cover the situation where the author has made a claim which is
-\emph{incorrect}, but the data set and surrounding natural language has caused the LLM to synthesise an
+system waits for the author to select a fragment of text $s$ to interpret (perhaps previously highlighted by
+the \SuggestionAgent). The system then attempts to generates a candidate Fluid expression $e$ using the
+closed-loop synthesis step (3) below. If code synthesis succeeds with an expression $e$, the system proceeds
+to the manual validation step (4) below. If the synthesis step fails with no expression, no remedial action is
+possible; this is considered an unsuccessful path through the workflow and returns the system to the entry
+state. Otherwise the synthesis step produces an expression $e$ which evaluates to a mismatched string $s' \neq
+s$ outcome, and the user can choose to manually abort and return to the entry state, or optionally to
+\emph{revise the goal}, replacing $s$ with $s'$ in the target document and retaining $e$ as the candidate
+expression. This is intended to cover the situation where the author has made a claim which is
+\emph{incorrect}, and the data set and surrounding natural language have led the LLM to synthesise an
 expression which generates a different value from the one specified by the user.
 
-\item \textbf{Code synthesis step.} The expression synthesis step is itself an internal loop which starts with
-an initial prompt sent to the LLM (\secref{prompt-design} below) requesting the generation of an expression
-$e$. Using the Fluid command-line interface, the expression is validated by checking that it evaluates without
-error, produces a value coercible to a string $s'$, and finally that $s'$ is equal to the target fragment $s$.
-Any failure triggers prompt augmentation with the appropriate error message and the system retries generation.
-If code synthesis loop is able to yield an expression which computes $s$ within a maximum number of retries,
-the synthesis step succeeds with $e$. If the last generated $e$ was invalid (resulting in an error), the code
-synthesis step fails with no expression. Otherwise, the code synthesis fails with a mismatched string outcome.
+\item \textbf{Code synthesis step.} The expression synthesis step is an internal loop which starts with an
+initial prompt sent to the LLM (\secref{prompt-design} below) requesting the generation of an expression $e$.
+Using the Fluid command-line interface, the expression is validated to check that it evaluates without error,
+produces a value coercible to a string $s'$, and finally that $s'$ is equal to the target fragment $s$. Any
+failure triggers prompt augmentation with the appropriate error message and the system retries generation. If
+code synthesis loop is able to yield an expression which computes $s$ within a maximum number of retries, the
+synthesis step succeeds with $e$. If the last generated $e$ was invalid (resulting in an error), the code
+synthesis step fails with no expression. Otherwise, code synthesis produces an expression $e$ but with a
+mismatched string outcome $s' \neq s$.
 
 \item \textbf{Manual validation step.} Once a candidate expression has been generated, the author is able to
 republish the web page containing the Fluid article and interact with the fragment of text.  As shown in

@@ -10,24 +10,20 @@ The system is composed of two LLM-based agents:
     attempts to synthesise Fluid expression computing target fragment.
 \end{itemize}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\linewidth]{fig/interpretation-agent}
-    \caption{Human-in-the-Loop \InterpretationAgent workflow (Author intervention states in grey)}
-    \label{fig:interpretation-agent}
-\end{figure}
-
-The author initially provides the text and accompanying data. The \SuggestionAgent analyses the inputs and
-identifies candidate fragments of natural language which could be replaced by Fluid expressions.
-Figure~\ref{fig:interpretation-agent} then shows the human-in-the loop workflow of the \InterpretationAgent.
-The entry point is the selection by the author of a fragment of text $s$ to interpret, a fragment which may or
-may not have been highlighted previously by the \SuggestionAgent. The system then generates a candidate Fluid
-expression $e$ by prompting the LLM (\secref{prompt-design} below). The expression is validated through a
-closed loop program synthesis step to check that it is well-formed, and, if so, that it evaluates to the
-target fragment of text $s$. If $e$ indeed evaluates to $s$, then the system replaces $s$ in the original
-top-level string with the interpolation expression \kw{\{$e$\}}. This is the primary successful path through
-the loop and returns the system to the ideal state where it is waiting for another top-level interaction from
-the author.
+The author initially imports the text and accompanying data into the system, which creates a Fluid
+representation of the target document. Initially that representation is just a string literal of the form
+\kw{"""..."""}, where the triple quotes are the Fluid syntax for an \emph{interpolated string}, i.e.~a string
+literal where expressions of the form \kw{\{$e$\}} are permitted within the string. The \SuggestionAgent
+analyses the inputs and identifies candidate fragments of natural language which could be replaced by Fluid
+expressions. Figure~\ref{fig:interpretation-agent} then shows the human-in-the loop workflow of the
+\InterpretationAgent. The entry point is the selection by the author of a fragment of text $s$ to interpret, a
+fragment which may or may not have been highlighted previously by the \SuggestionAgent. The system then
+generates a candidate Fluid expression $e$ by prompting the LLM (\secref{prompt-design} below). The expression
+is validated through a closed loop program synthesis step to check that it is well-formed, and, if so, that it
+evaluates to the target fragment of text $s$. If $e$ indeed evaluates to $s$, then the system replaces $s$ in
+the original top-level string with the interpolation expression \kw{\{$e$\}}. This is the primary successful
+path through the loop and returns the system to the ideal state where it is waiting for another top-level
+interaction from the author.
 
 Otherwise, the Fluid command-line either returned an error (either a syntax error or runtime error), or it
 succeeded but $e$ evaluated to some other string $s' \neq s$. Both cases trigger prompt augmentation with an
@@ -42,7 +38,35 @@ corresponding candidate expression. Internally the \InterpretationAgent uses a c
 process to ensure the expression is well-formed. The user is then able to accept the expression (in which case
 it is incorporated into the program) or reject and leave the text uninterpreted.
 
-\begin{figure}[ht]
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{fig/interpretation-agent}
+    \caption{Human-in-the-Loop workflow (states requiring human intervention in grey)}
+    \label{fig:interpretation-agent}
+\end{figure}
+
+\subsection{Prompt Design}
+\label{sec:prompt-design}
+
+\paragraph{System Prompt.}
+For the Interpretation Assistant, the system prompt guides the LLM in replacing placeholder tags in the
+supplied paragraph with executable Fluid expressions. It includes the following information about the document
+under construction, the exact task to perform, and constraints on the expected output. The full system prompt
+is given in \appref{system-prompt:interpretation-agent}.
+
+\begin{itemize}
+\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
+the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
+indicating the text fragment to replace, plus the full text for the paragraph.
+\item \textbf{Task description:} description of the LLM task, namely to identify \kw{[REPLACE …]} placeholder
+and generate Fluid expression that produces target string using supplied dataset and definitions in scope.
+\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
+with no extraneous content (such as comments).
+\end{itemize}
+
+\rpnote{Now something about the rest of the prompt.}
+
+\begin{figure}[t]
     \centering
     \begin{subfigure}{0.50\linewidth}
         \centering
@@ -61,49 +85,6 @@ it is incorporated into the program) or reject and leave the text uninterpreted.
     error (natural language mentions accuracy, while interaction reveals use of timing data).}
     \label{fig:overall-architecture}
 \end{figure}
-
-
-\subsection{Prompt Design}
-\label{sec:prompt-design}
-
-In the system prompt used to guide the Interpretation Assistant in replacing placeholder tags in user-authored
-paragraphs with executable Fluid expressions, we include the following information about the transparent
-document under construction, the exact task to perform, and constraints on the expected output. The full
-system prompt is given in \appref{system-prompt:interpretation-agent}.
-
-\begin{itemize}
-\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
-the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
-indicating the text fragment to replace, plus the full text for the paragraph.
-\item \textbf{Task description:} description of the LLM task, namely to identify \kw{[REPLACE …]} placeholder
-and generate Fluid expression that produces target string using supplied dataset and definitions in scope.
-\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
-with no extraneous content (such as comments).
-\end{itemize}
-
-\subsection{Editor Loop}
-\label{subsec:editor-loop}
-Design of main loop that would be integrated into an IDE. The configuration (state) that is being maintained
-is a \kw{Paragraph} the user is authoring in Fluid. Consists of a sequence of text fragments, some of which
-are uninterpreted (plain literals), the remainder have underlying expressions linking the text to raw or derived
-data.
-
-Workflow:
-\begin{enumerate}
-\item User selects (a substring of) one of the literal text fragments, indicating they want to link it in this
-way
-\item Authoring tool generates expression which is either:
-  \begin{enumerate}
-  \item computes the selected text (e.g.~``greater than'' might be computed by comparing two numbers)
-  \item becomes the formal meaning of the selected text (e.g. the text ``carbon intensity of methane
-emissions'' can be understood in a specific context as referring to the numerical value ``34 gCO2eq/kWh''
-  \end{enumerate}
-\item Some kind of validation step, including both automated validation (e.g. checking for runtime errors) and
-user validation; if validation fails, goto (2)
-\item Partition code into additional definitions and expression; add definitions to main source file, and
-incorporate expression into \kw{Paragraph}
-\item Goto (1) with updated editor state
-\end{enumerate}
 
 \subsection{Loopback System}
 \label{subsec:loopback-system}

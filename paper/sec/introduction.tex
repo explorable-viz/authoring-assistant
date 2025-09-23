@@ -34,14 +34,21 @@ data elements that support them, through embedded provenance queries.
 \end{enumerate}
 
 \figref{scigen-example-website}, generated from our implementation, illustrates these two features. The upper
-section shows an excerpt from a research paper comparing text encoding techniques~\citep{zhang18}. When a
-reader hovers over the phrase \textfrag{does not further improve}, the corresponding data entries are
-highlighted in blue on the left. Other fragments (e.g. \textfrag{better than}, \textfrag{further
-improvements}) that refer to the same data are also marked, allowing readers to explore supporting and
-contrasting evidence. The lower section shows a counterfactual situation where we imagine the authors'
-experiments had produced different results: here the phrase \textfrag{does not further improve} is replaced by
-\textfrag{further improves}. Transparent documents thus turn static text into interactable, data-driven
-content able to expose the evidential basis of scholarly claims.
+section shows an excerpt from \cite{zhang18}, a scholarly article comparing text encoding techniques. When a
+reader hovers over the phrase \textfrag{does not further improve}, the relevant data are highlighted on the
+left. Other fragments (e.g. \textfrag{better than}, \textfrag{further improvements}) that refer to the same
+data are also marked, allowing the reader to explore supporting and contrasting evidence. The lower section
+shows a counterfactual situation where the authors' experiments had produced different results: here the
+phrase \textfrag{does not further improve} is replaced by \textfrag{further improves}.
+
+Transparent documents thus turn static text into interactable, data-driven content able to expose the
+evidential basis of scholarly claims, for which we envisage two use cases. First, when \textbf{authoring}
+content for an online article, a journalist or scientific publisher may wish to link text to raw data so that
+the evidence base for the textual claims can be explored directly from the article. Second, when
+\textbf{reading} a document reporting on findings derived from open data (perhaps a scientific paper or
+climate report), the reader may want to retroactively interpret parts of the text as queries over the
+available data and gradually ``rationally reconstruct'' the relationship between claims in the paper and the
+evidence base. This might be just to aid their own comprehension, or part of a formal peer review process.
 
 \begin{figure}%[h]
     \centering
@@ -57,26 +64,13 @@ content able to expose the evidential basis of scholarly claims.
 \paragraph{Contributions.} Our specific contributions are:
 
 \begin{itemize}
-\item a proof-of-concept LLM-based tool for iteratively transforming a preexisting opaque document and
-associated data set into a transparent, data-driven counterpart
-\item an empirical evaluation of how well state-of-the-art models are able to solve the associated
-interpretation and code synthesis problems
+\item A proof-of-concept LLM-based tool for iteratively transforming a preexisting opaque document and
+associated data set into a transparent, data-driven counterpart;
+\item An empirical evaluation of how well state-of-the-art models are able to solve the associated
+interpretation and code synthesis problems.
 \end{itemize}
 
 We leave implementing a full authoring plugin for an IDE such as VSCode or Cursor for future work.
-
-We envisage two possible use cases for transparent text:
-
-\begin{enumerate}
-\item \textbf{Authoring.} Someone authoring content for an online article, wants to create text
-linked to raw data (and derivative data such as charts or tabular summaries), so that the evidence base for
-the claims made in the text can be explored \emph{in situ}, by interacting with the text.
-
-\item \textbf{Reading or reviewing.} Someone reading textual claims derived from open data (e.g. a
-scientific paper or climate report), wants to retroactively link the text to queries over the available data
-and gradually ``rationally reconstruct'' the relationship between the claims in the paper and the evidence
-base. Perhaps just to aid their own comprehension, or to provide some kind of justified peer review.
-\end{enumerate}
 
 \input{fig/scigen-1805.02474v1-10-src}
 

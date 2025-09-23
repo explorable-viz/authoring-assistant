@@ -15,8 +15,8 @@
     },
     {
       "type": "expression",
-      "expression": "underOverPerformed ( let s1 = sum (getColumn \"svm1_f1\" tableData); s2 = sum (getColumn \"svm2_f1\" tableData); s3 = sum (getColumn \"svm3_f1\" tableData); sr = sum (getColumn \"svmr_f1\" tableData); bestOther = max s2 (max s3 sr) in if s1 == bestOther then EQ else if s1 < bestOther then LT else GT )\n",
-      "categories": ["comparison"]
+      "expression": "underOverPerformed (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm2_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm3_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svmr_p\") tableData)])",
+      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",

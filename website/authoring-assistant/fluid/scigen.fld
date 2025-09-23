@@ -63,7 +63,8 @@ let underOverPerforming EQ = "performing the same as";
 let aHigherLower EQ = "an equivalent";
     aHigherLower LT = "a lower";
     aHigherLower GT = "a higher";
-    
+
 let underOverPerformed EQ = "performed the same as";
     underOverPerformed LT = "performed worse than";
     underOverPerformed GT = "outperformed";
+

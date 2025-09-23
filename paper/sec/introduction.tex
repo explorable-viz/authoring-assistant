@@ -34,22 +34,12 @@ data elements that support them, through embedded provenance queries.
 \end{enumerate}
 
 \figref{scigen-example-website}, generated from our implementation, illustrates these two features. The upper
-section shows an excerpt from \cite{zhang18}, a scholarly article comparing text encoding techniques. When a
-reader hovers over the phrase \textfrag{does not further improve}, the relevant data are highlighted on the
-left. Other fragments (e.g. \textfrag{better than}, \textfrag{further improvements}) that refer to the same
-data are also marked, allowing the reader to explore supporting and contrasting evidence. The lower section
-shows a counterfactual situation where the authors' experiments had produced different results: here the
-phrase \textfrag{does not further improve} is replaced by \textfrag{further improves}.
-
-Transparent documents thus turn static text into interactable, data-driven content able to expose the
-evidential basis of scholarly claims, for which we envisage two use cases. First, when \textbf{authoring}
-content for an online article, a journalist or scientific publisher may wish to provide text which is linked
-to the underlying data so that the evidence base for the textual claims can be explored directly from the
-article. Second, when \textbf{reading} a document reporting on findings derived from open data (perhaps a
-scientific paper or climate report), the reader may want to retroactively interpret parts of the text as
-queries over the available data and gradually ``rationally reconstruct'' the relationship between claims in
-the paper and the evidence base. This might be just to aid their own comprehension, or part of a formal peer
-review process.
+section shows a ``transparent'' excerpt from \cite{zhang18}, a scholarly article comparing text encoding
+techniques. When a reader hovers over the phrase \textfrag{does not further improve}, the relevant data are
+highlighted on the left. Other fragments (e.g. \textfrag{better than}, \textfrag{further improvements}) that
+refer to the same data are also marked, allowing the reader to explore supporting and contrasting evidence.
+The lower section shows a counterfactual situation where the authors' experiments had produced different
+results: here the phrase \textfrag{does not further improve} is replaced by \textfrag{further improves}.
 
 \begin{figure}%[h]
     \centering
@@ -61,6 +51,23 @@ review process.
     vs.~bottom)}
     \label{fig:scigen-example-website}
 \end{figure}
+
+This transparent version of the document was implemented in Fluid. The source code is shown in
+\figref{fluid-example-paragraph}, and makes use of several helper functions, a representative subset of which
+are shown in \figref{fluid-scigen}. Both the provenance-tracking runtime of Fluid \emph{and} the LLM-based
+authoring support contribute to the solution: the Fluid runtime provides the interactions, and the LLM-based
+authoring tool makes the whole process practical. Without tool support, authoring a scientific document as a
+(hand-crafted) \emph{program} is unlikely to be a feasible task.
+
+AI-assisted authoring of transparent documents thus support turning static text into interactable, data-driven
+content able to expose the evidential basis of scholarly claims, for which we envisage two use cases. First,
+when \textbf{authoring} content for an online article, a journalist or scientific publisher may wish to
+provide text which is linked to the underlying data so that the evidence base for the textual claims can be
+explored directly from the article. Second, when \textbf{reading} a document reporting on findings derived
+from open data (perhaps a scientific paper or climate report), the reader may want to retroactively interpret
+parts of the text as queries over the available data and gradually ``rationally reconstruct'' the relationship
+between claims in the paper and the evidence base. This might be just to aid their own comprehension, or part
+of a formal peer review process.
 
 \paragraph{Contributions.} Our specific contributions are:
 

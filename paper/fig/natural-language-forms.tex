@@ -4,21 +4,21 @@
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{>{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6cm}}
         \hline
-        \textbf{Type}                & \textbf{Example} & \textbf{Generated Expression} \\
+        \textbf{Type}                & \textbf{Example} & \textbf{Gold Solution} \\
         \rowcolor{gray!20}
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
 
         Numerical value
         & the training time per epoch growing from \hl{67} seconds to 106 seconds.
         &
-        \begin{lstlisting}[language=Fluid,numbers=none]
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 (findWithKey_ "model" "LSTM" tableData).time_s
         \end{lstlisting}
         \\
         Percentage &
-        The Energy Sector accounts for total methane emissions of \hl{52.80\%} in 2030.
+        The Energy Sector accounts for total methane emissions of \hl{52.80}\% in 2030.
         &
-        \begin{lstlisting}[language=Fluid,numbers=none]
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 (record.emissions /
  sum (map (fun x -> x.emissions)
           (getByYear year tableData))) * 100
@@ -28,28 +28,26 @@
         \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
         Average
         & The average methane emissions for the year 2030 is \hl{13.51} &
-        \begin{lstlisting}[language=Fluid,numbers=none]
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 (sumEmissions year tableData / length records)
         \end{lstlisting} \\
         Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-let maxEntry =
-    maximumBy (fun x -> x.emissions)
-              (filter
-                (fun x -> x.type == "Energy Sector")
-                tableData)
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
+let maxEntry = maximumBy
+   (fun x -> x.emissions)
+   (filter (fun x -> x.type == "Energy Sector")
+      tableData)
 in maxEntry.year
         \end{lstlisting} \\                             \\
         Rank &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
-        \begin{lstlisting}[language=Fluid,numbers=none]
-let pos =
-  findIndex "model" "CNN"
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
+let pos = findIndex "model" "CNN"
     (insertionSort cmpTime tableData)
 in rankLabel "lowest" pos \end{lstlisting} \\
         Total &
         The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
-        \begin{lstlisting}[language=Fluid,numbers=none]
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 sumEmissions year tableData
         \end{lstlisting} \\
         \rowcolor{gray!20}
@@ -57,15 +55,15 @@ sumEmissions year tableData
 
         Comparison
         & The training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
-        \begin{lstlisting}[language=Fluid,numbers=none]
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 trendWord
  (findWithKey_ "model" "BiLSTM" tableData).time_s
  (findWithKey_ "model" "LSTM" tableData).time_s
  growShrink
         \end{lstlisting} \\
-        Pairwise Comparisons
+        Pairwise comparisons
         & Overall the SVM with polynomial degree 1 kernel outperformed all other kernels with other kernels generally offering \hl{better} precision at a higher cost to recall. &
-        \begin{lstlisting}[language=Fluid,numbers=none]
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 trendWord
 (mean (getTableColumn \"svm1_p\" tableData))
 (mean
@@ -80,5 +78,5 @@ betterWorse
         \hline
     \end{tabular}
     \caption{Quantitative/semi-quantitative natural language forms considered in this paper}
-    \label{tab:fluid_examples}
+    \label{tab:natural-language-forms}
 \end{table}

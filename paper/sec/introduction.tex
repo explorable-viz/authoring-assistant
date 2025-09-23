@@ -1,17 +1,17 @@
 \section{Introduction: Transparent, Data-Driven Documents}
 
-Making sense of and verifying data-driven claims is hard, even when the evidence base is open and accessible.
-A key challenge lies in tracing specific claims back to the underlying data. In peer review, for example,
-empirical claims typically lack author-supplied links to data, making them hard for reviewers to check
+Making sense of and verifying data-driven claims is hard even with open and accessible data. A key challenge
+lies in tracing specific claims back to the relevant data. In peer review, for example, empirical claims
+typically lack author-supplied links to data, making them hard for reviewers to check
 directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to simple
 errors in data management or analysis~\citep{hu25}. The use of large language models (LLMs) to interpret
 scholarly documents has seen considerable attention recently, from fact-checking~\citep{abu-ahmad25} to
 interpretation of charts and figures~\citep{roberts24}, but current LLM interfaces do not support direct
-interrogation of visual or other outputs.
+interrogation of visual or other outputs for traceability to inputs.
 
-Recent work on data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
-takes a more infrastructural approach to tracing outputs back to data. These approaches link computed outputs
-to their data sources directly, by tracking dependency information. This allows visual outputs to support
+Recent advances in data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
+have pushed in this direction using a more infrastructural approach. These approaches link computed outputs
+to their data sources directly by tracking dependency information. This allows visual outputs to support
 \emph{provenance queries}, user interactions (e.g. mousing over visual elements) that reveal how output
 features relate to data. The advantage of this approach is that the relationships to data sources are exposed
 automatically via trusted infrastructure, typically a query language or general-purpose programming language
@@ -35,12 +35,13 @@ data elements that support them, through embedded provenance queries.
 
 \figref{scigen-example-website}, generated from our implementation, illustrates these two features. The upper
 section shows an excerpt from a research paper comparing text encoding techniques~\citep{zhang18}. When a
-reader hovers over the phrase ``does not further improve'', the corresponding data entries are highlighted in
-blue on the left. Other fragments (e.g. ``better than'', ``further improvements'') that refer to the same data
-are also marked, allowing readers to explore supporting and contrasting evidence. The lower section shows a
-counterfactual situation where we imagine the authors' experiments had produced different results: here the
-phrase ``does not further improve'' is replaced by the ``further improves''. Transparent documents thus turn
-static text into interactable, data-driven content able to expose the evidential basis of scholarly claims.
+reader hovers over the phrase \textfrag{does not further improve}, the corresponding data entries are
+highlighted in blue on the left. Other fragments (e.g. \textfrag{better than}, \textfrag{further
+improvements}) that refer to the same data are also marked, allowing readers to explore supporting and
+contrasting evidence. The lower section shows a counterfactual situation where we imagine the authors'
+experiments had produced different results: here the phrase \textfrag{does not further improve} is replaced by
+\textfrag{further improves}. Transparent documents thus turn static text into interactable, data-driven
+content able to expose the evidential basis of scholarly claims.
 
 \begin{figure}%[h]
     \centering
@@ -81,36 +82,42 @@ base. Perhaps just to aid their own comprehension, or to provide some kind of ju
 
 \subsection{Target idioms of natural language}
 
-Table~\ref{tab:fluid_examples} summarises the natural language idioms we have studied in this paper. In the
-realm of traditional quantitative expressions, and when using state-of-the-art models like gpt4o and gpt5, our
-system is able to recognise direct numerical values, percentages, averages, minima and maxima, ranks, and
-totals, each mapped to a corresponding computation over the source dataset. For example, phrases such as ``the
-Energy Sector accounts for 52.80\% of total emissions'' or ``the expected projected methane emissions for 2030
-is 13.5'' are interpreted as division and aggregation operations over data values. Similarly, ``recorded its
-highest emissions in 2030'' is interpreted as a `maximumBy` query, while rank-based statements such as ``CNN
-gives the lowest accuracy'' are interpreted as ranking computations.
-
-We also consider \emph{trend} expressions, which include relative or comparative natural language phrases
-describing how some property evolves over time. These include single comparisons (e.g.~``training time growing
-from 67 to 106 seconds'') and pairwise comparisons (e.g. “SVM outperformed all other kernels, offering better
-precision”). Such idioms are mapped to higher-level operators like trendWord, growShrink, and betterWorse,
-which combine statistical aggregation with semantic markers of relative performance. Taken together, these
-categories cover a substantial portion of the numerical reasoning idioms found in empirical scientific
-writing.
-
-Notably, the current coverage omits several common linguistic forms. We have yet to study the ability of LLMs
-to interpret approximate quantitative terms like ``around 50\%'' or ``roughly 100 instances'', nor
-interval-based descriptions such as ``between 30 and 40\%” or ``within 5–10 seconds''. We have no reason for
-thinking these will present specific difficulties. ``Graded'' modal adjectives like ``slightly better'',
-``significantly higher'' present more of a challenge linguistically~\cite{lassiter17}. Likewise, idioms
-expressing trends over time in nuanced or qualified ways (e.g. ``steady increase'', ``sharp decline'') or
-distributional descriptors like ``most models'', ``the majority of cases'', or ``usually performs better
-than'' present significant challenges to formal interpretation because of their reliance on non-standard
-quantifiers. Extending coverage to these idioms would substantially deepen our tool's ability to bridge
-natural language reporting with interpretation in terms of the underlying dataset. We discuss this further in
-\secref{future-work}.
-
 \input{fig/natural-language-forms}
+
+Table~\ref{tab:natural-language-forms} summarises the natural language idioms studied in this paper. With
+state-of-the-art models like gpt4o and gpt5, our system is able to resolve basic table lookups of direct
+numerical values, as well as computations of percentages, averages, minima and maxima, and totals, each mapped
+to the corresponding aggregation over the source data. For example, phrases such as \textfrag{the Energy
+Sector accounts for 52.80\% of total emissions} and \textfrag{average methane emissions for 2030 is 13.51} are
+interpreted in terms of sum and mean respectively over the relevant data values. Similarly, \textfrag{recorded
+its highest emissions in 2030} is interpreted as a \kw{maximumBy} query, while a statement such as
+\textfrag{CNN gives the lowest accuracy} is mapped to an explicit computation of rank.
+
+We also consider \emph{trend} expressions, which comparative natural language phrases describing how a data
+attribute evolves over time, such as \textfrag{training time growing from 67 to 106 seconds}. Such idioms are
+mapped to higher-order functions like \kw{trendWord} parameterised on additional helper functions such as
+\kw{growShrink} and \kw{betterWorse} (shown in \figref{fluid-scigen}) which map comparisons to appropriate
+natural language phrases.
+
+\input{fig/scigen-lib}
+
+Taken together, these categories cover a representative portion of the numerical reasoning idioms found in the
+SciGen benchmark. However, some linguistic forms that commonly arise in scholarly articles are not covered in
+our analysis. We have yet to study approximate quantitative terms like \textfrag{around 50\%} or
+\textfrag{roughly 100 instances}, nor interval-based descriptions such as \textfrag{between 30 and 40\%} or
+\textfrag{within 5–10 seconds}. While we have no reason for thinking these will present specific difficulties,
+other forms are likely to be more challenging. So-called \emph{graded} modal adverbs~\citep{lassiter17} which
+modify adjectival comparatives like \textfrag{better} -- as in \textfrag{slightly better} and
+\textfrag{significantly higher} -- especially when combined with trends over time, as in \textfrag{steadily
+increasing} or \textfrag{sharply declining} -- are likely to prove difficult because the interpretation of
+these qualifiers can be subjective and context-dependent. Adverbial quantifiers like \textfrag{generally} and
+\textfrag{usually} present similar challenges because colloquial use may differ from more formal uses (in some
+situations ``most'' might mean a majority, i.e.~greater than 50\% of cases, but in others may mean only
+``greater than any other alternative proportion''). On the other hand these difficulties also present
+themselves to human readers, so extending coverage to these idioms would substantially deepen our tool's
+ability to bridge natural language reporting with interpretation in terms of the underlying dataset, perhaps
+revealing inconsistent use of technical language on the part of the author. We discuss this further in
+\secref{conclusion:future-work}.
 
 \subsection{Contributions}
 

@@ -33,8 +33,7 @@
         \end{lstlisting} \\
         Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-let maxEntry =
-    maximumBy (fun x -> x.emissions)
+let maxEntry = maximumBy (fun x -> x.emissions)
               (filter
                 (fun x -> x.type == "Energy Sector")
                 tableData)

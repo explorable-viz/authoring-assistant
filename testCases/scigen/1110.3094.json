@@ -1,6 +1,6 @@
 {
   "datasets": [ "datasets/1110.3094.json" ],
-  "imports": ["util", "scigen", "datasets/_1110_3094"],
+  "imports": ["scigen", "util", "datasets/_1110_3094"],
   "variables": {},
   "testing-variables": {
     "resp_svm1_precision": [85.4, 85.9, 83.2, 82.0, 93.8],
@@ -15,8 +15,8 @@
     },
     {
       "type": "expression",
-      "expression": "underOverPerformed ( let s1 = sum (getColumn \"svm1_f1\" tableData); s2 = sum (getColumn \"svm2_f1\" tableData); s3 = sum (getColumn \"svm3_f1\" tableData); sr = sum (getColumn \"svmr_f1\" tableData); bestOther = max s2 (max s3 sr) in if s1 == bestOther then EQ else if s1 < bestOther then LT else GT )\n",
-      "categories": ["comparison"]
+      "expression": "underOverPerformed (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm2_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm3_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svmr_p\") tableData)])",
+      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -24,8 +24,8 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (\n  let s1 = sum (getColumn \"svm1_p\" tableData);\n      s2 = sum (getColumn \"svm2_p\" tableData);\n      s3 = sum (getColumn \"svm3_p\" tableData);\n      sr = sum (getColumn \"svmr_p\" tableData);\n      bestOther = max s2 (max s3 sr)\n  in if s1 == bestOther then EQ else if s1 < bestOther then LT else GT\n)",
-      "categories": ["comparison"]
+      "expression": "betterWorse (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm2_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm3_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svmr_p\") tableData)])",
+      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -33,8 +33,8 @@
     },
     {
       "type": "expression",
-      "expression": "smallerHigher (\n  let s1 = sum (getColumn \"svm1_r\" tableData);\n      s2 = sum (getColumn \"svm2_r\" tableData);\n      s3 = sum (getColumn \"svm3_r\" tableData);\n      sr = sum (getColumn \"svmr_r\" tableData);\n      bestOther = max s2 (max s3 sr)\n  in if s1 == bestOther then EQ else if s1 < bestOther then LT else GT\n)",
-      "categories": ["comparison"]
+      "expression": "aHigherLower (overallComparison [ overallComparison (map (compareCols \"naive_bayes_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svm2_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svm3_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svmr_r\" \"svm1_r\") tableData)])",
+      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -43,7 +43,7 @@
     {
       "type": "expression",
       "expression": "minimum (getColumn \"svm1_p\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -52,7 +52,7 @@
     {
       "type": "expression",
       "expression": "maximum (getColumn \"svm1_p\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -61,7 +61,7 @@
     {
       "type": "expression",
       "expression": "minimum (getColumn \"naive_bayes_p\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -70,7 +70,7 @@
     {
       "type": "expression",
       "expression": "maximum (getColumn \"naive_bayes_p\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -79,7 +79,7 @@
     {
       "type": "expression",
       "expression": "minimum (getColumn \"svm1_r\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -88,7 +88,7 @@
     {
       "type": "expression",
       "expression": "maximum (getColumn \"svm1_r\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -97,7 +97,7 @@
     {
       "type": "expression",
       "expression": "minimum (getColumn \"naive_bayes_r\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -106,7 +106,7 @@
     {
       "type": "expression",
       "expression": "maximum (getColumn \"naive_bayes_r\" tableData)",
-      "categories": ["min_max"]
+      "categories": ["min_max", "data_retrieval"]
     },
     {
       "type": "literal",

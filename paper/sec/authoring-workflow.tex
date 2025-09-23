@@ -9,15 +9,17 @@ Our authoring tool is composed of two LLM-based agents:
     attempts to synthesise Fluid expression computing target fragment.
 \end{itemize}
 
-The author initially imports the text and accompanying data into the system, which creates a Fluid
-representation of the target document. Initially that representation is just a string literal of the form
-\kw{"""..."""}, where the triple quotes are the Fluid syntax for an \emph{interpolated string}, i.e.~a string
-literal where expressions of the form \kw{\{$e$\}} are permitted within the string. The \SuggestionAgent
-analyses the inputs and identifies candidate fragments of natural language which could be replaced by Fluid
-expressions. The system then enters the human-in-the loop workflow shown in
-Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The system is
-initially waiting for the author to select a fragment of text $s$ to interpret, a fragment which may or may
-not have been highlighted previously by the \SuggestionAgent. The system then generates a candidate Fluid
+\paragraph{Initial configuration.} The author initially imports the text and accompanying data into the
+system, which creates a Fluid representation of the target document. Initially that representation is just a
+string literal of the form \kw{"""..."""}, where the triple quotes are the Fluid syntax for an
+\emph{interpolated string}, i.e.~a string literal where expressions of the form \kw{\{$e$\}} are permitted
+within the string. The \SuggestionAgent analyses the inputs and identifies candidate fragments of natural
+language which could be replaced by Fluid expressions.
+
+\paragraph{Authoring workflow.} The system then enters the human-in-the loop authoring workflow shown in
+Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The system
+initially waits for the author to select a fragment of text $s$ to interpret, a fragment which may or may not
+have been highlighted previously by the \SuggestionAgent. The system then generates a candidate Fluid
 expression $e$ by prompting the LLM (\secref{prompt-design} below). The expression is validated through a
 closed loop program synthesis step which checks that it is well-formed and evaluates to the target fragment
 $s$. If this process succeeds, the system replaces the selected substring $s$ with the interpolation
@@ -35,15 +37,13 @@ can choose to manually abort and return to the entry state, or optionally to \em
 $s$ with $s'$ in the target document and retaining $e$ as the candidate expression. This is intended to cover
 the situation where the author has made a claim which is \emph{incorrect}, but the data set and surrounding
 natural language has caused the LLM to synthesise an expression which generates a different value from the one
-specified by the user. Once a valid expression is approved, the updated text is spliced back into the
-document, and any downstream interactions (e.g. reloading the web page) are checked. This closed-loop design
-combines automated synthesis with validation and author oversight, ensuring both correctness and usability of
-the generated code.
+specified by the user.
 
-The user highlights a fragment of interest, which is then sent to the \InterpretationAgent, which generates a
-corresponding candidate expression. Internally the \InterpretationAgent uses a compiler-in-the-loop validation
-process to ensure the expression is well-formed. The user is then able to accept the expression (in which case
-it is incorporated into the program) or reject and leave the text uninterpreted.
+\paragraph{Manual validation step.} Once a valid expression is approved, the updated text is spliced back into
+the document, and any downstream interactions (e.g. reloading the web page) are checked.
+
+This human-in-the-loop design combines automated synthesis with validation and author oversight, providing a
+substantial level of automation, but requiring the author to intervene at key steps to ensure correctness.
 
 \begin{figure}
     \centering

@@ -110,12 +110,12 @@
     },
     {
       "type": "literal",
-      "value": " for NB. SVM tended to offer a "
+      "value": " for NB. SVM tended to offer "
     },
     {
       "type": "expression",
-      "expression": "\"reduced\"",
-      "categories": ["comparison"]
+      "expression": "aReducedIncreased (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm2_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm3_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svmr_p\" \"naive_bayes_p\") tableData)])",
+      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -123,8 +123,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"better\"",
-      "categories": ["comparison"]
+      "expression": "betterWorse (overallComparison [ overallComparison (map (compareCols \"svm1_r\" \"naive_bayes_r\") tableData), overallComparison (map (compareCols \"svm2_r\" \"naive_bayes_r\") tableData), overallComparison (map (compareCols \"svm3_r\" \"naive_bayes_r\") tableData), overallComparison (map (compareCols \"svmr_r\" \"naive_bayes_r\") tableData)])",
+      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -132,8 +132,8 @@
     },
     {
       "type": "expression",
-      "expression": "\"low\"",
-      "categories": ["comparison"]
+      "expression": "let hem = findWithKey_ \"synd\" \"Hem.\" tableData in highLow (overallComparison [compareCols \"svm1_r\" \"naive_bayes_r\" hem, compareCols \"svm2_r\" \"naive_bayes_r\" hem, compareCols \"svm3_r\" \"naive_bayes_r\" hem, compareCols \"svmr_r\" \"naive_bayes_r\" hem]) ",
+      "categories": ["comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",

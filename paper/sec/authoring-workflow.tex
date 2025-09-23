@@ -9,7 +9,7 @@ Our authoring tool is composed of two LLM-based agents:
     attempts to synthesise Fluid expression computing target fragment.
 \end{itemize}
 
-The high-level workflow is as follows:
+The main components of the workflow are as follows:
 
 \begin{enumerate}
 
@@ -20,33 +20,36 @@ text, namely a string literal of the form \kw{"""..."""}, where the triple quote
 within the string. The \SuggestionAgent analyses these inputs and identifies any fragments of natural language
 which are candidates for being computed instead of remaining as literal substrings.
 
-\item \textbf{Authoring workflow.} The system then enters the human-in-the loop authoring workflow shown in
-Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The system
-initially waits for the author to select a fragment of text $s$ to interpret, a fragment which may or may not
-have been highlighted previously by the \SuggestionAgent. The system then generates a candidate Fluid
-expression $e$ by prompting the LLM (\secref{prompt-design} below). The expression is validated through a
-closed loop program synthesis step which checks that it is well-formed and evaluates to the target fragment
-$s$. If this process succeeds, the system replaces the selected substring $s$ with the interpolation
-expression \kw{\{$e$\}}, creating a new document configuration. This is the primary successful path through
-the workflow and returns the system to the entry state where it is waiting for another top-level interaction
-from the author.
+\item \textbf{High-level Authoring workflow.} The system then enters the human-in-the loop authoring workflow
+shown in Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The
+system initially waits for the author to select a fragment of text $s$ to interpret, a fragment which may or
+may not have been highlighted previously by the \SuggestionAgent. The system then generates a candidate Fluid
+expression $e$ using a closed-loop synthesis step ((3) below). If this process succeeds, the system replaces
+the selected substring $s$ with the interpolation expression \kw{\{$e$\}}, creating a new document
+configuration. This is the primary successful path through the workflow and returns the system to the entry
+state where it is waiting for another top-level interaction from the author.
 
+\item \textbf{Code synthesis step.} The expression synthesis step is itself an internal loop which starts with
+an initial prompt sent to the LLM (\secref{prompt-design} below) requesting the generation of an expression
+$e$. Using the Fluid command-line interface, the expression is validated by checking that it evaluates without
+error, produces a value coercible to a string $s'$, and finally that $s'$ is equal to the target fragment $s$.
+Any failure triggers prompt augmentation with the appropriate error message and the system retries generation.
+If code synthesis loop is able to yield an expression which computes $s$ within a maximum
+number of retries, the system proceeds to the manual validation step (4). Otherwise, the code synthesis step has failed and there are two possibilities:
+\begin{enumerate}
+\item If the last generated $e$ was invalid (resulting in an error), no remedial action is open to the author. This is considered an unsuccessful path through the workflow and returns the system to the start state.
+\item In the $s' \neq s$ case, the user can choose to manually abort and return to the entry state, or
+optionally to \emph{revise the goal}, replacing $s$ with $s'$ in the target document and retaining $e$ as the
+candidate expression. This is intended to cover the situation where the author has made a claim which is
+\emph{incorrect}, but the data set and surrounding natural language has caused the LLM to synthesise an
+expression which generates a different value from the one specified by the user.
 \end{enumerate}
 
-Otherwise, the Fluid command-line either returned an error (either a syntax error or runtime error), or
-succeeded but $e$ evaluated to some other string $s' \neq s$. Both cases trigger prompt augmentation with an
-appropriate error message, and the system retries generation. Failure of the code synthesis step means that,
-even after multiple retries with an augmented prompt, $e$ remained invalid or evaluated to $s' \neq s$. If $e$
-was invalid (resulting in an error), no remedial action is open to the author. This is considered an
-unsuccessful path through the workflow and returns the system to the start state. In the $s' \neq s$ case, the
-can choose to manually abort and return to the entry state, or optionally to \emph{revise the goal}, replacing
-$s$ with $s'$ in the target document and retaining $e$ as the candidate expression. This is intended to cover
-the situation where the author has made a claim which is \emph{incorrect}, but the data set and surrounding
-natural language has caused the LLM to synthesise an expression which generates a different value from the one
-specified by the user.
+\item \textbf{Manual validation step.} Once a candidate expression has been generated, the author is able to
+republish the web page containing the Fluid article and interact with the fragment of text. As shown in
+\secref{}, this is an important validation step that can reveal errors in the generated expression.
 
-\paragraph{Manual validation step.} Once a valid expression is approved, the updated text is spliced back into
-the document, and any downstream interactions (e.g. reloading the web page) are checked.
+\end{enumerate}
 
 This human-in-the-loop design combines automated synthesis with validation and author oversight, providing a
 substantial level of automation, but requiring the author to intervene at key steps to ensure correctness.
@@ -98,18 +101,3 @@ with no extraneous content (such as comments).
     error (natural language mentions accuracy, while interaction reveals use of timing data).}
     \label{fig:overall-architecture}
 \end{figure}
-
-\subsection{Loopback System}
-\label{subsec:loopback-system}
-
-Expressions generated by the \InterpretationAgent are evaluated by the Fluid interpreter. If evaluation fails,
-the error is used to extend the prompt and the extended prompt is sent back to the LLM for regeneration. This
-loopback mechanism enables iterative refinement of expressions, improving accuracy and robustness. There are
-three kinds of loopback error:
-
-\begin{itemize}
-    \item \textbf{Invalid Program}. Evaluation fails due a syntax error, undeclared identifier, division by
-    zero, array index out of bounds or other runtime problem.
-    \item \textbf{Invalid Expression Type}. The value of the expression is not convertible to a string.
-    \item \textbf{Mismatching String}. The string value of the expression is not equal to the target text.
-\end{itemize}

@@ -6,7 +6,6 @@ public enum ExpressionCategory {
     PERCENTAGE("Percentage"),
     DATA_RETRIEVAL("Data Retrieval"),
     DIFFERENCE("Difference"),
-    TOTAL("Total"),
     AVERAGE("Average"),
     SUM("Sum"),
     MIN_MAX("Min/Max");

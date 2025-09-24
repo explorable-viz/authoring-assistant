@@ -25,7 +25,7 @@
   "threshold": 0.0,
   "system-prompt-path": "system-prompt/interpretation-agent",
   "max-program-variants": 1,
-  "num-learning-case-to-generate": 1,
+  "num-learning-case-to-generate": 0,
   "num-test-data-variants": 1,
   "num-test-runs": 1,
   "authoring-agent-class": "explorableviz.authoringassistant.llm.LLMDummyAgent",

@@ -34,22 +34,12 @@ data elements that support them, through embedded provenance queries.
 \end{enumerate}
 
 \figref{scigen-example-website}, generated from our implementation, illustrates these two features. The upper
-section shows an excerpt from \cite{zhang18}, a scholarly article comparing text encoding techniques. When a
-reader hovers over the phrase \textfrag{does not further improve}, the relevant data are highlighted on the
-left. Other fragments (e.g. \textfrag{better than}, \textfrag{further improvements}) that refer to the same
-data are also marked, allowing the reader to explore supporting and contrasting evidence. The lower section
-shows a counterfactual situation where the authors' experiments had produced different results: here the
-phrase \textfrag{does not further improve} is replaced by \textfrag{further improves}.
-
-Transparent documents thus turn static text into interactable, data-driven content able to expose the
-evidential basis of scholarly claims, for which we envisage two use cases. First, when \textbf{authoring}
-content for an online article, a journalist or scientific publisher may wish to provide text which is linked
-to the underlying data so that the evidence base for the textual claims can be explored directly from the
-article. Second, when \textbf{reading} a document reporting on findings derived from open data (perhaps a
-scientific paper or climate report), the reader may want to retroactively interpret parts of the text as
-queries over the available data and gradually ``rationally reconstruct'' the relationship between claims in
-the paper and the evidence base. This might be just to aid their own comprehension, or part of a formal peer
-review process.
+section shows a ``transparent'' excerpt from \cite{zhang18}, a scholarly article comparing text encoding
+techniques. When a reader hovers over the phrase \textfrag{does not further improve}, the relevant data are
+highlighted on the left. Other fragments (e.g. \textfrag{better than}, \textfrag{further improvements}) that
+refer to the same data are also marked, allowing the reader to explore supporting and contrasting evidence.
+The lower section shows a counterfactual situation where the authors' experiments had produced different
+results: here the phrase \textfrag{does not further improve} is replaced by \textfrag{further improves}.
 
 \begin{figure}%[h]
     \centering
@@ -58,9 +48,26 @@ review process.
     \hrule
     \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-counterfactual-with-pointer.png}
     \caption{\emph{Transparent document} example, showing data-driven natural language (top
-    vs.~bottom)}
+    vs.~bottom) \mdnote{The caption could perhaps say a little more about the figure, although it is already described in the text.}}
     \label{fig:scigen-example-website}
 \end{figure}
+
+This transparent version of the document was implemented in Fluid. The source code is shown in
+\figref{fluid-example-paragraph}, and makes use of several helper functions, a representative subset of which
+are shown in \figref{fluid-scigen}. Both the provenance-tracking runtime of Fluid \emph{and} the LLM-based
+authoring support contribute to the solution: the Fluid runtime provides the interactions, and the LLM-based
+authoring tool makes the whole process practical. Without tool support, authoring a scientific document as a
+(hand-crafted) \emph{program} is unlikely to be a feasible task.
+
+AI-assisted authoring of transparent documents thus support turning static text into interactable, data-driven
+content able to expose the evidential basis of scholarly claims. We envisage two use cases. First, when
+\textbf{authoring} content for an online article, a journalist or scientific publisher may wish to provide
+text which is linked to the underlying data so that the evidence base for the textual claims can be explored
+directly from the article. Second, when \textbf{reading} a document reporting on findings derived from open
+data (perhaps a scientific paper or climate report), the reader may want to retroactively interpret parts of
+the text as queries over the available data and gradually ``rationally reconstruct'' the relationship between
+claims in the paper and the evidence base. This might be just to aid their own comprehension, or part of a
+formal peer review process.
 
 \paragraph{Contributions.} Our specific contributions are:
 
@@ -81,7 +88,7 @@ work.
 \input{fig/natural-language-forms}
 
 Table~\ref{tab:natural-language-forms} summarises the natural language idioms studied in this paper. With
-state-of-the-art models like gpt4o and gpt5, our system is able to resolve basic table lookups of direct
+state-of-the-art models like \gptfour and \gptfive, our system is able to resolve basic table lookups of direct
 numerical values, as well as computations of percentages, averages, minima and maxima, and totals, each mapped
 to the corresponding aggregation over the source data. For example, phrases such as \textfrag{the Energy
 Sector accounts for 52.80\% of total emissions} and \textfrag{average methane emissions for 2030 is 13.51} are
@@ -98,7 +105,7 @@ natural language phrases.
 \input{fig/scigen-lib}
 
 Taken together, these categories cover a representative portion of the numerical reasoning idioms found in the
-SciGen benchmark. However, some linguistic forms that commonly arise in scholarly articles are not covered in
+\SciGen benchmark. However, some linguistic forms that commonly arise in scholarly articles are not covered in
 our analysis. We have yet to study approximate quantitative terms like \textfrag{around 50\%} or
 \textfrag{roughly 100 instances}, nor interval-based descriptions such as \textfrag{between 30 and 40\%} or
 \textfrag{within 5–10 seconds}. While we have no reason for thinking these will present specific difficulties,
@@ -106,19 +113,11 @@ other forms are likely to be more challenging. So-called \emph{graded} modal adv
 modify adjectival comparatives like \textfrag{better} -- as in \textfrag{slightly better} and
 \textfrag{significantly higher} -- especially when combined with trends over time, as in \textfrag{steadily
 increasing} or \textfrag{sharply declining} -- are likely to prove difficult because the interpretation of
-these qualifiers can be subjective and context-dependent. Adverbial quantifiers like \textfrag{generally} and
-\textfrag{usually} present similar challenges because colloquial use may differ from more formal uses (in some
-situations ``most'' might mean a majority, i.e.~greater than 50\% of cases, but in others may mean only
-``greater than any other alternative proportion''). On the other hand these difficulties also present
-themselves to human readers, so extending coverage to these idioms would substantially deepen our tool's
-ability to bridge natural language reporting with interpretation in terms of the underlying dataset, perhaps
-revealing inconsistent use of technical language on the part of the author. We discuss this further in
+these qualifiers can be subjective and context-dependent. Generalised quantifiers like \textfrag{generally}
+and \textfrag{usually}~\citep{barwise81} present similar challenges because colloquial use may differ from
+more formal uses (in some situations ``most'' might mean a majority, i.e.~greater than 50\% of cases, but in
+others may mean only ``greater than any other alternative proportion''). On the other hand these difficulties
+also present themselves to human readers, so extending coverage to these idioms would substantially deepen our
+tool's ability to bridge natural language reporting with interpretation in terms of the underlying dataset,
+perhaps revealing inconsistent use of technical language on the part of the author. We discuss this further in
 \secref{conclusion:future-work}.
-
-\subsection{Contributions}
-
-\begin{itemize}
-    \item Design and proof-of-concept implementation of AI-assisted workflow for authoring transparent text
-    (\secref{authoring-workflow})
-    \item Empirical evaluation of how effective current LLMs are at providing the ``AI-assisted'' part
-\end{itemize}

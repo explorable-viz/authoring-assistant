@@ -34,15 +34,15 @@ expression. This is intended to cover the situation where the author has made a 
 \emph{incorrect}, and the data set and surrounding natural language have led the LLM to synthesise an
 expression which generates a different value from the one specified by the user.
 
-\item \textbf{Code synthesis step.} The expression synthesis step is an internal loop which starts with an
-initial prompt sent to the LLM (\secref{prompt-design} below) requesting the generation of an expression $e$.
-Using the Fluid command-line interface, the expression is validated to check that it evaluates without error,
-produces a value coercible to a string $s'$, and finally that $s'$ is equal to the target fragment $s$. Any
-failure triggers prompt augmentation with the appropriate error message and the system retries generation. If
-code synthesis loop is able to yield an expression which computes $s$ within a maximum number of retries, the
-synthesis step succeeds with $e$. If the last generated $e$ was invalid (resulting in an error), the code
-synthesis step fails with no expression. Otherwise, code synthesis produces an expression $e$ but with a
-mismatched string outcome $s' \neq s$.
+\item \textbf{Code synthesis step.} The expression synthesis step is an error-guided iterative prompting
+loop~\citep{skreta23}, beginning with an initial prompt sent to the LLM (\secref{prompt-design} below)
+requesting the generation of an expression $e$. Using the Fluid command-line interface, the expression is
+validated to check that it evaluates without error, produces a value coercible to a string $s'$, and finally
+that $s'$ is equal to the target fragment $s$. Any failure triggers prompt augmentation with the appropriate
+error message and the system retries generation. If code synthesis loop is able to yield an expression which
+computes $s$ within a maximum number of retries, the synthesis step succeeds with $e$. If the last generated
+$e$ was invalid (resulting in an error), the code synthesis step fails with no expression. Otherwise, code
+synthesis produces an expression $e$ but with a mismatched string outcome $s' \neq s$.
 
 \item \textbf{Manual validation step.} Once a candidate expression has been generated, the system replaces the
 selected substring $s$ with the interpolation expression \kw{\{$e$\}}, creating a new (but only tentative)

@@ -46,16 +46,16 @@ generating expression by categories.
     \begin{subfigure}{0.48\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/success_rate_by_category}
-        \caption{Success rate by testcases}
+        \caption{Success rate by Linguistic Category}
         \label{fig:success_rate_by_category}
     \end{subfigure}\hfill
     \begin{subfigure}{0.48\linewidth}
         \centering
-        \includegraphics[width=\linewidth]{fig/success_rate_by_category_count}
-        \caption{Success rate by category count}
-        \label{fig:success_rate_by_category_count}
+        \includegraphics[width=\linewidth]{fig/success_rate_by_complexity}
+        \caption{Success rate by Complexity}
+        \label{fig:success_rate_by_complexity}
     \end{subfigure}
-    \caption{Comparison of success rates}
+    \caption{Success rate of the proposed system, measured over 5 runs with gpt-4o}
     \label{fig:success_rate_comparison}
 \end{figure}
 
@@ -70,14 +70,14 @@ generating expression by categories.
         \begin{tabular}{lcccc}
             \hline
             & \multicolumn{2}{c}{\textbf{gpt4o}} & \multicolumn{2}{c}{\textbf{gpt5}} \\
-            & \textbf{Success Rate} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
+            & \textbf{Success Rate (\%)} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
             \hline
-            Comparison     & 74   & 3 & 77.4 & 2 \\
-            Data Retrieval & 76   & 3 & 77.4 & 2 \\
-            Difference     & 80   & 3 & 77.4 & 2 \\
-            Min/max        & 50   & 3 & 77.4 & 2 \\
-            Rank           & 44   & 3 & 77.4 & 2 \\
-            Total          & 33   & 3 & 77.4 & 2 \\
+            Comparison     & 74.7   & 3 & 77.4 & 2 \\
+            Data Retrieval & 76.4   & 3 & 77.4 & 2 \\
+            Difference     & 80.3   & 3 & 77.4 & 2 \\
+            Min/max        & 50.2   & 3 & 77.4 & 2 \\
+            Rank           & 44.1   & 3 & 77.4 & 2 \\
+            Total          & 33.2   & 3 & 77.4 & 2 \\
             Overall        & 74.9 & 3 & 77.4 & 2 \\
             \hline
         \end{tabular}
@@ -90,7 +90,7 @@ generating expression by categories.
         \begin{tabular}{lcccc}
             \hline
             & \multicolumn{2}{c}{\textbf{gpt4o}} & \multicolumn{2}{c}{\textbf{gpt5}} \\
-            & \textbf{Success Rate} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
+            & \textbf{Success Rate (\%)} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
             \hline
             Comparison     & -- & -- & -- & -- \\
             Data Retrieval & -- & -- & -- & -- \\
@@ -119,7 +119,7 @@ Moreover, the \InterpretationAgent generates a correct expression in approximate
 The system achieved performance above 70\% in comparison, data retrieval, and min/max search tasks.
 In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (50\%).
 
-Figure~\ref{fig:success_rate_by_category_count} reports the success rate as a function of the number of categories assigned to each expression.
+Figure~\ref{fig:success_rate_by_complexity} reports the success rate as a function of the number of categories assigned to each expression.
 Fluid instructions combining multiple operations were associated with multiple categories.
 Results show that the success rate was 75\% for simple expressions (one category), increased to 85\% for two categories,
 and dropped to 58\% when three categories were involved.

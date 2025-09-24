@@ -23,7 +23,7 @@ fragments which are candidates for being computed instead of remaining as litera
 \item \textbf{High-level Authoring workflow.} The system then enters the human-in-the loop authoring workflow
 shown in Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The
 system waits for the author to select a fragment of text $s$ to interpret (perhaps previously highlighted by
-the \SuggestionAgent). The system then attempts to generate \mdnote{I changed ``generates'' to ``generate''} a candidate Fluid expression $e$ using the
+the \SuggestionAgent). The system then attempts to generate a candidate Fluid expression $e$ using the
 closed-loop synthesis step (3) below. If code synthesis succeeds with an expression $e$, the system proceeds
 to the manual validation step (4) below. If the synthesis step fails with no expression, no remedial action is
 possible; this is considered an unsuccessful path through the workflow and returns the system to the entry

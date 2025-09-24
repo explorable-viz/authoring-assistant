@@ -47,8 +47,7 @@ results: here the phrase \textfrag{does not further improve} is replaced by \tex
     \vspace{1mm}
     \hrule
     \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-counterfactual-with-pointer.png}
-    \caption{\emph{Transparent document} example, showing data-driven natural language (top
-    vs.~bottom)}
+    \caption{Two versions of a transparent document, showing text fragments linked to data}
     \label{fig:scigen-example-website}
 \end{figure}
 
@@ -83,12 +82,14 @@ work.
 
 \input{fig/scigen-1805.02474v1-10-src}
 
+
 \subsection{Target idioms of natural language}
+\cdnote{Can we make this a section? intro is getting too long}
 
 \input{fig/natural-language-forms}
 
 Table~\ref{tab:natural-language-forms} summarises the natural language idioms studied in this paper. With
-state-of-the-art models like gpt4o and gpt5, our system is able to resolve basic table lookups of direct
+state-of-the-art models like \gptfour and \gptfive, our system is able to resolve basic table lookups of direct
 numerical values, as well as computations of percentages, averages, minima and maxima, and totals, each mapped
 to the corresponding aggregation over the source data. For example, phrases such as \textfrag{the Energy
 Sector accounts for 52.80\% of total emissions} and \textfrag{average methane emissions for 2030 is 13.51} are
@@ -105,7 +106,7 @@ natural language phrases.
 \input{fig/scigen-lib}
 
 Taken together, these categories cover a representative portion of the numerical reasoning idioms found in the
-SciGen benchmark. However, some linguistic forms that commonly arise in scholarly articles are not covered in
+\SciGen benchmark. However, some linguistic forms that commonly arise in scholarly articles are not covered in
 our analysis. We have yet to study approximate quantitative terms like \textfrag{around 50\%} or
 \textfrag{roughly 100 instances}, nor interval-based descriptions such as \textfrag{between 30 and 40\%} or
 \textfrag{within 5–10 seconds}. While we have no reason for thinking these will present specific difficulties,
@@ -113,11 +114,11 @@ other forms are likely to be more challenging. So-called \emph{graded} modal adv
 modify adjectival comparatives like \textfrag{better} -- as in \textfrag{slightly better} and
 \textfrag{significantly higher} -- especially when combined with trends over time, as in \textfrag{steadily
 increasing} or \textfrag{sharply declining} -- are likely to prove difficult because the interpretation of
-these qualifiers can be subjective and context-dependent. Adverbial quantifiers like \textfrag{generally} and
-\textfrag{usually} present similar challenges because colloquial use may differ from more formal uses (in some
-situations ``most'' might mean a majority, i.e.~greater than 50\% of cases, but in others may mean only
-``greater than any other alternative proportion''). On the other hand these difficulties also present
-themselves to human readers, so extending coverage to these idioms would substantially deepen our tool's
-ability to bridge natural language reporting with interpretation in terms of the underlying dataset, perhaps
-revealing inconsistent use of technical language on the part of the author. We discuss this further in
+these qualifiers can be subjective and context-dependent. Generalised quantifiers like \textfrag{generally}
+and \textfrag{usually}~\citep{barwise81} present similar challenges because colloquial use may differ from
+more formal uses (in some situations ``most'' might mean a majority, i.e.~greater than 50\% of cases, but in
+others may mean only ``greater than any other alternative proportion''). On the other hand these difficulties
+also present themselves to human readers, so extending coverage to these idioms would substantially deepen our
+tool's ability to bridge natural language reporting with interpretation in terms of the underlying dataset,
+perhaps revealing inconsistent use of technical language on the part of the author. We discuss this further in
 \secref{conclusion:future-work}.

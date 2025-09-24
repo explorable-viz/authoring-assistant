@@ -3,10 +3,13 @@ package explorableviz.authoringassistant.paragraph;
 public enum ExpressionCategory {
     COMPARISON("Comparison"),
     RANK("Rank"),
-    PERCENTAGE("Percentage"),
+    RATIO("Ratio"),
     DATA_RETRIEVAL("Data Retrieval"),
     DIFFERENCE("Difference"),
     TOTAL("Total"),
+    MIN_MAX("Min/Max"),
+    AVERAGE("Average"),
+    SUM("Sum"),
     MIN_MAX("Min/Max"),
     GENERALISED_QUANTIFIER("Generalised Quantifier");
 

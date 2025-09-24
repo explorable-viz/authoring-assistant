@@ -3,21 +3,6 @@
     "emissions": [
       {
         "year": "2030",
-        "operation": "average",
-        "expected": "sumEmissions year tableData / length records"
-      },
-      {
-        "year": "2015",
-        "operation": "average",
-        "expected": "sumEmissions year tableData / length records"
-      },
-      {
-        "year": "2020",
-        "operation": "average",
-        "expected": "sumEmissions year tableData / length records"
-      },
-      {
-        "year": "2030",
         "operation": "total",
         "expected": "sumEmissions year tableData"
       },
@@ -54,7 +39,7 @@
     {
       "type": "expression",
       "expression": "$emissions.expected$",
-      "categories": ["total"]
+      "categories": ["sum"]
     }
   ]
 }

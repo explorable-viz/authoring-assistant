@@ -1,0 +1,7 @@
+let sumEmissions year data =
+   let records = getByYear year data;
+   let totals = sum(map (fun x -> x.emissions) records)
+   in totals;
+let year = $emissions.year$;
+let records = getByYear year tableData
+in

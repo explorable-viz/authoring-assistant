@@ -62,13 +62,21 @@ trendWord
  growShrink
         \end{lstlisting} \\
         Pairwise comparisons
+        & In the case of one syndrome (Hemorrhagic) we noticed an \hl{unusually low} level of recall for SVM but not for NB.&
+        \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
+unusuallyHighLow (overallComparison 
+  [compareCols col \"naive_bayes_r\" 
+    (findWithKey_ \"synd\" \"Hem.\" tableData) 
+  | col <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]]
+)
+        \end{lstlisting} \\
+        Generalised quantifiers
         & Overall the SVM with polynomial degree 1 kernel outperformed all other kernels with other kernels generally offering \hl{better} precision at a higher cost to recall. &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 betterWorse (overallComparison 
-  [compareToSvmLinearP c 
-  | c <- ["naive_bayes_p", "svm2_p", "svm3_p", "svmr_p"]]
+  [overallComparison (map (compareCols \"svm1_p\" col) tableData)
+  | col <- ["naive_bayes_p", "svm2_p", "svm3_p", "svmr_p"]]
 )
-
         \end{lstlisting} \\
         \hline
     \end{tabular}

@@ -6,8 +6,6 @@ public enum ExpressionCategory {
     RATIO("Ratio"),
     DATA_RETRIEVAL("Data Retrieval"),
     DIFFERENCE("Difference"),
-    TOTAL("Total"),
-    MIN_MAX("Min/Max"),
     AVERAGE("Average"),
     SUM("Sum"),
     MIN_MAX("Min/Max"),

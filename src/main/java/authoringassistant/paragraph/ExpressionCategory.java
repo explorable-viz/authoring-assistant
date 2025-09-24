@@ -1,4 +1,4 @@
-package explorableviz.authoringassistant.paragraph;
+package authoringassistant.paragraph;
 
 public enum ExpressionCategory {
     COMPARISON("Comparison"),
@@ -10,6 +10,7 @@ public enum ExpressionCategory {
     SUM("Sum"),
     MIN_MAX("Min/Max"),
     GENERALISED_QUANTIFIER("Generalised Quantifier");
+
 
     public final String label;
     ExpressionCategory(String label) {

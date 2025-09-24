@@ -1,4 +1,4 @@
-package explorableviz.authoringassistant.llm.suggestion;
+package authoringassistant.llm.suggestion;
 
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;

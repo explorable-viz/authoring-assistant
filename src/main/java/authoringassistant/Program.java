@@ -1,11 +1,11 @@
-package explorableviz.authoringassistant;
+package authoringassistant;
 
-import explorableviz.authoringassistant.paragraph.ExpressionCategory;
-import explorableviz.authoringassistant.paragraph.Expression;
-import explorableviz.authoringassistant.paragraph.Literal;
-import explorableviz.authoringassistant.paragraph.Paragraph;
-import explorableviz.authoringassistant.variable.ValueOptions;
-import explorableviz.authoringassistant.variable.Variables;
+import authoringassistant.paragraph.ExpressionCategory;
+import authoringassistant.paragraph.Expression;
+import authoringassistant.paragraph.Literal;
+import authoringassistant.paragraph.Paragraph;
+import authoringassistant.variable.ValueOptions;
+import authoringassistant.variable.Variables;
 import kotlin.Pair;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static explorableviz.authoringassistant.variable.Variables.Flat.expandVariables;
+import static authoringassistant.variable.Variables.Flat.expandVariables;
 
 public class Program {
 

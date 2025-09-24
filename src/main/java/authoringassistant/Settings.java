@@ -1,4 +1,4 @@
-package explorableviz.authoringassistant;
+package authoringassistant;
 
 import org.json.JSONObject;
 

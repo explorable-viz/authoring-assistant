@@ -1,10 +1,9 @@
-package explorableviz.authoringassistant.variable;
+package authoringassistant.variable;
 
 import org.json.JSONObject;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
-import java.util.Random;
 import java.util.Set;
 import java.util.SplittableRandom;
 

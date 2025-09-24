@@ -1,13 +1,11 @@
-package explorableviz.authoringassistant.llm;
+package authoringassistant.llm;
 
-import explorableviz.authoringassistant.paragraph.Expression;
+import authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
-import it.unisa.cluelab.lllm.llm.prompt.Prompt;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.logging.Logger;
 
 public class LLMDummyAgent extends LLMEvaluatorAgent<Expression> {

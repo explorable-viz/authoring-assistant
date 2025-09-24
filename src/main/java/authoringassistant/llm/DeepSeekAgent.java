@@ -1,6 +1,6 @@
-package explorableviz.authoringassistant.llm;
+package authoringassistant.llm;
 
-import explorableviz.authoringassistant.paragraph.Expression;
+import authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.agents.generic.OLLAMAEvaluatorAgent;
 import org.json.JSONObject;
 

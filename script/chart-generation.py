@@ -93,7 +93,7 @@ def generate_aggregated_plot(df, plot):
                     (p.get_x() + p.get_width()/2., h),
                     ha='center', va='bottom', fontsize=8)
 
-    plt.title("Success Rate by Linguistic Category (split by target-value)")
+    plt.title("Success Rate by Linguistic Category")
     plt.xlabel("Category")
     plt.ylabel("Average Success Rate")
     plt.xticks(rotation=45, ha="right")
@@ -115,7 +115,7 @@ def generate_success_rate_by_category_count(df, plot):
         .reset_index()
     )
 
-    summary["label"] = summary["category_count"].astype(str) + " (" + summary["count"].astype(str) + ")"
+    summary["label"] = summary["category_count"].astype(str)
 
     plt.figure(figsize=(6, 6))
     label_map = {
@@ -137,13 +137,13 @@ def generate_success_rate_by_category_count(df, plot):
                     (p.get_x() + p.get_width() / 2., p.get_height()),
                     ha='center', va='bottom', fontsize=8)
 
-    plt.title("Success Rate by Number of Categories (grouped by target-value)")
-    plt.xlabel("Number of Categories (Number of Examples)")
-    plt.ylabel("Average Success Rate")
+    plt.title("Success Rate by Complexity")
+    plt.xlabel("Complexity")
+    plt.ylabel("Average Success Rate over 5 runs")
     plt.xticks(rotation=45, ha="right")
     plt.ylim(0, 1.1)
     plt.tight_layout()
-    plt.savefig(f"{fig_dir}/success_rate_by_category_count.png")
+    plt.savefig(f"{fig_dir}/success_rate_by_complexity.png")
     plt.close()
 
 def generate_charts():

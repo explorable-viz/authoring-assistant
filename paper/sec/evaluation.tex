@@ -3,6 +3,20 @@
 
 \subsection{Research questions}
 
+\cdnote{I've bulked up the RQs qlthough I'm not sure we're actually attempting to answer them}
+RQ1. How robust is the system when provided with incomplete or ambiguous information?
+In real-world authoring tasks, text fragments may omit key criteria (e.g. \textbf{?}) or contain vague identifiers (e.g. \textbf{?} without further context).
+We therefore ask how performance degrades when the specification is underspecified or when multiple interpretations are possible. Here, we distinguish between two forms of ambiguity:
+(1) domain-level ambiguity, which reflects genuine uncertainty in the data (e.g. two models achieving identical scores).
+(2) specification-level ambiguity, which arises from incomplete or imprecise descriptions in the query (e.g. missing fields that would otherwise resolve the expression uniquely).
+
+RQ2. How sensitive is the system to misleading or adversarial information?
+Authors may, intentionally or unintentionally, introduce misleading elements into the text. These include inconsistent identifiers, incorrect numerical values, or contradictory claims.
+We ask how the system responds in such cases: does it fail gracefully, does it default to literal reproduction of the misleading fragment, or does it attempt to generate a plausible, but incorrect, expression?
+
+Together, these questions probe the limits of the InterpretationAgent's ability to generate reliable code. By contrasting genuine uncertainty with misleading or ill-specified inputs, we aim to understand not only the model's raw success rate, but also the failure modes most likely to arise in practical use.
+
+
 \begin{itemize}
 \item How does performance degrade with partial/ambiguous information?
 \item How is performance affected by ``adversarial'' (intentionally/unintentionally misleading) information?

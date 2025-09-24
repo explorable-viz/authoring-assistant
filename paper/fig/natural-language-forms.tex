@@ -64,15 +64,17 @@ trendWord
         Pairwise comparisons
         & Overall the SVM with polynomial degree 1 kernel outperformed all other kernels with other kernels generally offering \hl{better} precision at a higher cost to recall. &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-trendWord
-(mean (getTableColumn \"svm1_p\" tableData))
-(mean
-[ mean (getTableColumn \"naive_bayes_p\" tableData),
-  mean (getTableColumn \"svm2_p\" tableData),
-  mean (getTableColumn \"svm3_p\" tableData),
-  mean (getTableColumn \"svmr_p\" tableData)
-])
-betterWorse
+let compareToSvmLinearP columnName = 
+overallComparison 
+  (map (compareCols \"svm1_p\" columnName) 
+    tableData) 
+in betterWorse (overallComparison 
+[compareToSvmLinearP c | c <- [
+  \"naive_bayes_p\", 
+  \"svm2_p\",
+  \"svm3_p\",
+  \"svmr_p\"]
+])",
 
         \end{lstlisting} \\
         \hline

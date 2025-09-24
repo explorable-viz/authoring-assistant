@@ -15,8 +15,8 @@
     },
     {
       "type": "expression",
-      "expression": "underOverPerformed (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm2_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm3_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svmr_p\") tableData)])",
-      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "let compareToSvmLinearP columnName = overallComparison (map (compareCols \"svm1_p\" columnName) tableData) in underOverPerformed (overallComparison [compareToSvmLinearP c | c <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -24,8 +24,8 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm2_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm3_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svmr_p\") tableData)])",
-      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "let compareToSvmLinearP columnName = overallComparison (map (compareCols \"svm1_p\" columnName) tableData) in betterWorse (overallComparison [compareToSvmLinearP c | c <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -33,8 +33,8 @@
     },
     {
       "type": "expression",
-      "expression": "aHigherLower (overallComparison [ overallComparison (map (compareCols \"naive_bayes_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svm2_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svm3_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svmr_r\" \"svm1_r\") tableData)])",
-      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "let compareToSvmLinearR columnName = overallComparison (map (compareCols columnName \"svm1_r\" ) tableData) in betterWorse (overallComparison [compareToSvmLinearR c | c <- [\"naive_bayes_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -114,8 +114,8 @@
     },
     {
       "type": "expression",
-      "expression": "aReducedIncreased (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm2_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm3_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svmr_p\" \"naive_bayes_p\") tableData)])",
-      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "let compareToNBP columnName = overallComparison (map (compareCols columnName \"naive_bayes_p\" ) tableData) in aReducedIncreased (overallComparison [compareToNBP c | c <- [\"svm1_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -123,17 +123,17 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (overallComparison [ overallComparison (map (compareCols \"svm1_r\" \"naive_bayes_r\") tableData), overallComparison (map (compareCols \"svm2_r\" \"naive_bayes_r\") tableData), overallComparison (map (compareCols \"svm3_r\" \"naive_bayes_r\") tableData), overallComparison (map (compareCols \"svmr_r\" \"naive_bayes_r\") tableData)])",
-      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "let compareToNBR columnName = overallComparison (map (compareCols columnName \"naive_bayes_r\" ) tableData) in betterWorse (overallComparison [compareToNBR c | c <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
-      "value": " recall. In the case of one syndrome (Hemorrhagic) we noticed an unusually "
+      "value": " recall. In the case of one syndrome (Hemorrhagic) we noticed an "
     },
     {
       "type": "expression",
-      "expression": "let hem = findWithKey_ \"synd\" \"Hem.\" tableData in highLow (overallComparison [compareCols \"svm1_r\" \"naive_bayes_r\" hem, compareCols \"svm2_r\" \"naive_bayes_r\" hem, compareCols \"svm3_r\" \"naive_bayes_r\" hem, compareCols \"svmr_r\" \"naive_bayes_r\" hem]) ",
-      "categories": ["comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "let hem = findWithKey_ \"synd\" \"Hem.\" tableData; let compareToHemNBR columnName = compareCols columnName \"naive_bayes_r\" hem in unusuallyHighLow (overallComparison [compareToHemNBR c | c <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]]) ",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",

@@ -7,7 +7,8 @@ public enum ExpressionCategory {
     DATA_RETRIEVAL("Data Retrieval"),
     DIFFERENCE("Difference"),
     TOTAL("Total"),
-    MIN_MAX("Min/Max");
+    MIN_MAX("Min/Max"),
+    GENERALISED_QUANTIFIER("Generalised Quantifier");
 
     public final String label;
     ExpressionCategory(String label) {

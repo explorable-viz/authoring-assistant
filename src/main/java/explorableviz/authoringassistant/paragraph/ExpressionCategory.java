@@ -3,7 +3,7 @@ package explorableviz.authoringassistant.paragraph;
 public enum ExpressionCategory {
     COMPARISON("Comparison"),
     RANK("Rank"),
-    PERCENTAGE("Percentage"),
+    RATIO("Ratio"),
     DATA_RETRIEVAL("Data Retrieval"),
     DIFFERENCE("Difference"),
     AVERAGE("Average"),

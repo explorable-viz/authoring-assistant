@@ -11,7 +11,7 @@
     {
       "type": "expression",
       "expression": "length (filter (fun x -> x.dataset /= \"Average\") tableData)",
-      "categories": ["total"]
+      "categories": ["sum"]
     },
     {
       "type": "literal",
@@ -29,7 +29,7 @@
     {
       "type": "expression",
       "expression": "let avgCorrelationScores = findWithKey_ \"dataset\" \"Average\" tableData; let compareToProposed columnName = compareCols \"proposed\" columnName avgCorrelationScores in underOverPerformed (overallComparison [ compareToProposed c | c <- [\"glo_ve\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\"]])",
-      "categories": ["comparison"]
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -73,8 +73,8 @@
     },
     {
       "type": "expression",
-      "expression": "let avgCorrelationScores = findWithKey_ \"dataset\" \"Average\" tableData; let algorithms = [\"glo_ve\", \"word_2_vec\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\", \"proposed\"]; let corrScores = map (fun c -> avgCorrelationScores.[c]) algorithms; let [avg, dev] = stats corrScores in highLow (overallComparison ( map (fun val -> distributionOutlier val avg dev 2) (getColumn \"spine\" tableData)))",
-      "categories": ["comparison"]
+      "expression": "let avgCorrelationScores = findWithKey_ \"dataset\" \"Average\" tableData; let algorithms = [\"glo_ve\", \"word_2_vec\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\", \"proposed\"]; let corrScores = map (fun c -> avgCorrelationScores.[c]) algorithms; let [avg, dev] = stats corrScores in unusuallyHighLow (overallComparison ( map (fun val -> distributionOutlier val avg dev 2) (getColumn \"spine\" tableData)))",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",

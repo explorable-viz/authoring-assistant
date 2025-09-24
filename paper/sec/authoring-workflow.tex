@@ -14,12 +14,11 @@ The main components of the workflow are as follows:
 \begin{enumerate}
 
 \item \textbf{Initial configuration.} The author imports the target text and accompanying data into the system
-to create a programmatic representation of the target document. Initially this is simply isomorphic to the
+to create a programmatic representation of the target document. Initially this is simply equivalent to the
 target text, taking the form of a string literal \kw{"""..."""}, where the triple quotes are Fluid syntax for
 a Python or JavaScript-style \emph{interpolated string}, i.e.~a literal where expressions of the form
 \kw{\{$e$\}} are permitted within the string. The \SuggestionAgent analyses the target text and identifies any
 fragments which are candidates for being computed instead of remaining as literal substrings.
-\mdnote{Since this is the only occurrence of the term ``isomorphic'' in the paper, it might be worth adding a brief explanation, unless you feel it is clear enough as is.}
 
 \item \textbf{High-level Authoring workflow.} The system then enters the human-in-the loop authoring workflow
 shown in Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The

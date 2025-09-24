@@ -7,6 +7,8 @@ public enum ExpressionCategory {
     DATA_RETRIEVAL("Data Retrieval"),
     DIFFERENCE("Difference"),
     TOTAL("Total"),
+    AVERAGE("Average"),
+    SUM("Sum"),
     MIN_MAX("Min/Max");
 
     public final String label;

@@ -1,12 +1,21 @@
 {
   "datasets": [ "datasets/scigen/1807.07279v3-23.json" ],
-  "imports": ["util", "datasets/scigen/_1807_07279v3_23"],
+  "imports": ["util", "scigen", "datasets/scigen/_1807_07279v3_23"],
   "variables": {},
   "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
-      "value": "The correlation scores for 13 different similarity test sets and their averages are reported in Table VI. We observe that, let alone a"
+      "value": "The correlation scores for "
+    },
+    {
+      "type": "expression",
+      "expression": "length (filter (fun x -> x.dataset /= \"Average\") tableData)",
+      "categories": ["total"]
+    },
+    {
+      "type": "literal",
+      "value": "different similarity test sets and their averages are reported in Table VI. We observe that, let alone a"
     },
     {
       "type": "expression",
@@ -19,7 +28,7 @@
     },
     {
       "type": "expression",
-      "expression": "\"improvement\"",
+      "expression": "let avgCorrelationScores = findWithKey_ \"dataset\" \"Average\" tableData; let compareToProposed columnName = compareCols \"proposed\" columnName avgCorrelationScores in underOverPerformed (overallComparison [ compareToProposed c | c <- [\"glo_ve\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\"]])",
       "categories": ["comparison"]
     },
     {
@@ -60,21 +69,16 @@
     },
     {
       "type": "literal",
-      "value": "enough to result in a measurable improvement. It should also be noted that scores obtained by SPINE is unacceptably"
+      "value": "enough to result in a measurable improvement. It should also be noted that scores obtained by SPINE is "
     },
     {
       "type": "expression",
-      "expression": "\"low\"",
+      "expression": "let avgCorrelationScores = findWithKey_ \"dataset\" \"Average\" tableData; let algorithms = [\"glo_ve\", \"word_2_vec\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\", \"proposed\"]; let corrScores = map (fun c -> avgCorrelationScores.[c]) algorithms; let [avg, dev] = stats corrScores in highLow (overallComparison ( map (fun val -> distributionOutlier val avg dev 2) (getColumn \"spine\" tableData)))",
       "categories": ["comparison"]
     },
     {
       "type": "literal",
       "value": "on almost all tests indicating that it has achieved its interpretability performance at the cost of losing its semantic functions."
-    },
-    {
-      "type": "expression",
-      "expression": "(findWithKey_ \"dataset\" \"SIMLEX-999\" tableData).dataset",
-      "categories": ["comparison"]
     }
   ]
 }

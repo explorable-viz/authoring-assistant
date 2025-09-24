@@ -29,6 +29,11 @@ let overallComparison orders =
 
 let compareCols columnA columnB tableRow = compare tableRow.[columnA] tableRow.[columnB];
 
+let distributionOutlier val avg stdDev numOfDev = 
+   if (avg - numOfDev * stdDev <= val) `and` (val <= avg + numOfDev * stdDev) then EQ
+   else if (avg - numOfDev * stdDev > val) then LT
+   else GT;
+
 let trendWord n1 n2 compareWord =
     compareWord (compare n1 n2);
 

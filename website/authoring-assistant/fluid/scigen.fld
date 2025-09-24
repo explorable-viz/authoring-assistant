@@ -29,6 +29,19 @@ let overallComparison orders =
 
 let compareCols columnA columnB tableRow = compare tableRow.[columnA] tableRow.[columnB];
 
+let mean set = sum set / length set; 
+
+let standardDev avg set = (sum (map (fun x -> (x - avg) ** 2) set) / ((length set) - 1)) ** 0.5;
+
+let stats set = 
+    let avg = mean set
+    in [avg, standardDev avg set];
+
+let distributionOutlier val avg stdDev numOfDev = 
+   if (avg - numOfDev * stdDev <= val) `and` (val <= avg + numOfDev * stdDev) then EQ
+   else if (avg - numOfDev * stdDev > val) then LT
+   else GT;
+
 let trendWord n1 n2 compareWord =
     compareWord (compare n1 n2);
 

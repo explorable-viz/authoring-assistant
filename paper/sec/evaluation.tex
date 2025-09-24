@@ -1,25 +1,8 @@
 \section{Empirical Evaluation}
 \label{sec:evaluation}
 
-\subsection{Validation}
-\label{subsec:validation-with-counterfactual-data}
-
-The validation process is structured in two phases
-
-\paragraph{Initial validation}
-In the initial phase, the generated expression is executed via Fluid CLI. If the execution is successful, the
-result obtained is compared with the expected result. In case of error, the output is forwarded to the
-\InterpretationAgent, which proceeds to regenerate the expression.
-
-\paragraph{Validation via counterfactual testing}
-In the second phase, the data used for execution is deliberately modified in order to verify the consistency
-of the behaviours. Both the expected and generated expressions are executed again and the results are
-compared. If discrepancies emerge, the error is forwarded to the \InterpretationAgent. If there are no
-differences, the expression is considered valid and is returned to the user.
-
 \subsection{Research questions}
 
-These seem quite pertinent to the overall problem of transparent science communication:
 \begin{itemize}
 \item How does performance degrade with partial/ambiguous information?
 \item How is performance affected by ``adversarial'' (intentionally/unintentionally misleading) information?
@@ -35,9 +18,8 @@ We might want to distinguish ambiguity inherent in the problem domain (e.g.~unce
 specification of a particular code-generation query.
 
 \subsection{Success Rate by Category}
-To evaluate the system we used a sample of the \SciGen dataset~\citep{scigen_dataset_2021}.
-
-We aggregated the generated expression in three categories: aggregation, trends, quantitative (See
+To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
+expression in three categories: aggregation, trends, quantitative (See
 Table~\ref{tab:natural-language-forms}). \figref{success_rate_by_category} shows the results obtained in
 generating expression by categories.
 
@@ -129,6 +111,13 @@ correct expression when no reference string was given.
 On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
 Without the target string, performance decreased moderately to 39.4\%, indicating that the model retains substantial
 ability to reconstruct valid solutions even without explicit guidance
+
+\subsection{Counterfactual testing}
+\label{subsec:validation-with-counterfactual-data}
+
+For the \emph{counterfactual testing} part of our analysis, the input data is deliberately modified in order
+to verify the consistency of the behaviours. Both the expected and generated expressions are executed again
+and the results are compared. If discrepancies are found \rpnote{complete}
 
 \subsection{Problematic Cases}
 \label{subsec:problematic-cases}

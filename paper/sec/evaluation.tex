@@ -18,7 +18,7 @@ We might want to distinguish ambiguity inherent in the problem domain (e.g.~unce
 specification of a particular code-generation query.
 
 \subsection{Success Rate by Category}
-To evaluate the system we used a sample of the SciGen dataset~\citep{moosavi21}. We aggregated the generated
+To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
 expression in three categories: aggregation, trends, quantitative (See
 Table~\ref{tab:natural-language-forms}). \figref{success_rate_by_category} shows the results obtained in
 generating expression by categories.
@@ -37,7 +37,7 @@ generating expression by categories.
         \caption{Success rate by Complexity}
         \label{fig:success_rate_by_complexity}
     \end{subfigure}
-    \caption{Success rate of the proposed system, measured over 5 runs with gpt-4o}
+    \caption{Success rate of the proposed system, measured over 5 runs with \gptfour}
     \label{fig:success_rate_comparison}
 \end{figure}
 
@@ -51,7 +51,7 @@ generating expression by categories.
         \centering
         \begin{tabular}{lcccc}
             \hline
-            & \multicolumn{2}{c}{\textbf{gpt4o}} & \multicolumn{2}{c}{\textbf{gpt5}} \\
+            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfour}} \\
             & \textbf{Success Rate (\%)} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
             \hline
             Comparison     & 74.7   & 3 & 77.4 & 2 \\
@@ -71,7 +71,7 @@ generating expression by categories.
         \centering
         \begin{tabular}{lcccc}
             \hline
-            & \multicolumn{2}{c}{\textbf{gpt4o}} & \multicolumn{2}{c}{\textbf{gpt5}} \\
+            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
             & \textbf{Success Rate (\%)} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
             \hline
             Comparison     & -- & -- & -- & -- \\
@@ -86,13 +86,13 @@ generating expression by categories.
         \caption{Results without target-value}
         \label{tab:results_no_target}
     \end{subtable}
-    \caption{Comparison of success rates (with standard deviation) between \textbf{gpt4o} and \textbf{gpt5} across different task categories, reported with and without the use of target-values.}
+    \caption{Comparison of success rates (with standard deviation) between \textbf{\gptfour} and \textbf{\gptfive} across different task categories, reported with and without the use of target-values.}
     \label{tab:results_combined}
 \end{table}
 
 In this section, we report the experimental results.
-Table \ref{tab:results_combined} summarizes the performance of \textit{gpt4o} and the most recent OpenAI model, \textit{gpt5}, under two different settings: with target-value sharing enabled and without target-value sharing.
-Overall, the system produced a valid fluid expression in 74.9\% of the cases (S.D. 3\%).
+Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model, \gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
+Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
 
 Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and without target-value sharing.
 The results show that providing the target value is crucial for achieving a high success rate.
@@ -108,7 +108,7 @@ and dropped to 58\% when three categories were involved.
 
 In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
 correct expression when no reference string was given.
-On the SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
+On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
 Without the target string, performance decreased moderately to 39.4\%, indicating that the model retains substantial
 ability to reconstruct valid solutions even without explicit guidance
 
@@ -123,7 +123,7 @@ and the results are compared. If discrepancies are found \rpnote{complete}
 \label{subsec:problematic-cases}
 
 Table~\ref{tab:problematic_cases} presents examples of problematic cases in which the system was asked to generate a valid
-fluid expression.
+Fluid expression.
 In these cases, producing a valid expression is challenging because the input data (or the NL query) contains ambiguities
 that prevent the construction of a well-formed expression.
 

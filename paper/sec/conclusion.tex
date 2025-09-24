@@ -4,25 +4,29 @@
 \subsection{Future Work}
 \label{sec:conclusion:future-work}
 
-\begin{itemize}
-\item Till now we have assumed that helpers functions such as \kw{growShrink} and \kw{trendWord} are
-predefined. Add support for LLM query results that introduce definitions, perhaps adding a loopback condition
-which turns "Definition not found" errors into an augmented prompt to generate the appropriate definition.
-\item Extend prompt with values of variables in scope. We include statically known data sets into the prompt,
-but realistic data analyses make use of derived data resulting from cleaning, imputation, aggregation, etc.
-Natural language interpretation will likely proceed more accurately if we are able to include the values of
-some of these intermediate queries into the prompt as well, perhaps treating the prompt as a notebook-like
-script combining code fragments and their values.
-\item A related observation is that much of the natural language present in scholarly articles refer to
-\emph{visualisations}. Indeed, these also sometimes arise as intermediate artifacts in notebooks and similar
-workflows. These too should be made available to the LLM, perhaps as structured data rather than mere bitmaps,
-as one possible target for interpreting natural language claims (for example claims about trends often refer
-directly to charts).
-\item IDE integration. The implementation described in \secref{authoring-workflow} is a design prototype only,
-with no IDE integration. We plan to add integrate this into VSCode or Cursor, providing a smooth authoring
-experience for content creators.
-\item Fluid also supports \kw{Link} tags in its interpolated string notation. These are \emph{names} which can be given to \emph{queries}. For example, in the sentence ``The \ul{population} of Germany is the largest in the EU'',
-\item Automatic generation of counterfactual test cases.
-\end{itemize}
+Providing helper functions such as \kw{growShrink} and \kw{trendWord} as a predefined library is in some ways
+beneficial because they offer a uniform framework for interpreting a given scholarly document. We would also
+like make the system able to operate in the absence of these, perhaps adding a loopback condition to turn
+``Definition not found'' errors into an augmented prompt to generate the appropriate definition.
 
-\input{fig/nl-further-works}
+Another important direction is to broaden the scope of the artifacts than can be referred to and the natural
+language forms that can be used to refer to them. For example, many claims in scholarly writing refer to
+visualisations and intermediate data sets derived via cleansing, imputation or aggregation. These should also
+be made available to the LLM (for visualisations, as structured data rather than as static bitmaps), enabling
+interpretation of natural language in terms of visual information and other intermediate analyses. Extending
+coverage to additional idioms beyond those considered in Table~\ref{tab:natural-language-forms}, such as
+cardinals and multiplicatives (\textfrag{three} and \textfrag{three times}), rounding (\textfrag{about 2
+degrees warmer}) and graded adjectives \textfrag{extremely likely}, would also expand the expressivity of the
+assistant.
+
+Consider the false statement \textfrag{The population of France is the largest in the EU}. There are at least
+two ways to repair this statement so that it comes out true: treat the subject (France) as fixed, but adjust
+the predicate so that it matches the facts (\textfrag{second largest}), or treat the predicate as fixed, but
+keep adjust the subject to match (\textfrag{Germany}). To make these sorts of (pragmatically important)
+distinctions, we may need to introduce the idea of \emph{referential terms} that have fixed denotations, in
+contrast to queries, whose values are contingent on data.
+
+Finally, integration into developer and authoring environments such as VSCode or Cursor would make the
+workflow more seamless for authors. Automatic generation of the counterfactual test cases discussed in
+\secref{validation-with-counterfactual-data} could further strengthen validation at authoring-time, improving
+the trustability of interpreted claims.

@@ -16,7 +16,7 @@
     {
       "type": "expression",
       "expression": "\"1.0\"",
-      "categories": ["total"]
+      "categories": ["average"]
     }
   ]
 }

@@ -1,6 +1,6 @@
-package explorableviz.authoringassistant;
+package authoringassistant;
 
-import explorableviz.authoringassistant.paragraph.Expression;
+import authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import kotlin.Pair;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static explorableviz.authoringassistant.Program.loadPrograms;
+import static authoringassistant.Program.loadPrograms;
 
 public class InContextLearning {
     private final String systemPrompt;

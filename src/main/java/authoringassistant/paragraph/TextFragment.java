@@ -1,4 +1,4 @@
-package explorableviz.authoringassistant.paragraph;
+package authoringassistant.paragraph;
 
 public abstract class TextFragment {
     private final String value;

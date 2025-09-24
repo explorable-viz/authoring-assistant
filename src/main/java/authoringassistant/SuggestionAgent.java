@@ -1,8 +1,8 @@
-package explorableviz.authoringassistant;
+package authoringassistant;
 
-import explorableviz.authoringassistant.paragraph.Expression;
-import explorableviz.authoringassistant.paragraph.Literal;
-import explorableviz.authoringassistant.paragraph.Paragraph;
+import authoringassistant.paragraph.Expression;
+import authoringassistant.paragraph.Literal;
+import authoringassistant.paragraph.Paragraph;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import kotlin.Pair;

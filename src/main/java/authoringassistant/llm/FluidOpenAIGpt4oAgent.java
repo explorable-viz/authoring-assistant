@@ -1,4 +1,4 @@
-package explorableviz.authoringassistant.llm;
+package authoringassistant.llm;
 
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.theokanning.openai.completion.chat.ChatFunction;
@@ -6,16 +6,14 @@ import com.theokanning.openai.completion.chat.ChatFunctionCall;
 import com.theokanning.openai.completion.chat.ChatMessage;
 import com.theokanning.openai.service.FunctionExecutor;
 import com.theokanning.openai.service.OpenAiService;
-import explorableviz.authoringassistant.paragraph.Expression;
+import authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.agents.generic.OpenAIEvaluatorAgent;
-import it.unisa.cluelab.lllm.llm.prompt.Prompt;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 import java.time.Duration;
 import java.util.Collections;
-import java.util.List;
 
 public class FluidOpenAIGpt4oAgent extends OpenAIEvaluatorAgent<Expression> {
     public FluidOpenAIGpt4oAgent(JSONObject setttings) {

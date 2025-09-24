@@ -1,4 +1,4 @@
-package explorableviz.authoringassistant.variable;
+package authoringassistant.variable;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -6,7 +6,6 @@ import org.json.JSONObject;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.SplittableRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;

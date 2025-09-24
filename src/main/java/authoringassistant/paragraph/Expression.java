@@ -1,4 +1,4 @@
-package explorableviz.authoringassistant.paragraph;
+package authoringassistant.paragraph;
 
 import java.util.Set;
 

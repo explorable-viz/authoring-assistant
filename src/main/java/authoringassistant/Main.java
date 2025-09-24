@@ -1,8 +1,8 @@
-package explorableviz.authoringassistant;
+package authoringassistant;
 
 import kotlin.Pair;
 
-import explorableviz.authoringassistant.Program.QueryResult;
+import authoringassistant.Program.QueryResult;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static explorableviz.authoringassistant.Program.cleanWebsiteFolders;
+import static authoringassistant.Program.cleanWebsiteFolders;
 
 public class Main {
     public static Logger logger = Logger.getLogger(Main.class.getName());

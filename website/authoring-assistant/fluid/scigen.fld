@@ -16,6 +16,19 @@ let ordinal n =
 let rankLabel word n =
    (if n == 1 then "" else ordinal n ++ "-") ++ word;
 
+let countOrd e l g (EQ : xs) = countOrd (e + 1) l g xs;
+    countOrd e l g (LT : xs) = countOrd e (l + 1) g xs;
+    countOrd e l g (GT : xs) = countOrd e l (g + 1) xs;
+    countOrd e l g Nil = [e, l, g];
+
+let overallComparison orders = 
+    let [countEQ, countLT, countGT]  = countOrd 0 0 0 orders
+    in if (countEQ >= countLT) `and` (countEQ >= countGT) then EQ
+        else if countLT > countGT then LT
+        else GT;
+
+let compareCols columnA columnB tableRow = compare tableRow.[columnA] tableRow.[columnB];
+
 let trendWord n1 n2 compareWord =
     compareWord (compare n1 n2);
 
@@ -35,7 +48,7 @@ let improvements EQ = "no further improvements";
     improvements LT = "no further improvements";
     improvements GT = "further improvements";
 
-let shorterLonger EQ = "equal";
+let shorterLonger EQ = "identical";
     shorterLonger LT = "shorter";
     shorterLonger GT = "longer";
 
@@ -46,6 +59,10 @@ let betterWorse EQ = "equal";
 let underOverPerforming EQ = "performing the same as";
     underOverPerforming LT = "performing worse than";
     underOverPerforming GT = "outperforming";
+
+let aHigherLower EQ = "an equivalent";
+    aHigherLower LT = "a lower";
+    aHigherLower GT = "a higher";
 
 let underOverPerformed EQ = "performed the same as";
     underOverPerformed LT = "performed worse than";

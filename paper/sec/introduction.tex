@@ -1,17 +1,17 @@
 \section{Introduction: Transparent, Data-Driven Documents}
 
-Making sense of and verifying data-driven claims is hard, even when the evidence base is open and accessible.
-A key challenge lies in tracing specific claims back to the underlying data. In peer review, for example,
-empirical claims typically lack author-supplied links to data, making them hard for reviewers to check
+Making sense of and verifying data-driven claims is hard even with open and accessible data. A key challenge
+lies in tracing specific claims back to the relevant data. In peer review, for example, empirical claims
+typically lack author-supplied links to data, making them hard for reviewers to check
 directly~\citep{weber20}. Paper retractions, meanwhile, are often attributable not to fraud, but to simple
 errors in data management or analysis~\citep{hu25}. The use of large language models (LLMs) to interpret
 scholarly documents has seen considerable attention recently, from fact-checking~\citep{abu-ahmad25} to
 interpretation of charts and figures~\citep{roberts24}, but current LLM interfaces do not support direct
-interrogation of visual or other outputs.
+interrogation of visual or other outputs for traceability to inputs.
 
-Recent work on data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
-takes a more infrastructural approach to tracing outputs back to data. These approaches link computed outputs
-to their data sources directly, by tracking dependency information. This allows visual outputs to support
+Recent advances in data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
+have pushed in this direction using a more infrastructural approach. These approaches link computed outputs
+to their data sources directly by tracking dependency information. This allows visual outputs to support
 \emph{provenance queries}, user interactions (e.g. mousing over visual elements) that reveal how output
 features relate to data. The advantage of this approach is that the relationships to data sources are exposed
 automatically via trusted infrastructure, typically a query language or general-purpose programming language
@@ -34,13 +34,12 @@ data elements that support them, through embedded provenance queries.
 \end{enumerate}
 
 \figref{scigen-example-website}, generated from our implementation, illustrates these two features. The upper
-section shows an excerpt from a research paper comparing text encoding techniques~\citep{zhang18}. When a
-reader hovers over the phrase ``does not further improve'', the corresponding data entries are highlighted in
-blue on the left. Other fragments (e.g. ``better than'', ``further improvements'') that refer to the same data
-are also marked, allowing readers to explore supporting and contrasting evidence. The lower section shows a
-counterfactual situation where we imagine the authors' experiments had produced different results: here the
-phrase ``does not further improve'' is replaced by the ``further improves''. Transparent documents thus turn
-static text into interactable, data-driven content able to expose the evidential basis of scholarly claims.
+section shows a ``transparent'' excerpt from \cite{zhang18}, a scholarly article comparing text encoding
+techniques. When a reader hovers over the phrase \textfrag{does not further improve}, the relevant data are
+highlighted on the left. Other fragments (e.g. \textfrag{better than}, \textfrag{further improvements}) that
+refer to the same data are also marked, allowing the reader to explore supporting and contrasting evidence.
+The lower section shows a counterfactual situation where the authors' experiments had produced different
+results: here the phrase \textfrag{does not further improve} is replaced by \textfrag{further improves}.
 
 \begin{figure}%[h]
     \centering
@@ -53,43 +52,72 @@ static text into interactable, data-driven content able to expose the evidential
     \label{fig:scigen-example-website}
 \end{figure}
 
+This transparent version of the document was implemented in Fluid. The source code is shown in
+\figref{fluid-example-paragraph}, and makes use of several helper functions, a representative subset of which
+are shown in \figref{fluid-scigen}. Both the provenance-tracking runtime of Fluid \emph{and} the LLM-based
+authoring support contribute to the solution: the Fluid runtime provides the interactions, and the LLM-based
+authoring tool makes the whole process practical. Without tool support, authoring a scientific document as a
+(hand-crafted) \emph{program} is unlikely to be a feasible task.
+
+AI-assisted authoring of transparent documents thus support turning static text into interactable, data-driven
+content able to expose the evidential basis of scholarly claims. We envisage two use cases. First, when
+\textbf{authoring} content for an online article, a journalist or scientific publisher may wish to provide
+text which is linked to the underlying data so that the evidence base for the textual claims can be explored
+directly from the article. Second, when \textbf{reading} a document reporting on findings derived from open
+data (perhaps a scientific paper or climate report), the reader may want to retroactively interpret parts of
+the text as queries over the available data and gradually ``rationally reconstruct'' the relationship between
+claims in the paper and the evidence base. This might be just to aid their own comprehension, or part of a
+formal peer review process.
+
 \paragraph{Contributions.} Our specific contributions are:
 
 \begin{itemize}
-\item a proof-of-concept LLM-based tool for iteratively transforming a preexisting opaque document and
-associated data set into a transparent, data-driven counterpart
-\item an empirical evaluation of how well state-of-the-art models are able to solve the associated
-interpretation and code synthesis problems
+\item A proof-of-concept LLM-based tool for iteratively transforming a preexisting opaque document and
+associated data set into a transparent, data-driven counterpart;
+\item An empirical evaluation of how well state-of-the-art models are able to solve the associated
+interpretation and code synthesis problems.
 \end{itemize}
 
-We leave implementing a full authoring plugin for an IDE such as VSCode or Cursor for future work.
-
-We envisage two possible use cases for transparent text:
-
-\begin{enumerate}
-\item \textbf{Authoring.} Someone authoring content for an online article, wants to create text
-linked to raw data (and derivative data such as charts or tabular summaries), so that the evidence base for
-the claims made in the text can be explored \emph{in situ}, by interacting with the text.
-
-\item \textbf{Reading or reviewing.} Someone reading textual claims derived from open data (e.g. a
-scientific paper or climate report), wants to retroactively link the text to queries over the available data
-and gradually ``rationally reconstruct'' the relationship between the claims in the paper and the evidence
-base. Perhaps just to aid their own comprehension, or to provide some kind of justified peer review.
-\end{enumerate}
+We leave implementing a full Copilot-like authoring plugin for an IDE such as VSCode or Cursor for future
+work.
 
 \input{fig/scigen-1805.02474v1-10-src}
 
 \subsection{Target idioms of natural language}
 
-NLP aspect of the problem is potentially a big problem space in itself. We will restrict interest to certain
-idiomatic uses of natural language in making/justifying scientific claims. Table~\ref{tab:fluid_examples}
-
 \input{fig/natural-language-forms}
 
-\subsection{Contributions}
+Table~\ref{tab:natural-language-forms} summarises the natural language idioms studied in this paper. With
+state-of-the-art models like gpt4o and gpt5, our system is able to resolve basic table lookups of direct
+numerical values, as well as computations of percentages, averages, minima and maxima, and totals, each mapped
+to the corresponding aggregation over the source data. For example, phrases such as \textfrag{the Energy
+Sector accounts for 52.80\% of total emissions} and \textfrag{average methane emissions for 2030 is 13.51} are
+interpreted in terms of sum and mean respectively over the relevant data values. Similarly, \textfrag{recorded
+its highest emissions in 2030} is interpreted as a \kw{maximumBy} query, while a statement such as
+\textfrag{CNN gives the lowest accuracy} is mapped to an explicit computation of rank.
 
-\begin{itemize}
-    \item Design and proof-of-concept implementation of AI-assisted workflow for authoring transparent text
-    (\secref{authoring-workflow})
-    \item Empirical evaluation of how effective current LLMs are at providing the ``AI-assisted'' part
-\end{itemize}
+We also consider \emph{trend} expressions, which comparative natural language phrases describing how a data
+attribute evolves over time, such as \textfrag{training time growing from 67 to 106 seconds}. Such idioms are
+mapped to higher-order functions like \kw{trendWord} parameterised on additional helper functions such as
+\kw{growShrink} and \kw{betterWorse} (shown in \figref{fluid-scigen}) which map comparisons to appropriate
+natural language phrases.
+
+\input{fig/scigen-lib}
+
+Taken together, these categories cover a representative portion of the numerical reasoning idioms found in the
+SciGen benchmark. However, some linguistic forms that commonly arise in scholarly articles are not covered in
+our analysis. We have yet to study approximate quantitative terms like \textfrag{around 50\%} or
+\textfrag{roughly 100 instances}, nor interval-based descriptions such as \textfrag{between 30 and 40\%} or
+\textfrag{within 5–10 seconds}. While we have no reason for thinking these will present specific difficulties,
+other forms are likely to be more challenging. So-called \emph{graded} modal adverbs~\citep{lassiter17} which
+modify adjectival comparatives like \textfrag{better} -- as in \textfrag{slightly better} and
+\textfrag{significantly higher} -- especially when combined with trends over time, as in \textfrag{steadily
+increasing} or \textfrag{sharply declining} -- are likely to prove difficult because the interpretation of
+these qualifiers can be subjective and context-dependent. Adverbial quantifiers like \textfrag{generally} and
+\textfrag{usually} present similar challenges because colloquial use may differ from more formal uses (in some
+situations ``most'' might mean a majority, i.e.~greater than 50\% of cases, but in others may mean only
+``greater than any other alternative proportion''). On the other hand these difficulties also present
+themselves to human readers, so extending coverage to these idioms would substantially deepen our tool's
+ability to bridge natural language reporting with interpretation in terms of the underlying dataset, perhaps
+revealing inconsistent use of technical language on the part of the author. We discuss this further in
+\secref{conclusion:future-work}.

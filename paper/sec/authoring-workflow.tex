@@ -1,31 +1,92 @@
 \section{AI-Assisted Authoring Workflow}
 \label{sec:authoring-workflow}
 
-Figure~\ref{fig:overall-architecture} shows the system architecture and an example flow.
-The system is composed of two agents:
+Our authoring tool is composed of two LLM-based agents:
 
 \begin{itemize}
-    \item \textbf{\SuggestionAgent}. LLM-based agent which identifies text fragments potentially computable from data.
-    \item \textbf{\InterpretationAgent}. LLM-based agent which, for a given text fragment (provided by
-    SuggestionAgent or by the author), attempts to synthesise a Fluid expression computing the target text.
+    \item \textbf{\SuggestionAgent}. Identifies text fragments potentially computable from data.
+    \item \textbf{\InterpretationAgent}. For a given text fragment (provided by SuggestionAgent or author),
+    attempts to synthesise Fluid expression computing target fragment.
 \end{itemize}
+
+The main components of the workflow are as follows:
+
+\begin{enumerate}
+
+\item \textbf{Initial configuration.} The author imports the target text and accompanying data into the system
+to create a programmatic representation of the target document. Initially this is simply isomorphic to the
+target text, taking the form of a string literal \kw{"""..."""}, where the triple quotes are Fluid syntax for
+a Python or JavaScript-style \emph{interpolated string}, i.e.~a literal where expressions of the form
+\kw{\{$e$\}} are permitted within the string. The \SuggestionAgent analyses the target text and identifies any
+fragments which are candidates for being computed instead of remaining as literal substrings.
+
+\item \textbf{High-level Authoring workflow.} The system then enters the human-in-the loop authoring workflow
+shown in Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The
+system waits for the author to select a fragment of text $s$ to interpret (perhaps previously highlighted by
+the \SuggestionAgent). The system then attempts to generates a candidate Fluid expression $e$ using the
+closed-loop synthesis step (3) below. If code synthesis succeeds with an expression $e$, the system proceeds
+to the manual validation step (4) below. If the synthesis step fails with no expression, no remedial action is
+possible; this is considered an unsuccessful path through the workflow and returns the system to the entry
+state. Otherwise the synthesis step produces an expression $e$ which evaluates to a mismatched string $s' \neq
+s$ outcome, and the user can choose to manually abort and return to the entry state, or optionally to
+\emph{revise the goal}, replacing $s$ with $s'$ in the target document and retaining $e$ as the candidate
+expression. This is intended to cover the situation where the author has made a claim which is
+\emph{incorrect}, and the data set and surrounding natural language have led the LLM to synthesise an
+expression which generates a different value from the one specified by the user.
+
+\item \textbf{Code synthesis step.} The expression synthesis step is an error-guided iterative prompting
+loop~\citep{skreta23}, beginning with an initial prompt sent to the LLM (\secref{prompt-design} below)
+requesting the generation of an expression $e$. Using the Fluid command-line interface, the expression is
+validated to check that it evaluates without error, produces a value coercible to a string $s'$, and finally
+that $s'$ is equal to the target fragment $s$. Any failure triggers prompt augmentation with the appropriate
+error message and the system retries generation. If code synthesis loop is able to yield an expression which
+computes $s$ within a maximum number of retries, the synthesis step succeeds with $e$. If the last generated
+$e$ was invalid (resulting in an error), the code synthesis step fails with no expression. Otherwise, code
+synthesis produces an expression $e$ but with a mismatched string outcome $s' \neq s$.
+
+\item \textbf{Manual validation step.} Once a candidate expression has been generated, the system replaces the
+selected substring $s$ with the interpolation expression \kw{\{$e$\}}, creating a new (but only tentative)
+document configuration. The author can republish the web page hosting the document and interact with the
+proposed revision. As shown in \secref{}, this is an important validation step that can reveal errors in the
+generated expression. If the interactions look reasonable, the author can approve the new document state; this
+is the primary successful path through the workflow and returns the system to the entry state where it is
+waiting for another top-level interaction from the author. Otherwise, the author rejects the proposed change
+and returns to the entry state without any change to the document.
+
+\end{enumerate}
+
+This human-in-the-loop design combines automated synthesis with validation and author oversight, providing a
+substantial level of automation, but requiring the author to intervene at key steps to ensure correctness.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\linewidth]{fig/interpretation-agent}
-    \caption{Human-in-the-Loop \InterpretationAgent workflow (Author intervention states in grey)}
+    \caption{Human-in-the-Loop workflow (states requiring human intervention in grey)}
     \label{fig:interpretation-agent}
 \end{figure}
 
-Figure~\ref{fig:interpretation-agent} shows the overall architecture of the \InterpretationAgent. The author
-initially provides the text and accompanying data. The \SuggestionAgent analyses the input and identifies
-candidate fragments of natural language which could be replaced by Fluid expressions. The user highlightes a
-fragment of interest, which is then sent to the \InterpretationAgent, which generates a corresponding
-candidate expression. Internally the \InterpretationAgent uses a compiler-in-the-loop validation process to
-ensure the expression is well-formed. The user is then able to accept the expression (in which case it is
-incorporated into the program) or reject and leave the text uninterpreted.
+\subsection{Prompt Design}
+\label{sec:prompt-design}
 
-\begin{figure}[ht]
+\paragraph{System Prompt.}
+For the Interpretation Assistant, the system prompt guides the LLM in replacing placeholder tags in the
+supplied paragraph with executable Fluid expressions. It includes the following information about the document
+under construction, the exact task to perform, and constraints on the expected output. The full system prompt
+is given in \appref{system-prompt:interpretation-agent}.
+
+\begin{itemize}
+\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
+the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
+indicating the text fragment to replace, plus the full text for the paragraph.
+\item \textbf{Task description:} description of the LLM task, namely to identify \kw{[REPLACE …]} placeholder
+and generate Fluid expression that produces target string using supplied dataset and definitions in scope.
+\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
+with no extraneous content (such as comments).
+\end{itemize}
+
+\rpnote{Now something about the rest of the prompt.}
+
+\begin{figure}[t]
     \centering
     \begin{subfigure}{0.50\linewidth}
         \centering
@@ -44,92 +105,3 @@ incorporated into the program) or reject and leave the text uninterpreted.
     error (natural language mentions accuracy, while interaction reveals use of timing data).}
     \label{fig:overall-architecture}
 \end{figure}
-
-
-\subsection{System Prompt}
-\label{subsec:system-prompt}
-Fig. \ref{fig:system-prompt} shows the system prompt defined for the Authoring Assistant.
-
-\begin{figure}[h]
-    \centering
-    \begin{tcolorbox}[colback=gray!10, colframe=gray!50, boxrule=0.5pt, arc=2pt,
-        left=6pt, right=6pt, top=4pt, bottom=4pt]
-        \VerbatimInput[fontsize=\small, formatcom=\normalfont]{../system-prompt/interpretation-agent/system-prompt.txt}
-    \end{tcolorbox}
-    \vspace{-0.5em}
-    \caption{System Prompt defined for the Authoring Assistant}
-    \label{fig:system-prompt}
-\end{figure}
-
-
-\subsection{Editor Loop}
-\label{subsec:editor-loop}
-Design of main loop that would be integrated into an IDE. The configuration (state) that is being maintained
-is a \kw{Paragraph} the user is authoring in Fluid. Consists of a sequence of text fragments, some of which
-are uninterpreted (plain literals), the remainder have underlying expressions linking the text to raw or derived
-data.
-
-Workflow:
-\begin{enumerate}
-\item User selects (a substring of) one of the literal text fragments, indicating they want to link it in this
-way
-\item Authoring tool generates expression which is either:
-  \begin{enumerate}
-  \item computes the selected text (e.g.~``greater than'' might be computed by comparing two numbers)
-  \item becomes the formal meaning of the selected text (e.g. the text ``carbon intensity of methane
-emissions'' can be understood in a specific context as referring to the numerical value ``34 gCO2eq/kWh''
-  \end{enumerate}
-\item Some kind of validation step, including both automated validation (e.g. checking for runtime errors) and
-user validation; if validation fails, goto (2)
-\item Partition code into additional definitions and expression; add definitions to main source file, and
-incorporate expression into \kw{Paragraph}
-\item Goto (1) with updated editor state
-\end{enumerate}
-
-\subsection{Loopback System}
-\label{subsec:loopback-system}
-
-Expressions generated by the \InterpretationAgent are evaluated by the Fluid interpreter. If evaluation fails,
-the error is used to extend the prompt and the extended prompt is sent back to the LLM for regeneration. This
-loopback mechanism enables iterative refinement of expressions, improving accuracy and robustness. There are
-three kinds of loopback error:
-
-\begin{itemize}
-    \item \textbf{Invalid Program}. Evaluation fails due a syntax error, undeclared identifier, division by
-    zero, array index out of bounds or other runtime problem.
-    \item \textbf{Invalid Expression Type}. The value of the expression is not convertible to a string.
-    \item \textbf{Mismatching String}. The string value of the expression is not equal to the target text.
-\end{itemize}
-
-\subsection{Paragraph with generated expression}
-\label{subsec:paragraph-with-generated-expression}
-Figure \ref{fig:fluid-example-paragraph} shows the Fluid code of a Paragraph with the expression generated by the authoring assistant.
-Figure \ref{fig:fluid-scigen} shows the Fluid code written for the scigen datasets and examples.
-
-\begin{figure}[h]
-    \small
-    {\lstinputlisting[language=Fluid]{../fluid-common/scigen.fld}}
-    \caption{Fluid library written for scigen}
-    \label{fig:fluid-scigen}
-\end{figure}
-
-\subsection{Turning validation errors into improved prompts}\label{subsec:turning-validation-errors-into-improved-prompts}
-E.g.:
-\begin{enumerate}
-\item Turn ``Definition not found'' into prompt to generate definition?
-\end{enumerate}
-
-\subsection{IDE integration}\label{subsec:ide-integration}
-
-Could then be integrated into desktop IDE like VSCode or online IDE like CodeMirror. Might make a good
-internship project, but could also be out-of-scope for this paper.
-
-\subsection{Other potential enhancements}\label{subsec:other-potential-enhancements}
-
-We could also think about using an LLM in a couple of other complementary ways:
-\begin{itemize}
-\item identifying text fragments which might be linked;
-\item validating generated expressions (perhaps by proposing test cases)
-\end{itemize}
-
-

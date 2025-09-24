@@ -147,7 +147,7 @@ def generate_success_rate_by_category_count(df, plot):
     plt.close()
 
 def generate_charts():
-    latest_csv = "logs/log_1758489858583.csv"
+    latest_csv = get_latest_csv("logs")
     df = pd.read_csv(latest_csv, delimiter=';', quotechar='"', encoding='utf-8')
     df["success"] = df["generated-expression"].notna().astype(int)
     df["target-value"] = df["target-value"].astype(int)

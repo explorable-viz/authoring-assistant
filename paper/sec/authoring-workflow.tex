@@ -60,18 +60,15 @@ substantial level of automation, but requiring the author to intervene at key st
     \label{fig:interpretation-agent}
 \end{figure}
 
-\subsection{\InterpretationAgent prompt}
-\label{sec:interpretation-agent}
+\paragraph{\InterpretationAgent prompt design.}
 
-The InterpretationAgent is guided by a structured system prompt that frames code generation as a precise
+The \InterpretationAgent is guided by a structured system prompt that frames code generation as a precise
 replacement task. The model receives the imported datasets, helper modules, and the current Fluid
-representation of the paragraph, in which a text fragment is marked with [REPLACE …]. Its task is to
-substitute this placeholder with a Fluid expression that evaluates exactly to the target string,
-reconstructing quantitative or comparative claims as dataset queries where appropriate. To ensure integration
-with the workflow, the output must consist solely of a syntactically valid Fluid expression, with no
-additional commentary. This focused design constrains the model while providing enough context to generate
-expressions that are both data-grounded and immediately executable; the full prompt is given
-in~\appref{system-prompt:interpretation-agent}.
+representation of the paragraph, in which a text fragment is marked with the tag \kw{[REPLACE …]}. Its task is
+to substitute this placeholder with a Fluid expression that evaluates exactly to the target string,
+reconstructing quantitative or comparative claims as data queries. To ensure integration with the workflow,
+the output must consist solely of a syntactically valid Fluid expression, with no additional commentary. The
+full prompt is given in~\appref{system-prompt:interpretation-agent}.
 
 %\paragraph{System Prompt.}
 %For the Interpretation Assistant, the system prompt guides the LLM in replacing placeholder tags in the

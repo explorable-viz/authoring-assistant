@@ -2,11 +2,10 @@
 \begin{minipage}[t]{0.48\textwidth}
     \small
 \begin{lstlisting}
-let ordinalMap = [
-    { lastDigit: 1, suffix: "st" },
-    { lastDigit: 2, suffix: "nd" },
-    { lastDigit: 3, suffix: "rd" }
-];
+let ordinalMap =
+   [ { lastDigit: 1, suffix: "st" },
+     { lastDigit: 2, suffix: "nd" },
+     { lastDigit: 3, suffix: "rd" } ];
 
 let ordinal n =
    if n <= 0 then error "n <= 0 not supported"

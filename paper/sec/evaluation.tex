@@ -1,41 +1,32 @@
-\section{Empirical Evaluation}
+\section{Experimental Evaluation}
 \label{sec:evaluation}
 
 \subsection{Research questions}
 
-\cdnote{I've bulked up the RQs qlthough I'm not sure we're actually attempting to answer them}
-RQ1. How robust is the system when provided with incomplete or ambiguous information?
-In real-world authoring tasks, text fragments may omit key criteria (e.g. \textbf{?}) or contain vague identifiers (e.g. \textbf{?} without further context).
-We therefore ask how performance degrades when the specification is underspecified or when multiple interpretations are possible. Here, we distinguish between two forms of ambiguity:
-(1) domain-level ambiguity, which reflects genuine uncertainty in the data (e.g. two models achieving identical scores).
-(2) specification-level ambiguity, which arises from incomplete or imprecise descriptions in the query (e.g. missing fields that would otherwise resolve the expression uniquely).
+We investigated the following research questions, which probe the limits of the \InterpretationAgent's ability
+to reliably provide a data-driven interpretation of natural language. By contrasting genuine uncertainty with
+misleading or ill-specified inputs, we aim to understand not only the model's raw success rate, but also the
+failure modes most likely to arise in practical use.
 
-RQ2. How sensitive is the system to misleading or adversarial information?
-Authors may, intentionally or unintentionally, introduce misleading elements into the text. These include inconsistent identifiers, incorrect numerical values, or contradictory claims.
-We ask how the system responds in such cases: does it fail gracefully, does it default to literal reproduction of the misleading fragment, or does it attempt to generate a plausible, but incorrect, expression?
+\paragraph{RQ1. How robust is the system when provided with incomplete or ambiguous information?}
 
-Together, these questions probe the limits of the InterpretationAgent's ability to generate reliable code. By contrasting genuine uncertainty with misleading or ill-specified inputs, we aim to understand not only the model's raw success rate, but also the failure modes most likely to arise in practical use.
+In real-world authoring tasks, text fragments may omit key criteria (e.g. \textbf{?}) or contain vague
+identifiers (e.g. \textbf{?} without further context). We therefore ask how performance degrades when the
+specification is underspecified or when multiple interpretations are possible. Here, we distinguish between
+two forms of ambiguity: (1) domain-level ambiguity, which reflects genuine uncertainty in the data (e.g. two
+models achieving identical scores). (2) specification-level ambiguity, which arises from incomplete or
+imprecise descriptions in the query (e.g. missing fields that would otherwise resolve the expression
+uniquely).
 
+\paragraph{RQ2. How sensitive is the system to misleading or adversarial information?}
 
-\begin{itemize}
-\item How does performance degrade with partial/ambiguous information?
-\item How is performance affected by ``adversarial'' (intentionally/unintentionally misleading) information?
-\end{itemize}
-
-Some ways we might explore these axes:
-\begin{itemize}
-\item meaningful vs.~meaningless vs.~misleading identifiers
-\item leaving out key criteria (e.g.~year) that would resolve query to unique answer
-\end{itemize}
-
-We might want to distinguish ambiguity inherent in the problem domain (e.g.~uncertainty) vs.~ambiguity in the
-specification of a particular code-generation query.
-
-\subsection{Success Rate by Category}
-To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
-expression in three categories: aggregation, trends, quantitative (See
-Table~\ref{tab:natural-language-forms}). \figref{success_rate_by_category} shows the results obtained in
-generating expression by categories.
+Authors may (intentionally or unintentionally) introduce misleading elements into the text. These include
+inconsistent use of language, incorrect references to numerical values, or contradictory claims. We ask how
+the system responds in such cases: does it fail gracefully, does it default to literal reproduction of the
+misleading fragment, or does it attempt to generate a plausible, but incorrect, expression?
+Table~\ref{tab:problematic_cases} shows some of cases which are ``problematic'' in this sense; in these cases,
+producing a valid expression is likely to be challenging because of ambiguities in the input data or
+accompanying natural language.
 
 \begin{figure}
     \centering
@@ -44,7 +35,7 @@ generating expression by categories.
         \includegraphics[width=\linewidth]{fig/success_rate_by_category}
         \caption{Success rate by Linguistic Category}
         \label{fig:success_rate_by_category}
-    \end{subfigure}\hfill
+    \end{subfigure} \hfill
     \begin{subfigure}{0.48\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/success_rate_by_complexity}
@@ -57,73 +48,94 @@ generating expression by categories.
 
 \subsection{Results}
 
-\begin{table}[h!]
-    \scriptsize
 
-    \centering
-    \begin{subtable}{0.45\linewidth}
-        \centering
-        \begin{tabular}{lcccc}
-            \hline
-            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfour}} \\
-            & \textbf{Success Rate (\%)} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
-            \hline
-            Comparison     & 74.7   & 3 & 77.4 & 2 \\
-            Data Retrieval & 76.4   & 3 & 77.4 & 2 \\
-            Difference     & 80.3   & 3 & 77.4 & 2 \\
-            Min/max        & 50.2   & 3 & 77.4 & 2 \\
-            Rank           & 44.1   & 3 & 77.4 & 2 \\
-            Total          & 33.2   & 3 & 77.4 & 2 \\
-            Overall        & 74.9 & 3 & 77.4 & 2 \\
-            \hline
-        \end{tabular}
-        \caption{Results with target-value = true}
-        \label{tab:results_true}
-    \end{subtable}%
-    \hfill
-    \begin{subtable}{0.45\linewidth}
-        \centering
-        \begin{tabular}{lcccc}
-            \hline
-            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
-            & \textbf{Success Rate (\%)} & \textbf{SD} & \textbf{Success Rate} & \textbf{SD} \\
-            \hline
-            Comparison     & -- & -- & -- & -- \\
-            Data Retrieval & -- & -- & -- & -- \\
-            Difference     & -- & -- & -- & -- \\
-            Min/max        & -- & -- & -- & -- \\
-            Rank           & -- & -- & -- & -- \\
-            Total          & -- & -- & -- & -- \\
-            Overall        & -- & -- & -- & -- \\
-            \hline
-        \end{tabular}
-        \caption{Results without target-value}
-        \label{tab:results_no_target}
-    \end{subtable}
-    \caption{Comparison of success rates (with standard deviation) between \textbf{\gptfour} and \textbf{\gptfive} across different task categories, reported with and without the use of target-values.}
-    \label{tab:results_combined}
-\end{table}
+%\begin{table}[h!]
+%    \scriptsize
+%
+%    \centering
+%    \begin{subtable}{0.45\linewidth}
+%        \centering
+%        \begin{tabular}{lcccc}
+%            \hline
+%            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
+%            & \textbf{Success Rate (\%)} & \textbf{SD (\%)} & \textbf{Success Rate} & \textbf{SD (\%)} \\
+%            \hline
+%            Comparison     & 68.2   & 3.2 & 77.4 & 2 \\
+%            Data Retrieval & 77.3   & 3.7 & 77.4 & 2 \\
+%            Difference     & 20.0   & 44.7 & 77.4 & 2 \\
+%            Min/max        & 97.0   & 5.6 & 77.4 & 2 \\
+%            Rank           & 0.0   & 0.0 & 77.4 & 2 \\
+%            Sum            & 100   & 0.0 & 77.4 & 2 \\
+%            Ratio          & 100   & 0.0 & 77.4 & 2 \\
+%            Agerage        & 100   & 0.0 & 77.4 & 2 \\
+%            Overall        & 74.9 & 3 & 77.4 & 2 \\
+%            \hline
+%        \end{tabular}
+%        \caption{Results with target-value = true}
+%        \label{tab:results_true}
+%    \end{subtable}%
+%    \hfill
+%    \begin{subtable}{0.45\linewidth}
+%        \centering
+%        \begin{tabular}{lcccc}
+%            \hline
+%            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
+%            & \textbf{Success Rate (\%)} & \textbf{SD (\%)} & \textbf{Success Rate} & \textbf{SD (\%)} \\
+%            \hline
+%            Comparison     & 33.3 & 3.1 & -- & -- \\
+%            Data Retrieval & 62.0 & 1.6 & -- & -- \\
+%            Difference     & 75.0 & 50.0 & -- & -- \\
+%            Min/max        & 90.6 & 12.6 & -- & -- \\
+%            Rank           & 0.0 & 0.0 & -- & -- \\
+%            Sum            & 100.0 & 0.0 & -- & -- \\
+%            Ratio          & 100.0 & 0.0 & -- & -- \\
+%            Average        & 100.0 & 0.0 & -- & -- \\
+%            Overall        & 57.1 & 0.8 & -- & -- \\
+%            \hline
+%        \end{tabular}
+%        \caption{Results without target-value}
+%        \label{tab:results_no_target}
+%    \end{subtable}
+%    \caption{Success rates (with standard deviation) for \textbf{\gptfour} and \textbf{\gptfive} across different task categories}
+%    \label{tab:results_combined}
+%\end{table}
 
-In this section, we report the experimental results.
-Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model, \gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
-Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
 
-Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and without target-value sharing.
-The results show that providing the target value is crucial for achieving a high success rate.
-Moreover, the \InterpretationAgent generates a correct expression in approximately XX\% of the cases.
+%\figref{success_rate_by_category} shows the results obtained in generating expression by categories.
 
-The system achieved performance above 70\% in comparison, data retrieval, and min/max search tasks.
-In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (50\%).
+
+%Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model, \gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
+%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
+
+
+
+%Figure~\ref{fig:success_rate_by_category} illustrates the success rate of \gptfour % under two different settings: with target-value sharing enabled and without target-value sharing.
+%for each category, both with and without target-value sharing.
+%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%) \cdnote{this needs to be updated for target sharing and not target sharing or removed}.
+
+%Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model,
+%\gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
+%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
+
+To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
+expression in the linguistic categories from Table~\ref{tab:natural-language-forms}.
+Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and
+without target-value sharing. The results show that providing the target value (text fragment or numerical
+value) is crucial for achieving a high success rate. Moreover, the \InterpretationAgent generates a correct
+expression in approximately in 74.9\% of the cases (S.D. 3.0\%).
+
+The system achieved performance above 68\% in comparison, 77.3\% in data retrieval, and 97\% in min/max search tasks.
+In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (0\%).
 
 Figure~\ref{fig:success_rate_by_complexity} reports the success rate as a function of the number of categories assigned to each expression.
 Fluid instructions combining multiple operations were associated with multiple categories.
-Results show that the success rate was 75\% for simple expressions (one category), increased to 85\% for two categories,
-and dropped to 58\% when three categories were involved.
+Results show that the success rate was 62\% for simple expressions (one category), increased to 91\% for two categories,
+while no correct expression was generated for expression with 3 categories.
 
 In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
 correct expression when no reference string was given.
 On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
-Without the target string, performance decreased moderately to 39.4\%, indicating that the model retains substantial
+Without the target string, performance decreased moderately to 57.1\%, indicating that the model retains substantial
 ability to reconstruct valid solutions even without explicit guidance
 
 \subsection{Counterfactual testing}
@@ -131,21 +143,21 @@ ability to reconstruct valid solutions even without explicit guidance
 
 For the \emph{counterfactual testing} part of our analysis, the input data is deliberately modified in order
 to verify the consistency of the behaviours. Both the expected and generated expressions are executed again
-and the results are compared. If discrepancies are found \rpnote{complete}
+and the results are compared. If discrepancies are found the \InterpretationAgent ask for a new generation
+sending back that the failure is related to a counterfactual error.
 
-\subsection{Problematic Cases}
-\label{subsec:problematic-cases}
+%\rpnote{complete}
 
-Table~\ref{tab:problematic_cases} presents examples of problematic cases in which the system was asked to generate a valid
-Fluid expression.
-In these cases, producing a valid expression is challenging because the input data (or the NL query) contains ambiguities
-that prevent the construction of a well-formed expression.
+Across 300 test executions, 121 contained at least one counterfactual error (avg. 3.8), of which 42 ultimately
+succeeded. Such tests help detect expressions that may yield the expected output but not the correct solution.
+For example, the \InterpretationAgent generated:
 
-For instance, in the \textit{missing-data} problem, the \InterpretationAgent should generate a function to compute
- the average of the emissions. However, the input data does not provide information for all months.
+\begin{verbatim}
+(findWithKey_ "model" "LSTM2" tableData).time_s
+\end{verbatim}
 
-In such cases, the system was unable to generate a general expression and instead produced the expected value directly.
-
+intended to retrieve the execution time of the \texttt{LSTM} model, but incorrectly referred to \texttt{LSTM2}.
+Counterfactual testing exposed this error and prompted regeneration.
 
 
 \begin{table}[t]
@@ -155,20 +167,11 @@ In such cases, the system was unable to generate a general expression and instea
         \hline
         \textbf{Problem Type} & \textbf{Example} & \textbf{Explanation} \\
         \hline
-
-        ambiguous referent &
-        As shown in Table 3 \hl{BiLSTM} gives significantly better accuracies compared to uni-directional LSTM with the training time per epoch growing from 99 seconds to 106 seconds &
-        There are three models that have 99 seconds as their time; the assistant would not know which one to choose. \\
-
-        missing data &
-        The average methane emissions for the year 2015 is \hl{1.0} &
-        November is missing to calculate the average correctly. \\
-
-        false statement &
-        We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), BiLSTM is \hl{the most efficient} among all models compared, with the highest model size &
+        false comparison &
+        BiLSTM is \hl{the most efficient} among all models compared, with the highest model size &
         BiLSTM is not the most efficient, nor does it have the largest size. \\
 
-        incorrect numerical value &
+        wrong numerical value &
         LSTM is the fastest model with overall time taken being \hl{90} seconds &
         It is not 90 but 106. \\
 
@@ -181,8 +184,3 @@ In such cases, the system was unable to generate a general expression and instea
     \caption{Categories of problematic example}
     \label{tab:problematic_cases}
 \end{table}
-
-
-
-
-

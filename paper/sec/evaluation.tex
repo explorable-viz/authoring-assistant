@@ -3,7 +3,6 @@
 
 \subsection{Research questions}
 
-\cdnote{I've bulked up the RQs qlthough I'm not sure we're actually attempting to answer them}
 RQ1. How robust is the system when provided with incomplete or ambiguous information?
 In real-world authoring tasks, text fragments may omit key criteria (e.g. \textbf{?}) or contain vague identifiers (e.g. \textbf{?} without further context).
 We therefore ask how performance degrades when the specification is underspecified or when multiple interpretations are possible. Here, we distinguish between two forms of ambiguity:
@@ -15,21 +14,6 @@ Authors may, intentionally or unintentionally, introduce misleading elements int
 We ask how the system responds in such cases: does it fail gracefully, does it default to literal reproduction of the misleading fragment, or does it attempt to generate a plausible, but incorrect, expression?
 
 Together, these questions probe the limits of the InterpretationAgent's ability to generate reliable code. By contrasting genuine uncertainty with misleading or ill-specified inputs, we aim to understand not only the model's raw success rate, but also the failure modes most likely to arise in practical use.
-
-
-\begin{itemize}
-\item How does performance degrade with partial/ambiguous information?
-\item How is performance affected by ``adversarial'' (intentionally/unintentionally misleading) information?
-\end{itemize}
-
-Some ways we might explore these axes:
-\begin{itemize}
-\item meaningful vs.~meaningless vs.~misleading identifiers
-\item leaving out key criteria (e.g.~year) that would resolve query to unique answer
-\end{itemize}
-
-We might want to distinguish ambiguity inherent in the problem domain (e.g.~uncertainty) vs.~ambiguity in the
-specification of a particular code-generation query.
 
 \subsection{Success Rate by Category}
 To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
@@ -104,7 +88,7 @@ generating expression by categories.
         \caption{Results without target-value}
         \label{tab:results_no_target}
     \end{subtable}
-    \caption{Comparison of success rates (with standard deviation) between \textbf{\gptfour} and \textbf{\gptfive} across different task categories, reported with and without the use of target-values.}
+    \caption{Success rates (with standard deviation) for \textbf{\gptfour} and \textbf{\gptfive} across different task categories}
     \label{tab:results_combined}
 \end{table}
 
@@ -150,8 +134,6 @@ For instance, in the \textit{missing-data} problem, the \InterpretationAgent sho
 
 In such cases, the system was unable to generate a general expression and instead produced the expected value directly.
 
-
-
 \begin{table}[t]
     \centering
     \small
@@ -185,8 +167,3 @@ In such cases, the system was unable to generate a general expression and instea
     \caption{Categories of problematic example}
     \label{tab:problematic_cases}
 \end{table}
-
-
-
-
-

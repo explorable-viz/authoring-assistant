@@ -121,20 +121,20 @@ expression in the linguistic categories from Table~\ref{tab:natural-language-for
 
 Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and without target-value sharing.
 The results show that providing the target value is crucial for achieving a high success rate.
-Moreover, the \InterpretationAgent generates a correct expression in approximately XX\% of the cases.
+Moreover, the \InterpretationAgent generates a correct expression in 74.9\% of the cases (S.D. 3.0\%).
 
-The system achieved performance above 70\% in comparison, data retrieval, and min/max search tasks.
-In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (50\%).
+The system achieved performance above 68\% in comparison, 77.3\% in data retrieval, and 97\% in min/max search tasks.
+In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (0\%).
 
 Figure~\ref{fig:success_rate_by_complexity} reports the success rate as a function of the number of categories assigned to each expression.
 Fluid instructions combining multiple operations were associated with multiple categories.
-Results show that the success rate was 75\% for simple expressions (one category), increased to 85\% for two categories,
-and dropped to 58\% when three categories were involved.
+Results show that the success rate was 62\% for simple expressions (one category), increased to 91\% for two categories,
+while no correct expression was generated for expression with 3 categories.
 
 In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
 correct expression when no reference string was given.
 On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
-Without the target string, performance decreased moderately to 39.4\%, indicating that the model retains substantial
+Without the target string, performance decreased moderately to 57.1\%, indicating that the model retains substantial
 ability to reconstruct valid solutions even without explicit guidance
 
 \subsection{Counterfactual testing}

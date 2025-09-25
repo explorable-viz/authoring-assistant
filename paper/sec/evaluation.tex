@@ -28,12 +28,6 @@ Table~\ref{tab:problematic_cases} shows some of cases which are ``problematic'' 
 producing a valid expression is likely to be challenging because of ambiguities in the input data or
 accompanying natural language.
 
-\subsection{Success Rate by Category}
-To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
-expression in three categories: aggregation, trends, quantitative (See
-Table~\ref{tab:natural-language-forms}). \figref{success_rate_by_category} shows the results obtained in
-generating expression by categories.
-
 \begin{figure}
     \centering
     \begin{subfigure}{0.48\linewidth}
@@ -53,6 +47,10 @@ generating expression by categories.
 \end{figure}
 
 \subsection{Results}
+
+To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
+expression in the linguistic categories from Table~\ref{tab:natural-language-forms}.
+\figref{success_rate_by_category} shows the results obtained in generating expression by categories.
 
 \begin{table}[h!]
     \scriptsize
@@ -105,8 +103,8 @@ generating expression by categories.
     \label{tab:results_combined}
 \end{table}
 
-In this section, we report the experimental results.
-Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model, \gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
+Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model,
+\gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
 Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
 
 Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and without target-value sharing.

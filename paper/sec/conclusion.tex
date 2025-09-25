@@ -6,15 +6,13 @@ We introduced a proof-of-concept system for authoring transparent, data-driven d
 %\subsection{Future Work}
 %\label{sec:conclusion:future-work}
 
-Future work includes reducing reliance on predefined helper functions
-such as \kw{growShrink} and \kw{trendWord}. While these provide a uniform
-framework, we aim to enable the system to operate in their absence,
-for instance by turning ``definition not found'' errors into augmented
-prompts that trigger automatic generation of missing definitions. We
-also plan to broaden the scope of supported artifacts, extending
-interpretation to visualisations and intermediate datasets derived
-from cleansing or aggregation, and to cover additional idioms such as
-cardinals, multiplicatives, rounding, and graded adjectives.
+Future work includes reducing reliance on predefined helper functions such as \kw{growShrink} and
+\kw{trendWord}. While there is an advantage in using a predefined set of helpers (in that they offer a uniform
+framework for interpreting a given scholarly document), we also aim to enable the system to operate in their
+absence, for instance by turning ``definition not found'' errors into augmented prompts that trigger automatic
+generation of missing definitions. We also plan to broaden the scope of supported artifacts, extending
+interpretation to visualisations and intermediate datasets derived from cleansing or aggregation, and to cover
+additional idioms such as cardinals, multiplicatives, rounding, and graded adjectives.
 
 Another priority is improving integration and validation. Embedding
 the system into developer and authoring environments such as VSCode or
@@ -24,11 +22,6 @@ authoring time. Finally, distinguishing between \emph{referential terms} with
 fixed denotations and queries with data-dependent values may help in
 repairing false or inconsistent statements, ensuring that generated
 expressions remain aligned with both the data and the author's intent.
-
-%Providing helper functions such as \kw{growShrink} and \kw{trendWord} as a predefined library is in some ways
-%beneficial because they offer a uniform framework for interpreting a given scholarly document. We would also
-%like make the system able to operate in the absence of these, perhaps adding a loopback condition to turn
-%``Definition not found'' errors into an augmented prompt to generate the appropriate definition.
 
 %Another important direction is to broaden the scope of the artifacts than can be referred to and the natural
 %language forms that can be used to refer to them. For example, many claims in scholarly writing refer to

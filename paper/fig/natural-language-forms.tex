@@ -18,9 +18,9 @@
         The Energy Sector accounts for total methane emissions of \hl{52.80}\% in 2030.
         &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-(record.emissions /
+(getByCategory "Energy Sector" year).emissions /
  sum (map (fun x -> x.emissions)
-          (getByYear year tableData))) * 100
+   (getByYear year)) * 100
 
         \end{lstlisting}  \\
         \rowcolor{gray!20}
@@ -28,7 +28,8 @@
         Average
         & The average methane emissions for the year 2030 is \hl{13.51} &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-(sumEmissions year tableData / length records)
+sum (map (fun x -> x.emissions)
+  (getByYear year)) / length records
         \end{lstlisting} \\
         Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
@@ -46,7 +47,8 @@ rankLabel "lowest"
         Sum &
         The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-sumEmissions year tableData
+sum (map (fun x -> x.emissions)
+   (getByYear year))
         \end{lstlisting} \\
         \rowcolor{gray!20}
 %        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\

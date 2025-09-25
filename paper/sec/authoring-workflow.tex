@@ -1,15 +1,10 @@
 \section{AI-Assisted Authoring Workflow}
 \label{sec:authoring-workflow}
 
-Our authoring tool is composed of two LLM-based agents:
-
-\begin{itemize}
-    \item \textbf{\SuggestionAgent}. Identifies text fragments potentially computable from data.
-    \item \textbf{\InterpretationAgent}. For a given text fragment (provided by SuggestionAgent or author),
-    attempts to synthesise Fluid expression computing target fragment.
-\end{itemize}
-
-The main components of the workflow are as follows:
+Our authoring tool is composed of two LLM-based agents. A \textbf{\SuggestionAgent} identifies text fragments
+potentially computable from data, and an \textbf{\InterpretationAgent}, given a text fragment provided by the
+SuggestionAgent or by the author, attempts to synthesise a Fluid expression which computes the target
+fragment. The main components of the workflow are as follows:
 
 \begin{enumerate}
 
@@ -33,7 +28,6 @@ s$ outcome, and the user can choose to manually abort and return to the entry st
 expression. This is intended to cover the situation where the author has made a claim which is
 \emph{incorrect}, and the data set and surrounding natural language have led the LLM to synthesise an
 expression which generates a different value from the one specified by the user.
-
 
 \item \textbf{Code synthesis step.} The expression synthesis step is an error-guided iterative prompting
 loop~\citep{skreta23}, beginning with an initial prompt sent to the LLM (\secref{prompt-design} below)
@@ -66,7 +60,7 @@ substantial level of automation, but requiring the author to intervene at key st
     \label{fig:interpretation-agent}
 \end{figure}
 
-\subsection{The InterpertationAgent}
+\subsection{\InterpretationAgent}
 \label{sec:interpretation-agent}
 
 \cdnote{I integrated the prompt description in the description of the InterpretationAgentv (unsure if this is the best plece) -- the prompt description seemed to basic (it's commented if you want to revert)}

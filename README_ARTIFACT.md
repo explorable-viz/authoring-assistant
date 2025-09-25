@@ -65,7 +65,7 @@ To build the application run
 ```sh
 yarn build
 ```
-Thenm open `settings.json` and set the property `authoring-agent-class`
+Then open `settings.json` and set the property `authoring-agent-class`
 - FluidOpenAIGpt4oAgent, to run the assistant with Gpt4o
 - FluidOpenAIGpt5Agent.java, to run the assistant with Gpt5
 

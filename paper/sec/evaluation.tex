@@ -101,8 +101,6 @@ accompanying natural language.
 %\end{table}
 
 
-To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
-expression in the linguistic categories from Table~\ref{tab:natural-language-forms}.
 %\figref{success_rate_by_category} shows the results obtained in generating expression by categories.
 
 
@@ -119,9 +117,12 @@ expression in the linguistic categories from Table~\ref{tab:natural-language-for
 %\gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
 %Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
 
-Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and without target-value sharing.
-The results show that providing the target value is crucial for achieving a high success rate.
-Moreover, the \InterpretationAgent generates a correct expression in approximately XX\% of the cases.
+To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
+expression in the linguistic categories from Table~\ref{tab:natural-language-forms}.
+Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and
+without target-value sharing. The results show that providing the target value (text fragment or numerical
+value) is crucial for achieving a high success rate. Moreover, the \InterpretationAgent generates a correct
+expression in approximately XX\% of the cases.
 
 The system achieved performance above 70\% in comparison, data retrieval, and min/max search tasks.
 In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (50\%).
@@ -147,9 +148,9 @@ sending back that the failure is related to a counterfactual error.
 
 %\rpnote{complete}
 
-Across 300 test executions, 121 contained at least one counterfactual error (avg. 3.8), of which 42 ultimately succeeded.
-Such tests help detect expressions that may yield the expected output but not the correct solution.
-For example, the \texttt{\textbackslash InterpretationAgent} generated:
+Across 300 test executions, 121 contained at least one counterfactual error (avg. 3.8), of which 42 ultimately
+succeeded. Such tests help detect expressions that may yield the expected output but not the correct solution.
+For example, the \InterpretationAgent generated:
 
 \begin{verbatim}
 (findWithKey_ "model" "LSTM2" tableData).time_s
@@ -166,20 +167,11 @@ Counterfactual testing exposed this error and prompted regeneration.
         \hline
         \textbf{Problem Type} & \textbf{Example} & \textbf{Explanation} \\
         \hline
-
-        ambiguous referent &
-        As shown in Table 3 \hl{BiLSTM} gives significantly better accuracies compared to uni-directional LSTM with the training time per epoch growing from 99 seconds to 106 seconds &
-        There are three models that have 99 seconds as their time; the assistant would not know which one to choose. \\
-
-        missing data &
-        The average methane emissions for the year 2015 is \hl{1.0} &
-        November is missing to calculate the average correctly. \\
-
-        false statement &
-        We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), BiLSTM is \hl{the most efficient} among all models compared, with the highest model size &
+        false comparison &
+        BiLSTM is \hl{the most efficient} among all models compared, with the highest model size &
         BiLSTM is not the most efficient, nor does it have the largest size. \\
 
-        incorrect numerical value &
+        wrong numerical value &
         LSTM is the fastest model with overall time taken being \hl{90} seconds &
         It is not 90 but 106. \\
 

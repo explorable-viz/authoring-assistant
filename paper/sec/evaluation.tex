@@ -3,30 +3,29 @@
 
 \subsection{Research questions}
 
-We investigated the following research questions, which probe the limits of the \InterpretationAgent's ability
-to reliably provide a data-driven interpretation of natural language. By contrasting genuine uncertainty with
-misleading or ill-specified inputs, we aim to understand not only the model's raw success rate, but also the
-failure modes most likely to arise in practical use.
+Our evaluation tests the ability of the \InterpretationAgent to translate quantitative and semi-quantitative
+expressions from scholarly natural language into executable queries that operate on the underlying dataset.
+Beyond raw accuracy, we are also concerned with how performance varies with task complexity, and whether the
+generated expressions are robust under changes to data or in the presence of ambiguity or other low data
+quality issues. These are captured in two research questions:
 
-\paragraph{RQ1. How robust is the system when provided with incomplete or ambiguous information?}
+\paragraph{RQ1. Interpretation Accuracy across Linguistic Idioms and Complexity.}
 
-In real-world authoring tasks, text fragments may omit key criteria (e.g. \textbf{?}) or contain vague
-identifiers (e.g. \textbf{?} without further context). We therefore ask how performance degrades when the
-specification is underspecified or when multiple interpretations are possible. Here, we distinguish between
-two forms of ambiguity: (1) domain-level ambiguity, which reflects genuine uncertainty in the data (e.g. two
-models achieving identical scores). (2) specification-level ambiguity, which arises from incomplete or
-imprecise descriptions in the query (e.g. missing fields that would otherwise resolve the expression
-uniquely).
+To what extent can LLMs accurately interpret quantitative and semi-quantitative claims in scholarly text as
+data queries? We examine performance across a range of linguistic idioms (e.g. averages, percentages, min/max,
+ranks, as summarised in Table~\ref{tab:natural-language-forms}) and investigate how accuracy varies with task
+complexity, measured (somewhat crudely and approximately) by the number of query sub-expressions (e.g.
+retrieval, aggregation, or arithmetic) present in the gold solution.
 
-\paragraph{RQ2. How sensitive is the system to misleading or adversarial information?}
+\paragraph{RQ2. Generalisability and Robustness.}
 
-Authors may (intentionally or unintentionally) introduce misleading elements into the text. These include
-inconsistent use of language, incorrect references to numerical values, or contradictory claims. We ask how
-the system responds in such cases: does it fail gracefully, does it default to literal reproduction of the
-misleading fragment, or does it attempt to generate a plausible, but incorrect, expression?
-Table~\ref{tab:problematic_cases} shows some of cases which are ``problematic'' in this sense; in these cases,
-producing a valid expression is likely to be challenging because of ambiguities in the input data or
-accompanying natural language.
+How well do the generated expressions generalise when the underlying data changes, or when the input contains
+misleading or ill-specified information? We test whether generated queries continue to produce correct outputs
+under a set of hand-generated counterfactual modifications of the dataset, based on expected query results
+specific to each test case, and also how counterfactual performance is impacted by the presence of misleading
+or adversarial phrasing. Table~\ref{tab:problematic_cases} shows some of cases which are ``problematic'' in
+this sense; in these cases, producing a valid expression is likely to be challenging because of ambiguities in
+the input data or accompanying natural language.
 
 \begin{figure}
     \centering
@@ -117,26 +116,36 @@ accompanying natural language.
 %\gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
 %Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
 
-To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
+To evaluate RQ1, we used a sample of the \SciGen dataset~\citep{moosavi21}, an open source dataset consisting
+of tables from scientific articles and their corresponding descriptions. We aggregated the generated
 expression in the linguistic categories from Table~\ref{tab:natural-language-forms}.
 Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and
-without target-value sharing. The results show that providing the target value (text fragment or numerical
-value) is crucial for achieving a high success rate. Overall the \InterpretationAgent generates a correct
-expression in approximately in 74.9\% of the cases (S.D. 3.0\%).
+without target-value sharing.
 
-The system achieved performance above 68\% in comparison, 77.3\% in data retrieval, and 97\% in min/max search tasks.
-In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (0\%).
+The results show that \emph{the system is robust when provided with sufficient guidance but degrades when underspecified.} With the target-value sharing, 
+the InterpretationAgent produced correct Fluid expressions in 74.9\%  (S.D. 3.0\%) of cases,
+but performance dropped to 57.1\% when the target was withheld. This highlights the system's reliance on explicit cues when resolving ambiguous fragments.
 
-Figure~\ref{fig:success_rate_by_complexity} reports the success rate as a function of the number of categories assigned to each expression.
-Fluid instructions combining multiple operations were associated with multiple categories.
-Results show that the success rate was 62\% for simple expressions (one category), increased to 91\% for two categories,
-while no correct expression was generated for expression with 3 categories.
+\emph{Performance also varied across linguistic categories.} Success rates exceeded 68\% for comparison, 77.3\% for data retrieval, and 97\% for min/max search tasks.
+In contrast, accuracy decreased significantly for expressions requiring differences (20\%) and for ranking tasks (0\%).
 
-In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
-correct expression when no reference string was given.
-On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
-Without the target string, performance decreased moderately to 57.1\%, indicating that the model retains substantial
-ability to reconstruct valid solutions even without explicit guidance
+The trend for compositional complexity is more nuanced as shown in Figure~\ref{fig:success_rate_by_complexity}, which reports the success rate as a function of the number of categories assigned to each expression: success rates are 62\% for single-category expressions, increase to 91\% when two categories are combined, but collapse to 0\% when three categories are involved. This suggests that \emph{moderate composition can actually aid performance, perhaps by giving the model clearer structural cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
+
+%The results show that providing the target value (text fragment or numerical
+%value) is crucial for achieving a high success rate. Overall the \InterpretationAgent generates a correct
+%expression in approximately in 74.9\% of the cases (S.D. 3.0\%).
+
+%Figure~\ref{fig:success_rate_by_complexity} reports the success rate as a function of the number of categories assigned to each expression.
+%Fluid instructions combining multiple operations were associated with multiple categories.
+%Results show that the success rate was 62\% for simple expressions (one category), increased to 91\% for two categories,
+%while no correct expression was generated for expression with 3 categories.
+
+%In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
+%correct expression when no reference string was given.
+%On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
+%Without the target string, performance decreased moderately to 57.1\%, indicating that the model retains substantial
+%ability to reconstruct valid solutions even without explicit guidance
+
 
 \subsection{Counterfactual testing}
 \label{sec:validation-with-counterfactual-data}

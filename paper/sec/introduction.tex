@@ -1,10 +1,10 @@
 \section{Introduction: Transparent, Data-Driven Documents}
 
-When attempting to interpret or verify data-driven claims, a key challenge lies in tracing specific claims
-back to the relevant data. In peer review, for example, empirical claims typically lack author-supplied links
-to data, making them hard for reviewers to check directly~\citep{weber20}. Paper retractions, meanwhile, are
-often attributable not to fraud, but to simple errors in data management or analysis~\citep{hu25}. The use of
-large language models (LLMs) to interpret scholarly documents has seen considerable attention recently, from
+When interpreting or verifying data-driven claims, a key challenge lies in tracing specific claims back to the
+relevant data. In peer review, for example, empirical claims typically lack author-supplied links to data,
+making them hard for reviewers to check directly~\citep{weber20}. Paper retractions, meanwhile, are often
+attributable not to fraud, but to simple errors in data management or analysis~\citep{hu25}. The use of large
+language models (LLMs) to interpret scholarly documents has seen considerable attention recently, from
 fact-checking~\citep{abu-ahmad25} to interpretation of charts and figures~\citep{roberts24}, but current LLM
 interfaces do not support direct interrogation of visual or other outputs for traceability to inputs.
 
@@ -52,10 +52,13 @@ results: here the phrase \textfrag{does not further improve} is replaced by \tex
 
 This transparent version of the document was implemented in Fluid. The source code is shown in
 \figref{fluid-example-paragraph}, and makes use of several helper functions, a representative subset of which
-are shown in \figref{fluid-scigen}. Both the provenance-tracking runtime of Fluid \emph{and} the LLM-based
-authoring support contribute to the solution: the Fluid runtime provides the interactions, and the LLM-based
-authoring tool makes the whole process practical. Without tool support, authoring a scientific document as a
-(hand-crafted) \emph{program} is unlikely to be a feasible task.
+are shown in \figref{fluid-scigen}. What makes our solution interesting is that the provenance-tracking
+runtime of Fluid \emph{and} the LLM-based authoring support are both essential components of the solution,
+with Fluid providing the interactions, and the LLM-based tool making the authoring process feasible.
+Generating code for a traditional language like Python would still result in a data-driven document, but
+crucially without the interactive provenance queries; and without AI-based tooling to support the authoring
+process, the author would be faced with creating the code in \figref{fluid-example-paragraph} by hand, which
+is unlikely to be feasible as part of the usual scientific writing process.
 
 AI-assisted authoring of transparent documents thus support turning static text into interactable, data-driven
 content able to expose the evidential basis of scholarly claims. We envisage two use cases. First, when

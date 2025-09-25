@@ -34,6 +34,7 @@ expression. This is intended to cover the situation where the author has made a 
 \emph{incorrect}, and the data set and surrounding natural language have led the LLM to synthesise an
 expression which generates a different value from the one specified by the user.
 
+
 \item \textbf{Code synthesis step.} The expression synthesis step is an error-guided iterative prompting
 loop~\citep{skreta23}, beginning with an initial prompt sent to the LLM (\secref{prompt-design} below)
 requesting the generation of an expression $e$. Using the Fluid command-line interface, the expression is
@@ -65,26 +66,41 @@ substantial level of automation, but requiring the author to intervene at key st
     \label{fig:interpretation-agent}
 \end{figure}
 
-\subsection{Prompt Design}
-\label{sec:prompt-design}
+\subsection{The InterpertationAgent}
+\label{sec:interpretation-agent}
 
-\paragraph{System Prompt.}
-For the Interpretation Assistant, the system prompt guides the LLM in replacing placeholder tags in the
-supplied paragraph with executable Fluid expressions. It includes the following information about the document
-under construction, the exact task to perform, and constraints on the expected output. The full system prompt
-is given in \appref{system-prompt:interpretation-agent}.
+\cdnote{I integrated the prompt description in the description of the InterpretationAgentv (unsure if this is the best plece) -- the prompt description seemed to basic (it's commented if you want to revert)}
 
-\begin{itemize}
-\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
-the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
-indicating the text fragment to replace, plus the full text for the paragraph.
-\item \textbf{Task description:} description of the LLM task, namely to identify \kw{[REPLACE …]} placeholder
-and generate Fluid expression that produces target string using supplied dataset and definitions in scope.
-\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
-with no extraneous content (such as comments).
-\end{itemize}
+The InterpretationAgent is guided by a structured system prompt that
+frames code generation as a precise replacement task. The model
+receives the imported datasets, helper modules, and the current Fluid
+representation of the paragraph, in which a text fragment is marked
+with [REPLACE …]. Its task is to substitute this placeholder with a
+Fluid expression that evaluates exactly to the target string,
+reconstructing quantitative or comparative claims as dataset queries
+where appropriate. To ensure integration with the workflow, the output
+must consist solely of a syntactically valid Fluid expression, with no
+additional commentary. This focused design constrains the model while
+providing enough context to generate expressions that are both
+data-grounded and immediately executable; the full prompt is given in~\appref{system-prompt:interpretation-agent}.
 
-\rpnote{Now something about the rest of the prompt.}
+%\paragraph{System Prompt.}
+%For the Interpretation Assistant, the system prompt guides the LLM in replacing placeholder tags in the
+%supplied paragraph with executable Fluid expressions. It includes the following information about the document
+%under construction, the exact task to perform, and constraints on the expected output. The full system prompt
+%is given in \appref{system-prompt:interpretation-agent}.
+
+%\begin{itemize}
+%\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
+%the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
+%indicating the text fragment to replace, plus the full text for the paragraph.
+%\item \textbf{Task description:} description of the LLM task, namely to identify \kw{[REPLACE …]} placeholder
+%and generate Fluid expression that produces target string using supplied dataset and definitions in scope.
+%\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
+%with no extraneous content (such as comments).
+%\end{itemize}
+
+%\rpnote{Now something about the rest of the prompt.}
 
 \begin{figure}[t]
     \centering

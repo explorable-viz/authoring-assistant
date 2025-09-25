@@ -119,7 +119,22 @@ ability to reconstruct valid solutions even without explicit guidance
 
 For the \emph{counterfactual testing} part of our analysis, the input data is deliberately modified in order
 to verify the consistency of the behaviours. Both the expected and generated expressions are executed again
-and the results are compared. If discrepancies are found \rpnote{complete}
+and the results are compared. If discrepancies are found the \InterpretationAgent ask for a new generation
+sending back that the failure is related to a counterfactual error.
+
+%\rpnote{complete}
+
+Across 300 test executions, 121 contained at least one counterfactual error (avg. 3.8), of which 42 ultimately succeeded.
+Such tests help detect expressions that may yield the expected output but not the correct solution.
+For example, the \texttt{\textbackslash InterpretationAgent} generated:
+
+\begin{verbatim}
+(findWithKey_ "model" "LSTM2" tableData).time_s
+\end{verbatim}
+
+intended to retrieve the execution time of the \texttt{LSTM} model, but incorrectly referred to \texttt{LSTM2}.
+Counterfactual testing exposed this error and prompted regeneration.
+
 
 \subsection{Problematic Cases}
 \label{subsec:problematic-cases}

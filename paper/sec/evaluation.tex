@@ -9,15 +9,13 @@ Beyond raw accuracy, we are also concerned with how performance varies with task
 generated expressions are robust under changes to data or in the presence of ambiguity or other low data
 quality issues. These are captured in two research questions:
 
-\paragraph{RQ1. How robust is the system when provided with incomplete or ambiguous information?}
+\paragraph{RQ1. Interpretation Accuracy across Linguistic Idioms and Complexity.}
 
-In real-world authoring tasks, text fragments may omit key criteria (e.g. \textbf{?}) or contain vague
-identifiers (e.g. \textbf{?} without further context). We therefore ask how performance degrades when the
-specification is underspecified or when multiple interpretations are possible. Here, we distinguish between
-two forms of ambiguity: (1) domain-level ambiguity, which reflects genuine uncertainty in the data (e.g. two
-models achieving identical scores). (2) specification-level ambiguity, which arises from incomplete or
-imprecise descriptions in the query (e.g. missing fields that would otherwise resolve the expression
-uniquely).
+To what extent can LLMs accurately interpret quantitative and semi-quantitative claims in scholarly text as
+data queries? We examine performance across a range of linguistic idioms (e.g. averages, percentages, min/max,
+ranks, as summarised in Table~\ref{tab:natural-language-forms}) and investigate how accuracy varies with task
+complexity, measured (somewhat crudely and approximately) by the number of query sub-expressions (e.g.
+retrieval, aggregation, or arithmetic) present in the gold solution.
 
 \paragraph{RQ2. How sensitive is the system to misleading or adversarial information?}
 

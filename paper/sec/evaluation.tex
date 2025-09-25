@@ -120,23 +120,32 @@ To evaluate RQ1, we used a sample of the \SciGen dataset~\citep{moosavi21}, an o
 of tables from scientific articles and their corresponding descriptions. We aggregated the generated
 expression in the linguistic categories from Table~\ref{tab:natural-language-forms}.
 Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and
-without target-value sharing. The results show that providing the target value (text fragment or numerical
-value) is crucial for achieving a high success rate. Overall the \InterpretationAgent generates a correct
-expression in approximately in 74.9\% of the cases (S.D. 3.0\%).
+without target-value sharing.
 
-The system achieved performance above 68\% in comparison, 77.3\% in data retrieval, and 97\% in min/max search tasks.
-In contrast, accuracy decreased significantly in expressions requiring differences (20\%) and in ranking tasks (0\%).
+\emph{The results show that the system is robust when provided with sufficient guidance but degrades when underspecified.} With the target-value sharing, 
+the InterpretationAgent produced correct Fluid expressions in 74.9\%  (S.D. 3.0\%) of cases,
+but performance dropped to 57.1\% when the target was withheld. This highlights the system's reliance on explicit cues when resolving ambiguous fragments.
 
-Figure~\ref{fig:success_rate_by_complexity} reports the success rate as a function of the number of categories assigned to each expression.
-Fluid instructions combining multiple operations were associated with multiple categories.
-Results show that the success rate was 62\% for simple expressions (one category), increased to 91\% for two categories,
-while no correct expression was generated for expression with 3 categories.
+\emph{Performance also varied across linguistic categories.} Success rates exceeded 68\% for comparison, 77.3\% for data retrieval, and 97\% for min/max search tasks.
+In contrast, accuracy decreased significantly for expressions requiring differences (20\%) and for ranking tasks (0\%).
 
-In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
-correct expression when no reference string was given.
-On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
-Without the target string, performance decreased moderately to 57.1\%, indicating that the model retains substantial
-ability to reconstruct valid solutions even without explicit guidance
+The trend for compositional complexity is more nuanced as shown in Figure~\ref{fig:success_rate_by_complexity}, which reports the success rate as a function of the number of categories assigned to each expression: success rates are 62\% for single-category expressions, increase to 91\% when two categories are combined, but collapse to 0\% when three categories are involved. This suggests that \emph{moderate composition can actually aid performance, perhaps by giving the model clearer structural cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
+
+%The results show that providing the target value (text fragment or numerical
+%value) is crucial for achieving a high success rate. Overall the \InterpretationAgent generates a correct
+%expression in approximately in 74.9\% of the cases (S.D. 3.0\%).
+
+%Figure~\ref{fig:success_rate_by_complexity} reports the success rate as a function of the number of categories assigned to each expression.
+%Fluid instructions combining multiple operations were associated with multiple categories.
+%Results show that the success rate was 62\% for simple expressions (one category), increased to 91\% for two categories,
+%while no correct expression was generated for expression with 3 categories.
+
+%In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
+%correct expression when no reference string was given.
+%On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
+%Without the target string, performance decreased moderately to 57.1\%, indicating that the model retains substantial
+%ability to reconstruct valid solutions even without explicit guidance
+
 
 \subsection{Counterfactual testing}
 \label{sec:validation-with-counterfactual-data}

@@ -2,78 +2,73 @@
     \centering
     \footnotesize
     \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{>{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6cm}}
+    \begin{tabular}{>{\raggedright\arraybackslash}p{1.4cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6.3cm}}
         \hline
-        \textbf{Type}                & \textbf{Example} & \textbf{Gold Solution} \\
+        \textbf{Label}                & \textbf{Example} & \textbf{Gold Solution for Example} \\
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
-
-        Numerical value
+%        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
+        Data retrieval
         & the training time per epoch growing from \hl{67} seconds to 106 seconds.
         &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-(findWithKey_ "model" "LSTM" tableData).time_s
+(model_ "LSTM").time_s
         \end{lstlisting}
         \\
-        Percentage &
+        Ratio &
         The Energy Sector accounts for total methane emissions of \hl{52.80}\% in 2030.
         &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-(record.emissions /
- sum (map (fun x -> x.emissions)
-          (getByYear year tableData))) * 100
+(getByCategory "Energy Sector" year).emissions /
+  sum (map (fun x -> x.emissions)
+    (getByYear year)) * 100
 
         \end{lstlisting}  \\
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
+%        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
         Average
         & The average methane emissions for the year 2030 is \hl{13.51} &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-(sumEmissions year tableData / length records)
+sum (map (fun x -> x.emissions)
+  (getByYear year)) / length records
         \end{lstlisting} \\
         Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-let maxEntry = maximumBy
-   (fun x -> x.emissions)
+let maxEntry = maximumBy (fun x -> x.emissions)
    (filter (fun x -> x.type == "Energy Sector")
       tableData)
 in maxEntry.year
-        \end{lstlisting} \\                             \\
+        \end{lstlisting} \\
+        \rowcolor{gray!20}
         Rank &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-let pos = findIndex "model" "CNN"
-    (insertionSort cmpTime tableData)
-in rankLabel "lowest" pos \end{lstlisting} \\
-        Total &
+rankLabel "lowest"
+  (findIndex "model" "CNN"
+    (sort cmpTime tableData)) \end{lstlisting} \\
+        Sum &
         The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-sumEmissions year tableData
+sum (map (fun x -> x.emissions)
+   (getByYear year))
         \end{lstlisting} \\
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
-
+%        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
         Comparison
         & The training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 trendWord
- (findWithKey_ "model" "BiLSTM" tableData).time_s
- (findWithKey_ "model" "LSTM" tableData).time_s
- growShrink
+  (model_ "BiLSTM" tableData).time_s
+  (model_ "LSTM" tableData).time_s
+  growShrink
         \end{lstlisting} \\
-        Pairwise comparisons
-        & Overall the SVM with polynomial degree 1 kernel outperformed all other kernels with other kernels generally offering \hl{better} precision at a higher cost to recall. &
+        Generalised quantifiers
+        & In the case of one syndrome (Hemorrhagic) we noticed an \hl{unusually low} level of recall for SVM but not for NB. &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-trendWord
-(mean (getTableColumn \"svm1_p\" tableData))
-(mean
-[ mean (getTableColumn \"naive_bayes_p\" tableData),
-  mean (getTableColumn \"svm2_p\" tableData),
-  mean (getTableColumn \"svm3_p\" tableData),
-  mean (getTableColumn \"svmr_p\" tableData)
+unusuallyHighLow (overallComparison [
+  compareCols col "naive_bayes_r"
+    (findWithKey_ "synd" "Hem." tableData)
+  | col <- ["svm1_r", "svm2_r", "svm3_r", "svmr_r"]
 ])
-betterWorse
-
         \end{lstlisting} \\
         \hline
     \end{tabular}

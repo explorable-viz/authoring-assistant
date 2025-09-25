@@ -4,10 +4,9 @@
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{>{\raggedright\arraybackslash}p{2cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6cm}}
         \hline
-        \textbf{Type}                & \textbf{Example} & \textbf{Gold Solution} \\
+        \textbf{Label}                & \textbf{Example} & \textbf{Gold Solution for Example} \\
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
-
+%        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Quantitative expressions}} \\
         Data retrieval
         & the training time per epoch growing from \hl{67} seconds to 106 seconds.
         &
@@ -25,7 +24,7 @@
 
         \end{lstlisting}  \\
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
+%        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
         Average
         & The average methane emissions for the year 2030 is \hl{13.51} &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
@@ -37,7 +36,8 @@ let maxEntry = maximumBy (fun x -> x.emissions)
    (filter (fun x -> x.type == "Energy Sector")
       tableData)
 in maxEntry.year
-        \end{lstlisting} \\                             \\
+        \end{lstlisting} \\
+        \rowcolor{gray!20}
         Rank &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
@@ -49,15 +49,14 @@ rankLabel "lowest"
 sumEmissions year tableData
         \end{lstlisting} \\
         \rowcolor{gray!20}
-        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
-
+%        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Trends}} \\
         Comparison
         & The training time per epoch \hl{growing} from 67 seconds to 106 seconds. &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 trendWord
- (findWithKey_ "model" "BiLSTM" tableData).time_s
- (findWithKey_ "model" "LSTM" tableData).time_s
- growShrink
+  (model_ "BiLSTM" tableData).time_s
+  (model_ "LSTM" tableData).time_s
+  growShrink
         \end{lstlisting} \\
         Pairwise comparisons
         & Overall the SVM with polynomial degree 1 kernel outperformed all other kernels with other kernels generally offering \hl{better} precision at a higher cost to recall. &

@@ -23,9 +23,9 @@ How well do the generated expressions generalise when the underlying data change
 misleading or ill-specified information? We test whether generated queries continue to produce correct outputs
 under a set of hand-generated counterfactual modifications of the dataset, based on expected query results
 specific to each test case, and also how counterfactual performance is impacted by the presence of misleading
-or adversarial phrasing. Table~\ref{tab:problematic_cases} shows some of cases which are ``problematic'' in
-this sense; in these cases, producing a valid expression is likely to be challenging because of ambiguities in
-the input data or accompanying natural language.
+or adversarial phrasing. Table~\ref{tab:problematic_cases} shows some of cases we deem problematic in this
+sense; in these cases, producing a valid expression is likely to be challenging because of ambiguities in the
+input data or accompanying natural language.
 
 \begin{figure}
     \centering
@@ -116,20 +116,27 @@ the input data or accompanying natural language.
 %\gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
 %Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
 
-To evaluate RQ1, we used a sample of the \SciGen dataset~\citep{moosavi21}, an open source dataset consisting
-of tables from scientific articles and their corresponding descriptions. We aggregated the generated
-expression in the linguistic categories from Table~\ref{tab:natural-language-forms}.
-Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and
-without target-value sharing.
+\paragraph{Interpretation Accuracy across Linguistic Idioms and Complexity.} To evaluate RQ1, we used a sample
+of the \SciGen dataset~\citep{moosavi21}, an open source dataset consisting of tables from scientific articles
+and their corresponding descriptions. We aggregated the results according to the linguistic categories from
+Table~\ref{tab:natural-language-forms}. Figure~\ref{fig:success_rate_by_category} illustrates the success rate
+for each category, both with and without target-value sharing.
 
-The results show that \emph{the system is robust when provided with sufficient guidance but degrades when underspecified.} With the target-value sharing, 
-the InterpretationAgent produced correct Fluid expressions in 74.9\%  (S.D. 3.0\%) of cases,
-but performance dropped to 57.1\% when the target was withheld. This highlights the system's reliance on explicit cues when resolving ambiguous fragments.
+The results show that \emph{the system is robust when provided with sufficient guidance but degrades when
+underspecified.} With the target-value sharing, the InterpretationAgent produced correct Fluid expressions in
+74.9\%  (S.D. 3.0\%) of cases, but performance dropped to 57.1\% when the target was withheld. This highlights
+the system's reliance on explicit cues when resolving ambiguous fragments.
 
-\emph{Performance also varied across linguistic categories.} Success rates exceeded 68\% for comparison, 77.3\% for data retrieval, and 97\% for min/max search tasks.
-In contrast, accuracy decreased significantly for expressions requiring differences (20\%) and for ranking tasks (0\%).
+\emph{Performance also varied across linguistic categories.} Success rates exceeded 68\% for comparison,
+77.3\% for data retrieval, and 97\% for min/max search tasks. In contrast, accuracy decreased significantly
+for expressions requiring differences (20\%) and for ranking tasks (0\%).
 
-The trend for compositional complexity is more nuanced as shown in Figure~\ref{fig:success_rate_by_complexity}, which reports the success rate as a function of the number of categories assigned to each expression: success rates are 62\% for single-category expressions, increase to 91\% when two categories are combined, but collapse to 0\% when three categories are involved. This suggests that \emph{moderate composition can actually aid performance, perhaps by giving the model clearer structural cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
+The trend for compositional complexity is more nuanced as shown in
+Figure~\ref{fig:success_rate_by_complexity}, which reports the success rate as a function of the number of
+categories assigned to each expression: success rates are 62\% for single-category expressions, increase to
+91\% when two categories are combined, but collapse to 0\% when three categories are involved. This suggests
+that \emph{moderate composition can actually aid performance, perhaps by giving the model clearer structural
+cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
 
 %The results show that providing the target value (text fragment or numerical
 %value) is crucial for achieving a high success rate. Overall the \InterpretationAgent generates a correct
@@ -146,27 +153,23 @@ The trend for compositional complexity is more nuanced as shown in Figure~\ref{f
 %Without the target string, performance decreased moderately to 57.1\%, indicating that the model retains substantial
 %ability to reconstruct valid solutions even without explicit guidance
 
+\paragraph{Generalisability and Robustness.} As a preliminary attempt to address RQ2, we carried out
+\emph{counterfactual testing} to evaluate the robustness of generated expressions under changes to the
+underlying data. In this setup, the input tables were modified according to hand-craft test specifications,
+and both the expected and generated expressions were re-executed to check whether the behaviours remained
+consistent. Across 300 test executions, 121 contained at least one counterfactual error (an average of 3.8 per
+case), of which 42 ultimately still succeeded. These tests highlight cases where an expression may
+coincidentally yield the correct output on the original data but fails to be extensionally equivalent more
+generally (i.e.~under perturbation). For example, in one test the system generated
 
-\subsection{Counterfactual testing}
-\label{sec:validation-with-counterfactual-data}
-
-For the \emph{counterfactual testing} part of our analysis, the input data is deliberately modified in order
-to verify the consistency of the behaviours. Both the expected and generated expressions are executed again
-and the results are compared. If discrepancies are found the \InterpretationAgent ask for a new generation
-sending back that the failure is related to a counterfactual error.
-
-%\rpnote{complete}
-
-Across 300 test executions, 121 contained at least one counterfactual error (avg. 3.8), of which 42 ultimately
-succeeded. Such tests help detect expressions that may yield the expected output but not the correct solution.
-For example, the \InterpretationAgent generated:
-
-\begin{verbatim}
-(findWithKey_ "model" "LSTM2" tableData).time_s
-\end{verbatim}
+\hspace{3mm} \kw{(findWithKey\_ "model" "LSTM2" tableData).time\_s}
 
 intended to retrieve the execution time of the \texttt{LSTM} model, but incorrectly referred to \texttt{LSTM2}.
-Counterfactual testing exposed this error and prompted regeneration.
+Counterfactual testing exposed this mismatch, which would otherwise have gone undetected.
+
+At present, counterfactual tests are used only as an evaluation device, not as part of the authoring workflow
+itself. For future work (\secref{conclusion}), we plan to investigate automatic generation of counterfactual
+tests, allowing these additional robustness checks to be integrated into the document authoring workflow.
 
 
 \begin{table}[t]

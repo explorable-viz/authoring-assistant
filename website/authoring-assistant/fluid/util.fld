@@ -31,11 +31,11 @@ let maximumBy f [] = error "Empty list!";
 
 let getColumn columnName = map (fun x -> x.[columnName]);
 
-let mean set = sum set / length set; 
+let mean xs = sum xs / length xs; 
 
-let standardDev avg set = (sum (map (fun x -> (x - avg) ** 2) set) / ((length set) - 1)) ** 0.5;
+let standardDev avg xs = (sum (map (fun x -> (x - avg) ** 2) xs) / ((length xs) - 1)) ** 0.5;
 
-let stats set = 
-    let avg = mean set
-    in [avg, standardDev avg set];
+let stats xs = 
+    let avg = mean xs
+    in [avg, standardDev avg xs];
 

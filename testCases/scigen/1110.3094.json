@@ -15,8 +15,8 @@
     },
     {
       "type": "expression",
-      "expression": "underOverPerformed (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm2_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm3_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svmr_p\") tableData)])",
-      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "underOverPerformed (overallComparison [overallComparison (map (compareCols \"svm1_p\" col) tableData) | col <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -24,8 +24,8 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (overallComparison [ overallComparison (map (compareCols \"svm1_p\" \"naive_bayes_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm2_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svm3_p\") tableData), overallComparison (map (compareCols \"svm1_p\" \"svmr_p\") tableData)])",
-      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols \"svm1_p\" col) tableData) | col <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -33,8 +33,8 @@
     },
     {
       "type": "expression",
-      "expression": "aHigherLower (overallComparison [ overallComparison (map (compareCols \"naive_bayes_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svm2_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svm3_r\" \"svm1_r\") tableData), overallComparison (map (compareCols \"svmr_r\" \"svm1_r\") tableData)])",
-      "categories": ["comparison", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval", "comparison", "data_retrieval"]
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"svm1_r\" ) tableData) | col <- [\"naive_bayes_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -110,12 +110,12 @@
     },
     {
       "type": "literal",
-      "value": " for NB. SVM tended to offer a "
+      "value": " for NB. SVM tended to offer "
     },
     {
       "type": "expression",
-      "expression": "\"reduced\"",
-      "categories": ["comparison"]
+      "expression": "aReducedIncreased (overallComparison [overallComparison (map (compareCols col \"naive_bayes_p\" ) tableData) | col <- [\"svm1_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
@@ -123,17 +123,17 @@
     },
     {
       "type": "expression",
-      "expression": "\"better\"",
-      "categories": ["comparison"]
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"naive_bayes_r\" ) tableData) | col <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",
-      "value": " recall. In the case of one syndrome (Hemorrhagic) we noticed an unusually "
+      "value": " recall. In the case of one syndrome (Hemorrhagic) we noticed an "
     },
     {
       "type": "expression",
-      "expression": "\"low\"",
-      "categories": ["comparison"]
+      "expression": "unusuallyHighLow (overallComparison [compareCols col \"naive_bayes_r\" (findWithKey_ \"synd\" \"Hem.\" tableData) | col <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]]) ",
+      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
       "type": "literal",

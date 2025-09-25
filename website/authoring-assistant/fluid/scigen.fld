@@ -60,9 +60,17 @@ let underOverPerforming EQ = "performing the same as";
     underOverPerforming LT = "performing worse than";
     underOverPerforming GT = "outperforming";
 
+let unusuallyHighLow EQ = "mostly equal";
+    unusuallyHighLow LT = "unusually low";
+    unusuallyHighLow GT = "unusually high";
+
 let aHigherLower EQ = "an equivalent";
     aHigherLower LT = "a lower";
     aHigherLower GT = "a higher";
+
+let aReducedIncreased EQ = "the same";
+    aReducedIncreased LT = "a reduced";
+    aReducedIncreased GT = "an increased";
 
 let underOverPerformed EQ = "performed the same as";
     underOverPerformed LT = "performed worse than";

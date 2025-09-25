@@ -3,23 +3,30 @@
 
 \subsection{Research questions}
 
-RQ1. How robust is the system when provided with incomplete or ambiguous information?
-In real-world authoring tasks, text fragments may omit key criteria (e.g. \textbf{?}) or contain vague identifiers (e.g. \textbf{?} without further context).
-We therefore ask how performance degrades when the specification is underspecified or when multiple interpretations are possible. Here, we distinguish between two forms of ambiguity:
-(1) domain-level ambiguity, which reflects genuine uncertainty in the data (e.g. two models achieving identical scores).
-(2) specification-level ambiguity, which arises from incomplete or imprecise descriptions in the query (e.g. missing fields that would otherwise resolve the expression uniquely).
+We investigated the following research questions, which probe the limits of the \InterpretationAgent's ability
+to reliably provide a data-driven interpretation of natural language. By contrasting genuine uncertainty with
+misleading or ill-specified inputs, we aim to understand not only the model's raw success rate, but also the
+failure modes most likely to arise in practical use.
 
-RQ2. How sensitive is the system to misleading or adversarial information?
-Authors may, intentionally or unintentionally, introduce misleading elements into the text. These include inconsistent identifiers, incorrect numerical values, or contradictory claims.
-We ask how the system responds in such cases: does it fail gracefully, does it default to literal reproduction of the misleading fragment, or does it attempt to generate a plausible, but incorrect, expression?
+\paragraph{RQ1. How robust is the system when provided with incomplete or ambiguous information?}
 
-Together, these questions probe the limits of the InterpretationAgent's ability to generate reliable code. By contrasting genuine uncertainty with misleading or ill-specified inputs, we aim to understand not only the model's raw success rate, but also the failure modes most likely to arise in practical use.
+In real-world authoring tasks, text fragments may omit key criteria (e.g. \textbf{?}) or contain vague
+identifiers (e.g. \textbf{?} without further context). We therefore ask how performance degrades when the
+specification is underspecified or when multiple interpretations are possible. Here, we distinguish between
+two forms of ambiguity: (1) domain-level ambiguity, which reflects genuine uncertainty in the data (e.g. two
+models achieving identical scores). (2) specification-level ambiguity, which arises from incomplete or
+imprecise descriptions in the query (e.g. missing fields that would otherwise resolve the expression
+uniquely).
 
-\subsection{Success Rate by Category}
-To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
-expression in three categories: aggregation, trends, quantitative (See
-Table~\ref{tab:natural-language-forms}). \figref{success_rate_by_category} shows the results obtained in
-generating expression by categories.
+\paragraph{RQ2. How sensitive is the system to misleading or adversarial information?}
+
+Authors may (intentionally or unintentionally) introduce misleading elements into the text. These include
+inconsistent use of language, incorrect references to numerical values, or contradictory claims. We ask how
+the system responds in such cases: does it fail gracefully, does it default to literal reproduction of the
+misleading fragment, or does it attempt to generate a plausible, but incorrect, expression?
+Table~\ref{tab:problematic_cases} shows some of cases which are ``problematic'' in this sense; in these cases,
+producing a valid expression is likely to be challenging because of ambiguities in the input data or
+accompanying natural language.
 
 \begin{figure}
     \centering
@@ -40,6 +47,7 @@ generating expression by categories.
 \end{figure}
 
 \subsection{Results}
+
 
 %\begin{table}[h!]
 %    \scriptsize
@@ -92,13 +100,27 @@ generating expression by categories.
 %    \label{tab:results_combined}
 %\end{table}
 
+
+To evaluate the system we used a sample of the \SciGen dataset~\citep{moosavi21}. We aggregated the generated
+expression in the linguistic categories from Table~\ref{tab:natural-language-forms}.
+\figref{success_rate_by_category} shows the results obtained in generating expression by categories.
+
+
 %Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model, \gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
 %Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
 
-In this section, we report the experimental results.
-Figure~\ref{fig:success_rate_by_category} illustrates the success rate of \gptfour % under two different settings: with target-value sharing enabled and without target-value sharing.
-for each category, both with and without target-value sharing.
+
+
+%Figure~\ref{fig:success_rate_by_category} illustrates the success rate of \gptfour % under two different settings: with target-value sharing enabled and without target-value sharing.
+%for each category, both with and without target-value sharing.
 %Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%) \cdnote{this needs to be updated for target sharing and not target sharing or removed}.
+
+%Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model,
+%\gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
+%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
+
+In this section, we report the experimental results.
+Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and without target-value sharing.
 The results show that providing the target value is crucial for achieving a high success rate.
 Moreover, the \InterpretationAgent generates a correct expression in approximately XX\% of the cases.
 
@@ -121,20 +143,22 @@ ability to reconstruct valid solutions even without explicit guidance
 
 For the \emph{counterfactual testing} part of our analysis, the input data is deliberately modified in order
 to verify the consistency of the behaviours. Both the expected and generated expressions are executed again
-and the results are compared. If discrepancies are found \rpnote{complete}
+and the results are compared. If discrepancies are found the \InterpretationAgent ask for a new generation
+sending back that the failure is related to a counterfactual error.
 
-\subsection{Problematic Cases}
-\label{subsec:problematic-cases}
+%\rpnote{complete}
 
-Table~\ref{tab:problematic_cases} presents examples of problematic cases in which the system was asked to generate a valid
-Fluid expression.
-In these cases, producing a valid expression is challenging because the input data (or the NL query) contains ambiguities
-that prevent the construction of a well-formed expression.
+Across 300 test executions, 121 contained at least one counterfactual error (avg. 3.8), of which 42 ultimately succeeded.
+Such tests help detect expressions that may yield the expected output but not the correct solution.
+For example, the \texttt{\textbackslash InterpretationAgent} generated:
 
-For instance, in the \textit{missing-data} problem, the \InterpretationAgent should generate a function to compute
- the average of the emissions. However, the input data does not provide information for all months.
+\begin{verbatim}
+(findWithKey_ "model" "LSTM2" tableData).time_s
+\end{verbatim}
 
-In such cases, the system was unable to generate a general expression and instead produced the expected value directly.
+intended to retrieve the execution time of the \texttt{LSTM} model, but incorrectly referred to \texttt{LSTM2}.
+Counterfactual testing exposed this error and prompted regeneration.
+
 
 \begin{table}[t]
     \centering

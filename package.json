@@ -1,15 +1,8 @@
 {
-  "name": "@explorable-viz/authoring-assistant",
+  "name": "authoring-assistant",
   "version": "0.1.1",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/explorable-viz/transparent-text.git"
-  },
-  "author": "explorable-viz",
+  "author": "Authoring Assistant contributors",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/explorable-viz/fluid/issues"
-  },
   "scripts": {
     "build": "./script/build.sh",
     "generate-charts": "./script/py-install-requirements-and-gen.sh",
@@ -21,7 +14,8 @@
     "pull-llama3-1": "./script/ollama-model-pull.sh llama3.1",
     "serve": "./script/serve.sh",
     "test-mock": "./script/authoring-assistant.sh",
-    "test-websites": "./script/test-websites.sh"
+    "test-websites": "./script/test-websites.sh",
+    "zip-artifact" : "./script/zip-artifact.sh"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "dependencies": {

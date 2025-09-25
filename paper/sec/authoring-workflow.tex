@@ -1,15 +1,10 @@
 \section{AI-Assisted Authoring Workflow}
 \label{sec:authoring-workflow}
 
-Our authoring tool is composed of two LLM-based agents:
-
-\begin{itemize}
-    \item \textbf{\SuggestionAgent}. Identifies text fragments potentially computable from data.
-    \item \textbf{\InterpretationAgent}. For a given text fragment (provided by SuggestionAgent or author),
-    attempts to synthesise Fluid expression computing target fragment.
-\end{itemize}
-
-The main components of the workflow are as follows:
+Our authoring tool is composed of two LLM-based agents. A \textbf{\SuggestionAgent} identifies text fragments
+potentially computable from data, and an \textbf{\InterpretationAgent}, given a text fragment provided by the
+SuggestionAgent or by the author, attempts to synthesise a Fluid expression which computes the target
+fragment. The main components of the workflow are as follows:
 
 \begin{enumerate}
 
@@ -65,43 +60,49 @@ substantial level of automation, but requiring the author to intervene at key st
     \label{fig:interpretation-agent}
 \end{figure}
 
-\subsection{Prompt Design}
-\label{sec:prompt-design}
+\paragraph{\InterpretationAgent prompt design.}
 
-\paragraph{System Prompt.}
-For the Interpretation Assistant, the system prompt guides the LLM in replacing placeholder tags in the
-supplied paragraph with executable Fluid expressions. It includes the following information about the document
-under construction, the exact task to perform, and constraints on the expected output. The full system prompt
-is given in \appref{system-prompt:interpretation-agent}.
+The \InterpretationAgent is guided by a structured system prompt that frames code generation as a precise
+replacement task. The model receives the imported datasets, helper modules, and the current Fluid
+representation of the paragraph, in which a text fragment is marked with the tag \kw{[REPLACE …]}. Its task is
+to substitute this placeholder with a Fluid expression that evaluates exactly to the target string,
+reconstructing quantitative or comparative claims as data queries. To ensure integration with the workflow,
+the output must consist solely of a syntactically valid Fluid expression, with no additional commentary. The
+full prompt is given in~\appref{system-prompt:interpretation-agent}.
 
-\begin{itemize}
-\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
-the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
-indicating the text fragment to replace, plus the full text for the paragraph.
-\item \textbf{Task description:} description of the LLM task, namely to identify \kw{[REPLACE …]} placeholder
-and generate Fluid expression that produces target string using supplied dataset and definitions in scope.
-\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
-with no extraneous content (such as comments).
-\end{itemize}
+%\paragraph{System Prompt.}
+%For the Interpretation Assistant, the system prompt guides the LLM in replacing placeholder tags in the
+%supplied paragraph with executable Fluid expressions. It includes the following information about the document
+%under construction, the exact task to perform, and constraints on the expected output. The full system prompt
+%is given in \appref{system-prompt:interpretation-agent}.
 
-\rpnote{Now something about the rest of the prompt.}
+%\begin{itemize}
+%\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
+%the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
+%indicating the text fragment to replace, plus the full text for the paragraph.
+%\item \textbf{Task description:} description of the LLM task, namely to identify \kw{[REPLACE …]} placeholder
+%and generate Fluid expression that produces target string using supplied dataset and definitions in scope.
+%\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
+%with no extraneous content (such as comments).
+%\end{itemize}
+
+%\rpnote{Now something about the rest of the prompt.}
 
 \begin{figure}[t]
     \centering
     \begin{subfigure}{0.50\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/data-flow-correct}
-        \caption{Author Acceptance pathway}
+        \caption{Author accepts expression}
         \label{fig:data-flow-correct}
     \end{subfigure}\hfill
     \begin{subfigure}{0.50\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/data-flow-error}
-        \caption{Author Rejection pathway}
+        \caption{Author identifies error and rejects}
         \label{fig:dataflow-error}
     \end{subfigure}
-    \caption{Two possible paths through the basic editing loop: (a) author accepts generated expression after
-    interactively verifying its correctness; (b) author rejects proposed expression, having identified an
-    error (natural language mentions accuracy, while interaction reveals use of timing data).}
+    \caption{Two possible paths through editing loop, with interactive verification of generated code}
+%  (natural language mentions accuracy, while interaction reveals use of timing data).
     \label{fig:overall-architecture}
 \end{figure}

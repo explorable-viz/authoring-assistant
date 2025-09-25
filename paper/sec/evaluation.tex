@@ -17,15 +17,15 @@ ranks, as summarised in Table~\ref{tab:natural-language-forms}) and investigate 
 complexity, measured (somewhat crudely and approximately) by the number of query sub-expressions (e.g.
 retrieval, aggregation, or arithmetic) present in the gold solution.
 
-\paragraph{RQ2. How sensitive is the system to misleading or adversarial information?}
+\paragraph{RQ2. Generalisability and Robustness.}
 
-Authors may (intentionally or unintentionally) introduce misleading elements into the text. These include
-inconsistent use of language, incorrect references to numerical values, or contradictory claims. We ask how
-the system responds in such cases: does it fail gracefully, does it default to literal reproduction of the
-misleading fragment, or does it attempt to generate a plausible, but incorrect, expression?
-Table~\ref{tab:problematic_cases} shows some of cases which are ``problematic'' in this sense; in these cases,
-producing a valid expression is likely to be challenging because of ambiguities in the input data or
-accompanying natural language.
+How well do the generated expressions generalise when the underlying data changes, or when the input contains
+misleading or ill-specified information? We test whether generated queries continue to produce correct outputs
+under a set of hand-generated counterfactual modifications of the dataset, based on expected query results
+specific to each test case, and also how counterfactual performance is impacted by the presence of misleading
+or adversarial phrasing. able~\ref{tab:problematic_cases} shows some of cases which are ``problematic'' in
+this sense; in these cases, producing a valid expression is likely to be challenging because of ambiguities in
+the input data or accompanying natural language.
 
 \begin{figure}
     \centering

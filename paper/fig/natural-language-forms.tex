@@ -12,10 +12,10 @@
         & the training time per epoch growing from \hl{67} seconds to 106 seconds.
         &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-(findWithKey_ "model" "LSTM" tableData).time_s
+(model_ "LSTM").time_s
         \end{lstlisting}
         \\
-        Percentage &
+        Ratio &
         The Energy Sector accounts for total methane emissions of \hl{52.80}\% in 2030.
         &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
@@ -33,8 +33,7 @@
         \end{lstlisting} \\
         Min/Max                          & The Energy Sector recorded its highest methane emissions in \hl{2030}             &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-let maxEntry = maximumBy
-   (fun x -> x.emissions)
+let maxEntry = maximumBy (fun x -> x.emissions)
    (filter (fun x -> x.type == "Energy Sector")
       tableData)
 in maxEntry.year
@@ -42,10 +41,9 @@ in maxEntry.year
         Rank &
         3-layer stacked CNN gives an accuracy of 81.46\%, which is the \hl{lowest} compared with BiLSTM, and S-LSTM  &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
-let pos = findIndex "model" "CNN"
-    (insertionSort cmpTime tableData)
-in rankLabel "lowest" pos \end{lstlisting} \\
-        Total &
+rankLabel "lowest"
+  (findIndex "model" "CNN" (sort cmpTime tableData)) \end{lstlisting} \\
+        Sum &
         The total methane emissions for the year 2030 is \hl{37.74} for Agriculture &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 sumEmissions year tableData

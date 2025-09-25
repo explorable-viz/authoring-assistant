@@ -41,62 +41,64 @@ generating expression by categories.
 
 \subsection{Results}
 
-\begin{table}[h!]
-    \scriptsize
+%\begin{table}[h!]
+%    \scriptsize
+%
+%    \centering
+%    \begin{subtable}{0.45\linewidth}
+%        \centering
+%        \begin{tabular}{lcccc}
+%            \hline
+%            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
+%            & \textbf{Success Rate (\%)} & \textbf{SD (\%)} & \textbf{Success Rate} & \textbf{SD (\%)} \\
+%            \hline
+%            Comparison     & 68.2   & 3.2 & 77.4 & 2 \\
+%            Data Retrieval & 77.3   & 3.7 & 77.4 & 2 \\
+%            Difference     & 20.0   & 44.7 & 77.4 & 2 \\
+%            Min/max        & 97.0   & 5.6 & 77.4 & 2 \\
+%            Rank           & 0.0   & 0.0 & 77.4 & 2 \\
+%            Sum            & 100   & 0.0 & 77.4 & 2 \\
+%            Ratio          & 100   & 0.0 & 77.4 & 2 \\
+%            Agerage        & 100   & 0.0 & 77.4 & 2 \\
+%            Overall        & 74.9 & 3 & 77.4 & 2 \\
+%            \hline
+%        \end{tabular}
+%        \caption{Results with target-value = true}
+%        \label{tab:results_true}
+%    \end{subtable}%
+%    \hfill
+%    \begin{subtable}{0.45\linewidth}
+%        \centering
+%        \begin{tabular}{lcccc}
+%            \hline
+%            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
+%            & \textbf{Success Rate (\%)} & \textbf{SD (\%)} & \textbf{Success Rate} & \textbf{SD (\%)} \\
+%            \hline
+%            Comparison     & 33.3 & 3.1 & -- & -- \\
+%            Data Retrieval & 62.0 & 1.6 & -- & -- \\
+%            Difference     & 75.0 & 50.0 & -- & -- \\
+%            Min/max        & 90.6 & 12.6 & -- & -- \\
+%            Rank           & 0.0 & 0.0 & -- & -- \\
+%            Sum            & 100.0 & 0.0 & -- & -- \\
+%            Ratio          & 100.0 & 0.0 & -- & -- \\
+%            Average        & 100.0 & 0.0 & -- & -- \\
+%            Overall        & 57.1 & 0.8 & -- & -- \\
+%            \hline
+%        \end{tabular}
+%        \caption{Results without target-value}
+%        \label{tab:results_no_target}
+%    \end{subtable}
+%    \caption{Success rates (with standard deviation) for \textbf{\gptfour} and \textbf{\gptfive} across different task categories}
+%    \label{tab:results_combined}
+%\end{table}
 
-    \centering
-    \begin{subtable}{0.45\linewidth}
-        \centering
-        \begin{tabular}{lcccc}
-            \hline
-            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
-            & \textbf{Success Rate (\%)} & \textbf{SD (\%)} & \textbf{Success Rate} & \textbf{SD (\%)} \\
-            \hline
-            Comparison     & 68.2   & 3.2 & 77.4 & 2 \\
-            Data Retrieval & 77.3   & 3.7 & 77.4 & 2 \\
-            Difference     & 20.0   & 44.7 & 77.4 & 2 \\
-            Min/max        & 97.0   & 5.6 & 77.4 & 2 \\
-            Rank           & 0.0   & 0.0 & 77.4 & 2 \\
-            Sum            & 100   & 0.0 & 77.4 & 2 \\
-            Ratio          & 100   & 0.0 & 77.4 & 2 \\
-            Agerage        & 100   & 0.0 & 77.4 & 2 \\
-            Overall        & 74.9 & 3 & 77.4 & 2 \\
-            \hline
-        \end{tabular}
-        \caption{Results with target-value = true}
-        \label{tab:results_true}
-    \end{subtable}%
-    \hfill
-    \begin{subtable}{0.45\linewidth}
-        \centering
-        \begin{tabular}{lcccc}
-            \hline
-            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
-            & \textbf{Success Rate (\%)} & \textbf{SD (\%)} & \textbf{Success Rate} & \textbf{SD (\%)} \\
-            \hline
-            Comparison     & 33.3 & 3.1 & -- & -- \\
-            Data Retrieval & 62.0 & 1.6 & -- & -- \\
-            Difference     & 75.0 & 50.0 & -- & -- \\
-            Min/max        & 90.6 & 12.6 & -- & -- \\
-            Rank           & 0.0 & 0.0 & -- & -- \\
-            Sum            & 100.0 & 0.0 & -- & -- \\
-            Ratio          & 100.0 & 0.0 & -- & -- \\
-            Average        & 100.0 & 0.0 & -- & -- \\
-            Overall        & 57.1 & 0.8 & -- & -- \\
-            \hline
-        \end{tabular}
-        \caption{Results without target-value}
-        \label{tab:results_no_target}
-    \end{subtable}
-    \caption{Success rates (with standard deviation) for \textbf{\gptfour} and \textbf{\gptfive} across different task categories}
-    \label{tab:results_combined}
-\end{table}
+%Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model, \gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
+%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
 
 In this section, we report the experimental results.
-Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model, \gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
-Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
-
-Figure~\ref{fig:success_rate_by_category} illustrates the success rate for each category, both with and without target-value sharing.
+Figure~\ref{fig:success_rate_by_category} illustrates the success rate of \gptfour % under two different settings: with target-value sharing enabled and without target-value sharing.
+for each category, both with and without target-value sharing.
+%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%) \cdnote{this needs to be updated for target sharing and not target sharing or removed}.
 The results show that providing the target value is crucial for achieving a high success rate.
 Moreover, the \InterpretationAgent generates a correct expression in approximately XX\% of the cases.
 

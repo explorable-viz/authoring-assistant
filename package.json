@@ -1,7 +1,7 @@
 {
   "name": "authoring-assistant",
   "version": "0.1.1",
-  "author": "anonimous",
+  "author": "Authoring Assistant contributors",
   "license": "MIT",
   "scripts": {
     "build": "./script/build.sh",

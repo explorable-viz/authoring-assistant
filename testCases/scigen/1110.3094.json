@@ -15,7 +15,7 @@
     },
     {
       "type": "expression",
-      "expression": "let compareToSvmLinearP columnName = overallComparison (map (compareCols \"svm1_p\" columnName) tableData) in underOverPerformed (overallComparison [compareToSvmLinearP c | c <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "expression": "underOverPerformed (overallComparison [overallComparison (map (compareCols \"svm1_p\" col) tableData) | col <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
       "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "type": "expression",
-      "expression": "let compareToSvmLinearP columnName = overallComparison (map (compareCols \"svm1_p\" columnName) tableData) in betterWorse (overallComparison [compareToSvmLinearP c | c <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols \"svm1_p\" col) tableData) | col <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
       "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "type": "expression",
-      "expression": "let compareToSvmLinearR columnName = overallComparison (map (compareCols columnName \"svm1_r\" ) tableData) in betterWorse (overallComparison [compareToSvmLinearR c | c <- [\"naive_bayes_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"svm1_r\" ) tableData) | col <- [\"naive_bayes_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
       "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
@@ -114,7 +114,7 @@
     },
     {
       "type": "expression",
-      "expression": "let compareToNBP columnName = overallComparison (map (compareCols columnName \"naive_bayes_p\" ) tableData) in aReducedIncreased (overallComparison [compareToNBP c | c <- [\"svm1_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "expression": "aReducedIncreased (overallComparison [overallComparison (map (compareCols col \"naive_bayes_p\" ) tableData) | col <- [\"svm1_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
       "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "type": "expression",
-      "expression": "let compareToNBR columnName = overallComparison (map (compareCols columnName \"naive_bayes_r\" ) tableData) in betterWorse (overallComparison [compareToNBR c | c <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"naive_bayes_r\" ) tableData) | col <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
       "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {
@@ -132,7 +132,7 @@
     },
     {
       "type": "expression",
-      "expression": "let hem = findWithKey_ \"synd\" \"Hem.\" tableData; let compareToHemNBR columnName = compareCols columnName \"naive_bayes_r\" hem in unusuallyHighLow (overallComparison [compareToHemNBR c | c <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]]) ",
+      "expression": "unusuallyHighLow (overallComparison [compareCols col \"naive_bayes_r\" (findWithKey_ \"synd\" \"Hem.\" tableData) | col <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]]) ",
       "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
     },
     {

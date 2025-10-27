@@ -1,4 +1,3 @@
-[submodule "tex-common"]
-	path = tex-common
+[submodule "paper/tex-common"]
+	path = paper/tex-common
 	url = git@github.com:explorable-viz/tex-common.git
-	branch = master

@@ -8,3 +8,4 @@ ARCHIVE="../$NAME"
 
 zip -r - . > $ARCHIVE
 zip -d $ARCHIVE *.pdf \*.{DS_Store,gitignore}
+zip -d $ARCHIVE arXiv.sh build.bat build.sh

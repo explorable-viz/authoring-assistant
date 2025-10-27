@@ -34,27 +34,6 @@ def generate_success_rate_test_case_plot(df, plot):
     plt.savefig(f"{fig_dir}/success_rate_by_test_case.png")
     plt.close()
 
-def generate_summary_test_case_plot(df, plot):
-    df_plot = df[::-1].reset_index(drop=True)
-    row_height = 0.5
-    plt.figure(figsize=(10, len(df_plot) * row_height))
-
-    for idx, row in df_plot.iterrows():
-        is_success = not pd.isna(row["generated-expression"])
-        color = "green" if is_success else "red"
-        marker_text = f"{'OK' if is_success else 'KO'}"
-        plt.text(0.15, idx, marker_text, ha="left", va="center", fontsize=10.5, color=color)
-
-    plt.yticks(range(len(df_plot)), df_plot["test-case-short"], fontsize=8)
-    plt.xticks([])
-    plt.gca().spines[['top', 'right', 'left', 'bottom']].set_visible(False)
-    plt.grid(False)
-    plt.tick_params(left=False)
-    plt.title("Test Outcome per Test Case (OK = Success, KO = Failure). Max Attempts = 4", pad=20)
-    plt.tight_layout()
-    plt.savefig(f"{fig_dir}/per_row_checkmarks.png")
-    plt.close()
-
 def generate_aggregated_plot(df, plot):
     # esplodo le categorie
     df['expression-type'] = df['expression-type'].str.strip('[]').str.split(',')
@@ -159,7 +138,6 @@ def generate_charts():
 
     sns.set_style("whitegrid")
     generate_success_rate_test_case_plot(df, plt)
-    generate_summary_test_case_plot(df, plt)
     generate_aggregated_plot(df, plt)
     generate_success_rate_by_category_count(df, plt)
 

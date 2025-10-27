@@ -8,4 +8,4 @@ $PDFLATEX $TARGET
 bibtex $TARGET
 $PDFLATEX $TARGET
 $PDFLATEX $TARGET
-rm -f $TARGET.{aux,bbl,blg,,cb,cb2,dvi,logout,pag,toc}
+rm -f $TARGET.{aux,bbl,blg,,cb,cb2,dvi,log,out,pag,toc}

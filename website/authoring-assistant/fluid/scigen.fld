@@ -21,17 +21,18 @@ let countOrd e l g (EQ : xs) = countOrd (e + 1) l g xs;
     countOrd e l g (GT : xs) = countOrd e l (g + 1) xs;
     countOrd e l g Nil = [e, l, g];
 
-let overallComparison orders = 
+let overallComparison orders =
     let [countEQ, countLT, countGT]  = countOrd 0 0 0 orders
     in if (countEQ >= countLT) `and` (countEQ >= countGT) then EQ
         else if countLT > countGT then LT
         else GT;
 
-let compareCols columnA columnB tableRow = compare tableRow.[columnA] tableRow.[columnB];
+let compareCols columnA columnB tableRow =
+   compare tableRow.[columnA] tableRow.[columnB];
 
-let distributionOutlier val avg stdDev numOfDev = 
+let distributionOutlier val avg stdDev numOfDev =
    if (avg - numOfDev * stdDev <= val) `and` (val <= avg + numOfDev * stdDev) then EQ
-   else if (avg - numOfDev * stdDev > val) then LT
+   else if avg - numOfDev * stdDev > val then LT
    else GT;
 
 let trendWord n1 n2 compareWord =

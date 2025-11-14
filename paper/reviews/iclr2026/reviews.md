@@ -1,19 +1,5 @@
 # ICLR 2026 reviews
 
-## Reviewer XXXX
-
-### Summary
-### Soundness
-### Presentation
-### Contribution
-### Strengths
-### Weaknesses
-### Questions
-### Flag For Ethics Review
-### Rating
-### Confidence
-### Code Of Conduct
-
 ## Reviewer AyvP
 
 ### Summary
@@ -135,6 +121,45 @@ No ethics review needed.
 
 ### Confidence
 Confidence: 3: You are fairly confident in your assessment. It is possible that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work. Math/other details were not carefully checked.
+
+### Code Of Conduct
+Yes
+
+## Reviewer VRkd
+
+### Summary
+This work proposes a concept and tool called transparent documents, enabling better reader sensemaking of information underlying texts in the document.
+
+### Soundness
+2: fair
+
+### Presentation
+2: fair
+
+### Contribution
+2: fair
+
+### Strengths
+AI-based assistive tools is an important research direction
+
+### Weaknesses
+My greatest confusion is: isn't this supposed to be an HCI paper? Shouldn't some version of this go to CHI/CSCW/UIST/...? To me, there isn't any technical contribution for an ML venue beyond getting the system implemented, but this type of contribution should be very suitable for the HCI venues.
+
+Since "human" is a really central part in this system, it would be nice to get evaluated by actual human/users too. The evaluation, from an LLM/NLP standpoint, is perhaps not enough. It would be nice to show if the system could do well on some document NLP tasks (like scientific literature?) to begin with.
+
+Many of the niche details, like Table 1, are perhaps unnecessary for the main paper, when under consideration at an ML venue.
+
+### Questions
+please see above
+
+### Flag For Ethics Review
+No ethics review needed.
+
+### Rating
+2: reject, not good enough
+
+### Confidence
+4: You are confident in your assessment, but not absolutely certain. It is unlikely, but not impossible, that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work.
 
 ### Code Of Conduct
 Yes

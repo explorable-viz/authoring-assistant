@@ -100,3 +100,41 @@ No ethics review needed.
 
 ### Code Of Conduct
 Yes
+
+## Reviewer azjF
+
+### Summary
+This paper introduces transparent, data-driven documents, a new form of scholarly article that allows readers to directly explore how text claims relate to underlying data. Instead of leaving numerical or comparative statements as static text, these documents embed interactive provenance tracking, enabling readers to hover over phrases and see the exact data that supports them.
+
+### Soundness
+3: good
+
+### Presentation
+3: good
+
+### Contribution
+3: good
+
+### Strengths
+This paper primarily visualizes the data credibility of a research article through the collaborative interaction between two agents, forming a complete interactive system for "data credibility" that transparently reveals the authenticity of the paper's conclusions.
+The issues addressed by the paper include multiple categories, such as the reliability of data related to proportions, maximum and minimum values, and it even enables transparency analysis for ranking comparisons and generalized quantifiers, demonstrating strong practicality.
+The supplementary experiments in the paper show that the system's interpretation accuracy is moderate, and the robustness and generalizability of the generated Fluid code are also at a moderate level.
+
+### Weaknesses
+The system presented in this paper is more engineering-oriented, with relatively limited academic research value.
+The experimental design lacks a comprehensive justification. Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered). Overall, it can be regarded as a well-executed engineering paper.
+
+### Questions
+See above
+
+### Flag For Ethics Review
+No ethics review needed.
+
+### Rating
+6: marginally above the acceptance threshold. But would not mind if paper is rejected
+
+### Confidence
+Confidence: 3: You are fairly confident in your assessment. It is possible that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work. Math/other details were not carefully checked.
+
+### Code Of Conduct
+Yes

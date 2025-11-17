@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xe
 
-NAME=arXiv.zip
+NAME=preprint.zip
 ARCHIVE="../$NAME"
 
 . build.sh

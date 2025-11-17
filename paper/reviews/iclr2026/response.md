@@ -54,11 +54,15 @@ Maybe we have to concede this point and then propose more in-depth ablation stud
 
 ## VRkd (rating 2, confidence 4)
 
-### Isn't this supposed to be an HCI paper?
+### Isn't this supposed to be an HCI paper? To me, there isn't any technical contribution for an ML venue beyond getting the system implemented.
 
 Yes, the next step of this work will go to CHI/UIST/IUI.
 
-I think we need to argue that the technical contribution from an ML/NLP point of view is competency evaluation for LLMs.
+I think we need to argue that the technical contribution from an ML/NLP point of view includes:
+- competency evaluation for LLMs (which we can improve)
+- proof-of-concept agentic architecture for this particular task
+  - support the argument that this kind of thing is of valid to the ML community
+  - validation is an important challenge that we also address
 
 ### Since "human" is a really central part in this system, it would be nice to get evaluated by actual human/users too.
 
@@ -68,12 +72,12 @@ Let's respond to this as part of the question above.
 
 I think this is more than we can plan to do for this version of the paper, but for a resubmission it might be worth looking at some of the NLP literature (with Fede's help). Unsurprisingly, there are well-known NLP problems that are highly relevant and could form part of the "capability set" required for a tool providing automated computational interpretation of a scientific paper. From a very quick glance, all of the following datasets (from the computational lingustics literature) are potentially relevant and might be of use for a future study:
 
-SciERC (https://aclanthology.org/D18-1360/)
-Qasper (https://aclanthology.org/2021.naacl-main.365/)
-DROP (https://aclanthology.org/N19-1246/)
-NUMGLUE (https://aclanthology.org/2022.acl-long.246.pdf)
-SCIREX (https://aclanthology.org/2020.acl-main.670.pdf)
-TAT-QA (https://aclanthology.org/2021.acl-long.254/)
+- SciERC (https://aclanthology.org/D18-1360/)
+- Qasper (https://aclanthology.org/2021.naacl-main.365/)
+- DROP (https://aclanthology.org/N19-1246/)
+- NUMGLUE (https://aclanthology.org/2022.acl-long.246.pdf)
+- SCIREX (https://aclanthology.org/2020.acl-main.670.pdf)
+- TAT-QA (https://aclanthology.org/2021.acl-long.254/)
 
 (Fig. 1 in the TAT-QA paper looks very similar to some of ours.)
 

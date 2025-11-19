@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1908.03402v1-60.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1908_03402v1_60"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We then tested the BLEU scores between machine translation results and corresponding gold standard post-editing results on the original development set, the training set and the synthetic data as shown in Table 1.  Table 1 shows that there is a significant gap between the synthetic eScape data set (Negri et al., 2018) and the real-life data sets (the development set and the original training set from posteditors),"
+        }
+    ]
+}

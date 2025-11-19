@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1910.07124v1-237.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1910_07124v1_237"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "All models are trained given 50% NOTA queries and tested under four different NOTA rates: 0%, 15%, 30%, 50%.  For detailed numbers of results on fewshot NOTA, please refer to Table 3.  (1) Treating NOTA as the  + 1 relation is beneficial for handling Few-Shot NOTA, though the results still fall fast when the NOTA rate increases. (2) BERT-PAIR works better under the NOTA setting for its binary-classification style model, and stays stable with rising NOTA rate. (3) Though BERT-PAIR achieves promising results, huge gaps still exist between the conventional (0% NOTA rate) and NOTA settings (gaps of 8 points for 5-way 1-shot and 7 points for 5way 5-shot with 50% NOTA rate), which calls for further research to address the challenge."
+        }
+    ]
+}

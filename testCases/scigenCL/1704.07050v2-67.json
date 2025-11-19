@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1704.07050v2-67.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1704_07050v2_67"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Tables 4 through 6 show the summary metrics for the three language pairs for the large data experiments.  We can see that the reverse rank and forward rank methods of taking into account the global structure of interactions among predictions is still helpful, providing large improvements in performance even in this challenging large data condition over strong state of the art baselines"
+        }
+    ]
+}

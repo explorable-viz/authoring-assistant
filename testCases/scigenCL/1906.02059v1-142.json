@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1906.02059v1-142.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1906_02059v1_142"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 2 (upper part) shows the results for binary violation. We evaluate models using macroaveraged precision (P), recall (P), F1. The weak baselines (MAJORITY, COIN-TOSS) are widely outperformed by the rest of the methods. BIGRUATT outperforms in F1 (79.5 vs. 71.8) the previous best performing method (Aletras et al., 2016) in English judicial prediction.  HAN slightly improves over BIGRU-ATT (80.5 vs. 79.5), while being more robust across runs (0.2% vs. 2.7% std. dev.). the results in Table 2 indicate that performance is comparable even when this information is masked, with the exception of HIER-BERT that has quite worse results (2%) compared to using non-anonymized data, suggesting model bias."
+        }
+    ]
+}

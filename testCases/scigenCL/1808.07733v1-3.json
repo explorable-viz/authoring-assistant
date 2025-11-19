@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1808.07733v1-3.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1808_07733v1_3"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We present statistics of our dataset10 in Table 3.  As expected, inter-annotator agreement is higher for higher thresholds (less ambiguous sentences). According to Landis and Koch (1977), κ ∈ (0.2, 0.4] corresponds to \"fair agreement\", whereas κ ∈ (0.4, 0.6] corresponds to \"moderate agreement\".  We next compute the accuracy of our model for each threshold by removing the corresponding neutral sentences. Higher thresholds correspond to sets of less ambiguous sentences. Table 3 shows that ELMo's performance gains in Table 2 extends across all thresholds."
+        }
+    ]
+}

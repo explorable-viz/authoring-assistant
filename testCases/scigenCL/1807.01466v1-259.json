@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1807.01466v1-259.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1807_01466v1_259"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "of results the multimodal The experiments are shown in Table 3.  We find that EF>HF>TFN>LF.  4  Unlike Zadeh et al. (2017), here the EF model outperforms the TFN model. However, the TFN model achieved the best performance on the training and validation sets.  Compared to the feature concatenation used in EF, the Cartesian product used in TFN results in higher dimensionality of the multimodal input vector,5 which in turn increases the complexity of the model. Similarly, the HF model has worse performance than the EF model here, unlike in Tian et al. (2016).  In general, the multimodal models have better performance than the unimodal models.  In fact, the HF and LF models have better performance using single-task learning. For the TFN models, only the S+P model outperforms the S model, although the improvement is not significant.7 For the EF models, multi-task learning results in better performance.  Dimension of the EF input is 420, for TFN is 65,536. 6Except that the LF models often have worse performance than the verbal S+P model. p << 0.001 for TFN S+P and verbal S+P, p = 0.017 for verbal S+P and LF S. 7p = 0.105 for S TFN and S+P TFN. 8p = 0.888 for S EF and S+P EF, p = 0.029 for S EF and S+I EF, p = 0.009 for S EF and S+P+I EF."
+        }
+    ]
+}

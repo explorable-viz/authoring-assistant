@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1811.04154v1-302.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1811_04154v1_302"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Entity linking accuracies on the LORELEI dataset are shown in Table 2. PBEL has considerably higher accuracy than the other methods. However, we see relatively lower improvement in accuracy with Somali-Oromo than Amharic-Tigrinya.  the supervised TRANS model, which uses Wikipedia parallel data in the LRL itself as a lexicon, does not perform better than the zero-shot PBEL.  The PBEL model results for our test set with each input representation are presented in Table 3."
+        }
+    ]
+}

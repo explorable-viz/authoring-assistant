@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1906.02059v1-148.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1906_02059v1_148"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 3 reports micro-averaged precision (P), recall (R), and F1 results for all methods, now including LWAN, in multi-label violation prediction. The results are also grouped by label frequency for all (OVERALL), FREQUENT, and FEW labels (articles), counting frequencies on the training subset.  We observe that predicting specific articles that have been violated is a much more difficult task than predicting if any article has been violated in a binary setup (cf. Table 2). Overall, HIER-BERT outperforms BIGRU-ATT and LWAN (60.0 vs. 57.  micro-F1), which is tailored for multi-labeling tasks, while being comparable with HAN (60.0 vs. 59.9 micro-F1). All models under-perform in labels with FEW training examples, demonstrating the difficulty of few-shot learning in ECHR legal judgment prediction."
+        }
+    ]
+}

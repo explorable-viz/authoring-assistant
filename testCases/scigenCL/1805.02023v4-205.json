@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1805.02023v4-205.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1805_02023v4_205"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Results on the MSRA dataset are shown in Table 6.  Our chosen segmentor gives 95.93% accuracy on 5-fold cross-validated training set.  Compared with the existing methods, our wordbased and character-based LSTM-CRF models give competitive accuracies. The lattice model significantly outperforms both the best characterbased and word-based models (p < 0.01), achieving the best result on this standard benchmark."
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1906.08318v4-373.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1906_08318v4_373"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "table 6, where we compare hyperparameter tuning methodologies.  Perturbations on the hyperparameter search are listed in table 6 and compare performance with different hyperparameter values found using different tuning strategies.  We tested how manual tuning, requiring less expert knowledge than Bayesian optimization, would compare to the random search strategy in table 6. For both i2b2 and ddi corpora, manual search outperformed random search."
+        }
+    ]
+}

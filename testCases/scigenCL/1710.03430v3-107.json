@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1710.03430v3-107.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1710_03430v3_107"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 4 reveals that the HRDE-LTC model is best for three cases (1 in 2 R@1, 1 in 10 R@2 and 1 in 10 R@5).  we see improvements from the RDE model to the HRDE model and additional improvements with the LTC module in all test cases (the Ubuntuv1/v2 and the Samsung QA)."
+        }
+    ]
+}

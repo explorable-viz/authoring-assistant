@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/12-474.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_12_474"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "First, we report our results on English data (see Table 3, top)  we compare against German data (see Table 3, bottom).  Our new strong Data-Lexicon Baseline reaches a considerable accuracy of 86.32 %, which is hard to beat by trained models. Even the most recent state of the art only beats it by about two points: 88.41 % (Hermann et al., 2014). However, the accuracy of the baseline drops for ambiguous predicates (69.73 %) and the F1-macro score reveals its weakness toward minority classes (drop from 64.54 % to 37.42 %).  Our unimodal system trained and evaluated on English data slightly exceeds the accuracy of the previous state of the art (88.66 % on average versus 88.41 % for Hermann et al., 2014); our best run's accuracy is 89.35 %.  Table 3: FrameId results (in %) on English (upper) and German (lower) with and without using the lexicon. Reported are accuracy and F1-macro, both also for ambiguous predicates (mean scores over ten runs). Models: (a) Data, Lexicon, and Data-Lexicon Baselines. (b) Previous models for English. (c) Ours: unimodal our-uni, multimodal on top of our-uni – our-mm – with IMAGINED embeddings (and synset visual embeddings for English). Best results highlighted in bold. The best run's results for English were: our uni: acc: 89.35 ; acc amb: 76.45 ; F1-m: 76.95 ; F1-m amb: 54.02 (with lexicon) our mm (im, synsV): acc: 89.09 ; acc amb: 75.86 ; F1-m: 78.17 ; F1-m amb: 57.48 (with lexicon)  Our system evaluated on German data sets a new state of the art on this corpus with 80.76 % accuracy, outperforming the baselines (77.16 %; no other system evaluated on this dataset).  We report results achieved without the lexicon to evaluate independently of its quality (Hartmann et al., 2017). On English data, our systems outperforms Hartmann et al. (2017) by more than two points in accuracy and we achieve a large improvement over the Data Baseline. Comparing the F1-macro with and without lexicon, it can be seen that the additional information stored in the lexicon strongly increases the score by about 20 points for English data. For German data, the increase of F1-macro with lexicon versus without is small (one point)."
+        }
+    ]
+}

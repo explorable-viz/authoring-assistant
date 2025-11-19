@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1808.09943v1-269.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1808_09943v1_269"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "First, from the EnFr results in Table 3, we are in line with GNMT (Wu et al., 2016), and within 2 BLEU points of the RNN and Transformer models investigated by Chen et al. (2018).  we compare quite favorably with Lee et al. (2017), exceeding their reported scores by 3-6 points,"
+        }
+    ]
+}

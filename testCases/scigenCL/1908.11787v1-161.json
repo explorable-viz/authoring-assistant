@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1908.11787v1-161.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1908_11787v1_161"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We compare our model to Float Parser (FP) (Pasupat and Liang, 2015), Neural Programmer (NP) (Neelakantan et al., 2016b), DYNSP (Iyyer et al., 2017) and CAMP (Sun et al., 2018b) in Table 1.  We observe that our model improves the SOTA from 45.6% by CAMP to 55.1% in question accuracy (ALL), reducing the relative error rate by 18%. For the initial question (POS1), however, it is behind DYNSP by 3.7%. More interestingly, our model handles follow up questions especially well outperforming the previously best model FP by 20% on POS3, a 28% relative error reduction.  We observe that our model effectively leverages the context information by improving the average question accuracy from 45.1% to 55.1% in comparison to the use of context in DYNSP yielding 2.7% improvement.  If we provide the previous reference answers, the average question accuracy jumps to 61.7%, showing that 6.6% of the errors are due to error propagation."
+        }
+    ]
+}

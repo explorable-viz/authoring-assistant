@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1908.03402v1-61.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1908_03402v1_61"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": " Even the ensemble of 5 models did not result in significant differences especially in BLEU scores."
+        }
+    ]
+}

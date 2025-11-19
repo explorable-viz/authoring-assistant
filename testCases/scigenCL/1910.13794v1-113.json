@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1910.13794v1-113.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1910_13794v1_113"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "In addition, we provide the recall and precision per class for our final interrogative-word classifier (CLS + AT + NER in Table 7).  However, the recall of which is very low.  Our model has also problem with why  Lastly, the recall of 'when is also low"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1702.03121v1-127.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1702_03121v1_127"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "See Table 3 for the averages across 10 scenarios.  As we can see from Table 3, the perplexity scores are consistent with the accuracies: the script model again outperforms other methods, and, as expected, all the models are weaker than humans."
+        }
+    ]
+}

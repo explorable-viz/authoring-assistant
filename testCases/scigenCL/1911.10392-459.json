@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1911.10392-459.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1911_10392_459"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The results of the survey shows a general sat, confirmisfaction feeling of interactions with ing our motivation that the existence of such an agent helps researchers (See Table 4). 83% of participants agree that reduces their needs to search through the web (e.g. using search engines) to obtain information related to their research; and in the future. However, 66% of hu66% use man judges disagreed on using for planning their schedule for a conference. This observation could be because the current version of mainly retrieves information for users but planning for a conference needs some inferences on such information as well."
+        }
+    ]
+}

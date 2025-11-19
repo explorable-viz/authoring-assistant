@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1904.02338v2-213.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1904_02338v2_213"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "on our proposed preprocessed IWSLT17(cid:63) that eliminates the overlap and reduces the number of supervised directions (8), there is a considerable gap between the supervised and zeroshot performance of Basic.  Agree performs better than Basic and is slightly worse than Pivot."
+        }
+    ]
+}

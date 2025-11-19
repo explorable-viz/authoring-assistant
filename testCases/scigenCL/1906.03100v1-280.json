@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1906.03100v1-280.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1906_03100v1_280"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 3: Results on the IWSLT {Ar, Ja, Ko, Zh}-to-En translation tasks. These distant language pairs belonging to 5 different language families and written in 5 different alphabets.\"↑\" indicates the result is significantly better than that of the vanilla Transformer (p < 0.01).  Table 3 shows the results on the small-scale IWSLT translation tasks. We observe that the proposed method stays consistently better than the vanilla model on these distant language pairs."
+        }
+    ]
+}

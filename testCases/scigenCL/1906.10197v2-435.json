@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1906.10197v2-435.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1906_10197v2_435"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The results are summarized in Figure 6 and Table 3. The probability that a new image belongs to an unseen class P (N |t) is higher than the ME score of the classifier through most of the learning phase. Comparing the statistics of the datasets to the inductive biases in the classifiers, the ME score for the classifiers is substantially lower than the baseline ME measure in the dataset, P (N |t) (Table 3). For instance, the ImageNet classifier drops its ME score below 0.05 after about 8,960 images, while the approximate ME measure for the dataset shows that new classes are encountered at above this rate until at least 111,000 images."
+        }
+    ]
+}

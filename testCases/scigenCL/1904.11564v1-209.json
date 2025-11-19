@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1904.11564v1-209.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1904_11564v1_209"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "edge properties are removed, which Table 3 shows has an effect of less than 1 BLEU point).  we ablate node (predicate) and edge attributes  number and tense  have the largest effect on the reported BLEU score.  has only a small impact on performance."
+        }
+    ]
+}

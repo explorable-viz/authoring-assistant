@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1707.06226v1-488.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1707_06226v1_488"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 3 shows the results on the Twitter dataset.  As for discussion forums, adding context using the SVM models does not show a statistically significant improvement. For the neural networks model, similar to the results on discussion forums, the LSTM models that read both context and reply outperform the LSTM model that reads only the reply (LSTMr). The best performing architectures are again the LSTMconditional and LSTM with sentence-level attentions (LSTMcas +LSTMras ). LSTMconditional model shows an improvement of 11% F1 on the S class and 4-5%F1 on the  NS class, compared to LSTMr. For the attentionbased models, the improvement using context is smaller (∼2% F1)."
+        }
+    ]
+}

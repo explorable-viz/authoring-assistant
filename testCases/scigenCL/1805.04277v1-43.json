@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1805.04277v1-43.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1805_04277v1_43"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 2 reports the results of supervised systems on the same dataset, taken from the two works that use the dataset  As expected, supervised systems outperform knowledge-based systems, by a small margin in some of the cases."
+        }
+    ]
+}

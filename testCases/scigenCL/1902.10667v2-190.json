@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1902.10667v2-190.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1902_10667v2_190"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We perform hyperparameter optimisation and make comparisons among our systems, including GCN + Bi-LSTM (GCN-based), CNN + attention + Bi-LSTM (Attbased), and their combination using a highway layer (H-combined) in Table 1.  Systems are evaluated using two types of precision, recall and F-score measures: strict MWEbased scores (every component of an MWE should be correctly tagged to be considered as true positive), and token-based scores (a partial match between a predicted and a gold MWE would be considered as true positive). We report results for all MWEs as well as discontinuous ones specifically.  GCN-based outperforms Att-based and they both outperform the strong baseline in terms of MWE-based F-score in three out of four languages. Combining GCN with attention using highway networks results in further improvements for EN, FR and FA. The Hcombined model consistently exceeds the baseline for all languages.  GCN and H-combined models each show significant improvement with regard to discontinuous MWEs, regardless of the proportion of such expressions.  The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
+        }
+    ]
+}

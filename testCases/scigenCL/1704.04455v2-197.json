@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1704.04455v2-197.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1704_04455v2_197"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 2 shows the performance of our CRF-based method in finding the correct relation cardinality, evaluated on manually annotated 20 (has part), 100 (admin. terr. entity) and 200 (child and spouse) randomly selected subjects that have at least one object.  The random-number baseline achieves a precision of 5% (has part), 3.5% (admin. territ. entity), 0% (spouse) and 11.2% (child). Compared to that, especially using only-nummod, our method gives encouraging results for has part, admin. territ. entity and child, with 30-50% precision and around 30% F1-score.  As shown by the last row of Table 2, higher quality of training data can considerably boost the performance of cardinality extraction."
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1904.02338v2-211.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1904_02338v2_211"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 3 shows the results on the Europarl corpus.  our approach consistently outperforms Basic by 2-3 BLEU points but lags a bit behind Pivot on average (except on De where it is better). Es"
+        }
+    ]
+}

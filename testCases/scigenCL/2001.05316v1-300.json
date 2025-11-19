@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/2001.05316v1-300.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_2001_05316v1_300"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Various subsets of authors were chosen and the dataset was truncated to each author having the same number of samples.  with and without pre-training character level embedding and comparing the proposed architectures on the held-out dataset.  To illustrate the need of pre-trained character embeddings, we see from III that using a pre-trained embedding increases the accuracy across datasets and the different number of authors, regardless of the amount of data for each author.  increase the performance a few degrees.  we analyzed the importance of pretrained character embedding for author attribution and showed that pre-training can result in better performances."
+        }
+    ]
+}

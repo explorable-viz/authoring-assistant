@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1707.05853v2-231.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1707_05853v2_231"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "As can be seen from Table 2, the DST accuracy slightly increases for the higher-quality live ASR outputs. More importantly, the DST performance drastically increases, when we evaluate on the manual transcripts that reflect the true user utterances nearly perfectly."
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1805.02023v4-206.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1805_02023v4_206"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Results on the resume NER test data are shown in Table 8.  the lattice model significantly outperforms both the word-based mode and the character-based model for Weibo and resume (p < 0.01), giving state-of-the-art results."
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+{"testing-variables":{},"paragraph":[{"type":"literal","value":"Our model outperforms all other models in all the metrics. This improvement is consistent, around "},{"expression":"\"2\"","type":"expression"},{"type":"literal","value":"%."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1910_13794v1_109"],"datasets":["datasets/scigenCL/1910.13794v1-109.json"]}

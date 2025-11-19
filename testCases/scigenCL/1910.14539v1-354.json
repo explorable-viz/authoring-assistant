@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1910.14539v1-354.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1910_14539v1_354"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "From Table 7, we see that sorting players helps, but only slightly. Using only team-level information, and no information about players gives worse but still decent BLEU scores.  Week day, player position or team-level aggregated scores can be removed without hurting BLEU. However, information about next games seems useful. Interestingly, relying on position only and removing most tags (e.g.,  ,  ) seems to be fine. In this case, we also print all-zero stats, for the position of each statistic to be consistent across players and games."
+        }
+    ]
+}

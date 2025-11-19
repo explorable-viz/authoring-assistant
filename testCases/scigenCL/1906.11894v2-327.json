@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1906.11894v2-327.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1906_11894v2_327"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "In Table  there are the results on the DIVA-HisDB dataset (see Section III-A). Our method achieves nearly perfect results (99.42%) and outperforms state-of-the-art (97.86%) resulting in a error reduction of 80.7%.  Note that the lower end of the heatmap scale compares favourably with state-ofthe-art (see Table I) meaning that regardless of the choice of parameters, our method produces excellent results."
+        }
+    ]
+}

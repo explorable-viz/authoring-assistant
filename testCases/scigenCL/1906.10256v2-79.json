@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1906.10256v2-79.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1906_10256v2_79"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The main results of our experiments are shown in Table 1.  We notice that M.1 (Bag-of-words + Logistic Regression) and M.2 (BiLSTM) show a statistically significant difference between the two genders, with higher predicted positive class probabilities for sentences with female nouns.  On the contrary, M.3 (BERT) shows that sentences with male nouns have a statistically significant higher predicted positive class probability than sentences with female nouns."
+        }
+    ]
+}

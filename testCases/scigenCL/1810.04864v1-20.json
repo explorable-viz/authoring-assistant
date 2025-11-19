@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1810.04864v1-20.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1810_04864v1_20"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 6 shows automatically computed statistics on the diversity of the generated texts of both models and human texts and on the overlap of the (generated) texts with the training set.  On both datasets, our systems produce significantly less varied outputs and reproduce more  texts and sentences from the training data than the human texts. Interestingly, however, the characterbased models generate significantly more unique sentences and copy significantly less from the training data than the word-based models, which copy about 40% of their generated sentences from the training data."
+        }
+    ]
+}

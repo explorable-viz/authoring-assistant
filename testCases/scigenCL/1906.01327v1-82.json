@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1906.01327v1-82.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1906_01327v1_82"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "we reorganized the train/dev/test sets, forming new splits, which we refer to as NO-LEAK F&C. The new split sizes can be found in Table 2. We re-ran the current models on NO-LEAK F&C and, as expected, we observe a drop of 5-6% in accuracy: from the original 76% accuracy on the dev/test sets, to 70% and 71% accuracy, respectively."
+        }
+    ]
+}

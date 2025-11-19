@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1908.05787v1-433.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1908_05787v1_433"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Our proposed approach sets a new state of the art of 84.38% binary accuracy on CMU-MOSI dataset of multimodal sentiment analysis; a significant leap from previous state of  We compare the performance of M-BERT with the following models on the multimodal sentiment analysis task: RMFN (SOTA1)1 fuses multimodal information in multiple stages by focusing on a subset of signals in each stage (Liang et al., 2018). MFN (SOTA2) synchronizes states of three separate LSTMs with a multi-view gated memory (Zadeh et al., 2018a). MARN (SOTA3) models view-specific interactions using hybrid LSTM memories and cross-modal interactions using a Multi-Attention Block(MAB) (Zadeh et al., 2018c).  We perform two different evaluation tasks on CMU-MOSI datset: i) Binary Classification, and ii) Regression. We formulate it as a regression problem and report Mean-absolute Error (MAE) and the correlation of model predictions with true labels. Besides, we convert the regression outputs into categorical values to obtain binary classification accuracy (BA) and F1 score.  The performances of M-BERT and BERT are described in Table 1.  M-BERT model outperforms all the baseline models (described in Sec.4.4) on every evaluation metrics with large margin. It sets new state-of-the-art performance for this task and achieves 84.38% accuracy, a 5.98% increase with respect to the SOTA1 and 1.02% increase with respect to BERT (text-only).  Even BERT (text-only) model achieves 83.36% accuracy, an increase of 4.96% from the SOTA1 78.4%, using text information only. It achieves higher performance in all evaluation metrics compare to SOTA1; reinforcing the expressiveness and utility of BERT contextual representation."
+        }
+    ]
+}

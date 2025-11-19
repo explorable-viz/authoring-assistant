@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1909.06194v1-484.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1909_06194v1_484"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "the table, lexical model consistently outperforms the syntactic model across all the benchmark datasets. Moreover, combining the two representations further improves the performance results. Based on the observation, we realize that even if Syntactic-HAN achieves a comparable performance results combining it with Lexical-HAN, slightly improves the overall performance (Style-HAN). As shown in Table IV, the performance improvement in terms of accuracy is consistent across all the benchmark datasets (4.54% in CCAT10, 2.85% in CCAT50, 2.02% in BLOGS10, 1.42% in BLOGS50)"
+        }
+    ]
+}

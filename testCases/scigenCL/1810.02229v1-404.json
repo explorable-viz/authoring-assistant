@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1810.02229v1-404.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1810_02229v1_404"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Results for the experiments are illustrated in Table 3.  The network obtains the best F1 score, both for detection (F1 of 0.880 for strict evaluation and 0.903 for relaxed evaluation with Fastext-It embeddings) and for classification (F1-class of 0.756 for strict evaluation, and 0.751 for relaxed evaluation with Fastext-It embeddings).  Although FBKHLT suffers in the classification subtask, it qualifies as a highly competitive system for the detection subtask.  By observing the strict F1 scores, FBK-HLT beats three configurations (DH-FBK100, ILC-ItWack, Berardi2015 Glove) 11, almost equals one (Berardi2015 w2v) 12, and it is outperformed only by one (Fastext-It) 13. In the relaxed evaluation setting, DH-FBK-100 is the only configuration that does not beat FBK-HLT (although the difference is only 0.001 point). Nevertheless, it is remarkable to observe that FBK-HLT has a very high Precision (0.902, relaxed evaluation mode), that is overcome by only one embedding configuration, ILC-ItWack. The results also indicates that word embeddings have a major contribution on Recall,  these results are obtained using a single step approach,"
+        }
+    ]
+}

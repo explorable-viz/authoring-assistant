@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1909.06194v1-483.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1909_06194v1_483"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table III reports the accuracy of different syntactic representations for all the benchmark datasets. In ST encoding, the  the corresponding paper. The experimental results demon strate that our proposed syntactic representation (POS-CNN outperforms the previously proposed method (ST-CNN) by the benchmark datasets (38.6% in a large margin in all CCAT10, 30.80% in CCAT50, 19.62% in BLOGS10, 11.94% in BLOGS50). This improvement in performance can be due  syntactic representations are kept identical. According to Table III, POS-HAN outperforms POS-CNN model consistently across all the benchmark datasets (1.74% in CCAT10, 0.32% in CCAT50, 1.06% in BLOGS10, 2.91% in BLOGS50). This"
+        }
+    ]
+}

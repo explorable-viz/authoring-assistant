@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1810.03541v1-158.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1810_03541v1_158"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 3 shows the intrinsic evaluation results, in which our alignment intrinsically outperforms JAMR aligner by achieving better alignment F1 score and leading to a higher scored oracle parser."
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/2003.08875v1-452.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_2003_08875v1_452"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "these models are evaluated on two common datasets for NER: PEYMA and ARMAN. Bokaei and Mahmoudi (Bokaei and Mahmoudi, 2018) and Shahshahani et al. (Shahshahani et al., 2018) had reported the best results which you can see in Table 3  As you see in Table 3 in both word and phrase levels, our model outperform other NER approaches for the Persian language.  dataset.Table 3 shows that our results are 10 percent better than Shahshahani and colleagues on the same platform. On the other hand Bokaei and Mahmoudi (Bokaei and Mahmoudi, 2018) reported their results on Arman dataset Which is lower than ours in both word and phrase levels according to Table 3."
+        }
+    ]
+}

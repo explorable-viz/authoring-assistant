@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1706.09789v3-51.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1706_09789v3_51"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "report brief results on SQuAD (Table 3),  We also evaluate the SynNet on the NewsQAto-SQuAD direction. We directly apply the best setting from the other direction and report the result in Table 3.  The SynNet improves over the baseline by 1.6% in EM and 0.7% in F1. Limited by space, we leave out ablation studies in this direction."
+        }
+    ]
+}

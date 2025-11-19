@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1804.08887v1-25.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1804_08887v1_25"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We select the 1st and 2nd best performing models on the development datasets as well as the majority vote (mv) of 5 models for the final submission. The final results are shown in Table 3."
+        }
+    ]
+}

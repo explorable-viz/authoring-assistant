@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1805.12352v2-405.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1805_12352v2_405"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Tables 1 and 2 show the performance of DialogWAE and baselines on the two datasets. DialogWAE outperforms the baselines in the majority of the experiments. In terms of BLEU scores, DialogWAE (with a Gaussian mixture prior network) generates more relevant responses, with the average recall of 42.0% and 37.2% on both of the datasets. These are significantly higher than those of the CVAE baselines (29.9% and 26.5%). We observe a similar trend to the BOW embedding metrics."
+        }
+    ]
+}

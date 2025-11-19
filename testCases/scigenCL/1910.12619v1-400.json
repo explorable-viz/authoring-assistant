@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1910.12619v1-400.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1910_12619v1_400"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 2 lists the importance of each variable in the global model and in the three single domain models, where the variable with the highest weight is ranked 1. The lists are relatively stable, with some marked differences, such as the importance of the gloss length and the number of partOf relations for music and fruit, respectively."
+        }
+    ]
+}

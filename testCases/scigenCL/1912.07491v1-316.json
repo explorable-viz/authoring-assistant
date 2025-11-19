@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1912.07491v1-316.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1912_07491v1_316"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 3 demonstrates that the models leveraging external knowledge achieve better performance than the standard Seq2Seq model in generating meaningful entity words and diverse responses. In particular, our model outperforms all the baselines significantly with highest entity score."
+        }
+    ]
+}

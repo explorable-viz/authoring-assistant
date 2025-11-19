@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1904.05674v1-220.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1904_05674v1_220"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Results for the paraphrase identification task are presented in Table 3. AvgD yields the best results especially in F1 metric showing that cross-topic representations are semantically richer than single embeddings baseline (Global-DSM)."
+        }
+    ]
+}

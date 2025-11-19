@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1908.07855v1-304.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1908_07855v1_304"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The results are summarized in Table  Almost all the methods performed similar to random guess, showing that SQA on our dataset has its unique challenges."
+        }
+    ]
+}

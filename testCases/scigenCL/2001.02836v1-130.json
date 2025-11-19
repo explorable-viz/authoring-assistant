@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/2001.02836v1-130.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_2001_02836v1_130"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The experimental results are shown in Table 1. As Keller is created based on the PP distribution and have relatively small size while SP-10K is created based on random sampling and has a much larger size, we treat the performance on SP-10K as the major evaluation. Our embeddings significantly outperform other baselines, especially embedding based baselines. The only exception is PP on the Keller dataset due to its biased distribution. In addition, there are other interesting observations. First, compared with 'dobj' and 'nsubj', 'amod' is simpler for word2vec and GloVe. The reason behind is that conventional embeddings only capture the co-occurrence information, which is enough to predict the selectional preference of"
+        }
+    ]
+}

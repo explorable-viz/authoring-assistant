@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/1911.04123v2-116.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_1911_04123v2_116"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 3 shows the comparison with previous work on the PGR testset, where our models are significantly better than the existing models.  With 1-best trees, DEPTREE is 2.9 points better than TEXTONLY,  both KBESTEISNERPS and EDGEWISEPS significantly outperform DEPTR"
+        }
+    ]
+}

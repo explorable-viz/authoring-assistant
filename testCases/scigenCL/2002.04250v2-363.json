@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigenCL/2002.04250v2-363.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigenCL/_2002_04250v2_363"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Results are shown in Table 4. As can be seen, the incorporation of MMI model significantly improves MT performances."
+        }
+    ]
+}

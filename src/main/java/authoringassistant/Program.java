@@ -285,6 +285,49 @@ public class Program {
         return object.toString();
     }
 
+    public JSONObject toJsonProgram() {
+        JSONObject object = new JSONObject();
+        
+        // Add datasets (file names only, not content)
+        object.put("datasets", new JSONArray(datasets.stream().toList()));
+        
+        // Add imports
+        object.put("imports", new JSONArray(imports));
+        
+        // Add testing-variables (empty object for now)
+        object.put("testing-variables", new JSONObject());
+        
+        // Add variables (empty object for now)
+        object.put("variables", new JSONObject());
+        
+        // Add paragraph
+        JSONArray paragraphArray = new JSONArray(
+            paragraph.stream()
+                .map(fragment -> {
+                    JSONObject fragmentObj = new JSONObject();
+                    if (fragment instanceof Literal) {
+                        fragmentObj.put("type", "literal");
+                        fragmentObj.put("value", fragment.getValue());
+                    } else if (fragment instanceof Expression expr) {
+                        fragmentObj.put("type", "expression");
+                        fragmentObj.put("expression", expr.getExpr());
+                        if (!expr.getCategories().isEmpty()) {
+                            fragmentObj.put("categories", new JSONArray(
+                                expr.getCategories().stream()
+                                    .map(ExpressionCategory::getName)
+                                    .toList()
+                            ));
+                        }
+                    }
+                    return fragmentObj;
+                })
+                .toList()
+        );
+        object.put("paragraph", paragraphArray);
+        
+        return object;
+    }
+
     public ArrayList<String> get_loadedImports() {
         return _loadedImports;
     }

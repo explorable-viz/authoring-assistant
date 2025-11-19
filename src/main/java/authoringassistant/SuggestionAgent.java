@@ -73,12 +73,12 @@ public class SuggestionAgent {
     }
 
     private static String extractText(Program p) throws IOException {
-        return p.asIndividualEdits(p)
+        return !p.asIndividualEdits(p).isEmpty() ? p.asIndividualEdits(p)
                 .getFirst()
                 .component1()
                 .getParagraph()
                 .getFirst()
-                .getValue();
+                .getValue() : p.getParagraph().getFirst().getValue();
     }
 
     private static PromptList buildPrompts(String userText) throws IOException {

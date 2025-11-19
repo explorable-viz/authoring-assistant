@@ -1,6 +1,6 @@
 {
-  "datasets": [ "datasets/scigen-manual/1906.02780v1-17.json" ],
-  "imports": ["scigen", "util", "datasets/scigen-manual/_1906_02780v1_17"],
+  "datasets": [ "datasets/scigen_manual/1906.02780v1-17.json" ],
+  "imports": ["scigen", "util", "datasets/scigen_manual/_1906_02780v1_17"],
   "variables": {},
   "testing-variables": {
     "layers_1_bleu": [23.82, 24.10, 23.50, 24.20, 23.90],

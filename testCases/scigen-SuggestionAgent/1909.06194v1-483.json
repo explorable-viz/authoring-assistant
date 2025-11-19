@@ -82,7 +82,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigenCL/_1909_06194v1_483"
+    "datasets/scigen_SuggestionAgent/_1909_06194v1_483"
   ],
-  "datasets": ["datasets/scigenCL/1909.06194v1-483.json"]
+  "datasets": ["datasets/scigen_SuggestionAgent/1909.06194v1-483.json"]
 }

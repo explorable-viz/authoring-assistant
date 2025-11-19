@@ -42,7 +42,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigenCL/_1812_00381v2_449"
+    "datasets/scigen_SuggestionAgent/_1812_00381v2_449"
   ],
-  "datasets": ["datasets/scigenCL/1812.00381v2-449.json"]
+  "datasets": ["datasets/scigen_SuggestionAgent/1812.00381v2-449.json"]
 }

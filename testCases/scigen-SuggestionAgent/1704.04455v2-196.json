@@ -1,0 +1,64 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The distribution of their named-entity (NE) tags, according to Stanford NE-tagger, is shown in Table 1. While "
+    },
+    {
+      "expression": "\"temporal-related\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " numbers are the "
+    },
+    {
+      "expression": "\"most frequent\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", around "
+    },
+    {
+      "expression": "\"40\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% are classified only as unspecific "
+    },
+    {
+      "expression": "\"NUMBER\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". By manually checking 100 random "
+    },
+    {
+      "expression": "\"NUMBER\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "s, we observed that 47 are relation cardinalities, i.e., approximately "
+    },
+    {
+      "expression": "\"18.86\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% of all numbers in Wikipedia are relation cardinalities."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_04455v2_196"
+  ],
+  "datasets": ["datasets/scigenCL/1704.04455v2-196.json"]
+}

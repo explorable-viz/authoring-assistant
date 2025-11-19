@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 7 shows results from a manual error analysis on 50 events from UDS-IH2-dev with "
+    },
+    {
+      "expression": "\"highest\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " absolute prediction error (using H-biLSTM(2)MultiSim w/UDS-IH2). Grammatical errors (such as run-on sentences) in the underlying text of UDS-IH2 appear to pose a particular challenge for these models;"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1804_02472v1_182"
+  ],
+  "datasets": ["datasets/scigenCL/1804.02472v1-182.json"]
+}

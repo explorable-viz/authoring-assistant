@@ -1,0 +1,64 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the results of several systems on both datasets. The column '% perf' indicates the proportion of perfectly segmented super-tokens, while the next three columns indicate precision, recall and F-score for boundary detection, not including the trivial final position characters. The first baseline strategy of not segmenting anything is given in the first row, and unsurprisingly gets many cases right, but performs badly overall. A more intelligent baseline is provided by UDPipe (Straka et al. 2016; retrained on the SPMRL data), which, for super-tokens in morphologically rich languages such as Hebrew, implements a 'most common segmentation' baseline  (i.e. each super-token is given its most common segmentation from training data, forgoing segmentation for OOV items). Results for yap represent pure segmentation performance from the previous state of the art (More and Tsarfaty, 2016). The "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " two approaches in the present paper are represented next: the Extra Trees Random Forest variant, called RFTokenizer, is labeled RF and the DNN-based system is labeled DNN. Surprisingly, while the DNN is a close runner up, the "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance is achieved by the RFTokenizer, de  spite not having access to word embeddings. Its high performance on the SPMRL dataset makes it difficult to converge to a "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " solution using the DNN, though it is conceivable that substantially more data, a better feature representation and/or more hyperparameter tuning could equal or surpass the RFTokenizer's performance. Coupled with a lower cost in system resources and external dependencies, and the ability to forgo large model files to store word embeddings, we consider the RFTokenizer solution to be "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " given the current training data size. Performance on the out of domain dataset is encouragingly nearly as good as on SPMRL, suggesting our features are robust. This is especially clear compared to UDPipe and yap, which degrade more substantially. A key advantage of the present approach is its comparatively "
+    },
+    {
+      "expression": "\"high\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision. While other approaches have good recall, and yap approaches RFTokenizer on recall for SPMRL, RFTokenizer's reduction in spurious segmentations boosts its F-score "
+    },
+    {
+      "expression": "\"substantially\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". To see why, we examine some errors in the next section, and perform feature ablations in the following one."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_07214v2_138"
+  ],
+  "datasets": ["datasets/scigenCL/1808.07214v2-138.json"]
+}

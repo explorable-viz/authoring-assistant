@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "a comparison with existing event extraction and event schema induction datasets, including ASTRE (Nguyen et al., 2016a), MUC 4, ACE 20052 and ERE3, is shown in Table 2. Compared "
+    },
+    {
+      "expression": "\"with\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the other datasets, GNBusiness has a "
+    },
+    {
+      "expression": "\"much larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " number of documents (i.e., news clusters in GNBusiness), and a "
+    },
+    {
+      "expression": "\"comparable\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " number of labeled documents."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_06947v1_250"
+  ],
+  "datasets": ["datasets/scigenCL/1906.06947v1-250.json"]
+}

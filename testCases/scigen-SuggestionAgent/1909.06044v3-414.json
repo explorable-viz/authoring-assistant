@@ -1,0 +1,80 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We calculate these "
+    },
+    {
+      "expression": "\"similarity scores\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for each Real targeted output for the real inputs and the inputs found by the proposed model and report the average value in Table 1. According to the table, we observe that even inputting the real inputs, the "
+    },
+    {
+      "expression": "\"similarity scores\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between the outputs and the target outputs are not high. Besides, with the crafted inputs from the proposed framework, these "
+    },
+    {
+      "expression": "\"similarity scores\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
+    },
+    {
+      "expression": "\"significantly improved\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For example, for RL BeamSearch(200), the "
+    },
+    {
+      "expression": "\"similarity\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is improved by "
+    },
+    {
+      "expression": "\"41.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, "
+    },
+    {
+      "expression": "\"34.0\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% and "
+    },
+    {
+      "expression": "\"28.3\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% for the target outputs with length 1-3, 4-6 and 7-10, respectively."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_06044v3_414"
+  ],
+  "datasets": ["datasets/scigenCL/1909.06044v3-414.json"]
+}

@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 presents results on the original IWSLT17 task. The vanilla training method (Johnson et al., 2016) achieves "
+    },
+    {
+      "expression": "\"very high\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " zero shot performance, "
+    },
+    {
+      "expression": "\"even outperforming\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " Pivot."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_02338v2_212"
+  ],
+  "datasets": ["datasets/scigenCL/1904.02338v2-212.json"]
+}

@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results are shown in Table 2 ('Wikipedia'). The resulting model is "
+    },
+    {
+      "expression": "\"less\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accurate than the one which used unlabeled documents. The score difference is "
+    },
+    {
+      "expression": "\"larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for AIDA-CoNLL test set "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the other 5 test sets. Additionally we train our model on AIDA-CoNLL, producing its fully-supervised version ('AIDA CoNLL' row in Table 2). Though, as expected, this version is "
+    },
+    {
+      "expression": "\"more\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accurate on AIDA test set, similarly to other fully-supervised methods, it overfits and does not perform that well on the 5 out-of-domain test sets."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_01250v1_187"
+  ],
+  "datasets": ["datasets/scigenCL/1906.01250v1-187.json"]
+}

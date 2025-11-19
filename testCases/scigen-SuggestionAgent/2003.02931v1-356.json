@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Existing systems (RQ3) are evaluated and results "
+    },
+    {
+      "expression": "\"Polyglot\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Al-Rfou et al., 2013) overall performs "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"DKIE\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Derczynski et al., 2014). The "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " system is our cross-lingual transfer NER from MEDIUM source data paired with SMALL amounts of gold data. Per-entity evaluation shows that the neural Bilstm tagger outperforms "
+    },
+    {
+      "expression": "\"Polyglot\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " except for Location, which is consistent across evaluation sets."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2003_02931v1_356"
+  ],
+  "datasets": ["datasets/scigenCL/2003.02931v1-356.json"]
+}

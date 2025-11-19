@@ -1,0 +1,112 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the classification results on the discussion forum dataset. Although a vast majority of the context posts contain "
+    },
+    {
+      "expression": "\"3-4\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentences, around "
+    },
+    {
+      "expression": "\"100\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " context posts have "
+    },
+    {
+      "expression": "\"more than ten\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentences and thus we set a cutoff to "
+    },
+    {
+      "expression": "\"a maximum of ten\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentences for context modeling. For the reply r we considered the entire reply. The SV Mbl models that are based on discrete features did not perform very well, and adding context actually hurt the performance. Regarding the performance of the neural network models, we observe that modeling context improves the performance using all types of LSTM architectures that read both context (c) and reply (r). The "
+    },
+    {
+      "expression": "\"highest\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance when considering both the S and  S classes is achieved by the LSTMconditional model ("
+    },
+    {
+      "expression": "\"73.32\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% F1 for S class and "
+    },
+    {
+      "expression": "\"70.56\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% F1 for  S, showing a "
+    },
+    {
+      "expression": "\"6\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% and "
+    },
+    {
+      "expression": "\"3\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% improvement over LSTMr for S and  S classes, respectively). The LSTM model with sentence-level attentions on both context and reply (LSTMcas +LSTMras ) gives the "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 score of "
+    },
+    {
+      "expression": "\"73.7\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% for the S class. For the  S class, while we notice an improvement in precision we notice a drop in recall when compared to the LSTM model with sentence level attention only on reply (LSTMras ). We observe the performance ("
+    },
+    {
+      "expression": "\"69.88\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% F1 for S category) deteriorates, probably due to the lack of enough training data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_06226v1_487"
+  ],
+  "datasets": ["datasets/scigenCL/1707.06226v1-487.json"]
+}

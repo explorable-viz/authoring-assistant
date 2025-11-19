@@ -1,0 +1,72 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows how the position of the context window influences the average "
+    },
+    {
+      "expression": "\"model\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance. Note that symmetric windows of, for instance, "
+    },
+    {
+      "expression": "\"10\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are in fact "
+    },
+    {
+      "expression": "\"2 times larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the 'left' or 'right' windows of the same size, as they consider "
+    },
+    {
+      "expression": "\"10\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " words both to the left and to the right of the focus word. This is most likely why symmetric windows consistently "
+    },
+    {
+      "expression": "\"outperform\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " 'single-sided' ones on the analogy task, as they are able to include twice as much contextual input. However, the average performance on the semantic similarity task (as indicated by the Spearman correlation with the SimLex999 test set) does not exhibit the same trend. 'Left' windows are indeed "
+    },
+    {
+      "expression": "\"worse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than symmetric ones, but 'right' windows are "
+    },
+    {
+      "expression": "\"on par with\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the symmetric windows for OpenSubtitles and only one percent point behind them for Gigaword. It means that in many cases (at least with English texts) taking into account only n context words to the right of the focus word is sufficient to achieve the same performance with SimLex999 as by using a model which additionally considers n words to the left, and thus requires significantly more training time."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_05781v1_263"
+  ],
+  "datasets": ["datasets/scigenCL/1704.05781v1-263.json"]
+}

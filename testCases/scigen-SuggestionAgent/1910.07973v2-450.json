@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "are summarized in Table 1, where the score for each task category is calculated by averaging the normalized values for the tasks within each category. Although the activations of token hidden states are often used in fine-tuning BERT for classification tasks, Mean-pooling of hidden states performs "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all task categories among all the pooling methods."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_07973v2_450"
+  ],
+  "datasets": ["datasets/scigenCL/1910.07973v2-450.json"]
+}

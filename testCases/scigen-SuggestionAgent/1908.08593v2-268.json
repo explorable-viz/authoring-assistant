@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 shows that finetuned BERT outperforms pre-trained BERT by "
+    },
+    {
+      "expression": "\"a significant margin\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all the tasks (with an average of "
+    },
+    {
+      "expression": "\"35.9\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points of absolute difference). BERT with weights initialized from normal distribution and further fine-tuned for a given task consistently produces "
+    },
+    {
+      "expression": "\"lower scores\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the ones achieved with pre-trained BERT. In fact, for some tasks (STS-B and QNLI), initialization with random weights yields "
+    },
+    {
+      "expression": "\"worse performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than pre-trained BERT without fine-tuning."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_08593v2_268"
+  ],
+  "datasets": ["datasets/scigenCL/1908.08593v2-268.json"]
+}

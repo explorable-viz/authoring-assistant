@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the previous state-of-the-art and our baselines. TEXTONLY gives a performance comparable with Bran. With 1-best dependency trees, our DEPTREE baseline gives "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performances than the previous state of the art. Both KBESTEISNERPS and EDGEWISEPS obtain "
+    },
+    {
+      "expression": "\"significantly higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " numbers than DEPTREE."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1911_04123v2_115"
+  ],
+  "datasets": ["datasets/scigenCL/1911.04123v2-115.json"]
+}

@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We also performed experiments with mixed sources, the results are shown in Table 4. In this scenario, the neural network systems seem to benefit from the increased amount of training data and thus gave "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_07203v3_457"
+  ],
+  "datasets": ["datasets/scigenCL/1704.07203v3-457.json"]
+}

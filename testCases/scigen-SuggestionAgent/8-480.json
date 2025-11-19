@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The average precision (AP) ranking scores achieved via cross-lingual transfer of POSTLE are shown in Table 2. We report AP scores using three methods for cross-lingual word embedding induction, and compare their performance to two baselines: 1) random word pair scoring, and 2) the original (FASTTEXT) vectors. The results uncover the inability of distributional vectors to capture LE \u2013 they yield "
+    },
+    {
+      "expression": "\"lower\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than the random baseline, which strongly emphasizes the need for the LE-specialization. The transferred POSTLE yields an immense improve"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_8_480"
+  ],
+  "datasets": ["datasets/scigenCL/8-480.json"]
+}

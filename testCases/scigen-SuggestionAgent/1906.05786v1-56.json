@@ -1,0 +1,64 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 gives "
+    },
+    {
+      "expression": "\"single\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model validation scores for "
+    },
+    {
+      "expression": "\"es2en\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"en2es\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models with "
+    },
+    {
+      "expression": "\"standard\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"iterative\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " transfer learning. We find that the "
+    },
+    {
+      "expression": "\"all-biomed\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " domain gains 1-2 BLEU points from transfer learning."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_05786v1_56"
+  ],
+  "datasets": ["datasets/scigenCL/1906.05786v1-56.json"]
+}

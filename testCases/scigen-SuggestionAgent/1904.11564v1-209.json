@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "edge properties are removed, which Table 3 shows has an effect of "
+    },
+    {
+      "expression": "\"less than 1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU point). we ablate node (predicate) and edge attributes number and tense "
+    },
+    {
+      "expression": "\"have the largest effect\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the reported BLEU score. "
+    },
+    {
+      "expression": "\"has only a small impact\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on performance."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_11564v1_209"
+  ],
+  "datasets": ["datasets/scigenCL/1904.11564v1-209.json"]
+}

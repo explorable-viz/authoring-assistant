@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "In Table 1, we report the performance of the BiLSTM implementation for predicting epistemic activities in the Med and TEd data. As we can see, the difficulty of predicting the classes varies between different activities. Despite some room for improvement with respect to the human upper bound (UB) based on inter-rater agreement, the interactive nature of FAMULUS helps in succeeding in this attempt by continually improving the model when new data is available. We conduct similar experiments for the prediction of fine-grained diagnostic entities, but omit a comprehensive discussion due to space limitations.\n\n*No explicit values, comparative expressions, or superlative/aggregated expressions were found that can be directly replaced with Fluid expressions based on the provided paragraph and dataset.*"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_11254v1_465"
+  ],
+  "datasets": ["datasets/scigenCL/1908.11254v1-465.json"]
+}

@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The "
+    },
+    {
+      "expression": "\"two top\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rows in Table 1 show conflicting results for UKB. As the results show, that paper reports a suboptimal use of UKB. The table also reports the "
+    },
+    {
+      "expression": "\"best performing\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " knowledge-based systems on this dataset. Also report We (Chaplot and Sakajhutdinov, 2018), the latest work on this area, as well as the most frequent sense as given by WordNet counts The table shows that UKB yields the "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " overall result."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_04277v1_42"
+  ],
+  "datasets": ["datasets/scigenCL/1805.04277v1-42.json"]
+}

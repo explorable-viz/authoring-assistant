@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows that the 10rvw variant "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the word-level baseline."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_06068v1_277"
+  ],
+  "datasets": ["datasets/scigenCL/1808.06068v1-277.json"]
+}

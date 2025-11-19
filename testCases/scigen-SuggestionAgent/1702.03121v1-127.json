@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "See Table 3 for the averages across 10 scenarios.  As we can see from Table 3, the perplexity scores are consistent with the accuracies: the script model "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " other methods, and, as expected, all the models are "
+    },
+    {
+      "expression": "\"weaker\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than humans."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1702_03121v1_127"
+  ],
+  "datasets": ["datasets/scigenCL/1702.03121v1-127.json"]
+}

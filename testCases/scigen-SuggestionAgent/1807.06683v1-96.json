@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As can be seen from Table 2, we are very close to "
+    },
+    {
+      "expression": "\"the state of the art\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " MD performance even if we only trained with a low number of parameters as stated in the beginning of this section. We have to also note that in contrast with the NER task, the MD task did not enjoy a "
+    },
+    {
+      "expression": "\"performance increase\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from joint learning."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1807_06683v1_96"
+  ],
+  "datasets": ["datasets/scigenCL/1807.06683v1-96.json"]
+}

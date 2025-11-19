@@ -1,0 +1,64 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 contains the results on all four datasets. SynST achieves speedups of ∼ "
+    },
+    {
+      "expression": "\"4\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " − "
+    },
+    {
+      "expression": "\"5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "× that of the vanilla Transformer, which is "
+    },
+    {
+      "expression": "\"larger than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " nearly all of the SAT configurations. Quality-wise, SynST again significantly outperforms the SAT configurations at comparable speedups on all datasets. On WMT En-De, SynST improves by "
+    },
+    {
+      "expression": "\"1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU over LT ("
+    },
+    {
+      "expression": "\"20.74\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs LT's "
+    },
+    {
+      "expression": "\"19.8\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " without reranking)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_02780v1_8"
+  ],
+  "datasets": ["datasets/scigenCL/1906.02780v1-8.json"]
+}

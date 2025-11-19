@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 shows these performance measures for French-English, using global structure greatly "
+    },
+    {
+      "expression": "\"improves\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " upon the "
+    },
+    {
+      "expression": "\"state of the art\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline performance."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_07050v2_66"
+  ],
+  "datasets": ["datasets/scigenCL/1704.07050v2-66.json"]
+}

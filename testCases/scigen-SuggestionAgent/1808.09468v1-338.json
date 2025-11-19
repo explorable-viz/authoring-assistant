@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We relate our approach to prior work on Web-Split v1.0 by reporting scores on its test set in Table 5. Our "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance in BLEU is again obtained by combining the proposed WikiSplit dataset with the downsampled WebSplit, yielding a "
+    },
+    {
+      "expression": "\"32\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " point improvement over the prior "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " result."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_09468v1_338"
+  ],
+  "datasets": ["datasets/scigenCL/1808.09468v1-338.json"]
+}

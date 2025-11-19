@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows results that compare a BERT baseline that uses only the CQA inputs and the same architecture but trained using inputs that contain explanations from CoS-E during training. The BERT baseline model reaches "
+    },
+    {
+      "expression": "\"64\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% accuracy and adding open-ended human explanations (CoS-E-open-ended) alongside the questions during training results in a "
+    },
+    {
+      "expression": "\"2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% boost in accuracy.  In Table 2, using CAGE-reasoning at both train and validation resulted in an accuracy of "
+    },
+    {
+      "expression": "\"72\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, but Table 4 shows that if CAGE-reasoning truly captured all information provided in CoS-E-openended, performance would be "
+    },
+    {
+      "expression": "\"90\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%.\n\nIn this example, there are explicit numerical values (accuracy percentages) that can be annotated as Fluid expressions. There are no comparative or superlative expressions in the paragraph."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_02361v1_394"
+  ],
+  "datasets": ["datasets/scigenCL/1906.02361v1-394.json"]
+}

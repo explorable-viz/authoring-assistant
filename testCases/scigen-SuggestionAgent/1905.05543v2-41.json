@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Each average. According to our results (Table 2), the Wikification success ratios of eBay and Illegal Onion named entities is "
+    },
+    {
+      "expression": "\"comparable\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and relatively low. However, sites selling legal drugs on Onion have a "
+    },
+    {
+      "expression": "\"much higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " Wikification percentage."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_05543v2_41"
+  ],
+  "datasets": ["datasets/scigenCL/1905.05543v2-41.json"]
+}

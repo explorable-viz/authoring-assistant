@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 6 shows that for all generative models, the evaluation scores computed by our method are "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than those computed by prior method."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_04106v1_360"
+  ],
+  "datasets": ["datasets/scigenCL/1906.04106v1-360.json"]
+}

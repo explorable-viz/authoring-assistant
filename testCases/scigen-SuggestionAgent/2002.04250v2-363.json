@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results are shown in Table 4. As can be seen, the incorporation of MMI model significantly "
+    },
+    {
+      "expression": "\"improves\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " MT performances."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2002_04250v2_363"
+  ],
+  "datasets": ["datasets/scigenCL/2002.04250v2-363.json"]
+}

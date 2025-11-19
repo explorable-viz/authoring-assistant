@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We select the "
+    },
+    {
+      "expression": "\"1st\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"2nd\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"best performing\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models on the development datasets as well as the majority vote (mv) of 5 models for the final submission. The final results are shown in Table 3."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1804_08887v1_25"
+  ],
+  "datasets": ["datasets/scigenCL/1804.08887v1-25.json"]
+}

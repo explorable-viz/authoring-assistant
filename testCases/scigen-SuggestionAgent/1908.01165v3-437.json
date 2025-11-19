@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "1 2 , lblstm Table V shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table V, l1 denotes "
+    },
+    {
+      "expression": "\"l1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the Transformer model under attack (e.g. en-de), l2 denotes "
+    },
+    {
+      "expression": "\"l2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the other Transformer model (e.g. en-fr), and lblstm are the BLSTM counterparts of "
+    },
+    {
+      "expression": "\"l1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"l2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_01165v3_437"
+  ],
+  "datasets": ["datasets/scigenCL/1908.01165v3-437.json"]
+}

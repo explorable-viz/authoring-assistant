@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The purpose of Table 5 is to show that the traditional CNN classifier in Phase 2 was "
+    },
+    {
+      "expression": "\"highly accurate\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1903_12626v1_99"
+  ],
+  "datasets": ["datasets/scigenCL/1903.12626v1-99.json"]
+}

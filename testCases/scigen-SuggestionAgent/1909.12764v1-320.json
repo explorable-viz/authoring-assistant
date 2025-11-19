@@ -1,0 +1,80 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare our model with the state-of-the-art models in Table 3. As Table 3 shows, this model alone (without any reranking) improves the state-of-the-art performance from "
+    },
+    {
+      "expression": "\"79.6\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% to "
+    },
+    {
+      "expression": "\"82.15\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% accuracy. Increasing the beam size improves the performance as expected. Using a pre-trained model improves the performance as well. Reranking with a threshold rule may be helpful for the overall architecture. We observe that reranking by the critic at all times may not be "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approach. We note that choosing not to rerank when all scores are below "
+    },
+    {
+      "expression": "\"0.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increases the performance further. On the other hand, reranking if the difference between "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " score and second "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " score is above the threshold we set does not help in this case. The overall architecture improves the performance of the generator ("
+    },
+    {
+      "expression": "\"82.1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% accuracy) to "
+    },
+    {
+      "expression": "\"83.7\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% accuracy."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_12764v1_320"
+  ],
+  "datasets": ["datasets/scigenCL/1909.12764v1-320.json"]
+}

@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Over the rules used on the 1-best result, "
+    },
+    {
+      "expression": "\"more than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"30\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% are non-terminal rules, On the other hand, "
+    },
+    {
+      "expression": "\"30\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% are glue rules. Finally, terminal rules take the "
+    },
+    {
+      "expression": "\"largest\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage,"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1702_00500v4_154"
+  ],
+  "datasets": ["datasets/scigenCL/1702.00500v4-154.json"]
+}

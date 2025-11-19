@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "In addition, we provide the recall and precision per class for our final interrogative-word classifier (CLS + AT + NER in Table 7).  However, the recall "
+    },
+    {
+      "expression": "\"of which\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is very "
+    },
+    {
+      "expression": "\"low\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Our model has also problem with "
+    },
+    {
+      "expression": "\"why\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Lastly, the recall of 'when' is also "
+    },
+    {
+      "expression": "\"low\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_13794v1_113"
+  ],
+  "datasets": ["datasets/scigenCL/1910.13794v1-113.json"]
+}

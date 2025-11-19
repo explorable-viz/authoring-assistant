@@ -1,0 +1,64 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The left column of Table 4 presents results for the cleaned version of the Forbes and Choi (2017) dataset. Results on the new objects comparison dataset we created are shown in the rightmost column of Table 4. We get "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results than previous methods on this dataset: "
+    },
+    {
+      "expression": "\"63\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% and "
+    },
+    {
+      "expression": "\"61\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% accuracy on the dev/test sets compared to "
+    },
+    {
+      "expression": "\"60\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% and "
+    },
+    {
+      "expression": "\"57\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%. These relatively low results on this new dataset indicate that it is "
+    },
+    {
+      "expression": "\"more challenging\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_01327v1_83"
+  ],
+  "datasets": ["datasets/scigenCL/1906.01327v1-83.json"]
+}

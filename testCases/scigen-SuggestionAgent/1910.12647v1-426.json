@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Again transferring roles gives "
+    },
+    {
+      "expression": "\"positive\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results except for RTE. Filler vectors learned from QQP are "
+    },
+    {
+      "expression": "\"more transferable\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to MNLI and gives a boost to all tasks except for SNLI. Surprisingly, transferring BERT parameters is "
+    },
+    {
+      "expression": "\"hurting the results\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " now even when TPR is present."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_12647v1_426"
+  ],
+  "datasets": ["datasets/scigenCL/1910.12647v1-426.json"]
+}

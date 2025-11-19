@@ -1,0 +1,96 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results are shown in Table 1.  When comparing AR with AR+MMI, AR+MMI "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " AR across all metrics, lookahead strategy to estimate For the variants of AR+MMI, AR+MMI+diverse generates a "
+    },
+    {
+      "expression": "\"more diverse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " N-best list for reranking, and thus "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " AR+MMI; AR+MMI+RL uses future and thus "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " backward probability, AR+MMI as well.  It's hard to tell which model performs "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", AR "
+    },
+    {
+      "expression": "\"performs better than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non-AR for BLEU and adversarial success, but "
+    },
+    {
+      "expression": "\"worse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the other metrics. This means comparing with AR model, non-AR model tends to generate "
+    },
+    {
+      "expression": "\"more diverse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " responses, but might be less coherent.  When comparing non-AR with AR+MMI+diverse, non-AR has relatively "
+    },
+    {
+      "expression": "\"lower\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " distinct score, but "
+    },
+    {
+      "expression": "\"significantly higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " scores BLEU and adversarial success."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2002_04250v2_361"
+  ],
+  "datasets": ["datasets/scigenCL/2002.04250v2-361.json"]
+}

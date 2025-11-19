@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The "
+    },
+    {
+      "expression": "\"two best-performing\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approaches in the task of generating sentences from dependency trees have been feature-based incremental text generation ("
+    },
+    {
+      "expression": "\"Bohnet et al., 2010\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Liu et al., 2015\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Puduppully et al., 2016\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"King and White, 2018\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and "
+    },
+    {
+      "expression": "\"2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "http://universaldependencies.org/ techniques performing "
+    },
+    {
+      "expression": "\"more global\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " input-output mapping ("
+    },
+    {
+      "expression": "\"Castro Ferreira et al., 2018\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Elder and Hokamp, 2018\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Each of these approaches has their advantages and limitations (Table 2)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_0_478"
+  ],
+  "datasets": ["datasets/scigenCL/0-478.json"]
+}

@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 gives an overview of the historical datasets, covering "
+    },
+    {
+      "expression": "\"eight\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " languages from different language families\u2014"
+    },
+    {
+      "expression": "\"English\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"German\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Hungarian\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Icelandic\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Spanish\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Portuguese\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Slovene\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"Swedish\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\u2014as well as different text genres and time periods."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_02036v1_149"
+  ],
+  "datasets": ["datasets/scigenCL/1904.02036v1-149.json"]
+}

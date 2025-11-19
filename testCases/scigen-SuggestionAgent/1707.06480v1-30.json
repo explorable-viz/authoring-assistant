@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of the pre-selection are reported in Table 1. All syllable-aware models comfortably "
+    },
+    {
+      "expression": "\"outperform\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the Char-CNN when the budget is limited to "
+    },
+    {
+      "expression": "\"5M\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " parameters. Surprisingly, a pure word-level model,"
+    },
+    {
+      "expression": "\"6\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " LSTM-Word, also "
+    },
+    {
+      "expression": "\"beats\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the character-aware one under such budget. The three "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " configurations are Syl-Concat, Syl-Sum, and Syl-CNN-"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_06480v1_30"
+  ],
+  "datasets": ["datasets/scigenCL/1707.06480v1-30.json"]
+}

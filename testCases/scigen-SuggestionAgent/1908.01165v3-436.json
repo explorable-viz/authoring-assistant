@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table IV shows the "
+    },
+    {
+      "expression": "\"success rate\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the mean, median of the number of replacements (normalized by the length of original sentence) for different methods.  As we can see from Table IV, for both Hotflip and Soft-Att, Min-Grad method gives significant improvement in success rate in comparison with random baseline across all the NMT models. The number of replacement for Min-Grad is "
+    },
+    {
+      "expression": "\"comparable\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with random.  Table IV shows that Transformer is "
+    },
+    {
+      "expression": "\"more robust\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to our proposed method than BLSTM. This is because our proposed method has less number of replacements and lower success rate in case of Transformer than BLSTM for both the language pairs. Interestingly, HotFlip has "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " success rate and similar number of replacement in case for Transformer than BLSTM. Overall, as is evident from Table IV, our proposed method (Min-Grad + Soft-Att) achieves the "
+    },
+    {
+      "expression": "\"highest\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " success rate across the NMT models.  From Table IV, across all the NMT models, we can see that Soft-Att significantly outperforms HotFlip both in terms of success rate and number of replacements."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_01165v3_436"
+  ],
+  "datasets": ["datasets/scigenCL/1908.01165v3-436.json"]
+}

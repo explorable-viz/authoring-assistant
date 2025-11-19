@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Discussion of Results The left part of Table 1 shows results with the WordNet similarity scores used as gold standard. Path2vec "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " other graph embeddings, achieving "
+    },
+    {
+      "expression": "\"high\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " correlations with WordNet similarities. This shows that our model efficiently approximates different graph measures. The right part of Table 1 shows results for the correlations with human judgments (SimLex999). We report the results for "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models for each method, all of them (except FSE) using vector size "
+    },
+    {
+      "expression": "\"300\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for comparability."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_07040v1_120"
+  ],
+  "datasets": ["datasets/scigenCL/1906.07040v1-120.json"]
+}

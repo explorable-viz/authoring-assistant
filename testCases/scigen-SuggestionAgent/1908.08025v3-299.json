@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of the evaluation of the models on the test sets are shown in Table 1. We notice that additional training on WIKICREM consistently improves the performance of the models in all scenarios and on most tests. Due to the small size of some test sets, some of the results are subject to deviation. This especially applies to PDP (60 test samples) and WNLI (145 test samples). We observe that BERT WIKIRAND generally performs "
+    },
+    {
+      "expression": "\"worse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than BERT, with GAP and PDP being notable exceptions. This shows that BERT is a strong baseline and that improved performance of BERT WIKICREM is not a consequence of training on shorter sentences or with different loss function. BERT WIKICREM consistently outperforms both baselines on all tests, showing that WIKICREM can be used as a standalone dataset. We observe that training on the data from the target distribution improves the performance the most. Models trained on GAP-train usually show more than a 20% increase in their F1-score on GAP-test. Still, BERT WIKICREM GAP shows "
+    },
+    {
+      "expression": "\"a consistent improvement\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over BERT GAP on all subsets of the GAP test set. This confirms that WIKICREM works not just as a standalone dataset, but also as an additional pre-training in the transductive scenario. Similarly, BERT WIKICREM DPR outperforms BERT DPR on the majority of showing the applicability of WIKICREM to the scenario where additional training data is available. However, good results of BERT GAP DPR show that additional training on a manually constructed dataset, such as GAP, can yield similar results as additional training on WIKICREM. The reason behind this difference is the impact of the data distribution. GAP, DPR, and WIKICREM contain data that follows different distributions which strongly impacts the trained models. This  can be seen when we fine-tune BERT GAP on DPR to obtain BERT GAP DPR, as the model's performance on GAP-test drops by 8.2%. WIKICREM's data distribution strongly differs from the test sets' as described in Section 3. The "
+    },
+    {
+      "expression": "\"best results\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are achieved when all available data is combined, as shown by the models BERT ALL and BERT WIKICREM ALL. BERT WIKICREM ALL achieves "
+    },
+    {
+      "expression": "\"highest performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on GAP, DPR, WNLI, and WINOBIAS among the models, and sets the new state-of-the-art result on GAP, DPR, and WINOBIAS. The new state-of-the-art result on the WINOGENDER dataset is achieved by the BERT WIKICREM DPR model, while BERT WIKICREM ALL and BERT GAP DPR set the new state-of-the-art on the PDP dataset."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_08025v3_299"
+  ],
+  "datasets": ["datasets/scigenCL/1908.08025v3-299.json"]
+}

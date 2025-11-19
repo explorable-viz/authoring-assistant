@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The right-hand side of table 1 shows the performance of our "
+    },
+    {
+      "expression": "\"SVM\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the two neural methods. The results indicate that the "
+    },
+    {
+      "expression": "\"SVM\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " setup is well suited for the difficulty prediction task and that it successfully generalizes to new data.\n\n*Note: In this paragraph, there are no explicit values, comparative expressions, or superlative/aggregated expressions to replace with Fluid expressions.*"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_06905v2_471"
+  ],
+  "datasets": ["datasets/scigenCL/1906.06905v2-471.json"]
+}

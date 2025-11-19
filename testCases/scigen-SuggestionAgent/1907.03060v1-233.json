@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As a result, we obtained "
+    },
+    {
+      "expression": "\"1,654\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lines of data comprising trilingual, bilingual, and monolingual segments (mainly sentences) as summarized in Table 1. Finally, for the sake of comparability, we randomly chose "
+    },
+    {
+      "expression": "\"600\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " trilingual sentences to create a test set, and concatenated the rest of them and bilingual sentences to form development sets."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1907_03060v1_233"
+  ],
+  "datasets": ["datasets/scigenCL/1907.03060v1-233.json"]
+}

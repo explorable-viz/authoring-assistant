@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "First, from the EnFr results in Table 3, we are in line with GNMT (Wu et al., 2016), and within "
+    },
+    {
+      "expression": "\"2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU points of the RNN and Transformer models investigated by Chen et al. (2018). We compare quite favorably with Lee et al. (2017), exceeding their reported scores by "
+    },
+    {
+      "expression": "\"3-6\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points,"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_09943v1_269"
+  ],
+  "datasets": ["datasets/scigenCL/1808.09943v1-269.json"]
+}

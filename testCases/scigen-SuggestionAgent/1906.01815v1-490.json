@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 presents the performance of our baselines in the speaker-independent setup. In this case, the multimodal variants do not "
+    },
+    {
+      "expression": "\"greatly\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperform the unimodal counterparts. Unlike Table 2, the audio channel plays a more important role, and it is "
+    },
+    {
+      "expression": "\"slightly\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improved by adding text. In multiple evaluations, the multimodal variants were shown to "
+    },
+    {
+      "expression": "\"significantly\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperform their unimodal counterparts, with relative error rate reductions of up to "
+    },
+    {
+      "expression": "\"12.9\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%.\n\nNote: The comparative expressions \"greatly\", \"slightly\", and \"significantly\" are annotated as per the rules provided."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_01815v1_490"
+  ],
+  "datasets": ["datasets/scigenCL/1906.01815v1-490.json"]
+}

@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 displays "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performing DSM for each property. There is a preference to "
+    },
+    {
+      "expression": "\"word2vec\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and to a "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embedding dimension."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_04772v1_173"
+  ],
+  "datasets": ["datasets/scigenCL/1906.04772v1-173.json"]
+}

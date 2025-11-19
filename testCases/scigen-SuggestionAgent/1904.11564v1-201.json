@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare the performance of our neural generator when trained on either "
+    },
+    {
+      "expression": "\"gold\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"silver\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", or "
+    },
+    {
+      "expression": "\"gold and silver\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " data (Table 1). Generation quality is primarily evaluated with BLEU. Semi-supervised training leads to an "
+    },
+    {
+      "expression": "\"11\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU point improvement compar train. In addition to BLEU, we also report exact match accuracy on the overlapping subset. Results show that our neural models outperform the grammar-based generator by a large margin."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_11564v1_201"
+  ],
+  "datasets": ["datasets/scigenCL/1904.11564v1-201.json"]
+}

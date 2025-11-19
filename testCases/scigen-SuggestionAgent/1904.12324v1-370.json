@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Tab. 4 shows "
+    },
+    {
+      "expression": "\"the most frequent\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " open relations aligned to the DBpedia relations location, associatedMusicalArtist, and spouse. The frequencies correspond to the number of OIE triples that (1) have the specified open relation (e.g., \"be wife of \") and (2) have a KB hit with the specified KB relation (e.g., spouse). There is clearly no 1:1 correspondence between open relations and KB relations. On the one hand, open relations can be highly "
+    },
+    {
+      "expression": "\"ambiguous\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (e.g., \"be\" has hits to location and associatedMusicalArtits). On the other hand, open relations can also be "
+    },
+    {
+      "expression": "\"more specific\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than KB relations (e.g., \"be guitarist of \" is "
+    },
+    {
+      "expression": "\"more specific\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than associatedMusicalArtist) or semantically "
+    },
+    {
+      "expression": "\"different\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (e.g., \"be widow of \" and spouse) than the KB relations they align to."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_12324v1_370"
+  ],
+  "datasets": ["datasets/scigenCL/1904.12324v1-370.json"]
+}

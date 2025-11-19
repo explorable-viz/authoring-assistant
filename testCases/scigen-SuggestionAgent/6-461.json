@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "we first compare the performance of thematic rankers with respect to syntactic rankers and available datasets. The results of this comparison are summarized in Table 3 and show that syntactic rankers positioning the object second in the hierarchy (SE2 and SD2) lead to "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alignment on both datasets and have a "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " upper bound. For English the global hierarchy-based ranker approaches the upper bound, closely followed by the pairwise ranker. The accuracy on German data is lower and the pairwise and local rankers outperform the global hierarchy-based ranker."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_6_461"
+  ],
+  "datasets": ["datasets/scigenCL/6-461.json"]
+}

@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 4, BigRNN and Transformer are not able to "
+    },
+    {
+      "expression": "\"outperform\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BaseRNN."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_03590v3_384"
+  ],
+  "datasets": ["datasets/scigenCL/1909.03590v3-384.json"]
+}

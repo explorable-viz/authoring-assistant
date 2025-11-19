@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We report "
+    },
+    {
+      "expression": "\"accuracy\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as the performance metric. Table 1 represents the performance comparison of our proposed models and the baselines, which shows that incorporation of knowledge graph embeddings helps to improve the model performance. All results are summarized in Table 1.\n\nNo explicit values, comparative expressions, or superlative/aggregated expressions were detected in this paragraph for replacement with Fluid expressions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_00160v1_97"
+  ],
+  "datasets": ["datasets/scigenCL/1909.00160v1-97.json"]
+}

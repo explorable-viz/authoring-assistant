@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows the overall performance of schema matching on GNBusinessTest. From the table, we can see that ODEE-FER achieves "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 scores among all the methods. By comparing Nguyen et al. (2015) and ODEEF (p = 0.01), we can see that using continuous contextual features gives "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than discrete features. Among ODEE models, ODEE-FE gives a "
+    },
+    {
+      "expression": "\"2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% gain in F1 score against ODEE-F, there is a "
+    },
+    {
+      "expression": "\"1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% gain in F"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_06947v1_252"
+  ],
+  "datasets": ["datasets/scigenCL/1906.06947v1-252.json"]
+}

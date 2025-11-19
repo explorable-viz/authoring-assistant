@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 6 shows that the C-LSTM model performs well on the scientific embeddings, but consistently "
+    },
+    {
+      "expression": "\"worse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the SVM model using handcrafted features and achieves a macro-F1 score of "
+    },
+    {
+      "expression": "\"67.49\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"67.02\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for subtask 1.1 and subtask 1.2 respectively."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1804_05825v3_377"
+  ],
+  "datasets": ["datasets/scigenCL/1804.05825v3-377.json"]
+}

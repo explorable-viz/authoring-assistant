@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 lists the properties of the training and test set including the inter-rater agreement (κ). The agreement is substantial, with some variation between the domains: "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for tools and fruit than for the musical domain."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_12619v1_399"
+  ],
+  "datasets": ["datasets/scigenCL/1910.12619v1-399.json"]
+}

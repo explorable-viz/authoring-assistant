@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 summarizes the performance of the three models on the SUPPORTS and REFUTES pairs from the FEVER DEV set and on the created SYMMETRIC TEST SET pairs. All models perform relatively well on FEVER DEV but achieve "
+    },
+    {
+      "expression": "\"less than 60%\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy on the synthetic ones. The re-weighting method increases the accuracy of the ESIM and BERT models by an absolute "
+    },
+    {
+      "expression": "\"3.4\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% and "
+    },
+    {
+      "expression": "\"3.3\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% respectively. One can notice that this improvement comes at a cost in the accuracy over the FEVER DEV pairs. Applying the regularization method, using the same training data, helps to train a more robust model that performs "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on our test set, where verification in context is a key requirement."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_05267v2_49"
+  ],
+  "datasets": ["datasets/scigenCL/1908.05267v2-49.json"]
+}

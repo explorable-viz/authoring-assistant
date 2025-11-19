@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Tables 2 and 3 respectively show results for our pretraining and intermediate training experiments. From Table 2, among target tasks, we find the grammar-related CoLA task benefits dramatically from LM pretraining: The results achieved with LM pretraining are "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the results achieved without. In contrast, the meaning-oriented STS sees good results with several kinds of pretraining, but does not benefit substantially from LM pretraining. Among pretraining tasks, language modeling performs "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", followed by MNLI. The remaining pretraining tasks yield performance near that of the random baseline. Even our single-task baseline gets less than a one point gain over this simple baseline. The multitask models are tied or outperformed by models trained on one of their constituent tasks, suggesting that our approach to multitask learning does not reliably produce models that productively combine the knowledge taught by each task. However, of the two models that perform "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the development data, the multitask model generalizes "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the single-task model on test data for tasks like STS and MNLI where the test set contains out-of-domain data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1812_10860v5_193"
+  ],
+  "datasets": ["datasets/scigenCL/1812.10860v5-193.json"]
+}

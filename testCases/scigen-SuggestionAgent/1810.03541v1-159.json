@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows the results. From this table, we can see that our alignment consistently "
+    },
+    {
+      "expression": "\"improves\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " all the parsers by a margin ranging from "
+    },
+    {
+      "expression": "\"0.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"1.7\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1810_03541v1_159"
+  ],
+  "datasets": ["datasets/scigenCL/1810.03541v1-159.json"]
+}

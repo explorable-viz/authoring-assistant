@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table V reports the accuracy of the combined and the parallel fusion approaches. According to these results, training two parallel networks for lexical and syntax encoding achieves "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy when "
+    },
+    {
+      "expression": "\"compared to\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training the same network with combined embeddings."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_06194v1_485"
+  ],
+  "datasets": ["datasets/scigenCL/1909.06194v1-485.json"]
+}

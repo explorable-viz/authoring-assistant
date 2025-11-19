@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Furthermore, Table 5 illustrates the results on the unsupervised hypernym detection task for BLESS dataset, wherein we compare our proposed SPON model to other "
+    },
+    {
+      "expression": "\"supervised\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " SOTA approaches for hypernym prediction task, namely Order Embeddings (OE) approach as introduced by (Vendrov et al. 2016), and Smoothed Box model as introduced by (Li et al. 2019).\n\n**Note:** In this paragraph, there are no explicit values, comparative expressions, or superlative/aggregated expressions that need to be replaced with Fluid expressions based on the given instructions. The word \"supervised\" is not a value, comparative expression, or superlative in the context of needing replacement as per the task description."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_10572v2_411"
+  ],
+  "datasets": ["datasets/scigenCL/1909.10572v2-411.json"]
+}

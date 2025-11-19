@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the results, where the two cases are denoted as ΔIV and ΔOOV. The general trend in the results is that the improvements of both models in the "
+    },
+    {
+      "expression": "\"OOV\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case are "
+    },
+    {
+      "expression": "\"larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than in the "
+    },
+    {
+      "expression": "\"IV\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case, which means that the character composition models indeed alleviates the OOV problem. Also, CNN improves on seven languages in the IV case and eight languages in the OOV case, and it performs "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than LSTM in both cases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1705_10814v1_199"
+  ],
+  "datasets": ["datasets/scigenCL/1705.10814v1-199.json"]
+}

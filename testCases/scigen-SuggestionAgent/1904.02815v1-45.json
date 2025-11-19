@@ -1,0 +1,128 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare the performance of our model (Table 2) with traditional "
+    },
+    {
+      "expression": "\"Bag of Words\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"BoW\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"TF-IDF\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"n-grams\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " features based classifiers. We also compare against averaged "
+    },
+    {
+      "expression": "\"Skip-Gram\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"Mikolov et al., 2013\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"Doc2Vec\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"Le and Mikolov, 2014\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"CNN\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"Kim, 2014\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"Hierarchical Attention\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"HN-ATT\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") ("
+    },
+    {
+      "expression": "\"Yang et al., 2016\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and hierarchical network ("
+    },
+    {
+      "expression": "\"HN\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") models."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_02815v1_45"
+  ],
+  "datasets": ["datasets/scigenCL/1904.02815v1-45.json"]
+}

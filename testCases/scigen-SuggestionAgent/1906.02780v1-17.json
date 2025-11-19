@@ -1,0 +1,72 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only "
+    },
+    {
+      "expression": "\"0.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while the speedup drops from "
+    },
+    {
+      "expression": "\"3.8×\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"1.4×\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The final row of Table 4 shows that exposing the parse decoder to multiple possible chunkings of the same sentence during training allows it to choose a sequence of chunks that has a "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " likelihood at test time, improving BLEU by "
+    },
+    {
+      "expression": "\"1.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " while decreasing the speedup from "
+    },
+    {
+      "expression": "\"3.8×\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"3.1×\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_02780v1_17"
+  ],
+  "datasets": ["datasets/scigenCL/1906.02780v1-17.json"]
+}

@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Then, this projection is applied to the second model embeddings of "
+    },
+    {
+      "expression": "\"47\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " locations, which are subject to armed conflicts in the year 2001 ("
+    },
+    {
+      "expression": "\"38\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " after skipping pairs with outof-vocabulary elements). Table 2 demonstrates the resulting performance (reflecting how close the predicted vectors are to the actual armed groups active in this or that location). Note that "
+    },
+    {
+      "expression": "\"out of 38\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " pairs from 2001, "
+    },
+    {
+      "expression": "\"31\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " were already present in the previous data set (ongoing conflicts). This explains why the evaluation on all the pairs gives high results. However, even for the new conflicts, the projection performance is encouraging."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_08660v1_37"
+  ],
+  "datasets": ["datasets/scigenCL/1707.08660v1-37.json"]
+}

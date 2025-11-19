@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows full rankings extracted for English and German data. While some correspondence to the hierarchies proposed for English Agent in literature is evident (e.g. ≺ Instrument ≺ Theme, similar to "
+    },
+    {
+      "expression": "\"(Fillmore, 1968)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), a direct comparison is impossible due to the differences in role definitions and underlying syntactic formalisms. Notice the high number of ties: some roles never co-occur (either by chance or by design) or occur on the same syntactic rank (e.g. oblique) so there is no evidence for preference even if we enforce transitivity.\n\n**Note**: The only explicit value in this paragraph is a reference, which doesn't require replacement as per the provided instructions. No comparative or superlative expressions were found that needed to be annotated."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_6_462"
+  ],
+  "datasets": ["datasets/scigenCL/6-462.json"]
+}

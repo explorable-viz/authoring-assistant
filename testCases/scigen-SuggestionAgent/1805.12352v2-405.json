@@ -1,0 +1,64 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Tables 1 and 2 show the performance of DialogWAE and baselines on the two datasets. DialogWAE outperforms the baselines in the majority of the experiments. In terms of BLEU scores, DialogWAE (with a Gaussian mixture prior network) generates "
+    },
+    {
+      "expression": "\"more relevant\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " responses, with the average recall of "
+    },
+    {
+      "expression": "\"42.0\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% and "
+    },
+    {
+      "expression": "\"37.2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% on both of the datasets. These are "
+    },
+    {
+      "expression": "\"significantly higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than those of the CVAE baselines ("
+    },
+    {
+      "expression": "\"29.9\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% and "
+    },
+    {
+      "expression": "\"26.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%). We observe a similar trend to the BOW embedding metrics."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_12352v2_405"
+  ],
+  "datasets": ["datasets/scigenCL/1805.12352v2-405.json"]
+}

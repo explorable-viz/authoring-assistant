@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the values of hyper-parameters for our models, In particular, the embedding sizes are set to "
+    },
+    {
+      "expression": "\"50\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the hidden size of LSTM models to "
+    },
+    {
+      "expression": "\"200\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Dropout (Srivastava et al., 2014) is applied to both word and character embeddings with a rate of "
+    },
+    {
+      "expression": "\"0.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Stochastic gradient descent (SGD) is used for optimization, with an initial learning rate of "
+    },
+    {
+      "expression": "\"0.015\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and a decay rate of "
+    },
+    {
+      "expression": "\"0.05\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_02023v4_202"
+  ],
+  "datasets": ["datasets/scigenCL/1805.02023v4-202.json"]
+}

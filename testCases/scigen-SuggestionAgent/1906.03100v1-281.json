@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4: Performance of models using different sharing coefficients on the validation set of the NIST Chinese-English translation task. As shown in Table 4, the decoder WT model can be seen as a kind of shared-private method where zero features are shared between the source and target word embeddings. For the proposed method, "
+    },
+    {
+      "expression": "\"(0.5, 0.5, 0.5)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"(1, 1, 1)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are, respectively, used for sharing half and all features between the embeddings of all categories of words. This allows the model to significantly reduce the number of parameters and also improve the translation quality. For comparison purpose, we also consider sharing a large part of the features among the unrelated words by setting s3 to "
+    },
+    {
+      "expression": "\"0.9\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", i.e. "
+    },
+    {
+      "expression": "\"(0.5, 0.7, 0.9)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We argue that it is hard for"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_03100v1_281"
+  ],
+  "datasets": ["datasets/scigenCL/1906.03100v1-281.json"]
+}

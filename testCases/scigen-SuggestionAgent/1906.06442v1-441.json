@@ -1,0 +1,64 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We performed a minimal set of experiments on WMT EnFr, which are summarized in Table 5. In this case, we see that BT alone "
+    },
+    {
+      "expression": "\"hurts\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance compared to the strong bitext baseline, but NoisedBT indeed "
+    },
+    {
+      "expression": "\"surpasses\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the bitext model. It is worth noting that our numbers are lower than those reported by Edunov et al. (2018) on the years they report ("
+    },
+    {
+      "expression": "\"36.1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"43.8\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"40.9\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on 2013, 2014, and 2015 respectively). On WMT16 EnRo, TaggedBT improves on vanilla BT by "
+    },
+    {
+      "expression": "\"0.4\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_06442v1_441"
+  ],
+  "datasets": ["datasets/scigenCL/1906.06442v1-441.json"]
+}

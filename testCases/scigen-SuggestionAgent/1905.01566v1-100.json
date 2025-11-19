@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 compares the performance of these systems on the development set. Our model with no augmentation already "
+    },
+    {
+      "expression": "\"matches\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the system of Choi et al. (2018) with augmentation, and incorporating ELMo gives further gains on both precision and recall. On top of this model, adding the distantly-annotated data lowers the performance; the loss function-based approach of (Choi et al., 2018) does not sufficiently mitigate the noise in this data. However, denoising makes the distantly-annotated data useful, improving recall by a "
+    },
+    {
+      "expression": "\"substantial margin\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " especially in the general class. BERT performs "
+    },
+    {
+      "expression": "\"similarly to\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ELMo with denoised distant data. As can be seen in the performance breakdown, BERT gains from improvements in recall in the fine class."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_01566v1_100"
+  ],
+  "datasets": ["datasets/scigenCL/1905.01566v1-100.json"]
+}

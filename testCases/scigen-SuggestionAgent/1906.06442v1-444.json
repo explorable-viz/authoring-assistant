@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We quantify the copy rate with the unigram overlap between source and target as "
+    },
+    {
+      "expression": "\"a percentage\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of tokens in the target side, and "
+    },
+    {
+      "expression": "\"compare\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " those statistics to the bitext and the back-translated data (Table 9)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_06442v1_444"
+  ],
+  "datasets": ["datasets/scigenCL/1906.06442v1-444.json"]
+}

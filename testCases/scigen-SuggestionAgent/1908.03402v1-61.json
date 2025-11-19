@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Even the ensemble of 5 models did not result in significant differences especially in BLEU scores.\n\nNo explicit values, comparative expressions, or superlative/aggregated expressions are present that need to be replaced with Fluid expressions based on the given paragraph and data. The sentence is more about a general observation rather than specific numerical results or comparisons."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_03402v1_61"
+  ],
+  "datasets": ["datasets/scigenCL/1908.03402v1-61.json"]
+}

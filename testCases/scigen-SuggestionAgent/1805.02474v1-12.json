@@ -1,0 +1,72 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively. As shown in Table 5, among the 16 datasets S-LSTM gives "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results on 12, compared with BiLSTM and 2 layered BiLSTM models. The average accuracy of S-LSTM is "
+    },
+    {
+      "expression": "\"85.6\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, "
+    },
+    {
+      "expression": "\"significantly higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared with "
+    },
+    {
+      "expression": "\"84.9\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% by 2-layer stacked BiLSTM. 3-layer stacked BiLSTM gives an average accuracy of "
+    },
+    {
+      "expression": "\"84.57\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, which is "
+    },
+    {
+      "expression": "\"lower\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to a 2-layer stacked BiLSTM, with a training time per epoch of "
+    },
+    {
+      "expression": "\"423.6\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seconds."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_02474v1_12"
+  ],
+  "datasets": ["datasets/scigenCL/1805.02474v1-12.json"]
+}

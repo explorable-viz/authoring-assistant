@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We evaluate the in- and out-of-domain performance of our approach by training models on either WSJ gold data only, or both WSJ gold data and Gigaword silver data, and evaluating on different domains. The results in Table 2 show that while the generator performs "
+    },
+    {
+      "expression": "\"best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on test data which matches the training domain (news), semisupervised training leads to substantial out-ofdomain improvements on the Wikipedia and the Brown corpus portions of the test set."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_11564v1_218"
+  ],
+  "datasets": ["datasets/scigenCL/1904.11564v1-218.json"]
+}

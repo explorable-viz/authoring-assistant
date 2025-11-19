@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Figure 4 shows the accuracy of two systems for different NER (named entity recognition) types. We consider four types: location (LOC), organization (ORG), person (PER), and miscellany (MICS). These types are given in CoNLL 2003 dataset, which was used as a basis for AIDA CoNLL. Our model is accurate for PER, achieving accuracy of about "
+    },
+    {
+      "expression": "\"97\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, only "
+    },
+    {
+      "expression": "\"0.53\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% lower than the supervised model."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_01250v1_189"
+  ],
+  "datasets": ["datasets/scigenCL/1906.01250v1-189.json"]
+}

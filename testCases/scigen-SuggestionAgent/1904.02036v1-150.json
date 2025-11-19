@@ -1,0 +1,80 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the results of this evaluation. The extent of spelling variation varies greatly between datasets, with less than "
+    },
+    {
+      "expression": "\"15\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% of tokens requiring normalization (SLG) to more than "
+    },
+    {
+      "expression": "\"80\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% (HU). The "
+    },
+    {
+      "expression": "\"maximum\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy is above "
+    },
+    {
+      "expression": "\"97\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% for most datasets. For the normalization systems, we observe "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " word accuracy with SMT than NMT on four of the datasets, and non-significant differences on five others. There is only one dataset (DEA) where the NMT system by Tang et al. (2018) gets "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " word accuracy than other systems. Overall, the deep NMT model by Tang et al. (2018) consistently "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the shallow one by Bollmann (2018). Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "
+    },
+    {
+      "expression": "\"significantly behind\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the SMT and NMT methods."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_02036v1_150"
+  ],
+  "datasets": ["datasets/scigenCL/1904.02036v1-150.json"]
+}

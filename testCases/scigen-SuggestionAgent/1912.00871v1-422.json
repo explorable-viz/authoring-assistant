@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The values in the last column of Table III are summarized in Table IV. How the models compare with respect to "
+    },
+    {
+      "expression": "\"accuracy\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " closely resembles the comparison of BLEU scores, presented earlier. Thus, BLEU scores seem to correlate well with "
+    },
+    {
+      "expression": "\"accuracy\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " values in our case."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1912_00871v1_422"
+  ],
+  "datasets": ["datasets/scigenCL/1912.00871v1-422.json"]
+}

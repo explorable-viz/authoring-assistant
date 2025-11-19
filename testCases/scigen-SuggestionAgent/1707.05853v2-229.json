@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 1, this does not discard too many correct hypotheses but "
+    },
+    {
+      "expression": "\"markedly reduces\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the size of the cnet to an average of "
+    },
+    {
+      "expression": "\"seven\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " timesteps with "
+    },
+    {
+      "expression": "\"two\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hypotheses."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_05853v2_229"
+  ],
+  "datasets": ["datasets/scigenCL/1707.05853v2-229.json"]
+}

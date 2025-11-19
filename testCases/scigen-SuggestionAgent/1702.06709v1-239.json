@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results are shown in Table 4. Compared to AFET, the proposed model performs "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all types except other in the "
+    },
+    {
+      "expression": "\"top-10\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " frequent types."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1702_06709v1_239"
+  ],
+  "datasets": ["datasets/scigenCL/1702.06709v1-239.json"]
+}

@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 presents the results of our method comparing them against recent state-of-the-art supervised models and the simple n-gram language model used by Bryant and Briscoe (2018). A key result of Table 2 is that Transformer Language Models prove to be "
+    },
+    {
+      "expression": "\"more than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " just a competitive baseline to legitimate Grammatical Error Correction systems on their own. Across the board, Transformer Models are able to "
+    },
+    {
+      "expression": "\"outperform\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the simple n-gram model and even "
+    },
+    {
+      "expression": "\"approach\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the performance of supervised GEC systems. We see that their performance is nearly identical with GPT-2 leading by a small margin in the CoNLL14 dataset. BERT surpasses the n-gram baseline overall, it achieves "
+    },
+    {
+      "expression": "\"worse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than the rest in terms of precision and F0.5 score."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_01733v1_447"
+  ],
+  "datasets": ["datasets/scigenCL/1906.01733v1-447.json"]
+}

@@ -1,0 +1,128 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For dialogue coherence trend is "
+    },
+    {
+      "expression": "\"3\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". that "
+    },
+    {
+      "expression": "\"NonAR+MMI\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"AR+MMI\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", followed by "
+    },
+    {
+      "expression": "\"AR\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Non-AR\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"AR\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"slightly better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"Non-AR\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For Content Richness, the "
+    },
+    {
+      "expression": "\"is significantly better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " proposed "
+    },
+    {
+      "expression": "\"NonAR+MMI\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"AR+MMI\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and the gap is "
+    },
+    {
+      "expression": "\"greater than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dialogue coherence.  The output from the "
+    },
+    {
+      "expression": "\"AR+MMI\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model is thus "
+    },
+    {
+      "expression": "\"by far less diverse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than nonAR+MMI, which obtains the MMI score for each generated token."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2002_04250v2_362"
+  ],
+  "datasets": ["datasets/scigenCL/2002.04250v2-362.json"]
+}

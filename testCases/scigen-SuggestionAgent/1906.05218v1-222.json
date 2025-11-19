@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 shows the time-indexed lags that are averaged to calculate AL for a wait-3 system. The lags make the problem clear: each position beyond the point where all source tokens have been read ("
+    },
+    {
+      "expression": "\"gi = |x|\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") has its lag reduced by "
+    },
+    {
+      "expression": "\" \"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", pulling the average lag below "
+    },
+    {
+      "expression": "\"k\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_05218v1_222"
+  ],
+  "datasets": ["datasets/scigenCL/1906.05218v1-222.json"]
+}

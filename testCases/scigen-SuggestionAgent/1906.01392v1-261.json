@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the results of our method and all the baselines on tasks with different topics. We can first observe that the proposed RCN consistently "
+    },
+    {
+      "expression": "\"outperformed\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " all the baselines across all topics. Despite being modest, all the improvements of RCN over the baselines are statistically significant at p < 0.05 with a two-tailed t-test. BiLSTM performed "
+    },
+    {
+      "expression": "\"the worst\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", showing that only using the RNN encoder for sequence encoding is not sufficient for obtaining optimal results. DeAT and BiMPM performed similarly well; RCN performed "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with relative improvements from "
+    },
+    {
+      "expression": "\"2.1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% to "
+    },
+    {
+      "expression": "\"10.4\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% over the second best."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_01392v1_261"
+  ],
+  "datasets": ["datasets/scigenCL/1906.01392v1-261.json"]
+}

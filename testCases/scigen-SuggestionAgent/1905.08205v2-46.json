@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 presents the exact matching accuracy of IRNet and various baselines on the development set and the test set. IRNet clearly outperforms all the baselines by a "
+    },
+    {
+      "expression": "\"substantial\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " margin. It obtains "
+    },
+    {
+      "expression": "\"27.0\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% absolute improvement over SyntaxSQL"
+    },
+    {
+      "expression": "\"Net\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " also obtains "
+    },
+    {
+      "expression": "\"19.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% absolute "
+    },
+    {
+      "expression": "\"improvement\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over SyntaxSQL"
+    },
+    {
+      "expression": "\"Net(augment)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that performs large-scale data augmentation. When incorporating BERT, the performance of both SyntaxSQL"
+    },
+    {
+      "expression": "\"Net\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and IRNet is "
+    },
+    {
+      "expression": "\"substantially improved\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the accuracy gap between them on both the development set and the test set is "
+    },
+    {
+      "expression": "\"widened\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_08205v2_46"
+  ],
+  "datasets": ["datasets/scigenCL/1905.08205v2-46.json"]
+}

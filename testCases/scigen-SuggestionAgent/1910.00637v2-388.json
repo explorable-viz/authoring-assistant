@@ -1,0 +1,64 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 compares the performance of ESSENTIA with the FSA baseline for paraphrase mining. Specifically, we show the number of phrase pairs extracted by ESSENTIA and FSA from both datasets ("
+    },
+    {
+      "expression": "\"# of extracted pairs\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " column), number of valid paraphrases within these pairs ("
+    },
+    {
+      "expression": "\"# of valid pairs\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " column), and precision ("
+    },
+    {
+      "expression": "\"Precision\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " column). Although FSA has "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision due to conservative sentence alignment, ESSENTIA extracts significantly more paraphrases, improving the recall by "
+    },
+    {
+      "expression": "\"460\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% (Snips) and "
+    },
+    {
+      "expression": "\"247\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% (HotelQA) over the baseline."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_00637v2_388"
+  ],
+  "datasets": ["datasets/scigenCL/1910.00637v2-388.json"]
+}

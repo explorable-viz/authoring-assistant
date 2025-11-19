@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The BLEU values shown in Table 4 "
+    },
+    {
+      "expression": "\"demonstrates\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the comparison results from word-level overlaps. TransDG tends to generate responses that are "
+    },
+    {
+      "expression": "\"more similar\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to the gold responses than baselines in most cases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1912_07491v1_317"
+  ],
+  "datasets": ["datasets/scigenCL/1912.07491v1-317.json"]
+}

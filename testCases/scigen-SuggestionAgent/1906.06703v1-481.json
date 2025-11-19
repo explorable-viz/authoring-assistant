@@ -1,0 +1,72 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The reinforcement learning model of deep-coref, i.e., deep-coref RL, has "
+    },
+    {
+      "expression": "\"the most\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significant difference when it is evaluated based on maximum vs. minimum spans ("
+    },
+    {
+      "expression": "\"4\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points). The ensemble model of e2e-coref, on the other hand, has "
+    },
+    {
+      "expression": "\"the least\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " difference between maximum and minimum span scores ("
+    },
+    {
+      "expression": "\"1.4\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points), which indicates it "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recognizes maximum span boundaries in out-of-domain data. The ranking of systems is very different by using maximum vs. min Table 4 shows the maximum vs. minimum span evaluations of several recent coreference resolvers on the CoNLL-2012 test set and the WikiCoref dataset. The examined coreference resolvers are as follows: the Stanford rule-based system (Lee et al., 2013), the coreference resolver of Peng et al. (2015), the ranking model of cort (Martschat and Strube, 2015), the ranking and reinforcement learning models of deep-coref (Clark and Manning, 2016a,b), the single and ensemble models of Lee et al. (2017), and the current state-of-the-art system by Lee et al. (2018). The coreference resolver of Peng et al. (2015) has "
+    },
+    {
+      "expression": "\"the smallest\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " difference between its maximum and minimum span evaluation scores. Based on maximum spans, Peng et al. (2015) performs "
+    },
+    {
+      "expression": "\"on-par with\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " cort while cort outperforms it by about one percent when they are evaluated based on minimum spans."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_06703v1_481"
+  ],
+  "datasets": ["datasets/scigenCL/1906.06703v1-481.json"]
+}

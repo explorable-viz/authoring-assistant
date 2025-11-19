@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The "
+    },
+    {
+      "expression": "\"top\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tuning data scores for AVG COS SIM (Table 1) show that the Google embeddings with TF*IDF weighting yield the "
+    },
+    {
+      "expression": "\"top\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F score for all three concept input types ("
+    },
+    {
+      "expression": "\".881\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " - "
+    },
+    {
+      "expression": "\".945\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Somewhat expectedly, the "
+    },
+    {
+      "expression": "\"best overall\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F score ("
+    },
+    {
+      "expression": "\".945\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") is produced in the setting Both, which provides the most information. Actually, this is true for all four weighting schemes for both GloVe and Google, while fastText consistently yields its "
+    },
+    {
+      "expression": "\"top\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F scores ("
+    },
+    {
+      "expression": "\".840\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " - "
+    },
+    {
+      "expression": "\".911\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") in the Label setting, which provides the least information."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_12550v1_4"
+  ],
+  "datasets": ["datasets/scigenCL/1904.12550v1-4.json"]
+}

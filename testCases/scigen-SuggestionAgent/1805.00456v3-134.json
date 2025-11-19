@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "results in Table 3 show that large batch training can significantly improve the performance of single Transformers, particularly when trained to produce longer sequences. Accumulating the gradient over "
+    },
+    {
+      "expression": "\"8\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " batches of size "
+    },
+    {
+      "expression": "\"4096\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives a "
+    },
+    {
+      "expression": "\"3\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU improvement for the linear derivation model. It has been suggested that decaying the learning rate can have a similar effect to large batch training (Smith et al., 2017), but reducing the initial learning rate by a factor of "
+    },
+    {
+      "expression": "\"8\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alone did not give the same improvements."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_00456v3_134"
+  ],
+  "datasets": ["datasets/scigenCL/1805.00456v3-134.json"]
+}

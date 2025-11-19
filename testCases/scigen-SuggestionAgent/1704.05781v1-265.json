@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 4, the removal of stop words does not really "
+    },
+    {
+      "expression": "\"influence\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the "
+    },
+    {
+      "expression": "\"average\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the semantic similarity task. The analogy task, however, benefits substantially from this filtering, for both corpora."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_05781v1_265"
+  ],
+  "datasets": ["datasets/scigenCL/1704.05781v1-265.json"]
+}

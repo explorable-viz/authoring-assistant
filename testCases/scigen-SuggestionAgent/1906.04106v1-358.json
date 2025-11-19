@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We also report the average number of generated keyphrases per document, denoted as \"Avg. #\". The results are shown in Table 4, where oracle is a model that always generates the ground-truth keyphrases. The resultant MAEs demonstrate that our deep reinforced models notably "
+    },
+    {
+      "expression": "\"outperform\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the baselines on predicting the number of absent keyphrases and slightly "
+    },
+    {
+      "expression": "\"outperform\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the baselines on predicting the number of present keyphrases. Moreover, our deep reinforced models generate "
+    },
+    {
+      "expression": "\"significantly more\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " absent keyphrases than the baselines. Besides, the baseline models and our reinforced models generate similar numbers of present keyphrases, while our reinforced models achieve "
+    },
+    {
+      "expression": "\"notably higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F -measures, implying that our methods generate present keyphrases "
+    },
+    {
+      "expression": "\"more accurately\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the baselines."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_04106v1_358"
+  ],
+  "datasets": ["datasets/scigenCL/1906.04106v1-358.json"]
+}

@@ -1,0 +1,72 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Switching to ELMo word embeddings improves performance by "
+    },
+    {
+      "expression": "\"2.9\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points on an average, corresponding to about "
+    },
+    {
+      "expression": "\"53\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test sentences. Of these, about "
+    },
+    {
+      "expression": "\"32\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentences ("
+    },
+    {
+      "expression": "\"60%\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the improvement) correspond to A-but-B and negation style sentences, As further evidence that ELMo helps on these specific constructions, the non-ELMo baseline model (no-project, no-distill) gets "
+    },
+    {
+      "expression": "\"255\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentences wrong in the test corpus on average, only "
+    },
+    {
+      "expression": "\"89\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"34.8%\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") of which are A-but-B style or negations."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_07733v1_2"
+  ],
+  "datasets": ["datasets/scigenCL/1808.07733v1-2.json"]
+}

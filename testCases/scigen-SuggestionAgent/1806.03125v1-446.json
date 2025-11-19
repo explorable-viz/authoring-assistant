@@ -1,0 +1,80 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "In this experiment, we performed text classification among the classes in the Reuters-8 database. The results can be seen in Table II. The simplest baseline, SA with w2v, achieved an accuracy rate of "
+    },
+    {
+      "expression": "\"78.73\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%.\r\nThis LSA with BOW features was almost 10% "
+    },
+    {
+      "expression": "\"more accurate\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than SA, where the best results with binary weights were achieved with an approximation with 130 dimensions, with TF weights were achieved with 50 dimensions, and with TFIDF weights were achieved with 30 dimensions. SVM with BOW features was about 3% "
+    },
+    {
+      "expression": "\"more accurate\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than LSA, with binary weights leading to a "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy rate. Among the baselines, the best method was MNB with tfBOW features, with an accuracy of "
+    },
+    {
+      "expression": "\"91.47\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, MSM with w2v had an accuracy rate of "
+    },
+    {
+      "expression": "\"90.62\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, with the best results achieved with word subspace dimensions for the training classes ranging from 150 to 181, and for the query ranging from 3 to 217. Incorporating the frequency information in the subspace modeling resulted in a "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy, with TFMSM achieving "
+    },
+    {
+      "expression": "\"92.01\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, with dimensions of word subspaces"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1806_03125v1_446"
+  ],
+  "datasets": ["datasets/scigenCL/1806.03125v1-446.json"]
+}

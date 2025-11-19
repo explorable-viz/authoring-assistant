@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the error rates per C-test and strategy. Both "
+    },
+    {
+      "expression": "\"SEL\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"SIZE\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are overall able to significantly (p < 0.025) increase and decrease the test's difficulty over "
+    },
+    {
+      "expression": "\"DEF\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and with the exception of  "
+    },
+    {
+      "expression": "\"SEL,dec\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the effect is also statistically significant for all individual text and strategy pairs."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_06905v2_473"
+  ],
+  "datasets": ["datasets/scigenCL/1906.06905v2-473.json"]
+}

@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The main results of our experiments are shown in Table 1. We notice that M.1 ("
+    },
+    {
+      "expression": "\"Bag-of-words + Logistic Regression\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and M.2 ("
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") show a statistically significant difference between the two genders, with "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " predicted positive class probabilities for sentences with female nouns. On the contrary, M.3 ("
+    },
+    {
+      "expression": "\"BERT\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") shows that sentences with male nouns have a statistically significant "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " predicted positive class probability than sentences with female nouns."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_10256v2_79"
+  ],
+  "datasets": ["datasets/scigenCL/1906.10256v2-79.json"]
+}

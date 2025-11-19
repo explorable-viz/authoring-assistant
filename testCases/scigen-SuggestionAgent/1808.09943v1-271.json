@@ -1,0 +1,56 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "BPE and character systems differ most in the number of lexical choice "
+    },
+    {
+      "expression": "\"errors\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and in the extent to which they "
+    },
+    {
+      "expression": "\"drop\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " content. Regarding lexical choice, the two systems differ not only in the number of "
+    },
+    {
+      "expression": "\"errors\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but in the nature of those "
+    },
+    {
+      "expression": "\"errors\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". In particular, the BPE model had "
+    },
+    {
+      "expression": "\"more\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " trouble handling German compound nouns. We also found that both systems occasionally mistranslate proper names."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_09943v1_271"
+  ],
+  "datasets": ["datasets/scigenCL/1808.09943v1-271.json"]
+}

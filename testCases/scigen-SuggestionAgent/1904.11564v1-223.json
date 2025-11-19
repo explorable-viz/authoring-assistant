@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare our approach to AMR-to-text generation by evaluating our generator on a standard AMR test set for models trained on gold as well as gold plus silver data. We evaluate DMRS models both with and without predicate and edge attributes. The results in Table 4 show that our MRS generator performs "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the AMR generator by a large margin, even when the additional MRS attributes are excluded."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_11564v1_223"
+  ],
+  "datasets": ["datasets/scigenCL/1904.11564v1-223.json"]
+}

@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 clearly shows the character-level systems "
+    },
+    {
+      "expression": "\"outperforming\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BPE for all language pairs."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_09943v1_270"
+  ],
+  "datasets": ["datasets/scigenCL/1808.09943v1-270.json"]
+}

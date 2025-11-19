@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results in Table 4 show that our proposed similarity measures are predictive of the effectiveness of the pretraining data. VCcR is "
+    },
+    {
+      "expression": "\"the most\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " informative factor in predicting the effectiveness of pretrained word vectors given a target data set."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_00585v2_69"
+  ],
+  "datasets": ["datasets/scigenCL/1904.00585v2-69.json"]
+}

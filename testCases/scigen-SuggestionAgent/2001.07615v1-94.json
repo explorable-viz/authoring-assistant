@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "All results of these experiments are presented in Table 3 with the "
+    },
+    {
+      "expression": "\"absolute improvement\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the two main measures UAR and eA over the SVM-based approach."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2001_07615v1_94"
+  ],
+  "datasets": ["datasets/scigenCL/2001.07615v1-94.json"]
+}

@@ -1,0 +1,40 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We conduct an ablation study to validate our hypothesis of using the complete context versus using only one of the three types of contexts in a bilingual multi-speaker conversation: (i) current turn, (ii) previous turns in current language, and (iii) previous turns in the other language. The results for En-De are reported in Table 4. We see "
+    },
+    {
+      "expression": "\"decrease\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in BLEU for all types of contexts with "
+    },
+    {
+      "expression": "\"significant decrease\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when considering only current language from previous turns.The results show that the current turn has "
+    },
+    {
+      "expression": "\"the most influence\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on translating a sentence,"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1809_00344v1_216"
+  ],
+  "datasets": ["datasets/scigenCL/1809.00344v1-216.json"]
+}

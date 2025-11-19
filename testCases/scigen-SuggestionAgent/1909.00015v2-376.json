@@ -1,0 +1,32 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We report test set tokenized BLEU (Papineni et al., 2002) results in Table 1. We can see that replacing softmax by entmax does not hurt performance in any of the datasets; indeed, sparse attention Transformers tend to have "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU, but their sparsity leads to a "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " potential for analysis. In the next section, we make use of this potential by exploring the learned internal mechanics of the self-attention heads."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_00015v2_376"
+  ],
+  "datasets": ["datasets/scigenCL/1909.00015v2-376.json"]
+}

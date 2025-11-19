@@ -1,0 +1,24 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We label each reply into three categories: buy, sell and other. The distribution of reply types is "
+    },
+    {
+      "expression": "\"highly dependant\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the structure and rules of the forum as shown in Table III."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1812_00381v2_448"
+  ],
+  "datasets": ["datasets/scigenCL/1812.00381v2-448.json"]
+}

@@ -1,0 +1,160 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The table 1 shows the caption retrieval recall on COCO dataset. The first two lines show "
+    },
+    {
+      "expression": "\"the state-of-the-art\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results. The second pair of lines present the results of our model, with W2V and FastText embeddings used as "
+    },
+    {
+      "expression": "\"the baseline\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We can see that our model is close to "
+    },
+    {
+      "expression": "\"DSVE\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " method while the "
+    },
+    {
+      "expression": "\"W2V\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " method is "
+    },
+    {
+      "expression": "\"slightly worst\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as the representation power of the word embedding is reduced. The BIVEC English-French method is used in English and on both languages simultaneously. If trained only on English, i.e. only on the COCO dataset like the two previous methods, it shows performance similar to "
+    },
+    {
+      "expression": "\"the state-of-the-art\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This means training using BIVEC does not weaken the English representation. When trained on English and French together, the recall is increased by "
+    },
+    {
+      "expression": "\"3.35\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " %, going from "
+    },
+    {
+      "expression": "\"65.58\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " % to "
+    },
+    {
+      "expression": "\"67.78\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " %. We can also see an improvement for recall@5 and recall@10, with respectively "
+    },
+    {
+      "expression": "\"1.17\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " % and "
+    },
+    {
+      "expression": "\"0.85\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " % of increase. This implies that the similarity learning with French captions increases English recognition when using BIVEC. First of all, when training with MUSE for English only, we can see a sharp decrease in performance, with a recall going from "
+    },
+    {
+      "expression": "\"66.08\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " % to "
+    },
+    {
+      "expression": "\"63.10\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " %. By comparing the model trained with W2V, we obtain similar results. This could come from the fact that both MUSE and W2V embeddings do not have representation for out of vocabulary words like the FastText ones. Moreover, rare words have much more chance to be wrongly projected because of space transformation. When we train the model with additional languages, we can see a slight decrease in performance in English. The "
+    },
+    {
+      "expression": "\"maximum\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " decrease is "
+    },
+    {
+      "expression": "\"1.01\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " % for recall@10, but it is counterbalanced by an increase of "
+    },
+    {
+      "expression": "\"0.29\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " % for the recall@1. We evaluated our method on the COCO dataset for English-only results and shown that using BIVEC embeddings enables the use of another language in order to improve the performance. The obtained improvement is a "
+    },
+    {
+      "expression": "\"3.35\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " % increase in performance on the COCO dataset, and a "
+    },
+    {
+      "expression": "\"15.15\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " % increase on the Multi30K dataset."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1903_11299v3_305"
+  ],
+  "datasets": ["datasets/scigenCL/1903.11299v3-305.json"]
+}

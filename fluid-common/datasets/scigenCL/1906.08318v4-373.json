@@ -1,0 +1,50 @@
+[
+    {
+        "[width=13em]hyperparam_tuningdataset": "Default",
+        "semeval": "81.55",
+        "ddi_class": "62.55",
+        "ddi_detect": "80.29",
+        "i2b2_class": "55.15",
+        "i2b2_detect": "81.98"
+    },
+    {
+        "[width=13em]hyperparam_tuningdataset": "Default",
+        "semeval": "80.85 (1.31)",
+        "ddi_class": "81.62 (1.35)",
+        "ddi_detect": "87.76 (1.03)",
+        "i2b2_class": "67.28 (1.83)",
+        "i2b2_detect": "86.57 (0.58)"
+    },
+    {
+        "[width=13em]hyperparam_tuningdataset": "Manual Search",
+        "semeval": "-",
+        "ddi_class": " 65.53",
+        "ddi_detect": " 81.74",
+        "i2b2_class": " 59.75",
+        "i2b2_detect": " 83.17"
+    },
+    {
+        "[width=13em]hyperparam_tuningdataset": "Manual Search",
+        "semeval": "",
+        "ddi_class": "82.23 (0.32)•",
+        "ddi_detect": "88.40 (0.48)•",
+        "i2b2_class": "70.10 (0.85)",
+        "i2b2_detect": "86.45 (0.58)•"
+    },
+    {
+        "[width=13em]hyperparam_tuningdataset": "Random Search",
+        "semeval": " 82.2",
+        "ddi_class": "62.29",
+        "ddi_detect": "79.04",
+        "i2b2_class": "55.0",
+        "i2b2_detect": "80.77"
+    },
+    {
+        "[width=13em]hyperparam_tuningdataset": "Random Search",
+        "semeval": "81.10 (1.26)•",
+        "ddi_class": "75.43 (1.48)",
+        "ddi_detect": "83.54 (0.60)",
+        "i2b2_class": "60.66 (1.43)",
+        "i2b2_detect": "82.73 (0.49)"
+    }
+]

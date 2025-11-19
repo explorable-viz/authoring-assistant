@@ -1,0 +1,22 @@
+[
+    {
+        "tool": "slate",
+        "time_(minutes)_ubuntu": "10",
+        "time_(minutes)_macos": "16"
+    },
+    {
+        "tool": "YEDDA",
+        "time_(minutes)_ubuntu": "14",
+        "time_(minutes)_macos": "14"
+    },
+    {
+        "tool": "GATE",
+        "time_(minutes)_ubuntu": "21",
+        "time_(minutes)_macos": "22"
+    },
+    {
+        "tool": "brat",
+        "time_(minutes)_ubuntu": "-",
+        "time_(minutes)_macos": "-"
+    }
+]

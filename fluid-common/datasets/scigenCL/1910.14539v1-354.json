@@ -1,0 +1,52 @@
+[
+    {
+        "model": "Baseline (3 players, sorted)",
+        "valid": " 22.7",
+        "test": "20.4"
+    },
+    {
+        "model": "No player",
+        "valid": "20.1",
+        "test": "18.8"
+    },
+    {
+        "model": "All players, sorted",
+        "valid": " 22.7",
+        "test": "20.9"
+    },
+    {
+        "model": "All players, shuffled",
+        "valid": "22.0",
+        "test": "20.0"
+    },
+    {
+        "model": "(1) No next game",
+        "valid": "22.0",
+        "test": "19.9"
+    },
+    {
+        "model": "(2) No week day",
+        "valid": "22.2",
+        "test": "20.5"
+    },
+    {
+        "model": "(3) No player position",
+        "valid": "22.6",
+        "test": "20.5"
+    },
+    {
+        "model": "(4) No team-level sums",
+        "valid": "22.5",
+        "test": "20.5"
+    },
+    {
+        "model": "(5) Remove most tags",
+        "valid": "22.6",
+        "test": "20.8"
+    },
+    {
+        "model": "(1) to (5)",
+        "valid": "21.3",
+        "test": "19.7"
+    }
+]

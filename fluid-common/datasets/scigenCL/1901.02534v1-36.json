@@ -1,0 +1,27 @@
+[
+    {
+        "system": "FEVER Title Five Oracle",
+        "development": ".5289",
+        "test": "—"
+    },
+    {
+        "system": "FEVER Title Five",
+        "development": ".5553",
+        "test": "—"
+    },
+    {
+        "system": "FEVER Title One",
+        "development": ".5617",
+        "test": ".5539"
+    },
+    {
+        "system": "FEVER Title One (Narrow Evidence)",
+        "development": ".5550",
+        "test": "—"
+    },
+    {
+        "system": "FEVER Title One (Entire Articles)",
+        "development": ".5844",
+        "test": ".5736"
+    }
+]

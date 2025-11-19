@@ -1,0 +1,38 @@
+[
+    {
+        "": "",
+        "setup:_full_dbless": "GL",
+        "setup:_full_wbless": "GL",
+        "setup:_full_bibless": "GL",
+        "setup:_disjoint_dbless": "GL",
+        "setup:_disjoint_wbless": "GL",
+        "setup:_disjoint_bibless": "GL"
+    },
+    {
+        "": "lear [Vulic:2018naaclps]",
+        "setup:_full_dbless": ".955",
+        "setup:_full_wbless": ".910",
+        "setup:_full_bibless": ".875",
+        "setup:_disjoint_dbless": ".531",
+        "setup:_disjoint_wbless": ".529",
+        "setup:_disjoint_bibless": ".389"
+    },
+    {
+        "": "postle dffn",
+        "setup:_full_dbless": ".955",
+        "setup:_full_wbless": ".910",
+        "setup:_full_bibless": ".875",
+        "setup:_disjoint_dbless": ".825",
+        "setup:_disjoint_wbless": ".746",
+        "setup:_disjoint_bibless": ".677"
+    },
+    {
+        "": "postle adv",
+        "setup:_full_dbless": ".955",
+        "setup:_full_wbless": ".910",
+        "setup:_full_bibless": ".875",
+        "setup:_disjoint_dbless": ".888",
+        "setup:_disjoint_wbless": ".766",
+        "setup:_disjoint_bibless": ".690"
+    }
+]

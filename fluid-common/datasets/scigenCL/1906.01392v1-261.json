@@ -1,0 +1,44 @@
+[
+    {
+        "topic": "CC",
+        "bilstm": "68.1±0.6",
+        "deat": "70.9±0.7",
+        "bimpm": "71.5±0.6",
+        "rcn_(our)": " 73.0±0.5∗"
+    },
+    {
+        "topic": "HC",
+        "bilstm": "52.5±0.6",
+        "deat": "56.9±0.4",
+        "bimpm": "56.4±0.7",
+        "rcn_(our)": " 58.6±0.4∗∗"
+    },
+    {
+        "topic": "FM",
+        "bilstm": "58.3±0.6",
+        "deat": "60.6±0,7",
+        "bimpm": "59.8±0.7",
+        "rcn_(our)": " 64.4±0.5∗∗"
+    },
+    {
+        "topic": "AT",
+        "bilstm": "67.5±0.4",
+        "deat": "69.5±0.5",
+        "bimpm": "70.3±0.6",
+        "rcn_(our)": " 72.2±0.4∗"
+    },
+    {
+        "topic": "LA",
+        "bilstm": "61.3±0.3",
+        "deat": "63.2±0.6",
+        "bimpm": "62.4±0.4",
+        "rcn_(our)": " 64.5±0.4∗∗"
+    },
+    {
+        "topic": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+        "bilstm": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+        "deat": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+        "bimpm": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+        "rcn_(our)": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05"
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "_test_domain": "WSJ",
+        "_training_data___wsj": "65.78",
+        "_training_data___wsj_+_giga": "83.42"
+    },
+    {
+        "_test_domain": "Brown",
+        "_training_data___wsj": "45.00",
+        "_training_data___wsj_+_giga": "76.99"
+    },
+    {
+        "_test_domain": "Wikipedia",
+        "_training_data___wsj": "35.90",
+        "_training_data___wsj_+_giga": "62.26"
+    }
+]

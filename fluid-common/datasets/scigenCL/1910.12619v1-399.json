@@ -1,0 +1,37 @@
+[
+    {
+        "top-synset": "of domain",
+        "size": "#syns.",
+        "max.": "depth",
+        "#basic": "level",
+        "_κ": ""
+    },
+    {
+        "top-synset": "Hand tool",
+        "size": "157",
+        "max.": "6",
+        "#basic": "30",
+        "_κ": "0.73"
+    },
+    {
+        "top-synset": "Edible fruit",
+        "size": "197",
+        "max.": "5",
+        "#basic": "77",
+        "_κ": "0.78"
+    },
+    {
+        "top-synset": "Musical Instr.",
+        "size": "164",
+        "max.": "7",
+        "#basic": "54",
+        "_κ": "0.64"
+    },
+    {
+        "top-synset": "All",
+        "size": "518",
+        "max.": "7",
+        "#basic": "161",
+        "_κ": "0.73"
+    }
+]

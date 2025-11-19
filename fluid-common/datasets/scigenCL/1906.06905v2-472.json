@@ -1,0 +1,14 @@
+[
+    {
+        "strategy": "SEL",
+        "brown": ".11",
+        "reuters": ".12",
+        "gutenberg": ".10"
+    },
+    {
+        "strategy": "SIZE",
+        "brown": ".13",
+        "reuters": ".15",
+        "gutenberg": ".12"
+    }
+]

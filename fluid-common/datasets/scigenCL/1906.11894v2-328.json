@@ -1,0 +1,17 @@
+[
+    {
+        "method_from_gt": "wavelength ",
+        "line_iu_%": "66.44",
+        "pixel_iu_%": "81.52"
+    },
+    {
+        "method_from_gt": "wavelength (tight polygons) ",
+        "line_iu_%": "99.25",
+        "pixel_iu_%": "98.95"
+    },
+    {
+        "method_from_gt": "proposed method",
+        "line_iu_%": " 100.0",
+        "pixel_iu_%": "97.22"
+    }
+]

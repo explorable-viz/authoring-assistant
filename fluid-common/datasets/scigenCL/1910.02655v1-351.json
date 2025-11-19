@@ -1,0 +1,67 @@
+[
+    {
+        "_model": "UNC ",
+        "_fever_score(%)": "66.14",
+        "_label_accuracy(%)": "69.60"
+    },
+    {
+        "_model": "UCL ",
+        "_fever_score(%)": "65.41",
+        "_label_accuracy(%)": "69.66"
+    },
+    {
+        "_model": "UKP-Athene ",
+        "_fever_score(%)": "64.74",
+        "_label_accuracy(%)": "-"
+    },
+    {
+        "_model": "BERT & UKP-Athene",
+        "_fever_score(%)": "69.79",
+        "_label_accuracy(%)": "71.70"
+    },
+    {
+        "_model": "BERT Large & UKP-Athene",
+        "_fever_score(%)": "70.64",
+        "_label_accuracy(%)": "72.72"
+    },
+    {
+        "_model": "BERT & BERT (Pointwise)",
+        "_fever_score(%)": "71.38",
+        "_label_accuracy(%)": "73.51"
+    },
+    {
+        "_model": "BERT & BERT (Pointwise + HNM)",
+        "_fever_score(%)": "71.33",
+        "_label_accuracy(%)": "73.54"
+    },
+    {
+        "_model": "BERT (Large) & BERT (Pointwise)",
+        "_fever_score(%)": " 72.42",
+        "_label_accuracy(%)": "74.58"
+    },
+    {
+        "_model": "BERT (Large) & BERT (Pointwise + HNM)",
+        "_fever_score(%)": " 72.42",
+        "_label_accuracy(%)": " 74.59"
+    },
+    {
+        "_model": "BERT & BERT (Pairwise Ranknet)",
+        "_fever_score(%)": "71.02",
+        "_label_accuracy(%)": "73.22"
+    },
+    {
+        "_model": "BERT & BERT (Pairwise Ranknet + HNM)",
+        "_fever_score(%)": "70.99",
+        "_label_accuracy(%)": "73.02"
+    },
+    {
+        "_model": "BERT & BERT (Pairwise Hinge)",
+        "_fever_score(%)": "71.60",
+        "_label_accuracy(%)": "72.74"
+    },
+    {
+        "_model": "BERT & BERT (Pairwise Hinge + HNM)",
+        "_fever_score(%)": "70.70",
+        "_label_accuracy(%)": "72.76"
+    }
+]

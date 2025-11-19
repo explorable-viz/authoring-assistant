@@ -1,0 +1,74 @@
+[
+    {
+        "attribute": "Directness",
+        "model": "Majority",
+        "macro-f1_en": "0.50",
+        "macro-f1_fr": "0.11",
+        "macro-f1_ar": "0.50",
+        "macro-f1_avg": "0.47",
+        "micro-f1_en": "0.79",
+        "micro-f1_fr": "0.41",
+        "micro-f1_ar": "0.54",
+        "micro-f1_avg": "0.58"
+    },
+    {
+        "attribute": "Directness",
+        "model": "LR",
+        "macro-f1_en": "0.52",
+        "macro-f1_fr": "0.50",
+        "macro-f1_ar": "0.53",
+        "macro-f1_avg": "0.52",
+        "micro-f1_en": "0.79",
+        "micro-f1_fr": "0.50",
+        "micro-f1_ar": "0.56",
+        "micro-f1_avg": "0.62"
+    },
+    {
+        "attribute": "Directness",
+        "model": "STSL",
+        "macro-f1_en": " 0.94",
+        "macro-f1_fr": " 0.80",
+        "macro-f1_ar": " 0.84",
+        "macro-f1_avg": " 0.86",
+        "micro-f1_en": " 0.89",
+        "micro-f1_fr": " 0.69",
+        "micro-f1_ar": " 0.72",
+        "micro-f1_avg": " 0.76"
+    },
+    {
+        "attribute": "Directness",
+        "model": "MTSL",
+        "macro-f1_en": " 0.94",
+        "macro-f1_fr": "0.65",
+        "macro-f1_ar": "0.76",
+        "macro-f1_avg": "0.78",
+        "micro-f1_en": " 0.89",
+        "micro-f1_fr": "0.58",
+        "micro-f1_ar": "0.65",
+        "micro-f1_avg": "0.70"
+    },
+    {
+        "attribute": "Directness",
+        "model": "STML",
+        "macro-f1_en": " 0.94",
+        "macro-f1_fr": "0.79",
+        "macro-f1_ar": "0.83",
+        "macro-f1_avg": "0.85",
+        "micro-f1_en": "0.88",
+        "micro-f1_fr": "0.66",
+        "micro-f1_ar": " 0.72",
+        "micro-f1_avg": "0.75"
+    },
+    {
+        "attribute": "Directness",
+        "model": "MTML",
+        "macro-f1_en": " 0.94",
+        "macro-f1_fr": "0.78",
+        "macro-f1_ar": "0.74",
+        "macro-f1_avg": "0.82",
+        "micro-f1_en": "0.88",
+        "micro-f1_fr": "0.66",
+        "micro-f1_ar": "0.65",
+        "micro-f1_avg": "0.73"
+    }
+]

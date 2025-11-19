@@ -1,0 +1,22 @@
+[
+    {
+        "_stop_words_removal": "OS no removal",
+        "_simlex999": "0.41",
+        "_analogies": "0.34"
+    },
+    {
+        "_stop_words_removal": "OS with removal",
+        "_simlex999": "0.42",
+        "_analogies": " 0.43"
+    },
+    {
+        "_stop_words_removal": "GW no removal",
+        "_simlex999": "0.44",
+        "_analogies": "0.64"
+    },
+    {
+        "_stop_words_removal": "GW with removal",
+        "_simlex999": "0.44",
+        "_analogies": " 0.68"
+    }
+]

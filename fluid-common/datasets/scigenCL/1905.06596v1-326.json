@@ -1,0 +1,56 @@
+[
+    {
+        "model": "vaswani2017transformer",
+        "wmt’14_en-de": "28.4",
+        "wmt’14_en-fr": "41.0",
+        "iwslt’14_de-en": "34.4"
+    },
+    {
+        "model": "ahmed2018weighted",
+        "wmt’14_en-de": "28.9",
+        "wmt’14_en-fr": "41.4",
+        "iwslt’14_de-en": "-"
+    },
+    {
+        "model": "chen2018combining",
+        "wmt’14_en-de": "28.5",
+        "wmt’14_en-fr": "41.0",
+        "iwslt’14_de-en": "-"
+    },
+    {
+        "model": "shaw2018relative",
+        "wmt’14_en-de": "29.2",
+        "wmt’14_en-fr": "41.5",
+        "iwslt’14_de-en": "-"
+    },
+    {
+        "model": "ott2018scaling",
+        "wmt’14_en-de": "29.3",
+        "wmt’14_en-fr": "43.2",
+        "iwslt’14_de-en": "-"
+    },
+    {
+        "model": "wu2018dynconv",
+        "wmt’14_en-de": " 29.7",
+        "wmt’14_en-fr": "43.2",
+        "iwslt’14_de-en": "35.2"
+    },
+    {
+        "model": "he2018layerwise",
+        "wmt’14_en-de": "29.0",
+        "wmt’14_en-fr": "-",
+        "iwslt’14_de-en": "35.1"
+    },
+    {
+        "model": "Joint Self-attention",
+        "wmt’14_en-de": " 29.7",
+        "wmt’14_en-fr": "43.2",
+        "iwslt’14_de-en": "35.3"
+    },
+    {
+        "model": "Local Joint Self-attention",
+        "wmt’14_en-de": " 29.7",
+        "wmt’14_en-fr": " 43.3",
+        "iwslt’14_de-en": " 35.7"
+    }
+]

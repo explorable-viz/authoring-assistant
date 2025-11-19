@@ -1,0 +1,38 @@
+[
+    {
+        "metric": "E2E",
+        "human": "E2E",
+        "word": "E2E",
+        "char.": "E2E"
+    },
+    {
+        "metric": "BLEU",
+        "human": "55.5±0.7",
+        "word": "68.2±1.4",
+        "char.": "65.8±2.6"
+    },
+    {
+        "metric": "ROUGE-L",
+        "human": "62.0±0.4",
+        "word": "72.1±0.7",
+        "char.": "69.8±2.6"
+    },
+    {
+        "metric": "WebNLG",
+        "human": "WebNLG",
+        "word": "WebNLG",
+        "char.": "WebNLG"
+    },
+    {
+        "metric": "BLEU",
+        "human": "48.3±0.7",
+        "word": "40.6±4.2",
+        "char.": "43.7±2.4"
+    },
+    {
+        "metric": "ROUGE-L",
+        "human": "62.4±0.3",
+        "word": "58.5±3.0",
+        "char.": "63.1±0.8"
+    }
+]

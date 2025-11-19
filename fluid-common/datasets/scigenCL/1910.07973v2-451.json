@@ -1,0 +1,134 @@
+[
+    {
+        "_dataset_/_model___wikipassageqa": "BM25",
+        "_metrics___map": "53.7",
+        "_metrics___p@5": "19.5",
+        "_metrics___p@10": "11.5"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "Memory-CNN-LSTM Cohen2018",
+        "_metrics___map": "56.1",
+        "_metrics___p@5": "20.8",
+        "_metrics___p@10": "12.3"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "Pre-trained BERT Embedding",
+        "_metrics___map": "55.0",
+        "_metrics___p@5": "21.6",
+        "_metrics___p@10": "13.7"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "SNLI Fine-tuned BERT Embedding",
+        "_metrics___map": "52.5",
+        "_metrics___p@5": "20.6",
+        "_metrics___p@10": "12.8"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "In-domain Fine-tuned BERT",
+        "_metrics___map": " 74.9",
+        "_metrics___p@5": " 27.2",
+        "_metrics___p@10": " 15.2"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": " InsuranceQA",
+        "_metrics___map": " P@1",
+        "_metrics___p@5": " P@5",
+        "_metrics___p@10": " P@10"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "BM25",
+        "_metrics___map": "60.2",
+        "_metrics___p@5": "19.5",
+        "_metrics___p@10": "10.9"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "SUBMULT+NN Wang2016g",
+        "_metrics___map": "75.6",
+        "_metrics___p@5": "-",
+        "_metrics___p@10": "-"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "DSSM Huang2013a",
+        "_metrics___map": "30.3",
+        "_metrics___p@5": "-",
+        "_metrics___p@10": "-"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "Pre-trained BERT Embedding",
+        "_metrics___map": "44.9",
+        "_metrics___p@5": "17.6",
+        "_metrics___p@10": "10.6"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "SNLI Fine-tuned BERT Embedding",
+        "_metrics___map": "48.0",
+        "_metrics___p@5": "18.5",
+        "_metrics___p@10": "11.0"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "In-domain Fine-tuned BERT",
+        "_metrics___map": " 78.3",
+        "_metrics___p@5": " 25.4",
+        "_metrics___p@10": " 13.7"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": " Quasar-t",
+        "_metrics___map": " R@1",
+        "_metrics___p@5": " R@5",
+        "_metrics___p@10": " R@10"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "BM25",
+        "_metrics___map": "38.7",
+        "_metrics___p@5": "59.2",
+        "_metrics___p@10": "66.0"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "Pre-trained BERT Embedding",
+        "_metrics___map": "48.6",
+        "_metrics___p@5": "66.6",
+        "_metrics___p@10": "71.7"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "SNLI Fine-tuned BERT Embedding",
+        "_metrics___map": "49.3",
+        "_metrics___p@5": "66.1",
+        "_metrics___p@10": "71.0"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "In-domain Fine-tuned BERT",
+        "_metrics___map": " 59.5",
+        "_metrics___p@5": " 70.9",
+        "_metrics___p@10": " 74.6"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": " SearchQA",
+        "_metrics___map": " R@1",
+        "_metrics___p@5": " R@5",
+        "_metrics___p@10": " R@10"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "BM25",
+        "_metrics___map": "50.5",
+        "_metrics___p@5": "83.3",
+        "_metrics___p@10": "90.9"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "Pre-trained BERT Embedding",
+        "_metrics___map": "66.2",
+        "_metrics___p@5": "89.7",
+        "_metrics___p@10": "95.0"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "SNLI Fine-tuned BERT Embedding",
+        "_metrics___map": "66.8",
+        "_metrics___p@5": "90.0",
+        "_metrics___p@10": "95.1"
+    },
+    {
+        "_dataset_/_model___wikipassageqa": "In-domain Fine-tuned BERT",
+        "_metrics___map": " 76.3",
+        "_metrics___p@5": " 93.0",
+        "_metrics___p@10": " 96.7"
+    }
+]

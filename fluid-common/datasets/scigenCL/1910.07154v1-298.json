@@ -1,0 +1,17 @@
+[
+    {
+        "_type_of_set": "Training Set",
+        "_label_accuracy_(__ϕ_=_0.76)": "81.52",
+        "_label_accuracy_(__ϕ_=_0.67)": "88.05"
+    },
+    {
+        "_type_of_set": "Development Set",
+        "_label_accuracy_(__ϕ_=_0.76)": "80.20",
+        "_label_accuracy_(__ϕ_=_0.67)": "86.7"
+    },
+    {
+        "_type_of_set": "Test Set",
+        "_label_accuracy_(__ϕ_=_0.76)": "80.25",
+        "_label_accuracy_(__ϕ_=_0.67)": "87.04"
+    }
+]

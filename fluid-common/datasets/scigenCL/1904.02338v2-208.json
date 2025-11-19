@@ -1,0 +1,74 @@
+[
+    {
+        "": "\\En → \\Es",
+        "sestorain_et_al._(_2018_)†_pbsmt": "61.26",
+        "sestorain_et_al._(_2018_)†_nmt-0": "51.93",
+        "sestorain_et_al._(_2018_)†_dual-0": "—",
+        "our_baselines_basic": "56.58",
+        "our_baselines_pivot": "56.58",
+        "agree": "56.36"
+    },
+    {
+        "": "\\En → \\Fr",
+        "sestorain_et_al._(_2018_)†_pbsmt": "50.09",
+        "sestorain_et_al._(_2018_)†_nmt-0": "40.56",
+        "sestorain_et_al._(_2018_)†_dual-0": "—",
+        "our_baselines_basic": "44.27",
+        "our_baselines_pivot": "44.27",
+        "agree": "44.80"
+    },
+    {
+        "": "\\Es → \\En",
+        "sestorain_et_al._(_2018_)†_pbsmt": "59.89",
+        "sestorain_et_al._(_2018_)†_nmt-0": "51.58",
+        "sestorain_et_al._(_2018_)†_dual-0": "—",
+        "our_baselines_basic": "55.70",
+        "our_baselines_pivot": "55.70",
+        "agree": "55.24"
+    },
+    {
+        "": "\\Fr → \\En",
+        "sestorain_et_al._(_2018_)†_pbsmt": "52.22",
+        "sestorain_et_al._(_2018_)†_nmt-0": "43.33",
+        "sestorain_et_al._(_2018_)†_dual-0": "—",
+        "our_baselines_basic": "46.46",
+        "our_baselines_pivot": "46.46",
+        "agree": "46.17"
+    },
+    {
+        "": "Supervised (avg.)",
+        "sestorain_et_al._(_2018_)†_pbsmt": "55.87",
+        "sestorain_et_al._(_2018_)†_nmt-0": "46.85",
+        "sestorain_et_al._(_2018_)†_dual-0": "—",
+        "our_baselines_basic": "50.75",
+        "our_baselines_pivot": "50.75",
+        "agree": "50.64"
+    },
+    {
+        "": "\\Es → \\Fr",
+        "sestorain_et_al._(_2018_)†_pbsmt": "52.44",
+        "sestorain_et_al._(_2018_)†_nmt-0": "20.29",
+        "sestorain_et_al._(_2018_)†_dual-0": "36.68",
+        "our_baselines_basic": "34.75",
+        "our_baselines_pivot": " 38.10",
+        "agree": "37.54"
+    },
+    {
+        "": "\\Fr → \\Es",
+        "sestorain_et_al._(_2018_)†_pbsmt": "49.79",
+        "sestorain_et_al._(_2018_)†_nmt-0": "19.01",
+        "sestorain_et_al._(_2018_)†_dual-0": "39.19",
+        "our_baselines_basic": "37.67",
+        "our_baselines_pivot": " 40.84",
+        "agree": "40.02"
+    },
+    {
+        "": "Zero-shot (avg.)",
+        "sestorain_et_al._(_2018_)†_pbsmt": "51.11",
+        "sestorain_et_al._(_2018_)†_nmt-0": "19.69",
+        "sestorain_et_al._(_2018_)†_dual-0": "37.93",
+        "our_baselines_basic": "36.21",
+        "our_baselines_pivot": " 39.47",
+        "agree": "38.78"
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "feature": "depth_in_hierarchy",
+        "all": "1",
+        "tool": "1",
+        "fruit": "1",
+        "music": "3"
+    },
+    {
+        "feature": "G.Ngrams_2008_max",
+        "all": "2",
+        "tool": "2",
+        "fruit": "5",
+        "music": "2"
+    },
+    {
+        "feature": "gloss_length",
+        "all": "3",
+        "tool": "4",
+        "fruit": "7",
+        "music": "1"
+    },
+    {
+        "feature": "polysemy_max",
+        "all": "4",
+        "tool": "3",
+        "fruit": "4",
+        "music": "6"
+    },
+    {
+        "feature": "word_length_min",
+        "all": "5",
+        "tool": "5",
+        "fruit": "3",
+        "music": "4"
+    },
+    {
+        "feature": "nr_of_partOfs",
+        "all": "6",
+        "tool": "8",
+        "fruit": "2",
+        "music": "8"
+    },
+    {
+        "feature": "nr_of_hyponyms",
+        "all": "7",
+        "tool": "6",
+        "fruit": "6",
+        "music": "5"
+    },
+    {
+        "feature": "nr_of_synonyms",
+        "all": "8",
+        "tool": "7",
+        "fruit": "8",
+        "music": "7"
+    },
+    {
+        "feature": "nr_of_direct_hypernyms",
+        "all": "9",
+        "tool": "9",
+        "fruit": "9",
+        "music": "9"
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "cl": "en",
+        "parent_language_(pl)_en": "-",
+        "parent_language_(pl)_de": "57.1",
+        "parent_language_(pl)_fr": " 60.4",
+        "parent_language_(pl)_it": "59.9",
+        "parent_language_(pl)_es": "59.4",
+        "parent_language_(pl)_ja": "25.1",
+        "parent_language_(pl)_cs": "52.8",
+        "parent_language_(pl)_ru": "49.0",
+        "parent_language_(pl)_ar": "30.7",
+        "parent_language_(pl)_sw": "28.4",
+        "cipher-avg": "56.4",
+        "pl=cl": "73.9"
+    },
+    {
+        "cl": "fr",
+        "parent_language_(pl)_en": "58.1",
+        "parent_language_(pl)_de": "56.0",
+        "parent_language_(pl)_fr": "-",
+        "parent_language_(pl)_it": "68.6",
+        "parent_language_(pl)_es": " 71.9",
+        "parent_language_(pl)_ja": "23.6",
+        "parent_language_(pl)_cs": "48.3",
+        "parent_language_(pl)_ru": "47.8",
+        "parent_language_(pl)_ar": "35.0",
+        "parent_language_(pl)_sw": "26.7",
+        "cipher-avg": "58.6",
+        "pl=cl": "76.7"
+    },
+    {
+        "cl": "fa",
+        "parent_language_(pl)_en": "13.8",
+        "parent_language_(pl)_de": "32.3",
+        "parent_language_(pl)_fr": "29.7",
+        "parent_language_(pl)_it": "22.7",
+        "parent_language_(pl)_es": "33.3",
+        "parent_language_(pl)_ja": "19.7",
+        "parent_language_(pl)_cs": "33.3",
+        "parent_language_(pl)_ru": " 43.5",
+        "parent_language_(pl)_ar": "37.0",
+        "parent_language_(pl)_sw": "38.2",
+        "cipher-avg": "37.4",
+        "pl=cl": "73.3"
+    },
+    {
+        "cl": "sw",
+        "parent_language_(pl)_en": "24.9",
+        "parent_language_(pl)_de": "14.3",
+        "parent_language_(pl)_fr": "37.3",
+        "parent_language_(pl)_it": "21.2",
+        "parent_language_(pl)_es": "35.9",
+        "parent_language_(pl)_ja": "21.3",
+        "parent_language_(pl)_cs": "25.8",
+        "parent_language_(pl)_ru": "27.9",
+        "parent_language_(pl)_ar": " 38.96",
+        "parent_language_(pl)_sw": "-",
+        "cipher-avg": "37.8",
+        "pl=cl": "69.4"
+    }
+]

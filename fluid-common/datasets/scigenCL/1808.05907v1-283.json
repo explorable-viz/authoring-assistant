@@ -1,0 +1,26 @@
+[
+    {
+        "no._of_sentences": "0.01MB : 73",
+        "node2vec": "24.93",
+        "syntree2vec": "20.11",
+        "word2vec": "22"
+    },
+    {
+        "no._of_sentences": "0.03MB : 220",
+        "node2vec": "28.44",
+        "syntree2vec": "28.24",
+        "word2vec": "28.44"
+    },
+    {
+        "no._of_sentences": "0.07MB : 508",
+        "node2vec": "43.59",
+        "syntree2vec": "43.41",
+        "word2vec": "43.41"
+    },
+    {
+        "no._of_sentences": "0.15MB : 1070",
+        "node2vec": "71.20",
+        "syntree2vec": "71.01",
+        "word2vec": "71.01"
+    }
+]

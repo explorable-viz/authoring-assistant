@@ -1,0 +1,44 @@
+[
+    {
+        "model": "Model",
+        "self-bleu_(↓)": "Self-BLEU (↓)",
+        "%_unique___n-grams_(↑)_self": "n=4",
+        "%_unique___n-grams_(↑)_wt103": "n=4",
+        "%_unique___n-grams_(↑)_tbc": "n=4"
+    },
+    {
+        "model": "BERT (large)",
+        "self-bleu_(↓)": "9.43",
+        "%_unique___n-grams_(↑)_self": "98.01",
+        "%_unique___n-grams_(↑)_wt103": "98.43",
+        "%_unique___n-grams_(↑)_tbc": "98.59"
+    },
+    {
+        "model": "BERT (base)",
+        "self-bleu_(↓)": "10.06",
+        "%_unique___n-grams_(↑)_self": "98.14",
+        "%_unique___n-grams_(↑)_wt103": "98.55",
+        "%_unique___n-grams_(↑)_tbc": "98.56"
+    },
+    {
+        "model": "GPT",
+        "self-bleu_(↓)": "40.02",
+        "%_unique___n-grams_(↑)_self": "87.28",
+        "%_unique___n-grams_(↑)_wt103": "91.12",
+        "%_unique___n-grams_(↑)_tbc": "88.42"
+    },
+    {
+        "model": "WT103",
+        "self-bleu_(↓)": "9.80",
+        "%_unique___n-grams_(↑)_self": "99.05",
+        "%_unique___n-grams_(↑)_wt103": "97.44",
+        "%_unique___n-grams_(↑)_tbc": "99.23"
+    },
+    {
+        "model": "TBC",
+        "self-bleu_(↓)": "12.51",
+        "%_unique___n-grams_(↑)_self": "98.73",
+        "%_unique___n-grams_(↑)_wt103": "98.81",
+        "%_unique___n-grams_(↑)_tbc": "96.31"
+    }
+]

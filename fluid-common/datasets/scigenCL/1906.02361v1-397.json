@@ -1,0 +1,12 @@
+[
+    {
+        "_method": "BERT",
+        "_swag": "84.2",
+        "_story_cloze": "89.8"
+    },
+    {
+        "_method": "+ expl transfer",
+        "_swag": "83.6",
+        "_story_cloze": "89.5"
+    }
+]

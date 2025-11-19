@@ -1,0 +1,20 @@
+[
+    {
+        "_length_of_sentence": "4-7",
+        "_attention": "1.46",
+        "_gaussian_mask_only": "1.13",
+        "_gaussian_mask_+_rl_model": "1.33"
+    },
+    {
+        "_length_of_sentence": "8-11",
+        "_attention": "2.32",
+        "_gaussian_mask_only": "1.96",
+        "_gaussian_mask_+_rl_model": "2.12"
+    },
+    {
+        "_length_of_sentence": "12-15",
+        "_attention": "2.86",
+        "_gaussian_mask_only": "2.43",
+        "_gaussian_mask_+_rl_model": "2.61"
+    }
+]

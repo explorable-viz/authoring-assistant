@@ -1,0 +1,14 @@
+[
+    {
+        "_type_of_discrepancy": "wrong morphological form",
+        "_frequency": "66%"
+    },
+    {
+        "_type_of_discrepancy": "wrong verb (VP-ellipsis)",
+        "_frequency": "20%"
+    },
+    {
+        "_type_of_discrepancy": "other error",
+        "_frequency": "14%"
+    }
+]

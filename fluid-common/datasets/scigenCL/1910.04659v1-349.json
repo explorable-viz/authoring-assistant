@@ -1,0 +1,16 @@
+[
+    {
+        "": "Baseline",
+        "french_f1": "61.88",
+        "french_em": "40.67",
+        "japanese_f1": "52.19",
+        "japanese_em": "37.00"
+    },
+    {
+        "": "Multilingual BERT",
+        "french_f1": " 76.65",
+        "french_em": " 61.77",
+        "japanese_f1": " 61.83",
+        "japanese_em": " 59.94"
+    }
+]

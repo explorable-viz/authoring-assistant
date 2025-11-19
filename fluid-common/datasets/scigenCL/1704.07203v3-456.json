@@ -1,0 +1,242 @@
+[
+    {
+        "target_→_source/sys._↓": "MT",
+        "mt_cnn:rand": "67.3",
+        "oc_cnn:rand": "7.4",
+        "pe_cnn:rand": "22.1",
+        "vg_cnn:rand": "15.7",
+        "wd_cnn:rand": "9.4",
+        "wtp_cnn:rand": "10.9",
+        "average": "13.1"
+    },
+    {
+        "target_→_source/sys._↓": "OC",
+        "mt_cnn:rand": "39.7",
+        "oc_cnn:rand": "25.6",
+        "pe_cnn:rand": "42.8",
+        "vg_cnn:rand": "37.3",
+        "wd_cnn:rand": "13.2",
+        "wtp_cnn:rand": "28.9",
+        "average": "32.4"
+    },
+    {
+        "target_→_source/sys._↓": "PE",
+        "mt_cnn:rand": "18.0",
+        "oc_cnn:rand": "9.5",
+        "pe_cnn:rand": "61.1",
+        "vg_cnn:rand": "18.7",
+        "wd_cnn:rand": "15.9",
+        "wtp_cnn:rand": "16.0",
+        "average": "15.6"
+    },
+    {
+        "target_→_source/sys._↓": "VG",
+        "mt_cnn:rand": "51.5",
+        "oc_cnn:rand": "19.2",
+        "pe_cnn:rand": "32.0",
+        "vg_cnn:rand": "45.0",
+        "wd_cnn:rand": "10.5",
+        "wtp_cnn:rand": "22.0",
+        "average": "27.0"
+    },
+    {
+        "target_→_source/sys._↓": "WD",
+        "mt_cnn:rand": "3.5",
+        "oc_cnn:rand": "1.3",
+        "pe_cnn:rand": "0.0",
+        "vg_cnn:rand": "0.0",
+        "wd_cnn:rand": "25.8",
+        "wtp_cnn:rand": "0.0",
+        "average": "1.0"
+    },
+    {
+        "target_→_source/sys._↓": "WTP",
+        "mt_cnn:rand": "26.6",
+        "oc_cnn:rand": "15.4",
+        "pe_cnn:rand": "18.5",
+        "vg_cnn:rand": "19.4",
+        "wd_cnn:rand": "11.6",
+        "wtp_cnn:rand": "28.9",
+        "average": "18.3"
+    },
+    {
+        "target_→_source/sys._↓": "Average",
+        "mt_cnn:rand": "27.9",
+        "oc_cnn:rand": "10.6",
+        "pe_cnn:rand": "23.1",
+        "vg_cnn:rand": "18.2",
+        "wd_cnn:rand": "12.1",
+        "wtp_cnn:rand": "15.6",
+        "average": "17.9"
+    },
+    {
+        "target_→_source/sys._↓": "",
+        "mt_cnn:rand": "LR All features",
+        "oc_cnn:rand": "LR All features",
+        "pe_cnn:rand": "LR All features",
+        "vg_cnn:rand": "LR All features",
+        "wd_cnn:rand": "LR All features",
+        "wtp_cnn:rand": "LR All features",
+        "average": ""
+    },
+    {
+        "target_→_source/sys._↓": "MT",
+        "mt_cnn:rand": "62.7",
+        "oc_cnn:rand": "17.0",
+        "pe_cnn:rand": "29.5",
+        "vg_cnn:rand": "34.2",
+        "wd_cnn:rand": "14.5",
+        "wtp_cnn:rand": "21.2",
+        "average": "23.3"
+    },
+    {
+        "target_→_source/sys._↓": "OC",
+        "mt_cnn:rand": "45.1",
+        "oc_cnn:rand": "22.9",
+        "pe_cnn:rand": "47.0",
+        "vg_cnn:rand": "38.0",
+        "wd_cnn:rand": "12.2",
+        "wtp_cnn:rand": "27.5",
+        "average": "34.0"
+    },
+    {
+        "target_→_source/sys._↓": "PE",
+        "mt_cnn:rand": "36.3",
+        "oc_cnn:rand": "17.3",
+        "pe_cnn:rand": "60.6",
+        "vg_cnn:rand": "21.4",
+        "wd_cnn:rand": "13.5",
+        "wtp_cnn:rand": "20.4",
+        "average": "21.8"
+    },
+    {
+        "target_→_source/sys._↓": "VG",
+        "mt_cnn:rand": "51.4",
+        "oc_cnn:rand": "21.7",
+        "pe_cnn:rand": "45.1",
+        "vg_cnn:rand": "42.6",
+        "wd_cnn:rand": "13.1",
+        "wtp_cnn:rand": "24.8",
+        "average": "31.2"
+    },
+    {
+        "target_→_source/sys._↓": "WD",
+        "mt_cnn:rand": "38.5",
+        "oc_cnn:rand": "19.0",
+        "pe_cnn:rand": "30.1",
+        "vg_cnn:rand": "23.3",
+        "wd_cnn:rand": "23.3",
+        "wtp_cnn:rand": "20.9",
+        "average": "26.3"
+    },
+    {
+        "target_→_source/sys._↓": "WTP",
+        "mt_cnn:rand": "41.7",
+        "oc_cnn:rand": "20.3",
+        "pe_cnn:rand": "42.6",
+        "vg_cnn:rand": "38.0",
+        "wd_cnn:rand": "11.2",
+        "wtp_cnn:rand": "30.2",
+        "average": "30.8"
+    },
+    {
+        "target_→_source/sys._↓": "Average",
+        "mt_cnn:rand": "42.6",
+        "oc_cnn:rand": "19.1",
+        "pe_cnn:rand": "38.9",
+        "vg_cnn:rand": "31.0",
+        "wd_cnn:rand": "12.9",
+        "wtp_cnn:rand": "23.0",
+        "average": "27.9"
+    },
+    {
+        "target_→_source/sys._↓": "LR",
+        "mt_cnn:rand": "single feature groups (averages across all source domains)",
+        "oc_cnn:rand": "single feature groups (averages across all source domains)",
+        "pe_cnn:rand": "single feature groups (averages across all source domains)",
+        "vg_cnn:rand": "single feature groups (averages across all source domains)",
+        "wd_cnn:rand": "single feature groups (averages across all source domains)",
+        "wtp_cnn:rand": "single feature groups (averages across all source domains)",
+        "average": ""
+    },
+    {
+        "target_→_source/sys._↓": "+Discourse",
+        "mt_cnn:rand": "15.0",
+        "oc_cnn:rand": "5.8",
+        "pe_cnn:rand": "27.4",
+        "vg_cnn:rand": "19.9",
+        "wd_cnn:rand": "4.5",
+        "wtp_cnn:rand": "13.3",
+        "average": "14.3"
+    },
+    {
+        "target_→_source/sys._↓": "+Embeddings",
+        "mt_cnn:rand": "35.2",
+        "oc_cnn:rand": "12.8",
+        "pe_cnn:rand": "30.7",
+        "vg_cnn:rand": "24.3",
+        "wd_cnn:rand": "13.2",
+        "wtp_cnn:rand": "19.0",
+        "average": "22.5"
+    },
+    {
+        "target_→_source/sys._↓": "+Lexical",
+        "mt_cnn:rand": "42.2",
+        "oc_cnn:rand": "18.3",
+        "pe_cnn:rand": "38.6",
+        "vg_cnn:rand": "29.1",
+        "wd_cnn:rand": "11.9",
+        "wtp_cnn:rand": "23.4",
+        "average": "27.2"
+    },
+    {
+        "target_→_source/sys._↓": "+Structure",
+        "mt_cnn:rand": "22.9",
+        "oc_cnn:rand": "18.5",
+        "pe_cnn:rand": "38.4",
+        "vg_cnn:rand": "32.1",
+        "wd_cnn:rand": "9.0",
+        "wtp_cnn:rand": "23.3",
+        "average": "24.0"
+    },
+    {
+        "target_→_source/sys._↓": "+Syntax",
+        "mt_cnn:rand": "37.0",
+        "oc_cnn:rand": "17.5",
+        "pe_cnn:rand": "40.6",
+        "vg_cnn:rand": "32.0",
+        "wd_cnn:rand": "11.8",
+        "wtp_cnn:rand": "22.5",
+        "average": "26.9"
+    },
+    {
+        "target_→_source/sys._↓": "",
+        "mt_cnn:rand": "baselines",
+        "oc_cnn:rand": "baselines",
+        "pe_cnn:rand": "baselines",
+        "vg_cnn:rand": "baselines",
+        "wd_cnn:rand": "baselines",
+        "wtp_cnn:rand": "baselines",
+        "average": ""
+    },
+    {
+        "target_→_source/sys._↓": "Majority bsl",
+        "mt_cnn:rand": "0.0",
+        "oc_cnn:rand": "0.0",
+        "pe_cnn:rand": "0.0",
+        "vg_cnn:rand": "0.0",
+        "wd_cnn:rand": "0.0",
+        "wtp_cnn:rand": "0.0",
+        "average": "0.0"
+    },
+    {
+        "target_→_source/sys._↓": "Random bsl",
+        "mt_cnn:rand": "30.6",
+        "oc_cnn:rand": "14.0",
+        "pe_cnn:rand": "38.4",
+        "vg_cnn:rand": "29.3",
+        "wd_cnn:rand": "9.3",
+        "wtp_cnn:rand": "20.2",
+        "average": "23.6"
+    }
+]

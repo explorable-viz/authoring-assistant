@@ -1,1 +1,112 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table IV shows the success rate and the mean, median of the number of replacements (normalized by the length of original sentence) for different methods. As we can see from Table IV, for both "},{"expression":"\"Hotflip\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"Soft-Att\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"Min-Grad\"","type":"expression"},{"type":"literal","value":" method gives "},{"expression":"\"significant improvement in success rate\"","type":"expression"},{"type":"literal","value":" in comparison with "},{"expression":"\"random baseline\"","type":"expression"},{"type":"literal","value":" across all the NMT models. The number of replacement for Min-Grad is "},{"expression":"\"comparable with random\"","type":"expression"},{"type":"literal","value":". Table IV shows that Transformer is "},{"expression":"\"more robust\"","type":"expression"},{"type":"literal","value":" to our proposed method than BLSTM. This is because our proposed method has less number of replacements and lower success rate in case of Transformer than BLSTM for both the language pairs. Interestingly, HotFlip has "},{"expression":"\"higher success rate\"","type":"expression"},{"type":"literal","value":" and similar number of replacement in case for Transformer than BLSTM. Overall, as is evident from Table IV, our proposed method (Min-Grad + Soft-Att) achieves "},{"expression":"\"the highest success rate\"","type":"expression"},{"type":"literal","value":" across the NMT models. From Table IV, across all the NMT models, we can see that Soft-Att "},{"expression":"\"significantly outperforms\"","type":"expression"},{"type":"literal","value":" HotFlip both in terms of success rate and number of replacements."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1908_01165v3_436"],"datasets":["datasets/scigenCL/1908.01165v3-436.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table IV shows the "
+    },
+    {
+      "expression": "\"success rate\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"mean\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"median\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the number of replacements (normalized by the length of original sentence) for different methods. As we can see from Table IV, for both \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r, \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r method gives "
+    },
+    {
+      "expression": "\"in comparison with\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r across all the NMT models. The number of replacement for Min-Grad is "
+    },
+    {
+      "expression": "\".\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Table IV shows that Transformer is "
+    },
+    {
+      "expression": "\"to our proposed method than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLSTM. This is because our proposed method has "
+    },
+    {
+      "expression": "\"less\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " number of replacements and "
+    },
+    {
+      "expression": "\"lower\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " success rate in case of Transformer than BLSTM for both the language pairs. Interestingly, HotFlip has "
+    },
+    {
+      "expression": "\"and similar\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " number of replacement in case "
+    },
+    {
+      "expression": "\"for\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " Transformer than BLSTM. Overall, as is evident from Table IV, our proposed method (Min-Grad + Soft-Att) achieves "
+    },
+    {
+      "expression": "\"across the NMT models.\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". From Table IV, across all the NMT models, we can see that Soft-Att "
+    },
+    {
+      "expression": "\"both in terms of\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " success rate and number of replacements.\n\nIt seems like there are some placeholders or errors in the paragraph (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno) which prevent the detection of more expressions. Please verify if these parts should be replaced with actual data values or text. If they are indeed errors, correcting them will help in accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_01165v3_436"
+  ],
+  "datasets": ["datasets/scigenCL/1908.01165v3-436.json"]
+}

@@ -1,1 +1,72 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We compare the performance of our neural generator when trained on either gold, silver, or gold and silver data (Table 1). Generation quality is primarily evaluated with BLEU  Semi-supervised training leads to an "},{"expression":"\"11\"","type":"expression"},{"type":"literal","value":" BLEU point improvement "},{"expression":"\"compar\"","type":"expression"},{"type":"literal","value":" "},{"expression":"\"train\"","type":"expression"},{"type":"literal","value":" In addition to BLEU, we also report exact match accuracy on the overlapping subset. Results show that our neural models outperform the grammar-based generator by a "},{"expression":"\"large margin\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_11564v1_201"],"datasets":["datasets/scigenCL/1904.11564v1-201.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare the performance of our neural generator when trained on either "
+    },
+    {
+      "expression": "\"gold\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"silver\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", or "
+    },
+    {
+      "expression": "\"gold and silver\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " data (Table 1). Generation quality is primarily evaluated with BLEU  Semi-supervised training leads to an \""
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" non � riconosciuto come comando interno o esterno,\" BLEU point improvement \""
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" non � riconosciuto come comando interno o esterno,\" \""
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" non � riconosciuto come comando interno o esterno,\" In addition to BLEU, we also report exact match accuracy on the overlapping subset. Results show that our neural models outperform the grammar-based generator by a \""
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" non � riconosciuto come comando interno o esterno,\".\n\nThe text contains some errors or unusual phrases, such as multiple repetitions of an error message about the Fluid command not being recognized. These are annotated as explicit values in this context. However, if these were meant to represent actual comparative data points (e.g., BLEU scores), they should be replaced with those specific values instead. If that is not applicable, please provide the correct comparative or numeric data for more accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_11564v1_201"
+  ],
+  "datasets": ["datasets/scigenCL/1904.11564v1-201.json"]
+}

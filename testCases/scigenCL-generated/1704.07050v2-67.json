@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Tables 4 through 6 show the summary metrics for the three language pairs for the large data experiments. We can see that the reverse rank and forward rank methods of taking into account the global structure of interactions among predictions is still "},{"expression":"\"helpful\"","type":"expression"},{"type":"literal","value":", providing "},{"expression":"\"large improvements\"","type":"expression"},{"type":"literal","value":" in performance even in this challenging large data condition over strong state of the art baselines"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1704_07050v2_67"],"datasets":["datasets/scigenCL/1704.07050v2-67.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It looks like there are some non-relevant parts (appears to be an error message) in your input paragraph. I'll ignore those and focus on the meaningful content.\n\nHere's the annotated paragraph:\n\nTables 4 through 6 show the summary metrics for the three language pairs for the large data experiments. We can see that the reverse rank and forward rank methods of taking into account the global structure of interactions among predictions is still "
+    },
+    {
+      "expression": "\"providing\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in performance even in this challenging large data condition over strong state of the art baselines\n\nNo specific values, comparative or superlative expressions were found to replace with Fluid expressions in this paragraph. However, I did identify \"providing\" as an expression that seems out of place and could potentially be a mistake (likely meant to be something else). If you can clarify what was intended by \"providing\", I could possibly provide a more accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_07050v2_67"
+  ],
+  "datasets": ["datasets/scigenCL/1704.07050v2-67.json"]
+}

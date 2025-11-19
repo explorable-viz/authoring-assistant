@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Before preservation, MILk with a latency weight "},{"expression":"\"λ\"","type":"expression"},{"type":"literal","value":" = "},{"expression":"\"0\"","type":"expression"},{"type":"literal","value":" still showed a substantial reduction in latency from the "},{"expression":"\"maximum\"","type":"expression"},{"type":"literal","value":" value of "},{"expression":"\"27.9\"","type":"expression"},{"type":"literal","value":", indicating an intrinsic latency incentive. Furthermore, training quickly destabilized, resulting in very poor trade-offs for "},{"expression":"\"λ\"","type":"expression"},{"type":"literal","value":"s as low as "},{"expression":"\"0.2\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_05218v1_251"],"datasets":["datasets/scigenCL/1906.05218v1-251.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "It seems that the provided paragraph contains a repeated error message related to Fluid not being recognized as an internal or external command. This error does not contain any expressions of explicit values, comparative expressions, or superlative/aggregated expressions relevant to Fluid language queries or comparisons.\n\nHowever, if we assume this is a formatting issue and were looking for some meaningful data within the paragraph that could be replaced by Fluid expressions, it would need to be restructured with actual numerical or comparative statements. As it stands now, there's nothing in the provided text that can be directly annotated according to your guidelines.\n\nIf you meant to provide a different paragraph containing data points and comparisons, please feel free to share the correct one, and I'll be happy to help identify and annotate the relevant expressions using Fluid language notation."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_05218v1_251"
+  ],
+  "datasets": ["datasets/scigenCL/1906.05218v1-251.json"]
+}

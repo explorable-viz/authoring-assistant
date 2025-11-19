@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 shows the error rates per C-test and strategy. Both "},{"expression":"\"SEL\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"SIZE\"","type":"expression"},{"type":"literal","value":" are overall able to "},{"expression":"\"significantly\"","type":"expression"},{"type":"literal","value":" (p < 0.025) increase and decrease the test's difficulty over "},{"expression":"\"DEF\"","type":"expression"},{"type":"literal","value":", and with the exception of  "},{"expression":"\"SEL,dec\"","type":"expression"},{"type":"literal","value":", the effect is also statistically "},{"expression":"\"significant\"","type":"expression"},{"type":"literal","value":" for all individual text and strategy pairs."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_06905v2_473"],"datasets":["datasets/scigenCL/1906.06905v2-473.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It appears that the paragraph contains a repeated error message (\"non � riconosciuto come comando interno o esterno\") that seems to be unrelated to the actual content of the paragraph. Assuming this is an anomaly and not part of the intended text, here's how you would annotate the paragraph if it were properly written:\n\nOriginal paragraph:\nTable 3 shows the error rates per C-test and strategy. Both strategies are overall able to increase and decrease the test's difficulty over each other, and with the exception of one, the effect is also statistically significant for all individual text and strategy pairs.\n\nAnnotated paragraph:\nTable 3 shows the error rates per C-test and strategy. Both strategies are "
+    },
+    {
+      "expression": "\"overall\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " able to "
+    },
+    {
+      "expression": "\"increase\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"decrease\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the test's difficulty over each other, and with the exception of one, the effect is also "
+    },
+    {
+      "expression": "\"statistically significant\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for all individual text and strategy pairs.\n\nSince there were no explicit values or superlatives in the original paragraph that needed to be annotated, only comparative words like \"increase\", \"decrease\" and \"significant\" have been replaced with the [REPLACE] tag."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_06905v2_473"
+  ],
+  "datasets": ["datasets/scigenCL/1906.06905v2-473.json"]
+}

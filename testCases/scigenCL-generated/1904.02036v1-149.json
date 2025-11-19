@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 1 gives an overview of the historical datasets, covering "},{"expression":"\"eight\"","type":"expression"},{"type":"literal","value":" languages from different language families\u2014"},{"expression":"\"English\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"German\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"Hungarian\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"Icelandic\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"Spanish\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"Portuguese\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"Slovene\"","type":"expression"},{"type":"literal","value":", and "},{"expression":"\"Swedish\"","type":"expression"},{"type":"literal","value":"\u2014as well as different text genres and time periods."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_02036v1_149"],"datasets":["datasets/scigenCL/1904.02036v1-149.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "It seems there is an issue with the paragraph provided, as it repeatedly mentions a path that appears to be an error message related to Fluid not being recognized as a command:\n\n```\n\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\n```\n\nThis is not part of the actual text that you want annotated. If we assume this is an error and should be removed, the revised paragraph would look like:\n\n**Revised Paragraph:**\n\nTable 1 gives an overview of the historical datasets, covering languages from different language families\u2014as well as different text genres and time periods.\n\nSince there are no explicit values, comparative expressions, or superlative/aggregated expressions in the revised paragraph, no Fluid annotations are needed. If you intended to include some comparisons or specific numbers, please provide the corrected paragraph."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_02036v1_149"
+  ],
+  "datasets": ["datasets/scigenCL/1904.02036v1-149.json"]
+}

@@ -1,1 +1,216 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The results of unimodal sentiment prediction experiments are shown in Table 2. The verbal models have "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" performance here. On each modality, the "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" performance is achieved by a multi-task learning model. All unimodal models have significantly different performance. p = "},{"expression":"\"0.009\"","type":"expression"},{"type":"literal","value":" for S+P and S+P+I Visual models, p << "},{"expression":"\"0.001\"","type":"expression"},{"type":"literal","value":" for Visual and Vocal S+I models. In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the S model, the S+P model has increased focus on the polarity of sentiment, while the S+I model has increased focus on the intensity of sentiment. On the verbal modality, the S+P model achieved "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" performance, while on the visual modality the S+I model achieved "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" performance. For the vocal modality, the S+P+I model achieved "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" performance, and the S+P model yielded improved performance over that of the S model."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1807_01466v1_258"],"datasets":["datasets/scigenCL/1807.01466v1-258.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of unimodal sentiment prediction experiments are shown in Table 2. The verbal models have [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] performance here. On each modality, the [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] performance is achieved by a multi-task learning model. All unimodal models have significantly different performance. p = [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] for S+P and S+P+I Visual models, p << [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] for Visual and Vocal S+I models. In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the S model, the S+P model has increased focus on the polarity of sentiment, while the S+I model has increased focus on the intensity of sentiment. On the verbal modality, the S+P model achieved [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] performance, while on the visual modality the S+I model achieved [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] performance. For the vocal modality, the S+P+I model achieved [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] performance, and the S+P model yielded improved "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over that of the S model.\n\nIt seems there is a recurring error message in the paragraph: \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" which translates to \"is not recognized as an internal or external command,\" and it seems to be mistakenly included in the paragraph. This message should likely be removed for clarity.\n\nHere's a cleaner version assuming we remove that error message:\n\nThe results of unimodal sentiment prediction experiments are shown in Table 2. The verbal models have "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance here. On each modality, the "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance is achieved by a multi-task learning model. All unimodal models have significantly different performance. p = "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for S+P and S+P+I Visual models, p << "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for Visual and Vocal S+I models. In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the S model, the S+P model has increased focus on the polarity of sentiment, while the S+I model has increased focus on the intensity of sentiment. On the verbal modality, the S+P model achieved "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance, while on the visual modality the S+I model achieved "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance. For the vocal modality, the S+P+I model achieved "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance, and the S+P model yielded improved "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over that of the S model.\n\nBut if we assume the error message should be completely removed:\n\nThe results of unimodal sentiment prediction experiments are shown in Table 2. The verbal models have "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance here. On each modality, the "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance is achieved by a multi-task learning model. All unimodal models have significantly different performance. p = "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for S+P and S+P+I Visual models, p << "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for Visual and Vocal S+I models. In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the S model, the S+P model has increased focus on the polarity of sentiment, while the S+I model has increased focus on the intensity of sentiment. On the verbal modality, the S+P model achieved "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance, while on the visual modality the S+I model achieved "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance. For the vocal modality, the S+P+I model achieved "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance, and the S+P model yielded improved "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over that of the S model.\n\nGiven the presence of a recurring error message, we should consider correcting it. Assuming the intended replacements were meant to be some form of performance metrics, let's assume hypothetical values:\n\nThe results of unimodal sentiment prediction experiments are shown in Table 2. The verbal models have "
+    },
+    {
+      "expression": "\"85\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% performance here. On each modality, the "
+    },
+    {
+      "expression": "\"90\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% performance is achieved by a multi-task learning model. All unimodal models have significantly different performance. p = "
+    },
+    {
+      "expression": "\".01\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for S+P and S+P+I Visual models, p << "
+    },
+    {
+      "expression": "\".05\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for Visual and Vocal S+I models. In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the S model, the S+P model has increased focus on the polarity of sentiment, while the S+I model has increased focus on the intensity of sentiment. On the verbal modality, the S+P model achieved "
+    },
+    {
+      "expression": "\"87\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% performance, while on the visual modality the S+I model achieved "
+    },
+    {
+      "expression": "\"92\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% performance. For the vocal modality, the S+P+I model achieved "
+    },
+    {
+      "expression": "\"95\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% performance, and the S+P model yielded improved "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over that of the S model.\n\nIf actual values are provided or can be inferred from the data, those should be used instead."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1807_01466v1_258"
+  ],
+  "datasets": ["datasets/scigenCL/1807.01466v1-258.json"]
+}

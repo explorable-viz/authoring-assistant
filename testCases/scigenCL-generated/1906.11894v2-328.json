@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The answer is in Table II where we performed the same task, but this time we swapped our semantic segmentation network with the pixel-level ground-truth provided along with the data. This represents the upper-bound performances, as no tool will produce "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" segmentation than the ground-truth. In this scenario our method performed at "},{"expression":"\"100\"","type":"expression"},{"type":"literal","value":"% line IU, reinforcing our previous observation that our text-line extraction method has made the mistakes only in the presence of wrong results from the semantic segmentation step."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_11894v2_328"],"datasets":["datasets/scigenCL/1906.11894v2-328.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The answer is in Table II where we performed the same task, but this time we swapped our semantic segmentation network with the pixel-level ground-truth provided along with the data. This represents the upper-bound performances, as no tool will produce "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,\r segmentation than the ground-truth. In this scenario our method performed at "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% line IU, reinforcing our previous observation that our text-line extraction method has made the mistakes only in the presence of wrong results from the semantic segmentation step.\n\nIt seems there might be an error with \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" appearing in the text. Assuming these are placeholders for actual performance numbers or a command that failed to execute, let's assume they should have been replaced with actual values (e.g., 95.23). Here is how it might look if those were valid numbers:\n\nThe answer is in Table II where we performed the same task, but this time we swapped our semantic segmentation network with the pixel-level ground-truth provided along with the data. This represents the upper-bound performances, as no tool will produce "
+    },
+    {
+      "expression": "\"95.23\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% segmentation than the ground-truth. In this scenario our method performed at "
+    },
+    {
+      "expression": "\"95.23\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% line IU, reinforcing our previous observation that our text-line extraction method has made the mistakes only in the presence of wrong results from the semantic segmentation step.\n\nHowever, if these placeholders are indeed command errors and not meant to be performance numbers, then they should remain as is, without annotation for Fluid expressions. Let me know how you would like to proceed!"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_11894v2_328"
+  ],
+  "datasets": ["datasets/scigenCL/1906.11894v2-328.json"]
+}

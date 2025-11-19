@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The results of evaluating these three models on small (1M tokens) and medium-sized ("},{"expression":"\"17M\u2013 57M\"","type":"expression"},{"type":"literal","value":" tokens) data sets against Char-CNN for different languages are provided in Table 3. The models demonstrate similar performance on small data, but Char-CNN scales "},{"expression":"\"significantly better\"","type":"expression"},{"type":"literal","value":" on medium-sized data. From the three syllable-aware models, Syl-Concat looks "},{"expression":"\"the most advantageous\"","type":"expression"},{"type":"literal","value":" as it demonstrates stable results and has "},{"expression":"\"the least\"","type":"expression"},{"type":"literal","value":" number of parameters. Therefore in what follows we will make a more detailed comparison of SylConcat with Char-CNN."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1707_06480v1_31"],"datasets":["datasets/scigenCL/1707.06480v1-31.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of evaluating these three models on small (1M tokens) and medium-sized (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r tokens) data sets against Char-CNN for different languages are provided in Table 3. The models demonstrate similar performance on small data, but Char-CNN scales "
+    },
+    {
+      "expression": "\"on medium-sized data\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on medium-sized data. From the three syllable-aware models, Syl-Concat looks "
+    },
+    {
+      "expression": "\"as it demonstrates stable results and has\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as it demonstrates stable results and has \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r number of parameters. Therefore in what follows we will make a more detailed comparison of SylConcat with Char-CNN.\n\nNote: The phrase \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" seems to be an error or irrelevant information in the paragraph and is not replaced as it does not contain any value, comparative expression, or superlative/aggregated expression relevant to Fluid language."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_06480v1_31"
+  ],
+  "datasets": ["datasets/scigenCL/1707.06480v1-31.json"]
+}

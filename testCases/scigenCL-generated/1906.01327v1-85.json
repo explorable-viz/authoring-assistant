@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The results of the intrinsic evaluation on a sample of DOQ are shown in Table 7. The total agreement is "},{"expression":"\"69\"","type":"expression"},{"type":"literal","value":"%,\r\nwhile the specific agreements for MASS, LENGTH, SPEED and CURRENCY are "},{"expression":"\"61\"","type":"expression"},{"type":"literal","value":"%, "},{"expression":"\"79\"","type":"expression"},{"type":"literal","value":"%, "},{"expression":"\"77\"","type":"expression"},{"type":"literal","value":"% and "},{"expression":"\"58\"","type":"expression"},{"type":"literal","value":"% respectively.\r\nWe re-annotated the samples in the currency category with annotators from the U.S. and found a "},{"expression":"\"much higher\"","type":"expression"},{"type":"literal","value":" agreement score: "},{"expression":"\"76\"","type":"expression"},{"type":"literal","value":"%."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_01327v1_85"],"datasets":["datasets/scigenCL/1906.01327v1-85.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The results of the intrinsic evaluation on a sample of DOQ are shown in Table 7. The total agreement is [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]%,\nwhile the specific agreements for MASS, LENGTH, SPEED and CURRENCY are [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]%, [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]%, [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]% and [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]% respectively.\nWe re-annotated the samples in the currency category with annotators from the U.S. and found a [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] agreement score: [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]%.\n\nGiven the output, it appears that the actual agreement scores are missing and replaced with an error message. If you have the correct scores, please replace the [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]% placeholders with the actual percentage values."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_01327v1_85"
+  ],
+  "datasets": ["datasets/scigenCL/1906.01327v1-85.json"]
+}

@@ -1,1 +1,64 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 5 indicates the proposed "},{"expression":"\"RDE-LTC\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"HRDE\"","type":"expression"},{"type":"literal","value":", and the that "},{"expression":"\"HRDE-LTC\"","type":"expression"},{"type":"literal","value":" model show performance "},{"expression":"\"improvements\"","type":"expression"},{"type":"literal","value":" when "},{"expression":"\"compared to\"","type":"expression"},{"type":"literal","value":" the baseline models, "},{"expression":"\"TFIDF\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"RDE\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1710_03430v3_108"],"datasets":["datasets/scigenCL/1710.03430v3-108.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It seems there is a repetitive error message in the paragraph instead of meaningful text. Therefore, no explicit values, comparative expressions, or superlative/aggregated expressions are present to replace with Fluid expressions.\n\nThe paragraph should be revised to provide clear and relevant information for detection. Here's an example of how it could look:\n\n**Revised Paragraph Example:**\n\nTable 5 indicates the proposed model shows performance better than the baseline models. Specifically, the F1-score of the proposed model is 92.3%, which is higher compared to BiLSTM (90.5%) and LSTM (89.7%). The proposed model performs the best under these settings.\n\n**Revised Output Example:**\n\nTable 5 indicates the proposed model shows performance "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the baseline models. Specifically, the F1-score of the proposed model is "
+    },
+    {
+      "expression": "\"92.3\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, which is "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to BiLSTM ("
+    },
+    {
+      "expression": "\"90.5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%) and LSTM ("
+    },
+    {
+      "expression": "\"89.7\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%). The proposed model performs "
+    },
+    {
+      "expression": "\"the best\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " under these settings.\n\nIf the original paragraph was indeed meant to be error messages, then there are no expressions to replace with Fluid expressions in this context."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1710_03430v3_108"
+  ],
+  "datasets": ["datasets/scigenCL/1710.03430v3-108.json"]
+}

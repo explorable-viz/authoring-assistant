@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 1 shows the results of IBP training and baseline models under "},{"expression":"\"δ\"","type":"expression"},{"type":"literal","value":" = "},{"expression":"\"3\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"δ\"","type":"expression"},{"type":"literal","value":" = "},{"expression":"\"24\"","type":"expression"},{"type":"literal","value":" perturbations on SST and AG News, respectively. In Table 1, comparing adversarial accuracy with exhaustive verification accuracy (oracle), we observe that although adversarial training is effective at defending against HotFlip attacks ("},{"expression":"\"74.9\"","type":"expression"},{"type":"literal","value":" / "},{"expression":"\"76.8\"","type":"expression"},{"type":"literal","value":" / "},{"expression":"\"85.5\"","type":"expression"},{"type":"literal","value":"%), the oracle adversarial accuracy under exhaustive testing ("},{"expression":"\"25.8\"","type":"expression"},{"type":"literal","value":" / "},{"expression":"\"74.6\"","type":"expression"},{"type":"literal","value":" / "},{"expression":"\"81.6\"","type":"expression"},{"type":"literal","value":"%) is much lower in SST-character / SST-word / AG-character level, respectively. In Table 1, when the perturbation space is larger (SST character-level vs. SST word-level), (a) across models, there is a larger gap in adversarial accuracy and true robustness (oracle); (b) the difference in oracle robustness between IBP and adversarial training is even larger ("},{"expression":"\"73.1\"","type":"expression"},{"type":"literal","value":"% vs. "},{"expression":"\"25.8\"","type":"expression"},{"type":"literal","value":"% and "},{"expression":"\"76.5\"","type":"expression"},{"type":"literal","value":"% vs. "},{"expression":"\"74.6\"","type":"expression"},{"type":"literal","value":"%). The resulting models achieve the "},{"expression":"\"highest\"","type":"expression"},{"type":"literal","value":" exhaustively verified accuracy at the cost of only moderate deterioration in nominal accuracy (Table 1)."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_01492v2_141"],"datasets":["datasets/scigenCL/1909.01492v2-141.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 shows the results of IBP training and baseline models under \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r = \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r = \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r perturbations on SST and AG News, respectively. In Table 1, comparing adversarial accuracy with exhaustive verification accuracy (oracle), we observe that although adversarial training is effective at defending against HotFlip attacks (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r / \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r / \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r%), the oracle adversarial accuracy under exhaustive testing (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r / \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r / \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r%) is "
+    },
+    {
+      "expression": "\"much lower\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in SST-character / SST-word / AG-character level, respectively. In Table 1, when the perturbation space is larger (SST character-level vs. SST word-level), (a) across models, there is a "
+    },
+    {
+      "expression": "\"larger gap\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in adversarial accuracy and true robustness (oracle); (b) the difference in oracle robustness between IBP and adversarial training is even "
+    },
+    {
+      "expression": "\"larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r% vs. \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r% and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r% vs. \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r%). The resulting models achieve the "
+    },
+    {
+      "expression": "\"exhaustively verified accuracy\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " at the cost of only moderate deterioration in nominal accuracy (Table 1)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_01492v2_141"
+  ],
+  "datasets": ["datasets/scigenCL/1909.01492v2-141.json"]
+}

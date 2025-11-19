@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The allowable input perturbation space is much larger than for word-level synonym substitutions, as shown in Table 3. In Table 3, we show the "},{"expression":"\"maximum\"","type":"expression"},{"type":"literal","value":" perturbation space size in the SST and AG News test set for different perturbation radii δ. This number grows exponentially as δ increases."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_01492v2_140"],"datasets":["datasets/scigenCL/1909.01492v2-140.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The allowable input perturbation space is much larger than for word-level synonym substitutions, as shown in Table 3. In Table 3, we show the "
+    },
+    {
+      "expression": "\"perturbation space size\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the SST and AG News test set for different perturbation radii "
+    },
+    {
+      "expression": "\"δ\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This number grows exponentially as "
+    },
+    {
+      "expression": "\"δ\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_01492v2_140"
+  ],
+  "datasets": ["datasets/scigenCL/1909.01492v2-140.json"]
+}

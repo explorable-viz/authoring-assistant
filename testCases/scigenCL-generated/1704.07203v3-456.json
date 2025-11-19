@@ -1,1 +1,64 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 lists the results of "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" feature-based (LR All features) and deep learning ("},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" deep learning (CNN:rand)) systems, as well as single feature groups (averages over all source domains). For the lowest scoring datasets, OC and WTP, the differences are only marginal when trained on a suitable dataset. The "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" feature-based approach outperforms the "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" deep learning approach in most scenarios. In particular, as opposed to the in-domain experiments, the difference of the Claim-F1 measure between the feature-based approaches and the deep learning approaches is striking. In the feature-based approaches, on average, a combination of all features yields the "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" results for both Macro-F1 and Claim-F1. When comparing single features, lexical ones do the "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" job."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1704_07203v3_456"],"datasets":["datasets/scigenCL/1704.07203v3-456.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 lists the results of "
+    },
+    {
+      "expression": "\"feature-based (LR All features)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"deep learning (CNN:rand)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " systems, as well as single feature groups (averages over all source domains). For the lowest scoring datasets, OC and WTP, the differences are only marginal when trained on a suitable dataset. The "
+    },
+    {
+      "expression": "\"feature-based approach\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms the "
+    },
+    {
+      "expression": "\"deep learning approach\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in most scenarios. In particular, as opposed to the in-domain experiments, the difference of the Claim-F1 measure between the feature-based approaches and the deep learning approaches is striking. In the feature-based approaches, on average, a combination of all features yields the "
+    },
+    {
+      "expression": "\"results\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for both Macro-F1 and Claim-F1. When comparing single features, lexical ones do the "
+    },
+    {
+      "expression": "\"job\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_07203v3_456"
+  ],
+  "datasets": ["datasets/scigenCL/1704.07203v3-456.json"]
+}

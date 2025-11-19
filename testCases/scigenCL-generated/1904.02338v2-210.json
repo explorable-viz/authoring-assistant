@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We see that models trained with agreement perform comparably to Pivot, "},{"expression":"\"outperforming\"","type":"expression"},{"type":"literal","value":" it in some cases, e.g., when the target is Russian, perhaps because it is quite different linguistically from the English pivot. Unlike Dual-0, Agree maintains high performance in the supervised directions ("},{"expression":"\"within 1 BLEU point compared to Basic\"","type":"expression"},{"type":"literal","value":")."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_02338v2_210"],"datasets":["datasets/scigenCL/1904.02338v2-210.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We see that models trained with agreement perform "
+    },
+    {
+      "expression": "\"comparably\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to Pivot, \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r in some cases, e.g., when the target is Russian, perhaps because it is quite different linguistically from the English pivot. Unlike Dual-0, Agree maintains "
+    },
+    {
+      "expression": "\"high\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance in the supervised directions (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_02338v2_210"
+  ],
+  "datasets": ["datasets/scigenCL/1904.02338v2-210.json"]
+}

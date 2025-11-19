@@ -1,1 +1,80 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 gives an overview of the impact on performance when specific features are removed: "},{"expression":"\"the entire lexicon\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"lexicon expansion\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"letter identity\"","type":"expression"},{"type":"literal","value":", '"},{"expression":"\"'vowel' features\"","type":"expression"},{"type":"literal","value":" from Section 3.1, and both of the latter. Performance is high even in ablation scenarios, though we keep in mind that baselines for the task are high (e.g. 'most frequent lookup', the UDPipe strategy, achieves close to "},{"expression":"\"90\"","type":"expression"},{"type":"literal","value":"%). The results show the centrality of the lexicon: removing lexicon lookup features degrades performance by about "},{"expression":"\"3.5\"","type":"expression"},{"type":"literal","value":"% perfect accuracy, or "},{"expression":"\"5.5\"","type":"expression"},{"type":"literal","value":" F-score points. All other ablations impact performance by less than "},{"expression":"\"1\"","type":"expression"},{"type":"literal","value":"% or "},{"expression":"\"1.5\"","type":"expression"},{"type":"literal","value":" F-score points. Expanding the lexicon using Wikipedia data offers a contribution of "},{"expression":"\"0.3\"","type":"expression"},{"type":"literal","value":"\u2013"},{"expression":"\"0.4\"","type":"expression"},{"type":"literal","value":" points, confirming the original lexicon's incompleteness. Looking more closely at the other features, it is surprising that identity of the letters is not crucial, as long as we have access to dictionary lookup using the letters. Nevertheless, removing letter identity impacts especially boundary recall, perhaps  does not break down drastically. The impact on Wiki5k is stronger, possibly because the necessary memorization of familiar contexts is less effective out of domain. because some letters receive identical lookup values (e.g. single letter prepositions such as b 'in', l 'to') but have different segmentation likelihoods. The '"},{"expression":"\"'vowel' features\"","type":"expression"},{"type":"literal","value":"', though ostensibly redundant with letter identity, help a little, causing "},{"expression":"\"0.33\"","type":"expression"},{"type":"literal","value":" SPMRL F-score point degradation if removed."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1808_07214v2_139"],"datasets":["datasets/scigenCL/1808.07214v2-139.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 gives an overview of the impact on performance when specific features are removed: \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r non � riconosciuto come comando interno o esterno,\r \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r, '\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r from Section 3.1, and both of the latter. Performance is high even in ablation scenarios, though we keep in mind that baselines for the task are high (e.g. 'most frequent lookup', the UDPipe strategy, achieves close to "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%). The results show the centrality of the lexicon: removing lexicon lookup features degrades performance by about "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% perfect accuracy, or "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F-score points. All other ablations impact performance by less than "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% or "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F-score points. Expanding the lexicon using Wikipedia data offers a contribution of "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "-"
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points, confirming the original lexicon's incompleteness. Looking more closely at the other features, it is surprising that identity of the letters is not crucial, as long as we have access to dictionary lookup using the letters. Nevertheless, removing letter identity impacts especially boundary recall, perhaps  does not break down drastically. The impact on Wiki5k is stronger, possibly because the necessary memorization of familiar contexts is less effective out of domain. because some letters receive identical lookup values (e.g. single letter prepositions such as b 'in', l 'to') but have different segmentation likelihoods. The '\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\",\r though ostensibly redundant with letter identity, help a little, causing "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " SPMRL F-score point degradation if removed.\n\nNote: In the given paragraph, all numbers and values are replaced with error messages. For the Fluid expressions, we have kept these placeholders as is but annotated them for replacements following your instructions. If you have specific numeric values that can replace these placeholders, please provide those details for a more accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_07214v2_139"
+  ],
+  "datasets": ["datasets/scigenCL/1808.07214v2-139.json"]
+}

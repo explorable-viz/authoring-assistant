@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We show the experiment results in Table 2. Our method consistently performs "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than all baselines in all settings. Our method is also "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than LOF (Softmax). We observe that on the ATIS dataset, the performance of unknown intent detection dramatically drops as the known intent increases."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_00434v1_221"],"datasets":["datasets/scigenCL/1906.00434v1-221.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We show the experiment results in Table 2. Our method consistently performs "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than all baselines in all settings. Our method is also "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than LOF (Softmax). We observe that on the ATIS dataset, the performance of unknown intent detection dramatically drops as the known intent increases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_00434v1_221"
+  ],
+  "datasets": ["datasets/scigenCL/1906.00434v1-221.json"]
+}

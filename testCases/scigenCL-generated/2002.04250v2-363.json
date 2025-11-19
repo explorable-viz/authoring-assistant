@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Results are shown in Table 4. As can be seen, the incorporation of MMI model significantly improves "},{"expression":"\"MT performances\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2002_04250v2_363"],"datasets":["datasets/scigenCL/2002.04250v2-363.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The provided paragraph does not contain any explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced with Fluid expressions based on the given criteria and format.\n\nHowever, there seems to be an error message within the paragraph: `\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno` which translates to `\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" is not recognized as an internal or external command`. This message appears unrelated to the paragraph's content about results and does not require annotation.\n\nIf we assume that the error is a typo or unintended inclusion, the paragraph would remain unchanged in terms of Fluid expression annotations. Here it is:\n\nResults are shown in Table 4. As can be seen, the incorporation of MMI model significantly improves "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%. \n\nHowever, given that the error message does not fit within the context or follow the required format, we'll ignore it and present:\n\nResults are shown in Table 4. As can be seen, the incorporation of MMI model significantly improves the results.\n\nSince there is no explicit value or comparative/superlative expression provided, no replacements are necessary."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2002_04250v2_363"
+  ],
+  "datasets": ["datasets/scigenCL/2002.04250v2-363.json"]
+}

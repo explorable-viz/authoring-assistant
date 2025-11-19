@@ -1,1 +1,72 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We present sample generations, quality results, and diversity results respectively in Tables 1, 2, 3.  This observation is further bolstered by the fact that the GPT generations have "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" corpus-BLEU with TBC than TBC has with itself.  The corpusBLEU between BERT models and the datasets is low, particularly with WT103.  We find that BERT generations are "},{"expression":"\"more diverse\"","type":"expression"},{"type":"literal","value":" than GPT generations. GPT has "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" n-gram overlap (smaller percent of unique n-grams) with TBC, but surprisingly also with WikiText-103, despite being trained on different data. Furthermore, GPT generations have "},{"expression":"\"greater\"","type":"expression"},{"type":"literal","value":" n-gram overlap with these datasets than these datasets have with themselves, further suggesting that GPT is relying significantly on generic sentences. BERT has "},{"expression":"\"lower\"","type":"expression"},{"type":"literal","value":" n-gram overlap with both corpora, with similar degrees of n-gram overlap as the samples of the data."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1902_04094v2_184"],"datasets":["datasets/scigenCL/1902.04094v2-184.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We present sample generations, quality results, and diversity results respectively in Tables 1, 2, 3. This observation is further bolstered by the fact that the GPT generations have "
+    },
+    {
+      "expression": "\"corpus-BLEU with TBC\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"TBC has with itself\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The corpus-BLEU between BERT models and the datasets is low, particularly with WT103. We find that BERT generations are "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " GPT generations. GPT has "
+    },
+    {
+      "expression": "\"n-gram overlap (smaller percent of unique n-grams)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with TBC, but surprisingly also with WikiText-103, despite being trained on different data. Furthermore, GPT generations have "
+    },
+    {
+      "expression": "\"n-gram overlap with these datasets\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"these datasets have with themselves\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", further suggesting that GPT is relying significantly on generic sentences. BERT has "
+    },
+    {
+      "expression": "\"n-gram overlap with both corpora\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with similar degrees of n-gram overlap as the samples of the data.\n\nNote: The phrase \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" does not appear to be meaningful in this context and seems like an error or placeholder. It has been ignored during the replacement process, as it doesn't represent any value or comparison that can be translated into a Fluid expression."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1902_04094v2_184"
+  ],
+  "datasets": ["datasets/scigenCL/1902.04094v2-184.json"]
+}

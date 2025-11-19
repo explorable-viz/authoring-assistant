@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Various subsets of authors were chosen and the dataset was truncated to each author having the same number of samples. with and without "},{"expression":"\"pre-training\"","type":"expression"},{"type":"literal","value":" character level embedding and comparing the proposed architectures on the held-out dataset. To illustrate the need of pre-trained character embeddings, we see from III that using a "},{"expression":"\"pre-trained\"","type":"expression"},{"type":"literal","value":" embedding increases the accuracy across datasets and the different number of authors, regardless of the amount of data for each author.  increase the performance a few degrees.  we analyzed the importance of "},{"expression":"\"pretrained\"","type":"expression"},{"type":"literal","value":" character embedding for author attribution and showed that pre-training can result in "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" performances."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2001_05316v1_300"],"datasets":["datasets/scigenCL/2001.05316v1-300.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It seems the paragraph includes an error message (\"non � riconosciuto come comando interno o esterno\") that appears to be a repeated issue with a specific command path. Since this does not provide any value or comparative/superlative expressions relevant to Fluid language, we will focus only on potential values and expressions within the context.\n\nHowever, based on the given text, there are no explicit values (scores, names, numbers) or comparative/superlative expressions provided that can be annotated with Fluid expressions. The paragraph discusses character embeddings and their impact on performance but does not include specific scores or direct comparisons between different architectures/models.\n\nHere's how we would handle this if it were to contain such information:\n\nExample of what the output might look like if there were comparable values:\n```\nTo illustrate the need of pre-trained character embeddings, we see from III that using a "
+    },
+    {
+      "expression": "\"pre-trained\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embedding increases the accuracy across datasets and the different number of authors, regardless of the amount of data for each author.  increase the performance a few degrees.  we analyzed the importance of "
+    },
+    {
+      "expression": "\"character embedding\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for author attribution and showed that pre-training can result in "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performances.\n```\n\nIn the current state of the paragraph:\n```\nVarious subsets of authors were chosen and the dataset was truncated to each author having the same number of samples. with and without \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r character level embedding and comparing the proposed architectures on the held-out dataset. To illustrate the need of pre-trained character embeddings, we see from III that using a \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r embedding increases the accuracy across datasets and the different number of authors, regardless of the amount of data for each author.  increase the performance a few degrees.  we analyzed the importance of \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r character embedding for author attribution and showed that pre-training can result in \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r performances.\n```\n\nSince there are no values or comparative/superlative expressions to annotate, the output is the same as the input with respect to Fluid expression replacement."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2001_05316v1_300"
+  ],
+  "datasets": ["datasets/scigenCL/2001.05316v1-300.json"]
+}

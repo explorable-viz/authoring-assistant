@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Similarly, "},{"expression":"\"Table 7\"","type":"expression"},{"type":"literal","value":" shows the results on the two domain-specific tasks of music and medical domain corpora. SPON "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" the SOTA systems in all tasks except for the medical domain in which it achieves "},{"expression":"\"comparable\"","type":"expression"},{"type":"literal","value":" results."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_10572v2_413"],"datasets":["datasets/scigenCL/1909.10572v2-413.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It appears that there are some repetitions and unrelated text (file paths) in the paragraph which doesn't seem to pertain to structured data or comparative expressions as per your task description. Therefore, based on the provided content, no Fluid expression can be directly annotated in this paragraph.\n\nHowever, if we remove the irrelevant parts and assume it was meant to say something like:\n\n\"SPON shows the results on the two domain-specific tasks of music and medical domain corpora. SPON is the SOTA system in all tasks except for the medical domain in which it achieves results.\"\n\nThe output would look like this:\n\nSPON shows the results on the two domain-specific tasks of music and medical domain corpora. SPON is "
+    },
+    {
+      "expression": "\"the SOTA\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " system in all tasks except for the medical domain in which it achieves "
+    },
+    {
+      "expression": "\"results\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_10572v2_413"
+  ],
+  "datasets": ["datasets/scigenCL/1909.10572v2-413.json"]
+}

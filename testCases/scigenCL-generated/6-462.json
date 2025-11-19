@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 4 shows "},{"expression":"\"full rankings\"","type":"expression"},{"type":"literal","value":" extracted for English and German data. While some correspondence to the hierarchies proposed for English Agent in literature is evident (e.g. ≺ Instrument ≺ Theme, similar to (Fillmore, 1968)), a direct comparison is impossible due to the differences in role definitions and underlying syntactic formalisms. Notice the "},{"expression":"\"high number of ties\"","type":"expression"},{"type":"literal","value":": some roles never co-occur (either by chance or by design) or occur on the same syntactic rank (e.g. oblique) so there is no evidence for preference even if we enforce transitivity."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_6_462"],"datasets":["datasets/scigenCL/6-462.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, extracted for English and German data. While some correspondence to the hierarchies proposed for English Agent in literature is evident (e.g. ≺ Instrument ≺ Theme, similar to (Fillmore, 1968)), a direct comparison is impossible due to the differences in role definitions and underlying syntactic formalisms. Notice "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,: some roles never co-occur (either by chance or by design) or occur on the same syntactic rank (e.g. oblique) so there is no evidence for preference even if we enforce transitivity.\n\n**Note:** In this paragraph, there are no explicit values, comparative expressions, or superlative/aggregated expressions to replace with Fluid expressions. The only thing that was detected were the repeated file path errors, which have been annotated as they match the criteria of being an \"explicit value\" (in terms of a specific text string)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_6_462"
+  ],
+  "datasets": ["datasets/scigenCL/6-462.json"]
+}

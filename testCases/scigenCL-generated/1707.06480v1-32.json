@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"To find out whether this was the case we replaced the LSTM by a Variational RHN (Zilly et al., 2017), and that resulted in "},{"expression":"\"a significant reduction\"","type":"expression"},{"type":"literal","value":" of perplexities on PTB for both Char-CNN and Syl-Concat (Table 5). Moreover, increasing dLM from 439 to 650 did result in "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" performance for Syl-Concat."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1707_06480v1_32"],"datasets":["datasets/scigenCL/1707.06480v1-32.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "To find out whether this was the case we replaced the LSTM by a Variational RHN (Zilly et al., 2017), and that resulted in \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r of perplexities on PTB for both Char-CNN and Syl-Concat (Table 5). Moreover, increasing dLM from "
+    },
+    {
+      "expression": "\"439\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"650\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " did result in \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r performance for Syl-Concat."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_06480v1_32"
+  ],
+  "datasets": ["datasets/scigenCL/1707.06480v1-32.json"]
+}

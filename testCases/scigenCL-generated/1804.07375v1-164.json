@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The coreference annotated portion of the corpus contains "},{"expression":"\"1.59\"","type":"expression"},{"type":"literal","value":" million tokens from multiple genres, presented in Table 1. Written data constitutes the large bulk of material, primarily from newswire (Wall Street Journal data), as well as some data from the Web and the New Testament, and some translations of news and online discussions in Arabic and Chinese. The translated data has been placed in its own category: it behaves more "},{"expression":"\"conservatively\"","type":"expression"},{"type":"literal","value":" in preferring strict agreement than non-translated language (see Section 4.2), perhaps due to translators' editorial practices. The spoken data comes primarily from television broadcasts, including dialogue data from MSNBC, Phoenix and other broadcast sources (bc.conv), or news, from CNN, ABC and others (bc.news), as well as phone conversations."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1804_07375v1_164"],"datasets":["datasets/scigenCL/1804.07375v1-164.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The coreference annotated portion of the corpus contains \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r "
+    },
+    {
+      "expression": "\"million\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tokens from multiple genres, presented in Table 1. Written data constitutes the large bulk of material, primarily from newswire (Wall Street Journal data), as well as some data from the Web and the New Testament, and some translations of news and online discussions in Arabic and Chinese. The translated data has been placed in its own category: it behaves "
+    },
+    {
+      "expression": "\"more\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r in preferring strict agreement than non-translated language (see Section 4.2), perhaps due to translators' editorial practices. The spoken data comes primarily from television broadcasts, including dialogue data from MSNBC, Phoenix and other broadcast sources (bc.conv), or news, from CNN, ABC and others (bc.news), as well as phone conversations.\n\n**Notes:**\n- The text includes a path that appears not to be relevant for Fluid expression detection; it has been left unchanged.\n- \"million\" was replaced because it represents an explicit value.\n- \"more\" is part of a comparative phrase but does not clearly compare two entities, so only the word itself was annotated."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1804_07375v1_164"
+  ],
+  "datasets": ["datasets/scigenCL/1804.07375v1-164.json"]
+}

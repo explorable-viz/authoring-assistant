@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 1 compares the performance of these systems on the development set. Our model with no augmentation already matches the system of Choi et al. (2018) "},{"expression":"\"with augmentation\"","type":"expression"},{"type":"literal","value":", and incorporating ELMo gives further gains on both precision and recall. On top of this model, adding the distantly-annotated data lowers the performance; the loss function-based approach of (Choi et al., 2018) does not sufficiently mitigate the noise in this data. However, denoising makes the distantlyannotated data useful, improving recall by a "},{"expression":"\"substantial\"","type":"expression"},{"type":"literal","value":" margin especially in the general class. BERT performs similarly to ELMo with denoised distant data. As can be seen in the performance breakdown, BERT gains from improvements in recall in the fine class."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1905_01566v1_100"],"datasets":["datasets/scigenCL/1905.01566v1-100.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 1 compares the performance of these systems on the development set. Our model with no augmentation already matches the system of Choi et al. (2018) [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r], and incorporating ELMo gives further gains on both precision and recall. On top of this model, adding the distantly-annotated data lowers the performance; the loss function-based approach of (Choi et al., 2018) does not sufficiently mitigate the noise in this data. However, denoising makes the distantly-annotated data useful, improving recall by a [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] margin especially in the general class. BERT performs similarly to ELMo with denoised distant data. As can be seen in the performance breakdown, BERT gains from improvements in recall in the fine class.\n\n**Note:** The paths and error messages detected within the text do not seem relevant to the detection of Fluid expressions as they appear to be system-specific error messages rather than part of the comparison or evaluation metrics described in the paragraph. Hence, they are marked for replacement but would typically be left unaltered unless specific data points were mistakenly included in this format."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_01566v1_100"
+  ],
+  "datasets": ["datasets/scigenCL/1905.01566v1-100.json"]
+}

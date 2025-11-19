@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 7 presents "},{"expression":"\"the\"","type":"expression"},{"type":"literal","value":" POS tagging improvements that MIMICK achieves over the pre-trained Polyglot models, with and without CHAR→TAG concatenation, with "},{"expression":"\"10,000\"","type":"expression"},{"type":"literal","value":" tokens of training data. We obtain "},{"expression":"\"statistically significant\"","type":"expression"},{"type":"literal","value":" improvements in most languages, even when CHAR→TAG is included. These improvements are particularly "},{"expression":"\"substantial\"","type":"expression"},{"type":"literal","value":" for test-set tokens outside the UD training set, as shown in the right two columns. While test set OOVs are a strength of the CHAR→TAG model (Plank et al., 2016), in many languages there are still considerable improvements to be obtained from the application of MIMICK initialization.\n\n**Note:** In this case, \"the\" before \"POS tagging improvements\" and \"statistically significant\" could be considered comparative or superlative expressions. However, they don't fit perfectly into those categories as per typical usage, so I treated them based on their likely importance in the context. Please adjust if needed!"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1707_06961v1_126"],"datasets":["datasets/scigenCL/1707.06961v1-126.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 7 presents "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, POS tagging improvements that MIMICK achieves over the pre-trained Polyglot models, with and without CHAR→TAG concatenation, with "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, tokens of training data. We obtain "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, improvements in most languages, even when CHAR→TAG is included. These improvements are particularly "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, for test-set tokens outside the UD training set, as shown in the right two columns. While test set OOVs are a strength of the CHAR→TAG model (Plank et al., 2016), in many languages there are still considerable improvements to be obtained from the application of MIMICK initialization.\r\n\r\n**Note:** In this case, \"the\" before \"POS tagging improvements\" and \"statistically significant\" could be considered comparative or superlative expressions. However, they don't fit perfectly into those categories as per typical usage, so I treated them based on their likely importance in the context. Please adjust if needed!"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_06961v1_126"
+  ],
+  "datasets": ["datasets/scigenCL/1707.06961v1-126.json"]
+}

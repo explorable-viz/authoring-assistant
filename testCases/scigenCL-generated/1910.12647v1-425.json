@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 summarizes the results for these transfer learning experiments when the source task is MNLI. "},{"expression":"\"Gain\"","type":"expression"},{"type":"literal","value":" shows the difference between Fine-tuned model's accuracy and Baseline's accuracy. For HUBERT (Transformer), we observe "},{"expression":"\"substantial\"","type":"expression"},{"type":"literal","value":" gain across all "},{"expression":"\"5\"","type":"expression"},{"type":"literal","value":" target corpora after transfer. However, for BERT we have a "},{"expression":"\"drop\"","type":"expression"},{"type":"literal","value":" for QNLI, QQP, and SST."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1910_12647v1_425"],"datasets":["datasets/scigenCL/1910.12647v1-425.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 summarizes the results for these transfer learning experiments when the source task is MNLI. \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r shows the difference between Fine-tuned model's accuracy and Baseline's accuracy. For HUBERT (Transformer), we observe "
+    },
+    {
+      "expression": "\"gain\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across all \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r target corpora after transfer. However, for BERT we have a \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r "
+    },
+    {
+      "expression": "\"for\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " QNLI, QQP, and SST."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_12647v1_425"
+  ],
+  "datasets": ["datasets/scigenCL/1910.12647v1-425.json"]
+}

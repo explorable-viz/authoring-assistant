@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"In Table 3 we report the accuracies obtained by our "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" model in both matched (first 5 genres) and mismatched (last 5 genres) development sets.  We can observe that our implementation performed "},{"expression":"\"like\"","type":"expression"},{"type":"literal","value":" ESIM overall,"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1707_03103v2_267"],"datasets":["datasets/scigenCL/1707.03103v2-267.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "In Table 3 we report the accuracies obtained by our "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,\r model in both matched (first 5 genres) and mismatched (last 5 genres) development sets.  We can observe that our implementation performed "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,\r ESIM overall,\n\nIn this case, the path \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" is not recognized as a command, and it does not seem to be related to any specific value, comparative expression, or superlative in the context provided. Therefore, it doesn't need to be replaced with a Fluid expression according to the given rules. However, if there are specific accuracies or performance metrics mentioned for the model that could be annotated, please provide those details."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_03103v2_267"
+  ],
+  "datasets": ["datasets/scigenCL/1707.03103v2-267.json"]
+}

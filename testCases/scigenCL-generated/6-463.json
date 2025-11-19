@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 5 contrasts the performance of THs induced from English and German training data, and evaluated on German and English test data respectively. While the cross-lingual performance is "},{"expression":"\"lower\"","type":"expression"},{"type":"literal","value":" than the monolingual performance, it "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" the random baseline by a large margin, suggesting the potential for cross-lingual hierarchy induction."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_6_463"],"datasets":["datasets/scigenCL/6-463.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 5 contrasts the performance of THs induced from English and German training data, and evaluated on German and English test data respectively. While the cross-lingual performance is "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the monolingual performance, it "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " random baseline by a large margin, suggesting the potential for cross-lingual hierarchy induction.\n\nNote: The repeated phrase \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r\" seems to be an error and has been omitted in the annotated paragraph."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_6_463"
+  ],
+  "datasets": ["datasets/scigenCL/6-463.json"]
+}

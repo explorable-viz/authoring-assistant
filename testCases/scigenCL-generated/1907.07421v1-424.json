@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 2 shows the experimental results of the slot-independent SUMBT model on MultiWOZ corpus. The SUMBT greatly surpassed the performances of previous approaches by yielding "},{"expression":"\"42.4\"","type":"expression"},{"type":"literal","value":"% joint accuracy."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1907_07421v1_424"],"datasets":["datasets/scigenCL/1907.07421v1-424.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the experimental results of the slot-independent SUMBT model on MultiWOZ corpus. The SUMBT greatly surpassed the performances of previous approaches by yielding "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " joint accuracy. \n\n**Note:** The text \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,%\" seems to be an error message and not a valid value for the expression detector in this context. If you meant to include an actual accuracy score or comparative statement, please correct it so I can accurately annotate it.\n\nIf there is supposed to be an accuracy score after \"yielding\", such as \"95% joint accuracy,\" then here's how it would look:\n\nTable 2 shows the experimental results of the slot-independent SUMBT model on MultiWOZ corpus. The SUMBT greatly surpassed the performances of previous approaches by yielding "
+    },
+    {
+      "expression": "\"95\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% joint accuracy.\n\nIf you need further adjustments, please clarify!"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1907_07421v1_424"
+  ],
+  "datasets": ["datasets/scigenCL/1907.07421v1-424.json"]
+}

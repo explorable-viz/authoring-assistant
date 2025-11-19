@@ -1,1 +1,56 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Taking CONCAT as a representative, we compare the performance of our model with other models, as shown in Table 1. As illustrated, our model outperforms baselines "},{"expression":"\"by\"","type":"expression"},{"type":"literal","value":" a large margin "},{"expression":"\"with\"","type":"expression"},{"type":"literal","value":" or without BERT, achieving new SOTA performances on both datasets. Compared "},{"expression":"\"with\"","type":"expression"},{"type":"literal","value":" the previous SOTA without BERT on SPARC, our model improves Ques.Match and Int.Match by "},{"expression":"\"10.6\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"5.4\"","type":"expression"},{"type":"literal","value":" points, respectively."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2002_00652v2_408"],"datasets":["datasets/scigenCL/2002.00652v2-408.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Taking CONCAT as a representative, we compare the performance of our model with other models, as shown in Table 1. As illustrated, our model outperforms baselines "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,"
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " or without BERT, achieving new SOTA performances on both datasets. Compared "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the previous SOTA without BERT on SPARC, our model improves Ques.Match and Int.Match by "
+    },
+    {
+      "expression": "\"and\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points, respectively.\n\nIt seems there is an issue with \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" being incorrectly pasted as \"non � riconosciuto come comando interno o esterno,\" which translates to \"is not recognized as an internal or external command.\" This phrase should not be included in the final output, but if it appears in the original text, I have annotated it according to your instructions.\n\nHere is the corrected version without those phrases:\n\nTaking CONCAT as a representative, we compare the performance of our model with other models, as shown in Table 1. As illustrated, our model outperforms baselines or without BERT, achieving new SOTA performances on both datasets. Compared the previous SOTA without BERT on SPARC, our model improves Ques.Match and Int.Match by "
+    },
+    {
+      "expression": "\"and\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points, respectively.\n\nHowever, since \"and\" is not a comparative expression, it should remain as is unless you intended to replace something else. If there are specific metrics or values that should be annotated, please provide those details."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2002_00652v2_408"
+  ],
+  "datasets": ["datasets/scigenCL/2002.00652v2-408.json"]
+}

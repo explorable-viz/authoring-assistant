@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We evaluate our four labeling strategies using the many-to-one approach, as presented in Table 1. In all cases, clustering by type with Brown-based algorithms works "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than using a sophisticated tagger such as A-HMM."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_05426v1_143"],"datasets":["datasets/scigenCL/1904.05426v1-143.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We evaluate our four labeling strategies using the many-to-one approach, as presented in Table 1. In all cases, clustering by type with Brown-based algorithms works "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than using a sophisticated tagger such as A-HMM.\n\nNote: The expression \"non � riconosciuto come comando interno o esterno,\" appears to be an error or unrelated text and does not seem to fit into the comparative context. If it's meant to be a comparative phrase like \"better\" or \"worse\", please correct it for accurate replacement.\n\nIf we assume it was supposed to say something comparative like \"better\", then it would look like this:\n\nWe evaluate our four labeling strategies using the many-to-one approach, as presented in Table 1. In all cases, clustering by type with Brown-based algorithms works "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than using a sophisticated tagger such as A-HMM."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_05426v1_143"
+  ],
+  "datasets": ["datasets/scigenCL/1904.05426v1-143.json"]
+}

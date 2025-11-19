@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 4: Performance of different models on TREC-QA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed in (Yoon et al. 2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively. Table 4 reports "},{"expression":"\"the results\"","type":"expression"},{"type":"literal","value":" of our experiments with TREC-QA."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1911_04118v2_286"],"datasets":["datasets/scigenCL/1911.04118v2-286.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4: Performance of different models on TREC-QA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed in (Yoon et al. 2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively. Table 4 reports "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of our experiments with TREC-QA.\n\n**Note:** The detected expression seems to be an error message rather than a value from the data. If you intended to include actual values or comparative/superlative expressions in your paragraph for Fluid annotation, please provide those details accordingly."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1911_04118v2_286"
+  ],
+  "datasets": ["datasets/scigenCL/1911.04118v2-286.json"]
+}

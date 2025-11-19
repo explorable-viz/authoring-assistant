@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 1: The performances of the IM2LATEX-100K Bi-LSTM model. We discover that the look-ahead improves the model from the greedy search method \u2014 noted that LA is "},{"expression":"\"more\"","type":"expression"},{"type":"literal","value":" directly comparable to the greedy search because of their same beam size. We also show the scores of the beam search for the reference"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2003_03716v1_321"],"datasets":["datasets/scigenCL/2003.03716v1-321.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1: The performances of the IM2LATEX-100K Bi-LSTM model. We discover that the look-ahead improves the model from the greedy search method \u2014 noted that LA is "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, directly comparable to the greedy search because of their same beam size. We also show the scores of the beam search for the reference"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2003_03716v1_321"
+  ],
+  "datasets": ["datasets/scigenCL/2003.03716v1-321.json"]
+}

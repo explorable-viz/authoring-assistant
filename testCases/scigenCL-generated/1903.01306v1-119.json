@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"From the evaluation results in Table 2, we observe that the performance "},{"expression":"\"slightly degraded\"","type":"expression"},{"type":"literal","value":" without coarse-to-fine attention. We also noticed that the performance "},{"expression":"\"slightly degraded\"","type":"expression"},{"type":"literal","value":" without KG or using word embeddings, and the performance "},{"expression":"\"significantly degraded\"","type":"expression"},{"type":"literal","value":" when we removed GCNs."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1903_01306v1_119"],"datasets":["datasets/scigenCL/1903.01306v1-119.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It seems there's an issue with the command path provided in your paragraph, as it doesn't appear to contain any performance metrics or comparative expressions that can be replaced by Fluid expressions. The paragraph contains a repeated phrase that appears to be an error message rather than actual data points. However, if we assume that this is a placeholder for actual values or references, I will illustrate how to handle it.\n\nFor example, let's assume the phrase \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" is actually a placeholder for performance metrics like F1-scores or accuracy. In that case, here is how you could annotate the paragraph if those placeholders were replaced with actual values:\n\nAssuming hypothetical values:\n- Without coarse-to-fine attention: 85%\n- Without KG or using word embeddings: 87%\n- When we removed GCNs: 86%\n\nThe annotated paragraph would look like this:\n\nFrom the evaluation results in Table 2, we observe that the performance "
+    },
+    {
+      "expression": "\"85\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% without coarse-to-fine attention. We also noticed that the performance "
+    },
+    {
+      "expression": "\"87\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% without KG or using word embeddings, and the performance "
+    },
+    {
+      "expression": "\"86\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% when we removed GCNs.\n\nSince no actual values are provided in the original text, this is just an illustrative example of how to apply Fluid expression annotations once valid numerical data is present."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1903_01306v1_119"
+  ],
+  "datasets": ["datasets/scigenCL/1903.01306v1-119.json"]
+}

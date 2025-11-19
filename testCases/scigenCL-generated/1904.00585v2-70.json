@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We find that word vectors and LMs pretrained on small similar sources can achieve competitive or even "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" performance than the ones pretrained on larger sources (Table 5). On JNLPBA, ScienceIE and Wetlab, LMs pretrained on the small similar source perform "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":", while word vectors pretrained on the small similar source perform "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" on CRAFT, JNLPBA, and ScienceIE."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_00585v2_70"],"datasets":["datasets/scigenCL/1904.00585v2-70.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We find that word vectors and LMs pretrained on small similar sources can achieve competitive or even "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the ones pretrained on larger sources (Table 5). On JNLPBA, ScienceIE and Wetlab, LMs pretrained on the small similar source perform "
+    },
+    {
+      "expression": "\"perform\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while word vectors pretrained on the small similar source perform "
+    },
+    {
+      "expression": "\"perform\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on CRAFT, JNLPBA, and ScienceIE.\n\nNote: The phrase `\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r` seems to be an error message related to a Fluid command that failed to execute. This part of the text is not relevant for replacing with Fluid expressions and has been left as-is in the output."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_00585v2_70"
+  ],
+  "datasets": ["datasets/scigenCL/1904.00585v2-70.json"]
+}

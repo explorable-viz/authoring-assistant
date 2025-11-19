@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"report brief results on SQuAD (Table 3), We also evaluate the SynNet on the NewsQAto-SQuAD direction. We directly apply "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" setting from the other direction and report the result in Table 3. The SynNet improves over the baseline by "},{"expression":"\"1.6\"","type":"expression"},{"type":"literal","value":"% in EM and "},{"expression":"\"0.7\"","type":"expression"},{"type":"literal","value":"% in F1. Limited by space, we leave out ablation studies in this direction."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1706_09789v3_51"],"datasets":["datasets/scigenCL/1706.09789v3-51.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "report brief results on SQuAD (Table 3), We also evaluate the SynNet on the NewsQAto-SQuAD direction. We directly apply \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r setting from the other direction and report the result in Table 3. The SynNet improves over the baseline by [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]% in EM and [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]% in F1. Limited by space, we leave out ablation studies in this direction.\n\nIn the provided text, there are no explicit values or comparative/superlative expressions that can be clearly replaced with Fluid expressions other than the repeated path to `fluid`, which is not a value in the context of this task."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1706_09789v3_51"
+  ],
+  "datasets": ["datasets/scigenCL/1706.09789v3-51.json"]
+}

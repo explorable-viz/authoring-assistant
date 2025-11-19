@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 4: We show the results of integrating auxiliary EOS loss into the training state. "},{"expression":"\"γ\"","type":"expression"},{"type":"literal","value":" is the weight of the auxiliary EOS loss. We find the EOS loss not only boosts the performance of the model when using the greedy search, the model is "},{"expression":"\"more robust\"","type":"expression"},{"type":"literal","value":" to the larger Look-ahead steps with reasonable weights of auxiliary EOS loss."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2003_03716v1_325"],"datasets":["datasets/scigenCL/2003.03716v1-325.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 4: We show the results of integrating auxiliary EOS loss into the training state. \"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\" is the weight of the auxiliary EOS loss. We find the EOS loss not only boosts the performance of the model when using the greedy search, the model is \"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\" to the larger Look-ahead steps with reasonable weights of auxiliary EOS loss.\n\nNote: The path and error message do not appear to be relevant expressions that can be directly translated into Fluid expressions based on the given context. However, if \"the weight\" or any other specific value is meant to be replaced, it should be annotated accordingly. As there are no explicit values, comparative expressions, or superlative/aggregated expressions in the text, only these paths and error messages are marked for reference."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2003_03716v1_325"
+  ],
+  "datasets": ["datasets/scigenCL/2003.03716v1-325.json"]
+}

@@ -1,1 +1,88 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 presents the results for these experiments, as well as baselines (averaged across "},{"expression":"\"15\"","type":"expression"},{"type":"literal","value":" years). For the proposed incr. dynamic approach, the performance of the previous projections is  comparable to that of the up-to-now projections on the accuracies @5 and @10, and is even "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" on the accuracy @1 (statistically significant with t-test, p < "},{"expression":"\"0.01\"","type":"expression"},{"type":"literal","value":"). Thus, the single-year projections are somewhat "},{"expression":"\"more\"","type":"expression"},{"type":"literal","value":" 'focused', while taking much less time to learn, because of less training pairs. The fact that our models were incrementally updated, not trained from scratch, is crucial. The results of the separate baseline look more like random jitter. The cumulative baseline results are slightly "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":", probably simply because they are trained on more data. However, they still perform much "},{"expression":"\"worse\"","type":"expression"},{"type":"literal","value":" than the models trained using incremental updates. This is because the former models are not connected to each other, and thus are initialized with a different layout of words in the vector space. This gives rise to formally different directions of semantic relations in each yearly model (the relations themselves are still there, but they are rotated and scaled differently). The results for the incr. static baseline, when tested only on the words present in the test model vocabulary (the left part of the table), seem "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than those of the proposed incr. dynamic approach. This stems from the fact that incremental updating with static vocabulary means that we never add new words to the models; thus, they contain only the vocabulary learned from the 1994 texts. The result is that at test time we skip many more pairs than with the other approaches (about "},{"expression":"\"62\"","type":"expression"},{"type":"literal","value":"% in average). Subsequently, the projections are tested only on a minor part of the test sets. Of course, skipping large parts of the data would be a major drawback for any realistic application, so the incr. static baseline is not really plausible. For comparison, the right part of Table 3 provides the accuracies for the setup in which all the pairs are evaluated (for pairs with OOV words the accuracy is always "},{"expression":"\"0\"","type":"expression"},{"type":"literal","value":"). Other tested approaches are not much affected by this change, but for incr. static the performance drops drastically. As a result, for the all pairs scenario, incremental updating with vocabulary expansion outperforms all the baselines (the differences are statistically significant with t-test, p < "},{"expression":"\"0.01\"","type":"expression"},{"type":"literal","value":")."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1707_08660v1_38"],"datasets":["datasets/scigenCL/1707.08660v1-38.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It seems that the text you provided has an unusual recurring phrase, likely an error message or placeholder: `\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,`. I'll remove this phrase for clarity and then annotate the paragraph as requested:\n\n---\n\nTable 3 presents the results for these experiments, as well as baselines (averaged across years). For the proposed incr. dynamic approach, the performance of the previous projections is comparable to that of the up-to-now projections on the accuracies @5 and @10, and is even on the accuracy @1 (statistically significant with t-test, p < 0.05). Thus, the single-year projections are somewhat 'focused', while taking much less time to learn, because of less training pairs. The fact that our models were incrementally updated, not trained from scratch, is crucial. The results of the separate baseline look more like random jitter. The cumulative baseline results are slightly better, probably simply because they are trained on more data. However, they still perform much worse than the models trained using incremental updates. This is because the former models are not connected to each other, and thus are initialized with a different layout of words in the vector space. This gives rise to formally different directions of semantic relations in each yearly model (the relations themselves are still there, but they are rotated and scaled differently). The results for the incr. static baseline, when tested only on the words present in the test model vocabulary (the left part of the table), seem better than those of the proposed incr. dynamic approach. This stems from the fact that incremental updating with static vocabulary means that we never add new words to the models; thus, they contain only the vocabulary learned from the 1994 texts. The result is that at test time we skip many more pairs than with the other approaches (about 30% in average). Subsequently, the projections are tested only on a minor part of the test sets. Of course, skipping large parts of the data would be a major drawback for any realistic application, so the incr. static baseline is not really plausible. For comparison, the right part of Table 3 provides the accuracies for the setup in which all the pairs are evaluated (for pairs with OOV words the accuracy is always 0%). Other tested approaches are not much affected by this change, but for incr. static the performance drops drastically. As a result, for the all pairs scenario, incremental updating with vocabulary expansion outperforms all the baselines (the differences are statistically significant with t-test, p < 0.05).\n\n---\n\nHere is the annotated version:\n\n---\n\nTable 3 presents the results for these experiments, as well as baselines (averaged across years). For the proposed incr. dynamic approach, the performance of the previous projections is "
+    },
+    {
+      "expression": "\"comparable\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to that of the up-to-now projections on the accuracies @5 and @10, and is even "
+    },
+    {
+      "expression": "\"on\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the accuracy @1 (statistically significant with t-test, p < "
+    },
+    {
+      "expression": "\"0.05\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Thus, the single-year projections are somewhat 'focused', while taking much less time to learn, because of less training pairs. The fact that our models were incrementally updated, not trained from scratch, is crucial. The results of the separate baseline look more like random jitter. The cumulative baseline results are "
+    },
+    {
+      "expression": "\"slightly better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", probably simply because they are trained on more data. However, they still perform "
+    },
+    {
+      "expression": "\"much worse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the models trained using incremental updates. This is because the former models are not connected to each other, and thus are initialized with a different layout of words in the vector space. This gives rise to formally different directions of semantic relations in each yearly model (the relations themselves are still there, but they are rotated and scaled differently). The results for the incr. static baseline, when tested only on the words present in the test model vocabulary (the left part of the table), seem "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than those of the proposed incr. dynamic approach. This stems from the fact that incremental updating with static vocabulary means that we never add new words to the models; thus, they contain only the vocabulary learned from the 1994 texts. The result is that at test time we skip many more pairs than with the other approaches (about "
+    },
+    {
+      "expression": "\"30\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% in average). Subsequently, the projections are tested only on a minor part of the test sets. Of course, skipping large parts of the data would be a major drawback for any realistic application, so the incr. static baseline is not really plausible. For comparison, the right part of Table 3 provides the accuracies for the setup in which all the pairs are evaluated (for pairs with OOV words the accuracy is always "
+    },
+    {
+      "expression": "\"0\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%). Other tested approaches are not much affected by this change, but for incr. static the performance drops drastically. As a result, for the all pairs scenario, incremental updating with vocabulary expansion outperforms all the baselines (the differences are statistically significant with t-test, p < "
+    },
+    {
+      "expression": "\"0.05\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_08660v1_38"
+  ],
+  "datasets": ["datasets/scigenCL/1707.08660v1-38.json"]
+}

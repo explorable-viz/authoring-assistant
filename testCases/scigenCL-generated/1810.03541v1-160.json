@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 6 shows the performance of our transition-based parser along with "},{"expression":"\"comparison\"","type":"expression"},{"type":"literal","value":" to the parsers in the previous works. The second block in Table 6 shows the results of our ensemble parser, in which ensemble significantly improves the performance and "},{"expression":"\"more\"","type":"expression"},{"type":"literal","value":" parsers ensembled, "},{"expression":"\"more\"","type":"expression"},{"type":"literal","value":" improvements are achieved."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1810_03541v1_160"],"datasets":["datasets/scigenCL/1810.03541v1-160.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The paragraph contains no explicit values, comparative expressions, or superlative/aggregated expressions that can be replaced by Fluid expressions as per the given criteria. The repeated phrase \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" seems to be an error or an unrelated text and does not contribute to identifying any Fluid expressions.\n\nHere is the annotated paragraph without any changes:\n\nTable 6 shows the performance of our transition-based parser along with \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r to the parsers in the previous works. The second block in Table 6 shows the results of our ensemble parser, in which ensemble significantly improves the performance and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r parsers ensembled, \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r improvements are achieved."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1810_03541v1_160"
+  ],
+  "datasets": ["datasets/scigenCL/1810.03541v1-160.json"]
+}

@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"On a support basis, we find a "},{"expression":"\"52\"","type":"expression"},{"type":"literal","value":"% increase in Kappa by adding the titles.  Cohen's Kappa is "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" than that for ESIM."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1901_02534v1_33"],"datasets":["datasets/scigenCL/1901.02534v1-33.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "On a support basis, we find a "
+    },
+    {
+      "expression": "\"C:\\\\Users\\\\Alfy\\\\Lavoro\\\\bristol\\\\transp-text-new\\\\node_modules\\\\.bin\\\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,% "
+    },
+    {
+      "expression": "\"% increase in Kappa\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by adding the titles.  Cohen's Kappa is "
+    },
+    {
+      "expression": "\"C:\\\\Users\\\\Alfy\\\\Lavoro\\\\bristol\\\\transp-text-new\\\\node_modules\\\\.bin\\\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,% "
+    },
+    {
+      "expression": "\"than that for ESIM\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1901_02534v1_33"
+  ],
+  "datasets": ["datasets/scigenCL/1901.02534v1-33.json"]
+}

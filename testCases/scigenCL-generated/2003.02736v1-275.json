@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Our results are given in Table 4. We found that the Wikipedia and Twitter datasets contained labels which were "},{"expression":"\"more general\"","type":"expression"},{"type":"literal","value":", evidenced by similar high F1 scores from both annotators (> "},{"expression":"\"0.8\"","type":"expression"},{"type":"literal","value":"). For political speeches, we observed that the human annotators both found many more examples to be check-worthy than were labelled in the dataset."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2003_02736v1_275"],"datasets":["datasets/scigenCL/2003.02736v1-275.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our results are given in Table 4. We found that the Wikipedia and Twitter datasets contained labels which were [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] evidenced by similar high F1 scores from both annotators (> [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]). For political speeches, we observed that the human annotators both found "
+    },
+    {
+      "expression": "\"many more\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " examples to be check-worthy than were labelled in the dataset.\n\nNote: The paths mentioned (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r) seem to be error messages rather than valid values or expressions for Fluid. If they are intended to be actual F1 scores or other numerical data, they need to be corrected in the input paragraph before processing with Fluid. \n\nGiven the current text, there is only one comparative expression detected: \"many more\". The paths are kept as-is since they do not seem to represent valid values for replacement."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2003_02736v1_275"
+  ],
+  "datasets": ["datasets/scigenCL/2003.02736v1-275.json"]
+}

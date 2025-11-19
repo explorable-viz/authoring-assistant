@@ -1,1 +1,64 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The power these features bring to the model, beyond what is captured in the ELMo-LSTM representations, is evident in table 2, column 1. The results in table 2, column 2, clearly favor the combined model ELMo-LSTM-CRF-HB that uses both these features and the ELMo-LSTM. Our test-set results, given in table 2, column 3, show the power of our combined model ELMo-LSTM-CRF-HB. We report results for the standard test set. The power of the combined model ELMo-LSTM-CRF-HB is again evident in the results in table 2, column 4. Our results for this experiment are given in table 2, column 5, and point to "},{"expression":"\"the superiority\"","type":"expression"},{"type":"literal","value":" of our combined model ELMo-LSTM-CRF-HB. Our discussion seeks to show that the combined model ELMo-LSTM-CRF-HB, which shows "},{"expression":"\"superior performance\"","type":"expression"},{"type":"literal","value":" in all tasks (table 2), is making meaningful use of both kinds of features (hand-built and ELMo) and both of the major model components (LSTM and CRF). We note also that, where the performance of the two base models is very similar (table 2), the potential scores in the combined model are also more "},{"expression":"\"similar\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1811_00070v2_385"],"datasets":["datasets/scigenCL/1811.00070v2-385.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The power these features bring to the model, beyond what is captured in the ELMo-LSTM representations, is evident in table 2, column "
+    },
+    {
+      "expression": "\"1\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The results in table 2, column "
+    },
+    {
+      "expression": "\"2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", clearly favor the combined model ELMo-LSTM-CRF-HB that uses both these features and the ELMo-LSTM. Our test-set results, given in table 2, column "
+    },
+    {
+      "expression": "\"3\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", show the power of our combined model ELMo-LSTM-CRF-HB. We report results for the standard test set. The power of the combined model ELMo-LSTM-CRF-HB is again evident in the results in table 2, column "
+    },
+    {
+      "expression": "\"4\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Our results for this experiment are given in table 2, column "
+    },
+    {
+      "expression": "\"5\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and point to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" of our combined model ELMo-LSTM-CRF-HB. Our discussion seeks to show that the combined model ELMo-LSTM-CRF-HB, which shows \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" in all tasks (table 2), is making meaningful use of both kinds of features (hand-built and ELMo) and both of the major model components (LSTM and CRF). We note also that, where the performance of the two base models is very "
+    },
+    {
+      "expression": "\"similar\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (table 2), the potential scores in the combined model are also more \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\"."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1811_00070v2_385"
+  ],
+  "datasets": ["datasets/scigenCL/1811.00070v2-385.json"]
+}

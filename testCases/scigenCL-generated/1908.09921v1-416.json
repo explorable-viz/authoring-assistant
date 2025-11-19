@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"To evaluate the annotations, inter-annotator agreement was calculated based on a subset of the gold standard corpus.4 Table 4 illustrates the values of "},{"expression":"\"observed agreement\"","type":"expression"},{"type":"literal","value":" (Ao) and "},{"expression":"\"Cohen's κ\"","type":"expression"},{"type":"literal","value":" (Cohen, 1960) obtained for question, feature and answer annotation. The agreement values obtained for question types were over "},{"expression":"\"0.6\"","type":"expression"},{"type":"literal","value":" (for all annotators combined)."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1908_09921v1_416"],"datasets":["datasets/scigenCL/1908.09921v1-416.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The paragraph you provided does not contain any explicit values, comparative expressions, or superlative or aggregated expressions that can be replaced by Fluid expressions based on the given format and rules. The text seems to be discussing an evaluation process but does not provide specific numbers or comparisons between different metrics or models.\n\nHere is the annotated version of your paragraph as per the instructions provided:\n\nTo evaluate the annotations, inter-annotator agreement was calculated based on a subset of the gold standard corpus.\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" (Ao) and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" (Cohen, 1960) obtained for question, feature and answer annotation. The agreement values obtained for question types were over \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" (for all annotators combined).\n\nSince there are no explicit numerical values or comparative statements, the paragraph remains unchanged."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_09921v1_416"
+  ],
+  "datasets": ["datasets/scigenCL/1908.09921v1-416.json"]
+}

@@ -1,1 +1,80 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 2 shows micro "},{"expression":"\"F1\"","type":"expression"},{"type":"literal","value":" scores on 5 out-domain test sets. Besides ours, only Cheng and Roth (2013) employs several mention relations. Mentnorm achieves "},{"expression":"\"the highest\"","type":"expression"},{"type":"literal","value":" F1 scores on MSNBC and ACE2004. On average, ment-norm's F1 score is "},{"expression":"\"0.3\"","type":"expression"},{"type":"literal","value":"% higher than that of Ganea and Hofmann (2017), but "},{"expression":"\"0.2\"","type":"expression"},{"type":"literal","value":"% lower than Guo and Barbosa (2016)'s. It is worth noting that Guo and Barbosa (2016) performs exceptionally well on WIKI, but substantially "},{"expression":"\"worse\"","type":"expression"},{"type":"literal","value":" than ment-norm on all other datasets. Our other three models, however, have lower average F1 scores compared to the "},{"expression":"\"best previous\"","type":"expression"},{"type":"literal","value":" model. The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1804_10637v1_91"],"datasets":["datasets/scigenCL/1804.10637v1-91.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows micro "
+    },
+    {
+      "expression": "\"scores\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on 5 out-domain test sets. Besides ours, only Cheng and Roth (2013) employs several mention relations. Mentnorm achieves "
+    },
+    {
+      "expression": "\"F1 scores\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on MSNBC and ACE2004. On average, ment-norm's F1 score is "
+    },
+    {
+      "expression": "\"% higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than that of Ganea and Hofmann (2017), but "
+    },
+    {
+      "expression": "\"% lower\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than Guo and Barbosa (2016)'s. It is worth noting that Guo and Barbosa (2016) performs exceptionally well on WIKI, but substantially "
+    },
+    {
+      "expression": "\"lower\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than ment-norm on all other datasets. Our other three models, however, have "
+    },
+    {
+      "expression": "\"lower\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " average F1 scores compared to the "
+    },
+    {
+      "expression": "\"ment-norm\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model. The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role.\n\n**Note:** The phrases marked as "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " do not represent valid expressions to be replaced in Fluid. They appear to be errors or unintended text, so they have been ignored in the annotations."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1804_10637v1_91"
+  ],
+  "datasets": ["datasets/scigenCL/1804.10637v1-91.json"]
+}

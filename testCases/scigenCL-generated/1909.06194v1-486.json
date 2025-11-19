@@ -1,1 +1,80 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table VI reports the accuracy of the models on the four benchmark datasets. All the results are bold. It shows that Style-HAN outperforms the baselines by "},{"expression":"\"2.38\"","type":"expression"},{"type":"literal","value":"% "},{"expression":"\"over\"","type":"expression"},{"type":"literal","value":" the CCAT10, "},{"expression":"\"1.35\"","type":"expression"},{"type":"literal","value":"% "},{"expression":"\"over\"","type":"expression"},{"type":"literal","value":" the CCAT50, "},{"expression":"\"8.73\"","type":"expression"},{"type":"literal","value":"% "},{"expression":"\"over\"","type":"expression"},{"type":"literal","value":" the BLOGs10, and "},{"expression":"\"4.46\"","type":"expression"},{"type":"literal","value":"% "},{"expression":"\"over\"","type":"expression"},{"type":"literal","value":" the BLOGS50 datasets, respectively."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_06194v1_486"],"datasets":["datasets/scigenCL/1909.06194v1-486.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table VI reports the accuracy of the models on the four benchmark datasets. All the results are bold. It shows that Style-HAN outperforms the baselines by "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " CCAT10, "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " CCAT50, "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLOGs10, and "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLOGS50 datasets, respectively. \n\nNote: The paragraph contains an error where it repeats a message about \"fluid\" not being recognized as an internal or external command. This message should be removed as it is irrelevant to the content of the paragraph.\n\nThe corrected version would look like this:\n\nTable VI reports the accuracy of the models on the four benchmark datasets. All the results are bold. It shows that Style-HAN outperforms the baselines by "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " CCAT10, "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " CCAT50, "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLOGs10, and "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLOGS50 datasets, respectively."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_06194v1_486"
+  ],
+  "datasets": ["datasets/scigenCL/1909.06194v1-486.json"]
+}

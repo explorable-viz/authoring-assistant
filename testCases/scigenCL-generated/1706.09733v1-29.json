@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"As shown in Table 2, sub-word systems "},{"expression":"\"outperform\"","type":"expression"},{"type":"literal","value":" full-word systems across the board, despite having fewer total parameters. Systems built on larger data generally benefit from larger vocabularies while smaller systems perform "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" with smaller vocabularies."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1706_09733v1_29"],"datasets":["datasets/scigenCL/1706.09733v1-29.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 2, sub-word systems "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, full-word systems across the board, despite having fewer total parameters. Systems built on larger data generally benefit from larger vocabularies while smaller systems perform "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, with smaller vocabularies.\n\nNote: The paths provided in the text do not represent explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced by Fluid expressions. They appear to be file paths or commands and thus should remain unchanged."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1706_09733v1_29"
+  ],
+  "datasets": ["datasets/scigenCL/1706.09733v1-29.json"]
+}

@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 1 presents the results of using different pooling strategies for generating a raw sentence representation vector from the word vectors. We can observe that both "},{"expression":"\"the mean method\"","type":"expression"},{"type":"literal","value":", and picking "},{"expression":"\"the last hidden state\"","type":"expression"},{"type":"literal","value":" for both directions performed "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than the two other strategies, however at 95% confidence we cannot assert that any of these methods is statistically different from one another. Another interesting result, as shown by Table 1 and Table 2, is that the model seemed to be insensitive to the usage of character embeddings,"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1707_03103v2_266"],"datasets":["datasets/scigenCL/1707.03103v2-266.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The provided paragraph does not contain any explicit values, comparative expressions, or superlative or aggregated expressions that can be directly replaced with Fluid expressions based on the given format. The paragraph primarily discusses pooling strategies and results from tables, but it does not provide specific numerical results or comparisons that would fit the criteria for replacement.\n\nHowever, I will reformat any potential matches according to the rules if they were present:\n\n---\n\nTable 1 presents the results of using different pooling strategies for generating a raw sentence representation vector from the word vectors. We can observe that both \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r, and picking \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r for both directions performed "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the two other strategies, however at 95% confidence we cannot assert that any of these methods is statistically different from one another. Another interesting result, as shown by Table 1 and Table 2, is that the model seemed to be insensitive to the usage of character embeddings,\n\n---\n\nSince no actual values or comparative expressions are present in the text provided, no further replacements were made."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1707_03103v2_266"
+  ],
+  "datasets": ["datasets/scigenCL/1707.03103v2-266.json"]
+}

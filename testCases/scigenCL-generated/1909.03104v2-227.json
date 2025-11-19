@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Our results in Table 3 are consistent with these observations, where we see improvements in most tasks, but the difference is not as "},{"expression":"\"significant\"","type":"expression"},{"type":"literal","value":" as the probing tasks, except in TREC question classification where increasing K leads to "},{"expression":"\"much better\"","type":"expression"},{"type":"literal","value":" performance."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_03104v2_227"],"datasets":["datasets/scigenCL/1909.03104v2-227.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our results in Table 3 are consistent with these observations, where we see improvements in most tasks, but the difference is not as "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the probing tasks, except in TREC question classification where increasing K leads to "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance.\n\nIt appears that the string \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" is being treated as a comparative expression, but it seems to be an error message rather than a meaningful part of the sentence. If this string is not supposed to be there, you might want to clean up the text before annotation. Otherwise, if it should be treated as part of the description, it would not typically be replaced by a Fluid expression as it doesn't correspond to a value, comparison, or superlative in the context provided.\n\nIf you need help with cleaning up this text or further annotation, please let me know!"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_03104v2_227"
+  ],
+  "datasets": ["datasets/scigenCL/1909.03104v2-227.json"]
+}

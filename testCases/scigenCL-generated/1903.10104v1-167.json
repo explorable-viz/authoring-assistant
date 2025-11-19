@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We also show the number of propositions in each category in Table 3. The "},{"expression":"\"most frequent\"","type":"expression"},{"type":"literal","value":" types are "},{"expression":"\"evaluation\"","type":"expression"},{"type":"literal","value":" ("},{"expression":"\"38.3\"","type":"expression"},{"type":"literal","value":"% ) and "},{"expression":"\"fact\"","type":"expression"},{"type":"literal","value":" ("},{"expression":"\"36.5\"","type":"expression"},{"type":"literal","value":"%)."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1903_10104v1_167"],"datasets":["datasets/scigenCL/1903.10104v1-167.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The paragraph you provided does not contain any explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced with Fluid expressions. The text seems to be an error message related to the Fluid command not being recognized as a valid command in the system.\n\nHere is the original paragraph without any changes since no replacements are applicable:\n\nWe also show the number of propositions in each category in Table 3. The \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,  types are \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,% ) and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,%)."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1903_10104v1_167"
+  ],
+  "datasets": ["datasets/scigenCL/1903.10104v1-167.json"]
+}

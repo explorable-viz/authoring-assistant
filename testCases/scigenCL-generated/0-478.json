@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The "},{"expression":"\"two best-performing\"","type":"expression"},{"type":"literal","value":" approaches in the task of generating sentences from dependency trees have been feature-based incremental text generation (Bohnet et al., 2010; Liu et al., 2015; Puduppully et al., 2016; King and White, 2018) and "},{"expression":"\"more global\"","type":"expression"},{"type":"literal","value":" techniques performing more global input-output mapping (Castro Ferreira et al., 2018; Elder and Hokamp, 2018). Each of these approaches has their advantages and limitations (Table 2)."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_0_478"],"datasets":["datasets/scigenCL/0-478.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, approaches in the task of generating sentences from dependency trees have been feature-based incremental text generation (Bohnet et al., 2010; Liu et al., 2015; Puduppully et al., 2016; King and White, 2018) and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, "
+    },
+    {
+      "expression": "\"techniques performing more global input-output mapping\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Castro Ferreira et al., 2018; Elder and Hokamp, 2018). Each of these approaches has their advantages and limitations (Table 2).\n\nNote: The paths \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, seem to be repeated unnecessarily in the text. It appears they were not meant to be part of the paragraph but are instead an error message or path that should be removed for clarity. Here's a cleaned-up version with just the relevant annotation:\n\napproaches in the task of generating sentences from dependency trees have been feature-based incremental text generation (Bohnet et al., 2010; Liu et al., 2015; Puduppully et al., 2016; King and White, 2018) and "
+    },
+    {
+      "expression": "\"techniques performing more global input-output mapping\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Castro Ferreira et al., 2018; Elder and Hokamp, 2018). Each of these approaches has their advantages and limitations (Table 2)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_0_478"
+  ],
+  "datasets": ["datasets/scigenCL/0-478.json"]
+}

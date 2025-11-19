@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"As shown in Table 6, the BOTH model produced "},{"expression":"\"the most accurate\"","type":"expression"},{"type":"literal","value":" output ("},{"expression":"\"95\"","type":"expression"},{"type":"literal","value":"% correct simple sentences), with "},{"expression":"\"the lowest incidence of\"","type":"expression"},{"type":"literal","value":" missed or unsupported statements. outputs from Aharoni and Goldberg(2018) (AG18), which were "},{"expression":"\"22\"","type":"expression"},{"type":"literal","value":"% accurate."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1808_09468v1_337"],"datasets":["datasets/scigenCL/1808.09468v1-337.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "As shown in Table 6, the BOTH model produced [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]% correct simple sentences), with [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r] missed or unsupported statements. outputs from Aharoni and Goldberg(2018) (AG18), which were [REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]% accurate. \n\nIt seems like the paragraph contains a repeated and unusual phrase that is likely an error or placeholder text rather than meaningful content. I have annotated it as is based on your instructions.\n\nIf this was not intended, please provide the correct expressions to replace these annotations with the appropriate Fluid expressions."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_09468v1_337"
+  ],
+  "datasets": ["datasets/scigenCL/1808.09468v1-337.json"]
+}

@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"However, this comparison is reversed for the BB3 dataset where ENT-ONLY is in general "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" or comparable to ENT-SENT and ENT-DYM over different deep learning models. In the BB3 dataset, ENT-SENT significantly "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" ENT-DYM over all the models. When we switch to the BB3 dataset, it turns out that ENT-DEP0 is significantly "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than all the non-syntax pooling methods (i.e., ENT-ONLY, ENT-SENT and ENT-DYM) for all the comparing models."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1911_01055v1_368"],"datasets":["datasets/scigenCL/1911.01055v1-368.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It looks like there are some anomalies in your paragraph where parts of file paths or command errors seem to have been inserted (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\"). I'll assume these are not part of the original text and should be removed. Here is your annotated paragraph with Fluid expressions:\n\nHowever, this comparison is reversed for the BB3 dataset where ENT-ONLY is in general "
+    },
+    {
+      "expression": "\"comparable\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to ENT-SENT and ENT-DYM over different deep learning models. In the BB3 dataset, ENT-SENT significantly "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ENT-DYM over all the models. When we switch to the BB3 dataset, it turns out that ENT-DEP0 is significantly "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than all the non-syntax pooling methods (i.e., ENT-ONLY, ENT-SENT and ENT-DYM) for all the comparing models."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1911_01055v1_368"
+  ],
+  "datasets": ["datasets/scigenCL/1911.01055v1-368.json"]
+}

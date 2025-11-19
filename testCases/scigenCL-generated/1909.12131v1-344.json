@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The results of the human evaluation are displayed in Table 6. These scores show that we succeed in producing output sequences that reach a "},{"expression":"\"high\"","type":"expression"},{"type":"literal","value":" level of grammatical soundness and almost always perfectly preserve the original meaning of the input. The third dimension under consideration, structural simplicity, which captures the degree of minimality in the simplified sentences, scores "},{"expression":"\"high\"","type":"expression"},{"type":"literal","value":" values, too."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_12131v1_344"],"datasets":["datasets/scigenCL/1909.12131v1-344.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of the human evaluation are displayed in Table 6. These scores show that we succeed in producing output sequences that reach a "
+    },
+    {
+      "expression": "\"level\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of grammatical soundness and almost always perfectly preserve the original meaning of the input. The third dimension under consideration, structural simplicity, which captures the degree of minimality in the simplified sentences, scores "
+    },
+    {
+      "expression": "\"values\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", too.\n\nNote: Since there are no explicit comparative or superlative expressions, numbers, or names that can be replaced by Fluid expressions in this paragraph, the annotations are limited to replacing \"level\" and \"values\", assuming they refer to specific metrics being evaluated. However, if these terms do not correspond to actual values from the data set, then they should remain unchanged."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_12131v1_344"
+  ],
+  "datasets": ["datasets/scigenCL/1909.12131v1-344.json"]
+}

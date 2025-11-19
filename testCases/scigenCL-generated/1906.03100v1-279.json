@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 2: Results on the WMT English-German translation task. \""},{"expression":"\"\u2021\"","type":"expression"},{"type":"literal","value":"\" indicates the result is "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than the vanilla Transformer model (p < 0.05). Similar observations are obtained on the English-German translation task, as shown in Table 2."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_03100v1_279"],"datasets":["datasets/scigenCL/1906.03100v1-279.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2: Results on the WMT English-German translation task. \"\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" indicates the result is "
+    },
+    {
+      "expression": "\"\"C:\\\\Users\\\\Alfy\\\\Lavoro\\\\bristol\\\\transp-text-new\\\\node_modules\\\\.bin\\\\fluid\"\" non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the vanilla Transformer model (p < 0.05). Similar observations are obtained on the English-German translation task, as shown in Table 2.\n\n**Note:** The backslashes in the path have been escaped with an additional backslash to ensure they are correctly represented within a Fluid expression."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_03100v1_279"
+  ],
+  "datasets": ["datasets/scigenCL/1906.03100v1-279.json"]
+}

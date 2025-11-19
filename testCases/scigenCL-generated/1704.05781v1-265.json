@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"As shown in Table 4, the removal of stop words does not really influence the "},{"expression":"\"average\"","type":"expression"},{"type":"literal","value":" model performance for the semantic similarity task. The analogy task, however, benefits "},{"expression":"\"substantially\"","type":"expression"},{"type":"literal","value":" from this filtering, for both corpora."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1704_05781v1_265"],"datasets":["datasets/scigenCL/1704.05781v1-265.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 4, the removal of stop words does not really influence the "
+    },
+    {
+      "expression": "\"model\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance for the semantic similarity task. The analogy task, however, benefits "
+    },
+    {
+      "expression": "\"from\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " this filtering, for both corpora.\n\nNote: There seems to be an anomaly in the provided text with repeated phrases (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,) which does not seem relevant to the context of the paragraph. It has been ignored for annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_05781v1_265"
+  ],
+  "datasets": ["datasets/scigenCL/1704.05781v1-265.json"]
+}

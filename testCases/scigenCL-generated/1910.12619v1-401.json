@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We find that normalization of both structural and lexical features leads to a "},{"expression":"\"significant\"","type":"expression"},{"type":"literal","value":" performance gain. Normalization of the frequency feature seems to "},{"expression":"\"hurt\"","type":"expression"},{"type":"literal","value":" performance (Table 3)"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1910_12619v1_401"],"datasets":["datasets/scigenCL/1910.12619v1-401.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The provided paragraph does not contain any explicit values, comparative expressions, or superlative/aggregated expressions that can be replaced by Fluid expressions according to the given guidelines. The text appears to reference an error message related to a command not being recognized and mentions \"performance gain\" and \"performance,\" but it lacks specific values or comparisons.\n\nThus, there are no parts of this paragraph that need annotation with `"
+    },
+    {
+      "expression": "\"...\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "`.\n\nHere's the output as-is:\n\nWe find that normalization of both structural and lexical features leads to a \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r performance gain. Normalization of the frequency feature seems to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r performance (Table 3)"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_12619v1_401"
+  ],
+  "datasets": ["datasets/scigenCL/1910.12619v1-401.json"]
+}

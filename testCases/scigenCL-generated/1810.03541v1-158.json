@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 shows the intrinsic evaluation results, in which our alignment intrinsically "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" JAMR aligner by achieving "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" alignment F1 score and leading to a "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" scored oracle parser."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1810_03541v1_158"],"datasets":["datasets/scigenCL/1810.03541v1-158.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the intrinsic evaluation results, in which our alignment intrinsically \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\\ JAMR aligner by achieving "
+    },
+    {
+      "expression": "\"alignment F1 score\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and leading to a "
+    },
+    {
+      "expression": "\"scored oracle parser\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1810_03541v1_158"
+  ],
+  "datasets": ["datasets/scigenCL/1810.03541v1-158.json"]
+}

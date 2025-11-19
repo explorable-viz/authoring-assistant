@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 7 shows results from a manual error analysis on "},{"expression":"\"50\"","type":"expression"},{"type":"literal","value":" events from UDS-IH2-dev with "},{"expression":"\"highest\"","type":"expression"},{"type":"literal","value":" absolute prediction error (using H-biLSTM(2)MultiSim w/UDS-IH2). Grammatical errors (such as run-on sentences) in the underlying text of UDS-IH2 appear to pose a particular challenge for these models;"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1804_02472v1_182"],"datasets":["datasets/scigenCL/1804.02472v1-182.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The provided paragraph does not contain any explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced by Fluid expressions based on the given criteria. The text mainly discusses observations and challenges related to model predictions without providing specific metrics or comparisons.\n\nHere is the annotated version of the paragraph, indicating no detectable replacements:\n\nTable 7 shows results from a manual error analysis on \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r events from UDS-IH2-dev with \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\\ absolute prediction error (using H-biLSTM(2)MultiSim w/UDS-IH2). Grammatical errors (such as run-on sentences) in the underlying text of UDS-IH2 appear to pose a particular challenge for these models;"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1804_02472v1_182"
+  ],
+  "datasets": ["datasets/scigenCL/1804.02472v1-182.json"]
+}

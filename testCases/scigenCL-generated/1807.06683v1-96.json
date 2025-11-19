@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"As can be seen from Table 2, we are very close to the state of the art MD performance even if we only trained with a "},{"expression":"\"low\"","type":"expression"},{"type":"literal","value":" number of parameters as stated in the beginning of this section. We have to also note that in contrast with the NER task, the MD task did not enjoy a "},{"expression":"\"performance increase\"","type":"expression"},{"type":"literal","value":" from joint learning."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1807_06683v1_96"],"datasets":["datasets/scigenCL/1807.06683v1-96.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As can be seen from Table 2, we are very close to the state of the art MD performance even if we only trained with a \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, number of parameters as stated in the beginning of this section. We have to also note that in contrast with the NER task, the MD task did not enjoy a "
+    },
+    {
+      "expression": "\"from\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " joint learning.\n\nIt looks like there is some repeated text within the paragraph (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,) that appears to be an error. This part does not need to be annotated as it doesn't correspond to a Fluid expression. The only Fluid-related annotation is the comparative phrase \"from\", which should actually be replaced with the correct comparative term. However, based on the given instructions and the text provided, I have annotated the word \"from\" in the context of joint learning comparison.\n\nIf you intended for another part of the paragraph to contain a comparative or superlative expression that should be annotated, please provide further details or clarify the paragraph."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1807_06683v1_96"
+  ],
+  "datasets": ["datasets/scigenCL/1807.06683v1-96.json"]
+}

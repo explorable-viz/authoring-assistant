@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 8 shows the "},{"expression":"\"BLEU\"","type":"expression"},{"type":"literal","value":" scores achieved by several reasonable combinations of six-way pseudo-parallel data. We observed that the use of all six-way pseudo-parallel data (#10) significantly improved the base model for all the translation directions, except En→Ru. A translation direction often benefited when the pseudo-parallel data for that specific direction was used. However, the resulting "},{"expression":"\"BLEU\"","type":"expression"},{"type":"literal","value":" scores for Ja→Ru and Ru→Ja tasks do not exceed "},{"expression":"\"10\"","type":"expression"},{"type":"literal","value":" BLEU points, implying the inherent limitation of the in-domain data as well as the difficulty of these translation directions. models of our multistage fine-tuning, i.e., V and VII, achieved "},{"expression":"\"significantly higher\"","type":"expression"},{"type":"literal","value":" BLEU scores than (b3) in Table 5, a weak baseline without using any monolingual data, and #10 in Table 8, a strong baseline established with monolingual data."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1907_03060v1_235"],"datasets":["datasets/scigenCL/1907.03060v1-235.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 8 shows the \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r scores achieved by several reasonable combinations of six-way pseudo-parallel data. We observed that the use of all six-way pseudo-parallel data (#10) significantly improved the base model for all the translation directions, except En→Ru. A translation direction often benefited when the pseudo-parallel data for that specific direction was used. However, the resulting \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r scores for Ja→Ru and Ru→Ja tasks do not exceed "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points, implying the inherent limitation of the in-domain data as well as the difficulty of these translation directions. models of our multistage fine-tuning, i.e., V and VII, achieved "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " scores "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (b3) in Table 5, a weak baseline without using any monolingual data, and #10 in Table 8, a strong baseline established with monolingual data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1907_03060v1_235"
+  ],
+  "datasets": ["datasets/scigenCL/1907.03060v1-235.json"]
+}

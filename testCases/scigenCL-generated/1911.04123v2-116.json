@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 shows the comparison with previous work on the PGR testset, where our models are "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than the existing models. With 1-best trees, DEPTREE is "},{"expression":"\"2.9\"","type":"expression"},{"type":"literal","value":" points "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than TEXTONLY, both KBESTEISNERPS and EDGEWISEPS "},{"expression":"\"significantly outperform\"","type":"expression"},{"type":"literal","value":" DEPTR"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1911_04123v2_116"],"datasets":["datasets/scigenCL/1911.04123v2-116.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It looks like there is an error in the input paragraph where the string `\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\"` seems to be mistakenly repeated multiple times. I'll clean this up and annotate the parts that can be replaced with Fluid expressions:\n\n### Cleaned Paragraph\nTable 3 shows the comparison with previous work on the PGR testset, where our models are than the existing models. With 1-best trees, DEPTREE points than TEXTONLY, both KBESTEISNERPS and EDGEWISEPS DEPTR\n\n### Annotated Output\nTable 3 shows the comparison with previous work on the PGR testset, where our models are "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the existing models. With 1-best trees, DEPTREE points "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " TEXTONLY, both KBESTEISNERPS and EDGEWISEPS "
+    },
+    {
+      "expression": "\"DEPTR\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\n\n### Explanation\n- The comparative expressions \"than\" were annotated as `"
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "`.\n- The word \"DEPTR\" at the end seems to be incomplete and doesn't fit into a clear comparative or superlative expression, so it remains unchanged.\n\nIf there was intended content after \"DEPTREE points than TEXTONLY, both KBESTEISNERPS and EDGEWISEPS\", please provide the corrected paragraph for accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1911_04123v2_116"
+  ],
+  "datasets": ["datasets/scigenCL/1911.04123v2-116.json"]
+}

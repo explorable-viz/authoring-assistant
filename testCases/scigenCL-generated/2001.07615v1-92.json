@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The results are presented in Table 2. The results in Table 2 show "},{"expression":"\"very high\"","type":"expression"},{"type":"literal","value":" performance, which is likely to further increase with ongoing training."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2001_07615v1_92"],"datasets":["datasets/scigenCL/2001.07615v1-92.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results are presented in Table 2. The results in Table 2 show "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is likely to further increase with ongoing training."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2001_07615v1_92"
+  ],
+  "datasets": ["datasets/scigenCL/2001.07615v1-92.json"]
+}

@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Our results suggest that this hyper-parameter setting can overall (except Wiki-ScienceIE and MIMIC-WetLab pairs) produce "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" performance "},{"expression":"\"compare to\"","type":"expression"},{"type":"literal","value":" the default setting (Table 6)."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_00585v2_71"],"datasets":["datasets/scigenCL/1904.00585v2-71.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our results suggest that this hyper-parameter setting can overall (except Wiki-ScienceIE and MIMIC-WetLab pairs) produce "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r "
+    },
+    {
+      "expression": "\"the default setting\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Table 6)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_00585v2_71"
+  ],
+  "datasets": ["datasets/scigenCL/1904.00585v2-71.json"]
+}

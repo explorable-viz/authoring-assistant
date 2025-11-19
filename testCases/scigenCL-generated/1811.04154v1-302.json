@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Entity linking accuracies on the LORELEI dataset are shown in Table 2. PBEL has "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" accuracy than the other methods. However, we see relatively "},{"expression":"\"lower\"","type":"expression"},{"type":"literal","value":" improvement in accuracy with Somali-Oromo than Amharic-Tigrinya. The supervised TRANS model, which uses Wikipedia parallel data in the LRL itself as a lexicon, does not perform "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than the zero-shot PBEL. The PBEL model results for our test set with each input representation are presented in Table 3."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1811_04154v1_302"],"datasets":["datasets/scigenCL/1811.04154v1-302.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Entity linking accuracies on the LORELEI dataset are shown in Table 2. PBEL has "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy than the other methods. However, we see relatively "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvement in accuracy with Somali-Oromo than Amharic-Tigrinya. The supervised TRANS model, which uses Wikipedia parallel data in the LRL itself as a lexicon, does not perform "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the zero-shot PBEL. The PBEL model results for our test set with each input representation are presented in Table 3."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1811_04154v1_302"
+  ],
+  "datasets": ["datasets/scigenCL/1811.04154v1-302.json"]
+}

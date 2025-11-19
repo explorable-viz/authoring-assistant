@@ -1,1 +1,64 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"First, we compare to systems which relied on Wikipedia and those which used Wikipedia along with unlabeled data ('Wikipedia + unlab'), i.e. the top half of Table 1. These methods are "},{"expression":"\"comparable\"","type":"expression"},{"type":"literal","value":" to ours, as they use the same type of information as supervision. Our model outperformed all of them on all test sets. When evaluated on AIDA-B, their scores are still "},{"expression":"\"lower\"","type":"expression"},{"type":"literal","value":" than ours, though significantly "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" that those of the previous systems suggesting that web links are indeed valuable. Second, we compare to fully-supervised systems, which were estimated on AIDA-CoNLL documents. We distinguish results on a test set taken from AIDA-CoNLL (AIDA-B) and the other standard test sets not directly corresponding to the AIDA-CoNLL domain. When tested on the latter, our approach is very effective, "},{"expression":"\"on average outperforming\"","type":"expression"},{"type":"literal","value":" fully-supervised techniques. As expected, on the in-domain test set (AIDA-B), the majority of recent fully-supervised methods are "},{"expression":"\"more accurate\"","type":"expression"},{"type":"literal","value":" than our model. However, even on this test set our model is not as far behind, for example, outperforming the system of Guo and Barbosa (2016)."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_01250v1_186"],"datasets":["datasets/scigenCL/1906.01250v1-186.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "First, we compare to systems which relied on Wikipedia and those which used Wikipedia along with unlabeled data ('Wikipedia + unlab'), i.e. the top half of Table 1. These methods are "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to ours, as they use the same type of information as supervision. Our model outperformed all of them on all test sets. When evaluated on AIDA-B, their scores are still "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than ours, though significantly "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that those of the previous systems suggesting that web links are indeed valuable. Second, we compare to fully-supervised systems, which were estimated on AIDA-CoNLL documents. We distinguish results on a test set taken from AIDA-CoNLL (AIDA-B) and the other standard test sets not directly corresponding to the AIDA-CoNLL domain. When tested on the latter, our approach is very effective, "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " fully-supervised techniques. As expected, on the in-domain test set (AIDA-B), the majority of recent fully-supervised methods are "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than our model. However, even on this test set our model is not as far behind, for example, outperforming the system of Guo and Barbosa (2016).\n\nNote: The phrase \""
+    },
+    {
+      "expression": "\"\\\"non � riconosciuto come comando interno o esterno\\\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" seems to be a placeholder or an error message from the system rather than a part of the original text that can be replaced by a Fluid expression. If there were actual scores, comparative expressions, or superlatives in place of this phrase, they should have been replaced instead."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_01250v1_186"
+  ],
+  "datasets": ["datasets/scigenCL/1906.01250v1-186.json"]
+}

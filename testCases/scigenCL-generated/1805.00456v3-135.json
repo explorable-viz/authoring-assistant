@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Our plain BPE baseline (Table 4) "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" the "},{"expression":"\"current best system\"","type":"expression"},{"type":"literal","value":" on WAT Ja-En, an 8-model ensemble (Morishita et al., 2017). Our syntax models achieve similar results despite producing much longer sequences."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1805_00456v3_135"],"datasets":["datasets/scigenCL/1805.00456v3-135.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The paragraph you provided does not contain any explicit values, comparative expressions, or superlative or aggregated expressions that can be directly replaced by Fluid expressions based on the criteria given.\n\nHowever, if we were to assume that there are some implicit comparative or superlative phrases that could be identified, none are present in this text. Therefore, no replacements are needed:\n\nOur plain BPE baseline (Table 4) \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,  \nthe \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,  \non WAT Ja-En, an 8-model ensemble (Morishita et al., 2017). Our syntax models achieve similar results despite producing much longer sequences.\n\nNo further annotation is necessary for the given paragraph."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_00456v3_135"
+  ],
+  "datasets": ["datasets/scigenCL/1805.00456v3-135.json"]
+}

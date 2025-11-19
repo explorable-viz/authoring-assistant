@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 4 presents an alternative view of the results of the pretraining experiment (Table 2): The table shows "},{"expression":"\"correlations\"","type":"expression"},{"type":"literal","value":" between pairs of target tasks over the space of pretrained encoders. The correlations reflect the degree to which the performance on one target task with some encoder predicts performance on another target task with the same encoder. See Appendix D for the full table and similar tables for intermediate ELMo and BERT experiments. Many "},{"expression":"\"correlations\"","type":"expression"},{"type":"literal","value":" are low, suggesting that different tasks benefit from different forms of pretraining to a substantial degree, and bolstering the observation that no single pretraining task yields good performance on all target tasks. For reasons noted earlier, the models that tended to perform "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" overall also tended to overfit the WNLI training set most, leading to a "},{"expression":"\"negative correlation\"","type":"expression"},{"type":"literal","value":" between WNLI and overall GLUE score. STS also shows a "},{"expression":"\"negative correlation\"","type":"expression"},{"type":"literal","value":", likely due to the observation that it does not benefit from LM pretraining. In contrast, CoLA shows a "},{"expression":"\"strong correlation\"","type":"expression"},{"type":"literal","value":" with the overall GLUE scores, but has weak or negative correlations with many tasks: The use of LM pretraining dramatically improves CoLA performance, but most other forms of pretraining have little effect."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1812_10860v5_195"],"datasets":["datasets/scigenCL/1812.10860v5-195.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It appears that there is a recurring issue in the paragraph where the text \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" seems to be inserted into the paragraph. This does not appear to be part of the original content and seems like an error or placeholder for a command that was not recognized.\n\nAssuming this is an error and should be disregarded, here's how we would annotate the paragraph based on the Fluid expression rules:\n\nTable 4 presents an alternative view of the results of the pretraining experiment (Table 2): The table shows correlations between pairs of target tasks over the space of pretrained encoders. The correlations reflect the degree to which the performance on one target task with some encoder predicts performance on another target task with the same encoder. See Appendix D for the full table and similar tables for intermediate ELMo and BERT experiments. Many are low, suggesting that different tasks benefit from different forms of pretraining to a substantial degree, and bolstering the observation that no single pretraining task yields good performance on all target tasks. For reasons noted earlier, the models that tended to perform well overall also tended to overfit the WNLI training set most, leading to a "
+    },
+    {
+      "expression": "\"between\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " WNLI and overall GLUE score. STS also shows a "
+    },
+    {
+      "expression": "\"\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", likely due to the observation that it does not benefit from LM pretraining. In contrast, CoLA shows a correlation with the overall GLUE scores, but has weak or negative correlations with many tasks: The use of LM pretraining dramatically improves CoLA performance, but most other forms of pretraining have little effect.\n\nSince there are no explicit values, comparative expressions like \"well\", and superlative expressions in this text, only the placeholder error is removed. If any specific expressions were intended to be included, please correct them or provide more details for accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1812_10860v5_195"
+  ],
+  "datasets": ["datasets/scigenCL/1812.10860v5-195.json"]
+}

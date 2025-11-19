@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We present the test results in Table 2. We are able to reproduce the performance of the baseline model ("},{"expression":"\"CNN w/ GloVe\"","type":"expression"},{"type":"literal","value":"), and find that once again, adding the shallow discourse features improves results. Interestingly, we found that replacing the CNN with an LSTM results in improved MAE, but "},{"expression":"\"worse\"","type":"expression"},{"type":"literal","value":" MAPE. Adding discourse features to this model generally has "},{"expression":"\"marginal improvement\"","type":"expression"},{"type":"literal","value":" in all cases. When we replace the word sequence with EDUs ("},{"expression":"\"Bi-LSTM w/ latent\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"Bi-LSTM w/ shallow\"","type":"expression"},{"type":"literal","value":"), we see that the latent features "},{"expression":"\"outperform\"","type":"expression"},{"type":"literal","value":" the shallow features."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1911_06919v1_311"],"datasets":["datasets/scigenCL/1911.06919v1-311.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We present the test results in Table 2. We are able to reproduce the performance of the baseline model (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r), and find that once again, adding the shallow discourse features improves results. Interestingly, we found that replacing the CNN with an LSTM results in improved MAE, but "
+    },
+    {
+      "expression": "\"worse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " MAPE. Adding discourse features to this model generally has "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all cases. When we replace the word sequence with EDUs (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r), we see that the latent features "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the shallow features.\n\n**Note:** The text contains repetitive occurrences of an error message \"non � riconosciuto come comando interno o esterno,\" which translates to \"not recognized as an internal or external command\" in English. These are not part of the actual results or comparative expressions and thus do not need to be annotated with Fluid expressions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1911_06919v1_311"
+  ],
+  "datasets": ["datasets/scigenCL/1911.06919v1-311.json"]
+}

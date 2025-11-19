@@ -1,1 +1,64 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We present our results in Section 5 (Table 3) In Table 3 we use the abbreviations \"baseline\" and \"emb. conc.\" for the two baseline models respectively. We compare the performance of the three proposed conditioning methods with the two baselines and the state-of-the-art in Table 3. The results show that incorporating external knowledge in RNN-based architectures consistently improves performance over the baseline for all datasets. Furthermore, feature-based gating improves upon "},{"expression":"\"baseline\"","type":"expression"},{"type":"literal","value":" concatenation in the embedding layer across benchmarks, with the exception of PsychExp dataset. For the Sent17 dataset we achieve "},{"expression":"\"state-ofthe-art\"","type":"expression"},{"type":"literal","value":" F1 score using the feature-based gating method; we further improve performance when combining gating with the emb. conc. method. For SST-5, we observe a significant performance boost with combined attentional gating and embedding conditioning (gate + emb. conc.). For PsychExp, we "},{"expression":"\"marginally outperform\"","type":"expression"},{"type":"literal","value":" the state-ofthe-art also with the combined method, while for Irony18, feature-based gating yields "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" results. Finally, concatenation based conditioning is the "},{"expression":"\"top\"","type":"expression"},{"type":"literal","value":" method for SCv1, and the combination method for SCv2."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_03674v1_176"],"datasets":["datasets/scigenCL/1906.03674v1-176.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We present our results in Section 5 (Table 3) In Table 3 we use the abbreviations \"baseline\" and \"emb. conc.\" for the two baseline models respectively. We compare the performance of the three proposed conditioning methods with the two baselines and the state-of-the-art in Table 3. The results show that incorporating external knowledge in RNN-based architectures consistently improves performance over the "
+    },
+    {
+      "expression": "\"baseline\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for all datasets. Furthermore, feature-based gating improves upon "
+    },
+    {
+      "expression": "\"concatenation\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the embedding layer across benchmarks, with the exception of PsychExp dataset. For the Sent17 dataset we achieve "
+    },
+    {
+      "expression": "\"F1 score\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " using the feature-based gating method; we further improve performance when combining gating with the emb. conc. method. For SST-5, we observe a significant performance boost with combined attentional gating and embedding conditioning (gate + emb. conc.). For PsychExp, we reach "
+    },
+    {
+      "expression": "\"the state-of-the-art\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " also with the combined method, while for Irony18, feature-based gating yields "
+    },
+    {
+      "expression": "\"results\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Finally, concatenation based conditioning is the "
+    },
+    {
+      "expression": "\"method\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for SCv1, and the combination method for SCv2.\n\nNote: The phrase \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" appears multiple times in your paragraph. This does not seem to be part of the natural language and might be an error message related to running Fluid or another command. If it is supposed to be a placeholder for some results or method name, please clarify, so I can annotate it accordingly."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_03674v1_176"
+  ],
+  "datasets": ["datasets/scigenCL/1906.03674v1-176.json"]
+}

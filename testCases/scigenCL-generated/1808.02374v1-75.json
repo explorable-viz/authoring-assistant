@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"From Table 3 we can see that all models have difficulties with distant relations that cross sentence or clause boundaries (CCR).  Furthermore, arguments that are frequent in the supervised data "},{"expression":"\"> 250\"","type":"expression"},{"type":"literal","value":" are a dominant error category.  Furthermore it can be noticed that RC+SG has "},{"expression":"\"less errors\"","type":"expression"},{"type":"literal","value":" for infrequent arguments "},{"expression":"\"< 10\"","type":"expression"},{"type":"literal","value":" in the supervised data."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1808_02374v1_75"],"datasets":["datasets/scigenCL/1808.02374v1-75.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "From Table 3 we can see that all models have difficulties with distant relations that cross sentence or clause boundaries (CCR). Furthermore, arguments that are frequent in the supervised data "
+    },
+    {
+      "expression": "\"are a dominant error category\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Furthermore it can be noticed that RC+SG has "
+    },
+    {
+      "expression": "\"for infrequent arguments\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the supervised data. \n\nNote: The phrase \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" appears to be an error message and not a relevant part of the text for Fluid expression replacement. Therefore, it has been omitted in the output."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_02374v1_75"
+  ],
+  "datasets": ["datasets/scigenCL/1808.02374v1-75.json"]
+}

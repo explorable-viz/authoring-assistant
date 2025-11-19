@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"As shown in Table 3, there are at least "},{"expression":"\"6.6\"","type":"expression"},{"type":"literal","value":"% and up to "},{"expression":"\"14.4\"","type":"expression"},{"type":"literal","value":"% absolute improvements on accuracy of exact matching on the development set. For example, when SyntaxSQLNet is learned to generate SemQL queries instead of SQL queries, it registers "},{"expression":"\"8.6\"","type":"expression"},{"type":"literal","value":"% absolute improvement and even "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" SyntaxSQLNet(augment) which "},{"expression":"\"performs\"","type":"expression"},{"type":"literal","value":" largescale data augmentation.  Table 4 presents the ablation study results. It is clear that our base model "},{"expression":"\"significantly outperforms\"","type":"expression"},{"type":"literal","value":" SyntaxSQLNet, SyntaxSQLNet( augment) and SyntaxSQLNet(BERT). Performing schema linking ('+SL') brings about "},{"expression":"\"8.5\"","type":"expression"},{"type":"literal","value":"% and "},{"expression":"\"6.4\"","type":"expression"},{"type":"literal","value":"% absolute improvement on IRNet and IRNet(BERT).  The F1 score on the WHERE clause increases by "},{"expression":"\"12.5\"","type":"expression"},{"type":"literal","value":"% when IRNet performs schema linking.  The number of examples suffering from this problem decreases by "},{"expression":"\"70\"","type":"expression"},{"type":"literal","value":"%, when using the memory augmented pointer network."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1905_08205v2_48"],"datasets":["datasets/scigenCL/1905.08205v2-48.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "It seems that the provided text contains repetitive and unrelated error messages (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno) instead of actual numeric values or comparative expressions. These errors indicate that a Fluid command failed to execute properly, and hence there are no explicit values or comparative/superlative expressions we can replace.\n\nIf you have the correct data with actual numbers and comparisons, please provide it again for annotation. If this is the actual text, no Fluid annotations can be made from the current content."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_08205v2_48"
+  ],
+  "datasets": ["datasets/scigenCL/1905.08205v2-48.json"]
+}

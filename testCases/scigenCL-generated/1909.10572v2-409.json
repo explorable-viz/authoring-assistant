@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 shows the results on the unsupervised tasks of hypernym detection and direction predictions, reporting average precision and average accuracy, respectively. The first row titled Count based (in Table 3) depicts the performance of a Hearst-like Pattern system baseline, that uses a frequency based threshold to classify candidate hyponym-hypernym pairs as positive (i.e. exhibiting hypernymy) or negative (i.e. not exhibiting hypernymy). The ppmi approach in Table 3 builds upon the Count based approach by using Pointwise Mutual Information values for classification. SVD ppmi approach, the main contribution from Roller, Kiela, and Nickel (2018) builds low-rank embeddings of the PPMI matrix, which allows to make predictions for unseen pairs as well. HyperbolicCones is "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" in both these tasks. The final row reports the application of SPON (on the input provided by SVD ppmi) which is an original contribution of our work."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_10572v2_409"],"datasets":["datasets/scigenCL/1909.10572v2-409.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the results on the unsupervised tasks of hypernym detection and direction predictions, reporting average precision and average accuracy, respectively. The first row titled Count based (in Table 3) depicts the performance of a Hearst-like Pattern system baseline, that uses a frequency based threshold to classify candidate hyponym-hypernym pairs as positive (i.e. exhibiting hypernymy) or negative (i.e. not exhibiting hypernymy). The ppmi approach in Table 3 builds upon the Count based approach by using Pointwise Mutual Information values for classification. SVD ppmi approach, the main contribution from Roller, Kiela, and Nickel (2018) builds low-rank embeddings of the PPMI matrix, which allows to make predictions for unseen pairs as well. HyperbolicCones "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in both these tasks. The final row reports the application of SPON (on the input provided by SVD ppmi) which is an original contribution of our work."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_10572v2_409"
+  ],
+  "datasets": ["datasets/scigenCL/1909.10572v2-409.json"]
+}

@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 considers analysis of different aspects of the model. First, we look at the fluency model and compare the cluster smoothing (CS) approach with softmax temperature (TEMPx with x being the temperature) commonly used for generation in LM-integrated models (Chorowski and Jaitly, 2016) as well as no adjustment (NA). Second, we vary the 3-layer representation out of ELMo forward language model to do contextual matching (bot/mid/top: bottom/middle/top layer only, avg: average of 3 layers, cat: concatenation of all layers). Results show the effectiveness of our cluster smoothing method for the vocabulary adaptive language model pfm, although temperature smoothing is an option for abstractive datasets. When using word embeddings ("},{"expression":"\"bottom layer only\"","type":"expression"},{"type":"literal","value":" from ELMo language model) in our contextual matching model pcm, the summarization performance drops "},{"expression":"\"significantly\"","type":"expression"},{"type":"literal","value":" to below simple baselines as demonstrated by score decrease."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1907_13337v1_24"],"datasets":["datasets/scigenCL/1907.13337v1-24.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 considers analysis of different aspects of the model. First, we look at the fluency model and compare the cluster smoothing (CS) approach with softmax temperature (TEMPx with x being the temperature) commonly used for generation in LM-integrated models (Chorowski and Jaitly, 2016) as well as no adjustment (NA). Second, we vary the 3-layer representation out of ELMo forward language model to do contextual matching (bot/mid/top: bottom/middle/top layer only, avg: average of 3 layers, cat: concatenation of all layers). Results show the effectiveness of our cluster smoothing method for the vocabulary adaptive language model pfm, although temperature smoothing is an option for abstractive datasets. When using word embeddings (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,) from ELMo language model) in our contextual matching model pcm, the summarization performance drops "
+    },
+    {
+      "expression": "\"to below simple baselines\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as demonstrated by score decrease."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1907_13337v1_24"
+  ],
+  "datasets": ["datasets/scigenCL/1907.13337v1-24.json"]
+}

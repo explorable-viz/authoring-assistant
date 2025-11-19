@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Fourth, we introduce finer classes (Tables 1\u20132), which fit "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" the target task, where nested clauses are frequent. The splitter produced "},{"expression":"\"31,545\"","type":"expression"},{"type":"literal","value":" training, "},{"expression":"\"8,036\"","type":"expression"},{"type":"literal","value":" development, and "},{"expression":"\"5,563\"","type":"expression"},{"type":"literal","value":" test sentences/clauses. Table 2 shows their distribution in the six gold (correct) classes. cf. Table 2),"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1805_03871v1_232"],"datasets":["datasets/scigenCL/1805.03871v1-232.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "It seems like there is a repetitive error message within your text that appears to be an issue from your local system (\"non � riconosciuto come comando interno o esterno,\" which translates to \"is not recognized as an internal or external command\"). This doesn't seem to be related to the comparative or superlative expressions, explicit values, or aggregated expressions you are asking for in the context of Fluid language. If we assume these error messages are placeholders and should be ignored for the task at hand, then there are no explicit values, comparative expressions, or superlative/aggregated expressions that need replacing with Fluid expressions.\n\nIf you intended to provide a different paragraph or data set, please share the correct one, and I'll be happy to help identify and annotate the relevant expressions.\n\nOtherwise, the text remains unchanged for the task:\n\nFourth, we introduce finer classes (Tables 1\u20132), which fit \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r the target task, where nested clauses are frequent. The splitter produced \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r training, \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r development, and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r test sentences/clauses. Table 2 shows their distribution in the six gold (correct) classes. cf. Table 2),"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_03871v1_232"
+  ],
+  "datasets": ["datasets/scigenCL/1805.03871v1-232.json"]
+}

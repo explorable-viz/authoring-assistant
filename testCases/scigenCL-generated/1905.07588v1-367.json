@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We show the main result in "},{"expression":"\"Table 2\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"3\"","type":"expression"},{"type":"literal","value":". Despite training on a fraction of the data available, the proposed BERT-based models surpass "},{"expression":"\"the previous state-of-the-art models\"","type":"expression"},{"type":"literal","value":" by "},{"expression":"\"a large margin\"","type":"expression"},{"type":"literal","value":" on all datasets."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1905_07588v1_367"],"datasets":["datasets/scigenCL/1905.07588v1-367.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It seems there is an issue with the paragraph as it contains repeated and irrelevant content (\"non � riconosciuto come comando interno o esterno,\" which translates to \"is not recognized as an internal or external command\" in English). However, assuming that this repetitive phrase is unintentional and you want me to identify Fluid expressions based on the context, I'll focus on the logical statements about your models' performance.\n\nGiven paragraph:\n\nWe show the main result in \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r. Despite training on a fraction of the data available, the proposed BERT-based models surpass "
+    },
+    {
+      "expression": "\"the proposed BERT-based models\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"on all datasets\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all datasets.\n\nIt appears there is no explicit value, comparative expression, or superlative/aggregated expression in the paragraph that can be replaced with a Fluid expression based on the context provided. If you could clarify the intended content without the error messages, I'd be happy to assist further in detecting expressions suitable for Fluid language. \n\nIf you meant something like:\n\n\"We show the main result in Table 1. Despite training on a fraction of the data available, the proposed BERT-based models surpass state-of-the-art models by achieving higher accuracy across all datasets.\"\n\nThe output would look like this:\nWe show the main result in Table 1. Despite training on a fraction of the data available, the proposed BERT-based models surpass "
+    },
+    {
+      "expression": "\"state-of-the-art models\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by achieving "
+    },
+    {
+      "expression": "\"higher\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy across all datasets.\n\nPlease provide clarification or correct the paragraph if needed."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_07588v1_367"
+  ],
+  "datasets": ["datasets/scigenCL/1905.07588v1-367.json"]
+}

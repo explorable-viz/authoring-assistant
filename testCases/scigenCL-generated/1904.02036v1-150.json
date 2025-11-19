@@ -1,1 +1,72 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 2 shows the results of this evaluation. The extent of spelling variation varies greatly between datasets, with "},{"expression":"\"less than 15%\"","type":"expression"},{"type":"literal","value":" of tokens requiring normalization (SLG) to "},{"expression":"\"more than 80%\"","type":"expression"},{"type":"literal","value":" (HU). The "},{"expression":"\"maximum\"","type":"expression"},{"type":"literal","value":" accuracy is above "},{"expression":"\"97\"","type":"expression"},{"type":"literal","value":"% for most datasets. For the normalization systems, we observe "},{"expression":"\"significantly better\"","type":"expression"},{"type":"literal","value":" word accuracy with SMT than NMT on four of the datasets, and "},{"expression":"\"non-significant differences\"","type":"expression"},{"type":"literal","value":" on five others. There is only one dataset (DEA) where the NMT system by Tang et al. (2018) gets "},{"expression":"\"significantly better\"","type":"expression"},{"type":"literal","value":" word accuracy than other systems. Overall, the deep NMT model by Tang et al. (2018) consistently outperforms the shallow one by Bollmann (2018). Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "},{"expression":"\"significantly behind\"","type":"expression"},{"type":"literal","value":" the SMT and NMT methods."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_02036v1_150"],"datasets":["datasets/scigenCL/1904.02036v1-150.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It seems like there are repeated fragments of an error message (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\") in your paragraph that don't appear to be related to the content or data provided. I will ignore these parts and focus on detecting relevant expressions.\n\nHere is the annotated version:\n\nTable 2 shows the results of this evaluation. The extent of spelling variation varies greatly between datasets, with "
+    },
+    {
+      "expression": "\"SLG\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"HU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The accuracy is above "
+    },
+    {
+      "expression": "\"%\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for most datasets. For the normalization systems, we observe "
+    },
+    {
+      "expression": "\"word accuracy\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with SMT than NMT on four of the datasets, and "
+    },
+    {
+      "expression": "\"on\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " five others. There is only one dataset (DEA) where the NMT system by Tang et al. (2018) gets "
+    },
+    {
+      "expression": "\"word accuracy\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than other systems. Overall, the deep NMT model by Tang et al. (2018) consistently outperforms the shallow one by Bollmann (2018). Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "
+    },
+    {
+      "expression": "\"the\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " SMT and NMT methods.\n\nPlease review to confirm if there are any additional values or phrases that should be detected, and ensure all irrelevant error messages have been removed."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_02036v1_150"
+  ],
+  "datasets": ["datasets/scigenCL/1904.02036v1-150.json"]
+}

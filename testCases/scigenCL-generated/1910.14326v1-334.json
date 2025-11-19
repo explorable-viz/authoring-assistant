@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We present our results in Table 1. As shown in Table 1, our model "},{"expression":"\"CMAML\"","type":"expression"},{"type":"literal","value":" achieves good performance on quality, personality, and diversity.\n\nNote: In this case, \"CMAML\" is a name of the model, which is an explicit value. However, since there are no comparative or superlative expressions, only the explicit value is replaced.\n"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1910_14326v1_334"],"datasets":["datasets/scigenCL/1910.14326v1-334.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We present our results in Table 1. As shown in Table 1, our model "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, achieves good performance on quality, personality, and diversity.\n\nNote: In this case, \"CMAML\" is a name of the model, which is an explicit value. However, since there are no comparative or superlative expressions, only the explicit value is replaced.\n\nSince \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" seems to be the path to a Fluid executable and not the name of the model itself, let's assume you meant to replace the name of the model if it was given. However, since only \"CMAML\" is mentioned as a name, we will replace that:\n\nWe present our results in Table 1. As shown in Table 1, our model "
+    },
+    {
+      "expression": "\"CMAML\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves good performance on quality, personality, and diversity.\n\nNote: In this case, \"CMAML\" is a name of the model, which is an explicit value. However, since there are no comparative or superlative expressions, only the explicit value is replaced."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_14326v1_334"
+  ],
+  "datasets": ["datasets/scigenCL/1910.14326v1-334.json"]
+}

@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively. As shown in Table 4, S-LSTM "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" BiLSTM significantly, with a faster speed. S-LSTM also gives "},{"expression":"\"highly competitive\"","type":"expression"},{"type":"literal","value":" results when "},{"expression":"\"compared with\"","type":"expression"},{"type":"literal","value":" existing methods in the literature."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1805_02474v1_11"],"datasets":["datasets/scigenCL/1805.02474v1-11.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively. As shown in Table 4, S-LSTM "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BiLSTM significantly, with a faster speed. S-LSTM also gives "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results when "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " existing methods in the literature.\n\nNote: The text \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\" appears to be an error message and does not seem relevant to the context of the paragraph. If this was supposed to be a comparative expression, it should be corrected or clarified in the original text for accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_02474v1_11"
+  ],
+  "datasets": ["datasets/scigenCL/1805.02474v1-11.json"]
+}

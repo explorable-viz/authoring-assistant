@@ -1,1 +1,96 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The entry Joint Self-attention corresponds to the results of our implementation of (He et al., 2018), that significantly improves the original results by "},{"expression":"\"0.7\"","type":"expression"},{"type":"literal","value":" BLEU point on the WMT14 de-en benchmark, and "},{"expression":"\"0.2\"","type":"expression"},{"type":"literal","value":" on IWSLT. The same architecture with the proposed locality constraints (Local Joint Self-attention) establishes a new state of the art in IWSLT'14 de-en with "},{"expression":"\"35.7\"","type":"expression"},{"type":"literal","value":" BLEU, surpassing all previous published results by at least "},{"expression":"\"0.5\"","type":"expression"},{"type":"literal","value":" BLEU, and our results with the unconstrained version by "},{"expression":"\"0.4\"","type":"expression"},{"type":"literal","value":". The Table 1 presents a comparison of the translation quality measured via BLEU score between the currently dominant Transformer (Vaswani et al., 2017) and Dynamic Convolutions (Wu et al., 2019) models, as well as the work by He et al. (2018), which also proposes a joint encoder-decoder structure, and also other refinements over the transformer architecture like (Ahmed et al., 2017), (Chen et al., 2018), (Shaw et al., 2018) and (Ott et al., 2018). The Joint Self-attention model obtains "},{"expression":"\"the same SoTA\"","type":"expression"},{"type":"literal","value":" BLEU score of (Wu et al., 2019) on WMT'14 en-de, and "},{"expression":"\"the same SoTA\"","type":"expression"},{"type":"literal","value":" score of (Ott et al., 2018) and (Wu et al., 2019) on WMT'14 en-fr. The local attention constraints do not provide a significant gain on these bigger models, but it improves the BLEU score on WMT'14 en-fr to "},{"expression":"\"a new SoTA\"","type":"expression"},{"type":"literal","value":" of "},{"expression":"\"43.3\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1905_06596v1_326"],"datasets":["datasets/scigenCL/1905.06596v1-326.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The entry Joint Self-attention corresponds to the results of our implementation of (He et al., 2018), that significantly improves the original results by "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " point on the WMT14 de-en benchmark, and "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on IWSLT. The same architecture with the proposed locality constraints (Local Joint Self-attention) establishes a new state of the art in IWSLT'14 de-en with "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", surpassing all previous published results by at least "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and our results with the unconstrained version by "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The Table 1 presents a comparison of the translation quality measured via BLEU score between the currently dominant Transformer (Vaswani et al., 2017) and Dynamic Convolutions (Wu et al., 2019) models, as well as the work by He et al. (2018), which also proposes a joint encoder-decoder structure, and also other refinements over the transformer architecture like (Ahmed et al., 2017), (Chen et al., 2018), (Shaw et al., 2018) and (Ott et al., 2018). The Joint Self-attention model obtains "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " score of (Wu et al., 2019) on WMT'14 en-de, and "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " score of (Ott et al., 2018) and (Wu et al., 2019) on WMT'14 en-fr. The local attention constraints do not provide a significant gain on these bigger models, but it improves the BLEU score on WMT'14 en-fr to "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n\nIt seems that some parts were not properly annotated as they contained additional phrases or lacked specific values. Since there are no specific numbers given for the BLEU scores, we replaced each instance where BLEU was used in a comparative or superlative sense with "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_06596v1_326"
+  ],
+  "datasets": ["datasets/scigenCL/1905.06596v1-326.json"]
+}

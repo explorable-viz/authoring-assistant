@@ -1,1 +1,112 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"As shown in Table 3, BiLSTM gives "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" accuracies compared to uni-directional LSTM2, with the training time per epoch growing from "},{"expression":"\"67\"","type":"expression"},{"type":"literal","value":" seconds to "},{"expression":"\"106\"","type":"expression"},{"type":"literal","value":" seconds. Stacking 2 layers of BiLSTM gives further improvements to development results, with a larger time of "},{"expression":"\"207\"","type":"expression"},{"type":"literal","value":" seconds. 3 layers of stacked BiLSTM does not further improve the results. In contrast, S-LSTM gives a development result of "},{"expression":"\"82.64\"","type":"expression"},{"type":"literal","value":"%, which is "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" compared to 2-layer stacked BiLSTM, with a smaller number of model parameters and a shorter time of "},{"expression":"\"65\"","type":"expression"},{"type":"literal","value":" seconds. We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), CNN is "},{"expression":"\"the most efficient\"","type":"expression"},{"type":"literal","value":" among all models compared, with the smallest model size. On the other hand, a 3-layer stacked CNN gives an accuracy of "},{"expression":"\"81.46\"","type":"expression"},{"type":"literal","value":"%, which is also "},{"expression":"\"the lowest\"","type":"expression"},{"type":"literal","value":" compared with BiLSTM, hierarchical attention and S-LSTM. The best performance of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. S-LSTM gives "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still outperforming BiLSTM "},{"expression":"\"significantly\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1805_02474v1_10"],"datasets":["datasets/scigenCL/1805.02474v1-10.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Given the paragraph and the dataset provided, I will annotate parts of the paragraph that can be replaced by Fluid expressions.\n\nHowever, there appears to be a repetitive issue with the placeholder text \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,\" which seems like an error message or a misinterpretation of data values. For this example, I will assume that these are placeholder texts and ignore them for the purposes of annotation. If they represent specific values or phrases, please provide the correct data.\n\nHere is the annotated paragraph:\n\nAs shown in Table 3, BiLSTM gives "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracies compared to uni-directional LSTM2, with the training time per epoch growing from "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seconds to "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seconds. Stacking 2 layers of BiLSTM gives further improvements to development results, with a larger time of "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seconds. 3 layers of stacked BiLSTM does not further improve the results. In contrast, S-LSTM gives a development result of "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, which is "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to 2-layer stacked BiLSTM, with a smaller number of model parameters and a shorter time of "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seconds. We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), CNN is "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " among all models compared, with the smallest model size. On the other hand, a 3-layer stacked CNN gives an accuracy of "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, which is also "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. The best performance of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. S-LSTM gives "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still outperforming BiLSTM "
+    },
+    {
+      "expression": "\"non è riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n\nIf you provide the correct numerical values or phrases that should replace these placeholder texts, I can annotate them accordingly."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1805_02474v1_10"
+  ],
+  "datasets": ["datasets/scigenCL/1805.02474v1-10.json"]
+}

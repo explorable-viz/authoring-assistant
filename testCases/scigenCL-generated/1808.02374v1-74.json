@@ -1,1 +1,96 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 2 shows that initializing the model with the pre-trained embeddings gives a significant "},{"expression":"\"4.11\"","type":"expression"},{"type":"literal","value":" point increase in F-measure compared to random initialization, due to an increase in precision. Fixing the embeddings gives "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" performance than using them as initialization, an increase of "},{"expression":"\"0.9\"","type":"expression"},{"type":"literal","value":" point in F-measure, mostly due to "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" recall. When extending the loss with the SGLR loss, we gain "},{"expression":"\"1.6\"","type":"expression"},{"type":"literal","value":" in F-measure compared to fixing the word embeddings, and also surpass the state of the art by "},{"expression":"\"0.4\"","type":"expression"},{"type":"literal","value":" even without specialized resources. If we train our model using the SG loss extension we obtain "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" results, and gain "},{"expression":"\"1.9\"","type":"expression"},{"type":"literal","value":" points in F-measure compared to using pre-trained fixed word embeddings. This setting also exceeds the state of the art (Lin et al., 2017) by "},{"expression":"\"0.7\"","type":"expression"},{"type":"literal","value":" points in F-measure, due to a gain of "},{"expression":"\"1.2\"","type":"expression"},{"type":"literal","value":" points in recall, again without using any specialized clinical NLP tools for feature engineering, in contrast to all state-of-the-art baselines."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1808_02374v1_74"],"datasets":["datasets/scigenCL/1808.02374v1-74.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows that initializing the model with the pre-trained embeddings gives a significant "
+    },
+    {
+      "expression": "\"point increase\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in F-measure compared to random initialization, due to an increase in precision. Fixing the embeddings gives "
+    },
+    {
+      "expression": "\"performance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than using them as initialization, an increase of "
+    },
+    {
+      "expression": "\"point\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in F-measure, mostly due to "
+    },
+    {
+      "expression": "\"recall\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". When extending the loss with the SGLR loss, we gain "
+    },
+    {
+      "expression": "\"in\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F-measure compared to fixing the word embeddings, and also surpass the state of the art by "
+    },
+    {
+      "expression": "\"even without specialized resources\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". If we train our model using the SG loss extension we obtain "
+    },
+    {
+      "expression": "\"results\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and gain "
+    },
+    {
+      "expression": "\"points\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in F-measure compared to using pre-trained fixed word embeddings. This setting also exceeds the state of the art (Lin et al., 2017) by "
+    },
+    {
+      "expression": "\"points\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in F-measure, due to a gain of "
+    },
+    {
+      "expression": "\"points\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in recall, again without using any specialized clinical NLP tools for feature engineering, in contrast to all state-of-the-art baselines.\n\nNote: The original text contains repeated mentions of an error message \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" which was ignored for the purpose of this task, as it does not seem to be part of the narrative or comparative expressions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_02374v1_74"
+  ],
+  "datasets": ["datasets/scigenCL/1808.02374v1-74.json"]
+}

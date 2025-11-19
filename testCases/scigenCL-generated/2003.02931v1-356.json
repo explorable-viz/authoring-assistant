@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Existing systems (RQ3) are evaluated and results Polyglot (Al-Rfou et al., 2013) overall performs "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" than DKIE (Derczynski et al., 2014). The "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" system is our cross-lingual transfer NER from MEDIUM source data paired with SMALL amounts of gold data. Per-entity evaluation shows that the neural Bilstm tagger outperforms Polyglot except for Location, which is consistent across evaluation sets."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2003_02931v1_356"],"datasets":["datasets/scigenCL/2003.02931v1-356.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Existing systems (RQ3) are evaluated and results Polyglot (Al-Rfou et al., 2013) overall performs "
+    },
+    {
+      "expression": "\"than\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " DKIE (Derczynski et al., 2014). The \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r system is our cross-lingual transfer NER from MEDIUM source data paired with SMALL amounts of gold data. Per-entity evaluation shows that the neural Bilstm tagger outperforms Polyglot except for Location, which is consistent across evaluation sets."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2003_02931v1_356"
+  ],
+  "datasets": ["datasets/scigenCL/2003.02931v1-356.json"]
+}

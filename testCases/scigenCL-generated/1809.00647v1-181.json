@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We gradually add feature groups to the "},{"expression":"\"Frequency\"","type":"expression"},{"type":"literal","value":" baseline. The combination of Location (sentence location) and "},{"expression":"\"Frequency\"","type":"expression"},{"type":"literal","value":" almost sets the performance for the whole model. Adding each voting feature individually produces mixed results. However, adding all voting features improves all metrics. Though the margin is small, 4 of them are statistically significant over "},{"expression":"\"Frequency+Location\"","type":"expression"},{"type":"literal","value":". To understand the contribution of individual features, we conduct an ablation study of various feature settings in Table 4."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1809_00647v1_181"],"datasets":["datasets/scigenCL/1809.00647v1-181.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We gradually add feature groups to the \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, "
+    },
+    {
+      "expression": "\"baseline\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The combination of Location (sentence location) and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, "
+    },
+    {
+      "expression": "\"almost\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sets the performance for the whole model. Adding each voting feature individually produces mixed results. However, adding all voting features improves all metrics. Though the margin is small, 4 of them are statistically significant over \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" "
+    },
+    {
+      "expression": "\".\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". To understand the contribution of individual features, we conduct an ablation study of various feature settings in Table 4."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1809_00647v1_181"
+  ],
+  "datasets": ["datasets/scigenCL/1809.00647v1-181.json"]
+}

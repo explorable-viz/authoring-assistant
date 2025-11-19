@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We inspect some pairs of events and entities in different kernels and list some examples in Table 5. The pairs in Table 3 exhibit interesting types of relations: e.g., \"arrest-charge\" and \"attack-kill\" form script-like chains; \""},{"expression":"\"911 attack\"","type":"expression"},{"type":"literal","value":"\" forms a quasiidentity relation (Recasens et al., 2010) with \""},{"expression":"\"attack\"","type":"expression"},{"type":"literal","value":"\"; \"business\" and \"increase\" are candidates as frame-argument structure."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1809_00647v1_183"],"datasets":["datasets/scigenCL/1809.00647v1-183.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "We inspect some pairs of events and entities in different kernels and list some examples in Table 5. The pairs in Table 3 exhibit interesting types of relations: e.g., \"arrest-charge\" and \"attack-kill\" form script-like chains; \"\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r\" forms a quasiidentity relation (Recasens et al., 2010) with \"\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r\"; \"business\" and \"increase\" are candidates as frame-argument structure.\n\n*Note: The given paragraph does not contain any explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced with Fluid expressions.*"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1809_00647v1_183"
+  ],
+  "datasets": ["datasets/scigenCL/1809.00647v1-183.json"]
+}

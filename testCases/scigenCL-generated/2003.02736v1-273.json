@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The results for the tested systems are given in Table 2. Again we saw "},{"expression":"\"large gains\"","type":"expression"},{"type":"literal","value":" from the BERT based models over the baseline from (Zubiaga et al., 2017) and the 2-layer BiLSTM. Compared to training solely on PHEME, fine tuning from basic citation needed detection saw very little improvement ("},{"expression":"\"0.1\"","type":"expression"},{"type":"literal","value":" F1 points). However, fine tuning with a model trained using PU learning led to an increase of "},{"expression":"\"1\"","type":"expression"},{"type":"literal","value":" F1 point over the non-PU learning model, indicating that PU learning enables the Wikipedia data to be useful for transferring to rumour detection. For PUC, we saw an improvement of "},{"expression":"\"0.7\"","type":"expression"},{"type":"literal","value":" F1 points over the baseline and "},{"expression":"\"lower overall variance\"","type":"expression"},{"type":"literal","value":" than vanilla PU learning, meaning that the results with PUC are "},{"expression":"\"more consistent across runs\"","type":"expression"},{"type":"literal","value":". When models are ensembled, pretraining with vanilla PU learning improved over no pretraining by almost "},{"expression":"\"2\"","type":"expression"},{"type":"literal","value":" F1 points."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2003_02736v1_273"],"datasets":["datasets/scigenCL/2003.02736v1-273.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results for the tested systems are given in Table 2. Again we saw \"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\" from the BERT based models over the baseline from (Zubiaga et al., 2017) and the 2-layer BiLSTM. Compared to training solely on PHEME, fine tuning from basic citation needed detection saw very little improvement (\"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\" F1 points). However, fine tuning with a model trained using PU learning led to an increase of \"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\" F1 point over the non-PU learning model, indicating that PU learning enables the Wikipedia data to be useful for transferring to rumour detection. For PUC, we saw an improvement of \"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\" F1 points over the baseline and \"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\" than vanilla PU learning, meaning that the results with PUC are "
+    },
+    {
+      "expression": "\"\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". When models are ensembled, pretraining with vanilla PU learning improved over no pretraining by almost \"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\" F1 points.\n\nIt seems that the text contains a repeating error message \"[REPLACE value=\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r]\". This message does not appear to represent an explicit value or comparison from the context of the paragraph and thus should not be replaced with a Fluid expression. It seems there might be an issue in how the text was generated or extracted.\n\nIf we assume that this error is a placeholder for actual values (e.g., F1 scores), then you would need to replace those placeholders with the correct values from your dataset. As provided, none of the current placeholders meet the criteria for replacement according to the task description."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2003_02736v1_273"
+  ],
+  "datasets": ["datasets/scigenCL/2003.02736v1-273.json"]
+}

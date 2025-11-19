@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Likewise, the utility of CIPHER-AVG tags for dependency parsing under zero-resource scenarios is summarized in Table 4 and Table 5. We then take the next logical step and remove the parallel data-grounded embeddings, replacing them with fully unsupervised MUSE embeddings. Table 5 summarizes these results. It can be observed that POS signal improves performance greatly for all languages when using MUSE embeddings. Here we note a mixed result: whilst de, sv, and it do benefit from POS information, the other languages do not, obtaining "},{"expression":"\"great\"","type":"expression"},{"type":"literal","value":" improvements from MUSE embed dings instead. Finally, consider MUSE-CIPHER (gold POS tags during training, cipher tags during testing). When compared to MUSE-NONE setup, it can be observed that, unfortunately, the heuristic POS tagger is too noisy and gets in MUSE's way."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_05426v1_147"],"datasets":["datasets/scigenCL/1904.05426v1-147.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Likewise, the utility of CIPHER-AVG tags for dependency parsing under zero-resource scenarios is summarized in Table 4 and Table 5. We then take the next logical step and remove the parallel data-grounded embeddings, replacing them with fully unsupervised MUSE embeddings. Table 5 summarizes these results. It can be observed that POS signal improves performance greatly for all languages when using MUSE embeddings. Here we note a mixed result: whilst de, sv, and it do benefit from POS information, the other languages do not, obtaining \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, improvements from MUSE embed dings instead. Finally, consider MUSE-CIPHER (gold POS tags during training, cipher tags during testing). When "
+    },
+    {
+      "expression": "\"compared to\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " MUSE-NONE setup, it can be observed that, unfortunately, the heuristic POS tagger is too noisy and gets in MUSE's way."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_05426v1_147"
+  ],
+  "datasets": ["datasets/scigenCL/1904.05426v1-147.json"]
+}

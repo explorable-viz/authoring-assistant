@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We next conduct a series of experiments in which we train on DBiDAF, DBERT, and DRoBERTa, and observe how well models can then learn to generalise on the respective test portions of these datasets. Table 5 shows the results, and there is a multitude of observations. First, one clear trend we observe across all training data setups is a clear negative performance progression when evaluated against datasets constructed with a stronger model in the loop. This trend holds true for all but the BiDAF model, in each of the training configurations, and for each of the evaluation datasets. For example, RoBERTa trained on DRoBERTa achieves "},{"expression":"\"71.4\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"53.5\"","type":"expression"},{"type":"literal","value":", "},{"expression":"\"48.6\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"38.9\"","type":"expression"},{"type":"literal","value":" F1 when evaluated on DSQuAD, DBiDAF, DBERT and DRoBERTa, respectively. Second, we observe that the BiDAF model is not able to generalise well to datasets constructed with a model in the loop, independent of its training setup. In particular it is unable to learn from DBiDAF, thus failing to overcome some of its own blind spots through adversarial training. Both when training only on DBiDAF, as well as when adding DSQuAD to DBiDAF during training (cf. Table 6), BiDAF performs "},{"expression":"\"poorly\"","type":"expression"},{"type":"literal","value":" across all the adversarial datasets. results in Table 5, where training on DBiDAF in several cases led to "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" generalisation than training on DRoBERTa. we further train each of our three models on either DBiDAF, DBERT, or DRoBERTa and test on DSQuAD, with results in the DSQuAD columns of Table 5. First, we observe clear generalisation improvements towards DDROP across all models compared to training on DSQuAD(10K) when using any of the DBiDAF, DBERT, or DRoBERTa datasets for training. That is, including a model in the loop for the training dataset leads to improved transfer towards DDROP. Note that the DROP dataset also makes use of a BiDAF model in the loop during annotation; these results are in line with our prior observations when testing the same setups on DBiDAF, DBERT and DRoBERTa, compared to training on DSQuAD(10K). Second, we observe overall strong transfer results towards DNQ: up to "},{"expression":"\"71.0\"","type":"expression"},{"type":"literal","value":"F1 for a BERT model trained on DBiDAF. Note that this result is similar and even slightly improves over model training with SQuAD data of the same size. That is, relative to training on SQuAD data, training on adversarially collected data DBiDAF does not impede generalisation to the DNQ dataset, which was created without a model in the annotation loop. We then however see a similar negative performance progression as observed before when testing on DSQuAD: the stronger the model in the annotation loop of the training dataset, the lower the test accuracy on test data from a data distribution composed without using a model in the loop."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2002_00293v1_335"],"datasets":["datasets/scigenCL/2002.00293v1-335.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We next conduct a series of experiments in which we train on DBiDAF, DBERT, and DRoBERTa, and observe how well models can then learn to generalise on the respective test portions of these datasets. Table 5 shows the results, and there is a multitude of observations. First, one clear trend we observe across all training data setups is a clear negative performance progression when evaluated against datasets constructed with a stronger model in the loop. This trend holds true for all but the BiDAF model, in each of the training configurations, and for each of the evaluation datasets. For example, RoBERTa trained on DRoBERTa achieves "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 when evaluated on DSQuAD, DBiDAF, DBERT and DRoBERTa, respectively. Second, we observe that the BiDAF model is not able to generalise well to datasets constructed with a model in the loop, independent of its training setup. In particular it is unable to learn from DBiDAF, thus failing to overcome some of its own blind spots through adversarial training. Both when training only on DBiDAF, as well as when adding DSQuAD to DBiDAF during training (cf. Table 6), BiDAF performs "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across all the adversarial datasets. results in Table 5, where training on DBiDAF in several cases led to "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generalisation than training on DRoBERTa. we further train each of our three models on either DBiDAF, DBERT, or DRoBERTa and test on DSQuAD, with results in the DSQuAD columns of Table 5. First, we observe clear generalisation improvements towards DDROP across all models compared to training on DSQuAD(10K) when using any of the DBiDAF, DBERT, or DRoBERTa datasets for training. That is, including a model in the loop for the training dataset leads to improved transfer towards DDROP. Note that the DROP dataset also makes use of a BiDAF model in the loop during annotation; these results are in line with our prior observations when testing the same setups on DBiDAF, DBERT and DRoBERTa, compared to training on DSQuAD(10K). Second, we observe overall strong transfer results towards DNQ: up to "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 for a BERT model trained on DBiDAF. Note that this result is similar and even slightly improves over model training with SQuAD data of the same size. That is, relative to training on SQuAD data, training on adversarially collected data DBiDAF does not impede generalisation to the DNQ dataset, which was created without a model in the annotation loop. We then however see a similar negative performance progression as observed before when testing on DSQuAD: the stronger the model in the annotation loop of the training dataset, the lower the test accuracy on test data from a data distribution composed without using a model in the loop.\n\nIt appears that there is an issue with the output of some command not being recognized, which has been consistently replaced as it was part of the original paragraph. If these are actual numerical results that should be annotated with Fluid expressions, please provide those values for accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2002_00293v1_335"
+  ],
+  "datasets": ["datasets/scigenCL/2002.00293v1-335.json"]
+}

@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The results for political speech check-worthiness detection are given in Table 3. We found that the vanilla BERT model "},{"expression":"\"performed the best\"","type":"expression"},{"type":"literal","value":" of all models. As we added transfer learning and PU learning, the performance steadily dropped, with the "},{"expression":"\"worst performing\"","type":"expression"},{"type":"literal","value":" model being the one using PUC."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2003_02736v1_274"],"datasets":["datasets/scigenCL/2003.02736v1-274.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results for political speech check-worthiness detection are given in Table 3. We found that the vanilla BERT model "
+    },
+    {
+      "expression": "\"of all models\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As we added transfer learning and PU learning, the performance steadily dropped, with the "
+    },
+    {
+      "expression": "\"model being the one using PUC\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n\nNote: The phrase \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" seems to be an error message or path and not a meaningful expression in the context of Fluid. Therefore, it has been omitted from the annotations."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2003_02736v1_274"
+  ],
+  "datasets": ["datasets/scigenCL/2003.02736v1-274.json"]
+}

@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"As shown in Table 2, the proposed cross-modal self-attention "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" all other attention methods "},{"expression":"\"significantly\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1904_04745v1_379"],"datasets":["datasets/scigenCL/1904.04745v1-379.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "It appears that the paragraph provided contains text from an error message rather than a description of data or comparative statements that can be replaced with Fluid expressions. The paragraph mentions paths to a Fluid command but does not include any explicit values, comparative expressions, or superlative/aggregated expressions related to model performance or other metrics.\n\nTherefore, there are no parts in the provided paragraph that can be annotated according to the task description.\n\nIf you have a different paragraph that includes relevant data and comparative statements, please provide it for annotation."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1904_04745v1_379"
+  ],
+  "datasets": ["datasets/scigenCL/1904.04745v1-379.json"]
+}

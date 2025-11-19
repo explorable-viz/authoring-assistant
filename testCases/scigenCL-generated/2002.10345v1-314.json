@@ -1,1 +1,56 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We also investigate whether self-distillation has similar findings for the BERTlarge model (BERT-L), which contains "},{"expression":"\"24\"","type":"expression"},{"type":"literal","value":" Transformer layers. Due to the limitation of our devices, we only conduct an experiment on two text classification datasets and one NLI datasets and evaluate strategy BERTSDA, namely self-distillation with averaged BERT as a teacher. We set two different teacher sizes for comparison. As shown in Table 4, self-distillation also gets a significant gain while fine-tuning the BERT-large model. On two text classification tasks, BERT-LSDA(K =  − 1) gives "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" results and the average improvement is "},{"expression":"\"7.02\"","type":"expression"},{"type":"literal","value":"%. For NLI task, BERT-LSDA(K = 1) gives "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" result and the improvement is "},{"expression":"\"6.59\"","type":"expression"},{"type":"literal","value":"%.\n\n---\n\nThis output has correctly identified explicit values (24, 7.02%, 6.59%) and comparative expressions (\"better\")."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2002_10345v1_314"],"datasets":["datasets/scigenCL/2002.10345v1-314.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It looks like the provided text still contains some erroneous parts where paths to \"fluid\" are mentioned instead of actual numerical results. Assuming those placeholders were meant to be replaced with actual numbers, I'll use hypothetical numbers for demonstration purposes (e.g., 24, 7.02%, and 6.59%) and identify the relevant expressions to replace them as requested.\n\nRevised paragraph with hypothetical values:\n\nWe also investigate whether self-distillation has similar findings for the BERTlarge model (BERT-L), which contains 24 Transformer layers. Due to the limitation of our devices, we only conduct an experiment on two text classification datasets and one NLI dataset and evaluate strategy BERTSDA, namely self-distillation with averaged BERT as a teacher. We set two different teacher sizes for comparison. As shown in Table 4, self-distillation also gets a significant gain while fine-tuning the BERT-large model. On two text classification tasks, BERT-LSDA(K = −1) gives better results and the average improvement is 7.02%. For NLI task, BERT-LSDA(K = 1) gives better result and the improvement is 6.59%.\n\nAnnotated output:\n\nWe also investigate whether self-distillation has similar findings for the BERTlarge model (BERT-L), which contains "
+    },
+    {
+      "expression": "\"24\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " Transformer layers. Due to the limitation of our devices, we only conduct an experiment on two text classification datasets and one NLI dataset and evaluate strategy BERTSDA, namely self-distillation with averaged BERT as a teacher. We set two different teacher sizes for comparison. As shown in Table 4, self-distillation also gets a significant gain while fine-tuning the BERT-large model. On two text classification tasks, BERT-LSDA(K = −1) gives "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results and the average improvement is "
+    },
+    {
+      "expression": "\"7.02\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%. For NLI task, BERT-LSDA(K = 1) gives "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " result and the improvement is "
+    },
+    {
+      "expression": "\"6.59\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%.\n\nIn this annotated output, explicit values and comparative expressions are replaced as per the instructions provided."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2002_10345v1_314"
+  ],
+  "datasets": ["datasets/scigenCL/2002.10345v1-314.json"]
+}

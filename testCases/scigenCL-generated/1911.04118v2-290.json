@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 8: Comparison between "},{"expression":"\"FT\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"TANDA\"","type":"expression"},{"type":"literal","value":" on real-world datasets derived from Alexa Virtual Assistant traffic\r\nIn these experiments, we used, as usual, "},{"expression":"\"ASNQ\"","type":"expression"},{"type":"literal","value":" for the transfer step, and "},{"expression":"\"NAD\"","type":"expression"},{"type":"literal","value":" as our target dataset for the adapt step. Table 8 reports the "},{"expression":"\"comparative results\"","type":"expression"},{"type":"literal","value":" using simple FT on NAD (denoted simply by NAD) and tested on samples 1, 2 and 3.\r\n\r\nIn this paragraph, there are no explicit values or superlative/aggregated expressions to replace. Only the model names FT and TANDA, and the dataset names ASNQ and NAD have been annotated."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1911_04118v2_290"],"datasets":["datasets/scigenCL/1911.04118v2-290.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It appears that the text you provided does not contain any specific values, comparative expressions (like \"better\", \"worse\"), or superlative/aggregated expressions (like \"the best\", \"highest\") that need to be replaced according to the Fluid language detection rules.\n\nHowever, there is a recurring phrase in the paragraph which seems out of place and appears multiple times:\n\n\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno\n\nThis phrase translates to \"is not recognized as an internal or external command,\" and it is likely an error message from the command line rather than a relevant expression in the paragraph. Since this doesn't fit into the types of expressions we are looking for, it will remain unchanged.\n\nThe dataset names ASNQ and NAD mentioned later in the text can be considered explicit values, so I'll annotate those:\n\nTable 8: Comparison between \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r on real-world datasets derived from Alexa Virtual Assistant traffic\r\nIn these experiments, we used, as usual, \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r for the transfer step, and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r as our target dataset for the adapt step. Table 8 reports the results using simple FT on "
+    },
+    {
+      "expression": "\"NAD\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (denoted simply by NAD) and tested on samples 1, 2 and 3.\n\nPlease note that since there are no other explicit values or comparative/superlative expressions, this is the only annotation made in the provided paragraph."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1911_04118v2_290"
+  ],
+  "datasets": ["datasets/scigenCL/1911.04118v2-290.json"]
+}

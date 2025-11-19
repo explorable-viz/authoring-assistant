@@ -1,1 +1,64 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"With BIVEC embeddings, we learn two languages at the same time, and test retrieval on one or two of these languages. Results are shown in table 4. Trained in English alone, the model gives "},{"expression":"\"worse\"","type":"expression"},{"type":"literal","value":" performance than MUSE for languages not seen previously. For example, with English-German BIVEC and a model trained only in English, and test on German, we obtain only "},{"expression":"\"22.96\"","type":"expression"},{"type":"literal","value":"% recall@10, where MUSE embeddings obtain 44.18%. But when train on English and French, we obtain "},{"expression":"\"55.22\"","type":"expression"},{"type":"literal","value":"% recall, an increase of "},{"expression":"\"26.39\"","type":"expression"},{"type":"literal","value":"% compared to MUSE. With German and English training, we have an increase of "},{"expression":"\"15.16\"","type":"expression"},{"type":"literal","value":"% on English only recall, with a recall of 61.44%. Meaning that, once again, learning a new language with BIVEC enables "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" results in English, as the same kind of results is visible with French as well."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1903_11299v3_308"],"datasets":["datasets/scigenCL/1903.11299v3-308.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "With BIVEC embeddings, we learn two languages at the same time, and test retrieval on one or two of these languages. Results are shown in table 4. Trained in English alone, the model gives "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than MUSE for languages not seen previously. For example, with English-German BIVEC and a model trained only in English, and test on German, we obtain only "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% recall@10, where MUSE embeddings obtain 44.18%. But when train on English and French, we obtain "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% recall, an increase of "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% compared to MUSE. With German and English training, we have an increase of "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% on English only recall, with a recall of 61.44%. Meaning that, once again, learning a new language with BIVEC enables "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results in English, as the same kind of results is visible with French as well.\n\nNote: The phrase \"non � riconosciuto come comando interno o esterno\" appears to be an error or unintended output and doesn't represent a comparative or superlative expression. If this was supposed to be a number or another value, please provide the correct information for accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1903_11299v3_308"
+  ],
+  "datasets": ["datasets/scigenCL/1903.11299v3-308.json"]
+}

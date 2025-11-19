@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"For similarity tasks, cross-sentential contexts do not seem useful, and can even be detrimental for "},{"expression":"\"large\"","type":"expression"},{"type":"literal","value":" window sizes. However, for analogy tasks, crosssentential contexts lead to improved results thanks to the increased "},{"expression":"\"window\"","type":"expression"},{"type":"literal","value":" it provides. This is especially pronounced for corpora with "},{"expression":"\"short\"","type":"expression"},{"type":"literal","value":" sentences such as OpenSubtitles (see Table 3)."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1704_05781v1_264"],"datasets":["datasets/scigenCL/1704.05781v1-264.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For similarity tasks, cross-sentential contexts do not seem useful, and can even be detrimental for window sizes. However, for analogy tasks, crosssentential contexts lead to "
+    },
+    {
+      "expression": "\"improved\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results thanks to the increased it provides. This is especially pronounced for corpora with sentences such as OpenSubtitles (see Table 3).\n\nNote: There are repeated mentions of an error message (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno, ) in the input paragraph. Since these do not fit any of the categories you asked me to detect (explicit values, comparative expressions, superlative or aggregated expressions), they have been ignored in the output."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_05781v1_264"
+  ],
+  "datasets": ["datasets/scigenCL/1704.05781v1-264.json"]
+}

@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Although our unsupervised model doesn't support all the labels, to show the effectiveness of the approach, we compare the label accuracy of \"SUPPORTS\" label against a supervised approach \u2013 HexaF. Results from Table 3 suggests that our approach is "},{"expression":"\"comparable\"","type":"expression"},{"type":"literal","value":" to HexaF for φ = "},{"expression":"\"0.76\"","type":"expression"},{"type":"literal","value":"."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1910_07154v1_296"],"datasets":["datasets/scigenCL/1910.07154v1-296.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Although our unsupervised model doesn't support all the labels, to show the effectiveness of the approach, we compare the label accuracy of \"SUPPORTS\" label against a supervised approach \u2013 HexaF. Results from Table 3 suggests that our approach is "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,\r to HexaF for φ = "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n\nIt seems there is an error message (\"non è riconosciuto come comando interno o esterno\") in the paragraph that does not fit the context of comparing label accuracy. If this was a mistake and you meant to include comparative phrases like \"better\" or numerical values, please provide the correct comparative expression for accurate annotation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_07154v1_296"
+  ],
+  "datasets": ["datasets/scigenCL/1910.07154v1-296.json"]
+}

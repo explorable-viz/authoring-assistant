@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The named entity retrieval strategy boosts the evidence retrieval rate to "},{"expression":"\"80.8\"","type":"expression"},{"type":"literal","value":"%, The film retrievals raise evidence retrieval to "},{"expression":"\"81.2\"","type":"expression"},{"type":"literal","value":"%"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1901_02534v1_35"],"datasets":["datasets/scigenCL/1901.02534v1-35.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "It seems there is a mix-up in the paragraph provided as it appears to contain paths and error messages rather than structured data analysis or comparisons. However, I will attempt to detect and annotate any explicit values that might be relevant.\n\nGiven the paragraph:\nThe named entity retrieval strategy boosts the evidence retrieval rate to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r%, The film retrievals raise evidence retrieval to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r%\n\nThere are no explicit values (scores, names, numbers) or comparative/superlative expressions that can be replaced with a Fluid expression. The paragraph seems to contain error messages from some script execution rather than data analysis results.\n\nThus, the output remains unchanged:\nThe named entity retrieval strategy boosts the evidence retrieval rate to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r%, The film retrievals raise evidence retrieval to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,%"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1901_02534v1_35"
+  ],
+  "datasets": ["datasets/scigenCL/1901.02534v1-35.json"]
+}

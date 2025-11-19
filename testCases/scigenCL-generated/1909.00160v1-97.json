@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We report "},{"expression":"\"accuracy\"","type":"expression"},{"type":"literal","value":" as the performance metric. Table 1 represents the performance comparison of our proposed models and the baselines, which shows that incorporation of knowledge graph embeddings helps to "},{"expression":"\"improve\"","type":"expression"},{"type":"literal","value":" the model performance. All results are summarized in Table 1."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_00160v1_97"],"datasets":["datasets/scigenCL/1909.00160v1-97.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We report \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as the performance metric. Table 1 represents the performance comparison of our proposed models and the baselines, which shows that incorporation of knowledge graph embeddings helps to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the model performance. All results are summarized in Table 1.\n\nNote: The phrase \"non è riconosciuto come comando interno o esterno,\" seems to be a typographical error and might refer to an error message in Italian indicating that the command is not recognized, which is not related to the Fluid language as per your task. However, I have annotated it according to your instructions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_00160v1_97"
+  ],
+  "datasets": ["datasets/scigenCL/1909.00160v1-97.json"]
+}

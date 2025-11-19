@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"BPE and character sys"},{"expression":"\"tem\"","type":"expression"},{"type":"literal","value":"s differ most in the "},{"expression":"\"number\"","type":"expression"},{"type":"literal","value":" of lexical choice errors, and in the "},{"expression":"\"extent\"","type":"expression"},{"type":"literal","value":" to which they drop content. Regarding lexical choice, the two systems differ not only in the "},{"expression":"\"number\"","type":"expression"},{"type":"literal","value":" of errors, but in the nature of those errors. In particular, the BPE model had "},{"expression":"\"more\"","type":"expression"},{"type":"literal","value":" trouble handling German compound nouns. We also found that both systems occasionally mistranslate proper names."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1808_09943v1_271"],"datasets":["datasets/scigenCL/1808.09943v1-271.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It looks like the input paragraph includes an error message repeated multiple times: `\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,`. This is likely not part of the intended text and can be ignored for this task.\n\nAssuming we remove these repeated error messages, here's the cleaned-up paragraph with Fluid expressions annotated:\n\n---\n\n**Original Paragraph:**\nBPE and character systems differ most in the \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,\r of lexical choice errors, and in the \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,\r to which they drop content. Regarding lexical choice, the two systems differ not only in the \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,\r of errors, but in the nature of those errors. In particular, the BPE model had \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non è riconosciuto come comando interno o esterno,\r trouble handling German compound nouns. We also found that both systems occasionally mistranslate proper names.\n\n**Cleaned and Annotated Paragraph:**\nBPE and character systems differ most in the "
+    },
+    {
+      "expression": "\"of\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lexical choice errors, and in the "
+    },
+    {
+      "expression": "\"to which they drop content.\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " Regarding lexical choice, the two systems differ not only in the "
+    },
+    {
+      "expression": "\"of\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " errors, but in the nature of those errors. In particular, the BPE model had trouble handling German compound nouns. We also found that both systems occasionally mistranslate proper names.\n\n---\n\n**Annotations:**\n- The repeated error message has been ignored.\n- Comparative expressions like \"differ most\" and \"trouble handling\" are not comparative in a quantifiable way but more qualitative, so they have not been annotated as Fluid expressions.\n- The phrases \"of lexical choice errors,\" \"to which they drop content,\" and \"of errors\" do not represent explicit values or superlatives that can be directly translated to Fluid expressions. Thus, only the exact comparative/prepositional phrases are annotated."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_09943v1_271"
+  ],
+  "datasets": ["datasets/scigenCL/1808.09943v1-271.json"]
+}

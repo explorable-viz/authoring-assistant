@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The model performance and corresponding model size are reported in Table 5. On the one hand, removing the efficiency-aware loss ("},{"expression":"\"0\"","type":"expression"},{"type":"literal","value":") leads to "},{"expression":"\"the increase\"","type":"expression"},{"type":"literal","value":" in model parameter size, on the other hand, a more aggressive efficiency preference ("},{"expression":"\"8\"","type":"expression"},{"type":"literal","value":") results in "},{"expression":"\"the small\"","type":"expression"},{"type":"literal","value":" model size but degraded performance, since a large β encourages the compressed model to adopt more lightweight operations such as zero and skip which hurt the performance. A moderate efficiency constraint ("},{"expression":"\"4\"","type":"expression"},{"type":"literal","value":") provides a regularization, guiding the AdaBERT method to achieve "},{"expression":"\"a trade-off\"","type":"expression"},{"type":"literal","value":" between "},{"expression":"\"the small\"","type":"expression"},{"type":"literal","value":" parameter size and "},{"expression":"\"good\"","type":"expression"},{"type":"literal","value":" performance."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_2001_04246v1_431"],"datasets":["datasets/scigenCL/2001.04246v1-431.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The model performance and corresponding model size are reported in Table 5. On the one hand, removing the efficiency-aware loss leads to "
+    },
+    {
+      "expression": "\"smaller\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in model parameter size, on the other hand, a more aggressive efficiency preference results in "
+    },
+    {
+      "expression": "\"larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model size but "
+    },
+    {
+      "expression": "\"degraded\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance, since a large β encourages the compressed model to adopt more lightweight operations such as zero and skip which hurt the performance. A moderate efficiency constraint provides a regularization, guiding the AdaBERT method to achieve "
+    },
+    {
+      "expression": "\"balance\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between parameter size and performance.\n\nNote: The text contained multiple repetitions of an error message related to Fluid command not being recognized. These were removed from the final annotated paragraph as they did not represent actual comparative or superlative expressions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_2001_04246v1_431"
+  ],
+  "datasets": ["datasets/scigenCL/2001.04246v1-431.json"]
+}

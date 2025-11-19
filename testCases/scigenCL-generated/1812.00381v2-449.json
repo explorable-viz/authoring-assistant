@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Similarly a single classifier outperforms the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric, Logistic Regression performed "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" across both datasets, providing "},{"expression":"\"0.874\"","type":"expression"},{"type":"literal","value":" precision on Antichat and "},{"expression":"\"0.852\"","type":"expression"},{"type":"literal","value":" precision on Hack Forums."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1812_00381v2_449"],"datasets":["datasets/scigenCL/1812.00381v2-449.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Similarly a single classifier outperforms the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric, Logistic Regression performed "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across both datasets, providing "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision on Antichat and "
+    },
+    {
+      "expression": "\"non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision on Hack Forums.\n\nIt seems that the text contains repeated error messages instead of actual precision values. If you provide the correct precision values, I can annotate them accordingly."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1812_00381v2_449"
+  ],
+  "datasets": ["datasets/scigenCL/1812.00381v2-449.json"]
+}

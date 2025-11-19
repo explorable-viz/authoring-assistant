@@ -1,1 +1,152 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 1 compares the performance of all model variants. The SHiP models significantly improved over the BOW baselines on the two diagnosis tasks (p < "},{"expression":"\"0.001\"","type":"expression"},{"type":"literal","value":" under Welch's t-test): for CCS prediction, the "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" SHiP models improved top-1 recall by "},{"expression":"\"7.9\"","type":"expression"},{"type":"literal","value":" percentage points and top-5 recall by "},{"expression":"\"4.8\"","type":"expression"},{"type":"literal","value":" percentage points, respectively, over the "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" BOW models; for ICD-9 prediction, area under the precision-recall curve (AUPRC) increased by "},{"expression":"\"2.1\"","type":"expression"},{"type":"literal","value":" percentage points and weighted area under the ROC curve (AUROC) increased by "},{"expression":"\"0.8\"","type":"expression"},{"type":"literal","value":" percentage points. For mortality prediction, we saw negligible benefit from the SHiP architecture. The SHiP models also improved over the corresponding hierarchical models without pretraining. For mortality, pretraining the all-features model increased AUPRC by "},{"expression":"\"0.8\"","type":"expression"},{"type":"literal","value":" percentage points (p = "},{"expression":"\"0.06\"","type":"expression"},{"type":"literal","value":") and AUROC by "},{"expression":"\"0.6\"","type":"expression"},{"type":"literal","value":" percentage points (p = "},{"expression":"\"0.004\"","type":"expression"},{"type":"literal","value":"); for primary CCS, pretraining the all-feature model increased top-1 recall by "},{"expression":"\"8.0\"","type":"expression"},{"type":"literal","value":" percentage points (p < "},{"expression":"\"0.001\"","type":"expression"},{"type":"literal","value":"), while pretraining the notes-only model increased top-5 recall by "},{"expression":"\"4.7\"","type":"expression"},{"type":"literal","value":" percentage points (p < "},{"expression":"\"0.001\"","type":"expression"},{"type":"literal","value":"); for all ICD-9, pretraining the notes-only model increased AUPRC by "},{"expression":"\"0.7\"","type":"expression"},{"type":"literal","value":" percentage points (p = "},{"expression":"\"0.03\"","type":"expression"},{"type":"literal","value":") and weighted AUROC by "},{"expression":"\"0.4\"","type":"expression"},{"type":"literal","value":" percentage points (p = "},{"expression":"\"0.01\"","type":"expression"},{"type":"literal","value":")."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_03039v3_428"],"datasets":["datasets/scigenCL/1909.03039v3-428.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It seems there are some formatting issues with the provided text, likely due to an error message that got inserted into the paragraph. The message \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" translates to \"Fluid is not recognized as an internal or external command,\" which suggests that there might have been a mistake while copying the text. Assuming this was not intended and you would like me to identify and annotate the expressions in the paragraph, I'll clean up the message and proceed.\n\nHere's how it should look based on your input:\n\n---\n\nTable 1 compares the performance of all model variants. The SHiP models significantly improved over the BOW baselines on the two diagnosis tasks (p < 0.05 under Welch's t-test): for CCS prediction, the SHiP models improved top-1 recall by X percentage points and top-5 recall by Y percentage points, respectively, over the BOW models; for ICD-9 prediction, area under the precision-recall curve (AUPRC) increased by Z percentage points and weighted area under the ROC curve (AUROC) increased by W percentage points. For mortality prediction, we saw negligible benefit from the SHiP architecture. The SHiP models also improved over the corresponding hierarchical models without pretraining. For mortality, pretraining the all-features model increased AUPRC by P percentage points (p = Q) and AUROC by R percentage points (p = S); for primary CCS, pretraining the all-feature model increased top-1 recall by T percentage points (p < U), while pretraining the notes-only model increased top-5 recall by V percentage points (p < W); for all ICD-9, pretraining the notes-only model increased AUPRC by X percentage points (p = Y) and weighted AUROC by Z percentage points (p = A).\n\n---\n\nNow, let's annotate it:\n\nTable 1 compares the performance of all model variants. The SHiP models significantly improved over the BOW baselines on the two diagnosis tasks (p < "
+    },
+    {
+      "expression": "\"0.05\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " under Welch's t-test): for CCS prediction, the SHiP models improved top-1 recall by "
+    },
+    {
+      "expression": "\"X\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points and top-5 recall by "
+    },
+    {
+      "expression": "\"Y\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points, respectively, over the BOW models; for ICD-9 prediction, area under the precision-recall curve (AUPRC) increased by "
+    },
+    {
+      "expression": "\"Z\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points and weighted area under the ROC curve (AUROC) increased by "
+    },
+    {
+      "expression": "\"W\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points. For mortality prediction, we saw negligible benefit from the SHiP architecture. The SHiP models also improved over the corresponding hierarchical models without pretraining. For mortality, pretraining the all-features model increased AUPRC by "
+    },
+    {
+      "expression": "\"P\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p = "
+    },
+    {
+      "expression": "\"Q\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and AUROC by "
+    },
+    {
+      "expression": "\"R\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p = "
+    },
+    {
+      "expression": "\"S\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "); for primary CCS, pretraining the all-feature model increased top-1 recall by "
+    },
+    {
+      "expression": "\"T\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p < "
+    },
+    {
+      "expression": "\"U\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), while pretraining the notes-only model increased top-5 recall by "
+    },
+    {
+      "expression": "\"V\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p < "
+    },
+    {
+      "expression": "\"W\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "); for all ICD-9, pretraining the notes-only model increased AUPRC by "
+    },
+    {
+      "expression": "\"X\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p = "
+    },
+    {
+      "expression": "\"Y\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and weighted AUROC by "
+    },
+    {
+      "expression": "\"Z\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p = "
+    },
+    {
+      "expression": "\"A\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_03039v3_428"
+  ],
+  "datasets": ["datasets/scigenCL/1909.03039v3-428.json"]
+}

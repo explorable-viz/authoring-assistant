@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Also we compare performance of our model with two recent models, we see "},{"expression":"\"2.39\"","type":"expression"},{"type":"literal","value":" ROUGE-1 improvements compared to the ML+RL with intra-attn approach(previous SOTA) carries over to this dataset, which is a large margin. On ROUGE-2, our model also get an improvement of "},{"expression":"\"0.51\"","type":"expression"},{"type":"literal","value":". The experiment proves that our approach can "},{"expression":"\"outperform\"","type":"expression"},{"type":"literal","value":" competitive methods on different data distributions."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1902_09243v2_412"],"datasets":["datasets/scigenCL/1902.09243v2-412.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Also we compare performance of our model with two recent models, we see \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,  ROUGE-1 improvements compared to the ML+RL with intra-attn approach(previous SOTA) carries over to this dataset, which is a "
+    },
+    {
+      "expression": "\"large margin\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". On ROUGE-2, our model also get an improvement of \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,. The experiment proves that our approach can outperform "
+    },
+    {
+      "expression": "\"competitive methods\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on different data distributions.\n\nNote: The error messages related to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno are not relevant to the task and have been kept as is."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1902_09243v2_412"
+  ],
+  "datasets": ["datasets/scigenCL/1902.09243v2-412.json"]
+}

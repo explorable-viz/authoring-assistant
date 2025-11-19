@@ -1,1 +1,32 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We show the main result in "},{"expression":"\"Table 2\"","type":"expression"},{"type":"literal","value":" and "},{"expression":"\"3\"","type":"expression"},{"type":"literal","value":". Despite training on a fraction of the data available, the proposed BERT-based models surpass the previous state-of-the-art models "},{"expression":"\"by a large margin\"","type":"expression"},{"type":"literal","value":" on all datasets"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1905_07588v1_372"],"datasets":["datasets/scigenCL/1905.07588v1-372.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The paragraph you provided doesn't contain any explicit values, comparative expressions, or superlative/aggregated expressions that can be replaced by Fluid expressions. It seems to have some repeated phrases indicating an error related to the Fluid command not being recognized, but these do not pertain to the structured data queries and comparisons required for Fluid expressions.\n\nTherefore, there is no need to annotate any part of this paragraph with "
+    },
+    {
+      "expression": "\"...\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n\nHowever, if we were to focus on potential comparative or superlative/aggregated expressions in a corrected version of the text, it would look something like this:\n\nWe show the main result in \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r and \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r. Despite training on a fraction of the data available, the proposed BERT-based models surpass "
+    },
+    {
+      "expression": "\"the previous state-of-the-art\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r on all datasets\n\nBut given the current text, no replacements are necessary."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_07588v1_372"
+  ],
+  "datasets": ["datasets/scigenCL/1905.07588v1-372.json"]
+}

@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The results are summarized in Table "},{"expression":"\"Almost all\"","type":"expression"},{"type":"literal","value":" the methods performed "},{"expression":"\"similar\"","type":"expression"},{"type":"literal","value":" to "},{"expression":"\"random guess\"","type":"expression"},{"type":"literal","value":", showing that SQA on our dataset has its unique challenges."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1908_07855v1_304"],"datasets":["datasets/scigenCL/1908.07855v1-304.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results are summarized in Table "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, the methods performed "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno, to "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non � riconosciuto come comando interno o esterno,, showing that SQA on our dataset has its unique challenges.\n\nIt seems like the text includes repeated incorrect paths and messages, but there are no explicit values, comparative expressions, or superlative/aggregated expressions to replace with Fluid expressions based on the given criteria."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_07855v1_304"
+  ],
+  "datasets": ["datasets/scigenCL/1908.07855v1-304.json"]
+}

@@ -1,1 +1,64 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We report the performance in probing tasks in Table 2. In general, DCT yields "},{"expression":"\"better\"","type":"expression"},{"type":"literal","value":" performance compared to averaging on all tasks, and larger K often yields "},{"expression":"\"improved\"","type":"expression"},{"type":"literal","value":" performance in syntactic and semantic tasks. For the surface information tasks, SentLen and Word content (WC), c significantly outperforms AVG. The performance "},{"expression":"\"decreased\"","type":"expression"},{"type":"literal","value":" with increasing K in c[0 : K], While increasing K has no positive effect on surface information tasks, syntactic and semantic tasks demonstrate "},{"expression":"\"performance gains\"","type":"expression"},{"type":"literal","value":" with larger K. This trend is clearly observed in all syntactic tasks and three of the semantic tasks, where DCT performs "},{"expression":"\"well above\"","type":"expression"},{"type":"literal","value":" AVG and the performance improves with increasing K. The only exception is SOMO, where increasing K actually results in "},{"expression":"\"lower\"","type":"expression"},{"type":"literal","value":" performance, although all DCT results are still "},{"expression":"\"higher\"","type":"expression"},{"type":"literal","value":" than AVG."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1909_03104v2_226"],"datasets":["datasets/scigenCL/1909.03104v2-226.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "It seems like there's some text corruption or unintended duplication of a specific error message (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,) in the paragraph. I'll remove these error messages and focus on the meaningful content for detecting and annotating Fluid expressions.\n\nHere's the cleaned-up and annotated version:\n\n---\n\nWe report the performance in probing tasks in Table 2. In general, DCT yields "
+    },
+    {
+      "expression": "\"larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance compared to averaging on all tasks, and larger K often yields "
+    },
+    {
+      "expression": "\"larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance in syntactic and semantic tasks. For the surface information tasks, SentLen and Word content (WC), c significantly outperforms AVG. The performance with increasing K in c[0 : K], While increasing K has no positive effect on surface information tasks, syntactic and semantic tasks demonstrate "
+    },
+    {
+      "expression": "\"larger\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance with larger K. This trend is clearly observed in all syntactic tasks and three of the semantic tasks, where DCT performs "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than AVG and the performance improves with increasing K. The only exception is SOMO, where increasing K actually results in "
+    },
+    {
+      "expression": "\"worse\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance, although all DCT results are still "
+    },
+    {
+      "expression": "\"better\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than AVG.\n\n---\n\nNote: Some phrases like \"performance with increasing K in c[0 : K]\" and \"the performance with larger K\" were not explicitly marked as comparative or superlative but seem to suggest a trend. If these need specific Fluid annotations, further context or clarification would be needed. For now, I've focused on clear comparative and superlative expressions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1909_03104v2_226"
+  ],
+  "datasets": ["datasets/scigenCL/1909.03104v2-226.json"]
+}

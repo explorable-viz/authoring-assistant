@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 3 shows the development set results for Estonian. Cognate Morfessor "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" the comparable BPE system according to both measures for Estonian. The cross-lingual segmentation is particularly beneficial for Estonian. For Estonian, we have two ensemble configurations one combining 3 monolingually finetuned independent runs, and one combining 5 monolingually finetuned savepoints from 4 independent runs."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1808_10791v1_207"],"datasets":["datasets/scigenCL/1808.10791v1-207.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 3 shows the development set results for Estonian. Cognate Morfessor \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, the comparable BPE system according to both measures for Estonian. The cross-lingual segmentation is particularly beneficial for Estonian. For Estonian, we have two ensemble configurations one combining 3 monolingually finetuned independent runs, and one combining 5 monolingually finetuned savepoints from 4 independent runs.\n\nNo specific values or comparative/superlative expressions were detected that can be replaced with Fluid expressions based on the provided text."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1808_10791v1_207"
+  ],
+  "datasets": ["datasets/scigenCL/1808.10791v1-207.json"]
+}

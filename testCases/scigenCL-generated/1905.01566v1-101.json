@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach "},{"expression":"\"outperforms\"","type":"expression"},{"type":"literal","value":" the concurrently-published Xiong et al. (2019);"}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1905_01566v1_101"],"datasets":["datasets/scigenCL/1905.01566v1-101.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\"
+    },
+    {
+      "expression": "\"fluid\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" non � riconosciuto come comando interno o esterno,\r the concurrently-published Xiong et al. (2019);\n\nNote: The path \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" contains a command or script name that is not recognized as an internal or external command. Since there are no explicit values, comparative expressions, or superlative/aggregated expressions in this paragraph other than the path itself, we focus on annotating \"fluid\" within the path as it seems to be a command or script name which might correspond to a Fluid language context.\n\nHowever, if you intended to include an expression related to performance comparison that's not present, please provide more details."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1905_01566v1_101"
+  ],
+  "datasets": ["datasets/scigenCL/1905.01566v1-101.json"]
+}

@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"We also performed experiments with mixed sources, the results are shown in Table 4.  In this scenario, the neural network systems seem to benefit from the increased amount of training data and thus gave "},{"expression":"\"the best\"","type":"expression"},{"type":"literal","value":" results."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1704_07203v3_457"],"datasets":["datasets/scigenCL/1704.07203v3-457.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We also performed experiments with mixed sources, the results are shown in Table 4. In this scenario, the neural network systems seem to benefit from the increased amount of training data and thus gave "
+    },
+    {
+      "expression": "\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results.\n\nIt seems like there was a command-line error message included in the paragraph. Since this is not a comparable or explicit value that can be directly replaced by a Fluid expression, I've annotated it as-is with its original text. If you meant to include an actual result from the experiments, please provide the correct numeric or comparative value."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1704_07203v3_457"
+  ],
+  "datasets": ["datasets/scigenCL/1704.07203v3-457.json"]
+}

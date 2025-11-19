@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Table 2 (upper part) shows the results for binary violation. We evaluate models using macroaveraged precision ("},{"expression":"\"P\"","type":"expression"},{"type":"literal","value":"), recall ("},{"expression":"\"R\"","type":"expression"},{"type":"literal","value":"), F1. The weak baselines (MAJORITY, COIN-TOSS) are "},{"expression":"\"widely outperformed\"","type":"expression"},{"type":"literal","value":" by the rest of the methods. BIGRUATT outperforms in F1 ("},{"expression":"\"79.5\"","type":"expression"},{"type":"literal","value":" vs. "},{"expression":"\"71.8\"","type":"expression"},{"type":"literal","value":") the previous "},{"expression":"\"best performing method\"","type":"expression"},{"type":"literal","value":" (Aletras et al., 2016) in English judicial prediction. HAN slightly improves over BIGRUATT ("},{"expression":"\"80.5\"","type":"expression"},{"type":"literal","value":" vs. "},{"expression":"\"79.5\"","type":"expression"},{"type":"literal","value":"), while being "},{"expression":"\"more robust\"","type":"expression"},{"type":"literal","value":" across runs ("},{"expression":"\"0.2\"","type":"expression"},{"type":"literal","value":"% vs. "},{"expression":"\"2.7\"","type":"expression"},{"type":"literal","value":"% std. dev.). The results in Table 2 indicate that performance is comparable even when this information is masked, with the exception of HIER-BERT that has quite "},{"expression":"\"worse\"","type":"expression"},{"type":"literal","value":" results ("},{"expression":"\"2\"","type":"expression"},{"type":"literal","value":"%) compared to using non-anonymized data, suggesting model bias."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_02059v1_142"],"datasets":["datasets/scigenCL/1906.02059v1-142.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 (upper part) shows the results for binary violation. We evaluate models using macroaveraged precision (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r), recall (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r), F1. The weak baselines (MAJORITY, COIN-TOSS) are "
+    },
+    {
+      "expression": "\"by the rest of the methods\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". BIGRUATT outperforms in F1 (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r vs. \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r) the previous "
+    },
+    {
+      "expression": "\"(Aletras et al., 2016)\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in English judicial prediction. HAN slightly improves over BIGRUATT (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r vs. \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r), while being "
+    },
+    {
+      "expression": "\"across runs\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r% vs. \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r% std. dev.). The results in Table 2 indicate that performance is comparable even when this information is masked, with the exception of HIER-BERT that has quite "
+    },
+    {
+      "expression": "\"results\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r%) compared to using non-anonymized data, suggesting model bias.\n\nIt seems that there are some phrases in the text that were not directly related to values or comparative expressions. The text includes references to certain models and datasets which are not replaced by Fluid expressions according to the rules provided."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_02059v1_142"
+  ],
+  "datasets": ["datasets/scigenCL/1906.02059v1-142.json"]
+}

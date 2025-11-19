@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"These results are shown in "},{"expression":"\"table 2\"","type":"expression"},{"type":"literal","value":" as "},{"expression":"\"feature level transfer-learning\"","type":"expression"},{"type":"literal","value":".  \nThese results are shown in "},{"expression":"\"table 2\"","type":"expression"},{"type":"literal","value":" as "},{"expression":"\"model level transfer learning\"","type":"expression"},{"type":"literal","value":".  \n"},{"expression":"\"Table 2\"","type":"expression"},{"type":"literal","value":" shows the results of the proposed method, its variants and the baseline methods."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1702_06709v1_238"],"datasets":["datasets/scigenCL/1702.06709v1-238.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The given paragraph does not contain any explicit values, comparative expressions, or superlative/aggregated expressions that can be replaced with Fluid expressions based on the provided criteria.\n\nTherefore, no replacements are necessary:\n\nThese results are shown in \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r as \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r.  \nThese results are shown in \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r as \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r.  \n\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r shows the results of the proposed method, its variants and the baseline methods."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1702_06709v1_238"
+  ],
+  "datasets": ["datasets/scigenCL/1702.06709v1-238.json"]
+}

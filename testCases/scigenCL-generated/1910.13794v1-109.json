@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Our model outperforms all other models in all the metrics. This improvement is consistent, around "},{"expression":"\"2\"","type":"expression"},{"type":"literal","value":"%."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1910_13794v1_109"],"datasets":["datasets/scigenCL/1910.13794v1-109.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The provided paragraph contains an error regarding the Fluid command and some text that seems out of context. However, we can still annotate the relevant parts based on the task description.\n\nGiven the paragraph:\n\"Our model outperforms all other models in all the metrics. This improvement is consistent, around \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, %.\"\n\nHere's the annotated version:\n\nOur model "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " all other models in all the metrics. This improvement is consistent, around \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, %.\n\nNote: The Fluid command error seems to be an unrelated issue and does not contain any of the expressions we are looking for in this task."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1910_13794v1_109"
+  ],
+  "datasets": ["datasets/scigenCL/1910.13794v1-109.json"]
+}

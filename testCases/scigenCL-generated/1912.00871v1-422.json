@@ -1,1 +1,40 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"The values in the last column of Table III are summarized in Table IV. How the models compare with respect to "},{"expression":"\"accuracy\"","type":"expression"},{"type":"literal","value":" closely resembles the comparison of "},{"expression":"\"BLEU scores\"","type":"expression"},{"type":"literal","value":", presented earlier. Thus, "},{"expression":"\"BLEU scores\"","type":"expression"},{"type":"literal","value":" seem to correlate well with "},{"expression":"\"accuracy\"","type":"expression"},{"type":"literal","value":" values in our case."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1912_00871v1_422"],"datasets":["datasets/scigenCL/1912.00871v1-422.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The values in the last column of Table III are summarized in Table IV. How the models compare with respect to \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r closely resembles the comparison of "
+    },
+    {
+      "expression": "\"C:\\\\Users\\\\Alfy\\\\Lavoro\\\\bristol\\\\transp-text-new\\\\node_modules\\\\.bin\\\\fluid\\\" non \\\\� riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", presented earlier. Thus, "
+    },
+    {
+      "expression": "\"\\\"C:\\\\Users\\\\Alfy\\\\Lavoro\\\\bristol\\\\transp-text-new\\\\node_modules\\\\.bin\\\\fluid\\\" non \\\\� riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seem to correlate well with "
+    },
+    {
+      "expression": "\"\\\"C:\\\\Users\\\\Alfy\\\\Lavoro\\\\bristol\\\\transp-text-new\\\\node_modules\\\\.bin\\\\fluid\\\" non \\\\� riconosciuto come comando interno o esterno,\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " values in our case.\n\n**Note**: The backslashes have been escaped as required by Fluid's syntax."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1912_00871v1_422"
+  ],
+  "datasets": ["datasets/scigenCL/1912.00871v1-422.json"]
+}

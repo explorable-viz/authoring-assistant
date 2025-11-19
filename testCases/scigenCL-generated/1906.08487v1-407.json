@@ -1,1 +1,48 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"From the BLEU scores in Table 2, we can see that although MultiSeq has "},{"expression":"\"the highest\"","type":"expression"},{"type":"literal","value":" BLEU score, all models have similar BLEU scores and the difference is not that significant. We can clearly notice from human evaluations shown in Table 2 that our model, RL Look-ahead, outperforms all of the others in all three evaluated categories."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1906_08487v1_407"],"datasets":["datasets/scigenCL/1906.08487v1-407.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "From the BLEU scores in "
+    },
+    {
+      "expression": "\"Table 2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we can see that although MultiSeq has \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno, BLEU score, all models have similar "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the difference is not that significant. We can clearly notice from human evaluations shown in "
+    },
+    {
+      "expression": "\"Table 2\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that our model, RL Look-ahead, "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " all of the others in all three evaluated categories.\n\n**Note:** The phrase \"non � riconosciuto come comando interno o esterno\" seems to be an error message and not a comparative or superlative expression. It was left unaltered as it does not fit into the criteria provided for replacement with Fluid expressions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1906_08487v1_407"
+  ],
+  "datasets": ["datasets/scigenCL/1906.08487v1-407.json"]
+}

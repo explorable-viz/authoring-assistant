@@ -1,1 +1,14 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"Next we can consider the effect of genre, and expectations that speech promotes notional agreement. This is confirmed in Table 3. However we note that individual genres do behave differently: data from the Web is "},{"expression":"\"closer\"","type":"expression"},{"type":"literal","value":" to spoken language. The "},{"expression":"\"most restrictive\"","type":"expression"},{"type":"literal","value":" genre in avoiding notional agreement is translations. Both of these facts may reflect a combination of modality, genre and editorial practice effects. However the "},{"expression":"\"strong\"","type":"expression"},{"type":"literal","value":" differences suggest that genre is likely crucial to any model attempting to predict this phenomenon."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1804_07375v1_166"],"datasets":["datasets/scigenCL/1804.07375v1-166.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The provided paragraph does not contain explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced with Fluid expressions according to the given task description.\n\nHere's the annotated paragraph (which in this case remains unchanged):\n\nNext we can consider the effect of genre, and expectations that speech promotes notional agreement. This is confirmed in Table 3. However we note that individual genres do behave differently: data from the Web is \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r to spoken language. The \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r genre in avoiding notional agreement is translations. Both of these facts may reflect a combination of modality, genre and editorial practice effects. However the \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\r differences suggest that genre is likely crucial to any model attempting to predict this phenomenon.\n\nNote: The repeated error message in the paragraph (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno) appears to be unrelated to the task and seems to indicate an issue with a command not being recognized in some system context."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1804_07375v1_166"
+  ],
+  "datasets": ["datasets/scigenCL/1804.07375v1-166.json"]
+}

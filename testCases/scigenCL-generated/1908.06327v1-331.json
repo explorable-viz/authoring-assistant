@@ -1,1 +1,24 @@
-{"testing-variables":{},"paragraph":[{"type":"literal","value":"To address this, we fine-tune GrOVLE across the five VL tasks. We provide results for a four and "},{"expression":"\"five\"","type":"expression"},{"type":"literal","value":" multi-task trained embedding. The four task experiments are performed with the final task embedding fixed to demonstrate how well the embeddings would generalize to new tasks. We also provide results for pretraining on "},{"expression":"\"five\"","type":"expression"},{"type":"literal","value":" tasks with and without finetuning during the last task. This multi-task variant is the "},{"expression":"\"best performing\"","type":"expression"},{"type":"literal","value":" across all tasks, thus we release this embedding for public use. To verify that the multi-task GrOVLE performance improvements generalize across task model architecture, we provide results using additional task models in Table 4. Table 4 provides more models per task and demonstrates consistent results: embeddings can significantly affect performance and GrOVLE variants are still the "},{"expression":"\"best\"","type":"expression"},{"type":"literal","value":" embedding overall. As we move down the table we find even larger performance improvements made by using the five-task pretrained GrOVLE with fine-tuning than in Table 3."}],"variables":{},"imports":["scigen","util","datasets/scigenCL/_1908_06327v1_331"],"datasets":["datasets/scigenCL/1908.06327v1-331.json"]}
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "To address this, we fine-tune GrOVLE across the five VL tasks. We provide results for a four "
+    },
+    {
+      "expression": "\"and\"",
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" multi-task trained embedding. The four task experiments are performed with the final task embedding fixed to demonstrate how well the embeddings would generalize to new tasks. We also provide results for pretraining on \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" tasks with and without finetuning during the last task. This multi-task variant is the \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" across all tasks, thus we release this embedding for public use. To verify that the multi-task GrOVLE performance improvements generalize across task model architecture, we provide results using additional task models in Table 4. Table 4 provides more models per task and demonstrates consistent results: embeddings can significantly affect performance and GrOVLE variants are still the \"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno,\" embedding overall. As we move down the table we find even larger performance improvements made by using the five-task pretrained GrOVLE with fine-tuning than in Table 3.\n\nNote: The paragraph contains repeated references to an error message (\"C:\\Users\\Alfy\\Lavoro\\bristol\\transp-text-new\\node_modules\\.bin\\fluid\" non � riconosciuto come comando interno o esterno) which doesn't relate to the structured data or expressions needing replacement. These parts are not replaced with Fluid annotations as they don't represent explicit values, comparisons, or superlatives."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigenCL/_1908_06327v1_331"
+  ],
+  "datasets": ["datasets/scigenCL/1908.06327v1-331.json"]
+}

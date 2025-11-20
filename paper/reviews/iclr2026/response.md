@@ -18,7 +18,14 @@ the author burden by automatically exercising the generated code.
 
 For the more complex cases, where current LLMs are unable to generate a full solution in one step, we envisage
 a more interactive workflow, similar to working with Copilot. For the present paper we are focused on
-exploring the limits of current LLM capabilities and validating the basic idea.
+exploring the limits of current LLM capabilities and validating a simpler architecture with less interaction.
+
+## Reviewer Bezq
+
+_Re. subset of SciGen, could you provide details on the selection logic, sampling criteria, and exact number
+of examples used in evaluation?_
+
+For the submitted version we relied on a small subset of SciGen, with only XX example replacement tasks.
 
 ## Planned revisions to paper
 

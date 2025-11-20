@@ -22,8 +22,18 @@ exploring the limits of current LLM capabilities and validating a simpler archit
 
 ## Reviewer Bezq
 
-_Re. subset of SciGen, could you provide details on the selection logic, sampling criteria, and exact number
-of examples used in evaluation?_
+_Can authors report statistics about the manual validation process?_
+
+Unfortunately a user study is out-of-scope for this work; see [...]
+
+_Re. the subset of SciGen used, could you provide details on the selection logic, sampling criteria, and exact
+number of examples used in evaluation?_
+
+[Number of example papers + replacement problems within each of those]
+
+The paper states that experiments were conducted on “a subsample of the SciGen dataset” (line 367), but it remains unclear how this subset was chosen. Could the authors provide more details on the selection logic, sampling criteria, and the exact number of examples used in evaluation?
+
+It seems this framework rely on predefined helper routines such as trendWord or growShrink, which encode semantic logic that the model merely invokes rather than learns. Moreover, the large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning. Could the authors conduct an ablation study removing or varying these helper components to determine how much of the system’s success derives from the LLM’s own reasoning versus predefined components?
 
 For the submitted version we relied on a small subset of SciGen, with only XX example replacement tasks.
 

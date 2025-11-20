@@ -26,10 +26,14 @@ _Can authors report statistics about the manual validation process?_
 
 Unfortunately a user study is out-of-scope for this work; see [...]
 
-_Re. the subset of SciGen used, could you provide details on the selection logic, sampling criteria, and exact
-number of examples used in evaluation?_
+_Re. the subset of SciGen used, could you provide details on the selection logic/sampling criteria and exact
+number of examples used in the evaluation?_
 
 [Number of example papers + replacement problems within each of those]
+
+However we have increased the size of the dataset in two ways:
+- for measuring correctness only, we have added automation scripts to allow use to process the whole of SciGen (400+ examples)
+- for measuring
 
 The paper states that experiments were conducted on “a subsample of the SciGen dataset” (line 367), but it remains unclear how this subset was chosen. Could the authors provide more details on the selection logic, sampling criteria, and the exact number of examples used in evaluation?
 

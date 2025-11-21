@@ -20,8 +20,8 @@ We are implementing the following improvements to the RQ1 dataset and evaluation
 
 RQ2 (counterfactual testing) was given only a cursory treatment. We are adding the following improvements:
 
-- Redo the RQ2 study of whether LLM solutions which seem otherwise "correct" actually generalise under perturbations of the data, using the improved gold solution dataset.
-- Report on counterfactual robustness, disaggregated by linguistic category (omitted from submitted version).
+- Using the improved gold solution dataset, redo the RQ2 study of whether LLM solutions which seem otherwise "correct" actually generalise under perturbations of the data.
+- Report on counterfactual robustness (omitted from submitted version), namely the mean proportion of responses that are both correct and counterfactually correct, by linguistic category.
 
 # Response to Reviewer AyvP
 

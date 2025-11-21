@@ -47,9 +47,14 @@ Re. the target sharing point, the target string is an important part of the quer
 
 # Response to Reviewer azjF
 
-_More engineering-oriented, with relatively limited academic research value._ It is an engineering-oriented paper, however we address important research questions around how such an agent-based tool might be designed, how currently LLM competencies meet the needs of such a design, and how manual and automatic verification can be integrated and assessed.
+> - The system presented in this paper is more engineering-oriented, with relatively limited academic research value.
+> - Overall, it can be regarded as a well-executed engineering paper.
 
-_Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered)._ The lack of directly related prior work does indeed make comparison to baseline methods difficult. We agree more in-depth ablation studies would be appropriate; we will investigate removing the predefined helper routines (see response to reviewer Bezq above), along with other other similar experiments, and include those in our reporting on RQ1 and RQ2.
+We agree that it is an engineering-oriented paper, and thank you for the positive evaluation in that respect. However we also address important research questions around how such an agent-based tool might be designed, how current LLM competencies meet the needs of such a design, and how manual and automatic verification can be integrated and assessed.
+
+> - The experimental design lacks a comprehensive justification. Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered).
+
+The lack of directly related prior work does indeed make comparison to baseline methods difficult. We agree more in-depth ablation studies are needed; we will investigate removing the predefined helper routines (see response to reviewer Bezq above), along with other other similar experiments, and include those in our reporting on RQ1 and RQ2.
 
 # Response to Reviewer VRkd
 

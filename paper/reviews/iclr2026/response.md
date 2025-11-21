@@ -20,14 +20,14 @@ We are implementing the following improvements to the RQ1 dataset and evaluation
 
 RQ2 (counterfactual testing) was given only a cursory treatment. We are adding the following improvements:
 
-- Redo the study of whether LLM solutions which seem otherwise "correct" actually generalise under perturbations of the data, using the improved gold solution dataset
-- Report on counterfactual robustness disaggregated by linguistic category
+- Redo the RQ2 study of whether LLM solutions which seem otherwise "correct" actually generalise under perturbations of the data, using the improved gold solution dataset.
+- Report on counterfactual robustness, disaggregated by linguistic category (omitted from submitted version).
 
 # Response to Reviewer AyvP
 
 > - The proposed system still seems to be in early stages with respect to what can be verified, which limits its usefulness in practice. First, as far as I understand, it is limited to single papers and does not allow to check claims a paper makes about results presented in another paper. This is where a system like the proposed would be most useful
 
-Thank you for the suggestion; a multi-paper setup is indeed an interesting use case. Although for our evaluation we only considered excerpts from single papers, nothing about our design restricts it to such, so we will consider this for a real-world tool.
+Thank you for the suggestion; a multi-paper setup is indeed an interesting use case. For our evaluation we have only considered excerpts from single papers, but nothing about our design restricts it to such, so we will consider this for a real-world tool.
 
 > - Second, the claims that can be checked seem to be quite simple (checks for more complex claims cannot be generated with LLMs) and thus easy to check manually. Even then, a human has to verify all generated links, which in at least some cases are wrong. This begs the question of whether a manual system where only larger and more important claims are annotated would not be more useful in practice.
 

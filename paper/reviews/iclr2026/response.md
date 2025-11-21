@@ -13,9 +13,13 @@ We thank all reviewers for their time and expertise in evaluating our submission
 
 # Response to Reviewer AyvP
 
-_Restriction to single papers._ Nothing about our design restricts it to single papers, although for our evaluation we have only considered excerpts from single papers. A multi-paper setup is an interesting use case and one we will consider for a real-world tool.
+> - The proposed system still seems to be in early stages with respect to what can be verified, which limits its usefulness in practice. First, as far as I understand, it is limited to single papers and does not allow to check claims a paper makes about results presented in another paper. This is where a system like the proposed would be most useful
 
-_Checks for more complex claims cannot be generated with LLMs. Even for the simple cases, a human has to verify the generated links._ Keeping a human in the loop for verification purposes seems important from a trust point of view. For the simple cases, where it may seem unfortunate that author verification is still needed, a small amount of author effort nevertheless translates into a significant _reader_ benefit (since there are many more readers than authors). In future work we anticipate providing automated testing as a way of reducing author burden by automatically exercising the generated code.
+Thank you for the suggestion; a multi-paper setup is indeed an interesting use case. Although for our evaluation we only considered excerpts from single papers, nothing about our design restricts it to such, so we will consider this for a real-world tool.
+
+> - Second, the claims that can be checked seem to be quite simple (checks for more complex claims cannot be generated with LLMs) and thus easy to check manually. Even then, a human has to verify all generated links, which in at least some cases are wrong. This begs the question of whether a manual system where only larger and more important claims are annotated would not be more useful in practice.
+
+Keeping a human in the loop for verification purposes seems important from a trust point of view. For the simple cases, where it may seem unfortunate that author verification is still needed, a small amount of author effort nevertheless translates into a significant _reader_ benefit (since there are many more readers than authors). In future work we anticipate providing automated testing as a way of reducing author burden by automatically exercising the generated code.
 
 For the more complex cases, where current LLMs are unable to generate a full solution in one step, our current design should be able to form the basis of a more interactive workflow, similar to working with Copilot. For the present paper we are focused on exploring the limits of current LLM capabilities and validating a simpler architecture with less interaction.
 

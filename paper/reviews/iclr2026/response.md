@@ -24,12 +24,13 @@ exploring the limits of current LLM capabilities and validating a simpler archit
 
 _Can authors report statistics about the manual validation process?_
 
-Unfortunately a user study is out-of-scope for this work; see [...]
+Unfortunately a user study is out of scope for this work. We plan to do that next now that we have a good
+handle on the required LLM competencies.
 
 _Re. the subset of SciGen used, could you provide details on the selection logic/sampling criteria and exact
 number of examples used in the evaluation?_
 
-[Number of example papers + replacement problems within each of those]
+[19 of 400 + n replacement problems within each of those]
 
 However we have increased the size of the dataset in two ways:
 - for measuring correctness only, we have added automation scripts to allow use to process the whole of SciGen (400+ examples)
@@ -42,4 +43,3 @@ It seems this framework rely on predefined helper routines such as trendWord or 
 For the submitted version we relied on a small subset of SciGen, with only XX example replacement tasks.
 
 ## Planned revisions to paper
-

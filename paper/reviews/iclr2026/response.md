@@ -39,13 +39,13 @@ For the more complex cases, where current LLMs are unable to generate a full sol
 
 > - Although the paper provides useful category-level statistics, it does not analyze statistical variance beyond reporting standard deviation or assess generalization to unseen writing styles or datasets.
 
-We have changed our figures now use box plots to provide a better sense of the underlying distribution, additionally annotated with number of samples; thanks for the suggestion.
+We have changed our figures now use box plots to provide a better sense of the underlying distribution, additionally annotated with number of samples; thank you for the suggestion.
 
 In our experiments the LLM was not fine-tuned or prompted with SciGen examples other than as part of the testing step, so all the SciGen examples were acting as out-of-distribution problems. We will make sure this is clear.
 
 > - Can authors report statistics about the manual validation process? For examples, the ratio of accepted to rejected edits, average validation time per fragment, or the most common sources of rejection? Such data would illustrate how practical and scalable the workflow is for real authors.
 
-Thank you for this point. A proper user study with the necessary experimental setup is out of scope for this work, but certainly something we plan to do as the next step, alongside implementing a more complete interactive workflow; we recognise there is a risk (as with all AI-generated code) of simply shifting author workload from writing to debugging. For this paper, our main focus is on a basic agent-based architecture for interpretation synthesis and a solid evaluation of the required LLM competencies.
+Thank you for this point. A proper user study with the necessary experimental setup is out of scope for this work, but something we plan to do as the next step, alongside implementing a more complete interactive workflow. We certainly recognise that there is a risk, as with all AI-generated code, of simply shifting author workload from writing to debugging/validation. For this paper, our main focus is on a basic agent-based architecture for interpretation synthesis and a solid evaluation of the required LLM competencies. (It is also worth emphasising that "debugging" by simply interacting with the output is less technically demanding than using a traditional debugger!)
 
 > - The paper states that experiments were conducted on “a subsample of the SciGen dataset” (line 367), but it remains unclear how this subset was chosen. Could the authors provide more details on the selection logic, sampling criteria, and the exact number of examples used in evaluation?
 

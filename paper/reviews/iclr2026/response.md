@@ -36,10 +36,11 @@ _No analysis of statistical variance beyond standard deviation._ We have changed
 
 > Many of the niche details, like Table 1, are perhaps unnecessary for the main paper
 
-We would like to keep Table 1 in the body of the paper to be explicit about the specific linguistic/quantitative LLM competencies we evaluate in the paper. However it may be possible to streamline the figure a bit. We will also make a pass over the paper for other details that might be spurious for our audience here.
+We prefer to keep Table 1 in the body of the paper, to be explicit about the specific linguistic/quantitative LLM competencies evaluated in the paper; however it should be possible to streamline the figure a bit. We will also make a pass over the paper for other details that might be spurious for the ICLR audience.
 
 ## Planned revisions to paper
 
 - Clarify manually-annotated subsets of SciGen are randomly chosen; add additional manual annotations to grow subset from 2% to 5%. We will include this data set as supplementary material and release it as an open source benchmark.
 - Evaluate SuggestionAgent performance against manual annotations; estimate noise in SuggestionAgent labelling.
 - Extend our correctness evaluation (Fig. 6(b)) to full SciGen dataset, using SuggestionAgent annotations (and adjusted for noise)
+- Expand the treatment of RQ2

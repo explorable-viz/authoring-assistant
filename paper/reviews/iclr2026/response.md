@@ -14,7 +14,7 @@ For the more complex cases, where current LLMs are unable to generate a full sol
 
 _Can authors report statistics about the manual validation process?_
 
-Unfortunately a user study is out of scope for this work. We plan to do that next now that we have a good handle on the required LLM competencies.
+A proper user study with the necessary experimental setup is out of scope for this work, but certainly something we plan to do as the next step, alongside implementing a more complete interactive workflow. For this paper, our main focus is on a basic agent-based architecture for interpretation synthesis and a solid evaluation of of the required LLM competencies.
 
 _Re. the subset of SciGen used, could you provide details on the selection logic/sampling criteria and exact number of examples used in the evaluation?_
 

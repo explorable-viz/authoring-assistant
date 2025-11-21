@@ -26,10 +26,11 @@ This is a good suggestion; we will do this and also consider other ablations stu
 
 _Large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning._
 
-In response to additional points:
+The target string is present in one of our main use cases (where the reader or author is trying to retrofit an interpretation to text already written), so this doesn't qualify as answer leakage per se. Counterfactual testing, which is possible for manually annotated solutions, exposes whether some kind of computational reasoning has actually happened. We will improve our reporting on this (RQ2).
 
-_No analysis of statistical variance beyond standard deviation._ We are now reporting using box plots to give
-a better sense of the underlying distribution, annotated with the number of samples.
+To respond to your additional points:
+
+_No analysis of statistical variance beyond standard deviation._ We have changed our figures to use box plots for a better sense of the underlying distribution, annotated with the number of samples.
 
 ## Reviewer VRkd
 

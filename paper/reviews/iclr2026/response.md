@@ -6,7 +6,7 @@ We thank all reviewers for their time and expertise in evaluating our submission
 
 ## Planned Revisions and New Experiments
 
-- Clarify manually-annotated subsets of SciGen are randomly chosen; add additional manual annotations to grow subset from 2% to 5%. We will include this data set as supplementary material and release it as an open source benchmark.
+- Clarify manually-annotated subsets of SciGen are randomly chosen; add additional manual annotations to grow subset from 2% to 5%. We will include this data set as supplementary material and also plan to release it as an open source benchmark.
 - Evaluate SuggestionAgent performance against manual annotations; estimate noise in SuggestionAgent labelling.
 - Extend our correctness evaluation (Fig. 6(b)) to full SciGen dataset, using SuggestionAgent annotations (and adjusted for noise)
 - Expand the treatment of RQ2
@@ -25,31 +25,27 @@ For the more complex cases, where current LLMs are unable to generate a full sol
 
 # Response to Reviewer Bezq
 
-_Can authors report statistics about the manual validation process?_
+> - Although the paper provides useful category-level statistics, it does not analyze statistical variance beyond reporting standard deviation or assess generalization to unseen writing styles or datasets.
 
-A proper user study with the necessary experimental setup is out of scope for this work, but certainly something we plan to do as the next step, alongside implementing a more complete interactive workflow; we recognise there is a risk (as with all AI-generated code) of simply shifting author workload from writing to debugging. For this paper, our main focus is on a basic agent-based architecture for interpretation synthesis and a solid evaluation of the required LLM competencies.
+We have changed our figures now use box plots to provide a better sense of the underlying distribution, and annotated with number of samples; thanks for the suggestion.
 
-_Re. the subset of SciGen used, could you provide details on the selection logic/sampling criteria and exact number of examples used in the evaluation?_
+In our experiments the LLM was not fine-tuned or prompted with SciGen examples other than as part of the testing step, so all the SciGen examples were acting as out-of-distribution problems. We will make sure this is clear.
+
+> - Can authors report statistics about the manual validation process? For examples, the ratio of accepted to rejected edits, average validation time per fragment, or the most common sources of rejection? Such data would illustrate how practical and scalable the workflow is for real authors.
+
+Thank you for this point. A proper user study with the necessary experimental setup is out of scope for this work, but certainly something we plan to do as the next step, alongside implementing a more complete interactive workflow; we recognise there is a risk (as with all AI-generated code) of simply shifting author workload from writing to debugging. For this paper, our main focus is on a basic agent-based architecture for interpretation synthesis and a solid evaluation of the required LLM competencies.
+
+> - The paper states that experiments were conducted on “a subsample of the SciGen dataset” (line 367), but it remains unclear how this subset was chosen. Could the authors provide more details on the selection logic, sampling criteria, and the exact number of examples used in evaluation?
 
 For the submitted version we were only able to manually annotate 9 randomly-chosen SciGen issues (approximately 2% of the total), resulting in XX labelled replacement tasks. We have drawn a second (larger) random subsample (5% of the total) for manual annotation and will report on this in the final version of the paper. We have also added an automation pipeline to process every SciGen example using the Suggestion Agent, and will evaluate SuggestionAgent performance using manual annotations to estimate the noise rate. We are now able to evaluate the InterpretationAgent using the entirety of the SciGen data set, with confidence intervals adjusted to incorporate estimated noise.
 
-_The framework rely on predefined helper routines such as trendWord or growShrink_. Could the authors conduct an ablation study removing or varying these helper components?
+> - It seems this framework rely on predefined helper routines such as trendWord or growShrink, which encode semantic logic that the model merely invokes rather than learns. Moreover, the large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning. Could the authors conduct an ablation study removing or varying these helper components to determine how much of the system’s success derives from the LLM’s own reasoning versus predefined components?
 
-This is a good suggestion; we will do this and also consider other ablations studies (in addition to excluding the target string). It is worth emphasising that a fixed/standardised set of terminological definitions (for a given paper or research community, say) might be helpful (or even important in some domains, such as IPCC Summary for Policymaker reports), but your point remains valid.
+This is a good suggestion; we will do this and also consider other ablations studies (in addition to excluding the target string). It is worth emphasising that adopting a fixed or standardised set of terminological definitions (for a given paper or research community, say) might be helpful (or even important in some domains, such as IPCC Summary for Policymaker reports), but your point remains valid.
 
 _Large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning._
 
-The target string is present in one of our main use cases (where the reader or author is trying to retrofit an interpretation to text already written), so this doesn't qualify as answer leakage per se. Counterfactual testing, which is possible for manually annotated solutions, exposes whether some kind of computational reasoning has actually happened. We will improve our reporting on this (RQ2).
-
-To respond to your additional points:
-
-_No analysis of statistical variance beyond standard deviation._
-
-Our figures now use box plots for a better sense of the underlying distribution, annotated with the number of samples.
-
-_Assess generalization to unseen writing styles or datasets._
-
-In our experiments the LLM was not fine-tuned or prompted with SciGen examples other than as part of the test cases themselves, so all the SciGen examples were acting as out-of-distribution problems.
+In one of our main use cases (where the reader or author is trying to retrofit an interpretation to text already written), the target string is present an important part of the query, so this probably doesn't qualify as answer leakage per se. Your point about LLM reasoning is a good one though; counterfactual testing, which is possible for any manually annotated solutions, exposes whether some kind of computational reasoning has actually happened. We will improve our reporting on this (RQ2).
 
 # Response to Reviewer azjF
 

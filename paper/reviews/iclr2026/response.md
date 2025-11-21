@@ -25,7 +25,7 @@ RQ2 (counterfactual testing) was given only a cursory treatment. We are adding t
 
 # Response to Reviewer AyvP
 
-> - The proposed system still seems to be in early stages with respect to what can be verified, which limits its usefulness in practice. First, as far as I understand, it is limited to single papers and does not allow to check claims a paper makes about results presented in another paper. This is where a system like the proposed would be most useful
+> - The proposed system still seems to be in early stages with respect to what can be verified, which limits its usefulness in practice. First, as far as I understand, it is limited to single papers and does not allow to check claims a paper makes about results presented in another paper. This is where a system like the proposed would be most useful -- while directly linking to evidence in the same paper is useful, manually checking this information is not nearly as laborious as checking something in another paper.
 
 Thank you for the suggestion; a multi-paper setup is indeed an interesting use case. For our evaluation we have only considered excerpts from single papers, but nothing about our design restricts it to such, so we will consider this for a real-world tool.
 

@@ -62,7 +62,7 @@ Re. the target sharing point, the target string is an important part of the quer
 > - The system presented in this paper is more engineering-oriented, with relatively limited academic research value.
 > - Overall, it can be regarded as a well-executed engineering paper.
 
-We agree that it is an engineering-oriented paper, and thank you for the positive evaluation in that respect. However we also address important research questions around how such an agent-based tool might be designed, how current LLM competencies meet the needs of such a design, and how manual and automatic verification can be integrated and assessed.
+We agree that it is an engineering-oriented paper, and appreciate your positive evaluation in that respect. However we also address important research questions around how such an agent-based tool might be designed, how current LLM competencies meet the needs of such a design, and how manual and automatic verification can be integrated and assessed.
 
 > - The experimental design lacks a comprehensive justification. Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered).
 

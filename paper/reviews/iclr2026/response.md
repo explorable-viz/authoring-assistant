@@ -43,9 +43,7 @@ For the submitted version we were only able to manually annotate 9 randomly-chos
 
 This is a good suggestion; we will do this and also consider other ablations studies (in addition to excluding the target string). It is worth emphasising that adopting a fixed or standardised set of terminological definitions (for a given paper or research community, say) might be helpful (or even important in some domains, such as IPCC Summary for Policymaker reports), but your point remains valid.
 
-_Large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning._
-
-In one of our main use cases (where the reader or author is trying to retrofit an interpretation to text already written), the target string is present an important part of the query, so this probably doesn't qualify as answer leakage per se. Your point about LLM reasoning is a good one though; counterfactual testing, which is possible for any manually annotated solutions, exposes whether some kind of computational reasoning has actually happened. We will improve our reporting on this (RQ2).
+Re. the target sharing point, the target string is an important part of the query for the important use case where the reader or author is trying to retrofit an interpretation to text already written. So this probably doesn't qualify as answer leakage per se. Your point about determining when LLM reasoning is actually happening a good one though; counterfactual testing, which is possible only given a hand-generated solution, is designed to reveal this. We will improve our reporting on this (RQ2).
 
 # Response to Reviewer azjF
 

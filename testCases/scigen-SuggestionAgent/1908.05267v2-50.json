@@ -3,31 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
-    },
-    {
-      "expression": "\"7\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and Table "
-    },
-    {
-      "expression": "\"8\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " summarize the "
+      "value": "Table 7 and Table 8 summarize "
     },
     {
       "expression": "\"top 10\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " bigrams for SUPPORT and NOT ENOUGH INFO. The correlation between the biased phrases in the two dataset splits is not as strong as in the REFUTE label, presented in the paper. However, one can notice that some of the biased bigrams in the training set, such as \"least one\" and \"starred movie\", translate to cues that can help in predictions over the development set.\n\nIn this paragraph, there are no explicit values or comparative/superlative expressions to replace with Fluid expressions according to the rules provided. The phrases \"top 10\" could be considered for replacement but since it is not explicitly a superlative in the context of aggregation (like \"the top\", \"maximum\"), we do not replace it here."
+      "value": " bigrams for "
+    },
+    {
+      "expression": "\"SUPPORT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"NOT ENOUGH INFO\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The correlation between the biased phrases in the two dataset splits is not as strong as in the "
+    },
+    {
+      "expression": "\"REFUTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " label, presented in the paper.  However, one can notice that some of the biased bigrams in the training set, such as \"least one\" and \"starred movie\", translate to cues that can help in predictions over the development set."
     }
   ],
   "variables": {},

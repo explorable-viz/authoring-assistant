@@ -3,55 +3,133 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Because of the small size of the dataset, we report the average performance over "
+      "value": "Because of the small size of the dataset, we report "
+    },
+    {
+      "expression": "\"the average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance over "
     },
     {
       "expression": "\"5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " runs with different random seeds.  Table 1 shows the results. Compared with WM18, our RGB model outperforms under all conditions.  According to the cosine similarity, the HSV model is "
+      "value": " runs with different random seeds.  Table 1 shows the results. Compared with "
+    },
+    {
+      "expression": "\"WM18\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", our "
+    },
+    {
+      "expression": "\"RGB model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms under all conditions.  According to the cosine similarity, the "
+    },
+    {
+      "expression": "\"HSV model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"superior\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for most test conditions (confirming our hypothesis about simpler modifier behaviour in this space). However for Delta-E, the RGB model and ensemble perform "
+      "value": " for most test conditions (confirming our hypothesis about simpler modifier behaviour in this space). However for "
+    },
+    {
+      "expression": "\"Delta-E\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
+    },
+    {
+      "expression": "\"RGB model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and ensemble perform "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Unlike cosine, Delta-E is sensitive to differences in vector length, and we would argue it is the "
+      "value": ". Unlike cosine, "
     },
     {
-      "expression": "\"most appropriate\"",
+      "expression": "\"Delta-E\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " metric because lengths are critical to measuring the extent of lightness and darkness of colors. Accordingly the HSV model does "
+      "value": " is sensitive to differences in vector length, and we would argue it is the most appropriate metric because lengths are critical to measuring the extent of lightness and darkness of colors. Accordingly the "
+    },
+    {
+      "expression": "\"HSV model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " does "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " under this metric, as it more directly models the direction of color modifiers, but as a consequence this leads to errors in its length predictions. Over- all the ensemble does well according to both met rics, and has "
+      "value": " under this metric, as it more directly models the direction of color modifiers, but as a consequence this leads to errors in its length predictions. Over- all the ensemble does well according to both metrics, and has "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance for several test conditions with Delta-E."
+      "value": " performance for several test conditions with "
+    },
+    {
+      "expression": "\"Delta-E\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

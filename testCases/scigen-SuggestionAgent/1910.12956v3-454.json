@@ -7,43 +7,30 @@
     },
     {
       "expression": "\"top-5\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " words with the largest absolute differences between the assigned ranks have been reported for each scenario by Table III. The number of target words for each project scenario have also been mentioned in parenthesis. It can be observed that most of the cases of disagreement have a "
+      "value": " words with the largest absolute differences between the assigned ranks have been reported for each scenario by Table III.\r\nThe number of target words for each project scenario have also been mentioned in parenthesis.\r\nIt can be observed that most of the cases of disagreement have a "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"higher rank\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " rank, i.e. relatively lower ambiguity score assigned by the linear transformation approach proposed by this paper. Most of such cases are proper names such as "
+      "value": ", i.e. relatively "
     },
     {
-      "expression": "\"robert\"",
+      "expression": "\"lower ambiguity score\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"peter\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and "
-    },
-    {
-      "expression": "\"daniel\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " assigned by the linear transformation approach proposed by this paper.\r\nMost of such cases are proper names such as robert, peter, and daniel."
     }
   ],
   "variables": {},

@@ -3,34 +3,47 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 6 shows automatically computed statistics on the diversity of the generated texts of both models and human texts and on the overlap of the (generated) texts with the training set. On both datasets, our systems produce "
+      "value": "Table 6 shows automatically computed statistics on the diversity of the generated texts of both "
     },
     {
-      "expression": "\"significantly less\"",
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " varied outputs and reproduce "
+      "value": " and human texts and on the overlap of the (generated) texts with the training set.  On both datasets, our systems produce significantly "
+    },
+    {
+      "expression": "\"less varied\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outputs and reproduce "
     },
     {
       "expression": "\"more\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " texts and sentences from the training data than the human texts. Interestingly, however, the character-based models generate "
+      "value": "]  texts and sentences from the training data than the human texts. Interestingly, however, the character-based models generate significantly "
     },
     {
-      "expression": "\"significantly more\"",
+      "expression": "\"more unique\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " unique sentences and copy "
+      "value": "] sentences and copy significantly "
     },
     {
-      "expression": "\"significantly less\"",
+      "expression": "\"less\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -38,12 +51,13 @@
       "value": " from the training data than the word-based models, which copy about "
     },
     {
-      "expression": "\"40\"",
+      "expression": "\"40%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of their generated sentences from the training data."
+      "value": "] of their generated sentences from the training data."
     }
   ],
   "variables": {},

@@ -3,39 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For ellipsis, both models improve substantially over the baseline ("
+      "value": "For "
     },
     {
-      "expression": "\"19\"",
+      "expression": "\"ellipsis\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "-"
+      "value": ", both "
     },
     {
-      "expression": "\"51\"",
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points), with concat "
+      "value": " improve substantially over the baseline (by "
     },
     {
-      "expression": "\"stronger\"",
+      "expression": "\"19-51 percentage points\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for inflection tasks and CADec "
+      "value": "), with "
     },
     {
-      "expression": "\"stronger\"",
+      "expression": "\"concat\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for VPellipsis."
+      "value": " stronger for "
+    },
+    {
+      "expression": "\"inflection tasks\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"CADec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " stronger for "
+    },
+    {
+      "expression": "\"VPellipsis\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

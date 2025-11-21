@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Entity linking accuracies on the LORELEI dataset are shown in Table 2. PBEL has "
+      "value": "Entity linking accuracies on the LORELEI dataset are shown in Table 2. "
+    },
+    {
+      "expression": "\"PBEL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has considerably "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -15,19 +25,48 @@
     },
     {
       "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " improvement in accuracy with Somali-Oromo than Amharic-Tigrinya. The supervised TRANS model, which uses Wikipedia parallel data in the LRL itself as a lexicon, does not perform "
+      "value": "] improvement in accuracy with Somali-Oromo than Amharic-Tigrinya.  the supervised "
+    },
+    {
+      "expression": "\"TRANS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, which uses Wikipedia parallel data in the LRL itself as a lexicon, does not perform "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the zero-shot PBEL. The PBEL model results for our test set with each input representation are presented in Table 3."
+      "value": "] than the zero-shot "
+    },
+    {
+      "expression": "\"PBEL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The "
+    },
+    {
+      "expression": "\"PBEL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model results for our test set with each input representation are presented in Table 3."
     }
   ],
   "variables": {},

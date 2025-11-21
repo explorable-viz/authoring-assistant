@@ -7,14 +7,16 @@
     },
     {
       "expression": "\"80.8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, The film retrievals raise evidence retrieval to "
+      "value": "%,  The film retrievals raise evidence retrieval to "
     },
     {
       "expression": "\"81.2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

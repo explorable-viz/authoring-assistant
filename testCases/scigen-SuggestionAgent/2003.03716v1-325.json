@@ -3,15 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4: We show the results of integrating auxiliary EOS loss into the training state. γ is the weight of the auxiliary EOS loss. We find the EOS loss not only boosts the performance of the model when using the greedy search, "
+      "value": "Table 4: We show the results of integrating "
     },
     {
-      "expression": "\"the model is more robust\"",
+      "expression": "\"auxiliary EOS loss\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to the larger Look-ahead steps with reasonable weights of auxiliary EOS loss."
+      "value": " into the training state. γ is the weight of the "
+    },
+    {
+      "expression": "\"auxiliary EOS loss\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We find the "
+    },
+    {
+      "expression": "\"EOS loss\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " not only boosts the performance of the model when using the greedy search, the model is more robust to the larger Look-ahead steps with reasonable weights of "
+    },
+    {
+      "expression": "\"auxiliary EOS loss\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

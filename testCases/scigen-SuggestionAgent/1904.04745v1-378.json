@@ -3,23 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 presents comparisons of our method with existing state-of-the-art approaches. Our proposed method consistently "
+      "value": "Table 1 presents comparisons of our method with existing state-of-the-art approaches. Our proposed method consistently outperforms all other methods on all four "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"datasets\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " all other methods on all four datasets. The improvement is particularly significant on the "
+      "value": ". The improvement is particularly significant on the "
     },
     {
       "expression": "\"more challenging\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " datasets, such as UNC+ which has no location words and G-Ref which contains longer and richer query expressions."
+      "value": " datasets, such as "
+    },
+    {
+      "expression": "\"UNC+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which has no location words and "
+    },
+    {
+      "expression": "\"G-Ref\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which contains longer and richer query expressions."
     }
   ],
   "variables": {},

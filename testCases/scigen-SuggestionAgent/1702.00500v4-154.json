@@ -3,39 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Over the rules used on the 1-best result, "
+      "value": "Over the rules used on the "
     },
     {
-      "expression": "\"more than\"",
+      "expression": "\"1-best\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " result, "
     },
     {
-      "expression": "\"30\"",
+      "expression": "\"more than 30%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% are non-terminal rules, On the other hand, "
+      "value": " are non-terminal rules, On the other hand, "
     },
     {
-      "expression": "\"30\"",
+      "expression": "\"30%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% are glue rules. Finally, terminal rules take the "
-    },
-    {
-      "expression": "\"largest\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " percentage,"
+      "value": " are glue rules. Finally, terminal rules take the largest percentage,"
     }
   ],
   "variables": {},

@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table VI reports the accuracy of the models on the four benchmark datasets. All the results are bold. It shows that Style-HAN outperforms the baselines by "
+      "value": "Table VI reports "
+    },
+    {
+      "expression": "\"the accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the models on the four benchmark datasets. It shows that "
+    },
+    {
+      "expression": "\"Style-HAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms the baselines by "
     },
     {
       "expression": "\"2.38\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +34,7 @@
     },
     {
       "expression": "\"1.35\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +43,7 @@
     },
     {
       "expression": "\"8.73\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,11 +52,48 @@
     },
     {
       "expression": "\"4.46\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% over the CCAT10, CCAT50, BLOGs10, and BLOGS50 datasets, respectively."
+      "value": "% over the "
+    },
+    {
+      "expression": "\"CCAT10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"CCAT50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"BLOGs10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"BLOGS50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets, respectively."
     }
   ],
   "variables": {},

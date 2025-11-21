@@ -3,63 +3,124 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The table, lexical model consistently outperforms the syntactic model across all the benchmark datasets. Moreover, combining the two representations further improves the "
+      "value": "The table, "
     },
     {
-      "expression": "\"performance\"",
+      "expression": "\"lexical model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results. Based on the observation, we realize that even if Syntactic-HAN achieves "
+      "value": " consistently outperforms the "
     },
     {
-      "expression": "\"comparable performance\"",
+      "expression": "\"syntactic model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results, combining it with Lexical-HAN, "
+      "value": " across all the benchmark datasets. Moreover, combining the two representations further improves the performance results. Based on the observation, we realize that even if "
     },
     {
-      "expression": "\"slightly improves\"",
+      "expression": "\"Syntactic-HAN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the overall performance (Style-HAN). As shown in Table IV, the performance improvement in terms of accuracy is consistent across all the benchmark datasets ("
+      "value": " achieves a comparable performance results combining it with "
     },
     {
-      "expression": "\"4.54\"",
+      "expression": "\"Lexical-HAN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in CCAT10, "
+      "value": ", slightly improves the overall performance ("
     },
     {
-      "expression": "\"2.85\"",
+      "expression": "\"Style-HAN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in CCAT50, "
+      "value": "). As shown in Table IV, the performance improvement in terms of accuracy is consistent across all the benchmark datasets ("
     },
     {
-      "expression": "\"2.02\"",
+      "expression": "\"4.54%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in BLOGS10, "
+      "value": " in "
     },
     {
-      "expression": "\"1.42\"",
+      "expression": "\"CCAT10\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in BLOGS50)"
+      "value": ", "
+    },
+    {
+      "expression": "\"2.85%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"CCAT50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"2.02%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"BLOGS10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"1.42%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"BLOGS50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")"
     }
   ],
   "variables": {},

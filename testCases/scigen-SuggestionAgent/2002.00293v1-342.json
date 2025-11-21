@@ -3,87 +3,313 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For example, RoBERTa trained on DRoBERTa reaches "
+      "value": "For example, "
     },
     {
-      "expression": "\"38.9\"",
+      "expression": "\"RoBERTa\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "F1 on DRoBERTa, and this number further increases to "
+      "value": " trained on "
     },
     {
-      "expression": "\"47.2\"",
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "F1 when including SQuAD during training (cf. Table 6). In Table 6 we show experimental results for the same models and training datasets, but now including SQuAD as additional training data. In this training setup we generally see improved generalisation to DBiDAF, DBERT, and DRoBERTa. Interestingly, the relative differences between DBiDAF, DBERT, and DRoBERTa as training set used in conjunction with SQuAD are now much diminished, and especially DRoBERTa as (part of the) training set now generalises "
+      "value": " reaches "
+    },
+    {
+      "expression": "\"38.9F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and this number further increases to "
+    },
+    {
+      "expression": "\"47.2F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when including "
+    },
+    {
+      "expression": "\"SQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " during training (cf. Table 6). In Table 6 we show experimental results for the same models and training datasets, but now including "
+    },
+    {
+      "expression": "\"SQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as additional training data. In this training setup we generally see improved generalisation to "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"DBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Interestingly, the relative differences between "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"DBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as training set used in conjunction with "
+    },
+    {
+      "expression": "\"SQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are now much diminished, and especially "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as (part of the) training set now generalises substantially "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". RoBERTa achieves "
+      "value": ". "
     },
     {
-      "expression": "\"the strongest\"",
+      "expression": "\"RoBERTa\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results on any of the DBiDAF, DBERT, and DRoBERTa evaluation sets, in particular when trained on DSQuAD+DRoBERTa. We identify a risk of datasets constructed with weaker models in the loop becoming outdated. For example, RoBERTa achieves "
+      "value": " achieves the strongest results on any of the "
     },
     {
-      "expression": "\"58.2\"",
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "EM/"
+      "value": ", "
     },
     {
-      "expression": "\"73.2\"",
+      "expression": "\"DBERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "F1 on DBiDAF, in contrast to "
+      "value": ", and "
     },
     {
-      "expression": "\"0.0\"",
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "EM/"
+      "value": " evaluation sets, in particular when trained on "
     },
     {
-      "expression": "\"5.5\"",
+      "expression": "\"DSQuAD+DRoBERTa\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "F1 for BiDAF \u2013 which is not far from non-expert human performance of "
+      "value": ". we identify a risk of datasets constructed with weaker models in the loop becoming outdated. For example, "
     },
     {
-      "expression": "\"62.6\"",
+      "expression": "\"RoBERTa\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "EM/"
+      "value": " achieves "
     },
     {
-      "expression": "\"78.5\"",
+      "expression": "\"58.2EM/73.2F1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "F1. We furthermore observe a gradual decrease in generalisation to SQuAD when training on DBiDAF towards training on DRoBERTa. This suggests that the stronger the model used in the annotation loop, the more dissimilar the data distribution becomes from the original SQuAD distribution. We will later find further support for this explanation in a qualitative analysis (Section 5). It may however also be due to a limitation of BERT and RoBERTa \u2013 similar to BiDAF \u2013 in learning from a data distribution designed to beat these models; an even stronger model might learn more e.g. from DRoBERTa."
+      "value": " on "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", in contrast to "
+    },
+    {
+      "expression": "\"0.0EM/5.5F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"BiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \u2013 which is not far from non-expert human performance of "
+    },
+    {
+      "expression": "\"62.6EM/78.5F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We furthermore observe a gradual decrease in generalisation to "
+    },
+    {
+      "expression": "\"SQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when training on "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " towards training on "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This suggests that the stronger the model used in the annotation loop, the more dissimilar the data distribution becomes from the original "
+    },
+    {
+      "expression": "\"SQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " distribution. We will later find further support for this explanation in a qualitative analysis (Section 5). It may however also be due to a limitation of BERT and "
+    },
+    {
+      "expression": "\"RoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \u2013 similar to "
+    },
+    {
+      "expression": "\"BiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \u2013 in learning from a data distribution designed to beat these models; an even stronger model might learn more e.g. from "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

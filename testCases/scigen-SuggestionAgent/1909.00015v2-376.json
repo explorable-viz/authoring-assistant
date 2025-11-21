@@ -3,23 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We report test set tokenized BLEU (Papineni et al., 2002) results in Table 1. We can see that replacing softmax by entmax does not hurt performance in any of the datasets; indeed, sparse attention Transformers tend to have "
+      "value": "We report test set tokenized "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Papineni et al., 2002) results in Table 1. We can see that replacing "
+    },
+    {
+      "expression": "\"softmax\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"entmax\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " does not hurt performance in any of the datasets; indeed, sparse attention Transformers tend to have slightly "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU, but their sparsity leads to a "
+      "value": " "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " potential for analysis. In the next section, we make use of this potential by exploring the learned internal mechanics of the self-attention heads."
+      "value": ", but their sparsity leads to a better potential for analysis. In the next section, we make use of this potential by exploring the learned internal mechanics of the self-attention heads."
     }
   ],
   "variables": {},

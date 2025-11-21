@@ -7,14 +7,16 @@
     },
     {
       "expression": "\"13,000\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " potentially derogatory tweets. Table 1 compares different labelsets that exist in the literature. For instance, Waseem and Hovy (2016) use "
+      "value": " potentially derogatory tweets  Table 1 compares different labelsets that exist in the literature. For instance, Waseem and Hovy (2016) use "
     },
     {
       "expression": "\"racist\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"sexist\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"normal\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"hateful\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +52,7 @@
     },
     {
       "expression": "\"offensive (but not hateful)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +61,7 @@
     },
     {
       "expression": "\"neither\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -63,6 +70,7 @@
     },
     {
       "expression": "\"hate\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -71,6 +79,7 @@
     },
     {
       "expression": "\"non hate\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -79,6 +88,7 @@
     },
     {
       "expression": "\"offensive\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -87,6 +97,7 @@
     },
     {
       "expression": "\"abusive\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -95,6 +106,7 @@
     },
     {
       "expression": "\"hateful\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -103,6 +115,7 @@
     },
     {
       "expression": "\"aggressive\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -111,6 +124,7 @@
     },
     {
       "expression": "\"cyberbullying\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -119,6 +133,7 @@
     },
     {
       "expression": "\"spam\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -127,6 +142,7 @@
     },
     {
       "expression": "\"normal\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

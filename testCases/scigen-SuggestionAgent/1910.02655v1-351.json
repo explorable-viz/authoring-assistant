@@ -3,34 +3,65 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In Table 2, we compare the development set results of "
+      "value": "In Table 2, we compare the development set results of the state of the art methods with the "
     },
     {
-      "expression": "\"the state of the art\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " methods with the BERT model trained on different retrieved evidence sets. The BERT claim verification system even if it is trained on the UKP-Athene sentence retrieval component (Hanselowski et al., 2018), "
+      "value": " model trained on different retrieved evidence sets. The "
     },
     {
-      "expression": "\"the state of the art method with the highest recall\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", improves both label accuracy and FEVER score. Training based on the BERT sentence retrieval predictions significantly enhances the verification results because while it explicitly improves the FEVER score by providing more correct evidence sentences, it provides "
+      "value": " claim verification system even if it is trained on the UKP-Athene sentence retrieval component (Hanselowski et al., 2018), the state of the art method with the "
+    },
+    {
+      "expression": "\"highest recall\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", improves both label accuracy and FEVER score. Training based on the "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentence retrieval predictions significantly enhances the verification results because while it explicitly improves the FEVER score by providing more correct evidence sentences, it provides a "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " training set for the verification system. The large BERTs are only trained on "
+      "value": " training set for the verification system. The large "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"BERTs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are only trained on the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

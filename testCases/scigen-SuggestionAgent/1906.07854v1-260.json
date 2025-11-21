@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in table 2, BioBERT trained on PubMed+PMC "
+      "value": "As shown in table 2, "
     },
     {
-      "expression": "\"performs the best\"",
+      "expression": "\"BioBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " trained on "
+    },
+    {
+      "expression": "\"PubMed+PMC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
+    },
+    {
+      "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

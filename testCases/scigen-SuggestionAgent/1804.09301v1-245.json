@@ -3,10 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also identify so-called \"gotcha\" sentences in which pronoun gender does not match the occupation's majority gender (BLS) if OCCUPATION is the correct answer; all systems perform "
+      "value": "We also identify so-called \"gotcha\" sentences in which pronoun gender does not match "
+    },
+    {
+      "expression": "\"the occupation's majority gender\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"BLS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") if "
+    },
+    {
+      "expression": "\"OCCUPATION\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the correct answer; all systems perform "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

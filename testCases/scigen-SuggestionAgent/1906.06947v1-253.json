@@ -3,34 +3,101 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 5 shows the comparison of averaged slot coherence results over all the slots in the schemas. The averaged slot coherence of ODEE-FER is "
+      "value": "Table 5 shows the comparison of "
     },
     {
-      "expression": "\"the highest\"",
+      "expression": "\"averaged\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", The averaged slot coherence of ODEE-F is comparable to that of Nguyen et al. (2015) (p = "
+      "value": " slot coherence results over all the slots in the schemas.  The "
     },
     {
-      "expression": "\"0.3415\"",
+      "expression": "\"averaged\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), The scores of ODEE-FE (p = "
+      "value": " slot coherence of "
     },
     {
-      "expression": "\"0.06\"",
+      "expression": "\"ODEE-FER\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and ODEE-FER (p = "
+      "value": " is the "
     },
     {
-      "expression": "\"10−5\"",
+      "expression": "\"highest\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ",  The "
+    },
+    {
+      "expression": "\"averaged\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " slot coherence  of "
+    },
+    {
+      "expression": "\"ODEE-F\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is comparable to that of Nguyen et al. (2015) ("
+    },
+    {
+      "expression": "\"p=0.3415\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "),  The scores of "
+    },
+    {
+      "expression": "\"ODEE-FE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"p=0.06\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and "
+    },
+    {
+      "expression": "\"ODEE-FER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"p=10−5\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -39,11 +106,21 @@
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than that of ODEE-F,"
+      "value": " than that of "
+    },
+    {
+      "expression": "\"ODEE-F\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ","
     }
   ],
   "variables": {},

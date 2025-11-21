@@ -3,23 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In Table 3, we compare the combined distance measure with each of the two components used alone. The results show that combining the edit distance with the embedding similarity is "
+      "value": "In Table 3, we compare "
     },
     {
-      "expression": "\"stronger\"",
+      "expression": "\"the combined distance measure\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than using any of the measures alone. The embedding similarity alone performs "
+      "value": " with each of the two components used alone. The results show that combining "
+    },
+    {
+      "expression": "\"the edit distance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with "
+    },
+    {
+      "expression": "\"the embedding similarity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"stronger than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " using any of the measures alone.  "
+    },
+    {
+      "expression": "\"The embedding similarity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alone performs "
     },
     {
       "expression": "\"much better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the edit distance alone."
+      "value": "] than "
+    },
+    {
+      "expression": "\"the edit distance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alone."
     }
   ],
   "variables": {},

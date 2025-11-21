@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"f1-scores\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,22 +16,25 @@
     },
     {
       "expression": "\"average cosine similarity\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the associated words. A "
+      "value": " of the associated words. A high "
     },
     {
-      "expression": "\"high\"",
+      "expression": "\"average cosine similarity\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " average cosine similarity means that the concepts overall have similar vector representations and can thus be seen as having a low diversity. The results of the Spearman Rank correlation clearly indicate that scores achieved by nearest neighbors correlate "
+      "value": " means that the concepts overall have similar vector representations and can thus be seen as having a low diversity. The results of the Spearman Rank correlation clearly indicate that scores achieved by nearest neighbors correlate "
     },
     {
       "expression": "\"more strongly\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"average cosine\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {

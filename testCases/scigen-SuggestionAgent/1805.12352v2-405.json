@@ -3,55 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables 1 and 2 show the performance of DialogWAE and baselines on the two datasets. DialogWAE outperforms the baselines in the majority of the experiments. In terms of BLEU scores, DialogWAE (with a Gaussian mixture prior network) generates "
+      "value": "Tables 1 and 2 show the performance of "
     },
     {
-      "expression": "\"more relevant\"",
+      "expression": "\"DialogWAE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " responses, with the average recall of "
+      "value": " and baselines on the two datasets. "
     },
     {
-      "expression": "\"42.0\"",
+      "expression": "\"DialogWAE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " outperforms the baselines in the majority of the experiments. In terms of BLEU scores, "
     },
     {
-      "expression": "\"37.2\"",
+      "expression": "\"DialogWAE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% on both of the datasets. These are "
+      "value": " (with a Gaussian mixture prior network) generates more relevant responses, with the "
     },
     {
-      "expression": "\"significantly higher\"",
+      "expression": "\"average recall\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than those of the CVAE baselines ("
+      "value": " of "
     },
     {
-      "expression": "\"29.9\"",
+      "expression": "\"42.0%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " and "
     },
     {
-      "expression": "\"26.5\"",
+      "expression": "\"37.2%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%). We observe a similar trend to the BOW embedding metrics."
+      "value": " on both of the datasets. These are significantly "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than those of the "
+    },
+    {
+      "expression": "\"CVAE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baselines ("
+    },
+    {
+      "expression": "\"29.9%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"26.5%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). We observe a similar trend to the BOW embedding metrics."
     }
   ],
   "variables": {},

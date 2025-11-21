@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The entry Joint Self-attention corresponds to the results of our implementation of (He et al., 2018), that significantly improves the original results by "
+      "value": "The entry "
+    },
+    {
+      "expression": "\"Joint Self-attention\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " corresponds to the results of our implementation of (He et al., 2018), that significantly improves the original results by "
     },
     {
       "expression": "\"0.7\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +25,7 @@
     },
     {
       "expression": "\"0.2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -22,47 +33,71 @@
       "value": " on IWSLT. The same architecture with the proposed locality constraints (Local Joint Self-attention) establishes a new state of the art in IWSLT'14 de-en with "
     },
     {
-      "expression": "\"35.7\"",
+      "expression": "\"35.7 BLEU\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU, surpassing all previous published results by at least "
+      "value": ", surpassing all previous published results by at least "
     },
     {
-      "expression": "\"0.5\"",
+      "expression": "\"0.5 BLEU\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU, and our results with the unconstrained version by "
+      "value": ", and our results with the unconstrained version by "
     },
     {
       "expression": "\"0.4\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The Table 1 presents a comparison of the translation quality measured via BLEU score between the currently dominant Transformer (Vaswani et al., 2017) and Dynamic Convolutions (Wu et al., 2019) models, as well as the work by He et al. (2018), which also proposes a joint encoder-decoder structure, and also other refinements over the transformer architecture like (Ahmed et al., 2017), (Chen et al., 2018), (Shaw et al., 2018) and (Ott et al., 2018). The Joint Self-attention model obtains "
+      "value": ". The Table 1 presents a comparison of the translation quality measured via BLEU score between the currently dominant "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Vaswani et al., 2017) and "
+    },
+    {
+      "expression": "\"Dynamic Convolutions\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Wu et al., 2019) models, as well as the work by He et al. (2018), which also proposes a joint encoder-decoder structure, and also other refinements over the transformer architecture like (Ahmed et al., 2017), (Chen et al., 2018), (Shaw et al., 2018) and (Ott et al., 2018). The Joint Self-attention model obtains "
     },
     {
       "expression": "\"the same SoTA\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU score of (Wu et al., 2019) on WMT'14 en-de, and "
+      "value": " BLEU score of (Wu et al., 2019) on WMT'14 en-de, and the same "
     },
     {
-      "expression": "\"the same SoTA\"",
+      "expression": "\"SoTA\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " score of (Ott et al., 2018) and (Wu et al., 2019) on WMT'14 enfr. The local attention constraints do not provide a significant gain on these bigger models, but it improves the BLEU score on WMT'14 en-fr to "
+      "value": " score of (Ott et al., 2018) and (Wu et al., 2019) on WMT'14 enfr. The local attention constraints do not provide a significant gain on these bigger models, but it improves the BLEU score on WMT'14 en-fr to a new "
     },
     {
-      "expression": "\"a new SoTA\"",
+      "expression": "\"SoTA\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -71,6 +106,7 @@
     },
     {
       "expression": "\"43.3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

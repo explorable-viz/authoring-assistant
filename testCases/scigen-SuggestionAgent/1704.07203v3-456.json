@@ -7,22 +7,61 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " feature-based (LR All features) and deep learning ("
+      "value": " feature-based ("
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"LR All features\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " deep learning (CNN:rand)) systems, as well as single feature groups (averages over all source domains). For the lowest scoring datasets, OC and WTP, the differences are only marginal when trained on a suitable dataset. The "
+      "value": ") and deep learning ("
+    },
+    {
+      "expression": "\"CNN:rand\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") systems, as well as single feature groups (averages over all source domains,\r\nFor the "
+    },
+    {
+      "expression": "\"lowest scoring\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets, "
+    },
+    {
+      "expression": "\"OC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"WTP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the differences are only marginal when trained on a suitable dataset  The "
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -31,22 +70,25 @@
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " deep learning approach in most scenarios. In particular, as opposed to the in-domain experiments, the difference of the Claim-F1 measure between the feature-based approaches and the deep learning approaches is striking. In the feature-based approaches, on average, a combination of all features yields the "
+      "value": " deep learning approach in most scenarios.  In particular, as opposed to the in-domain experiments, the difference of the Claim-F1 measure between the feature-based approaches and the deep learning approaches is striking. In the feature-based approaches, on average, a combination of all features yields "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results for both Macro-F1 and Claim-F1. When comparing single features, lexical ones do the "
+      "value": " results for both Macro-F1 and Claim-F1. When comparing single features, lexical ones do "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

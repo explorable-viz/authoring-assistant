@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"Bag of Words\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"BoW\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"TF-IDF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"n-grams\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,54 +43,34 @@
     },
     {
       "expression": "\"Skip-Gram\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"Mikolov et al., 2013\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), "
+      "value": " (Mikolov et al., 2013), "
     },
     {
       "expression": "\"Doc2Vec\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"Le and Mikolov, 2014\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), "
+      "value": " (Le and Mikolov, 2014), "
     },
     {
       "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"Kim, 2014\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), "
+      "value": " (Kim, 2014), "
     },
     {
       "expression": "\"Hierarchical Attention\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -95,22 +79,16 @@
     },
     {
       "expression": "\"HN-ATT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") ("
-    },
-    {
-      "expression": "\"Yang et al., 2016\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") and hierarchical network ("
+      "value": ") (Yang et al., 2016) and hierarchical network ("
     },
     {
       "expression": "\"HN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

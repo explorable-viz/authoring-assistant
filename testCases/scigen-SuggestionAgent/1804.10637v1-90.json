@@ -3,31 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows micro F1 scores on AIDA-B of the SOTA methods and ours, which all use Wikipedia and YAGO mention-entity index. To our knowledge, ours are the only (unsupervisedly) inducing and employing "
+      "value": "Table 1 shows "
     },
     {
-      "expression": "\"more than one\"",
+      "expression": "\"micro F1 scores\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " relations on this dataset. The others use only one relation, coreference, which is given by simple heuristics or supervised third-party resolvers. All four of our models outperform any previous method, with ment-norm achieving "
+      "value": " on AIDA-B of the SOTA methods and ours, which all use Wikipedia and YAGO mention-entity index. To our knowledge, ours are the only (unsupervisedly) inducing and employing "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"more than one relations\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results, "
+      "value": " on this dataset. The others use only one relation, coreference, which is given by simple heuristics or supervised third-party resolvers. All four our models outperform any previous method, with ment-norm achieving "
     },
     {
-      "expression": "\"0.85\"",
+      "expression": "\"the best results\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% higher than that of Ganea and Hofmann (2017). The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."
+      "value": ", "
+    },
+    {
+      "expression": "\"0.85%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher than that of Ganea and Hofmann (2017).  The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."
     }
   ],
   "variables": {},

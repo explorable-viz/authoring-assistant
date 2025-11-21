@@ -3,23 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables 4, 5, 6, 7 and 8 show the results of evaluation reported by competition for all teams which participated in the challenge. Our method is mentioned as Beheshti-NER-1 Table 4 and 5 show the results for subtask A. According to the tables, we reached "
+      "value": "Tables 4, 5, 6, 7 and 8 show the results of evaluation reported by competition for all teams which participated in the challenge. Our method is mentioned as "
     },
     {
-      "expression": "\"84.0\"",
+      "expression": "\"Beheshti-NER-1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " Table 4 and 5 show the results for subtask A. according to the tables, we reached to "
     },
     {
-      "expression": "\"87.9\"",
+      "expression": "\"84.0%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% F1 score respectively for phrase and word level evaluations."
+      "value": " and "
+    },
+    {
+      "expression": "\"87.9%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 score respectively for phrase and word level evaluations."
     }
   ],
   "variables": {},

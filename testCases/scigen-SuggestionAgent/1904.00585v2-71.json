@@ -3,23 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our results suggest that this hyper-parameter setting can overall (except Wiki-ScienceIE and MIMIC-WetLab pairs) produce "
+      "value": "Our results suggest that this hyper-parameter setting can overall (except "
+    },
+    {
+      "expression": "\"Wiki-ScienceIE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"MIMIC-WetLab pairs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") produce "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance "
+      "value": " performance compare to the default "
     },
     {
-      "expression": "\"compare to\"",
+      "expression": "\"setting\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the default setting (Table 6)."
+      "value": " (Table 6)."
     }
   ],
   "variables": {},

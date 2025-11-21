@@ -7,14 +7,43 @@
     },
     {
       "expression": "\"the highest\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " factuality on average is no direct modal and no negation (first row); all other modal contexts have varying degrees of negative mean factuality scores, with will as "
+      "value": " factuality "
     },
     {
-      "expression": "\"the most negative\"",
+      "expression": "\"on average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is no direct modal and no negation (first row); all other modal contexts have varying degrees of negative "
+    },
+    {
+      "expression": "\"mean\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " factuality scores, with "
+    },
+    {
+      "expression": "\"will\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as the "
+    },
+    {
+      "expression": "\"most negative\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

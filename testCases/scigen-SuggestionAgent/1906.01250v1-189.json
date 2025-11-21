@@ -3,23 +3,106 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Figure 4 shows the accuracy of two systems for different NER (named entity recognition) types. We consider four types: location (LOC), organization (ORG), person (PER), and miscellany (MICS). These types are given in CoNLL 2003 dataset, which was used as a basis for AIDA CoNLL. Our model is accurate for PER, achieving accuracy of about "
+      "value": "Figure 4 shows the accuracy of two systems for different NER (named entity recognition) types. We consider four types: "
     },
     {
-      "expression": "\"97\"",
+      "expression": "\"location\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, only "
+      "value": " ("
     },
     {
-      "expression": "\"0.53\"",
+      "expression": "\"LOC\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% lower than the supervised model."
+      "value": "), "
+    },
+    {
+      "expression": "\"organization\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"ORG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"person\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"PER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and "
+    },
+    {
+      "expression": "\"miscellany\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"MICS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). These types are given in CoNLL 2003 dataset, which was used as a basis for AIDA CoNLL. Our model is accurate for "
+    },
+    {
+      "expression": "\"PER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", achieving accuracy of about "
+    },
+    {
+      "expression": "\"97%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", only "
+    },
+    {
+      "expression": "\"0.53%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lower than the supervised model."
     }
   ],
   "variables": {},

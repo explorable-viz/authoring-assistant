@@ -3,26 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "table 6, where we compare hyperparameter tuning methodologies. Perturbations on the hyperparameter search are listed in table 6 and "
+      "value": "table "
     },
     {
-      "expression": "\"compare\"",
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance with different hyperparameter values found using different tuning strategies. We tested how manual tuning, requiring less expert knowledge than Bayesian optimization, would "
+      "value": ", where we compare hyperparameter tuning methodologies.  Perturbations on the hyperparameter search are listed in table "
     },
     {
-      "expression": "\"compare\"",
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to the random search strategy in table 6. For both i2b2 and ddi corpora, manual search "
+      "value": " and compare performance with different hyperparameter values found using different tuning strategies.  We tested how manual tuning, requiring less expert knowledge than Bayesian optimization, would compare to the random search strategy in table "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For both i2b2 and ddi corpora, manual search "
     },
     {
       "expression": "\"outperformed\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

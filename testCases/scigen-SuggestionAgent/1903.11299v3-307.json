@@ -3,55 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The model is trained with English only, then with English and French (en+fr), with English, French, and German (en+fr+de) and with English, French, German and Czech (all). We can see a "
+      "value": "The "
     },
     {
-      "expression": "\"decrease\"",
+      "expression": "\"model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in performance when adding French that is not present with other languages. Otherwise, every time we add a new language the recall for this language logically "
+      "value": " is trained with "
     },
     {
-      "expression": "\"increase\"",
+      "expression": "\"English\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The "
+      "value": " only, then with "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"English and French (en+fr)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance is achieved with English+French+German+Czech, with an increase of "
+      "value": ", with "
+    },
+    {
+      "expression": "\"English, French, and German (en+fr+de)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and with "
+    },
+    {
+      "expression": "\"English, French, German and Czech (all)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We can see a decrease in performance when adding "
+    },
+    {
+      "expression": "\"French\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that is not present with other languages. Otherwise, every time we add a new language the recall for this language logically increase. The "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is achieved with "
+    },
+    {
+      "expression": "\"English+French+German+Czech\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with an increase of "
     },
     {
       "expression": "\"6.42\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " % for multilingual retrieval.  By using MUSE embeddings, we are able to embed more languages in the same model. We showed that adding other languages "
+      "value": " % for multilingual retrieval. By using MUSE embeddings, we are able to embed more languages in the same model. We showed that adding other languages decrease performance for "
     },
     {
-      "expression": "\"decrease\"",
+      "expression": "\"English\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance for English, but "
-    },
-    {
-      "expression": "\"increase\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the recall in a multilingual environment."
+      "value": ", but increase the recall in a multilingual environment."
     }
   ],
   "variables": {},

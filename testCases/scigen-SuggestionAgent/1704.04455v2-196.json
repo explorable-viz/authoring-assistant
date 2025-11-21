@@ -3,55 +3,79 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The distribution of their named-entity (NE) tags, according to Stanford NE-tagger, is shown in Table 1. While "
+      "value": "The distribution of their named-entity (NE) tags, according to Stanford NE-tagger, is shown in Table 1. While temporal-related "
     },
     {
-      "expression": "\"temporal-related\"",
+      "expression": "\"numbers\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " numbers are the "
+      "value": " are the most frequent, around "
     },
     {
-      "expression": "\"most frequent\"",
+      "expression": "\"40%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", around "
-    },
-    {
-      "expression": "\"40\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% are classified only as unspecific "
+      "value": " are classified only as unspecific "
     },
     {
       "expression": "\"NUMBER\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". By manually checking 100 random "
+      "value": ". By manually checking "
     },
     {
-      "expression": "\"NUMBER\"",
+      "expression": "\"100\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "s, we observed that 47 are relation cardinalities, i.e., approximately "
+      "value": " random "
     },
     {
-      "expression": "\"18.86\"",
+      "expression": "\"NUMBERs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of all numbers in Wikipedia are relation cardinalities."
+      "value": ", we observed that "
+    },
+    {
+      "expression": "\"47\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are relation cardinalities, i.e., approximately "
+    },
+    {
+      "expression": "\"18.86%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of all "
+    },
+    {
+      "expression": "\"numbers\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in Wikipedia are relation cardinalities."
     }
   ],
   "variables": {},

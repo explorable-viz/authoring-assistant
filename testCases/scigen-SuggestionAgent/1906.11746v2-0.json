@@ -3,26 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 (upper part) shows the results of our basic semantic parser (with GloVe embeddings) on all six graphbanks Our results are "
+      "value": "Table 1 (upper part) shows the results of our basic semantic parser (with GloVe embeddings) on all six "
     },
     {
-      "expression": "\"competitive\"",
+      "expression": "\"graphbanks\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " across the board, and set a new state of the art for EDS Smatch scores ("
+      "value": ". Our results are competitive across the board, and set a new state of the art for "
+    },
+    {
+      "expression": "\"EDS Smatch scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"Cai and Knight, 2013\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") among EDS parsers which are not trained on gold syntax information.  Our EDM score ("
+      "value": ") among EDS parsers which are not trained on gold syntax information. Our EDM score ("
     },
     {
       "expression": "\"Dridan and Oepen, 2011\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,19 +43,21 @@
     },
     {
       "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ",  The use of BERT embeddings is highly effective across the board. We set a new state of the art (without gold syntax) on all graphbanks except AMR 2017;  The improvement is particularly pronounced in the out-of-domain evaluations, illustrating BERT's ability to transfer across domains.  The results on the test dataset are shown in Table 1 (bottom). With GloVe, multi-task learning led to substantial improvements; with BERT the improvements are "
+      "value": ", The use of BERT embeddings is highly effective across the board. We set a new state of the art (without gold syntax) on all graphbanks except "
     },
     {
-      "expression": "\"smaller\"",
+      "expression": "\"AMR 2017\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " but still noticeable."
+      "value": "; The improvement is particularly pronounced in the out-of-domain evaluations, illustrating BERT's ability to transfer across domains. The results on the test dataset are shown in Table 1 (bottom). With GloVe, multi-task learning led to substantial improvements; with BERT the improvements are smaller but still noticeable."
     }
   ],
   "variables": {},

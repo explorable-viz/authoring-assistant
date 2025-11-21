@@ -3,47 +3,133 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are presented in Table 1 (top "
+      "value": "The results are presented in "
     },
     {
-      "expression": "\"two\"",
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " subparts). As we can see, the three decoding settings do not differ significantly in terms of the performance on selected downstream tasks, with RNN or CNN as the decoder. The results are also presented in Table 1 ("
+      "value": " ("
     },
     {
-      "expression": "\"3rd\"",
+      "expression": "\"top two subparts\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": "). As we can see, "
     },
     {
-      "expression": "\"4th\"",
+      "expression": "\"the three decoding settings\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " subparts). The performance of the predict-allwords RNN decoder does not "
+      "value": " do not differ significantly in terms of the performance on selected downstream tasks, with "
     },
     {
-      "expression": "\"significantly differ\"",
+      "expression": "\"RNN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from that of any one of the autoregressive RNN decoders, and the same situation can be also observed in CNN decoders. In our proposed RNN-CNN model, we empirically show that the mean+max pooling provides "
+      "value": " or "
     },
     {
-      "expression": "\"stronger transferability\"",
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the max pooling alone does, and the results are presented in the last two sections of Table 1."
+      "value": " as the decoder.  The results are also presented in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] ("
+    },
+    {
+      "expression": "\"3rd and 4th subparts\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). The performance of the "
+    },
+    {
+      "expression": "\"predict-allwords RNN decoder\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " does not significantly differ from that of any one of the autoregressive "
+    },
+    {
+      "expression": "\"RNN de  coders\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and the same situation can be also observed in "
+    },
+    {
+      "expression": "\"CNN decoders\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  In our proposed "
+    },
+    {
+      "expression": "\"RNN-CNN model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we empirically show that the "
+    },
+    {
+      "expression": "\"mean+max pooling\"",
+      "categories": ["sum"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " provides stronger transferability than the "
+    },
+    {
+      "expression": "\"max pooling\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alone does, and the results are presented in the last two sections of "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

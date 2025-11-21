@@ -6,15 +6,17 @@
       "value": "Table 2 gives "
     },
     {
-      "expression": "\"single\"",
+      "expression": "\"single model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model validation scores for "
+      "value": " validation scores for "
     },
     {
       "expression": "\"es2en\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"en2es\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"standard\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -38,20 +42,40 @@
       "value": " and "
     },
     {
-      "expression": "\"iterative\"",
+      "expression": "\"iterative transfer learning\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " transfer learning. We find that the "
+      "value": ". We find that the "
     },
     {
-      "expression": "\"all-biomed\"",
+      "expression": "\"all-biomed domain\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " domain gains 1-2 BLEU points from transfer learning."
+      "value": " gains 1-2 "
+    },
+    {
+      "expression": "\"BLEU points\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from "
+    },
+    {
+      "expression": "\"transfer learning\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

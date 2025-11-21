@@ -3,18 +3,65 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For de2en and es2en, uniform ensembling performs similarly to the oracles, and performs similarly to BI. We submitted three runs to the WMT19 biomedical task for each language pair: "
+      "value": "For "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"de2en\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " single all-biomed model, a uniform ensemble of models on two "
+      "value": " and "
+    },
+    {
+      "expression": "\"es2en\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"uniform ensembling\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs similarly to the oracles, and performs similarly to "
+    },
+    {
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We submitted "
+    },
+    {
+      "expression": "\"three runs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to the WMT19 biomedical task for each language pair: "
+    },
+    {
+      "expression": "\"the best single all-biomed model\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", a uniform ensemble of models on two "
     },
     {
       "expression": "\"en-de\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,35 +70,66 @@
     },
     {
       "expression": "\"es-en\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " domains, and an ensemble with Bayesian Interpolation. Tables 3 and 4 give validation and test scores. That a uniform multi-domain ensemble performs well, giving "
+      "value": " domains, and an ensemble with "
     },
     {
-      "expression": "\"0.5-1.2\"",
+      "expression": "\"Bayesian Interpolation\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU improvement on the test set over strong single models. We see small gains from using BI with ensembles on most validation sets, but only on en2es test. We noted that, in general, we could predict BI (α = 0.5) performance by comparing the uniform ensemble with the oracle model performing "
+      "value": ". Tables 3 and 4 give validation and test scores.  that a uniform multi-domain ensemble performs well, giving "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"0.5-1.2 BLEU improvement\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on each validation domain. For en2es uniform ensembling underperforms the health and bio oracle models on their validation sets, and the uniform ensemble slightly "
+      "value": " on the test set over strong single models.  We see small gains from using BI with ensembles on most validation sets, but only on "
     },
     {
-      "expression": "\"underperforms\"",
+      "expression": "\"en2es\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BI on the test data."
+      "value": " test.  we noted that, in general, we could predict BI (α = 0.5) performance by comparing the uniform ensemble with the oracle model performing "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on each validation domain.  For "
+    },
+    {
+      "expression": "\"en2es\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " uniform ensembling underperforms the "
+    },
+    {
+      "expression": "\"health and bio oracle models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on their validation sets, and the uniform ensemble slightly underperforms BI on the test data."
     }
   ],
   "variables": {},

@@ -3,39 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 presents the performance of our baselines in the speaker-independent setup. In this case, the multimodal variants do not "
+      "value": "Table 3 presents the performance of our baselines in the speaker-independent setup. In this case, the "
     },
     {
-      "expression": "\"greatly\"",
+      "expression": "\"multimodal variants\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " outperform the unimodal counterparts. Unlike Table 2, the audio channel plays a more important role, and it is "
+      "value": " do not greatly outperform the "
     },
     {
-      "expression": "\"slightly\"",
+      "expression": "\"unimodal counterparts\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " improved by adding text. In multiple evaluations, the multimodal variants were shown to "
+      "value": ". Unlike Table 2, the "
     },
     {
-      "expression": "\"significantly\"",
+      "expression": "\"audio channel\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " outperform their unimodal counterparts, with relative error rate reductions of up to "
+      "value": " plays a more important role, and it is slightly improved by adding "
     },
     {
-      "expression": "\"12.9\"",
+      "expression": "\"text\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%.\n\nNote: The comparative expressions \"greatly\", \"slightly\", and \"significantly\" are annotated as per the rules provided."
+      "value": ". In multiple evaluations, the "
+    },
+    {
+      "expression": "\"multimodal variants\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " were shown to significantly outperform their "
+    },
+    {
+      "expression": "\"unimodal counterparts\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with relative error rate reductions of up to "
+    },
+    {
+      "expression": "\"12.9%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

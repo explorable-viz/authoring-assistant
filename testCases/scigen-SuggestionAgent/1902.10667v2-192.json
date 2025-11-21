@@ -7,27 +7,102 @@
     },
     {
       "expression": "\"MWE-based F-score\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") of our top systems on the test data compared to the baseline and state"
+      "value": ") of our "
     },
     {
-      "expression": "\"of-the-art\"",
+      "expression": "\"top systems\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " systems, namely, ATILF-LLF (Al Saied et al., 2017) and SHOMA (Taslimipoor and Rohanian, 2018). GCN works "
+      "value": " on the test data compared to the baseline and stateof-the-art systems, namely, "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"ATILF-LLF (Al Saied et al., 2017)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for discontinuous MWEs in EN and FA, while H-combined outperforms based on results for all MWEs except for FA. The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
+      "value": " and "
+    },
+    {
+      "expression": "\"SHOMA (Taslimipoor and Rohanian, 2018)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"GCN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " works the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"discontinuous MWEs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"EN and FA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while "
+    },
+    {
+      "expression": "\"H-combined\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms based on results for all "
+    },
+    {
+      "expression": "\"MWEs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " except for "
+    },
+    {
+      "expression": "\"FA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
     }
   ],
   "variables": {},

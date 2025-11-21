@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"two best-performing\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -14,31 +15,8 @@
       "value": " approaches in the task of generating sentences from dependency trees have been feature-based incremental text generation ("
     },
     {
-      "expression": "\"Bohnet et al., 2010\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Liu et al., 2015\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Puduppully et al., 2016\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"King and White, 2018\"",
+      "expression": "\"Bohnet et al., 2010; Liu et al., 2015; Puduppully et al., 2016; King and White, 2018\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +25,7 @@
     },
     {
       "expression": "\"2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -54,23 +33,17 @@
       "value": "http://universaldependencies.org/ techniques performing "
     },
     {
-      "expression": "\"more global\"",
+      "expression": "\"more global input-output mapping\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " input-output mapping ("
+      "value": " ("
     },
     {
-      "expression": "\"Castro Ferreira et al., 2018\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Elder and Hokamp, 2018\"",
+      "expression": "\"Castro Ferreira et al., 2018; Elder and Hokamp, 2018\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"0.001\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,14 +16,25 @@
     },
     {
       "expression": "\"0.01\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", respectively). As can be seen, using the full cnet except for interjections does not improve over the baseline.  However, when pruning low-probability hypotheses both pooling strategies improve over the baseline. Yet, average pooling performs "
+      "value": ", respectively). As can be seen, using the full cnet except for interjections does not improve over the baseline.  However, when pruning low-probability hypotheses both pooling strategies improve over the baseline. Yet, "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " pooling performs "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -31,6 +43,7 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -39,6 +52,7 @@
     },
     {
       "expression": "\"0.001\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,22 +61,43 @@
     },
     {
       "expression": "\"highest\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " result overall, improving the joint goals accuracy by "
+      "value": " result overall, improving the joint goals accuracy by 1.6 percentage points "
     },
     {
-      "expression": "\"1.6\"",
+      "expression": "\"compared to\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points compared to the baseline.  Moreover, we see that an ensemble model that averages the predictions of ten cnet models trained with different random seeds also outperforms an ensemble of ten baseline models.  Our ensemble models outperform Mrksic et al. (2017) for the joint requests but are "
+      "value": " the baseline.  Moreover, we see that an ensemble model that averages the predictions of ten cnet models trained with different random seeds also "
     },
     {
-      "expression": "\"a bit worse\"",
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " an ensemble of ten baseline models.  Our ensemble models "
+    },
+    {
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " Mrksic et al. (2017) for the joint requests but are a bit "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

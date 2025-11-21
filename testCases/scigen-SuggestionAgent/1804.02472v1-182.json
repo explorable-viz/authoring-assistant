@@ -3,15 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 7 shows results from a manual error analysis on 50 events from UDS-IH2-dev with "
+      "value": "Table 7 shows results from a manual error analysis on "
     },
     {
-      "expression": "\"highest\"",
+      "expression": "\"50\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " absolute prediction error (using H-biLSTM(2)MultiSim w/UDS-IH2). Grammatical errors (such as run-on sentences) in the underlying text of UDS-IH2 appear to pose a particular challenge for these models;"
+      "value": " events from UDS-IH2-dev with "
+    },
+    {
+      "expression": "\"highest absolute prediction error\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (using "
+    },
+    {
+      "expression": "\"H-biLSTM(2)MultiSim w/UDS-IH2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Grammatical errors (such as run-on sentences) in the underlying text of UDS-IH2 appear to pose a particular challenge for these models;"
     }
   ],
   "variables": {},

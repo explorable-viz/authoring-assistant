@@ -3,15 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 4, BigRNN and Transformer are not able to "
+      "value": "As shown in Table 4, "
     },
     {
-      "expression": "\"outperform\"",
+      "expression": "\"BigRNN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BaseRNN."
+      "value": " and "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are not able to outperform "
+    },
+    {
+      "expression": "\"BaseRNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

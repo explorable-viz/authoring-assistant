@@ -7,30 +7,43 @@
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " scores for TE compared to EE relations. What is interesting to see is that when training with the combined loss (SG or SGLR) we obtain a clear improvement on the "
+      "value": " scores for TE compared to EE relations.\r\nWhat is interesting to see is that when training with the combined loss (SG or SGLR) we obtain a clear improvement on the "
     },
     {
       "expression": "\"more difficult\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " EE relations, and perform "
+      "value": " EE relations, and perform slightly "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on TE relations compared to using pre-trained embeddings (the three upper settings). What can be observed is that the RC+SG model performs "
+      "value": "] on TE relations compared to using pre-trained embeddings (the "
+    },
+    {
+      "expression": "\"three upper\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " settings).\r\nWhat can be observed is that the RC+SG model performs "
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -39,19 +52,21 @@
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for the higher frequency ranges. When evaluating on the full Dev set, both combined loss settings outperform the baselines "
+      "value": "] for the higher frequency ranges.\r\nWhen evaluating on the full Dev set, both combined loss settings outperform the baselines "
     },
     {
       "expression": "\"consistently\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": "]."
     }
   ],
   "variables": {},

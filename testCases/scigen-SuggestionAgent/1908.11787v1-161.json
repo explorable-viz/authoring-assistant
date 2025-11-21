@@ -3,103 +3,223 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compare our model to Float Parser (FP) (Pasupat and Liang, 2015), Neural Programmer (NP) (Neelakantan et al., 2016b), DYNSP (Iyyer et al., 2017) and CAMP (Sun et al., 2018b) in Table 1. We observe that our model improves the SOTA from "
+      "value": "We compare our model to "
     },
     {
-      "expression": "\"45.6\"",
+      "expression": "\"Float Parser (FP)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% by CAMP to "
+      "value": " ("
     },
     {
-      "expression": "\"55.1\"",
+      "expression": "\"Pasupat and Liang, 2015\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in question accuracy (ALL), reducing the relative error rate by "
+      "value": "), "
     },
     {
-      "expression": "\"18\"",
+      "expression": "\"Neural Programmer (NP)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. For the initial question (POS1), however, it is behind DYNSP by "
+      "value": "] ("
     },
     {
-      "expression": "\"3.7\"",
+      "expression": "\"Neelakantan et al., 2016b\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. More interestingly, our model handles follow up questions especially well outperforming the previously "
+      "value": "), "
+    },
+    {
+      "expression": "\"DYNSP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] ("
+    },
+    {
+      "expression": "\"Iyyer et al., 2017\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and "
+    },
+    {
+      "expression": "\"CAMP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] ("
+    },
+    {
+      "expression": "\"Sun et al., 2018b\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") in Table 1.  We observe that our model improves the SOTA from "
+    },
+    {
+      "expression": "\"45.6%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"CAMP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] to "
+    },
+    {
+      "expression": "\"55.1%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] in question accuracy (ALL), reducing the relative error rate by "
+    },
+    {
+      "expression": "\"18%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\nFor the initial question (POS1), however, it is behind "
+    },
+    {
+      "expression": "\"DYNSP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] by "
+    },
+    {
+      "expression": "\"3.7%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\nMore interestingly, our model handles follow up questions especially well outperforming the previously "
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model FP by "
+      "value": "] model "
     },
     {
-      "expression": "\"20\"",
+      "expression": "\"FP\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% on POS3, a "
+      "value": "]] by "
     },
     {
-      "expression": "\"28\"",
+      "expression": "\"20%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% relative error reduction. We observe that our model effectively leverages the context information by improving the average question accuracy from "
+      "value": "] on POS3, a "
     },
     {
-      "expression": "\"45.1\"",
+      "expression": "\"28%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% to "
+      "value": "] relative error reduction.\nWe observe that our model effectively leverages the context information by improving the average question accuracy from "
     },
     {
-      "expression": "\"55.1\"",
+      "expression": "\"45.1%\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in comparison to the use of context in DYNSP yielding "
+      "value": "] to "
     },
     {
-      "expression": "\"2.7\"",
+      "expression": "\"55.1%\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% improvement. If we provide the previous reference answers, the average question accuracy jumps to "
+      "value": " in comparison to the use of context in "
     },
     {
-      "expression": "\"61.7\"",
+      "expression": "\"DYNSP\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, showing that "
+      "value": "] yielding "
     },
     {
-      "expression": "\"6.6\"",
+      "expression": "\"2.7%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of the errors are due to error propagation."
+      "value": "] improvement.\nIf we provide the previous reference answers, the average question accuracy jumps to "
+    },
+    {
+      "expression": "\"61.7%\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "], showing that "
+    },
+    {
+      "expression": "\"6.6%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the errors are due to error propagation."
     }
   ],
   "variables": {},

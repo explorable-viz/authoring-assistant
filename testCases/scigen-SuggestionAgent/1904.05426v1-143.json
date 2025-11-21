@@ -3,15 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We evaluate our four labeling strategies using the many-to-one approach, as presented in Table 1.  In all cases, clustering by type with Brown-based algorithms works "
+      "value": "We evaluate "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"our four labeling strategies\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than using a sophisticated tagger such as A-HMM."
+      "value": " using the many-to-one approach, as presented in Table 1.  In all cases, clustering by type with Brown-based algorithms works "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than using a sophisticated tagger such as "
+    },
+    {
+      "expression": "\"A-HMM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

@@ -7,14 +7,16 @@
     },
     {
       "expression": "\"Polyglot\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Al-Rfou et al., 2013) overall performs "
+      "value": " overall performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -23,22 +25,43 @@
     },
     {
       "expression": "\"DKIE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Derczynski et al., 2014). The "
+      "value": ".2 The "
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " system is our cross-lingual transfer NER from MEDIUM source data paired with SMALL amounts of gold data. Per-entity evaluation shows that the neural Bilstm tagger outperforms "
+      "value": " system is our cross-lingual transfer NER from "
+    },
+    {
+      "expression": "\"MEDIUM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " source data paired with "
+    },
+    {
+      "expression": "\"SMALL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " amounts of gold data. Per-entity evaluation shows that the neural Bilstm tagger outperforms "
     },
     {
       "expression": "\"Polyglot\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

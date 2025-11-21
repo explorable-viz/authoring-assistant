@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows storage size of "
+      "value": "Table 2 shows "
+    },
+    {
+      "expression": "\"storage size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
     },
     {
       "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,14 +25,52 @@
     },
     {
       "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for each bootstrapping mode. Ethanos reduces Trie nodes size of geth from "
+      "value": " for each "
+    },
+    {
+      "expression": "\"bootstrapping mode\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reduces "
+    },
+    {
+      "expression": "\"Trie nodes size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from "
     },
     {
       "expression": "\"2,220MB\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,22 +79,61 @@
     },
     {
       "expression": "\"804.79MB\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "; however, it increases the transaction size (Bodies, Receipts) with block headers (Headers). Therefore, ethanos did not reduce the size of fast sync much, but it significantly reduced compact sync from "
+      "value": "; however, it increases the transaction size (Bodies, Receipts) with block headers (Headers). Therefore, "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " did not reduce the size of "
+    },
+    {
+      "expression": "\"fast sync\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " much, but it significantly reduced "
+    },
+    {
+      "expression": "\"compact sync\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from "
     },
     {
       "expression": "\"2,592.54MB\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of geth to "
+      "value": " of "
+    },
+    {
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
     },
     {
       "expression": "\"1,206.97MB\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -54,20 +141,31 @@
       "value": ", which is "
     },
     {
-      "expression": "\"less than\"",
+      "expression": "\"less than 50%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " 50%. Our result shows that the trie node size of each checkpoint is about "
+      "value": ". Our result shows that the "
+    },
+    {
+      "expression": "\"trie node size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of each checkpoint is about "
     },
     {
       "expression": "\"800MB\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": ","
     }
   ],
   "variables": {},

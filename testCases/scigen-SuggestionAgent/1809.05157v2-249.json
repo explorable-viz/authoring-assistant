@@ -3,39 +3,133 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our datasets vary in size of entity and non-entity tokens, as shown in Table 1. The smallest, Farsi, has "
+      "value": "Our datasets vary in size of "
+    },
+    {
+      "expression": "\"entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"non-entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tokens, as shown in Table 1. The "
+    },
+    {
+      "expression": "\"smallest\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Farsi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", has "
     },
     {
       "expression": "\"4.5K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " entity and "
+      "value": " "
+    },
+    {
+      "expression": "\"entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] and "
     },
     {
       "expression": "\"50K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " non-entity tokens; the largest, English, has "
+      "value": " "
+    },
+    {
+      "expression": "\"non-entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] tokens; the "
+    },
+    {
+      "expression": "\"largest\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"English\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", has "
     },
     {
       "expression": "\"29K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " entity and "
+      "value": " "
+    },
+    {
+      "expression": "\"entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] and "
     },
     {
       "expression": "\"170K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " nonentity tokens."
+      "value": " "
+    },
+    {
+      "expression": "\"non-entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tokens."
     }
   ],
   "variables": {},

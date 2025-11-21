@@ -3,31 +3,115 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 7 presents "
+      "value": "Table 7 presents the POS tagging "
     },
     {
-      "expression": "\"the\"",
+      "expression": "\"improvements\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " POS tagging improvements that MIMICK achieves over the pre-trained Polyglot models, with and without CHAR→TAG concatenation, with "
+      "value": " that "
     },
     {
-      "expression": "\"10,000\"",
+      "expression": "\"MIMICK\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " tokens of training data. We obtain statistically significant improvements in most languages, even when CHAR→TAG is included. These improvements are particularly "
+      "value": " achieves over the pre-trained "
+    },
+    {
+      "expression": "\"Polyglot models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with and without "
+    },
+    {
+      "expression": "\"CHAR→TAG concatenation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with "
+    },
+    {
+      "expression": "\"10,000 tokens\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of training data. We obtain statistically significant "
+    },
+    {
+      "expression": "\"improvements\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in most languages, even when "
+    },
+    {
+      "expression": "\"CHAR→TAG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is included. These "
+    },
+    {
+      "expression": "\"improvements\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are particularly "
     },
     {
       "expression": "\"substantial\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for test-set tokens outside the UD training set, as shown in the right two columns. While test set OOVs are a strength of the CHAR→TAG model (Plank et al., 2016), in many languages there are still considerable improvements to be obtained from the application of MIMICK initialization."
+      "value": " for test-set tokens outside the UD training set, as shown in the right two columns. While test set OOVs are a strength of the "
+    },
+    {
+      "expression": "\"CHAR→TAG model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Plank et al., 2016), in many languages there are still considerable "
+    },
+    {
+      "expression": "\"improvements\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to be obtained from the application of "
+    },
+    {
+      "expression": "\"MIMICK initialization\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

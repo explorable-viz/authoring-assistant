@@ -1,9 +1,38 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Even the ensemble of 5 models did not result in significant differences especially in BLEU scores.\n\nNo explicit values, comparative expressions, or superlative/aggregated expressions are present that need to be replaced with Fluid expressions based on the given paragraph and data. The sentence is more about a general observation rather than specific numerical results or comparisons."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Even the "
+    },
+    {
+      "expression": "\"ensemble\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models did not result in significant differences especially in "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

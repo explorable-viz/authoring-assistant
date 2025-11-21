@@ -2,19 +2,44 @@
   "testing-variables": {},
   "paragraph": [
     {
-      "type": "literal",
-      "value": "H-BILSTM-ATT is also "
-    },
-    {
-      "expression": "\"much faster\"",
+      "expression": "\"H-BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to train than BILSTM and BILSTM-ATT (Table 4),\r\neven though it has "
+      "value": " is also much "
+    },
+    {
+      "expression": "\"faster\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to train than "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Table 4), even though it has "
     },
     {
       "expression": "\"more parameters\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -23,22 +48,25 @@
     },
     {
       "expression": "\"faster\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "\r\n("
+      "value": " ("
     },
     {
-      "expression": "\"5-7\"",
+      "expression": "\"5-7 epochs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " epochs vs. "
+      "value": "] vs. "
     },
     {
       "expression": "\"12-15\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

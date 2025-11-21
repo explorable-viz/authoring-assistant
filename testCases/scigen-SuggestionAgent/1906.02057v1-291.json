@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The Vocabulary model correctly classified test items in "
+      "value": "The "
+    },
+    {
+      "expression": "\"Vocabulary\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model correctly classified test items in "
     },
     {
       "expression": "\"three\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

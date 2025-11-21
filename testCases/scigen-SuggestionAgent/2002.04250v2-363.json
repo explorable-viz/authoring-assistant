@@ -3,15 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Results are shown in Table 4. As can be seen, the incorporation of MMI model significantly "
+      "value": "Results are shown in Table 4. As can be seen, the incorporation of "
     },
     {
-      "expression": "\"improves\"",
+      "expression": "\"MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " MT performances."
+      "value": " model significantly improves "
+    },
+    {
+      "expression": "\"MT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performances."
     }
   ],
   "variables": {},

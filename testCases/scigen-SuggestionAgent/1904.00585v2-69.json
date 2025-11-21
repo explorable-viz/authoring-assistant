@@ -3,15 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results in Table 4 show that our proposed similarity measures are predictive of the effectiveness of the pretraining data. VCcR is "
+      "value": "The results in Table 4 show that our proposed similarity measures are predictive of the effectiveness of the pretraining data. "
     },
     {
-      "expression": "\"the most\"",
+      "expression": "\"VCcR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " informative factor in predicting the effectiveness of pretrained word vectors given a target data set."
+      "value": " is the "
+    },
+    {
+      "expression": "\"most informative factor\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in predicting the effectiveness of pretrained word vectors given a target data set."
     }
   ],
   "variables": {},

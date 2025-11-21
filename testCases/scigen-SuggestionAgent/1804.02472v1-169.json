@@ -3,63 +3,178 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 reports the results for all of the "
+      "value": "Table "
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "-layer L-, T-, and H-biLSTMs. The "
+      "value": " reports the results for all of the 2-layer "
+    },
+    {
+      "expression": "\"L-\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"T-\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"H-biLSTMs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
     },
     {
       "expression": "\"best-performing\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " system for each dataset and metric are highlighted in purple, and when the best-performing system for a particular dataset was a "
+      "value": " system for each dataset and metric are highlighted in purple, and when the "
     },
     {
-      "expression": "\"1\"",
+      "expression": "\"best-performing\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "-layer model, that system is included in Table 4. The "
+      "value": " system for a particular dataset was a 1-layer model, that system is included in Table "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
     },
     {
       "expression": "\"highest-performing\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " system for each is reported in Table 4. On its own, the biLSTM with linear topology (L-biLSTM) performs consistently "
+      "value": " system for each is reported in Table "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". On its own, the biLSTM with linear topology ("
+    },
+    {
+      "expression": "\"L-biLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") performs consistently "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the biLSTM with tree topology (T-biLSTM). However, the hybrid topology (H-biLSTM), consisting of both a L- and TbiLSTM is the "
+      "value": " than the biLSTM with tree topology ("
+    },
+    {
+      "expression": "\"T-biLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). However, the hybrid topology ("
+    },
+    {
+      "expression": "\"H-biLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), consisting of both a "
+    },
+    {
+      "expression": "\"L-\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"TbiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the "
     },
     {
       "expression": "\"top-performing\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " system on UW for correlation (Table 4). Though our methods achieve state of the art in the single-task setting, the "
+      "value": " system on UW for correlation (Table "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Though our methods achieve state of the art in the single-task setting, the "
     },
     {
       "expression": "\"best performing\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " systems are mostly multi-task (Table 4 and Supplementary Materials)."
+      "value": " systems are mostly multi-task (Table "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and Supplementary Materials)."
     }
   ],
   "variables": {},

@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"the worst\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"24.62\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"48.34\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"34.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,30 +52,16 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performing PL for each CL with its corresponding PL=CL upper-bound.  Among all CLs, "
-    },
-    {
-      "expression": "\"the best\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " cipher grounder for French (es-fr) gets "
-    },
-    {
-      "expression": "\"the closest to\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " its upper-bound with just "
+      "value": " performing PL for each CL with its corresponding PL=CL upper-bound.  Among all CLs, the best cipher grounder for French (es-fr) gets the closest to its upper-bound with just "
     },
     {
       "expression": "\"4.81\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -79,6 +70,7 @@
     },
     {
       "expression": "\"13.53\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -87,6 +79,7 @@
     },
     {
       "expression": "\"56.4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -95,6 +88,7 @@
     },
     {
       "expression": "\"58.6\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -103,6 +97,7 @@
     },
     {
       "expression": "\"37.4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -111,6 +106,7 @@
     },
     {
       "expression": "\"37.8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -119,6 +115,7 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -127,6 +124,7 @@
     },
     {
       "expression": "\"1.2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -135,6 +133,7 @@
     },
     {
       "expression": "\"13.3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -143,6 +142,7 @@
     },
     {
       "expression": "\"6.1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

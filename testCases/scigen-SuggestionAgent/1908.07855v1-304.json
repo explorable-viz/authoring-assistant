@@ -3,31 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are summarized in Table "
+      "value": "The results are summarized in Table  Almost all the methods performed similar to random guess, showing that "
     },
     {
-      "expression": "\"Almost all\"",
+      "expression": "\"SQA\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the methods performed "
-    },
-    {
-      "expression": "\"similar\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " to "
-    },
-    {
-      "expression": "\"random guess\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", showing that SQA on our dataset has its unique challenges."
+      "value": " on our dataset has its unique challenges."
     }
   ],
   "variables": {},

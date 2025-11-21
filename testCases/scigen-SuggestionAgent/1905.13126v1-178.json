@@ -3,39 +3,21 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As seen in Table 2, we report the coefficient of determination (r2) for each global metric and dataset. Note that global metrics do "
+      "value": "As seen in Table 2, we report the "
     },
     {
-      "expression": "\"correlate\"",
+      "expression": "\"coefficient of determination (r2)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " somewhat with human judgment of local topic quality. However, the "
-    },
-    {
-      "expression": "\"correlation\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"moderate to poor\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", especially in the case of "
+      "value": " for each global metric and dataset. Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is moderate to poor, especially in the case of "
     },
     {
       "expression": "\"coherence\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
     }
   ],
   "variables": {},

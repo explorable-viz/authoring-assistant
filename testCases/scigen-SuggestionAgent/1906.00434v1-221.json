@@ -3,23 +3,61 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We show the experiment results in Table 2. Our method consistently performs "
+      "value": "We show the experiment results in Table 2.  our method consistently performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than all baselines in all settings. Our method is also "
+      "value": " than all baselines in all settings.  our method is also "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than LOF (Softmax). We observe that on the ATIS dataset, the performance of unknown intent detection dramatically drops as the known intent increases."
+      "value": " than "
+    },
+    {
+      "expression": "\"LOF (Softmax)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  we observe that on the "
+    },
+    {
+      "expression": "\"ATIS dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the performance of "
+    },
+    {
+      "expression": "\"unknown intent detection\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dramatically drops as the "
+    },
+    {
+      "expression": "\"known intent\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increases."
     }
   ],
   "variables": {},

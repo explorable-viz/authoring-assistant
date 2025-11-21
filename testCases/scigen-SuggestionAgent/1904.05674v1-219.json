@@ -7,22 +7,52 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the baseline across all metrics for both averaging approaches (AvgCD, AvgD), while the usage of dominant topics appears to have "
+      "value": " than the baseline across all metrics for both averaging approaches ("
+    },
+    {
+      "expression": "\"AvgCD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"AvgD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), while the usage of dominant topics appears to have "
     },
     {
       "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance (MaxCD). Specifically, we get an improvement of "
+      "value": " performance ("
+    },
+    {
+      "expression": "\"MaxCD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Specifically, we get an improvement of "
     },
     {
       "expression": "\"2\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -31,6 +61,7 @@
     },
     {
       "expression": "\"2.5\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -39,6 +70,7 @@
     },
     {
       "expression": "\"0.5\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -47,11 +79,21 @@
     },
     {
       "expression": "\"1\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% on simple average combination compared to using Global-DSM."
+      "value": "% on simple average combination compared to using "
+    },
+    {
+      "expression": "\"Global-DSM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

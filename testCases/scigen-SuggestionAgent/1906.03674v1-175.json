@@ -1,9 +1,38 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "The paragraph does not contain explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced by Fluid expressions based on the given instructions. The text discusses leveraging existing linguistic and affective knowledge from human experts and lexica containing various annotations but does not provide specific numerical data or comparisons to replace.\n\nTherefore, no replacements are needed for this paragraph according to the provided criteria.\n\nFinal Output:\nwe augment our models with existing linguistic and affective knowledge from human experts. Specifically, we leverage lexica containing psycho-linguistic, sentiment and emotion annotations.  the word's annotations from the lexicons shown in Table 1.  As prior knowledge, we leverage the lexicons presented in Table 1. We selected widely-used lexicons that represent different facets of affective and psycho-linguistic features, namely;"
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "we augment our models with existing linguistic and affective knowledge from human experts. Specifically, we leverage lexica containing psycho-linguistic, sentiment and emotion annotations. the word's annotations from the "
+    },
+    {
+      "expression": "\"lexicons\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shown in Table 1. As prior knowledge, we leverage the "
+    },
+    {
+      "expression": "\"lexicons\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " presented in Table 1. We selected widely-used "
+    },
+    {
+      "expression": "\"lexicons\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that represent different facets of affective and psycho-linguistic features, namely;"
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

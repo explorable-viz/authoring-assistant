@@ -6,15 +6,17 @@
       "value": "Limiting evidence in this way when only "
     },
     {
-      "expression": "\"five\"",
+      "expression": "\"five statements\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " statements are retrieved (\"narrow evidence\" in Table 4) pushes FEVER score down very little, from "
+      "value": " are retrieved (\"narrow evidence\" in Table 4) pushes FEVER score down very little, from "
     },
     {
-      "expression": "\".5617\"",
+      "expression": "\".5550\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -22,7 +24,8 @@
       "value": " to "
     },
     {
-      "expression": "\".5550\"",
+      "expression": "\".5617\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\".5844\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -7,19 +7,30 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than the standard Seq2Seq model in generating meaningful entity words and diverse responses. In particular, our model outperforms all the baselines significantly with "
+      "value": " performance than the standard "
     },
     {
-      "expression": "\"highest\"",
+      "expression": "\"Seq2Seq model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " entity score."
+      "value": " in generating meaningful entity words and diverse responses. In particular, our model outperforms all the baselines significantly with "
+    },
+    {
+      "expression": "\"highest entity score\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

@@ -3,18 +3,47 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In addition, we provide the recall and precision per class for our final interrogative-word classifier (CLS + AT + NER in Table 7).  However, the recall "
+      "value": "In addition, we provide the "
     },
     {
-      "expression": "\"of which\"",
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is very "
+      "value": " and "
     },
     {
-      "expression": "\"low\"",
+      "expression": "\"precision\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " per class for our final interrogative-word classifier ("
+    },
+    {
+      "expression": "\"CLS + AT + NER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in Table 7).  However, the "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of which is "
+    },
+    {
+      "expression": "\"very low\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -23,14 +52,34 @@
     },
     {
       "expression": "\"why\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Lastly, the recall of 'when' is also "
+      "value": "  Lastly, the "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of '"
+    },
+    {
+      "expression": "\"when\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "' is also "
     },
     {
       "expression": "\"low\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

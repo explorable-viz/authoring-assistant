@@ -6,31 +6,26 @@
       "value": "We consistently observe "
     },
     {
-      "expression": "\"+1.15\"",
+      "expression": "\"+1.15/+1.13\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "/"
+      "value": " BLEU/METEOR score improvements across the three language pairs upon comparing our best model to "
     },
     {
-      "expression": "\"+1.13\"",
+      "expression": "\"S-NMT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU/METEOR score improvements across the three language pairs upon comparing our "
-    },
-    {
-      "expression": "\"best\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model to S-NMT (see Table 2). Overall, our document NMT model with both memories has been "
+      "value": " (see Table 2). Overall, our document NMT model with both memories has been "
     },
     {
       "expression": "\"the most effective\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -38,39 +33,44 @@
       "value": " variant for all of the three language pairs. From Table 2, we consistently see "
     },
     {
-      "expression": "\"+.95\"",
+      "expression": "\"+.95/+1.00\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "/"
+      "value": " BLEU/METEOR improvements between the best variants of our model and the sentence-level baseline across the three lan For German→English, guage pairs. For French→English, all variants of document NMT model show "
     },
     {
-      "expression": "\"+1.00\"",
+      "expression": "\"comparable performance\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU/METEOR improvements between the "
-    },
-    {
-      "expression": "\"best\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " variants of our model and the sentence-level baseline across the three lan For German→English, guage pairs. For French→English, all variants of document NMT model show comparable performance when using BLEU; however, when evaluated using METEOR, the dual memory model is "
+      "value": " when using BLEU; however, when evaluated using METEOR, the dual memory model is "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". the target memory variants give comparable results, whereas for Estonian→English, the dual memory variant proves to be "
+      "value": ". the target memory variants give "
+    },
+    {
+      "expression": "\"comparable results\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", whereas for Estonian→English, the dual memory variant proves to be "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -79,6 +79,7 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

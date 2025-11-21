@@ -3,55 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The experimental results are shown in Table 1. As Keller is created based on the PP distribution and have "
+      "value": "The experimental results are shown in Table 1. As "
     },
     {
-      "expression": "\"relatively small\"",
+      "expression": "\"Keller\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " size while SP-10K is created based on random sampling and has a "
+      "value": " is created based on the PP distribution and have relatively small size while "
     },
     {
-      "expression": "\"much larger\"",
+      "expression": "\"SP-10K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " size, we treat the performance on SP-10K as the major evaluation. Our embeddings significantly "
+      "value": " is created based on random sampling and has a much larger size, we treat the performance on "
     },
     {
-      "expression": "\"outperform\"",
+      "expression": "\"SP-10K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " other baselines, especially embedding based baselines. The only exception is PP on the Keller dataset due to its "
+      "value": " as the major evaluation. Our embeddings significantly outperform other baselines, especially embedding based baselines. The only exception is PP on the "
     },
     {
-      "expression": "\"biased\"",
+      "expression": "\"Keller\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " distribution. In addition, there are other interesting observations. First, "
-    },
-    {
-      "expression": "\"compared with\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " 'dobj' and 'nsubj', 'amod' is "
-    },
-    {
-      "expression": "\"simpler\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for word2vec and GloVe. The reason behind is that conventional embeddings only capture the co-occurrence information, which is enough to predict the selectional preference of"
+      "value": " dataset due to its biased distribution. In addition, there are other interesting observations. First, compared with 'dobj' and 'nsubj', 'amod' is simpler for word2vec and GloVe. The reason behind is that conventional embeddings only capture the co-occurrence information, which is enough to predict the selectional preference of"
     }
   ],
   "variables": {},

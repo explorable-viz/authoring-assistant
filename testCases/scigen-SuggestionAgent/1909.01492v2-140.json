@@ -3,15 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The allowable input perturbation space is much larger than for word-level synonym substitutions, as shown in Table 3. In Table 3, we show "
+      "value": "The allowable input perturbation space is much larger than for word-level synonym substitutions, as shown in "
     },
     {
-      "expression": "\"the maximum\"",
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " perturbation space size in the SST and AG News test set for different perturbation radii δ. This number grows exponentially as δ increases."
+      "value": ".  In "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we show the "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " perturbation space size in the "
+    },
+    {
+      "expression": "\"SST\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"AG News\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test set for different perturbation radii δ.  This number grows exponentially as δ increases."
     }
   ],
   "variables": {},

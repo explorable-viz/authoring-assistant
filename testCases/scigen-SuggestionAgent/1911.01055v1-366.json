@@ -3,50 +3,164 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Comparing ENT-SENT, ENT-DYM and ENT-ONLY, we see that the pooling methods over the whole sentence (i.e., ENT-SENT and ENT-DYM) are "
+      "value": "Comparing "
+    },
+    {
+      "expression": "\"ENT-SENT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ENT-ONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we see that the pooling methods over the whole sentence (i.e., "
+    },
+    {
+      "expression": "\"ENT-SENT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") are significantly "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than ENT-ONLY that only focuses on the two entity mentions of interest in the DDI-2013 dataset. This is true across different deep learning models in this work. Comparing ENT-SENT and ENT-DYM, their performance are "
+      "value": " than "
     },
     {
-      "expression": "\"comparable\"",
+      "expression": "\"ENT-ONLY\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in DDI-2013 (except for CNN where ENT-DYM is "
+      "value": " that only focuses on the two entity mentions of interest in the DDI-2013 dataset. This is true across different deep learning models in this work. Comparing "
+    },
+    {
+      "expression": "\"ENT-SENT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", their performance are comparable in DDI-2013 (except for CNN where "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). Comparing the syntax-based pooling methods and the non-syntax pooling methods, the pooling based on dependency paths (i.e., ENT-DEP0) is "
+      "value": "). Comparing the syntax-based pooling methods and the non-syntax pooling methods, the pooling based on dependency paths (i.e., "
+    },
+    {
+      "expression": "\"ENT-DEP0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") is "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the non-syntax pooling methods (i.e., ENT-SENT and ENT-DYM) and perform "
+      "value": " than the non-syntax pooling methods (i.e., "
     },
     {
-      "expression": "\"comparably\"",
+      "expression": "\"ENT-SENT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with ENT-ONLY in the DDI-2013 dataset over all the models (except for the CNN model where ENT-ONLY is much "
+      "value": " and "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and perform comparably with "
+    },
+    {
+      "expression": "\"ENT-ONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the DDI-2013 dataset over all the models (except for the CNN model where "
+    },
+    {
+      "expression": "\"ENT-ONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is much "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

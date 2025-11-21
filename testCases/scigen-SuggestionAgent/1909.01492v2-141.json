@@ -3,18 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows the results of IBP training and baseline models under δ = "
+      "value": "Table 1 shows the results of IBP training and baseline models under "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"δ = 3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and δ = "
+      "value": " and "
     },
     {
-      "expression": "\"24\"",
+      "expression": "\"δ = 24\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"74.9\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"76.8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -38,23 +42,17 @@
       "value": " / "
     },
     {
-      "expression": "\"85.5\"",
+      "expression": "\"85.5%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%), the oracle adversarial accuracy under exhaustive testing ("
+      "value": "), the oracle adversarial accuracy under exhaustive testing ("
     },
     {
-      "expression": "\"25.8\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " / "
-    },
-    {
-      "expression": "\"74.6\"",
+      "expression": "\"25.8%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -62,47 +60,89 @@
       "value": " / "
     },
     {
-      "expression": "\"81.6\"",
+      "expression": "\"74.6%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%) is much lower in SST-character / SST-word / AG-character level, respectively. In Table 1, when the perturbation space is larger (SST character-level vs. SST word-level), (a) across models, there is a larger gap in adversarial accuracy and true robustness (oracle); (b) the difference in oracle robustness between IBP and adversarial training is even larger ("
+      "value": " / "
     },
     {
-      "expression": "\"73.1\"",
+      "expression": "\"81.6%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% vs. "
+      "value": ") is "
     },
     {
-      "expression": "\"25.8\"",
+      "expression": "\"much lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " in SST-character / SST-word / AG-character level, respectively. In Table 1, when the perturbation space is larger (SST character-level vs. SST word-level), (a) across models, there is a "
     },
     {
-      "expression": "\"76.5\"",
+      "expression": "\"larger gap\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% vs. "
+      "value": " in adversarial accuracy and true robustness (oracle); (b) the difference in oracle robustness between IBP and adversarial training is even "
     },
     {
-      "expression": "\"74.6\"",
+      "expression": "\"larger\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%). The resulting models achieve "
+      "value": " ("
     },
     {
-      "expression": "\"the highest\"",
+      "expression": "\"73.1%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"25.8%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"76.5%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"74.6%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). The resulting models achieve the "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

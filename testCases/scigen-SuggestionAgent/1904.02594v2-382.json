@@ -3,47 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compare the classification accuracy of our model against several other recent methods (Table 3). Our model outperforms state-of-the-art methods by "
+      "value": "We compare the classification accuracy of our model against several other recent methods (Table 3).  Our model outperforms "
     },
     {
-      "expression": "\"1.6\"",
+      "expression": "\"state-of-the-art\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% on SwDA, the primary dataset for this task, and comes within "
+      "value": " methods by "
     },
     {
-      "expression": "\"0.6\"",
+      "expression": "\"1.6%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% on MRDA. It also beats a TF-IDF GloVe baseline (described in Section 5.2) by "
+      "value": " on SwDA, the primary dataset for this task, and comes within "
     },
     {
-      "expression": "\"16.4\"",
+      "expression": "\"0.6%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " on MRDA. It also beats a TF-IDF GloVe baseline (described in Section 5.2) by "
     },
     {
-      "expression": "\"12.2\"",
+      "expression": "\"16.4%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, respectively. The improvements that the model is able to make over the other methods are significant, however, the gains on MRDA still fall short of the state-of-the-art by "
+      "value": " and "
     },
     {
-      "expression": "\"0.6\"",
+      "expression": "\"12.2%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%."
+      "value": ", respectively.  The improvements that the model is able to make over the other methods are significant, however, the gains on MRDA still fall short of "
+    },
+    {
+      "expression": "\"the state-of-the-art\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"0.6%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

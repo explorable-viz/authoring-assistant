@@ -1,9 +1,79 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Table VI shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table VI, l1 denotes the BLSTM model under attack, l2 denotes the other BLSTM model, and ltrans are the Transformer counterparts of l1 and l2.\n\nNo comparative or superlative expressions or explicit values requiring replacement with Fluid expressions are detected in this paragraph based on the provided text. However, if there were specific scores mentioned for each model, those would be replaced as shown in previous examples."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table VI shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table VI, "
+    },
+    {
+      "expression": "\"l1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " denotes the "
+    },
+    {
+      "expression": "\"BLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model under attack, "
+    },
+    {
+      "expression": "\"l2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " denotes the other "
+    },
+    {
+      "expression": "\"BLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, and "
+    },
+    {
+      "expression": "\"ltrans\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are the Transformer counterparts of "
+    },
+    {
+      "expression": "\"l1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"l2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". , "
+    },
+    {
+      "expression": "\"ltrans 1 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

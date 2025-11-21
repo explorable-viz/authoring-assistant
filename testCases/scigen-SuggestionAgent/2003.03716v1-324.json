@@ -3,23 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3: We show the results of applying LA module to the transformer model trained on the WMT14 dataset. We find that the LA module "
+      "value": "Table 3: We show the results of applying "
     },
     {
-      "expression": "\"slightly improves\"",
+      "expression": "\"LA module\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the original model but "
+      "value": " to the "
     },
     {
-      "expression": "\"harms\"",
+      "expression": "\"transformer model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the performance when the LA time step is 5. We suggest one of the reasons of these results are caused by the EOS problem."
+      "value": " trained on the "
+    },
+    {
+      "expression": "\"WMT14 dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We find that the "
+    },
+    {
+      "expression": "\"LA module\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " slightly improves the original model but harms the performance when the "
+    },
+    {
+      "expression": "\"LA time step\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We suggest one of the reasons of these results are caused by the "
+    },
+    {
+      "expression": "\"EOS problem\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

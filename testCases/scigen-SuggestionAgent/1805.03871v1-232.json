@@ -3,18 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Fourth, we introduce finer classes (Tables 1\u20132), which fit "
+      "value": "Fourth, we introduce finer classes (Tables "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the target task, where nested clauses are frequent. The splitter produced "
+      "value": "\u2013"
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), which fit "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] the target task, where nested clauses are frequent.  The splitter produced "
     },
     {
       "expression": "\"31,545\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +43,7 @@
     },
     {
       "expression": "\"8,036\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,11 +52,30 @@
     },
     {
       "expression": "\"5,563\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test sentences/clauses. Table 2 shows their distribution in the six gold (correct) classes. cf. Table 2),"
+      "value": " test sentences/clauses. Table "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] shows their distribution in the six gold (correct) classes.  cf. Table "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "])."
     }
   ],
   "variables": {},

@@ -7,35 +7,12 @@
     },
     {
       "expression": "\"two best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " systems (PD = projective, FTD = fixed-tree) in more detail, and compares them to Wang's, Flanigan's, and Damonte's AMR parsers on the 2015 set, and "
-    },
-    {
-      "expression": "\"van Noord\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"Bos\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"2017b\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") for the 2017 dataset. The good scores we achieve on reentrancy identification,"
+      "value": " systems (PD = projective, FTD = fixed-tree) in more detail,  and compares them to Wang's, Flanigan's, and Damonte's AMR parsers on the 2015 set and , and van Noord and Bos (2017b) for the 2017 dataset.  The good scores we achieve on reentrancy identification,\n"
     }
   ],
   "variables": {},

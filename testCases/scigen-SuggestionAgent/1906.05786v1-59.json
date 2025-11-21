@@ -3,42 +3,56 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Consequently in Table 5 we experiment with BI ("
+      "value": "Consequently in Table 5 we experiment with "
     },
     {
-      "expression": "\"α\"",
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " = "
+      "value": " ("
     },
     {
-      "expression": "\"0.1\"",
+      "expression": "\"α = 0.1\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). In this case BI matches or "
+      "value": "). In this case "
+    },
+    {
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " matches or "
     },
     {
       "expression": "\"out-performs\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the uniform ensemble. Notably, for en2es, where BI ("
+      "value": " the uniform ensemble.\r\nNotably, for en2es, where "
     },
     {
-      "expression": "\"α\"",
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " = "
+      "value": " ("
     },
     {
-      "expression": "\"0.5\"",
+      "expression": "\"α = 0.5\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -46,15 +60,8 @@
       "value": ") performed well, taking "
     },
     {
-      "expression": "\"α\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " = "
-    },
-    {
-      "expression": "\"0.1\"",
+      "expression": "\"α = 0.1\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {

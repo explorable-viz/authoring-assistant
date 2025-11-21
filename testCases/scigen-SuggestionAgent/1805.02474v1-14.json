@@ -3,42 +3,101 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For NER (Table 7), S-LSTM gives an F1-score of "
+      "value": "For NER (Table 7), "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives an F1-score of "
     },
     {
       "expression": "\"91.57\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% on the CoNLL test set,\r\nwhich is "
+      "value": "% on the CoNLL test set, which is significantly "
     },
     {
-      "expression": "\"significantly better\"",
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared with BiLSTMs.\r\nStacking more layers of BiLSTMs leads to "
+      "value": " compared with "
     },
     {
-      "expression": "\"slightly better\"",
+      "expression": "\"BiLSTMs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1-scores compared with a single-layer BiLSTM.\r\nOur BiLSTM results are comparable to the results reported by Ma and Hovy (2016) and Lample et al. (2016),\r\nIn contrast, S-LSTM gives "
+      "value": ". Stacking more layers of "
+    },
+    {
+      "expression": "\"BiLSTMs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " leads to slightly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1-scores compared with a single-layer "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Our "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results are comparable to the results reported by Ma and Hovy (2016) and Lample et al. (2016),  In contrast, "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " reported results under the same settings.\r\nIn the second section of Table 7, Yang et al. (2017) obtain an Fscore of "
+      "value": " reported results under the same settings. In the second section of Table 7, Yang et al. (2017) obtain an Fscore of "
     },
     {
       "expression": "\"91.26\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

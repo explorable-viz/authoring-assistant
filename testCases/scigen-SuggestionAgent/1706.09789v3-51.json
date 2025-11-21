@@ -3,31 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "report brief results on SQuAD (Table 3), We also evaluate the SynNet on the NewsQA-to-SQuAD direction. We directly apply "
+      "value": "report brief results on "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"SQuAD\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " setting from the other direction and report the result in Table 3. The SynNet improves over the baseline by "
+      "value": " (Table 3),  We also evaluate the "
     },
     {
-      "expression": "\"1.6\"",
+      "expression": "\"SynNet\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in EM and "
+      "value": " on the NewsQAto-"
     },
     {
-      "expression": "\"0.7\"",
+      "expression": "\"SQuAD\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in F1. Limited by space, we leave out ablation studies in this direction."
+      "value": " direction. We directly apply the "
+    },
+    {
+      "expression": "\"best setting\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from the other direction and report the result in Table 3.  The "
+    },
+    {
+      "expression": "\"SynNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improves over the baseline by "
+    },
+    {
+      "expression": "\"1.6%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in EM and "
+    },
+    {
+      "expression": "\"0.7%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in F1. Limited by space, we leave out ablation studies in this direction."
     }
   ],
   "variables": {},

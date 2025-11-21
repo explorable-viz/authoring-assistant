@@ -7,22 +7,52 @@
     },
     {
       "expression": "\"two top\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " rows in Table 1 show conflicting results for UKB. As the results show, that paper reports a suboptimal use of UKB. The table also reports the "
+      "value": " rows in Table 1 show conflicting results for "
+    },
+    {
+      "expression": "\"UKB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As the results show, that paper reports a suboptimal use of "
+    },
+    {
+      "expression": "\"UKB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The table also reports the "
     },
     {
       "expression": "\"best performing\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " knowledge-based systems on this dataset. Also report We (Chaplot and Sakajhutdinov, 2018), the latest work on this area, as well as the most frequent sense as given by WordNet counts The table shows that UKB yields the "
+      "value": " knowledge-based systems on this dataset. Also report We (Chaplot and Sakajhutdinov, 2018), the latest work on this area, as well as the most frequent sense as given by WordNet counts The table shows that "
+    },
+    {
+      "expression": "\"UKB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " yields the "
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

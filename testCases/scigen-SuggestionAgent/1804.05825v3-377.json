@@ -3,18 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 6 shows that the C-LSTM model performs well on the scientific embeddings, but consistently "
+      "value": "Table 6 shows that the "
     },
     {
-      "expression": "\"worse\"",
+      "expression": "\"C-LSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the SVM model using handcrafted features and achieves a macro-F1 score of "
+      "value": " model performs well on the scientific embeddings, but consistently "
+    },
+    {
+      "expression": "\"worse than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the "
+    },
+    {
+      "expression": "\"SVM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model using handcrafted features and achieves a macro-F1 score of "
     },
     {
       "expression": "\"67.49\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +43,7 @@
     },
     {
       "expression": "\"67.02\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

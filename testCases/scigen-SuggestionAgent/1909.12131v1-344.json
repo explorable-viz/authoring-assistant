@@ -3,39 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results of the human evaluation are displayed in Table 6. These "
+      "value": "The results of the human evaluation are displayed in Table 6.  These scores show that we succeed in producing output sequences that reach a "
     },
     {
-      "expression": "\"scores\"",
+      "expression": "\"high level\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " show that we succeed in producing output sequences that reach a "
-    },
-    {
-      "expression": "\"high level of grammatical soundness\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and almost always "
-    },
-    {
-      "expression": "\"perfectly preserve\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the original meaning of the input. The third dimension under consideration, structural simplicity, which captures the degree of minimality in the simplified sentences, scores "
+      "value": " of grammatical soundness and almost always perfectly preserve the original meaning of the input. The third dimension under consideration, structural simplicity, which captures the degree of minimality in the simplified sentences, scores "
     },
     {
       "expression": "\"high values\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " too."
+      "value": ", too."
     }
   ],
   "variables": {},

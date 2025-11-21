@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We evaluate two configurations of the parse decoder, one in which it is trained separately from the token decoder (first column of Table 3), and the other where both decoders are trained jointly (second column of Table 3). We observe that joint training boosts the chunk F1 from "
+      "value": "We evaluate two configurations of the parse decoder, one in which it is trained separately from the token decoder (first column of Table 3), and the other where both decoders are trained jointly (second column of Ta  ble 3). We observe that joint training boosts the chunk F1 from "
     },
     {
       "expression": "\"65.4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"69.6\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"89.9\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -30,20 +33,22 @@
       "value": " F1 and "
     },
     {
-      "expression": "\"43.1\"",
+      "expression": "\"43.1%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% exact match indicate that the token decoder is heavily reliant on the generated chunk sequences.  The resulting F1 is indeed almost "
+      "value": " exact match indicate that the token decoder is heavily reliant on the generated chunk sequences.  The resulting F1 is indeed almost "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"10 points higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (third column of Table 3), indicating that the token decoder does have the ability to correct mistakes.  In Section 5.3 (see the final row of Table 3) we consider the effect of randomly sampling the max chunk size k during training. This provides a considerable boost to BLEU with a minimal impact to speedup."
+      "value": ", indicating that the token decoder does have the ability to correct mistakes.  In Section 5.3 (see the final row of Table 3) we consider the effect of randomly sampling the max chunk size k during training. This provides a considerable boost to BLEU with a minimal impact to speedup."
     }
   ],
   "variables": {},

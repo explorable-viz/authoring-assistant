@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The comparison between BERT embeddings and other models is presented in Table 3. Overall, in-domain fine-tuned BERT delivers "
+      "value": "The comparison between "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings and other models is presented in Table 3. Overall, in-domain fine-tuned "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " delivers "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -15,6 +34,7 @@
     },
     {
       "expression": "\"33\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -23,35 +43,102 @@
     },
     {
       "expression": "\"3.6\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% improvement in P@1) by supervised fine-tuning BERT using pairwise rank hinge loss. When evaluated on non-factoid QA datasets, there is a big gap between BERT embeddings and the fully fine-tuned BERT, which suggests that deep interactions between questions and answers are critical to the task. However, the gap is much smaller for factoid QA datasets. Since non-factoid QA depends more on content matching rather than vocabulary matching, the results are kind of expected. Similar to BERT for sentence embeddings, mean-pooling and combining the top and bottom layer embeddings lead to "
+      "value": "% improvement in P@1) by supervised fine-tuning "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " using pairwise rank hinge loss. When evaluated on non-factoid QA datasets, there is a big gap between "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings and the fully fine-tuned "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which suggests that deep interactions between questions and answers are critical to the task. However, the gap is much smaller for factoid QA datasets. Since non-factoid QA depends more on content matching rather than vocabulary matching, the results are kind of expected. Similar to "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for sentence embeddings, mean-pooling and combining the top and bottom layer embeddings lead to "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance, and ([u, v, u ∗ v, |u − v|]) shows the strongest results among other interaction schemes. Different from sentence-level embeddings, fine-tuning BERT on SNLI doesn't lead to significant improvement, which suggests possible domain mismatch between SNLI and the QA datasets. MLP layer usually provided a "
+      "value": " performance, and (u, v, u ∗ v, |u − v|) shows the strongest results among other interaction schemes. Different from sentence-level embeddings, fine-tuning "
     },
     {
-      "expression": "\"1-2\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% boost in performance compared to the logistic regression layer. For WikiPassageQA, BERT embeddings perform comparably as BM25 baseline. For InsuranceQA, BERT embeddings outperform a strong representation-based matching model DSSM (Huang et al., 2013), but still far behind the state-of-the-art interaction-based model SUBMULT+NN (Wang and Jiang, 2016) and fully fine-tuned BERT. On factoid datasets (Quasar-t and SearchQA), BERT embeddings outperform BM25 baseline "
+      "value": " on SNLI doesn't lead to significant improvement, which suggests possible domain mismatch between SNLI and the QA datasets. MLP layer usually provided a 1-2 percent boost in performance compared to the logistic regression layer. For WikiPassageQA, "
     },
     {
-      "expression": "\"significantly\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " embeddings perform comparably as BM25 baseline. For InsuranceQA, "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings outperform a strong representation-based matching model DSSM (Huang et al., 2013), but still far behind the state-of-the-art interaction-based model SUBMULT+NN (Wang and Jiang, 2016) and fully fine-tuned "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". On factoid datasets (Quasar-t and SearchQA), "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings outperform BM25 baseline significantly."
     }
   ],
   "variables": {},

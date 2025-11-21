@@ -3,18 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We present statistics of our dataset10 in "
+      "value": "We present statistics of our dataset"
     },
     {
-      "expression": "\"Table\"",
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " 3. As expected, inter-annotator agreement is "
+      "value": " in Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As expected, inter-annotator agreement is "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -22,68 +33,67 @@
       "value": " for "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"higher thresholds\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " thresholds (less ambiguous sentences). According to Landis and Koch (1977), κ ∈ ("
+      "value": " (less ambiguous sentences). According to Landis and Koch (1977), κ ∈ ("
     },
     {
-      "expression": "\"(0.2\"",
+      "expression": "\"(0.2, 0.4]\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
+      "value": ") corresponds to \"fair agreement\", whereas κ ∈ ("
     },
     {
-      "expression": "\"0.4\"",
+      "expression": "\"(0.4, 0.6]\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "]) corresponds to \"fair agreement\", whereas κ ∈ ("
+      "value": ") corresponds to \"moderate agreement\". We next compute the accuracy of our model for each threshold by removing the corresponding neutral sentences. "
     },
     {
-      "expression": "\"(0.4\"",
+      "expression": "\"Higher thresholds\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
+      "value": " correspond to sets of less ambiguous sentences. Table "
     },
     {
-      "expression": "\"0.6\"",
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "]) corresponds to \"moderate agreement\". We next compute the accuracy of our model for each threshold by removing the corresponding neutral sentences. "
+      "value": " shows that "
     },
     {
-      "expression": "\"Higher\"",
+      "expression": "\"ELMo's performance gains\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " thresholds correspond to sets of less ambiguous sentences. "
+      "value": " in Table "
     },
     {
-      "expression": "\"Table\"",
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " 3 shows that ELMo's performance gains in "
-    },
-    {
-      "expression": "\"Table\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " 2 extends across all thresholds."
+      "value": " extends across all thresholds."
     }
   ],
   "variables": {},

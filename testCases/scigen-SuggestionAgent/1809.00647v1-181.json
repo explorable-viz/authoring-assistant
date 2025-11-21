@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -14,23 +15,35 @@
       "value": " baseline. The combination of "
     },
     {
-      "expression": "\"Location\"",
+      "expression": "\"Location (sentence location)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (sentence location) and "
+      "value": " and "
     },
     {
       "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " almost sets the performance for the whole model. Adding each voting feature individually produces mixed results. However, adding all voting features improves all metrics. Though the margin is small, 4 of them are statistically significant over "
+      "value": " almost sets the performance for the whole model. Adding each voting feature individually produces mixed results. However, adding all voting features improves all metrics. Though the margin is small, "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of them are statistically significant over "
     },
     {
       "expression": "\"Frequency+Location\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

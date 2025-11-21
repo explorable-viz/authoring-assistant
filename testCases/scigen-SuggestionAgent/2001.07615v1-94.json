@@ -3,15 +3,30 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "All results of these experiments are presented in Table 3 with the "
+      "value": "All results of these experiments are presented in Table 3 with the absolute improvement of the two main measures "
     },
     {
-      "expression": "\"absolute improvement\"",
+      "expression": "\"UAR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the two main measures UAR and eA over the SVM-based approach."
+      "value": " and "
+    },
+    {
+      "expression": "\"eA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the "
+    },
+    {
+      "expression": "\"SVM-based approach\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
     }
   ],
   "variables": {},

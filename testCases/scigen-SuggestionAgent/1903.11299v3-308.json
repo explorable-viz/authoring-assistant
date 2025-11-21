@@ -3,63 +3,196 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "With BIVEC embeddings, we learn two languages at the same time, and test retrieval on one or two of these languages. Results are shown in table 4. Trained in English alone, the model gives "
+      "value": "With "
+    },
+    {
+      "expression": "\"BIVEC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings, we learn two languages at the same time, and test retrieval on one or two of these languages. Results are shown in table 4. Trained in "
+    },
+    {
+      "expression": "\"English\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alone, the model gives "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than MUSE for languages not seen previously. For example, with English-German BIVEC and a model trained only in English, and test on German, we obtain only "
+      "value": " performance than "
+    },
+    {
+      "expression": "\"MUSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for languages not seen previously. For example, with "
+    },
+    {
+      "expression": "\"English-German\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BIVEC and a model trained only in "
+    },
+    {
+      "expression": "\"English\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and test on "
+    },
+    {
+      "expression": "\"German\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we obtain only "
     },
     {
       "expression": "\"22.96\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% recall@10, where MUSE embeddings obtain 44.18 %. But when train on English and French, we obtain "
+      "value": " % recall@10, where "
+    },
+    {
+      "expression": "\"MUSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings obtain "
+    },
+    {
+      "expression": "\"44.18\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " %. But when train on "
+    },
+    {
+      "expression": "\"English and French\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we obtain "
     },
     {
       "expression": "\"55.22\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% recall, an increase of "
+      "value": " % recall, an increase of "
     },
     {
       "expression": "\"26.39\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% compared to MUSE. With German and English training, we have an increase of "
+      "value": " % compared to "
+    },
+    {
+      "expression": "\"MUSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". With "
+    },
+    {
+      "expression": "\"German and English\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training, we have an increase of "
     },
     {
       "expression": "\"15.16\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% on English only recall, with a recall of "
+      "value": " % on "
+    },
+    {
+      "expression": "\"English only\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recall, with a recall of "
     },
     {
       "expression": "\"61.44\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. Meaning that, once again, learning a new language with BIVEC enables "
+      "value": " %. Meaning that, once again, learning a new language with BIVEC enables "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results in English, as the same kind of results is visible with French as well."
+      "value": " results in "
+    },
+    {
+      "expression": "\"English\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as the same kind of results is visible with "
+    },
+    {
+      "expression": "\"French\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as well."
     }
   ],
   "variables": {},

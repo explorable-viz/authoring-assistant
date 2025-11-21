@@ -3,31 +3,88 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We find that word vectors and LMs pretrained on small similar sources can achieve competitive or even "
+      "value": "We find that "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"word vectors\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than the ones pretrained on larger sources (Table 5). On JNLPBA, ScienceIE and Wetlab, LMs pretrained on the small similar source perform "
+      "value": " and "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"LMs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", while word vectors pretrained on the small similar source perform "
+      "value": " pretrained on "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"small similar sources\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on CRAFT, JNLPBA, and ScienceIE."
+      "value": " can achieve competitive or even "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than the ones pretrained on larger sources (Table 5).  On "
+    },
+    {
+      "expression": "\"JNLPBA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"ScienceIE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Wetlab\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", LMs pretrained on the small similar source perform "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while word vectors pretrained on the small similar source perform better on "
+    },
+    {
+      "expression": "\"CRAFT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", JNLPBA, and ScienceIE."
     }
   ],
   "variables": {},

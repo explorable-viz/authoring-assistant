@@ -3,23 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results for political speech check-worthiness detection are given in Table 3. We found that the vanilla BERT model "
+      "value": "The results for political speech check-worthiness detection are given in Table 3. We found that the "
     },
     {
-      "expression": "\"performed the best\"",
+      "expression": "\"vanilla BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of all models. As we added transfer learning and PU learning, the performance steadily dropped, with the "
+      "value": " model performed "
     },
     {
-      "expression": "\"worst performing\"",
+      "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model being the one using PUC."
+      "value": " of all models.\r\nAs we added transfer learning and PU learning, the performance steadily dropped, with the "
+    },
+    {
+      "expression": "\"worst\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performing model being the one using "
+    },
+    {
+      "expression": "\"PUC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

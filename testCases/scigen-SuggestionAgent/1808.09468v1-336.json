@@ -3,10 +3,56 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compare three training configurations: WEBSPLIT only, WIKISPLIT only, and BOTH, which is simply their concatenation. The WEBSPLIT model scores "
+      "value": "We compare "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training configurations: "
+    },
+    {
+      "expression": "\"WEBSPLIT only\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"WIKISPLIT only\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"BOTH\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is simply their concatenation.  The "
+    },
+    {
+      "expression": "\"WEBSPLIT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model scores "
     },
     {
       "expression": "\"35.3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,19 +61,39 @@
     },
     {
       "expression": "\"4.2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU on the WikiSplit validation set. In contrast, the WIKISPLIT model achieves "
+      "value": " BLEU on the WikiSplit validation set.  In contrast, the "
+    },
+    {
+      "expression": "\"WIKISPLIT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model achieves "
     },
     {
       "expression": "\"59.4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU on the WebSplit validation set, Reintroducing the downsampled, in-domain training data (BOTH) further improves performance on the WebSplit evaluation."
+      "value": " BLEU on the WebSplit validation set,  Reintroducing the downsampled, in-domain training data ("
+    },
+    {
+      "expression": "\"BOTH\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") further improves performance on the WebSplit evaluation."
     }
   ],
   "variables": {},

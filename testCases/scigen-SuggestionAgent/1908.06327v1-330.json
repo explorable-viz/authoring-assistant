@@ -3,58 +3,137 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We see a small, but consistent improvement across most of the vision-language tasks using GrOVLE as seen in Table 2(b). These changes result in an embedding with "
+      "value": "We see a small, but consistent improvement across most of the vision-language tasks using "
     },
     {
-      "expression": "\"comparable\"",
+      "expression": "\"GrOVLE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance to the HGLMM 6K-D features, which are reported in Table 2(e). However, our word embedding tends to perform "
+      "value": " as seen in Table 2(b). These changes result in an embedding with comparable performance to the "
+    },
+    {
+      "expression": "\"HGLMM 6K-D features\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which are reported in Table 2(e). However, our word embedding tends to perform "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " when embeddings are the same size (i.e. 300-D). For the generation-based tasks (i.e. captioning and VQA), the benefits of using adapted embeddings are less clear. This may simply be an artifact of the challenges in evaluating these tasks (i.e., the captions are improving in a way the metrics don't capture). Visual Word2Vec performs "
+      "value": " when embeddings are the same size (i.e. "
     },
     {
-      "expression": "\"comparably\"",
+      "expression": "\"300-D\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " amongst results for generation tasks (i.e. image captioning and VQA), but these tasks have little variance in results, with less than a point of difference across the adapted embeddings. The small gain provided in generation tasks by Visual Word2Vec does not out-weight the drops in performance across other tasks such as the significant mean recall drop of "
+      "value": "). For the generation-based tasks (i.e. captioning and VQA), the benefits of using adapted embeddings are "
+    },
+    {
+      "expression": "\"less clear\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This may simply be an artifact of the challenges in evaluating these tasks (i.e., the captions are improving in a way the metrics don't capture).  Visual Word2Vec performs comparably amongst results for generation tasks (i.e. image captioning and VQA), but these tasks have little variance in results, with "
+    },
+    {
+      "expression": "\"less than a point\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of difference across the adapted embeddings.  The small gain provided in generation tasks by Visual Word2Vec does not out-weight the drops in performance across other tasks such as the significant "
+    },
+    {
+      "expression": "\"mean recall drop\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
     },
     {
       "expression": "\"6.3\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared to HGLMM's 6K-D Self-Attention result in line two of Table 2(c) and Table 2(e) for image-sentence retrieval of Flickr30K. For comparison, GrOVLE's Self-Attention result in Table 2(b) is only "
+      "value": " compared to HGLMM's 6K-D Self-Attention result in line two of Table 2(c) and Table 2(e) for image-sentence retrieval of Flickr30K. For comparison, "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"GrOVLE's Self-Attention\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " points lower. Finally, we report results using HGLMM of different dimension. HGLMM 300-D features are used for a more fair comparison to other embeddings. While the HGLMM 6K-D representation primarily results in the "
+      "value": " result in Table 2(b) is only "
     },
     {
-      "expression": "\"highest\"",
+      "expression": "\"3 points lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance, it performs more poorly on generation tasks and also results in high variance. For example, column one in Table 2(e) shows a range of "
+      "value": ".  Finally, we report results using HGLMM of different dimension. "
+    },
+    {
+      "expression": "\"HGLMM 300-D features\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are used for a more fair comparison to other embeddings. While the "
+    },
+    {
+      "expression": "\"HGLMM 6K-D representation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " primarily results in the "
+    },
+    {
+      "expression": "\"highest performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it performs "
+    },
+    {
+      "expression": "\"more poorly\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on generation tasks and also results in high variance. For example, column one in Table 2(e) shows a range of "
     },
     {
       "expression": "\"7.1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -63,6 +142,7 @@
     },
     {
       "expression": "\"2.6\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -3,63 +3,115 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The average performances of LR−syntax and CNN:rand are virtually identical, both for Macro-F1 "
+      "value": "The "
     },
     {
-      "expression": "\"FscoreM\"",
+      "expression": "\"average\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in Sokolova and Lapalme (2009). F1 and Claim-F1, with a slight advantage for the feature-based approach, but their difference is not statistically significant (p ≤ 0.05). Altogether, these two systems exhibit "
+      "value": " performances of "
+    },
+    {
+      "expression": "\"LR−syntax\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"CNN:rand\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are virtually identical, both for Macro6Described as FscoreM in Sokolova and Lapalme (2009). F1 and Claim-F1, with a slight advantage for the feature-based approach, but their difference is not statistically significant (p ≤ 0.05). Altogether, these two systems exhibit "
     },
     {
       "expression": "\"significantly better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " average performances than all other models surveyed here, both those relying on and those not relying on hand-crafted features (p ≤ 0.05). The performance of the learners is quite divergent across datasets, with Macro-F1 scores ranging from "
+      "value": " "
     },
     {
-      "expression": "\"60\"",
+      "expression": "\"average\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (WTP) to "
+      "value": " performances than all other models surveyed here, both those relying on and those not relying on hand-crafted features (p ≤ 0.05).  The performance of the learners is quite divergent across datasets, with Macro-F1 scores6 ranging from "
     },
     {
-      "expression": "\"80\"",
+      "expression": "\"60%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (MT), average "
+      "value": " ("
     },
     {
-      "expression": "\"67\"",
+      "expression": "\"WTP\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (see Table 2). On all datasets, our "
+      "value": ") to "
+    },
+    {
+      "expression": "\"80%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"MT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " 67% (see Table 2).  On all datasets, our "
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " systems clearly outperform both baselines. In isolation, lexical, embedding, and syntax features are most helpful, whereas structural features did not help in most cases. Discourse features only contribute "
+      "value": " systems clearly outperform both baselines. In isolation, lexical, embedding, and syntax features are most helpful, whereas structural features did not help in most cases. Discourse features only contribute significantly on MT. When looking at the performance of the feature-based approaches, the "
     },
     {
-      "expression": "\"significantly\"",
+      "expression": "\"most striking\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on MT. When looking at the performance of the feature-based approaches, the most striking finding is the importance of lexical (in our setup, unigram) information."
+      "value": " finding is the importance of lexical (in our setup, unigram) information."
     }
   ],
   "variables": {},

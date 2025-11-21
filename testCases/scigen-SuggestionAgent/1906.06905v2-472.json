@@ -3,31 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the results for our three corpora. Throughout all three corpora, both manipulation strategies perform "
+      "value": "Table 2 shows the results for our "
     },
     {
-      "expression": "\"well\"",
+      "expression": "\"three\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". SEL consistently "
+      "value": " corpora. Throughout all "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"three\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " SIZE, which "
+      "value": " corpora, both "
     },
     {
-      "expression": "\"matches\"",
+      "expression": "\"manipulation strategies\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " our observations from the previous experiment."
+      "value": " perform well. "
+    },
+    {
+      "expression": "\"SEL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " consistently outperforms "
+    },
+    {
+      "expression": "\"SIZE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which matches our observations from the previous experiment."
     }
   ],
   "variables": {},

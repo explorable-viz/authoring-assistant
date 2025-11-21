@@ -3,15 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1: The performances of the IM2LATEX-100K Bi-LSTM model. We discover that the look-ahead improves the model from the greedy search method \u2014 noted that LA is "
+      "value": "Table 1: The performances of the "
     },
     {
-      "expression": "\"more\"",
+      "expression": "\"IM2LATEX-100K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " directly comparable to the greedy search because of their same beam size. We also show the scores of the beam search for the reference"
+      "value": " "
+    },
+    {
+      "expression": "\"Bi-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model. We discover that the look-ahead improves the model from the greedy search method \u2014 noted that "
+    },
+    {
+      "expression": "\"LA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"more directly comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to the greedy search because of their same beam size. We also show the scores of the beam search for the reference"
     }
   ],
   "variables": {},

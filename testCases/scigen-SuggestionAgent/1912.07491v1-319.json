@@ -3,23 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The ablation test results are reported in Table 7. From the results, we can observe that the performance of TransDG drops "
+      "value": "The ablation test results are reported in Table 7. From the results, we can observe that the performance of "
     },
     {
-      "expression": "\"sharply\"",
+      "expression": "\"TransDG\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " when we discard the question representation module and the knowledge selection module transferred from KBQA. Response guiding attention also has "
+      "value": " drops sharply when we discard the question representation module and the knowledge selection module transferred from KBQA. Response guiding attention also has noticeable impact on the performance of "
     },
     {
-      "expression": "\"noticeable impact\"",
+      "expression": "\"TransDG\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the performance of TransDG, especially on BLEU scores. In addition, the second-step decoder can improve the ability of TransDG to generate relevant entities per response.\n\nNote: The phrase \"drops sharply\" does not have a direct comparative or superlative meaning in this context and is therefore left as is. Similarly, \"noticeable impact\" is descriptive and doesn't require replacement. However, if these phrases were to be considered for potential Fluid expressions in a broader context, they would remain unchanged based on the given rules."
+      "value": ", especially on BLEU scores. In addition, the second-step decoder can improve the ability of "
+    },
+    {
+      "expression": "\"TransDG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to generate relevant entities per response."
     }
   ],
   "variables": {},

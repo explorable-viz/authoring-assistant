@@ -3,31 +3,88 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 3 (top "
+      "value": "As shown in Table 3 ("
     },
     {
-      "expression": "\"4\"",
+      "expression": "\"top 4\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " rows), the proposed crossmodal self-attentive feature based approaches achieve "
+      "value": " rows), "
+    },
+    {
+      "expression": "\"the proposed crossmodal self-attentive feature based approaches\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieve significantly "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than other baselines. The word based method CMSA-W outperforms sentence based method CMSA-S for multimodal feature representation. As presented in the bottom "
+      "value": " performance than "
     },
     {
-      "expression": "\"5\"",
+      "expression": "\"other baselines\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " rows in Table 3, the proposed gated multi-level fusion outperforms these other multi-scale feature fusion methods."
+      "value": ".  "
+    },
+    {
+      "expression": "\"the word based method CMSA-W\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"sentence based method CMSA-S\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for multimodal feature representation.  As presented in the "
+    },
+    {
+      "expression": "\"bottom 5\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rows in Table 3, "
+    },
+    {
+      "expression": "\"the proposed gated multi-level fusion\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms these "
+    },
+    {
+      "expression": "\"other multi-scale feature fusion methods\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

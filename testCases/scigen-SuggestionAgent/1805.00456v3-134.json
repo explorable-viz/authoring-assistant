@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "results in Table 3 show that large batch training can significantly improve the performance of single Transformers, particularly when trained to produce longer sequences. Accumulating the gradient over "
+      "value": "results in Table 3 show that "
+    },
+    {
+      "expression": "\"large\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " batch training can significantly improve the performance of "
+    },
+    {
+      "expression": "\"single Transformers\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", particularly when trained to produce longer sequences. Accumulating the gradient over "
     },
     {
       "expression": "\"8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +34,7 @@
     },
     {
       "expression": "\"4096\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,14 +43,34 @@
     },
     {
       "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU improvement for the linear derivation model. It has been suggested that decaying the learning rate can have a similar effect to large batch training (Smith et al., 2017), but reducing the initial learning rate by a factor of "
+      "value": " BLEU improvement for the "
+    },
+    {
+      "expression": "\"linear derivation model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". It has been suggested that "
+    },
+    {
+      "expression": "\"decaying\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the learning rate can have a similar effect to large batch training (Smith et al., 2017), but reducing the initial learning rate by a factor of "
     },
     {
       "expression": "\"8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -7,30 +7,61 @@
     },
     {
       "expression": "\"78.73\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%.\r\nThis LSA with BOW features was almost 10% "
+      "value": "%. This  LSA with BOW features was almost "
     },
     {
-      "expression": "\"more accurate\"",
+      "expression": "\"10%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than SA, where the best results with binary weights were achieved with an approximation with 130 dimensions, with TF weights were achieved with 50 dimensions, and with TFIDF weights were achieved with 30 dimensions. SVM with BOW features was about 3% "
+      "value": " more accurate than SA, where the best results with binary weights were achieved with an approximation with "
     },
     {
-      "expression": "\"more accurate\"",
+      "expression": "\"130\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than LSA, with binary weights leading to a "
+      "value": " dimensions, with TF weights were achieved with "
+    },
+    {
+      "expression": "\"50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dimensions, and with TFIDF weights were achieved with "
+    },
+    {
+      "expression": "\"30\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dimensions. SVM with BOW features was about "
+    },
+    {
+      "expression": "\"3%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " more accurate than LSA, with binary weights leading to a "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -39,22 +70,61 @@
     },
     {
       "expression": "\"91.47\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, MSM with w2v had an accuracy rate of "
+      "value": "%,  MSM with w2v had an accuracy rate of "
     },
     {
       "expression": "\"90.62\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, with the best results achieved with word subspace dimensions for the training classes ranging from 150 to 181, and for the query ranging from 3 to 217. Incorporating the frequency information in the subspace modeling resulted in a "
+      "value": "%, with the best results achieved with word subspace dimensions for the training classes ranging from "
+    },
+    {
+      "expression": "\"150\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"181\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and for the query ranging from "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"217\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Incorporating the frequency information in the subspace modeling resulted in a "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -63,6 +133,7 @@
     },
     {
       "expression": "\"92.01\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

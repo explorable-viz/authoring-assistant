@@ -3,39 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "1 2 , lblstm Table V shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table V, l1 denotes "
+      "value": "1 2 , "
     },
     {
-      "expression": "\"l1\"",
+      "expression": "\"lblstm\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the Transformer model under attack (e.g. en-de), l2 denotes "
+      "value": " Table V shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table V, l1 denotes the Transformer model under attack (e.g. en-de), l2 denotes the other Transformer model (e.g. en-fr), and "
     },
     {
-      "expression": "\"l2\"",
+      "expression": "\"lblstm\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the other Transformer model (e.g. en-fr), and lblstm are the BLSTM counterparts of "
-    },
-    {
-      "expression": "\"l1\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"l2\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " are the BLSTM counterparts of l1 and l2."
     }
   ],
   "variables": {},

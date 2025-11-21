@@ -3,47 +3,331 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compared our three proposed models for the three loss functions Lτ , Lτ ce, and Lτ h, and their linear (unweighted) combination L∗, on TE3\u2021 and TD\u2021, for which the results are shown in Table 4. A trend that can be observed is that overall performance on TD\u2021 is "
+      "value": "We compared our "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " proposed models for the "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " loss functions "
+    },
+    {
+      "expression": "\"Lτ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Lτ ce\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"Lτ h\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and their linear (unweighted) combination "
+    },
+    {
+      "expression": "\"L∗\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", on "
+    },
+    {
+      "expression": "\"TE3\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"TD\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", for which the results are shown in Table 4.  A trend that can be observed is that overall performance on "
+    },
+    {
+      "expression": "\"TD\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than that of TE3\u2021. If we compare loss functions Lτ , Lτ ce, and Lτh, and combination L∗, it can be noticed that, although all loss functions seem to give fairly similar performance, Lτ gives the most robust results (never lowest), especially noticeable for the smaller dataset TD\u2021. The combination of losses L∗ shows mixed results, and has "
+      "value": " than that of "
+    },
+    {
+      "expression": "\"TE3\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". If we compare loss functions "
+    },
+    {
+      "expression": "\"Lτ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Lτ ce\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"Lτh\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and combination "
+    },
+    {
+      "expression": "\"L∗\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it can be noticed that, although all loss functions seem to give fairly similar performance, "
+    },
+    {
+      "expression": "\"Lτ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives the most robust results (never "
+    },
+    {
+      "expression": "\"lowest\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), especially noticeable for the smaller dataset "
+    },
+    {
+      "expression": "\"TD\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The combination of losses "
+    },
+    {
+      "expression": "\"L∗\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows mixed results, and has "
     },
     {
       "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance for S-TLM and C-TLM, but "
+      "value": " performance for "
+    },
+    {
+      "expression": "\"S-TLM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"C-TLM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance for TL2RTL. Moreover, we can clearly see that on TE3\u2021, CTLM performs "
+      "value": " performance for "
+    },
+    {
+      "expression": "\"TL2RTL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Moreover, we can clearly see that on "
+    },
+    {
+      "expression": "\"TE3\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"CTLM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the indirect models, across all loss functions. On TD\u2021, the indirect models seem to perform slightly "
+      "value": " than the indirect models, across all loss functions.  On "
+    },
+    {
+      "expression": "\"TD\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the indirect models seem to perform slightly "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The difference between C-TLM and S-TLM is small on the smaller TD\u2021. On TE3\u2021, the larger dataset, C-TLM clearly outperforms S-TLM across all loss functions."
+      "value": ". The difference between "
+    },
+    {
+      "expression": "\"C-TLM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"S-TLM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is small on the smaller "
+    },
+    {
+      "expression": "\"TD\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  On "
+    },
+    {
+      "expression": "\"TE3\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the larger dataset, "
+    },
+    {
+      "expression": "\"C-TLM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " clearly "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"S-TLM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across all loss functions,"
     }
   ],
   "variables": {},

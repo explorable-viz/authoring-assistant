@@ -3,18 +3,56 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In Table 3 and Figure 1, the results of the experiment are presented. Triframes based on WATSET clustering "
+      "value": "In Table 3 and Figure 1, the results of the experiment are presented. "
     },
     {
-      "expression": "\"outperformed\"",
+      "expression": "\"Triframes\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the other methods on both Verb F1 and overall Frame F1. The use of the WATSET fuzzy clustering algorithm that splits the hubs by disambiguating them leads to "
+      "value": " based on "
+    },
+    {
+      "expression": "\"WATSET clustering\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperformed the other methods on both "
+    },
+    {
+      "expression": "\"Verb F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and overall "
+    },
+    {
+      "expression": "\"Frame F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  the use of the "
+    },
+    {
+      "expression": "\"WATSET fuzzy clustering algorithm\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that splits the hubs by disambiguating them leads to "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

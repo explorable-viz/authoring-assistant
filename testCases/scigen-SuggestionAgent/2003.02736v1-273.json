@@ -3,18 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results for the tested systems are given in Table 2. Again we saw large gains from the BERT based models over the baseline from (Zubiaga et al., 2017) and the "
+      "value": "The results for the tested systems are given in Table 2. Again we saw large gains from the "
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "-layer BiLSTM. Compared to training solely on PHEME, fine tuning from basic citation needed detection saw very little improvement ("
+      "value": " based models over the baseline from (Zubiaga et al., 2017) and the "
+    },
+    {
+      "expression": "\"2-layer BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Compared to training solely on PHEME, fine tuning from basic citation needed detection saw very little improvement ("
     },
     {
       "expression": "\"0.1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +34,7 @@
     },
     {
       "expression": "\"1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,14 +43,25 @@
     },
     {
       "expression": "\"0.7\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1 points over the baseline and lower overall variance than vanilla PU learning, meaning that the results with PUC are more consistent across runs. When models are ensembled, pretraining with vanilla PU learning improved over no pretraining by almost "
+      "value": " F1 points over the baseline and "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " overall variance than vanilla PU learning, meaning that the results with PUC are more consistent across runs. When models are ensembled, pretraining with vanilla PU learning improved over no pretraining by almost "
     },
     {
       "expression": "\"2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

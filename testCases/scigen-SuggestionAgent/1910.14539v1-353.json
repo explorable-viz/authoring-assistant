@@ -7,11 +7,21 @@
     },
     {
       "expression": "\"5.7\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU improvement on Rotowire-test by our English NLG model compared to the previous state of the art."
+      "value": " BLEU improvement on "
+    },
+    {
+      "expression": "\"Rotowire-test\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by our English NLG model compared to the previous state of the art."
     }
   ],
   "variables": {},

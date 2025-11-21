@@ -7,30 +7,34 @@
     },
     {
       "expression": "\"top\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " tuning data scores for AVG COS SIM (Table 1) show that the Google embeddings with TF*IDF weighting yield the "
+      "value": " tuning data scores for AVG COS SIM (Table 1) show that the "
     },
     {
-      "expression": "\"top\"",
+      "expression": "\"Google embeddings\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F score for all three concept input types ("
+      "value": " with "
     },
     {
-      "expression": "\".881\"",
+      "expression": "\"TF*IDF weighting\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " - "
+      "value": " yield the top F score for all three concept input types ("
     },
     {
-      "expression": "\".945\"",
+      "expression": "\".881 - .945\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"best overall\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -47,35 +52,57 @@
     },
     {
       "expression": "\".945\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") is produced in the setting Both, which provides the most information. Actually, this is true for all four weighting schemes for both GloVe and Google, while fastText consistently yields its "
+      "value": ") is produced in the setting "
     },
     {
-      "expression": "\"top\"",
+      "expression": "\"Both\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F scores ("
+      "value": ", which provides the most information. Actually, this is true for all four weighting schemes for both "
     },
     {
-      "expression": "\".840\"",
+      "expression": "\"GloVe\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " - "
+      "value": " and "
     },
     {
-      "expression": "\".911\"",
+      "expression": "\"Google\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") in the Label setting, which provides the least information."
+      "value": ", while fastText consistently yields its top F scores ("
+    },
+    {
+      "expression": "\".840 - .911\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") in the "
+    },
+    {
+      "expression": "\"Label\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " setting, which provides the least information."
     }
   ],
   "variables": {},

@@ -3,34 +3,56 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Then, this projection is applied to the second model embeddings of "
+      "value": "Then, this projection is applied to the second model embeddings of the "
     },
     {
       "expression": "\"47\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " locations, which are subject to armed conflicts in the year 2001 ("
+      "value": " locations, which are subject to armed conflicts in the year "
+    },
+    {
+      "expression": "\"2001\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"38\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " after skipping pairs with outof-vocabulary elements). Table 2 demonstrates the resulting performance (reflecting how close the predicted vectors are to the actual armed groups active in this or that location). Note that "
+      "value": " after skipping pairs with outof-vocabulary elements). Table 2 demonstrates the resulting performance (reflecting how close the predicted vectors are to the actual armed groups active in this or that location). Note that out of "
     },
     {
-      "expression": "\"out of 38\"",
+      "expression": "\"38\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " pairs from 2001, "
+      "value": " pairs from "
+    },
+    {
+      "expression": "\"2001\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
     },
     {
       "expression": "\"31\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

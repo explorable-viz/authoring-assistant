@@ -3,23 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "From Table 3, it can be seen that our model "
+      "value": "From "
     },
     {
-      "expression": "\"surpasses\"",
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the local-context baseline for Europarl showing that the wider context is indeed beneficial. For En-Ru, it can be seen that using previous sentence is "
+      "value": ", it can be seen that our model surpasses the local-context baseline for "
     },
     {
-      "expression": "\"sufficient\"",
+      "expression": "\"Europarl\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " showing that the wider context is indeed beneficial  For En-Ru, it can be seen that using previous sentence is sufficient"
     }
   ],
   "variables": {},

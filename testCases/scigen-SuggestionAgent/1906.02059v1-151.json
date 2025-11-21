@@ -7,46 +7,88 @@
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than BIGRU-ATT, while HAN is "
+      "value": " than "
     },
     {
-      "expression": "\"10\"",
+      "expression": "\"BIGRU-ATT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": ", while "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"HAN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% "
+      "value": " is "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"10%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", respectively. HIER-BERT further improves the results, outperforming HAN by "
+      "value": " and "
     },
     {
-      "expression": "\"17\"",
+      "expression": "\"3%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. HIER-BERT has "
+      "value": " better, respectively. "
+    },
+    {
+      "expression": "\"HIER-BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " further improves the results, outperforming "
+    },
+    {
+      "expression": "\"HAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"17%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"HIER-BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -55,11 +97,21 @@
     },
     {
       "expression": "\".527\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), indicating a moderate positive correlation (> 0.5), which is not the case for the rest of the methods."
+      "value": "), indicating a moderate positive correlation (> "
+    },
+    {
+      "expression": "\"0.5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), which is not the case for the rest of the methods."
     }
   ],
   "variables": {},

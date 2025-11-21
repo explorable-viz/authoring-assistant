@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows the quality of word representations in terms of the correlation between word similarity scores obtained by the proposed models and word similarity scores defined by humans. For that can see First, we each task, character only models had "
+      "value": "Table 1 shows the quality of word representations in terms of the correlation between word similarity scores obtained by the proposed models and word similarity scores defined by humans. for that can see First, we each task, character only models had "
     },
     {
       "expression": "\"significantly worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"significantly worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"significantly better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

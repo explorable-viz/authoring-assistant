@@ -3,15 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the performance of baselines against user simulator and human on the two datasets. Equation (11) is also proven effective in delivering "
+      "value": "Table "
     },
     {
-      "expression": "\"more\"",
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " achievement, which can be seen from the second and last rows of Table 3. The results are consistent with those in Table 3."
+      "value": " shows the performance of baselines against user simulator and human on the two datasets.  Equation (11)) is also proven effective in deliver  ing "
+    },
+    {
+      "expression": "\"more achievement\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which can be seen from the second and last rows of Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The results are consistent with those in Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

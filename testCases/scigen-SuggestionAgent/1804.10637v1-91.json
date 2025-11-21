@@ -3,34 +3,65 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows micro F1 scores on 5 out-domain test sets. Besides ours, only Cheng and Roth (2013) employs several mention relations. Mentnorm achieves "
+      "value": "Table 2 shows micro F1 scores on "
     },
     {
-      "expression": "\"the highest\"",
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1 scores on MSNBC and ACE2004. On average, ment-norm's F1 score is "
+      "value": " out-domain test sets. Besides ours, only Cheng and Roth (2013) employs several mention relations. "
     },
     {
-      "expression": "\"0.3\"",
+      "expression": "\"Mentnorm\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% higher than that of Ganea and Hofmann (2017), but "
+      "value": " achieves the "
     },
     {
-      "expression": "\"0.2\"",
+      "expression": "\"highest\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% lower than Guo and Barbosa (2016)'s. It is worth noting that Guo and Barbosa (2016) performs exceptionally well on WIKI, but "
+      "value": " F1 scores on MSNBC and ACE2004. On average, "
     },
     {
-      "expression": "\"substantially worse\"",
+      "expression": "\"ment-norm's\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 score is "
+    },
+    {
+      "expression": "\"0.3%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher than that of Ganea and Hofmann (2017), but "
+    },
+    {
+      "expression": "\"0.2%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lower than Guo and Barbosa (2016)'s. It is worth noting that Guo and Barbosa (2016) performs exceptionally well on WIKI, but substantially "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -39,19 +70,39 @@
     },
     {
       "expression": "\"lower\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " average F1 scores compared to "
+      "value": " average F1 scores compared to the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " previous model. The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."
+      "value": " previous model. The experimental results show that "
+    },
+    {
+      "expression": "\"ment-norm\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"rel-norm\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and that mention padding plays an important role."
     }
   ],
   "variables": {},

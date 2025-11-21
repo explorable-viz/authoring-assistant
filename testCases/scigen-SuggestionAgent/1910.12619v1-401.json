@@ -3,23 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We find that normalization of both structural and lexical features leads to a "
+      "value": "We find that "
     },
     {
-      "expression": "\"significant\"",
+      "expression": "\"normalization\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance gain. Normalization of the frequency feature seems to "
+      "value": " of both "
     },
     {
-      "expression": "\"hurt\"",
+      "expression": "\"structural\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance (Table 3)"
+      "value": " and "
+    },
+    {
+      "expression": "\"lexical\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " features leads to a significant performance gain. "
+    },
+    {
+      "expression": "\"Normalization\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] of the "
+    },
+    {
+      "expression": "\"frequency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " feature seems to hurt performance (Table 3)"
     }
   ],
   "variables": {},

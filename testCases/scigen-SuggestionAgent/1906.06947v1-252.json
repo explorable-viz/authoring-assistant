@@ -3,39 +3,88 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows the overall performance of schema matching on GNBusinessTest. From the table, we can see that ODEE-FER achieves "
+      "value": "Table 4 shows the overall performance of schema matching on GNBusinessTest. From the table, we can see that "
+    },
+    {
+      "expression": "\"ODEE-FER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1 scores among all the methods. By comparing Nguyen et al. (2015) and ODEEF (p = 0.01), we can see that using continuous contextual features gives "
+      "value": " F1 scores among all the methods. By comparing "
+    },
+    {
+      "expression": "\"Nguyen et al. (2015)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ODEEF (p = 0.01)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we can see that using continuous contextual features gives "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than discrete features. Among ODEE models, ODEE-FE gives a "
+      "value": " performance than discrete features. Among ODEE models, "
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"ODEE-FE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% gain in F1 score against ODEE-F, there is a "
+      "value": " gives a "
     },
     {
-      "expression": "\"1\"",
+      "expression": "\"2%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% gain in F"
+      "value": " gain in F1 score against "
+    },
+    {
+      "expression": "\"ODEE-F\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", there is a "
+    },
+    {
+      "expression": "\"1%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gain in F"
     }
   ],
   "variables": {},

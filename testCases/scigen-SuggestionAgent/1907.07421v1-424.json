@@ -3,15 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the experimental results of the slot-independent SUMBT model on MultiWOZ corpus. The SUMBT greatly surpassed the performances of previous approaches by yielding "
+      "value": "Table 2 shows the experimental results of the "
     },
     {
-      "expression": "\"42.4\"",
+      "expression": "\"SUMBT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% joint accuracy."
+      "value": " model on MultiWOZ corpus.  The "
+    },
+    {
+      "expression": "\"SUMBT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " greatly surpassed the performances of previous approaches by yielding "
+    },
+    {
+      "expression": "\"42.4%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " joint accuracy."
     }
   ],
   "variables": {},

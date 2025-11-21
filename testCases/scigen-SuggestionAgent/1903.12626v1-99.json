@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The purpose of Table 5 is to show that the traditional CNN classifier in Phase 2 was "
+      "value": "The purpose of Table 5 is to show that the traditional "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " classifier in Phase "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " was "
     },
     {
       "expression": "\"highly accurate\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

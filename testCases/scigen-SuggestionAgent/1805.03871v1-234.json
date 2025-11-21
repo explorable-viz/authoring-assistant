@@ -3,39 +3,115 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 reports the precision, recall, F1 score, area under the precision-recall curve (AUC) per class, as well as micro- and macro-averages. The self-attention mechanism (BILSTM-ATT) leads to "
+      "value": "Table "
     },
     {
-      "expression": "\"clear\"",
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " overall improvements (in macro and micro F1 and AUC, Table 3) "
+      "value": " reports the precision, recall, F1 score, area under the precision-recall curve ("
     },
     {
-      "expression": "\"comparing\"",
+      "expression": "\"AUC\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to the plain BILSTM, supporting the hypothesis that selfattention allows the classifier to focus on indicative tokens. Allowing the BILSTM to consider tokens of neighboring sentences (X-BILSTM-ATT) does not lead to any "
+      "value": "), per class, as well as micro- and macro-averages.  The self-attention mechanism ("
     },
     {
-      "expression": "\"clear\"",
+      "expression": "\"BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " overall improvements. The hierarchical H-BILSTM-ATT clearly "
+      "value": ") leads to clear overall improvements (in macro and micro "
+    },
+    {
+      "expression": "\"F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"AUC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")"
+    },
+    {
+      "expression": "\"comparing to the plain BILSTM\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " supporting the hypothesis that selfattention allows the classifier to focus on indicative tokens. Allowing the "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to consider tokens of neighboring sentences ("
+    },
+    {
+      "expression": "\"X-BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") does not lead to any clear overall improvements.  The hierarchical "
+    },
+    {
+      "expression": "\"H-BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " clearly "
     },
     {
       "expression": "\"outperforms\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the other three methods, supporting the hypothesis that considering entire sections and allowing the sentence embeddings to interact in the upper BILSTM (Fig. 3) is beneficial."
+      "value": " the other three methods, supporting the hypothesis that considering entire sections and allowing the sentence embeddings to interact in the upper "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Fig. 3) is beneficial."
     }
   ],
   "variables": {},

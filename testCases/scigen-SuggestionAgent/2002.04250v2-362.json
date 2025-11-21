@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"NonAR+MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"AR+MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"Non-AR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,14 +52,16 @@
     },
     {
       "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is "
+      "value": " is slightly "
     },
     {
-      "expression": "\"slightly better\"",
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -63,14 +70,16 @@
     },
     {
       "expression": "\"Non-AR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". For Content Richness, the "
+      "value": ". For Content Richness, the is significantly "
     },
     {
-      "expression": "\"is significantly better\"",
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -79,6 +88,7 @@
     },
     {
       "expression": "\"NonAR+MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -87,6 +97,7 @@
     },
     {
       "expression": "\"AR+MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -94,28 +105,40 @@
       "value": ", and the gap is "
     },
     {
-      "expression": "\"greater than\"",
+      "expression": "\"greater\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " dialogue coherence.  The output from the "
+      "value": " than dialogue coherence. The output from the "
     },
     {
       "expression": "\"AR+MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model is thus "
+      "value": " model is thus by far "
     },
     {
-      "expression": "\"by far less diverse\"",
+      "expression": "\"less\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than nonAR+MMI, which obtains the MMI score for each generated token."
+      "value": " diverse than "
+    },
+    {
+      "expression": "\"nonAR+MMI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which obtains the MMI score for each generated token."
     }
   ],
   "variables": {},

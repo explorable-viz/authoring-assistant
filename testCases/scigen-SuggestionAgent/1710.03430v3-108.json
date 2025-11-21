@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 5 indicates the proposed "
+      "value": "Table 5 indicates "
     },
     {
-      "expression": "\"RDE-LTC\"",
+      "expression": "\"the proposed RDE-LTC\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"HRDE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -22,31 +24,17 @@
       "value": ", and the that "
     },
     {
-      "expression": "\"HRDE-LTC\"",
+      "expression": "\"HRDE-LTC model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model show performance "
-    },
-    {
-      "expression": "\"improvements\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " when "
-    },
-    {
-      "expression": "\"compared to\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the baseline model, "
+      "value": " show performance improvements when compared to the baseline model, "
     },
     {
       "expression": "\"TFIDF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +43,7 @@
     },
     {
       "expression": "\"RDE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

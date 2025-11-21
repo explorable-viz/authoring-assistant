@@ -3,23 +3,61 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our results in Table 3 are consistent with these observations, where we see improvements in most tasks, but the difference is not "
+      "value": "Our "
     },
     {
-      "expression": "\"as significant\"",
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " as the probing tasks, except in TREC question classification where increasing K leads to "
+      "value": " in Table 3 are consistent with these observations, where we see improvements in most "
+    },
+    {
+      "expression": "\"tasks\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but the difference is not as "
+    },
+    {
+      "expression": "\"significant\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as the "
+    },
+    {
+      "expression": "\"probing tasks\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", except in "
+    },
+    {
+      "expression": "\"TREC question classification\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " where increasing K leads to "
     },
     {
       "expression": "\"much better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance."
+      "value": "] performance."
     }
   ],
   "variables": {},

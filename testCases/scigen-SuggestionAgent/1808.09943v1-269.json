@@ -3,23 +3,61 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "First, from the EnFr results in Table 3, we are in line with GNMT (Wu et al., 2016), and within "
+      "value": "First, from the "
+    },
+    {
+      "expression": "\"EnFr\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results in Table 3, we are in line with "
+    },
+    {
+      "expression": "\"GNMT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Wu et al., 2016), and within "
     },
     {
       "expression": "\"2\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU points of the RNN and Transformer models investigated by Chen et al. (2018). We compare quite favorably with Lee et al. (2017), exceeding their reported scores by "
+      "value": " BLEU points of the "
     },
     {
-      "expression": "\"3-6\"",
+      "expression": "\"RNN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " points,"
+      "value": " and "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models investigated by Chen et al. (2018).  we compare quite favorably with Lee et al. (2017), exceeding their reported scores by "
+    },
+    {
+      "expression": "\"3-6 points\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

@@ -3,42 +3,101 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results using the corrected rank eval TransWeight, the composition model proposed in this paper, delivers consistent results, being "
+      "value": "The results using the corrected rank eval "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"TransWeight\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performing model across all languages and phrase types. The difference in performance to the runner-up model, FullLex+, translates into more of the test phrases being close to the original repachieving a rank ≤ 5. This resentations, i.e. difference ranges from "
+      "value": ", the composition model proposed in this paper, delivers consistent results, being "
     },
     {
-      "expression": "\"8\"",
+      "expression": "\"the best performing\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of the test phrases in the German compounds dataset to less than "
+      "value": " model across all languages and phrase types. The difference in performance to the runner-up model, "
     },
     {
-      "expression": "\"1%\"",
+      "expression": "\"FullLex+\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for English adjective-noun phrases. However, it is important to note the substantial difference in the number of parameters used by the two models: all TransWeight models use 100 transformations and have, therefore, a constant number of "
+      "value": ", translates into more of the test phrases being close to the original repachieving a rank ≤ "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This resentations, i.e. difference ranges from "
+    },
+    {
+      "expression": "\"8%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the test phrases in the German compounds dataset to "
+    },
+    {
+      "expression": "\"less than 1%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for English adjective-noun phrases. However, it is important to note the substantial difference in the number of parameters used by the two models: all "
+    },
+    {
+      "expression": "\"TransWeight\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models use "
+    },
+    {
+      "expression": "\"100\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " transformations and have, therefore, a constant number of "
     },
     {
       "expression": "\"12,020,200\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " parameters. In contrast the number of parameters used by FullLex+ increases with the size of the training vocabulary, reaching "
+      "value": " parameters. In contrast the number of parameters used by "
+    },
+    {
+      "expression": "\"FullLex+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increases with the size of the training vocabulary, reaching "
     },
     {
       "expression": "\"739,320,200\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -47,6 +106,7 @@
     },
     {
       "expression": "\"52\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -54,63 +114,233 @@
       "value": " adjectives like new, good, small, public, etc. are extremely frequent, occurring more than "
     },
     {
-      "expression": "\"500\"",
+      "expression": "\"500 times\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " times in the training portion of the adjective-noun sample dataset. Because the adjective is always the first element of the composition, the phrases that include these frequent adjectives amount to around "
+      "value": " in the training portion of the adjective-noun sample dataset. Because the adjective is always the first element of the composition, the phrases that include these frequent adjectives amount to around "
     },
     {
       "expression": "\"24.8%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the test dataset. Frequent constituents are more likely to be modeled correctly by composition \u2013 thus leading to "
+      "value": " of the test dataset. Frequent constituents are more likely to be modeled correctly by composition \u2013 thus leading to better results.  The additive models ("
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"Addition\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results.  The additive models (Addition, SAddition, VAddition) are the least competitive models in our evaluation, on all datasets. The results strongly argue for the point that additive models are too limited for composition. An adequate composed representation cannot be obtained simply as an ("
+      "value": ", "
+    },
+    {
+      "expression": "\"SAddition\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"VAddition\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") are the least competitive models in our evaluation, on all datasets. The results strongly argue for the point that additive models are too limited for composition. An adequate composed representation cannot be obtained simply as an ("
     },
     {
       "expression": "\"weighted\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") average of the input components.  The Matrix model clearly outperforms the additive models. However, its results are modest in comparison to models like WMask+, BiLinear, FullLex+ and TransWeight. This is to be expected: having a single affine transformation limits the model's capacity to adapt to all the possi  ble input vectors u and v. Because of its small number of parameters, the Matrix model can only capture the general trends in the data.  More interaction between u and v is promoted by the BiLinear model through the d bilinear forms in the tensor  ∈ Rn×d×n. This capacity to absorb more information from the training data translates into "
+      "value": ") average of the input components.  The "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"Matrix\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results \u2014 the BiLinear model outperforms the Matrix model on all datasets.  In evaluating FullLex we tried to mitigate its treatment of unknown words. Instead of using unknown matrices to model composition of phrases not in the training data, we take a nearest neighbor approach to composition. Take for example the phrase sky-blue dress, where sky-blue does not occur in train. Our implementation, FullLex+, looks for the nearest neighbor of sky-blue that appears in train, blue and uses the matrix associated with it for building the composed representation. The same approach is also used for the WMask model, which is referred to as WMask+.  On this dataset WMask+ fares only slightly "
+      "value": " model clearly outperforms the additive models. However, its results are modest in comparison to models like "
     },
     {
-      "expression": "\"worse\"",
+      "expression": "\"WMask+\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than FullLex+ ("
+      "value": ", "
+    },
+    {
+      "expression": "\"BiLinear\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"FullLex+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"TransWeight\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This is to be expected: having a single affine transformation limits the model's capacity to adapt to all the possi  ble input vectors u and v. Because of its small number of parameters, the "
+    },
+    {
+      "expression": "\"Matrix\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model can only capture the general trends in the data.  More interaction between u and v is promoted by the "
+    },
+    {
+      "expression": "\"BiLinear\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model through the d bilinear forms in the tensor  ∈ Rn×d×n. This capacity to absorb more information from the training data translates into better results \u2014 the "
+    },
+    {
+      "expression": "\"BiLinear\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model outperforms the "
+    },
+    {
+      "expression": "\"Matrix\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model on all datasets.  In evaluating "
+    },
+    {
+      "expression": "\"FullLex\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " we tried to mitigate its treatment of unknown words. Instead of using unknown matrices to model composition of phrases not in the training data, we take a nearest neighbor approach to composition. Take for example the phrase sky-blue dress, where sky-blue does not occur in train. Our implementation, "
+    },
+    {
+      "expression": "\"FullLex+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", looks for the nearest neighbor of sky-blue that appears in train, blue and uses the matrix associated with it for building the composed representation. The same approach is also used for the "
+    },
+    {
+      "expression": "\"WMask\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, which is referred to as "
+    },
+    {
+      "expression": "\"WMask+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  On this dataset "
+    },
+    {
+      "expression": "\"WMask+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " fares only slightly worse than "
+    },
+    {
+      "expression": "\"FullLex+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"0.70%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), an indication that FullLex+ suffers from data sparsity in such scenarios and cannot produce good results without an adequate amount of training data. By contrast, the gap between the two models increases considerably on datasets with more phrases per word \u2014 e.g. FullLex+ outperforms WMask+ with "
+      "value": "), an indication that "
+    },
+    {
+      "expression": "\"FullLex+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " suffers from data sparsity in such scenarios and cannot produce good results without an adequate amount of training data. By contrast, the gap between the two models increases considerably on datasets with more phrases per word \u2014 e.g. "
+    },
+    {
+      "expression": "\"FullLex+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"WMask+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with "
     },
     {
       "expression": "\"8.07%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -119,6 +349,7 @@
     },
     {
       "expression": "\"11.6\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {

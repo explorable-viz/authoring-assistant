@@ -3,23 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We find the inference times are "
+      "value": "We find the "
+    },
+    {
+      "expression": "\"inference times\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
     },
     {
       "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in the former case with "
+      "value": " in the former case with negligible difference in "
     },
     {
-      "expression": "\"negligible\"",
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " difference in BLEU scores. The inference times of the various models are mentioned in Table 1."
+      "value": ".  The "
+    },
+    {
+      "expression": "\"inference times\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the various "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are mentioned in Table 1."
     }
   ],
   "variables": {},

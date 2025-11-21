@@ -3,18 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Switching to ELMo word embeddings improves performance by "
+      "value": "Switching to "
     },
     {
-      "expression": "\"2.9\"",
+      "expression": "\"ELMo\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points on an average, corresponding to about "
+      "value": " word embeddings improves performance by "
+    },
+    {
+      "expression": "\"2.9 percentage points\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on an average, corresponding to about "
     },
     {
       "expression": "\"53\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +34,7 @@
     },
     {
       "expression": "\"32\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,14 +43,34 @@
     },
     {
       "expression": "\"60%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the improvement) correspond to A-but-B and negation style sentences, As further evidence that ELMo helps on these specific constructions, the non-ELMo baseline model (no-project, no-distill) gets "
+      "value": " of the improvement) correspond to A-but-B and negation style sentences, As further evidence that "
+    },
+    {
+      "expression": "\"ELMo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " helps on these specific constructions, the non-"
+    },
+    {
+      "expression": "\"ELMo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline model (no-project, no-distill) gets "
     },
     {
       "expression": "\"255\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +79,7 @@
     },
     {
       "expression": "\"89\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +88,7 @@
     },
     {
       "expression": "\"34.8%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {

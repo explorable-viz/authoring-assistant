@@ -3,34 +3,56 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "text of a story, and in combination. Results are shown in Table 2. The models based on the headline and text body give "
+      "value": "text of a story, and in combination. Results are shown in Table 2. The models based on the "
     },
     {
-      "expression": "\"a similar\"",
+      "expression": "\"headline\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1 score. However, while the headline model performs "
+      "value": " and "
     },
     {
-      "expression": "\"poorly\"",
+      "expression": "\"text body\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on precision, perhaps due to the short text, the model based on the text body performs "
+      "value": " give a similar F1 score. However, while the "
     },
     {
-      "expression": "\"poorly\"",
+      "expression": "\"headline model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on recall. The model based on the full text of headline and body gives "
+      "value": " performs poorly on precision, perhaps due to the short text, the model based on the "
+    },
+    {
+      "expression": "\"text body\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs poorly on recall. The model based on the full "
+    },
+    {
+      "expression": "\"text of headline and body\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives "
     },
     {
       "expression": "\"the best performance\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

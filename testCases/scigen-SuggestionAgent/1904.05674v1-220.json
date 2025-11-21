@@ -3,23 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Results for the paraphrase identification task are presented in Table 3. AvgD yields "
+      "value": "Results for the "
+    },
+    {
+      "expression": "\"paraphrase identification\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task are presented in Table 3. "
+    },
+    {
+      "expression": "\"AvgD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " yields "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results especially in F1 metric showing that cross-topic representations are "
+      "value": " results especially in "
     },
     {
-      "expression": "\"richer\"",
+      "expression": "\"F1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than single embeddings baseline (Global-DSM)."
+      "value": " metric showing that "
+    },
+    {
+      "expression": "\"cross-topic representations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are semantically richer than "
+    },
+    {
+      "expression": "\"single embeddings baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] ("
+    },
+    {
+      "expression": "\"Global-DSM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
     }
   ],
   "variables": {},

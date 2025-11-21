@@ -3,31 +3,61 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The answer is in Table II where we performed the same task, but this time we swapped our semantic segmentation network with the pixel-level ground-truth provided along with the data. This represents the "
+      "value": "The answer is in Table II where we performed the same task, but this time we swapped our "
     },
     {
-      "expression": "\"upper-bound\"",
+      "expression": "\"semantic segmentation network\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performances, as no tool will produce a "
+      "value": "  with the "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"pixel-level ground-truth\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " segmentation than the ground-truth. In this scenario our method performed at "
+      "value": " provided along with the data. This represents the "
     },
     {
-      "expression": "\"100\"",
+      "expression": "\"upper-bound performances\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% line IU, reinforcing our previous observation that our text-line extraction method has made the mistakes only in the presence of wrong results from the semantic segmentation step."
+      "value": ", as no tool will produce a better segmentation than the "
+    },
+    {
+      "expression": "\"ground-truth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". In this scenario our method performed at "
+    },
+    {
+      "expression": "\"100%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " line IU, reinforcing our previous observation that our text-line extraction method has made the mistakes only in the presence of wrong results from the "
+    },
+    {
+      "expression": "\"semantic segmentation step\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

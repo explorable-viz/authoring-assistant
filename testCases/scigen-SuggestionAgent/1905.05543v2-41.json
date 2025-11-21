@@ -3,23 +3,79 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Each average. According to our results (Table 2), the Wikification success ratios of eBay and Illegal Onion named entities is "
+      "value": "each "
     },
     {
-      "expression": "\"comparable\"",
+      "expression": "\"average\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and relatively low. However, sites selling legal drugs on Onion have a "
+      "value": ". According to our results (Table 2), the "
     },
     {
-      "expression": "\"much higher\"",
+      "expression": "\"Wikification success ratios\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " Wikification percentage."
+      "value": " of "
+    },
+    {
+      "expression": "\"eBay\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Illegal Onion\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " named entities is comparable and relatively "
+    },
+    {
+      "expression": "\"low\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, sites selling legal drugs on "
+    },
+    {
+      "expression": "\"Onion\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " have a much "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"Wikification percentage\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

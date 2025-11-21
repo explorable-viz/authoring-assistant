@@ -7,14 +7,25 @@
     },
     {
       "expression": "\"the highest\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " CIDEr score of "
+      "value": " "
+    },
+    {
+      "expression": "\"CIDEr score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
     },
     {
       "expression": "\"123.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

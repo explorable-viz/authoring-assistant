@@ -7,27 +7,30 @@
     },
     {
       "expression": "\"2.39\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ROUGE-1 improvements compared to the ML+RL with intra-attn approach(previous SOTA) carries over to this dataset, which is a large margin. On ROUGE-2, our model also get an improvement of "
+      "value": " ROUGE-1 improvements compared to the "
+    },
+    {
+      "expression": "\"ML+RL with intra-attn approach(previous SOTA)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is a large margin. On ROUGE-2, our model also get an improvement of "
     },
     {
       "expression": "\"0.51\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The experiment proves that our approach can "
-    },
-    {
-      "expression": "\"outperform\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " competitive methods on different data distributions."
+      "value": ". The experiment proves that our approach can outperform competitive methods on different data distributions."
     }
   ],
   "variables": {},

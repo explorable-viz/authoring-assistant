@@ -3,10 +3,56 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 compares the accuracy of our model on the test data with two baselines and two state-of-theart comparable systems. The MT baseline simply consists of the accuracy of the mt sentences with respect to the pe ground truth. The other baseline is given by a statistical PE (SPE) system (Simard et al., 2007) chosen by the WMT17 organizers. Table 2 shows that when our model is trained with only the "
+      "value": "Table 2 compares the accuracy of our model on the test data with "
+    },
+    {
+      "expression": "\"two\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baselines and "
+    },
+    {
+      "expression": "\"two\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " state-of-theart comparable systems. The "
+    },
+    {
+      "expression": "\"MT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline simply consists of the accuracy of the mt sentences with respect to the pe ground truth. The other baseline is given by a statistical PE (SPE) system ("
+    },
+    {
+      "expression": "\"Simard et al., 2007\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") chosen by the "
+    },
+    {
+      "expression": "\"WMT17\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " organizers. Table 2 shows that when our model is trained with only the "
     },
     {
       "expression": "\"11K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,14 +61,25 @@
     },
     {
       "expression": "\"12K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " WMT16 sentences are added, its accuracy is still well below that of the baselines. However, when the "
+      "value": " WMT16 sentences are added, its accuracy is still well "
+    },
+    {
+      "expression": "\"below\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that of the baselines. However, when the "
     },
     {
       "expression": "\"500K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,38 +88,34 @@
     },
     {
       "expression": "\"significantly\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". In addition, we have compared our model with two recent systems that have used our  same training settings ("
+      "value": ". In addition, we have compared our model with "
     },
     {
-      "expression": "\"500K\"",
+      "expression": "\"two\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " artificial triplets + "
+      "value": " recent systems that have used our same training settings ("
     },
     {
-      "expression": "\"23K\"",
+      "expression": "\"500K artificial triplets + 23K manual triplets oversampled 10 times\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " manual triplets oversampled "
+      "value": "), reporting a slightly "
     },
     {
-      "expression": "\"10\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " times), reporting a "
-    },
-    {
-      "expression": "\"slightly higher\"",
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -70,36 +123,49 @@
       "value": " accuracy than both ("
     },
     {
-      "expression": "\"1.43\"",
+      "expression": "\"1.43 TER and 1.93 BLEU p.p.\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " TER and "
+      "value": " over ("
     },
     {
-      "expression": "\"1.93\"",
+      "expression": "\"Varis and Bojar, 2017\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU p.p. over (Varis and Bojar, 2017) and "
+      "value": ") and "
     },
     {
-      "expression": "\"0.21\"",
+      "expression": "\"0.21 TER and 0.30 BLEU p.p.\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " TER and "
+      "value": " over ("
     },
     {
-      "expression": "\"0.30\"",
+      "expression": "\"B´erard et al., 2017\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU p.p. over (B´erard et al., 2017)). Since their models explicitly predicts edit operations rather than post-edited sentences, we speculate that these two tasks are of comparable intrinsic complexity."
+      "value": ")). Since their models explicitly predicts edit operations rather than post-edited sentences, we speculate that these two tasks are of "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " intrinsic complexity."
     }
   ],
   "variables": {},

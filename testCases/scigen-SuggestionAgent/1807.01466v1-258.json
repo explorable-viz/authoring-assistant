@@ -3,26 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results of unimodal sentiment prediction experiments are shown in Table 2. The verbal models have "
+      "value": "The results of unimodal sentiment prediction experiments are shown in Table 2.  The verbal models have "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance here. On each modality, "
+      "value": " performance here,  On each modality, "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance is achieved by a multi-task learning model. All unimodal models have significantly different performance. p = "
+      "value": " performance is achieved by a multi-task learning model.  All unimodal models have significantly different performance. p = "
     },
     {
       "expression": "\"0.009\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,35 +34,111 @@
     },
     {
       "expression": "\"0.001\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for Visual and Vocal S+I models. In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the S model, the S+P model has increased focus on the polarity of sentiment, while the S+I model has increased focus on the intensity of sentiment. On the verbal modality, the S+P model achieved "
+      "value": " for Visual and Vocal S+I models.  In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the "
+    },
+    {
+      "expression": "\"S\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, the "
+    },
+    {
+      "expression": "\"S+P\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model has increased focus on the polarity of sentiment, while the "
+    },
+    {
+      "expression": "\"S+I\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model has increased focus on the intensity of sentiment. On the verbal modality, the "
+    },
+    {
+      "expression": "\"S+P\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model achieved "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance, while on the visual modality the S+I model achieved "
+      "value": " performance, while on the visual modality the "
+    },
+    {
+      "expression": "\"S+I\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model achieved "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance. For the vocal modality, the S+P+I model achieved "
+      "value": " performance.  For the vocal modality, the "
+    },
+    {
+      "expression": "\"S+P+I\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model achieved "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance, and the S+P model yielded improved performance over that of the S model."
+      "value": " performance, and the "
+    },
+    {
+      "expression": "\"S+P\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model yielded improved performance over that of the "
+    },
+    {
+      "expression": "\"S\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model."
     }
   ],
   "variables": {},

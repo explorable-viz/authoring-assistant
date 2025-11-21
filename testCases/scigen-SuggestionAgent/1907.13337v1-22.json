@@ -3,18 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The automatic evaluation scores are presented in Table 1 and Table 2. Our method outperforms commonly used prefix baselines for this task which take the first 75 characters or 8 words of the source as a summary. Our system achieves "
+      "value": "The automatic evaluation scores are presented in Table 1 and Table 2. Our method outperforms commonly used prefix baselines for this task which take the first "
     },
     {
-      "expression": "\"comparable\"",
+      "expression": "\"75 characters\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results to Wang and Lee (2018) a system based on both GANs and reinforcement training. In Table 1, we also list scores of the state-of-the-art supervised model, an attention based seq-to-seq model of our own implementation, as well as the oracle scores of our method obtained by choosing "
+      "value": " or "
+    },
+    {
+      "expression": "\"8 words\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the source as a summary. Our system achieves comparable results to Wang and Lee (2018) a system based on both GANs and reinforcement training. In Table 1, we also list scores of the state-of-the-art supervised model, an attention based seq-to-seq model of our own implementation, as well as the oracle scores of our method obtained by choosing "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -23,6 +34,7 @@
     },
     {
       "expression": "\"much higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -30,12 +42,13 @@
       "value": ", indicating that our unsupervised method does allow summaries of "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"better quality\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " quality,"
+      "value": "."
     }
   ],
   "variables": {},

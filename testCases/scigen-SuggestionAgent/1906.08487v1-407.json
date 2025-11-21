@@ -3,31 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "From the BLEU scores in Table 2, we can see that although MultiSeq has "
+      "value": "From the BLEU scores in Table 2, we can see that although "
     },
     {
-      "expression": "\"the highest\"",
+      "expression": "\"MultiSeq\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU score, all models have similar BLEU scores and the difference is not that significant. We can clearly notice from human evaluations shown in Table 2 that our model, RL Look-ahead, outperforms "
+      "value": " has the "
     },
     {
-      "expression": "\"all of the others\"",
+      "expression": "\"highest\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"all three\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " evaluated categories."
+      "value": " BLEU score, all models have similar BLEU scores and the difference is not that significant.  We can clearly notice from human evaluations shown in Table 2 that our model, RL Look-ahead, outperforms all of the others in all three evaluated categories."
     }
   ],
   "variables": {},

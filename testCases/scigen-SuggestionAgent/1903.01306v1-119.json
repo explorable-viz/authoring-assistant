@@ -3,31 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "From the evaluation results in Table 2, we observe that the performance "
+      "value": "From the evaluation results in "
     },
     {
-      "expression": "\"slightly degraded\"",
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " without coarse-to-fine attention. We also noticed that the performance "
+      "value": ", we observe that the performance slightly degraded without "
     },
     {
-      "expression": "\"slightly degraded\"",
+      "expression": "\"coarse-tofine attention\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " without KG or using word embeddings, and the performance "
+      "value": ".\r\nWe also noticed that the performance slightly degraded without "
     },
     {
-      "expression": "\"significantly degraded\"",
+      "expression": "\"KG\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " when we removed GCNs."
+      "value": " or using "
+    },
+    {
+      "expression": "\"word embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and the performance significantly degraded when we removed "
+    },
+    {
+      "expression": "\"GCNs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

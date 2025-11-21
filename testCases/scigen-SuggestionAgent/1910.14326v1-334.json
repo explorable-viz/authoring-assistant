@@ -3,15 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We present our results in Table 1. As shown in Table 1, our model CMAML achieves "
+      "value": "We present our results in Table 1. As shown in Table 1, our model "
     },
     {
-      "expression": "\"good\"",
+      "expression": "\"CMAML\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance on quality, personality, and diversity."
+      "value": " achieves good performance on "
+    },
+    {
+      "expression": "\"quality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"personality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"diversity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

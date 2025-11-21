@@ -3,31 +3,79 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "a comparison with existing event extraction and event schema induction datasets, including ASTRE (Nguyen et al., 2016a), MUC 4, ACE 20052 and ERE3, is shown in Table 2. Compared "
+      "value": "a comparison with existing event extraction and event schema induction datasets, including "
     },
     {
-      "expression": "\"with\"",
+      "expression": "\"ASTRE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the other datasets, GNBusiness has a "
+      "value": " ("
     },
     {
-      "expression": "\"much larger\"",
+      "expression": "\"Nguyen et al.\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " number of documents (i.e., news clusters in GNBusiness), and a "
+      "value": ", 2016a), "
     },
     {
-      "expression": "\"comparable\"",
+      "expression": "\"MUC 4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " number of labeled documents."
+      "value": ", "
+    },
+    {
+      "expression": "\"ACE 20052\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ERE3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", is shown in Table 2. Compared with the other datasets, "
+    },
+    {
+      "expression": "\"GNBusiness\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has a "
+    },
+    {
+      "expression": "\"much larger number of documents\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (i.e., news clusters in GNBusiness), and a "
+    },
+    {
+      "expression": "\"comparable number of labeled documents\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

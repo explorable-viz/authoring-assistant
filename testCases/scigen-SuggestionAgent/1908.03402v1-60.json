@@ -3,15 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We then tested the BLEU scores between machine translation results and corresponding gold standard post-editing results on the original development set, the training set and the synthetic data as shown in Table 1. Table 1 shows that there is a "
+      "value": "We then tested the "
     },
     {
-      "expression": "\"significant\"",
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " gap between the synthetic eScape data set (Negri et al., 2018) and the real-life data sets (the development set and the original training set from posteditors),"
+      "value": " between machine translation results and corresponding gold standard post-editing results on the original "
+    },
+    {
+      "expression": "\"development set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
+    },
+    {
+      "expression": "\"training set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"synthetic data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as shown in Table 1.  Table 1 shows that there is a significant gap between the "
+    },
+    {
+      "expression": "\"synthetic eScape data set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Negri et al., 2018) and the real-life data sets ("
+    },
+    {
+      "expression": "\"development set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the original "
+    },
+    {
+      "expression": "\"training set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from posteditors),"
     }
   ],
   "variables": {},

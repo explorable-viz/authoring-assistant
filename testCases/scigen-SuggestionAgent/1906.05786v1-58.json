@@ -3,34 +3,65 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We see small gains from using BI with ensembles on most validation sets, but only on "
-    },
-    {
-      "expression": "\"en2es\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " test. For "
-    },
-    {
-      "expression": "\"en2de\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", by contrast, uniform ensembling is consistently "
-    },
-    {
-      "expression": "\"better\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than oracles on the dev sets, and outperforms "
+      "value": "We see small gains from using "
     },
     {
       "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with "
+    },
+    {
+      "expression": "\"ensembles\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on most validation sets, but only on "
+    },
+    {
+      "expression": "\"en2es\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test.  For "
+    },
+    {
+      "expression": "\"en2de\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", by contrast, "
+    },
+    {
+      "expression": "\"uniform ensembling\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is consistently "
+    },
+    {
+      "expression": "\"better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] oracles on the dev sets, and outperforms "
+    },
+    {
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

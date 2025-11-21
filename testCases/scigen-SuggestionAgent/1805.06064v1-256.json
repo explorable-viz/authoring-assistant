@@ -6,15 +6,8 @@
       "value": "We trained and evaluated our editing approach with "
     },
     {
-      "expression": "\"1\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "-"
-    },
-    {
-      "expression": "\"6\"",
+      "expression": "\"1-6\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +16,7 @@
     },
     {
       "expression": "\"second\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -31,6 +25,7 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The right-hand side of table 1 shows the performance of our "
+      "value": "The right-hand side of "
+    },
+    {
+      "expression": "\"table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the performance of our "
     },
     {
       "expression": "\"SVM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,11 +25,12 @@
     },
     {
       "expression": "\"SVM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " setup is well suited for the difficulty prediction task and that it successfully generalizes to new data.\n\n*Note: In this paragraph, there are no explicit values, comparative expressions, or superlative/aggregated expressions to replace with Fluid expressions.*"
+      "value": " setup is well suited for the difficulty prediction task and that it successfully generalizes to new data."
     }
   ],
   "variables": {},

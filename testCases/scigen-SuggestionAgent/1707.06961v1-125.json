@@ -1,9 +1,47 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Table 6 (morphosyntactic attribute tagging micro-F1). In morphosyntactic tagging, gains are apparent for Slavic languages and Chinese, but also for agglutinative languages \u2014 especially Tamil and Turkish \u2014 where the stable morpheme representation makes it easy for subword modeling to provide a type-level signal.\n\nIn this paragraph, there are no explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced with Fluid expressions. Therefore, the paragraph remains unchanged:\n\nTable 6 (morphosyntactic attribute tagging micro-F1). In morphosyntactic tagging, gains are apparent for Slavic languages and Chinese, but also for agglutinative languages \u2014 especially Tamil and Turkish \u2014 where the stable morpheme representation makes it easy for subword modeling to provide a type-level signal."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 6 (morphosyntactic attribute tagging micro-F1).  In morphosyntactic tagging, gains are apparent for "
+    },
+    {
+      "expression": "\"Slavic languages\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Chinese\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but also for agglutinative languages \u2014 especially "
+    },
+    {
+      "expression": "\"Tamil\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Turkish\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \u2014 where the stable morpheme representation makes it easy for subword modeling to provide a type-level signal."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

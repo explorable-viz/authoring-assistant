@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"λ\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"0\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"maximum\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -31,14 +34,25 @@
     },
     {
       "expression": "\"27.9\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", indicating an intrinsic latency incentive. Furthermore, training quickly destabilized, resulting in very poor trade-offs for λs as low as "
+      "value": ", indicating an intrinsic latency incentive. Furthermore, training quickly destabilized, resulting in very poor trade-offs for "
+    },
+    {
+      "expression": "\"λs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as low as "
     },
     {
       "expression": "\"0.2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

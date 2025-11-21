@@ -6,36 +6,58 @@
       "value": "Table 4 presents "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results on the second dataset for the "
+      "value": " on the second "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"dataset\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models identified on the first dataset. The LDA-Frames yielded "
+      "value": " for the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best models\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results with our approach performing "
+      "value": " identified on the first "
     },
     {
-      "expression": "\"comparably\"",
+      "expression": "\"dataset\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in terms of the F1-score."
+      "value": ". The "
+    },
+    {
+      "expression": "\"LDA-Frames\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " yielded the "
+    },
+    {
+      "expression": "\"best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with our approach performing comparably in terms of the F1-score."
     }
   ],
   "variables": {},

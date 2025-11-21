@@ -3,23 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows these performance measures for French-English, using global structure greatly "
+      "value": "Table 1 shows these performance measures for "
     },
     {
-      "expression": "\"improves\"",
+      "expression": "\"French-English\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " upon the "
+      "value": ",  using global structure greatly "
     },
     {
-      "expression": "\"state of the art\"",
+      "expression": "\"improves upon\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " baseline performance."
+      "value": " the state of the art baseline performance."
     }
   ],
   "variables": {},

@@ -3,47 +3,61 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "BPE and character systems differ most in the number of lexical choice "
+      "value": "BPE and character sys  tems differ most in the "
     },
     {
-      "expression": "\"errors\"",
+      "expression": "\"number\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", and in the extent to which they "
+      "value": " of "
     },
     {
-      "expression": "\"drop\"",
+      "expression": "\"lexical choice errors\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " content. Regarding lexical choice, the two systems differ not only in the number of "
+      "value": ", and in the "
     },
     {
-      "expression": "\"errors\"",
+      "expression": "\"extent\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", but in the nature of those "
+      "value": " to which they drop content.  Regarding lexical choice, the two systems differ not only in the "
     },
     {
-      "expression": "\"errors\"",
+      "expression": "\"number\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". In particular, the BPE model had "
+      "value": " of errors, but in the nature of those errors. In particular, the "
     },
     {
-      "expression": "\"more\"",
+      "expression": "\"BPE model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " trouble handling German compound nouns. We also found that both systems occasionally mistranslate proper names."
+      "value": " had "
+    },
+    {
+      "expression": "\"more trouble\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " handling German compound nouns.  We also found that both systems occasionally mistranslate proper names."
     }
   ],
   "variables": {},

@@ -3,47 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 2, sub-word systems "
+      "value": "As shown in Table 2, "
     },
     {
-      "expression": "\"outperform\"",
+      "expression": "\"sub-word\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " full-word systems across the board, despite having "
+      "value": " systems outperform "
     },
     {
-      "expression": "\"fewer\"",
+      "expression": "\"full-word\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " total parameters. Systems built on larger data generally benefit from "
-    },
-    {
-      "expression": "\"larger\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " vocabularies while smaller systems perform "
+      "value": " systems across the board, despite having fewer total parameters.\r\nSystems built on larger data generally benefit from larger vocabularies while smaller systems perform "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with "
-    },
-    {
-      "expression": "\"smaller\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " vocabularies."
+      "value": " with smaller vocabularies."
     }
   ],
   "variables": {},

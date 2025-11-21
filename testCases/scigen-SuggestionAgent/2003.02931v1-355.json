@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"58\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,22 +16,43 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than traditional HMM-based tagging (TnT) (Brants, 2000) and greatly improves by unsupervised word embedding initialization (+Poly). It is noteworthy that zero-shot transfer benefits only to a limiting degree from more source data (F1 increases by almost 3% when training on all English CoNLL data). To compare cross-lingual transfer to limited gold data (RQ2), we observe that training the neural system on the small amount of data together with Polyglot embeddings is close to the tiny-shot transfer setup. Few-shot learning greatly improves over zero-shot learning. The "
+      "value": " than traditional HMM-based tagging (TnT) (Brants, 2000) and greatly improves by unsupervised word embedding initialization (+Poly). It is noteworthy that zero-shot transfer benefits only to a limiting degree from more source data (F1 increases by almost "
+    },
+    {
+      "expression": "\"3%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when training on all English CoNLL data). To compare cross-lingual transfer to limited gold data (RQ2), we observe that training the neural system on the small amount of data together with Polyglot embeddings is close to the tiny-shot transfer setup. Few-shot learning greatly improves over zero-shot learning. The "
     },
     {
       "expression": "\"most beneficial\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " way is to add the target data to the source, in comparison to fine-tuning. In both MEDIUM and LARGE setups are further gains obtained by adding TINY or SMALL amounts of Danish gold data. Interestingly, a) finetuning is less effective; b) it is "
+      "value": " way is to add the target data to the source, in comparison to fine-tuning. In both MEDIUM and LARGE setups are further gains obtained by adding TINY or SMALL amounts of Danish gold data. Interestingly, a) finetuning is "
+    },
+    {
+      "expression": "\"less effective\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "; b) it is "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

@@ -3,95 +3,268 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the results of fine-tuning the BERT-base model on five text classification datasets and two NLI datasets. For ensemble BERT, both the voted BERT (BERTVOTE) and averaged BERT (BERTAVG) outperform the single BERT (BERTBASE). The average improvement of BERTVOTE is "
+      "value": "Table 3 shows the results of fine-tuning the "
     },
     {
-      "expression": "\"5.44\"",
+      "expression": "\"BERT-base\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (for text classification) and "
+      "value": " model on five text classification datasets and two NLI datasets. For ensemble BERT, both the voted BERT ("
     },
     {
-      "expression": "\"5.50\"",
+      "expression": "\"BERTVOTE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (for NLI), while BERTAVG follows closely with "
+      "value": ") and averaged BERT ("
     },
     {
-      "expression": "\"4.07\"",
+      "expression": "\"BERTAVG\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": ") outperform the single BERT ("
     },
     {
-      "expression": "\"3.24\"",
+      "expression": "\"BERTBASE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. BERTVOTE outperforms BERTAVG on all tasks, which adheres to our intuition since BERTVOTE is more complicated. The self-ensemble BERT (BERTSE) has a slight improvement in classification tasks of "
+      "value": "). The "
     },
     {
-      "expression": "\"2.50\"",
+      "expression": "\"average improvement\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, but it does not work on NLI tasks. This is also a reason why we need self-distillation to improve the base models. Overall, self-distillation model has significant improvement on both classification and NLI tasks. Table 3 shows that BERTSDA and BERTSDV outperform BERTBASE on all datasets. Generally speaking, BERTSDA performs "
+      "value": " of "
+    },
+    {
+      "expression": "\"BERTVOTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"5.44%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (for text classification) and "
+    },
+    {
+      "expression": "\"5.50%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (for NLI), while "
+    },
+    {
+      "expression": "\"BERTAVG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " follows closely with "
+    },
+    {
+      "expression": "\"4.07%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"3.24%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"BERTVOTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"BERTAVG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all tasks, which adheres to our intuition since "
+    },
+    {
+      "expression": "\"BERTVOTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is more complicated. The self-ensemble BERT ("
+    },
+    {
+      "expression": "\"BERTSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") has a slight improvement in classification tasks of "
+    },
+    {
+      "expression": "\"2.50%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but it does not work on NLI tasks. This is also a reason why we need self-distillation to improve the base models. Overall, self-distillation model has significant improvement on both classification and NLI tasks. Table 3 shows that "
+    },
+    {
+      "expression": "\"BERTSDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BERTSDV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperform "
+    },
+    {
+      "expression": "\"BERTBASE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all datasets. Generally speaking, "
+    },
+    {
+      "expression": "\"BERTSDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than BERTSDV on text classification tasks with the improvement of "
+      "value": " than "
     },
     {
-      "expression": "\"6.26\"",
+      "expression": "\"BERTSDV\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% vs. "
+      "value": " on text classification tasks with the improvement of "
     },
     {
-      "expression": "\"5.65\"",
+      "expression": "\"6.26%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, but the latter performs "
+      "value": " vs. "
+    },
+    {
+      "expression": "\"5.65%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but the latter performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on NLI tasks (BERTSDA vs. BERTSDV is "
+      "value": " on NLI tasks ("
     },
     {
-      "expression": "\"4.65\"",
+      "expression": "\"BERTSDA\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% vs. "
+      "value": " vs. "
     },
     {
-      "expression": "\"5.30\"",
+      "expression": "\"BERTSDV\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%). Our proposed fine-tuning strategies also outperform the previous method in [Sun et al., 2019] on text classification tasks, which makes extensive efforts to find sophisticated hyperparameters."
+      "value": " is "
+    },
+    {
+      "expression": "\"4.65%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"5.30%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Our proposed fine-tuning strategies also outperform the previous method in [Sun et al., 2019] on text classification tasks, which makes extensive efforts to find sophisticated hyperparameters."
     }
   ],
   "variables": {},

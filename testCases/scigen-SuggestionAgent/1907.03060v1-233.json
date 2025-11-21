@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"1,654\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"600\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

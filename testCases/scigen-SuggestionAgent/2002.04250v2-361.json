@@ -3,82 +3,164 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Results are shown in Table 1.  When comparing AR with AR+MMI, AR+MMI "
+      "value": "Results are shown in Table 1.  When comparing "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " AR across all metrics, lookahead strategy to estimate For the variants of AR+MMI, AR+MMI+diverse generates a "
+      "value": " with "
     },
     {
-      "expression": "\"more diverse\"",
+      "expression": "\"AR+MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " N-best list for reranking, and thus "
+      "value": ", "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"AR+MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " AR+MMI; AR+MMI+RL uses future and thus "
+      "value": " significantly outperforms "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " backward probability, AR+MMI as well.  It's hard to tell which model performs "
+      "value": " across all metrics,  lookahead strategy to estimate For the variants of "
+    },
+    {
+      "expression": "\"AR+MMI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"AR+MMI+diverse\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generates a more diverse N-best list for reranking, and thus outperforms "
+    },
+    {
+      "expression": "\"AR+MMI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "; "
+    },
+    {
+      "expression": "\"AR+MMI+RL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " uses future and thus outperforms backward probability, "
+    },
+    {
+      "expression": "\"AR+MMI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as well.  It's hard to tell which model performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", AR "
+      "value": ", "
     },
     {
-      "expression": "\"performs better than\"",
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " non-AR for BLEU and adversarial success, but "
+      "value": " or non-AR: "
+    },
+    {
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than non-AR for BLEU and adversarial success, but "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for the other metrics. This means comparing with AR model, non-AR model tends to generate "
+      "value": " for the other metrics. This means comparing with "
     },
     {
-      "expression": "\"more diverse\"",
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " responses, but might be less coherent.  When comparing non-AR with AR+MMI+diverse, non-AR has relatively "
+      "value": " model, non-AR model tends to generate more diverse responses, but might be less coherent.  When comparing non-AR with "
+    },
+    {
+      "expression": "\"AR+MMI+diverse\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", non-AR has relatively "
     },
     {
       "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " distinct score, but "
+      "value": " distinct score, but significantly "
     },
     {
-      "expression": "\"significantly higher\"",
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

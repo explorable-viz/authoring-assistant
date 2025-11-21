@@ -3,18 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3: Results on the IWSLT {Ar, Ja, Ko, Zh}-to-En translation tasks. These distant language pairs belonging to 5 different language families and written in 5 different alphabets.\"↑\" indicates the result is "
+      "value": "Table 3: Results on the "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"{Ar, Ja, Ko, Zh}-to-En\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than that of the vanilla Transformer (p < 0.01). Table 3 shows the results on the small-scale IWSLT translation tasks. We observe that the proposed method stays consistently "
+      "value": " translation tasks. These distant language pairs belonging to 5 different language families and written in 5 different alphabets.\"↑\" indicates the result is significantly "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than that of the vanilla Transformer (p < 0.01).  Table 3 shows the results on the small-scale IWSLT translation tasks. We observe that the proposed method stays consistently "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

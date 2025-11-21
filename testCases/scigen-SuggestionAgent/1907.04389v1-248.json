@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"CONTRADICTION\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"contradiction\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -22,23 +24,26 @@
       "value": ", given that the hypothesis contains the word. Table 3 shows the "
     },
     {
-      "expression": "\"top\"",
+      "expression": "\"top 10\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " 10 examples in the training set. For each word w, we give its frequency in SNLI, its empirical correlation with the label and with InferSent's prediction, and the percentage decrease in correlations with "
+      "value": " examples in the training set. For each word w, we give its frequency in SNLI, its empirical correlation with the label and with InferSent's prediction, and the percentage decrease in correlations with "
     },
     {
       "expression": "\"CONTRADICTION\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " predictions by three configurations of our methods. Generally, the baseline correlations are more uniform than the empirical ones (ˆp(l|w)), However, we still observed small skews towards "
+      "value": " predictions by three configurations of our methods. Generally, the baseline correlations are more uniform than the empirical ones (ˆp(l|w)),  However, we still observed small skews towards "
     },
     {
       "expression": "\"CONTRADICTION\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +52,7 @@
     },
     {
       "expression": "\"contradiction\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +61,7 @@
     },
     {
       "expression": "\"contradiction\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

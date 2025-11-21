@@ -3,23 +3,79 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We present the test results in Table 2. We are able to reproduce the performance of the baseline model (\"CNN w/ GloVe\"), and find that once again, adding the shallow discourse features improves results. Interestingly, we found that replacing the CNN with an LSTM results in improved MAE, but "
+      "value": "We present the test results in Table 2.  We are able to reproduce the performance of the baseline model ("
+    },
+    {
+      "expression": "\"CNN w/ GloVe\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and find that once again, adding the shallow discourse features improves results.  Interestingly, we found that replacing the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with an "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results in improved "
+    },
+    {
+      "expression": "\"MAE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " MAPE. Adding discourse features to this model generally has marginal improvement in all cases. When we replace the word sequence with EDUs (\"Bi-LSTM w/ latent\" and \"Bi-LSTM w/ shallow\"), we see that the latent features outperform "
+      "value": " "
     },
     {
-      "expression": "\"the shallow\"",
+      "expression": "\"MAPE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " features."
+      "value": ". Adding discourse features to this model generally has marginal improvement in all cases.  When we replace the word sequence with EDUs ("
+    },
+    {
+      "expression": "\"Bi-LSTM w/ latent\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Bi-LSTM w/ shallow\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), we see that the latent features outperform the shallow features."
     }
   ],
   "variables": {},

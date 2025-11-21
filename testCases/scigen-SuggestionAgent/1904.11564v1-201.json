@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"gold\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"silver\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -22,20 +24,40 @@
       "value": ", or "
     },
     {
-      "expression": "\"gold and silver\"",
+      "expression": "\"gold and silver data\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " data (Table 1). Generation quality is primarily evaluated with BLEU. Semi-supervised training leads to an "
+      "value": " (Table 1). Generation quality is primarily evaluated with "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Semi-supervised training leads to an "
     },
     {
       "expression": "\"11\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU point improvement compar train. In addition to BLEU, we also report exact match accuracy on the overlapping subset. Results show that our neural models outperform the grammar-based generator by a large margin."
+      "value": " BLEU point improvement compar train In addition to "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we also report exact match accuracy on the overlapping subset. Results show that our neural models outperform the grammar-based generator by a large margin."
     }
   ],
   "variables": {},

@@ -3,26 +3,47 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows that the performance got "
+      "value": "Table 2 shows that the performance got slightly hurt (comparing \""
     },
     {
-      "expression": "\"slightly hurt\"",
+      "expression": "\"Processed MT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (comparing \"Processed MT\" with \"MT as PE\") with pre-processing and post-processing procedures which are normally applied in training seq2seq models for reducing vocabulary size. The multi-source transformer (Base) model achieved "
+      "value": "\" with \""
+    },
+    {
+      "expression": "\"MT as PE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\") with pre-processing and post-processing procedures which are normally applied in training seq2seq models for reducing vocabulary size. The multi-source transformer ("
+    },
+    {
+      "expression": "\"Base\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") model achieved "
     },
     {
       "expression": "\"the highest\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " single model BLEU score without joint training with the de-noising encoder task. Even with the ensembled model, our APE approach does not significantly improve machine translation outputs measured in BLEU (+"
+      "value": " single model BLEU score without joint training with the de-noising encoder task.  Even with the ensembled model, our APE approach does not significantly improve machine translation outputs measured in BLEU (+"
     },
     {
       "expression": "\"0.46\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

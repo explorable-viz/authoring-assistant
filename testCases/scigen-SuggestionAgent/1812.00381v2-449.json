@@ -3,18 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Similarly a single classifier "
+      "value": "Similarly a single classifier outperforms the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric, "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"Logistic Regression\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric, Logistic Regression performed "
+      "value": " performed "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -23,19 +25,39 @@
     },
     {
       "expression": "\"0.874\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " precision on Antichat and "
+      "value": " precision on "
+    },
+    {
+      "expression": "\"Antichat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
     },
     {
       "expression": "\"0.852\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " precision on Hack Forums."
+      "value": " precision on "
+    },
+    {
+      "expression": "\"Hack Forums\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

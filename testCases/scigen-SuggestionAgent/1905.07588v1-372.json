@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We show the main result in Table "
+      "value": "We show the main result in "
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,19 +16,12 @@
     },
     {
       "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Despite training on a fraction of the data available, the proposed BERT-based models "
-    },
-    {
-      "expression": "\"surpass\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the previous state-of-the-art models by a large margin on all datasets"
+      "value": ". Despite training on a fraction of the data available, the proposed BERT-based models surpass the previous state-of-the-art models by a large margin on all datasets"
     }
   ],
   "variables": {},

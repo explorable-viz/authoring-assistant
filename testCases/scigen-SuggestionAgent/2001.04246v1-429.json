@@ -3,26 +3,65 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The compression results on the six adopted datasets, including parameter size, inference speedup and classification accuracy, are summarized in Table 1.  Overall speaking, on all the evaluated datasets, the proposed AdaBERT method achieves "
+      "value": "The compression results on the "
     },
     {
-      "expression": "\"significant\"",
+      "expression": "\"six\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " efficiency improvement while maintaining "
+      "value": " adopted datasets, including "
     },
     {
-      "expression": "\"comparable\"",
+      "expression": "\"parameter size\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance. Compared to the BERT12-T, the compressed models are "
+      "value": ", "
+    },
+    {
+      "expression": "\"inference speedup\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"classification accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", are summarized in Table 1.  Overall speaking, on all the evaluated datasets, the proposed "
+    },
+    {
+      "expression": "\"AdaBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " method achieves significant efficiency improvement while maintaining comparable performance. Compared to the "
+    },
+    {
+      "expression": "\"BERT12-T\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the compressed models are "
     },
     {
       "expression": "\"11.5x\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -31,14 +70,25 @@
     },
     {
       "expression": "\"17.0x\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " smaller in parameter size and "
+      "value": " smaller in "
+    },
+    {
+      "expression": "\"parameter size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
     },
     {
       "expression": "\"12.7x\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -47,38 +97,88 @@
     },
     {
       "expression": "\"29.3x\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " faster in inference speed with an average performance degradation of "
+      "value": " faster in "
     },
     {
-      "expression": "\"2.79\"",
+      "expression": "\"inference speedup\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%.  Comparing structureheterogeneous method, BiLSTMSOF, AdaBERT searches CNN-based models and achieves "
+      "value": " with an average performance degradation of "
     },
     {
-      "expression": "\"much another\"",
+      "expression": "\"2.79%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with "
+      "value": ".  Comparing structureheterogeneous method, "
+    },
+    {
+      "expression": "\"BiLSTMSOF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"AdaBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " searches "
+    },
+    {
+      "expression": "\"CNN-based models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and achieves much another with "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " improvements, especially on the MNLI dataset.  Comparing with different Transformers-based compression baselines, the proposed AdaBERT method is "
+      "value": " improvements, especially on the "
+    },
+    {
+      "expression": "\"MNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dataset.  Comparing with different Transformers-based compression baselines, the proposed "
+    },
+    {
+      "expression": "\"AdaBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " method is "
     },
     {
       "expression": "\"1.35x\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -87,35 +187,39 @@
     },
     {
       "expression": "\"3.12x\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " faster than the "
+      "value": " faster than the fastest baseline, "
     },
     {
-      "expression": "\"fastest\"",
+      "expression": "\"TinyBERT4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " baseline, TinyBERT4, and achieves "
+      "value": ", and achieves comparable performance with the two baselines that have the best averaged accuracy, "
     },
     {
-      "expression": "\"comparable\"",
+      "expression": "\"BERT6-PKD\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance with the two baselines that have the "
+      "value": " and "
     },
     {
-      "expression": "\"best averaged accuracy\"",
+      "expression": "\"TinyBERT4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", BERT6-PKD and TinyBERT4."
+      "value": "."
     }
   ],
   "variables": {},

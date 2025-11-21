@@ -3,23 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 suggests that the combined model does make progress here, in that "
+      "value": "Table 3 suggests that "
     },
     {
-      "expression": "\"the largest\"",
+      "expression": "\"the combined model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " gains, across all relevant datasets, tend to be for "
+      "value": " does make progress here, in that "
     },
     {
-      "expression": "\"the smallest\"",
+      "expression": "\"largest gains\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " categories."
+      "value": ", across all relevant datasets, tend to be for "
+    },
+    {
+      "expression": "\"smallest categories\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

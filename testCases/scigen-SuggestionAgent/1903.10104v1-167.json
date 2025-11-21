@@ -3,26 +3,47 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also show the number of propositions in each category in Table 3. The "
+      "value": "We also show the number of propositions in each category in Table 3. "
     },
     {
-      "expression": "\"most frequent\"",
+      "expression": "\"the most frequent\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " types are evaluation ("
+      "value": " types are "
+    },
+    {
+      "expression": "\"evaluation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"38.3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%) and fact ("
+      "value": "%) and "
+    },
+    {
+      "expression": "\"fact\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"36.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -3,23 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We tried to combine different features shown in Table 6 for the interrogative-word classifier.  The first model is only using the BERT token embedding  The second model is the previous one with the entity type of the answer as an additional feature. The performance of this model is "
+      "value": "We tried to combine different features shown in Table 6 for the interrogative-word classifier.  The first model is only using the  BERT token embedding  The second model is the previous one with the "
     },
     {
-      "expression": "\"a bit better\"",
+      "expression": "\"entity type of the answer\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the first one but it is not enough to be utilized effectively for our pipeline.  As we can see, the performance noticeably increased, which indicates that answer information is the key to predict the interrogative word needed.  the fourth model,  clearly outperforms the previous one,  The fifth model is the same as the previous one but with the addition of the entitytype embedding of the answer. The combination of the three features (answer, answer entity type, and passage) yields "
+      "value": " as an additional feature. The performance of this model is a bit "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance."
+      "value": " than the first one but it is not enough to be utilized effectively for our pipeline.  As we can see, the performance noticeably increased, which indicates that answer information is the key to predict the interrogative word needed.  the fourth model,  clearly outperforms the previous one,  The fifth model is the same as the previous one but with the addition of the "
+    },
+    {
+      "expression": "\"entitytype embedding of the answer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The combination of the three features (answer, answer entity type, and passage) yields to "
+    },
+    {
+      "expression": "\"the best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

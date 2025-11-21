@@ -3,39 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Evidence of this complementarity can be seen in Table 6, which contains a breakdown of system performance by governing dependency relation, for both linear and tree models, on UDS-IH2-dev. In most cases, the L-biLSTM's mean prediction is "
+      "value": "Evidence of this complementarity can be seen in Table 6, which contains a breakdown of system performance by governing dependency relation, for both linear and tree models, on UDS-IH2-dev. In most cases, the "
     },
     {
-      "expression": "\"closer\"",
+      "expression": "\"L-biLSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to the true mean. This appears to arise in part because the T-biLSTM is less confident in its predictions \u2013 i.e. its mean prediction tends to be "
+      "value": "'s "
     },
     {
-      "expression": "\"closer\"",
+      "expression": "\"mean prediction\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to 0. This results in the L-biLSTM being "
+      "value": " is closer to the true "
     },
     {
-      "expression": "\"too confident\"",
+      "expression": "\"mean\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in certain cases \u2013 e.g. in the case of the xcomp governing relation, where the T-biLSTM mean prediction is "
+      "value": ". This appears to arise in part because the "
     },
     {
-      "expression": "\"closer\"",
+      "expression": "\"T-biLSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to the true mean."
+      "value": " is less confident in its predictions \u2013 i.e. its "
+    },
+    {
+      "expression": "\"mean prediction\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tends to be closer to "
+    },
+    {
+      "expression": "\"0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This results in the "
+    },
+    {
+      "expression": "\"L-biLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " being too confident in certain cases \u2013 e.g. in the case of the xcomp governing relation, where the "
+    },
+    {
+      "expression": "\"T-biLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"mean prediction\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is closer to the true "
+    },
+    {
+      "expression": "\"mean\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

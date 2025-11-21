@@ -7,19 +7,48 @@
     },
     {
       "expression": "\"the state of the art\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " MD performance even if we only trained with a low number of parameters as stated in the beginning of this section. We have to also note that in contrast with the NER task, the MD task did not enjoy a "
+      "value": " "
     },
     {
-      "expression": "\"performance increase\"",
+      "expression": "\"MD\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from joint learning."
+      "value": " performance even if we only trained with a "
+    },
+    {
+      "expression": "\"low number of parameters\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We have to also note that in contrast with the "
+    },
+    {
+      "expression": "\"NER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task, the "
+    },
+    {
+      "expression": "\"MD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task did not enjoy a performance increase from joint learning."
     }
   ],
   "variables": {},

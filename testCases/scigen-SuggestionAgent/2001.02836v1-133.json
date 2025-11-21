@@ -6,15 +6,26 @@
       "value": "As shown in Table 5, we compare our model with several different strategies. The first one is to put all weights to the center embedding (fix "
     },
     {
-      "expression": "\"1\"",
+      "expression": "\"λ\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to 1), which never updates the local relational embeddings. As a result, it can achieve similar performance on word similarity measurement but is "
+      "value": " to "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), which never updates the local relational embeddings. As a result, it can achieve similar performance on word similarity measurement but is "
     },
     {
       "expression": "\"inferior\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

@@ -3,18 +3,74 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 summarizes the performance of the three models on the SUPPORTS and REFUTES pairs from the FEVER DEV set and on the created SYMMETRIC TEST SET pairs. All models perform relatively well on FEVER DEV but achieve "
+      "value": "Table 3 summarizes the performance of "
     },
     {
-      "expression": "\"less than 60%\"",
+      "expression": "\"the three models\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy on the synthetic ones. The re-weighting method increases the accuracy of the ESIM and BERT models by an absolute "
+      "value": " on the "
+    },
+    {
+      "expression": "\"SUPPORTS and REFUTES pairs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from the FEVER DEV set and on the created "
+    },
+    {
+      "expression": "\"SYMMETRIC TEST SET pairs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  All "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " perform relatively well on FEVER DEV but achieve "
+    },
+    {
+      "expression": "\"less than 60%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy on the synthetic ones.  The re-weighting method increases the accuracy of the "
+    },
+    {
+      "expression": "\"ESIM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BERT models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by an absolute "
     },
     {
       "expression": "\"3.4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,14 +79,16 @@
     },
     {
       "expression": "\"3.3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% respectively. One can notice that this improvement comes at a cost in the accuracy over the FEVER DEV pairs. Applying the regularization method, using the same training data, helps to train a more robust model that performs "
+      "value": "% respectively. One can notice that this improvement comes at a cost in the accuracy over the FEVER DEV pairs.  Applying the regularization method, using the same training data, helps to train a more robust model that performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

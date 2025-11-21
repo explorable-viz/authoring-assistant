@@ -3,26 +3,47 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compare our model with the state-of-the-art models in Table 3. As Table 3 shows, this model alone (without any reranking) improves the state-of-the-art performance from "
+      "value": "We compare our model with the "
     },
     {
-      "expression": "\"79.6\"",
+      "expression": "\"state-of-the-art models\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% to "
+      "value": " in Table 3. As Table 3 shows, this model alone (without any reranking) improves the "
     },
     {
-      "expression": "\"82.15\"",
+      "expression": "\"state-of-the-art performance\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% accuracy. Increasing the beam size improves the performance as expected. Using a pre-trained model improves the performance as well. Reranking with a threshold rule may be helpful for the overall architecture. We observe that reranking by the critic at all times may not be "
+      "value": " from "
+    },
+    {
+      "expression": "\"79.6%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"82.15%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy Increasing the beam size improves the performance as expected. Using a pre-trained model improves the performance as well. Reranking with a threshold rule may be helpful for the overall architecture. We observe that reranking by the critic at all times may not be "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -31,43 +52,48 @@
     },
     {
       "expression": "\"0.5\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " increases the performance further. On the other hand, reranking if the difference between "
+      "value": " increases the performance further. On the other hand, reranking if the difference between the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best score\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " score and second "
+      "value": " and "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"second best score\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " score is above the threshold we set does not help in this case. The overall architecture improves the performance of the generator ("
+      "value": " is above the threshold we set does not help in this case. The overall architecture improves the performance of the generator ("
     },
     {
-      "expression": "\"82.1\"",
+      "expression": "\"82.1%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% accuracy) to "
+      "value": " accuracy) to "
     },
     {
-      "expression": "\"83.7\"",
+      "expression": "\"83.7%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% accuracy."
+      "value": " accuracy."
     }
   ],
   "variables": {},

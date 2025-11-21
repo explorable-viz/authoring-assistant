@@ -6,28 +6,67 @@
       "value": "Table 2 presents "
     },
     {
-      "expression": "\"the time\"",
+      "expression": "\"the time required\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " required to install each tool and complete the first annotation task. SLATE and YEDDA are "
+      "value": " to "
     },
     {
-      "expression": "\"comparable in effort\"",
+      "expression": "\"install each tool\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", which fits with their common design as simple tools with minimal dependencies. Participants had great difficulty with brat, with only two managing to install it, one just as their "
+      "value": " and complete the first annotation task.\r\n"
     },
     {
-      "expression": "\"time\"",
+      "expression": "\"SLATE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " finished."
+      "value": " and "
+    },
+    {
+      "expression": "\"YEDDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in effort, which fits with their common design as simple tools with minimal dependencies.\r\nParticipants had great difficulty with "
+    },
+    {
+      "expression": "\"brat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with only "
+    },
+    {
+      "expression": "\"two\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " managing to install it, one just as their time finished."
     }
   ],
   "variables": {},

@@ -3,23 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The values in the last column of Table III are summarized in Table IV. How the models compare with respect to "
+      "value": "The values in the "
     },
     {
-      "expression": "\"accuracy\"",
+      "expression": "\"last column\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " closely resembles the comparison of BLEU scores, presented earlier. Thus, BLEU scores seem to correlate well with "
+      "value": " of Table III are summarized in Table IV. How the models compare with respect to "
     },
     {
       "expression": "\"accuracy\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " values in our case."
+      "value": " closely resembles the comparison of "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", presented earlier. Thus, "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seem to correlate well with "
+    },
+    {
+      "expression": "\"accuracy values\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in our case."
     }
   ],
   "variables": {},

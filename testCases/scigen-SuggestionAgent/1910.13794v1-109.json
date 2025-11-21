@@ -3,39 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our model outperforms "
+      "value": "Our model outperforms all other models in all the metrics. This "
     },
     {
-      "expression": "\"all other models\"",
+      "expression": "\"improvement\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in "
+      "value": " is consistent, around "
     },
     {
-      "expression": "\"all the metrics\"",
+      "expression": "\"2%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". This improvement is "
-    },
-    {
-      "expression": "\"consistent\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", around "
-    },
-    {
-      "expression": "\"2\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "%.\n\nNote that \"around\" is not replaced because it does not meet the criteria for explicit values, comparative expressions, or superlative/aggregated expressions."
+      "value": "."
     }
   ],
   "variables": {},

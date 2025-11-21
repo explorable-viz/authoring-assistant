@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"arrest-charge\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"attack-kill\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"911 attack\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"attack\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"business\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +52,7 @@
     },
     {
       "expression": "\"increase\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

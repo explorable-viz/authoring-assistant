@@ -3,18 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 displays "
+      "value": "Table 3 displays the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performing DSM for each property. There is a preference to "
+      "value": " performing "
+    },
+    {
+      "expression": "\"DSM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for each property. There is a preference to "
     },
     {
       "expression": "\"word2vec\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +34,7 @@
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

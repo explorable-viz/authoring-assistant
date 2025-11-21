@@ -3,26 +3,56 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the results of our method and all the baselines on tasks with different topics. We can first observe that the proposed RCN consistently "
+      "value": "Table 2 shows the results of our method and all the baselines on tasks with different topics. We can first observe that the proposed "
     },
     {
-      "expression": "\"outperformed\"",
+      "expression": "\"RCN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " all the baselines across all topics. Despite being modest, all the improvements of RCN over the baselines are statistically significant at p < 0.05 with a two-tailed t-test. BiLSTM performed "
+      "value": " consistently outperformed all the baselines across all topics. Despite being modest, all the improvements of "
+    },
+    {
+      "expression": "\"RCN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the baselines are statistically significant at p < 0.05 with a two-tailed t-test. "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performed "
     },
     {
       "expression": "\"the worst\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", showing that only using the RNN encoder for sequence encoding is not sufficient for obtaining optimal results. DeAT and BiMPM performed similarly well; RCN performed "
+      "value": ", showing that only using the RNN encoder for sequence encoding is not sufficient for obtaining optimal results. DeAT and BiMPM performed similarly well; "
+    },
+    {
+      "expression": "\"RCN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performed "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -30,20 +60,22 @@
       "value": ", with relative improvements from "
     },
     {
-      "expression": "\"2.1\"",
+      "expression": "\"2.1%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% to "
+      "value": " to "
     },
     {
-      "expression": "\"10.4\"",
+      "expression": "\"10.4%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% over the second best."
+      "value": " over the second best."
     }
   ],
   "variables": {},

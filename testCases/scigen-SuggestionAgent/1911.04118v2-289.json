@@ -3,15 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 7 shows that both FT and TANDA using ASNQ provide "
+      "value": "Table 7 shows that both "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"FT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than QNLI on the WikiQA dataset."
+      "value": " and "
+    },
+    {
+      "expression": "\"TANDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " using "
+    },
+    {
+      "expression": "\"ASNQ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " provide "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than "
+    },
+    {
+      "expression": "\"QNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the WikiQA dataset."
     }
   ],
   "variables": {},

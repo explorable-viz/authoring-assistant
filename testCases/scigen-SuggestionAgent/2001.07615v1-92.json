@@ -7,19 +7,12 @@
     },
     {
       "expression": "\"very high\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance, which is likely to further "
-    },
-    {
-      "expression": "\"increase\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with ongoing training."
+      "value": " performance, which is likely to further increase with ongoing training."
     }
   ],
   "variables": {},

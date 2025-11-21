@@ -3,55 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 compares the performance of ESSENTIA with the FSA baseline for paraphrase mining. Specifically, we show the number of phrase pairs extracted by ESSENTIA and FSA from both datasets ("
+      "value": "Table 1 compares the performance of "
     },
     {
-      "expression": "\"# of extracted pairs\"",
+      "expression": "\"ESSENTIA\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " column), number of valid paraphrases within these pairs ("
+      "value": " with the "
     },
     {
-      "expression": "\"# of valid pairs\"",
+      "expression": "\"FSA\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " column), and precision ("
+      "value": " baseline for paraphrase mining. Specifically, we show the number of phrase pairs extracted by "
     },
     {
-      "expression": "\"Precision\"",
+      "expression": "\"ESSENTIA\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " column). Although FSA has "
+      "value": " and "
+    },
+    {
+      "expression": "\"FSA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from both datasets (\"# of extracted pairs\" column), number of valid paraphrases within these pairs (\"# of valid pairs\" column), and precision (\"Precision\" column). Although "
+    },
+    {
+      "expression": "\"FSA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " precision due to conservative sentence alignment, ESSENTIA extracts significantly more paraphrases, improving the recall by "
+      "value": " precision due to conservative sentence alignment, "
     },
     {
-      "expression": "\"460\"",
+      "expression": "\"ESSENTIA\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (Snips) and "
+      "value": " extracts significantly "
     },
     {
-      "expression": "\"247\"",
+      "expression": "\"more\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (HotelQA) over the baseline."
+      "value": " paraphrases, improving the recall by "
+    },
+    {
+      "expression": "\"460%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Snips) and "
+    },
+    {
+      "expression": "\"247%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (HotelQA) over the baseline."
     }
   ],
   "variables": {},

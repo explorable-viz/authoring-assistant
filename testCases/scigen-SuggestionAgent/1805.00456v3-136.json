@@ -3,23 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Ensembles of two identical models trained with different seeds only "
+      "value": "Ensembles of "
     },
     {
-      "expression": "\"slightly improve\"",
+      "expression": "\"two\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " over the single model (Table 5). However, an ensemble of models producing plain BPE and linearized derivations improves by "
+      "value": " identical models trained with different seeds only slightly improve over the single model (Table 5). However, an ensemble of models producing "
+    },
+    {
+      "expression": "\"plain BPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and linearized derivations improves by "
     },
     {
       "expression": "\"0.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU over the plain BPE baseline."
+      "value": " "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the "
+    },
+    {
+      "expression": "\"plain BPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline."
     }
   ],
   "variables": {},

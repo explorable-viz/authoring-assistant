@@ -3,31 +3,115 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 4, we conduct a preliminary study on SemEval-2010 task 8  DEPTREE achieves similar performance as CGCN and is "
+      "value": "As shown in Table 4, we conduct a preliminary study on SemEval-2010 task 8 "
+    },
+    {
+      "expression": "\"DEPTREE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves similar performance as "
+    },
+    {
+      "expression": "\"CGCN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and is slightly "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than C-AGGCN,  both KBESTEISNERPS and EDGEWISEPS outperform DEPTREE  they show comparable and "
+      "value": " than "
+    },
+    {
+      "expression": "\"C-AGGCN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ",  both "
+    },
+    {
+      "expression": "\"KBESTEISNERPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"EDGEWISEPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperform "
+    },
+    {
+      "expression": "\"DEPTREE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "  they show comparable and slightly "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performances than C-AGGCN.  EDGEWISEPS is "
+      "value": " performances than "
+    },
+    {
+      "expression": "\"C-AGGCN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  "
+    },
+    {
+      "expression": "\"EDGEWISEPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than KBESTEISNERPS,"
+      "value": " than "
+    },
+    {
+      "expression": "\"KBESTEISNERPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ","
     }
   ],
   "variables": {},

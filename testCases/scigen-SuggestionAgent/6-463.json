@@ -3,15 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 5 contrasts the performance of THs induced from English and German training data, and evaluated on German and English test data respectively. While the cross-lingual performance is "
+      "value": "Table 5 contrasts the performance of "
     },
     {
-      "expression": "\"lower\"",
+      "expression": "\"THs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the monolingual performance, it outperforms the random baseline by a large margin, suggesting the potential for cross-lingual hierarchy induction."
+      "value": " induced from English and German training data, and evaluated on German and English test data respectively. While the cross-lingual performance is expectedly "
+    },
+    {
+      "expression": "\"lower than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] the monolingual performance, it outperforms the random baseline by a large margin, suggesting the potential for crosslingual hierarchy induction."
     }
   ],
   "variables": {},

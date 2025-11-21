@@ -3,23 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 6 shows the results obtained by the BERT baseline "
+      "value": "Table 6 shows the results obtained by "
     },
     {
-      "expression": "\"without\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " explanations and using our transferred explanations from CQA to SWAG and Story Cloze. We observed that adding explanations led to a very small decrease (< "
+      "value": " baseline without explanations and using our transferred explanations from CQA to SWAG and Story Cloze. We observed that adding explanations led to a very small decrease (< "
     },
     {
-      "expression": "\"0.6\"",
+      "expression": "\"0.6%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%) in the performance compared to the baseline for both tasks."
+      "value": ") in the performance compared to the baseline for both tasks."
     }
   ],
   "variables": {},

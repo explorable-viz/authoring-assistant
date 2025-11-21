@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the values of hyper-parameters for our models, In particular, the embedding sizes are set to "
+      "value": "Table 3 shows the values of hyper-parameters for our models,  In particular, the embedding sizes are set to "
     },
     {
       "expression": "\"50\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"200\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"0.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"0.015\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"0.05\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

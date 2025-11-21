@@ -3,23 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In Table 3 we report the accuracies obtained by "
+      "value": "In Table 3 we report the accuracies obtained by our "
     },
     {
-      "expression": "\"our best\"",
+      "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model in both matched (first 5 genres) and mismatched (last 5 genres) development sets. We can observe that our implementation performed "
+      "value": " model in both matched (first 5 genres) and mismatched (last 5 genres) development sets.  We can observe that our implementation performed like "
     },
     {
-      "expression": "\"like\"",
+      "expression": "\"ESIM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ESIM overall,"
+      "value": " overall,"
     }
   ],
   "variables": {},

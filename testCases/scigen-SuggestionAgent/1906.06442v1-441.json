@@ -3,26 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We performed a minimal set of experiments on WMT EnFr, which are summarized in Table 5. In this case, we see that BT alone "
+      "value": "We performed a minimal set of experiments on WMT EnFr, which are summarized in Table 5. In this case, we see that "
     },
     {
-      "expression": "\"hurts\"",
+      "expression": "\"BT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance compared to the strong bitext baseline, but NoisedBT indeed "
+      "value": " alone hurts performance compared to the strong bitext baseline, but "
     },
     {
-      "expression": "\"surpasses\"",
+      "expression": "\"NoisedBT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the bitext model. It is worth noting that our numbers are lower than those reported by Edunov et al. (2018) on the years they report ("
+      "value": " indeed surpasses the bitext model. It is worth noting that our numbers are "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than those reported by Edunov et al. (2018) on the years they report ("
     },
     {
       "expression": "\"36.1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +43,7 @@
     },
     {
       "expression": "\"43.8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,14 +52,25 @@
     },
     {
       "expression": "\"40.9\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on 2013, 2014, and 2015 respectively). On WMT16 EnRo, TaggedBT improves on vanilla BT by "
+      "value": " on 2013, 2014, and 2015 respectively). On WMT16 EnRo, "
+    },
+    {
+      "expression": "\"TaggedBT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improves on vanilla BT by "
     },
     {
       "expression": "\"0.4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

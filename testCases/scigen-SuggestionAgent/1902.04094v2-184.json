@@ -3,39 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We present sample generations, quality results, and diversity results respectively in Tables 1, 2, 3.  This observation is further bolstered by the fact that the GPT generations have a "
+      "value": "We present sample generations, quality results, and diversity results respectively in Tables 1, 2, 3. This observation is further bolstered by the fact that the GPT generations have a "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " corpus-BLEU with TBC than TBC has with itself.  The corpusBLEU between BERT models and the datasets is low, particularly with WT103.  We find that BERT generations are "
+      "value": " corpus-BLEU with TBC than TBC has with itself. The corpusBLEU between BERT models and the datasets is low, particularly with WT103. We find that BERT generations are "
     },
     {
       "expression": "\"more diverse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than GPT generations. GPT has "
-    },
-    {
-      "expression": "\"high\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " n-gram overlap (smaller percent of unique n-grams) with TBC, but surprisingly also with WikiText-103, despite being trained on different data. Furthermore, GPT generations have "
+      "value": " than GPT generations. GPT has high n-gram overlap (smaller percent of unique n-grams) with TBC, but surprisingly also with WikiText-103, despite being trained on different data. Furthermore, GPT generations have "
     },
     {
       "expression": "\"greater\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " n-gram overlap with these datasets than these datasets have with themselves, further suggesting that GPT is relying significantly on generic sentences. BERT has lower n-gram overlap with both corpora, with similar degrees of n-gram overlap as the samples of the data."
+      "value": " n-gram overlap with these datasets than these datasets have with themselves, further suggesting that GPT is relying significantly on generic sentences. BERT has "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " n-gram overlap with both corpora, with similar degrees of n-gram overlap as the samples of the data."
     }
   ],
   "variables": {},

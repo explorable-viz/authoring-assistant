@@ -3,31 +3,79 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We report the quality results in Table 2, where each number represents the fraction of tests passed. While on average the local embeddings for EmbDI are "
+      "value": "We report the quality results in Table 2, where each number represents the fraction of tests passed. While on "
     },
     {
-      "expression": "\"largely superior\"",
+      "expression": "\"average\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to the baseline, our solution is beaten once for MA. By increasing the percentage of row permutations in Basic, results for MR "
+      "value": " the local embeddings for "
     },
     {
-      "expression": "\"improve\"",
+      "expression": "\"EmbDI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " but "
+      "value": " are largely "
     },
     {
-      "expression": "\"decrease\"",
+      "expression": "\"superior\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for MA, without significant benefit for MC."
+      "value": " to the baseline, our solution is beaten once for "
+    },
+    {
+      "expression": "\"MA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". By increasing the percentage of row permutations in "
+    },
+    {
+      "expression": "\"Basic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", results for "
+    },
+    {
+      "expression": "\"MR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improve but decrease for "
+    },
+    {
+      "expression": "\"MA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", without significant benefit for "
+    },
+    {
+      "expression": "\"MC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

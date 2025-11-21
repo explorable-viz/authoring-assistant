@@ -7,14 +7,61 @@
     },
     {
       "expression": "\"question\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in ASNQ, the positive candidate answers are those sentences that occur in the long answer paragraphs in NQ and contain annotated short answers. The remaining sentences from the document are labeled as negative for the target question. While the ASNQ statistics are reported in Table 1. ASNQ contains "
+      "value": " in "
+    },
+    {
+      "expression": "\"ASNQ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the positive candidate answers are those sentences that occur in the long answer paragraphs in "
+    },
+    {
+      "expression": "\"NQ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and contain annotated short answers. The remaining sentences from the document are labeled as negative for the target "
+    },
+    {
+      "expression": "\"question\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". while the "
+    },
+    {
+      "expression": "\"ASNQ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " statistics are reported in Table 1. "
+    },
+    {
+      "expression": "\"ASNQ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " contains "
     },
     {
       "expression": "\"57,242\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +70,7 @@
     },
     {
       "expression": "\"2,672\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

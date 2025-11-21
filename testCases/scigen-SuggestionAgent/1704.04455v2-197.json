@@ -7,67 +7,192 @@
     },
     {
       "expression": "\"20\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (has part), "
+      "value": " ("
+    },
+    {
+      "expression": "\"has part\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
     },
     {
       "expression": "\"100\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (admin. terr. entity) and "
+      "value": " ("
+    },
+    {
+      "expression": "\"admin. terr. entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and "
     },
     {
       "expression": "\"200\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (child and spouse) randomly selected subjects that have at least one object. The random-number baseline achieves a precision of "
+      "value": " ("
     },
     {
-      "expression": "\"5\"",
+      "expression": "\"child and spouse\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (has part), "
+      "value": ") randomly selected subjects that have "
     },
     {
-      "expression": "\"3.5\"",
+      "expression": "\"at least one object\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (admin. territ. entity), "
+      "value": ". The random-number baseline achieves a precision of "
     },
     {
-      "expression": "\"0\"",
+      "expression": "\"5%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (spouse) and "
+      "value": " ("
     },
     {
-      "expression": "\"11.2\"",
+      "expression": "\"has part\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (child). Compared to that, especially using only-nummod, our method gives encouraging results for has part, admin. territ. entity and child, with 30-50% precision and around 30% F1-score. As shown by the last row of Table 2, "
+      "value": "), "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"3.5%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " quality of training data can considerably boost the performance of cardinality extraction."
+      "value": " ("
+    },
+    {
+      "expression": "\"admin. territ. entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"0%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"spouse\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and "
+    },
+    {
+      "expression": "\"11.2%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"child\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Compared to that, especially using only-nummod, our method gives encouraging results for "
+    },
+    {
+      "expression": "\"has part\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"admin. territ. entity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"child\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with "
+    },
+    {
+      "expression": "\"30-50%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision and around "
+    },
+    {
+      "expression": "\"30%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1-score. As shown by the last row of Table 2, "
+    },
+    {
+      "expression": "\"higher quality\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of training data can considerably boost the performance of cardinality extraction."
     }
   ],
   "variables": {},

@@ -6,7 +6,8 @@
       "value": "We designed ESE to output "
     },
     {
-      "expression": "\"30\"",
+      "expression": "\"thirty\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"30\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -30,20 +33,49 @@
       "value": " results when using the feature ensemble method which is "
     },
     {
-      "expression": "\"more stable\"",
+      "expression": "\"more stable than\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the non-ensemble one (due to lower standard deviation and non-zero precision). According to the results, "
+      "value": " the non-ensemble one (due to "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " combination in terms of the mean and standard deviation is obtained when using TFIDF (Eq.5) to weigh the edges and context-dependent similarity (Eq.8) to rank NPs. This shows that the uniqueness and the significant overlap of features between noun phrases were very important."
+      "value": " standard deviation and "
+    },
+    {
+      "expression": "\"non-zero\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision). According to the results, the best combination in terms of the "
+    },
+    {
+      "expression": "\"mean\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"standard deviation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is obtained when using TFIDF (Eq.5) to weigh the edges and context-dependent similarity (Eq.8) to rank NPs. This shows that the uniqueness and the significant overlap of features between noun phrases were very important."
     }
   ],
   "variables": {},

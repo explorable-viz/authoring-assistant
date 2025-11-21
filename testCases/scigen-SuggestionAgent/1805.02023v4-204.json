@@ -3,74 +3,83 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The OntoNotes test results are shown in Table 5. With gold-standard segmentation, our word-based methods give competitive results to the state-of-the-art on the dataset (Che et al., 2013; Wang et al., 2013), In addition, the results show that our word-based models can serve as highly "
+      "value": "The OntoNotes test results are shown in Table 5. With gold-standard segmentation, our word-based methods give competitive results to the state-of-the-art on the dataset (Che et al., 2013; Wang et al., 2013),  In addition, the results show  that our word-based models can serve as highly competitive baselines. With automatic segmentation, the F1-score of "
     },
     {
-      "expression": "\"competitive\"",
+      "expression": "\"word+char+bichar LSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " baselines. With automatic segmentation, the F1-score of word+char+bichar LSTM decreases from "
+      "value": " decreases from "
     },
     {
-      "expression": "\"75.77\"",
+      "expression": "\"75.77%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% to "
+      "value": " to "
     },
     {
-      "expression": "\"71.70\"",
+      "expression": "\"71.70%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, showing the influence of segmentation to NER. Consistent with observations on the development set, adding lattice word information leads to an "
+      "value": ", showing the influence of segmentation to NER. Consistent with observations on the development set, adding lattice word information leads to an "
     },
     {
-      "expression": "\"88.81\"",
+      "expression": "\"88.81%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% → "
+      "value": " → "
     },
     {
-      "expression": "\"93.18\"",
+      "expression": "\"93.18%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% increasement of F1-score over the character baseline, as compared with "
+      "value": " increasement of F1-score over the character baseline, as compared with "
     },
     {
-      "expression": "\"88.81\"",
+      "expression": "\"88.81%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% → "
+      "value": " → "
     },
     {
-      "expression": "\"91.87\"",
+      "expression": "\"91.87%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% by adding bichar+softword. The lattice model gives "
+      "value": " by adding "
     },
     {
-      "expression": "\"significantly\"",
+      "expression": "\"bichar+softword\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": ". The lattice model gives significantly "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

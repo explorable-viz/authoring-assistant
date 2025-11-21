@@ -3,18 +3,74 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 demonstrates several characteristics of the generated forests of both the EDGEWISE and KBESTEISNER algorithms in Section 5.1, where \"#Edge/#Sent\" measures the forest density with the number of edges divided by the sentence length, \"LAS\" represents the oracle LAS score on 100 biomedical sentences with manually annotated dependency trees, and \"Conn. Ratio (%)\" shows the percentage of forests where both related entity mentions are connected. Regarding the forest density, forests produced by EDGEWISE generally contain "
+      "value": "Table 1 demonstrates several characteristics of the generated forests of both the "
     },
     {
-      "expression": "\"more\"",
+      "expression": "\"EDGEWISE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " edges than those from KBESTEISNER. For connectivity, KBESTEISNER guarantees to generate spanning forests. On the other hand, the connectivity ratio for the forests produced by EDGEWISE drops when increasing the threshold γ. We can have "
+      "value": " and "
+    },
+    {
+      "expression": "\"KBESTEISNER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " algorithms in Section 5.1, where \"#Edge/#Sent\" measures the forest density with the number of edges divided by the sentence length, \"LAS\" represents the oracle LAS score on 100 biomedical sentences with manually annotated dependency trees, and \"Conn. Ratio (%)\" shows the percentage of forests where both related entity mentions are connected. Regarding the forest density, forests produced by "
+    },
+    {
+      "expression": "\"EDGEWISE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generally contain "
+    },
+    {
+      "expression": "\"more edges than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " those from "
+    },
+    {
+      "expression": "\"KBESTEISNER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For connectivity, "
+    },
+    {
+      "expression": "\"KBESTEISNER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " guarantees to generate spanning forests. On the other hand, the connectivity ratio for the forests produced by "
+    },
+    {
+      "expression": "\"EDGEWISE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " drops when increasing the threshold γ. We can have "
     },
     {
       "expression": "\"more than 94%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

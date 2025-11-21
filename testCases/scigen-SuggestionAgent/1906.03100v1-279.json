@@ -3,18 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2: Results on the WMT English-German translation task. \""
+      "value": "Table 2: "
     },
     {
-      "expression": "\"\u2021\"",
+      "expression": "\"Results\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "\" indicates the result is "
+      "value": " on the WMT English-German translation task. \"\u2021\" indicates the result is "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

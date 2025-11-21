@@ -3,23 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the impact that different methods for combining character and word-level word representations have in the quality of the sentence representations produced by our models. We can observe the same trend mentioned in section 4.1, and highlighted by the difference between bold values, that models trained in MultiNLI performed "
+      "value": "Table 2 shows the impact that different methods for combining character and word-level word representations have in the quality of the sentence representations produced by our models. We can observe the same trend mentioned in section 4.1, and highlighted by the difference between bold values, that models trained in "
+    },
+    {
+      "expression": "\"MultiNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performed "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than those trained in SNLI at a statistically significant level. The two exceptions to the previous trend, SICKE and SICKR, benefited "
+      "value": " than those trained in "
+    },
+    {
+      "expression": "\"SNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " at a statistically significant level. The two exceptions to the previous trend, "
+    },
+    {
+      "expression": "\"SICKE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"SICKR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", benefited "
     },
     {
       "expression": "\"more\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from models trained on SNLI. Additionally, there was no method that significantly outperformed the word only baseline in classification tasks. On the other hand, the vector gate significantly outperformed every other method in the STSB task when trained in both datasets, and in the STS16 task when trained in SNLI."
+      "value": " from models trained on "
+    },
+    {
+      "expression": "\"SNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Additionally, there was no method that significantly outperformed the word only baseline in classification tasks. On the other hand, the vector gate significantly outperformed every other method in the "
+    },
+    {
+      "expression": "\"STSB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task when trained in both datasets, and in the "
+    },
+    {
+      "expression": "\"STS16\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task when trained in "
+    },
+    {
+      "expression": "\"SNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

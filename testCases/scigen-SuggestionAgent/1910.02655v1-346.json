@@ -3,26 +3,56 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 compares the development set performance of different variants of the proposed sentence retrieval method with the state of the art results on the FEVER dataset. The results indicate that both pointwise and pairwise BERT sentence retrieval improve the "
+      "value": "Table 1 compares the development set performance of different variants of the proposed sentence retrieval method with the state of the art results on the FEVER dataset. The results indicate that both "
     },
     {
-      "expression": "\"recall\"",
+      "expression": "\"pointwise\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The UNC and DREAM precision scores are "
+      "value": " and "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"pairwise BERT sentence retrieval\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than our methods without a decision threshold, however, a threshold can regulate the trade-off between the recall and precision, and achieve the "
+      "value": " improve the recall. The "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"UNC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"DREAM precision scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
+    },
+    {
+      "expression": "\"better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " our methods without a decision threshold, however, a threshold can regulate the trade-off between the recall and precision, and achieve "
+    },
+    {
+      "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {

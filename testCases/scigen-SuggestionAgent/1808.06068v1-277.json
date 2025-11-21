@@ -3,15 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows that the 10rvw variant "
+      "value": "Table 3 shows that the "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"10rvw\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the word-level baseline."
+      "value": " variant consistently "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the "
+    },
+    {
+      "expression": "\"word-level baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

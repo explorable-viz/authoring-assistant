@@ -3,26 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables "
-    },
-    {
-      "expression": "\"1\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"2\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " report, respectively, the distribution of the events per token part-of speech (POS) and per event class. As for the classes, "
+      "value": "Tables 1 and 2 report, respectively, the distribution of the events per token part-of speech (POS) and per event class. As for the classes, "
     },
     {
       "expression": "\"OCCURRENCE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +16,7 @@
     },
     {
       "expression": "\"STATE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,14 +25,16 @@
     },
     {
       "expression": "\"I STATE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": " and  "
     },
     {
       "expression": "\"ACTION\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +43,7 @@
     },
     {
       "expression": "\"REPORTING\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -63,6 +52,7 @@
     },
     {
       "expression": "\"ASPECTUAL\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -71,6 +61,7 @@
     },
     {
       "expression": "\"PERCEPTION\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

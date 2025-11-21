@@ -3,39 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results of the survey shows a general "
+      "value": "The results of the survey shows a general sat, confirmisfaction feeling of interactions with ing our motivation that the existence of such an agent helps researchers (See Table 4). "
     },
     {
-      "expression": "\"sat, confirmisfaction\"",
+      "expression": "\"83%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " feeling of interactions with ing our motivation that the existence of such an agent helps researchers (See Table 4). "
+      "value": " of participants agree that reduces their needs to search through the web (e.g. using search engines) to obtain information related to their research; and in the future. However, "
     },
     {
-      "expression": "\"83\"",
+      "expression": "\"66%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of participants agree that reduces their needs to search through the web (e.g. using search engines) to obtain information related to their research; and in the future. However, "
-    },
-    {
-      "expression": "\"66\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% of hu"
-    },
-    {
-      "expression": "\"66\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% use man judges disagreed on using for planning their schedule for a conference. This observation could be because the current version of mainly retrieves information for users but planning for a conference needs some inferences on such information as well."
+      "value": " use man judges disagreed on using for planning their schedule for a conference. This observation could be because the current version of mainly retrieves information for users but planning for a conference needs some inferences on such information as well."
     }
   ],
   "variables": {},

@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,19 +16,21 @@
     },
     {
       "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Despite training on a fraction of the data available, the proposed BERT-based models surpass the previous "
+      "value": ". Despite training on a fraction of the data available, the proposed "
     },
     {
-      "expression": "\"state-of-the-art\"",
+      "expression": "\"BERT-based models\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models by a large margin on all datasets."
+      "value": " surpass the previous state-of-the-art models by a large margin on all datasets"
     }
   ],
   "variables": {},

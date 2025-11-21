@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the results on the Europarl corpus. Our approach consistently outperforms "
+      "value": "Table 3 shows the results on the Europarl corpus.  our approach consistently outperforms "
     },
     {
       "expression": "\"Basic\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"2-3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,19 +25,39 @@
     },
     {
       "expression": "\"Pivot\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on average (except on De where it is "
+      "value": " on "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (except on "
+    },
+    {
+      "expression": "\"De\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " where it is "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ")."
+      "value": "). Es"
     }
   ],
   "variables": {},

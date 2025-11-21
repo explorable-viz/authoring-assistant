@@ -6,15 +6,17 @@
       "value": "As expected, Table 4 shows that people with less domain knowledge are "
     },
     {
-      "expression": "\"more easily\"",
+      "expression": "\"more easily deceived\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " deceived. Specifically, non-CS human judges fail at "
+      "value": ". Specifically, non-CS human judges fail at "
     },
     {
       "expression": "\"more than half\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -22,15 +24,8 @@
       "value": " of the 1-to-1 sets for the same titles, which suggests that most of our system generated abstracts follow correct grammar and consistent writing style. Domain experts fail on "
     },
     {
-      "expression": "\"1\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " or "
-    },
-    {
-      "expression": "\"2\"",
+      "expression": "\"1 or 2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,11 +34,30 @@
     },
     {
       "expression": "\"topically relevant\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Additionally, the more abstracts that we provided to human judges, the easier it is to conceal the system generated abstract amongst human generated ones."
+      "value": ". Additionally, the "
+    },
+    {
+      "expression": "\"more abstracts\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that we provided to human judges, the "
+    },
+    {
+      "expression": "\"easier it is to conceal\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the system generated abstract amongst human generated ones."
     }
   ],
   "variables": {},

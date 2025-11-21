@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The table shows that the key factor is the use of sense frequencies, and systems that do not use them (those with a nf subscript) suffer a loss between "
+      "value": "Ta  The table shows that the key factor is the use of sense frequencies, and systems that do not use them (those with a nf subscript) suffer a loss between "
     },
     {
       "expression": "\"7\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,19 +16,39 @@
     },
     {
       "expression": "\"8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points in F1. The table also shows that extending the context is mildly effective. Regarding the algorithm, the table confirms that the "
+      "value": " percentage points in F1.  The table also shows that extending the context is mildly effective.  Regarding the algorithm, the table confirms that the best method is "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"ppr w2w\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " method is ppr w2w, followed by the subgraph approach (dfs) and ppr."
+      "value": ", followed by the subgraph approach ("
+    },
+    {
+      "expression": "\"dfs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and "
+    },
+    {
+      "expression": "\"ppr\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

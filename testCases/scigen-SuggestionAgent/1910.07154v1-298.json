@@ -3,39 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the performance of our Fact Checking system on the \"SUPPORTS\" label, the output of our system. We compare the results against two different classification thresholds. Here, φ = "
+      "value": "Table 2 shows the performance of our Fact Checking system on the "
     },
     {
-      "expression": "\"0.76\"",
+      "expression": "\"SUPPORTS\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " suggests that at least 3 out of the 4 questions have to be answered correctly while φ = "
+      "value": " label, the output of our system. We compare the results against two different classification thresholds.  Here, φ = "
+    },
+    {
+      "expression": "\"0.76\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " suggests that "
+    },
+    {
+      "expression": "\"at least 3\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " out of the 4 questions have to be answered correctly while φ = "
     },
     {
       "expression": "\"0.67\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " suggests that at least 2 out of the 3 questions has to be answered correctly for the claim to be classified as \"SUPPORTS\". In contrast to the results reported in Table 2, here we consider φ = "
+      "value": " suggests that "
+    },
+    {
+      "expression": "\"at least 2\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " out of the 3 questions has to be answered correctly for the claim to be classified as \"SUPPORTS\".  In contrast to the results reported in Table 2, here we consider φ = "
     },
     {
       "expression": "\"0.76\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to be "
+      "value": " to be a "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " classification threshold as it improvises over False Positives considerably over the entire dataset. From the results, we conclude that it is possible to verify the facts with the right kind of factoid questions."
+      "value": " classification threshold as it improvises over False Positives considerably over the entire dataset.  From the results, we conclude that it is possible to verify the facts with the right kind of factoid questions."
     }
   ],
   "variables": {},

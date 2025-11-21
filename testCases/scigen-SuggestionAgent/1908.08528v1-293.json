@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"23\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"23\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"28\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"28\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"23\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,14 +52,16 @@
     },
     {
       "expression": "\"23\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the datasets.  This results in a set of "
+      "value": " of the datasets,  This results in a set of "
     },
     {
       "expression": "\"28\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -63,38 +70,43 @@
     },
     {
       "expression": "\"23\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " languages listed in Table 2.  The results are listed in Table 2.  the oracle does not reach "
+      "value": " languages  listed in Table 2.  The results are listed in Table 2.  the oracle does not reach "
     },
     {
-      "expression": "\"100\"",
+      "expression": "\"100%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%;  We also express the performance of our method as error reduction on the scale from baseline ("
+      "value": ";  We also express the performance of our method as error reduction on the scale from baseline ("
     },
     {
-      "expression": "\"0\"",
+      "expression": "\"0%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%) to upper bound ("
+      "value": ") to upper bound ("
     },
     {
-      "expression": "\"100\"",
+      "expression": "\"100%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%).  For "
+      "value": ").  For "
     },
     {
       "expression": "\"23\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -103,6 +115,7 @@
     },
     {
       "expression": "\"28\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -110,44 +123,58 @@
       "value": " datasets, our method achieves a positive error reduction; the median error reduction is "
     },
     {
-      "expression": "\"23\"",
+      "expression": "\"23%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. Because of the extreme result for Korean, the average does not make much sense here. The results are "
+      "value": ". Because of the extreme result for Korean, the average does not make much sense here. The results are "
     },
     {
       "expression": "\"worst\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for Korean and Japanese,  the \"form\" baseline very close to the upper bound  our results are very low here. We also observe deteriorations for a treebank of Italian Tweets and for treebanks of historical Latin,  On all other datasets, we observe an improvement over the baseline, with an error reduction typically between "
+      "value": " for Korean and Japanese,  the \"form\" baseline very close to the upper bound  our results are "
     },
     {
-      "expression": "\"10\"",
+      "expression": "\"very low\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " here. We also observe deteriorations for a treebank of Italian Tweets and for treebanks of historical Latin,  On all other datasets, we observe an improvement over the baseline, with an error reduction typically between "
     },
     {
-      "expression": "\"35\"",
+      "expression": "\"10%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. The performance is especially good for Slavic languages (cs, hr, pl, sk, uk), where the error reduction is often around "
+      "value": " and "
     },
     {
-      "expression": "\"50\"",
+      "expression": "\"35%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%.  The evaluation showed the approach to be promising, surpassing the baseline on most of the evaluation datasets."
+      "value": ". The performance is especially good for Slavic languages (cs, hr, pl, sk, uk), where the error reduction is often around "
+    },
+    {
+      "expression": "\"50%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The evaluation showed the approach to be promising, surpassing the baseline on most of the evaluation datasets."
     }
   ],
   "variables": {},

@@ -3,31 +3,124 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1: Average accuracies and Macro-F1 scores over five runs with random initialization along with their standard deviations. "
+      "value": "Table 1: "
     },
     {
-      "expression": "\"Bold\"",
+      "expression": "\"Average accuracies\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ": best results or within std of them. ∗ indicates that the method's result is "
+      "value": " and "
     },
     {
-      "expression": "\"significantly better\"",
+      "expression": "\"Macro-F1 scores\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than all baseline methods, \u2020 indicates that the method's result is "
+      "value": " over "
     },
     {
-      "expression": "\"significantly better\"",
+      "expression": "\"five runs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than all baselines methods that use the aspect-based data only, with p < 0.05 according to a one-tailed unpaired t-test. The data annotations S,  and A indicate training with Sentence-level, Noisy sentence-level and Aspect-level data respectively. Numbers for TDLSTM+Att,ATAE-LSTM,MM,RAM and LSTM+SynATT+TarRep are from (He et al., 2018a). Numbers for Semisupervised are from (He et al., 2018b)."
+      "value": " with random initialization along with their "
+    },
+    {
+      "expression": "\"standard deviations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Bold: "
+    },
+    {
+      "expression": "\"best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " or within std of them. ∗ indicates that the method's result is significantly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than all baseline methods, \u2020 indicates that the method's result is significantly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than all baselines methods that use the aspect-based data only, with p < 0.05 according to a one-tailed unpaired t-test. The data annotations S,  and A indicate training with Sentence-level, Noisy sentence-level and Aspect-level data respectively. Numbers for "
+    },
+    {
+      "expression": "\"TDLSTM+Att\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ","
+    },
+    {
+      "expression": "\"ATAE-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ","
+    },
+    {
+      "expression": "\"MM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ","
+    },
+    {
+      "expression": "\"RAM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"LSTM+SynATT+TarRep\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are from (He et al., 2018a). Numbers for "
+    },
+    {
+      "expression": "\"Semisupervised\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are from (He et al., 2018b)."
     }
   ],
   "variables": {},

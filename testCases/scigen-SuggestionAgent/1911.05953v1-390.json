@@ -3,55 +3,205 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 gives full archive sync size of each data type for geth and ethanos at the "
+      "value": "Table 1 gives "
+    },
+    {
+      "expression": "\"full archive sync size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of each data type for "
+    },
+    {
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " at the "
     },
     {
       "expression": "\"8M\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " block. Ethanos reduces the total blockchain size "
+      "value": " block. "
     },
     {
-      "expression": "\"about 16GB\"",
+      "expression": "\"Ethanos\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared to geth. Especially, it reduces the size of Trie nodes "
+      "value": " reduces the "
     },
     {
-      "expression": "\"about 18GB\"",
+      "expression": "\"total blockchain size\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", because ethanos only maintains the state trie only with active accounts during a month which are "
+      "value": " about "
     },
     {
-      "expression": "\"10\"",
+      "expression": "\"16GB\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of the total accounts. However, hash field of bloom filter in block header slightly increases Headers, and restore transactions increment Bodies and Receipts "
+      "value": " compared to "
     },
     {
-      "expression": "\"about 1.6GB\"",
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". As a result, ethanos reduced full archive node by "
+      "value": ". Especially, it reduces the size of "
     },
     {
-      "expression": "\"about 8%\"",
+      "expression": "\"Trie nodes\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared to ethereum."
+      "value": " about "
+    },
+    {
+      "expression": "\"18GB\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", because "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " only maintains the state trie only with active accounts during a month which are only "
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the total accounts. However, "
+    },
+    {
+      "expression": "\"hash field\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"bloom filter in block header\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " slightly increases "
+    },
+    {
+      "expression": "\"Headers\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and restore transactions increment "
+    },
+    {
+      "expression": "\"Bodies\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Receipts\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " about "
+    },
+    {
+      "expression": "\"1.6GB\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As a result, "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reduced "
+    },
+    {
+      "expression": "\"full archive node\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by about "
+    },
+    {
+      "expression": "\"8%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to "
+    },
+    {
+      "expression": "\"ethereum\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

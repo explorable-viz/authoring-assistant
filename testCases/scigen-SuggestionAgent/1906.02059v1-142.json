@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 (upper part) shows the results for binary violation. We evaluate models using macroaveraged precision (P), recall (P), F1. The weak baselines ("
+      "value": "Table 2 (upper part) shows the results for binary violation. We evaluate "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " using macroaveraged precision (P), recall (P), F1. The weak baselines ("
     },
     {
       "expression": "\"MAJORITY\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,14 +25,34 @@
     },
     {
       "expression": "\"COIN-TOSS\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") are widely outperformed by the rest of the methods. BIGRUATT outperforms in F1 ("
+      "value": ") are widely "
+    },
+    {
+      "expression": "\"outperformed\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by the rest of the methods. "
+    },
+    {
+      "expression": "\"BIGRUATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms in F1 ("
     },
     {
       "expression": "\"79.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +61,7 @@
     },
     {
       "expression": "\"71.8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -38,15 +69,53 @@
       "value": ") the previous "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"best performing method\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performing method (Aletras et al., 2016) in English judicial prediction. HAN slightly improves over BIGRU-ATT ("
+      "value": " ("
+    },
+    {
+      "expression": "\"Aletras et al., 2016\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") in English judicial prediction. "
+    },
+    {
+      "expression": "\"HAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " slightly "
+    },
+    {
+      "expression": "\"improves\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over "
+    },
+    {
+      "expression": "\"BIGRU-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"80.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +124,7 @@
     },
     {
       "expression": "\"79.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -62,23 +132,35 @@
       "value": "), while being more robust across runs ("
     },
     {
-      "expression": "\"0.2\"",
+      "expression": "\"0.2%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% vs. "
+      "value": " vs. "
     },
     {
-      "expression": "\"2.7\"",
+      "expression": "\"2.7%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% std. dev.). the results in Table 2 indicate that performance is comparable even when this information is masked, with the exception of HIER-BERT that has quite "
+      "value": " std. dev.). the results in Table 2 indicate that performance is comparable even when this information is masked, with the exception of "
+    },
+    {
+      "expression": "\"HIER-BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that has quite "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -86,12 +168,13 @@
       "value": " results ("
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"2%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%) compared to using non-anonymized data, suggesting model bias."
+      "value": ") compared to using non-anonymized data, suggesting model bias."
     }
   ],
   "variables": {},

@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The final model used the finetuned BERT model mentioned above with a condition to predict non-propaganda only if the prediction probability is above "
+      "value": "The final model used the finetuned "
     },
     {
-      "expression": "\"0.70\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model mentioned above with a condition to predict non-propaganda only if the prediction probability is "
+    },
+    {
+      "expression": "\"above 0.70\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -15,6 +25,7 @@
     },
     {
       "expression": "\"0.70\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -22,31 +33,98 @@
       "value": " threshold was chosen after elaborate experiments on both the local and the shared-task's development sets. This condition consistently provided an improvement of around "
     },
     {
-      "expression": "\"5 points\"",
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in F1 score of the propaganda class on all experiments using different sets of features as shown in Table 2. In SLC, we ran multiple experiments using BERT with and without additional features as shown in Table 2. The features include using the text passed as is to BERT without any preprocessing. Also, we experimented with adding the context which includes the two sentences that come before and after the target sentence. Context sentences were concatenated and passed as the second BERT input, while the target sentence was passed as the first BERT input. In addition, we experimented with using BERT logits (i.e., the probability predictions per class) as features in a Logistic Regression (LR) classifier concatenated with handcrafted features (e.g., LIWC, quotes, questions), and with predictions of our FLC classifier (tagged spans: whether the sentence has a propaganda fragment or not). However, none of these features added any statistically significant improvements. Therefore, we used BERT predictions for our final model with a condition to predict the majority class non-propaganda only if its prediction probability is "
+      "value": " points in F1 score of the propaganda class on all experiments using different sets of features as shown in Table 2. In SLC, we ran multiple experiments using "
     },
     {
-      "expression": "\"more than\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " with and without additional features as shown in Table 2. The features include using the text passed as is to "
     },
     {
-      "expression": "\"0.70\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " as shown in Table 3. This is a modified threshold as opposed to "
+      "value": " without any preprocessing. Also, we experimented with adding the context which includes the two sentences that come before and after the target sentence. Context sentences were concatenated and passed as the second "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " input, while the target sentence was passed as the first "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " input. In addition, we experimented with using "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " logits (i.e., the probability predictions per class) as features in a Logistic Regression ("
+    },
+    {
+      "expression": "\"LR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") classifier concatenated with handcrafted features (e.g., LIWC, quotes, questions), and with predictions of our "
+    },
+    {
+      "expression": "\"FLC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " classifier (tagged spans: whether the sentence has a propaganda fragment or not). However, none of these features added any statistically significant improvements. Therefore, we used "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " predictions for our final model with a condition to predict the majority class non-propaganda only if its prediction probability is "
+    },
+    {
+      "expression": "\"more than 0.70\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". as shown in Table 3. This is a modified threshold as opposed to "
     },
     {
       "expression": "\"0.80\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +133,7 @@
     },
     {
       "expression": "\"0.70\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

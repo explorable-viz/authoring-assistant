@@ -3,15 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables 4 through 6 show the summary metrics for the three language pairs for the large data experiments. We can see that the reverse rank and forward rank methods of taking into account the global structure of interactions among predictions is still helpful, providing "
+      "value": "Tables 4 through 6 show the summary metrics for "
     },
     {
-      "expression": "\"large improvements\"",
+      "expression": "\"the three language pairs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in performance even in this challenging large data condition over strong state of the art baselines"
+      "value": " for "
+    },
+    {
+      "expression": "\"large data experiments\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We can see that "
+    },
+    {
+      "expression": "\"the reverse rank and forward rank methods\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of taking into account the global structure of interactions among predictions is still helpful, providing large improvements in performance even in this challenging "
+    },
+    {
+      "expression": "\"large data condition\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"over strong state of the art baselines\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

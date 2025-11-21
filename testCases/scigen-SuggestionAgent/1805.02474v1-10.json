@@ -3,18 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 3, BiLSTM gives "
+      "value": "As shown in Table 3, "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracies compared to uni-directional LSTM2, with the training time per epoch growing from "
+      "value": " gives "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracies compared to uni-directional "
+    },
+    {
+      "expression": "\"LSTM2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with the training time per epoch growing from "
     },
     {
       "expression": "\"67\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,91 +43,273 @@
     },
     {
       "expression": "\"106\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " seconds. Stacking 2 layers of BiLSTM gives further improvements to development results, with a larger time of "
+      "value": " seconds. Stacking 2 layers of "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives further improvements to development results, with a larger time of "
     },
     {
       "expression": "\"207\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " seconds. 3 layers of stacked BiLSTM does not further improve the results. In contrast, S-LSTM gives a development result of "
+      "value": " seconds. 3 layers of stacked "
     },
     {
-      "expression": "\"82.64\"",
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, which is "
+      "value": " does not further improve the results. In contrast, "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared to 2-layer stacked BiLSTM, with a smaller number of model parameters and a shorter time of "
+      "value": " gives a development result of "
+    },
+    {
+      "expression": "\"82.64%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to 2-layer stacked "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with a smaller number of model parameters and a shorter time of "
     },
     {
       "expression": "\"65\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " seconds. We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows), CNN is "
+      "value": " seconds.  We additionally make comparisons with stacked "
     },
     {
-      "expression": "\"the most efficient\"",
+      "expression": "\"CNNs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " among all models compared, with the smallest model size. On the other hand, a 3-layer stacked CNN gives an accuracy of "
+      "value": " and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the "
     },
     {
-      "expression": "\"81.46\"",
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, which is also "
+      "value": " and "
     },
     {
-      "expression": "\"the lowest\"",
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. The "
+      "value": " rows),  "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the "
+    },
+    {
+      "expression": "\"most efficient\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " among all models compared, with the smallest model size. On the other hand, a 3-layer stacked "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives an accuracy of "
+    },
+    {
+      "expression": "\"81.46%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is also  the "
+    },
+    {
+      "expression": "\"lowest\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared with "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", hierarchical attention and "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
     },
     {
       "expression": "\"best performance\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. S-LSTM gives "
+      "value": " of hierarchical attention is between single-layer and two-layer "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"BiLSTMs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still outperforming BiLSTM "
+      "value": " in terms of both accuracy and efficiency. "
     },
     {
-      "expression": "\"significantly\"",
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " gives "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracies compared with both "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and hierarchical attention.  Table 3 additionally shows the results of "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when external attention is used  Attention leads to improved accuracies for both "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in classification, with "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " still outperforming "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significantly."
     }
   ],
   "variables": {},

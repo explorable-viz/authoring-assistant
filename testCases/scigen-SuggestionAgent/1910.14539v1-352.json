@@ -7,19 +7,48 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models according to their BLEU score on DGT-valid. The scores are shown in Table 3. We see that in the same data conditions (unconstrained mode), the MT+NLG models are "
+      "value": " models according to their "
     },
     {
-      "expression": "\"not better than\"",
+      "expression": "\"BLEU score\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the pure MT models."
+      "value": " on DGT-valid. The scores are shown in Table 3,  We see that in the same data conditions (unconstrained mode), the "
+    },
+    {
+      "expression": "\"MT+NLG models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are not "
+    },
+    {
+      "expression": "\"better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the pure "
+    },
+    {
+      "expression": "\"MT models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables 1 and 2 report, respectively, the distribution of the events per token part-of speech (POS) and per event class. "
+      "value": "Tables 1 and 2 report, respectively, the distribution of the "
+    },
+    {
+      "expression": "\"events\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " per token part-of speech (POS) and per "
+    },
+    {
+      "expression": "\"event class\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\r\n"
     },
     {
       "expression": "\"verbs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -14,15 +33,17 @@
       "value": " are the "
     },
     {
-      "expression": "\"largest\"",
+      "expression": "\"largest annotated category\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " annotated category, followed by "
+      "value": ", followed by "
     },
     {
       "expression": "\"nouns\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,11 +52,21 @@
     },
     {
       "expression": "\"adjectives\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", and prepositional phrases."
+      "value": ", and "
+    },
+    {
+      "expression": "\"prepositional phrases\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

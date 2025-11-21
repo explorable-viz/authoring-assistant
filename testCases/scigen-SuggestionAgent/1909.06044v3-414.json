@@ -3,71 +3,106 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We calculate these "
+      "value": "We calculate these similarity scores for each "
     },
     {
-      "expression": "\"similarity scores\"",
+      "expression": "\"Real\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for each Real targeted output for the real inputs and the inputs found by the proposed model and report the average value in Table 1. According to the table, we observe that even inputting the real inputs, the "
+      "value": " targeted output for the real inputs and the inputs found by the proposed model and report the "
     },
     {
-      "expression": "\"similarity scores\"",
+      "expression": "\"average\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " between the outputs and the target outputs are not high. Besides, with the crafted inputs from the proposed framework, these "
+      "value": " value in Table 1. According to the table, we observe that even inputting the real inputs, the similarity scores between the outputs and the target outputs are not "
     },
     {
-      "expression": "\"similarity scores\"",
+      "expression": "\"high\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are "
+      "value": ". Besides, with the crafted inputs from the proposed framework, these similarity scores are significantly "
     },
     {
-      "expression": "\"significantly improved\"",
+      "expression": "\"improved\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". For example, for RL BeamSearch(200), the "
+      "value": ". For example, for "
     },
     {
-      "expression": "\"similarity\"",
+      "expression": "\"RL BeamSearch(200)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is improved by "
+      "value": ", the similarity is improved by "
     },
     {
-      "expression": "\"41.5\"",
+      "expression": "\"41.5%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, "
+      "value": ", "
     },
     {
-      "expression": "\"34.0\"",
+      "expression": "\"34.0%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " and "
     },
     {
-      "expression": "\"28.3\"",
+      "expression": "\"28.3%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% for the target outputs with length 1-3, 4-6 and 7-10, respectively."
+      "value": " for the target outputs with length "
+    },
+    {
+      "expression": "\"1-3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"4-6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"7-10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively."
     }
   ],
   "variables": {},

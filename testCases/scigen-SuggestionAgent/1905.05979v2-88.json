@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For all tasks, we observe a large improvement from using context. For deixis, the concatenation model (concat) and CADec improve over the baseline by "
+      "value": "For all tasks, we observe a large improvement from using context. For deixis, the "
+    },
+    {
+      "expression": "\"concatenation model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (concat) and "
+    },
+    {
+      "expression": "\"CADec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improve over the baseline by "
     },
     {
       "expression": "\"33.5\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -15,35 +34,57 @@
     },
     {
       "expression": "\"31.6\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points, respectively. On the lexical cohesion test set, CADec shows a "
+      "value": " percentage points, respectively.\r\nOn the lexical cohesion test set, "
     },
     {
-      "expression": "\"large improvement\"",
+      "expression": "\"CADec\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " over the context-agnostic baseline ("
+      "value": " shows a large improvement over the context-agnostic baseline ("
     },
     {
       "expression": "\"12.2\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points), while concat performs similarly to the baseline. When looking only at the scores where the latest relevant context is in the model's context window (column 2 in Table 7), s-hier-to-2.tied outperforms the concatenation baseline for lexical cohesion, but remains "
+      "value": " percentage points), while "
     },
     {
-      "expression": "\"behind\"",
+      "expression": "\"concat\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the performance of CADec."
+      "value": " performs similarly to the baseline.\r\nWhen looking only at the scores where the latest relevant context is in the model's context window (column 2 in Table 7), "
+    },
+    {
+      "expression": "\"s-hier-to-2.tied\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms the concatenation baseline for lexical cohesion, but remains behind the performance of "
+    },
+    {
+      "expression": "\"CADec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

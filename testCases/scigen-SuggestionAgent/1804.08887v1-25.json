@@ -3,31 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We select the "
+      "value": "We "
     },
     {
-      "expression": "\"1st\"",
+      "expression": "\"select\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": " the "
     },
     {
-      "expression": "\"2nd\"",
+      "expression": "\"1st and 2nd best performing models\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " on the development datasets as well as the majority vote (mv) of "
     },
     {
-      "expression": "\"best performing\"",
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models on the development datasets as well as the majority vote (mv) of 5 models for the final submission. The final results are shown in Table 3."
+      "value": " models for the final submission. The final results are shown in Table 3."
     }
   ],
   "variables": {},

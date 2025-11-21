@@ -6,76 +6,85 @@
       "value": "Table 2 presents the classification results for sarcasm prediction in the speaker-dependent setup. The "
     },
     {
-      "expression": "\"lowest\"",
+      "expression": "\"lowest performance\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance is obtained with the Majority baseline which achieves "
+      "value": " is obtained with the Majority baseline which achieves "
     },
     {
-      "expression": "\"33.3\"",
+      "expression": "\"33.3%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% weighted Fscore ("
+      "value": " weighted Fscore ("
     },
     {
-      "expression": "\"66.7\"",
+      "expression": "\"66.7%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% F-score for non-sarcastic class and "
+      "value": " F-score for non-sarcastic class and "
     },
     {
-      "expression": "\"0\"",
+      "expression": "\"0%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% for sarcastic). The pre-trained features for the visual modality provide the "
+      "value": " for sarcastic). The pre-trained features for the visual modality provide "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"the best performance\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance among the unimodal variants. The addition of textual features through concatenation improves the unimodal baseline and achieves the "
+      "value": " among the unimodal variants. The addition of textual features through concatenation improves the unimodal baseline and achieves "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"the best performance\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance. The tri-modal variant is unable to achieve the "
+      "value": ". The tri-modal variant is unable to achieve "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"the best score\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " score due to a slightly sub-optimal performance from the audio modality. Overall, the combination of visual and textual signals significantly improves over the unimodal variants, with a relative error rate reduction of up to "
+      "value": " due to a slightly sub-optimal performance from the audio modality. Overall, the combination of visual and textual signals significantly improves over the unimodal variants, with a relative error rate reduction of up to "
     },
     {
-      "expression": "\"12.9\"",
+      "expression": "\"12.9%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. In multiple evaluations, the multimodal variants were shown to significantly outperform their unimodal counterparts, with relative error rate reductions of up to "
+      "value": ". In multiple evaluations, the multimodal variants were shown to significantly outperform their unimodal counterparts, with relative error rate reductions of up to "
     },
     {
-      "expression": "\"12.9\"",
+      "expression": "\"12.9%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%."
+      "value": "."
     }
   ],
   "variables": {},

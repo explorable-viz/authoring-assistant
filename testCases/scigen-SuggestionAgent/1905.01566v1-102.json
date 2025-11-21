@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"ORIGINAL\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"PAIR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"ORIGINAL\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,22 +34,16 @@
     },
     {
       "expression": "\"OVERLAP\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"the most effective\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " heuristic technique. This simple heuristic improves recall on EL. "
+      "value": " is the most effective heuristic technique. This simple heuristic improves recall on EL. "
     },
     {
       "expression": "\"FILTER\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +52,7 @@
     },
     {
       "expression": "\"PAIR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -63,22 +61,16 @@
     },
     {
       "expression": "\"OVERLAP\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the HEAD setting, "
-    },
-    {
-      "expression": "\"RELABEL\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
+      "value": " on the HEAD setting, RELABEL and "
     },
     {
       "expression": "\"OVERLAP\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -87,6 +79,7 @@
     },
     {
       "expression": "\"FILTER & RELABEL\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

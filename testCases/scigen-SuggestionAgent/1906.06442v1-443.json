@@ -3,31 +3,88 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The BLEU scores of each decoding method are presented in Table 7. The noised decode \u2013 decoding newstest sentences with the NoisedBT model after noising the source \u2013 yields "
+      "value": "The BLEU scores of each "
     },
     {
-      "expression": "\"poor\"",
+      "expression": "\"decoding method\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance. The tagged decode, however, yields only somewhat "
+      "value": " are presented in Table 7.\r\nThe "
     },
     {
-      "expression": "\"lower\"",
+      "expression": "\"noised decode\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than the standard decode on the same model ("
+      "value": " \u2013 decoding newstest sentences with the "
     },
     {
-      "expression": "\"-2.9\"",
+      "expression": "\"NoisedBT model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "BLEU on average)."
+      "value": " after noising the source \u2013 yields "
+    },
+    {
+      "expression": "\"poor performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\r\nThe "
+    },
+    {
+      "expression": "\"tagged decode\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", however, yields only somewhat "
+    },
+    {
+      "expression": "\"lower performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the "
+    },
+    {
+      "expression": "\"standard decode\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the same model ("
+    },
+    {
+      "expression": "\"-2.9BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"on average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
     }
   ],
   "variables": {},

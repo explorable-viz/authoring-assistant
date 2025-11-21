@@ -3,31 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As can be seen from Table 2, the DST accuracy "
+      "value": "As can be seen from Table 2, the DST accuracy slightly "
     },
     {
-      "expression": "\"slightly\"",
+      "expression": "\"increases\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " increases for the "
+      "value": " for the "
     },
     {
       "expression": "\"higher-quality\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " live ASR outputs. More importantly, the DST performance "
+      "value": " live ASR outputs. More importantly, the DST performance drastically "
     },
     {
-      "expression": "\"drastically\"",
+      "expression": "\"increases\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " increases, when we evaluate on the manual transcripts that reflect the true user utterances nearly perfectly."
+      "value": ", when we evaluate on the manual transcripts that reflect the true user utterances nearly perfectly."
     }
   ],
   "variables": {},

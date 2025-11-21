@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only "
+      "value": "Table 4 shows that increasing the number of layers from "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results in a BLEU increase of only "
     },
     {
       "expression": "\"0.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +34,7 @@
     },
     {
       "expression": "\"3.8×\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,14 +43,16 @@
     },
     {
       "expression": "\"1.4×\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The final row of Table 4 shows that exposing the parse decoder to multiple possible chunkings of the same sentence during training allows it to choose a sequence of chunks that has a "
+      "value": ".  The final row of Table 4 shows that exposing the parse decoder to multiple possible chunkings of the same sentence during training allows it to choose a sequence of chunks that has a "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -39,6 +61,7 @@
     },
     {
       "expression": "\"1.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +70,7 @@
     },
     {
       "expression": "\"3.8×\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,11 +79,12 @@
     },
     {
       "expression": "\"3.1×\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": ";"
     }
   ],
   "variables": {},

@@ -3,15 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We label each reply into three categories: buy, sell and other. The distribution of reply types is "
+      "value": "We "
     },
     {
-      "expression": "\"highly dependant\"",
+      "expression": "\"label\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the structure and rules of the forum as shown in Table III."
+      "value": " each reply into "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " categories: "
+    },
+    {
+      "expression": "\"buy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"sell\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"other\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The distribution of reply types is highly dependant on the structure and rules of the forum as shown in Table III."
     }
   ],
   "variables": {},

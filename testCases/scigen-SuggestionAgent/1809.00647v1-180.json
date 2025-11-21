@@ -3,63 +3,196 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We summarize the main results in Table 3. Frequency is "
+      "value": "We summarize the main results in Table 3.  "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performing baseline. Its precision at 1 and 5 are "
+      "value": " is "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"the best performing baseline\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than 40%. PageRank performs "
+      "value": ". Its precision at 1 and 5 are "
+    },
+    {
+      "expression": "\"higher than 40%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"PageRank\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than Frequency on all the precision and recall metrics. Location performs "
+      "value": " than "
+    },
+    {
+      "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all  the precision and recall metrics. "
+    },
+    {
+      "expression": "\"Location\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
     },
     {
       "expression": "\"the worst\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". LeToR outperforms the baselines significantly on all metrics. Particularly, its P@1 value outperforms the Frequency baseline "
+      "value": ".  "
     },
     {
-      "expression": "\"the most\"",
+      "expression": "\"LeToR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (4.64%), indicating a "
+      "value": " outperforms the baselines significantly on all metrics. Particularly, its P@1 value outperforms the "
     },
     {
-      "expression": "\"much better\"",
+      "expression": "\"Frequency baseline\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " estimation on the most salient event. In terms of AUC, LeToR outperforms Frequency by a large margin (11.19% relative gain). The KCE model further beats LeToR significantly on all metrics, by around 5% on AUC and precision values, and by around 10% on the recall values. Notably, the P@1 score is "
+      "value": " the most ("
     },
     {
-      "expression": "\"much higher\"",
+      "expression": "\"4.64%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", reaching 50%. The large relative gain on all the recall metrics and the high performance on precision show that KCE works really well on the top of the rank list. To understand the source of performance gain of KCE, we conduct an ablation study by removing its components: -E removes of entity kernels; -EF removes the entity kernels and the features. We observe a performance drop in both cases."
+      "value": "), indicating a much better estimation on the most salient event. In terms of AUC, "
+    },
+    {
+      "expression": "\"LeToR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by a large margin ("
+    },
+    {
+      "expression": "\"11.19% relative gain\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ").  The "
+    },
+    {
+      "expression": "\"KCE model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " further beats "
+    },
+    {
+      "expression": "\"LeToR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significantly on all metrics, by around "
+    },
+    {
+      "expression": "\"5%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on AUC and precision values, and by around "
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the recall values. Notably, the P@1 score is much higher, reaching "
+    },
+    {
+      "expression": "\"50%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The large relative gain on all the recall metrics and the high performance on precision show that "
+    },
+    {
+      "expression": "\"KCE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " works really well on the top of the rank list.  To understand the source of performance gain of "
+    },
+    {
+      "expression": "\"KCE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we conduct an ablation study by removing its components: -E removes of entity kernels; -EF removes the entity kernels and the features. We observe a performance drop in both cases."
     }
   ],
   "variables": {},

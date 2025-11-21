@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 presents the results of our method comparing them against recent state-of-the-art supervised models and the simple n-gram language model used by Bryant and Briscoe (2018). A key result of Table 2 is that Transformer Language Models prove to be "
+      "value": "Table "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " presents the results of our method comparing them against recent state-of-the-art supervised models and the simple n-gram language model used by Bryant and Briscoe (2018).  A key result of Table "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is that Transformer Language Models prove to be "
     },
     {
       "expression": "\"more than\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -15,22 +34,34 @@
     },
     {
       "expression": "\"outperform\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the simple n-gram model and even "
+      "value": " the simple n-gram model and even approach the performance of supervised GEC systems.  we see that their performance is nearly identical with "
     },
     {
-      "expression": "\"approach\"",
+      "expression": "\"GPT-2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the performance of supervised GEC systems. We see that their performance is nearly identical with GPT-2 leading by a small margin in the CoNLL14 dataset. BERT surpasses the n-gram baseline overall, it achieves "
+      "value": " leading by a small margin in the CoNLL14 dataset.  "
+    },
+    {
+      "expression": "\"bert\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " surpasses the n-gram baseline overall, it achieves "
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

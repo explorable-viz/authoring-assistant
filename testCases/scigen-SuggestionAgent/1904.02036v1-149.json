@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 gives an overview of the historical datasets, covering "
+      "value": "Table 1 gives an overview of the historical datasets.  covering "
     },
     {
       "expression": "\"eight\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"English\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"German\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"Hungarian\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"Icelandic\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +52,7 @@
     },
     {
       "expression": "\"Spanish\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +61,7 @@
     },
     {
       "expression": "\"Portuguese\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -63,6 +70,7 @@
     },
     {
       "expression": "\"Slovene\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -71,6 +79,7 @@
     },
     {
       "expression": "\"Swedish\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -3,47 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Various subsets of authors were chosen and the dataset was truncated to each author having the same number of samples. With and without "
+      "value": "Various subsets of "
     },
     {
-      "expression": "\"pre-trained\"",
+      "expression": "\"authors\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " character level embedding and comparing the proposed architectures on the held-out dataset. To illustrate the need of "
+      "value": " were chosen and the dataset was truncated to each "
     },
     {
-      "expression": "\"pre-trained\"",
+      "expression": "\"author\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " character embeddings, we see from III that using a "
+      "value": " having the same number of samples.  with and without pre-training character level embedding and comparing the proposed architectures on the held-out dataset.  To illustrate the need of pre-trained character embeddings, we see from III that using a pre-trained embedding increases the "
     },
     {
-      "expression": "\"pre-trained\"",
+      "expression": "\"accuracy\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " embedding increases the accuracy across datasets and the different number of authors, regardless of the amount of data for each author. Increase the performance a few degrees. We analyzed the importance of "
+      "value": " across datasets and the different number of "
     },
     {
-      "expression": "\"pre-trained\"",
+      "expression": "\"authors\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " character embedding for author attribution and showed that pre-training can result in "
+      "value": ", regardless of the amount of data for each "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"author\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performances."
+      "value": ".  increase the performance a few degrees.  we analyzed the importance of pretrained character embedding for "
+    },
+    {
+      "expression": "\"author\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " attribution and showed that pre-training can result in "
+    },
+    {
+      "expression": "\"better performances\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

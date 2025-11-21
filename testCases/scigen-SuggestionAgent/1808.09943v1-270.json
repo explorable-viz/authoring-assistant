@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 clearly shows the character-level systems "
+      "value": "Table 2 clearly shows the "
+    },
+    {
+      "expression": "\"characterlevel\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " systems "
     },
     {
       "expression": "\"outperforming\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

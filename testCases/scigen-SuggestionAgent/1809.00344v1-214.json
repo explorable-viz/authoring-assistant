@@ -7,75 +7,102 @@
     },
     {
       "expression": "\"+1.11\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU) and En-De ("
+      "value": " "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and En-De ("
     },
     {
       "expression": "\"+1.60\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU), and with InitDec+AddDec for En-Fr ("
+      "value": " "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and with InitDec+AddDec for En-Fr ("
     },
     {
       "expression": "\"+1.19\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU). We also observe that, for all language-pairs, both translation directions benefit from context,  On the other hand, for the Subtitles data, we see a "
+      "value": " "
     },
     {
-      "expression": "\"maximum\"",
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " improvement of "
+      "value": "). We also observe that, for all language-pairs, both translation directions benefit from context,  On the other hand, for the Subtitles data, we see a "
+    },
+    {
+      "expression": "\"maximum improvement\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
     },
     {
       "expression": "\"+0.30\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU for InitDec+AddDec.  The next set of experiments evaluates the five different approaches for computing the source-side context. From Table 2 that for English-Estonian and English-German, our model indeed benefits from using is evident  Finally, our results with source, target and dual contexts are reported. Interestingly, just using the source context is sufficient for English-Estonian and English-German. For English-French, on the other hand, we see "
+      "value": " "
     },
     {
-      "expression": "\"significant\"",
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " improvements for the models using the target-side conversation history over using only the source-side.  Unlike Europarl, for Subtitles, we see "
+      "value": " for InitDec+AddDec.  The next set of experiments evaluates the five different approaches for computing the sourceside context. from Table 2 that for English-Estonian and English-German, our model indeed benefits from using is evident  Finally, our results with source, target and dual contexts are reported. Interestingly, just using the source context is sufficient for English-Estonian and English-German. For English-French, on the other hand, we see "
+    },
+    {
+      "expression": "\"significant improvements\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the models using the target-side conversation history over using only the source-side.  Unlike Europarl, for Subtitles, we see "
     },
     {
       "expression": "\"improvements\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for our Src-TgtMix dual context variant over the Src-Tgt one for En→Ru,  To summarise, for majority of the cases our Language-Specific Sentence-level Attention is a "
-    },
-    {
-      "expression": "\"winner\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " or a "
-    },
-    {
-      "expression": "\"close second\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Using the Target Context is useful when the base model generates reasonable-quality translations; otherwise, using the Source Context should suffice."
+      "value": " for our Src-TgtMix dual context variant over the Src-Tgt one for En→Ru,  To summarise, for majority of the cases our Language-Specific Sentence-level Attention is a winner or a close second. Using the Target Context is useful when the base model generates reasonable-quality translations; otherwise, using the Source Context should suffice."
     }
   ],
   "variables": {},

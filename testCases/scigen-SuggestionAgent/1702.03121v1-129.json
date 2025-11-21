@@ -3,15 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results of all four logistic regression models are shown in Table 5. The results for the full dataset are fully consistent with the findings shown in Table 5: there was no significant effect "
+      "value": "The results of all four "
     },
     {
-      "expression": "\"of\"",
+      "expression": "\"logistic regression models\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " surprisal on referring expression type. In order to replicate their settings as closely as possible, we also included residualEntropy as a predictor in our model (see last predictor in Table 5); however, this did not change the results.\n\nNote: The comparative phrase \"no significant effect of\" does not directly indicate an explicit comparison or superlative value, so it is not replaced. However, if there were phrases like \"better than\", \"the best\", \"higher than\", etc., those would be annotated as requested."
+      "value": " are shown in Table 5. The results for the full dataset are fully consistent with the findings shown in Table 5: there was no significant effect of "
+    },
+    {
+      "expression": "\"surprisal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on referring expression type. In order to replicate their settings as closely as possible, we also included "
+    },
+    {
+      "expression": "\"residualEntropy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as a predictor in our model (see last predictor in Table 5); however, this did not change the results."
     }
   ],
   "variables": {},

@@ -3,26 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The model has relatively low accuracy on the entailment and contradiction examples while "
+      "value": "The "
     },
     {
-      "expression": "\"close to zero\"",
+      "expression": "\"low\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy on the neutral ones. The accuracy of the model on each test set. On our dative alternation dataset, the accuracy on our test sets is "
+      "value": " accuracy of the model on the entailment and contradiction examples while close to "
     },
     {
-      "expression": "\"substantially lower than\"",
+      "expression": "\"zero\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the MultiNLI development set ("
+      "value": " accuracy on the neutral ones.  The accuracy of the model on each test set.  On our dative alternation dataset, the accuracy on our test sets is substantially "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than on the MultiNLI development set ("
     },
     {
       "expression": "\"50.78\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -30,28 +42,40 @@
       "value": "% versus "
     },
     {
-      "expression": "\"84.66%\"",
+      "expression": "\"84.66\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " respectively), The model has very high accuracy on the entailment examples, while "
+      "value": "% respectively),  The model has very "
     },
     {
-      "expression": "\"close to zero\"",
+      "expression": "\"high\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the contradiction ones. On the numerical reasoning dataset, the model also seems to fail on this inference type with test set accuracy "
+      "value": " accuracy on the entailment examples, while close to "
     },
     {
-      "expression": "\"much lower than\"",
+      "expression": "\"zero\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the MultiNLI development set,"
+      "value": " on the contradiction ones.  On the numerical reasoning dataset, the model also seems to fail on this inference type with test set accuracy much "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than on the MultiNLI development set,"
     }
   ],
   "variables": {},

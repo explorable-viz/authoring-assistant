@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"table 2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -14,15 +15,17 @@
       "value": " as "
     },
     {
-      "expression": "\"feature level\"",
+      "expression": "\"feature level transfer-learning\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " transfer-learning.  These results are shown in "
+      "value": ".  These results are shown in "
     },
     {
       "expression": "\"table 2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -30,20 +33,22 @@
       "value": " as "
     },
     {
-      "expression": "\"model level\"",
+      "expression": "\"model level transfer learning\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " transfer learning.  "
+      "value": ".  "
     },
     {
       "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " shows the results of the proposed method, its variants and the baseline methods.\n\nNote: In this paragraph, there are no explicit values, comparative expressions, or superlative/aggregated expressions to replace with Fluid expressions. Therefore, only the table references were replaced as they are not specific to Fluid language but could be annotated for clarity if needed. However, according to your instructions, no replacements are necessary in this case."
+      "value": " shows the results of the proposed method, its variants and the baseline methods."
     }
   ],
   "variables": {},

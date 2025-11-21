@@ -3,26 +3,47 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the results of this evaluation. The extent of spelling variation varies greatly between datasets, with less than "
+      "value": "Table 2 shows the results of this evaluation. The extent of spelling variation varies greatly between datasets, with "
     },
     {
-      "expression": "\"15\"",
+      "expression": "\"less than 15%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of tokens requiring normalization (SLG) to more than "
+      "value": " of tokens requiring normalization ("
     },
     {
-      "expression": "\"80\"",
+      "expression": "\"SLG\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% (HU). The "
+      "value": ") to "
+    },
+    {
+      "expression": "\"more than 80%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"HU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). The "
     },
     {
       "expression": "\"maximum\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -30,44 +51,112 @@
       "value": " accuracy is above "
     },
     {
-      "expression": "\"97\"",
+      "expression": "\"97%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% for most datasets. For the normalization systems, we observe "
+      "value": " for most datasets, For the normalization systems, we observe "
     },
     {
       "expression": "\"significantly better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " word accuracy with SMT than NMT on four of the datasets, and non-significant differences on five others. There is only one dataset (DEA) where the NMT system by Tang et al. (2018) gets "
+      "value": " word accuracy with "
+    },
+    {
+      "expression": "\"SMT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"NMT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on four of the datasets, and non-significant differences on five others. There is only one dataset ("
+    },
+    {
+      "expression": "\"DEA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") where the "
+    },
+    {
+      "expression": "\"NMT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " system by Tang et al. (2018) gets "
     },
     {
       "expression": "\"significantly better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " word accuracy than other systems. Overall, the deep NMT model by Tang et al. (2018) consistently "
+      "value": " word accuracy than other systems. Overall, the "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"deep\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the shallow one by Bollmann (2018). Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "
+      "value": " NMT model by Tang et al. (2018) consistently outperforms the "
+    },
+    {
+      "expression": "\"shallow\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " one by Bollmann (2018). Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "
     },
     {
       "expression": "\"significantly behind\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the SMT and NMT methods."
+      "value": " the "
+    },
+    {
+      "expression": "\"SMT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"NMT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " methods."
     }
   ],
   "variables": {},

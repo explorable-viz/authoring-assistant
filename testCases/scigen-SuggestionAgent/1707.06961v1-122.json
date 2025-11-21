@@ -3,34 +3,74 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results, shown in Table 3, demonstrate that the MIMICK RNN recovers about half of "
+      "value": "The results, shown in Table 3, demonstrate that the "
     },
     {
-      "expression": "\"the loss\"",
+      "expression": "\"MIMICK RNN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in performance incurred by the original Polyglot training model due to out-of-vocabulary words in the \"All pairs\" condition. MIMICK also "
+      "value": " recovers about half of the loss in performance incurred by the original "
+    },
+    {
+      "expression": "\"Polyglot\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training model due to out-of-vocabulary words in the \"All pairs\" condition. "
+    },
+    {
+      "expression": "\"MIMICK\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " also "
     },
     {
       "expression": "\"outperforms\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " VarEmbed. FastText can be considered an upper bound: with a vocabulary that is "
+      "value": " "
     },
     {
-      "expression": "\"25\"",
+      "expression": "\"VarEmbed\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " times larger than the other models, it was missing words from only "
+      "value": ". "
+    },
+    {
+      "expression": "\"FastText\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " can be considered an upper bound: with a vocabulary that is "
+    },
+    {
+      "expression": "\"25 times larger\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the other models, it was missing words from only "
     },
     {
       "expression": "\"44\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"SST\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,35 +16,147 @@
     },
     {
       "expression": "\"ROC\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), SoPa outperforms all models. On Amazon, SoPa performs within "
+      "value": "), "
+    },
+    {
+      "expression": "\"SoPa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms all models. On Amazon, "
+    },
+    {
+      "expression": "\"SoPa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs within "
     },
     {
       "expression": "\"0.3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " points of CNN and BiLSTM, and outperforms the other two baselines. The table also shows the number of parameters used by each model for each task.  SoPa performs "
+      "value": " points of "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and outperforms the other two baselines. The table also shows the number of parameters used by each model for each task.  "
+    },
+    {
+      "expression": "\"SoPa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " or roughly the same as a BiLSTM, which has "
+      "value": " or roughly the same as a "
     },
     {
-      "expression": "\"3\u20136\"",
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " times as many parameters.  Table 1 also shows an ablation of the differences between SoPa and CNN: max-product semiring with sigmoid vs. max-sum semiring with identity, self-loops, and (cid:15)-transitions. The last line is equivalent to a CNN with  multiple window sizes. Interestingly, the most notable difference between SoPa and CNN is the semiring and encoder function, while (cid:15) transitions and self-loops have little effect on performance."
+      "value": ", which has "
+    },
+    {
+      "expression": "\"3\u20136 times\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as many parameters.  Table 1 also shows an ablation of the differences between "
+    },
+    {
+      "expression": "\"SoPa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ":"
+    },
+    {
+      "expression": "\"max-product semiring with sigmoid vs. max-sum semiring with identity, self-loops, and (cid:15)-transitions\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The last line is equivalent to a "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with  multiple window sizes. Interestingly, the most notable difference between "
+    },
+    {
+      "expression": "\"SoPa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the semiring and encoder function, while (cid:15) transitions and self-loops have little effect on performance."
     }
   ],
   "variables": {},

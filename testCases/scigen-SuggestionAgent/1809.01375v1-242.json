@@ -7,22 +7,88 @@
     },
     {
       "expression": "\"4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " shows the f1-scores on the full clean datasets. For polysemy between food and animals (Table "
+      "value": " shows the f1-scores on the full clean datasets.  For polysemy between "
+    },
+    {
+      "expression": "\"food\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"animals\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), we observe that when trained on pure animal and food words and tested on polysemous animal and food words, the classifiers perform highly with a "
+      "value": "), we observe that when trained on pure "
+    },
+    {
+      "expression": "\"animal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"food\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " words and tested on polysemous "
+    },
+    {
+      "expression": "\"animal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"food\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " words, the classifiers perform "
+    },
+    {
+      "expression": "\"highly\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with a "
     },
     {
       "expression": "\"large difference\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

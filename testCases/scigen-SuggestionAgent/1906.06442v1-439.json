@@ -3,18 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We first show that noising EnDe bitext sources does not seriously impact the translation quality of the transformer-base baseline. Table 2 shows results for various values of p. Specifically, it presents the somewhat unexpected finding that even when noising "
+      "value": "We first show that noising "
     },
     {
-      "expression": "\"100\"",
+      "expression": "\"EnDe\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of the source bitext (so the model has never seen wellformed English), BLEU on well-formed test data only drops by "
+      "value": " bitext sources does not seriously impact the translation quality of the transformer-base baseline. Table 2 shows results for various values of "
+    },
+    {
+      "expression": "\"p\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Specifically, it presents the somewhat unexpected finding that even when noising "
+    },
+    {
+      "expression": "\"100%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the source bitext (so the model has never seen wellformed English), BLEU on well-formed test data only drops by "
     },
     {
       "expression": "\"2.5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

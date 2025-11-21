@@ -7,19 +7,21 @@
     },
     {
       "expression": "\"outperforms\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " all other attention methods "
+      "value": " all other "
     },
     {
-      "expression": "\"significantly\"",
+      "expression": "\"attention methods\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " significantly."
     }
   ],
   "variables": {},

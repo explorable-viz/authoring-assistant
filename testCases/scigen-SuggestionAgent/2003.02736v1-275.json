@@ -3,39 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our results are given in Table 4. We found that the Wikipedia and Twitter datasets contained labels which were "
+      "value": "Our results are given in Table 4. We found that "
     },
     {
-      "expression": "\"more\"",
+      "expression": "\"Wikipedia\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " general, evidenced by similar "
+      "value": " and "
     },
     {
-      "expression": "\"high\"",
+      "expression": "\"Twitter\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1 scores from both annotators (> "
+      "value": " datasets contained labels which were "
     },
     {
-      "expression": "\"0.8\"",
+      "expression": "\"more general\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). For political speeches, we observed that the human annotators both found many "
+      "value": ", evidenced by similar high F1 scores from both annotators ("
     },
     {
-      "expression": "\"more\"",
+      "expression": "\"> 0.8\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " examples to be check-worthy than were labelled in the dataset."
+      "value": "). For political speeches, we observed that the human annotators both found many more examples to be check-worthy than were labelled in the dataset."
     }
   ],
   "variables": {},

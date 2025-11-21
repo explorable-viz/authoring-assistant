@@ -3,31 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows the confusion matrix of JOINT on Wikipedia. We can see that "
+      "value": "Table 4 shows the confusion matrix of "
     },
     {
-      "expression": "\"more than\"",
+      "expression": "\"JOINT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " on Wikipedia. We can see that "
     },
     {
-      "expression": "\"50\"",
+      "expression": "\"more than 50%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of documents for each quality class are correctly classified, except for the class where "
+      "value": " of documents for each quality class are correctly classified, except for the "
+    },
+    {
+      "expression": "\"class\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " where "
     },
     {
       "expression": "\"more\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " documents are misclassified into B."
+      "value": " documents are misclassified into "
+    },
+    {
+      "expression": "\"B\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

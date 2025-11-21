@@ -3,42 +3,101 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are shown in Table 1. It shows that the proposed HRLCE model performs "
+      "value": "The results are shown in Table 1. It shows that the proposed "
+    },
+    {
+      "expression": "\"HRLCE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model performs "
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The performance of SLD and SL are very close to each other, on the dev set, SLD performs "
+      "value": ". The performance of "
+    },
+    {
+      "expression": "\"SLD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"SL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are very close to each other, on the dev set, "
+    },
+    {
+      "expression": "\"SLD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than SL but they have almost the same overall scores on the test set. The MacroF1 scores of each emotion category are very different from each other: the classification accuracy for emotion Sad is "
+      "value": " than "
+    },
+    {
+      "expression": "\"SL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " but they have almost the same overall scores on the test set. The MacroF1 scores of each emotion category are very different from each other: the classification accuracy for emotion "
+    },
+    {
+      "expression": "\"Sad\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"the highest\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in most of the cases, while the emotion Happy is "
+      "value": " in most of the cases, while the emotion "
     },
     {
-      "expression": "\"the least accurately classified\"",
+      "expression": "\"Happy\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " by all the models. We also noticed that the performance on the dev set is generally "
+      "value": " is the least accurately classified by all the models. We also noticed that the performance on the dev set is generally slightly "
     },
     {
-      "expression": "\"slightly better\"",
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

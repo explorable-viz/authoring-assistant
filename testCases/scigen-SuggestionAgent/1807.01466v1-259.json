@@ -3,10 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "of results the multimodal The experiments are shown in Table 3. We find that "
+      "value": "of results the multimodal The experiments are shown in Table 3.  We find that "
     },
     {
       "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"HF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,14 +34,16 @@
     },
     {
       "expression": "\"LF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". 4 Unlike Zadeh et al. (2017), here the "
+      "value": ".  4  Unlike Zadeh et al. (2017), here the "
     },
     {
       "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +52,7 @@
     },
     {
       "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +61,7 @@
     },
     {
       "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -63,14 +70,16 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance on the training and validation sets. Compared to the feature concatenation used in "
+      "value": " performance on the training and validation sets.  Compared to the feature concatenation used in "
     },
     {
       "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -79,6 +88,7 @@
     },
     {
       "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -87,6 +97,7 @@
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -95,6 +106,7 @@
     },
     {
       "expression": "\"HF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -103,6 +115,7 @@
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -111,22 +124,25 @@
     },
     {
       "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model here, unlike in Tian et al. (2016). In general, the multimodal models have "
+      "value": " model here, unlike in Tian et al. (2016).  In general, the multimodal models have "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than the unimodal models. In fact, the "
+      "value": " performance than the unimodal models.  In fact, the "
     },
     {
       "expression": "\"HF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -135,6 +151,7 @@
     },
     {
       "expression": "\"LF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -143,6 +160,7 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -151,30 +169,16 @@
     },
     {
       "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models, only the "
-    },
-    {
-      "expression": "\"S+P\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model outperforms the "
-    },
-    {
-      "expression": "\"S\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model, although the improvement is not significant.7 For the "
+      "value": " models, only the S+P model outperforms the S model, although the improvement is not significant.7 For the "
     },
     {
       "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -183,30 +187,52 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance. Dimension of the "
+      "value": " performance.  Dimension of the "
     },
     {
       "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " input is 420, for "
+      "value": " input is "
+    },
+    {
+      "expression": "\"420\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", for "
     },
     {
       "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is 65,536. 6Except that the "
+      "value": " is "
+    },
+    {
+      "expression": "\"65,536\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". 6Except that the "
     },
     {
       "expression": "\"LF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -215,19 +241,156 @@
     },
     {
       "expression": "\"worse\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance than the verbal "
+      "value": " performance than the verbal S+P model. p << "
     },
     {
-      "expression": "\"S+P\"",
+      "expression": "\"0.001\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model. p << 0.001 for TFN S+P and verbal S+P, p = 0.017 for verbal S+P and LF S. 7p = 0.105 for S TFN and S+P TFN. 8p = 0.888 for S EF and S+P EF, p = 0.029 for S EF and S+I EF, p = 0.009 for S EF and S+P+I EF."
+      "value": " for "
+    },
+    {
+      "expression": "\"TFN S+P\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and verbal S+P, p = "
+    },
+    {
+      "expression": "\"0.017\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for verbal S+P and "
+    },
+    {
+      "expression": "\"LF S\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". 7p = "
+    },
+    {
+      "expression": "\"0.105\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"S TFN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"S+P TFN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". 8p = "
+    },
+    {
+      "expression": "\"0.888\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"S EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"S+P EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", p = "
+    },
+    {
+      "expression": "\"0.029\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"S EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"S+I EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", p = "
+    },
+    {
+      "expression": "\"0.009\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"S EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"S+P+I EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

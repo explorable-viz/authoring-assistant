@@ -3,39 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 6, the BOTH model produced "
+      "value": "As shown in Table 6, the "
     },
     {
-      "expression": "\"the most\"",
+      "expression": "\"BOTH\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accurate output ("
+      "value": " model produced the most accurate output ("
     },
     {
-      "expression": "\"95\"",
+      "expression": "\"95%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% correct simple sentences), with "
+      "value": " correct simple sentences), with the "
     },
     {
-      "expression": "\"the lowest\"",
+      "expression": "\"lowest\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " incidence of missed or unsupported statements. outputs from Aharoni and Goldberg(2018) (AG18), which were "
+      "value": " incidence of missed or unsupported statements.  outputs from Aharoni and Goldberg(2018) (AG18), which were "
     },
     {
-      "expression": "\"22\"",
+      "expression": "\"22%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% accurate."
+      "value": " accurate."
     }
   ],
   "variables": {},

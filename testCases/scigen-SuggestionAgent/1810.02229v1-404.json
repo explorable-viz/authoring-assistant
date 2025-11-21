@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"the best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -15,6 +16,7 @@
     },
     {
       "expression": "\"0.880\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"0.903\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"0.756\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"0.751\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,14 +52,16 @@
     },
     {
       "expression": "\"beats\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " three configurations (DH-FBK100, ILC-ItWack, Berardi2015 Glove) 11, "
+      "value": " three configurations (DH-FBK100, ILC-ItWack, Berardi2015 Glove) 11, almost "
     },
     {
-      "expression": "\"almost equals\"",
+      "expression": "\"equals\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -63,6 +70,7 @@
     },
     {
       "expression": "\"outperformed\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -71,14 +79,25 @@
     },
     {
       "expression": "\"beat\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " FBK-HLT (although the difference is only 0.001 point). Nevertheless, it is remarkable to observe that FBK-HLT has a very high Precision ("
+      "value": " FBK-HLT (although the difference is only "
+    },
+    {
+      "expression": "\"0.001\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " point). Nevertheless, it is remarkable to observe that FBK-HLT has a very high Precision ("
     },
     {
       "expression": "\"0.902\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -87,6 +106,7 @@
     },
     {
       "expression": "\"overcome\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

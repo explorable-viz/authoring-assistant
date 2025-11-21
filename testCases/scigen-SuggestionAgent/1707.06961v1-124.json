@@ -7,14 +7,43 @@
     },
     {
       "expression": "\"5000\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " tokens in Table 5 (part-of-speech tagging accuracy) For POS, the largest margins are in the Slavic languages (Russian, Czech, Bulgarian), where word order is relatively free and thus rich word representations are imperative. Chinese also exhibits impressive improvement across all settings, perhaps due to the large character inventory (> "
+      "value": " tokens in Table 5 (partof-speech tagging accuracy) For POS, the largest margins are in the Slavic languages ("
     },
     {
-      "expression": "\"12,000\"",
+      "expression": "\"Russian\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Czech\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Bulgarian\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), where word order is relatively free and thus rich word representations are imperative. Chinese also exhibits impressive improvement across all settings, perhaps due to the large character inventory ("
+    },
+    {
+      "expression": "\"> 12,000\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

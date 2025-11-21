@@ -3,23 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the previous state-of-the-art and our baselines. TEXTONLY gives a performance comparable with Bran. With 1-best dependency trees, our DEPTREE baseline gives "
+      "value": "Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the "
+    },
+    {
+      "expression": "\"previous state-of-the-art\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and our baselines.  "
+    },
+    {
+      "expression": "\"TEXTONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives a performance comparable with "
+    },
+    {
+      "expression": "\"Bran\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". With 1-best dependency trees, our "
+    },
+    {
+      "expression": "\"DEPTREE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline gives "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performances than the previous state of the art. Both KBESTEISNERPS and EDGEWISEPS obtain "
+      "value": " performances than the "
     },
     {
-      "expression": "\"significantly higher\"",
+      "expression": "\"previous state of the art\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " numbers than DEPTREE."
+      "value": ".  both "
+    },
+    {
+      "expression": "\"KBESTEISNERPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"EDGEWISEPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " obtain significantly "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " numbers than "
+    },
+    {
+      "expression": "\"DEPTREE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

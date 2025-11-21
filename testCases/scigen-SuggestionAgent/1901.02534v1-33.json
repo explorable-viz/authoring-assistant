@@ -6,20 +6,40 @@
       "value": "On a support basis, we find a "
     },
     {
-      "expression": "\"52\"",
+      "expression": "\"52%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% increase in Kappa by adding the titles. Cohen's Kappa is "
+      "value": " increase in Kappa by adding the titles.  Cohen's Kappa is "
+    },
+    {
+      "expression": "\"68%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than that for ESIM."
+      "value": " than that for "
+    },
+    {
+      "expression": "\"ESIM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

@@ -7,14 +7,25 @@
     },
     {
       "expression": "\"1k\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " vocabulary items, BPE has already lost a BLEU point with respect to the character model. Comparing the performance of our Pooled BiLSTM model against BPE, we notice that for a comparable level of compression (BPE size of "
+      "value": " vocabulary items, BPE has already lost a "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU point with respect to the character model.  Comparing the performance of our Pooled BiLSTM model against BPE, we notice that for a comparable level of compression (BPE size of "
     },
     {
       "expression": "\"1k\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +34,7 @@
     },
     {
       "expression": "\"0.5\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -31,30 +43,61 @@
     },
     {
       "expression": "\"4k\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), BPE has significantly shorter sequences. As shown in table 6, the 3-HM configuration achieves "
+      "value": "), BPE has significantly shorter sequences.  As shown in table 6, the "
     },
     {
-      "expression": "\"much better\"",
+      "expression": "\"3-HM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compression even when this is accounted for, and also gives "
-    },
-    {
-      "expression": "\"slightly better\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " performance than 2-HM. In general, HM gating results in less compression but "
+      "value": " configuration achieves much "
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compression even when this is accounted for, and also gives slightly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than "
+    },
+    {
+      "expression": "\"2-HM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". In general, HM gating results in "
+    },
+    {
+      "expression": "\"less\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compression but "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

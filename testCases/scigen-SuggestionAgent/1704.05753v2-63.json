@@ -7,6 +7,7 @@
     },
     {
       "expression": "\"accuracy\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,51 +16,111 @@
     },
     {
       "expression": "\"diversity\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in crowd responses that arise as a result of task design. Our analysis shows that the most important factor is how workers are primed for a task, with the choice of examples and the prompt sentence affecting "
+      "value": " in crowd responses that arise as a result of task design,  Our analysis shows that the most important factor is how workers are primed for a task, with the choice of examples and the prompt sentence affecting "
     },
     {
       "expression": "\"diversity\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and correctness significantly. There was relatively little variation in grammaticality or time across the conditions. Priming had a major impact, with the shift to lexical examples leading to a significant improvement in correctness, but "
+      "value": " and "
     },
     {
-      "expression": "\"much lower\"",
+      "expression": "\"correctness\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " diversity. The surprising increase in correctness when providing no examples\u2014changing the incentives by providing either a bonus for novelty, or no bonus at all\u2014did not substantially impact any of the metrics. Changing the number of paraphrases written by each worker did not significantly impact "
+      "value": " significantly.  There was relatively little variation in "
+    },
+    {
+      "expression": "\"grammaticality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " or time across the conditions.  Priming had a major impact, with the shift to lexical examples leading to a significant improvement in "
+    },
+    {
+      "expression": "\"correctness\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but much lower "
     },
     {
       "expression": "\"diversity\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (we worried that collecting more than one may lead to a decrease). The One Paraphrase condition did have lower grammaticality. Changing the source of the prompt sentence to create a chain of paraphrases led to a significant increase in "
+      "value": ". The surprising increase in "
+    },
+    {
+      "expression": "\"correctness\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] when providing no examples  changing the incentives by providing either a bonus for novelty, or no bonus at all, did not substantially impact any of the metrics.  Changing the number of paraphrases written by each worker did not significantly impact "
     },
     {
       "expression": "\"diversity\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Showing the answer to the question being paraphrased did not significantly affect correctness or "
+      "value": "] (we worried that collecting more than one may lead to a decrease).  the One Paraphrase condition did have lower "
+    },
+    {
+      "expression": "\"grammaticality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "].  Changing the source of the prompt sentence to create a chain of paraphrases led to a significant increase in "
     },
     {
       "expression": "\"diversity\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ","
+      "value": "].  showing the answer to the question being para phrased did not significantly affect "
+    },
+    {
+      "expression": "\"correctness\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] or "
+    },
+    {
+      "expression": "\"diversity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "],"
     }
   ],
   "variables": {},

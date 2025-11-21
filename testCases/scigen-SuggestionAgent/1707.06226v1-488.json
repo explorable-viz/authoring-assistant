@@ -3,18 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the results on the Twitter dataset. As for discussion forums, adding context using the SVM models does not show a statistically significant improvement. For the neural networks model, similar to the results on discussion forums, the LSTM models that read both context and reply outperform the LSTM model that reads only the reply (LSTMr). The "
+      "value": "Table "
     },
     {
-      "expression": "\"best performing\"",
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " architectures are again the LSTMconditional and LSTM with sentence-level attentions (LSTMcas +LSTMras ). LSTMconditional model shows an improvement of "
+      "value": " shows the results on the Twitter dataset. As for discussion forums, adding context using the SVM models does not show a statistically significant improvement. For the neural networks model, similar to the results on discussion forums, the LSTM models that read both context and reply outperform the LSTM model that reads only the reply (LSTMr). "
+    },
+    {
+      "expression": "\"the best performing architectures\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are again the LSTMconditional and LSTM with sentence-level attentions (LSTMcas +LSTMras ). "
+    },
+    {
+      "expression": "\"LSTMconditional model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows an improvement of "
     },
     {
       "expression": "\"11\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +43,7 @@
     },
     {
       "expression": "\"4-5\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -31,6 +52,7 @@
     },
     {
       "expression": "\"∼2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

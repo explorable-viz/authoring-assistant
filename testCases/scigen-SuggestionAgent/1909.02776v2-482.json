@@ -7,30 +7,61 @@
     },
     {
       "expression": "\"compares\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " MSE and R2 "
+      "value": " "
     },
     {
-      "expression": "\"reported\"",
+      "expression": "\"MSE\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from these experiments. The results show that in experiment 2, the mean squared error is "
+      "value": " and "
+    },
+    {
+      "expression": "\"R2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reported from these experiments.\r\nThe results show that in experiment 2, the "
+    },
+    {
+      "expression": "\"mean squared error\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"reduced\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and the r2 score is "
+      "value": " and the "
+    },
+    {
+      "expression": "\"r2 score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"increased\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

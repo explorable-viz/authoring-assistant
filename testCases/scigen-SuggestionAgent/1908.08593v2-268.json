@@ -3,39 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows that finetuned BERT outperforms pre-trained BERT by "
+      "value": "Table 1 shows that "
     },
     {
-      "expression": "\"a significant margin\"",
+      "expression": "\"finetuned BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on all the tasks (with an average of "
+      "value": " outperforms "
     },
     {
-      "expression": "\"35.9\"",
+      "expression": "\"pre-trained BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " points of absolute difference). BERT with weights initialized from normal distribution and further fine-tuned for a given task consistently produces "
+      "value": " by a significant margin on all the tasks (with an average of "
+    },
+    {
+      "expression": "\"35.9 points\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of absolute difference).  "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with weights initialized from normal distribution and further fine-tuned for a given task consistently produces "
     },
     {
       "expression": "\"lower scores\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the ones achieved with pre-trained BERT. In fact, for some tasks (STS-B and QNLI), initialization with random weights yields "
+      "value": " than the ones achieved with "
+    },
+    {
+      "expression": "\"pre-trained BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". In fact, for some tasks ("
+    },
+    {
+      "expression": "\"STS-B\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"QNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), initialization with random weights yields "
     },
     {
       "expression": "\"worse performance\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than pre-trained BERT without fine-tuning."
+      "value": " than "
+    },
+    {
+      "expression": "\"pre-trained BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " without fine-tuning."
     }
   ],
   "variables": {},

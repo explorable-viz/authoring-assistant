@@ -3,39 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "When we jointly train each task on the three languages, the performance "
+      "value": "When we jointly train each task on the "
     },
     {
-      "expression": "\"decreases\"",
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in most cases, other than the target group classification tasks. Yet, multilingual training of the target group classification task improves "
+      "value": " languages, the performance decreases in most cases, other than the target group classification tasks. Yet, multilingual training of the target group classification task improves in all languages. Since the target group classification task involves "
     },
     {
-      "expression": "\"in all languages\"",
+      "expression": "\"16\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Since the target group classification task involves 16 labels, the amount of data annotated for each label is "
+      "value": " labels, the amount of data annotated for each label is "
     },
     {
-      "expression": "\"lower than\"",
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in other tasks. Hence, when aggregating annotated data in different languages, the size of the training data also increases, due to the relative regularity of identification words of different groups in all three languages in comparison to "
-    },
-    {
-      "expression": "\"other tasks\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " than in other tasks. Hence, when aggregating annotated data in different languages, the size of the training data also increases, due to the relative regularity of identification words of different groups in all three languages in comparison to other tasks."
     }
   ],
   "variables": {},

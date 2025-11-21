@@ -7,11 +7,30 @@
     },
     {
       "expression": "\"two best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models that represent using human explanations (CoS-E-openended) for training only and using language model explanations (CAGE-reasoning) during both train and test."
+      "value": " models that represent using human explanations ("
+    },
+    {
+      "expression": "\"CoS-E-openended\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") for training only and using language model explanations ("
+    },
+    {
+      "expression": "\"CAGE-reasoning\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") during both train and test."
     }
   ],
   "variables": {},

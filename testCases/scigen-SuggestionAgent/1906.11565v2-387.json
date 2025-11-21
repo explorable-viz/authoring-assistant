@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We describe data and label distribution of Friends and EmotionPush datasets. In terms of label distribution for both datasets, "
+      "value": "we describe data and label distribution of "
+    },
+    {
+      "expression": "\"Friends\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"EmotionPush\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets. In terms of label distribution for both datasets, "
     },
     {
       "expression": "\"Neutral\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +34,7 @@
     },
     {
       "expression": "\"Joy\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +43,7 @@
     },
     {
       "expression": "\"Sadness\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +52,7 @@
     },
     {
       "expression": "\"Anger\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +61,7 @@
     },
     {
       "expression": "\"Sadness\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +70,7 @@
     },
     {
       "expression": "\"Anger\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -54,23 +78,44 @@
       "value": " is very small. For instance, they account for only "
     },
     {
-      "expression": "\"3.4\"",
+      "expression": "\"3.4%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " and "
     },
     {
-      "expression": "\"5.2\"",
+      "expression": "\"5.2%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, respectively in the Friends dataset. In the case of EmotionPush, "
+      "value": ", respectively in the "
+    },
+    {
+      "expression": "\"Friends\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dataset. In the case of "
+    },
+    {
+      "expression": "\"EmotionPush\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
     },
     {
       "expression": "\"Anger\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -79,6 +124,7 @@
     },
     {
       "expression": "\"less than 1%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

@@ -7,27 +7,210 @@
     },
     {
       "expression": "\"top\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ranked entities of type Variants, Diseases and Drugs for the query {PIK3CA}. While the diseases and the drugs are all relevant, V600E and T790M are in fact not variants of the gene PIK3CA. However, when refining the query {PIK3CA, V600E, BRAF, H1047R, Dabrafenib}, the "
+      "value": " ranked entities of type "
+    },
+    {
+      "expression": "\"Variants\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Diseases\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] and "
+    },
+    {
+      "expression": "\"Drugs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the query {"
+    },
+    {
+      "expression": "\"PIK3CA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "}.\r\nWhile the "
+    },
+    {
+      "expression": "\"diseases\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] and the "
+    },
+    {
+      "expression": "\"drugs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] are all relevant, "
+    },
+    {
+      "expression": "\"V600E\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] and "
+    },
+    {
+      "expression": "\"T790M\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] are in fact not variants of the gene "
+    },
+    {
+      "expression": "\"PIK3CA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "].\r\nHowever, when refining the query {"
+    },
+    {
+      "expression": "\"PIK3CA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"V600E\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"BRAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"H1047R\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Dabrafenib\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "}, the "
     },
     {
       "expression": "\"top\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ranked diseases are [Melanoma, Neoplasms, Carcinoma Non Small Cell Lung (CNSCL), Thyroid Neoplasms, Colorectal Neoplasms]. Using Melanoma for refinement, retrieves the "
+      "value": "] ranked diseases are ["
+    },
+    {
+      "expression": "\"Melanoma\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Neoplasms\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Carcinoma Non Small Cell Lung (CNSCL)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Thyroid Neoplasms\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Colorectal Neoplasms\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "].\r\nUsing "
+    },
+    {
+      "expression": "\"Melanoma\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] for refinement, retrieves the "
     },
     {
       "expression": "\"top\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ranked paper (Falchook et al., 2013) which perfectly includes all these entities in a biomarker relationship."
+      "value": "] ranked paper (Falchook et al., 2013) which perfectly includes all these entities in a biomarker relationship."
     }
   ],
   "variables": {},

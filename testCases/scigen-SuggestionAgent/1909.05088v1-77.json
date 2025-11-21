@@ -1,9 +1,47 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "The provided paragraph does not contain explicit values, comparative expressions, or superlative/aggregated expressions that can be directly replaced by Fluid expressions based on the current information. The paragraph seems to describe a context and points to a table for detailed data but doesn't include specific numerical data, comparisons, or superlatives.\n\nHere is the annotated paragraph with no replacements:\n\nAn overview of the language pairs as well as the amount of annotated parallel sentences per language pair is given in Table 1. Overview of annotated parallel sentences per language pair\n\nIf you have a dataset that includes this information, we can annotate it further when provided."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "An "
+    },
+    {
+      "expression": "\"overview\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the language pairs as well as the "
+    },
+    {
+      "expression": "\"amount of annotated parallel sentences\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " per language pair is given in Table 1.  "
+    },
+    {
+      "expression": "\"Overview\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"annotated parallel sentences\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " per language pair"
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

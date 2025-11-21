@@ -3,39 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are shown in Table 2 ('Wikipedia'). The resulting model is "
+      "value": "The results are shown in Table 2 ('Wikipedia'). The resulting model is significantly "
     },
     {
-      "expression": "\"less\"",
+      "expression": "\"less accurate\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accurate than the one which used unlabeled documents. The score difference is "
+      "value": " than the one which used unlabeled documents. The score difference is "
     },
     {
       "expression": "\"larger\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for AIDA-CoNLL test set "
+      "value": " for AIDA-CoNLL test set than for the other "
     },
     {
-      "expression": "\"than\"",
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for the other 5 test sets. Additionally we train our model on AIDA-CoNLL, producing its fully-supervised version ('AIDA CoNLL' row in Table 2). Though, as expected, this version is "
+      "value": " test sets.  Additionally we train our model on "
     },
     {
-      "expression": "\"more\"",
+      "expression": "\"AIDA-CoNLL\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accurate on AIDA test set, similarly to other fully-supervised methods, it overfits and does not perform that well on the 5 out-of-domain test sets."
+      "value": ", producing its fully-supervised version ('AIDA CoNLL' row in Table 2). Though, as expected, this version is "
+    },
+    {
+      "expression": "\"more accurate\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"AIDA test set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", similarly to other fully-supervised methods, it overfits and does not perform that well on the "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " out-of-domain test sets."
     }
   ],
   "variables": {},

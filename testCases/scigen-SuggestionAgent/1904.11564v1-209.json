@@ -7,27 +7,21 @@
     },
     {
       "expression": "\"less than 1\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU point). we ablate node (predicate) and edge attributes number and tense "
+      "value": " BLEU point).  we ablate node (predicate) and edge attributes  number and tense  have the largest effect on the reported "
     },
     {
-      "expression": "\"have the largest effect\"",
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the reported BLEU score. "
-    },
-    {
-      "expression": "\"has only a small impact\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on performance."
+      "value": " score.  has only a small impact on performance."
     }
   ],
   "variables": {},

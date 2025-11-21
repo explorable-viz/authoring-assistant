@@ -3,34 +3,101 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 contains the results on all four datasets. SynST achieves speedups of ∼ "
+      "value": "Table 1 contains the results on all four "
     },
     {
-      "expression": "\"4\"",
+      "expression": "\"datasets\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " − "
+      "value": ". "
     },
     {
-      "expression": "\"5\"",
+      "expression": "\"SynST\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "× that of the vanilla Transformer, which is "
+      "value": " achieves speedups of ∼ "
+    },
+    {
+      "expression": "\"4 − 5×\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that of the vanilla "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is "
     },
     {
       "expression": "\"larger than\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " nearly all of the SAT configurations. Quality-wise, SynST again significantly outperforms the SAT configurations at comparable speedups on all datasets. On WMT En-De, SynST improves by "
+      "value": " nearly all  of the "
+    },
+    {
+      "expression": "\"SAT configurations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Quality-wise, "
+    },
+    {
+      "expression": "\"SynST\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " again significantly outperforms the "
+    },
+    {
+      "expression": "\"SAT configurations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " at comparable speedups on all "
+    },
+    {
+      "expression": "\"datasets\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". On WMT En-De, "
+    },
+    {
+      "expression": "\"SynST\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improves by "
     },
     {
       "expression": "\"1\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -39,6 +106,7 @@
     },
     {
       "expression": "\"20.74\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +115,7 @@
     },
     {
       "expression": "\"19.8\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

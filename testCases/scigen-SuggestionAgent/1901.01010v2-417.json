@@ -3,119 +3,331 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Experimental Results Table 3 shows the performance of the different models over our two datasets, in the form of the average accuracy on the test set (along with the standard deviation) over 10 runs, with different random initializations. On Wikipedia, we observe that the performance of BILSTM, INCEPTION, and JOINT is "
+      "value": "Experimental Results Table 3 shows the performance of the different models over our two datasets, in the form of "
     },
     {
-      "expression": "\"much better\"",
+      "expression": "\"the average\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than that of all four baselines. INCEPTION achieves "
+      "value": " accuracy on the test set (along with the standard deviation) over 10 runs, with different random initializations. On Wikipedia, we observe that the performance of "
     },
     {
-      "expression": "\"2.9\"",
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% higher accuracy than BILSTM. The performance of JOINT achieves an accuracy of "
+      "value": ", "
     },
     {
-      "expression": "\"59.4\"",
+      "expression": "\"INCEPTION\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, which is "
+      "value": ", and "
     },
     {
-      "expression": "\"5.3\"",
+      "expression": "\"JOINT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% higher than using textual features alone (BILSTM) and "
+      "value": " is "
     },
     {
-      "expression": "\"2.4\"",
+      "expression": "\"much better than\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% higher than using visual features alone (INCEPTION). Based on a one-tailed Wilcoxon signed-rank test, the performance of JOINT is "
+      "value": " that of all four baselines. "
     },
     {
-      "expression": "\"state-of-the-art\"",
+      "expression": "\"INCEPTION\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results in combination. For arXiv, baseline methods MAJORITY, BENCHMARK, and INCEPTIONFIXED outperform BILSTM over cs.ai, in large part because of the class imbalance in this dataset (90% of papers are rejected). Surprisingly, INCEPTIONFIXED is "
+      "value": " achieves "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"2.9%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than MAJORITY and BENCHMARK over the arXiv cs.lg subset, which verifies the usefulness of visual features, even when only the last layer is fine-tuned. Table 3 also shows that INCEPTION and BILSTM achieve similar performance on arXiv, showing that textual and visual representations are equally discriminative: INCEPTION and BILSTM are "
+      "value": " higher accuracy than "
     },
     {
-      "expression": "\"indistinguishable\"",
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " over cs.cl; BILSTM achieves "
+      "value": ". The performance of "
     },
     {
-      "expression": "\"1.8\"",
+      "expression": "\"JOINT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% higher accuracy over cs.lg, while INCEPTION achieves "
+      "value": " achieves an accuracy of "
     },
     {
-      "expression": "\"1.3\"",
+      "expression": "\"59.4%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% higher accuracy over cs.ai. Once again, the JOINT model achieves "
+      "value": ", which is "
     },
     {
-      "expression": "\"the highest\"",
+      "expression": "\"5.3%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy on cs.ai and cs.cl by combining textual and visual representations (at a level of statistical significance for cs.ai). This, again, confirms that textual and visual features achieve "
+      "value": " higher than using textual features alone ("
     },
     {
-      "expression": "\"state-of-the-art\"",
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results. On arXiv cs.lg, JOINT achieves a "
+      "value": ") and "
     },
     {
-      "expression": "\"0.6\"",
+      "expression": "\"2.4%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% higher accuracy than INCEPTION by combining visual features and textual features, but BILSTM achieves "
+      "value": " higher than using visual features alone ("
     },
     {
-      "expression": "\"the highest\"",
+      "expression": "\"INCEPTION\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy. One characteristic of cs.lg documents is"
+      "value": "). Based on a one-tailed Wilcoxon signed-rank test, the performance of Jis sta  of-the-art results in combination. For arXiv, baseline methods "
+    },
+    {
+      "expression": "\"MAJORITY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"BENCHMARK\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"INCEPTIONFIXED\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperform "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over cs.ai, in large part because of the class imbalance in this dataset ("
+    },
+    {
+      "expression": "\"90%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of papers are rejected). Surprisingly, "
+    },
+    {
+      "expression": "\"INCEPTIONFIXED\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"MAJORITY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BENCHMARK\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the arXiv cs.lg subset, which verifies the usefulness of visual features, even when only the last layer is fine-tuned. Table 3 also shows that "
+    },
+    {
+      "expression": "\"INCEPTION\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieve similar performance on arXiv, showing that textual and visual representations are equally discriminative: "
+    },
+    {
+      "expression": "\"INCEPTION\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are indistinguishable over cs.cl; "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves "
+    },
+    {
+      "expression": "\"1.8%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher accuracy over cs.lg, while "
+    },
+    {
+      "expression": "\"INCEPTION\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves "
+    },
+    {
+      "expression": "\"1.3%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher accuracy over cs.ai. Once again, the "
+    },
+    {
+      "expression": "\"JOINT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model achieves the highest accuracy on cs.ai and cs.cl by combining textual and visual representations (at a level of statistical significance for cs.ai). This, again, confirms that textual and visual  state-of-the-art results. On arXiv cs.lg, "
+    },
+    {
+      "expression": "\"JOINT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves a "
+    },
+    {
+      "expression": "\"0.6%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher accuracy than "
+    },
+    {
+      "expression": "\"INCEPTION\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by combining visual features and textual features, but "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves the highest accuracy. One characteristic of cs.lg documents is"
     }
   ],
   "variables": {},

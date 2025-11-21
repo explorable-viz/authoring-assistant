@@ -7,27 +7,39 @@
     },
     {
       "expression": "\"over\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the BERT baseline in Table 4, which suggests that the explanations are providing useful information beyond just mentioning the correct or incorrect answers. In Table 2, using CAGE-reasoning at both train and validation resulted in an accuracy of "
+      "value": "] the "
     },
     {
-      "expression": "\"72\"",
+      "expression": "\"BERT baseline\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, but Table 4 shows that if CAGE-reasoning truly captured all information provided in CoS-E-openended, performance would be "
+      "value": " in Table 4, which suggests that the explanations are providing useful information beyond just mentioning the correct or incorrect answers. In Table 2, using CAGE-reasoning at both train and validation resulted in an accuracy of "
     },
     {
-      "expression": "\"90\"",
+      "expression": "\"72%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%.\n\nNote: In this paragraph, there are no explicit superlative expressions (\"the best\", \"highest\") or comparative expressions (\"better\", \"worse\") that need to be annotated with the exact phrase from the text."
+      "value": ", but Table 4 shows that if CAGE-reasoning truly captured all information provided in CoS-E-openended, performance would be "
+    },
+    {
+      "expression": "\"90%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

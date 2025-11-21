@@ -7,43 +7,84 @@
     },
     {
       "expression": "\"outperform\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the Char-CNN when the budget is limited to "
+      "value": " the "
     },
     {
-      "expression": "\"5M\"",
+      "expression": "\"Char-CNN\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " parameters. Surprisingly, a pure word-level model,"
+      "value": " when the budget is limited to "
     },
     {
-      "expression": "\"6\"",
+      "expression": "\"5M parameters\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " LSTM-Word, also "
+      "value": ". Surprisingly, a pure word-level model, "
+    },
+    {
+      "expression": "\"6 LSTM-Word\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", also "
     },
     {
       "expression": "\"beats\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the character-aware one under such budget. The three "
+      "value": " the character-aware one under such budget. The "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"three best configurations\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " configurations are Syl-Concat, Syl-Sum, and Syl-CNN-"
+      "value": " are "
+    },
+    {
+      "expression": "\"Syl-Concat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Syl-Sum\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"Syl-CNN-\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

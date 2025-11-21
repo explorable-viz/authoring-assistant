@@ -7,14 +7,43 @@
     },
     {
       "expression": "\"f\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the eBay, Legal Onion and Illegal Onion corpora lies between "
+      "value": " of "
+    },
+    {
+      "expression": "\"eBay\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Legal Onion\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Illegal Onion\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " corpora lies between "
     },
     {
       "expression": "\"0.40\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -23,6 +52,7 @@
     },
     {
       "expression": "\"0.45\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -31,6 +61,7 @@
     },
     {
       "expression": "\"0.60\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -39,6 +70,7 @@
     },
     {
       "expression": "\"0.65\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

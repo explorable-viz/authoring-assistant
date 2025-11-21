@@ -3,26 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "To evaluate the annotations, inter-annotator agreement was calculated based on a subset of the gold standard corpus."
+      "value": "To evaluate the annotations, inter-annotator agreement was calculated based on a subset of the gold standard corpus.4 Table 4 illustrates the values of "
     },
     {
-      "expression": "\"4\"",
+      "expression": "\"observed agreement\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " Table "
-    },
-    {
-      "expression": "\"4\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " illustrates the values of observed agreement ("
+      "value": " ("
     },
     {
       "expression": "\"Ao\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +25,7 @@
     },
     {
       "expression": "\"over 0.6\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

@@ -6,15 +6,35 @@
       "value": "Table 3 shows the comparison with previous work on the PGR testset, where our models are "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the existing models. With 1-best trees, DEPTREE is "
+      "value": " than the existing models. With "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "-best trees, "
+    },
+    {
+      "expression": "\"DEPTREE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"2.9\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,19 +43,57 @@
     },
     {
       "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than TEXTONLY, both KBESTEISNERPS and EDGEWISEPS significantly "
+      "value": " than "
     },
     {
-      "expression": "\"outperform\"",
+      "expression": "\"TEXTONLY\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " DEPTR"
+      "value": ", both "
+    },
+    {
+      "expression": "\"KBESTEISNERPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"EDGEWISEPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"significantly outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"DEPTR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

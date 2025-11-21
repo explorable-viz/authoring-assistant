@@ -3,18 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The average number of words in questions and answers, as well as the average longest n-gram overlap between passage and question are furthermore given in Table 3. We can again observe two clear trends: from weaker towards stronger models used in the annotation loop, the average length of answers "
+      "value": "The "
     },
     {
-      "expression": "\"increases\"",
+      "expression": "\"average\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", and the largest n-gram overlap drops from "
+      "value": " number of words in questions and answers, as well as the "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " longest n-gram overlap between passage and question are furthermore given in Table 3. We can again observe two clear trends: from weaker towards stronger models used in the annotation loop, the "
+    },
+    {
+      "expression": "\"average length\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of answers increases, and the largest n-gram overlap drops from "
     },
     {
       "expression": "\"3\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +43,7 @@
     },
     {
       "expression": "\"2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

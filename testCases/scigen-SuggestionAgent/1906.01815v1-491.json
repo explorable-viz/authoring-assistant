@@ -3,23 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows the results for both evaluation settings for the "
+      "value": "Table 4 shows the results for both "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"evaluation settings\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " multimodal variant. For the context features, we see a slight improvement in the "
+      "value": " for the textual baseline and the "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"best multimodal variant\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " variant of the speaker independent setup (text plus audio); however, in other models, there is no improvement."
+      "value": ". For the context features, we see a slight improvement in the "
+    },
+    {
+      "expression": "\"best variant\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the "
+    },
+    {
+      "expression": "\"speaker independent setup (text plus audio)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "; however, in other models, there is no improvement."
     }
   ],
   "variables": {},

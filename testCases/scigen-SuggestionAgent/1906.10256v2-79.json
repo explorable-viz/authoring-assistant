@@ -3,18 +3,38 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The main results of our experiments are shown in Table 1. We notice that M.1 ("
+      "value": "The main results of our experiments are shown in Table 1.  We notice that "
     },
     {
-      "expression": "\"Bag-of-words + Logistic Regression\"",
+      "expression": "\"M.1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and M.2 ("
+      "value": " ("
+    },
+    {
+      "expression": "\"Bag-of-words + Logistic Regression\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and "
+    },
+    {
+      "expression": "\"M.2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,14 +43,25 @@
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " predicted positive class probabilities for sentences with female nouns. On the contrary, M.3 ("
+      "value": " predicted positive class probabilities for sentences with female nouns.  On the contrary, "
+    },
+    {
+      "expression": "\"M.3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +70,7 @@
     },
     {
       "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

@@ -7,14 +7,16 @@
     },
     {
       "expression": "\"significantly lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the scores of the same model on the standard dataset, due to the smaller sizes of the training datasets. Nevertheless, one can see, that our approach to word stress detection applies not only to the Russian language data, but also to the data in the Belarusian and Ukrainian languages; 2. cross-lingual setting (1): the Belarusian training dataset, being "
+      "value": " than the scores of the same model on the standard dataset, due to the smaller sizes of the training datasets. Nevertheless, one can see, that our approach to word stress detection applies not only to the Russian language data, but also to the data in the Belarusian and Ukrainian languages; 2. cross-lingual setting (1): the Belarusian training dataset, being the "
     },
     {
-      "expression": "\"the smallest\"",
+      "expression": "\"smallest\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"out as a good source\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -30,12 +33,13 @@
       "value": " for training word stress detection systems both for the Russian and Belarusian languages; 3. cross-lingual setting (2): adding one or two datasets to the other languages improves the quality. For example, around "
     },
     {
-      "expression": "\"10\"",
+      "expression": "\"10%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of accuracy is gained by adding the Russian training dataset to the Belarusian training dataset, while testing on Belarusian."
+      "value": " of accuracy is gained by adding the Russian training dataset to the Belarusian training dataset, while testing on Belarusian."
     }
   ],
   "variables": {},

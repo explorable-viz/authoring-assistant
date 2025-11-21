@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also report the average number of generated keyphrases per document, denoted as \"Avg. #\". The results are shown in Table 4, where oracle is a model that always generates the ground-truth keyphrases. The resultant MAEs demonstrate that our deep reinforced models notably "
+      "value": "We also report "
+    },
+    {
+      "expression": "\"the average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " number of generated keyphrases per document, denoted as  \"Avg. #\". The results are shown in Table 4, where "
+    },
+    {
+      "expression": "\"oracle\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is a model that always generates the ground-truth keyphrases. The resultant MAEs demonstrate that our deep reinforced models notably "
     },
     {
       "expression": "\"outperform\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -15,6 +34,7 @@
     },
     {
       "expression": "\"outperform\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -23,6 +43,7 @@
     },
     {
       "expression": "\"significantly more\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -31,19 +52,12 @@
     },
     {
       "expression": "\"notably higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F -measures, implying that our methods generate present keyphrases "
-    },
-    {
-      "expression": "\"more accurately\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than the baselines."
+      "value": " F -measures, implying that our methods generate present keyphrases more accurately than the baselines."
     }
   ],
   "variables": {},

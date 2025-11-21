@@ -3,18 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 1, this does not discard too many correct hypotheses but "
+      "value": "As shown in Table 1, this does not discard too many correct hypotheses but markedly reduces the size of the cnet to "
     },
     {
-      "expression": "\"markedly reduces\"",
+      "expression": "\"an average of\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the size of the cnet to an average of "
+      "value": " "
     },
     {
       "expression": "\"seven\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"two\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -3,26 +3,92 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively. As shown in Table 5, among the 16 datasets S-LSTM gives "
+      "value": "The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively. As shown in Table 5, among the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"16\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results on 12, compared with BiLSTM and 2 layered BiLSTM models. The average accuracy of S-LSTM is "
+      "value": " datasets "
     },
     {
-      "expression": "\"85.6\"",
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, "
+      "value": " gives "
     },
     {
-      "expression": "\"significantly higher\"",
+      "expression": "\"the best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"12\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", compared with "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and 2 layered "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models. The "
+    },
+    {
+      "expression": "\"average accuracy\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"85.6%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", significantly "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -30,36 +96,67 @@
       "value": " compared with "
     },
     {
-      "expression": "\"84.9\"",
+      "expression": "\"84.9%\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% by 2-layer stacked BiLSTM. 3-layer stacked BiLSTM gives an average accuracy of "
+      "value": " by 2-layer stacked "
     },
     {
-      "expression": "\"84.57\"",
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, which is "
+      "value": ". 3-layer stacked "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives an "
+    },
+    {
+      "expression": "\"average accuracy\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"84.57%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is "
     },
     {
       "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared to a 2-layer stacked BiLSTM, with a training time per epoch of "
+      "value": " compared to a 2-layer stacked "
     },
     {
-      "expression": "\"423.6\"",
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " seconds."
+      "value": ", with a training time per epoch of 423.6 seconds."
     }
   ],
   "variables": {},

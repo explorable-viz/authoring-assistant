@@ -3,23 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 reports the results of supervised systems on the same dataset, taken from the two works that use the dataset. As expected, supervised systems "
+      "value": "Table "
     },
     {
-      "expression": "\"outperform\"",
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " knowledge-based systems, "
+      "value": " reports the results of "
     },
     {
-      "expression": "\"by a small margin\"",
+      "expression": "\"supervised systems\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in some of the cases."
+      "value": " on the same dataset, taken from the two works that use the dataset  As expected, "
+    },
+    {
+      "expression": "\"supervised systems\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperform "
+    },
+    {
+      "expression": "\"knowledge-based systems\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", by a small margin in some of the cases."
     }
   ],
   "variables": {},

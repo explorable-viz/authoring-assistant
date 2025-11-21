@@ -3,31 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We see that models trained with agreement perform "
+      "value": "We see that "
     },
     {
-      "expression": "\"comparably\"",
+      "expression": "\"models trained with agreement\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to Pivot, "
+      "value": " perform comparably to "
     },
     {
-      "expression": "\"outperforming\"",
+      "expression": "\"Pivot\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " it in some cases, e.g., when the target is Russian, perhaps because it is quite different linguistically from the English pivot. Unlike Dual-0, Agree maintains high performance in the supervised directions ("
+      "value": ", outperforming it in some cases, e.g., when the target is "
+    },
+    {
+      "expression": "\"Russian\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", perhaps because it is quite different linguistically from the English pivot.  unlike "
+    },
+    {
+      "expression": "\"Dual-0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Agree\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " maintains high performance in the supervised directions ("
     },
     {
       "expression": "\"within 1 BLEU point\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared to Basic),"
+      "value": " compared to "
+    },
+    {
+      "expression": "\"Basic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "),"
     }
   ],
   "variables": {},

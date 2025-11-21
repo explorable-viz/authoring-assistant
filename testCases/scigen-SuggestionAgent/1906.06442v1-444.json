@@ -3,10 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We quantify the copy rate with the unigram overlap between source and target as "
+      "value": "We quantify the "
     },
     {
-      "expression": "\"a percentage\"",
+      "expression": "\"copy rate\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with the "
+    },
+    {
+      "expression": "\"unigram overlap\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between source and target as a "
+    },
+    {
+      "expression": "\"percentage\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -15,11 +34,30 @@
     },
     {
       "expression": "\"compare\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " those statistics to the bitext and the back-translated data (Table 9)."
+      "value": " those statistics to the "
+    },
+    {
+      "expression": "\"bitext\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"back-translated data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Table 9)."
     }
   ],
   "variables": {},

@@ -7,22 +7,34 @@
     },
     {
       "expression": "\"SUPPORTS\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " label against a supervised approach \u2013 HexaF. Results from Table 3 suggests that our approach is "
+      "value": " label against a supervised approach \u2013 "
     },
     {
-      "expression": "\"comparable\"",
+      "expression": "\"HexaF\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to HexaF4 for φ = "
+      "value": ". Results from Table 3 suggests that our approach is comparable to "
+    },
+    {
+      "expression": "\"HexaF4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for φ = "
     },
     {
       "expression": "\"0.76\"",
+      "categories": ["ratio"],
       "type": "expression"
     },
     {

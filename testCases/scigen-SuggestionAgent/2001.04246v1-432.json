@@ -3,23 +3,79 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The Base-KD is a naive knowledge distillation version in which only the logits of the last layer are distilled without considering hidden layer knowledge and supervised label knowledge. By incorporating the probe models, the performance (line 2 in Table 4) is "
+      "value": "The "
     },
     {
-      "expression": "\"consistently improved\"",
+      "expression": "\"Base-KD\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", indicating the benefits from hierarchically decomposed task-oriented knowledge. We then leverage Data Augmentation (DA) to enrich task-oriented knowledge and this technique also improves performance for all tasks, especially for tasks that have a limited scale of data (i.e., MRPC and RTE). DA is also adopted in existing KD-based compression studies (Tang et al., 2019; Jiao et al., 2019). When taking the supervised label knowledge (LCE) into consideration, the performance is "
+      "value": " is a naive knowledge distillation version in which only the logits of the last layer are distilled without considering hidden layer knowledge and supervised label knowledge. By incorporating the probe models, the performance (line 2 in Table 4) is consistently improved, indicating the benefits from hierarchically decomposed task-oriented knowledge. We then leverage "
     },
     {
-      "expression": "\"further boosted\"",
+      "expression": "\"Data Augmentation (DA)\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", showing that this term is also important for AdaBERT by providing focused search hints."
+      "value": " to enrich task-oriented knowledge and this technique also improves performance for all tasks, especially for tasks that have a limited scale of data (i.e., "
+    },
+    {
+      "expression": "\"MRPC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"RTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). DA is also adopted in existing KD-based compression studies ("
+    },
+    {
+      "expression": "\"Tang et al.\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"2019\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "; "
+    },
+    {
+      "expression": "\"Jiao et al.\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"2019\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). When taking the supervised label knowledge (LCE) into consideration, the performance is further boosted, showing that this term is also important for AdaBERT by providing focused search hints."
     }
   ],
   "variables": {},

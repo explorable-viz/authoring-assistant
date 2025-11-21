@@ -7,11 +7,30 @@
     },
     {
       "expression": "\"underperformance\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of these features overall, Table 9 shows that they may still improve performance in the subset of instances where they appear."
+      "value": " of these features overall, "
+    },
+    {
+      "expression": "\"Table 9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows that they may still "
+    },
+    {
+      "expression": "\"improve\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance in the subset of instances where they appear."
     }
   ],
   "variables": {},

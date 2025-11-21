@@ -3,15 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3: Performance of different models on WikiQA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed by Yoon et al. (2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively.  Table 3 reports the MAP and MRR of different pre-trained transformers models for two methods: standard fine-tuning (FT) and TANDA. The latter takes "
+      "value": "Table 3: Performance of "
     },
     {
-      "expression": "\"two\"",
+      "expression": "\"different models\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " arguments that we indicate as transfer dataset → adapt dataset.\nNote: In this case, there were no explicit values, comparative expressions, or superlative/aggregated expressions to replace with Fluid expressions. However, the word \"two\" is mentioned in relation to the number of arguments TANDA takes, but since it's not explicitly part of a comparison or evaluation, I did not annotate it as per the rules provided. If \"two\" were being compared to another number or was part of an aggregate description (e.g., \"the two best models\"), then it would be replaced."
+      "value": " on WikiQA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed by Yoon et al. (2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively.  Table 3 reports "
+    },
+    {
+      "expression": "\"MAP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"MRR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"different pre-trained transformers models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for two methods: standard fine-tuning (FT) and TANDA. The latter takes two arguments that we indicate as transfer dataset → adapt dataset."
     }
   ],
   "variables": {},

@@ -7,27 +7,53 @@
     },
     {
       "expression": "\"5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " bins using the full range of ADR of the dataset. The ADR-based bias measures (Tab. 2) follow the expected trend (model 1 appears "
+      "value": " bins using the full range of "
     },
     {
-      "expression": "\"more biased\"",
+      "expression": "\"ADR\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than models 2 and 3) contrary to the protected attributes-based measures. Model 1 trained with MV labels exhibits similar performance across demographic groups Model 2's performance is "
+      "value": " of the dataset. The "
     },
     {
-      "expression": "\"different\"",
+      "expression": "\"ADR-based bias measures\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " across groups"
+      "value": " (Tab. 2) follow the expected trend ("
+    },
+    {
+      "expression": "\"model 1 appears more biased than models 2 and 3\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") contrary to the protected attributes-based measures. "
+    },
+    {
+      "expression": "\"Model 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " trained with MV labels exhibits similar performance across demographic groups "
+    },
+    {
+      "expression": "\"Model 2's performance is different across groups\"",
+      "categories": ["comparison"],
+      "type": "expression"
     }
   ],
   "variables": {},

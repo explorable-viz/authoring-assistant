@@ -7,19 +7,30 @@
     },
     {
       "expression": "\"wordvectors.org\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Faruqui and Dyer, 2014a).  VecEval (Nayak et al., 2016) is another web based suite for static English word embeddings that perform evaluation on a set of downstream tasks which may take several hours.  K¨ohn (2015) introduced an offline, multilingual probing suite for static embeddings limited in terms of the languages and the probing tasks.  A "
+      "value": " (Faruqui and Dyer, 2014a).  "
+    },
+    {
+      "expression": "\"VecEval\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Nayak et al., 2016) is another web based suite for static English word embeddings that perform evaluation on a set of downstream tasks which may take several hours.  K¨ohn (2015) introduced an offline, multilingual probing suite for static embeddings limited in terms of the languages and the probing tasks.  A "
     },
     {
       "expression": "\"comparison\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the system features of previous studies is given in Table 1.\n\nNote: The term \"comparison\" here refers to the general action described, which doesn't fit perfectly into explicit values, comparative expressions or superlative/aggregated expressions as defined. However, I assumed that since it was a part of the instructions for detection and annotation, it should be included. If this interpretation is incorrect, please let me know and I can revise the output accordingly."
+      "value": " of the system features of previous studies is given in Table 1."
     }
   ],
   "variables": {},

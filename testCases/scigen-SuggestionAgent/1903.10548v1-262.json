@@ -7,51 +7,84 @@
     },
     {
       "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " result belongs to classifying order of paragraphs using pre-trained BERT model. It achieves around "
+      "value": " result belongs to classifying order of paragraphs using pre-trained "
     },
     {
-      "expression": "\"84\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% accuracy on test set which outperforms other models "
+      "value": " model. It achieves around "
     },
     {
-      "expression": "\"significantly\"",
+      "expression": "\"84%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".\nFirst, each paragraph is encoded with LSTM. The hidden state at the end of each sentence is extracted, and the resulting matrix is going through gated CNN (Dauphin et al., 2017) for extraction of single encoding for each paragraph. The accuracy is "
+      "value": " accuracy on test set which outperforms other models significantly.  First, each paragraph is encoded with "
     },
     {
-      "expression": "\"barely above 50%\"",
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", which depicts that this method is not very promising.\nWe have used a pre-trained BERT in two different ways. First, as a feature extractor without fine-tuning, and second, by fine-tuning the weights during training. In the case of fine-tuning, we have used different numbers for "
+      "value": ". The hidden state at the end of each sentence is extracted, and the resulting matrix is going through gated CNN (Dauphin et al., 2017) for extraction of single encoding for each paragraph. The accuracy is barely above "
+    },
+    {
+      "expression": "\"50%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which depicts that this method is not very promising.  We have used a pre-trained "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in two different ways. First, as a feature extractor without fine-tuning, and second, by fine-tuning the weights during training.  In the case of fine-tuning, we have used different numbers for "
     },
     {
       "expression": "\"maximum sequence length\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to test the capability of BERT in this task. We increased the number of tokens and accuracy respectively increases. We found this method very promising and the accuracy "
+      "value": " to test the capability of "
     },
     {
-      "expression": "\"significantly increases\"",
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with respect to previous methods (Table 3). This result reveals fine-tuning pre-trained BERT can approximately learn the order of the paragraphs and arrow of the time in the stories."
+      "value": " in this task.  we increased the number of tokens and accuracy respectively increases.  We found this method very promising and the accuracy significantly increases with respect to previous methods (Table 3). This result reveals fine-tuning pre-trained "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " can approximately learn the order of the paragraphs and arrow of the time in the stories."
     }
   ],
   "variables": {},

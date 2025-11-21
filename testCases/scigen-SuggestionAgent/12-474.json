@@ -3,10 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "First, we report our results on English data (see Table 3, top) we compare against German data (see Table 3, bottom). Our new strong Data-Lexicon Baseline reaches a considerable accuracy of "
+      "value": "First, we report our results on English data (see Table 3, top)  we compare against German data (see Table 3, bottom).  Our new strong "
+    },
+    {
+      "expression": "\"Data-Lexicon Baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reaches a considerable accuracy of "
     },
     {
       "expression": "\"86.32\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,6 +25,7 @@
     },
     {
       "expression": "\"88.41\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +34,7 @@
     },
     {
       "expression": "\"69.73\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +43,7 @@
     },
     {
       "expression": "\"64.54\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,14 +52,16 @@
     },
     {
       "expression": "\"37.42\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " %). Our unimodal system trained and evaluated on English data slightly exceeds the accuracy of the previous state of the art ("
+      "value": " %).  Our unimodal system trained and evaluated on English data slightly exceeds the accuracy of the previous state of the art ("
     },
     {
       "expression": "\"88.66\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +70,7 @@
     },
     {
       "expression": "\"88.41\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -63,22 +79,16 @@
     },
     {
       "expression": "\"89.35\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " %. Table 3: FrameId results (in %) on English (upper) and German (lower) with and without using the lexicon. Reported are accuracy and F1-macro, both also for ambiguous predicates (mean scores over ten runs). Models: (a) Data, Lexicon, and Data-Lexicon Baselines. (b) Previous models for English. (c) Ours: unimodal our-uni, multimodal on top of our-uni \u2013 our-mm \u2013 with IMAGINED embeddings (and synset visual embeddings for English). "
-    },
-    {
-      "expression": "\"Best results highlighted in bold\"",
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The best run's results for English were: our uni: acc: "
+      "value": " %.  Table 3: FrameId results (in %) on English (upper) and German (lower) with and without using the lexicon. Reported are accuracy and F1-macro, both also for ambiguous predicates (mean scores over ten runs). Models: (a) Data, Lexicon, and Data-Lexicon Baselines. (b) Previous models for English. (c) Ours: unimodal our-uni, multimodal on top of our-uni \u2013 our-mm \u2013 with IMAGINED embeddings (and synset visual embeddings for English). Best results highlighted in bold. The best run's results for English were: our uni: acc: "
     },
     {
       "expression": "\"89.35\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -87,6 +97,7 @@
     },
     {
       "expression": "\"76.45\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -95,6 +106,7 @@
     },
     {
       "expression": "\"76.95\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -103,6 +115,7 @@
     },
     {
       "expression": "\"54.02\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -111,6 +124,7 @@
     },
     {
       "expression": "\"89.09\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -119,6 +133,7 @@
     },
     {
       "expression": "\"75.86\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -127,6 +142,7 @@
     },
     {
       "expression": "\"78.17\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -135,14 +151,16 @@
     },
     {
       "expression": "\"57.48\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (with lexicon) Our system evaluated on German data sets a new state of the art on this corpus with "
+      "value": " (with lexicon)  Our system evaluated on German data sets a new state of the art on this corpus with "
     },
     {
       "expression": "\"80.76\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -151,19 +169,39 @@
     },
     {
       "expression": "\"77.16\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " %; no other system evaluated on this dataset). We report results achieved without the lexicon to evaluate independently of its quality (Hartmann et al., 2017). On English data, our systems "
+      "value": " %; no other system evaluated on this dataset).  We report results achieved without the lexicon to evaluate independently of its quality (Hartmann et al., 2017). On English data, our systems outperforms Hartmann et al. (2017) by "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"more than two points\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " Hartmann et al. (2017) by more than two points in accuracy and we achieve a large improvement over the Data Baseline. Comparing the F1-macro with and without lexicon, it can be seen that the additional information stored in the lexicon strongly increases the score by about 20 points for English data. For German data, the increase of F1-macro with lexicon versus without is small (one point)."
+      "value": " in accuracy and we achieve a large improvement over the Data Baseline. Comparing the F1-macro with and without lexicon, it can be seen that the additional information stored in the lexicon strongly increases the score by about "
+    },
+    {
+      "expression": "\"20\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points for English data. For German data, the increase of F1-macro with lexicon versus without is small ("
+    },
+    {
+      "expression": "\"one\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " point)."
     }
   ],
   "variables": {},

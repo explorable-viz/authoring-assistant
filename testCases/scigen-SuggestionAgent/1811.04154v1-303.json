@@ -3,18 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "See that using phonological representations (phonemes and articulatory features) offers the ability to map between languages that use different orthographies, explaining the convincing improvement over graphemes for HRL-LRL pairs that are written in different scripts (Table 3). With graphemes, the experiments on these languages achieve "
+      "value": "see We that using phonological representations (phonemes and articulatory features) offers the ability to map between languages that use different orthographies, explaining the convincing improvement over graphemes for HRL-LRL pairs that are written in different scripts (Table 3). With graphemes, the experiments on these languages achieve ≈ "
     },
     {
-      "expression": "\"≈ 0\"",
+      "expression": "\"0\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% accuracy because the character vocabulary of the HRL encoder simply does not contain the low-resource test language characters. This is the case with Lao-Thai ("
+      "value": " accuracy because the character vocabulary of the HRL encoder simply does not contain the low-resource test language characters. This is the case with Lao-Thai ("
     },
     {
       "expression": "\"lo-th\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -23,6 +25,7 @@
     },
     {
       "expression": "\"te-ta\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -31,6 +34,7 @@
     },
     {
       "expression": "\"bn-hi\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,6 +43,7 @@
     },
     {
       "expression": "\"jv-id\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -47,6 +52,7 @@
     },
     {
       "expression": "\"mr-hi\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -55,6 +61,7 @@
     },
     {
       "expression": "\"uk-ru\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -3,15 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "makes the FEVER Title Five Oracle performance "
+      "value": "makes the "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"FEVER Title Five Oracle\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than FEVER Title Five. The Transformer model is accurate enough that oracle guessing does not help."
+      "value": " performance "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"FEVER Title Five\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model is accurate enough that oracle guessing does not help."
     }
   ],
   "variables": {},

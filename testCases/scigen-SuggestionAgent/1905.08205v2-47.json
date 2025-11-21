@@ -3,31 +3,61 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 2, IRNet "
+      "value": "As shown in Table 2, "
     },
     {
-      "expression": "\"significantly outperforms\"",
+      "expression": "\"IRNet\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " SyntaxSQLNet in all four hardness levels with or without BERT. For example, "
+      "value": " significantly outperforms "
     },
     {
-      "expression": "\"compared with\"",
+      "expression": "\"SyntaxSQLNet\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " SyntaxSQLNet, IRNet obtains "
+      "value": " in all four hardness levels with or without BERT. For example, compared with "
     },
     {
-      "expression": "\"23.3\"",
+      "expression": "\"SyntaxSQLNet\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% absolute improvement in Hard level."
+      "value": ", "
+    },
+    {
+      "expression": "\"IRNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " obtains "
+    },
+    {
+      "expression": "\"23.3%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " absolute improvement in "
+    },
+    {
+      "expression": "\"Hard\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " level."
     }
   ],
   "variables": {},

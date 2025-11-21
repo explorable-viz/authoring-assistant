@@ -42,7 +42,7 @@ I think we can do this. (We can also argue that having a fixed/standardised set 
 
 Not sure I understand this point properly but one related thing we considered studying (and perhaps should in response to this) is what happens when the target value is incorrect. This is somewhat related to RQ2 and the ablation studies we considered for that.
 
-## azjF (rating 3, confidence 3)
+## azjF (rating 6, confidence 3)
 
 ### More engineering-oriented, with relatively limited academic research value
 

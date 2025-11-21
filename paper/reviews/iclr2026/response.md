@@ -31,15 +31,15 @@ Thank you for the suggestion; a multi-paper setup is indeed an interesting use c
 
 > - Second, the claims that can be checked seem to be quite simple (checks for more complex claims cannot be generated with LLMs) and thus easy to check manually. Even then, a human has to verify all generated links, which in at least some cases are wrong. This begs the question of whether a manual system where only larger and more important claims are annotated would not be more useful in practice.
 
-Keeping a human in the loop for verification purposes seems important from a trust point of view. For the simple cases, where it may seem unfortunate that author verification is still needed, a small amount of author effort nevertheless translates into a significant _reader_ benefit (since there are many more readers than authors). In future work we anticipate providing automated testing as a way of reducing author burden by automatically exercising the generated code.
+Keeping a human in the loop for verification purposes seems important from a trust point of view. For the simple cases, where it may seem unfortunate that author verification is still needed, a small amount of author effort nevertheless translates into a significant _reader_ benefit (since there are many more readers than authors). In future work we anticipate providing automated testing (e.g. automatically generating counterfactual test cases) as a way of reducing author burden by highlighting potential problems automatically.
 
-For the more complex cases, where current LLMs are unable to generate a full solution in one step, our current design should be able to form the basis of a more interactive workflow, similar to working with Copilot. For the present paper we are focused on exploring the limits of current LLM capabilities and validating a simpler architecture with less interaction.
+For the more complex cases, where current LLMs are unable to generate a full solution in one step, our current design should be able to form the basis of a more interactive workflow, similar to working with Copilot. For the present paper we are focused on exploring the limits of current LLM capabilities and validating a simpler architecture less dependent on interaction.
 
 # Response to Reviewer Bezq
 
 > - Although the paper provides useful category-level statistics, it does not analyze statistical variance beyond reporting standard deviation or assess generalization to unseen writing styles or datasets.
 
-We have changed our figures now use box plots to provide a better sense of the underlying distribution, and annotated with number of samples; thanks for the suggestion.
+We have changed our figures now use box plots to provide a better sense of the underlying distribution, additionally annotated with number of samples; thanks for the suggestion.
 
 In our experiments the LLM was not fine-tuned or prompted with SciGen examples other than as part of the testing step, so all the SciGen examples were acting as out-of-distribution problems. We will make sure this is clear.
 

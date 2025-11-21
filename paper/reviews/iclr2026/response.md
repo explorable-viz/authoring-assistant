@@ -18,22 +18,18 @@ A proper user study with the necessary experimental setup is out of scope for th
 
 _Re. the subset of SciGen used, could you provide details on the selection logic/sampling criteria and exact number of examples used in the evaluation?_
 
-For the submitted version we were only able to manually annotated a 2% subset of the 400 SciGen issues, with only XX example replacement tasks.
+For the submitted version we were only able to manually annotate 9 randomly-chosen SciGen issues (approximately 2% of the total), resulting in XX labelled replacement tasks. We have drawn a second (larger) random subsample (5% of the total) for manual annotation and will report on these in the final version of the paper. We have also added an automation pipeline to process every SciGen example using the Suggestion Agent. By evaluating the performance of the SuggestionAgent against the manual annotations to estimate the noise rate, we are now able to evaluate the InterpretationAgent using the entirety of the SciGen data set, with confidence intervals adjusted to incorporate estimated noise.
 
-[19 of 400 + n replacement problems within each of those]
+_The framework rely on predefined helper routines such as trendWord or growShrink_. Could the authors conduct an ablation study removing or varying these helper components?
 
-However we have increased the size of the dataset in two ways:
-- for measuring correctness only, we have added automation scripts to allow use to process the whole of SciGen (400+ examples)
-- for measuring
+This is a good suggestion; we will do this and also consider other ablations studies (in addition to excluding the target string). It is also worth emphasising that a fixed/standardised set of definitions (for a given paper or research community, say) might also be helpful, but your point remains valid.
 
-The paper states that experiments were conducted on “a subsample of the SciGen dataset” (line 367), but it remains unclear how this subset was chosen. Could the authors provide more details on the selection logic, sampling criteria, and the exact number of examples used in evaluation?
-
-It seems this framework rely on predefined helper routines such as trendWord or growShrink, which encode semantic logic that the model merely invokes rather than learns. Moreover, the large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning. Could the authors conduct an ablation study removing or varying these helper components to determine how much of the system’s success derives from the LLM’s own reasoning versus predefined components?
+_Large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning._
 
 ## Planned revisions to paper
 
-- Clarify that manually annotated subsets of SciGen are randomly chosen; add additional manual annotations to grow subset from 2% to 5%
+- Clarify manually-annotated subsets of SciGen are randomly chosen; add additional manual annotations to grow subset from 2% to 5%
 - Evaluate SuggestionAgent performance against manual annotations
-- Extend our correctness evaluation (Fig. 6(b)) to full SciGen dataset, using SuggestionAgent annotations
+- Extend our correctness evaluation (Fig. 6(b)) to full SciGen dataset, using SuggestionAgent annotations (and adjusted for noise)
 
 We will include our manually annotated subset as supplementary material and release it as an open source benchmark.

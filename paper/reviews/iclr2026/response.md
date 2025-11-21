@@ -31,3 +31,7 @@ It seems this framework rely on predefined helper routines such as trendWord or 
 For the submitted version we relied on a small subset of SciGen, with only XX example replacement tasks.
 
 ## Planned revisions to paper
+
+- Clarify that manually annotated subsets of SciGen are randomly chosen, and carry out additional manual annotation to grow subset from 2% to 5%
+- Evaluate SuggestionAgent performance against manual annotations
+- Extend our correctness evaluation (Fig. 6(b)) to full SciGen dataset, using SuggestionAgent annotations

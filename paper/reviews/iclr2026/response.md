@@ -2,13 +2,13 @@
 
 # General Response to Reviewers
 
-We thank all reviewers for their time and expertise in evaluating our submission. We are grateful for the positive feedback, including the recognition that the proposed system addresses an important research direction (Reviewers AyvP, Bezq and VRkd), that the connection between LLM-based code synthesis and data provenance systems is novel (Reviewer Bezq), and that our experimental results, while in need of some further work, indicate that the approach is feasible in practice (Reviewer azjF). The constructive feedback provided by the reviewers has been invaluable in understanding how to improve the evaluation. We have provided detailed responses to each reviewer individually and outline below how we plan to further revise the paper, including the new experiments conducted in response to multiple reviewer requests.
+We thank all reviewers for their time and expertise in evaluating our submission. We are grateful for the positive feedback, and are glad to hear that the proposed system addresses an important research direction (Reviewers AyvP, Bezq and VRkd), that the connection between LLM-based code synthesis and data provenance systems is novel (Reviewer Bezq), and that our experimental results support the claim that the approach is feasible in practice (Reviewer azjF). The constructive feedback provided by the reviewers has been invaluable in understanding how to improve various aspects of the evaluation. We have provided detailed responses to each reviewer individually and outline below how we plan to further revise the paper, including the new experiments conducted in response to multiple reviewer requests.
 
 ## Planned Revisions and New Experiments
 
 - Clarify manually-annotated subsets of SciGen are randomly chosen; add additional manual annotations to grow subset from 2% to 5%. We will include this data set as supplementary material and also plan to release it as an open source benchmark.
-- Evaluate SuggestionAgent performance against manual annotations; estimate noise in SuggestionAgent labelling.
-- Extend our correctness evaluation (Fig. 6(b)) to full SciGen dataset, using SuggestionAgent annotations (and adjusted for noise)
+- We will evaluate SuggestionAgent performance against manual annotations and use this to estimate noise in the SuggestionAgent labelling.
+- We will extend the success rate by linguistic category study to the full SciGen dataset, using the SuggestionAgent annotations (with confidence intervals adjusted for noise)
 - Expand the treatment of RQ2
 
 # Response to Reviewer AyvP

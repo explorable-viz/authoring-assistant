@@ -1,8 +1,16 @@
-# Response to reviewers
+# General Response to Reviewers
+[Post as initial comment, then one comment per reviewer, as below]
 
-We thank our three reviewers for their useful feedback and suggestions for revising the paper. We address specific comments of each reviewer below, and then summarise how we plan to improve the paper.
+We thank all the reviewers for their time and expertise in evaluating our submission. We are grateful for the positive feedback, including the recognition of [..] contribution (Reviewiers ???), the acknowledgment that [..] well-motivated (Reviewers ??), and the appreciation of (Reviewers ??). The constructive feedback provided by the reviewers has been invaluable in improving the paper. We have provided detailed responses to each reviewer's comments individually and outline below the key results from new experiments conducted in response to multiple reviewer requests.
 
-## Reviewer AyvP
+## Planned Revisions and New Experiments
+
+- Clarify manually-annotated subsets of SciGen are randomly chosen; add additional manual annotations to grow subset from 2% to 5%. We will include this data set as supplementary material and release it as an open source benchmark.
+- Evaluate SuggestionAgent performance against manual annotations; estimate noise in SuggestionAgent labelling.
+- Extend our correctness evaluation (Fig. 6(b)) to full SciGen dataset, using SuggestionAgent annotations (and adjusted for noise)
+- Expand the treatment of RQ2
+
+# Response to Reviewer AyvP
 
 _Restriction to single papers._ Nothing about our design restricts it to single papers, although for our evaluation we have only considered excerpts from single papers. A multi-paper setup is an interesting use case and one we will consider for a real-world tool.
 
@@ -10,7 +18,7 @@ _Checks for more complex claims cannot be generated with LLMs. Even for the simp
 
 For the more complex cases, where current LLMs are unable to generate a full solution in one step, our current design should be able to form the basis of a more interactive workflow, similar to working with Copilot. For the present paper we are focused on exploring the limits of current LLM capabilities and validating a simpler architecture with less interaction.
 
-## Reviewer Bezq
+# Response to Reviewer Bezq
 
 _Can authors report statistics about the manual validation process?_
 
@@ -38,13 +46,13 @@ _Assess generalization to unseen writing styles or datasets._
 
 In our experiments the LLM was not fine-tuned or prompted with SciGen examples other than as part of the test cases themselves, so all the SciGen examples were acting as out-of-distribution problems.
 
-## Reviewer azjF
+# Response to Reviewer azjF
 
 _More engineering-oriented, with relatively limited academic research value._ It is an engineering-oriented paper, however we address important research questions around how such an agent-based tool might be designed, how currently LLM competencies meet the needs of such a design, and how manual and automatic verification can be integrated and assessed.
 
 _Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered)._ The lack of directly related prior work does indeed make comparison to baseline methods difficult. We agree more in-depth ablation studies would be appropriate; we will investigate removing the predefined helper routines (see response to reviewer Bezq above), along with other other similar experiments, and include those in our reporting on RQ1 and RQ2.
 
-## Reviewer VRkd
+# Response to Reviewer VRkd
 
 _Isn't this supposed to be an HCI paper? To me, there isn't any technical contribution for an ML venue beyond getting the system implemented. Since "human" is a really central part in this system, it would be nice to get evaluated by actual human/users too._ The natural next step of this work will include a Copilot-like full-featured tool, which will enable a full user study. And indeed this would likely go to venue like CHI or IUI. For this paper, our aim to validate key components of such a tool, including:
 
@@ -53,13 +61,6 @@ _Isn't this supposed to be an HCI paper? To me, there isn't any technical contri
 
 We believe that this is of interest to the ML community, at least from NLP and tool architecture points of view, although we concede that the evaluation in the submitted version of the paper was in need further work. We discuss elsewhere how we plan to address that in the final revision.
 
-### The evaluation, from an LLM/NLP standpoint, is perhaps not enough. It would be nice to show if the system could do well on some documented NLP tasks (like scientific literature?) to begin with.
+_The evaluation, from an LLM/NLP standpoint, is perhaps not enough. It would be nice to show if the system could do well on some documented NLP tasks (like scientific literature?) to begin with._
 
 _Many of the niche details, like Table 1, are perhaps unnecessary for the main paper._ We prefer to keep Table 1 in the body of the paper, to be explicit about the specific linguistic/quantitative LLM competencies evaluated in the paper; however it should be possible to streamline the figure a bit. We will also make a pass over the paper for other details that might be spurious for the ICLR audience.
-
-## Planned revisions to paper
-
-- Clarify manually-annotated subsets of SciGen are randomly chosen; add additional manual annotations to grow subset from 2% to 5%. We will include this data set as supplementary material and release it as an open source benchmark.
-- Evaluate SuggestionAgent performance against manual annotations; estimate noise in SuggestionAgent labelling.
-- Extend our correctness evaluation (Fig. 6(b)) to full SciGen dataset, using SuggestionAgent annotations (and adjusted for noise)
-- Expand the treatment of RQ2

@@ -30,9 +30,36 @@ The target string is present in one of our main use cases (where the reader or a
 
 To respond to your additional points:
 
-_No analysis of statistical variance beyond standard deviation._ We have changed our figures to use box plots for a better sense of the underlying distribution, annotated with the number of samples.
+_No analysis of statistical variance beyond standard deviation._
+
+Our figures now use box plots for a better sense of the underlying distribution, annotated with the number of samples.
+
+_Assess generalization to unseen writing styles or datasets._
+
+In our experiments the LLM was not fine-tuned or prompted with SciGen examples other than as part of the test cases themselves, so all the SciGen examples were acting as out-of-distribution problems.
+
+## Reviewer azjF
+
+_More engineering-oriented, with relatively limited academic research value._
+
+_Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered)._
+
+Doing something new does indeed make comparison to baseline methods difficult. However we agree more in-depth ablation studies would be appropriate. We are investigating removing the predefined helper routines (see response to reviewer Bezq above); we will consider other ablation possibilities and include those in our reporting on RQ1 and RQ2.
 
 ## Reviewer VRkd
+
+> Isn't this supposed to be an HCI paper? To me, there isn't any technical contribution for an ML venue beyond getting the system implemented.
+> Since "human" is a really central part in this system, it would be nice to get evaluated by actual human/users too.
+
+The natural next step of this work will include a Copilot-like full-featured tool, which will enable a full user study. This will likelygo to venue like CHI or IUI, as suggested. For this paper, we aim to validate key components of such a tool, including:
+
+- competency evaluation for LLMs (which will substantially improve for this paper)
+- proof-of-concept agentic architecture, including support for compiler-in-the-loop and manual validation (both important for this task)
+
+We believe that this is of interest to the ML community, at least from NLP and tool architecture points of view, although we concede that the evaluation in the submitted version of the paper was in need further work, and we plan to substantially address that in the final revision.
+
+### The evaluation, from an LLM/NLP standpoint, is perhaps not enough. It would be nice to show if the system could do well on some documented NLP tasks (like scientific literature?) to begin with.
+
 
 > Many of the niche details, like Table 1, are perhaps unnecessary for the main paper
 

@@ -46,7 +46,7 @@ Not sure I understand this point properly but one related thing we considered st
 
 ### More engineering-oriented, with relatively limited academic research value
 
-Perhaps respond to this as part of respond to point below.
+Perhaps respond to this as part of response to point below.
 
 ### Experimental design lacks comprehensive justification. Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered)
 

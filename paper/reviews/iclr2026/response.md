@@ -1,4 +1,4 @@
-[Post each of the top-level sections below a separate comment, with title as given]
+[Post each of the top-level sections below as a separate comment, with title as given]
 
 # General Response to Reviewers
 

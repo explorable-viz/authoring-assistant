@@ -14,7 +14,7 @@ For the more complex cases, where current LLMs are unable to generate a full sol
 
 _Can authors report statistics about the manual validation process?_
 
-A proper user study with the necessary experimental setup is out of scope for this work, but certainly something we plan to do as the next step, alongside implementing a more complete interactive workflow. For this paper, our main focus is on a basic agent-based architecture for interpretation synthesis and a solid evaluation of the required LLM competencies.
+A proper user study with the necessary experimental setup is out of scope for this work, but certainly something we plan to do as the next step, alongside implementing a more complete interactive workflow; we recognise there is a risk (as with all AI-generated code) of simply shifting author workload from writing to debugging. For this paper, our main focus is on a basic agent-based architecture for interpretation synthesis and a solid evaluation of the required LLM competencies.
 
 _Re. the subset of SciGen used, could you provide details on the selection logic/sampling criteria and exact number of examples used in the evaluation?_
 
@@ -25,6 +25,11 @@ _The framework rely on predefined helper routines such as trendWord or growShrin
 This is a good suggestion; we will do this and also consider other ablations studies (in addition to excluding the target string). It is worth emphasising that a fixed/standardised set of terminological definitions (for a given paper or research community, say) might be helpful (or even important in some domains, such as IPCC Summary for Policymaker reports), but your point remains valid.
 
 _Large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning._
+
+In response to additional points:
+
+_No analysis of statistical variance beyond standard deviation._ We are now reporting using box plots to give
+a better sense of the underlying distribution, annotated with the number of samples.
 
 ## Reviewer VRkd
 

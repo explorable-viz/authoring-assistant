@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. Let's use the correct single category:\n\nEven the ensemble of "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models did not result in significant differences especially in "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1908_03402v1_61"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1908.03402v1-61.json"]
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "_score": "0.2",
+        "omniglot": "24,304",
+        "omniglot_classifier": "2,144",
+        "imagenet": "1,280",
+        "imagenet_classifier": "2,048"
+    },
+    {
+        "_score": "0.1",
+        "omniglot": "99,248",
+        "omniglot_classifier": "22,912",
+        "imagenet": "8,448",
+        "imagenet_classifier": "3,072"
+    },
+    {
+        "_score": "0.05",
+        "omniglot": "160,608",
+        "omniglot_classifier": "43,328",
+        "imagenet": "111,872",
+        "imagenet_classifier": "8,960"
+    }
+]

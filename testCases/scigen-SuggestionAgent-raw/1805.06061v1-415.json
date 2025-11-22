@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1805.06061v1-415.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1805_06061v1_415"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 1 shows our main experimental results. In two of the cases (SST and ROC), SoPa outperforms all models. On Amazon, SoPa performs within 0.3 points of CNN and BiLSTM, and outperforms the other two baselines. The table also shows the number of parameters used by each model for each task.  SoPa performs better or roughly the same as a BiLSTM, which has 3–6 times as many parameters.  Table 1 also shows an ablation of the differences between SoPa and CNN: max-product semiring with sigmoid vs. max-sum semiring with identity, self-loops, and (cid:15)-transitions. The last line is equivalent to a CNN with  multiple window sizes. Interestingly, the most notable difference between SoPa and CNN is the semiring and encoder function, while (cid:15) transitions and self-loops have little effect on performance.1"
+        }
+    ]
+}

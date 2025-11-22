@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For each track, we selected "
+    },
+    {
+      "expression": "\"the best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models according to their "
+    },
+    {
+      "expression": "\"BLEU score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on DGT-valid. The scores are shown in Table 3,  We see that in the same data conditions (unconstrained mode), the "
+    },
+    {
+      "expression": "\"MT+NLG models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are not "
+    },
+    {
+      "expression": "\"better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the pure "
+    },
+    {
+      "expression": "\"MT models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_14539v1_352"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.14539v1-352.json"]
+}

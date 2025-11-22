@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1903.10548v1-262.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1903_10548v1_262"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Different approaches have been used to solve this task. The best result belongs to classifying order of paragraphs using pre-trained BERT model. It achieves around 84% accuracy on test set which outperforms other models significantly.  First, each paragraph is encoded with LSTM. The hidden state at the end of each sentence is extracted, and the resulting matrix is going through gated CNN (Dauphin et al., 2017) for extraction of single encoding for each paragraph. The accuracy is barely above 50%, which depicts that this method is not very promising.  We have used a pre-trained BERT in two different ways. First, as a feature extractor without fine-tuning, and second, by fine-tuning the weights during training.  In the case of fine-tuning, we have used different numbers for maximum sequence length to test the capability of BERT in this task.  we increased the number of tokens and accuracy respectively increases.  We found this method very promising and the accuracy significantly increases with respect to previous methods (Table 3). This result reveals fine-tuning pre-trained BERT can approximately learn the order of the paragraphs and arrow of the time in the stories."
+        }
+    ]
+}

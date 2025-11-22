@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1906.05218v1-222.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1906_05218v1_222"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 1 shows the time-indexed lags that are averaged to calculate AL for a wait-3 system. The lags make the problem clear: each position beyond the point where all source tokens have been read (gi = |x|) has its lag reduced by  , pulling the average lag below k."
+        }
+    ]
+}

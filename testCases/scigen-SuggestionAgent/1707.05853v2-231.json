@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As can be seen from Table 2, the DST accuracy slightly "
+    },
+    {
+      "expression": "\"increases\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the "
+    },
+    {
+      "expression": "\"higher-quality\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " live ASR outputs. More importantly, the DST performance drastically "
+    },
+    {
+      "expression": "\"increases\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when we evaluate on the manual transcripts that reflect the true user utterances nearly perfectly."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1707_05853v2_231"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1707.05853v2-231.json"]
+}

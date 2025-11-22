@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 6, the "
+    },
+    {
+      "expression": "\"BOTH\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model produced the most accurate output ("
+    },
+    {
+      "expression": "\"95%\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), with the lowest incidence of missed or unsupported statements. outputs from Aharoni and Goldberg(2018) (AG18), which were "
+    },
+    {
+      "expression": "\"22%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1808_09468v1_337"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1808.09468v1-337.json"]
+}

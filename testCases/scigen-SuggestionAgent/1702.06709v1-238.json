@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "These results are shown in "
+    },
+    {
+      "expression": "\"table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as feature level transfer-learning.  These results are shown in "
+    },
+    {
+      "expression": "\"table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as model level transfer learning.  "
+    },
+    {
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the results of the proposed method, its variants and the baseline methods."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1702_06709v1_238"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1702.06709v1-238.json"]
+}

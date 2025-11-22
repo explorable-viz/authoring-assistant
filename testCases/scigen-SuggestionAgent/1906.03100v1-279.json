@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it, I'll ensure that each replacement uses only one category. Here is the corrected version:\n\nTable 2: "
+    },
+    {
+      "expression": "\"Results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the WMT "
+    },
+    {
+      "expression": "\"English-German\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " translation task. \""
+    },
+    {
+      "expression": "\"\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" indicates the result is "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the vanilla "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model (p < 0.05). Similar observations are obtained on the English-German translation task, as shown in Table 2."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_03100v1_279"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.03100v1-279.json"]
+}

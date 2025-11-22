@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1910.02655v1-351.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1910_02655v1_351"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "In Table 2, we compare the development set results of the state of the art methods with the BERT model trained on different retrieved evidence sets. The BERT claim verification system even if it is trained on the UKP-Athene sentence retrieval component (Hanselowski et al., 2018), the state of the art method with the highest recall, improves both label accuracy and FEVER score. Training based on the BERT sentence retrieval predictions significantly enhances the verification results because while it explicitly improves the FEVER score by providing more correct evidence sentences, it provides a better training set for the verification system. The large BERTs are only trained on the best retrieval systems, and as expected significantly improve the performance."
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood! I will ensure that only one category is used per replacement. Here is the revised paragraph:\n\nTable "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the results for both evaluation settings for the textual baseline and the "
+    },
+    {
+      "expression": "\"best multimodal variant\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For the context features, we see a slight improvement in the "
+    },
+    {
+      "expression": "\"best variant\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the speaker independent setup ("
+    },
+    {
+      "expression": "\"text plus audio\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "); however, in other models, there is no improvement."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_01815v1_491"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.01815v1-491.json"]
+}

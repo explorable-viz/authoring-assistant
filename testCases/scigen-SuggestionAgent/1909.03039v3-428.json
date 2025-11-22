@@ -1,0 +1,349 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I'll ensure that each replacement uses only a single category from the specified list.\n\nHere is the revised output:\n\nTable 1 compares the performance of all "
+    },
+    {
+      "expression": "\"model variants\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
+    },
+    {
+      "expression": "\"SHiP models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significantly improved over the "
+    },
+    {
+      "expression": "\"BOW baselines\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the two diagnosis tasks (p < 0.001 under Welch's t-test): for "
+    },
+    {
+      "expression": "\"CCS prediction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
+    },
+    {
+      "expression": "\"best SHiP models\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improved "
+    },
+    {
+      "expression": "\"top-1 recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"7.9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points and "
+    },
+    {
+      "expression": "\"top-5 recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"4.8\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points, respectively, over the "
+    },
+    {
+      "expression": "\"best BOW models\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "; for "
+    },
+    {
+      "expression": "\"ICD-9 prediction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"area under the precision-recall curve (AUPRC)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased by "
+    },
+    {
+      "expression": "\"2.1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points and "
+    },
+    {
+      "expression": "\"weighted area under the ROC curve (AUROC)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased by "
+    },
+    {
+      "expression": "\"0.8\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points. For "
+    },
+    {
+      "expression": "\"mortality prediction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we saw negligible benefit from the "
+    },
+    {
+      "expression": "\"SHiP architecture\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
+    },
+    {
+      "expression": "\"SHiP models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " also improved over the corresponding hierarchical models without pretraining. For "
+    },
+    {
+      "expression": "\"mortality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", pretraining the "
+    },
+    {
+      "expression": "\"all-features model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased "
+    },
+    {
+      "expression": "\"AUPRC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"0.8\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p = 0.06) and "
+    },
+    {
+      "expression": "\"AUROC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"0.6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p = 0.004); for "
+    },
+    {
+      "expression": "\"primary CCS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", pretraining the "
+    },
+    {
+      "expression": "\"all-feature model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased "
+    },
+    {
+      "expression": "\"top-1 recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"8.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p < 0.001), while pretraining the "
+    },
+    {
+      "expression": "\"notes-only model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased "
+    },
+    {
+      "expression": "\"top-5 recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"4.7\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p < 0.001); for "
+    },
+    {
+      "expression": "\"all ICD-9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", pretraining the "
+    },
+    {
+      "expression": "\"notes-only model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased "
+    },
+    {
+      "expression": "\"AUPRC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"0.7\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p = 0.03) and "
+    },
+    {
+      "expression": "\"weighted AUROC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased by "
+    },
+    {
+      "expression": "\"0.4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points (p = 0.01).\n\nIn this version, each replacement uses only one category from the specified list."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1909_03039v3_428"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1909.03039v3-428.json"]
+}

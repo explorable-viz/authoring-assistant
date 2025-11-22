@@ -1,0 +1,37 @@
+[
+    {
+        "model_no-distill": "no-distill",
+        "model_no-project": "project",
+        "test_85.98": "86.54",
+        "_but_78.69": "83.40",
+        "_but_or___neg_80.13": "-"
+    },
+    {
+        "model_no-distill": "distill",
+        "model_no-project": "no-project",
+        "test_85.98": "86.11",
+        "_but_78.69": "79.04",
+        "_but_or___neg_80.13": "-"
+    },
+    {
+        "model_no-distill": "distill",
+        "model_no-project": "project",
+        "test_85.98": "86.62",
+        "_but_78.69": "83.32",
+        "_but_or___neg_80.13": "-"
+    },
+    {
+        "model_no-distill": "ELMo",
+        "model_no-project": "no-project",
+        "test_85.98": "88.89",
+        "_but_78.69": "86.51",
+        "_but_or___neg_80.13": "87.24"
+    },
+    {
+        "model_no-distill": "ELMo",
+        "model_no-project": "project",
+        "test_85.98": "88.96",
+        "_but_78.69": "87.20",
+        "_but_or___neg_80.13": "-"
+    }
+]

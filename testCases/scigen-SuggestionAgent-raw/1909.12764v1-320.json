@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1909.12764v1-320.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1909_12764v1_320"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We compare our model with the state-of-the-art models in Table 3.  As Table 3 shows, this model alone (without any reranking) improves the state-of-the-art performance from 79.6% to 82.15% accuracy  Increasing the beam size improves the performance as expected.  Using a pre-trained model improves the performance as well.  Reranking with a threshold rule may be helpful for the overall architecture. We observe that reranking by the critic at all times may not be the best approach. We note that choosing not to rerank when all scores are below 0.5 increases the performance further. On the other hand, reranking if the difference between the best score and second best score is above the threshold we set does not help in this case.  The overall architecture improves the performance of the generator (82.1% accuracy) to 83.7% accuracy."
+        }
+    ]
+}

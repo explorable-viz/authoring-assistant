@@ -1,6 +1,7 @@
 package authoringassistant;
 
 import authoringassistant.paragraph.Expression;
+import authoringassistant.paragraph.ExpressionCategory;
 import authoringassistant.paragraph.Literal;
 import authoringassistant.paragraph.Paragraph;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
@@ -21,7 +22,7 @@ import java.util.regex.Pattern;
 
 public class SuggestionAgent {
 
-    private static final Pattern REPLACE = Pattern.compile("\\[REPLACE value=\"?(.*?)\"?]");
+    private static final Pattern REPLACE = Pattern.compile("\\[REPLACE value=\"?(.*?)\"? categories=\"?(.*?)\"?]");
     private static final Path SYSTEM_PROMPT_PATH = Path.of("system-prompt", "suggestion-agent", "system-prompt.txt");
     private final LLMEvaluatorAgent<String> llm;
 
@@ -38,12 +39,27 @@ public class SuggestionAgent {
             text = extractText(p);
         }
         PromptList prompts = buildPrompts(text);
-        String result = llm.evaluate(prompts, null);
-        if(result == null) {
-            return p;
+        String result;
+        while(true) {
+            try {
+                result = llm.evaluate(prompts, null);
+                if (result == null) {
+                    return p;
+                }
+                Paragraph paragraph = parseParagraph(result);
+                return new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCaseFileName(),p.getTest_datasets());
+            } catch (IllegalArgumentException ex) {
+                prompts.addUserPrompt("Invalid category! Please enter only one of the following categories:   - COMPARISON\n" +
+                        "  - RANK\n" +
+                        "  - RATIO\n" +
+                        "  - DATA_RETRIEVAL\n" +
+                        "  - AVERAGE\n" +
+                        "  - SUM\n" +
+                        "  - MIN_MAX");
+                continue;
+            }
         }
-        Paragraph paragraph = parseParagraph(result);
-        return new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCaseFileName(),p.getTest_datasets());
+
     }
 
     private Paragraph parseParagraph(String text) {
@@ -59,7 +75,9 @@ public class SuggestionAgent {
             }
             // Expression
             String exprValue = matcher.group(1);
-            paragraph.add(new Expression(STR."\"\{exprValue}\"", exprValue, new HashSet<>()));
+            HashSet<ExpressionCategory> categories = new HashSet<>();
+            categories.add(ExpressionCategory.of(matcher.group(2)));
+            paragraph.add(new Expression(STR."\"\{exprValue}\"", exprValue, categories));
 
             lastIndex = matcher.end();
         }
@@ -73,12 +91,12 @@ public class SuggestionAgent {
     }
 
     private static String extractText(Program p) throws IOException {
-        return p.asIndividualEdits(p)
+        return !p.asIndividualEdits(p).isEmpty() ? p.asIndividualEdits(p)
                 .getFirst()
                 .component1()
                 .getParagraph()
                 .getFirst()
-                .getValue();
+                .getValue() : p.getParagraph().getFirst().getValue();
     }
 
     private static PromptList buildPrompts(String userText) throws IOException {

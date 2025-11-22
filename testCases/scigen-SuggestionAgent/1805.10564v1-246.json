@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Thank you for pointing out the mistake. Here is the corrected version:\n\nThe results of the experiments are reported in Table 1.  "
+    },
+    {
+      "expression": "\"facts-to-seq model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " exploiting our positional fact encoding performs adequately. With an additional attention mechanism ("
+    },
+    {
+      "expression": "\"Facts-to-seq w. Attention\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), the results are even "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The analysis of the "
+    },
+    {
+      "expression": "\"Static Memory approach\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " amounts to an ablation study,  the "
+    },
+    {
+      "expression": "\"DMN+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is even outperformed by our "
+    },
+    {
+      "expression": "\"Facts-to-seq baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_10564v1_246"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.10564v1-246.json"]
+}

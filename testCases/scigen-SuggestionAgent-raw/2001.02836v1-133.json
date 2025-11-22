@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/2001.02836v1-133.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_2001_02836v1_133"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "As shown in Table 5, we compare our model with several different strategies. The first one is to put all weights to the center embedding (fix λ to 1), which never updates the local relational embeddings. As a result, it can achieve similar performance on word similarity measurement but is inferior in SP acquisition because no relationdependent information is preserved."
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1904.04745v1-378.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1904_04745v1_378"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 1 presents comparisons of our method with existing state-of-the-art approaches.  Our proposed method consistently outperforms all other methods on all four datasets. The improvement is particularly significant on the more challenging datasets, such as UNC+ which has no location words and G-Ref which contains longer and richer query expressions."
+        }
+    ]
+}

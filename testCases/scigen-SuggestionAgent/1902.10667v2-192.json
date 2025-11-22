@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood. I'll ensure that each annotation uses only one category from the provided list. Here is the corrected paragraph:\n\nwe show the superior performance (in terms of "
+    },
+    {
+      "expression": "\"MWE-based F-score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") of our "
+    },
+    {
+      "expression": "\"top systems\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] on the test data compared to the baseline and state-of-the-art systems, namely, "
+    },
+    {
+      "expression": "\"ATILF-LLF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Al Saied et al., 2017) and "
+    },
+    {
+      "expression": "\"SHOMA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Taslimipoor and Rohanian, 2018). "
+    },
+    {
+      "expression": "\"GCN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] works the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] for discontinuous MWEs in EN and FA, while "
+    },
+    {
+      "expression": "\"H-combined\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] outperforms based on results for all MWEs except for FA. The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1902_10667v2_192"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1902.10667v2-192.json"]
+}

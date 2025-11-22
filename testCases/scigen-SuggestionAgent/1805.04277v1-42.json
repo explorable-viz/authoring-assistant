@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The two "
+    },
+    {
+      "expression": "\"top\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rows in Table 1 show conflicting results for "
+    },
+    {
+      "expression": "\"UKB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As the results show, that paper reports a suboptimal use of "
+    },
+    {
+      "expression": "\"UKB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The table also reports the "
+    },
+    {
+      "expression": "\"best performing\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " knowledge-based systems on this dataset. Also report We (Chaplot and Sakajhutdinov, 2018), the latest work on this area, as well as the most frequent sense as given by WordNet counts The table shows that "
+    },
+    {
+      "expression": "\"UKB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " yields the "
+    },
+    {
+      "expression": "\"best overall\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " result."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_04277v1_42"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.04277v1-42.json"]
+}

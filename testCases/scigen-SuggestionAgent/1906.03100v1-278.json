@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it! I'll make sure to use only the specified valid categories. Here is the corrected version:\n\nTable 1: Results on the NIST Chinese-English translation task. \"Params\" denotes the number of model "
+    },
+    {
+      "expression": "\"parameters\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". \"Emb.\" represents the number of parameters used for word representation. \"Red.\" represents the reduction rate of the standard size. The results of SMT* and RNNsearch* are reported by Kuang et al. (2018) with the same datasets and vocabulary settings. \"↑\" indicates the result is significantly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than that of the vanilla Transformer (p < 0.01), while \"⇑\" indicates the result is significantly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than that of all other Transformer models (p < 0.01). All significance tests are measured by paired bootstrap resampling (Koehn, 2004). Table 1 reports the results on the NIST ChineseEnglish test sets. It is observed that the Transformer models significantly "
+    },
+    {
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " SMT and RNNsearch models. Therefore, we decide to implement all of our experiments based on Transformer architecture. The direct bridging model can further improve the translation quality of the Transformer baseline. The decoder WT model improves the translation quality while reducing the number of parameters for the word representation. This improved performance happens because there are fewer model "
+    },
+    {
+      "expression": "\"parameters\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which prevents over-fitting (Press and Wolf, 2017). Finally, the performance is further improved by the proposed method while using even fewer "
+    },
+    {
+      "expression": "\"parameters\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than other models."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_03100v1_278"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.03100v1-278.json"]
+}

@@ -1,0 +1,98 @@
+[
+    {
+        "model": "Coherence",
+        "disagr_(%)": "Coherence",
+        "un(%)": "Coherence",
+        "agr(%)": "Coherence"
+    },
+    {
+        "model": "Human",
+        "disagr_(%)": "17.4",
+        "un(%)": "20.8",
+        "agr(%)": "61.8"
+    },
+    {
+        "model": "AR",
+        "disagr_(%)": "28.6",
+        "un(%)": "29.5",
+        "agr(%)": "41.9"
+    },
+    {
+        "model": "AR+MMI",
+        "disagr_(%)": "25.3",
+        "un(%)": "27.9",
+        "agr(%)": "46.8"
+    },
+    {
+        "model": "AR+MMI+diverse",
+        "disagr_(%)": "24.8",
+        "un(%)": "27.8",
+        "agr(%)": "47.4"
+    },
+    {
+        "model": "AR+MMI+RL",
+        "disagr_(%)": "24.1",
+        "un(%)": "26.5",
+        "agr(%)": "49.4"
+    },
+    {
+        "model": "nonAR",
+        "disagr_(%)": "29.9",
+        "un(%)": "28.7",
+        "agr(%)": "41.4"
+    },
+    {
+        "model": "nonAR+MMI",
+        "disagr_(%)": "23.1",
+        "un(%)": "24.0",
+        "agr(%)": "52.9"
+    },
+    {
+        "model": "Content Richness",
+        "disagr_(%)": "Content Richness",
+        "un(%)": "Content Richness",
+        "agr(%)": "Content Richness"
+    },
+    {
+        "model": "Human",
+        "disagr_(%)": "14.0",
+        "un(%)": "16.6",
+        "agr(%)": "69.4"
+    },
+    {
+        "model": "AR",
+        "disagr_(%)": "38.2",
+        "un(%)": "30.4",
+        "agr(%)": "31.4"
+    },
+    {
+        "model": "AR+MMI",
+        "disagr_(%)": "30.6",
+        "un(%)": "26.2",
+        "agr(%)": "43.2"
+    },
+    {
+        "model": "AR+MMI+diverse",
+        "disagr_(%)": "23.9",
+        "un(%)": "21.3",
+        "agr(%)": "54.8"
+    },
+    {
+        "model": "AR+MMI+RL",
+        "disagr_(%)": "26.4",
+        "un(%)": "24.9",
+        "agr(%)": "48.7"
+    },
+    {
+        "model": "NonAR",
+        "disagr_(%)": "31.4",
+        "un(%)": "25.0",
+        "agr(%)": "44.6"
+    },
+    {
+        "model": "NonAR+MMI",
+        "disagr_(%)": "24.2",
+        "un(%)": "20.5",
+        "agr(%)": "55.3"
+    }
+]

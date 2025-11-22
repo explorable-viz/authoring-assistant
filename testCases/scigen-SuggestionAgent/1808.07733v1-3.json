@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We present statistics of our dataset"
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As expected, inter-annotator agreement is "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"higher thresholds\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (less ambiguous sentences). According to Landis and Koch (1977), κ ∈ ("
+    },
+    {
+      "expression": "\"(0.2, 0.4]\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") corresponds to \"fair agreement\", whereas κ ∈ ("
+    },
+    {
+      "expression": "\"(0.4, 0.6]\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") corresponds to \"moderate agreement\". We next compute the accuracy of our model for each threshold by removing the corresponding neutral sentences. "
+    },
+    {
+      "expression": "\"Higher thresholds\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " correspond to sets of less ambiguous sentences. Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows that "
+    },
+    {
+      "expression": "\"ELMo's performance gains\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in Table "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " extends across all thresholds."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1808_07733v1_3"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1808.07733v1-3.json"]
+}

@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results on the resume NER test data are shown in Table 8. "
+    },
+    {
+      "expression": "\"lattice\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model significantly outperforms both the "
+    },
+    {
+      "expression": "\"word-based\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " mode and the "
+    },
+    {
+      "expression": "\"character-based\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model for Weibo and resume (p < 0.01), giving state-of-the-art results."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_02023v4_206"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.02023v4-206.json"]
+}

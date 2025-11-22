@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 considers analysis of different aspects of the model. First, we look at the "
+    },
+    {
+      "expression": "\"fluency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model and compare the "
+    },
+    {
+      "expression": "\"cluster smoothing (CS)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approach with "
+    },
+    {
+      "expression": "\"softmax temperature (TEMPx with x being the temperature)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " commonly used for generation in LM-integrated models (Chorowski and Jaitly, 2016) as well as "
+    },
+    {
+      "expression": "\"no adjustment (NA)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Second, we vary the "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "-layer representation out of ELMo forward language model to do contextual matching ("
+    },
+    {
+      "expression": "\"bot/mid/top: bottom/middle/top layer only\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"avg: average of 3 layers\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"cat: concatenation of all layers\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Results show the effectiveness of our cluster smoothing method for the "
+    },
+    {
+      "expression": "\"vocabulary adaptive language model pfm\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", although temperature smoothing is an option for abstractive datasets. When using word embeddings (bottom layer only from ELMo language model) in our contextual matching model "
+    },
+    {
+      "expression": "\"pcm\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the summarization performance drops significantly to below simple baselines as demonstrated by score decrease."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1907_13337v1_24"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1907.13337v1-24.json"]
+}

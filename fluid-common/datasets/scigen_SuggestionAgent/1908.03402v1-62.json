@@ -1,0 +1,26 @@
+[
+    {
+        "models": "MT as PE",
+        "bleu": "76.76"
+    },
+    {
+        "models": "Processed MT",
+        "bleu": "76.61"
+    },
+    {
+        "models": "Base",
+        "bleu": "76.91 ∼ 77.13"
+    },
+    {
+        "models": "Gaussian",
+        "bleu": "76.94 ∼ 77.08"
+    },
+    {
+        "models": "Uniform",
+        "bleu": "77.01 ∼ 77.10"
+    },
+    {
+        "models": "Ensemble x5",
+        "bleu": " 77.22"
+    }
+]

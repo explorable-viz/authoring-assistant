@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "are summarized in Table 1, where "
+    },
+    {
+      "expression": "\"the score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for each task category is calculated by "
+    },
+    {
+      "expression": "\"averaging\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the normalized values for the tasks within each category. Although the activations of token hidden states are often used in fine-tuning "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for classification tasks, "
+    },
+    {
+      "expression": "\"Mean-pooling\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of hidden states performs the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all task categories among all the pooling methods."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_07973v2_450"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.07973v2-450.json"]
+}

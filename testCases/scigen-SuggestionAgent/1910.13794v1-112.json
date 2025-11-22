@@ -1,0 +1,66 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We tried to combine different features shown in Table 6 for the interrogative-word classifier.  The first model is only using the "
+    },
+    {
+      "expression": "\"BERT token embedding\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The second model is the previous one with the "
+    },
+    {
+      "expression": "\"entity type of the answer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as an additional feature. The performance of this model is a bit "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the first one but it is not enough to be utilized effectively for our pipeline.  As we can see, the performance noticeably increased, which indicates that answer information is the key to predict the interrogative word needed.  The fourth model,  clearly "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the previous one,  The fifth model is the same as the previous one but with the addition of the "
+    },
+    {
+      "expression": "\"entitytype embedding of the answer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The combination of the three features (answer, answer entity type, and passage) yields to the "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_13794v1_112"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.13794v1-112.json"]
+}

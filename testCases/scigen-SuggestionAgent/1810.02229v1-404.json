@@ -1,0 +1,115 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results for the experiments are illustrated in Table 3.  The network obtains "
+    },
+    {
+      "expression": "\"the best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 score, both for detection (F1 of "
+    },
+    {
+      "expression": "\"0.880\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for strict evaluation and "
+    },
+    {
+      "expression": "\"0.903\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for relaxed evaluation with Fastext-It embeddings) and for classification (F1-class of "
+    },
+    {
+      "expression": "\"0.756\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for strict evaluation, and "
+    },
+    {
+      "expression": "\"0.751\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for relaxed evaluation with Fastext-It embeddings).  Although FBKHLT suffers in the classification subtask, it qualifies as a highly competitive system for the detection subtask.  By observing the strict F1 scores, "
+    },
+    {
+      "expression": "\"FBK-HLT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " beats "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " configurations (DH-FBK100, ILC-ItWack, Berardi2015 Glove) 11, almost equals one (Berardi2015 w2v) 12, and it is outperformed only by one (Fastext-It) 13. In the relaxed evaluation setting, "
+    },
+    {
+      "expression": "\"DH-FBK-100\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the only configuration that does not beat FBK-HLT (although the difference is only "
+    },
+    {
+      "expression": "\"0.001\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " point). Nevertheless, it is remarkable to observe that "
+    },
+    {
+      "expression": "\"FBK-HLT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has a very high Precision ("
+    },
+    {
+      "expression": "\"0.902\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", relaxed evaluation mode), that is overcome by only one embedding configuration, ILC-ItWack. The results also indicates that word embeddings have a major contribution on Recall,  these results are obtained using a single step approach,"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1810_02229v1_404"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1810.02229v1-404.json"]
+}

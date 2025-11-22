@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I'll ensure that only a single category is used for each annotation. Here's the corrected output:\n\nOur results for citation needed detection are given in Table 1. The "
+    },
+    {
+      "expression": "\"vanilla BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model already significantly outperforms the state of the art model from Redi et al. (2019) ("
+    },
+    {
+      "expression": "\"GRU network with global attention\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") by "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 points. We saw further gains in performance with "
+    },
+    {
+      "expression": "\"PU learning\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as well as when using "
+    },
+    {
+      "expression": "\"PUC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Additionally, the models using "
+    },
+    {
+      "expression": "\"PU learning\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " had "
+    },
+    {
+      "expression": "\"lower variance\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", indicating more consistent performance across runs. The "
+    },
+    {
+      "expression": "\"best performing model\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " we saw was the one trained using "
+    },
+    {
+      "expression": "\"PUC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with an F1 score of "
+    },
+    {
+      "expression": "\"0.826\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2003_02736v1_398"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2003.02736v1-398.json"]
+}

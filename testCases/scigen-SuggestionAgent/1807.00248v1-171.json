@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 lists all hyper-parameters which have all been chosen using only training and validation data. The two encoders have been implemented using a "
+    },
+    {
+      "expression": "\"Bidirectional Long Short-Term Memory\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"B-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") (Hochreiter and Schmidhuber, 1997) while the decoder uses a unidirectional "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Both the encoders and the decoder use "
+    },
+    {
+      "expression": "\"two hidden layers\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For the attention network, we have used the "
+    },
+    {
+      "expression": "\"OpenNMT's general option\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Luong et al., 2015)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1807_00248v1_171"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1807.00248v1-171.json"]
+}

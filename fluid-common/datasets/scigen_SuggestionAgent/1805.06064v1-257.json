@@ -1,0 +1,47 @@
+[
+    {
+        "": "Different Titles",
+        "_#_tests": "50",
+        "_#_choices___per_test": "2",
+        "_non-expert___non-cs": "30%",
+        "_non-expert___cs": "15%",
+        "_nlp_expert___junior": "12%",
+        "_nlp_expert___senior": "0%"
+    },
+    {
+        "": "Different Titles",
+        "_#_tests": "20",
+        "_#_choices___per_test": "5",
+        "_non-expert___non-cs": "60%",
+        "_non-expert___cs": "20%",
+        "_nlp_expert___junior": "30%",
+        "_nlp_expert___senior": "20%"
+    },
+    {
+        "": "Different Titles",
+        "_#_tests": "10",
+        "_#_choices___per_test": "10",
+        "_non-expert___non-cs": "80%",
+        "_non-expert___cs": "30%",
+        "_nlp_expert___junior": "30%",
+        "_nlp_expert___senior": "20%"
+    },
+    {
+        "": "Same Title",
+        "_#_tests": "50",
+        "_#_choices___per_test": "2",
+        "_non-expert___non-cs": "54%",
+        "_non-expert___cs": "10%",
+        "_nlp_expert___junior": "4%",
+        "_nlp_expert___senior": "0%"
+    },
+    {
+        "": "Same Title",
+        "_#_tests": "20",
+        "_#_choices___per_test": "5",
+        "_non-expert___non-cs": "75%",
+        "_non-expert___cs": "25%",
+        "_nlp_expert___junior": "5%",
+        "_nlp_expert___senior": "5%"
+    }
+]

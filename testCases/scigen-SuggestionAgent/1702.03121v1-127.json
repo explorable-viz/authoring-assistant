@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood, I will correct the annotation to use only one category as specified. Here is the revised output:\n\nSee "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the "
+    },
+    {
+      "expression": "\"averages\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across "
+    },
+    {
+      "expression": "\"10 scenarios\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As we can see from Table 3, the perplexity scores are consistent with the accuracies: the "
+    },
+    {
+      "expression": "\"script model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " again outperforms other methods, and, as expected, all the models are "
+    },
+    {
+      "expression": "\"weaker\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than humans."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1702_03121v1_127"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1702.03121v1-127.json"]
+}

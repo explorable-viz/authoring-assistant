@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We also verified that our "
+    },
+    {
+      "expression": "\"TPR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " layer is not hurting the performance by comparing the test set results for "
+    },
+    {
+      "expression": "\"HUBERT (Transformer)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The results are obtained by submitting models to the GLUE evaluation server. The results are presented in Table 5."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_12647v1_427"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.12647v1-427.json"]
+}

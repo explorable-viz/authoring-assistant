@@ -1,0 +1,182 @@
+[
+    {
+        "methods": " Wikipedia",
+        "aida-b": "",
+        "msnbc": "",
+        "aquaint": "",
+        "ace2004": "",
+        "cweb": "",
+        "wiki": "",
+        "avg": ""
+    },
+    {
+        "methods": "Milne and Witten ( 2008 )",
+        "aida-b": "-",
+        "msnbc": "78",
+        "aquaint": "85",
+        "ace2004": "81",
+        "cweb": "64.1",
+        "wiki": " 81.7",
+        "avg": "77.96"
+    },
+    {
+        "methods": "Ratinov et al. ( 2011a )",
+        "aida-b": "-",
+        "msnbc": "75",
+        "aquaint": "83",
+        "ace2004": "82",
+        "cweb": "56.2",
+        "wiki": "67.2",
+        "avg": "72.68"
+    },
+    {
+        "methods": "Hoffart et al. ( 2011 )",
+        "aida-b": "-",
+        "msnbc": "79",
+        "aquaint": "56",
+        "ace2004": "80",
+        "cweb": "58.6",
+        "wiki": "63",
+        "avg": "67.32"
+    },
+    {
+        "methods": "Cheng and Roth ( 2013 )",
+        "aida-b": "-",
+        "msnbc": "90",
+        "aquaint": "90",
+        "ace2004": "86",
+        "cweb": "67.5",
+        "wiki": "73.4",
+        "avg": "81.38"
+    },
+    {
+        "methods": "Chisholm and Hachey ( 2015 )",
+        "aida-b": "84.9",
+        "msnbc": "-",
+        "aquaint": "-",
+        "ace2004": "-",
+        "cweb": "-",
+        "wiki": "-",
+        "avg": "-"
+    },
+    {
+        "methods": " Wiki + unlab",
+        "aida-b": "",
+        "msnbc": "",
+        "aquaint": "",
+        "ace2004": "",
+        "cweb": "",
+        "wiki": "",
+        "avg": ""
+    },
+    {
+        "methods": "Lazic et al. ( 2015 )",
+        "aida-b": "86.4",
+        "msnbc": "-",
+        "aquaint": "-",
+        "ace2004": "-",
+        "cweb": "-",
+        "wiki": "-",
+        "avg": ""
+    },
+    {
+        "methods": "Our model",
+        "aida-b": " 89.66 ±0.16",
+        "msnbc": " 92.2 ±0.2",
+        "aquaint": " 90.7 ±0.2",
+        "ace2004": " 88.1 ±0.0",
+        "cweb": " 78.2 ±0.2",
+        "wiki": " 81.7 ±0.1",
+        "avg": " 86.18"
+    },
+    {
+        "methods": " Wiki + Extra supervision",
+        "aida-b": "",
+        "msnbc": "",
+        "aquaint": "",
+        "ace2004": "",
+        "cweb": "",
+        "wiki": "",
+        "avg": ""
+    },
+    {
+        "methods": "Chisholm and Hachey ( 2015 )",
+        "aida-b": "88.7",
+        "msnbc": "-",
+        "aquaint": "-",
+        "ace2004": "-",
+        "cweb": "-",
+        "wiki": "-",
+        "avg": "-"
+    },
+    {
+        "methods": " Fully-supervised (Wiki +",
+        "aida-b": "",
+        "msnbc": "",
+        "aquaint": "",
+        "ace2004": "",
+        "cweb": "",
+        "wiki": "",
+        "avg": ""
+    },
+    {
+        "methods": " AIDA CoNLL train)",
+        "aida-b": "",
+        "msnbc": "",
+        "aquaint": "",
+        "ace2004": "",
+        "cweb": "",
+        "wiki": "",
+        "avg": ""
+    },
+    {
+        "methods": "Guo and Barbosa ( 2016 )",
+        "aida-b": "89.0",
+        "msnbc": "92",
+        "aquaint": "87",
+        "ace2004": "88",
+        "cweb": "77",
+        "wiki": "84.5",
+        "avg": "85.7"
+    },
+    {
+        "methods": "Globerson et al. ( 2016 )",
+        "aida-b": "91.0",
+        "msnbc": "-",
+        "aquaint": "-",
+        "ace2004": "-",
+        "cweb": "-",
+        "wiki": "-",
+        "avg": "-"
+    },
+    {
+        "methods": "Yamada et al. ( 2016 )",
+        "aida-b": "91.5",
+        "msnbc": "-",
+        "aquaint": "-",
+        "ace2004": "-",
+        "cweb": "-",
+        "wiki": "-",
+        "avg": "-"
+    },
+    {
+        "methods": "Ganea and Hofmann ( 2017 )",
+        "aida-b": "92.22 ±0.14",
+        "msnbc": "93.7 ±0.1",
+        "aquaint": "88.5 ±0.4",
+        "ace2004": "88.5 ±0.3",
+        "cweb": "77.9 ±0.1",
+        "wiki": "77.5 ±0.1",
+        "avg": "85.22"
+    },
+    {
+        "methods": "Le and Titov ( 2018 )",
+        "aida-b": "93.07 ±0.27",
+        "msnbc": "93.9 ±0.2",
+        "aquaint": "88.3 ±0.6",
+        "ace2004": "89.9 ±0.8",
+        "cweb": "77.5 ±0.1",
+        "wiki": "78.0 ±0.1",
+        "avg": "85.5"
+    }
+]

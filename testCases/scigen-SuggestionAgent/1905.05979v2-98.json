@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "I apologize for the mistake. Let's correct it according to your specified categories:\n\nResults for different values of "
+    },
+    {
+      "expression": "\"p\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are given in Table 9.\r\nAll models have about the same BLEU, not statistically significantly different from the baseline, but they are quite different in terms of incorporating context.\r\nThe denoising positively influences almost all tasks except for deixis, yielding "
+    },
+    {
+      "expression": "\"the largest improvement\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on lexical cohesion."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_05979v2_98"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.05979v2-98.json"]
+}

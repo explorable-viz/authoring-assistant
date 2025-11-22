@@ -1,0 +1,187 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 gives "
+    },
+    {
+      "expression": "\"full archive sync size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of each data type for "
+    },
+    {
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " at the "
+    },
+    {
+      "expression": "\"8M\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " block. "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reduces the "
+    },
+    {
+      "expression": "\"total blockchain size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " about "
+    },
+    {
+      "expression": "\"16GB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to "
+    },
+    {
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Especially, it reduces the size of Trie nodes about "
+    },
+    {
+      "expression": "\"18GB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", because "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " only maintains the state trie only with active accounts during a month which are only "
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the total accounts. However, hash field of bloom filter in block header slightly increases "
+    },
+    {
+      "expression": "\"Headers\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and restore transactions increment "
+    },
+    {
+      "expression": "\"Bodies\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Receipts\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " about "
+    },
+    {
+      "expression": "\"1.6GB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As a result, "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reduced "
+    },
+    {
+      "expression": "\"full archive node\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by about "
+    },
+    {
+      "expression": "\"8%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to "
+    },
+    {
+      "expression": "\"ethereum\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_05953v1_390"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.05953v1-390.json"]
+}

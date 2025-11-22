@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 shows these performance measures for "
+    },
+    {
+      "expression": "\"French-English\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ",  using global structure greatly "
+    },
+    {
+      "expression": "\"improves upon\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the state of the art baseline performance."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1704_07050v2_66"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1704.07050v2-66.json"]
+}

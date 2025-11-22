@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1907.13337v1-23.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1907_13337v1_23"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "For extractive sentence summarization, our method achieves good compression rate and significantly raises a previous unsupervised baseline on token level F1 score."
+        }
+    ]
+}

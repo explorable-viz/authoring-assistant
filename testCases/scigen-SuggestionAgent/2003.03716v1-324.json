@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3: We show the results of applying "
+    },
+    {
+      "expression": "\"LA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " module to the "
+    },
+    {
+      "expression": "\"transformer model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " trained on the "
+    },
+    {
+      "expression": "\"WMT14\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dataset. We find that the "
+    },
+    {
+      "expression": "\"LA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " module slightly improves the original model but harms the performance when the "
+    },
+    {
+      "expression": "\"LA time step\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We suggest one of the reasons of these results are caused by the EOS problem."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2003_03716v1_324"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2003.03716v1-324.json"]
+}

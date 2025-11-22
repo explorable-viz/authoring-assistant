@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood, I will ensure that each replacement uses only one category. Here is the corrected version:\n\nThe "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " values shown in "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " demonstrates the comparison results from word-level overlaps.\r\n"
+    },
+    {
+      "expression": "\"TransDG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tends to generate responses that are "
+    },
+    {
+      "expression": "\"more similar\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to the gold responses than "
+    },
+    {
+      "expression": "\"baselines\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in most cases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1912_07491v1_317"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1912.07491v1-317.json"]
+}

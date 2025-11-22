@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1811.04154v1-303.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1811_04154v1_303"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "see We that using phonological representations (phonemes and articulatory features) offers the ability to map between languages that use different orthographies, explaining the convincing improvement over graphemes for HRL-LRL pairs that are written in different scripts (Table 3). With graphemes, the experiments on these languages achieve ≈ 0 accuracy because the character vocabulary of the HRL encoder simply does not contain the low-resource test language characters. This is the case with Lao-Thai (lo-th), Telugu-Tamil (te-ta) and Bengali-Hindi (bn-hi). In contrast, we observe that the grapheme representation offers strong transfer performance when the LRL and HRL share orthography, notably Javanese-Indonesian (jv-id), Marathi-Hindi (mr-hi) and Ukrainian-Russian (uk-ru)."
+        }
+    ]
+}

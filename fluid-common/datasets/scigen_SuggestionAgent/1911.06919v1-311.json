@@ -1,0 +1,52 @@
+[
+    {
+        "_model": "CNN w/ GloVe",
+        "_mae": "1.16",
+        "_mape": "14.38"
+    },
+    {
+        "_model": "+ M1-latent",
+        "_mae": "1.15",
+        "_mape": "14.66"
+    },
+    {
+        "_model": "+ M1-shallow",
+        "_mae": " 1.12(1) 14.19",
+        "_mape": ""
+    },
+    {
+        "_model": "Bi-LSTM w/ GloVe",
+        "_mae": "1.14",
+        "_mape": "14.57"
+    },
+    {
+        "_model": "+ M1-latent",
+        "_mae": "1.13",
+        "_mape": "14.39"
+    },
+    {
+        "_model": "+ M1-shallow",
+        "_mae": "1.13",
+        "_mape": "14.25"
+    },
+    {
+        "_model": "+ M2-latent",
+        "_mae": "1.12",
+        "_mape": "14.02"
+    },
+    {
+        "_model": "+ M2-shallow",
+        "_mae": "1.13",
+        "_mape": "14.20"
+    },
+    {
+        "_model": "Bi-LSTM w/ latent",
+        "_mae": " 1.11(2) 13.91",
+        "_mape": ""
+    },
+    {
+        "_model": "Bi-LSTM w/ shallow",
+        "_mae": "1.15",
+        "_mape": "14.67"
+    }
+]

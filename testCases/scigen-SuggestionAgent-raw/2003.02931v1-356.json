@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/2003.02931v1-356.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_2003_02931v1_356"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Existing systems (RQ3) are evaluated and results Polyglot (Al-Rfou et al., 2013) overall performs better than DKIE (Derczynski et al., 2014).2 The best system is our cross-lingual transfer NER from MEDIUM source data paired with SMALL amounts of gold data.  Per-entity evaluation shows that the neural Bilstm tagger outperforms Polyglot except for Location, which is consistent across evaluation sets."
+        }
+    ]
+}

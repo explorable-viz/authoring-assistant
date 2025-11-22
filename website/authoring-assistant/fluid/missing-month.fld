@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.negative.missing_month
-
-"""
-	The average methane emissions for the year 2015 is ${"1.0"}
-"""

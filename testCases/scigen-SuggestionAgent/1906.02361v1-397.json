@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 6 shows the results obtained by the "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline without explanations and using our transferred explanations from CQA to SWAG and Story Cloze. We observed that adding explanations led to a very small decrease ("
+    },
+    {
+      "expression": "\"< 0.6%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") in the performance compared to the "
+    },
+    {
+      "expression": "\"baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for both tasks."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_02361v1_397"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.02361v1-397.json"]
+}

@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "we augment our models with existing linguistic and affective knowledge from human experts. Specifically, we leverage lexica containing psycho-linguistic, sentiment and emotion annotations. the word's annotations from the "
+    },
+    {
+      "expression": "\"lexicons\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shown in Table 1. As prior knowledge, we leverage the "
+    },
+    {
+      "expression": "\"lexicons\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " presented in Table 1. We selected widely-used "
+    },
+    {
+      "expression": "\"lexicons\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that represent different facets of affective and psycho-linguistic features, namely;"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_03674v1_175"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.03674v1-175.json"]
+}

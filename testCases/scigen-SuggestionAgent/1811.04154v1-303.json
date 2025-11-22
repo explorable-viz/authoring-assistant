@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "see We that using phonological representations (phonemes and articulatory features) offers the ability to map between languages that use different orthographies, explaining the convincing improvement over graphemes for HRL-LRL pairs that are written in different scripts (Table 3). With "
+    },
+    {
+      "expression": "\"graphemes\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the experiments on these languages achieve ≈ "
+    },
+    {
+      "expression": "\"0 accuracy\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " because the character vocabulary of the HRL encoder simply does not contain the low-resource test language characters. This is the case with Lao-Thai ("
+    },
+    {
+      "expression": "\"lo-th\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), Telugu-Tamil ("
+    },
+    {
+      "expression": "\"te-ta\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and Bengali-Hindi ("
+    },
+    {
+      "expression": "\"bn-hi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). In contrast, we observe that the "
+    },
+    {
+      "expression": "\"grapheme representation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " offers strong transfer performance when the LRL and HRL share orthography, notably Javanese-Indonesian ("
+    },
+    {
+      "expression": "\"jv-id\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), Marathi-Hindi ("
+    },
+    {
+      "expression": "\"mr-hi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and Ukrainian-Russian ("
+    },
+    {
+      "expression": "\"uk-ru\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1811_04154v1_303"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1811.04154v1-303.json"]
+}

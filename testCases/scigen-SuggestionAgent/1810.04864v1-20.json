@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows automatically computed statistics on the diversity of the generated texts of both "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and human texts and on the overlap of the (generated) texts with the training set.  On both datasets, our systems produce significantly "
+    },
+    {
+      "expression": "\"less varied\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outputs and reproduce "
+    },
+    {
+      "expression": "\"more\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] texts and sentences from the training data than the human texts. Interestingly, however, the character-based models generate significantly "
+    },
+    {
+      "expression": "\"more unique\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] sentences and copy significantly "
+    },
+    {
+      "expression": "\"less\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] from the training data than the word-based models, which copy about "
+    },
+    {
+      "expression": "\"40%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] of their generated sentences from the training data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1810_04864v1_20"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1810.04864v1-20.json"]
+}

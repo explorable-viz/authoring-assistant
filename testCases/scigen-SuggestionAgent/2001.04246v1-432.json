@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The Base-KD is a naive knowledge distillation version in which only the logits of the "
+    },
+    {
+      "expression": "\"last layer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are distilled without considering hidden layer knowledge and supervised label knowledge. By incorporating the probe models, the performance ("
+    },
+    {
+      "expression": "\"line 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") is consistently improved, indicating the benefits from hierarchically decomposed task-oriented knowledge. We then leverage Data Augmentation (DA) to enrich task-oriented knowledge and this technique also improves performance for all tasks, especially for tasks that have a "
+    },
+    {
+      "expression": "\"limited scale of data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (i.e., "
+    },
+    {
+      "expression": "\"MRPC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"RTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). DA is also adopted in existing KD-based compression studies ("
+    },
+    {
+      "expression": "\"Tang et al., 2019; Jiao et al., 2019\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). When taking the supervised label knowledge (LCE) into consideration, the performance is further boosted, showing that this term is also important for AdaBERT by providing focused search hints."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2001_04246v1_432"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2001.04246v1-432.json"]
+}

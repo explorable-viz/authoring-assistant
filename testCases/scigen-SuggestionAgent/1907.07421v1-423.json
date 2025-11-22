@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The experimental results on "
+    },
+    {
+      "expression": "\"WOZ 2.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " corpus are presented in Table 1. the "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline models, "
+    },
+    {
+      "expression": "\"BERT+RNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"BERT+RNN+Ontology\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and the slot-dependent  "
+    },
+    {
+      "expression": "\"SUMBT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", showed no significant performance differences. On the other hand, the slot-independent "
+    },
+    {
+      "expression": "\"SUMBT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which learned the shared information from all across domains and slots significantly outperformed those baselines, resulting in "
+    },
+    {
+      "expression": "\"91.0%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " joint accuracy.  The proposed model achieved state-of-the-art performance in both "
+    },
+    {
+      "expression": "\"WOZ 2.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"MultiWOZ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1907_07421v1_423"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1907.07421v1-423.json"]
+}

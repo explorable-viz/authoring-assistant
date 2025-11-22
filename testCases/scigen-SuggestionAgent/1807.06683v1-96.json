@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As can be seen from Table 2, we are very close to "
+    },
+    {
+      "expression": "\"the state of the art\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"MD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance even if we only trained with a "
+    },
+    {
+      "expression": "\"low number of parameters\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We have to also note that in contrast with the "
+    },
+    {
+      "expression": "\"NER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task, the "
+    },
+    {
+      "expression": "\"MD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task did not enjoy a performance increase from joint learning."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1807_06683v1_96"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1807.06683v1-96.json"]
+}

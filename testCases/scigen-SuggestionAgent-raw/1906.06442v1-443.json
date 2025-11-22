@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1906.06442v1-443.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1906_06442v1_443"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The BLEU scores of each decoding method are presented in Table 7.  The noised decode – decoding newstest sentences with the NoisedBT model after noising the source – yields poor performance.  The tagged decode, however, yields only somewhat lower performance than the standard decode on the same model (-2.9BLEU on average)."
+        }
+    ]
+}

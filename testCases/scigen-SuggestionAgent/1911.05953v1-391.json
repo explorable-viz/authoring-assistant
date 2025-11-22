@@ -1,0 +1,124 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows storage size of "
+    },
+    {
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for each bootstrapping mode. "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reduces Trie nodes size of "
+    },
+    {
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from "
+    },
+    {
+      "expression": "\"2,220MB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"804.79MB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "; however, it increases the transaction size (Bodies, Receipts) with block headers (Headers). Therefore, "
+    },
+    {
+      "expression": "\"ethanos\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " did not reduce the size of fast sync much, but it significantly reduced compact sync from "
+    },
+    {
+      "expression": "\"2,592.54MB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"geth\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"1,206.97MB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is less than "
+    },
+    {
+      "expression": "\"50%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Our result shows that the trie node size of each checkpoint is about "
+    },
+    {
+      "expression": "\"800MB\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ","
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_05953v1_391"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.05953v1-391.json"]
+}

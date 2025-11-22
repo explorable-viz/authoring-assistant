@@ -1,0 +1,82 @@
+[
+    {
+        "_dataset/language": "German (Anselm)",
+        "_time_period": "14th–16th c.",
+        "_genre": "Religious",
+        "_tokens_train": "233,947",
+        "_tokens_dev": "45,996",
+        "_tokens_test": "45,999"
+    },
+    {
+        "_dataset/language": "German (RIDGES)",
+        "_time_period": "1482–1652",
+        "_genre": "Science",
+        "_tokens_train": "41,857",
+        "_tokens_dev": "9,712",
+        "_tokens_test": "9,587"
+    },
+    {
+        "_dataset/language": "English",
+        "_time_period": "1386–1698",
+        "_genre": "Letters",
+        "_tokens_train": "147,826",
+        "_tokens_dev": "16,334",
+        "_tokens_test": "17,644"
+    },
+    {
+        "_dataset/language": "Spanish",
+        "_time_period": "15th–19th c.",
+        "_genre": "Letters",
+        "_tokens_train": "97,320",
+        "_tokens_dev": "11,650",
+        "_tokens_test": "12,479"
+    },
+    {
+        "_dataset/language": "Hungarian",
+        "_time_period": "1440–1541",
+        "_genre": "Religious",
+        "_tokens_train": "134,028",
+        "_tokens_dev": "16,707",
+        "_tokens_test": "16,779"
+    },
+    {
+        "_dataset/language": "Icelandic",
+        "_time_period": "15th c.",
+        "_genre": "Religious",
+        "_tokens_train": "49,633",
+        "_tokens_dev": "6,109",
+        "_tokens_test": "6,037"
+    },
+    {
+        "_dataset/language": "Portuguese",
+        "_time_period": "15th–19th c.",
+        "_genre": "Letters",
+        "_tokens_train": "222,525",
+        "_tokens_dev": "26,749",
+        "_tokens_test": "27,078"
+    },
+    {
+        "_dataset/language": "Slovene (Bohorič)",
+        "_time_period": "1750–1840s",
+        "_genre": "Diverse",
+        "_tokens_train": "50,023",
+        "_tokens_dev": "5,841",
+        "_tokens_test": "5,969"
+    },
+    {
+        "_dataset/language": "Slovene (Gaj)",
+        "_time_period": "1840s–1899",
+        "_genre": "Diverse",
+        "_tokens_train": "161,211",
+        "_tokens_dev": "20,878",
+        "_tokens_test": "21,493"
+    },
+    {
+        "_dataset/language": "Swedish",
+        "_time_period": "1527–1812",
+        "_genre": "Diverse",
+        "_tokens_train": "24,458",
+        "_tokens_dev": "2,245",
+        "_tokens_test": "29,184"
+    }
+]

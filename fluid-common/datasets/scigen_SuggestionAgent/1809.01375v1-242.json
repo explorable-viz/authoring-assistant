@@ -1,0 +1,114 @@
+[
+    {
+        "property": "full_is_yellow",
+        "av-cos": "0.23",
+        "neigh": "0.19",
+        "lr": "0.47",
+        "net1": "0.64",
+        "net2": "0.64"
+    },
+    {
+        "property": "full_is_used_in _cooking",
+        "av-cos": "0.37",
+        "neigh": "0.29",
+        "lr": "0.98",
+        "net1": "0.98",
+        "net2": "0.98"
+    },
+    {
+        "property": "full_is_black",
+        "av-cos": "0.19",
+        "neigh": "0.35",
+        "lr": "0.75",
+        "net1": "0.77",
+        "net2": "0.77"
+    },
+    {
+        "property": "full_is_red",
+        "av-cos": "0.23",
+        "neigh": "0.36",
+        "lr": "0.51",
+        "net1": "0.54",
+        "net2": "0.52"
+    },
+    {
+        "property": "full_is_dangerous",
+        "av-cos": "0.24",
+        "neigh": "0.58",
+        "lr": "0.88",
+        "net1": "0.88",
+        "net2": "0.87"
+    },
+    {
+        "property": "crowd_is_dangerous",
+        "av-cos": "0.26",
+        "neigh": "0.61",
+        "lr": "0.86",
+        "net1": "0.86",
+        "net2": "0.86"
+    },
+    {
+        "property": "full_has_wheels",
+        "av-cos": "0.38",
+        "neigh": "0.90",
+        "lr": "0.96",
+        "net1": "0.96",
+        "net2": "0.95"
+    },
+    {
+        "property": "full_is_found_in_seas",
+        "av-cos": "0.44",
+        "neigh": "0.87",
+        "lr": "0.97",
+        "net1": "0.98",
+        "net2": "0.98"
+    },
+    {
+        "property": "crowd_is_found _in_seas",
+        "av-cos": "0.50",
+        "neigh": "0.87",
+        "lr": "0.94",
+        "net1": "0.96",
+        "net2": "0.96"
+    },
+    {
+        "property": "full_does_kill",
+        "av-cos": "0.27",
+        "neigh": "0.67",
+        "lr": "0.83",
+        "net1": "0.86",
+        "net2": "0.82"
+    },
+    {
+        "property": "crowd_does_kill",
+        "av-cos": "0.30",
+        "neigh": "0.70",
+        "lr": "0.82",
+        "net1": "0.84",
+        "net2": "0.80"
+    },
+    {
+        "property": "full_made_of_wood",
+        "av-cos": "0.17",
+        "neigh": "0.14",
+        "lr": "0.84",
+        "net1": "0.85",
+        "net2": "0.85"
+    },
+    {
+        "property": "full_is_food_test",
+        "av-cos": "0.37",
+        "neigh": "0.00",
+        "lr": "0.36",
+        "net1": "0.36",
+        "net2": "0.36"
+    },
+    {
+        "property": "full_is_an _animal_test",
+        "av-cos": "0.37",
+        "neigh": "0.52",
+        "lr": "0.88",
+        "net1": "0.88",
+        "net2": "0.88"
+    }
+]

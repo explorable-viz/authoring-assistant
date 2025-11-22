@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1910.14539v1-352.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1910_14539v1_352"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "For each track, we selected the best models according to their BLEU score on DGT-valid. The scores are shown in Table 3,  We see that in the same data conditions (unconstrained mode), the MT+NLG models are not better than the pure MT models."
+        }
+    ]
+}

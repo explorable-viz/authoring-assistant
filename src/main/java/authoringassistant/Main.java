@@ -5,6 +5,7 @@ import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -50,6 +51,20 @@ public class Main {
             System.exit(1);
         }
 
+    }
+    private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, IOException {
+        SuggestionAgent sa = new SuggestionAgent(suggestionAgentClassName);
+        Files.createDirectories(Paths.get(outputFolder));
+
+        for (Program program : programs) {
+            Program p = sa.generateTemplateProgram(program);
+            String json = p.toJsonProgram().toString();
+
+            String fileName = STR."\{Path.of(p.getTestCaseFileName()).getFileName()}.json";
+            Path outputPath = Paths.get(outputFolder, fileName);
+            Files.writeString(outputPath, json);
+            logger.info(STR."Generated program saved to: \{outputPath}");
+        }
     }
 
     private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String agent, int learningContextSize) throws IOException {

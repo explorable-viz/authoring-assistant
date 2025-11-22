@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1909.10572v2-411.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1909_10572v2_411"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Furthermore, Table 5 illustrates the results on the unsupervised hypernym detection task for BLESS dataset, wherein we compare our proposed SPON model to other supervised SOTA approaches for hypernym prediction task, namely Order Embeddings (OE) approach as introduced by (Vendrov et al. 2016), and Smoothed Box model as introduced by (Li et al. 2019)."
+        }
+    ]
+}

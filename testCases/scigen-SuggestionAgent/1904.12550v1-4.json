@@ -1,0 +1,115 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The "
+    },
+    {
+      "expression": "\"top\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tuning data scores for AVG COS SIM (Table 1) show that the "
+    },
+    {
+      "expression": "\"Google embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with "
+    },
+    {
+      "expression": "\"TF*IDF weighting\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " yield the top F score for all three concept input types ("
+    },
+    {
+      "expression": "\".881 - .945\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Somewhat expectedly, the "
+    },
+    {
+      "expression": "\"best overall\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F score ("
+    },
+    {
+      "expression": "\".945\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") is produced in the setting "
+    },
+    {
+      "expression": "\"Both\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which provides the most information. Actually, this is true for all four weighting schemes for both "
+    },
+    {
+      "expression": "\"GloVe\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Google\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while fastText consistently yields its top F scores ("
+    },
+    {
+      "expression": "\".840 - .911\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") in the "
+    },
+    {
+      "expression": "\"Label\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " setting, which provides the least information."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1904_12550v1_4"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1904.12550v1-4.json"]
+}

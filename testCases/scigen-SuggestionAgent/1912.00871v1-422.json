@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The values in the last column of Table III are summarized in Table IV. How the "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compare with respect to "
+    },
+    {
+      "expression": "\"accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " closely resembles the comparison of "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", presented earlier. Thus, "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seem to correlate well with "
+    },
+    {
+      "expression": "\"accuracy values\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in our case."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1912_00871v1_422"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1912.00871v1-422.json"]
+}

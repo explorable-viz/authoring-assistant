@@ -1,0 +1,187 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood. I will ensure that each annotation includes only valid categories from the provided list.\n\nHere is the corrected version of the paragraph:\n\nIn Table 3 we have listed the "
+    },
+    {
+      "expression": "\"average MAP\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"nDCG scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the test sets. The "
+    },
+    {
+      "expression": "\"tf-idf model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is outperformed by most of the other models. However, "
+    },
+    {
+      "expression": "\"bm25\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which additionally takes the length of a document into account, performs very well. "
+    },
+    {
+      "expression": "\"tf-idf\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"bm25\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " have the major benefit of fast computation. The "
+    },
+    {
+      "expression": "\"feat model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " slightly outperforms the "
+    },
+    {
+      "expression": "\"auto-rank + feat model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", both of which have the overall "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This shows, that the auto-encoder learns something orthogonal to term frequency and document length. The "
+    },
+    {
+      "expression": "\"best model\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with respect to document ranking is the "
+    },
+    {
+      "expression": "\"auto-rank + feat model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". In Figure 3 we show the correlation between the different models. Interestingly, the "
+    },
+    {
+      "expression": "\"bm25\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"feat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " strongly correlate. However, the scores of "
+    },
+    {
+      "expression": "\"bm25\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " do not correlate with the scores of the combination of "
+    },
+    {
+      "expression": "\"auto-rank and bm25\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This indicates, that the model does not primarily learn to use the "
+    },
+    {
+      "expression": "\"bm25 score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " but also focuses on the auto-encoded representation. This underlines the hypothesis that the auto-encoder is able to represent latent features of the relationship of the query terms in the document. rank model. The distance features are a strong indicator for the semantic dependency between entities. These relationships need to be learned in the "
+    },
+    {
+      "expression": "\"auto-rank model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The cosine similarity of a query and a document (auto/cos) does not yield a good result. This shows that the auto-encoder has learned many features, most of which do not correlate with our task. We also find that "
+    },
+    {
+      "expression": "\"emb\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " does not yield an equal performance to "
+    },
+    {
+      "expression": "\"auto-rank\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The combination of the"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_9_464"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/9-464.json"]
+}

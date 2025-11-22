@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the performance of our Fact Checking system on the "
+    },
+    {
+      "expression": "\"SUPPORTS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " label, the output of our system. We compare the results against two different classification thresholds. Here, φ = "
+    },
+    {
+      "expression": "\"0.76\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " suggests that "
+    },
+    {
+      "expression": "\"at least 3 out of the 4 questions\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " have to be answered correctly while φ = "
+    },
+    {
+      "expression": "\"0.67\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " suggests that "
+    },
+    {
+      "expression": "\"at least 2 out of the 3 questions\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has to be answered correctly for the claim to be classified as \"SUPPORTS\". In contrast to the results reported in Table 2, here we consider φ = "
+    },
+    {
+      "expression": "\"0.76\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to be a "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " classification threshold as it improvises over False Positives considerably over the entire dataset. From the results, we conclude that it is possible to verify the facts with the right kind of factoid questions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_07154v1_298"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.07154v1-298.json"]
+}

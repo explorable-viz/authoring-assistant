@@ -1,0 +1,110 @@
+[
+    {
+        "": "",
+        "all_token-": "based",
+        "all_mwe-": "based",
+        "discontinuous": "MWE-based"
+    },
+    {
+        "": "model",
+        "all_token-": "F",
+        "all_mwe-": "F",
+        "discontinuous": "F"
+    },
+    {
+        "": "baseline",
+        "all_token-": "41.37",
+        "all_mwe-": "35.38",
+        "discontinuous": "14.67"
+    },
+    {
+        "": "GCN-based",
+        "all_token-": "39.78",
+        "all_mwe-": "39.11",
+        "discontinuous": "22.97"
+    },
+    {
+        "": "Att-based",
+        "all_token-": "33.33",
+        "all_mwe-": "31.79",
+        "discontinuous": "21.90"
+    },
+    {
+        "": "H-combined",
+        "all_token-": "41.63",
+        "all_mwe-": " 40.76",
+        "discontinuous": " 28.15"
+    },
+    {
+        "": "baseline",
+        "all_token-": "62.27",
+        "all_mwe-": "57.17",
+        "discontinuous": "54.90"
+    },
+    {
+        "": "GCN-based",
+        "all_token-": "65.48",
+        "all_mwe-": " 61.17",
+        "discontinuous": "55.08"
+    },
+    {
+        "": "Att-based",
+        "all_token-": "61.20",
+        "all_mwe-": "58.19",
+        "discontinuous": "53.37"
+    },
+    {
+        "": "H-combined",
+        "all_token-": "63.80",
+        "all_mwe-": "60.71",
+        "discontinuous": " 57.53"
+    },
+    {
+        "": "baseline",
+        "all_token-": "76.62",
+        "all_mwe-": "72.16",
+        "discontinuous": "61.54"
+    },
+    {
+        "": "GCN-based",
+        "all_token-": "79.59",
+        "all_mwe-": "75.15",
+        "discontinuous": "66.09"
+    },
+    {
+        "": "Att-based",
+        "all_token-": "78.21",
+        "all_mwe-": "74.23",
+        "discontinuous": "65.59"
+    },
+    {
+        "": "H-combined",
+        "all_token-": "80.25",
+        "all_mwe-": " 76.56",
+        "discontinuous": " 67.23"
+    },
+    {
+        "": "baseline",
+        "all_token-": "88.45",
+        "all_mwe-": "86.50",
+        "discontinuous": "61.29"
+    },
+    {
+        "": "GCN-based",
+        "all_token-": "87.78",
+        "all_mwe-": "86.42",
+        "discontinuous": "64.35"
+    },
+    {
+        "": "Att-based",
+        "all_token-": "87.55",
+        "all_mwe-": "84.20",
+        "discontinuous": "62.77"
+    },
+    {
+        "": "H-combined",
+        "all_token-": "88.76",
+        "all_mwe-": " 87.15",
+        "discontinuous": " 68.80"
+    }
+]

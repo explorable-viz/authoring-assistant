@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "In addition, we provide the recall and precision per class for our final interrogative-word classifier ("
+    },
+    {
+      "expression": "\"CLS + AT + NER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in Table 7). However, the recall of which is "
+    },
+    {
+      "expression": "\"very low\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Our model has also problem with "
+    },
+    {
+      "expression": "\"why\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Lastly, the recall of "
+    },
+    {
+      "expression": "\"'when'\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is also "
+    },
+    {
+      "expression": "\"low\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_13794v1_113"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.13794v1-113.json"]
+}

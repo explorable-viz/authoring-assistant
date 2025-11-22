@@ -1,0 +1,58 @@
+[
+    {
+        "": "",
+        "emb.": "dim",
+        "vocab": "size",
+        "polyglot": "in-vocab",
+        "all": "pairs"
+    },
+    {
+        "": "",
+        "emb.": "",
+        "vocab": "",
+        "polyglot": " N=862",
+        "all": " N=2034"
+    },
+    {
+        "": "VarEmbed",
+        "emb.": "128",
+        "vocab": "100K",
+        "polyglot": "41.9",
+        "all": "25.5"
+    },
+    {
+        "": "Polyglot",
+        "emb.": "64",
+        "vocab": "100K",
+        "polyglot": "40.8",
+        "all": "8.7"
+    },
+    {
+        "": "mimick",
+        "emb.": "64",
+        "vocab": "0",
+        "polyglot": "17.9",
+        "all": "17.5"
+    },
+    {
+        "": "Polyglot",
+        "emb.": "64",
+        "vocab": "100K",
+        "polyglot": "40.8",
+        "all": "27.0"
+    },
+    {
+        "": "+mimick",
+        "emb.": "64",
+        "vocab": "100K",
+        "polyglot": "40.8",
+        "all": "27.0"
+    },
+    {
+        "": "Fasttext",
+        "emb.": "300",
+        "vocab": "2.51M",
+        "polyglot": "",
+        "all": "47.3"
+    }
+]

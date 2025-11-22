@@ -1,0 +1,169 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Given a sentence, in any language, we evaluate the rank of the corresponding image. The evaluation is again made by batches of "
+    },
+    {
+      "expression": "\"1000\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The results are presented in table 2. The first two lines of the table present the state-of-the-art results, with "
+    },
+    {
+      "expression": "\"W2V\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"FastText\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings. We can see similar results as in the previous experiment. With "
+    },
+    {
+      "expression": "\"BIVEC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we have results close to the "
+    },
+    {
+      "expression": "\"FastText\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings when training only in English. This time, the recall is "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with an increase of "
+    },
+    {
+      "expression": "\"2.68%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"recall@1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". When trained with English and French, the "
+    },
+    {
+      "expression": "\"recall@1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is increased by "
+    },
+    {
+      "expression": "\"3.65%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This implies, again, that we can improve performance by learning on an additional language. Our model is able to use the multi-language representing the effectiveness of "
+    },
+    {
+      "expression": "\"MUSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings. We train the model with English, and different combinations of French, German and Czech. On English only, we have similar results to the "
+    },
+    {
+      "expression": "\"W2V\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approach. When adding new languages, we can see a decrease in performance for English. We obtain a "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " decrease of "
+    },
+    {
+      "expression": "\"2.62%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"recall@1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when the models saw English, French, German and Czech. For image retrieval from a caption in 4 languages, we obtain a "
+    },
+    {
+      "expression": "\"49.38%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"recall@10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the Multi30K dataset."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1903_11299v3_306"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1903.11299v3-306.json"]
+}

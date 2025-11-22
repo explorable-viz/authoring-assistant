@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Most errors in our annotated corpus are related to person deixis, specifically gender marking in the Russian translation, and the "
+    },
+    {
+      "expression": "\"T-V distinction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between informal and formal you (Latin \"tu\" and \"vos\").  From Table 3, we see that the most frequent error category related to "
+    },
+    {
+      "expression": "\"deixis\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in our annotated corpus is the inconsistency of "
+    },
+    {
+      "expression": "\"T-V forms\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when translating second person pronouns."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_05979v2_72"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.05979v2-72.json"]
+}

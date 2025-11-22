@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1905.05979v2-81.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1905_05979v2_81"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "BLEU scores for our model and the baselines are given in Table 6.5 For context-aware models, all sentences in a group were translated, and then only the current sentence is evaluated. We also report BLEU for the context-agnostic baseline trained only on 1.5m dataset to show how the performance is influenced by the amount of data. We observe that our model is no worse in BLEU than the baseline despite the second-pass model  being trained only on a fraction of the data. In contrast, the concatenation baseline, trained on a mixture of data with and without context is about 1 BLEU below the context-agnostic baseline and our model when using all 3 context sentences. CADec's performance remains the same independently from the number of context sentences (1, 2 or 3) as measured with BLEU. s-hier-to-2.tied performs worst in terms of BLEU, but note that this is a shallow recurrent model, while others are Transformer-based. It also suffers from the asymmetric data setting, like the concatenation baseline."
+        }
+    ]
+}

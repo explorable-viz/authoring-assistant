@@ -1,0 +1,79 @@
+[
+    {
+        "_input": "Auto seg",
+        "_models": "Word baseline",
+        "_p": "73.20",
+        "_r": "57.05",
+        "_f1": "64.12"
+    },
+    {
+        "_input": "Auto seg",
+        "_models": "+char LSTM",
+        "_p": "71.98",
+        "_r": "65.41",
+        "_f1": "68.54"
+    },
+    {
+        "_input": "Auto seg",
+        "_models": "+char LSTM′",
+        "_p": "71.08",
+        "_r": "65.83",
+        "_f1": "68.35"
+    },
+    {
+        "_input": "Auto seg",
+        "_models": "+char+bichar LSTM",
+        "_p": "72.63",
+        "_r": "67.60",
+        "_f1": "70.03"
+    },
+    {
+        "_input": "Auto seg",
+        "_models": "+char CNN",
+        "_p": "73.06",
+        "_r": "66.29",
+        "_f1": "69.51"
+    },
+    {
+        "_input": "Auto seg",
+        "_models": "+char+bichar CNN",
+        "_p": "72.01",
+        "_r": "65.50",
+        "_f1": "68.60"
+    },
+    {
+        "_input": "No seg",
+        "_models": "Char baseline",
+        "_p": "67.12",
+        "_r": "58.42",
+        "_f1": "62.47"
+    },
+    {
+        "_input": "No seg",
+        "_models": "+softword",
+        "_p": "69.30",
+        "_r": "62.47",
+        "_f1": "65.71"
+    },
+    {
+        "_input": "No seg",
+        "_models": "+bichar",
+        "_p": "71.67",
+        "_r": "64.02",
+        "_f1": "67.63"
+    },
+    {
+        "_input": "No seg",
+        "_models": "+bichar+softword",
+        "_p": "72.64",
+        "_r": "66.89",
+        "_f1": "69.64"
+    },
+    {
+        "_input": "No seg",
+        "_models": "Lattice",
+        "_p": " 74.64",
+        "_r": " 68.83",
+        "_f1": " 71.62"
+    }
+]

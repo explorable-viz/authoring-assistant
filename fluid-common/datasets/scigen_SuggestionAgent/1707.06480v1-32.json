@@ -1,0 +1,23 @@
+[
+    {
+        "model": "RHN-Char-CNN",
+        "depth": "8",
+        "_dlm": "650",
+        "size": "20M",
+        "ppl": "67.6"
+    },
+    {
+        "model": "RHN-Syl-Concat",
+        "depth": "8",
+        "_dlm": "439",
+        "size": "13M",
+        "ppl": "72.0"
+    },
+    {
+        "model": "RHN-Syl-Concat",
+        "depth": "8",
+        "_dlm": "650",
+        "size": "20M",
+        "ppl": "69.4"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "ne_tag": "date, time, duration, set (temporal)",
+        "frequency": "54.28%"
+    },
+    {
+        "ne_tag": "number",
+        "frequency": "40.13%"
+    },
+    {
+        "ne_tag": "  Relation cardinality",
+        "frequency": " 18.86%"
+    },
+    {
+        "ne_tag": "percent",
+        "frequency": "2.92%"
+    },
+    {
+        "ne_tag": "money",
+        "frequency": "2.25%"
+    },
+    {
+        "ne_tag": "person, location, organization",
+        "frequency": "0.26%"
+    },
+    {
+        "ne_tag": "ordinal",
+        "frequency": "0.16%"
+    }
+]

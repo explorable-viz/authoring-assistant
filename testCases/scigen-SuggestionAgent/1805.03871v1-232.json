@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Fourth, we introduce finer classes ("
+    },
+    {
+      "expression": "\"Tables 1\u20132\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), which fit "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the target task, where nested clauses are frequent. The splitter produced "
+    },
+    {
+      "expression": "\"31,545\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training, "
+    },
+    {
+      "expression": "\"8,036\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " development, and "
+    },
+    {
+      "expression": "\"5,563\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test sentences/clauses. Table 2 shows their distribution in the six gold (correct) classes. cf. "
+    },
+    {
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "),"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_03871v1_232"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.03871v1-232.json"]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1710.03430v3-108.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1710_03430v3_108"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 5 indicates the proposed RDE-LTC, HRDE, and the that HRDE-LTC model show performance improvements when compared to the baseline model, TFIDF and RDE."
+        }
+    ]
+}

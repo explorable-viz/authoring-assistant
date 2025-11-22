@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1901.02534v1-35.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1901_02534v1_35"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The named entity retrieval strategy boosts the evidence retrieval rate to 80.8%,  The film retrievals raise evidence retrieval to 81.2%."
+        }
+    ]
+}

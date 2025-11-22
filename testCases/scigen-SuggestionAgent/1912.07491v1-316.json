@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Thank you for the correction. Here is the revised annotation:\n\nTable 3 demonstrates that the "
+    },
+    {
+      "expression": "\"models leveraging external knowledge\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieve "
+    },
+    {
+      "expression": "\"better performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the "
+    },
+    {
+      "expression": "\"standard Seq2Seq model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in generating meaningful entity words and diverse responses. In particular, our "
+    },
+    {
+      "expression": "\"model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms all the "
+    },
+    {
+      "expression": "\"baselines\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significantly with "
+    },
+    {
+      "expression": "\"highest entity score\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "]"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1912_07491v1_316"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1912.07491v1-316.json"]
+}

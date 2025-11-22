@@ -1,0 +1,214 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Thank you for the clarification. Let's correct the annotations according to the provided categories:\n\nThe reinforcement learning model of "
+    },
+    {
+      "expression": "\"deep-coref\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", i.e., deep-coref RL, has the most significant difference when it is evaluated based on "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"minimum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " spans (about 4 points). The ensemble model of e2e-coref, on the other hand, has the least difference between "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] and "
+    },
+    {
+      "expression": "\"minimum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] span scores ("
+    },
+    {
+      "expression": "\"1.4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points), which indicates it "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recognizes "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " span boundaries in out-of-domain data. The ranking of systems is very different by using "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] vs. "
+    },
+    {
+      "expression": "\"minimum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "]  Table 4 shows the "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] vs. "
+    },
+    {
+      "expression": "\"minimum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " span evaluations of several recent coreference resolvers on the CoNLL-2012 test set and the WikiCoref dataset. The examined coreference resolvers are as follows: the Stanford rule-based system ("
+    },
+    {
+      "expression": "\"Lee et al., 2013\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), the coreference resolver of "
+    },
+    {
+      "expression": "\"Peng et al. (2015)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the ranking model of cort ("
+    },
+    {
+      "expression": "\"Martschat and Strube, 2015\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), the ranking and reinforcement learning models of deep-coref ("
+    },
+    {
+      "expression": "\"Clark and Manning, 2016a,b\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), the single and ensemble models of "
+    },
+    {
+      "expression": "\"Lee et al. (2017)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and the current state-of-the-art system by "
+    },
+    {
+      "expression": "\"Lee et al. (2018)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The coreference resolver of Peng et al. (2015) has the smallest difference between its "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] and "
+    },
+    {
+      "expression": "\"minimum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " span evaluation scores.  Based on "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", Peng et al. (2015) performs on-par with cort while cort outperforms it by about one percent when they are evaluated based on "
+    },
+    {
+      "expression": "\"minimum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " spans."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_06703v1_481"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.06703v1-481.json"]
+}

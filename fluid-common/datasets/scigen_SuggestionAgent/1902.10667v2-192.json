@@ -1,0 +1,37 @@
+[
+    {
+        "": "baseline",
+        "all_|_discontinuous_en": "33.01 | 16.53",
+        "all_|_discontinuous_de": "54.12 | 53.94",
+        "all_|_discontinuous_fr": "67.66 | 58.70",
+        "all_|_discontinuous_fa": " 81.62 | 61.73"
+    },
+    {
+        "": "GCN-based",
+        "all_|_discontinuous_en": "36.27 |   24.15",
+        "all_|_discontinuous_de": "56.96 | 54.87",
+        "all_|_discontinuous_fr": "70.79 | 59.95",
+        "all_|_discontinuous_fa": "81.00 |   62.35"
+    },
+    {
+        "": "H-combined",
+        "all_|_discontinuous_en": " 41.91 | 22.73",
+        "all_|_discontinuous_de": " 59.29 |   55.00",
+        "all_|_discontinuous_fr": " 70.97 |   63.90",
+        "all_|_discontinuous_fa": "80.04 | 61.90"
+    },
+    {
+        "": "ATILF-LLF",
+        "all_|_discontinuous_en": "31.58 | 09.91",
+        "all_|_discontinuous_de": "54.43 | 40.34",
+        "all_|_discontinuous_fr": "58.60 | 51.96",
+        "all_|_discontinuous_fa": "77.48 | 53.85"
+    },
+    {
+        "": "SHOMA",
+        "all_|_discontinuous_en": "26.42 | 01.90",
+        "all_|_discontinuous_de": "48.71 | 40.12",
+        "all_|_discontinuous_fr": "62.00 | 51.43",
+        "all_|_discontinuous_fa": "78.35 | 56.10"
+    }
+]

@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Also we compare performance of our model with two recent models, we see "
+    },
+    {
+      "expression": "\"2.39\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ROUGE-1 improvements compared to the "
+    },
+    {
+      "expression": "\"ML+RL with intra-attn approach\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "(previous SOTA) carries over to this dataset, which is a large margin. On ROUGE-2, our model also get an im- provement of "
+    },
+    {
+      "expression": "\"0.51\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The experiment proves that our approach can outperform competitive methods on different data distributions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1902_09243v2_412"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1902.09243v2-412.json"]
+}

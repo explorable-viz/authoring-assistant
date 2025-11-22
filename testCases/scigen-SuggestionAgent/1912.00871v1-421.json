@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table III provides detailed results of Experiment 2. The numbers are absolute accuracies, i.e., they correspond to cases where the arithmetic expression generated is "
+    },
+    {
+      "expression": "\"100%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " correct, leading to the correct numeric answer. Results by , , ,  are sparse but indicate the scale of success compared to recent past approaches. Prefix, postfix, and infix representations in Table III show that network capabilities are changed by how teachable the target data is.  While our networks fell short of "
+    },
+    {
+      "expression": "\"AI2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " testing accuracy, we present state-of-the-art results for the remaining three datasets.  The type 2 postfix Transformer received the "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " testing average of "
+    },
+    {
+      "expression": "\"87.2%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Our attempt at language pre-training fell short of our expectations in all but one tested dataset."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1912_00871v1_421"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1912.00871v1-421.json"]
+}

@@ -1,6 +1,0 @@
-import methane
-import datasets.methane_emissions
-
-"""
-	In 2015, the  ${"Energy Sector"}  had the second highest amount in methane emissions.
-"""

@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "a comparison with existing event extraction and event schema induction datasets, including "
+    },
+    {
+      "expression": "\"ASTRE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Nguyen et al., 2016a), "
+    },
+    {
+      "expression": "\"MUC 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"ACE 2005\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ERE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", is shown in Table 2. Compared with the other datasets, GNBusiness has a "
+    },
+    {
+      "expression": "\"much larger number of documents\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", (i.e., news clusters in GNBusiness), and a "
+    },
+    {
+      "expression": "\"comparable number of labeled documents\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_06947v1_250"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.06947v1-250.json"]
+}

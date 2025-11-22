@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Despite the underperformance of these features overall, Table 9 shows that they may still "
+    },
+    {
+      "expression": "\"improve\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance in the subset of instances where they appear."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1804_02472v1_191"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1804.02472v1-191.json"]
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "": "Gold",
+        "bleu": "-",
+        "empathy": "3.651",
+        "relevance": "3.752",
+        "fluency": "3.718"
+    },
+    {
+        "": "Seq2Seq",
+        "bleu": "2.29",
+        "empathy": "3.013",
+        "relevance": "3.173",
+        "fluency": "2.967"
+    },
+    {
+        "": "MultiSeq",
+        "bleu": " 2.45",
+        "empathy": "2.979",
+        "relevance": "3.25",
+        "fluency": "2.952"
+    },
+    {
+        "": "RL Current",
+        "bleu": "2.31",
+        "empathy": "3.18",
+        "relevance": "3.187",
+        "fluency": "3.14"
+    },
+    {
+        "": "RL Look-ahead",
+        "bleu": "2.32",
+        "empathy": " 3.327",
+        "relevance": " 3.593",
+        "fluency": " 3.327"
+    }
+]

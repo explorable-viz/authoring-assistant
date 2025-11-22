@@ -1,0 +1,72 @@
+[
+    {
+        "": " Baseline",
+        "_standard_decoder_mrr": " Baseline",
+        "_standard_decoder_p@1": " Baseline",
+        "_our_decoder_mrr": " Baseline",
+        "_our_decoder_p@1": " Baseline"
+    },
+    {
+        "": "Retrieval",
+        "_standard_decoder_mrr": "81.08",
+        "_standard_decoder_p@1": "65.45",
+        "_our_decoder_mrr": "-",
+        "_our_decoder_p@1": "-"
+    },
+    {
+        "": " Comparisons",
+        "_standard_decoder_mrr": " Comparisons",
+        "_standard_decoder_p@1": " Comparisons",
+        "_our_decoder_mrr": " Comparisons",
+        "_our_decoder_p@1": " Comparisons"
+    },
+    {
+        "": "Seq2seq",
+        "_standard_decoder_mrr": "75.29",
+        "_standard_decoder_p@1": "58.85",
+        "_our_decoder_mrr": "74.46",
+        "_our_decoder_p@1": "57.06"
+    },
+    {
+        "": "+   encode evd",
+        "_standard_decoder_mrr": "83.73",
+        "_standard_decoder_p@1": "71.59",
+        "_our_decoder_mrr": "88.24",
+        "_our_decoder_p@1": "78.76"
+    },
+    {
+        "": " Our Models",
+        "_standard_decoder_mrr": " Our Models",
+        "_standard_decoder_p@1": " Our Models",
+        "_our_decoder_mrr": " Our Models",
+        "_our_decoder_p@1": " Our Models"
+    },
+    {
+        "": "Dec-shared",
+        "_standard_decoder_mrr": "79.80",
+        "_standard_decoder_p@1": "65.57",
+        "_our_decoder_mrr": " 95.18",
+        "_our_decoder_p@1": " 90.91"
+    },
+    {
+        "": "+   attend KP",
+        "_standard_decoder_mrr": " 94.33",
+        "_standard_decoder_p@1": " 89.76",
+        "_our_decoder_mrr": "93.48",
+        "_our_decoder_p@1": "87.91"
+    },
+    {
+        "": "Dec-separate",
+        "_standard_decoder_mrr": "86.85",
+        "_standard_decoder_p@1": "76.74",
+        "_our_decoder_mrr": "91.70",
+        "_our_decoder_p@1": "84.72"
+    },
+    {
+        "": "+   attend KP",
+        "_standard_decoder_mrr": "88.53",
+        "_standard_decoder_p@1": "79.05",
+        "_our_decoder_mrr": "92.77",
+        "_our_decoder_p@1": "86.46"
+    }
+]

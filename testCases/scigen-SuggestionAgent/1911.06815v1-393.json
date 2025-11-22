@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "I apologize for the mistake. Let's correct the annotations to ensure they use only the specified categories:\n\nThe left side of Table 1 shows the performance for the "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baselines and for our multi-granularity network on the "
+    },
+    {
+      "expression": "\"FLC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task.  Table 1 (right) shows that using additional information from the sentence-level for the token-level classification ("
+    },
+    {
+      "expression": "\"BERT-Granularity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") yields small improvements. The multi-granularity models outperform all baselines thanks to their "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision. This shows the effect of the model excluding sentences that it determined to be non-propagandistic from being considered for token-level classification.  The right side of Table 1 shows the results for the "
+    },
+    {
+      "expression": "\"SLC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task. We apply our multi-granularity network model to the sentence-level classification task to see its effect on low granularity when we train the model with a high granularity task. Interestingly, it yields huge performance improvements on the sentence-level classification result. Compared to the "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline, it increases the recall by "
+    },
+    {
+      "expression": "\"8.42%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", resulting in a "
+    },
+    {
+      "expression": "\"3.24%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increase of the F1 score."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_06815v1_393"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.06815v1-393.json"]
+}

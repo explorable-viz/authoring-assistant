@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 lists the results of the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"feature-based (LR All features)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and deep learning ("
+    },
+    {
+      "expression": "\"CNN:rand\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") systems, as well as single feature groups (averages over all source domains,\r\nFor the lowest scoring datasets, "
+    },
+    {
+      "expression": "\"OC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"WTP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the differences are only marginal when trained on a suitable dataset\r\nThe "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " feature-based approach outperforms the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " deep learning approach in most scenarios.\r\nIn particular, as opposed to the in-domain experiments, the difference of the Claim-F1 measure between the feature-based approaches and the deep learning approaches is striking. In the feature-based approaches, on average, a combination of all features yields the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results for both Macro-F1 and Claim-F1.\r\nWhen comparing single features, lexical ones do the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " job."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1704_07203v3_456"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1704.07203v3-456.json"]
+}

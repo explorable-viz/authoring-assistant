@@ -1,0 +1,115 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood, I will adjust the annotations accordingly. Here is the revised paragraph:\n\nWe present the test results in Table 2. We are able to reproduce the performance of the "
+    },
+    {
+      "expression": "\"baseline model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (\""
+    },
+    {
+      "expression": "\"CNN w/ GloVe\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and find that once again, adding the shallow discourse features improves results. Interestingly, we found that replacing the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with an "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results in improved "
+    },
+    {
+      "expression": "\"MAE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"MAPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Adding discourse features to this model generally has marginal improvement in all cases. When we replace the word sequence with EDUs (\""
+    },
+    {
+      "expression": "\"Bi-LSTM w/ latent\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" and \""
+    },
+    {
+      "expression": "\"Bi-LSTM w/ shallow\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\"), we see that the "
+    },
+    {
+      "expression": "\"latent\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " features outperform the "
+    },
+    {
+      "expression": "\"shallow\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " features."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_06919v1_311"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.06919v1-311.json"]
+}

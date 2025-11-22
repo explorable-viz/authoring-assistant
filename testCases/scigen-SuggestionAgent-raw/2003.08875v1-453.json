@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/2003.08875v1-453.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_2003_08875v1_453"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Tables 4, 5, 6, 7 and 8 show the results of evaluation reported by competition for all teams which participated in the challenge. Our method is mentioned as Beheshti-NER-1  Table 4 and 5 show the results for subtask A. according to the tables, we reached to 84.0% and 87.9% F1 score respectively for phrase and word level evaluations."
+        }
+    ]
+}

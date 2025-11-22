@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/2001.02836v1-132.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_2001_02836v1_132"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We also compare MWE with pre-trained contextualized word embedding models in Table 4 for this task, with overall performance, embedding dimensions, and training times reported. It is observed that that MWE outperforms ELMo and achieves comparable results with BERT with smaller embedding dimension and much less training complexities."
+        }
+    ]
+}

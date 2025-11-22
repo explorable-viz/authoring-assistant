@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The evaluation results of different models on "
+    },
+    {
+      "expression": "\"predicting present keyphrases\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are shown in Table 2. We observe that our reinforcement learning algorithm "
+    },
+    {
+      "expression": "\"catSeqTG-2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " consistently improves the keyphrase extraction ability of all baseline generative models by a large margin."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_04106v1_357"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.04106v1-357.json"]
+}

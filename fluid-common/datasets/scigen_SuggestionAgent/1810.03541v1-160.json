@@ -1,0 +1,112 @@
+[
+    {
+        "model": "Our single parser: Word only",
+        "newswire": "Our single parser: Word only",
+        "all": ""
+    },
+    {
+        "model": "+ JAMR aligner",
+        "newswire": "68.6",
+        "all": "63.9"
+    },
+    {
+        "model": "+ Our aligner",
+        "newswire": "69.3",
+        "all": "64.7"
+    },
+    {
+        "model": "Our single parser: Word, POS",
+        "newswire": "Our single parser: Word, POS",
+        "all": ""
+    },
+    {
+        "model": "+ JAMR aligner",
+        "newswire": "68.8",
+        "all": "64.6"
+    },
+    {
+        "model": "+ Our aligner",
+        "newswire": "69.8",
+        "all": "65.2"
+    },
+    {
+        "model": "Our ensemble: Word only + Our aligner",
+        "newswire": "Our ensemble: Word only + Our aligner",
+        "all": ""
+    },
+    {
+        "model": "x3",
+        "newswire": "71.9",
+        "all": "67.4"
+    },
+    {
+        "model": "x10",
+        "newswire": "72.5",
+        "all": "68.1"
+    },
+    {
+        "model": "Our ensemble: Word, POS + Our aligner",
+        "newswire": "Our ensemble: Word, POS + Our aligner",
+        "all": ""
+    },
+    {
+        "model": "x3",
+        "newswire": "72.5",
+        "all": "67.7"
+    },
+    {
+        "model": "x10",
+        "newswire": "73.3",
+        "all": " 68.4"
+    },
+    {
+        "model": "BA17: Word only†",
+        "newswire": "68",
+        "all": "63"
+    },
+    {
+        "model": "+ POS",
+        "newswire": "68",
+        "all": "63"
+    },
+    {
+        "model": "+ POS, DEP",
+        "newswire": "69",
+        "all": "64"
+    },
+    {
+        "model": "Damonte et al. ( 2017 )‡",
+        "newswire": "-",
+        "all": "66"
+    },
+    {
+        "model": "Artzi et al. ( 2015 )",
+        "newswire": "66.3",
+        "all": "-"
+    },
+    {
+        "model": "Wang et al. ( 2015a )",
+        "newswire": "70",
+        "all": "66"
+    },
+    {
+        "model": "Pust et al. ( 2015 )",
+        "newswire": "-",
+        "all": "67.1"
+    },
+    {
+        "model": "Zhou et al. ( 2016 )",
+        "newswire": "71",
+        "all": "66"
+    },
+    {
+        "model": "Goodman et al. ( 2016 )",
+        "newswire": "70",
+        "all": "-"
+    },
+    {
+        "model": "Wang and Xue ( 2017 )",
+        "newswire": "-",
+        "all": "68.1"
+    }
+]

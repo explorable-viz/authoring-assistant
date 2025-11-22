@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1908.08528v1-294.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1908_08528v1_294"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "In Table 3, we compare the combined distance measure with each of the two components used alone. The results show that combining the edit distance with the embedding similarity is stronger than using any of the measures alone.  The embedding similarity alone performs much better than the edit distance alone."
+        }
+    ]
+}

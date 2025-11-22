@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1812.00381v2-448.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1812_00381v2_448"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We label each reply into three categories: buy, sell and other. The distribution of reply types is highly dependant on the structure and rules of the forum as shown in Table III."
+        }
+    ]
+}

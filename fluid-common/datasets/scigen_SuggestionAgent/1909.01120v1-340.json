@@ -1,0 +1,38 @@
+[
+    {
+        "": "Movie",
+        "embdi_p": " .75",
+        "embdi_r": " .86",
+        "embdi_f": " .80",
+        "seep__p_p": " .75",
+        "seep__p_r": ".62",
+        "seep__p_f": ".68",
+        "seep__l_p": " .75",
+        "seep__l_r": ".75",
+        "seep__l_f": ".75"
+    },
+    {
+        "": "RefS",
+        "embdi_p": " 1",
+        "embdi_r": " 1",
+        "embdi_f": " 1",
+        "seep__p_p": ".75",
+        "seep__p_r": ".75",
+        "seep__p_f": ".75",
+        "seep__l_p": ".88",
+        "seep__l_r": ".75",
+        "seep__l_f": ".81"
+    },
+    {
+        "": "RefL",
+        "embdi_p": " .71",
+        "embdi_r": ".83",
+        "embdi_f": " .77",
+        "seep__p_p": ".50",
+        "seep__p_r": ".75",
+        "seep__p_f": ".60",
+        "seep__l_p": ".63",
+        "seep__l_r": " .88",
+        "seep__l_f": ".73"
+    }
+]

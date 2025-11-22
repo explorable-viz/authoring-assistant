@@ -1,0 +1,124 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Thank you for the clarification. Let's correct the annotations to use only one category from the specified list.\n\nThe comparison between "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings and other models is presented in Table 3. Overall, in-domain fine-tuned BERT delivers the "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We report new state-of-the-art results on WikiPassageQA ("
+    },
+    {
+      "expression": "\"33% improvement in MAP\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and InsuranceQA (version 1.0) ("
+    },
+    {
+      "expression": "\"3.6% improvement in P@1\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") by supervised fine-tuning BERT using pairwise rank hinge loss. When evaluated on non-factoid QA datasets, there is a big gap between "
+    },
+    {
+      "expression": "\"BERT embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the fully fine-tuned BERT, which suggests that deep interactions between questions and answers are critical to the task. However, the gap is much smaller for factoid QA datasets. Since non-factoid QA depends more on content matching rather than vocabulary matching, the results are kind of expected. Similar to BERT for sentence embeddings, mean-pooling and combining the "
+    },
+    {
+      "expression": "\"top\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"bottom layer embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lead to "
+    },
+    {
+      "expression": "\"better performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and ("
+    },
+    {
+      "expression": "\"u, v, u ∗ v, |u − v|\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") shows the strongest results among other interaction schemes. Different from sentence-level embeddings, fine-tuning BERT on SNLI doesn't lead to significant improvement, which suggests possible domain mismatch between SNLI and the QA datasets. MLP layer usually provided a "
+    },
+    {
+      "expression": "\"1-2 percent boost in performance\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to the logistic regression layer. For WikiPassageQA, BERT embeddings perform comparably as BM25 baseline. For InsuranceQA, BERT embeddings outperform a strong representation-based matching model DSSM (Huang et al., 2013), but still far behind the state-of-the-art interaction-based model SUBMULT+NN (Wang and Jiang, 2016) and fully fine-tuned BERT. On factoid datasets ("
+    },
+    {
+      "expression": "\"Quasar-t and SearchQA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), BERT embeddings outperform BM25 baseline "
+    },
+    {
+      "expression": "\"significantly\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_07973v2_451"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.07973v2-451.json"]
+}

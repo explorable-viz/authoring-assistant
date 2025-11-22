@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "From the evaluation results in "
+    },
+    {
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we observe that the performance slightly "
+    },
+    {
+      "expression": "\"degraded\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " without "
+    },
+    {
+      "expression": "\"coarse-tofine attention\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We also noticed that the performance slightly "
+    },
+    {
+      "expression": "\"degraded\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " without "
+    },
+    {
+      "expression": "\"KG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " or using "
+    },
+    {
+      "expression": "\"word embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and the performance significantly "
+    },
+    {
+      "expression": "\"degraded\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when we removed "
+    },
+    {
+      "expression": "\"GCNs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1903_01306v1_119"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1903.01306v1-119.json"]
+}

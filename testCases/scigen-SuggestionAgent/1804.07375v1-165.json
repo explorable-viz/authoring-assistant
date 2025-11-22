@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Looking at the actual classifications obtained by the "
+    },
+    {
+      "expression": "\"classifier\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " produces the confusion matrix in Table 2. The matrix makes it clear that the "
+    },
+    {
+      "expression": "\"classifier\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is very good at avoiding errors against the majority class: it almost never guesses '"
+    },
+    {
+      "expression": "\"notional\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "' when it shouldn't. Conversely, about 1/3 of actual "
+    },
+    {
+      "expression": "\"notional\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " cases are misclassified, predicted to be '"
+    },
+    {
+      "expression": "\"strict\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "'). Among the erroneous cases, only "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " belong to Type III (about "
+    },
+    {
+      "expression": "\"15%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of errors) , showing that the "
+    },
+    {
+      "expression": "\"classifier\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " largely handles this type quite well next to the other types, since Type III covers about "
+    },
+    {
+      "expression": "\"20%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of plural-to-singular agreement cases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1804_07375v1_165"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1804.07375v1-165.json"]
+}

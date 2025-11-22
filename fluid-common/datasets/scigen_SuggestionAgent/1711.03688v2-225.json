@@ -1,0 +1,44 @@
+[
+    {
+        "": "",
+        "_memory-to-context_bleu": "Et→En",
+        "_memory-to-context_meteor": "Et→En",
+        "_memory-to-output_bleu": "Et→En",
+        "_memory-to-output_meteor": "Et→En"
+    },
+    {
+        "": "",
+        "_memory-to-context_bleu": "",
+        "_memory-to-context_meteor": "",
+        "_memory-to-output_bleu": "",
+        "_memory-to-output_meteor": ""
+    },
+    {
+        "": " S-NMT",
+        "_memory-to-context_bleu": "20.42",
+        "_memory-to-context_meteor": "24.65",
+        "_memory-to-output_bleu": "20.42",
+        "_memory-to-output_meteor": "24.65"
+    },
+    {
+        "": "  +src",
+        "_memory-to-context_bleu": "22.10†",
+        "_memory-to-context_meteor": "25.92†",
+        "_memory-to-output_bleu": "21.50†",
+        "_memory-to-output_meteor": "25.44†"
+    },
+    {
+        "": "  +trg",
+        "_memory-to-context_bleu": "21.94†",
+        "_memory-to-context_meteor": "25.89†",
+        "_memory-to-output_bleu": "21.82†",
+        "_memory-to-output_meteor": "25.93†"
+    },
+    {
+        "": "  +both",
+        "_memory-to-context_bleu": " 22.32†",
+        "_memory-to-context_meteor": " 26.34†",
+        "_memory-to-output_bleu": " 22.20†",
+        "_memory-to-output_meteor": " 26.10†"
+    }
+]

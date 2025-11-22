@@ -1,0 +1,38 @@
+[
+    {
+        "cl": "en",
+        "cipher-avg_p": "47.70",
+        "cipher-avg_r": "64.4",
+        "cipher-avg_f1": "54.81",
+        "supervised_p": "94.04",
+        "supervised_r": "90.44",
+        "supervised_f1": "92.20"
+    },
+    {
+        "cl": "fr",
+        "cipher-avg_p": "56.26",
+        "cipher-avg_r": "78.82",
+        "cipher-avg_f1": "65.65",
+        "supervised_p": "96.15",
+        "supervised_r": "93.72",
+        "supervised_f1": "94.92"
+    },
+    {
+        "cl": "fa",
+        "cipher-avg_p": "64.94",
+        "cipher-avg_r": "51.23",
+        "cipher-avg_f1": "57.27",
+        "supervised_p": "96.48",
+        "supervised_r": "97.77",
+        "supervised_f1": "97.12"
+    },
+    {
+        "cl": "sw",
+        "cipher-avg_p": "53.46",
+        "cipher-avg_r": "51.82",
+        "cipher-avg_f1": "52.63",
+        "supervised_p": "98.88",
+        "supervised_r": "97.50",
+        "supervised_f1": "98.18"
+    }
+]

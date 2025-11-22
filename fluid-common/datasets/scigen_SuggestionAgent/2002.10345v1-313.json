@@ -1,0 +1,101 @@
+[
+    {
+        "model": "Model",
+        "imdb": "Test Error Rate (%)",
+        "ag’s_news": "Test Error Rate (%)",
+        "dbpedia": "Test Error Rate (%)",
+        "yelp_p.": "Test Error Rate (%)",
+        "yelp_f.": "Test Error Rate (%)",
+        "avg._Δ": "Avg. Δ",
+        "snli": "Accuracy (%)",
+        "mnli_(m/mm)": "Accuracy (%)"
+    },
+    {
+        "model": "ULMFiT ",
+        "imdb": "4.60",
+        "ag’s_news": "5.01",
+        "dbpedia": "0.80",
+        "yelp_p.": "2.16",
+        "yelp_f.": "29.98",
+        "avg._Δ": "/",
+        "snli": "/",
+        "mnli_(m/mm)": "/"
+    },
+    {
+        "model": "BERTBASE *",
+        "imdb": "5.40",
+        "ag’s_news": "5.25",
+        "dbpedia": "0.71",
+        "yelp_p.": "2.28",
+        "yelp_f.": "30.06",
+        "avg._Δ": "/",
+        "snli": "/",
+        "mnli_(m/mm)": "/"
+    },
+    {
+        "model": "BERTBASE",
+        "imdb": "5.80",
+        "ag’s_news": "5.71",
+        "dbpedia": "0.71",
+        "yelp_p.": "2.25",
+        "yelp_f.": "30.37",
+        "avg._Δ": "-",
+        "snli": "90.7",
+        "mnli_(m/mm)": "84.6/83.3"
+    },
+    {
+        "model": "BERTVOTE (  K=4)",
+        "imdb": "5.60",
+        "ag’s_news": "5.41",
+        "dbpedia": "0.67",
+        "yelp_p.": "2.03",
+        "yelp_f.": "29.44",
+        "avg._Δ": "5.50%",
+        "snli": "91.2",
+        "mnli_(m/mm)": "85.3/84.4"
+    },
+    {
+        "model": "BERTAVG (  K=4)",
+        "imdb": "5.68",
+        "ag’s_news": "5.53",
+        "dbpedia": "0.68",
+        "yelp_p.": "2.03",
+        "yelp_f.": "30.03",
+        "avg._Δ": "3.24%",
+        "snli": "90.8",
+        "mnli_(m/mm)": "85.1/84.2"
+    },
+    {
+        "model": "BERTSE (ours)",
+        "imdb": "5.82",
+        "ag’s_news": "5.59",
+        "dbpedia": "0.65",
+        "yelp_p.": "2.19",
+        "yelp_f.": "30.48",
+        "avg._Δ": "-0.51%",
+        "snli": "90.8",
+        "mnli_(m/mm)": "84.2/83.3"
+    },
+    {
+        "model": "BERTSDV (ours)",
+        "imdb": "5.35",
+        "ag’s_news": "5.38",
+        "dbpedia": " 0.68",
+        "yelp_p.": "2.05",
+        "yelp_f.": " 29.88",
+        "avg._Δ": " 5.30%",
+        "snli": " 91.2",
+        "mnli_(m/mm)": " 85.3/84.3"
+    },
+    {
+        "model": "BERTSDA (ours)",
+        "imdb": " 5.29",
+        "ag’s_news": " 5.29",
+        "dbpedia": " 0.68",
+        "yelp_p.": " 2.04",
+        "yelp_f.": " 29.88",
+        "avg._Δ": "4.65%",
+        "snli": "91.2",
+        "mnli_(m/mm)": "85.0/84.3"
+    }
+]

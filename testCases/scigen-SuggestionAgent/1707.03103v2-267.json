@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. Let's use the appropriate single category for each expression.\n\nHere is the corrected paragraph:\n\nIn Table 3 we report the "
+    },
+    {
+      "expression": "\"accuracies\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " obtained by our "
+    },
+    {
+      "expression": "\"best model\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in both "
+    },
+    {
+      "expression": "\"matched\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (first 5 genres) and "
+    },
+    {
+      "expression": "\"mismatched\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (last 5 genres) development sets. We can observe that our implementation performed like "
+    },
+    {
+      "expression": "\"ESIM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " overall,"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1707_03103v2_267"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1707.03103v2-267.json"]
+}

@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "our model can stably generate adversarial samples without "
+    },
+    {
+      "expression": "\"significant\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " change in semantics with the same training setting for "
+    },
+    {
+      "expression": "\"different models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ","
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_03677v1_392"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.03677v1-392.json"]
+}

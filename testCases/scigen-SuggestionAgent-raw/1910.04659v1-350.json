@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1910.04659v1-350.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1910_04659v1_350"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "To run cross-lingual tests, we build six additional datasets from the existing ones by mixing context in one language with question in another language. The mixed datasets will be made available online  in a github repository. The performance of BERT on all datasets is displayed in Table 2.  the performance is the best for the En-En dataset. The performance on Fr-Fr and Jap-Jap is also very good as noted in the first experiment. We additionally note here that results on cross-lingual sets are close to monolingual results: either as good, or slightly worse or slightly better. For instance, the exact match on the En-Fr dataset is higher than the exact match on the Fr-Fr dataset. We also observe that, in general, the exact match and F1-score are close together when the context is in Japanese whereas there is generally a larger gap for the other two languages.  the performance on Jap-En is lower than on Jap-Jap whereas the performance on En-Fr is higher than on Fr-Fr,  Results for the Jap-Jap dataset are better than results for the Jap-En dataset"
+        }
+    ]
+}

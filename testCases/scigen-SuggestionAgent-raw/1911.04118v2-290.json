@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1911.04118v2-290.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1911_04118v2_290"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 8: Comparison between FT and TANDA on real-world datasets derived from Alexa Virtual Assistant traffic  In these experiments, we used, as usual, ASNQ for the transfer step, and NAD as our target dataset for the adapt step. Table 8 reports the comparative results using simple FT on NAD (denoted simply by NAD) and tested on samples 1, 2 and 3."
+        }
+    ]
+}

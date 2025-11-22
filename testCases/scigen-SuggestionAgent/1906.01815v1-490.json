@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 presents the performance of our baselines in the speaker-independent setup. In this case, the "
+    },
+    {
+      "expression": "\"multimodal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " variants do not greatly outperform the "
+    },
+    {
+      "expression": "\"unimodal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " counterparts. Unlike Table 2, the "
+    },
+    {
+      "expression": "\"audio\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " channel plays a more important role, and it is slightly improved by adding "
+    },
+    {
+      "expression": "\"text\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". In multiple evaluations, the "
+    },
+    {
+      "expression": "\"multimodal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " variants were shown to significantly outperform their "
+    },
+    {
+      "expression": "\"unimodal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " counterparts, with relative error rate reductions of up to "
+    },
+    {
+      "expression": "\"12.9\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_01815v1_490"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.01815v1-490.json"]
+}

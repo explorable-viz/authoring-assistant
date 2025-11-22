@@ -1,0 +1,75 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "expression": "\"H-BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is also much "
+    },
+    {
+      "expression": "\"faster\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to train than "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Table 4), even though it has more parameters, because it converges "
+    },
+    {
+      "expression": "\"faster\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"5-7 epochs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"12-15\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_03871v1_241"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.03871v1-241.json"]
+}

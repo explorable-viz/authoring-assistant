@@ -1,0 +1,65 @@
+[
+    {
+        "_model": "oracle",
+        "_present_mae": "0.000",
+        "_present_avg._#": "2.837",
+        "_absent_mae": "0.000",
+        "_absent_avg._#": "2.432"
+    },
+    {
+        "_model": "catSeq",
+        "_present_mae": "2.271",
+        "_present_avg._#": "3.781",
+        "_absent_mae": "1.943",
+        "_absent_avg._#": "0.659"
+    },
+    {
+        "_model": "catSeqD",
+        "_present_mae": "2.225",
+        "_present_avg._#": "3.694",
+        "_absent_mae": "1.961",
+        "_absent_avg._#": "0.629"
+    },
+    {
+        "_model": "catSeqCorr",
+        "_present_mae": "2.292",
+        "_present_avg._#": "3.790",
+        "_absent_mae": "1.914",
+        "_absent_avg._#": "0.703"
+    },
+    {
+        "_model": "catSeqTG",
+        "_present_mae": "2.276",
+        "_present_avg._#": "3.780",
+        "_absent_mae": "1.956",
+        "_absent_avg._#": "0.638"
+    },
+    {
+        "_model": "catSeq-2  RF1",
+        "_present_mae": "2.118",
+        "_present_avg._#": "3.733",
+        "_absent_mae": "1.494",
+        "_absent_avg._#": "1.574"
+    },
+    {
+        "_model": "catSeqD-2  RF1",
+        "_present_mae": " 2.087",
+        "_present_avg._#": " 3.666",
+        "_absent_mae": "1.541",
+        "_absent_avg._#": "1.455"
+    },
+    {
+        "_model": "catSeqCorr-2  RF1",
+        "_present_mae": "2.107",
+        "_present_avg._#": "3.696",
+        "_absent_mae": "1.557",
+        "_absent_avg._#": "1.409"
+    },
+    {
+        "_model": "catSeqTG-2  RF1",
+        "_present_mae": "2.204",
+        "_present_avg._#": "3.865",
+        "_absent_mae": " 1.439",
+        "_absent_avg._#": " 1.749"
+    }
+]

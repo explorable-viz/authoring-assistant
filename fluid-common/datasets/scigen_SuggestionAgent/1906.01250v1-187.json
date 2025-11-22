@@ -1,0 +1,26 @@
+[
+    {
+        "our_model": "weakly-supervised",
+        "aida-a": "88.05",
+        "aida-b": "89.66",
+        "avg": "86.18"
+    },
+    {
+        "our_model": "fully-supervised",
+        "aida-a": "",
+        "aida-b": "",
+        "avg": ""
+    },
+    {
+        "our_model": "on Wikipedia",
+        "aida-a": "87.23",
+        "aida-b": "87.83",
+        "avg": "85.84"
+    },
+    {
+        "our_model": "on AIDA CoNLL",
+        "aida-a": "91.34",
+        "aida-b": "91.87",
+        "avg": "84.55"
+    }
+]

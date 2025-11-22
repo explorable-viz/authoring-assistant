@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I will ensure that each annotation includes only a single category.\n\nDiscussion of Results The left part of Table 1 shows "
+    },
+    {
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with the "
+    },
+    {
+      "expression": "\"WordNet similarity scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " used as gold standard. "
+    },
+    {
+      "expression": "\"Path2vec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms other graph embeddings, achieving high correlations with WordNet similarities. This shows that our model efficiently approximates different graph measures. The right part of Table 1 shows "
+    },
+    {
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the correlations with human judgments (SimLex999). We report the "
+    },
+    {
+      "expression": "\"best models\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for each method, all of them (except FSE) using vector size 300 for comparability."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_07040v1_120"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.07040v1-120.json"]
+}

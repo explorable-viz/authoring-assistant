@@ -1,0 +1,30 @@
+[
+    {
+        "data_set": "AG news",
+        "train": "120k",
+        "test": "7.6k",
+        "classes": "4",
+        "task": "English news categorization"
+    },
+    {
+        "data_set": "AG news",
+        "train": "5k",
+        "test": "7.6k",
+        "classes": "4",
+        "task": "English news categorization"
+    },
+    {
+        "data_set": "Sogou news",
+        "train": "450k",
+        "test": "60k",
+        "classes": "5",
+        "task": "Chinese news categorization"
+    },
+    {
+        "data_set": "Sogou news",
+        "train": "10k",
+        "test": "60k",
+        "classes": "5",
+        "task": "Chinese news categorization"
+    }
+]

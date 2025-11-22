@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " number of words in questions and answers, as well as the "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " longest n-gram overlap between passage and question are furthermore given in Table 3. We can again observe two clear trends: from weaker towards stronger models used in the annotation loop, the average length of answers increases, and the largest n-gram overlap drops from "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tokens."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2002_00293v1_322"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2002.00293v1-322.json"]
+}

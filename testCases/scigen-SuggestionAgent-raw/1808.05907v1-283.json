@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1808.05907v1-283.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1808_05907v1_283"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Since the loss, perplexity of syntree2vec is lower than word2vec, node2vec over most of the data sizes given below we say that the syntree2vec performs slightly better than both of them.  There is a clear margin of difference between the perplexity scores of node2vec and syntree2vec."
+        }
+    ]
+}

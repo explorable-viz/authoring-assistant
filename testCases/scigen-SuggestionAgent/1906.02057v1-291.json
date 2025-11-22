@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The Vocabulary model correctly classified test items in "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " IC bands only (Table 5)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_02057v1_291"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.02057v1-291.json"]
+}

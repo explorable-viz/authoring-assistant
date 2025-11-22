@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1805.04715v2-65.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1805_04715v2_65"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 4 presents results on the second dataset for the best models identified on the first dataset. The LDA-Frames yielded the best results with our approach performing comparably in terms of the F1-score."
+        }
+    ]
+}

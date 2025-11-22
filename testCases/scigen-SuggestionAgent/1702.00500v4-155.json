@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Over the rules used on the "
+    },
+    {
+      "expression": "\"1-best\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " result, "
+    },
+    {
+      "expression": "\"more than 30%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are non-terminal rules. On the other hand, "
+    },
+    {
+      "expression": "\"30%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are glue rules. Finally, terminal rules take the "
+    },
+    {
+      "expression": "\"largest percentage\"",
+      "categories": ["rank"],
+      "type": "expression"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1702_00500v4_155"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1702.00500v4-155.json"]
+}

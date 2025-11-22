@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "In order to study the cases of disagreement between the approaches proposed by this paper and Ferrari et al. (2018), the "
+    },
+    {
+      "expression": "\"top-5\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " words with the largest absolute differences between the assigned ranks have been reported for each scenario by Table III. The number of target words for each project scenario have also been mentioned in parenthesis. It can be observed that most of the cases of disagreement have a "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rank, i.e. relatively "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ambiguity score assigned by the linear transformation approach proposed by this paper. Most of such cases are proper names such as robert, peter, and daniel."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_12956v3_454"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.12956v3-454.json"]
+}

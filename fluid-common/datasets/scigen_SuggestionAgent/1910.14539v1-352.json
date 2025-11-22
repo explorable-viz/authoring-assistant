@@ -1,0 +1,51 @@
+[
+    {
+        "track": "NLG",
+        "target": "EN",
+        "constrained": "no",
+        "valid": "23.5",
+        "test": "20.5"
+    },
+    {
+        "track": "MT",
+        "target": "EN",
+        "constrained": "yes",
+        "valid": "60.2",
+        "test": "58.2"
+    },
+    {
+        "track": "MT",
+        "target": "EN",
+        "constrained": "no",
+        "valid": "64.2",
+        "test": "62.2"
+    },
+    {
+        "track": "MT+NLG",
+        "target": "EN",
+        "constrained": "yes",
+        "valid": "64.4",
+        "test": "62.2"
+    },
+    {
+        "track": "NLG",
+        "target": "DE",
+        "constrained": "no",
+        "valid": "16.9",
+        "test": "16.1"
+    },
+    {
+        "track": "MT",
+        "target": "DE",
+        "constrained": "yes",
+        "valid": "49.8",
+        "test": "48.0"
+    },
+    {
+        "track": "MT+NLG",
+        "target": "DE",
+        "constrained": "yes",
+        "valid": "49.4",
+        "test": "48.2"
+    }
+]

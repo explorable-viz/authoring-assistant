@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Thank you for clarifying. I will adjust the annotation accordingly.\n\nHere is the revised paragraph:\n\nNext we can consider the effect of "
+    },
+    {
+      "expression": "\"genre\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and expectations that speech promotes notional agreement. This is confirmed in Table 3. However we note that individual "
+    },
+    {
+      "expression": "\"genres\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " do behave differently: data from the Web is closer to spoken language. The "
+    },
+    {
+      "expression": "\"most restrictive\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " genre in avoiding notional agreement is "
+    },
+    {
+      "expression": "\"translations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Both of these facts may reflect a combination of modality, "
+    },
+    {
+      "expression": "\"genre\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and editorial practice effects. However the strong differences suggest that "
+    },
+    {
+      "expression": "\"genre\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is likely crucial to any model attempting to predict this phenomenon."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1804_07375v1_166"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1804.07375v1-166.json"]
+}

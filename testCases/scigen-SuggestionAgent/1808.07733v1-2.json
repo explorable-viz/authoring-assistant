@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Switching to "
+    },
+    {
+      "expression": "\"ELMo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " word embeddings improves performance by "
+    },
+    {
+      "expression": "\"2.9 percentage points\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on an average, corresponding to about "
+    },
+    {
+      "expression": "\"53\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test sentences. Of these, about "
+    },
+    {
+      "expression": "\"32\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentences ("
+    },
+    {
+      "expression": "\"60%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the improvement) correspond to A-but-B and negation style sentences, As further evidence that "
+    },
+    {
+      "expression": "\"ELMo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " helps on these specific constructions, the non-"
+    },
+    {
+      "expression": "\"ELMo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline model (no-project, no-distill) gets "
+    },
+    {
+      "expression": "\"255\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentences wrong in the test corpus on average, only "
+    },
+    {
+      "expression": "\"89\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"34.8%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") of which are A-but-B style or negations."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1808_07733v1_2"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1808.07733v1-2.json"]
+}

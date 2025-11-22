@@ -10,7 +10,7 @@ We thank all reviewers for their time and expertise in evaluating our submission
 
 We are implementing the following improvements to the RQ1 dataset and evaluation:
 
-- We are adding additional manual annotations to substantially increase the size of the hand-labelled subset (now 5% of SciGen). We will clarify that the subset chosen for hand-annotation was selected by randomly choosing from each linguistic category.
+- We are adding additional manual annotations to substantially increase the size of the hand-labelled subset (now 5% of SciGen). We will clarify that the subset was chosen by randomly choosing from each linguistic category.
 - The SelectionAgent now also performs an initial labelling by linguistic category, in addition to identifying phrases to be replaced. We are evaluating this against the manual annotations to estimate the noise in the automated labelling.
 - Using this method, we can now derive an annotated dataset based on the full SciGen dataset. We will include this dataset as supplementary material, and release as an open source benchmark alongside the final version of the paper.
 - We will redo the RQ1 study using the full dataset (adjusting confidence intervals for noise); this should remove some degenerate estimates (e.g. success rates of 0% and 100%) attributable to sparsity in the original subset.

@@ -39,7 +39,7 @@ For the more complex cases, where current LLMs are unable to generate a full sol
 
 > - Although the paper provides useful category-level statistics, it does not analyze statistical variance beyond reporting standard deviation or assess generalization to unseen writing styles or datasets.
 
-We have changed our figures to use box plots to provide a better sense of the underlying distribution, additionally annotated with number of samples; thank you for the suggestion.
+We have changed our figures to use box plots to provide a better sense of the underlying distribution, additionally annotated with number of samples; thank you for the comment.
 
 In our experiments the LLM was not fine-tuned or prompted with SciGen examples other than as part of the testing step, so all the SciGen examples were acting as out-of-distribution problems. We will make sure this is clear.
 

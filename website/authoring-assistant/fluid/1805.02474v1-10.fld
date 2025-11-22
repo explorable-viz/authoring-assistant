@@ -1,6 +1,6 @@
 import scigen
 import util
-import datasets.scigen._1805_02474v1_10
+import datasets.scigen_manual._1805_02474v1_10
 let model_ name = model name tableData
 in
 

@@ -1,7 +1,0 @@
-import methane
-import util
-import datasets.methane_emissions
-
-"""
-	Residential Commercial Other recorded its lowest methane emissions in ${let maxEntry = maximumBy (fun x -> x.emissions) (filter (fun x -> x.type == "Residential Commercial Other") tableData) in maxEntry.year}
-"""

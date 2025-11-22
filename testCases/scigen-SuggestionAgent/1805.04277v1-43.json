@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reports the results of "
+    },
+    {
+      "expression": "\"supervised systems\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the same dataset, taken from the two works that use the dataset  As expected, "
+    },
+    {
+      "expression": "\"supervised systems\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperform "
+    },
+    {
+      "expression": "\"knowledge-based systems\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", by a small margin in some of the cases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_04277v1_43"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.04277v1-43.json"]
+}

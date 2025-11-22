@@ -1,0 +1,48 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the experimental results of the "
+    },
+    {
+      "expression": "\"slot-independent\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "expression": "\"SUMBT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model on MultiWOZ corpus.  The "
+    },
+    {
+      "expression": "\"SUMBT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " greatly surpassed the performances of previous approaches by yielding "
+    },
+    {
+      "expression": "\"42.4%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " joint accuracy."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1907_07421v1_424"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1907.07421v1-424.json"]
+}

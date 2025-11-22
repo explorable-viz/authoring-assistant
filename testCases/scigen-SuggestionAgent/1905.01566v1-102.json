@@ -1,0 +1,115 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compares the results on the development set. On top of the baseline "
+    },
+    {
+      "expression": "\"ORIGINAL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", adding synonyms and hypernyms by consulting external knowledge does not improve the performance. The "
+    },
+    {
+      "expression": "\"PAIR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " technique results in small gains over "
+    },
+    {
+      "expression": "\"ORIGINAL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"OVERLAP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the most effective heuristic technique. This simple heuristic improves recall on EL. "
+    },
+    {
+      "expression": "\"FILTER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives similar improvements to "
+    },
+    {
+      "expression": "\"PAIR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"OVERLAP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the HEAD setting, "
+    },
+    {
+      "expression": "\"RELABEL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"OVERLAP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " both improve performance on both EL and HEAD while other methods do poorly on EL. "
+    },
+    {
+      "expression": "\"FILTER & RELABEL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms all the baselines."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_01566v1_102"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.01566v1-102.json"]
+}

@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "You are correct. Let's adjust the annotation to use valid categories:\n\nWe also performed experiments with mixed sources, the results are shown in Table 4.  In this scenario, the neural network systems seem to benefit from the increased amount of "
+    },
+    {
+      "expression": "\"training data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and thus gave the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1704_07203v3_457"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1704.07203v3-457.json"]
+}

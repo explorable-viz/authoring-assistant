@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 shows the "
+    },
+    {
+      "expression": "\"time-indexed\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lags that are "
+    },
+    {
+      "expression": "\"averaged\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to calculate AL for a wait-3 system. The lags make the problem clear: each position beyond the point where all source tokens have been read (gi = |x|) has its lag reduced by  , pulling the average lag below k."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_05218v1_222"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.05218v1-222.json"]
+}

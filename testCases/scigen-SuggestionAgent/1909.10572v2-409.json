@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. Let's ensure that each replacement adheres strictly to the provided categories. Here is the corrected paragraph:\n\nTable 3 shows the results on the unsupervised tasks of hypernym detection and direction predictions, reporting "
+    },
+    {
+      "expression": "\"average precision\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"average accuracy\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively. The first row titled "
+    },
+    {
+      "expression": "\"Count based\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (in Table 3) depicts the performance of a Hearst-like Pattern system baseline, that uses a frequency based threshold to classify candidate hyponym-hypernym pairs as positive (i.e. exhibiting hypernymy) or negative (i.e. not exhibiting hypernymy). The "
+    },
+    {
+      "expression": "\"ppmi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approach in Table 3 builds upon the "
+    },
+    {
+      "expression": "\"Count based\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approach by using Pointwise Mutual Information values for classification. "
+    },
+    {
+      "expression": "\"SVD ppmi\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the main contribution from Roller, Kiela, and Nickel (2018) builds low-rank embeddings of the PPMI matrix, which allows to make predictions for unseen pairs as well. "
+    },
+    {
+      "expression": "\"HyperbolicCones\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the SOTA (Le et al. 2019) in both these tasks. The final row reports the application of SPON (on the input provided by "
+    },
+    {
+      "expression": "\"SVD ppmi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") which is an original contribution of our work."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1909_10572v2_409"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1909.10572v2-409.json"]
+}

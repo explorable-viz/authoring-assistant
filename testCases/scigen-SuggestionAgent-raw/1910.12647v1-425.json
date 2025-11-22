@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1910.12647v1-425.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1910_12647v1_425"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 3 summarizes the results for these transfer learning experiments when the source task is MNLI. Gain shows the difference between Fine-tuned model's accuracy and Baseline's accuracy. For HUBERT (Transformer), we observe substantial gain across all 5 target corpora after transfer. However, for BERT we have a drop for QNLI, QQP, and SST."
+        }
+    ]
+}

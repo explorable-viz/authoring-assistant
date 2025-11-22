@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1911.01055v1-368.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1911_01055v1_368"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "However, this comparison is reversed for the BB3 dataset where ENT-ONLY is in general better or comparable to ENT-SENT and ENT-DYM over different deep learning models. in the BB3 dataset, ENT-SENT singificantly outperforms ENT-DYM over all the models. When we switch to the BB3 dataset, it turns out thatENT-DEP0 is significantly better than all the non-syntax pooling methods (i.e., ENT-ONLY, ENT-SENT and ENT-DYM) for all the comparing models."
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+[
+    {
+        "": "Single context sentence",
+        "all": "Single context sentence",
+        "s2": "Single context sentence",
+        "s3": "Single context sentence",
+        "s07": "Single context sentence",
+        "s13": "Single context sentence",
+        "s15": "Single context sentence"
+    },
+    {
+        "": "ppr_w2w",
+        "all": "66.9",
+        "s2": " 69.0",
+        "s3": "65.7",
+        "s07": "53.9",
+        "s13": "67.1",
+        "s15": "69.9"
+    },
+    {
+        "": "dfs_ppr",
+        "all": "65.2",
+        "s2": "67.5",
+        "s3": "65.6",
+        "s07": "53.6",
+        "s13": "62.7",
+        "s15": "68.2"
+    },
+    {
+        "": "ppr",
+        "all": "65.5",
+        "s2": "67.5",
+        "s3": " 66.5",
+        "s07": " 54.7",
+        "s13": "63.3",
+        "s15": "67.4"
+    },
+    {
+        "": "ppr_w2wnf",
+        "all": "60.2",
+        "s2": "63.7",
+        "s3": "55.1",
+        "s07": "42.2",
+        "s13": "63.5",
+        "s15": "63.8"
+    },
+    {
+        "": "pprnf",
+        "all": "57.1",
+        "s2": "60.5",
+        "s3": "53.8",
+        "s07": "41.3",
+        "s13": "58.0",
+        "s15": "61.4"
+    },
+    {
+        "": "dfsnf",
+        "all": "58.7",
+        "s2": "63.3",
+        "s3": "52.8",
+        "s07": "40.4",
+        "s13": "61.6",
+        "s15": "62.5"
+    },
+    {
+        "": "One or more context sentences (#  words≥20)",
+        "all": "One or more context sentences (#  words≥20)",
+        "s2": "One or more context sentences (#  words≥20)",
+        "s3": "One or more context sentences (#  words≥20)",
+        "s07": "One or more context sentences (#  words≥20)",
+        "s13": "One or more context sentences (#  words≥20)",
+        "s15": "One or more context sentences (#  words≥20)"
+    },
+    {
+        "": "ppr_w2w",
+        "all": " 67.3",
+        "s2": "68.8",
+        "s3": "66.1",
+        "s07": "53.0",
+        "s13": " 68.8",
+        "s15": " 70.3"
+    },
+    {
+        "": "ppr",
+        "all": "65.6",
+        "s2": "67.5",
+        "s3": "66.4",
+        "s07": "54.1",
+        "s13": "64.0",
+        "s15": "67.8"
+    },
+    {
+        "": "dfs",
+        "all": "65.7",
+        "s2": "67.9",
+        "s3": "65.9",
+        "s07": "54.5",
+        "s13": "64.2",
+        "s15": "68.1"
+    },
+    {
+        "": "ppr_w2wnf",
+        "all": "60.4",
+        "s2": "64.2",
+        "s3": "54.8",
+        "s07": "40.0",
+        "s13": "64.5",
+        "s15": "64.5"
+    },
+    {
+        "": "pprnf",
+        "all": "58.6",
+        "s2": "61.3",
+        "s3": "54.9",
+        "s07": "42.2",
+        "s13": "60.9",
+        "s15": "62.9"
+    },
+    {
+        "": "dfsnf",
+        "all": "59.1",
+        "s2": "62.7",
+        "s3": "54.4",
+        "s07": "39.3",
+        "s13": "62.8",
+        "s15": "62.2"
+    }
+]

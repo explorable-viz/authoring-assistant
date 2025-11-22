@@ -1,0 +1,115 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results can be found in Table 3. For "
+    },
+    {
+      "expression": "\"comparison\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
+    },
+    {
+      "expression": "\"two top rows\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " provide the "
+    },
+    {
+      "expression": "\"best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"Gong et al.\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (2018). The first interesting finding is that the AVG COS SIM measure again performs very well: In all three settings, it beats both the system based on general-purpose embeddings ("
+    },
+    {
+      "expression": "\"topic wiki\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and the one that is adapted to the science domain ("
+    },
+    {
+      "expression": "\"topic science\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), with again the "
+    },
+    {
+      "expression": "\"Both setting\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " yielding the "
+    },
+    {
+      "expression": "\"best overall result\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\".926\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Note that our "
+    },
+    {
+      "expression": "\"Both setting\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is probably the one most similar to the concept input used by "
+    },
+    {
+      "expression": "\"Gong et al.\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (2018)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1904_12550v1_6"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1904.12550v1-6.json"]
+}

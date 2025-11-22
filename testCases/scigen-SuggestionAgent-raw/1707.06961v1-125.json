@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1707.06961v1-125.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1707_06961v1_125"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 6 (morphosyntactic attribute tagging micro-F1).  In morphosyntactic tagging, gains are apparent for Slavic languages and Chinese, but also for agglutinative languages — especially Tamil and Turkish — where the stable morpheme representation makes it easy for subword modeling to provide a type-level signal."
+        }
+    ]
+}

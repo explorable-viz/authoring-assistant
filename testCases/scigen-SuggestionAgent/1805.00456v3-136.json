@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Ensembles of "
+    },
+    {
+      "expression": "\"two\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " identical models trained with different seeds only slightly improve "
+    },
+    {
+      "expression": "\"over\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the single model (Table 5). However, an ensemble of models producing plain "
+    },
+    {
+      "expression": "\"BPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and linearized derivations improves by "
+    },
+    {
+      "expression": "\"0.5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU "
+    },
+    {
+      "expression": "\"over\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the plain "
+    },
+    {
+      "expression": "\"BPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_00456v3_136"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.00456v3-136.json"]
+}

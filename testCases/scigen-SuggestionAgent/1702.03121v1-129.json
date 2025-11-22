@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of all "
+    },
+    {
+      "expression": "\"four\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " logistic regression models are shown in Table 5.  The results for the "
+    },
+    {
+      "expression": "\"full dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are fully consistent with the findings shown in Table 5: there was no significant effect of "
+    },
+    {
+      "expression": "\"surprisal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on referring expression type.  In order to replicate their settings as closely as possible, we also included "
+    },
+    {
+      "expression": "\"residualEntropy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as a predictor in our model (see last predictor in Table 5); however, this did not change the results."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1702_03121v1_129"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1702.03121v1-129.json"]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1906.06947v1-253.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1906_06947v1_253"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 5 shows the comparison of averaged slot coherence results over all the slots in the schemas.  The averaged slot coherence of ODEE-FER is the highest,  The averaged slot coherence  of ODEE-F is comparable to that of Nguyen et al. (2015) (p = 0.3415),  The scores of ODEE-FE (p = 0.06) and ODEE-FER (p = 10−5) are both higher than that of ODEE-F,"
+        }
+    ]
+}

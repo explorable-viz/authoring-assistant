@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "the table, "
+    },
+    {
+      "expression": "\"lexical model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " consistently outperforms the "
+    },
+    {
+      "expression": "\"syntactic model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across all the benchmark datasets. Moreover, combining the two representations further improves the performance results. Based on the observation, we realize that even if "
+    },
+    {
+      "expression": "\"Syntactic-HAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves a comparable performance results combining it with "
+    },
+    {
+      "expression": "\"Lexical-HAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", slightly improves the overall performance ("
+    },
+    {
+      "expression": "\"Style-HAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). As shown in Table IV, the performance improvement in terms of accuracy is consistent across all the benchmark datasets ("
+    },
+    {
+      "expression": "\"4.54%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"2.85%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"2.02%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"1.42%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1909_06194v1_484"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1909.06194v1-484.json"]
+}

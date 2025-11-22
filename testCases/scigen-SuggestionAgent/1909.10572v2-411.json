@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Furthermore, Table 5 illustrates the results on the unsupervised hypernym detection task for "
+    },
+    {
+      "expression": "\"BLESS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dataset, wherein we compare our proposed "
+    },
+    {
+      "expression": "\"SPON model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to other supervised SOTA approaches for hypernym prediction task, namely "
+    },
+    {
+      "expression": "\"Order Embeddings (OE)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approach as introduced by (Vendrov et al. 2016), and "
+    },
+    {
+      "expression": "\"Smoothed Box model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as introduced by (Li et al. 2019)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1909_10572v2_411"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1909.10572v2-411.json"]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/2001.07615v1-94.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_2001_07615v1_94"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "All results of these experiments are presented in Table 3 with the absolute improvement of the two main measures UAR and eA over the SVM-based approach"
+        }
+    ]
+}

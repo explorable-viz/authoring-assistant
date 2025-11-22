@@ -1,0 +1,27 @@
+[
+    {
+        "variants": "H1047R",
+        "diseases": "Color. Neop.",
+        "drugs": "Lapatinib"
+    },
+    {
+        "variants": "V600E",
+        "diseases": "Liposarcoma",
+        "drugs": "Mitomycin"
+    },
+    {
+        "variants": "T790M",
+        "diseases": "Adenocarcin.",
+        "drugs": "Linsitinib"
+    },
+    {
+        "variants": "E545K",
+        "diseases": "Glioblastoma",
+        "drugs": "Dactolisib"
+    },
+    {
+        "variants": "E542K",
+        "diseases": "Stomach Neop.",
+        "drugs": "Pictrelisib"
+    }
+]

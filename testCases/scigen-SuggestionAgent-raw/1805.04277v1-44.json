@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1805.04277v1-44.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1805_04277v1_44"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Ta  The table shows that the key factor is the use of sense frequencies, and systems that do not use them (those with a nf subscript) suffer a loss between 7 and 8 percentage points in F1.  The table also shows that extending the context is mildly effective.  Regarding the algorithm, the table confirms that the best method is ppr w2w, followed by the subgraph approach (dfs) and ppr."
+        }
+    ]
+}

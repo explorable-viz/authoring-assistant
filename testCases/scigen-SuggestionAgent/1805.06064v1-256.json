@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I'll ensure that each annotation uses a single category appropriately:\n\nWe trained and evaluated our editing approach with "
+    },
+    {
+      "expression": "\"1-6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " iterations and the experimental results (Table 5) showed that the "
+    },
+    {
+      "expression": "\"second iteration\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " produced the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_06064v1_256"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.06064v1-256.json"]
+}

@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "I apologize for the mistake. Here is the corrected annotation:\n\nWe find the "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " inference times are in the "
+    },
+    {
+      "expression": "\"former case\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with negligible difference in "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The inference times of the various "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are mentioned in Table 1."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_03853v2_434"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.03853v2-434.json"]
+}

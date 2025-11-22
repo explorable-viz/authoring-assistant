@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We quantify the copy rate with the "
+    },
+    {
+      "expression": "\"unigram overlap\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between source and target as a "
+    },
+    {
+      "expression": "\"percentage\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of tokens in the target side, and compare those statistics to the "
+    },
+    {
+      "expression": "\"bitext\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"back-translated data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Table 9)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_06442v1_444"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.06442v1-444.json"]
+}

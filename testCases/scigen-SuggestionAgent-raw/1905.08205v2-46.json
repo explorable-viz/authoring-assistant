@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1905.08205v2-46.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1905_08205v2_46"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 1 presents the exact matching accuracy of IRNet and various baselines on the development set and the test set. IRNet clearly outperforms all the baselines by a substantial margin. It obtains 27.0% absolute improvement over SyntaxSQLIt also obtains 19.5% absolute Net on test set. improvement over SyntaxSQLNet(augment) that performs large-scale data augmentation. When incorporating BERT, the performance of both SyntaxSQLNet and IRNet is substantially improved and the accuracy gap between them on both the development set and the test set is widened."
+        }
+    ]
+}

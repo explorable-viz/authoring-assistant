@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the development results of various "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " settings, Adding one additional sentence-level node does not lead to accuracy improvements, although the number of parameters and decoding time increase accordingly. The accuracies of "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increases as the hidden layer size for each node increases from "
+    },
+    {
+      "expression": "\"100\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"300\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but does not further increase when the size increases beyond "
+    },
+    {
+      "expression": "\"300\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We fix the hidden size to "
+    },
+    {
+      "expression": "\"300\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accordingly. Without using (cid:104)s(cid:105) and (cid:104)/s(cid:105), the performance of "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " drops from "
+    },
+    {
+      "expression": "\"82.64%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"82.36%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", showing the effectiveness of having these additional nodes."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_02474v1_9"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.02474v1-9.json"]
+}

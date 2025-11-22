@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 presents "
+    },
+    {
+      "expression": "\"the time required\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"install each tool\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and complete the first annotation task.\r\n"
+    },
+    {
+      "expression": "\"SLATE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"YEDDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in effort, which fits with their common design as simple tools with minimal dependencies.\r\nParticipants had great difficulty with "
+    },
+    {
+      "expression": "\"brat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with only "
+    },
+    {
+      "expression": "\"two\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " managing to install it, one just as their time finished."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1907_08236v1_282"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1907.08236v1-282.json"]
+}

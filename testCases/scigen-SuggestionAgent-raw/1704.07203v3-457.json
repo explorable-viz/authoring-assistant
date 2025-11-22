@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1704.07203v3-457.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1704_07203v3_457"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We also performed experiments with mixed sources, the results are shown in Table 4.  In this scenario, the neural network systems seem to benefit from the increased amount of training data and thus gave the best results."
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "You are correct, I apologize for the error. Let's correct the annotations to fit within the provided categories:\n\nWe select the "
+    },
+    {
+      "expression": "\"1st\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"2nd\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " best performing "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the development datasets as well as the "
+    },
+    {
+      "expression": "\"majority vote\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"5 models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the final submission. The final results are shown in Table 3.\n\nHere is the corrected output:\n\nWe select the "
+    },
+    {
+      "expression": "\"1st\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"2nd\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " best performing "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the development datasets as well as the "
+    },
+    {
+      "expression": "\"majority vote\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"5 models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the final submission. The final results are shown in Table 3."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1804_08887v1_25"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1804.08887v1-25.json"]
+}

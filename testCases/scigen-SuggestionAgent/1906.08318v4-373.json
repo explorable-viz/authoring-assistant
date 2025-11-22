@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "table "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", where we compare hyperparameter tuning methodologies.  Perturbations on the hyperparameter search are listed in table "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and compare performance with different hyperparameter values found using different tuning strategies.  We tested how manual tuning, requiring less expert knowledge than Bayesian optimization, would compare to the random search strategy in table "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For both "
+    },
+    {
+      "expression": "\"i2b2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ddi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " corpora, manual search outperformed random search."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_08318v4_373"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.08318v4-373.json"]
+}

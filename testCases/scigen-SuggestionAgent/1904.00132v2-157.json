@@ -1,0 +1,124 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. Here is the revised paragraph with the correct categories:\n\nThe results are shown in Table 1. It shows that the proposed "
+    },
+    {
+      "expression": "\"HRLCE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model performs the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The performance of "
+    },
+    {
+      "expression": "\"SLD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"SL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are very close to each other, on the dev set, "
+    },
+    {
+      "expression": "\"SLD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"SL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " but they have almost the same overall scores on the test set. The MacroF1 scores of each emotion category are very different from each other: the classification accuracy for emotion "
+    },
+    {
+      "expression": "\"Sad\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in most of the cases, while the emotion "
+    },
+    {
+      "expression": "\"Happy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the "
+    },
+    {
+      "expression": "\"least accurately classified\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by all the models. We also noticed that the performance on the dev set is generally slightly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than that on the test set."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1904_00132v2_157"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1904.00132v2-157.json"]
+}

@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1: The performances of the "
+    },
+    {
+      "expression": "\"IM2LATEX-100K Bi-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model. We discover that the look-ahead improves the model from the greedy search method \u2014 noted that LA is more directly "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to the greedy search because of their same beam size. We also show the scores of the beam search for the reference"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2003_03716v1_321"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2003.03716v1-321.json"]
+}

@@ -1,0 +1,169 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 3, there are "
+    },
+    {
+      "expression": "\"at least 6.6%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and up to "
+    },
+    {
+      "expression": "\"14.4%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " absolute improvements on accuracy of exact matching on the development set. For example, when "
+    },
+    {
+      "expression": "\"SyntaxSQLNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is learned to generate "
+    },
+    {
+      "expression": "\"SemQL queries\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " instead of "
+    },
+    {
+      "expression": "\"SQL queries\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it registers "
+    },
+    {
+      "expression": "\"8.6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% absolute improvement and even outperforms "
+    },
+    {
+      "expression": "\"SyntaxSQLNet(augment)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which performs largescale data augmentation.  Table 4 presents the ablation study results. It is clear that our base model significantly "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"SyntaxSQLNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"SyntaxSQLNet(augment)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"SyntaxSQLNet(BERT)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Performing schema linking ('+SL') brings about "
+    },
+    {
+      "expression": "\"8.5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% and "
+    },
+    {
+      "expression": "\"6.4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% absolute improvement on "
+    },
+    {
+      "expression": "\"IRNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"IRNet(BERT)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The F1 score on the WHERE clause increases by "
+    },
+    {
+      "expression": "\"12.5\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% when IRNet performs schema linking.  The number of examples suffering from this problem decreases by "
+    },
+    {
+      "expression": "\"70%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when using the memory augmented pointer network."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_08205v2_48"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.08205v2-48.json"]
+}

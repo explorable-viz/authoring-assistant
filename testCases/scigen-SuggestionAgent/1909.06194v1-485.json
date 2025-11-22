@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it, I'll adjust the annotations to use the specified categories. Here is the revised paragraph:\n\nTable V reports the accuracy of the "
+    },
+    {
+      "expression": "\"combined\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"parallel fusion\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approaches. According to these results, training two parallel networks for lexical and syntax encoding achieves "
+    },
+    {
+      "expression": "\"higher accuracy\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when compared to training the same network with "
+    },
+    {
+      "expression": "\"combined embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1909_06194v1_485"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1909.06194v1-485.json"]
+}

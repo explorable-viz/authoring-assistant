@@ -1,0 +1,170 @@
+[
+    {
+        "medical_device_term": "root",
+        "medical_device_score": "0.8802",
+        "medical_robot_term": "stroke",
+        "medical_robot_score": "0.919",
+        "sports_rehab_machine_term": "kingdom",
+        "sports_rehab_machine_score": "0.907"
+    },
+    {
+        "medical_device_term": "mouse",
+        "medical_device_score": "0.8633",
+        "medical_robot_term": "kingdom",
+        "medical_robot_score": "0.893",
+        "sports_rehab_machine_term": "stroke",
+        "sports_rehab_machine_score": "0.8495"
+    },
+    {
+        "medical_device_term": "kingdom",
+        "medical_device_score": "0.8383",
+        "medical_robot_term": "vessel",
+        "medical_robot_score": "0.8651",
+        "sports_rehab_machine_term": "progressive",
+        "sports_rehab_machine_score": "0.8414"
+    },
+    {
+        "medical_device_term": "iron",
+        "medical_device_score": "0.8381",
+        "medical_robot_term": "thread",
+        "medical_robot_score": "0.8385",
+        "sports_rehab_machine_term": "net",
+        "sports_rehab_machine_score": "0.8334"
+    },
+    {
+        "medical_device_term": "internal",
+        "medical_device_score": "0.8043",
+        "medical_robot_term": "floating",
+        "medical_robot_score": "0.8045",
+        "sports_rehab_machine_term": "suspension",
+        "sports_rehab_machine_score": "0.8322"
+    },
+    {
+        "medical_device_term": "progressive",
+        "medical_device_score": "0.7957",
+        "medical_robot_term": "strain",
+        "medical_robot_score": "0.8018",
+        "sports_rehab_machine_term": "induction",
+        "sports_rehab_machine_score": "0.8244"
+    },
+    {
+        "medical_device_term": "agent",
+        "medical_device_score": "0.7875",
+        "medical_robot_term": "mouse",
+        "medical_robot_score": "0.7997",
+        "sports_rehab_machine_term": "thread",
+        "sports_rehab_machine_score": "0.8236"
+    },
+    {
+        "medical_device_term": "express",
+        "medical_device_score": "0.7733",
+        "medical_robot_term": "progressive",
+        "medical_robot_score": "0.7983",
+        "sports_rehab_machine_term": "root",
+        "sports_rehab_machine_score": "0.8093"
+    },
+    {
+        "medical_device_term": "plasma",
+        "medical_device_score": "0.7685",
+        "medical_robot_term": "die",
+        "medical_robot_score": "0.787",
+        "sports_rehab_machine_term": "transmission",
+        "sports_rehab_machine_score": "0.7871"
+    },
+    {
+        "medical_device_term": "net",
+        "medical_device_score": "0.7678",
+        "medical_robot_term": "secondary",
+        "medical_robot_score": "0.786",
+        "sports_rehab_machine_term": "die",
+        "sports_rehab_machine_score": "0.7821"
+    },
+    {
+        "medical_device_term": "⋮",
+        "medical_device_score": "⋮",
+        "medical_robot_term": "⋮",
+        "medical_robot_score": "⋮",
+        "sports_rehab_machine_term": "⋮",
+        "sports_rehab_machine_score": "⋮"
+    },
+    {
+        "medical_device_term": "argued",
+        "medical_device_score": "0.1631",
+        "medical_robot_term": "corresponding",
+        "medical_robot_score": "0.1695",
+        "sports_rehab_machine_term": "corresponding",
+        "sports_rehab_machine_score": "0.196"
+    },
+    {
+        "medical_device_term": "richard",
+        "medical_device_score": "0.1608",
+        "medical_robot_term": "corresponds",
+        "medical_robot_score": "0.1693",
+        "sports_rehab_machine_term": "told",
+        "sports_rehab_machine_score": "0.1958"
+    },
+    {
+        "medical_device_term": "authority",
+        "medical_device_score": "0.1606",
+        "medical_robot_term": "feel",
+        "medical_robot_score": "0.167",
+        "sports_rehab_machine_term": "joseph",
+        "sports_rehab_machine_score": "0.1956"
+    },
+    {
+        "medical_device_term": "michael",
+        "medical_device_score": "0.1569",
+        "medical_robot_term": "coating",
+        "medical_robot_score": "0.1666",
+        "sports_rehab_machine_term": "understanding",
+        "sports_rehab_machine_score": "0.1953"
+    },
+    {
+        "medical_device_term": "required",
+        "medical_device_score": "0.154",
+        "medical_robot_term": "wife",
+        "medical_robot_score": "0.1603",
+        "sports_rehab_machine_term": "love",
+        "sports_rehab_machine_score": "0.1902"
+    },
+    {
+        "medical_device_term": "peter",
+        "medical_device_score": "0.1388",
+        "medical_robot_term": "michael",
+        "medical_robot_score": "0.159",
+        "sports_rehab_machine_term": "economic",
+        "sports_rehab_machine_score": "0.1902"
+    },
+    {
+        "medical_device_term": "robert",
+        "medical_device_score": "0.1381",
+        "medical_robot_term": "authority",
+        "medical_robot_score": "0.156",
+        "sports_rehab_machine_term": "coating",
+        "sports_rehab_machine_score": "0.1892"
+    },
+    {
+        "medical_device_term": "david",
+        "medical_device_score": "0.1201",
+        "medical_robot_term": "peter",
+        "medical_robot_score": "0.1437",
+        "sports_rehab_machine_term": "pay",
+        "sports_rehab_machine_score": "0.1856"
+    },
+    {
+        "medical_device_term": "james",
+        "medical_device_score": "0.1188",
+        "medical_robot_term": "david",
+        "medical_robot_score": "0.1412",
+        "sports_rehab_machine_term": "authority",
+        "sports_rehab_machine_score": "0.1838"
+    },
+    {
+        "medical_device_term": "charles",
+        "medical_device_score": "0.1157",
+        "medical_robot_term": "required",
+        "medical_robot_score": "0.1382",
+        "sports_rehab_machine_term": "causing",
+        "sports_rehab_machine_score": "0.1822"
+    }
+]

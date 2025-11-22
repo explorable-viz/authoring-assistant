@@ -1,0 +1,117 @@
+[
+    {
+        "method": "Liu et al. ( 2015a )",
+        "avgsimc": "67.3",
+        "maxsimc": "68.1"
+    },
+    {
+        "method": "Liu et al. ( 2015b )",
+        "avgsimc": "69.5",
+        "maxsimc": "67.9"
+    },
+    {
+        "method": "Amiri et al. ( 2016 )",
+        "avgsimc": "70.9",
+        "maxsimc": "-"
+    },
+    {
+        "method": "Lee and Chen ( 2017 )",
+        "avgsimc": "68.7",
+        "maxsimc": "67.9"
+    },
+    {
+        "method": "Guo et al. ( 2018 )",
+        "avgsimc": "69.3",
+        "maxsimc": "68.2"
+    },
+    {
+        "method": " 300-dimensions",
+        "avgsimc": " 300-dimensions",
+        "maxsimc": " 300-dimensions"
+    },
+    {
+        "method": "Global-DSM",
+        "avgsimc": "67.1",
+        "maxsimc": "67.1"
+    },
+    {
+        "method": "UTDSM Random",
+        "avgsimc": "69.1±0.1",
+        "maxsimc": "66.4±0.2"
+    },
+    {
+        "method": "UTDSM",
+        "avgsimc": " 69.6",
+        "maxsimc": "67.1"
+    },
+    {
+        "method": "UTDSM + GMM (1)",
+        "avgsimc": "67.4",
+        "maxsimc": "67.4"
+    },
+    {
+        "method": "UTDSM + GMM (2)",
+        "avgsimc": "68.4",
+        "maxsimc": " 68.3"
+    },
+    {
+        "method": "UTDSM + GMM (3)",
+        "avgsimc": "68.9",
+        "maxsimc": " 68.3"
+    },
+    {
+        "method": "UTDSM + GMM (8)",
+        "avgsimc": "69.1",
+        "maxsimc": "68.0"
+    },
+    {
+        "method": "UTDSM + GMM (10)",
+        "avgsimc": "69.0",
+        "maxsimc": "67.8"
+    },
+    {
+        "method": " 500-dimensions",
+        "avgsimc": " 500-dimensions",
+        "maxsimc": " 500-dimensions"
+    },
+    {
+        "method": "Global-DSM",
+        "avgsimc": "67.6",
+        "maxsimc": "67.6"
+    },
+    {
+        "method": "UTDSM Random",
+        "avgsimc": "69.4±0.1",
+        "maxsimc": "66.5±0.3"
+    },
+    {
+        "method": "UTDSM",
+        "avgsimc": " 70.2",
+        "maxsimc": "68.0"
+    },
+    {
+        "method": "UTDSM + GMM (1)",
+        "avgsimc": "67.6",
+        "maxsimc": "67.6"
+    },
+    {
+        "method": "UTDSM + GMM (2)",
+        "avgsimc": "68.8",
+        "maxsimc": " 68.6"
+    },
+    {
+        "method": "UTDSM + GMM (3)",
+        "avgsimc": "69.0",
+        "maxsimc": "68.5"
+    },
+    {
+        "method": "UTDSM + GMM (8)",
+        "avgsimc": "69.5",
+        "maxsimc": "68.5"
+    },
+    {
+        "method": "UTDSM + GMM (10)",
+        "avgsimc": "69.2",
+        "maxsimc": "68.0"
+    }
+]

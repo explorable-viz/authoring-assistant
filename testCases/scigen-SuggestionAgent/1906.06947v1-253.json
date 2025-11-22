@@ -1,0 +1,133 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I'll adjust the annotations to use the specified categories.\n\nHere is the corrected paragraph:\n\nTable "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the comparison of "
+    },
+    {
+      "expression": "\"averaged slot coherence\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results over all the slots in the schemas.  The "
+    },
+    {
+      "expression": "\"averaged slot coherence\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"ODEE-FER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The "
+    },
+    {
+      "expression": "\"averaged slot coherence\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"ODEE-F\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to that of Nguyen et al. (2015) (p = "
+    },
+    {
+      "expression": "\"0.3415\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ").  The scores of ODEE-FE (p = "
+    },
+    {
+      "expression": "\"0.06\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and ODEE-FER (p = "
+    },
+    {
+      "expression": "\"10−5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") are both "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than that of "
+    },
+    {
+      "expression": "\"ODEE-F\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_06947v1_253"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.06947v1-253.json"]
+}

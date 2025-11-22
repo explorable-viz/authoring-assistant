@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1908.05267v2-50.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1908_05267v2_50"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 7 and Table 8 summarize the top 10 bigrams for SUPPORT and NOT ENOUGH INFO. The correlation between the biased phrases in the two dataset splits is not as strong as in the REFUTE label, presented in the paper.  However, one can notice that some of the biased bigrams in the training set, such as \"least one\" and \"starred movie\", translate to cues that can help in predictions over the development set."
+        }
+    ]
+}

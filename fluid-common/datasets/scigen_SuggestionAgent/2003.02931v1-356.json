@@ -1,0 +1,58 @@
+[
+    {
+        "dev": "Majority",
+        "all": "44.4",
+        "per": "61.8",
+        "loc": "0.0",
+        "org": "0.0",
+        "misc": "—"
+    },
+    {
+        "dev": "DKIE",
+        "all": "58.9",
+        "per": "68.9",
+        "loc": "63.6",
+        "org": "23.3",
+        "misc": "—"
+    },
+    {
+        "dev": "Polyglot",
+        "all": "64.5",
+        "per": "73.7",
+        "loc": " 73.4",
+        "org": "36.8",
+        "misc": "—"
+    },
+    {
+        "dev": "Bilstm",
+        "all": " 70.8",
+        "per": " 83.3",
+        "loc": "71.8",
+        "org": " 60.0",
+        "misc": "23.9"
+    },
+    {
+        "dev": "Test",
+        "all": "All",
+        "per": "PER",
+        "loc": "LOC",
+        "org": "ORG",
+        "misc": "MISC"
+    },
+    {
+        "dev": "Polyglot",
+        "all": "61.6",
+        "per": "78.4",
+        "loc": " 69.7",
+        "org": "24.7",
+        "misc": "—"
+    },
+    {
+        "dev": "Bilstm",
+        "all": " 66.0",
+        "per": " 86.6",
+        "loc": "63.6",
+        "org": " 42.5",
+        "misc": "24.8"
+    }
+]

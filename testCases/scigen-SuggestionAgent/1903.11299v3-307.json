@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The model is trained with "
+    },
+    {
+      "expression": "\"English\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " only, then with "
+    },
+    {
+      "expression": "\"English and French (en+fr)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with "
+    },
+    {
+      "expression": "\"English, French, and German (en+fr+de)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and with "
+    },
+    {
+      "expression": "\"English, French, German and Czech (all)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We can see a decrease in performance when adding "
+    },
+    {
+      "expression": "\"French\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that is not present with other languages. Otherwise, every time we add a new language the recall for this language logically increase. The "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is achieved with "
+    },
+    {
+      "expression": "\"English+French+German+Czech\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with an increase of "
+    },
+    {
+      "expression": "\"6.42%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". By using MUSE embeddings, we are able to embed more languages in the same model. We showed that adding other languages decrease performance for "
+    },
+    {
+      "expression": "\"English\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but increase the recall in a multilingual environment."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1903_11299v3_307"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1903.11299v3-307.json"]
+}

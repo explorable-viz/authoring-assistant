@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 2, "
+    },
+    {
+      "expression": "\"sub-word\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " systems outperform "
+    },
+    {
+      "expression": "\"full-word\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " systems across the board, despite having fewer total parameters.\r\nSystems built on larger data generally benefit from larger vocabularies while smaller systems perform "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with smaller vocabularies."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1706_09733v1_29"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1706.09733v1-29.json"]
+}

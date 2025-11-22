@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1911.04123v2-114.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1911_04123v2_114"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 1 demonstrates several characteristics of the generated forests of both the EDGEWISE and KBESTEISNER algorithms in Section 5.1, where \"#Edge/#Sent\" measures the forest density with the number of edges divided by the sentence length, \"LAS\" represents the oracle LAS score on 100 biomedical sentences with manually annotated dependency trees, and \"Conn. Ratio (%)\" shows the percentage of forests where both related entity mentions are connected.  Regarding the forest density, forests produced by EDGEWISE generally contain more edges than those from KBESTEISNER.  For connectivity, KBESTEISNER guarantees to generate spanning forests. On the other hand, the connectivity ratio for the forests produced by EDGEWISE drops when increasing the threshold γ. We can have more than 94% being connected with γ ≤ 0.2."
+        }
+    ]
+}

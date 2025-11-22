@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The "
+    },
+    {
+      "expression": "\"model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has relatively low accuracy on the entailment and contradiction examples while close to zero accuracy on the neutral ones. The accuracy of the "
+    },
+    {
+      "expression": "\"model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on each test set. On our dative alternation dataset, the accuracy on our test sets is substantially "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than on the MultiNLI development set ("
+    },
+    {
+      "expression": "\"50.78%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " versus "
+    },
+    {
+      "expression": "\"84.66%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " respectively), The model has very high accuracy on the entailment examples, while close to zero on the contradiction ones. On the numerical reasoning dataset, the model also seems to fail on this inference type with test set accuracy much "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than on the MultiNLI development set,"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_09302v1_224"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.09302v1-224.json"]
+}

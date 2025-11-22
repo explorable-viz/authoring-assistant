@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results are summarized in Table "
+    },
+    {
+      "expression": "\"Almost all\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the methods performed similar to "
+    },
+    {
+      "expression": "\"random guess\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", showing that "
+    },
+    {
+      "expression": "\"SQA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on our dataset has its unique challenges."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1908_07855v1_304"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1908.07855v1-304.json"]
+}

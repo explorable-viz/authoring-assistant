@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 lists the "
+    },
+    {
+      "expression": "\"importance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of each "
+    },
+    {
+      "expression": "\"variable\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the global model and in the three single domain models, where the variable with the "
+    },
+    {
+      "expression": "\"highest weight\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is ranked 1. The lists are relatively stable, with some marked differences, such as the importance of the "
+    },
+    {
+      "expression": "\"gloss length\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"number of partOf relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"music\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"fruit\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_12619v1_400"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.12619v1-400.json"]
+}

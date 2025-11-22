@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it, I will correct the annotations to use only one category per expression. Here is the revised paragraph:\n\nResults on the MSRA dataset are shown in Table 6.  Our chosen segmentor gives "
+    },
+    {
+      "expression": "\"95.93%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy on "
+    },
+    {
+      "expression": "\"5-fold cross-validated training set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Compared with the existing methods, our "
+    },
+    {
+      "expression": "\"wordbased and character-based LSTM-CRF models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " give competitive accuracies. The lattice model significantly outperforms both the "
+    },
+    {
+      "expression": "\"best characterbased\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"word-based models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (p < 0.01), achieving the "
+    },
+    {
+      "expression": "\"best result\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on this standard benchmark."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_02023v4_205"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.02023v4-205.json"]
+}

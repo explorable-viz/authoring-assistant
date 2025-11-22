@@ -1,0 +1,538 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Thank you for your feedback. Here is the corrected output with the proper categories:\n\nThe experimental results are shown in Table 1, with "
+    },
+    {
+      "expression": "\"Int\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " denoting internal comparisons (with "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " groups) and "
+    },
+    {
+      "expression": "\"Ext\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " denoting external comparisons, the "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " LAS in each group is marked in bold face.  In the first group, we compare the LAS of the four single models "
+    },
+    {
+      "expression": "\"WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"W2V\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". In macro average of all languages, the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model performs "
+    },
+    {
+      "expression": "\"2.17%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher than the "
+    },
+    {
+      "expression": "\"WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, and "
+    },
+    {
+      "expression": "\"1.24%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher than the "
+    },
+    {
+      "expression": "\"W2V\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model. The "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, however, performs only "
+    },
+    {
+      "expression": "\"0.9%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher than the "
+    },
+    {
+      "expression": "\"WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model and "
+    },
+    {
+      "expression": "\"1.27%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lower than the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model.  In the second group, we observe that the additional word-lookup model does not significantly improve the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " moodel (from "
+    },
+    {
+      "expression": "\"82.75\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% in "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"82.90\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% in "
+    },
+    {
+      "expression": "\"CNN+WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") while the "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model is improved by a much larger margin (from "
+    },
+    {
+      "expression": "\"81.48\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% in "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"82.56\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% in "
+    },
+    {
+      "expression": "\"LSTM+WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). This suggests that the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model has already learned the most important information from the the word forms, while the "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model has not. Also, the combined "
+    },
+    {
+      "expression": "\"CNN+WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model is still "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the "
+    },
+    {
+      "expression": "\"LSTM+WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, despite the large improvement in the latter.  While comparing to the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " published results (Björkelund et al., 2013, 2014), we have to note that their approach uses explicit morphological features, ensemble, ranking, etc., which all can boost parsing performance. We only use a greedy parser with much fewer features, but bridge the "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points gap between the previous best greedy parser and the best published result by more than one half.  On "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
+    },
+    {
+      "expression": "\"B15-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model improves their own baseline by "
+    },
+    {
+      "expression": "\"1.1%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", similar to the "
+    },
+    {
+      "expression": "\"0.9%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvement of our "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, which is much smaller than the "
+    },
+    {
+      "expression": "\"2.17%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvement of the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model. Furthermore, the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model is improved from a strong baseline: our "
+    },
+    {
+      "expression": "\"WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model performs already "
+    },
+    {
+      "expression": "\"2.22%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher than the "
+    },
+    {
+      "expression": "\"B15-WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model.  Comparing the individual performances on each language, we observe that the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model almost always outperforms the "
+    },
+    {
+      "expression": "\"WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model except for "
+    },
+    {
+      "expression": "\"Hebrew\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, both "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"B15-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " perform "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than baseline only on the three agglutinative languages ("
+    },
+    {
+      "expression": "\"Basque\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Hungarian\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"Korean\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than baseline on the other six."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1705_10814v1_198"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1705.10814v1-198.json"]
+}

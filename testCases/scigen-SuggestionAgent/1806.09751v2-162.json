@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We designed ESE to output "
+    },
+    {
+      "expression": "\"thirty\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " candidate entities (NPs) ranked based on the similarity to the seed term. Therefore, we calculated precision at k (p@k) where k is always "
+    },
+    {
+      "expression": "\"30\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Table 2 shows the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results when using the feature ensemble method which is more stable than the non-ensemble one (due to "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " standard deviation and "
+    },
+    {
+      "expression": "\"non-zero\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision). According to the results, the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " combination in terms of the "
+    },
+    {
+      "expression": "\"mean\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and standard deviation is obtained when using TFIDF (Eq.5) to weigh the edges and context-dependent similarity (Eq.8) to rank NPs. This shows that the uniqueness and the significant overlap of features between noun phrases were very important."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1806_09751v2_162"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1806.09751v2-162.json"]
+}

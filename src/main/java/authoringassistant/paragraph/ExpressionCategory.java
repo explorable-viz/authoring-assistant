@@ -17,6 +17,10 @@ public enum ExpressionCategory {
         this.label = label;
     }
 
+    public String getName() {
+        return name().toLowerCase().replace('_', '-');
+    }
+
     public static ExpressionCategory of(String category) {
         for (ExpressionCategory cat : values()) {
             if (cat.name().equalsIgnoreCase(category)) {

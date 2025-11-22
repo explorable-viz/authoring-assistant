@@ -1,0 +1,86 @@
+[
+    {
+        "_complexity": "MultiNLI Matched Dev Set",
+        "_ent.": "MultiNLI Matched Dev Set",
+        "_neutral": "MultiNLI Matched Dev Set",
+        "_cont.": "MultiNLI Matched Dev Set",
+        "_all": "MultiNLI Matched Dev Set"
+    },
+    {
+        "_complexity": " All",
+        "_ent.": "83.56",
+        "_neutral": "84.12",
+        "_cont.": "86.37",
+        "_all": " 84.66"
+    },
+    {
+        "_complexity": "Dative Alternation",
+        "_ent.": "Dative Alternation",
+        "_neutral": "Dative Alternation",
+        "_cont.": "Dative Alternation",
+        "_all": "Dative Alternation"
+    },
+    {
+        "_complexity": " Simple",
+        "_ent.": "100",
+        "_neutral": "-",
+        "_cont.": "4.22",
+        "_all": " 52.63"
+    },
+    {
+        "_complexity": " Medium",
+        "_ent.": "100",
+        "_neutral": "-",
+        "_cont.": "2.16",
+        "_all": " 49.27"
+    },
+    {
+        "_complexity": " Complex",
+        "_ent.": "99.77",
+        "_neutral": "-",
+        "_cont.": "0.36",
+        "_all": " 50.45"
+    },
+    {
+        "_complexity": " All",
+        "_ent.": "99.92",
+        "_neutral": "-",
+        "_cont.": "2.25",
+        "_all": " 50.78"
+    },
+    {
+        "_complexity": "Numerical Reasoning",
+        "_ent.": "Numerical Reasoning",
+        "_neutral": "Numerical Reasoning",
+        "_cont.": "Numerical Reasoning",
+        "_all": "Numerical Reasoning"
+    },
+    {
+        "_complexity": " Simple",
+        "_ent.": "38.14",
+        "_neutral": "0.66",
+        "_cont.": "69.53",
+        "_all": " 45.04"
+    },
+    {
+        "_complexity": " Medium",
+        "_ent.": "57.14",
+        "_neutral": "1.36",
+        "_cont.": "50.14",
+        "_all": " 38.11"
+    },
+    {
+        "_complexity": " Complex",
+        "_ent.": "55.48",
+        "_neutral": "3.04",
+        "_cont.": "46.26",
+        "_all": " 36.15"
+    },
+    {
+        "_complexity": " All",
+        "_ent.": "50.25",
+        "_neutral": "1.69",
+        "_cont.": "55.31",
+        "_all": " 39.77"
+    }
+]

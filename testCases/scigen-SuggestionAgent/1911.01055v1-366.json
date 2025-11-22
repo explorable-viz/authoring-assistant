@@ -1,0 +1,178 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it, I will adjust the annotations to use the correct category. Here is the revised paragraph:\n\nComparing "
+    },
+    {
+      "expression": "\"ENT-SENT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ENT-ONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we see that the pooling methods over the whole sentence (i.e., "
+    },
+    {
+      "expression": "\"ENT-SENT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") are significantly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"ENT-ONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that only focuses on the two entity mentions of interest in the DDI-2013 dataset. This is true across different deep learning models in this work. Comparing "
+    },
+    {
+      "expression": "\"ENT-SENT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", their performance are comparable in DDI-2013 (except for CNN where "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Comparing the syntax-based pooling methods and the non-syntax pooling methods, the pooling based on dependency paths (i.e., "
+    },
+    {
+      "expression": "\"ENT-DEP0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") is "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the non-syntax pooling methods (i.e., "
+    },
+    {
+      "expression": "\"ENT-SENT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ENT-DYM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and perform comparably with "
+    },
+    {
+      "expression": "\"ENT-ONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the DDI-2013 dataset over all the models (except for the CNN model where "
+    },
+    {
+      "expression": "\"ENT-ONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is much "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_01055v1_366"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.01055v1-366.json"]
+}

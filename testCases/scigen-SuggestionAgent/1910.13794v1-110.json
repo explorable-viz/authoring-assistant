@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 and Figure 3 show a linear relationship between the "
+    },
+    {
+      "expression": "\"accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the classifier and the "
+    },
+    {
+      "expression": "\"IWAQG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This demonstrates the effectiveness of our pipelined approach regardless of the interrogative-word classifier model."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_13794v1_110"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.13794v1-110.json"]
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "_model": "baseline (1.5m)",
+        "_bleu": "29.10"
+    },
+    {
+        "_model": "baseline (6m)",
+        "_bleu": " 32.40"
+    },
+    {
+        "_model": "concat",
+        "_bleu": "31.56"
+    },
+    {
+        "_model": "s-hier-to-2.tied",
+        "_bleu": "26.68"
+    },
+    {
+        "_model": "CADec",
+        "_bleu": " 32.38"
+    }
+]

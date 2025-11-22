@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1906.02059v1-151.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1906_02059v1_151"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "BOW-SVR performs worse than BIGRU-ATT, while HAN is 10% and 3% better, respectively. HIER-BERT further improves the results, outperforming HAN by 17%.  HIER-BERT has the best ρ (.527), indicating a moderate positive correlation (> 0.5), which is not the case for the rest of the methods."
+        }
+    ]
+}

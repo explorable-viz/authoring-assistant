@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 8: Comparison between "
+    },
+    {
+      "expression": "\"FT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"TANDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on real-world datasets derived from Alexa Virtual Assistant traffic\r\nIn these experiments, we used, as usual, ASNQ for the transfer step, and NAD as our target dataset for the adapt step. Table 8 reports the comparative results using simple "
+    },
+    {
+      "expression": "\"FT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"NAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (denoted simply by "
+    },
+    {
+      "expression": "\"NAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and tested on samples 1, 2 and 3."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_04118v2_290"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.04118v2-290.json"]
+}

@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it, I'll ensure to use only the specified categories. Here is the corrected output:\n\nWe first compare the performance of "
+    },
+    {
+      "expression": "\"thematic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rankers with respect to "
+    },
+    {
+      "expression": "\"syntactic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rankers and available datasets. The results of this comparison are summarized in Table 3 and show that "
+    },
+    {
+      "expression": "\"syntactic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rankers positioning the object second in the hierarchy ("
+    },
+    {
+      "expression": "\"SE2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"SD2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") lead to "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alignment on both datasets and have a "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " upper bound. For English the global hierarchy-based ranker approaches the upper bound, closely followed by the pairwise ranker. The accuracy on German data is "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the pairwise and local rankers outperform the global hierarchy-based ranker."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_6_461"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/6-461.json"]
+}

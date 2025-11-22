@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 compares the performance of "
+    },
+    {
+      "expression": "\"ESSENTIA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with the "
+    },
+    {
+      "expression": "\"FSA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline for paraphrase mining. Specifically, we show the number of phrase pairs extracted by "
+    },
+    {
+      "expression": "\"ESSENTIA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"FSA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from both datasets (\"# of extracted pairs\" column), number of valid paraphrases within these pairs (\"# of valid pairs\" column), and precision (\"Precision\" column). Although "
+    },
+    {
+      "expression": "\"FSA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision due to conservative sentence alignment, "
+    },
+    {
+      "expression": "\"ESSENTIA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " extracts significantly more paraphrases, improving the recall by "
+    },
+    {
+      "expression": "\"460%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Snips) and "
+    },
+    {
+      "expression": "\"247%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (HotelQA) over the baseline."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_00637v2_388"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.00637v2-388.json"]
+}

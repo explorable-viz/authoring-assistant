@@ -1,0 +1,142 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood. I will ensure to use only one category per annotation.\n\nTable 3 reports "
+    },
+    {
+      "expression": "\"micro-averaged\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision (P), recall (R), and F1 results for all methods, now including "
+    },
+    {
+      "expression": "\"LWAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", in multi-label violation prediction. The results are also grouped by label frequency for all ("
+    },
+    {
+      "expression": "\"OVERALL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"FREQUENT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"FEW\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " labels (articles), counting frequencies on the training subset. We observe that predicting specific articles that have been violated is a much more difficult task than predicting if any article has been violated in a binary setup (cf. Table 2). Overall, "
+    },
+    {
+      "expression": "\"HIER-BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"BIGRU-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"LWAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"60.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"57.\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " micro-F1), which is tailored for multi-labeling tasks, while being comparable with "
+    },
+    {
+      "expression": "\"HAN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"60.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"59.9\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " micro-F1). All models under-perform in labels with "
+    },
+    {
+      "expression": "\"FEW\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training examples, demonstrating the difficulty of few-shot learning in ECHR legal judgment prediction."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_02059v1_148"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.02059v1-148.json"]
+}

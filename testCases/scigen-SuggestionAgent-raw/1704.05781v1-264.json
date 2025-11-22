@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1704.05781v1-264.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1704_05781v1_264"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "For similarity tasks, cross-sentential contexts do not seem useful, and can even be detrimental for large window sizes. However, for analogy tasks, crosssentential contexts lead to improved results thanks to the increased window it provides. This is especially pronounced for corpora with short sentences such as OpenSubtitles (see Table 3)."
+        }
+    ]
+}

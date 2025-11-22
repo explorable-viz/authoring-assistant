@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our "
+    },
+    {
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in Table 3 are consistent with these observations, where we see improvements in most "
+    },
+    {
+      "expression": "\"tasks\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but the difference is not as "
+    },
+    {
+      "expression": "\"significant\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as the "
+    },
+    {
+      "expression": "\"probing tasks\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", except in "
+    },
+    {
+      "expression": "\"TREC question classification\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " where increasing K leads to "
+    },
+    {
+      "expression": "\"much better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "] performance."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1909_03104v2_227"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1909.03104v2-227.json"]
+}

@@ -1,0 +1,259 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the results of fine-tuning the "
+    },
+    {
+      "expression": "\"BERT-base\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model on five text classification datasets and two NLI datasets. For ensemble BERT, both the voted BERT ("
+    },
+    {
+      "expression": "\"BERTVOTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and averaged BERT ("
+    },
+    {
+      "expression": "\"BERTAVG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") outperform the single "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"BERTBASE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). The average improvement of "
+    },
+    {
+      "expression": "\"BERTVOTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"5.44\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% (for text classification) and "
+    },
+    {
+      "expression": "\"5.50\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% (for NLI), while "
+    },
+    {
+      "expression": "\"BERTAVG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " follows closely with "
+    },
+    {
+      "expression": "\"4.07\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"3.24\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%. "
+    },
+    {
+      "expression": "\"BERTVOTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"BERTAVG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all tasks, which adheres to our intuition since "
+    },
+    {
+      "expression": "\"BERTVOTE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is more complicated. The self-ensemble BERT ("
+    },
+    {
+      "expression": "\"BERTSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") has a slight improvement in classification tasks of "
+    },
+    {
+      "expression": "\"2.50\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, but it does not work on NLI tasks. This is also a reason why we need self-distillation to improve the base models. Overall, self-distillation model has significant improvement on both classification and NLI tasks. Table 3 shows that "
+    },
+    {
+      "expression": "\"BERTSDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BERTSDV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperform "
+    },
+    {
+      "expression": "\"BERTBASE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all datasets. Generally speaking, "
+    },
+    {
+      "expression": "\"BERTSDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs better than "
+    },
+    {
+      "expression": "\"BERTSDV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on text classification tasks with the improvement of "
+    },
+    {
+      "expression": "\"6.26\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% vs. "
+    },
+    {
+      "expression": "\"5.65\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, but the latter performs better on NLI tasks ("
+    },
+    {
+      "expression": "\"BERTSDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"BERTSDV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"4.65\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% vs. "
+    },
+    {
+      "expression": "\"5.30\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%). Our proposed fine-tuning strategies also outperform the previous method in [Sun et al., 2019] on text classification tasks, which makes extensive efforts to find sophisticated hyperparameters."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2002_10345v1_313"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2002.10345v1-313.json"]
+}

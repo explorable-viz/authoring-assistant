@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the error rates per C-test and strategy. Both "
+    },
+    {
+      "expression": "\"SEL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"SIZE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are overall able to significantly (p < 0.025) increase and decrease the test's difficulty over "
+    },
+    {
+      "expression": "\"DEF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and with the exception of  "
+    },
+    {
+      "expression": "\"SEL,dec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the effect is also statistically significant "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for all individual text and strategy pairs."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_06905v2_473"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.06905v2-473.json"]
+}

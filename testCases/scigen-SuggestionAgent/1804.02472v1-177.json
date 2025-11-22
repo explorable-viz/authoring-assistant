@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "I understand. Let's adjust the annotations to ensure they use only the specified valid categories.\n\nHere is the corrected paragraph:\n\nTable 5 illustrates the influence of modals and negation on the "
+    },
+    {
+      "expression": "\"factuality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the events they have direct scope over. The context with the "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"factuality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on average is no direct modal and no negation (first row); all other modal contexts have varying degrees of negative "
+    },
+    {
+      "expression": "\"mean factuality scores\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with "
+    },
+    {
+      "expression": "\"will\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as the most negative."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1804_02472v1_177"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1804.02472v1-177.json"]
+}

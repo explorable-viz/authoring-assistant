@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1805.03871v1-232.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1805_03871v1_232"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Fourth, we introduce finer classes (Tables 1–2), which fit better the target task, where nested clauses are frequent.  The splitter produced 31,545 training, 8,036 development, and 5,563 test sentences/clauses.3 Table 2 shows their distribution in the six gold (correct) classes.  cf. Table 2),"
+        }
+    ]
+}

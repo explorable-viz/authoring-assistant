@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows that the "
+    },
+    {
+      "expression": "\"10rvw\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " variant consistently outperforms the "
+    },
+    {
+      "expression": "\"word-level baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1808_06068v1_277"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1808.06068v1-277.json"]
+}

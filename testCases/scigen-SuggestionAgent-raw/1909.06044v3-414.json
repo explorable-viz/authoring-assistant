@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1909.06044v3-414.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1909_06044v3_414"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "We calculate these similarity scores for each Real targeted output for the real inputs and the inputs found by the proposed model and report the average value in Table 1. According to the table, we observe that even inputting the real inputs, the similarity scores between the outputs and the target outputs are not high. Besides, with the crafted inputs from the proposed framework, these similarity scores are significantly improved. For example, for RL BeamSearch(200), the similarity is improved by 41.5%, 34.0% and 28.3% for the target outputs with length 1-3, 4-6 and 7-10, respectively."
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it, I'll use the correct categories. Here's the annotated paragraph:\n\nTable 3 shows the results on the Europarl corpus.  our approach consistently "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"Basic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"2-3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU points but "
+    },
+    {
+      "expression": "\"lags a bit behind\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"Pivot\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (except on "
+    },
+    {
+      "expression": "\"De\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " where it is "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1904_02338v2_211"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1904.02338v2-211.json"]
+}

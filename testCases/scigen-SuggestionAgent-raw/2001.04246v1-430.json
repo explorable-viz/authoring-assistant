@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/2001.04246v1-430.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_2001_04246v1_430"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The results of cross-task validation is summarized in Table 3. From Table 3, we can observe that: The searched structures achieve the best performance on their original target tasks compared with other tasks, in other words, the performance numbers along the diagonal line of this table are the best. Further, the performance degradation is quite significant across different kinds of tasks (for example, applying the searched structures of sentiment classification tasks to entailment recognition task, or vice verse), while the performance degradations within the same kind  of tasks (for example, MRPC and QQP for semantic equivalence classification) are relatively small, since they have the same input format (i.e., a pair of sentences) and similar targets.  From the last row of Table 3, we can see that the randomly sampled structures perform worse than the searched structures and their performances are not stable."
+        }
+    ]
+}

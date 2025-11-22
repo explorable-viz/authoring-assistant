@@ -1,0 +1,32 @@
+[
+    {
+        "model_lstm-word": "Syl-LSTM",
+        "ppl_88.0": "88.7",
+        "model_char-cnn": "Syl-Avg",
+        "ppl_92.3": "88.5"
+    },
+    {
+        "model_lstm-word": "Syl-CNN-2",
+        "ppl_88.0": "86.6",
+        "model_char-cnn": "Syl-Avg-A",
+        "ppl_92.3": "91.4"
+    },
+    {
+        "model_lstm-word": "Syl-CNN-3",
+        "ppl_88.0": " 84.6",
+        "model_char-cnn": "Syl-Avg-B",
+        "ppl_92.3": "88.5"
+    },
+    {
+        "model_lstm-word": "Syl-CNN-4",
+        "ppl_88.0": "86.8",
+        "model_char-cnn": "Syl-Concat",
+        "ppl_92.3": " 83.7"
+    },
+    {
+        "model_lstm-word": "Syl-Sum",
+        "ppl_88.0": " 84.6",
+        "model_char-cnn": "",
+        "ppl_92.3": ""
+    }
+]

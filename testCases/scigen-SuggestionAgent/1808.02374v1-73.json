@@ -1,0 +1,142 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. Here is the annotated paragraph with the appropriate single category for each annotation:\n\nIn Table 1 we can see that also for our model, "
+    },
+    {
+      "expression": "\"EE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are harder to recognize than the "
+    },
+    {
+      "expression": "\"TE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as all models achieve "
+    },
+    {
+      "expression": "\"higher scores\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"TE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to "
+    },
+    {
+      "expression": "\"EE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  What is interesting to see is that when training with the combined loss ("
+    },
+    {
+      "expression": "\"SG or SGLR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") we obtain a clear improvement on the "
+    },
+    {
+      "expression": "\"more difficult EE relations\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and perform slightly "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"TE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to using pre-trained embeddings (the "
+    },
+    {
+      "expression": "\"three upper settings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ").  What can be observed is that the "
+    },
+    {
+      "expression": "\"RC+SG model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for low-frequency words, and "
+    },
+    {
+      "expression": "\"RC+SGLR model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs  "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the higher frequency ranges.  When evaluating on the full Dev set, both combined loss settings outperform the baselines consistently."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1808_02374v1_73"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1808.02374v1-73.json"]
+}

@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 2, "
+    },
+    {
+      "expression": "\"IRNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significantly outperforms "
+    },
+    {
+      "expression": "\"SyntaxSQLNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all four hardness levels with or without BERT. For example, compared with "
+    },
+    {
+      "expression": "\"SyntaxSQLNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"IRNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " obtains "
+    },
+    {
+      "expression": "\"23.3%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " absolute improvement in Hard level."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_08205v2_47"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.08205v2-47.json"]
+}

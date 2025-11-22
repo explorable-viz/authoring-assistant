@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We choose "
+    },
+    {
+      "expression": "\"different\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " teacher "
+    },
+    {
+      "expression": "\"K\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and evaluate our models in "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets. Table 2 shows that teacher size is sensitive to datasets. Therefore, we select the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " teacher size for each dataset in the following experiment."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2002_10345v1_312"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2002.10345v1-312.json"]
+}

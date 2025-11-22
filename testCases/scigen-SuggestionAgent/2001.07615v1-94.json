@@ -1,0 +1,39 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "All results of these experiments are presented in Table 3 with the absolute improvement of the two main measures "
+    },
+    {
+      "expression": "\"UAR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"eA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the "
+    },
+    {
+      "expression": "\"SVM-based approach\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2001_07615v1_94"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2001.07615v1-94.json"]
+}

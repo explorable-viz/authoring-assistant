@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I'll correct that and ensure the appropriate categories are used.\n\nHere is the revised output:\n\nTable 1 compares the development set performance of different variants of the proposed sentence retrieval method with the state of the art results on the FEVER dataset. The results indicate that both "
+    },
+    {
+      "expression": "\"pointwise\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"pairwise BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentence retrieval improve the "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
+    },
+    {
+      "expression": "\"UNC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"DREAM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision scores are "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than our methods without a decision threshold, however, a threshold can regulate the trade-off between the "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"precision\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and achieve the "
+    },
+    {
+      "expression": "\"best precision\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"F1 scores\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_02655v1_346"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.02655v1-346.json"]
+}

@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For "
+    },
+    {
+      "expression": "\"ellipsis\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", both models improve substantially over the baseline (by "
+    },
+    {
+      "expression": "\"19-51 percentage points\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), with concat stronger for inflection tasks and CADec stronger for "
+    },
+    {
+      "expression": "\"VPellipsis\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_05979v2_93"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.05979v2-93.json"]
+}

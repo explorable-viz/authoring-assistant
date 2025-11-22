@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it! I'll correct the annotation to use the appropriate category. Here is the revised paragraph:\n\nTable 7 shows results from a manual error analysis on "
+    },
+    {
+      "expression": "\"50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " events from UDS-IH2-dev with "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " absolute prediction error (using "
+    },
+    {
+      "expression": "\"H-biLSTM(2)MultiSim w/UDS-IH2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Grammatical errors (such as run-on sentences) in the underlying text of UDS-IH2 appear to pose a particular challenge for these models;"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1804_02472v1_182"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1804.02472v1-182.json"]
+}

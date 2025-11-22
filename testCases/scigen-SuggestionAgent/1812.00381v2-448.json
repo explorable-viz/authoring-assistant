@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We "
+    },
+    {
+      "expression": "\"label\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " each reply into "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " categories: "
+    },
+    {
+      "expression": "\"buy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"sell\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"other\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The distribution of reply types is highly dependant on the structure and rules of the forum as shown in Table III."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1812_00381v2_448"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1812.00381v2-448.json"]
+}

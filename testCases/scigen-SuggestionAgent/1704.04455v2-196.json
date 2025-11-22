@@ -1,0 +1,142 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I will ensure that the annotations use only the specified categories. Here's the corrected output:\n\nFor NER (Table 7), "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives an F1-score of "
+    },
+    {
+      "expression": "\"91.57%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the CoNLL test set, which is significantly\n"
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared with "
+    },
+    {
+      "expression": "\"BiLSTMs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\r\nThe minimum F1-score was obtained by "
+    },
+    {
+      "expression": "\"BiLSTM-small variants\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\r\nThe average training time of the "
+    },
+    {
+      "expression": "\"BiLSTM-small variants\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"1.7\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hours\r\nwhile the total training time required to run all the models is "
+    },
+    {
+      "expression": "\"28.5\"",
+      "categories": ["sum"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hours.\r\nStacking more layers of BiLSTMs leads to slightly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1-scores\r\ncompared with a single-layer "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\r\nOur "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results are comparable to the results reported\r\nby Ma and Hovy (2016) and Lample et al. (2016).\r\nIn contrast, "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reported results under the same settings.\r\nIn the second section of Table 7, Yang et al. (2017) obtain an Fscore of "
+    },
+    {
+      "expression": "\"91.26%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1704_04455v2_196"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1704.04455v2-196.json"]
+}

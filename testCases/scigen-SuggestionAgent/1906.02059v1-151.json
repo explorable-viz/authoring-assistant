@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood, I will use the correct categories. Here is the revised output:\n\nBOW-SVR performs "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than BIGRU-ATT, while HAN is "
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"3%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " better, respectively. HIER-BERT further improves the results, outperforming HAN by "
+    },
+    {
+      "expression": "\"17%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  HIER-BERT has the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ρ (.527), indicating a moderate positive correlation (> "
+    },
+    {
+      "expression": "\"0.5\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), which is not the case for the rest of the methods."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_02059v1_151"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.02059v1-151.json"]
+}

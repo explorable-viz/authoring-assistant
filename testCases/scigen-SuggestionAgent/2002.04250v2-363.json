@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results are shown in Table 4. As can be seen, the incorporation of "
+    },
+    {
+      "expression": "\"MMI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model significantly improves "
+    },
+    {
+      "expression": "\"MT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performances."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2002_04250v2_363"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2002.04250v2-363.json"]
+}

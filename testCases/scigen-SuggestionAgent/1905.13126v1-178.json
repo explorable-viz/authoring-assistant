@@ -1,0 +1,30 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As seen in Table 2, we report the "
+    },
+    {
+      "expression": "\"coefficient of determination (r2)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for each global metric and dataset.  Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is moderate to poor, especially in the case of "
+    },
+    {
+      "expression": "\"coherence\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_13126v1_178"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.13126v1-178.json"]
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "": "CRIM",
+        "_music_map": "40.97",
+        "_music_mrr": "60.93",
+        "_music_p@5": "41.31"
+    },
+    {
+        "": "SPON",
+        "_music_map": " 54.70",
+        "_music_mrr": " 71.20",
+        "_music_p@5": " 56.30"
+    },
+    {
+        "": "",
+        "_music_map": " Medical",
+        "_music_mrr": " Medical",
+        "_music_p@5": " Medical"
+    },
+    {
+        "": "",
+        "_music_map": "MAP",
+        "_music_mrr": "MRR",
+        "_music_p@5": "P@5"
+    },
+    {
+        "": "CRIM",
+        "_music_map": " 34.05",
+        "_music_mrr": " 54.64",
+        "_music_p@5": " 36.77"
+    },
+    {
+        "": "SPON",
+        "_music_map": "33.50",
+        "_music_mrr": "50.60",
+        "_music_p@5": "35.10"
+    }
+]

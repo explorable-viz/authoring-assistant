@@ -1,0 +1,37 @@
+[
+    {
+        "model/dataset": "Majority",
+        "f&c_clean_dev": "0.54",
+        "f&c_clean_test": "0.57",
+        "new_data_dev": "0.51",
+        "new_data_test": "0.50"
+    },
+    {
+        "model/dataset": "Yang et al. (PCE LSTM)",
+        "f&c_clean_dev": " 0.86",
+        "f&c_clean_test": " 0.87",
+        "new_data_dev": "0.60",
+        "new_data_test": "0.57"
+    },
+    {
+        "model/dataset": "DoQ",
+        "f&c_clean_dev": "0.78",
+        "f&c_clean_test": "0.77",
+        "new_data_dev": " 0.62",
+        "new_data_test": " 0.62"
+    },
+    {
+        "model/dataset": "DoQ + 10-distance",
+        "f&c_clean_dev": "0.78",
+        "f&c_clean_test": "0.77",
+        "new_data_dev": " 0.62",
+        "new_data_test": " 0.62"
+    },
+    {
+        "model/dataset": "DoQ + 3-distance",
+        "f&c_clean_dev": "0.81",
+        "f&c_clean_test": "0.80",
+        "new_data_dev": " 0.62",
+        "new_data_test": "0.61"
+    }
+]

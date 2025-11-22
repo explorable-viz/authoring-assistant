@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We see that "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " trained with "
+    },
+    {
+      "expression": "\"agreement\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " perform comparably to "
+    },
+    {
+      "expression": "\"Pivot\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", outperforming it in some cases, e.g., when the target is "
+    },
+    {
+      "expression": "\"Russian\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", perhaps because it is quite different linguistically from the English pivot. unlike "
+    },
+    {
+      "expression": "\"Dual-0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Agree\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " maintains high performance in the supervised directions (within "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"BLEU point\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to "
+    },
+    {
+      "expression": "\"Basic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "),"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1904_02338v2_210"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1904.02338v2-210.json"]
+}

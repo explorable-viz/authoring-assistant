@@ -1,0 +1,214 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood, I'll adjust the annotations to use the correct categories. Here is the revised output:\n\nWe summarize the main results in Table 3.  "
+    },
+    {
+      "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Its precision at 1 and 5 are "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"40%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"PageRank\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all  the precision and recall metrics. "
+    },
+    {
+      "expression": "\"Location\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs the "
+    },
+    {
+      "expression": "\"worst\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  "
+    },
+    {
+      "expression": "\"LeToR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms the baselines significantly on all metrics. Particularly, its P@1 value outperforms the "
+    },
+    {
+      "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline the most ("
+    },
+    {
+      "expression": "\"4.64%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), indicating a much better estimation on the most salient event. In terms of AUC, "
+    },
+    {
+      "expression": "\"LeToR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"Frequency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by a large margin ("
+    },
+    {
+      "expression": "\"11.19%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " relative gain).  The "
+    },
+    {
+      "expression": "\"KCE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model further beats "
+    },
+    {
+      "expression": "\"LeToR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significantly on all metrics, by around "
+    },
+    {
+      "expression": "\"5%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on AUC and precision values, and by around "
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the recall values. Notably, the P@1 score is much higher, reaching "
+    },
+    {
+      "expression": "\"50%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The large relative gain on all the recall metrics and the high performance on precision show that "
+    },
+    {
+      "expression": "\"KCE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " works really well on the top of the rank list.  To understand the source of performance gain of "
+    },
+    {
+      "expression": "\"KCE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we conduct an ablation study by removing its components: -E removes of entity kernels; -EF removes the entity kernels and the features. We observe a performance drop in both cases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1809_00647v1_180"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1809.00647v1-180.json"]
+}

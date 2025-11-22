@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I'll ensure that each annotation uses only a single category from your provided list. Here is the corrected version:\n\nIn "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we compare the combined distance measure with each of the two components used alone. The results show that combining the "
+    },
+    {
+      "expression": "\"edit distance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with the "
+    },
+    {
+      "expression": "\"embedding similarity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"stronger\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than using any of the measures alone.  The "
+    },
+    {
+      "expression": "\"embedding similarity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alone performs "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the "
+    },
+    {
+      "expression": "\"edit distance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " alone."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1908_08528v1_294"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1908.08528v1-294.json"]
+}

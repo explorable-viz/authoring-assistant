@@ -1,0 +1,232 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Thank you for clarifying. I will ensure that each annotation uses only one of the specified categories. Here is the corrected output:\n\nThe results, shown in Table 3, demonstrate that the "
+    },
+    {
+      "expression": "\"MIMICK RNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recovers about half of the loss in performance incurred by the original "
+    },
+    {
+      "expression": "\"Polyglot training model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " due to out-of-vocabulary words in the \"All pairs\" condition. "
+    },
+    {
+      "expression": "\"MIMICK\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " also "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"VarEmbed\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"FastText\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " can be considered an upper bound: with a vocabulary that is "
+    },
+    {
+      "expression": "\"25 times larger\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the other models, it was missing words from only "
+    },
+    {
+      "expression": "\"44 pairs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on this data.\n\nTo correct further:\nThe results, shown in Table 3, demonstrate that the "
+    },
+    {
+      "expression": "\"MIMICK RNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recovers about half of the loss in performance incurred by the original "
+    },
+    {
+      "expression": "\"Polyglot training model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " due to out-of-vocabulary words in the \"All pairs\" condition. "
+    },
+    {
+      "expression": "\"MIMICK\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " also "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"VarEmbed\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"FastText\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " can be considered an upper bound: with a vocabulary that is "
+    },
+    {
+      "expression": "\"25 times larger\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the other models, it was missing words from only "
+    },
+    {
+      "expression": "\"44\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " pairs on this data.\n\nRevised again for clarity:\nThe results, shown in Table 3, demonstrate that the "
+    },
+    {
+      "expression": "\"MIMICK RNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recovers about half of the loss in performance incurred by the original "
+    },
+    {
+      "expression": "\"Polyglot training model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " due to out-of-vocabulary words in the \"All pairs\" condition. "
+    },
+    {
+      "expression": "\"MIMICK\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " also "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"VarEmbed\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"FastText\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " can be considered an upper bound: with a vocabulary that is "
+    },
+    {
+      "expression": "\"25\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " times larger than the other models, it was missing words from only "
+    },
+    {
+      "expression": "\"44\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " pairs on this data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1707_06961v1_122"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1707.06961v1-122.json"]
+}

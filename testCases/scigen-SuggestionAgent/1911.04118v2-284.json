@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For each "
+    },
+    {
+      "expression": "\"question\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"ASNQ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the positive candidate answers are those sentences that occur in the long answer paragraphs in "
+    },
+    {
+      "expression": "\"NQ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and contain annotated short answers. The remaining sentences from the document are labeled as negative for the target "
+    },
+    {
+      "expression": "\"question\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  while the "
+    },
+    {
+      "expression": "\"ASNQ statistics\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are reported in Table 1.  "
+    },
+    {
+      "expression": "\"ASNQ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " contains "
+    },
+    {
+      "expression": "\"57,242\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " distinct "
+    },
+    {
+      "expression": "\"questions\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the training set and "
+    },
+    {
+      "expression": "\"2,672\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " distinct "
+    },
+    {
+      "expression": "\"questions\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the dev. set,"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_04118v2_284"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.04118v2-284.json"]
+}

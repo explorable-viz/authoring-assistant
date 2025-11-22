@@ -1,0 +1,32 @@
+[
+    {
+        "_method": "DBLP:conf/acl/NguyenTFB15",
+        "_schema_matching_(%)___p": "41.5",
+        "_schema_matching_(%)___r": "53.4",
+        "_schema_matching_(%)___f1": "46.7"
+    },
+    {
+        "_method": "Clustering",
+        "_schema_matching_(%)___p": "41.2",
+        "_schema_matching_(%)___r": "50.6",
+        "_schema_matching_(%)___f1": "45.4"
+    },
+    {
+        "_method": "ODEE-F",
+        "_schema_matching_(%)___p": "41.7",
+        "_schema_matching_(%)___r": "53.2",
+        "_schema_matching_(%)___f1": "46.8"
+    },
+    {
+        "_method": "ODEE-FE",
+        "_schema_matching_(%)___p": "42.4",
+        "_schema_matching_(%)___r": "56.1",
+        "_schema_matching_(%)___f1": "48.3"
+    },
+    {
+        "_method": "ODEE-FER",
+        "_schema_matching_(%)___p": " 43.4",
+        "_schema_matching_(%)___r": " 58.3",
+        "_schema_matching_(%)___f1": " 49.8"
+    }
+]

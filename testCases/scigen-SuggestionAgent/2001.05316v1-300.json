@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood. I'll ensure that each annotation uses only a single category. Here's the revised paragraph:\n\nVarious subsets of "
+    },
+    {
+      "expression": "\"authors\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " were chosen and the dataset was truncated to each "
+    },
+    {
+      "expression": "\"author\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " having the same number of "
+    },
+    {
+      "expression": "\"samples\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  with and without pre-training character level embedding and comparing the proposed architectures on the held-out dataset.  To illustrate the need of pre-trained character embeddings, we see from III that using a pre-trained embedding increases the "
+    },
+    {
+      "expression": "\"accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across datasets and the different number of "
+    },
+    {
+      "expression": "\"authors\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", regardless of the amount of data for each "
+    },
+    {
+      "expression": "\"author\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  increase the performance a few degrees.  we analyzed the importance of pretrained character embedding for author attribution and showed that pre-training can result in "
+    },
+    {
+      "expression": "\"better performances\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n\nIn this revision, \"better performances\" is annotated with only the COMPARISON category."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_2001_05316v1_300"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/2001.05316v1-300.json"]
+}

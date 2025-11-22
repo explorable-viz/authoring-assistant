@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the results obtained on the CQA test split. We report our "
+    },
+    {
+      "expression": "\"two best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models that represent using human explanations ("
+    },
+    {
+      "expression": "\"CoS-E-openended\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") for training only and using language model explanations ("
+    },
+    {
+      "expression": "\"CAGE-reasoning\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") during both train and test."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_02361v1_395"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.02361v1-395.json"]
+}

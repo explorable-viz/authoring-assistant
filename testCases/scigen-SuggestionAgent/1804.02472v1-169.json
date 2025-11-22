@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood. Here is the corrected output with each span annotated with a single category:\n\nTable "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reports the results for all of the "
+    },
+    {
+      "expression": "\"2-layer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " L-, T-, and H-biLSTMs. The best-performing system for each dataset and metric are highlighted in purple, and when the best-performing system for a particular dataset was a 1-layer model, that system is included in Table "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The highest-performing system for each is reported in Table "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". On its own, the biLSTM with linear topology (L-biLSTM) performs consistently "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the biLSTM with tree topology (T-biLSTM). However, the hybrid topology (H-biLSTM), consisting of both a L- and TbiLSTM is the "
+    },
+    {
+      "expression": "\"top-performing\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " system on UW for correlation (Table "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Though our methods achieve state of the art in the single-task setting, the best performing systems are mostly multi-task (Table "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and Supplementary Materials)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1804_02472v1_169"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1804.02472v1-169.json"]
+}

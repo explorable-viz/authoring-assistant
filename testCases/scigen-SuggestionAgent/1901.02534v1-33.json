@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "On a support basis, we find a "
+    },
+    {
+      "expression": "\"52%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increase in Kappa by adding the titles.  Cohen's Kappa is "
+    },
+    {
+      "expression": "\"68%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than that for "
+    },
+    {
+      "expression": "\"ESIM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1901_02534v1_33"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1901.02534v1-33.json"]
+}

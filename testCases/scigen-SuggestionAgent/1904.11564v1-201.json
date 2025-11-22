@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare the performance of our neural generator when trained on either "
+    },
+    {
+      "expression": "\"gold\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"silver\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", or gold and silver data (Table 1). Generation quality is primarily evaluated with "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "  Semi-supervised training  leads to an "
+    },
+    {
+      "expression": "\"11 BLEU point improvement\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "  compar  train  In addition to BLEU, we also report exact match accuracy on the overlapping subset. Results show that our neural models outperform the grammar-based generator by a large margin."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1904_11564v1_201"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1904.11564v1-201.json"]
+}

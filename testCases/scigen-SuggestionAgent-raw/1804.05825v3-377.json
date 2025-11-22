@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1804.05825v3-377.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1804_05825v3_377"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Table 6 shows that the C-LSTM model performs well on the scientific embeddings, but consistently worse than the SVM model using handcrafted features and achieves a macro-F1 score of 67.49 and 67.02 for subtask 1.1 and subtask 1.2 respectively."
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows the confusion matrix of "
+    },
+    {
+      "expression": "\"JOINT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on Wikipedia. We can see that "
+    },
+    {
+      "expression": "\"more than 50%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of documents for each quality class are correctly classified, except for the  class where "
+    },
+    {
+      "expression": "\"more\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " documents are misclassified into "
+    },
+    {
+      "expression": "\"B\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1901_01010v2_418"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1901.01010v2-418.json"]
+}

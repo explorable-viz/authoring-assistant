@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We evaluate two configurations of the parse decoder, one in which it is trained separately from the token decoder (first column of Table 3), and the other where both decoders are trained jointly (second column of Ta  ble 3). We observe that joint training boosts the chunk F1 from "
+    },
+    {
+      "expression": "\"65.4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"69.6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", although, in both cases the F1 scores are relatively low, which matches our intuition as most source sentences can be translated into multiple target syntactic forms.  To measure how often the token decoder follows the predicted chunk sequence, we parse the generated translation and compute the F1 between the resulting chunk sequence and the parse decoder's prediction (fourth column of Table 3). Strong results of "
+    },
+    {
+      "expression": "\"89.9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 and "
+    },
+    {
+      "expression": "\"43.1%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " exact match indicate that the token decoder is heavily reliant on the generated chunk sequences.  The resulting F1 is indeed almost "
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points higher (third column of Table 3), indicating that the token decoder does have the ability to correct mistakes.  In Section 5.3 (see the final row of Table 3) we consider the effect of randomly sampling the max chunk size k during training. This provides a considerable boost to BLEU with a minimal impact to speedup."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_02780v1_26"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.02780v1-26.json"]
+}

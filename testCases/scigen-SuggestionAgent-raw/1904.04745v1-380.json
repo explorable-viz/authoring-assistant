@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1904.04745v1-380.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1904_04745v1_380"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "As shown in Table 3 (top 4 rows), the proposed crossmodal self-attentive feature based approaches achieve significantly better performance than other baselines.  the word based method CMSA-W outperforms sentence based method CMSA-S for multimodal feature representation.  As presented in the bottom 5 rows in Table 3, the proposed gated multi-level fusion outperforms these other multi-scale feature fusion methods."
+        }
+    ]
+}

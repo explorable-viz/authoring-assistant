@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood. I'll ensure that each annotation uses only one category from the specified list. Here is the corrected output:\n\nTable 4 presents "
+    },
+    {
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the second "
+    },
+    {
+      "expression": "\"dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the "
+    },
+    {
+      "expression": "\"best models\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " identified on the first "
+    },
+    {
+      "expression": "\"dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
+    },
+    {
+      "expression": "\"LDA-Frames\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " yielded the "
+    },
+    {
+      "expression": "\"best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with our approach performing comparably in terms of the "
+    },
+    {
+      "expression": "\"F1-score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_04715v2_65"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.04715v2-65.json"]
+}

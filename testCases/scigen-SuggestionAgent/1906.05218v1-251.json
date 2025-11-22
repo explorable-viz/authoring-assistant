@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Before preservation, MILk with a latency weight "
+    },
+    {
+      "expression": "\"λ = 0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " still showed a substantial reduction in latency from the "
+    },
+    {
+      "expression": "\"maximum\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " value of "
+    },
+    {
+      "expression": "\"27.9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", indicating an intrinsic latency incentive. Furthermore, training quickly destabilized, resulting in very poor trade-offs for "
+    },
+    {
+      "expression": "\"λs as low as 0.2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_05218v1_251"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.05218v1-251.json"]
+}

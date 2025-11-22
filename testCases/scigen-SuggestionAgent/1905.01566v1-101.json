@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach outperforms the concurrently-published "
+    },
+    {
+      "expression": "\"Xiong et al.\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (2019);"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_01566v1_101"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.01566v1-101.json"]
+}

@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 demonstrates the evaluation results of "
+    },
+    {
+      "expression": "\"few-shot\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " DA on the existing FewRel test set and the new test set. (1) All "
+    },
+    {
+      "expression": "\"few-shot\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models suffer dramatic performance falls when tested on a different domain. (2) Adversarial training does improve the results on the new test domain, yet still has large space for growth. (3) "
+    },
+    {
+      "expression": "\"BERT-PAIR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms all other "
+    },
+    {
+      "expression": "\"few-shot\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models on both 1.0 and 2.0 test set."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1910_07124v1_236"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1910.07124v1-236.json"]
+}

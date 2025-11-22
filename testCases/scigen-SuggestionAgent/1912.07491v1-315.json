@@ -1,0 +1,39 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "You are correct. I will adjust the annotation to fit within the provided categories.\n\nHere is the corrected output:\n\nAs shown in Table 2, "
+    },
+    {
+      "expression": "\"TransDG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves the "
+    },
+    {
+      "expression": "\"lowest\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " perplexity on all the datasets, indicating that the generated responses are "
+    },
+    {
+      "expression": "\"more grammatical\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1912_07491v1_315"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1912.07491v1-315.json"]
+}

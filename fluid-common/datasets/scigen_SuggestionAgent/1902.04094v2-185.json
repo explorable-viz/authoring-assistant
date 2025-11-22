@@ -1,0 +1,32 @@
+[
+    {
+        "model": "BERT (large)",
+        "corpus-bleu_(↑)_wt103": "5.05",
+        "corpus-bleu_(↑)_tbc": "7.60",
+        "ppl_(↓)": "331.47"
+    },
+    {
+        "model": "BERT (base)",
+        "corpus-bleu_(↑)_wt103": "7.80",
+        "corpus-bleu_(↑)_tbc": "7.06",
+        "ppl_(↓)": "279.10"
+    },
+    {
+        "model": "GPT",
+        "corpus-bleu_(↑)_wt103": "10.81",
+        "corpus-bleu_(↑)_tbc": "30.75",
+        "ppl_(↓)": "154.29"
+    },
+    {
+        "model": "WT103",
+        "corpus-bleu_(↑)_wt103": "17.48",
+        "corpus-bleu_(↑)_tbc": "6.57",
+        "ppl_(↓)": "54.00"
+    },
+    {
+        "model": "TBC",
+        "corpus-bleu_(↑)_wt103": "10.05",
+        "corpus-bleu_(↑)_tbc": "23.05",
+        "ppl_(↓)": "314.28"
+    }
+]

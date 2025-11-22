@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Similarly a single classifier outperforms the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric, "
+    },
+    {
+      "expression": "\"Logistic Regression\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performed "
+    },
+    {
+      "expression": "\"the best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across both datasets, providing "
+    },
+    {
+      "expression": "\"0.874\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision on "
+    },
+    {
+      "expression": "\"Antichat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"0.852\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision on "
+    },
+    {
+      "expression": "\"Hack Forums\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1812_00381v2_449"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1812.00381v2-449.json"]
+}

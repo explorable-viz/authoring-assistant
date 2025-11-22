@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3: Results on the "
+    },
+    {
+      "expression": "\"IWSLT {Ar, Ja, Ko, Zh}-to-En\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " translation tasks. These distant language pairs belonging to 5 different language families and written in 5 different alphabets.\"↑\" indicates the result is significantly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than that of the "
+    },
+    {
+      "expression": "\"vanilla Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (p < 0.01). Table 3 shows the results on the small-scale "
+    },
+    {
+      "expression": "\"IWSLT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " translation tasks. We observe that the proposed method stays consistently "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the "
+    },
+    {
+      "expression": "\"vanilla model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on these distant language pairs."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1906_03100v1_280"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1906.03100v1-280.json"]
+}

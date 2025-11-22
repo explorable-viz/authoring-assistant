@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Ta  The table shows that the key factor is the use of sense frequencies, and systems that do not use them (those with a nf subscript) suffer a loss between "
+    },
+    {
+      "expression": "\"7\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"8\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " percentage points in F1.  The table also shows that extending the context is mildly effective.  Regarding the algorithm, the table confirms that the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " method is "
+    },
+    {
+      "expression": "\"ppr w2w\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", followed by the subgraph approach ("
+    },
+    {
+      "expression": "\"dfs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and "
+    },
+    {
+      "expression": "\"ppr\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1805_04277v1_44"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1805.04277v1-44.json"]
+}

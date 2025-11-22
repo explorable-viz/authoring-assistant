@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We report experimental results on "
+    },
+    {
+      "expression": "\"four\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " common benchmark datasets (totalling "
+    },
+    {
+      "expression": "\"1241\"",
+      "categories": ["sum"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " testing data points) in Table 1.  As shown in Table 1, the "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance increases from "
+    },
+    {
+      "expression": "\"RANDOM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"APPEAR-AP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ": a trend that becomes particularly obvious for F1@10."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1909_03590v3_383"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1909.03590v3-383.json"]
+}

@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Understood, I'll ensure that each annotation uses only one category as specified. Here is the revised paragraph:\n\nTable "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reports the results on "
+    },
+    {
+      "expression": "\"SNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with the configurations that performed "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the validation set for each of the adversarial methods.  both training methods perform "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than our unmodified, non-adversarial InferSent baseline on SNLI's test set, since they remove biases that may be useful for performing this task. The difference for AdvCls is "
+    },
+    {
+      "expression": "\"minimal\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and it even slightly outperforms InferSent on the validation set. While AdvDat's results are noticeably "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the non-adversarial InferSent, the drops are still less than "
+    },
+    {
+      "expression": "\"6%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1907_04389v1_247"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1907.04389v1-247.json"]
+}

@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1912.07491v1-319.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1912_07491v1_319"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The ablation test results are reported in Table 7. From the results, we can observe that the performance of TransDG drops sharply when we discard the question representation module and the knowledge selection module transferred from KBQA.  Response guiding attention also has noticeable impact on the performance of TransDG, especially on BLEU scores.  In addition, the second-step decoder can improve the ability of TransDG to generate relevant entities per response."
+        }
+    ]
+}

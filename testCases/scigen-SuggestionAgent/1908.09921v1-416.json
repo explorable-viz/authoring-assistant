@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "To evaluate the annotations, inter-annotator agreement was calculated based on a subset of the gold standard corpus.4 "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " illustrates the values of observed agreement ("
+    },
+    {
+      "expression": "\"Ao\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and Cohen's κ (Cohen, 1960) obtained for question, feature and answer annotation. The agreement values obtained for "
+    },
+    {
+      "expression": "\"question types\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " were "
+    },
+    {
+      "expression": "\"over 0.6\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (for all annotators combined)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1908_09921v1_416"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1908.09921v1-416.json"]
+}

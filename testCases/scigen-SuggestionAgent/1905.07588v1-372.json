@@ -1,0 +1,57 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We show the main result in Table "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Despite training on a fraction of the data available, the proposed "
+    },
+    {
+      "expression": "\"BERT-based models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " surpass the previous state-of-the-art "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by a large margin on all "
+    },
+    {
+      "expression": "\"datasets\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1905_07588v1_372"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1905.07588v1-372.json"]
+}

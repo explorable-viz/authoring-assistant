@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Likewise, the utility of "
+    },
+    {
+      "expression": "\"CIPHER-AVG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tags for dependency parsing under zero-resource scenarios is summarized in Table 4 and Table 5.  We first analyze the effect of POS tag information at test time for the MALOPA setup in Table 4.  First we remove all POS signal except trivial punctuation information ("
+    },
+    {
+      "expression": "\"NONE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " row), and, predictably, the scores drop significantly across all target languages. Then, we use our cipher tags ("
+    },
+    {
+      "expression": "\"CIPHER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " row) and see improvements for all languages in LAS and for all but one language in UAS ("
+    },
+    {
+      "expression": "\"de\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1904_05426v1_146"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1904.05426v1-146.json"]
+}

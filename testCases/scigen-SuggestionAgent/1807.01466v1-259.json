@@ -1,0 +1,259 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it! I will make sure to use the correct categories. Here is the corrected version of the paragraph:\n\nof results the multimodal The experiments are shown in Table 3.  We find that "
+    },
+    {
+      "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ">"
+    },
+    {
+      "expression": "\"HF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ">"
+    },
+    {
+      "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ">"
+    },
+    {
+      "expression": "\"LF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  4  Unlike Zadeh et al. (2017), here the "
+    },
+    {
+      "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model outperforms the "
+    },
+    {
+      "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model. However, the "
+    },
+    {
+      "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model achieved the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance on the training and validation sets.  Compared to the feature concatenation used in "
+    },
+    {
+      "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the Cartesian product used in "
+    },
+    {
+      "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results in "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dimensionality of the multimodal input vector,5 which in turn increases the complexity of the model. Similarly, the "
+    },
+    {
+      "expression": "\"HF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model has "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than the "
+    },
+    {
+      "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model here, unlike in Tian et al. (2016).  In general, the multimodal models have "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than the unimodal models.  In fact, the "
+    },
+    {
+      "expression": "\"HF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"LF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models have "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance using single-task learning. For the "
+    },
+    {
+      "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models, only the S+P model outperforms the S model, although the improvement is not significant.7 For the "
+    },
+    {
+      "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models, multi-task learning results in "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance.  Dimension of the "
+    },
+    {
+      "expression": "\"EF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " input is "
+    },
+    {
+      "expression": "\"420\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", for "
+    },
+    {
+      "expression": "\"TFN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"65,536\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". 6Except that the "
+    },
+    {
+      "expression": "\"LF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models often have "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than the verbal S+P model. p << 0.001 for TFN S+P and verbal S+P, p = 0.017 for verbal S+P and LF S. 7p = 0.105 for S TFN and S+P TFN. 8p = 0.888 for S EF and S+P EF, p = 0.029 for S EF and S+I EF, p = 0.009 for S EF and S+P+I EF."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1807_01466v1_259"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1807.01466v1-259.json"]
+}

@@ -1,0 +1,146 @@
+[
+    {
+        "_decoder": " auto-regressive RNN as decoder",
+        "_sick-r": " auto-regressive RNN as decoder",
+        "_sick-e": " auto-regressive RNN as decoder",
+        "_sts14": " auto-regressive RNN as decoder",
+        "_msrp_(acc/f1)": " auto-regressive RNN as decoder",
+        "_sst": " auto-regressive RNN as decoder",
+        "_trec": " auto-regressive RNN as decoder"
+    },
+    {
+        "_decoder": "Teacher-Forcing",
+        "_sick-r": "0.8530",
+        "_sick-e": "82.6",
+        "_sts14": "0.51/0.50",
+        "_msrp_(acc/f1)": "74.1 / 81.7",
+        "_sst": "82.5",
+        "_trec": "88.2"
+    },
+    {
+        "_decoder": "Always Sampling",
+        "_sick-r": "0.8576",
+        "_sick-e": "83.2",
+        "_sts14": "0.55/0.53",
+        "_msrp_(acc/f1)": "74.7 / 81.3",
+        "_sst": "80.6",
+        "_trec": "87.0"
+    },
+    {
+        "_decoder": "Uniform Sampling",
+        "_sick-r": "0.8559",
+        "_sick-e": "82.9",
+        "_sts14": "0.54/0.53",
+        "_msrp_(acc/f1)": "74.0 / 81.8",
+        "_sst": "81.0",
+        "_trec": "87.4"
+    },
+    {
+        "_decoder": " auto-regressive CNN as decoder",
+        "_sick-r": " auto-regressive CNN as decoder",
+        "_sick-e": " auto-regressive CNN as decoder",
+        "_sts14": " auto-regressive CNN as decoder",
+        "_msrp_(acc/f1)": " auto-regressive CNN as decoder",
+        "_sst": " auto-regressive CNN as decoder",
+        "_trec": " auto-regressive CNN as decoder"
+    },
+    {
+        "_decoder": "Teacher-Forcing",
+        "_sick-r": "0.8510",
+        "_sick-e": "82.8",
+        "_sts14": "0.49/0.48",
+        "_msrp_(acc/f1)": "74.7 / 82.8",
+        "_sst": "81.4",
+        "_trec": "82.6"
+    },
+    {
+        "_decoder": "Always Sampling",
+        "_sick-r": "0.8535",
+        "_sick-e": "83.3",
+        "_sts14": "0.53/0.52",
+        "_msrp_(acc/f1)": "75.0 / 81.7",
+        "_sst": "81.4",
+        "_trec": "87.6"
+    },
+    {
+        "_decoder": "Uniform Sampling",
+        "_sick-r": "0.8568",
+        "_sick-e": "83.4",
+        "_sts14": "0.56/0.54",
+        "_msrp_(acc/f1)": "74.7 / 81.4",
+        "_sst": "83.0",
+        "_trec": "88.4"
+    },
+    {
+        "_decoder": " predict-all-words RNN as decoder",
+        "_sick-r": " predict-all-words RNN as decoder",
+        "_sick-e": " predict-all-words RNN as decoder",
+        "_sts14": " predict-all-words RNN as decoder",
+        "_msrp_(acc/f1)": " predict-all-words RNN as decoder",
+        "_sst": " predict-all-words RNN as decoder",
+        "_trec": " predict-all-words RNN as decoder"
+    },
+    {
+        "_decoder": "RNN",
+        "_sick-r": "0.8508",
+        "_sick-e": "82.8",
+        "_sts14": "0.58/0.55",
+        "_msrp_(acc/f1)": "74.2 / 82.8",
+        "_sst": "81.6",
+        "_trec": "88.8"
+    },
+    {
+        "_decoder": " predict-all-words CNN as decoder",
+        "_sick-r": " predict-all-words CNN as decoder",
+        "_sick-e": " predict-all-words CNN as decoder",
+        "_sts14": " predict-all-words CNN as decoder",
+        "_msrp_(acc/f1)": " predict-all-words CNN as decoder",
+        "_sst": " predict-all-words CNN as decoder",
+        "_trec": " predict-all-words CNN as decoder"
+    },
+    {
+        "_decoder": "CNN",
+        "_sick-r": "0.8530",
+        "_sick-e": "82.6",
+        "_sts14": " 0.58/  0.56",
+        "_msrp_(acc/f1)": " 75.6 / 82.9",
+        "_sst": "82.8",
+        "_trec": "89.2"
+    },
+    {
+        "_decoder": "CNN-MaxOnly",
+        "_sick-r": "0.8465",
+        "_sick-e": "82.6",
+        "_sts14": "0.50/0.47",
+        "_msrp_(acc/f1)": "73.3 / 81.5",
+        "_sst": "79.1",
+        "_trec": "82.2"
+    },
+    {
+        "_decoder": "Double-sized RNN Encoder",
+        "_sick-r": "Double-sized RNN Encoder",
+        "_sick-e": "Double-sized RNN Encoder",
+        "_sts14": "Double-sized RNN Encoder",
+        "_msrp_(acc/f1)": "Double-sized RNN Encoder",
+        "_sst": "Double-sized RNN Encoder",
+        "_trec": "Double-sized RNN Encoder"
+    },
+    {
+        "_decoder": "CNN",
+        "_sick-r": " 0.8631",
+        "_sick-e": " 83.9",
+        "_sts14": " 0.58/0.55",
+        "_msrp_(acc/f1)": "74.7 /   83.1",
+        "_sst": " 83.4",
+        "_trec": " 90.2"
+    },
+    {
+        "_decoder": "CNN-MaxOnly",
+        "_sick-r": "0.8485",
+        "_sick-e": "83.2",
+        "_sts14": "0.47/0.44",
+        "_msrp_(acc/f1)": "72.9 / 80.8",
+        "_sst": "82.2",
+        "_trec": "86.6"
+    }
+]

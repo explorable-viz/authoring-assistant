@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Limiting evidence in this way when only "
+    },
+    {
+      "expression": "\"five statements\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are retrieved (\"narrow evidence\" in Table 4) pushes FEVER score down very little, from "
+    },
+    {
+      "expression": "\".5550\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\".5617\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the development set. Indeed, when the system reviews the extra evidence, FEVER score goes up to "
+    },
+    {
+      "expression": "\".5844\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the development set."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1901_02534v1_36"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1901.02534v1-36.json"]
+}

@@ -1,0 +1,114 @@
+[
+    {
+        "test_condition": "Seen Pairings",
+        "_cosine_similarity_±_sd__(↑)___rgb": "0.954±0.001",
+        "_cosine_similarity_±_sd__(↑)___wm18": "0.953±0.000",
+        "_cosine_similarity_±_sd__(↑)___hsv": "0.934±0.089",
+        "_cosine_similarity_±_sd__(↑)___ensemble": " 0.954±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "0.68"
+    },
+    {
+        "test_condition": "Unseen Pairings",
+        "_cosine_similarity_±_sd__(↑)___rgb": "0.799±0.044",
+        "_cosine_similarity_±_sd__(↑)___wm18": "0.771±0.032",
+        "_cosine_similarity_±_sd__(↑)___hsv": " 0.843±0.144",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "0.797±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "0.68"
+    },
+    {
+        "test_condition": "Unseen Ref. Color",
+        "_cosine_similarity_±_sd__(↑)___rgb": "0.781±0.015",
+        "_cosine_similarity_±_sd__(↑)___wm18": "0.767±0.010",
+        "_cosine_similarity_±_sd__(↑)___hsv": " 0.945±0.019",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "0.804±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "0.40"
+    },
+    {
+        "test_condition": "Unseen Modifiers",
+        "_cosine_similarity_±_sd__(↑)___rgb": "0.633±0.042",
+        "_cosine_similarity_±_sd__(↑)___wm18": "0.637±0.032",
+        "_cosine_similarity_±_sd__(↑)___hsv": " 0.724±0.131",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "0.629±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "0.41"
+    },
+    {
+        "test_condition": "Fully Unseen",
+        "_cosine_similarity_±_sd__(↑)___rgb": "0.370±0.029",
+        "_cosine_similarity_±_sd__(↑)___wm18": "0.358±0.038",
+        "_cosine_similarity_±_sd__(↑)___hsv": " 0.919±0.026",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "0.445±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "-0.21"
+    },
+    {
+        "test_condition": "Overall",
+        "_cosine_similarity_±_sd__(↑)___rgb": "0.858±0.006",
+        "_cosine_similarity_±_sd__(↑)___wm18": "0.856±0.003",
+        "_cosine_similarity_±_sd__(↑)___hsv": " 0.911±0.057",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "0.868±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "0.65"
+    },
+    {
+        "test_condition": "",
+        "_cosine_similarity_±_sd__(↑)___rgb": " Delta-E ± SD  (↓)",
+        "_cosine_similarity_±_sd__(↑)___wm18": " Delta-E ± SD  (↓)",
+        "_cosine_similarity_±_sd__(↑)___hsv": " Delta-E ± SD  (↓)",
+        "_cosine_similarity_±_sd__(↑)___ensemble": " Delta-E ± SD  (↓)",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": " Delta-E ± SD  (↓)"
+    },
+    {
+        "test_condition": "Test Condition",
+        "_cosine_similarity_±_sd__(↑)___rgb": "RGB",
+        "_cosine_similarity_±_sd__(↑)___wm18": "WM18",
+        "_cosine_similarity_±_sd__(↑)___hsv": "HSV",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "Ensemble",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "WM18∗"
+    },
+    {
+        "test_condition": "Seen Pairings",
+        "_cosine_similarity_±_sd__(↑)___rgb": " 3.121±0.027",
+        "_cosine_similarity_±_sd__(↑)___wm18": "3.188±0.062",
+        "_cosine_similarity_±_sd__(↑)___hsv": "5.380±4.846",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "4.093±0.1",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "6.1"
+    },
+    {
+        "test_condition": "Unseen Pairings",
+        "_cosine_similarity_±_sd__(↑)___rgb": "6.454±0.233",
+        "_cosine_similarity_±_sd__(↑)___wm18": "6.825±0.093",
+        "_cosine_similarity_±_sd__(↑)___hsv": "11.701±3.358",
+        "_cosine_similarity_±_sd__(↑)___ensemble": " 5.873±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "7.9"
+    },
+    {
+        "test_condition": "Unseen Ref. Color",
+        "_cosine_similarity_±_sd__(↑)___rgb": "7.456±0.184",
+        "_cosine_similarity_±_sd__(↑)___wm18": "7.658±0.363",
+        "_cosine_similarity_±_sd__(↑)___hsv": "10.429±2.523",
+        "_cosine_similarity_±_sd__(↑)___ensemble": " 7.171±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "11.4"
+    },
+    {
+        "test_condition": "Unseen Modifiers",
+        "_cosine_similarity_±_sd__(↑)___rgb": "13.288±1.082",
+        "_cosine_similarity_±_sd__(↑)___wm18": "13.891±1.077",
+        "_cosine_similarity_±_sd__(↑)___hsv": "14.183±5.175",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "10.927±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": " 10.5"
+    },
+    {
+        "test_condition": "Fully Unseen",
+        "_cosine_similarity_±_sd__(↑)___rgb": "13.859±0.874",
+        "_cosine_similarity_±_sd__(↑)___wm18": "14.516±0.587",
+        "_cosine_similarity_±_sd__(↑)___hsv": " 12.432±2.170",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "13.448±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "15.9"
+    },
+    {
+        "test_condition": "Overall",
+        "_cosine_similarity_±_sd__(↑)___rgb": " 5.412±0.169",
+        "_cosine_similarity_±_sd__(↑)___wm18": "5.595±0.128",
+        "_cosine_similarity_±_sd__(↑)___hsv": "7.487±3.940",
+        "_cosine_similarity_±_sd__(↑)___ensemble": "5.777±0.0",
+        "_cosine_similarity_±_sd__(↑)___wm18∗": "6.8"
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "_models": "BoW + Logsitic",
+        "_swbd": "78.95",
+        "_swbd2": "87.76"
+    },
+    {
+        "_models": "BoW + SVM",
+        "_swbd": "73.68",
+        "_swbd2": " 90.82"
+    },
+    {
+        "_models": "Bigram + SVM",
+        "_swbd": "52.63",
+        "_swbd2": "79.59"
+    },
+    {
+        "_models": "BoW + TF-IDF + Logistic",
+        "_swbd": "52.63",
+        "_swbd2": "81.63"
+    },
+    {
+        "_models": "nGram + Logistic",
+        "_swbd": "52.63",
+        "_swbd2": "78.57"
+    },
+    {
+        "_models": "nGram + TF-IDF + Logistic",
+        "_swbd": "57.89",
+        "_swbd2": "87.76"
+    },
+    {
+        "_models": "Bag of Means + Logistic",
+        "_swbd": "78.95",
+        "_swbd2": "87.76"
+    },
+    {
+        "_models": "Avg. Skipgram + Logistic",
+        "_swbd": "26.32",
+        "_swbd2": "59.18"
+    },
+    {
+        "_models": "Doc2Vec + SVM",
+        "_swbd": "73.68",
+        "_swbd2": "86.73"
+    },
+    {
+        "_models": "HN",
+        "_swbd": "31.58",
+        "_swbd2": "54.08"
+    },
+    {
+        "_models": "HN-ATT Yang et al. ( 2016 )",
+        "_swbd": "73.68",
+        "_swbd2": "85.71"
+    },
+    {
+        "_models": "CNN Kim ( 2014 )",
+        "_swbd": "84.21",
+        "_swbd2": "93.87"
+    },
+    {
+        "_models": "HN-SA (our model)",
+        "_swbd": " 89.47",
+        "_swbd2": " 95.92"
+    }
+]

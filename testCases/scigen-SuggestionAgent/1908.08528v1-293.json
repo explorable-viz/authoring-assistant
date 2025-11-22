@@ -1,0 +1,178 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our experiments on "
+    },
+    {
+      "expression": "\"23\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " languages show our approach to be promising, surpassing the baseline on "
+    },
+    {
+      "expression": "\"23\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the "
+    },
+    {
+      "expression": "\"28\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " evaluation datasets.  We evaluate our setup on "
+    },
+    {
+      "expression": "\"28\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets for "
+    },
+    {
+      "expression": "\"23\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " languages, finding that it outperforms the baseline on "
+    },
+    {
+      "expression": "\"23\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the datasets.  This results in a set of "
+    },
+    {
+      "expression": "\"28\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " treebanks for "
+    },
+    {
+      "expression": "\"23\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " languages  listed in Table 2.  The results are listed in Table 2.  the oracle does not reach "
+    },
+    {
+      "expression": "\"100\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%;  We also express the performance of our method as error reduction on the scale from baseline ("
+    },
+    {
+      "expression": "\"0%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") to upper bound ("
+    },
+    {
+      "expression": "\"100%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ").  For "
+    },
+    {
+      "expression": "\"23\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the "
+    },
+    {
+      "expression": "\"28\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets, our method achieves a positive error reduction; the median error reduction is "
+    },
+    {
+      "expression": "\"23%\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Because of the extreme result for Korean, the average does not make much sense here. The results are "
+    },
+    {
+      "expression": "\"worst\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for Korean and Japanese,  the \"form\" baseline very close to the upper bound  our results are very low here. We also observe deteriorations for a treebank of Italian Tweets and for treebanks of historical Latin,  On all other datasets, we observe an improvement over the baseline, with an error reduction typically between "
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"35%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The performance is especially good for Slavic languages (cs, hr, pl, sk, uk), where the error reduction is often around "
+    },
+    {
+      "expression": "\"50%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The evaluation showed the approach to be promising, surpassing the baseline on most of the evaluation datasets."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1908_08528v1_293"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1908.08528v1-293.json"]
+}

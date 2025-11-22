@@ -1,0 +1,98 @@
+[
+    {
+        "test": "EGFR",
+        "metric": "MAP",
+        "tf-idf": "0.289",
+        "bm25": "0.632",
+        "emb": "0.310",
+        "feat": "0.575",
+        "auto/_cosine": "0.054",
+        "auto-_rank": "0.545",
+        "auto-_rank_+_bm25": "0.588",
+        "auto-_rank_+_feat": "0.699"
+    },
+    {
+        "test": "EGFR",
+        "metric": "nDCG",
+        "tf-idf": "0.424",
+        "bm25": "0.728",
+        "emb": "0.460",
+        "feat": "0.695",
+        "auto/_cosine": "0.129",
+        "auto-_rank": "0.653",
+        "auto-_rank_+_bm25": "0.716",
+        "auto-_rank_+_feat": "0.810"
+    },
+    {
+        "test": "KRAS",
+        "metric": "MAP",
+        "tf-idf": "0.327",
+        "bm25": "0.610",
+        "emb": "0.466",
+        "feat": "0.609",
+        "auto/_cosine": "0.058",
+        "auto-_rank": "0.575",
+        "auto-_rank_+_bm25": "0.774",
+        "auto-_rank_+_feat": "0.820"
+    },
+    {
+        "test": "KRAS",
+        "metric": "nDCG",
+        "tf-idf": "0.456",
+        "bm25": "0.723",
+        "emb": "0.592",
+        "feat": "0.712",
+        "auto/_cosine": "0.145",
+        "auto-_rank": "0.688",
+        "auto-_rank_+_bm25": "0.867",
+        "auto-_rank_+_feat": "0.914"
+    },
+    {
+        "test": "BRAF",
+        "metric": "MAP",
+        "tf-idf": "0.342",
+        "bm25": "0.656",
+        "emb": "0.427",
+        "feat": "0.704",
+        "auto/_cosine": "0.063",
+        "auto-_rank": "0.563",
+        "auto-_rank_+_bm25": "0.702",
+        "auto-_rank_+_feat": "0.812"
+    },
+    {
+        "test": "BRAF",
+        "metric": "nDCG",
+        "tf-idf": "0.480",
+        "bm25": "0.751",
+        "emb": "0.572",
+        "feat": "0.802",
+        "auto/_cosine": "0.163.",
+        "auto-_rank": "0.671",
+        "auto-_rank_+_bm25": "0.820",
+        "auto-_rank_+_feat": "0.901"
+    },
+    {
+        "test": "PIK3CA",
+        "metric": "MAP",
+        "tf-idf": "0.341",
+        "bm25": "0.633",
+        "emb": "0.486",
+        "feat": "0.625",
+        "auto/_cosine": "0.079",
+        "auto-_rank": "0.541",
+        "auto-_rank_+_bm25": "0.779",
+        "auto-_rank_+_feat": "0.810"
+    },
+    {
+        "test": "PIK3CA",
+        "metric": "nDCG",
+        "tf-idf": "0.473",
+        "bm25": "0.729",
+        "emb": "0.617",
+        "feat": "0.718",
+        "auto/_cosine": "0.171",
+        "auto-_rank": "0.656",
+        "auto-_rank_+_bm25": "0.859",
+        "auto-_rank_+_feat": "0.895"
+    }
+]

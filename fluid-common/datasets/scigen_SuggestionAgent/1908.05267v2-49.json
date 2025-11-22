@@ -1,0 +1,23 @@
+[
+    {
+        "model": "NSMN",
+        "fever_dev_base": "81.8",
+        "fever_dev_r.w": "-",
+        "generated_base": "58.7",
+        "generated_r.w": "-"
+    },
+    {
+        "model": "ESIM",
+        "fever_dev_base": "80.8",
+        "fever_dev_r.w": "76.0",
+        "generated_base": "55.9",
+        "generated_r.w": "59.3"
+    },
+    {
+        "model": "BERT",
+        "fever_dev_base": " 86.2",
+        "fever_dev_r.w": "84.6",
+        "generated_base": "58.3",
+        "generated_r.w": " 61.6"
+    }
+]

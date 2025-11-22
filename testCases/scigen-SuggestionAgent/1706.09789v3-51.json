@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it. I'll ensure that only one valid category is used for each annotation.\n\nHere's the revised output:\n\nreport brief results on SQuAD (Table 3), We also evaluate the SynNet on the "
+    },
+    {
+      "expression": "\"NewsQAto-SQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " direction. We directly apply the best setting from the other direction and report the result in Table 3. The SynNet improves over the baseline by "
+    },
+    {
+      "expression": "\"1.6%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"EM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"0.7%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Limited by space, we leave out ablation studies in this direction."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1706_09789v3_51"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1706.09789v3-51.json"]
+}

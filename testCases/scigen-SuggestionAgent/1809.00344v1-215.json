@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "From "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it can be seen that our model surpasses the "
+    },
+    {
+      "expression": "\"local-context baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"Europarl\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " showing that the wider context is indeed beneficial. For "
+    },
+    {
+      "expression": "\"En-Ru\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it can be seen that using previous sentence is sufficient."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1809_00344v1_215"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1809.00344v1-215.json"]
+}

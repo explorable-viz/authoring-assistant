@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1906.08487v1-407.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1906_08487v1_407"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "From the BLEU scores in Table 2, we can see that although MultiSeq has the highest BLEU score, all models have similar BLEU scores and the difference is not that significant.  We can clearly notice from human evaluations shown in Table 2 that our model, RL Look-ahead, outperforms all of the others in all three evaluated categories."
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "": "First metric",
+        "___model_1": "First metric",
+        "___model_2": "",
+        "___model_3": ""
+    },
+    {
+        "": "0.08    Disp.",
+        "___model_1": " 0.94",
+        "___model_2": "0.72",
+        "___model_3": "0"
+    },
+    {
+        "": "0.08    Gen. perf.",
+        "___model_1": "0.68",
+        "___model_2": "0.63",
+        "___model_3": "1"
+    },
+    {
+        "": "Second metric",
+        "___model_1": "Second metric",
+        "___model_2": "",
+        "___model_3": ""
+    },
+    {
+        "": "0.08    Disp.",
+        "___model_1": "0.93",
+        "___model_2": " 0.96",
+        "___model_3": "0"
+    },
+    {
+        "": "0.08    Gen. perf.",
+        "___model_1": "0.68",
+        "___model_2": "0.68",
+        "___model_3": "1"
+    }
+]

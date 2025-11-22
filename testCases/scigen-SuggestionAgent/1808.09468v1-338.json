@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Got it! I will ensure to use only the specified categories. Here is the revised output:\n\nWe relate our approach to prior work on "
+    },
+    {
+      "expression": "\"Web-Split v1.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by reporting scores on its test set in Table 5. Our "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is again obtained by combining the proposed "
+    },
+    {
+      "expression": "\"WikiSplit\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dataset with the downsampled "
+    },
+    {
+      "expression": "\"WebSplit\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", yielding a "
+    },
+    {
+      "expression": "\"32\"",
+      "categories": ["sum"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " point improvement over the prior "
+    },
+    {
+      "expression": "\"best result\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1808_09468v1_338"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1808.09468v1-338.json"]
+}

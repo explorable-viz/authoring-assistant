@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/2001.02836v1-131.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_2001_02836v1_131"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "Results are reported in Table 3 with several observations. First, our model achieves the best overall performance and significantly better on nouns, which can be explained by that nouns appear in all 9The only possible SP relation between nouns and adjectives is 'amod', while multiple SP relations could exist between nouns and verbs, and co occurrence information cannot effectively distinguish them. (2017) that three relations while most of the verbs and adjectives only appear in one or two relations. This result is promising since it is analyzed by Solovyev et al. two-thirds of the frequent words are nouns; thus there are potential benefits if our embeddings are used in downstream NLP tasks. Second, the center embeddings achieve the best performance against all the other relationdependent embeddings, which demonstrates the effectiveness of our model in learning relationdependent information over words and also enhancing their overall semantics."
+        }
+    ]
+}

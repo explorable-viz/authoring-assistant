@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3: Performance of "
+    },
+    {
+      "expression": "\"different models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on WikiQA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed by Yoon et al. (2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for "
+    },
+    {
+      "expression": "\"Large\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Base\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively.  Table 3 reports the "
+    },
+    {
+      "expression": "\"MAP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"MRR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"different pre-trained transformers models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for two methods: "
+    },
+    {
+      "expression": "\"standard fine-tuning (FT)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and TANDA. The latter takes two arguments that we indicate as transfer dataset → adapt dataset."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_SuggestionAgent/_1911_04118v2_285"
+  ],
+  "datasets": ["datasets/scigen_SuggestionAgent/1911.04118v2-285.json"]
+}

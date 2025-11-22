@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1806.02875v1-389.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1806_02875v1_389"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "The classification of BR and US datasets used the 60 and 49 most relevant features, respectively. The test accuracy for the BR and US datasets were 85% and 72%, respectively, with a baseline score of 50%. The combined dataset used a reduced set of features consisting of an intersection of the most relevant features observed in both BR and US, achieving a test score of 70% using only 18 features.  classes. We have shown that these features may be used to classify news articles in a language other than English."
+        }
+    ]
+}

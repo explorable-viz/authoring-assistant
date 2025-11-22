@@ -12,16 +12,16 @@ We are implementing the following improvements to the RQ1 dataset and evaluation
 
 - We are adding additional manual annotations to substantially increase the size of the hand-labelled subset (now 5% of SciGen). We will clarify that the subset was chosen by randomly choosing from each linguistic category.
 - The SelectionAgent now also performs an initial labelling by linguistic category, in addition to identifying phrases to be replaced. We are evaluating this against the manual annotations to estimate the noise in the automated labelling.
-- Using this method, we can now derive an annotated dataset based on the full SciGen dataset. We will include this dataset as supplementary material, and release as an open source benchmark alongside the final version of the paper.
+- This allows us to derive an annotated dataset based on the full SciGen dataset, which we call SciGen-interpret. We will include this dataset as supplementary material, and release as an open source benchmark alongside the final version of the paper.
 - We will redo the RQ1 study using the full dataset (adjusting confidence intervals for noise); this should remove some degenerate estimates (e.g. success rates of 0% and 100%) attributable to sparsity in the original subset.
-- Additional ablation study to assess contribution of predefined helpers.
+- We will perform an additional ablation study to assess the contribution of predefined helpers to success rates.
 
 ### Improvements to RQ2 study
 
-RQ2 (counterfactual testing) was given only a cursory treatment. We are adding the following improvements:
+RQ2 (counterfactual testing) was given only a cursory treatment in the submitted version. We are implementing the following improvements:
 
-- Using the improved gold solution dataset, redo the RQ2 study of whether LLM solutions which seem otherwise "correct" actually generalise under perturbations of the data.
-- Report on counterfactual robustness (omitted from submitted version), namely the mean proportion of responses that are both correct and counterfactually correct, by linguistic category.
+- Using the improved hand-labelled dataset, redo the RQ2 study of whether LLM solutions which are correct (in the sense of evaluating to the target strong) are also counterfactually correct (i.e. generalise under perturbations of the data).
+- Report on counterfactual robustness (omitted from submitted version), namely the mean proportion of responses that are both correct and counterfactually correct, disaggregated by linguistic category.
 
 # Response to Reviewer AyvP
 

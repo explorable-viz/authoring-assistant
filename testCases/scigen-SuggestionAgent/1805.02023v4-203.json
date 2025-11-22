@@ -6,13 +6,13 @@
       "value": "As shown in Table 4, without using word segmentation, a "
     },
     {
-      "expression": "\"characterbased LSTM-CRF\"",
+      "expression": "\"characterbased LSTM-CRF model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model gives a development F1score of "
+      "value": " gives a development F1score of "
     },
     {
       "expression": "\"62.47%\"",
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": ". Adding "
-    },
-    {
-      "expression": "\"character-bigram and softword representations\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " as described in Section 3.1 increases the F1-score to "
+      "value": ". Adding character-bigram and softword representations as described in Section 3.1 increases the F1-score to "
     },
     {
       "expression": "\"67.63%\"",
@@ -57,34 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " F1-score, which is "
+      "value": " F1-score, which is the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " among various character representations.  Table 4 shows a variety of different settings for "
-    },
-    {
-      "expression": "\"word-based Chinese NER\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". With automatic segmentation, a "
-    },
-    {
-      "expression": "\"word-based LSTM CRF baseline\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " gives a "
+      "value": " among various character representations.  Table 4 shows a variety of different settings for word-based Chinese NER. With automatic segmentation, a word-based LSTM CRF baseline gives a "
     },
     {
       "expression": "\"64.12%\"",
@@ -120,61 +93,34 @@
     },
     {
       "type": "literal",
-      "value": ", lead to similar improvements.  A "
+      "value": ", lead to similar improvements.  A CNN representation of character sequences gives a "
     },
     {
-      "expression": "\"CNN representation of character sequences\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " gives a slightly "
-    },
-    {
-      "expression": "\"higher\"",
+      "expression": "\"slightly higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1-score compared to "
+      "value": " F1-score compared to LSTM character representations. On the other hand, further using character bigram information leads to "
     },
     {
-      "expression": "\"LSTM character representations\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"increased\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". On the other hand, further using character bigram information leads to increased F1-score over "
+      "value": " F1-score over word+char LSTM, but "
     },
     {
-      "expression": "\"word+char LSTM\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"decreased\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", but decreased F1-score over "
-    },
-    {
-      "expression": "\"word+char CNN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  As shown in Table 4, the "
-    },
-    {
-      "expression": "\"lattice LSTM-CRF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model gives a development F1-score of "
+      "value": " F1-score over word+char CNN.  As shown in Table 4, the lattice LSTM-CRF model gives a development F1-score of "
     },
     {
       "expression": "\"71.62%\"",
@@ -183,16 +129,16 @@
     },
     {
       "type": "literal",
-      "value": ", which is significantly"
+      "value": ", which is "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"significantly higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] compared with both the word-based and character-based methods, despite that it does not use character bigrams or word segmentation information."
+      "value": " compared with both the word-based and character-based methods, despite that it does not use character bigrams or word segmentation information."
     }
   ],
   "variables": {},

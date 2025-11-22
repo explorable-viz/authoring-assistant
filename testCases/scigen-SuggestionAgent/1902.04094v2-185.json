@@ -3,7 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We present sample generations, quality results, and diversity results respectively in Tables 1, 2, 3. We find that, compared to "
+      "value": "We present sample generations, quality results, and diversity results respectively in Tables "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We find that, compared to "
     },
     {
       "expression": "\"GPT\"",
@@ -34,7 +61,7 @@
     },
     {
       "expression": "\"more diverse\"",
-      "categories": ["comparison"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -84,7 +111,16 @@
     },
     {
       "type": "literal",
-      "value": " was trained on romance novels and Wikipedia. On actual data from TBC, the outside language model is about as perplexed as on the "
+      "value": " was trained on romance novels and Wikipedia. On actual data from TBC, the outside language model is about as "
+    },
+    {
+      "expression": "\"perplexed\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as on the "
     },
     {
       "expression": "\"BERT\"",
@@ -102,7 +138,16 @@
     },
     {
       "type": "literal",
-      "value": " generations might have collapsed to fairly generic and simple sentences. The perplexity on "
+      "value": " generations might have collapsed to fairly generic and simple sentences.  The "
+    },
+    {
+      "expression": "\"perplexity\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
     },
     {
       "expression": "\"BERT\"",
@@ -111,7 +156,16 @@
     },
     {
       "type": "literal",
-      "value": " samples is not absurdly high, and in reading the samples, we find that many are fairly coherent."
+      "value": " samples is not "
+    },
+    {
+      "expression": "\"absurdly high\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and in reading the samples, we find that many are fairly coherent."
     }
   ],
   "variables": {},

@@ -12,25 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " shows the f1-scores on the full clean datasets.  For polysemy between "
+      "value": " shows the f1-scores on the full clean datasets.  For "
     },
     {
-      "expression": "\"food\"",
+      "expression": "\"polysemy between food and animals\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"animals\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
+      "value": " (Table "
     },
     {
       "expression": "\"4\"",
@@ -39,43 +30,7 @@
     },
     {
       "type": "literal",
-      "value": "), we observe that when trained on pure "
-    },
-    {
-      "expression": "\"animal\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"food\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " words and tested on polysemous "
-    },
-    {
-      "expression": "\"animal\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"food\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " words, the classifiers perform "
+      "value": "), we observe that when trained on pure animal and food words and tested on polysemous animal and food words, the classifiers perform "
     },
     {
       "expression": "\"highly\"",

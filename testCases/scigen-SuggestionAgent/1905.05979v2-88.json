@@ -6,13 +6,13 @@
       "value": "For all tasks, we observe a large improvement from using context. For deixis, the "
     },
     {
-      "expression": "\"concatenation model\"",
+      "expression": "\"concatenation model (concat)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (concat) and "
+      "value": " and "
     },
     {
       "expression": "\"CADec\"",
@@ -25,7 +25,7 @@
     },
     {
       "expression": "\"33.5\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -34,12 +34,12 @@
     },
     {
       "expression": "\"31.6\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points, respectively.\r\nOn the lexical cohesion test set, "
+      "value": " percentage points, respectively. On the lexical cohesion test set, "
     },
     {
       "expression": "\"CADec\"",
@@ -52,7 +52,7 @@
     },
     {
       "expression": "\"12.2\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -60,13 +60,13 @@
       "value": " percentage points), while "
     },
     {
-      "expression": "\"concat\"",
+      "expression": "\"concatenation model (concat)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performs similarly to the baseline.\r\nWhen looking only at the scores where the latest relevant context is in the model's context window (column 2 in Table 7), "
+      "value": " performs similarly to the baseline. When looking only at the scores where the latest relevant context is in the model's context window (column 2 in Table 7), "
     },
     {
       "expression": "\"s-hier-to-2.tied\"",

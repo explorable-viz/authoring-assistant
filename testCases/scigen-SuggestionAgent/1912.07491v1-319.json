@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " drops sharply when we discard the question representation module and the knowledge selection module transferred from KBQA. Response guiding attention also has noticeable impact on the performance of "
+      "value": " drops sharply when we discard the question representation module and the knowledge selection module transferred from KBQA.  Response guiding attention also has noticeable impact on the performance of "
     },
     {
       "expression": "\"TransDG\"",
@@ -21,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": ", especially on BLEU scores. In addition, the second-step decoder can improve the ability of "
+      "value": ", especially on "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  In addition, the second-step decoder can improve the ability of "
     },
     {
       "expression": "\"TransDG\"",

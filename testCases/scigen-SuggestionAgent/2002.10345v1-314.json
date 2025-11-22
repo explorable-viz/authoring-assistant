@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also investigate whether self-distillation has similar findings for the "
+      "value": "Understood. I will ensure to use only the specified categories. Here is the revised annotation:\n\nWe also investigate whether self-distillation has similar findings for the "
     },
     {
-      "expression": "\"BERTlarge model (BERT-L)\"",
+      "expression": "\"BERTlarge\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", which contains "
+      "value": " model ("
+    },
+    {
+      "expression": "\"BERT-L\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), which contains "
     },
     {
       "expression": "\"24\"",
@@ -33,13 +42,13 @@
       "value": ", namely self-distillation with averaged BERT as a teacher. We set two different teacher sizes for comparison. As shown in Table 4, self-distillation also gets a significant gain while fine-tuning the "
     },
     {
-      "expression": "\"BERT-large model\"",
+      "expression": "\"BERT-large\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". On two text classification tasks, "
+      "value": " model. On two text classification tasks, "
     },
     {
       "expression": "\"BERT-LSDA(K =  − 1)\"",
@@ -60,13 +69,13 @@
       "value": " results and the average improvement is "
     },
     {
-      "expression": "\"7.02%\"",
-      "categories": ["ratio"],
+      "expression": "\"7.02\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". For NLI task, "
+      "value": "%. For NLI task, "
     },
     {
       "expression": "\"BERT-LSDA(K = 1)\"",
@@ -87,13 +96,13 @@
       "value": " result and the improvement is "
     },
     {
-      "expression": "\"6.59%\"",
-      "categories": ["ratio"],
+      "expression": "\"6.59\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": "%."
     }
   ],
   "variables": {},

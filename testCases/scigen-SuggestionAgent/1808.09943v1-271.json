@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": ", and in the "
-    },
-    {
-      "expression": "\"extent\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " to which they drop content.  Regarding lexical choice, the two systems differ not only in the "
+      "value": ", and in the extent to which they drop content.  Regarding lexical choice, the two systems differ not only in the "
     },
     {
       "expression": "\"number\"",
@@ -48,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " had "
-    },
-    {
-      "expression": "\"more trouble\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " handling German compound nouns.  We also found that both systems occasionally mistranslate proper names."
+      "value": " had more trouble handling German compound nouns.  We also found that both systems occasionally mistranslate proper names."
     }
   ],
   "variables": {},

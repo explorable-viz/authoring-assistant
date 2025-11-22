@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ") outperform the single BERT ("
+      "value": ") outperform the single "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"BERTBASE\"",
@@ -39,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": "). The "
-    },
-    {
-      "expression": "\"average improvement\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
+      "value": "). The average improvement of "
     },
     {
       "expression": "\"BERTVOTE\"",
@@ -60,22 +60,22 @@
       "value": " is "
     },
     {
-      "expression": "\"5.44%\"",
-      "categories": ["ratio"],
+      "expression": "\"5.44\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (for text classification) and "
+      "value": "% (for text classification) and "
     },
     {
-      "expression": "\"5.50%\"",
-      "categories": ["ratio"],
+      "expression": "\"5.50\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (for NLI), while "
+      "value": "% (for NLI), while "
     },
     {
       "expression": "\"BERTAVG\"",
@@ -87,8 +87,8 @@
       "value": " follows closely with "
     },
     {
-      "expression": "\"4.07%\"",
-      "categories": ["ratio"],
+      "expression": "\"4.07\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -96,13 +96,13 @@
       "value": " and "
     },
     {
-      "expression": "\"3.24%\"",
-      "categories": ["ratio"],
+      "expression": "\"3.24\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". "
+      "value": "%. "
     },
     {
       "expression": "\"BERTVOTE\"",
@@ -141,13 +141,13 @@
       "value": ") has a slight improvement in classification tasks of "
     },
     {
-      "expression": "\"2.50%\"",
-      "categories": ["ratio"],
+      "expression": "\"2.50\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", but it does not work on NLI tasks. This is also a reason why we need self-distillation to improve the base models. Overall, self-distillation model has significant improvement on both classification and NLI tasks. Table 3 shows that "
+      "value": "%, but it does not work on NLI tasks. This is also a reason why we need self-distillation to improve the base models. Overall, self-distillation model has significant improvement on both classification and NLI tasks. Table 3 shows that "
     },
     {
       "expression": "\"BERTSDA\"",
@@ -183,16 +183,7 @@
     },
     {
       "type": "literal",
-      "value": " performs "
-    },
-    {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than "
+      "value": " performs better than "
     },
     {
       "expression": "\"BERTSDV\"",
@@ -204,31 +195,22 @@
       "value": " on text classification tasks with the improvement of "
     },
     {
-      "expression": "\"6.26%\"",
-      "categories": ["ratio"],
+      "expression": "\"6.26\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " vs. "
+      "value": "% vs. "
     },
     {
-      "expression": "\"5.65%\"",
-      "categories": ["ratio"],
+      "expression": "\"5.65\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", but the latter performs "
-    },
-    {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on NLI tasks ("
+      "value": "%, but the latter performs better on NLI tasks ("
     },
     {
       "expression": "\"BERTSDA\"",
@@ -249,22 +231,22 @@
       "value": " is "
     },
     {
-      "expression": "\"4.65%\"",
-      "categories": ["ratio"],
+      "expression": "\"4.65\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " vs. "
+      "value": "% vs. "
     },
     {
-      "expression": "\"5.30%\"",
-      "categories": ["ratio"],
+      "expression": "\"5.30\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). Our proposed fine-tuning strategies also outperform the previous method in [Sun et al., 2019] on text classification tasks, which makes extensive efforts to find sophisticated hyperparameters."
+      "value": "%). Our proposed fine-tuning strategies also outperform the previous method in [Sun et al., 2019] on text classification tasks, which makes extensive efforts to find sophisticated hyperparameters."
     }
   ],
   "variables": {},

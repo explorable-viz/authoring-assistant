@@ -3,70 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We then tested the "
+      "value": "We then tested the BLEU scores between machine translation results and corresponding gold standard post-editing results on the "
     },
     {
-      "expression": "\"BLEU scores\"",
+      "expression": "\"original\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " between machine translation results and corresponding gold standard post-editing results on the original "
+      "value": " "
     },
     {
-      "expression": "\"development set\"",
+      "expression": "\"development\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", the "
+      "value": " set, the "
     },
     {
-      "expression": "\"training set\"",
+      "expression": "\"training\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and the "
+      "value": " set and the "
     },
     {
-      "expression": "\"synthetic data\"",
+      "expression": "\"synthetic\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " as shown in Table 1.  Table 1 shows that there is a significant gap between the "
+      "value": " data as shown in Table 1. Table 1 shows that there is a significant gap between the "
     },
     {
-      "expression": "\"synthetic eScape data set\"",
+      "expression": "\"synthetic eScape\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Negri et al., 2018) and the real-life data sets ("
+      "value": " data set (Negri et al., 2018) and the real-life data sets (the "
     },
     {
-      "expression": "\"development set\"",
+      "expression": "\"development\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and the original "
+      "value": " set and the "
     },
     {
-      "expression": "\"training set\"",
+      "expression": "\"original training\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from posteditors),"
+      "value": " set from posteditors),"
     }
   ],
   "variables": {},

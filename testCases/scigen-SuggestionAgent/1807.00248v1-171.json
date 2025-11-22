@@ -39,16 +39,16 @@
     },
     {
       "type": "literal",
-      "value": ". For the attention network, we have used the OpenNMT's general option ("
+      "value": ". For the attention network, we have used the "
     },
     {
-      "expression": "\"Luong et al., 2015\"",
+      "expression": "\"OpenNMT's general option\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ")."
+      "value": " (Luong et al., 2015)."
     }
   ],
   "variables": {},

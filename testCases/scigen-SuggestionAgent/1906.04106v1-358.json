@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also report "
+      "value": "Thank you for the clarification. I'll adjust the annotations accordingly.\n\nHere's the revised paragraph:\n\nWe also report "
     },
     {
       "expression": "\"the average\"",
@@ -39,19 +39,19 @@
     },
     {
       "type": "literal",
-      "value": " the baselines on predicting the number of present keyphrases. Moreover, our deep reinforced models generate "
+      "value": " the baselines on predicting the number of present keyphrases. Moreover, our deep reinforced models generate significantly "
     },
     {
-      "expression": "\"significantly more\"",
+      "expression": "\"more\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " absent keyphrases than the baselines. Besides, the baseline models and our reinforced models generate similar numbers of present keyphrases, while our reinforced models achieve "
+      "value": " absent keyphrases than the baselines  Besides, the baseline models and our reinforced models generate similar numbers of present keyphrases, while our reinforced models achieve notably "
     },
     {
-      "expression": "\"notably higher\"",
+      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },

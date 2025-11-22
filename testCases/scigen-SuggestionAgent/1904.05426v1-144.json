@@ -3,19 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 presents the intrinsic performance of the cipher grounder over all PL-CL pairs considered. The difference between "
+      "value": "Table 2 presents the intrinsic performance of the cipher grounder over all PL-CL pairs considered. The difference between the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": " and the "
     },
     {
-      "expression": "\"the worst\"",
+      "expression": "\"worst\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " percentage points for Swahili to "
+      "value": " percentage points for "
+    },
+    {
+      "expression": "\"Swahili\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
     },
     {
       "expression": "\"48.34\"",
@@ -39,25 +48,43 @@
     },
     {
       "type": "literal",
-      "value": " points for French, and an average difference of "
+      "value": " points for "
     },
     {
-      "expression": "\"34.5\"",
+      "expression": "\"French\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " points among all languages.  The case when PL=CL is also presented in Table 2 as a reference and provides a reliable upper-bound under zero-resource conditions.  It is worth noting the difference in accuracy when comparing "
+      "value": ", and an average difference of "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"34.5\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points among all languages. The case when PL=CL is also presented in Table 2 as a reference and provides a reliable upper-bound under zero-resource conditions. It is worth noting the difference in accuracy when comparing the "
+    },
+    {
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performing PL for each CL with its corresponding PL=CL upper-bound.  Among all CLs, the best cipher grounder for French (es-fr) gets the closest to its upper-bound with just "
+      "value": " performing PL for each CL with its corresponding PL=CL upper-bound. Among all CLs, the best cipher grounder for "
+    },
+    {
+      "expression": "\"French (es-fr)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gets the closest to its upper-bound with just "
     },
     {
       "expression": "\"4.81\"",
@@ -66,7 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " percentage points of difference, followed by the English grounder (fr-en) with "
+      "value": " percentage points of difference, followed by the English grounder ("
+    },
+    {
+      "expression": "\"fr-en\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") with "
     },
     {
       "expression": "\"13.53\"",
@@ -75,7 +111,7 @@
     },
     {
       "type": "literal",
-      "value": " points of difference.  As shown in Table 2, this model, CIPHER-AVG, obtains accuracy scores of "
+      "value": " points of difference. As shown in Table 2, this model, CIPHER-AVG, obtains accuracy scores of "
     },
     {
       "expression": "\"56.4\"",
@@ -111,10 +147,10 @@
     },
     {
       "type": "literal",
-      "value": " % for en, fr, fa, and sw, respectively.  When compared to "
+      "value": " % for en, fr, fa, and sw, respectively. When compared to the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -129,7 +165,16 @@
     },
     {
       "type": "literal",
-      "value": " percentage points for Swahili to "
+      "value": " percentage points for "
+    },
+    {
+      "expression": "\"Swahili\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
     },
     {
       "expression": "\"13.3\"",
@@ -138,11 +183,20 @@
     },
     {
       "type": "literal",
-      "value": " points for French, with an average of "
+      "value": " points for "
+    },
+    {
+      "expression": "\"French\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with an average of "
     },
     {
       "expression": "\"6.1\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {

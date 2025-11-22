@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " outperforms other methods in F1.\r\nMore importantly, the perfor mance on reviews is "
+      "value": " outperforms other methods in F1. More importantly, the performance on reviews is "
     },
     {
       "expression": "\"lower\"",
@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " is obtained by "
+      "value": "% is obtained by "
     },
     {
       "expression": "\"CRF\"",

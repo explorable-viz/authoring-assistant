@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Since the "
+      "value": "Got it. Here's the corrected version with each expression mapped to the appropriate single category:\n\nSince the "
     },
     {
       "expression": "\"loss\"",
@@ -66,16 +66,16 @@
     },
     {
       "type": "literal",
-      "value": " performs "
+      "value": " performs slightly "
     },
     {
-      "expression": "\"slightly better than\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " both of them.  There is a clear margin of difference between the "
+      "value": " than both of them. There is a clear margin of difference between the "
     },
     {
       "expression": "\"perplexity scores\"",

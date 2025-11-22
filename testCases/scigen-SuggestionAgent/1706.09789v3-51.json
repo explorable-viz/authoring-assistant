@@ -3,52 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "report brief results on "
+      "value": "Got it. I'll ensure that only one valid category is used for each annotation.\n\nHere's the revised output:\n\nreport brief results on SQuAD (Table 3), We also evaluate the SynNet on the "
     },
     {
-      "expression": "\"SQuAD\"",
+      "expression": "\"NewsQAto-SQuAD\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Table 3),  We also evaluate the "
-    },
-    {
-      "expression": "\"SynNet\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on the NewsQAto-"
-    },
-    {
-      "expression": "\"SQuAD\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " direction. We directly apply the "
-    },
-    {
-      "expression": "\"best setting\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " from the other direction and report the result in Table 3.  The "
-    },
-    {
-      "expression": "\"SynNet\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " improves over the baseline by "
+      "value": " direction. We directly apply the best setting from the other direction and report the result in Table 3. The SynNet improves over the baseline by "
     },
     {
       "expression": "\"1.6%\"",
@@ -57,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " in EM and "
+      "value": " in "
+    },
+    {
+      "expression": "\"EM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
     },
     {
       "expression": "\"0.7%\"",
@@ -66,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " in F1. Limited by space, we leave out ablation studies in this direction."
+      "value": " in "
+    },
+    {
+      "expression": "\"F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Limited by space, we leave out ablation studies in this direction."
     }
   ],
   "variables": {},

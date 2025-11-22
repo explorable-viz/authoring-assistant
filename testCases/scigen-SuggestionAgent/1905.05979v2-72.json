@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Most errors in our annotated corpus are related to person deixis, specifically gender marking in the Russian translation, and the T-V distinction between informal and formal you (Latin \"tu\" and \"vos\"). From "
+      "value": "Most errors in our annotated corpus are related to person deixis, specifically gender marking in the Russian translation, and the "
     },
     {
-      "expression": "\"Table 3\"",
+      "expression": "\"T-V distinction\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", we see that the most frequent error category related to deixis in our annotated corpus is the inconsistency of "
+      "value": " between informal and formal you (Latin \"tu\" and \"vos\").  From Table 3, we see that the most frequent error category related to "
+    },
+    {
+      "expression": "\"deixis\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in our annotated corpus is the inconsistency of "
     },
     {
       "expression": "\"T-V forms\"",

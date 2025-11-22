@@ -12,34 +12,61 @@
     },
     {
       "type": "literal",
-      "value": " tags for dependency parsing under zero-resource scenarios is summarized in Table 4 and Table 5. We then take the next logical step and remove the parallel data-grounded embeddings, replacing them with fully unsupervised MUSE embeddings. Table 5 summarizes these results. It can be observed that POS signal improves performance greatly for all languages when using MUSE embeddings. Here we note a mixed result: whilst "
+      "value": " tags for dependency parsing under zero-resource scenarios is summarized in Table 4 and Table 5.  We then take the next logical step and remove the parallel data-grounded embeddings, replacing them with fully unsupervised "
     },
     {
-      "expression": "\"de\"",
+      "expression": "\"MUSE\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
+      "value": " embeddings. Table 5 summarizes these results.  It can be observed that "
     },
     {
-      "expression": "\"sv\"",
+      "expression": "\"POS\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", and "
+      "value": " signal improves performance greatly for all languages when using "
     },
     {
-      "expression": "\"it\"",
+      "expression": "\"MUSE\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " do benefit from POS information, the other languages do not, obtaining great improvements from MUSE embeddings instead. Finally, consider "
+      "value": " embeddings.  Here we note a mixed result: whilst "
+    },
+    {
+      "expression": "\"de, sv, and it\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " do benefit from "
+    },
+    {
+      "expression": "\"POS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " information, the other languages do not, obtaining great improvements from "
+    },
+    {
+      "expression": "\"MUSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embed  dings instead.  Finally, consider "
     },
     {
       "expression": "\"MUSE-CIPHER\"",
@@ -48,7 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " (gold POS tags during training, cipher tags during testing). When compared to "
+      "value": " (gold "
+    },
+    {
+      "expression": "\"POS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tags during training, cipher tags during testing). When compared to "
     },
     {
       "expression": "\"MUSE-NONE\"",
@@ -57,7 +93,25 @@
     },
     {
       "type": "literal",
-      "value": " setup, it can be observed that, unfortunately, the heuristic POS tagger is too noisy and gets in MUSE's way."
+      "value": " setup, it can be observed that, unfortunately, the heuristic "
+    },
+    {
+      "expression": "\"POS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tagger is too noisy and gets in "
+    },
+    {
+      "expression": "\"MUSE's\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " way."
     }
   ],
   "variables": {},

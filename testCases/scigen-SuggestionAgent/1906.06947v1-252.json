@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows the overall performance of schema matching on GNBusinessTest. From the table, we can see that "
+      "value": "Got it. Let's ensure that we use only the specified categories and annotate the paragraph correctly.\n\nHere is the corrected paragraph:\n\nTable 4 shows the overall performance of schema matching on GNBusinessTest. From the table, we can see that "
     },
     {
       "expression": "\"ODEE-FER\"",
@@ -12,19 +12,19 @@
     },
     {
       "type": "literal",
-      "value": " achieves "
+      "value": " achieves the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1 scores among all the methods. By comparing "
+      "value": " F1 scores among all the methods.\nBy comparing "
     },
     {
-      "expression": "\"Nguyen et al. (2015)\"",
+      "expression": "\"Nguyễn et al. (2015)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -48,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " performance than discrete features. Among ODEE models, "
+      "value": " performance than discrete features.\nAmong ODEE models, "
     },
     {
       "expression": "\"ODEE-FE\"",
@@ -84,7 +84,7 @@
     },
     {
       "type": "literal",
-      "value": " gain in F"
+      "value": " gain in F\n\nThis should now be correctly annotated."
     }
   ],
   "variables": {},

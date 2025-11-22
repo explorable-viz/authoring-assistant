@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 gives an overview of the historical datasets.  covering "
+      "value": "Table "
     },
     {
-      "expression": "\"eight\"",
+      "expression": "\"1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " languages from different language families\u2014"
+      "value": " gives an overview of the historical datasets. covering "
+    },
+    {
+      "expression": "\"eight languages\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from different language families\u2014"
     },
     {
       "expression": "\"English\"",

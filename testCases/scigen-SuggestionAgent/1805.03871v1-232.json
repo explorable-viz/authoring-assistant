@@ -3,19 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Fourth, we introduce finer classes (Tables "
+      "value": "Fourth, we introduce finer classes ("
     },
     {
-      "expression": "\"1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "\u2013"
-    },
-    {
-      "expression": "\"2\"",
+      "expression": "\"Tables 1\u20132\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -30,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": "] the target task, where nested clauses are frequent.  The splitter produced "
+      "value": " the target task, where nested clauses are frequent. The splitter produced "
     },
     {
       "expression": "\"31,545\"",
@@ -57,25 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " test sentences/clauses. Table "
+      "value": " test sentences/clauses. Table 2 shows their distribution in the six gold (correct) classes. cf. "
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"Table 2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] shows their distribution in the six gold (correct) classes.  cf. Table "
-    },
-    {
-      "expression": "\"2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "])."
+      "value": "),"
     }
   ],
   "variables": {},

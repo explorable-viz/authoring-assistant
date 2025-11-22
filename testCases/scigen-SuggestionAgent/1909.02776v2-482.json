@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows and "
-    },
-    {
-      "expression": "\"compares\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
+      "value": "Table 1 shows and compares "
     },
     {
       "expression": "\"MSE\"",
@@ -30,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " reported from these experiments.\r\nThe results show that in experiment 2, the "
+      "value": " reported from these experiments. The results show that in experiment 2, the "
     },
     {
       "expression": "\"mean squared error\"",
@@ -39,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"reduced\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and the "
+      "value": " is reduced and the "
     },
     {
       "expression": "\"r2 score\"",
@@ -57,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"increased\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " is increased."
     }
   ],
   "variables": {},

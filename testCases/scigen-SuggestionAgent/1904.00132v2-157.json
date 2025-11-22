@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are shown in Table 1. It shows that the proposed "
+      "value": "Got it. Here is the revised paragraph with the correct categories:\n\nThe results are shown in Table 1. It shows that the proposed "
     },
     {
       "expression": "\"HRLCE\"",
@@ -12,10 +12,10 @@
     },
     {
       "type": "literal",
-      "value": " model performs "
+      "value": " model performs the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -75,11 +75,11 @@
     },
     {
       "type": "literal",
-      "value": " is "
+      "value": " is the "
     },
     {
-      "expression": "\"the highest\"",
-      "categories": ["rank"],
+      "expression": "\"highest\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -93,7 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " is the least accurately classified by all the models. We also noticed that the performance on the dev set is generally slightly "
+      "value": " is the "
+    },
+    {
+      "expression": "\"least accurately classified\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by all the models. We also noticed that the performance on the dev set is generally slightly "
     },
     {
       "expression": "\"better\"",

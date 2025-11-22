@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " of documents for each quality class are correctly classified, except for the "
-    },
-    {
-      "expression": "\"class\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " where "
+      "value": " of documents for each quality class are correctly classified, except for the  class where "
     },
     {
       "expression": "\"more\"",

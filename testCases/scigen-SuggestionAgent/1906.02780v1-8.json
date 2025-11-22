@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 contains the results on all four "
+      "value": "Table 1 contains the results on all "
     },
     {
-      "expression": "\"datasets\"",
+      "expression": "\"four\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". "
+      "value": " datasets. "
     },
     {
       "expression": "\"SynST\"",
@@ -25,30 +25,12 @@
     },
     {
       "expression": "\"4 − 5×\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " that of the vanilla "
-    },
-    {
-      "expression": "\"Transformer\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", which is "
-    },
-    {
-      "expression": "\"larger than\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " nearly all  of the "
+      "value": " that of the vanilla Transformer, which is larger than nearly all of the "
     },
     {
       "expression": "\"SAT configurations\"",
@@ -75,16 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " at comparable speedups on all "
-    },
-    {
-      "expression": "\"datasets\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". On WMT En-De, "
+      "value": " at comparable speedups on all datasets. On WMT En-De, "
     },
     {
       "expression": "\"SynST\"",
@@ -97,7 +70,7 @@
     },
     {
       "expression": "\"1\"",
-      "categories": ["ratio"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

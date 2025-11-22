@@ -3,43 +3,88 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 (upper part) shows the results of our basic semantic parser (with GloVe embeddings) on all six "
+      "value": "I understand now. I will ensure that each annotation uses only one of the specified valid categories.\n\nHere is the corrected paragraph:\n\nTable 1 (upper part) shows the results of our basic semantic parser ("
     },
     {
-      "expression": "\"graphbanks\"",
+      "expression": "\"GloVe\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Our results are competitive across the board, and set a new state of the art for "
+      "value": " embeddings) on all "
     },
     {
-      "expression": "\"EDS Smatch scores\"",
+      "expression": "\"six\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
+      "value": " graphbanks. Our results are competitive across the board, and set a new state of the art for "
     },
     {
-      "expression": "\"Cai and Knight, 2013\"",
+      "expression": "\"EDS\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") among EDS parsers which are not trained on gold syntax information. Our EDM score ("
+      "value": " Smatch scores ("
     },
     {
-      "expression": "\"Dridan and Oepen, 2011\"",
+      "expression": "\"Cai\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") on EDS is "
+      "value": " and "
+    },
+    {
+      "expression": "\"Knight\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", 2013) among "
+    },
+    {
+      "expression": "\"EDS parsers\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which are not trained on gold syntax information. Our EDM score ("
+    },
+    {
+      "expression": "\"Dridan\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Oepen\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", 2011) on "
+    },
+    {
+      "expression": "\"EDS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
     },
     {
       "expression": "\"lower\"",
@@ -48,7 +93,7 @@
     },
     {
       "type": "literal",
-      "value": ", The use of BERT embeddings is highly effective across the board. We set a new state of the art (without gold syntax) on all graphbanks except "
+      "value": ". The use of BERT embeddings is highly effective across the board. We set a new state of the art on all graphbanks except "
     },
     {
       "expression": "\"AMR 2017\"",
@@ -57,7 +102,7 @@
     },
     {
       "type": "literal",
-      "value": "; The improvement is particularly pronounced in the out-of-domain evaluations, illustrating BERT's ability to transfer across domains. The results on the test dataset are shown in Table 1 (bottom). With GloVe, multi-task learning led to substantial improvements; with BERT the improvements are smaller but still noticeable."
+      "value": "; The improvement is particularly pronounced in the out-of-domain evaluations, illustrating BERT's ability to transfer across domains. The results on the test dataset are shown in Table 1 (bottom). With GloVe, multi-task learning led to substantial improvements; with BERT the improvements are smaller but still noticeable.\n\nIn this version, \"lower\" is annotated with only the `COMPARISON` category and \"AMR 2017\" is annotated with only the `DATA_RETRIEVAL` category."
     }
   ],
   "variables": {},

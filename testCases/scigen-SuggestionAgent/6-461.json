@@ -3,16 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "we first compare the performance of thematic rankers with respect to syntactic rankers and available datasets. The results of this comparison are summarized in Table 3 and show that "
+      "value": "Got it, I'll ensure to use only the specified categories. Here is the corrected output:\n\nWe first compare the performance of "
     },
     {
-      "expression": "\"syntactic rankers\"",
+      "expression": "\"thematic\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " positioning the object second in the hierarchy ("
+      "value": " rankers with respect to "
+    },
+    {
+      "expression": "\"syntactic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rankers and available datasets. The results of this comparison are summarized in Table 3 and show that "
+    },
+    {
+      "expression": "\"syntactic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rankers positioning the object second in the hierarchy ("
     },
     {
       "expression": "\"SE2\"",
@@ -48,11 +66,11 @@
     },
     {
       "type": "literal",
-      "value": " upper bound.  For English the global hierarchy-based ranker approaches the upper bound, closely followed by the pairwise ranker. The accuracy on German data is "
+      "value": " upper bound. For English the global hierarchy-based ranker approaches the upper bound, closely followed by the pairwise ranker. The accuracy on German data is "
     },
     {
       "expression": "\"lower\"",
-      "categories": ["min-max"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

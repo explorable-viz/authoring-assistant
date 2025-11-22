@@ -39,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " significantly.  There was relatively little variation in "
-    },
-    {
-      "expression": "\"grammaticality\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " or time across the conditions.  Priming had a major impact, with the shift to lexical examples leading to a significant improvement in "
+      "value": " significantly.  There was relatively little variation in grammaticality or time across the conditions.  Priming had a major impact, with the shift to lexical examples leading to a significant improvement in "
     },
     {
       "expression": "\"correctness\"",
@@ -75,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": "] when providing no examples  changing the incentives by providing either a bonus for novelty, or no bonus at all, did not substantially impact any of the metrics.  Changing the number of paraphrases written by each worker did not significantly impact "
+      "value": " when providing no examples  changing the incentives by providing either a bonus for novelty, or no bonus at all, did not substantially impact any of the metrics.  Changing the number of paraphrases written by each worker did not significantly impact "
     },
     {
       "expression": "\"diversity\"",
@@ -84,16 +75,16 @@
     },
     {
       "type": "literal",
-      "value": "] (we worried that collecting more than one may lead to a decrease).  the One Paraphrase condition did have lower "
+      "value": " (we worried that collecting more than one may lead to a decrease).  the "
     },
     {
-      "expression": "\"grammaticality\"",
+      "expression": "\"One Paraphrase\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "].  Changing the source of the prompt sentence to create a chain of paraphrases led to a significant increase in "
+      "value": " condition did have lower grammaticality,  Changing the source of the prompt sentence to create a chain of paraphrases led to a significant increase in "
     },
     {
       "expression": "\"diversity\"",
@@ -102,7 +93,7 @@
     },
     {
       "type": "literal",
-      "value": "].  showing the answer to the question being para phrased did not significantly affect "
+      "value": ".  showing the answer to the question being paraphrased did not significantly affect "
     },
     {
       "expression": "\"correctness\"",
@@ -111,7 +102,7 @@
     },
     {
       "type": "literal",
-      "value": "] or "
+      "value": " or "
     },
     {
       "expression": "\"diversity\"",
@@ -120,7 +111,7 @@
     },
     {
       "type": "literal",
-      "value": "],"
+      "value": ","
     }
   ],
   "variables": {},

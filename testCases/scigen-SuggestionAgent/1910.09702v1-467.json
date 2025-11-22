@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also experimented with stacking "
+      "value": "I understand now. Let's ensure each detected expression is annotated with exactly one category from the provided list and avoid using \"COUNT\" as a category.\n\nHere is the corrected paragraph:\n\nWe also experimented with stacking "
     },
     {
-      "expression": "\"BERT\"",
+      "expression": "\"BERT embeddings\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " embeddings with all or some of the embeddings mentioned above. However, this resulted on "
+      "value": " with all or some of the embeddings mentioned above. However, this resulted in "
     },
     {
       "expression": "\"lower\"",
@@ -21,25 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " 2https://www.urbandictionary.com/ 3https://data.world/jaredfern/urban-dictionary embedding  In FLC, we only show the results of our "
+      "value": " performance compared to two models. In FLC, we only show the results of our "
     },
     {
-      "expression": "\"best model\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in Table 5 to focus more on the differences between propaganda techniques. A more elaborate study of performance of different models should follow in future work. The "
-    },
-    {
-      "expression": "\"best model\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is a "
+      "value": " model in Table 5 to focus more on the differences between propaganda techniques. A more elaborate study of performance of different models should follow in future work. The best model is a "
     },
     {
       "expression": "\"BiLSTM-CRF with flair and urban glove embed\"",
@@ -48,52 +39,124 @@
     },
     {
       "type": "literal",
-      "value": "  As we can see in Table 5, we can divide the propaganda techniques into three groups according to the model's performance on the development and test sets. The first group includes techniques with non-zero "
+      "value": ".\nAs we can see in Table 5, we can divide the propaganda techniques into three groups according to the model's performance on the development and test sets. The first group includes techniques with non-zero F1 scores on both datasets: "
     },
     {
-      "expression": "\"F1 scores\"",
+      "expression": "\"Flag-Waving\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on both datasets: Flag-Waving, Loaded Language, Name Calling,Labeling and Slogans. This group has techniques that appear frequently in the data and/or techniques with strong lexical signals (e.g. \"American People\" in Flag-Waving) or punctuation signals (e.g. quotes in Slogans). The second group has the techniques with a "
+      "value": ", "
     },
     {
-      "expression": "\"nonzero F1 score\"",
+      "expression": "\"Loaded Language\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on only one of the datasets but not the other, such as: Appeal to Authority, Appeal to Fear, Doubt, Reduction, and Exaggeration,Minimisation. Two out of these five techniques (Appeal to Fear and Doubt) have very small "
+      "value": ", "
     },
     {
-      "expression": "\"non-zero F1\"",
+      "expression": "\"Name Calling,Labeling and Slogans\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the development set which indicates that they are generally challenging on our model and were only tagged due to minor differences between the two datasets. However, the remaining three types show significant drops from development to test sets or vice-versa. This requires further analysis to understand why the model was able to do well on one dataset but get zero on the other dataset, which we leave for future work. The third group has the remaining nine techniques were our sequence tagger fails to correctly tag any text span on either dataset. This group has the most infrequent types as well as types beyond the ability for our tagger to spot by looking at the sentence only such as Repetition.  Overall, our model has the "
+      "value": ". This group has techniques that appear frequently in the data and/or techniques with strong lexical signals (e.g. \"American People\" in Flag-Waving) or punctuation signals (e.g. quotes in Slogans). The second group has the techniques with a nonzero F1 score on only one of the datasets but not the other, such as: "
+    },
+    {
+      "expression": "\"Appeal to Authority\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Appeal to Fear\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Doubt\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Reduction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"Exaggeration,Minimisation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Two out of these five techniques ("
+    },
+    {
+      "expression": "\"Appeal to Fear\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Doubt\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") have very small non-zero F1 on the development set which indicates that they are generally challenging on our model and were only tagged due to minor differences between the two datasets. However, the remaining three types show significant drops from development to test sets or vice-versa. This requires further analysis to understand why the model was able to do well on one dataset but get zero on the other dataset, which we leave for future work. The third group has the remaining nine techniques that our sequence tagger fails to correctly tag any text span on either dataset. This group has the most infrequent types as well as types beyond the ability for our tagger to spot by looking at the sentence only such as "
+    },
+    {
+      "expression": "\"Repetition\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Overall, our model has the "
     },
     {
       "expression": "\"highest precision\"",
-      "categories": ["min-max"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " among all teams on both datasets, which could be due to adding the UBY  one-hot encoded features that highlighted some strong signals for some propaganda types. This also could be the reason for our model to have the "
+      "value": " among all teams on both datasets, which could be due to adding the UBY one-hot encoded features that highlighted some strong signals for some propaganda types. This also could be the reason for our model to have the "
     },
     {
       "expression": "\"lowest recall\"",
-      "categories": ["min-max"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " among the top 7 teams on both datasets as having explicit handcrafted signals suffers from the usual sparseness that accompanies these kinds of representations which could have made the model more conservative in tagging text spans."
+      "value": " among the top seven teams on both datasets as having explicit handcrafted signals suffers from the usual sparseness that accompanies these kinds of representations which could have made the model more conservative in tagging text spans.\n\nThis should now be correctly categorized according to the provided list."
     }
   ],
   "variables": {},

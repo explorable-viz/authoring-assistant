@@ -3,10 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows that "
+      "value": "Understood. I'll make sure to use only one category for each expression. Here is the corrected version:\n\nTable 1 shows that "
     },
     {
-      "expression": "\"finetuned BERT\"",
+      "expression": "\"finetuned\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -15,7 +24,16 @@
       "value": " outperforms "
     },
     {
-      "expression": "\"pre-trained BERT\"",
+      "expression": "\"pre-trained\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -24,13 +42,13 @@
       "value": " by a significant margin on all the tasks (with an average of "
     },
     {
-      "expression": "\"35.9 points\"",
+      "expression": "\"35.9\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of absolute difference).  "
+      "value": " points of absolute difference).  "
     },
     {
       "expression": "\"BERT\"",
@@ -42,16 +60,25 @@
       "value": " with weights initialized from normal distribution and further fine-tuned for a given task consistently produces "
     },
     {
-      "expression": "\"lower scores\"",
+      "expression": "\"lower\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the ones achieved with "
+      "value": " scores than the ones achieved with "
     },
     {
-      "expression": "\"pre-trained BERT\"",
+      "expression": "\"pre-trained\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -78,16 +105,25 @@
       "value": "), initialization with random weights yields "
     },
     {
-      "expression": "\"worse performance\"",
+      "expression": "\"worse\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than "
+      "value": " performance than "
     },
     {
-      "expression": "\"pre-trained BERT\"",
+      "expression": "\"pre-trained\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We perform hyperparameter optimisation and make comparisons among our systems, including "
+      "value": "Thank you for the clarification. I will ensure that only the specified categories are used.\n\nHere is the revised paragraph with the appropriate categories:\n\nWe perform hyperparameter optimisation and make comparisons among our systems, including "
     },
     {
-      "expression": "\"GCN + Bi-LSTM (GCN-based)\"",
+      "expression": "\"GCN + Bi-LSTM\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
+      "value": " (GCN-based), "
     },
     {
-      "expression": "\"CNN + attention + Bi-LSTM (Attbased)\"",
+      "expression": "\"CNN + attention + Bi-LSTM\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", and their combination using a highway layer ("
+      "value": " (Attbased), and their combination using a highway layer ("
     },
     {
       "expression": "\"H-combined\"",
@@ -51,22 +51,22 @@
       "value": " and they both outperform the strong baseline in terms of MWE-based F-score in "
     },
     {
-      "expression": "\"three out of four languages\"",
+      "expression": "\"three\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Combining GCN with attention using highway networks results in further improvements for "
+      "value": ". Combining GCN with attention using highway networks results in further improvements for EN, FR and FA. The "
     },
     {
-      "expression": "\"EN, FR and FA\"",
+      "expression": "\"Hcombined model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The H-combined model consistently exceeds the baseline for all languages. "
+      "value": " consistently exceeds the baseline for all languages. "
     },
     {
       "expression": "\"GCN\"",
@@ -78,13 +78,13 @@
       "value": " and "
     },
     {
-      "expression": "\"H-combined\"",
+      "expression": "\"H-combined models\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models each show significant improvement with regard to discontinuous MWEs, regardless of the proportion of such expressions. The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
+      "value": " each show significant improvement with regard to discontinuous MWEs, regardless of the proportion of such expressions. The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
     }
   ],
   "variables": {},

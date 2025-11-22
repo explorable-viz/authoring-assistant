@@ -21,16 +21,43 @@
     },
     {
       "type": "literal",
-      "value": " dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate "
+      "value": " dataset. Here "
     },
     {
-      "expression": "\"model\"",
+      "expression": "\"Comp-Agg + LM + LC\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with Language Modeling and Latent Clustering as proposed in (Yoon et al. 2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively.  Table 4 reports the results of our experiments with "
+      "value": " refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed in (Yoon et al. 2019). "
+    },
+    {
+      "expression": "\"TL(QNLI)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " refers to Transfer Learning from the QNLI corpus. L and B stand for "
+    },
+    {
+      "expression": "\"Large\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Base\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively.  Table 4 reports the results of our experiments with "
     },
     {
       "expression": "\"TREC-QA\"",

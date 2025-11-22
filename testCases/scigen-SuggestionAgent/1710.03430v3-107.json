@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 reveals that "
+      "value": "Got it. I'll ensure that each annotation uses only one of the specified categories.\n\nHere's the revised paragraph:\n\nTable 4 reveals that the "
     },
     {
       "expression": "\"HRDE-LTC\"",
@@ -24,31 +24,58 @@
       "value": " for three cases ("
     },
     {
-      "expression": "\"1 in 2 R@1\"",
+      "expression": "\"1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
+      "value": " in "
     },
     {
-      "expression": "\"1 in 10 R@2\"",
+      "expression": "\"2\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " R@1, "
+    },
+    {
+      "expression": "\"1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": " in "
     },
     {
-      "expression": "\"1 in 10 R@5\"",
+      "expression": "\"10\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " R@2 and "
+    },
+    {
+      "expression": "\"1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). we see improvements from the "
+      "value": " in "
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " R@5). we see improvements from the "
     },
     {
       "expression": "\"RDE\"",
@@ -69,13 +96,13 @@
       "value": " model and additional improvements with the "
     },
     {
-      "expression": "\"LTC module\"",
+      "expression": "\"LTC\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in all test cases (the "
+      "value": " module in all test cases (the "
     },
     {
       "expression": "\"Ubuntuv1/v2\"",

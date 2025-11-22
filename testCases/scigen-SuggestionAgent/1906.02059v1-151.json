@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "BOW-SVR performs "
+      "value": "Understood, I will use the correct categories. Here is the revised output:\n\nBOW-SVR performs "
     },
     {
       "expression": "\"worse\"",
@@ -12,29 +12,11 @@
     },
     {
       "type": "literal",
-      "value": " than "
-    },
-    {
-      "expression": "\"BIGRU-ATT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", while "
-    },
-    {
-      "expression": "\"HAN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
+      "value": " than BIGRU-ATT, while HAN is "
     },
     {
       "expression": "\"10%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -43,70 +25,34 @@
     },
     {
       "expression": "\"3%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " better, respectively. "
-    },
-    {
-      "expression": "\"HIER-BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " further improves the results, outperforming "
-    },
-    {
-      "expression": "\"HAN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " by "
+      "value": " better, respectively. HIER-BERT further improves the results, outperforming HAN by "
     },
     {
       "expression": "\"17%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". "
-    },
-    {
-      "expression": "\"HIER-BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " has "
+      "value": ".  HIER-BERT has the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ρ ("
-    },
-    {
-      "expression": "\".527\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), indicating a moderate positive correlation (> "
+      "value": " ρ (.527), indicating a moderate positive correlation (> "
     },
     {
       "expression": "\"0.5\"",
-      "categories": ["data-retrieval"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

@@ -30,25 +30,7 @@
     },
     {
       "type": "literal",
-      "value": ", improves both label accuracy and FEVER score. Training based on the "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " sentence retrieval predictions significantly enhances the verification results because while it explicitly improves the FEVER score by providing more correct evidence sentences, it provides a "
-    },
-    {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " training set for the verification system. The large "
+      "value": ", improves both label accuracy and FEVER score. Training based on the BERT sentence retrieval predictions significantly enhances the verification results because while it explicitly improves the FEVER score by providing more correct evidence sentences, it provides a better training set for the verification system. The large "
     },
     {
       "expression": "\"BERTs\"",

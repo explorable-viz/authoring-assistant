@@ -3,34 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows that initializing the model with "
+      "value": "Understood. I will ensure that each expression is annotated with only one valid category. Here is the corrected paragraph:\n\nTable 2 shows that initializing the model with the pre-trained embeddings gives a significant "
     },
     {
-      "expression": "\"the pre-trained embeddings\"",
+      "expression": "\"4 1.1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " gives a significant "
-    },
-    {
-      "expression": "\"4.11\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " point increase in F-measure compared to "
-    },
-    {
-      "expression": "\"random initialization\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", due to an increase in precision. Fixing the embeddings gives slightly "
+      "value": " point increase in F-measure compared to random initialization, due to an increase in precision. Fixing the embeddings gives slightly "
     },
     {
       "expression": "\"better\"",
@@ -52,21 +34,12 @@
     },
     {
       "expression": "\"higher\"",
-      "categories": ["rank"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " recall. When extending the loss with the "
-    },
-    {
-      "expression": "\"SGLR loss\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", we gain"
+      "value": ". When extending the loss with the SGLR loss, we gain "
     },
     {
       "expression": "\"1.6\"",
@@ -84,16 +57,16 @@
     },
     {
       "type": "literal",
-      "value": " even without specialized resources. If we train our model using the SG loss extension we obtain "
+      "value": " even without specialized resources. If we train our model using the SG loss extension we obtain the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results, and gain"
+      "value": " results, and gain "
     },
     {
       "expression": "\"1.9\"",

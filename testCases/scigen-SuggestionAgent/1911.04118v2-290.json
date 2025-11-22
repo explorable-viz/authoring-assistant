@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " on real-world datasets derived from Alexa Virtual Assistant traffic\r\nIn these experiments, we used, as usual, ASNQ for the transfer step, and "
-    },
-    {
-      "expression": "\"NAD\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " as our target dataset for the adapt step.\r\nTable 8 reports the comparative results using simple "
+      "value": " on real-world datasets derived from Alexa Virtual Assistant traffic\r\nIn these experiments, we used, as usual, ASNQ for the transfer step, and NAD as our target dataset for the adapt step. Table 8 reports the comparative results using simple "
     },
     {
       "expression": "\"FT\"",
@@ -57,34 +48,7 @@
     },
     {
       "type": "literal",
-      "value": ") and tested on samples "
-    },
-    {
-      "expression": "\"1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"3\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": ") and tested on samples 1, 2 and 3."
     }
   ],
   "variables": {},

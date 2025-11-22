@@ -25,12 +25,17 @@
     },
     {
       "expression": "\"30%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are glue rules. Finally, terminal rules take the largest percentage,"
+      "value": " are glue rules. Finally, terminal rules take the largest "
+    },
+    {
+      "expression": "\"percentage\"",
+      "categories": ["rank"],
+      "type": "expression"
     }
   ],
   "variables": {},

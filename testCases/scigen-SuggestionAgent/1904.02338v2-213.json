@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "on our proposed preprocessed "
+      "value": "Understood. I will ensure that each annotation uses only one category from the specified list. Here is the corrected output:\n\non our proposed preprocessed IWSLT17"
     },
     {
-      "expression": "\"IWSLT17\"",
+      "expression": "\"(cid:63)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "(cid:63) that eliminates the overlap and reduces the number of supervised directions ("
+      "value": " that eliminates the overlap and reduces the number of supervised directions ("
     },
     {
       "expression": "\"8\"",

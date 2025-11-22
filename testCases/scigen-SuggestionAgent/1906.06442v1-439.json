@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We first show that noising "
+      "value": "We first show that "
     },
     {
-      "expression": "\"EnDe\"",
+      "expression": "\"noising\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " bitext sources does not seriously impact the translation quality of the transformer-base baseline. Table 2 shows results for various values of "
+      "value": " EnDe bitext sources does not seriously impact the translation quality of the transformer-base baseline.  Table 2 shows results for various values of "
     },
     {
       "expression": "\"p\"",
@@ -25,7 +25,7 @@
     },
     {
       "expression": "\"100%\"",
-      "categories": ["ratio"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

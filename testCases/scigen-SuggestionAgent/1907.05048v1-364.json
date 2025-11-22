@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 compares the performance of the four weighting variants introduced in Section 3.2. "
+      "value": "I apologize for the mistake. I'll make sure to use only one category per replacement.\n\nTable 3 compares the performance of the four weighting variants introduced in Section 3.2. "
     },
     {
       "expression": "\"TransWeight-feat\"",
@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": ", which sums the transformed representations and then weights each component of the summed representation, has the weakest performance, with only "
+      "value": " which sums the transformed representations and then weights each component of the summed representation, has the weakest performance, with only "
     },
     {
       "expression": "\"50.82%\"",
@@ -34,7 +34,7 @@
     },
     {
       "expression": "\"5\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -66,16 +66,7 @@
     },
     {
       "type": "literal",
-      "value": " are interesting in two respects: first, it "
-    },
-    {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the feature variation, "
+      "value": " are interesting in two respects: first, it outperforms the feature variation, "
     },
     {
       "expression": "\"TransWeight-feat\"",
@@ -133,16 +124,16 @@
     },
     {
       "expression": "\"12%\"",
-      "categories": ["ratio"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " more of the test representations having a rank "
+      "value": " more of the test representations having a rank ≤"
     },
     {
-      "expression": "\"≤5\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"5\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -151,7 +142,7 @@
     },
     {
       "expression": "\"4,000,200\"",
-      "categories": ["data-retrieval"],
+      "categories": ["sum"],
       "type": "expression"
     },
     {

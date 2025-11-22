@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows the results for both "
+      "value": "Understood! I will ensure that only one category is used per replacement. Here is the revised paragraph:\n\nTable "
     },
     {
-      "expression": "\"evaluation settings\"",
+      "expression": "\"4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for the textual baseline and the "
+      "value": " shows the results for both evaluation settings for the textual baseline and the "
     },
     {
       "expression": "\"best multimodal variant\"",
@@ -30,16 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " of the "
+      "value": " of the speaker independent setup ("
     },
     {
-      "expression": "\"speaker independent setup (text plus audio)\"",
+      "expression": "\"text plus audio\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "; however, in other models, there is no improvement."
+      "value": "); however, in other models, there is no improvement."
     }
   ],
   "variables": {},

@@ -25,7 +25,7 @@
     },
     {
       "expression": "\"38.6%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "expression": "\"30.80%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "expression": "\"19.62%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "expression": "\"11.94%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "expression": "\"1.74%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -133,7 +133,7 @@
     },
     {
       "expression": "\"0.32%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -151,7 +151,7 @@
     },
     {
       "expression": "\"1.06%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -169,7 +169,7 @@
     },
     {
       "expression": "\"2.91%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

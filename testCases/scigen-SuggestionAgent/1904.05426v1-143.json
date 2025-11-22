@@ -3,10 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We evaluate "
+      "value": "we evaluate our four "
     },
     {
-      "expression": "\"our four labeling strategies\"",
+      "expression": "\"labeling strategies\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

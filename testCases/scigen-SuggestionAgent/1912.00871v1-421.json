@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " correct, leading to the correct numeric answer. Results by , , ,  are sparse but indicate the scale of success compared to recent past approaches. Prefix, postfix, and infix representations in Table III show that network capabilities are changed by how teachable the target data is. While our networks fell short of "
+      "value": " correct, leading to the correct numeric answer. Results by , , ,  are sparse but indicate the scale of success compared to recent past approaches. Prefix, postfix, and infix representations in Table III show that network capabilities are changed by how teachable the target data is.  While our networks fell short of "
     },
     {
       "expression": "\"AI2\"",
@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " testing accuracy, we present state-of-the-art results for the remaining three datasets. The type 2 postfix Transformer received the "
+      "value": " testing accuracy, we present state-of-the-art results for the remaining three datasets.  The type 2 postfix Transformer received the "
     },
     {
       "expression": "\"highest\"",
@@ -39,7 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ". Our attempt at language pre-training fell short of our expectations in all but one tested dataset."
+      "value": ".  Our attempt at language pre-training fell short of our expectations in all but one tested dataset."
     }
   ],
   "variables": {},

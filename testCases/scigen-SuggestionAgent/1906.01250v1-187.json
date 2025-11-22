@@ -12,25 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " than the one which used unlabeled documents. The score difference is "
+      "value": " than the one which used "
     },
     {
-      "expression": "\"larger\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for AIDA-CoNLL test set than for the other "
-    },
-    {
-      "expression": "\"5\"",
+      "expression": "\"unlabeled documents\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test sets.  Additionally we train our model on "
+      "value": ". The score difference is larger for "
     },
     {
       "expression": "\"AIDA-CoNLL\"",
@@ -39,25 +30,43 @@
     },
     {
       "type": "literal",
-      "value": ", producing its fully-supervised version ('AIDA CoNLL' row in Table 2). Though, as expected, this version is "
+      "value": " test set than for the other "
     },
     {
-      "expression": "\"more accurate\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"AIDA test set\"",
+      "expression": "\"5\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", similarly to other fully-supervised methods, it overfits and does not perform that well on the "
+      "value": " test sets. Additionally we train our model on "
+    },
+    {
+      "expression": "\"AIDA-CoNLL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", producing its fully-supervised version ('"
+    },
+    {
+      "expression": "\"AIDA CoNLL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "' row in Table 2). Though, as expected, this version is more accurate on "
+    },
+    {
+      "expression": "\"AIDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test set, similarly to other fully-supervised methods, it overfits and does not perform that well on the "
     },
     {
       "expression": "\"5\"",

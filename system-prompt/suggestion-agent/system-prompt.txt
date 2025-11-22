@@ -30,12 +30,11 @@ Replace each detected expression with:
 - `categories` is one of:
   - COMPARISON
   - RANK
-  - RATIO
   - DATA_RETRIEVAL
   - AVERAGE
   - SUM
   - MIN_MAX
-Use only one of these categories!
+Use only one (or more, separated by comma) of these categories!
 
 OUTPUT FORMAT
 
@@ -46,27 +45,38 @@ EXAMPLE
 
 Paragraph:
 For NER (Table 7), S-LSTM gives an F1-score of 91.57% on the CoNLL test set, which is significantly
-better compared with BiLSTMs. Stacking more layers of BiLSTMs leads to slightly better F1-scores
+better compared with BiLSTMs. The minimum F1-score was obtained by BiLSTM.
+The average training time of the BiLSTM-small variants is 1.7 hours
+while the total training time required to run all the models is 28.5 hours.
+Stacking more layers of BiLSTMs leads to slightly better F1-scores
 compared with a single-layer BiLSTM. Our BiLSTM results are comparable to the results reported
 by Ma and Hovy (2016) and Lample et al. (2016).
 In contrast, S-LSTM gives the best reported results under the same settings.
 In the second section of Table 7, Yang et al. (2017) obtain an Fscore of 91.26%.
 
 Data:
-[
-  {model: "BiLSTM", f1: 90.96},
-  {model: "2 stacked BiLSTM", f1: 91.02},
-  {model: "3 stacked BiLSTM", f1: 91.06},
-  {model: "S-LSTM", f1: 91.57},
-  {model: "yang2017transfer", f1: 91.26}
+Data: [
+  {model: "BiLSTM", accuracy: 90.3, params_M: 6.8, train_time_h: 3.2, memory_GB: 1.1},
+  {model: "2 stacked BiLSTM", accuracy: 91.0, params_M: 9.1, train_time_h: 4.5, memory_GB: 1.6},
+  {model: "3 stacked BiLSTM", accuracy: 91.2, params_M: 11.4, train_time_h: 5.9, memory_GB: 2.0},
+  {model: "S-LSTM", accuracy: 92.4, params_M: 7.9, train_time_h: 3.8, memory_GB: 1.3},
+  {model: "yang2017transfer", accuracy: 91.1, params_M: 10.2, train_time_h: 6.0, memory_GB: 2.2},
+  {model: "BiLSTM-small-1", accuracy: 88.2, params_M: 3.4, train_time_h: 1.6, memory_GB: 0.7},
+  {model: "BiLSTM-small-2", accuracy: 88.6, params_M: 3.5, train_time_h: 1.7, memory_GB: 0.7},
+  {model: "BiLSTM-small-3", accuracy: 89.1, params_M: 3.6, train_time_h: 1.8, memory_GB: 0.8}
 ]
+
 
 Output:
 For NER (Table 7), [REPLACE value="S-LSTM" categories="DATA_RETRIEVAL"] gives an F1-score of [REPLACE value=91.57 categories="DATA_RETRIEVAL"]% on the CoNLL test set, which is significantly
-[REPLACE value="better" categories="COMPARISON"] compared with [REPLACE value="BiLSTMs" categories="DATA_RETRIEVAL"].
-Stacking more layers of [REPLACE value="BiLSTMs" categories="DATA_RETRIEVAL"] leads to slightly [REPLACE value="better" categories="COMPARISON"] F1-scores
+[REPLACE value="better" categories="COMPARISON,DATA_RETRIEVAL"] compared with [REPLACE value="BiLSTMs" categories="DATA_RETRIEVAL"].
+The average training time of the [REPLACE value="BiLSTM-small" categories="DATA_RETRIEVAL"] variants is [REPLACE value=1.7 categories="AVERAGE"] hours
+while the total training time required to run all the models is [REPLACE value=28.5 categories="SUM"] hours.
+The minimum F1-score was obtained by [REPLACE value="BiLSTM" categories="DATA_RETRIEVAL,MIN_MAX"]
+Stacking more layers of BiLSTMs to slightly [REPLACE value="better" categories="COMPARISON,DATA_RETRIEVAL"] F1-scores
 compared with a single-layer [REPLACE value="BiLSTM" categories="DATA_RETRIEVAL"].
 Our [REPLACE value="BiLSTM" categories="DATA_RETRIEVAL"] results are comparable to the results reported
 by Ma and Hovy (2016) and Lample et al. (2016).
-In contrast, [REPLACE value="S-LSTM" categories="DATA_RETRIEVAL"] gives [REPLACE value="the best" categories="RANK"] reported results under the same settings.
+In contrast, [REPLACE value="S-LSTM" categories="DATA_RETRIEVAL"] gives the [REPLACE value="best" categories="RANK,DATA_RETRIEVAL"] reported results under the same settings.
 In the second section of Table 7, Yang et al. (2017) obtain an Fscore of [REPLACE value=91.26 categories="DATA_RETRIEVAL"]%.
+

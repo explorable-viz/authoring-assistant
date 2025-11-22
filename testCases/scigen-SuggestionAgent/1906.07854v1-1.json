@@ -48,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": ") for comparison.  "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " performs "
+      "value": ") for comparison.  BERT performs "
     },
     {
       "expression": "\"better\"",
@@ -66,16 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " on tasks in the general domain while "
-    },
-    {
-      "expression": "\"BioBERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " performs "
+      "value": " on tasks in the general domain while BioBERT performs "
     },
     {
       "expression": "\"better\"",
@@ -102,16 +84,7 @@
     },
     {
       "type": "literal",
-      "value": ".  even though "
-    },
-    {
-      "expression": "\"BioBERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is finetuned on general domain tasks before "
+      "value": ".  even though BioBERT is finetuned on general domain tasks before "
     },
     {
       "expression": "\"MedNLI\"",
@@ -138,16 +111,7 @@
     },
     {
       "type": "literal",
-      "value": " directly.  the domain specific language representations from "
-    },
-    {
-      "expression": "\"BioBERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are maintained while fine-tuning on general domain tasks by showing that the transfer learning results of "
+      "value": " directly.  the domain specific language representations from BioBERT are maintained while fine-tuning on general domain tasks by showing that the transfer learning results of "
     },
     {
       "expression": "\"MedNLI\"",
@@ -156,16 +120,7 @@
     },
     {
       "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"BioBERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " have "
+      "value": " on BioBERT have "
     },
     {
       "expression": "\"better\"",
@@ -174,16 +129,7 @@
     },
     {
       "type": "literal",
-      "value": " performance than the results on "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (line 4 to 7).  the accuracy of "
+      "value": " performance than the results on BERT (line 4 to 7).  the accuracy of "
     },
     {
       "expression": "\"MNLI\"",
@@ -201,34 +147,16 @@
     },
     {
       "type": "literal",
-      "value": " on "
+      "value": " on BioBERT is "
     },
     {
-      "expression": "\"BioBERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"lower than\"",
+      "expression": "\"lower\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the accuracy on "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  The "
+      "value": " than the accuracy on BERT.  The "
     },
     {
       "expression": "\"best\"",
@@ -246,16 +174,7 @@
     },
     {
       "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"BioBERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  "
+      "value": " on BioBERT.  "
     },
     {
       "expression": "\"MedNLI (expanded)\"",
@@ -267,13 +186,13 @@
       "value": " shows "
     },
     {
-      "expression": "\"better performance\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than "
+      "value": " performance than "
     },
     {
       "expression": "\"MedNLI\"",
@@ -282,16 +201,7 @@
     },
     {
       "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"BioBERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " while "
+      "value": " on BioBERT while "
     },
     {
       "expression": "\"MedNLI\"",
@@ -309,16 +219,7 @@
     },
     {
       "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (see table 4).  the performance of "
+      "value": " on BERT (see table 4).  the performance of "
     },
     {
       "expression": "\"MedNLI (expanded)\"",
@@ -336,16 +237,7 @@
     },
     {
       "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
+      "value": " on BERT and "
     },
     {
       "expression": "\"lower\"",
@@ -354,16 +246,7 @@
     },
     {
       "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"BioBERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than the performance of "
+      "value": " on BioBERT than the performance of "
     },
     {
       "expression": "\"MedNLI\"",

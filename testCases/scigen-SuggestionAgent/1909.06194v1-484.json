@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The table, "
+      "value": "the table, "
     },
     {
       "expression": "\"lexical model\"",
@@ -52,15 +52,6 @@
     },
     {
       "expression": "\"4.54%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"CCAT10\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -70,15 +61,6 @@
     },
     {
       "expression": "\"2.85%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"CCAT50\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -88,15 +70,6 @@
     },
     {
       "expression": "\"2.02%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"BLOGS10\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -106,15 +79,6 @@
     },
     {
       "expression": "\"1.42%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"BLOGS50\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

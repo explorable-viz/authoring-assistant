@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " ("
+      "value": ", "
     },
     {
       "expression": "\"BoW\"",
@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": "), "
+      "value": ", "
     },
     {
       "expression": "\"TF-IDF\"",
@@ -75,7 +75,7 @@
     },
     {
       "type": "literal",
-      "value": " ("
+      "value": ", ("
     },
     {
       "expression": "\"HN-ATT\"",

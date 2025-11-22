@@ -21,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " algorithms in Section 5.1, where \"#Edge/#Sent\" measures the forest density with the number of edges divided by the sentence length, \"LAS\" represents the oracle LAS score on 100 biomedical sentences with manually annotated dependency trees, and \"Conn. Ratio (%)\" shows the percentage of forests where both related entity mentions are connected. Regarding the forest density, forests produced by "
+      "value": " algorithms in Section 5.1, where \"#Edge/#Sent\" measures the forest density with the number of edges divided by the sentence length, \"LAS\" represents the oracle LAS score on "
+    },
+    {
+      "expression": "\"100\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " biomedical sentences with manually annotated dependency trees, and \"Conn. Ratio (%)\" shows the percentage of forests where both related entity mentions are connected. Regarding the forest density, forests produced by "
     },
     {
       "expression": "\"EDGEWISE\"",
@@ -33,13 +42,13 @@
       "value": " generally contain "
     },
     {
-      "expression": "\"more edges than\"",
+      "expression": "\"more edges\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " those from "
+      "value": " than those from "
     },
     {
       "expression": "\"KBESTEISNER\"",
@@ -75,7 +84,16 @@
     },
     {
       "type": "literal",
-      "value": " being connected with γ ≤ 0.2."
+      "value": " being connected with γ ≤ "
+    },
+    {
+      "expression": "\"0.2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

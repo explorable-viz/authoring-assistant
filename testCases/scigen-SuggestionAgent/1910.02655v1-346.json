@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 compares the development set performance of different variants of the proposed sentence retrieval method with the state of the art results on the FEVER dataset. The results indicate that both "
+      "value": "Got it. I'll correct that and ensure the appropriate categories are used.\n\nHere is the revised output:\n\nTable 1 compares the development set performance of different variants of the proposed sentence retrieval method with the state of the art results on the FEVER dataset. The results indicate that both "
     },
     {
       "expression": "\"pointwise\"",
@@ -15,13 +15,22 @@
       "value": " and "
     },
     {
-      "expression": "\"pairwise BERT sentence retrieval\"",
+      "expression": "\"pairwise BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " improve the recall. The "
+      "value": " sentence retrieval improve the "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
     },
     {
       "expression": "\"UNC\"",
@@ -33,31 +42,58 @@
       "value": " and "
     },
     {
-      "expression": "\"DREAM precision scores\"",
+      "expression": "\"DREAM\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are "
+      "value": " precision scores are "
     },
     {
-      "expression": "\"better than\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " our methods without a decision threshold, however, a threshold can regulate the trade-off between the recall and precision, and achieve "
+      "value": " than our methods without a decision threshold, however, a threshold can regulate the trade-off between the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"precision\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and achieve the "
+    },
+    {
+      "expression": "\"best precision\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " precision and F1 scores."
+      "value": " and "
+    },
+    {
+      "expression": "\"F1 scores\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

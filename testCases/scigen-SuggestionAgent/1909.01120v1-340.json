@@ -3,7 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We test an unsupervised setting using (1) the algorithm proposed in Section 4.4 with EmbDI local embeddings, and (2) an existing matching system  with both pre-trained embeddings (SeepP ) and our local embeddings (SeepL). Pre-trained embeddings for tokens and tuples have been obtained from Glove .  Table 3 reports the results w.r.t. manually defined attribute matches. The simple unsupervised method with EmbDI local embeddings outperforms the baseline in terms of Fmeasure in all scenarios. Results of "
+      "value": "Got it. I'll ensure that each annotation uses only one valid category. Here is the corrected output:\n\nWe test an unsupervised setting using (1) the algorithm proposed in Section 4.4 with "
+    },
+    {
+      "expression": "\"EmbDI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " local embeddings, and (2) an existing matching system  with both pre-trained embeddings ("
+    },
+    {
+      "expression": "\"SeepP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and our local embeddings ("
+    },
+    {
+      "expression": "\"SeepL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Pre-trained embeddings for tokens and tuples have been obtained from Glove .  Table 3 reports the results w.r.t. manually defined attribute matches. The simple unsupervised method with "
+    },
+    {
+      "expression": "\"EmbDI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " local embeddings outperforms the baseline in terms of Fmeasure in all scenarios. Results of "
     },
     {
       "expression": "\"RefS\"",
@@ -12,25 +48,25 @@
     },
     {
       "type": "literal",
-      "value": " are "
+      "value": " are the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " because of the high overlap between its datasets. The baseline improves when it is executed with EmbDI local embeddings, showing their superior quality w.r.t. pre-trained ones. "
+      "value": " because of the high overlap between its datasets. The baseline improves when it is executed with "
     },
     {
-      "expression": "\"Basic\"",
+      "expression": "\"EmbDI\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " local embeddings lead to "
+      "value": " local embeddings, showing their superior quality w.r.t. pre-trained ones. The Basic local embeddings lead to "
     },
     {
       "expression": "\"0\"",
@@ -57,25 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " obtains F-measure values between "
+      "value": " obtains F-measure values between [.30] and [.38]. Local embeddings from "
     },
     {
-      "expression": "\".30\"",
+      "expression": "\"EmbDI\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\".38\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Local embeddings from EmbDI do not depend on the presence of the attribute labels.  Similarly, decreasing the size of the walks to "
+      "value": " do not depend on the presence of the attribute labels.  Similarly, decreasing the size of the walks to "
     },
     {
       "expression": "\"5\"",
@@ -93,25 +120,7 @@
     },
     {
       "type": "literal",
-      "value": " to "
-    },
-    {
-      "expression": "\".92\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (from "
-    },
-    {
-      "expression": "\".77\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ")."
+      "value": " to [.92] (from [.77])."
     }
   ],
   "variables": {},

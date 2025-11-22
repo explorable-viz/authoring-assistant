@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We present "
+      "value": "You are correct, I apologize for the mistake. Here is the corrected output using only one category per detected expression:\n\nWe present the "
     },
     {
       "expression": "\"Table 4\"",
@@ -21,34 +21,25 @@
     },
     {
       "type": "literal",
-      "value": ", which was adopted from the skip-thought training code, gave reasonably good performance. More words for decoding didn't give us a significant performance gain, and took longer to train. 3. Adding more layers into the decoder and enlarging the dimension of the convolutional layers indeed sightly improved the performance on the "
+      "value": ", which was adopted from the skip-thought training code3, gave reasonably good performance. More words for decoding didn't give us a significant performance gain, and took longer to train. 3. Adding more layers into the decoder and enlarging the dimension of the convolutional layers indeed sightly "
     },
     {
-      "expression": "\"three\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"improved\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " downstream tasks, but as training efficiency is one of our main concerns, it wasn't worth sacrificing training efficiency for the minor performance gain. 4. Increasing the dimensionality of the RNN encoder improved the model performance, and the additional training time required was less than needed for increasing the complexity in the CNN decoder. We report results from both "
+      "value": " the performance on the three downstream tasks, but as training efficiency is one of our main concerns, it wasn't worth sacrificing training efficiency for the minor performance gain. 4. Increasing the dimensionality of the RNN encoder "
     },
     {
-      "expression": "\"smallest\"",
-      "categories": ["rank"],
+      "expression": "\"improved\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"largest\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " models in "
+      "value": " the model performance, and the additional training time required was less than needed for increasing the complexity in the CNN decoder. We report results from both smallest and largest models in "
     },
     {
       "expression": "\"Table 2\"",
@@ -57,11 +48,11 @@
     },
     {
       "type": "literal",
-      "value": ".  As the transferability of the models trained in both cases perform similarly on the evaluation tasks (see rows "
+      "value": ". As the transferability of the models trained in both cases perform similarly on the evaluation tasks (see rows "
     },
     {
       "expression": "\"1\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -70,7 +61,7 @@
     },
     {
       "expression": "\"2\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -84,11 +75,11 @@
     },
     {
       "type": "literal",
-      "value": "), we focus on the simpler predictall-words CNN decoder that learns to reconstruct the next window of contiguous words.  As stated in rows "
+      "value": "), we focus on the simpler predictall-words CNN decoder that learns to reconstruct the next window of contiguous words. As stated in rows "
     },
     {
       "expression": "\"1\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -97,7 +88,7 @@
     },
     {
       "expression": "\"3\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -106,7 +97,7 @@
     },
     {
       "expression": "\"4\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -129,29 +120,20 @@
     },
     {
       "type": "literal",
-      "value": "] Pearson score on "
+      "value": " Pearson score on SICK, and decoding longer target sequences lead to a longer training time. We tweaked the CNN encoder, including different kernel size and activation function, and we report the "
     },
     {
-      "expression": "\"SICK\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and decoding longer target sequences lead to a longer training time.  We tweaked the CNN encoder, including different kernel size and activation function, and we report the "
-    },
-    {
-      "expression": "\"best results\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of CNNCNN model at row "
+      "value": " results of CNNCNN model at row "
     },
     {
       "expression": "\"6\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -165,11 +147,11 @@
     },
     {
       "type": "literal",
-      "value": ".  The future predictor in (Gan et al., 2017) also applies a CNN as the encoder, but the decoder is still an RNN, listed at row "
+      "value": ". The future predictor in (Gan et al., 2017) also applies a CNN as the encoder, but the decoder is still an RNN, listed at row "
     },
     {
       "expression": "\"11\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -192,11 +174,11 @@
     },
     {
       "type": "literal",
-      "value": " than our RNNCNN model.  Clearly, we can tell from the comparison between rows "
+      "value": " than our RNNCNN model. Clearly, we can tell from the comparison between rows "
     },
     {
       "expression": "\"1\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -205,7 +187,7 @@
     },
     {
       "expression": "\"9\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -214,7 +196,7 @@
     },
     {
       "expression": "\"12\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -237,11 +219,11 @@
     },
     {
       "type": "literal",
-      "value": "] transferability of the model.  Compared with the model with larger-size CNN decoder, apparently, we can see that larger encoder size helps more than larger decoder size does (rows "
+      "value": " transferability of the model. Compared with the model with larger-size CNN decoder, apparently, we can see that larger encoder size helps more than larger decoder size does (rows "
     },
     {
       "expression": "\"7\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -250,7 +232,7 @@
     },
     {
       "expression": "\"8\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -259,7 +241,7 @@
     },
     {
       "expression": "\"9\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {

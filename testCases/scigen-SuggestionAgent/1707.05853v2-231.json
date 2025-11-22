@@ -16,7 +16,7 @@
     },
     {
       "expression": "\"higher-quality\"",
-      "categories": ["comparison"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": ", when we evaluate on the manual transcripts that reflect the true user utterances nearly perfectly."
+      "value": " when we evaluate on the manual transcripts that reflect the true user utterances nearly perfectly."
     }
   ],
   "variables": {},

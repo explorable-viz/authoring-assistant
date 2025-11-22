@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The accuracy scores on "
-    },
-    {
-      "expression": "\"BLESS\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " test sets are provided in Table 1.8 Our "
+      "value": "The accuracy scores on *BLESS test sets are provided in Table 1.8 Our "
     },
     {
       "expression": "\"POSTLE\"",
@@ -39,34 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " setting: this is simply because all words found in "
-    },
-    {
-      "expression": "\"BLESS\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " datasets are covered by the lexical constraints, and "
-    },
-    {
-      "expression": "\"POSTLE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " does not generalize the initial "
-    },
-    {
-      "expression": "\"LEAR\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " transformation to unseen test words. In the "
+      "value": " setting: this is simply because all words found in *BLESS datasets are covered by the lexical constraints, and POSTLE does not generalize the initial LEAR transformation to unseen test words. In the "
     },
     {
       "expression": "\"DISJOINT\"",
@@ -75,97 +39,43 @@
     },
     {
       "type": "literal",
-      "value": " setting, however, "
+      "value": " setting, however, LEAR is left \"blind\" as it has not seen a single test word in the constraints: it leaves distributional vectors of *BLESS test words identical. In this setting, LEAR performance is equivalent to the original distributional space. In contrast, learning to generalize the "
     },
     {
-      "expression": "\"LEAR\"",
+      "expression": "\"LE specialization function\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is left \"blind\" as it has not seen a single test word in the constraints: it leaves distributional vectors of "
+      "value": " from "
     },
     {
-      "expression": "\"BLESS\"",
+      "expression": "\"LEAR-specializations\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test words identical. In this setting, "
+      "value": " of other words, POSTLE models are able to successfully "
     },
     {
-      "expression": "\"LEAR\"",
+      "expression": "\"LE-specialize\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance is equivalent to the original distributional space. In contrast, learning to generalize the "
+      "value": " vectors of test *BLESS words. As in the graded LE, the "
     },
     {
-      "expression": "\"LE\"",
+      "expression": "\"adversarial\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " specialization function from "
-    },
-    {
-      "expression": "\"LEAR\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "-specializations of other words, "
-    },
-    {
-      "expression": "\"POSTLE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " models are able to successfully "
-    },
-    {
-      "expression": "\"LE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "-specialize vectors of test "
-    },
-    {
-      "expression": "\"BLESS\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " words. As in the graded "
-    },
-    {
-      "expression": "\"LE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", the adversarial "
-    },
-    {
-      "expression": "\"POSTLE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " architecture outperforms the simpler "
+      "value": " POSTLE architecture outperforms the simpler "
     },
     {
       "expression": "\"DFFN\"",

@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results of all four "
+      "value": "The results of all "
     },
     {
-      "expression": "\"logistic regression models\"",
+      "expression": "\"four\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are shown in Table 5. The results for the full dataset are fully consistent with the findings shown in Table 5: there was no significant effect of "
+      "value": " logistic regression models are shown in Table 5.  The results for the "
+    },
+    {
+      "expression": "\"full dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are fully consistent with the findings shown in Table 5: there was no significant effect of "
     },
     {
       "expression": "\"surprisal\"",
@@ -21,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " on referring expression type. In order to replicate their settings as closely as possible, we also included "
+      "value": " on referring expression type.  In order to replicate their settings as closely as possible, we also included "
     },
     {
       "expression": "\"residualEntropy\"",

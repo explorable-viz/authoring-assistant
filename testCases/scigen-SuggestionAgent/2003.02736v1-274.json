@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results for political speech check-worthiness detection are given in Table 3. We found that the "
+      "value": "Thank you for the clarification. Let's correct that accordingly:\n\nThe results for political speech check-worthiness detection are given in Table 3. We found that the "
     },
     {
       "expression": "\"vanilla BERT\"",
@@ -12,25 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " model performed "
+      "value": " model performed the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of all models.\r\nAs we added transfer learning and PU learning, the performance steadily dropped, with the "
+      "value": " of all models. As we added transfer learning and PU learning, the performance steadily dropped, with the "
     },
     {
-      "expression": "\"worst\"",
-      "categories": ["rank"],
+      "expression": "\"worst performing\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performing model being the one using "
+      "value": " model being the one using "
     },
     {
       "expression": "\"PUC\"",

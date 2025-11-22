@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " teacher size "
+      "value": " teacher "
     },
     {
       "expression": "\"K\"",
@@ -25,15 +25,15 @@
     },
     {
       "expression": "\"three\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " datasets. Table 2 shows that teacher size is sensitive to datasets. Therefore, we select "
+      "value": " datasets. Table 2 shows that teacher size is sensitive to datasets. Therefore, we select the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },

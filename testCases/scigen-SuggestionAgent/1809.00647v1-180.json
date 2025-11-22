@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We summarize the main results in Table 3.  "
+      "value": "Understood, I'll adjust the annotations to use the correct categories. Here is the revised output:\n\nWe summarize the main results in Table 3.  "
     },
     {
       "expression": "\"Frequency\"",
@@ -12,10 +12,10 @@
     },
     {
       "type": "literal",
-      "value": " is "
+      "value": " is the "
     },
     {
-      "expression": "\"the best performing baseline\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -24,8 +24,17 @@
       "value": ". Its precision at 1 and 5 are "
     },
     {
-      "expression": "\"higher than 40%\"",
+      "expression": "\"higher\"",
       "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"40%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -66,10 +75,10 @@
     },
     {
       "type": "literal",
-      "value": " performs "
+      "value": " performs the "
     },
     {
-      "expression": "\"the worst\"",
+      "expression": "\"worst\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -87,17 +96,17 @@
       "value": " outperforms the baselines significantly on all metrics. Particularly, its P@1 value outperforms the "
     },
     {
-      "expression": "\"Frequency baseline\"",
+      "expression": "\"Frequency\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the most ("
+      "value": " baseline the most ("
     },
     {
       "expression": "\"4.64%\"",
-      "categories": ["comparison"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -123,22 +132,22 @@
       "value": " by a large margin ("
     },
     {
-      "expression": "\"11.19% relative gain\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ").  The "
-    },
-    {
-      "expression": "\"KCE model\"",
+      "expression": "\"11.19%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " further beats "
+      "value": " relative gain).  The "
+    },
+    {
+      "expression": "\"KCE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model further beats "
     },
     {
       "expression": "\"LeToR\"",

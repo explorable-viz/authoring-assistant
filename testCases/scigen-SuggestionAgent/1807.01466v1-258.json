@@ -3,19 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results of unimodal sentiment prediction experiments are shown in Table 2.  The verbal models have "
+      "value": "The results of unimodal sentiment prediction experiments are shown in Table 2.  The verbal models have the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance here,  On each modality, "
+      "value": " performance here,  On each modality, the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -48,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " model, the "
+      "value": ", the "
     },
     {
       "expression": "\"S+P\"",
@@ -75,16 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " model achieved "
+      "value": " model achieved the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance, while on the visual modality the "
+      "value": ", while on the visual modality the "
     },
     {
       "expression": "\"S+I\"",
@@ -93,16 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " model achieved "
+      "value": " model achieved the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance.  For the vocal modality, the "
+      "value": ".  For the vocal modality, the "
     },
     {
       "expression": "\"S+P+I\"",
@@ -111,16 +111,16 @@
     },
     {
       "type": "literal",
-      "value": " model achieved "
+      "value": " model achieved the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance, and the "
+      "value": ", and the "
     },
     {
       "expression": "\"S+P\"",
@@ -138,7 +138,7 @@
     },
     {
       "type": "literal",
-      "value": " model."
+      "value": "."
     }
   ],
   "variables": {},

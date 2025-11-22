@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The evaluation results of different models on predicting present keyphrases are shown in Table 2. We observe that our reinforcement learning algorithm "
+      "value": "The evaluation results of different models on "
+    },
+    {
+      "expression": "\"predicting present keyphrases\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are shown in Table 2. We observe that our reinforcement learning algorithm "
     },
     {
       "expression": "\"catSeqTG-2\"",
@@ -12,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " RF1 consistently improves the keyphrase extraction ability of all baseline generative models by a large margin."
+      "value": " consistently improves the keyphrase extraction ability of all baseline generative models by a large margin."
     }
   ],
   "variables": {},

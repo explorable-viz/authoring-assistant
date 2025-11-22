@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table V reports the "
-    },
-    {
-      "expression": "\"accuracy\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the "
+      "value": "Got it, I'll adjust the annotations to use the specified categories. Here is the revised paragraph:\n\nTable V reports the accuracy of the "
     },
     {
       "expression": "\"combined\"",
@@ -24,17 +15,17 @@
       "value": " and the "
     },
     {
-      "expression": "\"parallel fusion approaches\"",
+      "expression": "\"parallel fusion\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". According to these results, training two parallel networks for lexical and syntax encoding achieves "
+      "value": " approaches. According to these results, training two parallel networks for lexical and syntax encoding achieves "
     },
     {
       "expression": "\"higher accuracy\"",
-      "categories": ["comparison"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {

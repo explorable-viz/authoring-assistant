@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
+      "value": "Understood. Here is the corrected output with each span annotated with a single category:\n\nTable "
     },
     {
       "expression": "\"4\"",
@@ -12,52 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " reports the results for all of the 2-layer "
+      "value": " reports the results for all of the "
     },
     {
-      "expression": "\"L-\"",
+      "expression": "\"2-layer\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"T-\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and "
-    },
-    {
-      "expression": "\"H-biLSTMs\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The "
-    },
-    {
-      "expression": "\"best-performing\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " system for each dataset and metric are highlighted in purple, and when the "
-    },
-    {
-      "expression": "\"best-performing\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " system for a particular dataset was a 1-layer model, that system is included in Table "
+      "value": " L-, T-, and H-biLSTMs. The best-performing system for each dataset and metric are highlighted in purple, and when the best-performing system for a particular dataset was a 1-layer model, that system is included in Table "
     },
     {
       "expression": "\"4\"",
@@ -66,34 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ". The "
+      "value": ". The highest-performing system for each is reported in Table "
     },
     {
-      "expression": "\"highest-performing\"",
+      "expression": "\"4\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " system for each is reported in Table "
-    },
-    {
-      "expression": "\"4\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". On its own, the biLSTM with linear topology ("
-    },
-    {
-      "expression": "\"L-biLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") performs consistently "
+      "value": ". On its own, the biLSTM with linear topology (L-biLSTM) performs consistently "
     },
     {
       "expression": "\"better\"",
@@ -102,43 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " than the biLSTM with tree topology ("
-    },
-    {
-      "expression": "\"T-biLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "). However, the hybrid topology ("
-    },
-    {
-      "expression": "\"H-biLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), consisting of both a "
-    },
-    {
-      "expression": "\"L-\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"TbiLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is the "
+      "value": " than the biLSTM with tree topology (T-biLSTM). However, the hybrid topology (H-biLSTM), consisting of both a L- and TbiLSTM is the "
     },
     {
       "expression": "\"top-performing\"",
@@ -156,16 +66,7 @@
     },
     {
       "type": "literal",
-      "value": "). Though our methods achieve state of the art in the single-task setting, the "
-    },
-    {
-      "expression": "\"best performing\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " systems are mostly multi-task (Table "
+      "value": "). Though our methods achieve state of the art in the single-task setting, the best performing systems are mostly multi-task (Table "
     },
     {
       "expression": "\"4\"",

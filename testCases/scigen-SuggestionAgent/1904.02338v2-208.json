@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables 1 and 2 show results on the "
+      "value": "Tables "
     },
     {
-      "expression": "\"UNCorpus\"",
+      "expression": "\"1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " datasets. Our approach consistently outperforms "
+      "value": " and "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " show results on the UNCorpus datasets.  Our approach consistently outperforms "
     },
     {
       "expression": "\"Basic\"",

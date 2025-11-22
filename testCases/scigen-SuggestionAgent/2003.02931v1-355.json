@@ -3,16 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Cross-lingual transfer is powerful (RQ1). Zero-shot learning reaches an F1 score of "
+      "value": "Understood. I will adjust the annotations to use the correct categories. Here is the corrected output:\n\nCross-lingual transfer is powerful (RQ1). Zero-shot learning reaches an F1 score of "
     },
     {
-      "expression": "\"58\"",
+      "expression": "\"58%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% in the MEDIUM setup, which outperforms training the neural tagger on very limited gold data (plain). Neural NER is "
+      "value": " in the "
+    },
+    {
+      "expression": "\"MEDIUM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " setup, which outperforms training the neural tagger on very limited gold data ("
+    },
+    {
+      "expression": "\"plain\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Neural NER is "
     },
     {
       "expression": "\"better\"",
@@ -21,7 +39,25 @@
     },
     {
       "type": "literal",
-      "value": " than traditional HMM-based tagging (TnT) (Brants, 2000) and greatly improves by unsupervised word embedding initialization (+Poly). It is noteworthy that zero-shot transfer benefits only to a limiting degree from more source data (F1 increases by almost "
+      "value": " than traditional HMM-based tagging ("
+    },
+    {
+      "expression": "\"TnT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") (Brants, 2000) and greatly improves by unsupervised word embedding initialization (+"
+    },
+    {
+      "expression": "\"Poly\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). It is noteworthy that zero-shot transfer benefits only to a limiting degree from more source data (F1 increases by almost "
     },
     {
       "expression": "\"3%\"",
@@ -30,25 +66,52 @@
     },
     {
       "type": "literal",
-      "value": " when training on all English CoNLL data). To compare cross-lingual transfer to limited gold data (RQ2), we observe that training the neural system on the small amount of data together with Polyglot embeddings is close to the tiny-shot transfer setup. Few-shot learning greatly improves over zero-shot learning. The "
+      "value": " when training on all English CoNLL data). To compare cross-lingual transfer to limited gold data ("
     },
     {
-      "expression": "\"most beneficial\"",
-      "categories": ["rank"],
+      "expression": "\"RQ2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " way is to add the target data to the source, in comparison to fine-tuning. In both MEDIUM and LARGE setups are further gains obtained by adding TINY or SMALL amounts of Danish gold data. Interestingly, a) finetuning is "
+      "value": "), we observe that training the neural system on the small amount of data together with Polyglot embeddings is close to the tiny-shot transfer setup. Few-shot learning greatly improves over zero-shot learning. The most beneficial way is to add the target data to the source, in comparison to fine-tuning. In both "
     },
     {
-      "expression": "\"less effective\"",
-      "categories": ["comparison"],
+      "expression": "\"MEDIUM\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "; b) it is "
+      "value": " and "
+    },
+    {
+      "expression": "\"LARGE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " setups are further gains obtained by adding "
+    },
+    {
+      "expression": "\"TINY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " or "
+    },
+    {
+      "expression": "\"SMALL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " amounts of Danish gold data. Interestingly, a) finetuning is less effective; b) it is "
     },
     {
       "expression": "\"better\"",

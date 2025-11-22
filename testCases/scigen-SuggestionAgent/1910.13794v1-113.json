@@ -3,25 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In addition, we provide the "
-    },
-    {
-      "expression": "\"recall\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"precision\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " per class for our final interrogative-word classifier ("
+      "value": "In addition, we provide the recall and precision per class for our final interrogative-word classifier ("
     },
     {
       "expression": "\"CLS + AT + NER\"",
@@ -30,25 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " in Table 7).  However, the "
-    },
-    {
-      "expression": "\"recall\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of which is "
+      "value": " in Table 7). However, the recall of which is "
     },
     {
       "expression": "\"very low\"",
-      "categories": ["min-max"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".  Our model has also problem with "
+      "value": ". Our model has also problem with "
     },
     {
       "expression": "\"why\"",
@@ -57,29 +30,20 @@
     },
     {
       "type": "literal",
-      "value": "  Lastly, the "
+      "value": ". Lastly, the recall of "
     },
     {
-      "expression": "\"recall\"",
+      "expression": "\"'when'\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of '"
-    },
-    {
-      "expression": "\"when\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "' is also "
+      "value": " is also "
     },
     {
       "expression": "\"low\"",
-      "categories": ["min-max"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

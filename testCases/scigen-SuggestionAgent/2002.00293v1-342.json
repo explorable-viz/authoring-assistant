@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For example, "
+      "value": "Thank you for the correction. Here is the annotated paragraph with the appropriate categories:\n\nFor example, "
     },
     {
       "expression": "\"RoBERTa\"",
@@ -24,13 +24,13 @@
       "value": " reaches "
     },
     {
-      "expression": "\"38.9F1\"",
+      "expression": "\"38.9\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on "
+      "value": "F1 on "
     },
     {
       "expression": "\"DRoBERTa\"",
@@ -42,13 +42,13 @@
       "value": ", and this number further increases to "
     },
     {
-      "expression": "\"47.2F1\"",
+      "expression": "\"47.2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " when including "
+      "value": "F1 when including "
     },
     {
       "expression": "\"SQuAD\"",
@@ -57,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " during training (cf. Table 6). In Table 6 we show experimental results for the same models and training datasets, but now including "
+      "value": " during training (cf. Table 6).  In Table 6 we show experimental results for the same models and training datasets, but now including "
     },
     {
       "expression": "\"SQuAD\"",
@@ -156,7 +156,16 @@
     },
     {
       "type": "literal",
-      "value": " achieves the strongest results on any of the "
+      "value": " achieves the "
+    },
+    {
+      "expression": "\"strongest\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results on any of the "
     },
     {
       "expression": "\"DBiDAF\"",
@@ -192,7 +201,7 @@
     },
     {
       "type": "literal",
-      "value": ". we identify a risk of datasets constructed with weaker models in the loop becoming outdated. For example, "
+      "value": ".  we identify a risk of datasets constructed with weaker models in the loop becoming outdated. For example, "
     },
     {
       "expression": "\"RoBERTa\"",
@@ -204,13 +213,22 @@
       "value": " achieves "
     },
     {
-      "expression": "\"58.2EM/73.2F1\"",
+      "expression": "\"58.2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on "
+      "value": "EM/"
+    },
+    {
+      "expression": "\"73.2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "F1 on "
     },
     {
       "expression": "\"DBiDAF\"",
@@ -222,13 +240,22 @@
       "value": ", in contrast to "
     },
     {
-      "expression": "\"0.0EM/5.5F1\"",
+      "expression": "\"0.0\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for "
+      "value": "EM/"
+    },
+    {
+      "expression": "\"5.5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "F1 for "
     },
     {
       "expression": "\"BiDAF\"",
@@ -240,13 +267,22 @@
       "value": " \u2013 which is not far from non-expert human performance of "
     },
     {
-      "expression": "\"62.6EM/78.5F1\"",
+      "expression": "\"62.6\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". We furthermore observe a gradual decrease in generalisation to "
+      "value": "EM/"
+    },
+    {
+      "expression": "\"78.5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "F1.  We furthermore observe a gradual decrease in generalisation to "
     },
     {
       "expression": "\"SQuAD\"",

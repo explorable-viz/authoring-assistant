@@ -30,7 +30,25 @@
     },
     {
       "type": "literal",
-      "value": "] improvement in accuracy with Somali-Oromo than Amharic-Tigrinya.  the supervised "
+      "value": " improvement in accuracy with "
+    },
+    {
+      "expression": "\"Somali-Oromo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"Amharic-Tigrinya\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  the supervised "
     },
     {
       "expression": "\"TRANS\"",
@@ -48,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": "] than the zero-shot "
+      "value": " than the zero-shot "
     },
     {
       "expression": "\"PBEL\"",

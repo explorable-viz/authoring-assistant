@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "of results the multimodal The experiments are shown in Table 3.  We find that "
+      "value": "Got it! I will make sure to use the correct categories. Here is the corrected version of the paragraph:\n\nof results the multimodal The experiments are shown in Table 3.  We find that "
     },
     {
       "expression": "\"EF\"",
@@ -66,10 +66,10 @@
     },
     {
       "type": "literal",
-      "value": " model achieved "
+      "value": " model achieved the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -246,151 +246,7 @@
     },
     {
       "type": "literal",
-      "value": " performance than the verbal S+P model. p << "
-    },
-    {
-      "expression": "\"0.001\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
-    },
-    {
-      "expression": "\"TFN S+P\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and verbal S+P, p = "
-    },
-    {
-      "expression": "\"0.017\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for verbal S+P and "
-    },
-    {
-      "expression": "\"LF S\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". 7p = "
-    },
-    {
-      "expression": "\"0.105\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
-    },
-    {
-      "expression": "\"S TFN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"S+P TFN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". 8p = "
-    },
-    {
-      "expression": "\"0.888\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
-    },
-    {
-      "expression": "\"S EF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"S+P EF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", p = "
-    },
-    {
-      "expression": "\"0.029\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
-    },
-    {
-      "expression": "\"S EF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"S+I EF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", p = "
-    },
-    {
-      "expression": "\"0.009\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
-    },
-    {
-      "expression": "\"S EF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"S+P+I EF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " performance than the verbal S+P model. p << 0.001 for TFN S+P and verbal S+P, p = 0.017 for verbal S+P and LF S. 7p = 0.105 for S TFN and S+P TFN. 8p = 0.888 for S EF and S+P EF, p = 0.029 for S EF and S+I EF, p = 0.009 for S EF and S+P+I EF."
     }
   ],
   "variables": {},

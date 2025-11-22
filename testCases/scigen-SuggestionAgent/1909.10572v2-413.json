@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " shows the results on the two domain-specific tasks of music and medical domain corpora.\r\n"
+      "value": " shows the results on the two domain-specific tasks of music and medical domain corpora. "
     },
     {
       "expression": "\"SPON\"",
@@ -21,16 +21,25 @@
     },
     {
       "type": "literal",
-      "value": " outperforms the SOTA systems in all tasks except for the medical domain in which it achieves "
+      "value": " outperforms the "
     },
     {
-      "expression": "\"comparable\"",
-      "categories": ["comparison"],
+      "expression": "\"SOTA systems\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results."
+      "value": " in all tasks except for the "
+    },
+    {
+      "expression": "\"medical domain\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in which it achieves comparable results."
     }
   ],
   "variables": {},

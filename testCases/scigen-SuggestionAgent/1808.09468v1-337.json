@@ -16,21 +16,12 @@
     },
     {
       "expression": "\"95%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " correct simple sentences), with the "
-    },
-    {
-      "expression": "\"lowest\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " incidence of missed or unsupported statements.  outputs from Aharoni and Goldberg(2018) (AG18), which were "
+      "value": "), with the lowest incidence of missed or unsupported statements. outputs from Aharoni and Goldberg(2018) (AG18), which were "
     },
     {
       "expression": "\"22%\"",
@@ -39,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " accurate."
+      "value": "."
     }
   ],
   "variables": {},

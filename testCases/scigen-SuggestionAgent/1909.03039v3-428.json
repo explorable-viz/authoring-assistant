@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 compares the performance of all "
+      "value": "Got it. I'll ensure that each replacement uses only a single category from the specified list.\n\nHere is the revised output:\n\nTable 1 compares the performance of all "
     },
     {
       "expression": "\"model variants\"",
@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " on the two diagnosis tasks (p < 0.001 under Welch's t-test): for CCS prediction, the "
+      "value": " on the two diagnosis tasks (p < 0.001 under Welch's t-test): for "
+    },
+    {
+      "expression": "\"CCS prediction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
     },
     {
       "expression": "\"best SHiP models\"",
@@ -52,7 +61,7 @@
     },
     {
       "expression": "\"7.9\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -70,7 +79,7 @@
     },
     {
       "expression": "\"4.8\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -84,25 +93,61 @@
     },
     {
       "type": "literal",
-      "value": "; for ICD-9 prediction, area under the precision-recall curve (AUPRC) increased by "
+      "value": "; for "
+    },
+    {
+      "expression": "\"ICD-9 prediction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"area under the precision-recall curve (AUPRC)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased by "
     },
     {
       "expression": "\"2.1\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points and weighted area under the ROC curve (AUROC) increased by "
+      "value": " percentage points and "
+    },
+    {
+      "expression": "\"weighted area under the ROC curve (AUROC)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased by "
     },
     {
       "expression": "\"0.8\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points. For mortality prediction, we saw negligible benefit from the "
+      "value": " percentage points. For "
+    },
+    {
+      "expression": "\"mortality prediction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we saw negligible benefit from the "
     },
     {
       "expression": "\"SHiP architecture\"",
@@ -120,61 +165,178 @@
     },
     {
       "type": "literal",
-      "value": " also improved over the corresponding hierarchical models without pretraining. For mortality, pretraining the all-features model increased AUPRC by "
+      "value": " also improved over the corresponding hierarchical models without pretraining. For "
+    },
+    {
+      "expression": "\"mortality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", pretraining the "
+    },
+    {
+      "expression": "\"all-features model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased "
+    },
+    {
+      "expression": "\"AUPRC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
     },
     {
       "expression": "\"0.8\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points (p = 0.06) and AUROC by "
+      "value": " percentage points (p = 0.06) and "
+    },
+    {
+      "expression": "\"AUROC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
     },
     {
       "expression": "\"0.6\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points (p = 0.004); for primary CCS, pretraining the all-feature model increased top-1 recall by "
+      "value": " percentage points (p = 0.004); for "
+    },
+    {
+      "expression": "\"primary CCS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", pretraining the "
+    },
+    {
+      "expression": "\"all-feature model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased "
+    },
+    {
+      "expression": "\"top-1 recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
     },
     {
       "expression": "\"8.0\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points (p < 0.001), while pretraining the notes-only model increased top-5 recall by "
+      "value": " percentage points (p < 0.001), while pretraining the "
+    },
+    {
+      "expression": "\"notes-only model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased "
+    },
+    {
+      "expression": "\"top-5 recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
     },
     {
       "expression": "\"4.7\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points (p < 0.001); for all ICD-9, pretraining the notes-only model increased AUPRC by "
+      "value": " percentage points (p < 0.001); for "
+    },
+    {
+      "expression": "\"all ICD-9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", pretraining the "
+    },
+    {
+      "expression": "\"notes-only model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased "
+    },
+    {
+      "expression": "\"AUPRC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
     },
     {
       "expression": "\"0.7\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points (p = 0.03) and weighted AUROC by "
+      "value": " percentage points (p = 0.03) and "
+    },
+    {
+      "expression": "\"weighted AUROC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increased by "
     },
     {
       "expression": "\"0.4\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " percentage points (p = 0.01)."
+      "value": " percentage points (p = 0.01).\n\nIn this version, each replacement uses only one category from the specified list."
     }
   ],
   "variables": {},

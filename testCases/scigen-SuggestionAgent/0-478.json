@@ -12,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " approaches in the task of generating sentences from dependency trees have been feature-based incremental text generation ("
+      "value": " approaches in the task of generating sentences from dependency trees have been "
     },
     {
-      "expression": "\"Bohnet et al., 2010; Liu et al., 2015; Puduppully et al., 2016; King and White, 2018\"",
+      "expression": "\"feature-based incremental text generation\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and "
+      "value": " (Bohnet et al., 2010; Liu et al., 2015; Puduppully et al., 2016; King and White, 2018) and "
     },
     {
       "expression": "\"2\"",
@@ -30,25 +30,16 @@
     },
     {
       "type": "literal",
-      "value": "http://universaldependencies.org/ techniques performing "
+      "value": "http://universaldependencies.org/ techniques performing more global input-output mapping (Castro Ferreira et al., 2018; Elder and Hokamp, 2018). Each of these approaches has their advantages and limitations ("
     },
     {
-      "expression": "\"more global input-output mapping\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"Castro Ferreira et al., 2018; Elder and Hokamp, 2018\"",
+      "expression": "\"Table 2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). Each of these approaches has their advantages and limitations (Table 2)."
+      "value": ")."
     }
   ],
   "variables": {},

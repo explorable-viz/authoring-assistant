@@ -3,25 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
+      "value": "Understood, I'll ensure that each annotation uses only one category. Here is the corrected output:\n\nTable 3 reports the precision, recall, F1 score, area under the precision-recall curve (AUC) per class, as well as micro- and macro-averages. The "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"self-attention mechanism\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " reports the precision, recall, F1 score, area under the precision-recall curve ("
-    },
-    {
-      "expression": "\"AUC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), per class, as well as micro- and macro-averages.  The self-attention mechanism ("
+      "value": " ("
     },
     {
       "expression": "\"BILSTM-ATT\"",
@@ -48,25 +39,16 @@
     },
     {
       "type": "literal",
-      "value": ", Table "
+      "value": ", Table 3) comparing to the plain "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"BILSTM\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ")"
-    },
-    {
-      "expression": "\"comparing to the plain BILSTM\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " supporting the hypothesis that selfattention allows the classifier to focus on indicative tokens. Allowing the "
+      "value": ", supporting the hypothesis that selfattention allows the classifier to focus on indicative tokens. Allowing the "
     },
     {
       "expression": "\"BILSTM\"",
@@ -84,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": ") does not lead to any clear overall improvements.  The hierarchical "
+      "value": ") does not lead to any clear overall improvements. The hierarchical "
     },
     {
       "expression": "\"H-BILSTM-ATT\"",

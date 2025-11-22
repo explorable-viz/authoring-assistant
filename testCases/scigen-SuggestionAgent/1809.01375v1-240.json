@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows a selection of the "
+      "value": "Got it, I will ensure that each annotation uses only one category. Here is the corrected paragraph:\n\nTable 2 shows a selection of the "
     },
     {
       "expression": "\"f1-scores\"",
@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " achieved on properties in the CSLB dataset in relation to the "
+      "value": " achieved on properties in the "
+    },
+    {
+      "expression": "\"CSLB dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in relation to the "
     },
     {
       "expression": "\"average cosine similarity\"",
@@ -30,19 +39,19 @@
     },
     {
       "type": "literal",
-      "value": " means that the concepts overall have similar vector representations and can thus be seen as having a low diversity. The results of the Spearman Rank correlation clearly indicate that scores achieved by nearest neighbors correlate "
+      "value": " means that the concepts overall have similar vector representations and can thus be seen as having a low diversity. The results of the "
     },
     {
-      "expression": "\"more strongly\"",
-      "categories": ["comparison"],
+      "expression": "\"Spearman Rank correlation\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with the "
+      "value": " clearly indicate that scores achieved by nearest neighbors correlate more strongly with the "
     },
     {
-      "expression": "\"average cosine\"",
+      "expression": "\"average cosine similarity\"",
       "categories": ["average"],
       "type": "expression"
     },

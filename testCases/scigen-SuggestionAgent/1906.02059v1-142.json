@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 (upper part) shows the results for binary violation. We evaluate "
+      "value": "Thank you for clarifying. I will ensure that the correct categories are used.\n\nHere is the revised annotation:\n\nTable 2 (upper part) shows the results for binary violation. We evaluate models using macroaveraged precision ("
     },
     {
-      "expression": "\"models\"",
+      "expression": "\"P\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " using macroaveraged precision (P), recall (P), F1. The weak baselines ("
+      "value": "), recall ("
+    },
+    {
+      "expression": "\"R\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), F1. The weak baselines ("
     },
     {
       "expression": "\"MAJORITY\"",
@@ -30,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ") are widely "
-    },
-    {
-      "expression": "\"outperformed\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " by the rest of the methods. "
+      "value": ") are widely outperformed by the rest of the methods. "
     },
     {
       "expression": "\"BIGRUATT\"",
@@ -66,25 +66,7 @@
     },
     {
       "type": "literal",
-      "value": ") the previous "
-    },
-    {
-      "expression": "\"best performing method\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"Aletras et al., 2016\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") in English judicial prediction. "
+      "value": ") the previous best performing method (Aletras et al., 2016) in English judicial prediction. "
     },
     {
       "expression": "\"HAN\"",
@@ -93,16 +75,7 @@
     },
     {
       "type": "literal",
-      "value": " slightly "
-    },
-    {
-      "expression": "\"improves\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " over "
+      "value": " slightly improves over "
     },
     {
       "expression": "\"BIGRU-ATT\"",
@@ -132,22 +105,22 @@
       "value": "), while being more robust across runs ("
     },
     {
-      "expression": "\"0.2%\"",
+      "expression": "\"0.2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " vs. "
+      "value": "% vs. "
     },
     {
-      "expression": "\"2.7%\"",
+      "expression": "\"2.7\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " std. dev.). the results in Table 2 indicate that performance is comparable even when this information is masked, with the exception of "
+      "value": "% std. dev.). The results in Table 2 indicate that performance is comparable even when this information is masked, with the exception of "
     },
     {
       "expression": "\"HIER-BERT\"",
@@ -165,16 +138,16 @@
     },
     {
       "type": "literal",
-      "value": " results ("
+      "value": "] results ("
     },
     {
-      "expression": "\"2%\"",
+      "expression": "\"2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") compared to using non-anonymized data, suggesting model bias."
+      "value": "%) compared to using non-anonymized data, suggesting model bias."
     }
   ],
   "variables": {},

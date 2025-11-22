@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " languages, the performance decreases in most cases, other than the target group classification tasks. Yet, multilingual training of the target group classification task improves in all languages. Since the target group classification task involves "
+      "value": " languages, the performance decreases in most cases, other than the target group classification tasks.  Yet, multilingual training of the target group classification task improves in all languages. Since the target group classification task involves "
     },
     {
       "expression": "\"16\"",
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " labels, the amount of data annotated for each label is "
-    },
-    {
-      "expression": "\"lower\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than in other tasks. Hence, when aggregating annotated data in different languages, the size of the training data also increases, due to the relative regularity of identification words of different groups in all three languages in comparison to other tasks."
+      "value": " labels, the amount of data annotated for each label is lower than in other tasks. Hence, when aggregating annotated data in different languages, the size of the training data also increases, due to the relative regularity of identification words of different groups in all three languages in comparison to other tasks."
     }
   ],
   "variables": {},

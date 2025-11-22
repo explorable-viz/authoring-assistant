@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the impact that different methods for combining character and word-level word representations have in the quality of the sentence representations produced by our models. We can observe the same trend mentioned in section 4.1, and highlighted by the difference between bold values, that models trained in "
+      "value": "Got it. Let's correct that and ensure we use only the specified categories.\n\nHere is the annotated paragraph:\n\nTable 2 shows the impact that different methods for combining character and word-level word representations have in the quality of the sentence representations produced by our models.  We can observe the same trend mentioned in section 4.1, and highlighted by the difference between bold values, that models trained in "
     },
     {
       "expression": "\"MultiNLI\"",
@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " than those trained in "
+      "value": " than those trained in  "
     },
     {
       "expression": "\"SNLI\"",
@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " at a statistically significant level. The two exceptions to the previous trend, "
+      "value": " at a statistically significant level.  The two exceptions to the previous trend, "
     },
     {
       "expression": "\"SICKE\"",
@@ -48,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": ", benefited "
-    },
-    {
-      "expression": "\"more\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " from models trained on "
+      "value": ", benefited more from models trained on "
     },
     {
       "expression": "\"SNLI\"",
@@ -66,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": ". Additionally, there was no method that significantly outperformed the word only baseline in classification tasks. On the other hand, the vector gate significantly outperformed every other method in the "
+      "value": ".  Additionally, there was no method that significantly outperformed the word only baseline in classification tasks.  On the other hand, the vector gate significantly outperformed every other method in the "
     },
     {
       "expression": "\"STSB\"",

@@ -3,34 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 5 illustrates the influence of modals and negation on the factuality of the events they have direct scope over. The context with "
+      "value": "I understand. Let's adjust the annotations to ensure they use only the specified valid categories.\n\nHere is the corrected paragraph:\n\nTable 5 illustrates the influence of modals and negation on the "
     },
     {
-      "expression": "\"the highest\"",
-      "categories": ["rank"],
+      "expression": "\"factuality\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " factuality "
+      "value": " of the events they have direct scope over. The context with the "
     },
     {
-      "expression": "\"on average\"",
+      "expression": "\"highest\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"factuality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on average is no direct modal and no negation (first row); all other modal contexts have varying degrees of negative "
+    },
+    {
+      "expression": "\"mean factuality scores\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is no direct modal and no negation (first row); all other modal contexts have varying degrees of negative "
-    },
-    {
-      "expression": "\"mean\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " factuality scores, with "
+      "value": " with "
     },
     {
       "expression": "\"will\"",
@@ -39,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " as the "
-    },
-    {
-      "expression": "\"most negative\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " as the most negative."
     }
   ],
   "variables": {},

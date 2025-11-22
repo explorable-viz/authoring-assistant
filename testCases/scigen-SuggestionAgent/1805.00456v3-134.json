@@ -12,10 +12,10 @@
     },
     {
       "type": "literal",
-      "value": " batch training can significantly improve the performance of "
+      "value": " batch training can significantly improve the performance of single "
     },
     {
-      "expression": "\"single Transformers\"",
+      "expression": "\"Transformers\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -25,7 +25,7 @@
     },
     {
       "expression": "\"8\"",
-      "categories": ["data-retrieval"],
+      "categories": ["sum"],
       "type": "expression"
     },
     {
@@ -48,29 +48,20 @@
     },
     {
       "type": "literal",
-      "value": " BLEU improvement for the "
+      "value": " BLEU improvement for the linear derivation model. It has been suggested that decaying the learning rate can have a similar effect to large batch training ("
     },
     {
-      "expression": "\"linear derivation model\"",
+      "expression": "\"Smith et al., 2017\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". It has been suggested that "
-    },
-    {
-      "expression": "\"decaying\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the learning rate can have a similar effect to large batch training (Smith et al., 2017), but reducing the initial learning rate by a factor of "
+      "value": "), but reducing the initial learning rate by a factor of "
     },
     {
       "expression": "\"8\"",
-      "categories": ["data-retrieval"],
+      "categories": ["sum"],
       "type": "expression"
     },
     {

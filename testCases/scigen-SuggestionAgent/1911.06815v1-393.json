@@ -3,43 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The left side of "
+      "value": "I apologize for the mistake. Let's correct the annotations to ensure they use only the specified categories:\n\nThe left side of Table 1 shows the performance for the "
     },
     {
-      "expression": "\"Table 1\"",
+      "expression": "\"three\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " shows the performance for the "
+      "value": " baselines and for our multi-granularity network on the "
     },
     {
-      "expression": "\"three baselines\"",
+      "expression": "\"FLC\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and for our multi-granularity network on the "
-    },
-    {
-      "expression": "\"FLC task\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  "
-    },
-    {
-      "expression": "\"Table 1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (right) shows that using additional information from the sentence-level for the token-level classification ("
+      "value": " task.  Table 1 (right) shows that using additional information from the sentence-level for the token-level classification ("
     },
     {
       "expression": "\"BERT-Granularity\"",
@@ -51,31 +33,22 @@
       "value": ") yields small improvements. The multi-granularity models outperform all baselines thanks to their "
     },
     {
-      "expression": "\"higher precision\"",
-      "categories": ["min-max"],
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". This shows the effect of the model excluding sentences that it determined to be non-propagandistic from being considered for token-level classification.  The right side of "
+      "value": " precision. This shows the effect of the model excluding sentences that it determined to be non-propagandistic from being considered for token-level classification.  The right side of Table 1 shows the results for the "
     },
     {
-      "expression": "\"Table 1\"",
+      "expression": "\"SLC\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " shows the results for the "
-    },
-    {
-      "expression": "\"SLC task\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". We apply our multi-granularity network model to the sentence-level classification task to see its effect on low granularity when we train the model with a high granularity task. Interestingly, it yields huge performance improvements on the sentence-level classification result. Compared to the "
+      "value": " task. We apply our multi-granularity network model to the sentence-level classification task to see its effect on low granularity when we train the model with a high granularity task. Interestingly, it yields huge performance improvements on the sentence-level classification result. Compared to the "
     },
     {
       "expression": "\"BERT\"",
@@ -87,22 +60,22 @@
       "value": " baseline, it increases the recall by "
     },
     {
-      "expression": "\"8.42\"",
-      "categories": ["ratio"],
+      "expression": "\"8.42%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, resulting in a "
+      "value": ", resulting in a "
     },
     {
-      "expression": "\"3.24\"",
-      "categories": ["ratio"],
+      "expression": "\"3.24%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% increase of the F1 score."
+      "value": " increase of the F1 score."
     }
   ],
   "variables": {},

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the results of this evaluation. The extent of spelling variation varies greatly between datasets, with "
+      "value": "Got it! I will ensure that each annotation uses only a single category. Here is the revised output:\n\nTable 2 shows the results of this evaluation. The extent of spelling variation varies  greatly between datasets, with "
     },
     {
       "expression": "\"less than 15%\"",
@@ -42,13 +42,13 @@
       "value": "). The "
     },
     {
-      "expression": "\"maximum\"",
+      "expression": "\"maximum accuracy\"",
       "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy is above "
+      "value": " is above "
     },
     {
       "expression": "\"97%\"",
@@ -57,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " for most datasets, For the normalization systems, we observe "
+      "value": " for most datasets,  For the normalization systems, we observe "
     },
     {
       "expression": "\"significantly better\"",
@@ -111,25 +111,16 @@
     },
     {
       "type": "literal",
-      "value": " word accuracy than other systems. Overall, the "
+      "value": " word accuracy than other systems.  Overall, the deep "
     },
     {
-      "expression": "\"deep\"",
-      "categories": ["average"],
+      "expression": "\"NMT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " NMT model by Tang et al. (2018) consistently outperforms the "
-    },
-    {
-      "expression": "\"shallow\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " one by Bollmann (2018). Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "
+      "value": " model by Tang et al. (2018) consistently outperforms the shallow one by Bollmann (2018).  Finally, while Norma does produce competitive results on sev  eral datasets (particularly in the \"combined\" setting), it is generally "
     },
     {
       "expression": "\"significantly behind\"",

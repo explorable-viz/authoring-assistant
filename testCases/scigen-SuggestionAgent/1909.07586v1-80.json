@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Because of the small size of the dataset, we report "
+      "value": "Understood. I will adjust the annotations to use only the specified categories.\n\nHere is the corrected output:\n\nBecause of the small size of the dataset, we report "
     },
     {
       "expression": "\"the average\"",
@@ -48,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"superior\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for most test conditions (confirming our hypothesis about simpler modifier behaviour in this space). However for "
+      "value": " is superior for most test conditions (confirming our hypothesis about simpler modifier behaviour in this space). However for "
     },
     {
       "expression": "\"Delta-E\"",
@@ -111,16 +102,16 @@
     },
     {
       "type": "literal",
-      "value": " under this metric, as it more directly models the direction of color modifiers, but as a consequence this leads to errors in its length predictions. Over- all the ensemble does well according to both metrics, and has "
+      "value": ". under this metric, as it more directly models the direction of color modifiers, but as a consequence this leads to errors in its length predictions. Over- all the ensemble does well according to both met rics, and has the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best performance\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance for several test conditions with "
+      "value": " for several test conditions with "
     },
     {
       "expression": "\"Delta-E\"",

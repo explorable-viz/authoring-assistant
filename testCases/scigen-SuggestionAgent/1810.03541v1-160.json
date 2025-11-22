@@ -33,13 +33,13 @@
       "value": " parsers ensembled, "
     },
     {
-      "expression": "\"more improvements\"",
-      "categories": ["rank"],
+      "expression": "\"more\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are achieved."
+      "value": " improvements are achieved."
     }
   ],
   "variables": {},

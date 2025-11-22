@@ -12,52 +12,16 @@
     },
     {
       "type": "literal",
-      "value": ", both "
-    },
-    {
-      "expression": "\"models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " improve substantially over the baseline (by "
+      "value": ", both models improve substantially over the baseline (by "
     },
     {
       "expression": "\"19-51 percentage points\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), with "
-    },
-    {
-      "expression": "\"concat\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " stronger for "
-    },
-    {
-      "expression": "\"inflection tasks\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"CADec\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " stronger for "
+      "value": "), with concat stronger for inflection tasks and CADec stronger for "
     },
     {
       "expression": "\"VPellipsis\"",

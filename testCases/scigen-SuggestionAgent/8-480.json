@@ -6,13 +6,22 @@
       "value": "The "
     },
     {
-      "expression": "\"average\"",
+      "expression": "\"average precision\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " precision (AP) ranking scores achieved via cross-lingual transfer of POSTLE are shown in Table 2. We report AP scores using three methods for cross-lingual word embedding induction, and compare their performance to two baselines: 1) random word pair scoring, and 2) the original ("
+      "value": " ranking scores achieved via cross-lingual transfer of "
+    },
+    {
+      "expression": "\"POSTLE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are shown in Table 2. We report AP scores using three methods for cross-lingual word embedding induction, and compare their performance to two baselines: 1) random word pair scoring, and 2) the original ("
     },
     {
       "expression": "\"FASTTEXT\"",

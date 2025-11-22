@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": ", we observe that the performance slightly degraded without "
+      "value": ", we observe that the performance slightly "
+    },
+    {
+      "expression": "\"degraded\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " without "
     },
     {
       "expression": "\"coarse-tofine attention\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ".\r\nWe also noticed that the performance slightly degraded without "
+      "value": ". We also noticed that the performance slightly "
+    },
+    {
+      "expression": "\"degraded\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " without "
     },
     {
       "expression": "\"KG\"",
@@ -39,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": ", and the performance significantly degraded when we removed "
+      "value": ", and the performance significantly "
+    },
+    {
+      "expression": "\"degraded\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when we removed "
     },
     {
       "expression": "\"GCNs\"",

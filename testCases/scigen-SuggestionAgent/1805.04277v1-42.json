@@ -3,10 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The "
+      "value": "The two "
     },
     {
-      "expression": "\"two top\"",
+      "expression": "\"top\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -51,13 +51,13 @@
       "value": " yields the "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"best overall\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " overall result."
+      "value": " result."
     }
   ],
   "variables": {},

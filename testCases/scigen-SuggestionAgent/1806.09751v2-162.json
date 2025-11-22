@@ -21,25 +21,16 @@
     },
     {
       "type": "literal",
-      "value": ". Table 2 shows "
+      "value": ". Table 2 shows the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results when using the feature ensemble method which is "
-    },
-    {
-      "expression": "\"more stable than\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the non-ensemble one (due to "
+      "value": " results when using the feature ensemble method which is more stable than the non-ensemble one (due to "
     },
     {
       "expression": "\"lower\"",
@@ -57,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " precision). According to the results, the best combination in terms of the "
+      "value": " precision). According to the results, the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " combination in terms of the "
     },
     {
       "expression": "\"mean\"",
@@ -66,16 +66,7 @@
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"standard deviation\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is obtained when using TFIDF (Eq.5) to weigh the edges and context-dependent similarity (Eq.8) to rank NPs. This shows that the uniqueness and the significant overlap of features between noun phrases were very important."
+      "value": " and standard deviation is obtained when using TFIDF (Eq.5) to weigh the edges and context-dependent similarity (Eq.8) to rank NPs. This shows that the uniqueness and the significant overlap of features between noun phrases were very important."
     }
   ],
   "variables": {},

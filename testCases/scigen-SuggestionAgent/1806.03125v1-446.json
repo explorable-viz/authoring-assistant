@@ -12,61 +12,43 @@
     },
     {
       "type": "literal",
-      "value": "%. This  LSA with BOW features was almost "
+      "value": "%. This LSA with BOW features was almost 10% "
     },
     {
-      "expression": "\"10%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " more accurate than SA, where the best results with binary weights were achieved with an approximation with "
-    },
-    {
-      "expression": "\"130\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dimensions, with TF weights were achieved with "
-    },
-    {
-      "expression": "\"50\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dimensions, and with TFIDF weights were achieved with "
-    },
-    {
-      "expression": "\"30\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dimensions. SVM with BOW features was about "
-    },
-    {
-      "expression": "\"3%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " more accurate than LSA, with binary weights leading to a "
-    },
-    {
-      "expression": "\"higher\"",
+      "expression": "\"more accurate\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy rate. Among the baselines, the best method was MNB with tfBOW features, with an accuracy of "
+      "value": " than SA, where the "
+    },
+    {
+      "expression": "\"best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with binary weights were achieved with an approximation with 130 dimensions, with TF weights were achieved with 50 dimensions, and with TFIDF weights were achieved with 30 dimensions. SVM with BOW features was about 3% "
+    },
+    {
+      "expression": "\"more accurate\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than LSA, with binary weights leading to a higher accuracy rate. Among the baselines, the "
+    },
+    {
+      "expression": "\"best method\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " was MNB with tfBOW features, with an accuracy of "
     },
     {
       "expression": "\"91.47\"",
@@ -75,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": "%,  MSM with w2v had an accuracy rate of "
+      "value": "%, MSM with w2v had an accuracy rate of "
     },
     {
       "expression": "\"90.62\"",
@@ -84,52 +66,16 @@
     },
     {
       "type": "literal",
-      "value": "%, with the best results achieved with word subspace dimensions for the training classes ranging from "
+      "value": "%, with the "
     },
     {
-      "expression": "\"150\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"best results\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to "
-    },
-    {
-      "expression": "\"181\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and for the query ranging from "
-    },
-    {
-      "expression": "\"3\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " to "
-    },
-    {
-      "expression": "\"217\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Incorporating the frequency information in the subspace modeling resulted in a "
-    },
-    {
-      "expression": "\"higher\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " accuracy, with TFMSM achieving "
+      "value": " achieved with word subspace dimensions for the training classes ranging from 150 to 181, and for the query ranging from 3 to 217. Incorporating the frequency information in the subspace modeling resulted in higher accuracy, with TFMSM achieving "
     },
     {
       "expression": "\"92.01\"",

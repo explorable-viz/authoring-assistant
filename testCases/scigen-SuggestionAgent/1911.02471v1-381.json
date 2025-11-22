@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We report metric results when grouping crowd workers into "
+      "value": "Got it, I'll ensure to use the correct categories. Here's the revised output:\n\nWe report metric results when grouping crowd workers into "
     },
     {
       "expression": "\"5\"",
@@ -24,22 +24,31 @@
       "value": " of the dataset. The "
     },
     {
-      "expression": "\"ADR-based bias measures\"",
+      "expression": "\"ADR\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Tab. 2) follow the expected trend ("
+      "value": "-based bias measures (Tab. 2) follow the expected trend ("
     },
     {
-      "expression": "\"model 1 appears more biased than models 2 and 3\"",
+      "expression": "\"model 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " appears "
+    },
+    {
+      "expression": "\"more biased than\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") contrary to the protected attributes-based measures. "
+      "value": " models 2 and 3) contrary to the protected attributes-based measures. "
     },
     {
       "expression": "\"Model 1\"",
@@ -51,9 +60,13 @@
       "value": " trained with MV labels exhibits similar performance across demographic groups "
     },
     {
-      "expression": "\"Model 2's performance is different across groups\"",
-      "categories": ["comparison"],
+      "expression": "\"Model 2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "'s performance is different across groups"
     }
   ],
   "variables": {},

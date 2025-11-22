@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are provided in Table 4.  The scores demonstrate that "
+      "value": "The results are provided in Table 4. The scores demonstrate that "
     },
     {
       "expression": "\"on average\"",
@@ -15,13 +15,13 @@
       "value": " our proposed sentence splitting corpus contains "
     },
     {
-      "expression": "\"four simplified target sentences per complex source sentence\"",
+      "expression": "\"four\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", with every target proposition consisting of "
+      "value": " simplified target sentences per complex source sentence, with every target proposition consisting of "
     },
     {
       "expression": "\"12\"",

@@ -34,7 +34,7 @@
     },
     {
       "expression": "\"43.1%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -42,13 +42,13 @@
       "value": " exact match indicate that the token decoder is heavily reliant on the generated chunk sequences.  The resulting F1 is indeed almost "
     },
     {
-      "expression": "\"10 points higher\"",
+      "expression": "\"10\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", indicating that the token decoder does have the ability to correct mistakes.  In Section 5.3 (see the final row of Table 3) we consider the effect of randomly sampling the max chunk size k during training. This provides a considerable boost to BLEU with a minimal impact to speedup."
+      "value": " points higher (third column of Table 3), indicating that the token decoder does have the ability to correct mistakes.  In Section 5.3 (see the final row of Table 3) we consider the effect of randomly sampling the max chunk size k during training. This provides a considerable boost to BLEU with a minimal impact to speedup."
     }
   ],
   "variables": {},

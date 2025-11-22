@@ -3,25 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Despite the "
-    },
-    {
-      "expression": "\"underperformance\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of these features overall, "
-    },
-    {
-      "expression": "\"Table 9\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " shows that they may still "
+      "value": "Despite the underperformance of these features overall, Table 9 shows that they may still "
     },
     {
       "expression": "\"improve\"",

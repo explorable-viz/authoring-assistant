@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Basic statistics such as corpus sizes, frequency of various semantic annotations, and information about the length of the extracted triples of "
+      "value": "Understood, I will ensure that each expression is annotated with only one category. Here\u2019s the corrected output:\n\nBasic statistics such as "
     },
     {
-      "expression": "\"OPIEC\"",
+      "expression": "\"corpus sizes\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and its subcorpora are shown in Tab. 2.  Roughly "
+      "value": ", frequency of various semantic annotations, and information about the length of the extracted triples of OPIEC and its subcorpora are shown in Tab. 2.  Roughly "
     },
     {
       "expression": "\"30%\"",
@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " ("
+      "value": " of the triples ("
     },
     {
       "expression": "\"104M\"",
@@ -30,25 +30,7 @@
     },
     {
       "type": "literal",
-      "value": ") of the triples in "
-    },
-    {
-      "expression": "\"OPIEC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are clean according to the above constraints. Table 2 shows that clean triples are generally shorter "
-    },
-    {
-      "expression": "\"on average\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and tend to have a "
+      "value": ") in OPIEC are clean according to the above constraints. Table 2 shows that clean triples are generally shorter on average and tend to have a "
     },
     {
       "expression": "\"higher\"",
@@ -57,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " confidence score than the full set of triples in "
-    },
-    {
-      "expression": "\"OPIEC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  About "
+      "value": " confidence score than the full set of triples in OPIEC.  About "
     },
     {
       "expression": "\"49%\"",
@@ -75,25 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " of all triples in "
-    },
-    {
-      "expression": "\"OPIEC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " contain some sort of semantic annotation (cf. Tab. 2); in "
-    },
-    {
-      "expression": "\"OPIEC-Linked\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", the fraction increases to "
+      "value": " of all triples in OPIEC contain some sort of semantic annotation (cf. Tab. 2); in OPIEC-Linked, the fraction increases to "
     },
     {
       "expression": "\"58%\"",

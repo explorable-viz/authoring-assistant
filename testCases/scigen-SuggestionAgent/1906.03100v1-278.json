@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1: Results on the NIST Chinese-English translation task. \"Params\" denotes the number of model parameters. \"Emb.\" represents the number of parameters used for word representation. \"Red.\" represents the reduction rate of the standard size. The results of SMT* and RNNsearch* are reported by Kuang et al. (2018) with the same datasets and vocabulary settings. \"↑\" indicates the result is significantly "
+      "value": "Got it! I'll make sure to use only the specified valid categories. Here is the corrected version:\n\nTable 1: Results on the NIST Chinese-English translation task. \"Params\" denotes the number of model "
+    },
+    {
+      "expression": "\"parameters\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". \"Emb.\" represents the number of parameters used for word representation. \"Red.\" represents the reduction rate of the standard size. The results of SMT* and RNNsearch* are reported by Kuang et al. (2018) with the same datasets and vocabulary settings. \"↑\" indicates the result is significantly "
     },
     {
       "expression": "\"better\"",
@@ -30,10 +39,10 @@
     },
     {
       "type": "literal",
-      "value": " SMT and RNNsearch models. Therefore, we decide to implement all of our experiments based on Transformer architecture. The direct bridging model can further improve the translation quality of the Transformer baseline. The decoder WT model improves the translation quality while reducing the number of parameters for the word representation. This improved performance happens because there are fewer "
+      "value": " SMT and RNNsearch models. Therefore, we decide to implement all of our experiments based on Transformer architecture. The direct bridging model can further improve the translation quality of the Transformer baseline. The decoder WT model improves the translation quality while reducing the number of parameters for the word representation. This improved performance happens because there are fewer model "
     },
     {
-      "expression": "\"model parameters\"",
+      "expression": "\"parameters\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

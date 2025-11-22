@@ -6,31 +6,31 @@
       "value": "Table 3 presents the performance of our baselines in the speaker-independent setup. In this case, the "
     },
     {
-      "expression": "\"multimodal variants\"",
+      "expression": "\"multimodal\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " do not greatly outperform the "
+      "value": " variants do not greatly outperform the "
     },
     {
-      "expression": "\"unimodal counterparts\"",
+      "expression": "\"unimodal\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Unlike Table 2, the "
+      "value": " counterparts. Unlike Table 2, the "
     },
     {
-      "expression": "\"audio channel\"",
+      "expression": "\"audio\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " plays a more important role, and it is slightly improved by adding "
+      "value": " channel plays a more important role, and it is slightly improved by adding "
     },
     {
       "expression": "\"text\"",
@@ -42,31 +42,31 @@
       "value": ". In multiple evaluations, the "
     },
     {
-      "expression": "\"multimodal variants\"",
+      "expression": "\"multimodal\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " were shown to significantly outperform their "
+      "value": " variants were shown to significantly outperform their "
     },
     {
-      "expression": "\"unimodal counterparts\"",
+      "expression": "\"unimodal\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", with relative error rate reductions of up to "
+      "value": " counterparts, with relative error rate reductions of up to "
     },
     {
-      "expression": "\"12.9%\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"12.9\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": "%."
     }
   ],
   "variables": {},

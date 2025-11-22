@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We conduct an ablation study to further analyze our reinforcement learning algorithm. The results are reported in Table 5.  As seen in Table 5, although the performance of "
+      "value": "You are correct. I will use the appropriate categories as specified. Let's correct that:\n\nWe conduct an ablation study to further analyze our reinforcement learning algorithm. The results are reported in Table 5. As seen in Table 5, although the performance of "
     },
     {
       "expression": "\"catSeq-RF1\"",
@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " on predicting present keyphrases, it yields an extremely poor performance on absent keyphrase prediction.  By comparing the last two rows in Table 5, we observe that our "
+      "value": " on predicting present keyphrases, it yields an extremely poor performance on absent keyphrase prediction. By comparing the last two rows in Table 5, we observe that our "
     },
     {
       "expression": "\"RF1 reward function\"",

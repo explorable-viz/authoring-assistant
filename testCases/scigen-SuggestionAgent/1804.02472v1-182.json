@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 7 shows results from a manual error analysis on "
+      "value": "Got it! I'll correct the annotation to use the appropriate category. Here is the revised paragraph:\n\nTable 7 shows results from a manual error analysis on "
     },
     {
       "expression": "\"50\"",
@@ -15,13 +15,13 @@
       "value": " events from UDS-IH2-dev with "
     },
     {
-      "expression": "\"highest absolute prediction error\"",
+      "expression": "\"highest\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (using "
+      "value": " absolute prediction error (using "
     },
     {
       "expression": "\"H-biLSTM(2)MultiSim w/UDS-IH2\"",

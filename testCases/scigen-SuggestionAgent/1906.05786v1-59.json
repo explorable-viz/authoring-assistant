@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Consequently in Table 5 we experiment with "
+      "value": "Thank you for the clarification. Let's correct that and annotate the paragraph again with the appropriate categories.\n\nConsequently in Table 5 we experiment with "
     },
     {
       "expression": "\"BI\"",
@@ -16,7 +16,7 @@
     },
     {
       "expression": "\"α = 0.1\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " the uniform ensemble.\r\nNotably, for en2es, where "
+      "value": "] the uniform ensemble. Notably, for en2es, where "
     },
     {
       "expression": "\"BI\"",
@@ -52,7 +52,7 @@
     },
     {
       "expression": "\"α = 0.5\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "expression": "\"α = 0.1\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

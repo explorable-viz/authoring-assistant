@@ -3,25 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The left column of Table 4 presents results for the cleaned version of the "
-    },
-    {
-      "expression": "\"Forbes and Choi (2017)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dataset.  Results on the "
-    },
-    {
-      "expression": "\"new objects comparison\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dataset we created are shown in the rightmost column of Table 4.  We get "
+      "value": "The left column of Table 4 presents results for the cleaned version of the Forbes and Choi (2017) dataset.  Results on the new objects comparison dataset we created are shown in the rightmost column of Table 4.  We get "
     },
     {
       "expression": "\"better\"",
@@ -33,40 +15,40 @@
       "value": " results than previous methods on this dataset: "
     },
     {
-      "expression": "\"63%\"",
-      "categories": ["ratio"],
+      "expression": "\"63\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": "% and "
     },
     {
-      "expression": "\"61%\"",
-      "categories": ["ratio"],
+      "expression": "\"61\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy on the dev/test sets compared to "
+      "value": "% accuracy on the dev/test sets compared to "
     },
     {
-      "expression": "\"60%\"",
-      "categories": ["ratio"],
+      "expression": "\"60\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": "% and "
     },
     {
-      "expression": "\"57%\"",
-      "categories": ["ratio"],
+      "expression": "\"57\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". These relatively low results on this new dataset indicate that it is more challenging."
+      "value": "%. These relatively low results on this new dataset indicate that it is more challenging."
     }
   ],
   "variables": {},

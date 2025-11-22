@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 6 shows automatically computed statistics on the diversity of the generated texts of both "
+      "value": "Table "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows automatically computed statistics on the diversity of the generated texts of both "
     },
     {
       "expression": "\"models\"",
@@ -30,11 +39,11 @@
     },
     {
       "type": "literal",
-      "value": "]  texts and sentences from the training data than the human texts. Interestingly, however, the character-based models generate significantly "
+      "value": "] texts and sentences from the training data than the human texts. Interestingly, however, the character-based models generate significantly "
     },
     {
       "expression": "\"more unique\"",
-      "categories": ["rank"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -48,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " from the training data than the word-based models, which copy about "
+      "value": "] from the training data than the word-based models, which copy about "
     },
     {
       "expression": "\"40%\"",

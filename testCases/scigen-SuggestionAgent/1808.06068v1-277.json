@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " variant consistently "
-    },
-    {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the "
+      "value": " variant consistently outperforms the "
     },
     {
       "expression": "\"word-level baseline\"",

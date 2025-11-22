@@ -12,7 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " for each task category is calculated by averaging the normalized values for the tasks within each category. Although the activations of token hidden states are often used in fine-tuning BERT for classification tasks, "
+      "value": " for each task category is calculated by "
+    },
+    {
+      "expression": "\"averaging\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the normalized values for the tasks within each category. Although the activations of token hidden states are often used in fine-tuning "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for classification tasks, "
     },
     {
       "expression": "\"Mean-pooling\"",
@@ -21,10 +39,10 @@
     },
     {
       "type": "literal",
-      "value": " of hidden states performs "
+      "value": " of hidden states performs the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },

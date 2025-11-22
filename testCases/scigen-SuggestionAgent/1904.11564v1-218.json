@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We evaluate the in- and out-of-domain performance of our approach by training models on either "
+      "value": "Thank you for clarifying. I will ensure that each annotation uses only one category from the specified list.\n\nHere is the corrected output:\n\nWe evaluate the in- and out-of-domain performance of our approach by training models on either "
     },
     {
       "expression": "\"WSJ gold data\"",

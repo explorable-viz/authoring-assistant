@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In Table 3 and Figure 1, the results of the experiment are presented. "
+      "value": "I apologize for the confusion. I'll ensure that each annotation uses only one valid category.\n\nHere is the corrected output:\n\nIn Table 3 and Figure 1, the results of the experiment are presented. "
     },
     {
       "expression": "\"Triframes\"",
@@ -15,13 +15,13 @@
       "value": " based on "
     },
     {
-      "expression": "\"WATSET clustering\"",
+      "expression": "\"WATSET\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " outperformed the other methods on both "
+      "value": " clustering outperformed the other methods on both "
     },
     {
       "expression": "\"Verb F1\"",
@@ -39,19 +39,19 @@
     },
     {
       "type": "literal",
-      "value": ".  the use of the "
+      "value": ". The use of the "
     },
     {
-      "expression": "\"WATSET fuzzy clustering algorithm\"",
+      "expression": "\"WATSET\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " that splits the hubs by disambiguating them leads to "
+      "value": " fuzzy clustering algorithm that splits the hubs by disambiguating them leads to the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },

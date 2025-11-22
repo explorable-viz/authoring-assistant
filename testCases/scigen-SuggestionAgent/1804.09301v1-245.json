@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also identify so-called \"gotcha\" sentences in which pronoun gender does not match "
+      "value": "Understood. I will correct the annotation to use the appropriate category.\n\nHere is the corrected output:\n\nWe also identify so-called \"gotcha\" sentences in which pronoun gender does not match the "
     },
     {
-      "expression": "\"the occupation's majority gender\"",
+      "expression": "\"occupation's\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
+      "value": " majority gender ("
     },
     {
       "expression": "\"BLS\"",

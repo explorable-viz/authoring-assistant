@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " represents the performance comparison of our proposed models and the baselines, which shows that incorporation of knowledge graph embeddings helps to improve the model performance.  All results are summarized in "
+      "value": " represents the performance comparison of our proposed models and the baselines, which shows that incorporation of knowledge graph embeddings helps to improve the model performance. All results are summarized in "
     },
     {
       "expression": "\"Table 1\"",

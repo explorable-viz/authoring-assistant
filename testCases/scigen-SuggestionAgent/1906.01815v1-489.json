@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 presents the classification results for sarcasm prediction in the speaker-dependent setup. The "
+      "value": "Understood. I will ensure that the annotations use only the specified categories.\n\nHere is the revised paragraph with correct categories:\n\nTable 2 presents the classification results for sarcasm prediction in the speaker-dependent setup. The "
     },
     {
-      "expression": "\"lowest performance\"",
+      "expression": "\"lowest\"",
       "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is obtained with the Majority baseline which achieves "
+      "value": " performance is obtained with the Majority baseline which achieves "
     },
     {
       "expression": "\"33.3%\"",
@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " F-score for non-sarcastic class and "
+      "value": " for non-sarcastic class and "
     },
     {
       "expression": "\"0%\"",
@@ -39,34 +39,34 @@
     },
     {
       "type": "literal",
-      "value": " for sarcastic). The pre-trained features for the visual modality provide "
+      "value": " for sarcastic). The pre-trained features for the visual modality provide the "
     },
     {
-      "expression": "\"the best performance\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " among the unimodal variants. The addition of textual features through concatenation improves the unimodal baseline and achieves "
+      "value": " performance among the unimodal variants. The addition of textual features through concatenation improves the unimodal baseline and achieves the "
     },
     {
-      "expression": "\"the best performance\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The tri-modal variant is unable to achieve "
+      "value": " performance. The tri-modal variant is unable to achieve the "
     },
     {
-      "expression": "\"the best score\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " due to a slightly sub-optimal performance from the audio modality. Overall, the combination of visual and textual signals significantly improves over the unimodal variants, with a relative error rate reduction of up to "
+      "value": " score due to a slightly sub-optimal performance from the audio modality. Overall, the combination of visual and textual signals significantly improves over the unimodal variants, with a relative error rate reduction of up to "
     },
     {
       "expression": "\"12.9%\"",

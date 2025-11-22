@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We find the "
-    },
-    {
-      "expression": "\"inference times\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are "
+      "value": "I apologize for the mistake. Here is the corrected annotation:\n\nWe find the "
     },
     {
       "expression": "\"lower\"",
@@ -21,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " in the former case with negligible difference in "
+      "value": " inference times are in the "
+    },
+    {
+      "expression": "\"former case\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with negligible difference in "
     },
     {
       "expression": "\"BLEU scores\"",
@@ -30,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": ".  The "
-    },
-    {
-      "expression": "\"inference times\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the various "
+      "value": ".  The inference times of the various "
     },
     {
       "expression": "\"models\"",

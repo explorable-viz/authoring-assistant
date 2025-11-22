@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": ", it can be seen that our model surpasses the local-context baseline for "
+      "value": ", it can be seen that our model surpasses the "
+    },
+    {
+      "expression": "\"local-context baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
     },
     {
       "expression": "\"Europarl\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " showing that the wider context is indeed beneficial  For En-Ru, it can be seen that using previous sentence is sufficient"
+      "value": " showing that the wider context is indeed beneficial. For "
+    },
+    {
+      "expression": "\"En-Ru\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it can be seen that using previous sentence is sufficient."
     }
   ],
   "variables": {},

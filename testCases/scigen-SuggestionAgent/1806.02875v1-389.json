@@ -61,7 +61,7 @@
     },
     {
       "expression": "\"85%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "expression": "\"72%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "expression": "\"50%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -106,7 +106,7 @@
     },
     {
       "expression": "\"70%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

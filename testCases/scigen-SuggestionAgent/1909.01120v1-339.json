@@ -3,7 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We report the quality results in Table 2, where each number represents the fraction of tests passed. While on "
+      "value": "Understood. Here is the corrected version with appropriate categories:\n\nWe report the quality results in Table 2, where each "
+    },
+    {
+      "expression": "\"number\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " represents the fraction of tests passed. While on "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the local embeddings for "
+    },
+    {
+      "expression": "\"EmbDI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are largely "
+    },
+    {
+      "expression": "\"superior\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to the baseline, our solution is beaten once for "
+    },
+    {
+      "expression": "\"MA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". By increasing the percentage of row permutations in "
+    },
+    {
+      "expression": "\"Basic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", results for "
+    },
+    {
+      "expression": "\"MR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improve but decrease for "
+    },
+    {
+      "expression": "\"MA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", without significant benefit for "
+    },
+    {
+      "expression": "\"MC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n\nThis should now use the correct categories:\n\nWe report the quality results in Table 2, where each "
+    },
+    {
+      "expression": "\"number\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " represents the fraction of tests passed. While on "
     },
     {
       "expression": "\"average\"",

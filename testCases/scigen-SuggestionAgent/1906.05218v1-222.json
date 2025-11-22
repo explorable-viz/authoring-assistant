@@ -3,43 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows "
+      "value": "Table 1 shows the "
     },
     {
-      "expression": "\"AL\"",
+      "expression": "\"time-indexed\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " that are averaged to calculate "
+      "value": " lags that are "
     },
     {
-      "expression": "\"AL\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"averaged\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for a wait-3 system. The lags make the problem clear: each position beyond the point where all source tokens have been read ("
-    },
-    {
-      "expression": "\"gi = |x|\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") has its lag reduced by  , pulling the average lag below "
-    },
-    {
-      "expression": "\"k\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " to calculate AL for a wait-3 system. The lags make the problem clear: each position beyond the point where all source tokens have been read (gi = |x|) has its lag reduced by  , pulling the average lag below k."
     }
   ],
   "variables": {},

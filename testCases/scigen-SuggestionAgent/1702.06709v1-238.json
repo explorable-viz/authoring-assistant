@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " as "
-    },
-    {
-      "expression": "\"feature level transfer-learning\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  These results are shown in "
+      "value": " as feature level transfer-learning.  These results are shown in "
     },
     {
       "expression": "\"table 2\"",
@@ -30,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " as "
-    },
-    {
-      "expression": "\"model level transfer learning\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  "
+      "value": " as model level transfer learning.  "
     },
     {
       "expression": "\"Table 2\"",

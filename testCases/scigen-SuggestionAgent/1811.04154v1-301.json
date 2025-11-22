@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The entity linking accuracy on the Wikipedia test set are summarized in Table 1. On "
+      "value": "I apologize for that mistake. Let's correct the paragraph using the provided categories:\n\nThe entity linking accuracy on the Wikipedia test set are summarized in Table 1. On "
     },
     {
       "expression": "\"average\"",
@@ -21,10 +21,10 @@
     },
     {
       "type": "literal",
-      "value": " method performs "
+      "value": " method performs significantly "
     },
     {
-      "expression": "\"significantly better\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -39,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " baseline, which is most often used for monolingual EL (Sil et al. 2017), performs reasonably only when the test language is in the same script as English (i.e., Javanese).  Similarly "
+      "value": ", which is most often used for monolingual EL (Sil et al. 2017), performs reasonably only when the test language is in the same script as English (i.e., "
+    },
+    {
+      "expression": "\"Javanese\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ").  Similarly "
     },
     {
       "expression": "\"TRANS\"",
@@ -48,7 +57,34 @@
     },
     {
       "type": "literal",
-      "value": ", the current state-of-the-art retrieval method in cross-lingual EL (Pan et al. 2017), fails when zero data is available in the test language, unless the HRL is very closely-related to the LRL (as with jv, mr and am). On the other hand, "
+      "value": ", the current state-of-the-art retrieval method in cross-lingual EL (Pan et al. 2017), fails when zero data is available in the test language, unless the HRL is very closely-related to the LRL (as with "
+    },
+    {
+      "expression": "\"jv\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"mr\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"am\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). On the other hand, "
     },
     {
       "expression": "\"ENCODE\"",
@@ -75,16 +111,16 @@
     },
     {
       "type": "literal",
-      "value": "  As seen in the "
+      "value": ". As seen in the "
     },
     {
       "expression": "\"BEST-53\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results, the HRL that performs "
+      "value": ", the HRL that performs "
     },
     {
       "expression": "\"best\"",
@@ -96,13 +132,13 @@
       "value": " is closely-related to the respective test LRL  We also observe that using multiple pivot HRLs leads to "
     },
     {
-      "expression": "\"better average accuracy\"",
-      "categories": ["average"],
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", with considerable improvement for some languages.  In most cases, the "
+      "value": " average accuracy, with considerable improvement for some languages.  In most cases, the "
     },
     {
       "expression": "\"MANUAL\"",
@@ -114,40 +150,94 @@
       "value": " HRL is also the "
     },
     {
-      "expression": "\"best performing\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in "
+      "value": " performing in "
     },
     {
       "expression": "\"BEST-53\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, we see that the Dravidian Telugu ("
+    },
+    {
+      "expression": "\"te\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". However, we see that the Dravidian Telugu (te) seems to obtain "
+      "value": ") seems to obtain "
     },
     {
-      "expression": "\"higher accuracy\"",
+      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with Indo-Aryan HRLs \u2013 Punjabi (pa) or Hindi (hi).  We also see that the Ukrainian (uk) test set has "
+      "value": " accuracy with Indo-Aryan HRLs \u2013 Punjabi ("
     },
     {
-      "expression": "\"better performance\"",
+      "expression": "\"pa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") or Hindi ("
+    },
+    {
+      "expression": "\"hi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ").  We also see that the Ukrainian ("
+    },
+    {
+      "expression": "\"uk\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") test set has "
+    },
+    {
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with another Cyrillic script language, Kazakh (kk), rather than Russian (ru)."
+      "value": " performance with another Cyrillic script language, Kazakh ("
+    },
+    {
+      "expression": "\"kk\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), rather than Russian ("
+    },
+    {
+      "expression": "\"ru\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
     }
   ],
   "variables": {},

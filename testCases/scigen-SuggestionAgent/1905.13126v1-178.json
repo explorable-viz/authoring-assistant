@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " for each global metric and dataset. Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is moderate to poor, especially in the case of "
+      "value": " for each global metric and dataset.  Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is moderate to poor, especially in the case of "
     },
     {
       "expression": "\"coherence\"",

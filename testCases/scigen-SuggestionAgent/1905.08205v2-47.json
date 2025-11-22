@@ -43,21 +43,12 @@
     },
     {
       "expression": "\"23.3%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " absolute improvement in "
-    },
-    {
-      "expression": "\"Hard\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " level."
+      "value": " absolute improvement in Hard level."
     }
   ],
   "variables": {},

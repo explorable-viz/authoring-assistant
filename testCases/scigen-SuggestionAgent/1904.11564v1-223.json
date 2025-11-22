@@ -12,25 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " by evaluating our generator on a standard "
+      "value": " by evaluating our generator on a standard AMR test set  for models trained on gold as well as gold plus silver data.9 We evaluate "
     },
     {
-      "expression": "\"AMR test set\"",
+      "expression": "\"DMRS\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for models trained on gold as well as gold plus silver data.9 We evaluate "
-    },
-    {
-      "expression": "\"DMRS models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " both with and without predicate and edge attributes,  The results in Table 4 show that our "
+      "value": " models both with and without predicate and edge attributes,  The results in Table 4 show that our "
     },
     {
       "expression": "\"MRS generator\"",
@@ -57,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " by a large margin, even when the additional MRS attributes are excluded."
+      "value": " by a large margin, even when the additional "
+    },
+    {
+      "expression": "\"MRS attributes\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are excluded."
     }
   ],
   "variables": {},

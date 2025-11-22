@@ -6,40 +6,22 @@
       "value": "As shown in Table 3, there are "
     },
     {
-      "expression": "\"at least\"",
+      "expression": "\"at least 6.6%\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " and up to "
     },
     {
-      "expression": "\"6.6\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% and "
-    },
-    {
-      "expression": "\"up to\"",
+      "expression": "\"14.4%\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"14.4\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% absolute improvements on accuracy of exact matching on the development set. For example, when "
+      "value": " absolute improvements on accuracy of exact matching on the development set. For example, when "
     },
     {
       "expression": "\"SyntaxSQLNet\"",
@@ -75,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": "% absolute improvement and even "
+      "value": "% absolute improvement and even outperforms "
+    },
+    {
+      "expression": "\"SyntaxSQLNet(augment)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which performs largescale data augmentation.  Table 4 presents the ablation study results. It is clear that our base model significantly "
     },
     {
       "expression": "\"outperforms\"",
@@ -87,25 +78,25 @@
       "value": " "
     },
     {
+      "expression": "\"SyntaxSQLNet\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
       "expression": "\"SyntaxSQLNet(augment)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " which performs largescale data augmentation.  Table 4 presents the ablation study results. It is clear that our base model "
+      "value": " and "
     },
     {
-      "expression": "\"significantly outperforms\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"SyntaxSQLNet, SyntaxSQLNet( augment) and SyntaxSQLNet(BERT)\"",
+      "expression": "\"SyntaxSQLNet(BERT)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -151,30 +142,21 @@
     },
     {
       "expression": "\"12.5\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% when "
+      "value": "% when IRNet performs schema linking.  The number of examples suffering from this problem decreases by "
     },
     {
-      "expression": "\"IRNet\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"70%\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performs schema linking.  The number of examples suffering from this problem decreases by "
-    },
-    {
-      "expression": "\"70\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "%, when using the memory augmented pointer network."
+      "value": " when using the memory augmented pointer network."
     }
   ],
   "variables": {},

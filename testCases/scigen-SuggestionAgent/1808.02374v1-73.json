@@ -3,25 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In Table 1 we can see that also for our model, EE relations are harder to recognize than the TE relations, as all models achieve "
+      "value": "Got it. Here is the annotated paragraph with the appropriate single category for each annotation:\n\nIn Table 1 we can see that also for our model, "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"EE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are harder to recognize than the "
+    },
+    {
+      "expression": "\"TE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as all models achieve "
+    },
+    {
+      "expression": "\"higher scores\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " scores for TE compared to EE relations.\r\nWhat is interesting to see is that when training with the combined loss (SG or SGLR) we obtain a clear improvement on the "
+      "value": " for "
     },
     {
-      "expression": "\"more difficult\"",
+      "expression": "\"TE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to "
+    },
+    {
+      "expression": "\"EE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  What is interesting to see is that when training with the combined loss ("
+    },
+    {
+      "expression": "\"SG or SGLR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") we obtain a clear improvement on the "
+    },
+    {
+      "expression": "\"more difficult EE relations\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " EE relations, and perform slightly "
+      "value": ", and perform slightly "
     },
     {
       "expression": "\"worse\"",
@@ -30,16 +75,34 @@
     },
     {
       "type": "literal",
-      "value": "] on TE relations compared to using pre-trained embeddings (the "
+      "value": " on "
     },
     {
-      "expression": "\"three upper\"",
-      "categories": ["rank"],
+      "expression": "\"TE relations\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " settings).\r\nWhat can be observed is that the RC+SG model performs "
+      "value": " compared to using pre-trained embeddings (the "
+    },
+    {
+      "expression": "\"three upper settings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ").  What can be observed is that the "
+    },
+    {
+      "expression": "\"RC+SG model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
     },
     {
       "expression": "\"best\"",
@@ -48,7 +111,16 @@
     },
     {
       "type": "literal",
-      "value": " for low-frequency words, and RC+SGLR performs  "
+      "value": " for low-frequency words, and "
+    },
+    {
+      "expression": "\"RC+SGLR model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs  "
     },
     {
       "expression": "\"best\"",
@@ -57,16 +129,7 @@
     },
     {
       "type": "literal",
-      "value": "] for the higher frequency ranges.\r\nWhen evaluating on the full Dev set, both combined loss settings outperform the baselines "
-    },
-    {
-      "expression": "\"consistently\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "]."
+      "value": " for the higher frequency ranges.  When evaluating on the full Dev set, both combined loss settings outperform the baselines consistently."
     }
   ],
   "variables": {},

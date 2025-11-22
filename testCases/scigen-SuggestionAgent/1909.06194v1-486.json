@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table VI reports "
+      "value": "Table VI reports the accuracy of the "
     },
     {
-      "expression": "\"the accuracy\"",
+      "expression": "\"models\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the models on the four benchmark datasets. It shows that "
+      "value": " on the four benchmark "
+    },
+    {
+      "expression": "\"datasets\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". All the results are bold. It shows that "
     },
     {
       "expression": "\"Style-HAN\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " outperforms the baselines by "
+      "value": " outperforms the "
+    },
+    {
+      "expression": "\"baselines\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
     },
     {
       "expression": "\"2.38\"",

@@ -3,10 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "averaged. The Table 3 presents the results of these experiments. The Table 3 shows, that: 1. in monolingual setting, we can get highquality results. The scores are "
+      "value": "averaged. The Table 3 presents the results of these experiments. The Table 3 shows, that: 1. in monolingual setting, we can get "
     },
     {
-      "expression": "\"significantly lower\"",
+      "expression": "\"highquality\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results. The scores are significantly "
+    },
+    {
+      "expression": "\"lower\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -16,7 +25,7 @@
     },
     {
       "expression": "\"smallest\"",
-      "categories": ["comparison"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

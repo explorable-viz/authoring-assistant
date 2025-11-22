@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our results for citation needed detection are given in Table 1. The "
+      "value": "Got it. I'll ensure that only a single category is used for each annotation. Here's the corrected output:\n\nOur results for citation needed detection are given in Table 1. The "
     },
     {
       "expression": "\"vanilla BERT\"",
@@ -12,25 +12,61 @@
     },
     {
       "type": "literal",
-      "value": " model already significantly outperforms the state of the art model from Redi et al. (2019) (a GRU network with global attention) by "
+      "value": " model already significantly outperforms the state of the art model from Redi et al. (2019) ("
     },
     {
-      "expression": "\"6\"",
-      "categories": ["ratio"],
+      "expression": "\"GRU network with global attention\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1 points. We saw further gains in performance with PU learning, as well as when using PUC. Additionally, the models using PU learning had "
+      "value": ") by "
     },
     {
-      "expression": "\"lower\"",
+      "expression": "\"6\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " variance, indicating more consistent performance across runs. The "
+      "value": " F1 points. We saw further gains in performance with "
+    },
+    {
+      "expression": "\"PU learning\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as well as when using "
+    },
+    {
+      "expression": "\"PUC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Additionally, the models using "
+    },
+    {
+      "expression": "\"PU learning\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " had "
+    },
+    {
+      "expression": "\"lower variance\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", indicating more consistent performance across runs. The "
     },
     {
       "expression": "\"best performing model\"",
@@ -39,7 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " we saw was the one trained using PUC with an F1 score of "
+      "value": " we saw was the one trained using "
+    },
+    {
+      "expression": "\"PUC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with an F1 score of "
     },
     {
       "expression": "\"0.826\"",

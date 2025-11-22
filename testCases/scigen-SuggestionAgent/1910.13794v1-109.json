@@ -3,16 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our model outperforms all other models in all the metrics. This "
+      "value": "Our "
     },
     {
-      "expression": "\"improvement\"",
-      "categories": ["rank"],
+      "expression": "\"model\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is consistent, around "
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"all other models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"all the metrics\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This improvement is consistent, around "
     },
     {
       "expression": "\"2%\"",

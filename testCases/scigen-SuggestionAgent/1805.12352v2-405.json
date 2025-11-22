@@ -30,20 +30,11 @@
     },
     {
       "type": "literal",
-      "value": " (with a Gaussian mixture prior network) generates more relevant responses, with the "
-    },
-    {
-      "expression": "\"average recall\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
+      "value": " (with a Gaussian mixture prior network) generates more relevant responses, with the average recall of "
     },
     {
       "expression": "\"42.0%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -52,7 +43,7 @@
     },
     {
       "expression": "\"37.2%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -69,13 +60,13 @@
       "value": " than those of the "
     },
     {
-      "expression": "\"CVAE\"",
+      "expression": "\"CVAE baselines\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " baselines ("
+      "value": " ("
     },
     {
       "expression": "\"29.9%\"",

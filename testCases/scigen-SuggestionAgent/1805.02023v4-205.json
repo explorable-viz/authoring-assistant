@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Results on the "
-    },
-    {
-      "expression": "\"MSRA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dataset are shown in Table 6. Our chosen segmentor gives "
+      "value": "Got it, I will correct the annotations to use only one category per expression. Here is the revised paragraph:\n\nResults on the MSRA dataset are shown in Table 6.  Our chosen segmentor gives "
     },
     {
       "expression": "\"95.93%\"",
@@ -30,19 +21,19 @@
     },
     {
       "type": "literal",
-      "value": ". Compared with the existing methods, our wordbased and character-based "
+      "value": ".  Compared with the existing methods, our "
     },
     {
-      "expression": "\"LSTM-CRF models\"",
+      "expression": "\"wordbased and character-based LSTM-CRF models\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " give competitive accuracies. The lattice model significantly outperforms both "
+      "value": " give competitive accuracies. The lattice model significantly outperforms both the "
     },
     {
-      "expression": "\"the best characterbased\"",
+      "expression": "\"best characterbased\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -57,10 +48,10 @@
     },
     {
       "type": "literal",
-      "value": " (p < 0.01), achieving "
+      "value": " (p < 0.01), achieving the "
     },
     {
-      "expression": "\"the best result\"",
+      "expression": "\"best result\"",
       "categories": ["rank"],
       "type": "expression"
     },

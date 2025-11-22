@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 5 reports "
+      "value": "Thank you for your patience. I'll ensure that each expression is annotated with only one category.\n\nHere is the corrected version:\n\nTable 5 reports "
     },
     {
       "expression": "\"the average\"",
@@ -12,25 +12,43 @@
     },
     {
       "type": "literal",
-      "value": " numbers of types added/deleted by the relabeling function and "
+      "value": " numbers of types added/deleted by the relabeling function and the ratio of examples discarded by the filtering function. The "
     },
     {
-      "expression": "\"the ratio\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of examples discarded by the filtering function.  The HEAD examples have "
-    },
-    {
-      "expression": "\"more general types\"",
+      "expression": "\"HEAD\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " added than the EL examples since the noisy HEAD labels are typically finer. Fine-grained types are added to both EL and HEAD examples "
+      "value": " examples have "
+    },
+    {
+      "expression": "\"more general types added\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the "
+    },
+    {
+      "expression": "\"EL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " examples since the noisy "
+    },
+    {
+      "expression": "\"HEAD labels\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are typically finer. Fine-grained types are added to both EL and HEAD examples "
     },
     {
       "expression": "\"less frequently\"",
@@ -39,16 +57,115 @@
     },
     {
       "type": "literal",
-      "value": ". Ultra-fine examples are frequently added to both datasets, with "
+      "value": ". Ultra-fine examples are "
     },
     {
-      "expression": "\"more added to EL\"",
+      "expression": "\"frequently added\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ";  The filtering function discards similar numbers of examples for the EL and HEAD data: "
+      "value": " to both datasets, with "
+    },
+    {
+      "expression": "\"more added\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to EL; The filtering function discards similar numbers of examples for the EL and HEAD data: "
+    },
+    {
+      "expression": "\"9.4%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " respectively.\n\nTo ensure clarity and correctness, here is the final version with each expression having only one category:\n\nTable 5 reports "
+    },
+    {
+      "expression": "\"the average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " numbers of types added/deleted by the relabeling function and the ratio of examples discarded by the filtering function. The "
+    },
+    {
+      "expression": "\"HEAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " examples have "
+    },
+    {
+      "expression": "\"more general types added\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the "
+    },
+    {
+      "expression": "\"EL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " examples since the noisy "
+    },
+    {
+      "expression": "\"HEAD labels\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are typically finer. Fine-grained types are added to both EL and HEAD examples "
+    },
+    {
+      "expression": "\"less frequently\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Ultra-fine examples are "
+    },
+    {
+      "expression": "\"frequently added\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to both datasets, with "
+    },
+    {
+      "expression": "\"more added\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to EL; The filtering function discards similar numbers of examples for the EL and HEAD data: "
     },
     {
       "expression": "\"9.4%\"",

@@ -3,20 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Even the "
-    },
-    {
-      "expression": "\"ensemble\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
+      "value": "Got it. Let's use the correct single category:\n\nEven the ensemble of "
     },
     {
       "expression": "\"5\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

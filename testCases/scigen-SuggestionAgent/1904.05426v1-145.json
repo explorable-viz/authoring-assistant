@@ -12,52 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " with that of a vanilla supervised neural model.11 Table 3 shows "
+      "value": " with that of a vanilla supervised neural model.11 Table 3 shows precision, recall, and F1 scores for the NOUN tag.  Even though CIPHER-AVG achieved mixed results (mid to low accuracy), the model robustly achieves mid-range "
     },
     {
-      "expression": "\"precision\"",
+      "expression": "\"performance\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"recall\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and "
-    },
-    {
-      "expression": "\"F1 scores\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for the "
-    },
-    {
-      "expression": "\"NOUN tag\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Even though "
-    },
-    {
-      "expression": "\"CIPHER-AVG\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " achieved mixed results (mid to low accuracy), the model robustly achieves mid-range performance according to "
+      "value": " according to "
     },
     {
       "expression": "\"F1-score\"",
@@ -66,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " for all CLs. The results are even more optimistic in terms of "
+      "value": " for all CLs.  The results are even more optimistic in terms of "
     },
     {
       "expression": "\"recall\"",

@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Humans agree "
+      "value": "Humans agree more often with models trained on "
     },
     {
-      "expression": "\"more often\"",
-      "categories": ["comparison"],
+      "expression": "\"Amazon reviews\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with models trained on Amazon reviews than on New York Times.  As seen in Table 3, we report the coefficient of determination (r2) for each metric and dataset.  "
+      "value": " than on "
+    },
+    {
+      "expression": "\"New York Times\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  As seen in Table 3, we report the coefficient of determination (r2) for each metric and dataset.  "
     },
     {
       "expression": "\"SWITCHP\"",

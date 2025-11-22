@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We relate our approach to prior work on Web-Split v1.0 by reporting scores on its test set in Table 5. Our "
+      "value": "Got it! I will ensure to use only the specified categories. Here is the revised output:\n\nWe relate our approach to prior work on "
+    },
+    {
+      "expression": "\"Web-Split v1.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by reporting scores on its test set in Table 5. Our "
     },
     {
       "expression": "\"best performance\"",
@@ -21,19 +30,37 @@
     },
     {
       "type": "literal",
-      "value": " is again obtained by combining the proposed WikiSplit dataset with the downsampled WebSplit, yielding a "
+      "value": " is again obtained by combining the proposed "
     },
     {
-      "expression": "\"32\"",
-      "categories": ["average"],
+      "expression": "\"WikiSplit\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " point improvement over the "
+      "value": " dataset with the downsampled "
     },
     {
-      "expression": "\"prior best result\"",
+      "expression": "\"WebSplit\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", yielding a "
+    },
+    {
+      "expression": "\"32\"",
+      "categories": ["sum"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " point improvement over the prior "
+    },
+    {
+      "expression": "\"best result\"",
       "categories": ["rank"],
       "type": "expression"
     },

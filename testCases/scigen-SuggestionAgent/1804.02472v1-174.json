@@ -3,19 +3,28 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Evidence of this complementarity can be seen in Table 6, which contains a breakdown of system performance by governing dependency relation, for both linear and tree models, on UDS-IH2-dev. In most cases, the "
+      "value": "Evidence of this complementarity can be seen in Table 6, which contains a breakdown of system performance by governing dependency relation, for both "
     },
     {
-      "expression": "\"L-biLSTM\"",
+      "expression": "\"linear\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "'s "
+      "value": " and "
     },
     {
-      "expression": "\"mean prediction\"",
+      "expression": "\"tree\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models, on UDS-IH2-dev. In most cases, the "
+    },
+    {
+      "expression": "\"L-biLSTM's mean prediction\"",
       "categories": ["average"],
       "type": "expression"
     },
@@ -66,19 +75,19 @@
     },
     {
       "type": "literal",
-      "value": " being too confident in certain cases \u2013 e.g. in the case of the xcomp governing relation, where the "
+      "value": " being too confident in certain cases \u2013 e.g. in the case of the "
     },
     {
-      "expression": "\"T-biLSTM\"",
+      "expression": "\"xcomp governing relation\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": ", where the "
     },
     {
-      "expression": "\"mean prediction\"",
+      "expression": "\"T-biLSTM mean prediction\"",
       "categories": ["average"],
       "type": "expression"
     },

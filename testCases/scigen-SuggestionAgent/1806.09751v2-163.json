@@ -43,7 +43,7 @@
     },
     {
       "expression": "\"87%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "expression": "\"81%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "expression": "\"33%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -79,12 +79,30 @@
     },
     {
       "expression": "\"10%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (when comparing the on average performance of HFA with ESA) is unreasonable. Table 3 appears to show "
+      "value": " (when comparing the on average performance of "
+    },
+    {
+      "expression": "\"HFA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with "
+    },
+    {
+      "expression": "\"ESA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") is unreasonable. Table 3 appears to show "
     },
     {
       "expression": "\"FA\"",
@@ -93,7 +111,16 @@
     },
     {
       "type": "literal",
-      "value": " being inferior to EAL in terms of the percentage cut for the Location class, for example. In reality "
+      "value": " being inferior to "
+    },
+    {
+      "expression": "\"EAL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in terms of the percentage cut for the Location class, for example. In reality "
     },
     {
       "expression": "\"FA\"",
@@ -106,12 +133,30 @@
     },
     {
       "expression": "\"65%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to reach 0.99 F-Score. But as our testing criteria demanded that we either reach 1.0 F-Score or finish all sentences from the pool, "
+      "value": " to reach "
+    },
+    {
+      "expression": "\"0.99\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F-Score. But as our testing criteria demanded that we either reach "
+    },
+    {
+      "expression": "\"1.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F-Score or finish all sentences from the pool, "
     },
     {
       "expression": "\"FA\"",

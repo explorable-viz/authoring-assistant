@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows that the performance got slightly hurt (comparing \""
+      "value": "I apologize for the error. Here is the corrected output with the proper categories:\n\nTable 2 shows that the performance got slightly hurt (comparing \""
     },
     {
       "expression": "\"Processed MT\"",
@@ -21,25 +21,25 @@
     },
     {
       "type": "literal",
-      "value": "\") with pre-processing and post-processing procedures which are normally applied in training seq2seq models for reducing vocabulary size. The multi-source transformer ("
+      "value": "\") with pre-processing and post-processing procedures which are normally applied in training seq2seq models for reducing vocabulary size. The "
     },
     {
-      "expression": "\"Base\"",
+      "expression": "\"multi-source transformer (Base)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") model achieved "
+      "value": " model achieved the "
     },
     {
-      "expression": "\"the highest\"",
+      "expression": "\"highest\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " single model BLEU score without joint training with the de-noising encoder task.  Even with the ensembled model, our APE approach does not significantly improve machine translation outputs measured in BLEU (+"
+      "value": " single model BLEU score without joint training with the de-noising encoder task. Even with the ensembled model, our APE approach does not significantly improve machine translation outputs measured in BLEU (+"
     },
     {
       "expression": "\"0.46\"",

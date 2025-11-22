@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": "] and "
+      "value": " and "
     },
     {
       "expression": "\"Drugs\"",
@@ -48,25 +48,7 @@
     },
     {
       "type": "literal",
-      "value": "}.\r\nWhile the "
-    },
-    {
-      "expression": "\"diseases\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] and the "
-    },
-    {
-      "expression": "\"drugs\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] are all relevant, "
+      "value": "}. While the diseases and the drugs are all relevant, "
     },
     {
       "expression": "\"V600E\"",
@@ -75,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": "] and "
+      "value": " and "
     },
     {
       "expression": "\"T790M\"",
@@ -84,16 +66,7 @@
     },
     {
       "type": "literal",
-      "value": "] are in fact not variants of the gene "
-    },
-    {
-      "expression": "\"PIK3CA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "].\r\nHowever, when refining the query {"
+      "value": " are in fact not variants of the gene PIK3CA. However, when refining the query {"
     },
     {
       "expression": "\"PIK3CA\"",
@@ -147,7 +120,7 @@
     },
     {
       "type": "literal",
-      "value": "] ranked diseases are ["
+      "value": " ranked diseases are [Melanoma, Neoplasms, Carcinoma Non Small Cell Lung (CNSCL), Thyroid Neoplasms, Colorectal Neoplasms]. Using "
     },
     {
       "expression": "\"Melanoma\"",
@@ -156,52 +129,7 @@
     },
     {
       "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Neoplasms\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Carcinoma Non Small Cell Lung (CNSCL)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Thyroid Neoplasms\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Colorectal Neoplasms\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "].\r\nUsing "
-    },
-    {
-      "expression": "\"Melanoma\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] for refinement, retrieves the "
+      "value": " for refinement, retrieves the "
     },
     {
       "expression": "\"top\"",
@@ -210,7 +138,7 @@
     },
     {
       "type": "literal",
-      "value": "] ranked paper (Falchook et al., 2013) which perfectly includes all these entities in a biomarker relationship."
+      "value": " ranked paper (Falchook et al., 2013) which perfectly includes all these entities in a biomarker relationship."
     }
   ],
   "variables": {},

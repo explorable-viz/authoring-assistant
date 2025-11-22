@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We see small gains from using "
+      "value": "Thank you for clarifying. I will adjust accordingly.\n\nHere is the corrected paragraph:\n\nWe see small gains from using "
     },
     {
       "expression": "\"BI\"",
@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " with "
-    },
-    {
-      "expression": "\"ensembles\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on most validation sets, but only on "
+      "value": " with ensembles on most validation sets, but only on "
     },
     {
       "expression": "\"en2es\"",
@@ -30,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " test.  For "
+      "value": " test.\r\nFor "
     },
     {
       "expression": "\"en2de\"",
@@ -39,25 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ", by contrast, "
+      "value": ", by contrast, uniform ensembling is consistently "
     },
     {
-      "expression": "\"uniform ensembling\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is consistently "
-    },
-    {
-      "expression": "\"better than\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] oracles on the dev sets, and outperforms "
+      "value": " than oracles on the dev sets, and outperforms "
     },
     {
       "expression": "\"BI\"",

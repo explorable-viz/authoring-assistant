@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We report the results on the full sets and on "
+      "value": "Got it, I will ensure to use only one category per annotation. Here is the corrected paragraph:\n\nWe report the results on the full sets and on "
     },
     {
       "expression": "\"5000\"",
@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " tokens in Table 5 (partof-speech tagging accuracy) For POS, the largest margins are in the Slavic languages ("
+      "value": " tokens in Table 5 (partof-speech tagging accuracy)  For POS, the largest margins are in the Slavic languages ("
     },
     {
       "expression": "\"Russian\"",

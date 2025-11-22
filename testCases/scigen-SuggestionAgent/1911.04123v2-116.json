@@ -3,10 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the comparison with previous work on the PGR testset, where our models are "
+      "value": "Table 3 shows the comparison with previous work on the "
     },
     {
-      "expression": "\"significantly better\"",
+      "expression": "\"PGR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " testset, where our models are significantly "
+    },
+    {
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -15,13 +24,13 @@
       "value": " than the existing models. With "
     },
     {
-      "expression": "\"1\"",
+      "expression": "\"1-best\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "-best trees, "
+      "value": " trees, "
     },
     {
       "expression": "\"DEPTREE\"",
@@ -33,16 +42,7 @@
       "value": " is "
     },
     {
-      "expression": "\"2.9\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " points "
-    },
-    {
-      "expression": "\"better\"",
+      "expression": "\"2.9 points better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -75,10 +75,10 @@
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " significantly "
     },
     {
-      "expression": "\"significantly outperform\"",
+      "expression": "\"outperform\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -93,7 +93,7 @@
     },
     {
       "type": "literal",
-      "value": "."
+      "value": "]"
     }
   ],
   "variables": {},

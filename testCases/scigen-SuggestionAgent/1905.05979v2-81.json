@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "BLEU scores for our "
+      "value": "Thank you for the clarification. Here is the corrected output:\n\nBLEU scores for our "
     },
     {
       "expression": "\"model\"",
@@ -33,13 +33,13 @@
       "value": " trained only on "
     },
     {
-      "expression": "\"1.5m dataset\"",
+      "expression": "\"1.5m\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to show how the performance is influenced by the amount of data. We observe that our "
+      "value": " dataset to show how the performance is influenced by the amount of data. We observe that our "
     },
     {
       "expression": "\"model\"",
@@ -48,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " is no "
-    },
-    {
-      "expression": "\"worse\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in BLEU than the "
+      "value": " is no worse in BLEU than the "
     },
     {
       "expression": "\"baseline\"",
@@ -66,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": " despite the second-pass model  being trained only on a fraction of the data. In contrast, the "
+      "value": " despite the second-pass "
+    },
+    {
+      "expression": "\"model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "  being trained only on a fraction of the data. In contrast, the "
     },
     {
       "expression": "\"concatenation baseline\"",
@@ -93,7 +93,7 @@
     },
     {
       "type": "literal",
-      "value": "] and our "
+      "value": " and our "
     },
     {
       "expression": "\"model\"",
@@ -106,21 +106,57 @@
     },
     {
       "expression": "\"3\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " context sentences. CADec's performance remains the same independently from the number of context sentences ("
-    },
-    {
-      "expression": "\"1, 2 or 3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") as measured with BLEU. s-hier-to-2.tied performs "
+      "value": " context sentences. "
+    },
+    {
+      "expression": "\"CADec's performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " remains the same independently from the number of context sentences ("
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " or "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") as measured with BLEU. "
+    },
+    {
+      "expression": "\"s-hier-to-2.tied\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
     },
     {
       "expression": "\"worst\"",
@@ -129,7 +165,16 @@
     },
     {
       "type": "literal",
-      "value": " in terms of BLEU, but note that this is a shallow recurrent model, while others are Transformer-based. It also suffers from the asymmetric data setting, like the concatenation baseline."
+      "value": " in terms of BLEU, but note that this is a shallow recurrent model, while others are Transformer-based. It also suffers from the asymmetric data setting, like the "
+    },
+    {
+      "expression": "\"concatenation baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

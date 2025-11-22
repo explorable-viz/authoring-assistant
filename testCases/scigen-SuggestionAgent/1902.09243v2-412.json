@@ -15,13 +15,13 @@
       "value": " ROUGE-1 improvements compared to the "
     },
     {
-      "expression": "\"ML+RL with intra-attn approach(previous SOTA)\"",
+      "expression": "\"ML+RL with intra-attn approach\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", which is a large margin. On ROUGE-2, our model also get an improvement of "
+      "value": "(previous SOTA) carries over to this dataset, which is a large margin. On ROUGE-2, our model also get an im- provement of "
     },
     {
       "expression": "\"0.51\"",

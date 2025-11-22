@@ -6,7 +6,16 @@
       "value": "We see that "
     },
     {
-      "expression": "\"models trained with agreement\"",
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " trained with "
+    },
+    {
+      "expression": "\"agreement\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -30,7 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ", perhaps because it is quite different linguistically from the English pivot.  unlike "
+      "value": ", perhaps because it is quite different linguistically from the English pivot. unlike "
     },
     {
       "expression": "\"Dual-0\"",
@@ -48,11 +57,20 @@
     },
     {
       "type": "literal",
-      "value": " maintains high performance in the supervised directions ("
+      "value": " maintains high performance in the supervised directions (within "
     },
     {
-      "expression": "\"within 1 BLEU point\"",
+      "expression": "\"1\"",
       "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"BLEU point\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

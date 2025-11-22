@@ -3,19 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The purpose of Table 5 is to show that the traditional "
+      "value": "The purpose of Table 5 is to show that the "
     },
     {
-      "expression": "\"CNN\"",
+      "expression": "\"traditional CNN\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " classifier in Phase "
+      "value": " classifier in "
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"Phase 2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -25,12 +25,57 @@
     },
     {
       "expression": "\"highly accurate\"",
-      "categories": ["rank"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": ".\n\nNote: \"Phase 2\" could be considered as a data retrieval if it's an identifiable section or label within the dataset. If it\u2019s not, you might only annotate \u201ctraditional CNN\u201d.\n```markdown\nThe purpose of Table 5 is to show that the "
+    },
+    {
+      "expression": "\"traditional CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " classifier in Phase 2 was "
+    },
+    {
+      "expression": "\"highly accurate\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n```\n\nIf \"Phase 2\" can be mapped to the dataset, then:\n```markdown\nThe purpose of Table 5 is to show that the "
+    },
+    {
+      "expression": "\"traditional CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " classifier in "
+    },
+    {
+      "expression": "\"Phase 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " was "
+    },
+    {
+      "expression": "\"highly accurate\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".\n```"
     }
   ],
   "variables": {},

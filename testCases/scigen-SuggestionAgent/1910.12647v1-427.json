@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also verified that our TPR layer is not hurting the performance by comparing the "
+      "value": "We also verified that our "
     },
     {
-      "expression": "\"test set\"",
+      "expression": "\"TPR\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results for "
+      "value": " layer is not hurting the performance by comparing the test set results for "
     },
     {
       "expression": "\"HUBERT (Transformer)\"",

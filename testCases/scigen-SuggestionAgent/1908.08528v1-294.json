@@ -3,28 +3,28 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In Table 3, we compare "
+      "value": "Got it. I'll ensure that each annotation uses only a single category from your provided list. Here is the corrected version:\n\nIn "
     },
     {
-      "expression": "\"the combined distance measure\"",
+      "expression": "\"Table 3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with each of the two components used alone. The results show that combining "
+      "value": ", we compare the combined distance measure with each of the two components used alone. The results show that combining the "
     },
     {
-      "expression": "\"the edit distance\"",
+      "expression": "\"edit distance\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with "
+      "value": " with the "
     },
     {
-      "expression": "\"the embedding similarity\"",
+      "expression": "\"embedding similarity\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -33,16 +33,16 @@
       "value": " is "
     },
     {
-      "expression": "\"stronger than\"",
+      "expression": "\"stronger\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " using any of the measures alone.  "
+      "value": " than using any of the measures alone.  The "
     },
     {
-      "expression": "\"The embedding similarity\"",
+      "expression": "\"embedding similarity\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -51,16 +51,16 @@
       "value": " alone performs "
     },
     {
-      "expression": "\"much better\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] than "
+      "value": " than the "
     },
     {
-      "expression": "\"the edit distance\"",
+      "expression": "\"edit distance\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

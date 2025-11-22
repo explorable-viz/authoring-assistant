@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "To find out whether this was the case we replaced the "
+      "value": "I apologize for the mistake. Let's correct it and ensure we use only the specified categories.\n\nHere is the corrected output:\n\nTo find out whether this was the case we replaced the "
     },
     {
       "expression": "\"LSTM\"",
@@ -48,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": "). Moreover, increasing dLM from "
+      "value": "). Moreover, increasing "
+    },
+    {
+      "expression": "\"dLM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from "
     },
     {
       "expression": "\"439\"",

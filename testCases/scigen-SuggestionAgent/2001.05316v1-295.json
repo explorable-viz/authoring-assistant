@@ -6,121 +6,94 @@
       "value": "Various subsets of authors were chosen and the dataset was truncated to each author having the same number of samples. The classification was carried out with 2 "
     },
     {
-      "expression": "\"author\"",
+      "expression": "\"author attribution datasets\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " attribution datasets, one with "
+      "value": ", one with "
     },
     {
       "expression": "\"6\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"authors\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and our dataset with "
+      "value": " authors and our dataset with "
     },
     {
-      "expression": "\"maximum\"",
+      "expression": "\"maximum 14 authors\"",
       "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] "
+      "value": ". The larger dataset was trained with "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"8\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"12\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
     },
     {
       "expression": "\"14\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"authors\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The larger dataset was trained with 6,8,10,12 and 14 "
-    },
-    {
-      "expression": "\"authors\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] to analyze the effects of increasing "
-    },
-    {
-      "expression": "\"classes\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] on the proposed model. We evaluate the performance of the proposed architecture in terms of "
+      "value": " authors to analyze the effects of increasing classes on the proposed model. We evaluate the performance of the proposed architecture in terms of "
     },
     {
       "expression": "\"accuracy\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".\nWe also try to infer how the "
-    },
-    {
-      "expression": "\"character-level\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] model compares with the "
-    },
-    {
-      "expression": "\"word level\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] models. All models are compared for the increasing number of "
-    },
-    {
-      "expression": "\"authors(classes)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on the corpus mentioned to assess the quality of the models. both word and character levels are summarized in Table II. From the "
+      "value": ". We also try to infer how the character-level model compares with the word level models. All models are compared for the increasing number of authors(classes) on the corpus mentioned to assess the quality of the models. both word and character levels are summarized in Table II. From the "
     },
     {
       "expression": "\"accuracy\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] comparisons shown in Table II we see that Skip-gram implemented by fastText performs well in the given datasets. Character level model performs reasonably well in competition with subword level as long as the dataset is big enough. With larger datasets, this model will be able to perform significantly "
+      "value": " comparisons shown in Table II we see that Skip-gram implemented by fastText performs well in the given datasets. Character level model performs reasonably well in competition with subword level as long as the dataset is big enough. With larger datasets, this model will be able to perform significantly "
     },
     {
       "expression": "\"better\"",
@@ -129,43 +102,16 @@
     },
     {
       "type": "literal",
-      "value": "] compare "
+      "value": " compare character embeddings with word embeddings showing that character embeddings perform almost "
     },
     {
-      "expression": "\"character embeddings\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with "
-    },
-    {
-      "expression": "\"word embeddings\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] showing that character embeddings perform almost as good as the "
-    },
-    {
-      "expression": "\"best\"",
+      "expression": "\"as good as the best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] "
-    },
-    {
-      "expression": "\"word embedding model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "]."
+      "value": " word embedding model."
     }
   ],
   "variables": {},

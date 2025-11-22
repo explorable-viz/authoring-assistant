@@ -16,7 +16,7 @@
     },
     {
       "expression": "\"1241\"",
-      "categories": ["data-retrieval"],
+      "categories": ["sum"],
       "type": "expression"
     },
     {
@@ -24,13 +24,13 @@
       "value": " testing data points) in Table 1.  As shown in Table 1, the "
     },
     {
-      "expression": "\"average performance increases\"",
+      "expression": "\"average\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from "
+      "value": " performance increases from "
     },
     {
       "expression": "\"RANDOM\"",
@@ -48,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": ": a trend that becomes particularly obvious for "
-    },
-    {
-      "expression": "\"F1@10\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": ": a trend that becomes particularly obvious for F1@10."
     }
   ],
   "variables": {},

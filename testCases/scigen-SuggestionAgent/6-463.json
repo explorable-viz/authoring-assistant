@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": "] the monolingual performance, it outperforms the random baseline by a large margin, suggesting the potential for crosslingual hierarchy induction."
+      "value": " the monolingual performance, it outperforms the random baseline by a large margin, suggesting the potential for cross-lingual hierarchy induction."
     }
   ],
   "variables": {},

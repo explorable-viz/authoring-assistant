@@ -12,37 +12,91 @@
     },
     {
       "type": "literal",
-      "value": " models on small ("
+      "value": " models on "
     },
     {
-      "expression": "\"1M tokens\"",
+      "expression": "\"small (1M tokens)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and medium-sized ("
+      "value": " and "
     },
     {
-      "expression": "\"17M\u2013 57M tokens\"",
+      "expression": "\"medium-sized (17M\u2013 57M tokens)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") data sets against Char-CNN for different languages are provided in Table 3. The models demonstrate similar performance on small data, but Char-CNN scales "
+      "value": " data sets against "
     },
     {
-      "expression": "\"significantly better\"",
+      "expression": "\"Char-CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for different languages are provided in Table 3. The models demonstrate similar performance on "
+    },
+    {
+      "expression": "\"small\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " data, but "
+    },
+    {
+      "expression": "\"Char-CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " scales significantly "
+    },
+    {
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on medium-sized data. From the three syllable-aware models, Syl-Concat looks the most advantageous as it demonstrates stable results and has the "
+      "value": " on "
     },
     {
-      "expression": "\"least number of parameters\"",
+      "expression": "\"medium-sized\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " data. From the "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " syllable-aware models, "
+    },
+    {
+      "expression": "\"Syl-Concat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " looks the most advantageous as it demonstrates stable results and has the "
+    },
+    {
+      "expression": "\"least  number of parameters\"",
       "categories": ["min-max"],
       "type": "expression"
     },
@@ -57,7 +111,16 @@
     },
     {
       "type": "literal",
-      "value": " with Char-CNN."
+      "value": " with "
+    },
+    {
+      "expression": "\"Char-CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " shows the performance of baselines against user simulator and human on the two datasets.  Equation (11)) is also proven effective in deliver  ing "
+      "value": " shows the performance of baselines against user simulator and human on the two datasets. Equation ("
+    },
+    {
+      "expression": "\"11\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "))) is also proven effective in deliver ing "
     },
     {
       "expression": "\"more achievement\"",
@@ -21,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": ", which can be seen from the second and last rows of Table "
+      "value": " which can be seen from the second and last rows of Table "
     },
     {
       "expression": "\"3\"",
@@ -30,7 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ".  The results are consistent with those in Table "
+      "value": ". The results are consistent with those in Table "
     },
     {
       "expression": "\"3\"",

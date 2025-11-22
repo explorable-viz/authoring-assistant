@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"Pasupat and Liang, 2015\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), "
+      "value": " (Pasupat and Liang, 2015), "
     },
     {
       "expression": "\"Neural Programmer (NP)\"",
@@ -30,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": "] ("
-    },
-    {
-      "expression": "\"Neelakantan et al., 2016b\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), "
+      "value": " (Neelakantan et al., 2016b), "
     },
     {
       "expression": "\"DYNSP\"",
@@ -48,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": "] ("
-    },
-    {
-      "expression": "\"Iyyer et al., 2017\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") and "
+      "value": " (Iyyer et al., 2017) and "
     },
     {
       "expression": "\"CAMP\"",
@@ -66,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": "] ("
-    },
-    {
-      "expression": "\"Sun et al., 2018b\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") in Table 1.  We observe that our model improves the SOTA from "
+      "value": " (Sun et al., 2018b) in Table 1.  We observe that our model improves the SOTA from "
     },
     {
       "expression": "\"45.6%\"",
@@ -93,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": "] to "
+      "value": " to "
     },
     {
       "expression": "\"55.1%\"",
@@ -102,16 +66,7 @@
     },
     {
       "type": "literal",
-      "value": "] in question accuracy (ALL), reducing the relative error rate by "
-    },
-    {
-      "expression": "\"18%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".\nFor the initial question (POS1), however, it is behind "
+      "value": " in question accuracy (ALL), reducing the relative error rate by 18%. For the initial question (POS1), however, it is behind "
     },
     {
       "expression": "\"DYNSP\"",
@@ -120,16 +75,7 @@
     },
     {
       "type": "literal",
-      "value": "] by "
-    },
-    {
-      "expression": "\"3.7%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".\nMore interestingly, our model handles follow up questions especially well outperforming the previously "
+      "value": " by 3.7%. More interestingly, our model handles follow up questions especially well outperforming the previously "
     },
     {
       "expression": "\"best\"",
@@ -138,7 +84,7 @@
     },
     {
       "type": "literal",
-      "value": "] model "
+      "value": " model "
     },
     {
       "expression": "\"FP\"",
@@ -147,38 +93,29 @@
     },
     {
       "type": "literal",
-      "value": "]] by "
+      "value": " by 20% on POS3, a 28% relative error reduction.  We observe that our model effectively leverages the context information by improving the "
     },
     {
-      "expression": "\"20%\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"average question accuracy\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] on POS3, a "
-    },
-    {
-      "expression": "\"28%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] relative error reduction.\nWe observe that our model effectively leverages the context information by improving the average question accuracy from "
+      "value": " from "
     },
     {
       "expression": "\"45.1%\"",
-      "categories": ["average"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] to "
+      "value": " to "
     },
     {
       "expression": "\"55.1%\"",
-      "categories": ["average"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -192,34 +129,25 @@
     },
     {
       "type": "literal",
-      "value": "] yielding "
+      "value": " yielding 2.7% improvement.  If we provide the previous reference answers, the "
     },
     {
-      "expression": "\"2.7%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] improvement.\nIf we provide the previous reference answers, the average question accuracy jumps to "
-    },
-    {
-      "expression": "\"61.7%\"",
+      "expression": "\"average question accuracy\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "], showing that "
+      "value": " jumps to "
     },
     {
-      "expression": "\"6.6%\"",
+      "expression": "\"61.7%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the errors are due to error propagation."
+      "value": ", showing that 6.6% of the errors are due to error propagation."
     }
   ],
   "variables": {},

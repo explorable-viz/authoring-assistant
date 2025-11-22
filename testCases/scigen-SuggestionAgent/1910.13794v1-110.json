@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 and Figure 3 show a "
-    },
-    {
-      "expression": "\"linear\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " relationship between the "
+      "value": "Table 3 and Figure 3 show a linear relationship between the "
     },
     {
       "expression": "\"accuracy\"",
@@ -21,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " of the "
-    },
-    {
-      "expression": "\"classifier\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and the "
+      "value": " of the classifier and the "
     },
     {
       "expression": "\"IWAQG\"",
@@ -39,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": ". This demonstrates the effectiveness of our pipelined approach regardless of the interrogative-word "
-    },
-    {
-      "expression": "\"classifier\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model."
+      "value": ". This demonstrates the effectiveness of our pipelined approach regardless of the interrogative-word classifier model."
     }
   ],
   "variables": {},

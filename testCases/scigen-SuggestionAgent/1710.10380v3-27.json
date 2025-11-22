@@ -3,34 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are presented in "
+      "value": "The results are presented in Table 1 (top two subparts). As we can see, "
     },
     {
-      "expression": "\"Table 1\"",
+      "expression": "\"three\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"top two subparts\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "). As we can see, "
-    },
-    {
-      "expression": "\"the three decoding settings\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " do not differ significantly in terms of the performance on selected downstream tasks, with "
+      "value": " decoding settings do not differ significantly in terms of the performance on selected downstream tasks, with "
     },
     {
       "expression": "\"RNN\"",
@@ -48,25 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " as the decoder.  The results are also presented in "
-    },
-    {
-      "expression": "\"Table 1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] ("
-    },
-    {
-      "expression": "\"3rd and 4th subparts\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "). The performance of the "
+      "value": " as the decoder. The results are also presented in Table 1 (3rd and 4th subparts). The performance of the "
     },
     {
       "expression": "\"predict-allwords RNN decoder\"",
@@ -78,7 +42,7 @@
       "value": " does not significantly differ from that of any one of the autoregressive "
     },
     {
-      "expression": "\"RNN de  coders\"",
+      "expression": "\"RNN decoders\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -93,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": ".  In our proposed "
+      "value": ". In our proposed "
     },
     {
       "expression": "\"RNN-CNN model\"",
@@ -106,7 +70,7 @@
     },
     {
       "expression": "\"mean+max pooling\"",
-      "categories": ["sum"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -114,22 +78,13 @@
       "value": " provides stronger transferability than the "
     },
     {
-      "expression": "\"max pooling\"",
+      "expression": "\"max pooling alone\"",
       "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " alone does, and the results are presented in the last two sections of "
-    },
-    {
-      "expression": "\"Table 1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " does, and the results are presented in the last two sections of Table 1."
     }
   ],
   "variables": {},

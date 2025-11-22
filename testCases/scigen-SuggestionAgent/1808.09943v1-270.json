@@ -21,7 +21,25 @@
     },
     {
       "type": "literal",
-      "value": " BPE for all language pairs."
+      "value": " "
+    },
+    {
+      "expression": "\"BPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for all "
+    },
+    {
+      "expression": "\"language pairs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

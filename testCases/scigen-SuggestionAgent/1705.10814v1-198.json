@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The experimental results are shown in Table 1, with "
+      "value": "Thank you for your feedback. Here is the corrected output with the proper categories:\n\nThe experimental results are shown in Table 1, with "
     },
     {
       "expression": "\"Int\"",
@@ -12,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " denoting internal comparisons ("
+      "value": " denoting internal comparisons (with "
     },
     {
-      "expression": "\"three groups\"",
-      "categories": ["ratio"],
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and "
+      "value": " groups) and "
     },
     {
       "expression": "\"Ext\"",
@@ -34,7 +34,7 @@
     },
     {
       "expression": "\"highest\"",
-      "categories": ["rank"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -75,16 +75,7 @@
     },
     {
       "type": "literal",
-      "value": ". In macro "
-    },
-    {
-      "expression": "\"average\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of all languages, the "
+      "value": ". In macro average of all languages, the "
     },
     {
       "expression": "\"CNN\"",
@@ -97,21 +88,12 @@
     },
     {
       "expression": "\"2.17%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the "
+      "value": " higher than the "
     },
     {
       "expression": "\"WORD\"",
@@ -124,21 +106,12 @@
     },
     {
       "expression": "\"1.24%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the "
+      "value": " higher than the "
     },
     {
       "expression": "\"W2V\"",
@@ -160,21 +133,12 @@
     },
     {
       "expression": "\"0.9%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the "
+      "value": " higher than the "
     },
     {
       "expression": "\"WORD\"",
@@ -187,21 +151,12 @@
     },
     {
       "expression": "\"1.27%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"lower\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the "
+      "value": " lower than the "
     },
     {
       "expression": "\"CNN\"",
@@ -222,13 +177,13 @@
       "value": " moodel (from "
     },
     {
-      "expression": "\"82.75%\"",
-      "categories": ["ratio"],
+      "expression": "\"82.75\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in "
+      "value": "% in "
     },
     {
       "expression": "\"CNN\"",
@@ -240,13 +195,13 @@
       "value": " to "
     },
     {
-      "expression": "\"82.90%\"",
-      "categories": ["ratio"],
+      "expression": "\"82.90\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in "
+      "value": "% in "
     },
     {
       "expression": "\"CNN+WORD\"",
@@ -255,7 +210,16 @@
     },
     {
       "type": "literal",
-      "value": "] on average) while the "
+      "value": " on "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") while the "
     },
     {
       "expression": "\"LSTM\"",
@@ -267,13 +231,13 @@
       "value": " model is improved by a much larger margin (from "
     },
     {
-      "expression": "\"81.48%\"",
-      "categories": ["ratio"],
+      "expression": "\"81.48\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in "
+      "value": "% in "
     },
     {
       "expression": "\"LSTM\"",
@@ -285,13 +249,13 @@
       "value": " to "
     },
     {
-      "expression": "\"82.56%\"",
-      "categories": ["ratio"],
+      "expression": "\"82.56\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in "
+      "value": "% in "
     },
     {
       "expression": "\"LSTM+WORD\"",
@@ -300,7 +264,16 @@
     },
     {
       "type": "literal",
-      "value": "] on average). This suggests that the "
+      "value": " on "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). This suggests that the "
     },
     {
       "expression": "\"CNN\"",
@@ -336,7 +309,7 @@
     },
     {
       "type": "literal",
-      "value": "] than the "
+      "value": " than the "
     },
     {
       "expression": "\"LSTM+WORD\"",
@@ -345,79 +318,169 @@
     },
     {
       "type": "literal",
-      "value": "] model, despite the large improvement in the latter.  While comparing to the "
+      "value": " model, despite the large improvement in the latter.  While comparing to the "
     },
     {
-      "expression": "\"best published results\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] ("
+      "value": " published results (Björkelund et al., 2013, 2014), we have to note that their approach uses explicit morphological features, ensemble, ranking, etc., which all can boost parsing performance. We only use a greedy parser with much fewer features, but bridge the "
     },
     {
-      "expression": "\"Björkelund et al., 2013, 2014\"",
+      "expression": "\"6\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "], we have to note that their approach uses explicit morphological features, ensemble, ranking, etc., which all can boost parsing performance. We only use a greedy parser with much fewer features, but bridge the "
+      "value": " points gap between the previous best greedy parser and the best published result by more than one half.  On "
     },
     {
-      "expression": "\"6 points\"",
-      "categories": ["ratio"],
+      "expression": "\"average\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] gap between the previous best greedy parser and the best published result by more than one half.  On average, the B15-LSTM model improves their own baseline by "
+      "value": ", the "
+    },
+    {
+      "expression": "\"B15-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model improves their own baseline by "
     },
     {
       "expression": "\"1.1%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "], similar to the "
-    },
-    {
-      "expression": "\"0.9%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] improvement of our LSTM model, which is much smaller than the "
-    },
-    {
-      "expression": "\"2.17%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] improvement of the CNN model. Furthermore, the CNN model is improved from a strong baseline: our WORD model performs already "
-    },
-    {
-      "expression": "\"2.22%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " higher than the B15-WORD model.  Comparing the individual performances on each language, we observe that the CNN model almost always "
-    },
-    {
-      "expression": "\"outperforms\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] the WORD model except for Hebrew. However, both LSTM and B15-LSTM perform "
+      "value": ", similar to the "
+    },
+    {
+      "expression": "\"0.9%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvement of our "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model, which is much smaller than the "
+    },
+    {
+      "expression": "\"2.17%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvement of the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model. Furthermore, the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model is improved from a strong baseline: our "
+    },
+    {
+      "expression": "\"WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model performs already "
+    },
+    {
+      "expression": "\"2.22%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " higher than the "
+    },
+    {
+      "expression": "\"B15-WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model.  Comparing the individual performances on each language, we observe that the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model almost always outperforms the "
+    },
+    {
+      "expression": "\"WORD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model except for "
+    },
+    {
+      "expression": "\"Hebrew\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, both "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"B15-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " perform "
     },
     {
       "expression": "\"higher\"",
@@ -426,16 +489,7 @@
     },
     {
       "type": "literal",
-      "value": " than baseline only on the "
-    },
-    {
-      "expression": "\"three\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] agglutinative languages ("
+      "value": " than baseline only on the three agglutinative languages ("
     },
     {
       "expression": "\"Basque\"",
@@ -444,7 +498,7 @@
     },
     {
       "type": "literal",
-      "value": "], "
+      "value": ", "
     },
     {
       "expression": "\"Hungarian\"",
@@ -453,7 +507,7 @@
     },
     {
       "type": "literal",
-      "value": "], and "
+      "value": ", and "
     },
     {
       "expression": "\"Korean\"",
@@ -462,7 +516,7 @@
     },
     {
       "type": "literal",
-      "value": "]), and "
+      "value": "), and "
     },
     {
       "expression": "\"lower\"",
@@ -471,7 +525,7 @@
     },
     {
       "type": "literal",
-      "value": "] than baseline on the other six."
+      "value": " than baseline on the other six."
     }
   ],
   "variables": {},

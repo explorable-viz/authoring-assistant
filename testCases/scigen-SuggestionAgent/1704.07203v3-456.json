@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 lists the results of "
+      "value": "Table 3 lists the results of the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " feature-based ("
+      "value": " "
     },
     {
-      "expression": "\"LR All features\"",
+      "expression": "\"feature-based (LR All features)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and deep learning ("
+      "value": " and deep learning ("
     },
     {
       "expression": "\"CNN:rand\"",
@@ -30,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": ") systems, as well as single feature groups (averages over all source domains,\r\nFor the "
-    },
-    {
-      "expression": "\"lowest scoring\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " datasets, "
+      "value": ") systems, as well as single feature groups (averages over all source domains,\r\nFor the lowest scoring datasets, "
     },
     {
       "expression": "\"OC\"",
@@ -57,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": ", the differences are only marginal when trained on a suitable dataset  The "
+      "value": ", the differences are only marginal when trained on a suitable dataset\r\nThe "
     },
     {
       "expression": "\"best\"",
@@ -75,19 +66,19 @@
     },
     {
       "type": "literal",
-      "value": " deep learning approach in most scenarios.  In particular, as opposed to the in-domain experiments, the difference of the Claim-F1 measure between the feature-based approaches and the deep learning approaches is striking. In the feature-based approaches, on average, a combination of all features yields "
+      "value": " deep learning approach in most scenarios.\r\nIn particular, as opposed to the in-domain experiments, the difference of the Claim-F1 measure between the feature-based approaches and the deep learning approaches is striking. In the feature-based approaches, on average, a combination of all features yields the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results for both Macro-F1 and Claim-F1. When comparing single features, lexical ones do "
+      "value": " results for both Macro-F1 and Claim-F1.\r\nWhen comparing single features, lexical ones do the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },

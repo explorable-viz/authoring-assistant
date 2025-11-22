@@ -3,25 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach "
+      "value": "Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach outperforms the concurrently-published "
     },
     {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the concurrently-published "
-    },
-    {
-      "expression": "\"Xiong et al. (2019)\"",
+      "expression": "\"Xiong et al.\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ";"
+      "value": " (2019);"
     }
   ],
   "variables": {},

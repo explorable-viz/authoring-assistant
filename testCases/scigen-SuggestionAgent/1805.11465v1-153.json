@@ -3,16 +3,97 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 analyzes the performance of our "
+      "value": "Got it. Here is the revised paragraph with the correct annotations using only one category per expression:\n\nTable "
     },
     {
-      "expression": "\"two best\"",
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " analyzes the performance of our two "
+    },
+    {
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " systems (PD = projective, FTD = fixed-tree) in more detail,  and compares them to Wang's, Flanigan's, and Damonte's AMR parsers on the 2015 set and , and van Noord and Bos (2017b) for the 2017 dataset.  The good scores we achieve on reentrancy identification,\n"
+      "value": " systems ("
+    },
+    {
+      "expression": "\"PD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " = projective, "
+    },
+    {
+      "expression": "\"FTD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " = fixed-tree) in more detail,  and compares them to "
+    },
+    {
+      "expression": "\"Wang's\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Flanigan's\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"Damonte's\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " AMR parsers on the "
+    },
+    {
+      "expression": "\"2015\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " set and , and "
+    },
+    {
+      "expression": "\"van Noord and Bos (2017b)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the "
+    },
+    {
+      "expression": "\"2017\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dataset.  The good scores we achieve on reentrancy identification,"
     }
   ],
   "variables": {},

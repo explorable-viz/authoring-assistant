@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the "
+      "value": "Got it. I'll correct that and ensure the proper category is used.\n\nHere's the corrected output:\n\nTable 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the "
     },
     {
       "expression": "\"previous state-of-the-art\"",
@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " and our baselines.  "
+      "value": " and our "
+    },
+    {
+      "expression": "\"baselines\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  "
     },
     {
       "expression": "\"TEXTONLY\"",
@@ -30,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": ". With 1-best dependency trees, our "
+      "value": ". With "
+    },
+    {
+      "expression": "\"1-best dependency trees\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", our "
     },
     {
       "expression": "\"DEPTREE\"",
@@ -42,13 +60,13 @@
       "value": " baseline gives "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"better performances\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performances than the "
+      "value": " than the "
     },
     {
       "expression": "\"previous state of the art\"",
@@ -75,16 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " obtain significantly "
+      "value": " obtain "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"significantly higher numbers\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " numbers than "
+      "value": " than "
     },
     {
       "expression": "\"DEPTREE\"",

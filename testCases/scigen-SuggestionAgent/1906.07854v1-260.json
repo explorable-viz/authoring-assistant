@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in table 2, "
+      "value": "Understood, I will correct that. Here's the corrected output:\n\nAs shown in table 2, "
     },
     {
       "expression": "\"BioBERT\"",
@@ -21,10 +21,10 @@
     },
     {
       "type": "literal",
-      "value": " performs "
+      "value": " performs the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are summarized in Figure 6 and Table 3. The probability that a new image belongs to an unseen class "
+      "value": "Got it, I will adjust the annotations to use only one category from the provided list.\n\nHere is the revised paragraph:\n\nThe results are summarized in Figure 6 and Table 3. The probability that a new image belongs to an unseen class "
     },
     {
       "expression": "\"P (N |t)\"",
@@ -48,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": "] than the baseline "
+      "value": " than the baseline "
     },
     {
       "expression": "\"ME measure\"",
@@ -57,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": "] in the dataset, "
+      "value": " in the dataset, "
     },
     {
       "expression": "\"P (N |t)\"",
@@ -66,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": "] (Table 3). For instance, the ImageNet classifier drops its "
+      "value": " (Table 3). For instance, the ImageNet classifier drops its "
     },
     {
       "expression": "\"ME score\"",
@@ -87,13 +87,13 @@
       "value": " after about "
     },
     {
-      "expression": "\"8,960 images\"",
+      "expression": "\"8,960\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " , while the approximate "
+      "value": " images, while the approximate "
     },
     {
       "expression": "\"ME measure\"",
@@ -102,16 +102,16 @@
     },
     {
       "type": "literal",
-      "value": "] for the dataset shows that new classes are encountered at above this rate until "
+      "value": " for the dataset shows that new classes are encountered at above this rate until "
     },
     {
-      "expression": "\"at least 111,000 images\"",
+      "expression": "\"at least 111,000\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ."
+      "value": " images."
     }
   ],
   "variables": {},

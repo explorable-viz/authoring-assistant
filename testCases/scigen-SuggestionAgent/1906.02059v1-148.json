@@ -3,25 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 reports micro-averaged precision ("
+      "value": "Understood. I will ensure to use only one category per annotation.\n\nTable 3 reports "
     },
     {
-      "expression": "\"P\"",
+      "expression": "\"micro-averaged\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), recall ("
-    },
-    {
-      "expression": "\"R\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), and F1 results for all methods, now including "
+      "value": " precision (P), recall (R), and F1 results for all methods, now including "
     },
     {
       "expression": "\"LWAN\"",
@@ -97,7 +88,7 @@
     },
     {
       "expression": "\"57.\"",
-      "categories": ["data-retrieval"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -124,7 +115,7 @@
     },
     {
       "expression": "\"59.9\"",
-      "categories": ["data-retrieval"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

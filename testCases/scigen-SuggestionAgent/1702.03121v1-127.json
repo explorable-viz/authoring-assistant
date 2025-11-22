@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "See Table 3 for the "
+      "value": "Understood, I will correct the annotation to use only one category as specified. Here is the revised output:\n\nSee "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the "
     },
     {
       "expression": "\"averages\"",
@@ -15,31 +24,31 @@
       "value": " across "
     },
     {
-      "expression": "\"10\"",
+      "expression": "\"10 scenarios\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " scenarios.  As we can see from Table 3, the perplexity scores are consistent with the accuracies: the script model again "
+      "value": ". As we can see from Table 3, the perplexity scores are consistent with the accuracies: the "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"script model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " again outperforms other methods, and, as expected, all the models are "
+    },
+    {
+      "expression": "\"weaker\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " other methods, and, as expected, all the models are "
-    },
-    {
-      "expression": "\"weaker than humans\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " than humans."
     }
   ],
   "variables": {},

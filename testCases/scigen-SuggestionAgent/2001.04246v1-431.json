@@ -3,37 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The "
+      "value": "The model performance and corresponding model size are reported in Table 5. On the one hand, removing the efficiency-aware loss ("
     },
     {
-      "expression": "\"model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " performance and corresponding "
-    },
-    {
-      "expression": "\"model size\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are reported in Table 5. On the one hand, removing the efficiency-aware loss ("
-    },
-    {
-      "expression": "\"β\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " = "
-    },
-    {
-      "expression": "\"0\"",
+      "expression": "\"β = 0\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -42,16 +15,7 @@
       "value": ") leads to the increase in model parameter size, on the other hand, a more aggressive efficiency preference ("
     },
     {
-      "expression": "\"β\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " = "
-    },
-    {
-      "expression": "\"8\"",
+      "expression": "\"β = 8\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -69,16 +33,7 @@
       "value": " encourages the compressed model to adopt more lightweight operations such as zero and skip which hurt the performance. A moderate efficiency constraint ("
     },
     {
-      "expression": "\"β\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " = "
-    },
-    {
-      "expression": "\"4\"",
+      "expression": "\"β = 4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

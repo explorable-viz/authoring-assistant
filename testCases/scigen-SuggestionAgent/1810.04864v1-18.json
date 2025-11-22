@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows "
+      "value": "Table 4 shows the "
     },
     {
       "expression": "\"BLEU\"",
@@ -21,16 +21,25 @@
     },
     {
       "type": "literal",
-      "value": " development set scores when treating each human reference as prediction once and evaluating it against the remaining references, compared to the scores of the word-based and  character-based models. Strikingly, on the E2E development set, both model variants significantly "
+      "value": " development set scores when treating each human reference as prediction once and evaluating it against the remaining references, compared to the scores of the "
     },
     {
-      "expression": "\"outperform\"",
-      "categories": ["comparison"],
+      "expression": "\"word-based\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " human texts by far with respect to both automatic evaluation measures. While the human "
+      "value": " and  "
+    },
+    {
+      "expression": "\"character-based\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models. Strikingly, on the E2E development set, both model variants significantly outperform human texts by far with respect to both automatic evaluation measures. While the human "
     },
     {
       "expression": "\"BLEU\"",

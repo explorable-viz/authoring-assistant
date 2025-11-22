@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the performance of our CRF-based method in finding the correct relation cardinality, evaluated on manually annotated "
+      "value": "Thank you for the clarification. Let's correct the annotations accordingly:\n\nTable 2 shows the performance of our CRF-based method in finding the correct relation cardinality, evaluated on manually annotated "
     },
     {
       "expression": "\"20\"",
@@ -66,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": ". The random-number baseline achieves a precision of "
+      "value": ".  The random-number baseline achieves a precision of "
     },
     {
       "expression": "\"5%\"",
@@ -169,7 +169,7 @@
     },
     {
       "expression": "\"30-50%\"",
-      "categories": ["ratio"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -178,12 +178,12 @@
     },
     {
       "expression": "\"30%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F1-score. As shown by the last row of Table 2, "
+      "value": " F1-score.  As shown by the last row of Table 2, "
     },
     {
       "expression": "\"higher quality\"",

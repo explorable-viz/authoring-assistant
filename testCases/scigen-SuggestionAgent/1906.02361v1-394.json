@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows results that compare a BERT baseline that uses only the "
+      "value": "Table 2 shows results that compare a "
     },
     {
-      "expression": "\"CQA\"",
+      "expression": "\"BERT baseline\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " inputs and the same architecture but trained using inputs that contain explanations from "
+      "value": " that uses only the "
     },
     {
-      "expression": "\"CoS-E\"",
+      "expression": "\"CQA inputs\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " during training. The "
+      "value": " and the same architecture but trained using inputs that contain explanations from CoS-E during training. The "
     },
     {
       "expression": "\"BERT baseline model\"",
@@ -39,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " accuracy and adding open-ended human explanations ("
-    },
-    {
-      "expression": "\"CoS-E-open-ended\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") alongside the questions during training results in a "
+      "value": " accuracy and adding open-ended human explanations (CoS-E-open-ended) alongside the questions during training results in a "
     },
     {
       "expression": "\"2%\"",
@@ -84,16 +75,7 @@
     },
     {
       "type": "literal",
-      "value": " truly captured all information provided in "
-    },
-    {
-      "expression": "\"CoS-E-openended\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", performance would be "
+      "value": " truly captured all information provided in CoS-E-openended, performance would be "
     },
     {
       "expression": "\"90%\"",

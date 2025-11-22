@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows "
-    },
-    {
-      "expression": "\"storage size\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
+      "value": "Table 2 shows storage size of "
     },
     {
       "expression": "\"geth\"",
@@ -30,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " for each "
-    },
-    {
-      "expression": "\"bootstrapping mode\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". "
+      "value": " for each bootstrapping mode. "
     },
     {
       "expression": "\"ethanos\"",
@@ -48,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " reduces "
-    },
-    {
-      "expression": "\"Trie nodes size\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
+      "value": " reduces Trie nodes size of "
     },
     {
       "expression": "\"geth\"",
@@ -93,25 +66,7 @@
     },
     {
       "type": "literal",
-      "value": " did not reduce the size of "
-    },
-    {
-      "expression": "\"fast sync\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " much, but it significantly reduced "
-    },
-    {
-      "expression": "\"compact sync\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " from "
+      "value": " did not reduce the size of fast sync much, but it significantly reduced compact sync from "
     },
     {
       "expression": "\"2,592.54MB\"",
@@ -138,25 +93,16 @@
     },
     {
       "type": "literal",
-      "value": ", which is "
+      "value": ", which is less than "
     },
     {
-      "expression": "\"less than 50%\"",
+      "expression": "\"50%\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Our result shows that the "
-    },
-    {
-      "expression": "\"trie node size\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of each checkpoint is about "
+      "value": ". Our result shows that the trie node size of each checkpoint is about "
     },
     {
       "expression": "\"800MB\"",

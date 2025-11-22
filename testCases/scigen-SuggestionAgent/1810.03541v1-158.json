@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the intrinsic evaluation results, in which our alignment intrinsically outperforms "
+      "value": "Table 3 shows the intrinsic evaluation results, in which our alignment intrinsically "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
     },
     {
       "expression": "\"JAMR aligner\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " alignment F1 score and leading to a "
+      "value": " alignment "
+    },
+    {
+      "expression": "\"F1 score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and leading to a "
     },
     {
       "expression": "\"higher\"",

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows our main experimental results. In two of the cases ("
+      "value": "Thank you for the clarification. Here's the revised paragraph with the correct categories:\n\nTable 1 shows our main experimental results. In two of the cases ("
     },
     {
       "expression": "\"SST\"",
@@ -84,7 +84,7 @@
     },
     {
       "type": "literal",
-      "value": " or roughly the same as a "
+      "value": "] or roughly the same as a "
     },
     {
       "expression": "\"BiLSTM\"",
@@ -120,16 +120,7 @@
     },
     {
       "type": "literal",
-      "value": ":"
-    },
-    {
-      "expression": "\"max-product semiring with sigmoid vs. max-sum semiring with identity, self-loops, and (cid:15)-transitions\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The last line is equivalent to a "
+      "value": ": max-product semiring with sigmoid vs. max-sum semiring with identity, self-loops, and (cid:15)-transitions. The last line is equivalent to a "
     },
     {
       "expression": "\"CNN\"",
@@ -156,7 +147,7 @@
     },
     {
       "type": "literal",
-      "value": " is the semiring and encoder function, while (cid:15) transitions and self-loops have little effect on performance."
+      "value": " is the semiring and encoder function, while (cid:15) transitions and self-loops have little effect on performance.1"
     }
   ],
   "variables": {},

@@ -30,16 +30,25 @@
     },
     {
       "type": "literal",
-      "value": ". For both i2b2 and ddi corpora, manual search "
+      "value": ". For both "
     },
     {
-      "expression": "\"outperformed\"",
-      "categories": ["comparison"],
+      "expression": "\"i2b2\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " random search."
+      "value": " and "
+    },
+    {
+      "expression": "\"ddi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " corpora, manual search outperformed random search."
     }
   ],
   "variables": {},

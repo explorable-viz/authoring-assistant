@@ -3,29 +3,29 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 suggests that "
+      "value": "Got it. Let's use just one category for each expression:\n\nTable 3 suggests that the "
     },
     {
-      "expression": "\"the combined model\"",
+      "expression": "\"combined model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " does make progress here, in that "
+      "value": " does make progress here, in that the "
     },
     {
       "expression": "\"largest gains\"",
-      "categories": ["rank"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", across all relevant datasets, tend to be for "
+      "value": " across all relevant datasets, tend to be for the "
     },
     {
       "expression": "\"smallest categories\"",
-      "categories": ["rank"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

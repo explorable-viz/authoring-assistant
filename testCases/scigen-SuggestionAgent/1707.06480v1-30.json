@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results of the pre-selection are reported in Table 1. All syllable-aware models comfortably "
+      "value": "The results of the pre-selection are reported in Table 1. All "
     },
     {
-      "expression": "\"outperform\"",
-      "categories": ["comparison"],
+      "expression": "\"syllable-aware models\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the "
+      "value": " comfortably outperform "
     },
     {
       "expression": "\"Char-CNN\"",
@@ -25,7 +25,7 @@
     },
     {
       "expression": "\"5M parameters\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -33,22 +33,13 @@
       "value": ". Surprisingly, a pure word-level model, "
     },
     {
-      "expression": "\"6 LSTM-Word\"",
+      "expression": "\"LSTM-Word\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", also "
-    },
-    {
-      "expression": "\"beats\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the character-aware one under such budget. The "
+      "value": ", also beats the character-aware one under such budget. The "
     },
     {
       "expression": "\"three best configurations\"",

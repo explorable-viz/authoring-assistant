@@ -3,25 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 5 shows the comparison of "
+      "value": "Got it. I'll adjust the annotations to use the specified categories.\n\nHere is the corrected paragraph:\n\nTable "
     },
     {
-      "expression": "\"averaged\"",
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the comparison of "
+    },
+    {
+      "expression": "\"averaged slot coherence\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " slot coherence results over all the slots in the schemas.  The "
+      "value": " results over all the slots in the schemas.  The "
     },
     {
-      "expression": "\"averaged\"",
+      "expression": "\"averaged slot coherence\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " slot coherence of "
+      "value": " of "
     },
     {
       "expression": "\"ODEE-FER\"",
@@ -34,21 +43,21 @@
     },
     {
       "expression": "\"highest\"",
-      "categories": ["min-max"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ",  The "
+      "value": ".  The "
     },
     {
-      "expression": "\"averaged\"",
+      "expression": "\"averaged slot coherence\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " slot coherence  of "
+      "value": " of "
     },
     {
       "expression": "\"ODEE-F\"",
@@ -57,47 +66,38 @@
     },
     {
       "type": "literal",
-      "value": " is comparable to that of Nguyen et al. (2015) ("
+      "value": " is "
     },
     {
-      "expression": "\"p=0.3415\"",
-      "categories": ["ratio"],
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "),  The scores of "
+      "value": " to that of Nguyen et al. (2015) (p = "
     },
     {
-      "expression": "\"ODEE-FE\"",
+      "expression": "\"0.3415\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
+      "value": ").  The scores of ODEE-FE (p = "
     },
     {
-      "expression": "\"p=0.06\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") and "
-    },
-    {
-      "expression": "\"ODEE-FER\"",
+      "expression": "\"0.06\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
+      "value": ") and ODEE-FER (p = "
     },
     {
-      "expression": "\"p=10−5\"",
-      "categories": ["ratio"],
+      "expression": "\"10−5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "type": "literal",
-      "value": ","
+      "value": "."
     }
   ],
   "variables": {},

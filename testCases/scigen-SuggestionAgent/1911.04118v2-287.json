@@ -3,25 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
+      "value": "Table 5: Model accuracy when noise is injected into "
     },
     {
-      "expression": "\"5\"",
+      "expression": "\"WikiQA\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ": Model accuracy when noise is injected into WikiQA and TREC-QA datasets. ∗ indicates the target dataset for the second step of fine-tuning (adapt step).  Table "
+      "value": " and "
     },
     {
-      "expression": "\"5\"",
+      "expression": "\"TREC-QA\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " shows the MAP and MRR of "
+      "value": " datasets. ∗ indicates the target dataset for the second step of fine-tuning (adapt step).  Table 5 shows the "
+    },
+    {
+      "expression": "\"MAP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"MRR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
     },
     {
       "expression": "\"BERTBase\"",
@@ -30,7 +48,25 @@
     },
     {
       "type": "literal",
-      "value": " using FT and TANDA, also indicating the drop percentage (% ) in accuracy due to the injection of noise."
+      "value": " using "
+    },
+    {
+      "expression": "\"FT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"TANDA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", also indicating the drop percentage (% ) in accuracy due to the injection of noise."
     }
   ],
   "variables": {},

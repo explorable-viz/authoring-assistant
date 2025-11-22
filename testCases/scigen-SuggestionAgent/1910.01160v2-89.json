@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 provides a summary of the results. We compare the results of our methods of the pre-trained "
+      "value": "Thank you for pointing that out. I'll adjust the categories accordingly.\n\nHere is the corrected output:\n\nTable 3 provides a summary of the results. We compare the results of our methods of the pre-trained "
     },
     {
       "expression": "\"BERT\"",
@@ -39,16 +39,25 @@
     },
     {
       "type": "literal",
-      "value": " significantly outperform the baseline on the F1 score. The two-tailed paired t-test with a 0.05 significance level was used for testing statistical significance of performance differences. The "
+      "value": " significantly outperform the baseline on the F1 score. The two-tailed paired t-test with a 0."
     },
     {
-      "expression": "\"best result\"",
+      "expression": "\"05\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significance level was used for testing statistical significance of performance differences. The "
+    },
+    {
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is given by the "
+      "value": " result is given by the "
     },
     {
       "expression": "\"BERT\"",

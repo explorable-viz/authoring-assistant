@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " open relations aligned to the DBpedia relations "
-    },
-    {
-      "expression": "\"location\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
+      "value": " open relations aligned to the DBpedia relations location, "
     },
     {
       "expression": "\"associatedMusicalArtist\"",
@@ -39,25 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ". The frequencies correspond to the number of OIE triples that (1) have the specified open relation (e.g., \"be wife of \") and (2) have a KB hit with the specified KB relation (e.g., spouse). There is clearly no "
+      "value": ". The frequencies correspond to the number of OIE triples that (1) have the specified open relation (e.g., \"be wife of \") and (2) have a KB hit with the specified KB relation (e.g., "
     },
     {
-      "expression": "\"1:1\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " correspondence between open relations and KB relations. On the one hand, open relations can be highly ambiguous (e.g., \"be\" has hits to "
-    },
-    {
-      "expression": "\"location\"",
+      "expression": "\"spouse\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": "). There is clearly no 1:1 correspondence between open relations and KB relations. On the one hand, open relations can be highly ambiguous (e.g., \"be\" has hits to location and "
     },
     {
       "expression": "\"associatedMusicalArtits\"",

@@ -42,17 +42,17 @@
       "value": ", surpassing all previous published results by at least "
     },
     {
-      "expression": "\"0.5 BLEU\"",
+      "expression": "\"in 0.5 BLEU\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", and our results with the unconstrained version by "
+      "value": " and our results with the unconstrained version by "
     },
     {
       "expression": "\"0.4\"",
-      "categories": ["comparison"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -75,34 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " (Wu et al., 2019) models, as well as the work by He et al. (2018), which also proposes a joint encoder-decoder structure, and also other refinements over the transformer architecture like (Ahmed et al., 2017), (Chen et al., 2018), (Shaw et al., 2018) and (Ott et al., 2018). The Joint Self-attention model obtains "
+      "value": " (Wu et al., 2019) models, as well as the work by He et al. (2018), which also proposes a joint encoderdecoder structure, and also other refinements over the transformer architecture like (Ahmed et al., 2017), (Chen et al., 2018), (Shaw et al., 2018) and (Ott et al., 2018). The "
     },
     {
-      "expression": "\"the same SoTA\"",
-      "categories": ["rank"],
+      "expression": "\"Joint Self-attention\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU score of (Wu et al., 2019) on WMT'14 en-de, and the same "
-    },
-    {
-      "expression": "\"SoTA\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " score of (Ott et al., 2018) and (Wu et al., 2019) on WMT'14 enfr. The local attention constraints do not provide a significant gain on these bigger models, but it improves the BLEU score on WMT'14 en-fr to a new "
-    },
-    {
-      "expression": "\"SoTA\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
+      "value": " model obtains the same SoTA BLEU score of (Wu et al., 2019) on WMT'14 en-de, and the same SoTA score of (Ott et al., 2018) and (Wu et al., 2019) on WMT'14 enfr. The local attention constraints do not provide a significant gain on these bigger models, but it improves the BLEU score on WMT'14 en-fr to a new SoTA of "
     },
     {
       "expression": "\"43.3\"",

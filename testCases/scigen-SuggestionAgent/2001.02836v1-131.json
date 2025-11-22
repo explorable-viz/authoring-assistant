@@ -12,10 +12,10 @@
     },
     {
       "type": "literal",
-      "value": " overall performance and "
+      "value": " overall performance and significantly "
     },
     {
-      "expression": "\"significantly better\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": "The only possible SP relation between nouns and adjectives is 'amod', while multiple SP relations could exist between nouns and verbs, and co occurrence information cannot effectively distinguish them. ("
+      "value": " The only possible SP relation between nouns and adjectives is 'amod', while multiple SP relations could exist between nouns and verbs, and co occurrence information cannot effectively distinguish them. ("
     },
     {
       "expression": "\"three\"",
@@ -39,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ") relations while most of the verbs and adjectives only appear in one or two relations. This result is promising since it is analyzed by Solovyev et al. "
-    },
-    {
-      "expression": "\"two-thirds\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the frequent words are nouns; thus there are potential benefits if our embeddings are used in downstream NLP tasks. Second, the center embeddings achieve "
+      "value": ") relations while most of the verbs and adjectives only appear in one or two relations. This result is promising since it is analyzed by Solovyev et al. two-thirds of the frequent words are nouns; thus there are potential benefits if our embeddings are used in downstream NLP tasks. Second, the center embeddings achieve "
     },
     {
       "expression": "\"the best\"",
@@ -57,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " performance against all the other relation-dependent embeddings, which demonstrates the effectiveness of our model in learning relation-dependent information over words and also enhancing their overall semantics."
+      "value": " performance against all the other relationdependent embeddings, which demonstrates the effectiveness of our model in learning relationdependent information over words and also enhancing their overall semantics."
     }
   ],
   "variables": {},

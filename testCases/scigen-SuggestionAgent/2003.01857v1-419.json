@@ -15,49 +15,13 @@
       "value": " corpus consists of news articles from the "
     },
     {
-      "expression": "\"AG's corpus\"",
+      "expression": "\"AG's\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of news articles on the web pertaining to the 4 largest classes, which are "
-    },
-    {
-      "expression": "\"Work\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Sports\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Business\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Sci/Tech\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The data set contains "
+      "value": " corpus of news articles on the web pertaining to the 4 largest classes, which are Work, Sports, Business, Sci/Tech. The data set contains "
     },
     {
       "expression": "\"30,000\"",
@@ -75,34 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " samples for each class for testing. In this data set, there are three columns which are "
-    },
-    {
-      "expression": "\"label\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"title\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"description\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", we treat title as abstract input and description as contents input. Sogou News A Chinese news data set. This data set is a combination of the "
+      "value": " samples for each class for testing. In this data set, there are three columns which are label, title, description, we treat title as abstract input and description as contents input. Sogou News A Chinese news data set. This data set is a combination of the "
     },
     {
       "expression": "\"SogouCA\"",
@@ -120,52 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " news corpora pertaining to 5 categories, which are "
-    },
-    {
-      "expression": "\"Sports\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Finance\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Entertainment\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Automobile\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"Technology\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". It contains "
+      "value": " news corpora pertaining to 5 categories, which are Sports, Finance, Entertainment, Automobile and Technology. It contains "
     },
     {
       "expression": "\"450,000\"",
@@ -183,34 +75,7 @@
     },
     {
       "type": "literal",
-      "value": " samples for testing in total. Sogou New also has three columns in data set files, "
-    },
-    {
-      "expression": "\"label\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"title\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"description\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", similarly, we treat title as abstract input and description as contents input."
+      "value": " samples for testing in total. Sogou New also has three columns in data set files, label, title, description, similarly, we treat title as abstract input and description as contents input."
     }
   ],
   "variables": {},

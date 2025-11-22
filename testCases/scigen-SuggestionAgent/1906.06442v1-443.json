@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " are presented in Table 7.\r\nThe "
+      "value": " are presented in Table 7.  The "
     },
     {
       "expression": "\"noised decode\"",
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " \u2013 decoding newstest sentences with the "
-    },
-    {
-      "expression": "\"NoisedBT model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " after noising the source \u2013 yields "
+      "value": " \u2013 decoding newstest sentences with the NoisedBT model after noising the source \u2013 yields "
     },
     {
       "expression": "\"poor performance\"",
@@ -39,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": ".\r\nThe "
+      "value": ".  The "
     },
     {
       "expression": "\"tagged decode\"",
@@ -48,19 +39,19 @@
     },
     {
       "type": "literal",
-      "value": ", however, yields only somewhat "
+      "value": ", however, yields only "
     },
     {
-      "expression": "\"lower performance\"",
+      "expression": "\"somewhat lower performance\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the "
+      "value": " than the standard "
     },
     {
-      "expression": "\"standard decode\"",
+      "expression": "\"decode\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -69,16 +60,21 @@
       "value": " on the same model ("
     },
     {
-      "expression": "\"-2.9BLEU\"",
+      "expression": "\"-2.9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "expression": "\"BLEU\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " on "
     },
     {
-      "expression": "\"on average\"",
+      "expression": "\"average\"",
       "categories": ["average"],
       "type": "expression"
     },

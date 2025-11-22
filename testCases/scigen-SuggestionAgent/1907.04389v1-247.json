@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
+      "value": "Understood, I'll ensure that each annotation uses only one category as specified. Here is the revised paragraph:\n\nTable "
     },
     {
       "expression": "\"2\"",
@@ -39,88 +39,34 @@
     },
     {
       "type": "literal",
-      "value": " than our unmodified, non-adversarial "
+      "value": " than our unmodified, non-adversarial InferSent baseline on SNLI's test set, since they remove biases that may be useful for performing this task. The difference for AdvCls is "
     },
     {
-      "expression": "\"InferSent\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " baseline on "
-    },
-    {
-      "expression": "\"SNLI's test set\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", since they remove biases that may be useful for performing this task. The difference for "
-    },
-    {
-      "expression": "\"AdvCls\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is minimal, and it even slightly "
-    },
-    {
-      "expression": "\"outperforms\"",
+      "expression": "\"minimal\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"InferSent\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on the validation set. While "
-    },
-    {
-      "expression": "\"Advdat's results\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are noticeably "
+      "value": ", and it even slightly outperforms InferSent on the validation set. While AdvDat's results are noticeably "
     },
     {
       "expression": "\"lower\"",
-      "categories": ["min-max"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the non-adversarial "
+      "value": " than the non-adversarial InferSent, the drops are still less than "
     },
     {
-      "expression": "\"InferSent\"",
+      "expression": "\"6%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", the drops are still less than "
-    },
-    {
-      "expression": "\"6%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " points."
+      "value": "."
     }
   ],
   "variables": {},

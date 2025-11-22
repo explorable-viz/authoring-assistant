@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The main results of our experiments are shown in Table 1.  We notice that "
+      "value": "The main results of our experiments are shown in Table 1. We notice that "
     },
     {
       "expression": "\"M.1\"",
@@ -15,7 +15,16 @@
       "value": " ("
     },
     {
-      "expression": "\"Bag-of-words + Logistic Regression\"",
+      "expression": "\"Bag-of-words\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " + "
+    },
+    {
+      "expression": "\"Logistic Regression\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -48,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": " predicted positive class probabilities for sentences with female nouns.  On the contrary, "
+      "value": " predicted positive class probabilities for sentences with "
+    },
+    {
+      "expression": "\"female\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " nouns. On the contrary, "
     },
     {
       "expression": "\"M.3\"",
@@ -66,7 +84,16 @@
     },
     {
       "type": "literal",
-      "value": ") shows that sentences with male nouns have a statistically significant "
+      "value": ") shows that sentences with "
+    },
+    {
+      "expression": "\"male\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " nouns have a statistically significant "
     },
     {
       "expression": "\"higher\"",
@@ -75,7 +102,16 @@
     },
     {
       "type": "literal",
-      "value": " predicted positive class probability than sentences with female nouns."
+      "value": " predicted positive class probability than sentences with "
+    },
+    {
+      "expression": "\"female\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " nouns."
     }
   ],
   "variables": {},

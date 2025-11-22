@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 compares the results on the development set. On top of the baseline "
+      "value": "Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compares the results on the development set. On top of the baseline "
     },
     {
       "expression": "\"ORIGINAL\"",
@@ -48,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": ", gives similar improvements to "
+      "value": " gives similar improvements to "
     },
     {
       "expression": "\"PAIR\"",
@@ -66,7 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " on the HEAD setting, RELABEL and "
+      "value": " on the HEAD setting, "
+    },
+    {
+      "expression": "\"RELABEL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
     },
     {
       "expression": "\"OVERLAP\"",

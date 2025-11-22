@@ -35,16 +35,7 @@
     },
     {
       "type": "literal",
-      "value": " (Table 4), even though it has "
-    },
-    {
-      "expression": "\"more parameters\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", because it converges "
+      "value": " (Table 4), even though it has more parameters, because it converges "
     },
     {
       "expression": "\"faster\"",
@@ -62,7 +53,7 @@
     },
     {
       "type": "literal",
-      "value": "] vs. "
+      "value": " vs. "
     },
     {
       "expression": "\"12-15\"",

@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "see We that using phonological representations (phonemes and articulatory features) offers the ability to map between languages that use different orthographies, explaining the convincing improvement over graphemes for HRL-LRL pairs that are written in different scripts (Table 3). With graphemes, the experiments on these languages achieve ≈ "
+      "value": "see We that using phonological representations (phonemes and articulatory features) offers the ability to map between languages that use different orthographies, explaining the convincing improvement over graphemes for HRL-LRL pairs that are written in different scripts (Table 3). With "
     },
     {
-      "expression": "\"0\"",
+      "expression": "\"graphemes\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy because the character vocabulary of the HRL encoder simply does not contain the low-resource test language characters. This is the case with Lao-Thai ("
+      "value": ", the experiments on these languages achieve ≈ "
+    },
+    {
+      "expression": "\"0 accuracy\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " because the character vocabulary of the HRL encoder simply does not contain the low-resource test language characters. This is the case with Lao-Thai ("
     },
     {
       "expression": "\"lo-th\"",
@@ -39,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": "). In contrast, we observe that the grapheme representation offers strong transfer performance when the LRL and HRL share orthography, notably Javanese-Indonesian ("
+      "value": "). In contrast, we observe that the "
+    },
+    {
+      "expression": "\"grapheme representation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " offers strong transfer performance when the LRL and HRL share orthography, notably Javanese-Indonesian ("
     },
     {
       "expression": "\"jv-id\"",

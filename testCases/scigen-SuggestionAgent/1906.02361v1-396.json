@@ -3,43 +3,61 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 also contains results that use only the explanation and exclude the original question from CQA denoted by 'w/o question'. These variants also use explanation during both train and validation. We observe that even using these limited kind of explanations improves "
+      "value": "Table 4 also contains results that use only the explanation and exclude the original question from CQA denoted by '"
     },
     {
-      "expression": "\"over\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] the "
-    },
-    {
-      "expression": "\"BERT baseline\"",
+      "expression": "\"w/o question\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in Table 4, which suggests that the explanations are providing useful information beyond just mentioning the correct or incorrect answers. In Table 2, using CAGE-reasoning at both train and validation resulted in an accuracy of "
+      "value": "'. These variants also use explanation during both train and validation. We observe that even using these limited kind of explanations improves over the "
     },
     {
-      "expression": "\"72%\"",
-      "categories": ["ratio"],
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", but Table 4 shows that if CAGE-reasoning truly captured all information provided in CoS-E-openended, performance would be "
+      "value": " baseline in Table 4, which suggests that the explanations are providing useful information beyond just mentioning the correct or incorrect answers. In Table 2, using "
     },
     {
-      "expression": "\"90%\"",
-      "categories": ["ratio"],
+      "expression": "\"CAGE-reasoning\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " at both train and validation resulted in an accuracy of "
+    },
+    {
+      "expression": "\"72\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, but Table 4 shows that if "
+    },
+    {
+      "expression": "\"CAGE-reasoning\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " truly captured all information provided in CoS-E-openended, performance would be "
+    },
+    {
+      "expression": "\"90\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%."
     }
   ],
   "variables": {},

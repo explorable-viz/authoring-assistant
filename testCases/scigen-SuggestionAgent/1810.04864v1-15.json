@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 and 3 display the results on the "
+      "value": "Table "
     },
     {
-      "expression": "\"E2E\"",
+      "expression": "\"2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and WebNLG test sets for models of the respective challenges and our own models On the "
+      "value": " and "
     },
     {
-      "expression": "\"E2E\"",
+      "expression": "\"3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test set, our single "
+      "value": " display the results on the E2E and WebNLG test sets for models of the respective challenges and our own models On the E2E test set, our single "
     },
     {
       "expression": "\"best\"",

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2: "
+      "value": "Got it, I'll ensure that each replacement uses only one category. Here is the corrected version:\n\nTable 2: "
     },
     {
       "expression": "\"Results\"",
@@ -12,7 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " on the WMT English-German translation task. \"\u2021\" indicates the result is "
+      "value": " on the WMT "
+    },
+    {
+      "expression": "\"English-German\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " translation task. \""
+    },
+    {
+      "expression": "\"\u2021\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" indicates the result is "
     },
     {
       "expression": "\"significantly better\"",
@@ -21,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " than the vanilla Transformer model (p < 0.05). Similar observations are obtained on the English-German translation task, as shown in Table 2."
+      "value": " than the vanilla "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model (p < 0.05). Similar observations are obtained on the English-German translation task, as shown in Table 2."
     }
   ],
   "variables": {},

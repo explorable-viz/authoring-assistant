@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 5, we compare our model with several different strategies. The first one is to put all weights to the center embedding (fix "
+      "value": "Thank you for the clarification. Here is the corrected output:\n\nAs shown in Table 5, we compare our model with several different strategies. The first one is to put all weights to the center embedding (fix "
     },
     {
       "expression": "\"λ\"",

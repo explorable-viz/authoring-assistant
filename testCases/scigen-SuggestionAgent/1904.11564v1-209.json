@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "edge properties are removed, which Table 3 shows has an effect of "
+      "value": "edge properties are removed, which "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows has an effect of "
     },
     {
       "expression": "\"less than 1\"",
@@ -12,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " BLEU point).  we ablate node (predicate) and edge attributes  number and tense  have the largest effect on the reported "
+      "value": " "
     },
     {
       "expression": "\"BLEU\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " score.  has only a small impact on performance."
+      "value": " point). we ablate node (predicate) and edge attributes number and tense have the largest effect on the reported "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " score. has only a small impact on performance."
     }
   ],
   "variables": {},

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our results are given in Table 4. We found that "
+      "value": "Our results are given in Table 4. We found that the "
     },
     {
       "expression": "\"Wikipedia\"",
@@ -30,11 +30,11 @@
     },
     {
       "type": "literal",
-      "value": ", evidenced by similar high F1 scores from both annotators ("
+      "value": ", evidenced by similar high F1 scores from both annotators (> "
     },
     {
-      "expression": "\"> 0.8\"",
-      "categories": ["ratio"],
+      "expression": "\"0.8\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

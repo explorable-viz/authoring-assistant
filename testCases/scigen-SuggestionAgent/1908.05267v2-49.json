@@ -3,43 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 summarizes the performance of "
+      "value": "Thank you for your patience. I will ensure that each annotation contains only one category.\n\nHere is the corrected output:\n\nTable 3 summarizes the performance of the "
     },
     {
-      "expression": "\"the three models\"",
+      "expression": "\"three\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the "
+      "value": " models on the "
     },
     {
-      "expression": "\"SUPPORTS and REFUTES pairs\"",
+      "expression": "\"SUPPORTS\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from the FEVER DEV set and on the created "
+      "value": " and "
     },
     {
-      "expression": "\"SYMMETRIC TEST SET pairs\"",
+      "expression": "\"REFUTES\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".  All "
+      "value": " pairs from the FEVER DEV set and on the created "
     },
     {
-      "expression": "\"models\"",
+      "expression": "\"SYMMETRIC TEST SET\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " perform relatively well on FEVER DEV but achieve "
+      "value": " pairs.  All models perform relatively well on FEVER DEV but achieve "
     },
     {
       "expression": "\"less than 60%\"",
@@ -60,31 +60,31 @@
       "value": " and "
     },
     {
-      "expression": "\"BERT models\"",
+      "expression": "\"BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " by an absolute "
+      "value": " models by an absolute "
     },
     {
-      "expression": "\"3.4\"",
+      "expression": "\"3.4%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " and "
     },
     {
-      "expression": "\"3.3\"",
+      "expression": "\"3.3%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% respectively. One can notice that this improvement comes at a cost in the accuracy over the FEVER DEV pairs.  Applying the regularization method, using the same training data, helps to train a more robust model that performs "
+      "value": " respectively. One can notice that this improvement comes at a cost in the accuracy over the FEVER DEV pairs.  Applying the regularization method, using the same training data, helps to train a more robust model that performs "
     },
     {
       "expression": "\"better\"",

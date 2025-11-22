@@ -3,43 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 6: Impact of different labels of ASNQ on fine-tuning "
+      "value": "Table 6: Impact of different labels of ASNQ on fine-tuning BERT for answer sentence selection. Neg and Pos refers to question-answer (QA) pairs of that particular label being chosen for fine-tuning. We carried out experiments by fine-tuning BERTBase on ASNQ with specific label categories assigned to the negative class. Table 6 shows the results: "
     },
     {
-      "expression": "\"BERT\"",
+      "expression": "\"Label 3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for answer sentence selection. Neg and Pos refers to question-answer (QA) pairs of that particular label being chosen for fine-tuning. We carried out experiments by fine-tuning "
-    },
-    {
-      "expression": "\"BERTBase\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on ASNQ with specific label categories assigned to the negative class. Table 6 shows the results: Label "
-    },
-    {
-      "expression": "\"3\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"the most effective\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " negative type of the three,"
+      "value": " is the most effective negative type of the three,"
     }
   ],
   "variables": {},

@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The table 1 shows the caption retrieval recall on COCO dataset. The first two lines show the state-of-the-art results. The second pair of lines present the results of our model, with "
+      "value": "Got it, I will ensure to use only the valid categories.\n\nHere's the corrected paragraph:\n\nThe table 1 shows the caption retrieval recall on COCO dataset. The first two lines show the "
+    },
+    {
+      "expression": "\"state-of-the-art\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results. The second pair of lines present the results of our model, with "
     },
     {
       "expression": "\"W2V\"",
@@ -21,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " embeddings used as the baseline.  We can see that our model is close to the "
-    },
-    {
-      "expression": "\"Deep SemanticVisual Embedding (DSVE)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " method  while the "
+      "value": " embeddings used as the baseline.  We can see that our model is close to the Deep SemanticVisual Embedding (DSVE) method while the "
     },
     {
       "expression": "\"W2V\"",
@@ -57,110 +57,47 @@
     },
     {
       "type": "literal",
-      "value": " method is used in English and on both languages simultaneously. If trained only on English, i.e. only on the COCO dataset like the two previous methods, it shows performance similar to the one of the state-of-the-art. This means training using "
+      "value": " method is used in English and on both languages simultaneously. If trained only on English, i.e. only on the COCO dataset like the two previous methods, it shows performance similar to the one of the "
     },
     {
-      "expression": "\"BIVEC\"",
+      "expression": "\"state-of-the-art\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " does not weaken the English representation. When trained on English and French together, the recall is increased by "
+      "value": ". This means training using BIVEC does not weaken the English representation. When trained on English and French together, the recall is increased by "
     },
     {
-      "expression": "\"3.35\"",
+      "expression": "\"3.35%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", going from "
+    },
+    {
+      "expression": "\"65.58%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " %, going from "
+      "value": " to "
     },
     {
-      "expression": "\"65.58\"",
+      "expression": "\"67.78%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " % to "
+      "value": ". We can also see an improvement for recall@5 and recall@10, with respectively "
     },
     {
-      "expression": "\"67.78\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " %. We can also see an improvement for recall@5 and recall@10, with respectively "
-    },
-    {
-      "expression": "\"1.17\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " % and "
-    },
-    {
-      "expression": "\"0.85\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " % of increase. This implies that the similarity learning with French captions increases English recognition when using "
-    },
-    {
-      "expression": "\"BIVEC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  First of all, when training with "
-    },
-    {
-      "expression": "\"MUSE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for English only, we can see a sharp decrease in performance, with a recall going from "
-    },
-    {
-      "expression": "\"66.08\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " % to "
-    },
-    {
-      "expression": "\"63.10\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " %. By comparing the model trained with "
-    },
-    {
-      "expression": "\"W2V\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", we obtain similar results. This could come from the fact that both "
-    },
-    {
-      "expression": "\"MUSE\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"1.17%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -168,22 +105,31 @@
       "value": " and "
     },
     {
-      "expression": "\"W2V\"",
+      "expression": "\"0.85%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of increase. This implies that the similarity learning with French captions increases English recognition when using BIVEC.  First of all, when training with MUSE for English only, we can see a sharp decrease in performance, with a recall going from "
+    },
+    {
+      "expression": "\"66.08%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " embeddings do not have representation for out of vocabulary words like the "
+      "value": " to "
     },
     {
-      "expression": "\"FastText\"",
+      "expression": "\"63.10%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ones. Moreover, rare words have much more chance to be wrongly projected because of space transformation. When we train the model with additional languages, we can see a slight decrease in performance in English. The "
+      "value": ". By comparing the model trained with W2V, we obtain similar results. This could come from the fact that both MUSE and W2V embeddings do not have representation for out of vocabulary words like the FastText ones. Moreover, rare words have much more chance to be wrongly projected because of space transformation. When we train the model with additional languages, we can see a slight decrease in performance in English. The "
     },
     {
       "expression": "\"maximum\"",
@@ -195,49 +141,40 @@
       "value": " decrease is "
     },
     {
-      "expression": "\"1.01\"",
+      "expression": "\"1.01%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " % for recall@10, but it is counterbalanced by an increase of "
+      "value": " for recall@10, but it is counterbalanced by an increase of "
     },
     {
-      "expression": "\"0.29\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"0.29%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " % for the recall@1.  We evaluated our method on the COCO dataset for English-only results and shown that using "
+      "value": " for the recall@1.  We evaluated our method on the COCO dataset for English-only results and shown that using BIVEC embeddings enables the use of another language in order to improve the performance. The obtained improvement is a "
     },
     {
-      "expression": "\"BIVEC\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"3.35%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " embeddings enables the use of another language in order to improve the performance. The obtained improvement is a "
+      "value": " increase in performance on the COCO dataset, and a "
     },
     {
-      "expression": "\"3.35\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"15.15%\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " % increase in performance on the COCO dataset, and a "
-    },
-    {
-      "expression": "\"15.15\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " % increase on the Multi30K dataset."
+      "value": " increase on the Multi30K dataset."
     }
   ],
   "variables": {},

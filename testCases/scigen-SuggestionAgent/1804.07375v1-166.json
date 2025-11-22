@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Next we can consider the effect of "
+      "value": "Thank you for clarifying. I will adjust the annotation accordingly.\n\nHere is the revised paragraph:\n\nNext we can consider the effect of "
     },
     {
       "expression": "\"genre\"",
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " do behave differently: data from the "
-    },
-    {
-      "expression": "\"Web\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is closer to spoken language. The "
+      "value": " do behave differently: data from the Web is closer to spoken language. The "
     },
     {
       "expression": "\"most restrictive\"",
@@ -57,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " and editorial practice effects. However the strong differences suggest that "
+      "value": ", and editorial practice effects. However the strong differences suggest that "
     },
     {
       "expression": "\"genre\"",

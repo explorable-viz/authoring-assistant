@@ -39,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": ", 2018) does not sufficiently mitigate the noise in this data. However, denoising makes the distantlyannotated data useful, improving recall by a substantial margin especially in the general class.  "
+      "value": ", 2018) does not sufficiently mitigate the noise in this data. However, denoising makes the distantlyannotated data useful, improving recall by a "
+    },
+    {
+      "expression": "\"substantial\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " margin especially in the general class.  "
     },
     {
       "expression": "\"BERT\"",

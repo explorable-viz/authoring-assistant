@@ -30,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " knowledge relevance than other models, indicating that "
-    },
-    {
-      "expression": "\"TransDG\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is effective to incorporate appropriate commonsense knowledge."
+      "value": " knowledge relevance than other models, indicating that TransDG is effective to incorporate appropriate commonsense knowledge."
     }
   ],
   "variables": {},

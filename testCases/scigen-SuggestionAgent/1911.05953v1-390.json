@@ -42,7 +42,7 @@
       "value": " block. "
     },
     {
-      "expression": "\"Ethanos\"",
+      "expression": "\"ethanos\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -61,7 +61,7 @@
     },
     {
       "expression": "\"16GB\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -75,20 +75,11 @@
     },
     {
       "type": "literal",
-      "value": ". Especially, it reduces the size of "
-    },
-    {
-      "expression": "\"Trie nodes\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " about "
+      "value": ". Especially, it reduces the size of Trie nodes about "
     },
     {
       "expression": "\"18GB\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -106,30 +97,12 @@
     },
     {
       "expression": "\"10%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the total accounts. However, "
-    },
-    {
-      "expression": "\"hash field\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of "
-    },
-    {
-      "expression": "\"bloom filter in block header\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " slightly increases "
+      "value": " of the total accounts. However, hash field of bloom filter in block header slightly increases "
     },
     {
       "expression": "\"Headers\"",
@@ -160,7 +133,7 @@
     },
     {
       "expression": "\"1.6GB\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -187,7 +160,7 @@
     },
     {
       "expression": "\"8%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

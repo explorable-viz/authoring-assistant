@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Seconds a decoder takes to decode an entire dataset, given a set of scores. Score matrix entries are  We compare "
+      "value": "Got it! Let's correct that annotation based on the provided categories.\n\nSeconds a decoder takes to decode an entire dataset, given a set of scores. Score matrix entries are  We compare "
     },
     {
       "expression": "\"Cython implementations\"",

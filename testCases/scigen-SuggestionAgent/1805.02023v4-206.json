@@ -3,61 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Results on the "
+      "value": "Results on the resume NER test data are shown in Table 8. "
     },
     {
-      "expression": "\"resume\"",
+      "expression": "\"lattice\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " NER test data are shown in Table 8.  the "
+      "value": " model significantly outperforms both the "
     },
     {
-      "expression": "\"lattice model\"",
+      "expression": "\"word-based\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " significantly outperforms both the "
+      "value": " mode and the "
     },
     {
-      "expression": "\"word-based mode\"",
+      "expression": "\"character-based\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and the "
-    },
-    {
-      "expression": "\"character-based model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for Weibo and "
-    },
-    {
-      "expression": "\"resume\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"p < 0.01\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), giving state-of-the-art results."
+      "value": " model for Weibo and resume (p < 0.01), giving state-of-the-art results."
     }
   ],
   "variables": {},

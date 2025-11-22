@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Experimental Results Table 3 shows the performance of the different models over our two datasets, in the form of "
+      "value": "Experimental Results Table 3 shows the performance of the different models over our two datasets, in the form of the "
     },
     {
-      "expression": "\"the average\"",
+      "expression": "\"average\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy on the test set (along with the standard deviation) over 10 runs, with different random initializations. On Wikipedia, we observe that the performance of "
+      "value": " accuracy on the test set (along with the standard deviation) over "
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " runs, with different random initializations.  On Wikipedia, we observe that the performance of "
     },
     {
       "expression": "\"BILSTM\"",
@@ -48,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " that of all four baselines. "
+      "value": " that of  all four baselines. "
     },
     {
       "expression": "\"INCEPTION\"",
@@ -87,13 +96,13 @@
       "value": " achieves an accuracy of "
     },
     {
-      "expression": "\"59.4%\"",
+      "expression": "\"59.4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", which is "
+      "value": "%, which is "
     },
     {
       "expression": "\"5.3%\"",
@@ -129,7 +138,16 @@
     },
     {
       "type": "literal",
-      "value": "). Based on a one-tailed Wilcoxon signed-rank test, the performance of Jis sta  of-the-art results in combination. For arXiv, baseline methods "
+      "value": "). Based on a one-tailed Wilcoxon signed-rank test, the performance of "
+    },
+    {
+      "expression": "\"JOINT\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is state-of-the-art results in combination. For arXiv, baseline methods "
     },
     {
       "expression": "\"MAJORITY\"",
@@ -169,12 +187,12 @@
     },
     {
       "expression": "\"90%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of papers are rejected). Surprisingly, "
+      "value": "). Surprisingly, "
     },
     {
       "expression": "\"INCEPTIONFIXED\"",
@@ -291,7 +309,25 @@
     },
     {
       "type": "literal",
-      "value": " model achieves the highest accuracy on cs.ai and cs.cl by combining textual and visual representations (at a level of statistical significance for cs.ai). This, again, confirms that textual and visual  state-of-the-art results. On arXiv cs.lg, "
+      "value": " model achieves the "
+    },
+    {
+      "expression": "\"highest accuracy\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on cs.ai and cs.cl by combining textual and visual representations (at a level of statistical significance for cs.ai). This, again, confirms that textual and visual  "
+    },
+    {
+      "expression": "\"JOINT\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is state-of-the-art results. On arXiv cs.lg, "
     },
     {
       "expression": "\"JOINT\"",
@@ -327,7 +363,16 @@
     },
     {
       "type": "literal",
-      "value": " achieves the highest accuracy. One characteristic of cs.lg documents is"
+      "value": " achieves the "
+    },
+    {
+      "expression": "\"highest accuracy\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". One characteristic of cs.lg documents is"
     }
   ],
   "variables": {},

@@ -52,7 +52,7 @@
     },
     {
       "expression": "\"ELMo-LSTM-CRF-HB\"",
-      "categories": ["data-retrieval"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {

@@ -6,34 +6,16 @@
       "value": "Table 1: The performances of the "
     },
     {
-      "expression": "\"IM2LATEX-100K\"",
+      "expression": "\"IM2LATEX-100K Bi-LSTM\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " model. We discover that the look-ahead improves the model from the greedy search method \u2014 noted that LA is more directly "
     },
     {
-      "expression": "\"Bi-LSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model. We discover that the look-ahead improves the model from the greedy search method \u2014 noted that "
-    },
-    {
-      "expression": "\"LA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"more directly comparable\"",
+      "expression": "\"comparable\"",
       "categories": ["comparison"],
       "type": "expression"
     },

@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We performed a minimal set of experiments on WMT EnFr, which are summarized in Table 5. In this case, we see that "
+      "value": "We performed a minimal set of experiments on "
+    },
+    {
+      "expression": "\"WMT EnFr\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which are summarized in Table 5.  In this case, we see that "
     },
     {
       "expression": "\"BT\"",
@@ -21,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " indeed surpasses the bitext model. It is worth noting that our numbers are "
-    },
-    {
-      "expression": "\"lower\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than those reported by Edunov et al. (2018) on the years they report ("
+      "value": " indeed surpasses the bitext model.  It is worth noting that our numbers are lower than those reported by Edunov et al. (2018) on the years they report ("
     },
     {
       "expression": "\"36.1\"",
@@ -57,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": " on 2013, 2014, and 2015 respectively). On WMT16 EnRo, "
+      "value": " on 2013, 2014, and 2015 respectively).  On "
+    },
+    {
+      "expression": "\"WMT16 EnRo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
     },
     {
       "expression": "\"TaggedBT\"",
@@ -66,7 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " improves on vanilla BT by "
+      "value": " improves on vanilla "
+    },
+    {
+      "expression": "\"BT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
     },
     {
       "expression": "\"0.4\"",

@@ -3,10 +3,37 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows the results of IBP training and baseline models under "
+      "value": "I understand now. Let's make sure each annotation has only one category, and I'll ensure the correct categories are used.\n\nHere is the revised paragraph:\n\nTable "
     },
     {
-      "expression": "\"δ = 3\"",
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the results of "
+    },
+    {
+      "expression": "\"IBP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training and baseline models under "
+    },
+    {
+      "expression": "\"δ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " = "
+    },
+    {
+      "expression": "\"3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -15,67 +42,67 @@
       "value": " and "
     },
     {
-      "expression": "\"δ = 24\"",
+      "expression": "\"δ\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " perturbations on SST and AG News, respectively. In Table 1, comparing adversarial accuracy with exhaustive verification accuracy (oracle), we observe that although adversarial training is effective at defending against HotFlip attacks ("
+      "value": " = "
     },
     {
-      "expression": "\"74.9\"",
+      "expression": "\"24\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " / "
+      "value": " perturbations on "
     },
     {
-      "expression": "\"76.8\"",
+      "expression": "\"SST\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " / "
+      "value": " and "
     },
     {
-      "expression": "\"85.5%\"",
+      "expression": "\"AG News\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), the oracle adversarial accuracy under exhaustive testing ("
+      "value": ", respectively.  In Table "
     },
     {
-      "expression": "\"25.8%\"",
+      "expression": "\"1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " / "
+      "value": ", comparing adversarial accuracy with exhaustive verification accuracy (oracle), we observe that although adversarial training is effective at defending against HotFlip attacks ("
     },
     {
-      "expression": "\"74.6%\"",
+      "expression": "\"74.9 / 76.8 / 85.5\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " / "
+      "value": "%), the oracle adversarial accuracy under exhaustive testing ("
     },
     {
-      "expression": "\"81.6%\"",
+      "expression": "\"25.8 / 74.6 / 81.6\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") is "
+      "value": "%) is "
     },
     {
       "expression": "\"much lower\"",
@@ -84,7 +111,43 @@
     },
     {
       "type": "literal",
-      "value": " in SST-character / SST-word / AG-character level, respectively. In Table 1, when the perturbation space is larger (SST character-level vs. SST word-level), (a) across models, there is a "
+      "value": " in "
+    },
+    {
+      "expression": "\"SST-character / SST-word / AG-character level\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively.  In Table "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", when the perturbation space is larger ("
+    },
+    {
+      "expression": "\"SST character-level\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"SST word-level\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), (a) across models, there is a "
     },
     {
       "expression": "\"larger gap\"",
@@ -105,40 +168,13 @@
       "value": " ("
     },
     {
-      "expression": "\"73.1%\"",
+      "expression": "\"73.1% vs. 25.8% and 76.5% vs. 74.6\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " vs. "
-    },
-    {
-      "expression": "\"25.8%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"76.5%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " vs. "
-    },
-    {
-      "expression": "\"74.6%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "). The resulting models achieve the "
+      "value": "%).  The resulting models achieve the "
     },
     {
       "expression": "\"highest\"",
@@ -147,7 +183,16 @@
     },
     {
       "type": "literal",
-      "value": " exhaustively verified accuracy at the cost of only moderate deterioration in nominal accuracy (Table 1)."
+      "value": " exhaustively verified accuracy at the cost of only moderate deterioration in nominal accuracy (Table "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
     }
   ],
   "variables": {},

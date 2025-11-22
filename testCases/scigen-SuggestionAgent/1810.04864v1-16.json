@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "On the WebNLG test set, the "
+      "value": "You are correct, I apologize for that mistake. Let's correct it:\n\nOn the WebNLG test set, the "
     },
     {
       "expression": "\"BLEU\"",
@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " challenge submission by a small margin. The character-based model achieves a significantly "
+      "value": " challenge submission by a small margin. The "
+    },
+    {
+      "expression": "\"character-based\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model achieves a significantly "
     },
     {
       "expression": "\"higher\"",
@@ -48,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": " score than the word-based model, whereas the BLEU score difference is not significant."
+      "value": " score than the word-based model, whereas the "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " score difference is not significant."
     }
   ],
   "variables": {},

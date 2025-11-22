@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We repeat these experiments for WMT EnRo (Table 4). In this case, "
+      "value": "We repeat these experiments for "
+    },
+    {
+      "expression": "\"WMT EnRo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Table 4).  In this case, "
     },
     {
       "expression": "\"NoisedBT\"",
@@ -12,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " is actually harmful, lagging standard BT by -"
+      "value": " is actually harmful, lagging standard "
+    },
+    {
+      "expression": "\"BT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by -"
     },
     {
       "expression": "\"0.6\"",
@@ -30,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " closes this gap and passes standard BT by +"
+      "value": " closes this gap and passes standard "
+    },
+    {
+      "expression": "\"BT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by +"
     },
     {
       "expression": "\"0.4\"",
@@ -43,7 +70,7 @@
     },
     {
       "expression": "\"1.0\"",
-      "categories": ["data-retrieval"],
+      "categories": ["sum"],
       "type": "expression"
     },
     {
@@ -57,7 +84,7 @@
     },
     {
       "type": "literal",
-      "value": ". We further investigate the effects of "
+      "value": ".  We further investigate the effects of "
     },
     {
       "expression": "\"TaggedBT\"",
@@ -66,7 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " by performing one round of iterative backtranslation (Cotterell and Kreutzer, 2018; Vu Cong Duy Hoang and Cohn, 2018; Niu et al., 2018), and find another difference between the different varieties of BT: "
+      "value": " by performing one round of iterative backtranslation (Cotterell and Kreutzer, 2018; Vu Cong Duy Hoang and Cohn, 2018; Niu et al., 2018), and find another difference between the different varieties of "
+    },
+    {
+      "expression": "\"BT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ": "
     },
     {
       "expression": "\"NoisedBT\"",
@@ -84,7 +120,34 @@
     },
     {
       "type": "literal",
-      "value": " allow the model to bootstrap improvements from an improved reverse model, whereas standard BT does not. SacreBLEU scores for all these models are displayed in Table 4. We find that the iteration-3 BT models improve over their Iteration-1 counterparts only for "
+      "value": " allow the model to bootstrap improvements from an improved reverse model, whereas standard "
+    },
+    {
+      "expression": "\"BT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " does not.  "
+    },
+    {
+      "expression": "\"SacreBLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " scores for all these models are displayed in Table 4.  We find that the iteration-3 "
+    },
+    {
+      "expression": "\"BT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models improve over their Iteration-1 counterparts only for "
     },
     {
       "expression": "\"NoisedBT\"",
@@ -97,7 +160,7 @@
     },
     {
       "expression": "\"1.0\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -115,12 +178,21 @@
     },
     {
       "expression": "\"0.7\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU, dev+test avg), whereas the Iteration-3 "
+    },
+    {
+      "expression": "\"BT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU, dev+test avg), whereas the Iteration-3 BT model shows no improvement over its Iteration-1 counterpart (-"
+      "value": " model shows no improvement over its Iteration-1 counterpart (-"
     },
     {
       "expression": "\"0.1\"",
@@ -129,7 +201,7 @@
     },
     {
       "type": "literal",
-      "value": " BLEU, dev+test avg). iteration-3 "
+      "value": " BLEU, dev+test avg).  iteration-3 "
     },
     {
       "expression": "\"TaggedBT\"",
@@ -138,7 +210,7 @@
     },
     {
       "type": "literal",
-      "value": " (Table 4), Our "
+      "value": " (Table 4),  Our "
     },
     {
       "expression": "\"best\"",
@@ -169,7 +241,7 @@
     },
     {
       "expression": "\"3.5\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -177,22 +249,31 @@
       "value": " BLEU over the "
     },
     {
-      "expression": "\"highest\"",
-      "categories": ["rank"],
+      "expression": "\"highest previously published result\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " previously published result on this test-set that we are aware of. We furthermore match or out-perform the "
+      "value": " on this test-set that we are aware of.  We furthermore match or out-perform the "
     },
     {
-      "expression": "\"highest\"",
-      "categories": ["rank"],
+      "expression": "\"highest published results\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " published results we are aware of on WMT EnDe that use only back-translation, with "
+      "value": " we are aware of on "
+    },
+    {
+      "expression": "\"WMT EnDe\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that use only back-translation, with "
     },
     {
       "expression": "\"higher\"",
@@ -201,7 +282,16 @@
     },
     {
       "type": "literal",
-      "value": " or equal BLEU on five of seven test sets."
+      "value": " or "
+    },
+    {
+      "expression": "\"equal\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU on five of seven test sets."
     }
   ],
   "variables": {},

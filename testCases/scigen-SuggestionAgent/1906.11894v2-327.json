@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In Table there are the results on the DIVA-HisDB dataset (see Section III-A). Our method achieves nearly perfect results ("
+      "value": "Understood! Let's ensure that each expression is annotated with only one category.\n\nHere is the corrected output:\n\nIn Table there are the results on the DIVA-HisDB dataset (see Section III-A). Our method achieves nearly perfect results ("
     },
     {
       "expression": "\"99.42%\"",
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": ") resulting in a error reduction of "
-    },
-    {
-      "expression": "\"80.7%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  Note that the "
+      "value": ") resulting in a error reduction of 80.7%. Note that the "
     },
     {
       "expression": "\"lower end\"",

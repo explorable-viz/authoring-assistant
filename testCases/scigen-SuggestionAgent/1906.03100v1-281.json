@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4: Performance of models using different sharing coefficients on the validation set of the NIST Chinese-English translation task. As shown in Table 4, the decoder WT model can be seen as a kind of shared-private method where "
+      "value": "Table 4: Performance of models using different sharing coefficients on the validation set of the NIST Chinese-English translation task.  As shown in Table 4, the decoder WT model can be seen as a kind of shared-private method where zero features are "
     },
     {
       "expression": "\"zero\"",
@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " features are shared between the source and target word embeddings. For the proposed method, "
+      "value": " shared between the source and target word embeddings. For the proposed method, "
     },
     {
       "expression": "\"(0.5, 0.5, 0.5)\"",

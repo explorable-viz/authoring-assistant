@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " is created based on the PP distribution and have relatively small size while "
+      "value": " is created based on the "
+    },
+    {
+      "expression": "\"PP distribution\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and have relatively small size while "
     },
     {
       "expression": "\"SP-10K\"",
@@ -30,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " as the major evaluation. Our embeddings significantly outperform other baselines, especially embedding based baselines. The only exception is PP on the "
+      "value": " as the major evaluation. Our embeddings significantly outperform other baselines, especially embedding based baselines. The only exception is "
+    },
+    {
+      "expression": "\"PP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the "
     },
     {
       "expression": "\"Keller\"",
@@ -39,7 +57,52 @@
     },
     {
       "type": "literal",
-      "value": " dataset due to its biased distribution. In addition, there are other interesting observations. First, compared with 'dobj' and 'nsubj', 'amod' is simpler for word2vec and GloVe. The reason behind is that conventional embeddings only capture the co-occurrence information, which is enough to predict the selectional preference of"
+      "value": " dataset due to its biased distribution. In addition, there are other interesting observations. First, compared with '"
+    },
+    {
+      "expression": "\"'dobj'\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "' and '"
+    },
+    {
+      "expression": "\"'nsubj'\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "', '"
+    },
+    {
+      "expression": "\"'amod'\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "' is simpler for "
+    },
+    {
+      "expression": "\"word2vec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"GloVe\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The reason behind is that conventional embeddings only capture the co-occurrence information, which is enough to predict the selectional preference of"
     }
   ],
   "variables": {},

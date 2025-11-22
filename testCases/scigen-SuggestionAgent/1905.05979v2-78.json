@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We classified ellipsis examples which lead to errors in sentence-level translations by the type of error they cause. Results are provided in Table 4.  From Table 4, we see that the "
+      "value": "We classified ellipsis examples which lead to errors in sentence-level translations by the type of error they cause. Results are provided in "
     },
     {
-      "expression": "\"two most frequent\"",
-      "categories": ["rank"],
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " types of ambiguity caused by the presence of an elliptical structure have different nature, hence we construct individual test sets for each of them."
+      "value": ". From "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we see that the two most frequent types of ambiguity caused by the presence of an elliptical structure have different nature, hence we construct individual test sets for each of them."
     }
   ],
   "variables": {},

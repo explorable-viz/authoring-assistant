@@ -3,10 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "One annotator (one of the authors of this paper) manually assessed the outputs of the models that obtained "
+      "value": "One annotator (one of the authors of this paper) manually assessed the outputs of the models that obtained the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -57,10 +57,10 @@
     },
     {
       "type": "literal",
-      "value": " dataset. The latter is an especially frequent problem of the character-based model, affecting "
+      "value": " dataset. The latter is an especially frequent problem of the character-based model, affecting more than a "
     },
     {
-      "expression": "\"more than a quarter\"",
+      "expression": "\"quarter\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -75,16 +75,7 @@
     },
     {
       "type": "literal",
-      "value": " dataset while offering the same level of linguistic quality as word-based models, leading to "
-    },
-    {
-      "expression": "\"more correct\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] outputs overall. On the "
+      "value": " dataset while offering the same level of linguistic quality as word-based models, leading to more correct outputs overall. On the "
     },
     {
       "expression": "\"WebNLG\"",
@@ -93,16 +84,7 @@
     },
     {
       "type": "literal",
-      "value": " dataset, the word-based model is more faithful to the inputs, probably because of the effective delexicalization strategy, whereas the character-based model errs less on the linguistic side. Overall, the word-based model yields "
-    },
-    {
-      "expression": "\"more correct\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] texts, stressing the importance of delexicalization and data normalization in low resource settings."
+      "value": " dataset, the word-based model is more faithful to the inputs, probably because of the effective delexicalization strategy, whereas the character-based model errs less on the linguistic side. Overall, the word-based model yields more correct texts, stressing the importance of delexicalization and data normalization in low resource settings."
     }
   ],
   "variables": {},

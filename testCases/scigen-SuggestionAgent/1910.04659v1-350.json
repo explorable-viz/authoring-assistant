@@ -12,10 +12,10 @@
     },
     {
       "type": "literal",
-      "value": " on all datasets is displayed in Table 2.  the performance is "
+      "value": " on all datasets is displayed in Table 2.  the performance is the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -57,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " or slightly "
+      "value": ", or slightly "
     },
     {
       "expression": "\"better\"",
@@ -160,7 +160,7 @@
     },
     {
       "expression": "\"better\"",
-      "categories": ["comparison"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {

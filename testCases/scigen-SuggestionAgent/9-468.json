@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "To evaluate the ranking of entity terms we have computed "
+      "value": "Got it, I'll make sure to use the correct categories. Here's the revised paragraph with the expressions annotated:\n\nTo evaluate the ranking of entity terms we have computed "
     },
     {
       "expression": "\"nDCG@10\"",
@@ -39,34 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " of relevant documents for automatically refined queries using the "
+      "value": " of relevant documents for automatically refined queries using the 1st, 2nd and 3rd "
     },
     {
-      "expression": "\"1st\"",
+      "expression": "\"ranked\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"2nd\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"3rd\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ranked entities. The scores can be found in Table 5. Tables 4 and 5 show that the "
+      "value": " entities. The scores can be found in Table 5. Tables 4 and 5 show that the "
     },
     {
       "expression": "\"Relevance Model\"",
@@ -84,25 +66,16 @@
     },
     {
       "type": "literal",
-      "value": " in every aspect. Both models outperform the "
+      "value": " in every aspect. Both models outperform the auto-encoder approach ("
     },
     {
-      "expression": "\"auto-encoder approach (auto-ref )\"",
+      "expression": "\"auto-ref\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". We suspect that "
-    },
-    {
-      "expression": "\"summing\"",
-      "categories": ["sum"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " over the encodings distorts the individual features too much for a correct extraction of relevant entities to be possible. The combination of all three models ("
+      "value": "). We suspect that summing over the encodings distorts the individual features too much for a correct extraction of relevant entities to be possible. The combination of all three models ("
     },
     {
       "expression": "\"auto-ref + rocchio + relevance\"",
@@ -120,25 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " model outperforms the recall for "
+      "value": " model outperforms the recall for second and third "
     },
     {
-      "expression": "\"second and third best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " terms. This indicates that for user-evaluated term suggestions, the inclusion of the auto-encoded features is advisable. For automatic query refinement however, in "
-    },
-    {
-      "expression": "\"average\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", this is not the case."
+      "value": " terms. This indicates that for user-evaluated term suggestions, the inclusion of the auto-encoded features is advisable. For automatic query refinement however, in average, this is not the case."
     }
   ],
   "variables": {},

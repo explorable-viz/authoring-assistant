@@ -3,25 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The "
+      "value": "The Base-KD is a naive knowledge distillation version in which only the logits of the "
     },
     {
-      "expression": "\"Base-KD\"",
+      "expression": "\"last layer\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is a naive knowledge distillation version in which only the logits of the last layer are distilled without considering hidden layer knowledge and supervised label knowledge. By incorporating the probe models, the performance (line 2 in Table 4) is consistently improved, indicating the benefits from hierarchically decomposed task-oriented knowledge. We then leverage "
+      "value": " are distilled without considering hidden layer knowledge and supervised label knowledge. By incorporating the probe models, the performance ("
     },
     {
-      "expression": "\"Data Augmentation (DA)\"",
+      "expression": "\"line 2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to enrich task-oriented knowledge and this technique also improves performance for all tasks, especially for tasks that have a limited scale of data (i.e., "
+      "value": ") is consistently improved, indicating the benefits from hierarchically decomposed task-oriented knowledge. We then leverage Data Augmentation (DA) to enrich task-oriented knowledge and this technique also improves performance for all tasks, especially for tasks that have a "
+    },
+    {
+      "expression": "\"limited scale of data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (i.e., "
     },
     {
       "expression": "\"MRPC\"",
@@ -42,34 +51,7 @@
       "value": "). DA is also adopted in existing KD-based compression studies ("
     },
     {
-      "expression": "\"Tang et al.\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"2019\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "; "
-    },
-    {
-      "expression": "\"Jiao et al.\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"2019\"",
+      "expression": "\"Tang et al., 2019; Jiao et al., 2019\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

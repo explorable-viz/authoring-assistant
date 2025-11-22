@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " with pre-trained contextualized word embedding models in Table 4 for this task, with overall performance, embedding dimensions, and training times reported. It is observed that that "
+      "value": " with pre-trained contextualized word embedding models in Table 4 for this task, with overall performance, embedding dimensions, and training times reported. It is observed that "
     },
     {
       "expression": "\"MWE\"",
@@ -30,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " and achieves "
-    },
-    {
-      "expression": "\"comparable results\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with "
+      "value": " and achieves comparable results with "
     },
     {
       "expression": "\"BERT\"",

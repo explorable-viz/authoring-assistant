@@ -3,79 +3,133 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The distribution of their named-entity (NE) tags, according to Stanford NE-tagger, is shown in Table 1. While temporal-related "
+      "value": "Got it. I will ensure that the annotations use only the specified categories. Here's the corrected output:\n\nFor NER (Table 7), "
     },
     {
-      "expression": "\"numbers\"",
+      "expression": "\"S-LSTM\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are the most frequent, around "
+      "value": " gives an F1-score of "
     },
     {
-      "expression": "\"40%\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are classified only as unspecific "
-    },
-    {
-      "expression": "\"NUMBER\"",
+      "expression": "\"91.57%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". By manually checking "
+      "value": " on the CoNLL test set, which is significantly\n"
     },
     {
-      "expression": "\"100\"",
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared with "
+    },
+    {
+      "expression": "\"BiLSTMs\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " random "
+      "value": ".\r\nThe minimum F1-score was obtained by "
     },
     {
-      "expression": "\"NUMBERs\"",
+      "expression": "\"BiLSTM-small variants\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", we observed that "
+      "value": ".\r\nThe average training time of the "
     },
     {
-      "expression": "\"47\"",
+      "expression": "\"BiLSTM-small variants\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are relation cardinalities, i.e., approximately "
+      "value": " is "
     },
     {
-      "expression": "\"18.86%\"",
-      "categories": ["ratio"],
+      "expression": "\"1.7\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of all "
+      "value": " hours\r\nwhile the total training time required to run all the models is "
     },
     {
-      "expression": "\"numbers\"",
+      "expression": "\"28.5\"",
+      "categories": ["sum"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hours.\r\nStacking more layers of BiLSTMs leads to slightly "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1-scores\r\ncompared with a single-layer "
+    },
+    {
+      "expression": "\"BiLSTM\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in Wikipedia are relation cardinalities."
+      "value": ".\r\nOur "
+    },
+    {
+      "expression": "\"BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results are comparable to the results reported\r\nby Ma and Hovy (2016) and Lample et al. (2016).\r\nIn contrast, "
+    },
+    {
+      "expression": "\"S-LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " reported results under the same settings.\r\nIn the second section of Table 7, Yang et al. (2017) obtain an Fscore of "
+    },
+    {
+      "expression": "\"91.26%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables 1 and 2 report, respectively, the distribution of the events per token part-of speech (POS) and per event class. As for the classes, "
+      "value": "Tables 1 and 2 report, respectively, the distribution of the events per token part-of speech (POS) and per event class.  As for the classes, "
     },
     {
       "expression": "\"OCCURRENCE\"",

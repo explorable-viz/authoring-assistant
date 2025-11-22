@@ -21,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " percentage points in F1.  The table also shows that extending the context is mildly effective.  Regarding the algorithm, the table confirms that the best method is "
+      "value": " percentage points in F1.  The table also shows that extending the context is mildly effective.  Regarding the algorithm, the table confirms that the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " method is "
     },
     {
       "expression": "\"ppr w2w\"",

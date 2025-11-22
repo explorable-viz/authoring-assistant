@@ -3,7 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 7 and Table 8 summarize "
+      "value": "Table "
+    },
+    {
+      "expression": "\"7\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and Table "
+    },
+    {
+      "expression": "\"8\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " summarize the "
     },
     {
       "expression": "\"top 10\"",
@@ -39,7 +57,25 @@
     },
     {
       "type": "literal",
-      "value": " label, presented in the paper.  However, one can notice that some of the biased bigrams in the training set, such as \"least one\" and \"starred movie\", translate to cues that can help in predictions over the development set."
+      "value": " label, presented in the paper.  However, one can notice that some of the biased bigrams in the training set, such as \""
+    },
+    {
+      "expression": "\"least one\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\" and \""
+    },
+    {
+      "expression": "\"starred movie\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "\", translate to cues that can help in predictions over the development set."
     }
   ],
   "variables": {},

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Results are shown in Table 1.  When comparing "
+      "value": "Results are shown in Table 1. When comparing "
     },
     {
       "expression": "\"AR\"",
@@ -57,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": " generates a more diverse N-best list for reranking, and thus outperforms "
+      "value": " generates a "
+    },
+    {
+      "expression": "\"more diverse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " N-best list for reranking, and thus outperforms "
     },
     {
       "expression": "\"AR+MMI\"",
@@ -84,16 +93,7 @@
     },
     {
       "type": "literal",
-      "value": " as well.  It's hard to tell which model performs "
-    },
-    {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
+      "value": " as well. It's hard to tell which model performs better, "
     },
     {
       "expression": "\"AR\"",
@@ -102,7 +102,16 @@
     },
     {
       "type": "literal",
-      "value": " or non-AR: "
+      "value": " or non-"
+    },
+    {
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ": "
     },
     {
       "expression": "\"AR\"",
@@ -120,7 +129,16 @@
     },
     {
       "type": "literal",
-      "value": " than non-AR for BLEU and adversarial success, but "
+      "value": " than non-"
+    },
+    {
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for BLEU and adversarial success, but "
     },
     {
       "expression": "\"worse\"",
@@ -138,7 +156,25 @@
     },
     {
       "type": "literal",
-      "value": " model, non-AR model tends to generate more diverse responses, but might be less coherent.  When comparing non-AR with "
+      "value": " model, non-"
+    },
+    {
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model tends to generate more diverse responses, but might be less coherent. When comparing non-"
+    },
+    {
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with "
     },
     {
       "expression": "\"AR+MMI+diverse\"",
@@ -147,7 +183,16 @@
     },
     {
       "type": "literal",
-      "value": ", non-AR has relatively "
+      "value": ", non-"
+    },
+    {
+      "expression": "\"AR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has relatively "
     },
     {
       "expression": "\"lower\"",

@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows how the position of the context window influences "
+      "value": "Table 2 shows how the position of the "
     },
     {
-      "expression": "\"the average\"",
+      "expression": "\"context window\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " influences the "
+    },
+    {
+      "expression": "\"average model performance\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model performance. Note that symmetric windows of, for instance, "
+      "value": ". Note that symmetric windows of, for instance, "
     },
     {
       "expression": "\"10\"",
@@ -21,25 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " are in fact "
-    },
-    {
-      "expression": "\"2 times larger\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than the 'left' or 'right'  windows of the same size, as they consider "
-    },
-    {
-      "expression": "\"10\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " words both to the left and to the right of the focus word. This is most likely why symmetric windows consistently "
+      "value": ", are in fact 2 times larger than the 'left' or 'right'  windows of the same size, as they consider 10 words both to the left and to the right of the focus word. This is most likely why symmetric windows consistently "
     },
     {
       "expression": "\"outperform\"",
@@ -48,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": "] 'single-sided' ones on the analogy task, as they are able to include twice as much contextual input. However, the "
-    },
-    {
-      "expression": "\"average performance\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on the semantic similarity task (as indicated by the Spearman correlation with the SimLex999 test set) does not exhibit the same trend. 'Left' windows are indeed "
+      "value": " 'single-sided' ones on the analogy task, as they are able to include twice as much contextual input. However, the average performance on the semantic similarity task (as indicated by the Spearman correlation with the SimLex999 test set) does not exhibit the same trend. 'Left' windows are indeed "
     },
     {
       "expression": "\"worse\"",
@@ -66,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": "] than symmetric ones, but 'right' windows are "
+      "value": " than symmetric ones, but 'right' windows are "
     },
     {
       "expression": "\"on par\"",
@@ -75,16 +57,7 @@
     },
     {
       "type": "literal",
-      "value": "] with the symmetric windows for OpenSubtitles and only "
-    },
-    {
-      "expression": "\"one percent point behind\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] them for Gigaword. It means that in many cases (at least with English texts) taking into account only n context words to the right of the focus word is sufficient to achieve the same performance with SimLex999 as by using a model which additionally considers n words to the left, and thus requires significantly more training time."
+      "value": " with the symmetric windows for OpenSubtitles and only one percent point behind them for Gigaword. It means that in many cases (at least with English texts) taking into account only n context words to the right of the focus word is sufficient to achieve the same performance with SimLex999 as by using a model which additionally considers n words to the left, and thus requires significantly more training time."
     }
   ],
   "variables": {},

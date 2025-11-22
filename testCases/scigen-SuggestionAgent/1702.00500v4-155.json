@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Over the rules used on the 1-best result, "
+      "value": "Over the rules used on the "
+    },
+    {
+      "expression": "\"1-best\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " result, "
     },
     {
       "expression": "\"more than 30%\"",
@@ -12,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " are non-terminal rules.  On the other hand, "
+      "value": " are non-terminal rules. On the other hand, "
     },
     {
       "expression": "\"30%\"",
@@ -21,10 +30,10 @@
     },
     {
       "type": "literal",
-      "value": " are glue rules.  Finally, terminal rules take "
+      "value": " are glue rules. Finally, terminal rules take the "
     },
     {
-      "expression": "\"the largest percentage\"",
+      "expression": "\"largest percentage\"",
       "categories": ["rank"],
       "type": "expression"
     }

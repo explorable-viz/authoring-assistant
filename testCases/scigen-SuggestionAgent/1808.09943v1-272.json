@@ -12,52 +12,79 @@
     },
     {
       "type": "literal",
-      "value": " vocabulary items, BPE has already lost a "
+      "value": " vocabulary items, "
+    },
+    {
+      "expression": "\"BPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has already lost a "
     },
     {
       "expression": "\"1\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " BLEU point with respect to the character model.  Comparing the performance of our Pooled BiLSTM model against BPE, we notice that for a comparable level of compression (BPE size of "
-    },
-    {
-      "expression": "\"1k\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), BPE out-performs the pooled model by around "
+      "value": " BLEU point with respect to the character model.  Comparing the performance of our Pooled BiLSTM model against BPE, we notice that for a comparable level of compression ("
+    },
+    {
+      "expression": "\"BPE size of 1k\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"BPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " out-performs the pooled model by around "
     },
     {
       "expression": "\"0.5\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " BLEU points. At a similar level of performance (BPE size of "
-    },
-    {
-      "expression": "\"4k\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), BPE has significantly shorter sequences.  As shown in table 6, the "
+      "value": " BLEU points. At a similar level of performance ("
     },
     {
-      "expression": "\"3-HM\"",
+      "expression": "\"BPE size of 4k\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " configuration achieves much "
+      "value": "), "
+    },
+    {
+      "expression": "\"BPE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has significantly shorter sequences.  As shown in table 6, the "
+    },
+    {
+      "expression": "\"3-HM configuration\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves much "
     },
     {
       "expression": "\"better\"",
@@ -84,16 +111,7 @@
     },
     {
       "type": "literal",
-      "value": ". In general, HM gating results in "
-    },
-    {
-      "expression": "\"less\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " compression but "
+      "value": ". In general, HM gating results in less compression but "
     },
     {
       "expression": "\"better\"",

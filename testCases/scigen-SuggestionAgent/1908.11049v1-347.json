@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "single task single language (STSL), single task multilingual (STML), and multitask multilingual models (MTML) on our dataset.  "
+      "value": "Understood, I will ensure that each replacement uses only one category. Here's the corrected version:\n\nsingle task single language (STSL), single task multilingual (STML), and multitask multilingual models (MTML) on our dataset.  "
     },
     {
       "expression": "\"STSL\"",
@@ -12,19 +12,19 @@
     },
     {
       "type": "literal",
-      "value": " performs "
+      "value": " performs the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " among all models on the directness classification, and it is also consistent in both micro and macro-F1 scores.  due to the fact that the directness has only two labels and multilabeling is not allowed in this task. Tasks involving imbalanced data, multiclass and multilabel annotations harm the performance of the directness in multitask settings.  Since macro-F1 is "
+      "value": " among all models on the directness classification, and it is also consistent in both micro and macro-F1 scores.  due to the fact that the directness has only two labels and multilabeling is not allowed in this task. Tasks involving imbalanced data, multiclass and multilabel annotations harm the performance of the directness in multitask settings.  Since macro-F1 is the "
     },
     {
-      "expression": "\"the average\"",
+      "expression": "\"average\"",
       "categories": ["average"],
       "type": "expression"
     },

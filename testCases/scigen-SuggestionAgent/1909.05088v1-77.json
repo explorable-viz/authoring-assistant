@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "An "
-    },
-    {
-      "expression": "\"overview\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the language pairs as well as the "
+      "value": "An overview of the language pairs as well as the "
     },
     {
       "expression": "\"amount of annotated parallel sentences\"",
@@ -21,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " per language pair is given in Table 1.  "
+      "value": " per "
     },
     {
-      "expression": "\"Overview\"",
-      "categories": ["rank"],
+      "expression": "\"language pair\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of "
+      "value": " is given in Table 1. Overview of "
     },
     {
       "expression": "\"annotated parallel sentences\"",
@@ -39,7 +30,12 @@
     },
     {
       "type": "literal",
-      "value": " per language pair"
+      "value": " per "
+    },
+    {
+      "expression": "\"language pair\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
     }
   ],
   "variables": {},

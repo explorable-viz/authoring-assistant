@@ -66,20 +66,11 @@
     },
     {
       "type": "literal",
-      "value": " extracts significantly "
-    },
-    {
-      "expression": "\"more\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " paraphrases, improving the recall by "
+      "value": " extracts significantly more paraphrases, improving the recall by "
     },
     {
       "expression": "\"460%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -88,7 +79,7 @@
     },
     {
       "expression": "\"247%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

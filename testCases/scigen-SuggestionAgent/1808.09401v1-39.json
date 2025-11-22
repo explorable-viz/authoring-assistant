@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " proposed models for the "
-    },
-    {
-      "expression": "\"three\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " loss functions "
+      "value": " proposed models for the three loss functions "
     },
     {
       "expression": "\"Lτ\"",
@@ -102,7 +93,7 @@
     },
     {
       "type": "literal",
-      "value": ". If we compare loss functions "
+      "value": ".  If we compare loss functions "
     },
     {
       "expression": "\"Lτ\"",
@@ -165,7 +156,7 @@
     },
     {
       "type": "literal",
-      "value": ". The combination of losses "
+      "value": ".  The combination of losses "
     },
     {
       "expression": "\"L∗\"",
@@ -219,7 +210,7 @@
     },
     {
       "type": "literal",
-      "value": ". Moreover, we can clearly see that on "
+      "value": ".  Moreover, we can clearly see that on "
     },
     {
       "expression": "\"TE3\u2021\"",
@@ -264,7 +255,7 @@
     },
     {
       "type": "literal",
-      "value": ". The difference between "
+      "value": ".  The difference between "
     },
     {
       "expression": "\"C-TLM\"",
@@ -282,7 +273,16 @@
     },
     {
       "type": "literal",
-      "value": " is small on the smaller "
+      "value": " is "
+    },
+    {
+      "expression": "\"small\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the smaller "
     },
     {
       "expression": "\"TD\u2021\"",

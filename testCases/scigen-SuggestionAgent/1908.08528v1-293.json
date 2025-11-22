@@ -57,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " of the datasets,  This results in a set of "
+      "value": " of the datasets.  This results in a set of "
     },
     {
       "expression": "\"28\"",
@@ -78,17 +78,17 @@
       "value": " languages  listed in Table 2.  The results are listed in Table 2.  the oracle does not reach "
     },
     {
-      "expression": "\"100%\"",
-      "categories": ["ratio"],
+      "expression": "\"100\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ";  We also express the performance of our method as error reduction on the scale from baseline ("
+      "value": "%;  We also express the performance of our method as error reduction on the scale from baseline ("
     },
     {
       "expression": "\"0%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -97,7 +97,7 @@
     },
     {
       "expression": "\"100%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -124,7 +124,7 @@
     },
     {
       "expression": "\"23%\"",
-      "categories": ["ratio"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -133,25 +133,16 @@
     },
     {
       "expression": "\"worst\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for Korean and Japanese,  the \"form\" baseline very close to the upper bound  our results are "
-    },
-    {
-      "expression": "\"very low\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " here. We also observe deteriorations for a treebank of Italian Tweets and for treebanks of historical Latin,  On all other datasets, we observe an improvement over the baseline, with an error reduction typically between "
+      "value": " for Korean and Japanese,  the \"form\" baseline very close to the upper bound  our results are very low here. We also observe deteriorations for a treebank of Italian Tweets and for treebanks of historical Latin,  On all other datasets, we observe an improvement over the baseline, with an error reduction typically between "
     },
     {
       "expression": "\"10%\"",
-      "categories": ["ratio"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -160,7 +151,7 @@
     },
     {
       "expression": "\"35%\"",
-      "categories": ["ratio"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -169,7 +160,7 @@
     },
     {
       "expression": "\"50%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

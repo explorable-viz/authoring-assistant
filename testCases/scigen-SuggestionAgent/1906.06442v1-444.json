@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We quantify the "
-    },
-    {
-      "expression": "\"copy rate\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with the "
+      "value": "We quantify the copy rate with the "
     },
     {
       "expression": "\"unigram overlap\"",
@@ -25,21 +16,12 @@
     },
     {
       "expression": "\"percentage\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of tokens in the target side, and "
-    },
-    {
-      "expression": "\"compare\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " those statistics to the "
+      "value": " of tokens in the target side, and compare those statistics to the "
     },
     {
       "expression": "\"bitext\"",

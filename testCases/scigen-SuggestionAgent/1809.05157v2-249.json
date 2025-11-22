@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " tokens, as shown in Table 1. The "
-    },
-    {
-      "expression": "\"smallest\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
+      "value": " tokens, as shown in Table 1.\r\nThe smallest, "
     },
     {
       "expression": "\"Farsi\"",
@@ -57,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": "] and "
+      "value": " and "
     },
     {
       "expression": "\"50K\"",
@@ -75,16 +66,7 @@
     },
     {
       "type": "literal",
-      "value": "] tokens; the "
-    },
-    {
-      "expression": "\"largest\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
+      "value": " tokens;\r\nthe largest, "
     },
     {
       "expression": "\"English\"",
@@ -111,7 +93,7 @@
     },
     {
       "type": "literal",
-      "value": "] and "
+      "value": " and "
     },
     {
       "expression": "\"170K\"",
@@ -123,7 +105,7 @@
       "value": " "
     },
     {
-      "expression": "\"non-entity\"",
+      "expression": "\"nonentity\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

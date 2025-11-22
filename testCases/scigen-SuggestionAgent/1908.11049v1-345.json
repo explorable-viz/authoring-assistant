@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " potentially derogatory tweets  Table 1 compares different labelsets that exist in the literature. For instance, Waseem and Hovy (2016) use "
+      "value": " potentially derogatory tweets  Table 1 compares different "
+    },
+    {
+      "expression": "\"labelsets\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that exist in the literature. For instance, Waseem and Hovy (2016) use "
     },
     {
       "expression": "\"racist\"",

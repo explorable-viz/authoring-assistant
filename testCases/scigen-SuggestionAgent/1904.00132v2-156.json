@@ -7,7 +7,7 @@
     },
     {
       "expression": "\"4%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -15,13 +15,22 @@
       "value": " for each of the emotions. However, from the dev set (Table 2) we know that the proportions of each of the emotion categories are "
     },
     {
-      "expression": "\"better described as %5 each\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", thereby we use "
+      "value": " described as "
+    },
+    {
+      "expression": "\"%5\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " each, thereby we use "
     },
     {
       "expression": "\"%5\"",

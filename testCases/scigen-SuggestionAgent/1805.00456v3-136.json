@@ -12,10 +12,19 @@
     },
     {
       "type": "literal",
-      "value": " identical models trained with different seeds only slightly improve over the single model (Table 5). However, an ensemble of models producing "
+      "value": " identical models trained with different seeds only slightly improve "
     },
     {
-      "expression": "\"plain BPE\"",
+      "expression": "\"over\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the single model (Table 5). However, an ensemble of models producing plain "
+    },
+    {
+      "expression": "\"BPE\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -30,19 +39,19 @@
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " BLEU "
     },
     {
-      "expression": "\"BLEU\"",
-      "categories": ["ratio"],
+      "expression": "\"over\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " over the "
+      "value": " the plain "
     },
     {
-      "expression": "\"plain BPE\"",
+      "expression": "\"BPE\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

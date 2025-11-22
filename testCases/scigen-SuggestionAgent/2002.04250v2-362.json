@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For dialogue coherence trend is "
+      "value": "Thank you for the clarification. Here's the revised paragraph with the correct categories:\n\nFor dialogue coherence trend is "
     },
     {
       "expression": "\"3\"",
@@ -75,20 +75,20 @@
     },
     {
       "type": "literal",
-      "value": ". For Content Richness, the is significantly "
+      "value": ". For Content Richness, the "
     },
     {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
+      "expression": "\"proposed NonAR+MMI\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " proposed "
+      "value": " is significantly "
     },
     {
-      "expression": "\"NonAR+MMI\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -102,34 +102,16 @@
     },
     {
       "type": "literal",
-      "value": ", and the gap is "
+      "value": ", and the gap is greater than dialogue coherence.  The output from the "
     },
     {
-      "expression": "\"greater\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than dialogue coherence. The output from the "
-    },
-    {
-      "expression": "\"AR+MMI\"",
+      "expression": "\"AR+MMI model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model is thus by far "
-    },
-    {
-      "expression": "\"less\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " diverse than "
+      "value": " is thus by far less diverse than "
     },
     {
       "expression": "\"nonAR+MMI\"",

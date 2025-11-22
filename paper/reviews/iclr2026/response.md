@@ -72,7 +72,7 @@ The lack of directly related prior work does indeed make comparison to baseline 
 
 > - My greatest confusion is: isn't this supposed to be an HCI paper? Shouldn't some version of this go to CHI/CSCW/UIST/...? To me, there isn't any technical contribution for an ML venue beyond getting the system implemented, but this type of contribution should be very suitable for the HCI venues.
 
-The natural next step of this work will be a full-featured Copilot-like authoring (or reading) tool, which will enable a full user study, and which would likely go to venue like CHI, UIST, or IUI. For this paper, our aim to validate key components of such a tool, including:
+The natural next step of this work will be a full-featured Copilot-like authoring (or reading) tool, which will enable a full user study. This will likely go to a venue like CHI, UIST, or IUI. For this paper, our aim to validate key components of such a tool, including:
 
 - competency evaluation for LLMs (which we will substantially improve for this paper)
 - proof-of-concept agentic architecture, including support for compiler-in-the-loop and manual validation (both important for this task)
@@ -85,7 +85,7 @@ Thank you for emphasising the importance of this. We agree, but unfortunately th
 
 > - The evaluation, from an LLM/NLP standpoint, is perhaps not enough. It would be nice to show if the system could do well on some document NLP tasks (like scientific literature?) to begin with.
 
-There are several well-known NLP problems, beyond argument mining and related techniques already discussed in the paper, which are highly relevant and could form part of the "capability set" required for a tool like the one we have in mind. From the computational lingustics literature, datasets like [SciERC](https://aclanthology.org/D18-1360/), [SCIREX](https://aclanthology.org/2020.acl-main.670.pdf) and [Qasper](https://aclanthology.org/2021.naacl-main.365/) (among others) look relevant, and [TAT-QA](https://aclanthology.org/2021.acl-long.254/) in particular looks closely related to some of our natural language tasks. We will add some discussion around these to Related Work and consider how some of these challenge problems would become relevant in a more mature tool.
+There are several well-known NLP problems, beyond argument mining and related techniques already discussed in the paper, which could form part of the "capability set" required for a tool like the one we have in mind. From the computational lingustics literature, datasets like [SciERC](https://aclanthology.org/D18-1360/), [SCIREX](https://aclanthology.org/2020.acl-main.670.pdf) and [Qasper](https://aclanthology.org/2021.naacl-main.365/) (among others) have some relevance, and [TAT-QA](https://aclanthology.org/2021.acl-long.254/) in particular looks closely related to some of our natural language tasks. We will add some discussion around these to Related Work and consider how some of these challenge problems would become relevant in a more mature tool.
 
 > Many of the niche details, like Table 1, are perhaps unnecessary for the main paper, when under consideration at an ML venue.
 

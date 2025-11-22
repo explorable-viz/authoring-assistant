@@ -12,7 +12,7 @@ We are implementing the following improvements to the RQ1 dataset and evaluation
 
 - We are adding sufficient additional manual annotations to substantially increase the size of the hand-labelled dataset (now covering 5% of SciGen). We will include this dataset as supplementary material, and release as an open source benchmark alongside the final version of the paper.
 - We will clarify that the subset chosen for hand-annotation was selected by randomly choosing from each linguistic category.
-- We have enhanced the SelectionAgent so that as well as identifying replacement candidates, it also performs an initial labelling by linguistic category. We will evaluate this against the manual annotations to estimate the noise in the SuggestionAgent labelling.
+- The SelectionAgent now also performs an initial labelling by linguistic category, in addition to identifying phrases to be replaced. We are evaluating this against the manual annotations to estimate the noise in the automated labelling.
 - These machine-generated labels have allowed us to extend the first study to the full SciGen dataset (adjusting confidence intervals for noise), removing some anomalies in the original data (e.g. success rates of 0% and 100%).
 - Additional ablation study to assess contribution of predefined helpers.
 

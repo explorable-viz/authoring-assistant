@@ -89,4 +89,4 @@ Thank you for highlighting this. There are indeed several well-known NLP problem
 
 > Many of the niche details, like Table 1, are perhaps unnecessary for the main paper, when under consideration at an ML venue.
 
-We prefer to keep Table 1 in the body of the paper, to be explicit about the specific linguistic/quantitative LLM competencies evaluated in the paper; however it should be possible to streamline the figure a bit. We will also make a pass over the paper for other details that might be spurious for the ICLR audience.
+We prefer to keep Table 1 in the body of the paper, to be explicit about the specific linguistic/quantitative LLM competencies evaluated in the paper; however it should be possible to streamline the figure a bit, perhaps by moving the example gold solutions to the appendix. We will also make a pass over the paper for other details that might be spurious for the ICLR audience.

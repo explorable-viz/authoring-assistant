@@ -2,7 +2,7 @@
 
 # General Response to Reviewers
 
-We thank all reviewers for their time and expertise in evaluating our submission. We are grateful for the positive feedback, and are glad to hear that the proposed system addresses an important research direction (Reviewers AyvP, Bezq and VRkd), that the connection between LLM-based code synthesis and data provenance systems seems to be novel (Reviewer Bezq), and that our experimental results suggest that the approach is feasible in practice (Reviewer azjF). The constructive feedback provided by the reviewers has been invaluable in understanding how to improve various aspects of the empirical evaluation. We have provided detailed responses to each reviewer individually and outline below how we plan to further revise the paper, including the new experiments conducted in response to reviewer requests.
+We thank all reviewers for their time and expertise in evaluating our submission. We are grateful for the positive feedback; we are glad to hear that the proposed system addresses an important research direction (Reviewers AyvP, Bezq and VRkd), that combining LLM-based code synthesis with data provenance systems seems to be a novel approach to the problem (Reviewer Bezq), and that our experimental results suggest that the approach may be practical (Reviewer azjF). The critical feedback provided by the reviewers has also been invaluable in understanding how to improve various aspects of the empirical evaluation. We have provided detailed responses to each reviewer individually and outline below how we plan to further revise the paper, including the new experiments conducted in response to reviewer requests.
 
 ## Planned Revisions and New Experiments
 

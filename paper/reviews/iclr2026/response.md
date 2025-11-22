@@ -66,7 +66,6 @@ We agree that it is an engineering-oriented paper, and appreciate your positive 
 
 > - The experimental design lacks a comprehensive justification. Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered).
 
-The lack of directly related prior work does indeed make comparison to baseline methods difficult. We agree more in-depth ablation studies are needed; we will investigate removing the predefined helper routines (see response to reviewer Bezq above), along with other other similar experiments, and include those in our reporting on RQ1 and RQ2.
 The lack of directly related prior work does indeed make comparison to baseline methods difficult. We agree more in-depth ablation studies are needed; we will investigate removing the predefined helper routines (see response to reviewer Bezq above), along with other similar experiments, and include those in our reporting on RQ1 and RQ2.
 
 # Response to Reviewer VRkd

@@ -81,7 +81,7 @@ We believe that this is of interest to the ML community, at least from NLP and t
 
 > - Since "human" is a really central part in this system, it would be nice to get evaluated by actual human/users too.
 
-We agree, but unfortunately this is not within scope for this paper, not least because it would require a more mature tool, as discussed above.
+We agree, but unfortunately this is not within scope for this paper, not least because it would require a more mature tool implementation, as discussed above.
 
 > - The evaluation, from an LLM/NLP standpoint, is perhaps not enough. It would be nice to show if the system could do well on some document NLP tasks (like scientific literature?) to begin with.
 

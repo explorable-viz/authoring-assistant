@@ -31,7 +31,7 @@ Replace each detected phrase with:
 
 - `value` must contain only the text to be annotated, e.g., "better", "91.57%", "best"; do not include
   spurious surrounding words
-- `categories` is one of {COMPARISON, RANK, DATA_RETRIEVAL, AVERAGE, SUM, MIN_MAX} as described above
+- `categories` is one of {COMPARISON, RANK, DATA_RETRIEVAL, AVERAGE, SUM, MIN_MAX, RATIO, DIFFERENCE} as described above
 - Label each fragment with the appropriate categories (comma-separated)
 - Return the entire paragraph with the phrases replaced inline
 - Preserve all other text exactly (spacing, punctuation, line breaks)

@@ -35,22 +35,28 @@ public class Main {
             cleanWebsiteFolders("website/authoring-assistant/");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
-            final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, suggestionAgent, programs);
-            float accuracy = computeAccuracy(results);
-            generateLinks();
-            writeLog(results, agent, inContextLearning.size());
-            if (accuracy >= Settings.getThreshold()) {
-                System.out.println(STR."Accuracy OK =\{accuracy}");
-                System.exit(0);
-            } else {
-                System.out.println(STR."Accuracy KO =\{accuracy}");
-                System.exit(1);
+            if(arguments.containsKey("suggestion-agent-only") && arguments.get("suggestion-agent-only").equals("true")) {
+                generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
+                return;
+            }
+            else
+            {
+                final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, suggestionAgent, programs);
+                float accuracy = computeAccuracy(results);
+                generateLinks();
+                writeLog(results, agent, inContextLearning.size());
+                if (accuracy >= Settings.getThreshold()) {
+                    System.out.println(STR."Accuracy OK =\{accuracy}");
+                    System.exit(0);
+                } else {
+                    System.out.println(STR."Accuracy KO =\{accuracy}");
+                    System.exit(1);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
         }
-
     }
     private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, IOException {
         SuggestionAgent sa = new SuggestionAgent(suggestionAgentClassName);

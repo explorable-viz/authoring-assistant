@@ -20,7 +20,7 @@ We are implementing the following improvements to the RQ1 dataset and evaluation
 
 RQ2 (counterfactual testing) was given only a cursory treatment in the submitted version. We are implementing the following improvements:
 
-- Using the improved hand-labelled dataset, redo the RQ2 study of whether LLM solutions which are correct (in the sense of evaluating to the target strong) are also counterfactually correct (i.e. generalise under perturbations of the data).
+- Using the improved hand-labelled dataset, redo the RQ2 study of whether LLM solutions which are "correct" (in the sense of evaluating to the target string) are also counterfactually correct (i.e. generalise under perturbations of the data).
 - Report on counterfactual robustness (omitted from submitted version), namely the mean proportion of responses that are both correct and counterfactually correct, disaggregated by linguistic category.
 
 # Response to Reviewer AyvP

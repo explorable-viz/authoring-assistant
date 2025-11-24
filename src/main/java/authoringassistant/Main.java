@@ -64,7 +64,7 @@ public class Main {
 
         for (Program program : programs) {
             Program p = sa.generateTemplateProgram(program);
-            String json = p.toJsonProgram().toString();
+            String json = p.toJsonProgram().toString(2);
 
             String fileName = STR."\{Path.of(p.getTestCaseFileName()).getFileName()}.json";
             Path outputPath = Paths.get(outputFolder, fileName);

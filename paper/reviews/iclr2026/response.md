@@ -49,7 +49,7 @@ Thank you for this point. A proper user study with the necessary experimental se
 
 > - The paper states that experiments were conducted on “a subsample of the SciGen dataset” (line 367), but it remains unclear how this subset was chosen. Could the authors provide more details on the selection logic, sampling criteria, and the exact number of examples used in evaluation?
 
-For the submitted version we were only able to manually annotate 9 randomly-chosen SciGen issues, resulting in only 56 labelled replacement tasks for that dataset. We have since selected a substantially larger subsample (also randomly chosen) for manual annotation, which we will use for the final version of the paper.
+For the submitted version we were only able to manually annotate 9 randomly-chosen SciGen issues, resulting in 56 labelled replacement tasks for that dataset. We have since selected a substantially larger subsample (also randomly chosen) for manual annotation, which we will use for the final version of the paper.
 
 In addition, we have also added an automation pipeline to process every SciGen example using the SuggestionAgent. This means we can now evaluate the core InterpretationAgent on the *entirety* of the SciGen dataset (with confidence intervals adjusted to incorporate noise estimated by evaluating SuggestionAgent annotations relative to the manual baseline).
 

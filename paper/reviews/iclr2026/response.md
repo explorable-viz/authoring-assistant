@@ -13,7 +13,7 @@ We are implementing the following improvements to the RQ1 dataset and evaluation
 - We are adding additional manual annotations to substantially increase the size of the hand-labelled subset. We will clarify that the subset was chosen by randomly choosing from each linguistic category.
 - The SelectionAgent now also performs an initial labelling by linguistic category, in addition to identifying phrases to be replaced. We are evaluating this against the manual annotations to estimate the noise in the automated labelling.
 - This allows us to derive an annotated dataset based on the full SciGen dataset, which we call SciGen-interpret. We will include this dataset as supplementary material, and release as an open source benchmark alongside the final version of the paper.
-- We will redo the RQ1 study using the full dataset (adjusting confidence intervals for noise); this should remove some degenerate estimates (e.g. success rates of 0% and 100%) attributable to sparsity in the original subset.
+- We will redo the RQ1 study using the full dataset (adjusting confidence intervals for noise); this should remove some degenerate estimates (e.g. success rates of 0% and 100%) attributable to sparsity in the original subsample.
 - We will perform an additional ablation study to assess the contribution of predefined helpers to success rates.
 
 ### Improvements to RQ2 study
@@ -39,7 +39,7 @@ For the more complex cases, where current LLMs are unable to generate a full sol
 
 > - Although the paper provides useful category-level statistics, it does not analyze statistical variance beyond reporting standard deviation or assess generalization to unseen writing styles or datasets.
 
-We have changed our figures to use box plots to provide a better sense of the underlying distribution, additionally annotated with number of samples; we appreciate the comment.
+We have changed our figures to use box plots to provide a better sense of the underlying distribution, additionally annotated with number of samples; we hope this addresses your point.
 
 In our experiments the LLM was not fine-tuned or prompted with SciGen examples other than as part of the testing step, so all the SciGen examples were acting as out-of-distribution problems. We will make sure this is clear.
 
@@ -51,7 +51,7 @@ Thank you for this point. A proper user study with the necessary experimental se
 
 For the submitted version we were only able to manually annotate 9 randomly-chosen SciGen issues, resulting in 56 labelled replacement tasks for that dataset. We have since selected a substantially larger subsample (also randomly chosen) for manual annotation, which we will use for the final version of the paper.
 
-In addition, we have also added an automation pipeline to process every SciGen example using the SuggestionAgent. This means we can now evaluate the core InterpretationAgent on the *entirety* of the SciGen dataset (with confidence intervals adjusted to incorporate noise estimated by evaluating SuggestionAgent annotations relative to the manual baseline).
+In addition, we have added an automation pipeline to process every SciGen example using the SuggestionAgent. This means we can now evaluate the core InterpretationAgent on the *entirety* of the SciGen dataset (with confidence intervals adjusted to incorporate noise, estimated by evaluating SuggestionAgent annotations relative to the manual baseline).
 
 > - It seems this framework rely on predefined helper routines such as trendWord or growShrink, which encode semantic logic that the model merely invokes rather than learns. Moreover, the large performance gap between target-value-sharing (74.9%) and no-target (57.1%) suggests potential reliance on implicit answer leakage rather than actual LLM reasoning. Could the authors conduct an ablation study removing or varying these helper components to determine how much of the system’s success derives from the LLM’s own reasoning versus predefined components?
 
@@ -68,18 +68,18 @@ We agree that it is an engineering-oriented paper, and appreciate your positive 
 
 > - The experimental design lacks a comprehensive justification. Without comparisons to other baseline methods, it is difficult to determine whether this system represents the optimal solution (though, as a pioneering work, more in-depth ablation studies could be considered).
 
-The lack of directly related prior work does indeed make comparison to baseline methods difficult. We agree more in-depth ablation studies are needed; we will investigate removing the predefined helper routines (see response to reviewer Bezq above), along with other similar experiments, and include those in our reporting on RQ1 and RQ2.
+The lack of directly related prior work does indeed make comparison to baseline methods difficult. We agree more in-depth ablation studies are needed. We will investigate removing the predefined helper routines (see response to reviewer Bezq above), along with other similar experiments, and include those in our reporting on RQ1 and RQ2.
 
 # Response to Reviewer VRkd
 
 > - My greatest confusion is: isn't this supposed to be an HCI paper? Shouldn't some version of this go to CHI/CSCW/UIST/...? To me, there isn't any technical contribution for an ML venue beyond getting the system implemented, but this type of contribution should be very suitable for the HCI venues.
 
-The natural next step of this work will be a full-featured Copilot-like authoring (or reading) tool, which will enable a full user study. This will likely go to a venue like CHI, UIST, or IUI. For this paper, our aim to validate key components of such a tool, including:
+The natural next step of this work will be a full-featured Copilot-like authoring (or reading) tool, which will enable a full user study. This will likely go to a venue like CHI, UIST, or IUI. For the present paper, our aim to validate key components of such a tool, including:
 
 - competency evaluation for LLMs (which we will substantially improve for this paper)
 - proof-of-concept agentic architecture, with both automatic and manual validation (both important for this task)
 
-We believe that this is of interest to the ML community, at least from NLP and tool architecture points of view, although we concede that the evaluation in the submitted version of the paper is in need further work. We are substantially improving that section as summarised in "Planned Revisions and New Experiments" above.
+We believe that this is of interest to the ML community, at least from NLP and tool architecture points of view, although we concede that the evaluation in the submitted version of the paper is in need further work. We are making improvements to that section as summarised in "Planned Revisions and New Experiments" above.
 
 > - Since "human" is a really central part in this system, it would be nice to get evaluated by actual human/users too.
 

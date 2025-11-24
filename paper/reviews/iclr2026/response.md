@@ -31,9 +31,9 @@ Thank you for the suggestion; a multi-paper setup is indeed an interesting use c
 
 > - Second, the claims that can be checked seem to be quite simple (checks for more complex claims cannot be generated with LLMs) and thus easy to check manually. Even then, a human has to verify all generated links, which in at least some cases are wrong. This begs the question of whether a manual system where only larger and more important claims are annotated would not be more useful in practice.
 
-Although we cannot remove the need for author verification entirely, we do at least make it much easier than it would be using a traditional debugger, since the author can interact directly with the output. Keeping a human in the loop for verification purposes is also likely to be important from a trust point of view.
+Although we cannot remove the need for author verification entirely, we can at least make it much easier than it would be using a traditional debugger, since the author is now able to interact directly with the output. Keeping a human in the loop for verification purposes is also likely to be important from a trust point of view.
 
-For the more complex cases, where current LLMs are unable to generate a full solution in one step, our current design should be able to form the basis of a more interactive workflow, similar to working with Copilot, where users iteratively refine the goal by nudging, re-prompting, and constraining via partial code. For the present paper we are focused on exploring the limits of current LLM capabilities and validating a simpler agent-based architecture where user interaction is restricted mainly to validation rather than iterative refinement.
+For the more complex cases, where current LLMs are unable to generate a full solution in one step, our current design should be able to form the basis of a more interactive workflow, similar to working with Copilot, where users iteratively refine the goal by nudging, re-prompting, and constraining via partial code. For the present paper we are focused on exploring the limits of current LLM capabilities and validating a simpler agent-based architecture, where user interaction is restricted mainly to validation rather than iterative refinement.
 
 # Response to Reviewer Bezq
 
@@ -57,7 +57,7 @@ In addition, we have also added an automation pipeline to process every SciGen e
 
 This is a good suggestion; we will do this and also consider other ablations studies (in addition to excluding the target string). It is worth pointing out that fixed or standardised terminological definitions (for a given paper or research community, say) might be helpful or even important in some domains; for example the IPCC Summary for Policymaker reports use terms like _extremely likely_ in a specific predefined ways. Nevertheless your general point remains valid.
 
-Re. the target-sharing point, the target string is an important part of the query for the key use case where the reader or author is trying to retrofit an interpretation to text already written. So this probably does not qualify as answer leakage per se. Your point about determining whether LLM reasoning is actually happening is important though; counterfactual testing, which is possible only given a hand-generated solution, is precisely designed to catch this. We will improve our reporting on this (RQ2).
+Re. the target-sharing point, the target string is an essential part of the problem specification, so not part of the answer. (The key use case for us is a reader or author trying to retrofit an interpretation to text already written.) Your point about determining whether LLM reasoning is actually happening is important though; counterfactual testing, which is possible only given a hand-generated solution, is precisely designed to catch this. We will improve our reporting on this (RQ2).
 
 # Response to Reviewer azjF
 

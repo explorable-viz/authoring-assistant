@@ -77,7 +77,7 @@ The lack of directly related prior work does indeed make comparison to baseline 
 The natural next step of this work will be a full-featured Copilot-like authoring (or reading) tool, which will enable a full user study. This will likely go to a venue like CHI, UIST, or IUI. For this paper, our aim to validate key components of such a tool, including:
 
 - competency evaluation for LLMs (which we will substantially improve for this paper)
-- proof-of-concept agentic architecture, including support for compiler-in-the-loop and manual validation (both important for this task)
+- proof-of-concept agentic architecture, with both automatic and manual validation (both important for this task)
 
 We believe that this is of interest to the ML community, at least from NLP and tool architecture points of view, although we concede that the evaluation in the submitted version of the paper is in need further work. We have discussed elsewhere how we are addressing that for the final revision.
 

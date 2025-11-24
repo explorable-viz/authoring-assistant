@@ -79,7 +79,7 @@ The natural next step of this work will be a full-featured Copilot-like authorin
 - competency evaluation for LLMs (which we will substantially improve for this paper)
 - proof-of-concept agentic architecture, with both automatic and manual validation (both important for this task)
 
-We believe that this is of interest to the ML community, at least from NLP and tool architecture points of view, although we concede that the evaluation in the submitted version of the paper is in need further work. We have discussed elsewhere how we are addressing that for the final revision.
+We believe that this is of interest to the ML community, at least from NLP and tool architecture points of view, although we concede that the evaluation in the submitted version of the paper is in need further work. We are substantially improving that section as summarised in "Planned Revisions and New Experiments" above.
 
 > - Since "human" is a really central part in this system, it would be nice to get evaluated by actual human/users too.
 

@@ -40,25 +40,28 @@ public class SuggestionAgent {
         }
         PromptList prompts = buildPrompts(text);
         String result;
-        while(true) {
+        int attempts = 0;
+        while(attempts < Settings.getLimit()) {
+            attempts++;
             try {
                 result = llm.evaluate(prompts, null);
                 if (result == null) {
                     return p;
                 }
                 Paragraph paragraph = parseParagraph(result);
+                if(!p.getParagraph().equals(paragraph)) {
+                    prompts.addUserPrompt("Your response contains extra text outside the annotated paragraph. Please provide ONLY the original text with [REPLACE value=\"...\" categories=\"...\"] annotations inserted inline. Do not add any explanations, comments, markdown formatting, or other additional content.");
+                    continue;
+                }
                 return new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCaseFileName(),p.getTest_datasets());
             } catch (IllegalArgumentException ex) {
-                prompts.addUserPrompt("Invalid category! Please enter only one of the following categories:   - COMPARISON\n" +
-                        "  - RANK\n" +
-                        "  - RATIO\n" +
-                        "  - DATA_RETRIEVAL\n" +
-                        "  - AVERAGE\n" +
-                        "  - SUM\n" +
-                        "  - MIN_MAX");
+                prompts.addUserPrompt("Invalid category! Please use only the following categories: COMPARISON, RANK, RATIO, DATA_RETRIEVAL, DIFFERENCE, AVERAGE, SUM, MIN_MAX. Return ONLY the annotated paragraph with [REPLACE ...] tags, without any additional comments or explanations.");
                 continue;
             }
         }
+        
+        // Limite di tentativi raggiunto, restituisci il programma originale
+        return p;
 
     }
 

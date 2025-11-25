@@ -6,18 +6,24 @@ import glob
 import os
 import json
 
-fig_dir = "paper/fig"
+def count_problems_per_category(df):
+    # Explode expression-type categories (format: "[Category1,Category2]")
+    df_exploded = df.copy()
+    # Convert to string and handle NaN values
+    df_exploded['expression-type'] = df_exploded['expression-type'].astype(str)
+    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip('[]').str.split(',')
+    df_exploded = df_exploded.explode('expression-type')
+    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
+    
+    # Count unique (expected-expression, target-value) pairs per category
+    # This counts the actual expressions, not the test case files
+    category_counts = df_exploded.groupby("expression-type").apply(
+        lambda x: x[['expected-expression', 'target-value']].drop_duplicates().shape[0]
+    )
+    
+    return category_counts
 
-def get_latest_csv(folder_path):
-    csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
-
-    if not csv_files:
-        exit(1)
-
-    latest_file = max(csv_files, key=os.path.getmtime)
-    return latest_file
-
-def generate_success_rate_test_case_plot(df, plot):
+def generate_success_rate_test_case_plot(df, plot, fig_dir):
     summary = (
         df.groupby("test-case-short")
         .agg(success_rate=("success", "mean"), avg_attempts=("attempts", "mean"), num_queries=("test-case-short", "count"))
@@ -34,9 +40,9 @@ def generate_success_rate_test_case_plot(df, plot):
     plt.savefig(f"{fig_dir}/success_rate_by_test_case.png")
     plt.close()
 
-def generate_aggregated_plot(df, plot):
+def generate_aggregated_plot(df, plot, fig_dir):
     # esplodo le categorie
-    df['expression-type'] = df['expression-type'].str.strip('[]').str.split(',')
+    df['expression-type'] = df['expression-type'].astype(str).str.strip('[]').str.split(',')
     df_exploded = df.explode('expression-type')
     df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
 
@@ -81,8 +87,73 @@ def generate_aggregated_plot(df, plot):
     plt.savefig(f"{fig_dir}/success_rate_by_category.png")
     plt.close()
 
+def generate_aggregated_boxplot(df, plot, fig_dir):
+    df['expression-type'] = df['expression-type'].astype(str).str.strip('[]').str.split(',')
+    df_exploded = df.explode('expression-type')
+    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
 
-def generate_success_rate_by_category_count(df, plot):
+    summary = (
+        df_exploded.groupby(["runId", "expression-type", "target-value"])
+        .agg(success_rate=("success", "mean"))
+        .reset_index()
+    )
+
+    # Use the reusable function to count problems per category
+    category_counts = count_problems_per_category(df)
+    category_counts_dict = category_counts.to_dict()
+
+    # labels for  target-value
+    plt.figure(figsize=(8,6))
+    label_map = {
+        1: "Present",
+        0: "Absent"
+    }
+    summary["target_label"] = summary["target-value"].map(label_map)
+
+    ax = sns.boxplot(
+        data=summary,
+        x="expression-type",
+        y="success_rate",
+        hue="target_label",
+        palette="Set2",
+        order=sorted(summary['expression-type'].unique())
+    )
+    ax.legend(title="Target value", loc='lower right', bbox_to_anchor=(1.0, -0.25))
+
+    categories = sorted(summary['expression-type'].unique())
+    target_values = sorted(summary['target-value'].unique())
+    
+    for i, category in enumerate(categories):
+        # Get problem count for this category
+        n_problems = category_counts_dict.get(category, 0)
+        n_runs = df_exploded['runId'].nunique()
+        count = n_problems // n_runs if n_runs > 0 else n_problems
+        
+        for j, target_val in enumerate(target_values):
+            if count > 0:
+                x_offset = -0.2 if j == 0 else 0.2
+                mask = (summary['expression-type'] == category) & (summary['target-value'] == target_val)
+                if mask.sum() > 0:
+                    median_y = summary[mask]['success_rate'].median()
+                else:
+                    median_y = 0.5  
+                
+                ax.text(i + x_offset, median_y, f'n:{count}', 
+                        ha='center', va='center', 
+                        fontsize=8, color='black', weight='bold',
+                        bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8))
+
+    # plt.title("Success Rate by Linguistic Category")
+    plt.xlabel("Category")
+    plt.ylabel("Success Rate")
+    plt.xticks(rotation=45, ha="right")
+    plt.ylim(-0.05,1.1)
+    plt.tight_layout()
+    plt.savefig(f"{fig_dir}/success_rate_by_category_boxplot.png")
+    plt.close()
+
+
+def generate_success_rate_by_category_count(df, plot, fig_dir):
     df['category_count'] = df['expression-type'].str.len()
 
     summary = (
@@ -116,7 +187,7 @@ def generate_success_rate_by_category_count(df, plot):
                     (p.get_x() + p.get_width() / 2., p.get_height()),
                     ha='center', va='bottom', fontsize=8)
 
-    plt.title("Success Rate by Complexity")
+    #plt.title("Success Rate by Complexity")
     plt.xlabel("Complexity")
     plt.ylabel("Average Success Rate over 5 runs")
     plt.xticks(rotation=45, ha="right")
@@ -125,9 +196,24 @@ def generate_success_rate_by_category_count(df, plot):
     plt.savefig(f"{fig_dir}/success_rate_by_complexity.png")
     plt.close()
 
-def generate_charts():
-    latest_csv = get_latest_csv("logs")
-    df = pd.read_csv(latest_csv, delimiter=';', quotechar='"', encoding='utf-8')
+def process_csv_file(csv_file):
+    """Process a single CSV file and generate charts in the corresponding subdirectory."""
+    # Get the subdirectory name (e.g., "scigen-manual" from "results/scigen-manual/file.csv")
+    rel_path = os.path.relpath(csv_file, "results")
+    subdir = os.path.dirname(rel_path)
+    
+    # Create output directory
+    fig_dir = os.path.join("paper", "fig", subdir)
+    os.makedirs(fig_dir, exist_ok=True)
+    
+    print(f"\n{'='*60}")
+    print(f"Processing: {csv_file}")
+    print(f"Output directory: {fig_dir}")
+    print(f"{'='*60}")
+    
+    df = pd.read_csv(csv_file, delimiter=';', quotechar='"', encoding='utf-8')
+    # Filter out rows where is-negative=true
+    df = df[df["is-negative"].astype(str).str.lower() != "true"]
     df["success"] = df["generated-expression"].notna().astype(int)
     df["target-value"] = df["target-value"].astype(int)
     df["attempts"] = pd.to_numeric(df["attempts"], errors="coerce")
@@ -135,10 +221,41 @@ def generate_charts():
     df["test-case-short"] = df["test-case"].apply(
         lambda x: os.path.join(os.path.basename(os.path.dirname(str(x))), os.path.basename(str(x)))
     )
-
+    
+    # Print the number of problems per linguistic category
+    category_counts = count_problems_per_category(df)
+    print("\nNumber of problems per linguistic category:")
+    for category, count in category_counts.items():
+        print(f"  {category}: {count}")
+    print()
+    
     sns.set_style("whitegrid")
-    generate_success_rate_test_case_plot(df, plt)
-    generate_aggregated_plot(df, plt)
-    generate_success_rate_by_category_count(df, plt)
+    generate_success_rate_test_case_plot(df, plt, fig_dir)
+    #generate_aggregated_plot(df, plt, fig_dir)
+    generate_aggregated_boxplot(df, plt, fig_dir)
+    generate_success_rate_by_category_count(df, plt, fig_dir)
+    
+    print(f"Charts saved in {fig_dir}")
+
+def generate_charts():
+    """Find all CSV files in results directory and subdirectories, and generate charts for each."""
+    csv_files = glob.glob("results/**/*.csv", recursive=True)
+    
+    if not csv_files:
+        print("No CSV files found in results directory")
+        return
+    
+    print(f"Found {len(csv_files)} CSV file(s) to process")
+    
+    for csv_file in csv_files:
+        try:
+            process_csv_file(csv_file)
+        except Exception as e:
+            print(f"Error processing {csv_file}: {e}")
+            continue
+    
+    print(f"\n{'='*60}")
+    print("All charts generated successfully!")
+    print(f"{'='*60}")
 
 generate_charts()

@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_04082v1_200
+
+"""
+	averaged. The  ${"Table 3"}  presents the results of these experiments. The  ${"Table 3"}  shows, that: 1. in  ${"monolingual"}  setting, we can get highquality results. The scores are  ${"significantly lower"}  than the scores of the same model on the  ${"standard dataset"} , due to the smaller sizes of the training datasets. Nevertheless, one can see, that our approach to word stress detection applies not only to the  ${"Russian"}  language data, but also to the data in the  ${"Belarusian"}  and  ${"Ukrainian"}  languages; 2.  ${"cross-lingual setting (1)"} : the  ${"Belarusian training dataset"} , being the smallest one among the three datasets, is not a good source for training word stress detection models in other languages, while the  ${"Ukrainian dataset"}  stands  out as a good source for training word stress detection systems both for the  ${"Russian"}  and  ${"Belarusian"}  languages; 3.  ${"cross-lingual setting (2)"} : adding one or two datasets to the other languages improves the quality. For example, around  ${"10%"}  of accuracy is gained by adding the  ${"Russian training dataset"}  to the  ${"Belarusian training dataset"} , while testing on  ${"Belarusian"} .
+"""

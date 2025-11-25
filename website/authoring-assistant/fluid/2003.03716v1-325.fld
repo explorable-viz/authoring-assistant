@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._2003_03716v1_325
+
+"""
+	Table 4: We show the results of integrating  ${"auxiliary EOS loss"}  into the training state.  ${"γ"}  is the weight of the  ${"auxiliary EOS loss"} . We find the  ${"EOS loss"}  not only boosts the performance of the model when using the greedy search, the model is more robust to the larger Look-ahead steps with reasonable weights of  ${"auxiliary EOS loss"} .
+"""

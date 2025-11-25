@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_01327v1_83
+
+"""
+	The left column of Table 4 presents results for the cleaned version of the Forbes and Choi (2017) dataset.  Results on the new objects comparison dataset we created are shown in the rightmost column of Table 4.  We get  ${"better"}  results than previous methods on this dataset:  ${"63%"}  and  ${"61%"}  accuracy on the dev/test sets compared to  ${"60%"}  and  ${"57%"} . These relatively low results on this new dataset indicate that it is more challenging.
+"""

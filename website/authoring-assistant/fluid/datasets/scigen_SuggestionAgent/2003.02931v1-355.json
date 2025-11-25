@@ -1,0 +1,29 @@
+[
+    {
+        "": "zero-shot",
+        "tnt": "—",
+        "neural_in-lang._plain": "—",
+        "neural_in-lang._+poly": "—",
+        "neural_transfer_+medium_src": "58.29",
+        "neural_transfer_+large_src": "61.18",
+        "neural_transfer_finetune": "—"
+    },
+    {
+        "": "Tiny",
+        "tnt": "37.48",
+        "neural_in-lang._plain": "36.17",
+        "neural_in-lang._+poly": "56.05",
+        "neural_transfer_+medium_src": "67.14",
+        "neural_transfer_+large_src": "67.49",
+        "neural_transfer_finetune": "62.07"
+    },
+    {
+        "": "Small",
+        "tnt": "44.30",
+        "neural_in-lang._plain": "51.90",
+        "neural_in-lang._+poly": "67.18",
+        "neural_transfer_+medium_src": " 70.82",
+        "neural_transfer_+large_src": "70.01",
+        "neural_transfer_finetune": "65.63"
+    }
+]

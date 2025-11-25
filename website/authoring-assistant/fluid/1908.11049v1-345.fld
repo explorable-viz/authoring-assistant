@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1908_11049v1_345
+
+"""
+	We use Amazon Mechanical Turk to label around  ${"13,000"}  potentially derogatory tweets  Table 1 compares different labelsets that exist in the literature. For instance, Waseem and Hovy (2016) use racist, sexist, and normal as labels; Davidson et al. (2017) label their data as hateful, offensive (but not hateful), and neither, while ElSherief et al. (2018) present an English dataset that records the target category based on which hate speech discriminates against people, such as ethnicity, gender, or sexual orientation and ask human annotators to classify the tweets as hate and non hate. Founta et al. (2018) label their data as offensive, abusive, hateful, aggressive, cyberbullying, spam, and normal.
+"""

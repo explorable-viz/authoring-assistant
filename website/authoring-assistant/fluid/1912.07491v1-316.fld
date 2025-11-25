@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1912_07491v1_316
+
+"""
+	Table 3 demonstrates that the models leveraging external knowledge achieve  ${"better"}  performance than the  ${"standard Seq2Seq model"}  in generating meaningful entity words and diverse responses. In particular, our model outperforms all the baselines significantly with  ${"highest"}  entity score.
+"""

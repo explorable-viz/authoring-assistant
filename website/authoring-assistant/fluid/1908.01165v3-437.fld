@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1908_01165v3_437
+
+"""
+	1 2 ,  ${"lblstm"}  Table V shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table V,  ${"l1"}  denotes the Transformer model under attack (e.g. en-de),  ${"l2"}  denotes the other Transformer model (e.g. en-fr), and  ${"lblstm"}  are the BLSTM counterparts of  ${"l1"}  and  ${"l2"} .
+"""

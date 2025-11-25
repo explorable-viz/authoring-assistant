@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_00434v1_221
+
+"""
+	We show the experiment results in Table 2.   ${"our method"}  consistently performs  ${"better"}  than all  ${"baselines"}  in all  ${"settings"} .   ${"our method"}  is also  ${"better"}  than  ${"LOF (Softmax)"} .  we observe that on the  ${"ATIS dataset"} , the performance of  ${"unknown intent detection"}  dramatically drops as the  ${"known intent"}  increases.
+"""

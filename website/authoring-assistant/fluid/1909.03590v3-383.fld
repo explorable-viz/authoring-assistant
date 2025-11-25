@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1909_03590v3_383
+
+"""
+	We  ${"report"}  experimental results on four common benchmark datasets (totalling  ${"1241"}  testing data points) in Table 1.  As shown in Table 1, the average performance  ${"increases"}  from  ${"RANDOM"}  to  ${"APPEAR-AP"} : a trend that becomes particularly obvious for  ${"F1@10"} .
+"""

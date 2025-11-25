@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_01327v1_85
+
+"""
+	The results of the intrinsic evaluation on a sample of  ${"DOQ"}  are shown in Table 7. The total agreement is  ${"69%"} , while the specific agreements for  ${"MASS"} ,  ${"LENGTH"} ,  ${"SPEED"}  and  ${"CURRENCY"}  are  ${"61%"} ,  ${"79%"} ,  ${"77%"}  and  ${"58%"}  respectively.  We re-annotated the samples in the  ${"currency"}  category with annotators from the U.S. and found a  ${"much higher"}  agreement score:  ${"76%"} .
+"""

@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1704_05781v1_265
+
+"""
+	As shown in  ${"Table 4"} , the removal of  ${"stop words"}  does not really influence the  ${"average model performance"}  for the  ${"semantic similarity task"} . The  ${"analogy task"} , however, benefits substantially from this filtering, for both  ${"corpora"} .
+"""

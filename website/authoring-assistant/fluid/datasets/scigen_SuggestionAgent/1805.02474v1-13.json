@@ -1,0 +1,68 @@
+[
+    {
+        "_model": "manning2011part",
+        "_accuracy": "97.28",
+        "_train_(s)": "–",
+        "_test_(s)": "–"
+    },
+    {
+        "_model": "collobert2011natural",
+        "_accuracy": "97.29",
+        "_train_(s)": "–",
+        "_test_(s)": "–"
+    },
+    {
+        "_model": "sun2014structure",
+        "_accuracy": "97.36",
+        "_train_(s)": "–",
+        "_test_(s)": "–"
+    },
+    {
+        "_model": "sogaard2011semisupervised",
+        "_accuracy": "97.50",
+        "_train_(s)": "–",
+        "_test_(s)": "–"
+    },
+    {
+        "_model": "huang2015bidirectional",
+        "_accuracy": " 97.55",
+        "_train_(s)": "–",
+        "_test_(s)": "–"
+    },
+    {
+        "_model": "ma2016end",
+        "_accuracy": " 97.55",
+        "_train_(s)": "–",
+        "_test_(s)": "–"
+    },
+    {
+        "_model": "yang2017transfer",
+        "_accuracy": " 97.55",
+        "_train_(s)": "–",
+        "_test_(s)": "–"
+    },
+    {
+        "_model": "BiLSTM",
+        "_accuracy": "97.35",
+        "_train_(s)": "254",
+        "_test_(s)": "22.50"
+    },
+    {
+        "_model": "2 stacked BiLSTM",
+        "_accuracy": "97.41",
+        "_train_(s)": "501",
+        "_test_(s)": "43.99"
+    },
+    {
+        "_model": "3 stacked BiLSTM",
+        "_accuracy": "97.40",
+        "_train_(s)": "746",
+        "_test_(s)": "64.96"
+    },
+    {
+        "_model": "S-LSTM",
+        "_accuracy": " 97.55",
+        "_train_(s)": "237",
+        "_test_(s)": "22.16"
+    }
+]

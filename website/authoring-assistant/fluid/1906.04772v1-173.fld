@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_04772v1_173
+
+"""
+	Table 3 displays the  ${"best"}  performing  ${"DSM"}  for each  ${"property"} . There is a preference to  ${"word2vec"}  and to a  ${"higher"}   ${"embedding dimension"} .
+"""

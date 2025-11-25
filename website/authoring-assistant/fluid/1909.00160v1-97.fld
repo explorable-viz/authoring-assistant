@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1909_00160v1_97
+
+"""
+	We report  ${"accuracy"}  as the performance metric. Table 1 represents the performance comparison of our proposed models and the baselines, which shows that incorporation of knowledge graph embeddings helps to improve the model performance.  All results are summarized in Table 1.
+"""

@@ -1,0 +1,23 @@
+[
+    {
+        "": "Question length",
+        "dsquad": "10.3",
+        "dbidaf": "9.8",
+        "dbert": "9.8",
+        "droberta": "10.0"
+    },
+    {
+        "": "Answer length",
+        "dsquad": "2.6",
+        "dbidaf": "2.9",
+        "dbert": "3.0",
+        "droberta": "3.2"
+    },
+    {
+        "": "N-gram overlap",
+        "dsquad": "3.0",
+        "dbidaf": "2.2",
+        "dbert": "2.1",
+        "droberta": "2.0"
+    }
+]

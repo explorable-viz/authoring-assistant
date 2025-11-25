@@ -1,0 +1,22 @@
+[
+    {
+        "model": "C-GCN (Zhang et al.,  2018b )†",
+        "f1_score": "84.8"
+    },
+    {
+        "model": "C-AGGCN (Guo et al.,  2019 )†",
+        "f1_score": "85.7"
+    },
+    {
+        "model": "DepTree",
+        "f1_score": "84.6"
+    },
+    {
+        "model": "KBestEisnerPS",
+        "f1_score": "85.8"
+    },
+    {
+        "model": "EdgewisePS",
+        "f1_score": "86.3"
+    }
+]

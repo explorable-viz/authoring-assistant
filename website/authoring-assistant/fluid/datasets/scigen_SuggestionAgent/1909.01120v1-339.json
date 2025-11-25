@@ -1,0 +1,35 @@
+[
+    {
+        "": "Movie",
+        "basic:_no_walks_ma": " .80",
+        "basic:_no_walks_mr": ".54",
+        "basic:_no_walks_mc": ".41",
+        "basic:_no_walks_avg": ".59",
+        "embdi_walks_ma": ".55",
+        "embdi_walks_mr": " .80",
+        "embdi_walks_mc": " .90",
+        "embdi_walks_avg": " .75"
+    },
+    {
+        "": "RefS",
+        "basic:_no_walks_ma": ".39",
+        "basic:_no_walks_mr": ".40",
+        "basic:_no_walks_mc": ".24",
+        "basic:_no_walks_avg": ".34",
+        "embdi_walks_ma": " .90",
+        "embdi_walks_mr": " .59",
+        "embdi_walks_mc": " .62",
+        "embdi_walks_avg": " .70"
+    },
+    {
+        "": "RefL",
+        "basic:_no_walks_ma": " .63",
+        "basic:_no_walks_mr": ".50",
+        "basic:_no_walks_mc": ".29",
+        "basic:_no_walks_avg": ".47",
+        "embdi_walks_ma": " .63",
+        "embdi_walks_mr": " .69",
+        "embdi_walks_mc": " .78",
+        "embdi_walks_avg": " .70"
+    }
+]

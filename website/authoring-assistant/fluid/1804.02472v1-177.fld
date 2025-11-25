@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1804_02472v1_177
+
+"""
+	Table 5 illustrates the influence of modals and negation on the factuality of the events they have direct scope over. The context with the  ${"highest"}  factuality  ${"on average"}  is no direct modal and no negation (first row); all other modal contexts have varying degrees of negative mean factuality scores, with  ${"will"}  as the  ${"most negative"} .
+"""

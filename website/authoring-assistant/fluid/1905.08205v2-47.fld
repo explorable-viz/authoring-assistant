@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1905_08205v2_47
+
+"""
+	As shown in Table 2,  ${"IRNet"}  significantly outperforms  ${"SyntaxSQLNet"}  in all four hardness levels with or without BERT. For example, compared with  ${"SyntaxSQLNet"} ,  ${"IRNet"}  obtains  ${"23.3%"}  absolute improvement in  ${"Hard level"} .
+"""

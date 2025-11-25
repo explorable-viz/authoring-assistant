@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1911_04123v2_117
+
+"""
+	As shown in Table 4, we conduct a preliminary study on SemEval-2010 task 8   ${"DEPTREE"}  achieves similar performance as  ${"CGCN"}  and is slightly  ${"worse"}  than  ${"C-AGGCN"} ,  both  ${"KBESTEISNERPS"}  and  ${"EDGEWISEPS"}  outperform  ${"DEPTREE"}   they show comparable and slightly  ${"better"}  performances than  ${"C-AGGCN"} .   ${"EDGEWISEPS"}  is  ${"better"}  than  ${"KBESTEISNERPS"} ,
+"""

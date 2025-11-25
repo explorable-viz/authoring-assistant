@@ -1,0 +1,22 @@
+[
+    {
+        "_method": "CoS-E-selected w/o ques",
+        "_accuracy_(%)": "53.0"
+    },
+    {
+        "_method": "CoS-E-limited-open-ended",
+        "_accuracy_(%)": "67.6"
+    },
+    {
+        "_method": "CoS-E-selected",
+        "_accuracy_(%)": "70.0"
+    },
+    {
+        "_method": "CoS-E-open-ended w/o ques",
+        "_accuracy_(%)": "84.5"
+    },
+    {
+        "_method": "CoS-E-open-ended*",
+        "_accuracy_(%)": " 89.8"
+    }
+]

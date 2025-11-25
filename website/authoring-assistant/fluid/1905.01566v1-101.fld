@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1905_01566v1_101
+
+"""
+	Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set.  ${"Our approach"}  outperforms the concurrently-published  ${"Xiong et al. (2019)"} ;
+"""

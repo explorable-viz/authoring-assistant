@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1905_05979v2_72
+
+"""
+	Most errors in our annotated corpus are related to  ${"person deixis"} , specifically gender marking in the Russian translation, and the T-V distinction between informal and formal you (Latin "tu" and "vos").  From Table 3, we see that the  ${"most frequent error category"}  related to deixis in our annotated corpus is the inconsistency of T-V forms when translating second person pronouns.
+"""

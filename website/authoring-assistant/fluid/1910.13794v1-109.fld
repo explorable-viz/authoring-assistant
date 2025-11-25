@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1910_13794v1_109
+
+"""
+	Our model outperforms all other models in all the  ${"metrics"} . This improvement is consistent, around  ${"2%"} .
+"""

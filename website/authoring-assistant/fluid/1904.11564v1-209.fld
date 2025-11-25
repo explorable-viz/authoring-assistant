@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1904_11564v1_209
+
+"""
+	edge  ${"properties"}  are removed, which Table 3 shows has an effect of  ${"less than 1"}   ${"BLEU point"} ).  we ablate node (predicate) and edge  ${"attributes"}  number and tense  have the largest effect on the reported  ${"BLEU score"} .  has only a small impact on performance.
+"""

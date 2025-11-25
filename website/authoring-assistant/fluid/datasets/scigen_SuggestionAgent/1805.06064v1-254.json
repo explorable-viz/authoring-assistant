@@ -1,0 +1,32 @@
+[
+    {
+        "_method": "",
+        "_meteor": "",
+        "_rouge-l": "",
+        "_human___prefer-": " ENCE"
+    },
+    {
+        "_method": "LSTM-LM",
+        "_meteor": "8.7",
+        "_rouge-l": "15.1",
+        "_human___prefer-": "0"
+    },
+    {
+        "_method": "Seq2seq",
+        "_meteor": "13.5",
+        "_rouge-l": "19.2",
+        "_human___prefer-": "22"
+    },
+    {
+        "_method": "ED(1)",
+        "_meteor": "13.3",
+        "_rouge-l": " 20.3",
+        "_human___prefer-": "30"
+    },
+    {
+        "_method": "ED(2)",
+        "_meteor": " 14.0",
+        "_rouge-l": "19.8",
+        "_human___prefer-": " 48"
+    }
+]

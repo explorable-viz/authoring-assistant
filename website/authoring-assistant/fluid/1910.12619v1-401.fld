@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1910_12619v1_401
+
+"""
+	We find that  ${"normalization"}  of both  ${"structural"}  and  ${"lexical"}  features leads to a significant performance gain.  ${"Normalization"}  of the  ${"frequency"}  feature seems to hurt performance (Table 3)
+"""

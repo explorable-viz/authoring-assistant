@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1909_10572v2_413
+
+"""
+	Similarly,  ${"Table 7"}  shows the results on the two  ${"domain-specific tasks"}  of  ${"music"}  and  ${"medical domain corpora"} .  ${"SPON"}  outperforms the  ${"SOTA systems"}  in all tasks except for the  ${"medical domain"}  in which it achieves comparable results.
+"""

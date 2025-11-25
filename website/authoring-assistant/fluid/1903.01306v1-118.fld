@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1903_01306v1_118
+
+"""
+	From the results shown in Table 1, we observe that for both  ${"CNN"}  and  ${"PCNN"}  models, our model outperforms the  ${"plain attention model"}  and the  ${"HATT model"} .
+"""

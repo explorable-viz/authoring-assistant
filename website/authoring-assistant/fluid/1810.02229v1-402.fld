@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1810_02229v1_402
+
+"""
+	Tables 1 and 2 report, respectively, the distribution of the events  ${"per token part-of speech"}  (POS) and  ${"per event class"} .   ${"verbs"}  are the  ${"largest annotated category"} , followed by  ${"nouns"} ,  ${"adjectives"} , and  ${"prepositional phrases"} .
+"""

@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1707_06961v1_126
+
+"""
+	Table  ${"7"}  presents the POS tagging improvements that  ${"MIMICK"}  achieves over the pre-trained  ${"Polyglot models"} , with and without  ${"CHAR→TAG concatenation"} , with  ${"10,000"}  tokens of training data. We obtain statistically significant improvements in most languages, even when  ${"CHAR→TAG"}  is included. These improvements are particularly substantial for test-set tokens outside the  ${"UD training set"} , as shown in the right two columns. While test set OOVs are a strength of the  ${"CHAR→TAG model"}  (Plank et al., 2016), in many languages there are still considerable improvements to be obtained from the application of  ${"MIMICK initialization"} .
+"""

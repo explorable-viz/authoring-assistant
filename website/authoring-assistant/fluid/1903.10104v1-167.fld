@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1903_10104v1_167
+
+"""
+	We also show the number of propositions in each category in Table 3. The  ${"most frequent"}  types are  ${"evaluation"}  ( ${"38.3"} %) and  ${"fact"}  ( ${"36.5"} %).
+"""

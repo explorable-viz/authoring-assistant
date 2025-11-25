@@ -1,0 +1,30 @@
+[
+    {
+        "language": "EnFr",
+        "tokenized_bleu_bpe": "38.8",
+        "tokenized_bleu_char": "39.2",
+        "tokenized_bleu_delta": "0.4",
+        "sacrebleu_char": "38.1"
+    },
+    {
+        "language": "CsEn",
+        "tokenized_bleu_bpe": "24.8",
+        "tokenized_bleu_char": "25.9",
+        "tokenized_bleu_delta": "1.1",
+        "sacrebleu_char": "25.6"
+    },
+    {
+        "language": "DeEn",
+        "tokenized_bleu_bpe": "29.7",
+        "tokenized_bleu_char": "31.6",
+        "tokenized_bleu_delta": "1.9",
+        "sacrebleu_char": "31.6"
+    },
+    {
+        "language": "FiEn",
+        "tokenized_bleu_bpe": "17.5",
+        "tokenized_bleu_char": "19.3",
+        "tokenized_bleu_delta": "1.8",
+        "sacrebleu_char": "19.5"
+    }
+]

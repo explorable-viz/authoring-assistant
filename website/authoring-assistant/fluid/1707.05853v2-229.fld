@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1707_05853v2_229
+
+"""
+	As shown in Table 1, this does not discard too many correct hypotheses but markedly reduces the size of the cnet to an  ${"average"}  of  ${"seven"}  timesteps with  ${"two"}  hypotheses.
+"""

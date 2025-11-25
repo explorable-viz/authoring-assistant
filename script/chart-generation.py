@@ -23,16 +23,6 @@ def count_problems_per_category(df):
     
     return category_counts
 
-def get_latest_csv(folder_path):
-    csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
-
-    if not csv_files:
-        exit(1)
-
-    latest_file = max(csv_files, key=os.path.getmtime)
-    print(f"Using latest CSV file: {latest_file}")
-    return latest_file
-
 def generate_success_rate_test_case_plot(df, plot, fig_dir):
     summary = (
         df.groupby("test-case-short")

@@ -3,10 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are provided in Table 4. The scores demonstrate that "
+      "value": "The results are provided in "
     },
     {
-      "expression": "\"on average\"",
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The scores demonstrate that on "
+    },
+    {
+      "expression": "\"average\"",
       "categories": ["average"],
       "type": "expression"
     },

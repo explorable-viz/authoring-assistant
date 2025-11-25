@@ -1,92 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "The results are presented in Table 1 (top two subparts). As we can see, "
-    },
-    {
-      "expression": "\"three\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " decoding settings do not differ significantly in terms of the performance on selected downstream tasks, with "
-    },
-    {
-      "expression": "\"RNN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " or "
-    },
-    {
-      "expression": "\"CNN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " as the decoder. The results are also presented in Table 1 (3rd and 4th subparts). The performance of the "
-    },
-    {
-      "expression": "\"predict-allwords RNN decoder\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " does not significantly differ from that of any one of the autoregressive "
-    },
-    {
-      "expression": "\"RNN decoders\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and the same situation can be also observed in "
-    },
-    {
-      "expression": "\"CNN decoders\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". In our proposed "
-    },
-    {
-      "expression": "\"RNN-CNN model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", we empirically show that the "
-    },
-    {
-      "expression": "\"mean+max pooling\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " provides stronger transferability than the "
-    },
-    {
-      "expression": "\"max pooling alone\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " does, and the results are presented in the last two sections of Table 1."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "The results are presented in Table 1 (top two subparts). As we can see, the three decoding settings do not differ significantly in terms of the performance on selected downstream tasks, with RNN or CNN as the decoder.  The results are also presented in Table 1 (3rd and 4th subparts). The performance of the predict-allwords RNN decoder does not significantly differ from that of any one of the autoregressive RNN de  coders, and the same situation can be also observed in CNN decoders.  In our proposed RNN-CNN model, we empirically show that the mean+max pooling provides stronger transferability than the max pooling alone does, and the results are presented in the last two sections of Table 1."
+  }],
   "variables": {},
   "imports": [
     "scigen",

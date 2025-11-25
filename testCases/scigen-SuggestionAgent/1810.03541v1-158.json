@@ -1,56 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Table 3 shows the intrinsic evaluation results, in which our alignment intrinsically "
-    },
-    {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"JAMR aligner\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " by achieving "
-    },
-    {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " alignment "
-    },
-    {
-      "expression": "\"F1 score\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and leading to a "
-    },
-    {
-      "expression": "\"higher\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " scored oracle parser."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 3 shows the intrinsic evaluation results, in which our alignment intrinsically outperforms JAMR aligner by achieving better alignment F1 score and leading to a higher scored oracle parser."
+  }],
   "variables": {},
   "imports": [
     "scigen",

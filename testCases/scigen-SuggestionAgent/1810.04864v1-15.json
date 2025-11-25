@@ -3,10 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
+      "value": "Table 2 and 3 display the results on the "
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"E2E\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -15,13 +15,22 @@
       "value": " and "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"WebNLG\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " display the results on the E2E and WebNLG test sets for models of the respective challenges and our own models On the E2E test set, our single "
+      "value": " test sets for models of the respective challenges and our own models  On the "
+    },
+    {
+      "expression": "\"E2E\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test set, our single "
     },
     {
       "expression": "\"best\"",
@@ -48,7 +57,25 @@
     },
     {
       "type": "literal",
-      "value": " BLEU and ROUGE-L scores than the character-based models."
+      "value": " "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ROUGE-L\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " scores than the character-based models."
     }
   ],
   "variables": {},

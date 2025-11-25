@@ -1,56 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "I apologize for the error. Here is the corrected output with the proper categories:\n\nTable 2 shows that the performance got slightly hurt (comparing \""
-    },
-    {
-      "expression": "\"Processed MT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "\" with \""
-    },
-    {
-      "expression": "\"MT as PE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "\") with pre-processing and post-processing procedures which are normally applied in training seq2seq models for reducing vocabulary size. The "
-    },
-    {
-      "expression": "\"multi-source transformer (Base)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model achieved the "
-    },
-    {
-      "expression": "\"highest\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " single model BLEU score without joint training with the de-noising encoder task. Even with the ensembled model, our APE approach does not significantly improve machine translation outputs measured in BLEU (+"
-    },
-    {
-      "expression": "\"0.46\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ")."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 2 shows that the performance got slightly hurt (comparing \"Processed MT\" with \"MT as PE\") with pre-processing and post-processing procedures which are normally applied in training seq2seq models for reducing vocabulary size. The multi-source transformer (Base) model achieved the highest single model BLEU score without joint training with the de-noising encoder task.  Even with the ensembled model, our APE approach does not significantly improve machine translation outputs measured in BLEU (+0.46)."
+  }],
   "variables": {},
   "imports": [
     "scigen",

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. Here is the revised paragraph with the correct annotations using only one category per expression:\n\nTable "
+      "value": "Table "
     },
     {
       "expression": "\"2\"",
@@ -39,34 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " = fixed-tree) in more detail,  and compares them to "
-    },
-    {
-      "expression": "\"Wang's\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Flanigan's\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and "
-    },
-    {
-      "expression": "\"Damonte's\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " AMR parsers on the "
+      "value": " = fixed-tree) in more detail,  and compares them to Wang's, Flanigan's, and Damonte's AMR parsers on the "
     },
     {
       "expression": "\"2015\"",
@@ -75,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " set and , and "
-    },
-    {
-      "expression": "\"van Noord and Bos (2017b)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for the "
+      "value": " set and , and van Noord and Bos (2017b) for the "
     },
     {
       "expression": "\"2017\"",

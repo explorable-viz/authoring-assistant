@@ -1,38 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "we evaluate our four "
-    },
-    {
-      "expression": "\"labeling strategies\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " using the many-to-one approach, as presented in Table 1.  In all cases, clustering by type with Brown-based algorithms works "
-    },
-    {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than using a sophisticated tagger such as "
-    },
-    {
-      "expression": "\"A-HMM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "we evaluate our four labeling strategies using the many-to-one approach, as presented in Table 1.  In all cases, clustering by type with Brown-based algorithms works better than using a sophisticated tagger such as A-HMM."
+  }],
   "variables": {},
   "imports": [
     "scigen",

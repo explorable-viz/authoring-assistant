@@ -7,12 +7,12 @@
     },
     {
       "expression": "\"average precision\"",
-      "categories": ["average"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ranking scores achieved via cross-lingual transfer of "
+      "value": " (AP) ranking scores achieved via cross-lingual transfer of "
     },
     {
       "expression": "\"POSTLE\"",
@@ -21,16 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " are shown in Table 2. We report AP scores using three methods for cross-lingual word embedding induction, and compare their performance to two baselines: 1) random word pair scoring, and 2) the original ("
+      "value": " are shown in Table 2. We report AP scores using three methods for cross-lingual word embedding induction, and "
     },
     {
-      "expression": "\"FASTTEXT\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"compare\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") vectors. The results uncover the inability of distributional vectors to capture LE \u2013 they yield "
+      "value": " their performance to two baselines: 1) random word pair scoring, and 2) the original (FASTTEXT) vectors. The results uncover the inability of distributional vectors to capture LE \u2013 they yield "
     },
     {
       "expression": "\"lower\"",

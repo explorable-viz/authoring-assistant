@@ -6,44 +6,26 @@
       "value": "Finally, for the last setting, we tested the system using the "
     },
     {
-      "expression": "\"three\"",
+      "expression": "\"three auto-annotation modes (i.e., FA, HFA, and UFA)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " auto-annotation modes (i.e., "
+      "value": " as shown in Table 3. While the "
     },
     {
-      "expression": "\"FA\"",
+      "expression": "\"auto-annotation mode\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"HFA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ",  and "
-    },
-    {
-      "expression": "\"UFA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") as shown in Table 3. While the auto-annotation mode can allow us to reduce up to "
+      "value": " can allow us to reduce up to "
     },
     {
       "expression": "\"87%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -60,13 +42,13 @@
       "value": " F-Score. Overall, our framework presents a trade off between coverage and annotation cost. The "
     },
     {
-      "expression": "\"HFA\"",
+      "expression": "\"HFA auto-annotation mode\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " auto-annotation mode shows the benefit, especially in a realistic enterprise setting, when we need to annotate "
+      "value": " shows the benefit, especially in a realistic enterprise setting, when we need to annotate "
     },
     {
       "expression": "\"33%\"",
@@ -79,30 +61,12 @@
     },
     {
       "expression": "\"10%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (when comparing the on average performance of "
-    },
-    {
-      "expression": "\"HFA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with "
-    },
-    {
-      "expression": "\"ESA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") is unreasonable. Table 3 appears to show "
+      "value": " (when comparing the on average performance of HFA with ESA) is unreasonable. Table 3 appears to show "
     },
     {
       "expression": "\"FA\"",
@@ -120,16 +84,7 @@
     },
     {
       "type": "literal",
-      "value": " in terms of the percentage cut for the Location class, for example. In reality "
-    },
-    {
-      "expression": "\"FA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " reduced sentence annotation by "
+      "value": " in terms of the percentage cut for the Location class, for example. In reality FA reduced sentence annotation by "
     },
     {
       "expression": "\"65%\"",
@@ -141,40 +96,22 @@
       "value": " to reach "
     },
     {
-      "expression": "\"0.99\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"0.99 F-Score\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F-Score. But as our testing criteria demanded that we either reach "
+      "value": ". But as our testing criteria demanded that we either reach 1.0 F-Score or finish all sentences from the pool, FA tried to finish the pool without any further performance improvement on the "
     },
     {
-      "expression": "\"1.0\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"0.99 F-Score\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " F-Score or finish all sentences from the pool, "
-    },
-    {
-      "expression": "\"FA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " tried to finish the pool without any further performance improvement on the "
-    },
-    {
-      "expression": "\"0.99\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " F-Score."
+      "value": "."
     }
   ],
   "variables": {},

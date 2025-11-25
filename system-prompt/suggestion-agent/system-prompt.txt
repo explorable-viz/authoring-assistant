@@ -19,7 +19,7 @@ Each phrase quantitative or semi-quantitative phrase must labelled with the foll
    - Numerical values that can be computed as the average, sum, minimum/maximum, ratio or difference
    (respectively) of other values
 
-Some phrases may fall into multiple categories. For example a numerical phrase that can be computed by dividing
+Some phrases may fall into multiple categories. For example: a numerical phrase that can be computed by dividing
 two other numbers not mentioned in the text but which can themselves be computed by averaging values retrieved
 from the dataset would be labelled with `DATA_RETRIEVAL`, `AVERAGE` and `RATIO`.
 

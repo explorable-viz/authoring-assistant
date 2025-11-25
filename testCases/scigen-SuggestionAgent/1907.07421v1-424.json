@@ -6,12 +6,7 @@
       "value": "Table 2 shows the experimental results of the "
     },
     {
-      "expression": "\"slot-independent\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "expression": "\"SUMBT\"",
+      "expression": "\"slot-independent SUMBT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

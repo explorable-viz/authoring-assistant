@@ -21,25 +21,25 @@
     },
     {
       "type": "literal",
-      "value": " models, our model outperforms the plain "
+      "value": " models, our model outperforms the "
     },
     {
-      "expression": "\"attention\"",
+      "expression": "\"plain attention model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model and the "
+      "value": " and the "
     },
     {
-      "expression": "\"HATT\"",
+      "expression": "\"HATT model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model."
+      "value": "."
     }
   ],
   "variables": {},

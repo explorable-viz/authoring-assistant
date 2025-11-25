@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 also contains results that use only the explanation and exclude the original question from CQA denoted by '"
-    },
-    {
-      "expression": "\"w/o question\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "'. These variants also use explanation during both train and validation. We observe that even using these limited kind of explanations improves over the "
+      "value": "Table 4 also contains results that use only the explanation and exclude the original question from CQA denoted by 'w/o question'. These variants also use explanation during both train and validation. We observe that even using these limited kind of explanations improves over the "
     },
     {
       "expression": "\"BERT\"",
@@ -33,13 +24,13 @@
       "value": " at both train and validation resulted in an accuracy of "
     },
     {
-      "expression": "\"72\"",
+      "expression": "\"72%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%, but Table 4 shows that if "
+      "value": ", but Table 4 shows that if "
     },
     {
       "expression": "\"CAGE-reasoning\"",
@@ -51,13 +42,13 @@
       "value": " truly captured all information provided in CoS-E-openended, performance would be "
     },
     {
-      "expression": "\"90\"",
+      "expression": "\"90%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%."
+      "value": "."
     }
   ],
   "variables": {},

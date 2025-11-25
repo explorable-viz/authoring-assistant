@@ -1,83 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Table 1 presents our results. The self-distance "
-    },
-    {
-      "expression": "\"f\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
-    },
-    {
-      "expression": "\"eBay\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Legal Onion\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"Illegal Onion\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " corpora lies between "
-    },
-    {
-      "expression": "\"0.40\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " to "
-    },
-    {
-      "expression": "\"0.45\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " by the JensenShannon divergence, but the distance between each pair is "
-    },
-    {
-      "expression": "\"0.60\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " to "
-    },
-    {
-      "expression": "\"0.65\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", with the three approximately forming an equilateral triangle in the space of word distributions. Similar results are obtained using Variational distance, and are omitted for brevity."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 1 presents our results. The self-distance f the eBay, Legal Onion and Illegal Onion corpora lies between 0.40 to 0.45 by the JensenShannon divergence, but the distance between each pair is 0.60 to 0.65, with the three approximately forming an equilateral triangle in the space of word distributions. Similar results are obtained using Variational distance, and are omitted for brevity."
+  }],
   "variables": {},
   "imports": [
     "scigen",

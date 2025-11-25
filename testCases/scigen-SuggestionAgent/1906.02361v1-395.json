@@ -6,13 +6,13 @@
       "value": "Table 3 shows the results obtained on the CQA test split. We report our "
     },
     {
-      "expression": "\"two best\"",
-      "categories": ["rank"],
+      "expression": "\"two\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models that represent using human explanations ("
+      "value": " best models that represent using human explanations ("
     },
     {
       "expression": "\"CoS-E-openended\"",

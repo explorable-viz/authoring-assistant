@@ -3,55 +3,64 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the performance of our Fact Checking system on the "
+      "value": "Table 2 shows the performance of our Fact Checking system on the \"SUPPORTS\" label, the output of our system. We compare the results against two different classification thresholds. Here, "
     },
     {
-      "expression": "\"SUPPORTS\"",
+      "expression": "\"φ = 0.76\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " label, the output of our system. We compare the results against two different classification thresholds. Here, φ = "
+      "value": " suggests that at least "
     },
     {
-      "expression": "\"0.76\"",
+      "expression": "\"3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " suggests that "
+      "value": " out of the "
     },
     {
-      "expression": "\"at least 3 out of the 4 questions\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " have to be answered correctly while φ = "
-    },
-    {
-      "expression": "\"0.67\"",
+      "expression": "\"4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " suggests that "
+      "value": " questions have to be answered correctly while "
     },
     {
-      "expression": "\"at least 2 out of the 3 questions\"",
-      "categories": ["comparison"],
+      "expression": "\"φ = 0.67\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " has to be answered correctly for the claim to be classified as \"SUPPORTS\". In contrast to the results reported in Table 2, here we consider φ = "
+      "value": " suggests that at least "
     },
     {
-      "expression": "\"0.76\"",
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " out of the "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " questions has to be answered correctly for the claim to be classified as \"SUPPORTS\". In contrast to the results reported in Table 2, here we consider "
+    },
+    {
+      "expression": "\"φ = 0.76\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

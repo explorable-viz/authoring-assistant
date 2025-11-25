@@ -3,61 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We inspect some pairs of events and entities in different kernels and list some examples in Table 5. The pairs in Table 3 exhibit interesting types of relations: e.g., \""
+      "value": "We inspect some pairs of events and entities in different kernels and list some examples in "
     },
     {
-      "expression": "\"arrest-charge\"",
+      "expression": "\"Table 5\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "\" and \""
+      "value": ".  The pairs in "
     },
     {
-      "expression": "\"attack-kill\"",
+      "expression": "\"Table 3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "\" form script-like chains; \""
+      "value": " exhibit interesting types of relations: e.g.,\"arrest-charge\" and \"attack-kill\" form script-like chains; \""
     },
     {
-      "expression": "\"911 attack\"",
+      "expression": "\"911\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "\" forms a quasiidentity relation (Recasens et al., 2010) with \""
-    },
-    {
-      "expression": "\"attack\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "\"; \""
-    },
-    {
-      "expression": "\"business\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "\" and \""
-    },
-    {
-      "expression": "\"increase\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "\" are candidates as frame-argument structure."
+      "value": " attack\" forms a quasiidentity relation (Recasens et al., 2010) with \"attack\"; \"business\" and \"increase\" are candidates as frame-argument structure."
     }
   ],
   "variables": {},

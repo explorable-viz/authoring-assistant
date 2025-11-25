@@ -12,34 +12,52 @@
     },
     {
       "type": "literal",
-      "value": " dataset, wherein we compare our proposed "
+      "value": " dataset, wherein we "
     },
     {
-      "expression": "\"SPON model\"",
+      "expression": "\"compare\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " our proposed "
+    },
+    {
+      "expression": "\"SPON\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to other supervised SOTA approaches for hypernym prediction task, namely "
+      "value": " model to other supervised SOTA approaches for hypernym prediction task, namely "
     },
     {
-      "expression": "\"Order Embeddings (OE)\"",
+      "expression": "\"Order Embeddings\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " approach as introduced by (Vendrov et al. 2016), and "
+      "value": " ("
     },
     {
-      "expression": "\"Smoothed Box model\"",
+      "expression": "\"OE\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " as introduced by (Li et al. 2019)."
+      "value": ") approach as introduced by (Vendrov et al. 2016), and "
+    },
+    {
+      "expression": "\"Smoothed Box\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model as introduced by (Li et al. 2019)."
     }
   ],
   "variables": {},

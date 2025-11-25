@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "You are correct, I apologize for the error. Let's correct the annotations to fit within the provided categories:\n\nWe select the "
+      "value": "We select the "
     },
     {
       "expression": "\"1st\"",
@@ -15,85 +15,22 @@
       "value": " and "
     },
     {
-      "expression": "\"2nd\"",
+      "expression": "\"2nd best performing\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " best performing "
+      "value": " models on the development datasets as well as the majority vote (mv) of "
     },
     {
-      "expression": "\"models\"",
+      "expression": "\"5\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the development datasets as well as the "
-    },
-    {
-      "expression": "\"majority vote\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
-    },
-    {
-      "expression": "\"5 models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for the final submission. The final results are shown in Table 3.\n\nHere is the corrected output:\n\nWe select the "
-    },
-    {
-      "expression": "\"1st\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"2nd\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " best performing "
-    },
-    {
-      "expression": "\"models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on the development datasets as well as the "
-    },
-    {
-      "expression": "\"majority vote\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of "
-    },
-    {
-      "expression": "\"5 models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for the final submission. The final results are shown in Table 3."
+      "value": " models for the final submission. The final results are shown in Table 3."
     }
   ],
   "variables": {},

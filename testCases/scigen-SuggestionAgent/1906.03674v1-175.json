@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "we augment our models with existing linguistic and affective knowledge from human experts. Specifically, we leverage lexica containing psycho-linguistic, sentiment and emotion annotations. the word's annotations from the "
+      "value": "we augment our models with existing linguistic and affective knowledge from human experts. Specifically, we leverage lexica containing psycho-linguistic, sentiment and emotion annotations.  the word's annotations from the "
     },
     {
       "expression": "\"lexicons\"",
@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " shown in Table 1. As prior knowledge, we leverage the "
+      "value": " shown in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  As prior knowledge, we leverage the "
     },
     {
       "expression": "\"lexicons\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " presented in Table 1. We selected widely-used "
+      "value": " presented in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We selected widely-used "
     },
     {
       "expression": "\"lexicons\"",

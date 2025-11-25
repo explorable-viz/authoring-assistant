@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it, I'll use the correct categories. Here's the annotated paragraph:\n\nTable 3 shows the results on the Europarl corpus.  our approach consistently "
+      "value": "Table 3 shows the results on the Europarl corpus.  our approach consistently "
     },
     {
       "expression": "\"outperforms\"",
@@ -24,22 +24,13 @@
       "value": " by "
     },
     {
-      "expression": "\"2-3\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"2-3 BLEU points\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU points but "
-    },
-    {
-      "expression": "\"lags a bit behind\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
+      "value": " but lags a bit behind "
     },
     {
       "expression": "\"Pivot\"",
@@ -75,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": ")."
+      "value": "). Es"
     }
   ],
   "variables": {},

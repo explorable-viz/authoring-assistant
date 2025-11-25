@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are shown in Table 2 ('Wikipedia'). The resulting model is significantly "
+      "value": "The results are shown in "
+    },
+    {
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ('Wikipedia'). The resulting model is significantly "
     },
     {
       "expression": "\"less accurate\"",
@@ -21,16 +30,34 @@
     },
     {
       "type": "literal",
-      "value": ". The score difference is larger for "
+      "value": ". The "
     },
     {
-      "expression": "\"AIDA-CoNLL\"",
+      "expression": "\"score difference\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"larger\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "  for "
+    },
+    {
+      "expression": "\"AIDA-CoNLL test set\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test set than for the other "
+      "value": " than for the other "
     },
     {
       "expression": "\"5\"",
@@ -39,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": " test sets. Additionally we train our model on "
+      "value": " test sets.  Additionally we train our model on "
     },
     {
       "expression": "\"AIDA-CoNLL\"",
@@ -57,16 +84,16 @@
     },
     {
       "type": "literal",
-      "value": "' row in Table 2). Though, as expected, this version is more accurate on "
+      "value": "' row in Table 2). Though, as expected, this version is "
     },
     {
-      "expression": "\"AIDA\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"more accurate\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test set, similarly to other fully-supervised methods, it overfits and does not perform that well on the "
+      "value": " on AIDA test set, similarly to other fully-supervised methods, it overfits and does not perform that well on the "
     },
     {
       "expression": "\"5\"",

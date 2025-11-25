@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Humans agree more often with models trained on "
+      "value": "Humans "
+    },
+    {
+      "expression": "\"agree more often\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with models trained on "
     },
     {
       "expression": "\"Amazon reviews\"",

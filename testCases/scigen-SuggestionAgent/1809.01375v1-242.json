@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
-    },
-    {
-      "expression": "\"4\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " shows the f1-scores on the full clean datasets.  For "
+      "value": "Table 4 shows the f1-scores on the full clean datasets.  For "
     },
     {
       "expression": "\"polysemy between food and animals\"",
@@ -21,29 +12,11 @@
     },
     {
       "type": "literal",
-      "value": " (Table "
-    },
-    {
-      "expression": "\"4\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), we observe that when trained on pure animal and food words and tested on polysemous animal and food words, the classifiers perform "
-    },
-    {
-      "expression": "\"highly\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with a "
+      "value": " (Table 4), we observe that when trained on pure animal and food words and tested on polysemous animal and food words, the classifiers perform highly with a "
     },
     {
       "expression": "\"large difference\"",
-      "categories": ["comparison"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {

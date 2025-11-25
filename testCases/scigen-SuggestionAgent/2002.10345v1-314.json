@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Understood. I will ensure to use only the specified categories. Here is the revised annotation:\n\nWe also investigate whether self-distillation has similar findings for the "
+      "value": "We also investigate whether self-distillation has similar findings for the "
     },
     {
       "expression": "\"BERTlarge\"",
@@ -75,7 +75,7 @@
     },
     {
       "type": "literal",
-      "value": "%. For NLI task, "
+      "value": "%.\nFor NLI task, "
     },
     {
       "expression": "\"BERT-LSDA(K = 1)\"",

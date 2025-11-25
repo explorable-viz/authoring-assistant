@@ -3,7 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "First, we represent utterances by their TF-IDF representations as feature-vectors. We then supply the vector representation of each utterance to a Support Vector Machine (SVM) with a linear kernel for domain and intent identification, and to a Hidden Markov Model (HMM) for slot filling. Second, we encode words in a dialogue utterance by GLoVe, as benchmark pre-trained word embeddings, to include the semantic relationships among words. We compute the "
+      "value": "First, we "
+    },
+    {
+      "expression": "\"represent\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " utterances by their "
+    },
+    {
+      "expression": "\"TF-IDF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " representations as feature-vectors. We then supply the vector representation of each utterance to a Support Vector Machine (SVM) with a linear kernel for domain and intent identification, and to a Hidden Markov Model (HMM) for slot filling. Second, we "
+    },
+    {
+      "expression": "\"encode\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " words in a dialogue utterance by "
+    },
+    {
+      "expression": "\"GLoVe\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as benchmark pre-trained word embeddings, to include the semantic relationships among words. We compute the "
     },
     {
       "expression": "\"average\"",

@@ -3,61 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 reports results of the multi-task training procedure described above. We use "
+      "value": "Table 3 reports results of the multi-task training procedure described above. We use the "
     },
     {
-      "expression": "\"the best performing\"",
+      "expression": "\"best performing\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " language model in our comparisons for each task, i.e. "
+      "value": " language model in our comparisons for each task, i.e. Self-Attention for image-sentence retrieval and phrase grounding, and the LSTM language model for text-to-clip, image captioning, and VQA. The first lines of Table 3 report the results of the original fixed GrOVLE embedding, which should be considered the baseline. The second line of Table 3 reports performance when the "
     },
     {
-      "expression": "\"Self-Attention\"",
+      "expression": "\"four-task pretrained\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for image-sentence retrieval and phrase grounding, and the "
+      "value": " GrOVLE is "
     },
     {
-      "expression": "\"LSTM\"",
+      "expression": "\"fixed\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " language model for text-to-clip, image captioning, and VQA. The first lines of Table 3 report the results of the original fixed GrOVLE embedding, which should be considered the baseline. The second line of Table 3 reports performance when the four-task pretrained GrOVLE is fixed when used in the target task, i.e. the task currently being run. The third and fourth line of Table 3 report the results of our embedding when they were trained on all five tasks, and kept fixed or fine-tuned for the target task, respectively.  The results of line three and four demonstrate that our improved embedding tends to transfer better when applied with fine-tuning during the target task. We find similar trends in performance improvements across tasks: larger gains occur for image-sentence retrieval with "
+      "value": " when used in the target task, i.e. the task currently being run. The third and fourth line of Table 3 report the results of our embedding when they were trained on all five tasks, and kept fixed or fine-tuned for the target task, respectively.  The results of line three and four demonstrate that our improved embedding tends to transfer "
     },
     {
-      "expression": "\"+7.9\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " mean recall for the Flickr30K dataset and "
+      "value": " when applied with fine-tuning during the target task. We find similar trends in performance improvements across tasks: "
     },
     {
-      "expression": "\"+6.3\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"larger gains\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for MSCOCO. All other tasks have performance improvements under one point, showing that while the vision-language tasks appear to transfer well without harming performance, they are leveraged most in image-sentence retrieval, with an exception of phrase grounding accuracy on ReferIt ("
-    },
-    {
-      "expression": "\"+2.36%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ")."
+      "value": " occur for image-sentence retrieval with +7.9 mean recall for the Flickr30K dataset and +6.3 for MSCOCO. All other tasks have performance improvements under one point, showing that while the vision-language tasks appear to transfer well without harming performance, they are leveraged most in image-sentence retrieval, with an exception of phrase grounding accuracy on ReferIt (+2.36%)."
     }
   ],
   "variables": {},

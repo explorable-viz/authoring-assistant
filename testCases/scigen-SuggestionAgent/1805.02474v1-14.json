@@ -39,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ". Stacking more layers of "
-    },
-    {
-      "expression": "\"BiLSTMs\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " leads to slightly "
+      "value": ". Stacking more layers of BiLSTMs leads to slightly "
     },
     {
       "expression": "\"better\"",
@@ -84,10 +75,10 @@
     },
     {
       "type": "literal",
-      "value": " gives "
+      "value": " gives the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },

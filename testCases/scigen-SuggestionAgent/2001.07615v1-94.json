@@ -3,7 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "All results of these experiments are presented in Table 3 with the absolute improvement of the two main measures "
+      "value": "All "
+    },
+    {
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of these "
+    },
+    {
+      "expression": "\"experiments\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are presented in "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with the "
+    },
+    {
+      "expression": "\"absolute improvement\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the two main measures "
     },
     {
       "expression": "\"UAR\"",

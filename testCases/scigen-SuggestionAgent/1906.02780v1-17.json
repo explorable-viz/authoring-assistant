@@ -48,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": ".  The final row of Table 4 shows that exposing the parse decoder to multiple possible chunkings of the same sentence during training allows it to choose a sequence of chunks that has a "
-    },
-    {
-      "expression": "\"higher\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " likelihood at test time, improving BLEU by "
+      "value": ".  The final row of Table 4 shows that exposing the parse decoder to multiple possible chunkings of the same sentence during training allows it to choose a sequence of chunks that has a higher likelihood at test time, improving BLEU by "
     },
     {
       "expression": "\"1.5\"",

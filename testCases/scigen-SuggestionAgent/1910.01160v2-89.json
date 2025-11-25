@@ -1,74 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Thank you for pointing that out. I'll adjust the categories accordingly.\n\nHere is the corrected output:\n\nTable 3 provides a summary of the results. We compare the results of our methods of the pre-trained "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", using both the headline and text body, and the "
-    },
-    {
-      "expression": "\"Coh-Metrix\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " approach, to the language-based baseline with Multinomial Naive Bayes from (Golbeck et al., 2018)2. Both the semantic cues with "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and the linguistic cues with "
-    },
-    {
-      "expression": "\"Coh-Metrix\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " significantly outperform the baseline on the F1 score. The two-tailed paired t-test with a 0."
-    },
-    {
-      "expression": "\"05\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " significance level was used for testing statistical significance of performance differences. The "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " result is given by the "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model. Overall, these results provide an answer to research question RQ1 regarding the existence of semantic and linguistic difference between fake news and satire."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 3 provides a summary of the results. We compare the results of our methods of the pre-trained BERT, using both the headline and text body, and the Coh-Mertix approach, to the language-based baseline with Multinomial Naive Bayes from (Golbeck et al., 2018)2. Both the semantic cues with BERT and the linguistic cues with Coh-Metrix significantly outperform the baseline on the F1 score. The two-tailed paired t-test with a 0.05 significance level was used for testing statistical significance of performance differences. The best result is given by the BERT model. Overall, these results provide an answer to research question RQ1 regarding the existence of semantic and linguistic difference between fake news and satire."
+  }],
   "variables": {},
   "imports": [
     "scigen",

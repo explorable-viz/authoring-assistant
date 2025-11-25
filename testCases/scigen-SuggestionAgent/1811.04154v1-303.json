@@ -3,88 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "see We that using phonological representations (phonemes and articulatory features) offers the ability to map between languages that use different orthographies, explaining the convincing improvement over graphemes for HRL-LRL pairs that are written in different scripts (Table 3). With "
+      "value": "see We that using phonological representations (phonemes and articulatory features) offers the ability to map between languages that use different orthographies, explaining the convincing improvement over graphemes for HRL-LRL pairs that are written in different scripts (Table 3). With graphemes, the experiments on these languages achieve ≈ "
     },
     {
-      "expression": "\"graphemes\"",
+      "expression": "\"0\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", the experiments on these languages achieve ≈ "
+      "value": " accuracy because the character vocabulary of the HRL encoder simply does not contain the low-resource test language characters. This is the case with "
     },
     {
-      "expression": "\"0 accuracy\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " because the character vocabulary of the HRL encoder simply does not contain the low-resource test language characters. This is the case with Lao-Thai ("
-    },
-    {
-      "expression": "\"lo-th\"",
+      "expression": "\"Lao-Thai (lo-th)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), Telugu-Tamil ("
+      "value": ", "
     },
     {
-      "expression": "\"te-ta\"",
+      "expression": "\"Telugu-Tamil (te-ta)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and Bengali-Hindi ("
+      "value": " and "
     },
     {
-      "expression": "\"bn-hi\"",
+      "expression": "\"Bengali-Hindi (bn-hi)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). In contrast, we observe that the "
+      "value": ". In contrast, we observe that the grapheme representation offers strong transfer performance when the LRL and HRL share orthography, notably "
     },
     {
-      "expression": "\"grapheme representation\"",
+      "expression": "\"Javanese-Indonesian (jv-id)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " offers strong transfer performance when the LRL and HRL share orthography, notably Javanese-Indonesian ("
+      "value": ", "
     },
     {
-      "expression": "\"jv-id\"",
+      "expression": "\"Marathi-Hindi (mr-hi)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), Marathi-Hindi ("
+      "value": " and "
     },
     {
-      "expression": "\"mr-hi\"",
+      "expression": "\"Ukrainian-Russian (uk-ru)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and Ukrainian-Russian ("
-    },
-    {
-      "expression": "\"uk-ru\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ")."
+      "value": "."
     }
   ],
   "variables": {},

@@ -3,16 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We calculate these similarity scores for each Real targeted output for the real inputs and the inputs found by the proposed model and report the "
+      "value": "We calculate these "
     },
     {
-      "expression": "\"average\"",
+      "expression": "\"similarity scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for each Real targeted output for the real inputs and the inputs found by the proposed model and report the "
+    },
+    {
+      "expression": "\"average value\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " value in Table 1. According to the table, we observe that even inputting the real inputs, the similarity scores between the outputs and the target outputs are not high. Besides, with the crafted inputs from the proposed framework, these similarity scores are significantly improved. For example, for "
+      "value": " in Table 1. According to the table, we observe that even inputting the real inputs, the "
+    },
+    {
+      "expression": "\"similarity scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between the outputs and the target outputs are not "
+    },
+    {
+      "expression": "\"high\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Besides, with the crafted inputs from the proposed framework, these "
+    },
+    {
+      "expression": "\"similarity scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are significantly improved. For example, for "
     },
     {
       "expression": "\"RL BeamSearch(200)\"",
@@ -25,7 +61,7 @@
     },
     {
       "expression": "\"41.5%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -34,7 +70,7 @@
     },
     {
       "expression": "\"34.0%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -43,7 +79,7 @@
     },
     {
       "expression": "\"28.3%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {

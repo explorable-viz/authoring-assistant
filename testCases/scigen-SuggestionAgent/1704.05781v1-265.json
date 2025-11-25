@@ -3,16 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 4, the removal of stop words does not really influence the "
+      "value": "As shown in "
     },
     {
-      "expression": "\"average\"",
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the removal of "
+    },
+    {
+      "expression": "\"stop words\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " does not really influence the "
+    },
+    {
+      "expression": "\"average model performance\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model performance for the semantic similarity task. The analogy task, however, benefits substantially from this filtering, for both "
+      "value": " for the "
+    },
+    {
+      "expression": "\"semantic similarity task\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The "
+    },
+    {
+      "expression": "\"analogy task\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", however, benefits substantially from this filtering, for both "
     },
     {
       "expression": "\"corpora\"",

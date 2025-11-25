@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "BPE and character sys  tems differ most in the "
+      "value": "BPE and character sys"
     },
     {
-      "expression": "\"number\"",
+      "expression": "\"tem\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of "
+      "value": "s differ most in the number of "
     },
     {
       "expression": "\"lexical choice errors\"",
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": ", and in the extent to which they drop content.  Regarding lexical choice, the two systems differ not only in the "
-    },
-    {
-      "expression": "\"number\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of errors, but in the nature of those errors. In particular, the "
+      "value": ", and in the extent to which they drop content. Regarding lexical choice, the two systems differ not only in the number of errors, but in the nature of those errors. In particular, the "
     },
     {
       "expression": "\"BPE model\"",
@@ -39,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " had more trouble handling German compound nouns.  We also found that both systems occasionally mistranslate proper names."
+      "value": " had more trouble handling German compound nouns. We also found that both systems occasionally mistranslate proper names."
     }
   ],
   "variables": {},

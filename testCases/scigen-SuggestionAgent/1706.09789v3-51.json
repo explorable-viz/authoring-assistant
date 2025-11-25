@@ -1,56 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Got it. I'll ensure that only one valid category is used for each annotation.\n\nHere's the revised output:\n\nreport brief results on SQuAD (Table 3), We also evaluate the SynNet on the "
-    },
-    {
-      "expression": "\"NewsQAto-SQuAD\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " direction. We directly apply the best setting from the other direction and report the result in Table 3. The SynNet improves over the baseline by "
-    },
-    {
-      "expression": "\"1.6%\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"EM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"0.7%\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"F1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Limited by space, we leave out ablation studies in this direction."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "report brief results on SQuAD (Table 3),  We also evaluate the SynNet on the NewsQAto-SQuAD direction. We directly apply the best setting from the other direction and report the result in Table 3.  The SynNet improves over the baseline by 1.6% in EM and 0.7% in F1. Limited by space, we leave out ablation studies in this direction."
+  }],
   "variables": {},
   "imports": [
     "scigen",

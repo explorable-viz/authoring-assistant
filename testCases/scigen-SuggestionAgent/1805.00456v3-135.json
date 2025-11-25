@@ -1,38 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Got it! I will use only the valid categories. Here is the corrected version:\n\nOur "
-    },
-    {
-      "expression": "\"plain BPE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " baseline (Table 4) outperforms the current "
-    },
-    {
-      "expression": "\"best system\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on WAT Ja-En, an "
-    },
-    {
-      "expression": "\"8\"",
-      "categories": ["sum"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "-model ensemble (Morishita et al., 2017). Our syntax models achieve similar results despite producing much longer sequences."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Our plain BPE baseline (Table 4) outperforms the current best system on WAT Ja-En, an 8-model ensemble (Morishita et al., 2017). Our syntax models achieve similar results despite producing much longer sequences."
+  }],
   "variables": {},
   "imports": [
     "scigen",

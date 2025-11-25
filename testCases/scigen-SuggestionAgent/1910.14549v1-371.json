@@ -12,34 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " outperformed other models on both the in-domain "
-    },
-    {
-      "expression": "\"Das's test set\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and the out-of-domain "
-    },
-    {
-      "expression": "\"YAGS test set\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", yielding new state-of-the-art results for frame identification. As expected, the results obtained with "
-    },
-    {
-      "expression": "\"LU-based frame filtering\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " were slightly "
+      "value": " outperformed other models on both the in-domain Das's test set and the out-of-domain YAGS test set, yielding new state-of-the-art results for frame identification. As expected, the results obtained with LU-based frame filtering were slightly "
     },
     {
       "expression": "\"better\"",
@@ -66,16 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " with frame filtering (Table 2) and without frame filtering (Table 3) respectively. As reported by , frame identification models usually suffer a drastic drop in performance when tested on out-of-domain data. The same trend was observed in our experiments for the YAGS test set. Nevertheless, PAFIBERT still outperformed existing methods by a large margin on this out-of-domain test set. Besides, in the more challenging setup that involved no frame filtering, the results obtained by "
+      "value": " with frame filtering (Table 2) and without frame filtering (Table 3) respectively. As reported by , frame identification models usually suffer a drastic drop in performance when tested on out-of-domain data. The same trend was observed in our experiments for the YAGS test set. Nevertheless, PAFIBERT still outperformed existing methods by a large margin on this out-of-domain test set. Besides, in the more challenging setup that involved no frame filtering, the results obtained by PAFIBERT were "
     },
     {
-      "expression": "\"PAFIBERT\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"on par\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " were on par with the prior state-of-the-art accuracies achieved with frame filtering."
+      "value": " with the prior state-of-the-art accuracies achieved with frame filtering."
     }
   ],
   "variables": {},

@@ -1,74 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Thank you for clarifying. I will ensure that each annotation uses only one category from the specified list.\n\nHere is the corrected output:\n\nWe evaluate the in- and out-of-domain performance of our approach by training models on either "
-    },
-    {
-      "expression": "\"WSJ gold data\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " only, or both "
-    },
-    {
-      "expression": "\"WSJ gold data\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"Gigaword silver data\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and evaluating on different domains. The results in Table 2 show that while the generator performs "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on test data which matches the training domain ("
-    },
-    {
-      "expression": "\"news\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), semisupervised training leads to substantial out-ofdomain improvements on the "
-    },
-    {
-      "expression": "\"Wikipedia\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and the "
-    },
-    {
-      "expression": "\"Brown corpus\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " portions of the test set."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We evaluate the in- and out-of-domain performance of our approach by training models on either WSJ gold data only, or both WSJ gold data and Gigaword silver data, and evaluating on different domains. The results in Table 2 show that while the generator performs best on test data which matches the training domain (news), semisupervised training leads to substantial out-ofdomain improvements on the Wikipedia and the Brown corpus portions of the test set."
+  }],
   "variables": {},
   "imports": [
     "scigen",

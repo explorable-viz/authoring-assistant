@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "To evaluate the annotations, inter-annotator agreement was calculated based on a subset of the gold standard corpus.4 "
+      "value": "To evaluate the annotations, inter-annotator agreement was calculated based on a subset of the gold standard corpus.4 Table 4 illustrates the values of "
     },
     {
-      "expression": "\"Table 4\"",
+      "expression": "\"observed agreement\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " illustrates the values of observed agreement ("
+      "value": " ("
     },
     {
       "expression": "\"Ao\"",
@@ -21,20 +21,11 @@
     },
     {
       "type": "literal",
-      "value": ") and Cohen's κ (Cohen, 1960) obtained for question, feature and answer annotation. The agreement values obtained for "
+      "value": ") and Cohen's κ (Cohen, 1960) obtained for question, feature and answer annotation. The agreement values obtained for question types were over "
     },
     {
-      "expression": "\"question types\"",
+      "expression": "\"0.6\"",
       "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " were "
-    },
-    {
-      "expression": "\"over 0.6\"",
-      "categories": ["comparison"],
       "type": "expression"
     },
     {

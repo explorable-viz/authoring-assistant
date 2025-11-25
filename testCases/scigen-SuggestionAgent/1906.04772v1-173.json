@@ -21,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " for each property. There is a preference to "
+      "value": " for each "
+    },
+    {
+      "expression": "\"property\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". There is a preference to "
     },
     {
       "expression": "\"word2vec\"",
@@ -39,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " embedding dimension."
+      "value": " "
+    },
+    {
+      "expression": "\"embedding dimension\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

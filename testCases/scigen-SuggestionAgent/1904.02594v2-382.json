@@ -3,7 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compare the classification accuracy of our model against several other recent methods (Table 3). Our model outperforms "
+      "value": "We "
+    },
+    {
+      "expression": "\"compare\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the classification accuracy of our model against several other recent methods (Table 3).  Our model outperforms "
+    },
+    {
+      "expression": "\"state-of-the-art methods\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"1.6%\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on SwDA, the primary dataset for this task, and comes within "
+    },
+    {
+      "expression": "\"0.6%\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on MRDA. It also "
+    },
+    {
+      "expression": "\"beats\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " a TF-IDF GloVe baseline (described in Section 5.2) by "
+    },
+    {
+      "expression": "\"16.4%\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"12.2%\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively.  The improvements that the model is able to make over the other methods are significant, however, the gains on MRDA still fall short of the "
     },
     {
       "expression": "\"state-of-the-art\"",
@@ -12,79 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " methods by "
+      "value": " by "
     },
     {
-      "expression": "\"1.6\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"0.6%\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% on "
-    },
-    {
-      "expression": "\"SwDA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", the primary dataset for this task, and comes within "
-    },
-    {
-      "expression": "\"0.6\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% on "
-    },
-    {
-      "expression": "\"MRDA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". It also beats a "
-    },
-    {
-      "expression": "\"TF-IDF GloVe baseline\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (described in Section 5.2) by "
-    },
-    {
-      "expression": "\"16.4\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% and "
-    },
-    {
-      "expression": "\"12.2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "%, respectively. The improvements that the model is able to make over the other methods are significant, however, the gains on MRDA still fall short of the state-of-the-art by "
-    },
-    {
-      "expression": "\"0.6\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "%."
+      "value": "."
     }
   ],
   "variables": {},

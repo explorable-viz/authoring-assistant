@@ -1,20 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "The results are presented in Table 2. The results in Table 2 show "
-    },
-    {
-      "expression": "\"very high\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " performance, which is likely to further increase with ongoing training."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "The results are presented in Table 2.  the results in Table 2 show very high performance, which is likely to further increase with ongoing training."
+  }],
   "variables": {},
   "imports": [
     "scigen",

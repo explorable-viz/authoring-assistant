@@ -12,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " BLEU improvement on "
+      "value": " BLEU "
     },
     {
-      "expression": "\"Rotowire-test\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"improvement\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " by our English NLG model compared to the previous state of the art."
+      "value": " on Rotowire-test by our English NLG model compared to the previous state of the art."
     }
   ],
   "variables": {},

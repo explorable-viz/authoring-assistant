@@ -3,11 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As can be seen from Table 2, the DST accuracy slightly "
+      "value": "As can be seen from Table 2, the "
+    },
+    {
+      "expression": "\"DST accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " slightly "
     },
     {
       "expression": "\"increases\"",
-      "categories": ["comparison"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -15,22 +24,40 @@
       "value": " for the "
     },
     {
-      "expression": "\"higher-quality\"",
-      "categories": ["rank"],
+      "expression": "\"higher-quality live ASR outputs\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " live ASR outputs. More importantly, the DST performance drastically "
+      "value": ". More importantly, the "
+    },
+    {
+      "expression": "\"DST performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " drastically "
     },
     {
       "expression": "\"increases\"",
-      "categories": ["comparison"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " when we evaluate on the manual transcripts that reflect the true user utterances nearly perfectly."
+      "value": " , when we evaluate on the "
+    },
+    {
+      "expression": "\"manual transcripts\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that reflect the true user utterances nearly perfectly."
     }
   ],
   "variables": {},

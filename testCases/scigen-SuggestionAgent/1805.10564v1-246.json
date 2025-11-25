@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Thank you for pointing out the mistake. Here is the corrected version:\n\nThe results of the experiments are reported in Table 1.  "
+      "value": "The results of the experiments are reported in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". A "
     },
     {
       "expression": "\"facts-to-seq model\"",
@@ -30,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ".  The analysis of the "
-    },
-    {
-      "expression": "\"Static Memory approach\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " amounts to an ablation study,  the "
+      "value": ". The analysis of the Static Memory approach amounts to an ablation study,  the "
     },
     {
       "expression": "\"DMN+\"",
@@ -48,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " is even outperformed by our "
+      "value": " is even "
+    },
+    {
+      "expression": "\"outperformed\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by our "
     },
     {
       "expression": "\"Facts-to-seq baseline\"",

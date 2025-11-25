@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
+      "value": "Table 3 shows the development set results for "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"Estonian\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " shows the development set results for Estonian.\r\n"
+      "value": ". "
     },
     {
       "expression": "\"Cognate Morfessor\"",
@@ -24,40 +24,40 @@
       "value": " outperforms the comparable "
     },
     {
-      "expression": "\"BPE\"",
+      "expression": "\"BPE system\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " system according to both measures for Estonian.\r\nThe cross-lingual segmentation is particularly beneficial for Estonian.\r\nFor Estonian, we have two ensemble configurations one combining "
+      "value": " according to both measures for "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"Estonian\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " monolingually finetuned independent runs, and one combining "
+      "value": ". The cross-lingual segmentation is particularly beneficial for "
     },
     {
-      "expression": "\"5\"",
+      "expression": "\"Estonian\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " monolingually finetuned savepoints from "
+      "value": ". For "
     },
     {
-      "expression": "\"4\"",
+      "expression": "\"Estonian\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " independent runs."
+      "value": ", we have two ensemble configurations one combining 3 monolingually finetuned independent runs, and one combining 5 monolingually finetuned savepoints from 4 independent runs."
     }
   ],
   "variables": {},

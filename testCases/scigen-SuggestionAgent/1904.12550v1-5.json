@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " set of embeddings: Google yields the "
+      "value": " set of embeddings: "
+    },
+    {
+      "expression": "\"Google\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " yields the "
     },
     {
       "expression": "\"best\"",
@@ -48,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": "), while GloVe (though only barely) leads in the Description setting ("
+      "value": "), while "
+    },
+    {
+      "expression": "\"GloVe\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (though only barely) leads in the Description setting ("
     },
     {
       "expression": "\".912\"",
@@ -57,7 +75,16 @@
     },
     {
       "type": "literal",
-      "value": "). This time, it is fastText which produces the "
+      "value": "). This time, it is "
+    },
+    {
+      "expression": "\"fastText\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which produces the "
     },
     {
       "expression": "\"best\"",

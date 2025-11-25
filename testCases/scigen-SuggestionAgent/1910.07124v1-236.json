@@ -3,43 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 demonstrates the evaluation results of "
+      "value": "Table 2 demonstrates the evaluation results of few-shot DA on the existing FewRel "
     },
     {
-      "expression": "\"few-shot\"",
+      "expression": "\"test\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " DA on the existing FewRel test set and the new test set. (1) All "
+      "value": " set and the new "
     },
     {
-      "expression": "\"few-shot\"",
+      "expression": "\"test\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models suffer dramatic performance falls when tested on a different domain. (2) Adversarial training does improve the results on the new test domain, yet still has large space for growth. (3) "
+      "value": " set.  (1) All few-shot models suffer dramatic "
     },
     {
-      "expression": "\"BERT-PAIR\"",
+      "expression": "\"performance falls\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when tested on a different "
+    },
+    {
+      "expression": "\"domain\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " outperforms all other "
+      "value": ". (2) Adversarial training does improve the results on the new "
     },
     {
-      "expression": "\"few-shot\"",
+      "expression": "\"test domain\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models on both 1.0 and 2.0 test set."
+      "value": ", yet still has large space for growth. (3) BERT-PAIR outperforms all other few-shot models on both "
+    },
+    {
+      "expression": "\"1.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"2.0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test set."
     }
   ],
   "variables": {},

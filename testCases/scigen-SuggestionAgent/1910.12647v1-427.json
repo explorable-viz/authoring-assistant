@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " layer is not hurting the performance by comparing the test set results for "
+      "value": " layer is not hurting the performance by "
+    },
+    {
+      "expression": "\"comparing\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the test set results for "
     },
     {
       "expression": "\"HUBERT (Transformer)\"",
@@ -30,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": ". The results are obtained by submitting models to the GLUE evaluation server. The results are presented in Table 5."
+      "value": ". The results are obtained by submitting models to the "
+    },
+    {
+      "expression": "\"GLUE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " evaluation server. The results are presented in Table 5."
     }
   ],
   "variables": {},

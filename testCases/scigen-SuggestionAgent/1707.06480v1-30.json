@@ -1,83 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "The results of the pre-selection are reported in Table 1. All "
-    },
-    {
-      "expression": "\"syllable-aware models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " comfortably outperform "
-    },
-    {
-      "expression": "\"Char-CNN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " when the budget is limited to "
-    },
-    {
-      "expression": "\"5M parameters\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Surprisingly, a pure word-level model, "
-    },
-    {
-      "expression": "\"LSTM-Word\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", also beats the character-aware one under such budget. The "
-    },
-    {
-      "expression": "\"three best configurations\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are "
-    },
-    {
-      "expression": "\"Syl-Concat\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"Syl-Sum\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and "
-    },
-    {
-      "expression": "\"Syl-CNN-\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "The results of the pre-selection are reported in Table 1. All syllable-aware models comfortably outperform the Char-CNN when the budget is limited to 5M parameters. Surprisingly, a pure word-level model,6 LSTM-Word, also beats the character-aware one under such budget. The three best configurations are Syl-Concat, Syl-Sum, and Syl-CNN-"
+  }],
   "variables": {},
   "imports": [
     "scigen",

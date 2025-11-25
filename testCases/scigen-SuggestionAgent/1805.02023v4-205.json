@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it, I will correct the annotations to use only one category per expression. Here is the revised paragraph:\n\nResults on the MSRA dataset are shown in Table 6.  Our chosen segmentor gives "
+      "value": "Results on the MSRA dataset are shown in Table 6.  Our chosen segmentor gives "
     },
     {
-      "expression": "\"95.93%\"",
+      "expression": "\"95.93\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " accuracy on "
+      "value": "% accuracy on "
     },
     {
       "expression": "\"5-fold cross-validated training set\"",
@@ -21,29 +21,11 @@
     },
     {
       "type": "literal",
-      "value": ".  Compared with the existing methods, our "
+      "value": ".  Compared with the existing methods, our wordbased and character-based LSTM-CRF models give competitive accuracies. The lattice model significantly outperforms both the "
     },
     {
-      "expression": "\"wordbased and character-based LSTM-CRF models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " give competitive accuracies. The lattice model significantly outperforms both the "
-    },
-    {
-      "expression": "\"best characterbased\"",
+      "expression": "\"best characterbased and word-based models\"",
       "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"word-based models\"",
-      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

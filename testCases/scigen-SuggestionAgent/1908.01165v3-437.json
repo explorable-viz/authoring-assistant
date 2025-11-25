@@ -12,7 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " Table V shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table V, l1 denotes the Transformer model under attack (e.g. en-de), l2 denotes the other Transformer model (e.g. en-fr), and "
+      "value": " Table V shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table V, "
+    },
+    {
+      "expression": "\"l1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " denotes the Transformer model under attack (e.g. en-de), "
+    },
+    {
+      "expression": "\"l2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " denotes the other Transformer model (e.g. en-fr), and "
     },
     {
       "expression": "\"lblstm\"",
@@ -21,7 +39,25 @@
     },
     {
       "type": "literal",
-      "value": " are the BLSTM counterparts of l1 and l2."
+      "value": " are the BLSTM counterparts of "
+    },
+    {
+      "expression": "\"l1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"l2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

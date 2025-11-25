@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " and baselines on the two datasets. "
+      "value": " and "
+    },
+    {
+      "expression": "\"baselines\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the two datasets. "
     },
     {
       "expression": "\"DialogWAE\"",
@@ -21,16 +30,25 @@
     },
     {
       "type": "literal",
-      "value": " outperforms the baselines in the majority of the experiments. In terms of BLEU scores, "
+      "value": " outperforms the "
     },
     {
-      "expression": "\"DialogWAE\"",
+      "expression": "\"baselines\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (with a Gaussian mixture prior network) generates more relevant responses, with the average recall of "
+      "value": " in the majority of the experiments. In terms of BLEU scores, "
+    },
+    {
+      "expression": "\"DialogWAE (with a Gaussian mixture prior network)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generates more relevant responses, with the average recall of "
     },
     {
       "expression": "\"42.0%\"",

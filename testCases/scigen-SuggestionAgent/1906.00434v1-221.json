@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We show the experiment results in Table 2.  our method consistently performs "
+      "value": "We show the experiment results in Table 2.  "
+    },
+    {
+      "expression": "\"our method\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " consistently performs "
     },
     {
       "expression": "\"better\"",
@@ -12,7 +21,34 @@
     },
     {
       "type": "literal",
-      "value": " than all baselines in all settings.  our method is also "
+      "value": " than all "
+    },
+    {
+      "expression": "\"baselines\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all "
+    },
+    {
+      "expression": "\"settings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  "
+    },
+    {
+      "expression": "\"our method\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is also "
     },
     {
       "expression": "\"better\"",

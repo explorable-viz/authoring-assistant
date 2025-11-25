@@ -3,7 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table VI shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table VI, "
+      "value": "Table "
+    },
+    {
+      "expression": "\"VI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the BLEU scores for the original/adversarial sentence (src) and their respective translation by the four NMT models. In Table "
+    },
+    {
+      "expression": "\"VI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
     },
     {
       "expression": "\"l1\"",
@@ -12,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " denotes the "
-    },
-    {
-      "expression": "\"BLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model under attack, "
+      "value": " denotes the BLSTM model under attack, "
     },
     {
       "expression": "\"l2\"",
@@ -30,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " denotes the other "
-    },
-    {
-      "expression": "\"BLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model, and "
+      "value": " denotes the other BLSTM model, and "
     },
     {
       "expression": "\"ltrans\"",

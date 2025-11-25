@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Similarly a single classifier outperforms the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric, "
+      "value": "Similarly a "
+    },
+    {
+      "expression": "\"single classifier\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric, "
     },
     {
       "expression": "\"Logistic Regression\"",
@@ -12,10 +21,10 @@
     },
     {
       "type": "literal",
-      "value": " performed "
+      "value": " performed the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },

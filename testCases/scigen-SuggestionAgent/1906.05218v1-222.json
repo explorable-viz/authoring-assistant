@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows the "
-    },
-    {
-      "expression": "\"time-indexed\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " lags that are "
+      "value": "Table 1 shows the time-indexed lags that are "
     },
     {
       "expression": "\"averaged\"",

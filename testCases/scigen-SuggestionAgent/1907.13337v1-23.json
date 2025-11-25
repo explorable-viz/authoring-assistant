@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For extractive sentence summarization, our method achieves "
+      "value": "For extractive sentence summarization, our method achieves good compression rate and "
     },
     {
-      "expression": "\"good\"",
+      "expression": "\"significantly\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " raises a "
+    },
+    {
+      "expression": "\"previous unsupervised baseline\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compression rate and significantly raises a previous unsupervised baseline on "
+      "value": " on "
     },
     {
       "expression": "\"token level F1 score\"",

@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Despite the underperformance of these features overall, Table 9 shows that they may still "
+      "value": "Despite the "
     },
     {
-      "expression": "\"improve\"",
+      "expression": "\"underperformance\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance in the subset of instances where they appear."
+      "value": " of these features overall, "
+    },
+    {
+      "expression": "\"Table 9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows that they may still improve performance in the subset of instances where they appear."
     }
   ],
   "variables": {},

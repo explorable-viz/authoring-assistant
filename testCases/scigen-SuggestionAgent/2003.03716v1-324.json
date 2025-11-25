@@ -12,25 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " module to the "
-    },
-    {
-      "expression": "\"transformer model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " trained on the "
-    },
-    {
-      "expression": "\"WMT14\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dataset. We find that the "
+      "value": " module to the transformer model trained on the WMT14 dataset. We find that the "
     },
     {
       "expression": "\"LA\"",
@@ -39,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " module slightly improves the original model but harms the performance when the "
-    },
-    {
-      "expression": "\"LA time step\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
+      "value": " module slightly improves the original model but harms the performance when the LA time step is "
     },
     {
       "expression": "\"5\"",

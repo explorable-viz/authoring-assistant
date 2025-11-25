@@ -1,38 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Table "
-    },
-    {
-      "expression": "\"1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " shows the Smatch scores (Cai and Knight, 2013) of our models, compared to a selection of previously published results. The fixed-tree decoder seems to work well with either edge model, but performance of the projective decoder drops with the "
-    },
-    {
-      "expression": "\"K&G\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " edge scores. As expected, the type-unaware baseline has low "
-    },
-    {
-      "expression": "\"recall\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", The fact that our models outperform the JAMR-style baseline so clearly is an indication that"
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 1 shows the Smatch scores (Cai and Knight, 2013) of our models, compared to a selection of previously published results.  The fixed-tree decoder seems to work well with either edge model, but performance of the projective decoder drops with the K&G edge scores.  As expected, the type-unaware baseline has low recall,  The fact that our models outperform the JAMR-style baseline so clearly is an indication that"
+  }],
   "variables": {},
   "imports": [
     "scigen",

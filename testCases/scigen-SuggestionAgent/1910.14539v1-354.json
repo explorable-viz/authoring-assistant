@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "From "
+      "value": "From Table 7, we see that sorting "
     },
     {
-      "expression": "\"Table 7\"",
+      "expression": "\"players\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", we see that sorting players helps, but only slightly. Using only team-level information, and no information about players gives "
+      "value": " helps, but only slightly. Using only team-level information, and no information about "
+    },
+    {
+      "expression": "\"players\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives "
     },
     {
       "expression": "\"worse\"",
@@ -21,7 +30,88 @@
     },
     {
       "type": "literal",
-      "value": " but still decent BLEU scores.  Week day, player position or team-level aggregated scores can be removed without hurting BLEU. However, information about next games seems useful. Interestingly, relying on position only and removing most tags (e.g.,  ,  ) seems to be fine. In this case, we also print all-zero stats, for the position of each statistic to be consistent across players and games."
+      "value": " but still decent "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  "
+    },
+    {
+      "expression": "\"Week day\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"player position\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " or team-level aggregated "
+    },
+    {
+      "expression": "\"scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " can be removed without hurting "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, information about "
+    },
+    {
+      "expression": "\"next games\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seems useful. Interestingly, relying on "
+    },
+    {
+      "expression": "\"position only\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and removing most tags (e.g.,  ,  ) seems to be fine. In this case, we also print all-zero stats, for the position of each statistic to be consistent across "
+    },
+    {
+      "expression": "\"players\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"games\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

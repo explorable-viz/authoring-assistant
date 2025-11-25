@@ -1,74 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "We then tested the BLEU scores between machine translation results and corresponding gold standard post-editing results on the "
-    },
-    {
-      "expression": "\"original\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"development\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " set, the "
-    },
-    {
-      "expression": "\"training\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " set and the "
-    },
-    {
-      "expression": "\"synthetic\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " data as shown in Table 1. Table 1 shows that there is a significant gap between the "
-    },
-    {
-      "expression": "\"synthetic eScape\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " data set (Negri et al., 2018) and the real-life data sets (the "
-    },
-    {
-      "expression": "\"development\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " set and the "
-    },
-    {
-      "expression": "\"original training\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " set from posteditors),"
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We then tested the BLEU scores between machine translation results and corresponding gold standard post-editing results on the original development set, the training set and the synthetic data as shown in Table 1.  Table 1 shows that there is a significant gap between the synthetic eScape data set (Negri et al., 2018) and the real-life data sets (the development set and the original training set from posteditors),"
+  }],
   "variables": {},
   "imports": [
     "scigen",

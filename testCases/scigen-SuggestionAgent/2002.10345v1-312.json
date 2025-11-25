@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We choose "
+      "value": "We choose different "
     },
     {
-      "expression": "\"different\"",
+      "expression": "\"teacher size\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " teacher "
+      "value": " "
     },
     {
       "expression": "\"K\"",
@@ -21,16 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " and evaluate our models in "
+      "value": " and evaluate our models in three "
     },
     {
-      "expression": "\"three\"",
+      "expression": "\"datasets\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " datasets. Table 2 shows that teacher size is sensitive to datasets. Therefore, we select the "
+      "value": ". Table 2 shows that teacher size is sensitive to datasets. Therefore, we select the "
     },
     {
       "expression": "\"best\"",

@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": ". According to our results (Table 2), the "
+      "value": ".\nAccording to our results (Table 2), the "
     },
     {
       "expression": "\"Wikification success ratios\"",
@@ -33,22 +33,13 @@
       "value": " and "
     },
     {
-      "expression": "\"Illegal Onion\"",
+      "expression": "\"Illegal Onion named entities is comparable\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " named entities is comparable and relatively "
-    },
-    {
-      "expression": "\"low\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". However, sites selling legal drugs on "
+      "value": " and relatively low.\nHowever, sites selling legal drugs on "
     },
     {
       "expression": "\"Onion\"",
@@ -57,10 +48,10 @@
     },
     {
       "type": "literal",
-      "value": " have a much "
+      "value": " have a "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"much higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },

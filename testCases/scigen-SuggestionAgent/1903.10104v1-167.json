@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also show the number of propositions in each category in "
-    },
-    {
-      "expression": "\"Table 3\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The "
+      "value": "We also show the number of propositions in each category in Table 3. The "
     },
     {
       "expression": "\"most frequent\"",

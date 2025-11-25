@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Understood, I will ensure that each expression is annotated with only one category. Here\u2019s the corrected output:\n\nBasic statistics such as "
+      "value": "Basic statistics such as "
     },
     {
       "expression": "\"corpus sizes\"",
@@ -12,11 +12,20 @@
     },
     {
       "type": "literal",
-      "value": ", frequency of various semantic annotations, and information about the length of the extracted triples of OPIEC and its subcorpora are shown in Tab. 2.  Roughly "
+      "value": ", frequency of various semantic annotations, and information about the length of the extracted triples of "
+    },
+    {
+      "expression": "\"OPIEC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and its subcorpora are shown in Tab. 2.  Roughly "
     },
     {
       "expression": "\"30%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -30,29 +39,56 @@
     },
     {
       "type": "literal",
-      "value": ") in OPIEC are clean according to the above constraints. Table 2 shows that clean triples are generally shorter on average and tend to have a "
+      "value": ") in "
     },
     {
-      "expression": "\"higher\"",
-      "categories": ["comparison"],
+      "expression": "\"OPIEC\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " confidence score than the full set of triples in OPIEC.  About "
+      "value": " are clean according to the above constraints. Table 2 shows that clean triples are generally shorter on average and tend to have a higher confidence score than the full set of triples in "
+    },
+    {
+      "expression": "\"OPIEC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  About "
     },
     {
       "expression": "\"49%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of all triples in OPIEC contain some sort of semantic annotation (cf. Tab. 2); in OPIEC-Linked, the fraction increases to "
+      "value": " of all triples in "
+    },
+    {
+      "expression": "\"OPIEC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " contain some sort of semantic annotation (cf. Tab. 2); in "
+    },
+    {
+      "expression": "\"OPIEC-Linked\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the fraction increases to "
     },
     {
       "expression": "\"58%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

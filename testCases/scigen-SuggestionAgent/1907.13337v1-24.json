@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 considers analysis of different aspects of the model. First, we look at the "
+      "value": "Table "
     },
     {
-      "expression": "\"fluency\"",
+      "expression": "\"3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model and compare the "
+      "value": " considers analysis of different aspects of the model.  First, we look at the fluency model and compare the "
     },
     {
       "expression": "\"cluster smoothing (CS)\"",
@@ -30,20 +30,20 @@
     },
     {
       "type": "literal",
-      "value": " commonly used for generation in LM-integrated models (Chorowski and Jaitly, 2016) as well as "
+      "value": " commonly used for generation in LM-integrated models (Chorowski and Jaitly, 2016) as well as no adjustment ("
     },
     {
-      "expression": "\"no adjustment (NA)\"",
+      "expression": "\"NA\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Second, we vary the "
+      "value": "). Second, we vary the "
     },
     {
       "expression": "\"3\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -51,49 +51,31 @@
       "value": "-layer representation out of ELMo forward language model to do contextual matching ("
     },
     {
-      "expression": "\"bot/mid/top: bottom/middle/top layer only\"",
+      "expression": "\"bot/mid/top\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", "
+      "value": ": bottom/middle/top layer only, avg: average of "
     },
     {
-      "expression": "\"avg: average of 3 layers\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"cat: concatenation of all layers\"",
+      "expression": "\"3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). Results show the effectiveness of our cluster smoothing method for the "
+      "value": " layers, cat: concatenation of all layers).  Results show the effectiveness of our cluster smoothing method for the vocabulary adaptive language model pfm, although temperature smoothing is an option for abstractive datasets.  When using word embeddings ("
     },
     {
-      "expression": "\"vocabulary adaptive language model pfm\"",
+      "expression": "\"bottom layer only\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", although temperature smoothing is an option for abstractive datasets. When using word embeddings (bottom layer only from ELMo language model) in our contextual matching model "
-    },
-    {
-      "expression": "\"pcm\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", the summarization performance drops significantly to below simple baselines as demonstrated by score decrease."
+      "value": " from ELMo language model) in our contextual matching model pcm, the summarization performance drops significantly to below simple baselines as demonstrated by score decrease."
     }
   ],
   "variables": {},

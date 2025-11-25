@@ -1,74 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "results in Table 3 show that "
-    },
-    {
-      "expression": "\"large\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " batch training can significantly improve the performance of single "
-    },
-    {
-      "expression": "\"Transformers\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", particularly when trained to produce longer sequences. Accumulating the gradient over "
-    },
-    {
-      "expression": "\"8\"",
-      "categories": ["sum"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " batches of size "
-    },
-    {
-      "expression": "\"4096\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " gives a "
-    },
-    {
-      "expression": "\"3\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " BLEU improvement for the linear derivation model. It has been suggested that decaying the learning rate can have a similar effect to large batch training ("
-    },
-    {
-      "expression": "\"Smith et al., 2017\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), but reducing the initial learning rate by a factor of "
-    },
-    {
-      "expression": "\"8\"",
-      "categories": ["sum"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " alone did not give the same improvements."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "results in Table 3 show that large batch training can significantly improve the performance of single Transformers, particularly when trained to produce longer sequences. Accumulating the gradient over 8 batches of size 4096 gives a 3 BLEU improvement for the linear derivation model. It has been suggested that decaying the learning rate can have a similar effect to large batch training (Smith et al., 2017), but reducing the initial learning rate by a factor of 8 alone did not give the same improvements."
+  }],
   "variables": {},
   "imports": [
     "scigen",

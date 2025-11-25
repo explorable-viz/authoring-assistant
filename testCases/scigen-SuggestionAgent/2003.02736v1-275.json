@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our results are given in Table 4. We found that the "
+      "value": "Our results are given in Table 4.  We found that the "
     },
     {
       "expression": "\"Wikipedia\"",
@@ -34,12 +34,21 @@
     },
     {
       "expression": "\"0.8\"",
-      "categories": ["min-max"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). For political speeches, we observed that the human annotators both found many more examples to be check-worthy than were labelled in the dataset."
+      "value": "). For "
+    },
+    {
+      "expression": "\"political speeches\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we observed that the human annotators both found many more examples to be check-worthy than were labelled in the dataset."
     }
   ],
   "variables": {},

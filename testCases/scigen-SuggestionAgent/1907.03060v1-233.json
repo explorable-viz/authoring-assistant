@@ -21,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " trilingual sentences to create a test set, and concatenated the rest of them and bilingual sentences to form development sets."
+      "value": " trilingual sentences to create a test set, and concatenated the rest of them and "
+    },
+    {
+      "expression": "\"bilingual\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sentences to form development sets."
     }
   ],
   "variables": {},

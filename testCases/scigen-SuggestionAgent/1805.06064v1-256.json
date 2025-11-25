@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. I'll ensure that each annotation uses a single category appropriately:\n\nWe trained and evaluated our editing approach with "
+      "value": "We trained and evaluated our editing approach with "
     },
     {
       "expression": "\"1-6\"",
@@ -15,13 +15,13 @@
       "value": " iterations and the experimental results (Table 5) showed that the "
     },
     {
-      "expression": "\"second iteration\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"second\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " produced the "
+      "value": " iteration produced the "
     },
     {
       "expression": "\"best\"",
@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " results."
     }
   ],
   "variables": {},

@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables 1 and 2 report, respectively, the distribution of the events per token "
+      "value": "Tables 1 and 2 report, respectively, the distribution of the events "
     },
     {
-      "expression": "\"part-of speech\"",
+      "expression": "\"per token part-of speech\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " ("
+      "value": " (POS) and "
     },
     {
-      "expression": "\"POS\"",
+      "expression": "\"per event class\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and per event class.  "
+      "value": ".  "
     },
     {
       "expression": "\"verbs\"",
@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " are the largest annotated category, followed by "
+      "value": " are the "
+    },
+    {
+      "expression": "\"largest annotated category\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", followed by "
     },
     {
       "expression": "\"nouns\"",

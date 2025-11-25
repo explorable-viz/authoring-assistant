@@ -1,74 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Thank you for the clarification. Let's correct that and annotate the paragraph again with the appropriate categories.\n\nConsequently in Table 5 we experiment with "
-    },
-    {
-      "expression": "\"BI\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"α = 0.1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "). In this case "
-    },
-    {
-      "expression": "\"BI\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " matches or "
-    },
-    {
-      "expression": "\"out-performs\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] the uniform ensemble. Notably, for en2es, where "
-    },
-    {
-      "expression": "\"BI\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"α = 0.5\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") performed well, taking "
-    },
-    {
-      "expression": "\"α = 0.1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " does not harm performance."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Consequently in Table 5 we experiment with BI (α = 0.1). In this case BI matches or out-performs the uniform ensemble. Notably, for en2es, where BI (α = 0.5) performed well, taking α = 0.1 does not harm performance."
+  }],
   "variables": {},
   "imports": [
     "scigen",

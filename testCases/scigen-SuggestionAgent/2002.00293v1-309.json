@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We select a randomly chosen validator's answer to each question and compute Exact Match ("
+      "value": "We select a randomly chosen validator's answer to each question and compute "
     },
     {
-      "expression": "\"EM\"",
+      "expression": "\"Exact Match\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") and "
+      "value": " (EM) and "
     },
     {
-      "expression": "\"word overlap F1\"",
+      "expression": "\"word overlap F1 scores\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " scores with the original to calculate non-expert human performance; Table 1 shows the result. We observe a clear trend: the stronger the model in the loop used to construct the dataset, the harder the resulting questions become for humans."
+      "value": " with the original to calculate non-expert human performance; Table 1 shows the result. We observe a clear trend: the stronger the model in the loop used to construct the dataset, the harder the resulting questions become for humans."
     }
   ],
   "variables": {},

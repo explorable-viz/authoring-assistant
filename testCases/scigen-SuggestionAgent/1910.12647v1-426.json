@@ -1,92 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Again transferring "
-    },
-    {
-      "expression": "\"roles\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " gives positive results except for "
-    },
-    {
-      "expression": "\"RTE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". "
-    },
-    {
-      "expression": "\"Filler vectors\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " learned from "
-    },
-    {
-      "expression": "\"QQP\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are more "
-    },
-    {
-      "expression": "\"transferable\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " compared to "
-    },
-    {
-      "expression": "\"MNLI\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and gives a boost to all tasks except for "
-    },
-    {
-      "expression": "\"SNLI\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Surprisingly, transferring "
-    },
-    {
-      "expression": "\"BERT parameters\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is hurting the results now even when "
-    },
-    {
-      "expression": "\"TPR\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is present."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Again transferring roles gives positive results except for RTE. Filler vectors learned from QQP are more transferable compared to MNLI and gives a boost to all tasks except for SNLI. Surprisingly, transferring BERT parameters is hurting the results now even when TPR is present."
+  }],
   "variables": {},
   "imports": [
     "scigen",

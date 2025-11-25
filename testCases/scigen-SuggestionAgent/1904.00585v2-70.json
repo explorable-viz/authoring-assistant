@@ -39,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " performance than the ones pretrained on larger sources (Table 5).  On "
+      "value": " performance than the ones pretrained on "
+    },
+    {
+      "expression": "\"larger sources\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Table 5).  On "
     },
     {
       "expression": "\"JNLPBA\"",
@@ -66,7 +75,25 @@
     },
     {
       "type": "literal",
-      "value": ", LMs pretrained on the small similar source perform "
+      "value": ", "
+    },
+    {
+      "expression": "\"LMs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " pretrained on the "
+    },
+    {
+      "expression": "\"small similar source\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " perform "
     },
     {
       "expression": "\"better\"",
@@ -75,7 +102,34 @@
     },
     {
       "type": "literal",
-      "value": ", while word vectors pretrained on the small similar source perform better on "
+      "value": ", while "
+    },
+    {
+      "expression": "\"word vectors\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " pretrained on the "
+    },
+    {
+      "expression": "\"small similar source\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " perform "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
     },
     {
       "expression": "\"CRAFT\"",
@@ -84,7 +138,25 @@
     },
     {
       "type": "literal",
-      "value": ", JNLPBA, and ScienceIE."
+      "value": ", "
+    },
+    {
+      "expression": "\"JNLPBA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"ScienceIE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

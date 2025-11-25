@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The right-hand side of "
+      "value": "The right-hand side of table 1 shows the "
     },
     {
-      "expression": "\"table 1\"",
+      "expression": "\"performance\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " shows the performance of our "
+      "value": " of our "
     },
     {
       "expression": "\"SVM\"",
@@ -21,16 +21,34 @@
     },
     {
       "type": "literal",
-      "value": " and the two neural methods. The results indicate that the "
+      "value": " and the two "
     },
     {
-      "expression": "\"SVM\"",
+      "expression": "\"neural methods\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " setup is well suited for the difficulty prediction task and that it successfully generalizes to new data."
+      "value": ". The results indicate that the "
+    },
+    {
+      "expression": "\"SVM setup\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is well suited for the "
+    },
+    {
+      "expression": "\"difficulty prediction task\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and that it successfully generalizes to new data."
     }
   ],
   "variables": {},

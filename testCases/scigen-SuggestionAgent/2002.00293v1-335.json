@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ", and observe how well models can then learn to generalise on the respective test portions of these datasets. Table 5 shows the results, and there is a multitude of observations.  First, one clear trend we observe across all training data setups is a clear negative performance progression when evaluated against datasets constructed with a stronger model in the loop. This trend holds true for all but the "
+      "value": ", and observe how well models can then learn to generalise on the respective test portions of these datasets. Table 5 shows the results, and there is a multitude of observations.  First, one clear trend we observe across all training data setups is a clear "
+    },
+    {
+      "expression": "\"negative\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance progression when evaluated against datasets constructed with a stronger model in the loop. This trend holds true for all but the "
     },
     {
       "expression": "\"BiDAF\"",
@@ -39,7 +48,25 @@
     },
     {
       "type": "literal",
-      "value": " model, in each of the training configurations, and for each of the evaluation datasets. For example, RoBERTa trained on DRoBERTa achieves "
+      "value": " model, in each of the training configurations, and for each of the evaluation datasets. For example, "
+    },
+    {
+      "expression": "\"RoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " trained on "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves "
     },
     {
       "expression": "\"71.4\"",
@@ -75,16 +102,16 @@
     },
     {
       "type": "literal",
-      "value": " F1 when evaluated on DSQuAD, DBiDAF, DBERT and DRoBERTa, respectively. Second, we observe that the "
+      "value": " F1 when evaluated on "
     },
     {
-      "expression": "\"BiDAF\"",
+      "expression": "\"DSQuAD\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model is not able to generalise well to datasets constructed with a model in the loop, independent of its training setup. In particular it is unable to learn from DBiDAF, thus failing to overcome some of its own blind spots through adversarial training. Both when training only on "
+      "value": ", "
     },
     {
       "expression": "\"DBiDAF\"",
@@ -93,7 +120,61 @@
     },
     {
       "type": "literal",
-      "value": ", as well as when adding DSQuAD to "
+      "value": ", "
+    },
+    {
+      "expression": "\"DBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively. Second, we observe that the "
+    },
+    {
+      "expression": "\"BiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model is not able to generalise well to datasets constructed with a model in the loop, independent of its training setup. In particular it is unable to learn from "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", thus failing to overcome some of its own blind spots through adversarial training. Both when training only on "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as well as when adding "
+    },
+    {
+      "expression": "\"DSQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
     },
     {
       "expression": "\"DBiDAF\"",
@@ -111,7 +192,34 @@
     },
     {
       "type": "literal",
-      "value": " performs poorly across all the adversarial datasets.  results in Table 5, where training on DBiDAF in several cases led to better generalisation than training on DRoBERTa.  we further train each of our three models on either "
+      "value": " performs poorly across all the adversarial datasets.  results in Table 5, where training on "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in several cases led to "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generalisation than training on "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  we further train each of our three models on either "
     },
     {
       "expression": "\"DBiDAF\"",
@@ -138,7 +246,25 @@
     },
     {
       "type": "literal",
-      "value": " and test on DSQuAD, with results in the DSQuAD columns of Table 5.  First, we observe clear generalisation improvements towards DDROP across all models compared to training on "
+      "value": " and test on "
+    },
+    {
+      "expression": "\"DSQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with results in the "
+    },
+    {
+      "expression": "\"DSQuAD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " columns of Table 5.  First, we observe clear generalisation improvements towards DDROP across all models compared to training on "
     },
     {
       "expression": "\"DSQuAD(10K)\"",
@@ -147,7 +273,34 @@
     },
     {
       "type": "literal",
-      "value": " when using any of the DBiDAF, DBERT, or DRoBERTa datasets for training. That is, including a model in the loop for the training dataset leads to improved transfer towards DDROP. Note that the DROP dataset also makes use of a "
+      "value": " when using any of the "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"DBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", or "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets for training. That is, including a model in the loop for the training dataset leads to improved transfer towards DDROP. Note that the DROP dataset also makes use of a "
     },
     {
       "expression": "\"BiDAF\"",
@@ -156,7 +309,34 @@
     },
     {
       "type": "literal",
-      "value": " model in the loop during annotation; these results are in line with our prior observations when testing the same setups on DBiDAF, DBERT and DRoBERTa, compared to training on "
+      "value": " model in the loop during annotation; these results are in line with our prior observations when testing the same setups on "
+    },
+    {
+      "expression": "\"DBiDAF\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"DBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"DRoBERTa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", compared to training on "
     },
     {
       "expression": "\"DSQuAD(10K)\"",
@@ -174,7 +354,16 @@
     },
     {
       "type": "literal",
-      "value": "F1 for a BERT model trained on "
+      "value": "F1 for a "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model trained on "
     },
     {
       "expression": "\"DBiDAF\"",

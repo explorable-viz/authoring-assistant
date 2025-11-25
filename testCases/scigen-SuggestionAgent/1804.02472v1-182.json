@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it! I'll correct the annotation to use the appropriate category. Here is the revised paragraph:\n\nTable 7 shows results from a manual error analysis on "
+      "value": "Table 7 shows results from a manual error analysis on "
     },
     {
       "expression": "\"50\"",
@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " events from UDS-IH2-dev with "
+      "value": " events from "
+    },
+    {
+      "expression": "\"UDS-IH2-dev\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with "
     },
     {
       "expression": "\"highest\"",

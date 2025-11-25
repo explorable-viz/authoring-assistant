@@ -12,7 +12,34 @@
     },
     {
       "type": "literal",
-      "value": " shows the results on the two domain-specific tasks of music and medical domain corpora. "
+      "value": " shows the results on the two "
+    },
+    {
+      "expression": "\"domain-specific tasks\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"music\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"medical domain corpora\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
     },
     {
       "expression": "\"SPON\"",

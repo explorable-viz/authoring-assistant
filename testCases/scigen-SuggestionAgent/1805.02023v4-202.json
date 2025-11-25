@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the values of hyper-parameters for our models, In particular, the embedding sizes are set to "
+      "value": "Table 3 shows the values of hyper-parameters for our models,  In particular, the embedding sizes are set to "
     },
     {
       "expression": "\"50\"",

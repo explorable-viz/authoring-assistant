@@ -1,56 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "First, from the EnFr results in Table 3, we are in line with "
-    },
-    {
-      "expression": "\"GNMT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (Wu et al., 2016), and within "
-    },
-    {
-      "expression": "\"2\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " BLEU points of the "
-    },
-    {
-      "expression": "\"RNN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"Transformer\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " models investigated by Chen et al. (2018).  we compare quite favorably with Lee et al. (2017), exceeding their reported scores by "
-    },
-    {
-      "expression": "\"3-6 points\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "First, from the EnFr results in Table 3, we are in line with GNMT (Wu et al., 2016), and within 2 BLEU points of the RNN and Transformer models investigated by Chen et al. (2018).  we compare quite favorably with Lee et al. (2017), exceeding their reported scores by 3-6 points,"
+  }],
   "variables": {},
   "imports": [
     "scigen",

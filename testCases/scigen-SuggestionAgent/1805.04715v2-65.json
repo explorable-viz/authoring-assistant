@@ -3,43 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Understood. I'll ensure that each annotation uses only one category from the specified list. Here is the corrected output:\n\nTable 4 presents "
+      "value": "Table 4 presents results on the second dataset for the "
     },
     {
-      "expression": "\"results\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on the second "
-    },
-    {
-      "expression": "\"dataset\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for the "
-    },
-    {
-      "expression": "\"best models\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " identified on the first "
-    },
-    {
-      "expression": "\"dataset\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The "
+      "value": " models identified on the first dataset. The "
     },
     {
       "expression": "\"LDA-Frames\"",
@@ -51,22 +24,13 @@
       "value": " yielded the "
     },
     {
-      "expression": "\"best results\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with our approach performing comparably in terms of the "
-    },
-    {
-      "expression": "\"F1-score\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " results with our approach performing comparably in terms of the F1-score."
     }
   ],
   "variables": {},

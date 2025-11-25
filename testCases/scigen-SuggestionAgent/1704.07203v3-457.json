@@ -3,7 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "You are correct. Let's adjust the annotation to use valid categories:\n\nWe also performed experiments with mixed sources, the results are shown in Table 4.  In this scenario, the neural network systems seem to benefit from the increased amount of "
+      "value": "We also performed experiments with "
+    },
+    {
+      "expression": "\"mixed sources\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the results are shown in "
+    },
+    {
+      "expression": "\"Table\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " 4.\nIn this scenario, the "
+    },
+    {
+      "expression": "\"neural network systems\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seem to benefit from the increased amount of "
     },
     {
       "expression": "\"training data\"",
@@ -21,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " results."
     }
   ],
   "variables": {},

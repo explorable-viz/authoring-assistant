@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Thank you for the correction. Here is the revised output with the correct category:\n\nTable 6 shows that the "
+      "value": "Table 6 shows that the "
     },
     {
       "expression": "\"C-LSTM\"",
@@ -15,13 +15,13 @@
       "value": " model performs well on the scientific embeddings, but consistently "
     },
     {
-      "expression": "\"worse than\"",
+      "expression": "\"worse\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the "
+      "value": " than the "
     },
     {
       "expression": "\"SVM\"",

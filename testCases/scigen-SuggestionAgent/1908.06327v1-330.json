@@ -12,16 +12,34 @@
     },
     {
       "type": "literal",
-      "value": " as seen in Table 2(b). These changes result in an embedding with comparable performance to the "
+      "value": " as seen in "
     },
     {
-      "expression": "\"HGLMM 6K-D\"",
+      "expression": "\"Table 2(b)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " features, which are reported in Table 2(e). However, our word embedding tends to perform "
+      "value": ". These changes result in an embedding with comparable performance to the "
+    },
+    {
+      "expression": "\"HGLMM 6K-D features\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which are reported in "
+    },
+    {
+      "expression": "\"Table 2(e)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, our word embedding tends to perform "
     },
     {
       "expression": "\"better\"",
@@ -61,7 +79,7 @@
     },
     {
       "expression": "\"6.3\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -69,49 +87,94 @@
       "value": " compared to "
     },
     {
-      "expression": "\"HGLMM's 6K-D Self-Attention\"",
+      "expression": "\"HGLMM's 6K-D Self-Attention result\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " result in line two of Table 2(c) and Table 2(e) for image-sentence retrieval of Flickr30K. For comparison, "
+      "value": " in line two of "
     },
     {
-      "expression": "\"GrOVLE's Self-Attention\"",
+      "expression": "\"Table 2(c)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " result in Table 2(b) is only "
+      "value": " and "
     },
     {
-      "expression": "\"3 points\"",
+      "expression": "\"Table 2(e)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " lower.  Finally, we report results using HGLMM of different dimension. "
+      "value": " for image-sentence retrieval of Flickr30K. For comparison, "
     },
     {
-      "expression": "\"HGLMM 300-D\"",
+      "expression": "\"GrOVLE's Self-Attention result\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " features are used for a more fair comparison to other embeddings. While the "
+      "value": " in "
     },
     {
-      "expression": "\"HGLMM 6K-D\"",
+      "expression": "\"Table 2(b)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " representation primarily results in the highest performance, it performs more poorly on generation tasks and also results in high variance. For example, column one in Table 2(e) shows a range of "
+      "value": " is only "
+    },
+    {
+      "expression": "\"3 points lower\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Finally, we report results using HGLMM of different dimension. "
+    },
+    {
+      "expression": "\"HGLMM 300-D features\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are used for a more fair comparison to other embeddings. While the "
+    },
+    {
+      "expression": "\"HGLMM 6K-D representation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " primarily results in the "
+    },
+    {
+      "expression": "\"highest performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it performs more poorly on generation tasks and also results in high variance. For example, column one in "
+    },
+    {
+      "expression": "\"Table 2(e)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows a range of "
     },
     {
       "expression": "\"7.1\"",
@@ -120,16 +183,7 @@
     },
     {
       "type": "literal",
-      "value": " in mean recall, unlike "
-    },
-    {
-      "expression": "\"GrOVLE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " which has a range of "
+      "value": " in mean recall, unlike GrOVLE which has a range of "
     },
     {
       "expression": "\"2.6\"",

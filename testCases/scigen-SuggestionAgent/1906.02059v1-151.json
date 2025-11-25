@@ -1,65 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Understood, I will use the correct categories. Here is the revised output:\n\nBOW-SVR performs "
-    },
-    {
-      "expression": "\"worse\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than BIGRU-ATT, while HAN is "
-    },
-    {
-      "expression": "\"10%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"3%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " better, respectively. HIER-BERT further improves the results, outperforming HAN by "
-    },
-    {
-      "expression": "\"17%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  HIER-BERT has the "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ρ (.527), indicating a moderate positive correlation (> "
-    },
-    {
-      "expression": "\"0.5\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), which is not the case for the rest of the methods."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "BOW-SVR performs worse than BIGRU-ATT, while HAN is 10% and 3% better, respectively. HIER-BERT further improves the results, outperforming HAN by 17%.  HIER-BERT has the best ρ (.527), indicating a moderate positive correlation (> 0.5), which is not the case for the rest of the methods."
+  }],
   "variables": {},
   "imports": [
     "scigen",

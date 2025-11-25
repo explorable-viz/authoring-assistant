@@ -1,65 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Got it, I will ensure that each annotation uses only one category. Here is the corrected paragraph:\n\nTable 2 shows a selection of the "
-    },
-    {
-      "expression": "\"f1-scores\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " achieved on properties in the "
-    },
-    {
-      "expression": "\"CSLB dataset\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in relation to the "
-    },
-    {
-      "expression": "\"average cosine similarity\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the associated words. A high "
-    },
-    {
-      "expression": "\"average cosine similarity\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " means that the concepts overall have similar vector representations and can thus be seen as having a low diversity. The results of the "
-    },
-    {
-      "expression": "\"Spearman Rank correlation\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " clearly indicate that scores achieved by nearest neighbors correlate more strongly with the "
-    },
-    {
-      "expression": "\"average cosine similarity\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than the two supervised classification approaches."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 2 shows a selection of the f1-scores achieved on properties in the CSLB dataset in relation to the average cosine similarity of the associated words. A high average cosine similarity means that the concepts overall have similar vector representations and can thus be seen as having a low diversity. The results of the Spearman Rank correlation clearly indicate that scores achieved by nearest neighbors correlate more strongly with the average cosine than the two supervised classification approaches."
+  }],
   "variables": {},
   "imports": [
     "scigen",

@@ -15,13 +15,13 @@
       "value": " "
     },
     {
-      "expression": "\"worsens\"",
+      "expression": "\"worsens in performance\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in performance for "
+      "value": " for "
     },
     {
       "expression": "\"BERTCLS\"",
@@ -39,16 +39,43 @@
     },
     {
       "type": "literal",
-      "value": " in table 5 where it "
+      "value": " in table 5 where it hurts "
     },
     {
-      "expression": "\"hurts\"",
-      "categories": ["comparison"],
+      "expression": "\"test set performance\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test set performance on ddi but is not statistically significant when cross validation is performed.  In table 5, we tested the generalizability of the commonly used piecewise pooling technique  While piecewise pooling helps i2b2 by "
+      "value": " on "
+    },
+    {
+      "expression": "\"ddi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " but is not statistically significant when cross validation is performed.  In table 5, we tested the generalizability of the commonly used piecewise pooling technique  While "
+    },
+    {
+      "expression": "\"piecewise pooling\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " helps "
+    },
+    {
+      "expression": "\"i2b2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
     },
     {
       "expression": "\"1%\"",
@@ -57,16 +84,124 @@
     },
     {
       "type": "literal",
-      "value": ", it "
+      "value": ", it hurts "
     },
     {
-      "expression": "\"hurts\"",
-      "categories": ["comparison"],
+      "expression": "\"test set performance\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test set performance on ddi and doesn't affect performance on semeval.  We found ELMo and BER tokens to boost performance significantly for all datasets, but that BERT-CLS hurt performance for the medical datasets. While BERT-CLS boosted test set performance for semeval, this was not found to be a statistically significant difference for cross validation."
+      "value": " on "
+    },
+    {
+      "expression": "\"ddi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and doesn't affect "
+    },
+    {
+      "expression": "\"performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"semeval\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We found "
+    },
+    {
+      "expression": "\"ELMo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BER tokens\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to boost "
+    },
+    {
+      "expression": "\"performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " significantly for all datasets, but that "
+    },
+    {
+      "expression": "\"BERT-CLS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hurt "
+    },
+    {
+      "expression": "\"performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the medical datasets. While "
+    },
+    {
+      "expression": "\"BERT-CLS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " boosted "
+    },
+    {
+      "expression": "\"test set performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"semeval\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", this was not found to be a statistically significant "
+    },
+    {
+      "expression": "\"difference\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for cross validation."
     }
   ],
   "variables": {},

@@ -1,65 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Thank you for the clarification. I'll adjust the annotations accordingly.\n\nHere's the revised paragraph:\n\nWe also report "
-    },
-    {
-      "expression": "\"the average\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " number of generated keyphrases per document, denoted as  \"Avg. #\". The results are shown in Table 4, where "
-    },
-    {
-      "expression": "\"oracle\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is a model that always generates the ground-truth keyphrases. The resultant MAEs demonstrate that our deep reinforced models notably "
-    },
-    {
-      "expression": "\"outperform\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the baselines on predicting the number of absent keyphrases and slightly "
-    },
-    {
-      "expression": "\"outperform\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the baselines on predicting the number of present keyphrases. Moreover, our deep reinforced models generate significantly "
-    },
-    {
-      "expression": "\"more\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " absent keyphrases than the baselines  Besides, the baseline models and our reinforced models generate similar numbers of present keyphrases, while our reinforced models achieve notably "
-    },
-    {
-      "expression": "\"higher\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " F -measures, implying that our methods generate present keyphrases more accurately than the baselines."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We also report the average number of generated keyphrases per document, denoted as  \"Avg. #\". The results are shown in Table 4, where oracle is a model that always generates the ground-truth keyphrases. The resultant MAEs demonstrate that our deep reinforced models notably outperform the baselines on predicting the number of absent keyphrases and slightly outperform the baselines on predicting the number of present keyphrases. Moreover, our deep reinforced models generate significantly more absent keyphrases than the baselines  Besides, the baseline models and our reinforced models generate similar numbers of present keyphrases, while our reinforced models achieve notably higher F -measures, implying that our methods generate present keyphrases more accurately than the baselines."
+  }],
   "variables": {},
   "imports": [
     "scigen",

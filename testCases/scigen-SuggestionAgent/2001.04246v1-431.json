@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The model performance and corresponding model size are reported in Table 5. On the one hand, removing the efficiency-aware loss ("
+      "value": "The "
     },
     {
-      "expression": "\"β = 0\"",
+      "expression": "\"model performance\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") leads to the increase in model parameter size, on the other hand, a more aggressive efficiency preference ("
+      "value": " and corresponding "
     },
     {
-      "expression": "\"β = 8\"",
+      "expression": "\"model size\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") results in the small model size but degraded performance, since a large "
+      "value": " are reported in Table 5. On the one hand, removing the efficiency-aware loss ("
     },
     {
       "expression": "\"β\"",
@@ -30,16 +30,115 @@
     },
     {
       "type": "literal",
-      "value": " encourages the compressed model to adopt more lightweight operations such as zero and skip which hurt the performance. A moderate efficiency constraint ("
+      "value": " = "
     },
     {
-      "expression": "\"β = 4\"",
+      "expression": "\"0\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") provides a regularization, guiding the AdaBERT method to achieve a trade-off between the small parameter size and the good performance."
+      "value": ") leads to the increase in "
+    },
+    {
+      "expression": "\"model parameter size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", on the other hand, a more aggressive efficiency preference ("
+    },
+    {
+      "expression": "\"β\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " = "
+    },
+    {
+      "expression": "\"8\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") results in the small "
+    },
+    {
+      "expression": "\"model size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " but degraded "
+    },
+    {
+      "expression": "\"performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", since a large "
+    },
+    {
+      "expression": "\"β\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " encourages the compressed model to adopt more lightweight operations such as zero and skip which hurt the "
+    },
+    {
+      "expression": "\"performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". A moderate efficiency constraint ("
+    },
+    {
+      "expression": "\"β\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " = "
+    },
+    {
+      "expression": "\"4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") provides a regularization, guiding the AdaBERT method to achieve a trade-off between the small "
+    },
+    {
+      "expression": "\"parameter size\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the good "
+    },
+    {
+      "expression": "\"performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

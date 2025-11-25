@@ -1,56 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Thank you for the clarification. I will adjust accordingly.\n\nHere is the corrected output:\n\nTable 7 shows that both "
-    },
-    {
-      "expression": "\"FT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"TANDA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " using "
-    },
-    {
-      "expression": "\"ASNQ\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " provide significantly "
-    },
-    {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " performance than "
-    },
-    {
-      "expression": "\"QNLI\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on the WikiQA dataset."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 7 shows that both FT and TANDA using ASNQ provide significantly better performance than QNLI on the WikiQA dataset."
+  }],
   "variables": {},
   "imports": [
     "scigen",

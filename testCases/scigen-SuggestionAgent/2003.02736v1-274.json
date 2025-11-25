@@ -1,47 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Thank you for the clarification. Let's correct that accordingly:\n\nThe results for political speech check-worthiness detection are given in Table 3. We found that the "
-    },
-    {
-      "expression": "\"vanilla BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model performed the "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of all models. As we added transfer learning and PU learning, the performance steadily dropped, with the "
-    },
-    {
-      "expression": "\"worst performing\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model being the one using "
-    },
-    {
-      "expression": "\"PUC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "The results for political speech check-worthiness detection are given in Table 3. We found that the vanilla BERT model performed the best of all models. As we added transfer learning and PU learning, the performance steadily dropped, with the worst performing model being the one using PUC."
+  }],
   "variables": {},
   "imports": [
     "scigen",

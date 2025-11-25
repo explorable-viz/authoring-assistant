@@ -12,70 +12,43 @@
     },
     {
       "type": "literal",
-      "value": ", the "
+      "value": ", the two top rows provide the "
     },
     {
-      "expression": "\"two top rows\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " provide the "
+      "value": " results of "
     },
     {
-      "expression": "\"best results\"",
+      "expression": "\"Gong et al. (2018)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The first interesting finding is that the AVG COS SIM measure again performs very well: In all three settings, it "
+    },
+    {
+      "expression": "\"beats\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " both the system based on general-purpose embeddings (topic wiki) and the one that is adapted to the science domain (topic science), with again the Both setting yielding the "
+    },
+    {
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of "
-    },
-    {
-      "expression": "\"Gong et al.\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (2018). The first interesting finding is that the AVG COS SIM measure again performs very well: In all three settings, it beats both the system based on general-purpose embeddings ("
-    },
-    {
-      "expression": "\"topic wiki\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") and the one that is adapted to the science domain ("
-    },
-    {
-      "expression": "\"topic science\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), with again the "
-    },
-    {
-      "expression": "\"Both setting\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " yielding the "
-    },
-    {
-      "expression": "\"best overall result\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
+      "value": " overall result ("
     },
     {
       "expression": "\".926\"",
@@ -84,25 +57,7 @@
     },
     {
       "type": "literal",
-      "value": "). Note that our "
-    },
-    {
-      "expression": "\"Both setting\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is probably the one most similar to the concept input used by "
-    },
-    {
-      "expression": "\"Gong et al.\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (2018)."
+      "value": "). Note that our Both setting is probably the one most similar to the concept input used by Gong et al. (2018)."
     }
   ],
   "variables": {},

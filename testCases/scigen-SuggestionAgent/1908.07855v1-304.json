@@ -3,16 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are summarized in Table "
+      "value": "The "
     },
     {
-      "expression": "\"Almost all\"",
-      "categories": ["comparison"],
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the methods performed similar to "
+      "value": " are summarized in Table "
+    },
+    {
+      "expression": "\"Almost\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " all the "
+    },
+    {
+      "expression": "\"methods\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performed similar to "
     },
     {
       "expression": "\"random guess\"",

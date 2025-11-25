@@ -12,7 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " EnDe bitext sources does not seriously impact the translation quality of the transformer-base baseline.  Table 2 shows results for various values of "
+      "value": " "
+    },
+    {
+      "expression": "\"EnDe\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " bitext sources does not seriously impact the translation quality of the "
+    },
+    {
+      "expression": "\"transformer-base\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " baseline.  Table 2 shows results for various values of "
     },
     {
       "expression": "\"p\"",
@@ -25,7 +43,7 @@
     },
     {
       "expression": "\"100%\"",
-      "categories": ["comparison"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

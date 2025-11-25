@@ -6,22 +6,22 @@
       "value": "The results of the human evaluation are displayed in Table 6.  These scores show that we succeed in producing output sequences that reach a "
     },
     {
-      "expression": "\"high level\"",
+      "expression": "\"high\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of grammatical soundness and almost always perfectly preserve the original meaning of the input. The third dimension under consideration, structural simplicity, which captures the degree of minimality in the simplified sentences, scores "
+      "value": " level of grammatical soundness and almost always perfectly preserve the original meaning of the input. The third dimension under consideration, structural simplicity, which captures the degree of minimality in the simplified sentences, scores "
     },
     {
-      "expression": "\"high values\"",
+      "expression": "\"high\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", too."
+      "value": " values, too."
     }
   ],
   "variables": {},

@@ -3,7 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We present our results in Table 1. As shown in Table 1, our model "
+      "value": "We present our results in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As shown in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", our model "
     },
     {
       "expression": "\"CMAML\"",

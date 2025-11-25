@@ -61,7 +61,7 @@
     },
     {
       "expression": "\"more diverse\"",
-      "categories": ["data-retrieval"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -93,34 +93,7 @@
     },
     {
       "type": "literal",
-      "value": " generations, even though "
-    },
-    {
-      "expression": "\"GPT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " was only trained on romance novels and "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " was trained on romance novels and Wikipedia. On actual data from TBC, the outside language model is about as "
-    },
-    {
-      "expression": "\"perplexed\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " as on the "
+      "value": " generations, even though GPT was only trained on romance novels and BERT was trained on romance novels and Wikipedia. On actual data from TBC, the outside language model is about as perplexed as on the "
     },
     {
       "expression": "\"BERT\"",
@@ -138,34 +111,7 @@
     },
     {
       "type": "literal",
-      "value": " generations might have collapsed to fairly generic and simple sentences.  The "
-    },
-    {
-      "expression": "\"perplexity\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " samples is not "
-    },
-    {
-      "expression": "\"absurdly high\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and in reading the samples, we find that many are fairly coherent."
+      "value": " generations might have collapsed to fairly generic and simple sentences.  The perplexity on BERT samples is not absurdly high, and in reading the samples, we find that many are fairly coherent."
     }
   ],
   "variables": {},

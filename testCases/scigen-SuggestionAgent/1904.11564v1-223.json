@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compare our approach to "
+      "value": "We "
+    },
+    {
+      "expression": "\"compare\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " our approach to "
     },
     {
       "expression": "\"AMR-to-text generation\"",
@@ -12,16 +21,43 @@
     },
     {
       "type": "literal",
-      "value": " by evaluating our generator on a standard AMR test set  for models trained on gold as well as gold plus silver data.9 We evaluate "
+      "value": " by evaluating our generator on a standard AMR test set  for models trained on "
     },
     {
-      "expression": "\"DMRS\"",
+      "expression": "\"gold\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models both with and without predicate and edge attributes,  The results in Table 4 show that our "
+      "value": " as well as "
+    },
+    {
+      "expression": "\"gold plus silver data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".9 We evaluate "
+    },
+    {
+      "expression": "\"DMRS models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " both with and without "
+    },
+    {
+      "expression": "\"predicate and edge attributes\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ",  The results in Table 4 show that our "
     },
     {
       "expression": "\"MRS generator\"",

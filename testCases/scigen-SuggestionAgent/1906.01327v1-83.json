@@ -15,40 +15,40 @@
       "value": " results than previous methods on this dataset: "
     },
     {
-      "expression": "\"63\"",
+      "expression": "\"63%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " and "
     },
     {
-      "expression": "\"61\"",
+      "expression": "\"61%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% accuracy on the dev/test sets compared to "
+      "value": " accuracy on the dev/test sets compared to "
     },
     {
-      "expression": "\"60\"",
+      "expression": "\"60%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% and "
+      "value": " and "
     },
     {
-      "expression": "\"57\"",
+      "expression": "\"57%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%. These relatively low results on this new dataset indicate that it is more challenging."
+      "value": ". These relatively low results on this new dataset indicate that it is more challenging."
     }
   ],
   "variables": {},

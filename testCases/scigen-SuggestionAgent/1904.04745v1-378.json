@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 presents comparisons of our method with existing state-of-the-art approaches. Our proposed method consistently outperforms all other methods on all four "
+      "value": "Table "
     },
     {
-      "expression": "\"datasets\"",
+      "expression": "\"1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The improvement is particularly significant on the "
+      "value": " presents comparisons of our method with existing state-of-the-art approaches.  Our proposed method consistently outperforms all other methods on all four datasets. The improvement is particularly significant on the "
     },
     {
       "expression": "\"more challenging\"",

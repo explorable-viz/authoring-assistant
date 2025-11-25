@@ -3,25 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Thank you for the correction. Here is the revised annotation:\n\nTable 3 demonstrates that the "
+      "value": "Table 3 demonstrates that the models leveraging external knowledge achieve "
     },
     {
-      "expression": "\"models leveraging external knowledge\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " achieve "
-    },
-    {
-      "expression": "\"better performance\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the "
+      "value": " performance than the "
     },
     {
       "expression": "\"standard Seq2Seq model\"",
@@ -30,34 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " in generating meaningful entity words and diverse responses. In particular, our "
+      "value": " in generating meaningful entity words and diverse responses. In particular, our model outperforms all the baselines significantly with "
     },
     {
-      "expression": "\"model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " outperforms all the "
-    },
-    {
-      "expression": "\"baselines\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " significantly with "
-    },
-    {
-      "expression": "\"highest entity score\"",
+      "expression": "\"highest\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "]"
+      "value": " entity score."
     }
   ],
   "variables": {},

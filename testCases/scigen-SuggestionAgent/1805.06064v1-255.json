@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We also conduct a plagiarism check in Table 3, which shows that "
+      "value": "We also conduct a plagiarism check in "
     },
     {
-      "expression": "\"93.4\"",
+      "expression": "\"Table 3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "% of "
+      "value": ", which shows that "
+    },
+    {
+      "expression": "\"93.4%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
     },
     {
       "expression": "\"6-grams\"",

@@ -1,47 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "The results are shown in Table 1. We see that the "
-    },
-    {
-      "expression": "\"mean\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " NER performance increases in joint models. As one can see from the table, it achieved "
-    },
-    {
-      "expression": "\"the best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " results compared to our joint models. However, we cannot confirm the difference between "
-    },
-    {
-      "expression": "\"EXT M FEAT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"J MULTI\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " models as the calculated p is well above .05."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "The results are shown in Table 1. We see that the mean NER performance increases in joint models.  As one can see from the table, it achieved the best results compared to our joint models. However, we cannot confirm the difference between EXT M FEAT and J MULTI models as the calculated p is well above .05."
+  }],
   "variables": {},
   "imports": [
     "scigen",

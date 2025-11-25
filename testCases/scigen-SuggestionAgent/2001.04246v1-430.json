@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " performance on their original target tasks compared with other tasks, in other words, the performance numbers along the diagonal line of this table are the "
+      "value": " performance on their original target tasks "
+    },
+    {
+      "expression": "\"compared with\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " other tasks, in other words, the performance numbers along the diagonal line of this table are the "
     },
     {
       "expression": "\"best\"",

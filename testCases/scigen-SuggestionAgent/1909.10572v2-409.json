@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. Let's ensure that each replacement adheres strictly to the provided categories. Here is the corrected paragraph:\n\nTable 3 shows the results on the unsupervised tasks of hypernym detection and direction predictions, reporting "
+      "value": "Table 3 shows the results on the unsupervised tasks of hypernym detection and direction predictions, reporting "
     },
     {
       "expression": "\"average precision\"",
@@ -39,43 +39,25 @@
     },
     {
       "type": "literal",
-      "value": " approach in Table 3 builds upon the "
+      "value": " approach in Table 3 builds upon the Count based approach  by using Pointwise Mutual Information values for classification. SVD ppmi approach, the main contribution from Roller, Kiela, and Nickel (2018) builds low-rank embeddings of the PPMI matrix, which allows to make predictions for unseen pairs as well. "
     },
     {
-      "expression": "\"Count based\"",
+      "expression": "\"HyperbolicCones\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " approach by using Pointwise Mutual Information values for classification. "
+      "value": " is the "
     },
     {
-      "expression": "\"SVD ppmi\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", the main contribution from Roller, Kiela, and Nickel (2018) builds low-rank embeddings of the PPMI matrix, which allows to make predictions for unseen pairs as well. "
-    },
-    {
-      "expression": "\"HyperbolicCones\"",
+      "expression": "\"SOTA\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is the SOTA (Le et al. 2019) in both these tasks. The final row reports the application of SPON (on the input provided by "
-    },
-    {
-      "expression": "\"SVD ppmi\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") which is an original contribution of our work."
+      "value": " (Le et al. 2019) in both these tasks. The final row reports the application of SPON (on the input provided by SVD ppmi) which is an original contribution of our work."
     }
   ],
   "variables": {},

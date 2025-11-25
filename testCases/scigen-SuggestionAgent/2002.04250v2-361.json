@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Results are shown in Table 1. When comparing "
+      "value": "Results are shown in Table 1.  When comparing "
     },
     {
       "expression": "\"AR\"",
@@ -57,16 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " generates a "
-    },
-    {
-      "expression": "\"more diverse\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " N-best list for reranking, and thus outperforms "
+      "value": " generates a more diverse N-best list for reranking, and thus outperforms "
     },
     {
       "expression": "\"AR+MMI\"",
@@ -93,7 +84,7 @@
     },
     {
       "type": "literal",
-      "value": " as well. It's hard to tell which model performs better, "
+      "value": " as well.  It's hard to tell which model performs better, "
     },
     {
       "expression": "\"AR\"",
@@ -165,7 +156,7 @@
     },
     {
       "type": "literal",
-      "value": " model tends to generate more diverse responses, but might be less coherent. When comparing non-"
+      "value": " model tends to generate more diverse responses, but might be less coherent.  When comparing non-"
     },
     {
       "expression": "\"AR\"",
@@ -201,16 +192,7 @@
     },
     {
       "type": "literal",
-      "value": " distinct score, but significantly "
-    },
-    {
-      "expression": "\"higher\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " scores BLEU and adversarial success."
+      "value": " distinct score, but significantly higher scores BLEU and adversarial success."
     }
   ],
   "variables": {},

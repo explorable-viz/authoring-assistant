@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " showing that the wider context is indeed beneficial. For "
+      "value": " showing that the wider context is indeed beneficial  For "
     },
     {
       "expression": "\"En-Ru\"",
@@ -39,7 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ", it can be seen that using previous sentence is sufficient."
+      "value": ", it can be seen that using previous sentence is sufficient"
     }
   ],
   "variables": {},

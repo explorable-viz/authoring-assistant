@@ -3,52 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For each track, we selected "
+      "value": "For each track, we selected the "
     },
     {
-      "expression": "\"the best\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models according to their "
+      "value": " models according to their BLEU score on DGT-valid. The scores are shown in Table 3,  We see that in the same data conditions (unconstrained mode), the "
     },
     {
-      "expression": "\"BLEU score\"",
+      "expression": "\"MT+NLG\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on DGT-valid. The scores are shown in Table 3,  We see that in the same data conditions (unconstrained mode), the "
+      "value": " models are not "
     },
     {
-      "expression": "\"MT+NLG models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are not "
-    },
-    {
-      "expression": "\"better than\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the pure "
+      "value": " than the "
     },
     {
-      "expression": "\"MT models\"",
+      "expression": "\"pure MT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " models."
     }
   ],
   "variables": {},

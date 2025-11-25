@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "are summarized in Table 1, where "
+      "value": "are summarized in Table 1, where the "
     },
     {
-      "expression": "\"the score\"",
+      "expression": "\"score\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for each task category is calculated by "
+      "value": " for each "
+    },
+    {
+      "expression": "\"task category\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is calculated by "
     },
     {
       "expression": "\"averaging\"",
@@ -21,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " the normalized values for the tasks within each category. Although the activations of token hidden states are often used in fine-tuning "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for classification tasks, "
+      "value": " the normalized values for the tasks within each category. Although the activations of  token hidden states are often used in fine-tuning BERT for classification tasks, "
     },
     {
       "expression": "\"Mean-pooling\"",

@@ -7,15 +7,6 @@ import os
 import json
 
 def count_problems_per_category(df):
-    """
-    Count the number of unique problems per linguistic category.
-    
-    Args:
-        df: DataFrame with columns 'expression-type', 'test-case', 'target-value'
-    
-    Returns:
-        Series with category names as index and problem counts as values
-    """
     # Explode expression-type categories (format: "[Category1,Category2]")
     df_exploded = df.copy()
     # Convert to string and handle NaN values
@@ -24,10 +15,10 @@ def count_problems_per_category(df):
     df_exploded = df_exploded.explode('expression-type')
     df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
     
-    # Count unique (test-case, target-value) pairs per category
-    # This avoids double-counting the same problem across multiple runs
+    # Count unique (expected-expression, target-value) pairs per category
+    # This counts the actual expressions, not the test case files
     category_counts = df_exploded.groupby("expression-type").apply(
-        lambda x: x[['test-case', 'target-value']].drop_duplicates().shape[0]
+        lambda x: x[['expected-expression', 'target-value']].drop_duplicates().shape[0]
     )
     
     return category_counts

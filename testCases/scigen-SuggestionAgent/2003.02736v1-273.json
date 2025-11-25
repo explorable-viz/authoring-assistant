@@ -6,13 +6,13 @@
       "value": "The results for the tested systems are given in Table 2. Again we saw large gains from the "
     },
     {
-      "expression": "\"BERT\"",
+      "expression": "\"BERT based\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " based models over the baseline from (Zubiaga et al., 2017) and the "
+      "value": " models over the baseline from (Zubiaga et al., 2017) and the "
     },
     {
       "expression": "\"2-layer BiLSTM\"",

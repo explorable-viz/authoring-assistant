@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Understood. I'll ensure that each annotation uses only a single category. Here's the revised paragraph:\n\nVarious subsets of "
+      "value": "Various subsets of "
     },
     {
       "expression": "\"authors\"",
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " having the same number of "
-    },
-    {
-      "expression": "\"samples\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  with and without pre-training character level embedding and comparing the proposed architectures on the held-out dataset.  To illustrate the need of pre-trained character embeddings, we see from III that using a pre-trained embedding increases the "
+      "value": " having the same number of samples.  with and without pre-training character level embedding and comparing the proposed architectures on the held-out dataset.  To illustrate the need of pre-trained character embeddings, we see from III that using a pre-trained embedding increases the "
     },
     {
       "expression": "\"accuracy\"",
@@ -60,13 +51,13 @@
       "value": ".  increase the performance a few degrees.  we analyzed the importance of pretrained character embedding for author attribution and showed that pre-training can result in "
     },
     {
-      "expression": "\"better performances\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".\n\nIn this revision, \"better performances\" is annotated with only the COMPARISON category."
+      "value": " performances."
     }
   ],
   "variables": {},

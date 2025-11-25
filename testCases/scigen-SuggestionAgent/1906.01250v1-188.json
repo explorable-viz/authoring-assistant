@@ -1,38 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "As we do not want to test multiple systems on the final test set, we report the remaining ablations on the development set (AIDA-A), Table 3.  we constructed a baseline which only relies on link statistics in Wikipedia as well as string similarity (we refereed to its scoring function as sc). It appears surprisingly strong, however, we still outperform it by "
-    },
-    {
-      "expression": "\"1.6%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (see Table 3).  When we use only global coherence (i.e. only second term in expression (1)) and drop any modeling of local context on the disambiguation stage, the performance drops very substantially ("
-    },
-    {
-      "expression": "\"to 82.4%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " F1, see Table 3).  Without using local scores the disambiguation model appears to be even less accurate than our 'no-statisticaldisambiguation' baseline. It is also important to have an accurate global model: not using global attention results in a "
-    },
-    {
-      "expression": "\"1.2%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " drop in performance."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "As we do not want to test multiple systems on the final test set, we report the remaining ablations on the development set (AIDA-A), Table 3.  we constructed a baseline which only relies on link statistics in Wikipedia as well as string similarity (we refereed to its scoring function as sc). It appears surprisingly strong, however, we still outperform it by 1.6% (see Table 3).  When we use only global coherence (i.e. only second term in expression (1)) and drop any modeling of local context on the disambiguation stage, the performance drops very substantially (to 82.4% F1, see Table 3).  Without using local scores the disambiguation model appears to be even less accurate than our 'no-statisticaldisambiguation' baseline. It is also important to have an accurate global model: not using global attention results in a 1.2% drop in performance."
+  }],
   "variables": {},
   "imports": [
     "scigen",

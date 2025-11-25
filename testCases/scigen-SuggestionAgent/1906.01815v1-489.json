@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Understood. I will ensure that the annotations use only the specified categories.\n\nHere is the revised paragraph with correct categories:\n\nTable 2 presents the classification results for sarcasm prediction in the speaker-dependent setup. The "
+      "value": "Table 2 presents the classification results for sarcasm prediction in the speaker-dependent setup. The "
     },
     {
       "expression": "\"lowest\"",
@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " performance is obtained with the Majority baseline which achieves "
+      "value": " performance is obtained with the "
+    },
+    {
+      "expression": "\"Majority baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which achieves "
     },
     {
       "expression": "\"33.3%\"",
@@ -30,7 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " for non-sarcastic class and "
+      "value": " F-score for non-sarcastic class and "
     },
     {
       "expression": "\"0%\"",

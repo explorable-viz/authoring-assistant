@@ -1,0 +1,62 @@
+[
+    {
+        "_model": "+0 dummy node",
+        "_time_(s)": "56",
+        "_acc": "81.76",
+        "_#_param": "7,216K"
+    },
+    {
+        "_model": "+1 dummy node",
+        "_time_(s)": "65",
+        "_acc": "82.64",
+        "_#_param": "8,768K"
+    },
+    {
+        "_model": "+2 dummy node",
+        "_time_(s)": "76",
+        "_acc": "82.24",
+        "_#_param": "10,321K"
+    },
+    {
+        "_model": "Hidden size 100",
+        "_time_(s)": "42",
+        "_acc": "81.75",
+        "_#_param": "4,891K"
+    },
+    {
+        "_model": "Hidden size 200",
+        "_time_(s)": "54",
+        "_acc": "82.04",
+        "_#_param": "6,002K"
+    },
+    {
+        "_model": "Hidden size 300",
+        "_time_(s)": "65",
+        "_acc": "82.64",
+        "_#_param": "8,768K"
+    },
+    {
+        "_model": "Hidden size 600",
+        "_time_(s)": "175",
+        "_acc": "81.84",
+        "_#_param": "17,648K"
+    },
+    {
+        "_model": "Hidden size 900",
+        "_time_(s)": "235",
+        "_acc": "81.66",
+        "_#_param": "33,942K"
+    },
+    {
+        "_model": "Without ⟨s⟩, ⟨/s⟩",
+        "_time_(s)": "63",
+        "_acc": "82.36",
+        "_#_param": "8,768K"
+    },
+    {
+        "_model": "With ⟨s⟩, ⟨/s⟩",
+        "_time_(s)": "65",
+        "_acc": "82.64",
+        "_#_param": "8,768K"
+    }
+]

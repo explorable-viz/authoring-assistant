@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1807_04053v1_292
+
+"""
+	Seconds a  ${"decoder"}  takes to decode an entire dataset, given a set of scores. Score matrix entries are  We compare  ${"Cython implementations"}  in Table 1 and Figure 1 over randomised score input. Note that our implementations are significantly  ${"faster"} .
+"""

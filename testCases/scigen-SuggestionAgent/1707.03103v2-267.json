@@ -3,43 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. Let's use the appropriate single category for each expression.\n\nHere is the corrected paragraph:\n\nIn Table 3 we report the "
+      "value": "In "
     },
     {
-      "expression": "\"accuracies\"",
+      "expression": "\"Table 3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " obtained by our "
+      "value": " we report the accuracies obtained by our "
     },
     {
-      "expression": "\"best model\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in both "
+      "value": " model in both "
     },
     {
-      "expression": "\"matched\"",
+      "expression": "\"matched (first 5 genres)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (first 5 genres) and "
+      "value": " and "
     },
     {
-      "expression": "\"mismatched\"",
+      "expression": "\"mismatched (last 5 genres)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (last 5 genres) development sets. We can observe that our implementation performed like "
+      "value": " development sets.  We can observe that our implementation performed like "
     },
     {
       "expression": "\"ESIM\"",

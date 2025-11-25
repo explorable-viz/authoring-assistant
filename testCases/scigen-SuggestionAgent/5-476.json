@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows the "
-    },
-    {
-      "expression": "\"evaluation results\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". In line with the findings for sentence summarization (Cao et al., 2018; Li et al., 2018), we observe that factual errors are also a frequent problem for document summarization. Interestingly, the fraction of incorrect summaries is substantially "
+      "value": "Table 1 shows the evaluation results. In line with the findings for sentence summarization (Cao et al., 2018; Li et al., 2018), we observe that factual errors are also a frequent problem for document summarization. Interestingly, the fraction of incorrect summaries is substantially "
     },
     {
       "expression": "\"higher\"",
@@ -24,16 +15,7 @@
       "value": " for "
     },
     {
-      "expression": "\"FAS\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"BUS\"",
+      "expression": "\"FAS and BUS\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -60,16 +42,7 @@
       "value": " abstractiveness of summaries produced by "
     },
     {
-      "expression": "\"FAS\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"BUS\"",
+      "expression": "\"FAS and BUS\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

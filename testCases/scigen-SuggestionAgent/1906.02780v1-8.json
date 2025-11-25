@@ -3,10 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 contains the results on all "
+      "value": "Table 1 contains the results on "
     },
     {
-      "expression": "\"four\"",
+      "expression": "\"all four\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -25,7 +25,7 @@
     },
     {
       "expression": "\"4 − 5×\"",
-      "categories": ["comparison"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -48,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " again significantly outperforms the "
+      "value": " again significantly "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the "
     },
     {
       "expression": "\"SAT configurations\"",
@@ -70,7 +79,7 @@
     },
     {
       "expression": "\"1\"",
-      "categories": ["comparison"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {

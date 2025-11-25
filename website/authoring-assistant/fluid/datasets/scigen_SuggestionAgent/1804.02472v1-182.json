@@ -1,0 +1,34 @@
+[
+    {
+        "attribute": "Grammatical error present, incl. run-ons",
+        "#": "16"
+    },
+    {
+        "attribute": "Is an auxiliary or light verb",
+        "#": "14"
+    },
+    {
+        "attribute": "Annotation is incorrect",
+        "#": "13"
+    },
+    {
+        "attribute": "Future event",
+        "#": "12"
+    },
+    {
+        "attribute": "Is a question",
+        "#": "5"
+    },
+    {
+        "attribute": "Is an imperative",
+        "#": "3"
+    },
+    {
+        "attribute": "Is not an event or state",
+        "#": "2"
+    },
+    {
+        "attribute": "One or more of the above",
+        "#": "43"
+    }
+]

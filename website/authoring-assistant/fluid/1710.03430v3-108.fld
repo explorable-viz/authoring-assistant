@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1710_03430v3_108
+
+"""
+	Table 5 indicates the  ${"proposed RDE-LTC"} ,  ${"HRDE"} , and the that  ${"HRDE-LTC model"}  show performance improvements when compared to the baseline  ${"model, TFIDF"}  and  ${"RDE"} .
+"""

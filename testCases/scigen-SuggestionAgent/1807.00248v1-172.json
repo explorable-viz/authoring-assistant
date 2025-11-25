@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 compares the accuracy of our model on the test data with "
+      "value": "Table 2 compares the "
+    },
+    {
+      "expression": "\"accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of our model on the test data with "
     },
     {
       "expression": "\"two baselines\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ". The MT baseline simply consists of the accuracy of the mt sentences with respect to the pe ground truth. The other baseline is given by a statistical PE (SPE) system (Simard et al., 2007) chosen by the WMT17 organizers. Table 2 shows that when our model is trained with only the "
+      "value": ". The "
+    },
+    {
+      "expression": "\"MT baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " simply consists of the accuracy of the mt sentences with respect to the pe ground truth. The other baseline is given by a statistical PE (SPE) system (Simard et al., 2007) chosen by the WMT17 organizers. Table 2 shows that when our model is trained with only the "
     },
     {
       "expression": "\"11K\"",
@@ -42,34 +60,52 @@
       "value": " WMT16 sentences are added, its accuracy is still well below that of the baselines. However, when the "
     },
     {
-      "expression": "\"500K artificial data\"",
+      "expression": "\"500K\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are added, it reports a major improvement and it outperforms them both significantly. In addition, we have compared our model with two recent systems that have used our same training settings ("
+      "value": " artificial data are added, it reports a major improvement and it outperforms them both significantly. In addition, we have compared our model with two recent systems that have used our same training settings ("
     },
     {
-      "expression": "\"500K artificial triplets + 23K manual triplets oversampled 10 times\"",
+      "expression": "\"500K\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), reporting a slightly "
+      "value": " artificial triplets + "
     },
     {
-      "expression": "\"higher accuracy\"",
-      "categories": ["comparison"],
+      "expression": "\"23K\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than both ("
+      "value": " manual triplets oversampled "
     },
     {
-      "expression": "\"1.43 TER and 1.93 BLEU p.p.\"",
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " times), reporting a slightly higher accuracy than both ("
+    },
+    {
+      "expression": "\"1.43 TER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"1.93 BLEU p.p.\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -78,7 +114,16 @@
       "value": " over (Varis and Bojar, 2017) and "
     },
     {
-      "expression": "\"0.21 TER and 0.30 BLEU p.p.\"",
+      "expression": "\"0.21 TER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"0.30 BLEU p.p.\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

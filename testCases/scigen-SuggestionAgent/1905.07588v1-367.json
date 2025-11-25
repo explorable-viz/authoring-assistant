@@ -30,7 +30,21 @@
     },
     {
       "type": "literal",
-      "value": " surpass the previous state-of-the-art models by a large margin on all datasets"
+      "value": " surpass the previous state-of-the-art "
+    },
+    {
+      "expression": "\"models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by a large margin on all "
+    },
+    {
+      "expression": "\"datasets\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
     }
   ],
   "variables": {},

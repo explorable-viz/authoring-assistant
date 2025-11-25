@@ -3,19 +3,28 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. Let's use the correct single category:\n\nEven the ensemble of "
+      "value": "Even the ensemble of "
     },
     {
       "expression": "\"5\"",
-      "categories": ["min-max"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " models did not result in significant differences especially in "
+      "value": " models did not result in significant "
     },
     {
-      "expression": "\"BLEU scores\"",
+      "expression": "\"differences\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " especially in BLEU "
+    },
+    {
+      "expression": "\"scores\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

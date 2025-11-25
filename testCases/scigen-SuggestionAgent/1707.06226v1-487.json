@@ -34,7 +34,7 @@
     },
     {
       "expression": "\"maximum of ten\"",
-      "categories": ["min-max"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -51,13 +51,13 @@
       "value": " architectures that read both context (c) and reply (r)  The "
     },
     {
-      "expression": "\"highest performance\"",
-      "categories": ["min-max"],
+      "expression": "\"highest\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " when considering both the S and  S classes is achieved by the "
+      "value": " performance when considering both the S and  S classes is achieved by the "
     },
     {
       "expression": "\"LSTMconditional model\"",
@@ -69,40 +69,76 @@
       "value": " ("
     },
     {
-      "expression": "\"73.32% F1 for S class and 70.56% F1 for  S, showing a 6% and 3% improvement over LSTMr for S and  S classes, respectively\"",
+      "expression": "\"73.32\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "). The "
+      "value": "% F1 for S class and "
     },
     {
-      "expression": "\"LSTM model with sentence-level attentions on both context and reply (LSTMcas +LSTMras )\"",
+      "expression": "\"70.56\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " gives the "
+      "value": "% F1 for  S, showing a "
     },
     {
-      "expression": "\"best F1 score of 73.7% for the S class\"",
-      "categories": ["min-max"],
+      "expression": "\"6\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". For the  S class, while we notice an improvement in precision we notice a drop in recall when compared to the LSTM model with sentence level attention only on reply (LSTMras ).  We observe the performance ("
+      "value": "% and "
     },
     {
-      "expression": "\"69.88% F1 for S category\"",
+      "expression": "\"3\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% improvement over "
+    },
+    {
+      "expression": "\"LSTMr\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") deteriorates, probably due to the lack of enough training data."
+      "value": " for S and  S classes, respectively). The LSTM model with sentence-level attentions on both context and reply (LSTMcas +LSTMras ) gives the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 score of "
+    },
+    {
+      "expression": "\"73.7\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% for the S class. For the  S class, while we notice an improvement in precision we notice a drop in recall when compared to the LSTM model with sentence level attention only on reply (LSTMras ).  We observe the performance ("
+    },
+    {
+      "expression": "\"69.88\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "% F1 for S category) deteriorates, probably due to the lack of enough training data."
     }
   ],
   "variables": {},

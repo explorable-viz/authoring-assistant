@@ -12,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " gives an overview of the historical datasets. covering "
+      "value": " gives an overview of the historical datasets.  covering "
     },
     {
-      "expression": "\"eight languages\"",
+      "expression": "\"eight\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from different language families\u2014"
+      "value": " languages from different language families\u2014"
     },
     {
       "expression": "\"English\"",

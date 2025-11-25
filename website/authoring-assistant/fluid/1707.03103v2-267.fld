@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1707_03103v2_267
+
+"""
+	In  ${"Table 3"}  we report the accuracies obtained by our  ${"best"}  model in both  ${"matched (first 5 genres)"}  and  ${"mismatched (last 5 genres)"}  development sets.  We can observe that our implementation performed like  ${"ESIM"}  overall,
+"""

@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1909_02776v2_482
+
+"""
+	Table 1 shows and  ${"compares"}  MSE and  ${"R2"}  reported from these experiments. The results show that in  ${"experiment 2"} , the  ${"mean squared error"}  is  ${"reduced"}  and the  ${"r2 score"}  is  ${"increased"} .
+"""

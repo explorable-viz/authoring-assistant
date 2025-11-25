@@ -48,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " absolute improvement in Hard level."
+      "value": " absolute improvement in "
+    },
+    {
+      "expression": "\"Hard level\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

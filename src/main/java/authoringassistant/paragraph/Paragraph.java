@@ -103,4 +103,15 @@ public class Paragraph extends ArrayList<TextFragment> {
         }
         return p;
     }
+
+    public String toString() {
+        return stream()
+                .map(TextFragment::getValue)
+                .collect(Collectors.joining(""));
+    }
+
+    public boolean equals(Paragraph p) {
+        return p.toString().replaceAll("\\s", "").equals(toString().replaceAll("\\s", ""));
+    }
+
 }

@@ -3,7 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We consider variations in instructions, incentives, data domains, and workflows. We manually analyzed paraphrases for correctness, grammaticality, and linguistic diversity. Our observations provide new insight into the trade-offs between "
+      "value": "We consider variations in "
+    },
+    {
+      "expression": "\"instructions\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"incentives\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"data domains\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"workflows\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We manually analyzed "
+    },
+    {
+      "expression": "\"paraphrases\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for correctness, grammaticality, and linguistic diversity. Our observations provide new insight into the trade-offs between "
     },
     {
       "expression": "\"accuracy\"",
@@ -21,61 +66,16 @@
     },
     {
       "type": "literal",
-      "value": " in crowd responses that arise as a result of task design,  Our analysis shows that the most important factor is how workers are primed for a task, with the choice of examples and the prompt sentence affecting "
+      "value": " in crowd responses that arise as a result of task design,  Our analysis shows that the most important factor is how workers are primed for a task, with the choice of examples and the prompt sentence affecting diversity and correctness significantly.  There was relatively little variation in grammaticality or time across the conditions.  "
     },
     {
-      "expression": "\"diversity\"",
+      "expression": "\"Priming\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"correctness\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " significantly.  There was relatively little variation in grammaticality or time across the conditions.  Priming had a major impact, with the shift to lexical examples leading to a significant improvement in "
-    },
-    {
-      "expression": "\"correctness\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", but much lower "
-    },
-    {
-      "expression": "\"diversity\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The surprising increase in "
-    },
-    {
-      "expression": "\"correctness\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " when providing no examples  changing the incentives by providing either a bonus for novelty, or no bonus at all, did not substantially impact any of the metrics.  Changing the number of paraphrases written by each worker did not significantly impact "
-    },
-    {
-      "expression": "\"diversity\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (we worried that collecting more than one may lead to a decrease).  the "
+      "value": " had a major impact, with the shift to lexical examples leading to a significant improvement in correctness, but much lower diversity. The surprising increase in correctness when providing no examples  changing the incentives by providing either a bonus for novelty, or no bonus at all, did not substantially impact any of the metrics.  Changing the number of paraphrases written by each worker did not significantly impact diversity (we worried that collecting more than one may lead to a decrease).  the "
     },
     {
       "expression": "\"One Paraphrase\"",
@@ -84,34 +84,7 @@
     },
     {
       "type": "literal",
-      "value": " condition did have lower grammaticality,  Changing the source of the prompt sentence to create a chain of paraphrases led to a significant increase in "
-    },
-    {
-      "expression": "\"diversity\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  showing the answer to the question being paraphrased did not significantly affect "
-    },
-    {
-      "expression": "\"correctness\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " or "
-    },
-    {
-      "expression": "\"diversity\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ","
+      "value": " condition did have lower grammaticality,  Changing the source of the prompt sentence to create a chain of paraphrases led to a significant increase in diversity.  showing the answer to the question being para  phrased did not significantly affect correctness or diversity,"
     }
   ],
   "variables": {},

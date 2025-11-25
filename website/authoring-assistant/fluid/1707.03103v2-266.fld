@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1707_03103v2_266
+
+"""
+	Table 1 presents the results of using different pooling strategies for generating a raw sentence representation vector from the word vectors.  We can observe that that both the  ${"mean"}  method, and picking the last hidden state for both directions performed slightly  ${"better"}  than the two other strategies, however at  ${"95%"}  confidence we cannot assert that any of these methods is statistically different from one another.  Another interesting result, as shown by Table 1 and Table 2, is that the model seemed to be insensitive to the usage of character embeddings,
+"""

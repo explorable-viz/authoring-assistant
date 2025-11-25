@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "I understand now. Let's make sure each annotation has only one category, and I'll ensure the correct categories are used.\n\nHere is the revised paragraph:\n\nTable "
+      "value": "Table "
     },
     {
       "expression": "\"1\"",
@@ -15,22 +15,13 @@
       "value": " shows the results of "
     },
     {
-      "expression": "\"IBP\"",
+      "expression": "\"IBP training\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " training and baseline models under "
-    },
-    {
-      "expression": "\"δ\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " = "
+      "value": " and baseline models under δ = "
     },
     {
       "expression": "\"3\"",
@@ -39,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"δ\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " = "
+      "value": " and δ = "
     },
     {
       "expression": "\"24\"",
@@ -87,40 +69,31 @@
       "value": ", comparing adversarial accuracy with exhaustive verification accuracy (oracle), we observe that although adversarial training is effective at defending against HotFlip attacks ("
     },
     {
-      "expression": "\"74.9 / 76.8 / 85.5\"",
+      "expression": "\"74.9 / 76.8 / 85.5%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%), the oracle adversarial accuracy under exhaustive testing ("
+      "value": "), the oracle adversarial accuracy under exhaustive testing ("
     },
     {
-      "expression": "\"25.8 / 74.6 / 81.6\"",
+      "expression": "\"25.8 / 74.6 / 81.6%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%) is "
+      "value": ") is much "
     },
     {
-      "expression": "\"much lower\"",
+      "expression": "\"lower\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"SST-character / SST-word / AG-character level\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", respectively.  In Table "
+      "value": " in SST-character / SST-word / AG-character level, respectively.  In Table "
     },
     {
       "expression": "\"1\"",
@@ -132,31 +105,22 @@
       "value": ", when the perturbation space is larger ("
     },
     {
-      "expression": "\"SST character-level\"",
+      "expression": "\"SST character-level vs. SST word-level\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " vs. "
+      "value": "), (a) across models, there is a larger gap in adversarial accuracy and true robustness (oracle); (b) the "
     },
     {
-      "expression": "\"SST word-level\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"difference\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), (a) across models, there is a "
-    },
-    {
-      "expression": "\"larger gap\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in adversarial accuracy and true robustness (oracle); (b) the difference in oracle robustness between IBP and adversarial training is even "
+      "value": " in oracle robustness between IBP and adversarial training is even "
     },
     {
       "expression": "\"larger\"",
@@ -168,13 +132,13 @@
       "value": " ("
     },
     {
-      "expression": "\"73.1% vs. 25.8% and 76.5% vs. 74.6\"",
+      "expression": "\"73.1% vs. 25.8% and 76.5% vs. 74.6%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%).  The resulting models achieve the "
+      "value": ").  The resulting models achieve the "
     },
     {
       "expression": "\"highest\"",

@@ -1,0 +1,110 @@
+[
+    {
+        "method": "Method",
+        "#_params": "# Params",
+        "inference": "Speedup",
+        "sst-2": "SST-2",
+        "mrpc": "MRPC",
+        "qqp": "QQP",
+        "mnli": "MNLI",
+        "qnli": "QNLI",
+        "rte": "RTE",
+        "average": "Average"
+    },
+    {
+        "method": "BERT12",
+        "#_params": "109M",
+        "inference": "1x",
+        "sst-2": "93.5",
+        "mrpc": "88.9",
+        "qqp": "71.2",
+        "mnli": "84.6",
+        "qnli": "90.5",
+        "rte": "66.4",
+        "average": "82.5"
+    },
+    {
+        "method": "BERT12-T",
+        "#_params": "109M",
+        "inference": "1x",
+        "sst-2": "93.3",
+        "mrpc": "88.7",
+        "qqp": "71.1",
+        "mnli": "84.8",
+        "qnli": "90.4",
+        "rte": "66.1",
+        "average": "82.4"
+    },
+    {
+        "method": "BERT6-PKD",
+        "#_params": "67.0M",
+        "inference": "1.9x",
+        "sst-2": "92.0",
+        "mrpc": "85.0",
+        "qqp": "70.7",
+        "mnli": "81.5",
+        "qnli": " 89.0",
+        "rte": " 65.5",
+        "average": " 80.6"
+    },
+    {
+        "method": "BERT3-PKD",
+        "#_params": "45.7M",
+        "inference": "3.7x",
+        "sst-2": "87.5",
+        "mrpc": "80.7",
+        "qqp": "68.1",
+        "mnli": "76.7",
+        "qnli": "84.7",
+        "rte": "58.2",
+        "average": "76.0"
+    },
+    {
+        "method": "DistilBERT4",
+        "#_params": "52.2M",
+        "inference": "3.0x",
+        "sst-2": "91.4",
+        "mrpc": "82.4",
+        "qqp": "68.5",
+        "mnli": "78.9",
+        "qnli": "85.2",
+        "rte": "54.1",
+        "average": "76.8"
+    },
+    {
+        "method": "TinyBert4",
+        "#_params": "14.5M",
+        "inference": "9.4x",
+        "sst-2": " 92.6",
+        "mrpc": " 86.4",
+        "qqp": " 71.3",
+        "mnli": " 82.5",
+        "qnli": "87.7",
+        "rte": "62.9",
+        "average": " 80.6"
+    },
+    {
+        "method": "BiLSTM  SOFT",
+        "#_params": "10.1M",
+        "inference": "7.6x",
+        "sst-2": "90.7",
+        "mrpc": "-",
+        "qqp": "68.2",
+        "mnli": "73.0",
+        "qnli": "-",
+        "rte": "-",
+        "average": "-"
+    },
+    {
+        "method": "AdaBERT",
+        "#_params": " 6.4M ∼ 9.5M",
+        "inference": " 12.7x ∼ 29.3x",
+        "sst-2": "91.8",
+        "mrpc": "85.1",
+        "qqp": "70.7",
+        "mnli": "81.6",
+        "qnli": "86.8",
+        "rte": "64.4",
+        "average": "80.1"
+    }
+]

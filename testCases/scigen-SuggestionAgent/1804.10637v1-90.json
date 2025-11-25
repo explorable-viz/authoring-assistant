@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Understood, I will correct the categories accordingly. Here is the revised output:\n\nTable 1 shows "
+      "value": "Table 1 shows "
     },
     {
       "expression": "\"micro F1 scores\"",
@@ -12,25 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " on AIDA-B of the "
+      "value": " on AIDA-B of the SOTA methods and ours, which all use Wikipedia and YAGO mention-entity index. To our knowledge, ours are the only (unsupervisedly) inducing and employing more than one relations on this dataset. The others use only one relation, "
     },
     {
-      "expression": "\"SOTA methods\"",
+      "expression": "\"coreference\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and ours, which all use Wikipedia and YAGO mention-entity index. To our knowledge, ours are the only (unsupervisedly) inducing and employing "
-    },
-    {
-      "expression": "\"more than one relations\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on this dataset. The others use only one relation, coreference, which is given by simple heuristics or supervised third-party resolvers. All four our models outperform any previous method, with ment-norm achieving the "
+      "value": ", which is given by simple heuristics or supervised third-party resolvers. All four our models outperform any previous method, with ment-norm achieving the "
     },
     {
       "expression": "\"best results\"",
@@ -39,16 +30,25 @@
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " , "
     },
     {
       "expression": "\"0.85%\"",
-      "categories": ["comparison"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " higher than that of Ganea and Hofmann (2017). The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."
+      "value": " higher than that of "
+    },
+    {
+      "expression": "\"Ganea and Hofmann (2017)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."
     }
   ],
   "variables": {},

@@ -3,25 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As shown in Table 2, the proposed cross-modal self-attention "
+      "value": "As shown in Table 2, the "
     },
     {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " all other "
-    },
-    {
-      "expression": "\"attention methods\"",
+      "expression": "\"proposed cross-modal self-attention\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " significantly."
+      "value": " outperforms "
+    },
+    {
+      "expression": "\"all other attention methods\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"significantly\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

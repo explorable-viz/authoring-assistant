@@ -1,74 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "As Table 3 shows, our proposed "
-    },
-    {
-      "expression": "\"HRDE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"HRDE-LTC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " models achieve the "
-    },
-    {
-      "expression": "\"best performance\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for the "
-    },
-    {
-      "expression": "\"Ubuntu-v1 dataset\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". We also find that the "
-    },
-    {
-      "expression": "\"RDE-LTC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model shows improvements from the baseline "
-    },
-    {
-      "expression": "\"RDE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model, "
-    },
-    {
-      "expression": "\"RDE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "As Table 3 shows, our proposed HRDE and HRDE-LTC models achieve the best performance for the Ubuntu-v1 dataset. We also find that the RDE-LTC model shows improvements from the baseline model, RDE."
+  }],
   "variables": {},
   "imports": [
     "scigen",

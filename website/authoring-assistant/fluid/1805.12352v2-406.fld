@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1805_12352v2_406
+
+"""
+	To validate the previous results, we further conduct a human evaluation with Amazon Mechanical Turk. We randomly selected  ${"50"}  dialogues from the test set of DailyDialog. For each dialogue context, we generated  ${"10"}  responses from each of the four models. Responses for each context were inspected by  ${"5"}  participants who were asked to choose the model which performs the  ${"best"}  in regarding to coherence, diversity and informative while being blind to the underlying algorithms. The average percentages that each model was selected as the  ${"best"}  to a specific criterion are shown in Table 5.
+"""

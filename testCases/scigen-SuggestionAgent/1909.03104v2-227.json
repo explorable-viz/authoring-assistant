@@ -21,16 +21,16 @@
     },
     {
       "type": "literal",
-      "value": ", but the difference is not as "
+      "value": ", but the "
     },
     {
-      "expression": "\"significant\"",
-      "categories": ["comparison"],
+      "expression": "\"difference\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " as the "
+      "value": " is not as significant as the "
     },
     {
       "expression": "\"probing tasks\"",
@@ -48,16 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " where increasing K leads to "
+      "value": " where increasing K leads to much "
     },
     {
-      "expression": "\"much better\"",
+      "expression": "\"better performance\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] performance."
+      "value": "."
     }
   ],
   "variables": {},

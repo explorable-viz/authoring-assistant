@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results of the survey shows a general sat, confirmisfaction feeling of interactions with ing our motivation that the existence of such an agent helps researchers (See Table 4). "
+      "value": "The results of the survey shows a general "
+    },
+    {
+      "expression": "\"sat, confirmisfaction feeling\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of interactions with ing our motivation that the existence of such an agent helps researchers (See Table 4). "
     },
     {
       "expression": "\"83%\"",

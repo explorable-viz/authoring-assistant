@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1911_06919v1_310
+
+"""
+	We assess  ${"unigram (R-1)"} ,  ${"bigram (R-2)"} , and  ${"longest-commonsubsequence (R-L)"}  overlap, and present F1, recall and precision scores in Table 1. For the first baseline ( ${"PG"} ), we see that incorporating discourse features consistently improves recall and F1. We see similar observations for the second baseline ( ${"PG+Cov"} ): recall is generally improved at the expense of precision. Observing that our model generally has  ${"better"}  recall (Table 1)
+"""

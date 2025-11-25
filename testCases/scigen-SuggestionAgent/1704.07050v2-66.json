@@ -21,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " the state of the art baseline performance."
+      "value": " the state of the art "
+    },
+    {
+      "expression": "\"baseline performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

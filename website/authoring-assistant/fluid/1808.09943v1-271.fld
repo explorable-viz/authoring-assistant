@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1808_09943v1_271
+
+"""
+	BPE and character sys ${"tem"} s differ most in the number of  ${"lexical choice errors"} , and in the extent to which they drop content. Regarding lexical choice, the two systems differ not only in the number of errors, but in the nature of those errors. In particular, the  ${"BPE model"}  had more trouble handling German compound nouns. We also found that both systems occasionally mistranslate proper names.
+"""

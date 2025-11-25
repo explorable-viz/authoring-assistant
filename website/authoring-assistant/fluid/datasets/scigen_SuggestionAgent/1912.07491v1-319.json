@@ -1,0 +1,44 @@
+[
+    {
+        "model": "TransDG",
+        "perplexity": "37.53",
+        "entity": "1.207",
+        "bleu-1": "0.1807",
+        "bleu-2": "0.0178"
+    },
+    {
+        "model": "w/o QRT",
+        "perplexity": "42.17",
+        "entity": "1.076",
+        "bleu-1": "0.1604",
+        "bleu-2": "0.0171"
+    },
+    {
+        "model": "w/o KST",
+        "perplexity": "43.05",
+        "entity": "0.774",
+        "bleu-1": "0.1643",
+        "bleu-2": "0.0158"
+    },
+    {
+        "model": "w/o QRT+KST",
+        "perplexity": "44.15",
+        "entity": "0.772",
+        "bleu-1": "0.1612",
+        "bleu-2": "0.0170"
+    },
+    {
+        "model": "w/o RGA",
+        "perplexity": "38.62",
+        "entity": "1.106",
+        "bleu-1": "0.1712",
+        "bleu-2": "0.0170"
+    },
+    {
+        "model": "w/o SSD",
+        "perplexity": "38.18",
+        "entity": "1.114",
+        "bleu-1": "0.1804",
+        "bleu-2": "0.0178"
+    }
+]

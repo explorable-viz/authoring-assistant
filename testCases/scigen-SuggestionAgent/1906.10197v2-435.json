@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it, I will adjust the annotations to use only one category from the provided list.\n\nHere is the revised paragraph:\n\nThe results are summarized in Figure 6 and Table 3. The probability that a new image belongs to an unseen class "
-    },
-    {
-      "expression": "\"P (N |t)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
+      "value": "The results are summarized in Figure 6 and Table 3. The probability that a new image belongs to an unseen class P (N |t) is "
     },
     {
       "expression": "\"higher\"",
@@ -57,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " in the dataset, "
-    },
-    {
-      "expression": "\"P (N |t)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (Table 3). For instance, the ImageNet classifier drops its "
+      "value": " in the dataset, P (N |t) (Table 3). For instance, the ImageNet classifier drops its "
     },
     {
       "expression": "\"ME score\"",
@@ -102,11 +84,11 @@
     },
     {
       "type": "literal",
-      "value": " for the dataset shows that new classes are encountered at above this rate until "
+      "value": " for the dataset shows that new classes are encountered at above this rate until at least "
     },
     {
-      "expression": "\"at least 111,000\"",
-      "categories": ["comparison"],
+      "expression": "\"111,000\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

@@ -3,10 +3,28 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Before preservation, MILk with a latency weight "
+      "value": "Before preservation, "
     },
     {
-      "expression": "\"λ = 0\"",
+      "expression": "\"MILk\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with a latency weight "
+    },
+    {
+      "expression": "\"λ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " = "
+    },
+    {
+      "expression": "\"0\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -33,7 +51,16 @@
       "value": ", indicating an intrinsic latency incentive. Furthermore, training quickly destabilized, resulting in very poor trade-offs for "
     },
     {
-      "expression": "\"λs as low as 0.2\"",
+      "expression": "\"λs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as low as "
+    },
+    {
+      "expression": "\"0.2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

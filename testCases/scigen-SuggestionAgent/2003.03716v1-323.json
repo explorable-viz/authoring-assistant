@@ -12,11 +12,20 @@
     },
     {
       "type": "literal",
-      "value": " model trained on the WMT16 multimodal translation dataset with different LA steps. We show the look-ahead module is able to improve the model on the entire testing set. However, either the LA module or the beam search method harm the models when the length of the target sentences is "
+      "value": " model trained on the WMT16 multimodal translation dataset with different LA steps. We show the look-ahead module is able to improve the model on the entire testing set. However, either the "
     },
     {
-      "expression": "\"longer than 25\"",
-      "categories": ["comparison"],
+      "expression": "\"LA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " module or the beam search method harm the models when the length of the target sentences is longer than "
+    },
+    {
+      "expression": "\"25\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

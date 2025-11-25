@@ -1,47 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Table "
-    },
-    {
-      "expression": "\"6\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " shows the performance of our transition-based parser along with comparison to the parsers in the previous works. The second block in Table "
-    },
-    {
-      "expression": "\"6\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " shows the results of our ensemble parser, in which ensemble significantly improves the performance and "
-    },
-    {
-      "expression": "\"more\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " parsers ensembled, "
-    },
-    {
-      "expression": "\"more\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " improvements are achieved."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 6 shows the performance of our transitionbased parser along with comparison to the parsers in the previous works.  The second block in Table 6 shows the results of our ensemble parser, in which ensemble significantly improves the performance and more parsers ensembled, more improvements are achieved."
+  }],
   "variables": {},
   "imports": [
     "scigen",

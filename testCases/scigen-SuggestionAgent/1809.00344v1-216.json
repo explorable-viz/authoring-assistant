@@ -1,47 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "We conduct an ablation study to validate our hypothesis of using the complete context versus using only one of the three types of contexts in a bilingual multi-speaker conversation: (i) "
-    },
-    {
-      "expression": "\"current turn\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", (ii) "
-    },
-    {
-      "expression": "\"previous turns in current language\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and (iii) "
-    },
-    {
-      "expression": "\"previous turns in the other language\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The results for En-De are reported in Table 4. We see decrease in BLEU for all types of contexts with significant decrease when considering only current language from previous turns.The results show that the "
-    },
-    {
-      "expression": "\"current turn\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " has the most influence on translating a sentence,"
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We conduct an ablation study to validate our hypothesis of using the complete context versus using only one of the three types of contexts in a bilingual multi-speaker conversation: (i) current turn, (ii) previous turns in current language, and (iii) previous turns in the other language. The results for En-De are reported in Table 4. We see decrease in BLEU for all types of contexts with significant decrease when considering only current language from previous turns.The results show that the current turn has the most influence on translating a sentence,"
+  }],
   "variables": {},
   "imports": [
     "scigen",

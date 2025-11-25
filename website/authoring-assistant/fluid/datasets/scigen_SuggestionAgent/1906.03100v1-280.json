@@ -1,0 +1,58 @@
+[
+    {
+        "": "Ar⇒ En",
+        "model": "Vanilla",
+        "emb.": "23.6M",
+        "red.": "0%",
+        "bleu": "28.36"
+    },
+    {
+        "": "Ar⇒ En",
+        "model": " Shared-private",
+        "emb.": "11.8M",
+        "red.": "50%",
+        "bleu": "29.71↑"
+    },
+    {
+        "": "Ja⇒ En",
+        "model": "Vanilla",
+        "emb.": "25.6M",
+        "red.": "0%",
+        "bleu": "10.94"
+    },
+    {
+        "": "Ja⇒ En",
+        "model": " Shared-private",
+        "emb.": "13.3M",
+        "red.": "48.0%",
+        "bleu": "12.35↑"
+    },
+    {
+        "": "Ko⇒ En",
+        "model": "Vanilla",
+        "emb.": "25.1M",
+        "red.": "0%",
+        "bleu": "16.48"
+    },
+    {
+        "": "Ko⇒ En",
+        "model": " Shared-private",
+        "emb.": "13.2M",
+        "red.": "47.4%",
+        "bleu": "17.84↑"
+    },
+    {
+        "": "Zh⇒ En",
+        "model": "Vanilla",
+        "emb.": "27.4M",
+        "red.": "0%",
+        "bleu": "19.36"
+    },
+    {
+        "": "Zh⇒ En",
+        "model": " Shared-private",
+        "emb.": "13.8M",
+        "red.": "49.6%",
+        "bleu": "21.00↑"
+    }
+]

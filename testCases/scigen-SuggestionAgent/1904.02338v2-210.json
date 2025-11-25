@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We see that "
-    },
-    {
-      "expression": "\"models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " trained with "
+      "value": "We see that models trained with "
     },
     {
       "expression": "\"agreement\"",
@@ -39,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ", perhaps because it is quite different linguistically from the English pivot. unlike "
+      "value": ", perhaps because it is quite different linguistically from the "
+    },
+    {
+      "expression": "\"English pivot\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  unlike "
     },
     {
       "expression": "\"Dual-0\"",
@@ -61,21 +61,12 @@
     },
     {
       "expression": "\"1\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"BLEU point\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared to "
+      "value": " BLEU point compared to "
     },
     {
       "expression": "\"Basic\"",

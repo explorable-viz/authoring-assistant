@@ -3,7 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "According to the description in (CodaLab, 2019), the label distribution for dev and test sets are roughly "
+      "value": "According to the description in (CodaLab, 2019), the label distribution for "
+    },
+    {
+      "expression": "\"dev\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"test\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sets are roughly "
     },
     {
       "expression": "\"4%\"",
@@ -12,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " for each of the emotions. However, from the dev set (Table 2) we know that the proportions of each of the emotion categories are "
+      "value": " for each of the emotions. However, from the "
+    },
+    {
+      "expression": "\"dev\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " set (Table 2) we know that the proportions of each of the emotion categories are "
     },
     {
       "expression": "\"better\"",
@@ -25,7 +52,7 @@
     },
     {
       "expression": "\"%5\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -34,12 +61,30 @@
     },
     {
       "expression": "\"%5\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " as the empirical estimation of distribution Pte(xtr i ). We did not use the exact proportion of dev set as the estimation to prevent the overfitting towards dev set. The sample distribution of the train set is used as Ptr(xtr i )."
+      "value": " as the empirical estimation of distribution Pte(xtr i ). We did not use the exact proportion of "
+    },
+    {
+      "expression": "\"dev\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " set as the estimation to prevent the overfitting towards "
+    },
+    {
+      "expression": "\"dev\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " set. The sample distribution of the train set is used as Ptr(xtr i )."
     }
   ],
   "variables": {},

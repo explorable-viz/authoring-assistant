@@ -3,16 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The compression results on the "
+      "value": "The compression results on the six adopted datasets, including "
     },
     {
-      "expression": "\"six\"",
+      "expression": "\"parameter size\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " adopted datasets, including parameter size, inference speedup and classification accuracy, are summarized in Table 1.  Overall speaking, on all the evaluated datasets, the proposed AdaBERT method achieves significant efficiency improvement while maintaining comparable performance. Compared to the "
+      "value": ", "
+    },
+    {
+      "expression": "\"inference speedup\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"classification accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", are summarized in Table 1.  Overall speaking, on all the evaluated datasets, the proposed AdaBERT method achieves significant efficiency improvement while maintaining comparable performance. Compared to the "
     },
     {
       "expression": "\"BERT12-T\"",
@@ -25,7 +43,7 @@
     },
     {
       "expression": "\"11.5x\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -34,7 +52,7 @@
     },
     {
       "expression": "\"17.0x\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -43,7 +61,7 @@
     },
     {
       "expression": "\"12.7x\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -52,7 +70,7 @@
     },
     {
       "expression": "\"29.3x\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -66,16 +84,16 @@
     },
     {
       "type": "literal",
-      "value": ".  Comparing structureheterogeneous method, "
+      "value": ".  Comparing "
     },
     {
-      "expression": "\"BiLSTMSOF\"",
+      "expression": "\"structureheterogeneous method\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", AdaBERT searches CNN-based models and achieves much another with "
+      "value": ", BiLSTMSOF, AdaBERT searches CNN-based models and achieves much another with "
     },
     {
       "expression": "\"better\"",
@@ -87,17 +105,17 @@
       "value": " improvements, especially on the "
     },
     {
-      "expression": "\"MNLI\"",
+      "expression": "\"MNLI dataset\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " dataset.  Comparing with different Transformers-based compression baselines, the proposed AdaBERT method is "
+      "value": ".  Comparing with different Transformers-based compression baselines, the proposed AdaBERT method is "
     },
     {
       "expression": "\"1.35x\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -106,7 +124,7 @@
     },
     {
       "expression": "\"3.12x\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {

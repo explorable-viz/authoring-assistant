@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " as feature level transfer-learning.  These results are shown in "
+      "value": " as feature level transfer-learning.\nThese results are shown in "
     },
     {
       "expression": "\"table 2\"",
@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " as model level transfer learning.  "
+      "value": " as model level transfer learning.\n"
     },
     {
       "expression": "\"Table 2\"",

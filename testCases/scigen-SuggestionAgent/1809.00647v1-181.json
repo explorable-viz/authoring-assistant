@@ -3,25 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We gradually add "
+      "value": "We gradually add feature groups to the "
     },
     {
-      "expression": "\"feature groups\"",
+      "expression": "\"Frequency\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to the "
-    },
-    {
-      "expression": "\"Frequency baseline\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The combination of "
+      "value": " baseline. The combination of "
     },
     {
       "expression": "\"Location (sentence location)\"",
@@ -39,25 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " almost sets the performance for the whole model. Adding each "
-    },
-    {
-      "expression": "\"voting feature\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " individually produces mixed results. However, adding all "
-    },
-    {
-      "expression": "\"voting features\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " improves all metrics. Though the margin is small, "
+      "value": " almost sets the performance for the whole model. Adding each voting feature individually produces mixed results. However, adding all voting features improves all metrics. Though the margin is small, "
     },
     {
       "expression": "\"4\"",
@@ -75,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": ". To understand the contribution of individual "
-    },
-    {
-      "expression": "\"features\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", we conduct an ablation study of various feature settings in Table 4."
+      "value": ". To understand the contribution of individual features, we conduct an ablation study of various feature settings in Table 4."
     }
   ],
   "variables": {},

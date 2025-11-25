@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 8: Comparison between "
+      "value": "Table 8: "
+    },
+    {
+      "expression": "\"Comparison\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between "
     },
     {
       "expression": "\"FT\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " on real-world datasets derived from Alexa Virtual Assistant traffic\r\nIn these experiments, we used, as usual, ASNQ for the transfer step, and NAD as our target dataset for the adapt step. Table 8 reports the comparative results using simple "
+      "value": " on real-world datasets derived from Alexa Virtual Assistant traffic  In these experiments, we used, as usual, ASNQ for the transfer step, and NAD as our target dataset for the adapt step. Table 8 reports the comparative "
+    },
+    {
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " using simple "
     },
     {
       "expression": "\"FT\"",

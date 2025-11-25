@@ -1,0 +1,16 @@
+[
+    {
+        "": "CC",
+        "subtask_1.1_macro_f1": "54.42",
+        "subtask_1.1_micro_f1": "67.61",
+        "subtask_1.2_macro_f1": " 74.42",
+        "subtask_1.2_micro_f1": " 78.87"
+    },
+    {
+        "": "arXiv",
+        "subtask_1.1_macro_f1": " 67.49",
+        "subtask_1.1_micro_f1": " 70.96",
+        "subtask_1.2_macro_f1": "67.02",
+        "subtask_1.2_micro_f1": "74.37"
+    }
+]

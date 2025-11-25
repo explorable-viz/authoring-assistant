@@ -1,0 +1,79 @@
+[
+    {
+        "_model": "Baseline (  b=1)",
+        "_wmt_en-de_bleu": "25.82",
+        "_wmt_en-de_speedup": "1.15×",
+        "_wmt_de-en_bleu": "29.83",
+        "_wmt_de-en_speedup": "1.14×",
+        "_iwslt_en-de_bleu": "28.66",
+        "_iwslt_en-de_speedup": "1.16×",
+        "_wmt_en-fr_bleu": "39.41",
+        "_wmt_en-fr_speedup": "1.18×"
+    },
+    {
+        "_model": "Baseline (  b=4)",
+        "_wmt_en-de_bleu": "26.87",
+        "_wmt_en-de_speedup": "1.00×",
+        "_wmt_de-en_bleu": "30.73",
+        "_wmt_de-en_speedup": "1.00×",
+        "_iwslt_en-de_bleu": "30.00",
+        "_iwslt_en-de_speedup": "1.00×",
+        "_wmt_en-fr_bleu": "40.22",
+        "_wmt_en-fr_speedup": "1.00×"
+    },
+    {
+        "_model": "SAT (  k=2)",
+        "_wmt_en-de_bleu": "22.81",
+        "_wmt_en-de_speedup": "2.05×",
+        "_wmt_de-en_bleu": "26.78",
+        "_wmt_de-en_speedup": "2.04×",
+        "_iwslt_en-de_bleu": "25.48",
+        "_iwslt_en-de_speedup": "2.03×",
+        "_wmt_en-fr_bleu": "36.62",
+        "_wmt_en-fr_speedup": "2.14×"
+    },
+    {
+        "_model": "SAT (  k=4)",
+        "_wmt_en-de_bleu": "16.44",
+        "_wmt_en-de_speedup": "3.61×",
+        "_wmt_de-en_bleu": "21.27",
+        "_wmt_de-en_speedup": "3.58×",
+        "_iwslt_en-de_bleu": "20.25",
+        "_iwslt_en-de_speedup": "3.45×",
+        "_wmt_en-fr_bleu": "28.07",
+        "_wmt_en-fr_speedup": "3.34×"
+    },
+    {
+        "_model": "SAT (  k=6)",
+        "_wmt_en-de_bleu": "12.55",
+        "_wmt_en-de_speedup": "4.86×",
+        "_wmt_de-en_bleu": "15.23",
+        "_wmt_de-en_speedup": "4.27×",
+        "_iwslt_en-de_bleu": "14.02",
+        "_iwslt_en-de_speedup": "4.39×",
+        "_wmt_en-fr_bleu": "24.63",
+        "_wmt_en-fr_speedup": "4.77×"
+    },
+    {
+        "_model": "LT*",
+        "_wmt_en-de_bleu": "19.8",
+        "_wmt_en-de_speedup": "3.89×",
+        "_wmt_de-en_bleu": "-",
+        "_wmt_de-en_speedup": "-",
+        "_iwslt_en-de_bleu": "-",
+        "_iwslt_en-de_speedup": "-",
+        "_wmt_en-fr_bleu": "-",
+        "_wmt_en-fr_speedup": "-"
+    },
+    {
+        "_model": "SynST(  k=6)",
+        "_wmt_en-de_bleu": "20.74",
+        "_wmt_en-de_speedup": "4.86×",
+        "_wmt_de-en_bleu": "25.50",
+        "_wmt_de-en_speedup": "5.06×",
+        "_iwslt_en-de_bleu": "23.82",
+        "_iwslt_en-de_speedup": "3.78×",
+        "_wmt_en-fr_bleu": "33.47",
+        "_wmt_en-fr_speedup": "5.32×"
+    }
+]

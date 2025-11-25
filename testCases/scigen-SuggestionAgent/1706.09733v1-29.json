@@ -12,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " systems outperform "
+      "value": " systems "
     },
     {
-      "expression": "\"full-word\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " systems across the board, despite having fewer total parameters.\r\nSystems built on larger data generally benefit from larger vocabularies while smaller systems perform "
+      "value": " full-word systems across the board, despite having fewer total parameters. Systems built on larger data generally benefit from larger vocabularies while smaller systems perform "
     },
     {
       "expression": "\"better\"",

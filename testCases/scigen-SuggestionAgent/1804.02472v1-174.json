@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Evidence of this complementarity can be seen in Table 6, which contains a breakdown of system performance by governing dependency relation, for both "
+      "value": "Evidence of this complementarity can be seen in "
+    },
+    {
+      "expression": "\"Table 6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which contains a breakdown of system performance by governing dependency relation, for both "
     },
     {
       "expression": "\"linear\"",
@@ -30,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " is closer to the true "
-    },
-    {
-      "expression": "\"mean\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". This appears to arise in part because the "
+      "value": " is closer to the true mean. This appears to arise in part because the "
     },
     {
       "expression": "\"T-biLSTM\"",
@@ -48,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " is less confident in its predictions \u2013 i.e. its "
-    },
-    {
-      "expression": "\"mean prediction\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " tends to be closer to "
+      "value": " is less confident in its predictions \u2013 i.e. its mean prediction tends to be closer to "
     },
     {
       "expression": "\"0\"",
@@ -93,16 +84,7 @@
     },
     {
       "type": "literal",
-      "value": " is closer to the true "
-    },
-    {
-      "expression": "\"mean\"",
-      "categories": ["average"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " is closer to the true mean."
     }
   ],
   "variables": {},

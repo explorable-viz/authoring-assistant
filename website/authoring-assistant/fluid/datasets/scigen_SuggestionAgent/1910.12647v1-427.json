@@ -1,0 +1,92 @@
+[
+    {
+        "_source_corpus": "MNLI",
+        "_target_corpus": "QNLI",
+        "_hubert_transfer_bert": "True",
+        "_hubert_transfer_filler": "True",
+        "_hubert_transfer_role": "False",
+        "_bert_acc._(%)": " 90.50",
+        "_hubert_acc._(%)": " 90.50"
+    },
+    {
+        "_source_corpus": "MNLI",
+        "_target_corpus": "QQP",
+        "_hubert_transfer_bert": "False",
+        "_hubert_transfer_filler": "False",
+        "_hubert_transfer_role": "True",
+        "_bert_acc._(%)": "89.20",
+        "_hubert_acc._(%)": " 89.30"
+    },
+    {
+        "_source_corpus": "MNLI",
+        "_target_corpus": "RTE",
+        "_hubert_transfer_bert": "True",
+        "_hubert_transfer_filler": "True",
+        "_hubert_transfer_role": "True",
+        "_bert_acc._(%)": "66.40",
+        "_hubert_acc._(%)": " 69.30"
+    },
+    {
+        "_source_corpus": "MNLI",
+        "_target_corpus": "SNLI",
+        "_hubert_transfer_bert": "True",
+        "_hubert_transfer_filler": "False",
+        "_hubert_transfer_role": "True",
+        "_bert_acc._(%)": "89.20",
+        "_hubert_acc._(%)": " 90.35"
+    },
+    {
+        "_source_corpus": "MNLI",
+        "_target_corpus": "SST",
+        "_hubert_transfer_bert": "True",
+        "_hubert_transfer_filler": "False",
+        "_hubert_transfer_role": "True",
+        "_bert_acc._(%)": " 93.50",
+        "_hubert_acc._(%)": "92.60"
+    },
+    {
+        "_source_corpus": "QQP",
+        "_target_corpus": "QNLI",
+        "_hubert_transfer_bert": "False",
+        "_hubert_transfer_filler": "True",
+        "_hubert_transfer_role": "True",
+        "_bert_acc._(%)": "90.50",
+        "_hubert_acc._(%)": " 90.70"
+    },
+    {
+        "_source_corpus": "QQP",
+        "_target_corpus": "MNLI",
+        "_hubert_transfer_bert": "False",
+        "_hubert_transfer_filler": "True",
+        "_hubert_transfer_role": "True",
+        "_bert_acc._(%)": "84.60",
+        "_hubert_acc._(%)": " 84.70"
+    },
+    {
+        "_source_corpus": "QQP",
+        "_target_corpus": "RTE",
+        "_hubert_transfer_bert": "False",
+        "_hubert_transfer_filler": "True",
+        "_hubert_transfer_role": "False",
+        "_bert_acc._(%)": " 66.40",
+        "_hubert_acc._(%)": "63.20"
+    },
+    {
+        "_source_corpus": "QQP",
+        "_target_corpus": "SNLI",
+        "_hubert_transfer_bert": "False",
+        "_hubert_transfer_filler": "False",
+        "_hubert_transfer_role": "True",
+        "_bert_acc._(%)": "89.20",
+        "_hubert_acc._(%)": " 90.36"
+    },
+    {
+        "_source_corpus": "QQP",
+        "_target_corpus": "SST",
+        "_hubert_transfer_bert": "True",
+        "_hubert_transfer_filler": "True",
+        "_hubert_transfer_role": "True",
+        "_bert_acc._(%)": " 93.50",
+        "_hubert_acc._(%)": "91.00"
+    }
+]

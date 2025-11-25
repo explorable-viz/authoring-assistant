@@ -3,28 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our "
+      "value": "Our model outperforms all other models in all the "
     },
     {
-      "expression": "\"model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " outperforms "
-    },
-    {
-      "expression": "\"all other models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in "
-    },
-    {
-      "expression": "\"all the metrics\"",
+      "expression": "\"metrics\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

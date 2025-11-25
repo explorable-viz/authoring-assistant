@@ -3,52 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Given a sentence, in any language, we evaluate the rank of the corresponding image. The evaluation is again made by batches of "
+      "value": "Given a sentence, in any language, we evaluate the "
     },
     {
-      "expression": "\"1000\"",
+      "expression": "\"rank\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the corresponding image. The evaluation is again made by "
+    },
+    {
+      "expression": "\"batches of 1000\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The results are presented in table 2. The first two lines of the table present the state-of-the-art results, with "
+      "value": ". The results are presented in table 2.  The first two lines of the table present the state-of-the-art results, with "
     },
     {
-      "expression": "\"W2V\"",
+      "expression": "\"W2V and FastText embeddings\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": ". We can see similar results as in the previous experiment. With BIVEC, we have results close to the "
     },
     {
-      "expression": "\"FastText\"",
+      "expression": "\"FastText embeddings\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " embeddings. We can see similar results as in the previous experiment. With "
+      "value": " when training only in English. This time, the "
     },
     {
-      "expression": "\"BIVEC\"",
+      "expression": "\"recall\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", we have results close to the "
-    },
-    {
-      "expression": "\"FastText\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " embeddings when training only in English. This time, the recall is "
+      "value": " is "
     },
     {
       "expression": "\"better\"",
@@ -60,13 +60,13 @@
       "value": " with an increase of "
     },
     {
-      "expression": "\"2.68%\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"2.68\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for "
+      "value": " % for "
     },
     {
       "expression": "\"recall@1\"",
@@ -87,49 +87,40 @@
       "value": " is increased by "
     },
     {
-      "expression": "\"3.65%\"",
+      "expression": "\"3.65\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " %. This implies, again, that we can improve performance by learning on an additional language.  Our model is able to use the multi-language representing the effectiveness of MUSE embeddings. We train the model with English, and different combinations of French, German and Czech. On English only, we have similar results to the "
+    },
+    {
+      "expression": "\"W2V approach\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". This implies, again, that we can improve performance by learning on an additional language. Our model is able to use the multi-language representing the effectiveness of "
+      "value": ". When adding new languages, we can see a decrease in performance for English. We obtain a "
     },
     {
-      "expression": "\"MUSE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " embeddings. We train the model with English, and different combinations of French, German and Czech. On English only, we have similar results to the "
-    },
-    {
-      "expression": "\"W2V\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " approach. When adding new languages, we can see a decrease in performance for English. We obtain a "
-    },
-    {
-      "expression": "\"maximum\"",
+      "expression": "\"maximum decrease\"",
       "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " decrease of "
+      "value": " of "
     },
     {
-      "expression": "\"2.62%\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"2.62\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for "
+      "value": " % for "
     },
     {
       "expression": "\"recall@1\"",
@@ -138,16 +129,16 @@
     },
     {
       "type": "literal",
-      "value": " when the models saw English, French, German and Czech. For image retrieval from a caption in 4 languages, we obtain a "
+      "value": " when the models saw English, French, German and Czech.  For image retrieval from a caption in 4 languages, we obtain a "
     },
     {
-      "expression": "\"49.38%\"",
+      "expression": "\"49.38\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " % "
     },
     {
       "expression": "\"recall@10\"",

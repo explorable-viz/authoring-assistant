@@ -1,0 +1,32 @@
+[
+    {
+        "model": "JAMR parser: Word, POS, NER, DEP",
+        "newswire": "JAMR parser: Word, POS, NER, DEP",
+        "all": ""
+    },
+    {
+        "model": "+ JAMR aligner",
+        "newswire": "71.3",
+        "all": "65.9"
+    },
+    {
+        "model": "+ Our aligner",
+        "newswire": "73.1",
+        "all": "67.6"
+    },
+    {
+        "model": "CAMR parser: Word, POS, NER, DEP",
+        "newswire": "CAMR parser: Word, POS, NER, DEP",
+        "all": ""
+    },
+    {
+        "model": "+ JAMR aligner",
+        "newswire": "68.4",
+        "all": "64.6"
+    },
+    {
+        "model": "+ Our aligner",
+        "newswire": "68.8",
+        "all": "65.1"
+    }
+]

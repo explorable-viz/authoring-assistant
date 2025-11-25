@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1904_02338v2_212
+
+"""
+	Table  ${"4"}  presents results on the original  ${"IWSLT17"}  task.  the  ${"vanilla training method"}  (Johnson et al.,  ${"2016"} ) achieves very high zero shot performance, even outperforming  ${"Pivot"} .
+"""

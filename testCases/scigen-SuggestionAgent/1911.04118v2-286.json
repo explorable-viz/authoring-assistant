@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4: Performance of different "
+      "value": "Table 4: "
+    },
+    {
+      "expression": "\"Performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of different "
     },
     {
       "expression": "\"models\"",
@@ -12,34 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"TREC-QA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dataset. Here "
-    },
-    {
-      "expression": "\"Comp-Agg + LM + LC\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed in (Yoon et al. 2019). "
-    },
-    {
-      "expression": "\"TL(QNLI)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " refers to Transfer Learning from the QNLI corpus. L and B stand for "
+      "value": " on TREC-QA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed in (Yoon et al. 2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for "
     },
     {
       "expression": "\"Large\"",
@@ -57,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ", respectively.  Table 4 reports the results of our experiments with "
-    },
-    {
-      "expression": "\"TREC-QA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": ", respectively.  Table 4 reports the results of our experiments with TREC-QA."
     }
   ],
   "variables": {},

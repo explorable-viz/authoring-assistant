@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1804_08887v1_25
+
+"""
+	We select the  ${"1st"}  and  ${"2nd best performing"}  models on the development datasets as well as the majority vote (mv) of  ${"5"}  models for the final submission. The final results are shown in Table 3.
+"""

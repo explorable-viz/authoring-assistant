@@ -33,13 +33,13 @@
       "value": ".  The "
     },
     {
-      "expression": "\"Transformer\"",
+      "expression": "\"Transformer model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model is accurate enough that oracle guessing does not help."
+      "value": " is accurate enough that oracle guessing does not help."
     }
   ],
   "variables": {},

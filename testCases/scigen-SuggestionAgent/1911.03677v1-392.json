@@ -3,19 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "our model can stably generate adversarial samples without "
+      "value": "our model can stably generate adversarial samples without significant change in semantics with the same "
     },
     {
-      "expression": "\"significant\"",
-      "categories": ["comparison"],
+      "expression": "\"training setting\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " change in semantics with the same training setting for "
+      "value": " for different "
     },
     {
-      "expression": "\"different models\"",
+      "expression": "\"models\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

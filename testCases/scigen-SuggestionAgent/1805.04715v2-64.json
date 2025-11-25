@@ -1,65 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "I apologize for the confusion. I'll ensure that each annotation uses only one valid category.\n\nHere is the corrected output:\n\nIn Table 3 and Figure 1, the results of the experiment are presented. "
-    },
-    {
-      "expression": "\"Triframes\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " based on "
-    },
-    {
-      "expression": "\"WATSET\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " clustering outperformed the other methods on both "
-    },
-    {
-      "expression": "\"Verb F1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and overall "
-    },
-    {
-      "expression": "\"Frame F1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The use of the "
-    },
-    {
-      "expression": "\"WATSET\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " fuzzy clustering algorithm that splits the hubs by disambiguating them leads to the "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " results (see Table 3)."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "In Table 3 and Figure 1, the results of the experiment are presented. Triframes based on WATSET clustering outperformed the other methods on both Verb F1 and overall Frame F1.  the use of the WATSET fuzzy clustering algorithm that splits the hubs by disambiguating them leads to the best results (see Table 3)."
+  }],
   "variables": {},
   "imports": [
     "scigen",

@@ -3,52 +3,61 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "table "
+      "value": "table 6, where we "
     },
     {
-      "expression": "\"6\"",
+      "expression": "\"compare\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hyperparameter tuning methodologies.  Perturbations on the hyperparameter search are listed in table 6 and "
+    },
+    {
+      "expression": "\"compare performance with different hyperparameter values found using different tuning strategies\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We tested how manual tuning, requiring less expert knowledge than Bayesian optimization, would "
+    },
+    {
+      "expression": "\"compare to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the random search strategy in table 6. For both "
+    },
+    {
+      "expression": "\"i2b2 and ddi corpora\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", where we compare hyperparameter tuning methodologies.  Perturbations on the hyperparameter search are listed in table "
+      "value": ", "
     },
     {
-      "expression": "\"6\"",
+      "expression": "\"manual search\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and compare performance with different hyperparameter values found using different tuning strategies.  We tested how manual tuning, requiring less expert knowledge than Bayesian optimization, would compare to the random search strategy in table "
+      "value": " outperformed "
     },
     {
-      "expression": "\"6\"",
+      "expression": "\"random search\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". For both "
-    },
-    {
-      "expression": "\"i2b2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"ddi\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " corpora, manual search outperformed random search."
+      "value": "."
     }
   ],
   "variables": {},

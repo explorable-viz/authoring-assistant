@@ -3,34 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows results that compare a "
+      "value": "Table 2 shows results that compare a BERT baseline that uses only the "
     },
     {
-      "expression": "\"BERT baseline\"",
+      "expression": "\"CQA\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " that uses only the "
+      "value": " inputs and the same architecture but trained using inputs that contain explanations from "
     },
     {
-      "expression": "\"CQA inputs\"",
+      "expression": "\"CoS-E\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and the same architecture but trained using inputs that contain explanations from CoS-E during training. The "
-    },
-    {
-      "expression": "\"BERT baseline model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " reaches "
+      "value": " during training. The BERT baseline model reaches "
     },
     {
       "expression": "\"64%\"",
@@ -39,11 +30,20 @@
     },
     {
       "type": "literal",
-      "value": " accuracy and adding open-ended human explanations (CoS-E-open-ended) alongside the questions during training results in a "
+      "value": " accuracy and adding open-ended human explanations ("
+    },
+    {
+      "expression": "\"CoS-E-open-ended\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") alongside the questions during training results in a "
     },
     {
       "expression": "\"2%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -66,16 +66,7 @@
     },
     {
       "type": "literal",
-      "value": ", but Table 4 shows that if "
-    },
-    {
-      "expression": "\"CAGE-reasoning\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " truly captured all information provided in CoS-E-openended, performance would be "
+      "value": ", but Table 4 shows that if CAGE-reasoning truly captured all information provided in CoS-E-openended, performance would be "
     },
     {
       "expression": "\"90%\"",

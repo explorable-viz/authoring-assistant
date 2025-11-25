@@ -1,38 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Understood! Let's ensure that each expression is annotated with only one category.\n\nHere is the corrected output:\n\nIn Table there are the results on the DIVA-HisDB dataset (see Section III-A). Our method achieves nearly perfect results ("
-    },
-    {
-      "expression": "\"99.42%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") and outperforms state-of-the-art ("
-    },
-    {
-      "expression": "\"97.86%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") resulting in a error reduction of 80.7%. Note that the "
-    },
-    {
-      "expression": "\"lower end\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the heatmap scale compares favourably with state-of-the-art (see Table I) meaning that regardless of the choice of parameters, our method produces excellent results."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "In Table  there are the results on the DIVA-HisDB dataset (see Section III-A). Our method achieves nearly perfect results (99.42%) and outperforms state-of-the-art (97.86%) resulting in a error reduction of 80.7%.  Note that the lower end of the heatmap scale compares favourably with state-ofthe-art (see Table I) meaning that regardless of the choice of parameters, our method produces excellent results."
+  }],
   "variables": {},
   "imports": [
     "scigen",

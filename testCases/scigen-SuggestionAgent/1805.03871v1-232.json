@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " the target task, where nested clauses are frequent. The splitter produced "
+      "value": " the target task, where nested clauses are frequent.  The splitter produced "
     },
     {
       "expression": "\"31,545\"",
@@ -48,16 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " test sentences/clauses. Table 2 shows their distribution in the six gold (correct) classes. cf. "
-    },
-    {
-      "expression": "\"Table 2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "),"
+      "value": " test sentences/clauses.3 Table 2 shows their distribution in the six gold (correct) classes.  cf. Table 2),"
     }
   ],
   "variables": {},

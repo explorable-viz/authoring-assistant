@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1808_09943v1_270
+
+"""
+	Table 2 clearly shows the  ${"characterlevel"}  systems  ${"outperforming"}   ${"BPE"}  for all  ${"language pairs"} .
+"""

@@ -15,7 +15,7 @@
       "value": " are shown in Table 2. We observe that our reinforcement learning algorithm "
     },
     {
-      "expression": "\"catSeqTG-2\"",
+      "expression": "\"catSeqTG-2 RF1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

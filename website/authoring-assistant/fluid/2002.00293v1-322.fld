@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._2002_00293v1_322
+
+"""
+	The  ${"average number of words"}  in questions and answers, as well as the  ${"average longest n-gram overlap"}  between passage and question are furthermore given in Table 3. We can again observe two clear trends: from weaker towards stronger models used in the annotation loop, the average length of answers increases, and the  ${"largest n-gram overlap"}  drops from  ${"3"}  to  ${"2"}  tokens.
+"""

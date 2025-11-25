@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. I'll ensure that each annotation uses only a single category from your provided list. Here is the corrected version:\n\nIn "
+      "value": "In "
     },
     {
       "expression": "\"Table 3\"",
@@ -48,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " alone performs "
+      "value": " alone performs much "
     },
     {
       "expression": "\"better\"",

@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1805_03871v1_241
+
+"""
+	${"H-BILSTM-ATT"}  is also much "faster" to train than "BILSTM" and "BILSTM-ATT" (Table 4), even though it has more parameters, because it converges faster ("5-7 epochs vs.12-15").
+"""

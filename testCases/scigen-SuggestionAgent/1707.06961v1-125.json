@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
+      "value": "Table 6 (morphosyntactic attribute tagging micro-F1).  In "
     },
     {
-      "expression": "\"6\"",
+      "expression": "\"morphosyntactic tagging\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (morphosyntactic attribute tagging micro-F1).  In morphosyntactic tagging, gains are apparent for "
+      "value": ", gains are apparent for "
     },
     {
       "expression": "\"Slavic languages\"",

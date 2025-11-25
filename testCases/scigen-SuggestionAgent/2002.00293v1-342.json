@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Thank you for the correction. Here is the annotated paragraph with the appropriate categories:\n\nFor example, "
+      "value": "For example, "
     },
     {
       "expression": "\"RoBERTa\"",
@@ -156,16 +156,7 @@
     },
     {
       "type": "literal",
-      "value": " achieves the "
-    },
-    {
-      "expression": "\"strongest\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " results on any of the "
+      "value": " achieves the strongest results on any of the "
     },
     {
       "expression": "\"DBiDAF\"",
@@ -318,25 +309,7 @@
     },
     {
       "type": "literal",
-      "value": " distribution. We will later find further support for this explanation in a qualitative analysis (Section 5). It may however also be due to a limitation of BERT and "
-    },
-    {
-      "expression": "\"RoBERTa\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " \u2013 similar to "
-    },
-    {
-      "expression": "\"BiDAF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " \u2013 in learning from a data distribution designed to beat these models; an even stronger model might learn more e.g. from "
+      "value": " distribution. We will later find further support for this explanation in a qualitative analysis (Section 5). It may however also be due to a limitation of BERT and RoBERTa \u2013 similar to BiDAF \u2013 in learning from a data distribution designed to beat these models; an even stronger model might learn more e.g. from "
     },
     {
       "expression": "\"DRoBERTa\"",

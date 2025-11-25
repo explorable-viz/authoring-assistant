@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Thank you for clarifying. I will adjust the annotation accordingly.\n\nHere is the revised paragraph:\n\nNext we can consider the effect of "
+      "value": "Next we can consider the effect of genre, and expectations that speech promotes notional agreement. This is confirmed in "
     },
     {
-      "expression": "\"genre\"",
+      "expression": "\"Table 3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", and expectations that speech promotes notional agreement. This is confirmed in Table 3. However we note that individual "
+      "value": ". However we note that individual genres do behave differently: data from the "
     },
     {
-      "expression": "\"genres\"",
+      "expression": "\"Web\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " do behave differently: data from the Web is closer to spoken language. The "
+      "value": " is closer to spoken language. The "
     },
     {
       "expression": "\"most restrictive\"",
@@ -39,25 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ". Both of these facts may reflect a combination of modality, "
-    },
-    {
-      "expression": "\"genre\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and editorial practice effects. However the strong differences suggest that "
-    },
-    {
-      "expression": "\"genre\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is likely crucial to any model attempting to predict this phenomenon."
+      "value": ". Both of these facts may reflect a combination of modality, genre and editorial practice effects. However the strong differences suggest that genre is likely crucial to any model attempting to predict this phenomenon."
     }
   ],
   "variables": {},

@@ -6,22 +6,31 @@
       "value": "The "
     },
     {
-      "expression": "\"average\"",
+      "expression": "\"average number of words\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " number of words in questions and answers, as well as the "
+      "value": " in questions and answers, as well as the "
     },
     {
-      "expression": "\"average\"",
+      "expression": "\"average longest n-gram overlap\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " longest n-gram overlap between passage and question are furthermore given in Table 3. We can again observe two clear trends: from weaker towards stronger models used in the annotation loop, the average length of answers increases, and the largest n-gram overlap drops from "
+      "value": " between passage and question are furthermore given in Table 3. We can again observe two clear trends: from weaker towards stronger models used in the annotation loop, the average length of answers increases, and the "
+    },
+    {
+      "expression": "\"largest n-gram overlap\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " drops from "
     },
     {
       "expression": "\"3\"",

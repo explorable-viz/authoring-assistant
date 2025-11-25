@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1807_00248v1_172
+
+"""
+	Table 2 compares the  ${"accuracy"}  of our model on the test data with  ${"two baselines"}  and  ${"two state-of-theart comparable systems"} . The  ${"MT baseline"}  simply consists of the accuracy of the mt sentences with respect to the pe ground truth. The other baseline is given by a statistical PE (SPE) system (Simard et al., 2007) chosen by the WMT17 organizers. Table 2 shows that when our model is trained with only the  ${"11K"}  WMT17 official training sentences, it cannot even approach the baselines. Even when the  ${"12K"}  WMT16 sentences are added, its accuracy is still well below that of the baselines. However, when the  ${"500K"}  artificial data are added, it reports a major improvement and it outperforms them both significantly. In addition, we have compared our model with two recent systems that have used our same training settings ( ${"500K"}  artificial triplets +  ${"23K"}  manual triplets oversampled  ${"10"}  times), reporting a slightly higher accuracy than both ( ${"1.43 TER"}  and  ${"1.93 BLEU p.p."}  over (Varis and Bojar, 2017) and  ${"0.21 TER"}  and  ${"0.30 BLEU p.p."}  over (B´erard et al., 2017)). Since their models explicitly predicts edit operations rather than post-edited sentences, we speculate that these two tasks are of comparable intrinsic complexity.
+"""

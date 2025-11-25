@@ -1,38 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Thank you for the clarification. Here is the corrected output:\n\nAs shown in Table 5, we compare our model with several different strategies. The first one is to put all weights to the center embedding (fix "
-    },
-    {
-      "expression": "\"λ\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " to "
-    },
-    {
-      "expression": "\"1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), which never updates the local relational embeddings. As a result, it can achieve similar performance on word similarity measurement but is "
-    },
-    {
-      "expression": "\"inferior\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in SP acquisition because no relation-dependent information is preserved."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "As shown in Table 5, we compare our model with several different strategies. The first one is to put all weights to the center embedding (fix λ to 1), which never updates the local relational embeddings. As a result, it can achieve similar performance on word similarity measurement but is inferior in SP acquisition because no relationdependent information is preserved."
+  }],
   "variables": {},
   "imports": [
     "scigen",

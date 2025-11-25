@@ -3,25 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table VI reports the accuracy of the "
-    },
-    {
-      "expression": "\"models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on the four benchmark "
-    },
-    {
-      "expression": "\"datasets\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". All the results are bold. It shows that "
+      "value": "Table VI reports the accuracy of the models on the four benchmark datasets. All the results are bold. It shows that "
     },
     {
       "expression": "\"Style-HAN\"",
@@ -30,20 +12,11 @@
     },
     {
       "type": "literal",
-      "value": " outperforms the "
-    },
-    {
-      "expression": "\"baselines\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " by "
+      "value": " outperforms the baselines by "
     },
     {
       "expression": "\"2.38\"",
-      "categories": ["data-retrieval"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -52,7 +25,7 @@
     },
     {
       "expression": "\"1.35\"",
-      "categories": ["data-retrieval"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -61,7 +34,7 @@
     },
     {
       "expression": "\"8.73\"",
-      "categories": ["data-retrieval"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -70,7 +43,7 @@
     },
     {
       "expression": "\"4.46\"",
-      "categories": ["data-retrieval"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {

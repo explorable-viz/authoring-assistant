@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " (Nguyen et al., 2016a), "
+      "value": " ("
+    },
+    {
+      "expression": "\"Nguyen et al.\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", 2016a), "
     },
     {
       "expression": "\"MUC 4\"",
@@ -24,7 +33,7 @@
       "value": ", "
     },
     {
-      "expression": "\"ACE 2005\"",
+      "expression": "\"ACE 20052\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -33,13 +42,22 @@
       "value": " and "
     },
     {
-      "expression": "\"ERE\"",
+      "expression": "\"ERE3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", is shown in Table 2. Compared with the other datasets, GNBusiness has a "
+      "value": ", is shown in Table 2. Compared with the other datasets, "
+    },
+    {
+      "expression": "\"GNBusiness\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has a "
     },
     {
       "expression": "\"much larger number of documents\"",
@@ -48,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": ", (i.e., news clusters in GNBusiness), and a "
+      "value": " (i.e., news clusters in GNBusiness), and a "
     },
     {
       "expression": "\"comparable number of labeled documents\"",

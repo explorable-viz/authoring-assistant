@@ -1,0 +1,101 @@
+[
+    {
+        "": " Baseline",
+        "_w/_system_retrieval___bleu": " Baseline",
+        "_w/_system_retrieval___mtr": " Baseline",
+        "_w/_system_retrieval___len": " Baseline",
+        "_w/_oracle_retrieval___bleu": " Baseline",
+        "_w/_oracle_retrieval___mtr": " Baseline",
+        "_w/_oracle_retrieval___len": " Baseline"
+    },
+    {
+        "": "Retrieval",
+        "_w/_system_retrieval___bleu": "15.32",
+        "_w/_system_retrieval___mtr": " 12.19",
+        "_w/_system_retrieval___len": "151.2",
+        "_w/_oracle_retrieval___bleu": "10.24",
+        "_w/_oracle_retrieval___mtr": " 16.22",
+        "_w/_oracle_retrieval___len": "132.7"
+    },
+    {
+        "": " Comparisons",
+        "_w/_system_retrieval___bleu": " Comparisons",
+        "_w/_system_retrieval___mtr": " Comparisons",
+        "_w/_system_retrieval___len": " Comparisons",
+        "_w/_oracle_retrieval___bleu": " Comparisons",
+        "_w/_oracle_retrieval___mtr": " Comparisons",
+        "_w/_oracle_retrieval___len": " Comparisons"
+    },
+    {
+        "": "Seq2seq",
+        "_w/_system_retrieval___bleu": "10.21",
+        "_w/_system_retrieval___mtr": "5.74",
+        "_w/_system_retrieval___len": "34.9",
+        "_w/_oracle_retrieval___bleu": "7.44",
+        "_w/_oracle_retrieval___mtr": "5.25",
+        "_w/_oracle_retrieval___len": "31.1"
+    },
+    {
+        "": "+   encode evd",
+        "_w/_system_retrieval___bleu": "18.03",
+        "_w/_system_retrieval___mtr": "7.32",
+        "_w/_system_retrieval___len": "67.0",
+        "_w/_oracle_retrieval___bleu": "13.79",
+        "_w/_oracle_retrieval___mtr": "10.06",
+        "_w/_oracle_retrieval___len": "68.1"
+    },
+    {
+        "": "+   encode KP",
+        "_w/_system_retrieval___bleu": "21.94",
+        "_w/_system_retrieval___mtr": "8.63",
+        "_w/_system_retrieval___len": "74.4",
+        "_w/_oracle_retrieval___bleu": "12.96",
+        "_w/_oracle_retrieval___mtr": "10.50",
+        "_w/_oracle_retrieval___len": "78.2"
+    },
+    {
+        "": " Our Models",
+        "_w/_system_retrieval___bleu": " Our Models",
+        "_w/_system_retrieval___mtr": " Our Models",
+        "_w/_system_retrieval___len": " Our Models",
+        "_w/_oracle_retrieval___bleu": " Our Models",
+        "_w/_oracle_retrieval___mtr": " Our Models",
+        "_w/_oracle_retrieval___len": " Our Models"
+    },
+    {
+        "": "Dec-shared",
+        "_w/_system_retrieval___bleu": "21.22",
+        "_w/_system_retrieval___mtr": "8.91",
+        "_w/_system_retrieval___len": "69.1",
+        "_w/_oracle_retrieval___bleu": "15.78",
+        "_w/_oracle_retrieval___mtr": "11.52",
+        "_w/_oracle_retrieval___len": "68.2"
+    },
+    {
+        "": "+   attend KP",
+        "_w/_system_retrieval___bleu": " 24.71",
+        "_w/_system_retrieval___mtr": "10.05",
+        "_w/_system_retrieval___len": "74.8",
+        "_w/_oracle_retrieval___bleu": "11.48",
+        "_w/_oracle_retrieval___mtr": "10.08",
+        "_w/_oracle_retrieval___len": "40.5"
+    },
+    {
+        "": "Dec-separate",
+        "_w/_system_retrieval___bleu": "24.24",
+        "_w/_system_retrieval___mtr": "10.63",
+        "_w/_system_retrieval___len": "88.6",
+        "_w/_oracle_retrieval___bleu": "17.48",
+        "_w/_oracle_retrieval___mtr": "13.15",
+        "_w/_oracle_retrieval___len": "86.9"
+    },
+    {
+        "": "+   attend KP",
+        "_w/_system_retrieval___bleu": "24.52",
+        "_w/_system_retrieval___mtr": "11.27",
+        "_w/_system_retrieval___len": "88.3",
+        "_w/_oracle_retrieval___bleu": " 17.80",
+        "_w/_oracle_retrieval___mtr": "13.67",
+        "_w/_oracle_retrieval___len": "86.8"
+    }
+]

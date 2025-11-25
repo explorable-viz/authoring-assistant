@@ -3,25 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 presents results on the original IWSLT17 task.  the "
+      "value": "Table "
     },
     {
-      "expression": "\"vanilla\"",
+      "expression": "\"4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " training method ("
+      "value": " presents results on the original "
     },
     {
-      "expression": "\"Johnson et al.\"",
+      "expression": "\"IWSLT17\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", 2016) achieves very high zero shot performance, even outperforming "
+      "value": " task.  the "
+    },
+    {
+      "expression": "\"vanilla training method\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Johnson et al., "
+    },
+    {
+      "expression": "\"2016\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") achieves very high zero shot performance, even outperforming "
     },
     {
       "expression": "\"Pivot\"",

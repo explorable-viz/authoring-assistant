@@ -1,47 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "We also compare "
-    },
-    {
-      "expression": "\"MWE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with pre-trained contextualized word embedding models in Table 4 for this task, with overall performance, embedding dimensions, and training times reported. It is observed that "
-    },
-    {
-      "expression": "\"MWE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " outperforms "
-    },
-    {
-      "expression": "\"ELMo\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and achieves comparable results with "
-    },
-    {
-      "expression": "\"BERT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with smaller embedding dimension and much less training complexities."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We also compare MWE with pre-trained contextualized word embedding models in Table 4 for this task, with overall performance, embedding dimensions, and training times reported. It is observed that that MWE outperforms ELMo and achieves comparable results with BERT with smaller embedding dimension and much less training complexities."
+  }],
   "variables": {},
   "imports": [
     "scigen",

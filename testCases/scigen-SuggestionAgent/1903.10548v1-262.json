@@ -12,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " result belongs to classifying order of paragraphs using "
+      "value": " result belongs to classifying order of paragraphs using pre-trained "
     },
     {
-      "expression": "\"BERT\"",
+      "expression": "\"BERT model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model. It achieves around "
+      "value": ". It achieves around "
     },
     {
       "expression": "\"84%\"",
@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " accuracy on test set which outperforms other models significantly.  First, each paragraph is encoded with "
+      "value": " accuracy on test set which "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " other models significantly.  First, each paragraph is encoded with "
     },
     {
       "expression": "\"LSTM\"",

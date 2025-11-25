@@ -3,70 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The allowable input perturbation space is much larger than for word-level synonym substitutions, as shown in Table "
+      "value": "The allowable input perturbation space is much "
     },
     {
-      "expression": "\"3\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"larger\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". In Table "
-    },
-    {
-      "expression": "\"3\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", we show the "
+      "value": " than for word-level synonym substitutions, as shown in Table 3.  In Table 3, we show the "
     },
     {
       "expression": "\"maximum\"",
-      "categories": ["min-max"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " perturbation space size in the "
-    },
-    {
-      "expression": "\"SST\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"AG News\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " test set for different perturbation radii "
-    },
-    {
-      "expression": "\"δ\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". This number grows exponentially as "
-    },
-    {
-      "expression": "\"δ\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " increases."
+      "value": " perturbation space size in the SST and AG News test set for different perturbation radii δ.  This number grows exponentially as δ increases."
     }
   ],
   "variables": {},

@@ -12,25 +12,43 @@
     },
     {
       "type": "literal",
-      "value": " baseline without explanations and using our transferred explanations from CQA to SWAG and Story Cloze. We observed that adding explanations led to a very small decrease ("
+      "value": " baseline without explanations and using our transferred explanations from "
     },
     {
-      "expression": "\"< 0.6%\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") in the performance compared to the "
-    },
-    {
-      "expression": "\"baseline\"",
+      "expression": "\"CQA\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for both tasks."
+      "value": " to "
+    },
+    {
+      "expression": "\"SWAG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Story Cloze\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We observed that adding explanations led to a very small decrease (< "
+    },
+    {
+      "expression": "\"0.6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%) in the performance compared to the baseline for both tasks."
     }
   ],
   "variables": {},

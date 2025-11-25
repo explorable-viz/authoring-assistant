@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1706_09733v1_29
+
+"""
+	As shown in Table 2,  ${"sub-word"}  systems  ${"outperform"}  full-word systems across the board, despite having fewer total parameters. Systems built on larger data generally benefit from larger vocabularies while smaller systems perform  ${"better"}  with smaller vocabularies.
+"""

@@ -1,56 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Let us now compare the performance of "
-    },
-    {
-      "expression": "\"CIPHER-AVG\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with that of a vanilla supervised neural model.11 Table 3 shows precision, recall, and F1 scores for the NOUN tag.  Even though CIPHER-AVG achieved mixed results (mid to low accuracy), the model robustly achieves mid-range "
-    },
-    {
-      "expression": "\"performance\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " according to "
-    },
-    {
-      "expression": "\"F1-score\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for all CLs.  The results are even more optimistic in terms of "
-    },
-    {
-      "expression": "\"recall\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for English and French, and in terms of "
-    },
-    {
-      "expression": "\"precision\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for Farsi and Swahili."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Let us now compare the performance of CIPHER-AVG with that of a vanilla supervised neural model.11 Table 3 shows precision, recall, and F1 scores for the NOUN tag.  Even though CIPHER-AVG achieved mixed results (mid to low accuracy), the model robustly achieves mid-range performance according to F1-score for all CLs.  The results are even more optimistic in terms of recall for English and French, and in terms of precision for Farsi and Swahili."
+  }],
   "variables": {},
   "imports": [
     "scigen",

@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1904_02338v2_211
+
+"""
+	Table 3 shows the results on the Europarl corpus.  our approach consistently  ${"outperforms"}   ${"Basic"}  by  ${"2-3 BLEU points"}  but lags a bit behind  ${"Pivot"}  on  ${"average"}  (except on  ${"De"}  where it is  ${"better"} ). Es
+"""

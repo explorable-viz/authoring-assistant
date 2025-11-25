@@ -16,12 +16,21 @@
     },
     {
       "expression": "\"highest\"",
-      "categories": ["min-max"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BLEU score, all models have similar BLEU scores and the difference is not that significant.  We can clearly notice from human evaluations shown in Table 2 that our model, RL Look-ahead, outperforms all of the others in all three evaluated categories."
+      "value": " BLEU score, all models have similar BLEU scores and the "
+    },
+    {
+      "expression": "\"difference\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is not that significant.  We can clearly notice from human evaluations shown in Table 2 that our model, RL Look-ahead, outperforms all of the others in all three evaluated categories."
     }
   ],
   "variables": {},

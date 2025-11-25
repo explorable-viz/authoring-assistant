@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. I'll use the correct category from the provided list.\n\nHere is the revised paragraph:\n\nTable 2 shows the results, where the two cases are denoted as "
+      "value": "Table 2 shows the results, where the two cases are denoted as "
     },
     {
       "expression": "\"ΔIV\"",
@@ -21,7 +21,25 @@
     },
     {
       "type": "literal",
-      "value": ". The general trend in the results is that the improvements of both models in the OOV case are larger than in the IV case, which means that the character composition models indeed alleviates the OOV problem. Also, "
+      "value": ". The general trend in the results is that the improvements of both models in the "
+    },
+    {
+      "expression": "\"OOV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case are larger than in the "
+    },
+    {
+      "expression": "\"IV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case, which means that the character composition models indeed alleviates the OOV problem. Also, "
     },
     {
       "expression": "\"CNN\"",
@@ -30,7 +48,25 @@
     },
     {
       "type": "literal",
-      "value": " improves on seven languages in the IV case and eight languages in the OOV case, and it performs consistently "
+      "value": " improves on seven languages in the "
+    },
+    {
+      "expression": "\"IV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case and eight languages in the "
+    },
+    {
+      "expression": "\"OOV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case, and it performs consistently "
     },
     {
       "expression": "\"better\"",

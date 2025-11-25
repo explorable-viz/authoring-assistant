@@ -1,83 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "We compare our model with the state-of-the-art models in Table 3. As Table 3 shows, this model alone (without any reranking) improves the state-of-the-art performance from "
-    },
-    {
-      "expression": "\"79.6\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% to "
-    },
-    {
-      "expression": "\"82.15\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% accuracy. Increasing the beam size improves the performance as expected. Using a pre-trained model improves the performance as well. Reranking with a threshold rule may be helpful for the overall architecture. We observe that reranking by the critic at all times may not be the "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " approach. We note that choosing not to rerank when all scores are below "
-    },
-    {
-      "expression": "\"0.5\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " increases the performance further. On the other hand, reranking if the difference between the "
-    },
-    {
-      "expression": "\"best score\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"second best score\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is above the threshold we set does not help in this case. The overall architecture improves the performance of the generator ("
-    },
-    {
-      "expression": "\"82.1%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " accuracy) to "
-    },
-    {
-      "expression": "\"83.7\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% accuracy."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We compare our model with the state-of-the-art models in Table 3.  As Table 3 shows, this model alone (without any reranking) improves the state-of-the-art performance from 79.6% to 82.15% accuracy  Increasing the beam size improves the performance as expected.  Using a pre-trained model improves the performance as well.  Reranking with a threshold rule may be helpful for the overall architecture. We observe that reranking by the critic at all times may not be the best approach. We note that choosing not to rerank when all scores are below 0.5 increases the performance further. On the other hand, reranking if the difference between the best score and second best score is above the threshold we set does not help in this case.  The overall architecture improves the performance of the generator (82.1% accuracy) to 83.7% accuracy."
+  }],
   "variables": {},
   "imports": [
     "scigen",

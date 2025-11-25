@@ -1,92 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Thank you for the clarification. I will ensure that only the specified categories are used.\n\nHere is the revised paragraph with the appropriate categories:\n\nWe perform hyperparameter optimisation and make comparisons among our systems, including "
-    },
-    {
-      "expression": "\"GCN + Bi-LSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (GCN-based), "
-    },
-    {
-      "expression": "\"CNN + attention + Bi-LSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (Attbased), and their combination using a highway layer ("
-    },
-    {
-      "expression": "\"H-combined\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") in Table 1. Systems are evaluated using two types of precision, recall and F-score measures: strict MWE-based scores (every component of an MWE should be correctly tagged to be considered as true positive), and token-based scores (a partial match between a predicted and a gold MWE would be considered as true positive). We report results for all MWEs as well as discontinuous ones specifically. "
-    },
-    {
-      "expression": "\"GCN-based\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " outperforms "
-    },
-    {
-      "expression": "\"Att-based\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and they both outperform the strong baseline in terms of MWE-based F-score in "
-    },
-    {
-      "expression": "\"three\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Combining GCN with attention using highway networks results in further improvements for EN, FR and FA. The "
-    },
-    {
-      "expression": "\"Hcombined model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " consistently exceeds the baseline for all languages. "
-    },
-    {
-      "expression": "\"GCN\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"H-combined models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " each show significant improvement with regard to discontinuous MWEs, regardless of the proportion of such expressions. The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We perform hyperparameter optimisation and make comparisons among our systems, including GCN + Bi-LSTM (GCN-based), CNN + attention + Bi-LSTM (Attbased), and their combination using a highway layer (H-combined) in Table 1.  Systems are evaluated using two types of precision, recall and F-score measures: strict MWEbased scores (every component of an MWE should be correctly tagged to be considered as true positive), and token-based scores (a partial match between a predicted and a gold MWE would be considered as true positive). We report results for all MWEs as well as discontinuous ones specifically.  GCN-based outperforms Att-based and they both outperform the strong baseline in terms of MWE-based F-score in three out of four languages. Combining GCN with attention using highway networks results in further improvements for EN, FR and FA. The Hcombined model consistently exceeds the baseline for all languages.  GCN and H-combined models each show significant improvement with regard to discontinuous MWEs, regardless of the proportion of such expressions.  The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
+  }],
   "variables": {},
   "imports": [
     "scigen",

@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. I'll correct that and ensure the proper category is used.\n\nHere's the corrected output:\n\nTable 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the "
+      "value": "Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the "
     },
     {
       "expression": "\"previous state-of-the-art\"",
@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " and our "
-    },
-    {
-      "expression": "\"baselines\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  "
+      "value": " and our baselines.  "
     },
     {
       "expression": "\"TEXTONLY\"",
@@ -66,16 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " than the "
-    },
-    {
-      "expression": "\"previous state of the art\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  both "
+      "value": " than the previous state of the art.  both "
     },
     {
       "expression": "\"KBESTEISNERPS\"",
@@ -93,10 +75,10 @@
     },
     {
       "type": "literal",
-      "value": " obtain "
+      "value": " obtain significantly "
     },
     {
-      "expression": "\"significantly higher numbers\"",
+      "expression": "\"higher numbers\"",
       "categories": ["comparison"],
       "type": "expression"
     },

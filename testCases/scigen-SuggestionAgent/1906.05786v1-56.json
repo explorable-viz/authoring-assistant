@@ -30,16 +30,25 @@
     },
     {
       "type": "literal",
-      "value": " models with standard and iterative transfer learning. We find that the all-biomed domain gains 1-2 "
+      "value": " models with standard and iterative transfer learning. We find that the "
     },
     {
-      "expression": "\"BLEU points\"",
+      "expression": "\"all-biomed domain\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from transfer learning."
+      "value": " gains "
+    },
+    {
+      "expression": "\"1-2\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU points from transfer learning."
     }
   ],
   "variables": {},

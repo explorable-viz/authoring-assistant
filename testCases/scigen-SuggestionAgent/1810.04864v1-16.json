@@ -1,74 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "You are correct, I apologize for that mistake. Let's correct it:\n\nOn the WebNLG test set, the "
-    },
-    {
-      "expression": "\"BLEU\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " score of our "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " word-based model outperforms the "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " challenge submission by a small margin. The "
-    },
-    {
-      "expression": "\"character-based\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model achieves a significantly "
-    },
-    {
-      "expression": "\"higher\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"ROUGE-L\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " score than the word-based model, whereas the "
-    },
-    {
-      "expression": "\"BLEU\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " score difference is not significant."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "On the WebNLG test set, the BLEU score of our best word-based model outperforms the best challenge submission by a small margin. The character-based model achieves a significantly higher ROUGE-L score than the wordbased model, whereas the BLEU score difference is not significant."
+  }],
   "variables": {},
   "imports": [
     "scigen",

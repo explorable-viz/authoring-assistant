@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 summarizes the results for these transfer learning experiments when the source task is "
+      "value": "Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " summarizes the results for these transfer learning experiments when the source task is "
     },
     {
       "expression": "\"MNLI\"",
@@ -12,16 +21,52 @@
     },
     {
       "type": "literal",
-      "value": ". Gain shows the difference between Fine-tuned model's accuracy and Baseline's accuracy. For "
+      "value": ". Gain shows the "
     },
     {
-      "expression": "\"HUBERT (Transformer)\"",
+      "expression": "\"difference\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between "
+    },
+    {
+      "expression": "\"Fine-tuned model's accuracy\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", we observe substantial gain across all "
+      "value": " and "
+    },
+    {
+      "expression": "\"Baseline's accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For "
+    },
+    {
+      "expression": "\"HUBERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Transformer), we observe substantial "
+    },
+    {
+      "expression": "\"gain\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across all "
     },
     {
       "expression": "\"5\"",
@@ -39,7 +84,16 @@
     },
     {
       "type": "literal",
-      "value": " we have a drop for "
+      "value": " we have a "
+    },
+    {
+      "expression": "\"drop\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
     },
     {
       "expression": "\"QNLI\"",

@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_02361v1_396
+
+"""
+	Table 4 also contains results that use only the explanation and exclude the original question from CQA denoted by 'w/o question'. These variants also use explanation during both train and validation. We observe that even using these limited kind of explanations improves over the  ${"BERT"}  baseline in Table 4, which suggests that the explanations are providing useful information beyond just mentioning the correct or incorrect answers. In Table 2, using  ${"CAGE-reasoning"}  at both train and validation resulted in an accuracy of  ${"72%"} , but Table 4 shows that if  ${"CAGE-reasoning"}  truly captured all information provided in CoS-E-openended, performance would be  ${"90%"} .
+"""

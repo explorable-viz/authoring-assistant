@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The values in the last column of Table III are summarized in Table IV. How the "
+      "value": "The values in "
     },
     {
-      "expression": "\"models\"",
+      "expression": "\"the last column\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compare with respect to "
+      "value": " of Table III are summarized in Table IV. How the models "
+    },
+    {
+      "expression": "\"compare\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with respect to "
     },
     {
       "expression": "\"accuracy\"",

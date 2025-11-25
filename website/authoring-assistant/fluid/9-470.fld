@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._9_470
+
+"""
+	In Table 6 we show the  ${"top ranked"}  entities of type Variants, Diseases and Drugs for the query {PIK3CA}. While the diseases and the drugs are all relevant, V600E and T790M are in fact not variants of the gene PIK3CA. However, when refining the query {PIK3CA, V600E, BRAF, H1047R, Dabrafenib}, the  ${"top ranked"}  diseases are [Melanoma, Neoplasms, Carcinoma Non Small Cell Lung (CNSCL), Thyroid Neoplasms, Colorectal Neoplasms]. Using Melanoma for refinement, retrieves the  ${"top ranked"}  paper (Falchook et al., 2013) which perfectly includes all these entities in a biomarker relationship.
+"""

@@ -21,10 +21,10 @@
     },
     {
       "type": "literal",
-      "value": " summarize the "
+      "value": " summarize the top "
     },
     {
-      "expression": "\"top 10\"",
+      "expression": "\"10\"",
       "categories": ["rank"],
       "type": "expression"
     },
@@ -61,7 +61,7 @@
     },
     {
       "expression": "\"least one\"",
-      "categories": ["comparison"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

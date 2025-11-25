@@ -3,70 +3,88 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 presents the performance of our baselines in the speaker-independent setup. In this case, the "
+      "value": "Table "
     },
     {
-      "expression": "\"multimodal\"",
+      "expression": "\"3\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " variants do not greatly outperform the "
+      "value": " presents the performance of our baselines in the speaker-independent setup. In this case, the "
     },
     {
-      "expression": "\"unimodal\"",
+      "expression": "\"multimodal variants\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " counterparts. Unlike Table 2, the "
+      "value": " do not greatly "
     },
     {
-      "expression": "\"audio\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " channel plays a more important role, and it is slightly improved by adding "
-    },
-    {
-      "expression": "\"text\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". In multiple evaluations, the "
-    },
-    {
-      "expression": "\"multimodal\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " variants were shown to significantly outperform their "
-    },
-    {
-      "expression": "\"unimodal\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " counterparts, with relative error rate reductions of up to "
-    },
-    {
-      "expression": "\"12.9\"",
+      "expression": "\"outperform\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "%."
+      "value": " the "
+    },
+    {
+      "expression": "\"unimodal counterparts\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Unlike Table "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the audio channel plays a more important role, and it is slightly improved by adding text.  In multiple evaluations, the "
+    },
+    {
+      "expression": "\"multimodal variants\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " were shown to significantly "
+    },
+    {
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " their "
+    },
+    {
+      "expression": "\"unimodal counterparts\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with relative error rate reductions of up to "
+    },
+    {
+      "expression": "\"12.9%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

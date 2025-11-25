@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it, I will ensure that each expression is annotated with a single category. Here's the corrected paragraph:\n\nTable "
-    },
-    {
-      "expression": "\"2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " shows micro F1 scores on "
+      "value": "Table 2 shows micro F1 scores on "
     },
     {
       "expression": "\"5\"",
@@ -30,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " employs several mention relations. Mentnorm achieves the "
+      "value": " employs several mention relations. "
+    },
+    {
+      "expression": "\"Mentnorm\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieves the "
     },
     {
       "expression": "\"highest\"",
@@ -57,11 +57,20 @@
     },
     {
       "type": "literal",
-      "value": ". On average, ment-norm's F1 score is "
+      "value": ". On average, "
+    },
+    {
+      "expression": "\"ment-norm's\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 score is "
     },
     {
       "expression": "\"0.3%\"",
-      "categories": ["average"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -79,12 +88,21 @@
     },
     {
       "expression": "\"0.2%\"",
-      "categories": ["min-max"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
       "value": " lower than "
+    },
+    {
+      "expression": "\"Guo and Barbosa (2016)'s\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". It is worth noting that "
     },
     {
       "expression": "\"Guo and Barbosa (2016)\"",
@@ -93,7 +111,7 @@
     },
     {
       "type": "literal",
-      "value": "'s. It is worth noting that Guo and Barbosa (2016) performs exceptionally well on "
+      "value": " performs exceptionally well on "
     },
     {
       "expression": "\"WIKI\"",
@@ -111,7 +129,16 @@
     },
     {
       "type": "literal",
-      "value": "] than ment-norm on all other datasets. Our other three models, however, have "
+      "value": " than "
+    },
+    {
+      "expression": "\"ment-norm\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all other datasets. Our other three models, however, have "
     },
     {
       "expression": "\"lower\"",
@@ -129,7 +156,16 @@
     },
     {
       "type": "literal",
-      "value": " previous model. The experimental results show that ment-norm outperforms "
+      "value": " previous model.  The experimental results show that "
+    },
+    {
+      "expression": "\"ment-norm\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms "
     },
     {
       "expression": "\"rel-norm\"",

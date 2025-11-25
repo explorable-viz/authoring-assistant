@@ -48,52 +48,61 @@
     },
     {
       "type": "literal",
-      "value": " for relaxed evaluation with Fastext-It embeddings).  Although FBKHLT suffers in the classification subtask, it qualifies as a highly competitive system for the detection subtask.  By observing the strict F1 scores, "
+      "value": " for relaxed evaluation with Fastext-It embeddings).  Although FBKHLT suffers in the classification subtask, it qualifies as a highly competitive system for the detection subtask.  By observing the strict F1 scores, FBK-HLT "
     },
     {
-      "expression": "\"FBK-HLT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " beats "
-    },
-    {
-      "expression": "\"three\"",
+      "expression": "\"beats\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " configurations (DH-FBK100, ILC-ItWack, Berardi2015 Glove) 11, almost equals one (Berardi2015 w2v) 12, and it is outperformed only by one (Fastext-It) 13. In the relaxed evaluation setting, "
+      "value": " "
     },
     {
-      "expression": "\"DH-FBK-100\"",
+      "expression": "\"three\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is the only configuration that does not beat FBK-HLT (although the difference is only "
+      "value": " configurations (DH-FBK100, ILC-ItWack, Berardi2015 Glove) 11, almost "
+    },
+    {
+      "expression": "\"equals\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " one (Berardi2015 w2v) 12, and it is "
+    },
+    {
+      "expression": "\"outperformed\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " only by one (Fastext-It) 13. In the relaxed evaluation setting, DH-FBK-100 is the only configuration that does not "
+    },
+    {
+      "expression": "\"beat\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " FBK-HLT (although the difference is only "
     },
     {
       "expression": "\"0.001\"",
-      "categories": ["data-retrieval"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " point). Nevertheless, it is remarkable to observe that "
-    },
-    {
-      "expression": "\"FBK-HLT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " has a very high Precision ("
+      "value": " point). Nevertheless, it is remarkable to observe that FBK-HLT has a very high Precision ("
     },
     {
       "expression": "\"0.902\"",
@@ -102,7 +111,16 @@
     },
     {
       "type": "literal",
-      "value": ", relaxed evaluation mode), that is overcome by only one embedding configuration, ILC-ItWack. The results also indicates that word embeddings have a major contribution on Recall,  these results are obtained using a single step approach,"
+      "value": ", relaxed evaluation mode), that is "
+    },
+    {
+      "expression": "\"overcome\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by only one embedding configuration, ILC-ItWack. The results also indicates that word embeddings have a major contribution on Recall,  these results are obtained using a single step approach,"
     }
   ],
   "variables": {},

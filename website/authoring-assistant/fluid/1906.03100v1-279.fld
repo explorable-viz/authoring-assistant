@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_03100v1_279
+
+"""
+	Table 2:  ${"Results"}  on the WMT English-German translation task. " ${"‡"} " indicates the result is significantly  ${"better"}  than the vanilla  ${"Transformer model"}  (p < 0.05).  Similar observations are obtained on the English-German translation task, as shown in Table 2.
+"""

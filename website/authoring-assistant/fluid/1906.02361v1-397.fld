@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_02361v1_397
+
+"""
+	Table 6 shows the results obtained by the  ${"BERT"}  baseline without explanations and using our transferred explanations from  ${"CQA"}  to  ${"SWAG"}  and  ${"Story Cloze"} . We observed that adding explanations led to a very small decrease (<  ${"0.6"} %) in the performance compared to the baseline for both tasks.
+"""

@@ -1,74 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "To address this, we fine-tune "
-    },
-    {
-      "expression": "\"GrOVLE\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " across the "
-    },
-    {
-      "expression": "\"five\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " VL tasks. We provide results for a "
-    },
-    {
-      "expression": "\"four\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"five\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " multi-task trained embedding. The four task experiments are performed with the final task embedding fixed to demonstrate how well the embeddings would generalize to new tasks. We also provide results for pretraining on five tasks with and without finetuning during the last task.  This multi-task variant is the "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " performing across all tasks, thus we release this embedding for public use.  To verify that the multi-task GrOVLE performance improvements generalize across task model architecture, we provide results using additional task models in Table 4.  Table 4 provides more models per task and demonstrates consistent results: embeddings can significantly affect performance and GrOVLE variants are still the "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " embedding overall. As we move down the table we find even larger performance improvements made by using the "
-    },
-    {
-      "expression": "\"five-task pretrained GrOVLE with fine-tuning\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than in Table 3."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "To address this, we fine-tune GrOVLE across the five VL tasks. We provide results for a four and five multi-task trained embedding. The four task experiments are performed with the final task embedding fixed to demonstrate how well the embeddings would generalize to new tasks. We also provide results for pretraining on five tasks with and without finetuning during the last task.  This multi-task variant is the best performing across all tasks, thus we release this embedding for public use.  To verify that the multi-task GrOVLE performance improvements generalize across task model architecture, we provide results using additional task models in Table 4.  Table 4 provides more models per task and demonstrates consistent results: embeddings can significantly affect performance and GrOVLE variants are still the best embedding overall. As we move down the table we find even larger performance improvements made by using the five-task pretrained GrOVLE with fine-tuning than in Table 3."
+  }],
   "variables": {},
   "imports": [
     "scigen",

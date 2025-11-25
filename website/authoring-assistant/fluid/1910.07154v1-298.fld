@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1910_07154v1_298
+
+"""
+	Table 2 shows the performance of our Fact Checking system on the "SUPPORTS" label, the output of our system. We compare the results against two different classification thresholds. Here,  ${"φ = 0.76"}  suggests that at least  ${"3"}  out of the  ${"4"}  questions have to be answered correctly while  ${"φ = 0.67"}  suggests that at least  ${"2"}  out of the  ${"3"}  questions has to be answered correctly for the claim to be classified as "SUPPORTS". In contrast to the results reported in Table 2, here we consider  ${"φ = 0.76"}  to be a  ${"better"}  classification threshold as it improvises over False Positives considerably over the entire dataset. From the results, we conclude that it is possible to verify the facts with the right kind of factoid questions.
+"""

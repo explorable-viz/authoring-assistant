@@ -3,10 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As can be seen from Table 2, we are very close to "
+      "value": "As can be seen from Table 2, we are very close to the "
     },
     {
-      "expression": "\"the state of the art\"",
+      "expression": "\"state of the art\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " performance even if we only trained with a "
-    },
-    {
-      "expression": "\"low number of parameters\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". We have to also note that in contrast with the "
+      "value": " performance even if we only trained with a low number of parameters as stated in the beginning of this section. We have to also note that in contrast with the "
     },
     {
       "expression": "\"NER\"",

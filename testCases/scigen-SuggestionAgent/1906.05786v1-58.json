@@ -3,25 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Thank you for clarifying. I will adjust accordingly.\n\nHere is the corrected paragraph:\n\nWe see small gains from using "
+      "value": "We see "
     },
     {
-      "expression": "\"BI\"",
+      "expression": "\"small gains\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with ensembles on most validation sets, but only on "
+      "value": " from using "
     },
     {
-      "expression": "\"en2es\"",
+      "expression": "\"BI with ensembles\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " test.\r\nFor "
+      "value": " on most validation sets, but only on "
+    },
+    {
+      "expression": "\"en2es test\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  For "
     },
     {
       "expression": "\"en2de\"",
@@ -33,17 +42,17 @@
       "value": ", by contrast, uniform ensembling is consistently "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"better than oracles\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than oracles on the dev sets, and outperforms "
+      "value": " on the dev sets, and "
     },
     {
-      "expression": "\"BI\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"outperforms BI\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

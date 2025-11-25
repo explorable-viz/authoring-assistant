@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1812_10860v5_195
+
+"""
+	Table 4 presents an alternative view of the results of the  ${"pretraining experiment"}  (Table 2): The table shows correlations between pairs of target tasks over the space of pretrained encoders. The correlations reflect the degree to which the performance on one target task with some encoder predicts performance on another target task with the same encoder. See Appendix D for the full table and similar tables for intermediate  ${"ELMo"}  and  ${"BERT"}  experiments. Many correlations are low, suggesting that different tasks benefit from different forms of pretraining to a substantial degree, and bolstering the observation that no single pretraining task yields good performance on all target tasks. For reasons noted earlier, the models that tended to  ${"perform best"}  overall also tended to overfit the WNLI training set most, leading to a negative correlation between WNLI and overall  ${"GLUE score"} . STS also shows a negative correlation, likely due to the observation that it does not benefit from LM pretraining. In contrast, CoLA shows a strong correlation with the overall  ${"GLUE scores"} , but has weak or negative correlations with many tasks: The use of LM pretraining dramatically improves CoLA performance, but most other forms of pretraining have little effect.
+"""

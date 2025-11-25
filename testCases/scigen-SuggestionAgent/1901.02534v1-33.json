@@ -7,7 +7,7 @@
     },
     {
       "expression": "\"52%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"higher\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than that for "
+      "value": " higher than that for "
     },
     {
       "expression": "\"ESIM\"",

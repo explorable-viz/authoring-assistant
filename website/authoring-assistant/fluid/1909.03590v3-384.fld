@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1909_03590v3_384
+
+"""
+	As shown in Table 4,  ${"BigRNN"}  and  ${"Transformer"}  are not able to outperform  ${"BaseRNN"} .
+"""

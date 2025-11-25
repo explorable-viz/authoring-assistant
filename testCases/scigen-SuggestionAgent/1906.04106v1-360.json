@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 6 shows that for all generative models, the evaluation scores computed by our method are "
+      "value": "Table 6 shows that for all "
+    },
+    {
+      "expression": "\"generative models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the evaluation scores computed by our method are "
     },
     {
       "expression": "\"higher\"",
@@ -12,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " than those computed by prior method."
+      "value": " than those computed by "
+    },
+    {
+      "expression": "\"prior method\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

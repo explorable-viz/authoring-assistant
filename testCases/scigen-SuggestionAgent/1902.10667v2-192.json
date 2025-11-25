@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Understood. I'll ensure that each annotation uses only one category from the provided list. Here is the corrected paragraph:\n\nwe show the superior performance (in terms of "
+      "value": "we show the superior performance (in terms of "
     },
     {
       "expression": "\"MWE-based F-score\"",
@@ -21,25 +21,25 @@
     },
     {
       "type": "literal",
-      "value": "] on the test data compared to the baseline and state-of-the-art systems, namely, "
+      "value": " on the test data compared to the baseline and stateof-the-art systems, namely, "
     },
     {
-      "expression": "\"ATILF-LLF\"",
+      "expression": "\"ATILF-LLF (Al Saied et al., 2017)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Al Saied et al., 2017) and "
+      "value": " and "
     },
     {
-      "expression": "\"SHOMA\"",
+      "expression": "\"SHOMA (Taslimipoor and Rohanian, 2018)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Taslimipoor and Rohanian, 2018). "
+      "value": ". "
     },
     {
       "expression": "\"GCN\"",
@@ -48,7 +48,7 @@
     },
     {
       "type": "literal",
-      "value": "] works the "
+      "value": " works the "
     },
     {
       "expression": "\"best\"",
@@ -57,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": "] for discontinuous MWEs in EN and FA, while "
+      "value": " for discontinuous MWEs in "
+    },
+    {
+      "expression": "\"EN and FA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while "
     },
     {
       "expression": "\"H-combined\"",
@@ -66,7 +75,16 @@
     },
     {
       "type": "literal",
-      "value": "] outperforms based on results for all MWEs except for FA. The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
+      "value": " outperforms based on results for all MWEs except for "
+    },
+    {
+      "expression": "\"FA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  The overall results confirm our assumption that a hybrid architecture can mitigate errors of individual models and bolster their strengths."
     }
   ],
   "variables": {},

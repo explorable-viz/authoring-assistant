@@ -3,11 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As expected, Table 4 shows that people with less domain knowledge are "
+      "value": "As expected, "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows that people with less domain knowledge are "
     },
     {
       "expression": "\"more easily deceived\"",
-      "categories": ["comparison"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -21,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " of the 1-to-1 sets for the same titles, which suggests that most of our system generated abstracts follow correct grammar and consistent writing style. Domain experts fail on "
+      "value": " of the "
     },
     {
       "expression": "\"1\"",
@@ -30,10 +39,19 @@
     },
     {
       "type": "literal",
-      "value": " or "
+      "value": "-to-"
     },
     {
-      "expression": "\"2\"",
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " sets for the same titles, which suggests that most of our system generated abstracts follow correct grammar and consistent writing style. Domain experts fail on "
+    },
+    {
+      "expression": "\"1 or 2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -43,21 +61,12 @@
     },
     {
       "expression": "\"topically relevant\"",
-      "categories": ["comparison"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Additionally, the "
-    },
-    {
-      "expression": "\"more\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " abstracts that we provided to human judges, the easier it is to conceal the system generated abstract amongst human generated ones."
+      "value": ". Additionally, the more abstracts that we provided to human judges, the easier it is to conceal the system generated abstract amongst human generated ones."
     }
   ],
   "variables": {},

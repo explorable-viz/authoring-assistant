@@ -3,7 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Thank you for the clarification. Here is the corrected paragraph with the appropriate category:\n\nF1 scores for all propositions and each type are reported in Table 5.  "
+      "value": "F1 scores for "
+    },
+    {
+      "expression": "\"all propositions\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"each type\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are reported in Table 5.  "
     },
     {
       "expression": "\"CNN\"",
@@ -21,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " for types with significantly more training samples, i.e., "
+      "value": " for types with "
+    },
+    {
+      "expression": "\"significantly more\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training samples, i.e., "
     },
     {
       "expression": "\"evaluation\"",
@@ -39,16 +66,25 @@
     },
     {
       "type": "literal",
-      "value": ", indicating the effect of data size on neural model's performance. "
+      "value": ", indicating the effect of data size on neural model's performance. Joint models ("
     },
     {
-      "expression": "\"Joint models (CRF-joint and BiLSTM-CRF-joint)\"",
+      "expression": "\"CRF-joint\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " yield the "
+      "value": " and "
+    },
+    {
+      "expression": "\"BiLSTM-CRF-joint\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") yield the "
     },
     {
       "expression": "\"best\"",
@@ -57,7 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " F1 scores for all categories when gold-standard segmentation is unavailable."
+      "value": " F1 scores for all categories when "
+    },
+    {
+      "expression": "\"gold-standard segmentation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is unavailable."
     }
   ],
   "variables": {},

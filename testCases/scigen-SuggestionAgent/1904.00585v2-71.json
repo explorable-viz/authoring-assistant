@@ -30,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " performance compare to the default "
-    },
-    {
-      "expression": "\"setting\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (Table 6)."
+      "value": " performance compare to the default setting (Table 6)."
     }
   ],
   "variables": {},

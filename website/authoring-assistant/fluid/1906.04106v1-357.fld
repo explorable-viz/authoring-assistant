@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_04106v1_357
+
+"""
+	The evaluation results of different models on  ${"predicting present keyphrases"}  are shown in Table 2. We observe that our reinforcement learning algorithm  ${"catSeqTG-2 RF1"}  consistently improves the keyphrase extraction ability of all baseline generative models by a large margin.
+"""

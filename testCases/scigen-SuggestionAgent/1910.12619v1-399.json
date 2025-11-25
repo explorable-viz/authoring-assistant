@@ -3,7 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 lists the properties of the training and test set including the inter-rater agreement (κ). The agreement is substantial, with some variation between the domains: "
+      "value": "Table "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lists the properties of the "
+    },
+    {
+      "expression": "\"training\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"test set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " including the inter-rater agreement (κ). The agreement is substantial, with some variation between the domains: κ is "
     },
     {
       "expression": "\"higher\"",

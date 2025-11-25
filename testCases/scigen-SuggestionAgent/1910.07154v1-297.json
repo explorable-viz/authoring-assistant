@@ -3,25 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For the subtask of question generation, the results in Table 1 show that the system is able to generate questions given a claim with considerably "
+      "value": "For the "
     },
     {
-      "expression": "\"good\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " accuracy. The conversion accuracy is defined as the ratio of the number of claims in which the named entities are extracted to the number of claims. The results also support our assumption that the claims generally feature information about one or more "
-    },
-    {
-      "expression": "\"entities\"",
+      "expression": "\"subtask\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".  Ta"
+      "value": " of "
+    },
+    {
+      "expression": "\"question generation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the results in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " show that the system is able to generate questions given a claim with considerably good accuracy. The conversion accuracy is defined as the "
+    },
+    {
+      "expression": "\"ratio\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the number of claims in which the named entities are extracted to the number of claims. The results also support our assumption that the claims generally feature information about one or more entities.  Ta"
     }
   ],
   "variables": {},

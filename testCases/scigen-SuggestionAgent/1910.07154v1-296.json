@@ -1,38 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Although our unsupervised model doesn't support all the labels, to show the effectiveness of the approach, we compare the label accuracy of "
-    },
-    {
-      "expression": "\"SUPPORTS\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " label against a supervised approach \u2013 "
-    },
-    {
-      "expression": "\"HexaF\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Results from Table 3 suggests that our approach is comparable to HexaF4 for φ = "
-    },
-    {
-      "expression": "\"0.76\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Although our unsupervised model doesn't support all the labels, to show the effectiveness of the approach, we compare the label accuracy of \"SUPPORTS\" label against a supervised approach \u2013 HexaF.  Results from Table 3 suggests that our approach is comparable to HexaF4 for φ = 0.76."
+  }],
   "variables": {},
   "imports": [
     "scigen",

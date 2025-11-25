@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._2002_04250v2_363
+
+"""
+	Results are shown in  ${"Table 4"} . As can be seen, the incorporation of  ${"MMI model"}  significantly  ${"improves"}  MT performances.
+"""

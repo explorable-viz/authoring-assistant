@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1910_12619v1_399
+
+"""
+	Table  ${"1"}  lists the properties of the  ${"training"}  and  ${"test set"}  including the inter-rater agreement (κ). The agreement is substantial, with some variation between the domains: κ is  ${"higher"}  for  ${"tools"}  and  ${"fruit"}  than for the  ${"musical domain"} .
+"""

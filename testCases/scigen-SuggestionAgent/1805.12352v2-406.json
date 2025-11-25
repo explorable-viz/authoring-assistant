@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " responses from each of the "
-    },
-    {
-      "expression": "\"four models\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Responses for each context were inspected by "
+      "value": " responses from each of the four models. Responses for each context were inspected by "
     },
     {
       "expression": "\"5\"",
@@ -48,16 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " in regarding to coherence, diversity and informative while being blind to the underlying algorithms. The "
+      "value": " in regarding to coherence, diversity and informative while being blind to the underlying algorithms. The average percentages that each model was selected as the "
     },
     {
-      "expression": "\"average percentages\"",
-      "categories": ["average"],
+      "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " that each model was selected as the best to a specific criterion are shown in Table 5."
+      "value": " to a specific criterion are shown in Table 5."
     }
   ],
   "variables": {},

@@ -3,34 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the comparison with previous work on the "
+      "value": "Table 3 shows the comparison with previous work on the PGR testset, where our models are "
     },
     {
-      "expression": "\"PGR\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " testset, where our models are significantly "
-    },
-    {
-      "expression": "\"better\"",
+      "expression": "\"significantly better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the existing models. With "
+      "value": " than the existing models.  With "
     },
     {
-      "expression": "\"1-best\"",
+      "expression": "\"1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " trees, "
+      "value": "-best trees, "
     },
     {
       "expression": "\"DEPTREE\"",
@@ -42,7 +33,16 @@
       "value": " is "
     },
     {
-      "expression": "\"2.9 points better\"",
+      "expression": "\"2.9\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " points "
+    },
+    {
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -57,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": ", both "
+      "value": ",  both "
     },
     {
       "expression": "\"KBESTEISNERPS\"",
@@ -75,10 +75,10 @@
     },
     {
       "type": "literal",
-      "value": " significantly "
+      "value": " "
     },
     {
-      "expression": "\"outperform\"",
+      "expression": "\"significantly outperform\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -90,10 +90,6 @@
       "expression": "\"DEPTR\"",
       "categories": ["data-retrieval"],
       "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "]"
     }
   ],
   "variables": {},

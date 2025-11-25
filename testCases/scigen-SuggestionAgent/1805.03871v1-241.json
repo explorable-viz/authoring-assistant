@@ -35,29 +35,11 @@
     },
     {
       "type": "literal",
-      "value": " (Table 4), even though it has more parameters, because it converges "
+      "value": " (Table 4), even though it has more parameters, because it converges faster ("
     },
     {
-      "expression": "\"faster\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"5-7 epochs\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " vs. "
-    },
-    {
-      "expression": "\"12-15\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"5-7 epochs vs. 12-15\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {

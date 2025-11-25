@@ -1,45 +1,40 @@
-You are an expression detector for Fluid language.
-Fluid is a functional programming language used to represent structured data queries and comparisons in a transparent way.
-
 YOUR GOAL
 Given:
 1. A natural language paragraph
-2. A structured dataset
+2. A JSON dataset
 
-you must identify and annotate ONLY the minimal text spans in the paragraph that can be mapped to Fluid query expressions over the dataset.
+You must identify and annotate individual fragments of text in the paragraph that can be interpreted as queries over the dataset.
 
-You MUST detect and annotate:
-1. Explicit data values
-   - Numbers, floats, percentages, counts (e.g., "91.57", "91.57%", "three", "10 models")
-   - Names or labels that clearly correspond to entries or fields in the dataset (e.g., "S-LSTM", "BiLSTM")
-2. Comparative expressions
-   - Words or phrases expressing comparisons: "better", "worse", "higher", "lower", "more than", "less than", "at least", "at most"
-   - Numerical thresholds used in comparisons: "more than 90", "over 95%", "top 3"
-3. Superlative / ranking / aggregation expressions
-   - "the best", "the worst", "highest", "lowest", "maximum", "minimum", "top performer", "top 3", "average", "mean", "sum", "total"
+Each phrase quantitative or semi-quantitative phrase must labelled with the following categories:
+1. COMPARISON
+   - Comparative phrases like "better", "worse", "higher", "lower", "more than", "less than"
+2. RANK
+   - Superlative phrases such as "best", "worst", "highest", "lowest", "maximum", "minimum", "top-performing",
+   and other ordinal descriptors like "second-best", "fourth-largest"
+3. DATA_RETRIEVAL
+   - String or numerical values that can be retrieved by a simple lookup in the dataset; including
+   (non-computed) numerical values like "91.57", "6.5%"; lexical numerals like "three", "ten"; and primary keys
+   such as emissions types, country codes, years, product ids
+4. AVERAGE, SUM, MIN_MAX, RATIO, DIFFERENCE
+   - Numerical values that can be computed as the average, sum, minimum/maximum, ratio or difference
+   (respectively) of other values
+
+Some phrases may fall into multiple categories. For example: a numerical phrase that can be computed by dividing
+two other numbers not mentioned in the text but which can themselves be computed by averaging values retrieved
+from the dataset would be labelled with `DATA_RETRIEVAL`, `AVERAGE` and `RATIO`.
 
 ANNOTATION FORMAT
 
-Replace each detected expression with:
+Replace each detected phrase with:
 
 [REPLACE value=... categories="..."]
 
-- `value` MUST contain exactly the ORIGINAL TEXT SPAN from the paragraph.
-  - Keep it as short as possible while still meaningful (e.g., "better", "91.57%", "the best").
-  - Do NOT include surrounding words that are not part of the value or operator.
-- `categories` is one of:
-  - COMPARISON
-  - RANK
-  - DATA_RETRIEVAL
-  - AVERAGE
-  - SUM
-  - MIN_MAX
-Use only one (or more, separated by comma) of these categories!
-
-OUTPUT FORMAT
-
-- Return the entire paragraph with the expressions replaced inline.
-- Preserve all other text exactly as in the input (spacing, punctuation, line breaks).
+- `value` must contain only the text to be annotated, e.g., "better", "91.57%", "best"; do not include
+  spurious surrounding words
+- `categories` is one of {COMPARISON, RANK, DATA_RETRIEVAL, AVERAGE, SUM, MIN_MAX, RATIO, DIFFERENCE} as described above
+- Label each fragment with the appropriate categories (comma-separated)
+- Return the entire paragraph with the phrases replaced inline
+- Preserve all other text exactly (spacing, punctuation, line breaks)
 
 EXAMPLE
 
@@ -55,7 +50,7 @@ In contrast, S-LSTM gives the best reported results under the same settings.
 In the second section of Table 7, Yang et al. (2017) obtain an Fscore of 91.26%.
 
 Data:
-Data: [
+[
   {model: "BiLSTM", accuracy: 90.3, params_M: 6.8, train_time_h: 3.2, memory_GB: 1.1},
   {model: "2 stacked BiLSTM", accuracy: 91.0, params_M: 9.1, train_time_h: 4.5, memory_GB: 1.6},
   {model: "3 stacked BiLSTM", accuracy: 91.2, params_M: 11.4, train_time_h: 5.9, memory_GB: 2.0},
@@ -65,7 +60,6 @@ Data: [
   {model: "BiLSTM-small-2", accuracy: 88.6, params_M: 3.5, train_time_h: 1.7, memory_GB: 0.7},
   {model: "BiLSTM-small-3", accuracy: 89.1, params_M: 3.6, train_time_h: 1.8, memory_GB: 0.8}
 ]
-
 
 Output:
 For NER (Table 7), [REPLACE value="S-LSTM" categories="DATA_RETRIEVAL"] gives an F1-score of [REPLACE value=91.57 categories="DATA_RETRIEVAL"]% on the CoNLL test set, which is significantly
@@ -79,4 +73,3 @@ Our [REPLACE value="BiLSTM" categories="DATA_RETRIEVAL"] results are comparable 
 by Ma and Hovy (2016) and Lample et al. (2016).
 In contrast, [REPLACE value="S-LSTM" categories="DATA_RETRIEVAL"] gives the [REPLACE value="best" categories="RANK,DATA_RETRIEVAL"] reported results under the same settings.
 In the second section of Table 7, Yang et al. (2017) obtain an Fscore of [REPLACE value=91.26 categories="DATA_RETRIEVAL"]%.
-

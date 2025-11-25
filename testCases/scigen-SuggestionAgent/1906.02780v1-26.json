@@ -3,7 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We evaluate two configurations of the parse decoder, one in which it is trained separately from the token decoder (first column of Table 3), and the other where both decoders are trained jointly (second column of Ta  ble 3). We observe that joint training boosts the chunk F1 from "
+      "value": "We evaluate two configurations of the parse decoder, one in which it is trained separately from the token decoder ("
+    },
+    {
+      "expression": "\"first column of Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and the other where both decoders are trained jointly ("
+    },
+    {
+      "expression": "\"second column of Ta  ble 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). We observe that joint training boosts the chunk F1 from "
     },
     {
       "expression": "\"65.4\"",
@@ -21,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": ", although, in both cases the F1 scores are relatively low, which matches our intuition as most source sentences can be translated into multiple target syntactic forms.  To measure how often the token decoder follows the predicted chunk sequence, we parse the generated translation and compute the F1 between the resulting chunk sequence and the parse decoder's prediction (fourth column of Table 3). Strong results of "
+      "value": ", although, in both cases the F1 scores are relatively low, which matches our intuition as most source sentences can be translated into multiple target syntactic forms.  To measure how often the token decoder follows the predicted chunk sequence, we parse the generated translation and compute the F1 between the resulting chunk sequence and the parse decoder's prediction ("
+    },
+    {
+      "expression": "\"fourth column of Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Strong results of "
     },
     {
       "expression": "\"89.9\"",
@@ -42,13 +69,31 @@
       "value": " exact match indicate that the token decoder is heavily reliant on the generated chunk sequences.  The resulting F1 is indeed almost "
     },
     {
-      "expression": "\"10\"",
-      "categories": ["comparison"],
+      "expression": "\"10 points\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " points higher (third column of Table 3), indicating that the token decoder does have the ability to correct mistakes.  In Section 5.3 (see the final row of Table 3) we consider the effect of randomly sampling the max chunk size k during training. This provides a considerable boost to BLEU with a minimal impact to speedup."
+      "value": " higher ("
+    },
+    {
+      "expression": "\"third column of Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), indicating that the token decoder does have the ability to correct mistakes.  In Section 5.3 (see the final row of Table 3) we consider the effect of randomly sampling the max chunk size "
+    },
+    {
+      "expression": "\"k\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " during training. This provides a considerable boost to BLEU with a minimal impact to speedup."
     }
   ],
   "variables": {},

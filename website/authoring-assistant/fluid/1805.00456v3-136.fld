@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1805_00456v3_136
+
+"""
+	Ensembles of  ${"two"}  identical models trained with different seeds only slightly improve over the single model (Table 5). However, an ensemble of models producing  ${"plain BPE"}  and linearized derivations improves by  ${"0.5"}  BLEU over the  ${"plain BPE"}  baseline.
+"""

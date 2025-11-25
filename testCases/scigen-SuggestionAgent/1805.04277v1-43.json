@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
-    },
-    {
-      "expression": "\"2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " reports the results of "
+      "value": "Table 2 reports the results of "
     },
     {
       "expression": "\"supervised systems\"",

@@ -1,0 +1,22 @@
+[
+    {
+        "%_noised": "0%",
+        "sacrebleu_newstest_’12": "22.4",
+        "sacrebleu_newstest_’17": "28.1"
+    },
+    {
+        "%_noised": "20%",
+        "sacrebleu_newstest_’12": "22.4",
+        "sacrebleu_newstest_’17": "27.9"
+    },
+    {
+        "%_noised": "80%",
+        "sacrebleu_newstest_’12": "21.5",
+        "sacrebleu_newstest_’17": "27.0"
+    },
+    {
+        "%_noised": "100%",
+        "sacrebleu_newstest_’12": "21.2",
+        "sacrebleu_newstest_’17": "25.6"
+    }
+]

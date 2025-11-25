@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compare three training configurations: "
+      "value": "We compare three "
+    },
+    {
+      "expression": "\"training configurations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ": "
     },
     {
       "expression": "\"WEBSPLIT only\"",
@@ -75,7 +84,16 @@
     },
     {
       "type": "literal",
-      "value": " BLEU on the WebSplit validation set,  Reintroducing the downsampled, in-domain training data (BOTH) further improves performance on the WebSplit evaluation."
+      "value": " BLEU on the WebSplit validation set,  Reintroducing the downsampled, in-domain training data ("
+    },
+    {
+      "expression": "\"BOTH\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") further improves performance on the WebSplit evaluation."
     }
   ],
   "variables": {},

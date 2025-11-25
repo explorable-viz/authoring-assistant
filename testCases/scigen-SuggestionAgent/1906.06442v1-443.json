@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The BLEU scores of each "
+      "value": "The "
     },
     {
-      "expression": "\"decoding method\"",
+      "expression": "\"BLEU\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are presented in Table 7.  The "
+      "value": " scores of each decoding method are presented in Table 7.  The "
     },
     {
       "expression": "\"noised decode\"",
@@ -21,16 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " \u2013 decoding newstest sentences with the NoisedBT model after noising the source \u2013 yields "
+      "value": " \u2013 decoding newstest sentences with the "
     },
     {
-      "expression": "\"poor performance\"",
-      "categories": ["comparison"],
+      "expression": "\"NoisedBT\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".  The "
+      "value": " model after noising the source \u2013 yields poor performance.  The "
     },
     {
       "expression": "\"tagged decode\"",
@@ -39,19 +39,19 @@
     },
     {
       "type": "literal",
-      "value": ", however, yields only "
+      "value": " , however, yields only somewhat "
     },
     {
-      "expression": "\"somewhat lower performance\"",
+      "expression": "\"lower\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the standard "
+      "value": " performance than the "
     },
     {
-      "expression": "\"decode\"",
+      "expression": "\"standard decode\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -61,26 +61,12 @@
     },
     {
       "expression": "\"-2.9\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "expression": "\"BLEU\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on "
-    },
-    {
-      "expression": "\"average\"",
       "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ")."
+      "value": " BLEU on average)."
     }
   ],
   "variables": {},

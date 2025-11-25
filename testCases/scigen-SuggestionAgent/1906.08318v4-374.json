@@ -3,43 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "importance of pre-processing in performance improvements. Experiments in table 4 reveal that they can cause larger variations in "
+      "value": "importance of pre-processing in "
     },
     {
-      "expression": "\"performance\"",
+      "expression": "\"performance improvements\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] than modeling.  "
+      "value": ". Experiments in table "
     },
     {
-      "expression": "\"Punctuation and digits\"",
+      "expression": "\"4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] hold more importance for the "
+      "value": " reveal that they can cause larger variations in performance than modeling.  Punctuation and digits hold more importance for the "
     },
     {
-      "expression": "\"ddi\"",
+      "expression": "\"ddi dataset\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] dataset, which is a biomedical dataset, compared to the other two datasets.  We found that "
-    },
-    {
-      "expression": "\"stop words\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "] seem to be important for relation extraction for all three datasets that we looked at, to a smaller degree for "
+      "value": ", which is a biomedical dataset, compared to the other two datasets.  We found that stop words seem to be important for relation extraction for all three datasets that we looked at, to a smaller degree for "
     },
     {
       "expression": "\"i2b2\"",
@@ -48,61 +39,43 @@
     },
     {
       "type": "literal",
-      "value": "] compared to the other two datasets.  "
+      "value": " compared to the other two datasets.  Entity blinding causes almost "
     },
     {
-      "expression": "\"Entity blinding\"",
+      "expression": "\"9%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] causes almost "
+      "value": " improvement in classification performance and "
     },
     {
-      "expression": "\"9\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% improvement in classification "
-    },
-    {
-      "expression": "\"performance\"",
+      "expression": "\"1%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] and "
+      "value": " improvement in detection performance.  While entity blinding hurts performance for semeval, possibly due to the coarse-grained nature of the replacement, NER blinding does not hurt performance.  entity blinding seems to help test set performance for "
     },
     {
-      "expression": "\"1\"",
-      "categories": ["ratio"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "% improvement in detection "
-    },
-    {
-      "expression": "\"performance\"",
+      "expression": "\"ddi\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "].  While entity blinding hurts performance for semeval, possibly due to the coarse-grained nature of the replacement, NER blinding does not hurt performance.  entity blinding seems to help test set "
+      "value": " in table "
     },
     {
-      "expression": "\"performance\"",
+      "expression": "\"4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "] for ddi in table 4, but shows no statistical significance."
+      "value": ", but shows no statistical significance."
     }
   ],
   "variables": {},

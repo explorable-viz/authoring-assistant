@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1906_06905v2_473
+
+"""
+	Table  ${"3"}  shows the error rates per  ${"C-test"}  and  ${"strategy"} . Both  ${"SEL"}  and  ${"SIZE"}  are overall able to significantly (p < 0.025) increase and decrease the test's difficulty over  ${"DEF"} , and with the exception of   ${"SEL,dec"} , the effect is also statistically significant 4 for all individual text and strategy pairs.
+"""

@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " on Wikipedia. We can see that "
+      "value": " on "
+    },
+    {
+      "expression": "\"Wikipedia\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We can see that "
     },
     {
       "expression": "\"more than 50%\"",
@@ -21,16 +30,25 @@
     },
     {
       "type": "literal",
-      "value": " of documents for each quality class are correctly classified, except for the  class where "
+      "value": " of documents for each quality class are correctly classified, except for the "
     },
     {
-      "expression": "\"more\"",
+      "expression": "\"class\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " where "
+    },
+    {
+      "expression": "\"more documents\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " documents are misclassified into "
+      "value": " are misclassified into "
     },
     {
       "expression": "\"B\"",

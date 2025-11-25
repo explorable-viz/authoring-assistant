@@ -12,25 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " as the performance metric. "
-    },
-    {
-      "expression": "\"Table 1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " represents the performance comparison of our proposed models and the baselines, which shows that incorporation of knowledge graph embeddings helps to improve the model performance. All results are summarized in "
-    },
-    {
-      "expression": "\"Table 1\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " as the performance metric. Table 1 represents the performance comparison of our proposed models and the baselines, which shows that incorporation of knowledge graph embeddings helps to improve the model performance.  All results are summarized in Table 1."
     }
   ],
   "variables": {},

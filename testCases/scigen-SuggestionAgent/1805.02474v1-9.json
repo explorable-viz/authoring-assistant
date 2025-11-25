@@ -12,7 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " settings, Adding one additional sentence-level node does not lead to accuracy improvements, although the number of parameters and decoding time increase accordingly. The accuracies of "
+      "value": " settings,  Adding one additional sentence-level node  does not lead to accuracy improvements, although the number of parameters and decoding time increase accordingly.  The accuracies of "
     },
     {
       "expression": "\"S-LSTM\"",

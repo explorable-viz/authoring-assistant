@@ -3,7 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3 shows the error rates per C-test and strategy. Both "
+      "value": "Table "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the error rates per "
+    },
+    {
+      "expression": "\"C-test\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"strategy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Both "
     },
     {
       "expression": "\"SEL\"",
@@ -39,16 +66,7 @@
     },
     {
       "type": "literal",
-      "value": ", the effect is also statistically significant "
-    },
-    {
-      "expression": "\"4\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for all individual text and strategy pairs."
+      "value": ", the effect is also statistically significant 4 for all individual text and strategy pairs."
     }
   ],
   "variables": {},

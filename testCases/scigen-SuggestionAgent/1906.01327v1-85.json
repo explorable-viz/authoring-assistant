@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "You are correct. I will use the specified categories. Here is the revised output:\n\nThe results of the intrinsic evaluation on a sample of DOQ are shown in Table 7. The "
+      "value": "The results of the intrinsic evaluation on a sample of "
     },
     {
-      "expression": "\"total\"",
-      "categories": ["sum"],
+      "expression": "\"DOQ\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " agreement is "
+      "value": " are shown in Table 7. The total agreement is "
     },
     {
       "expression": "\"69%\"",
@@ -102,10 +102,10 @@
     },
     {
       "type": "literal",
-      "value": " category with annotators from the U.S. and found a much "
+      "value": " category with annotators from the U.S. and found a "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"much higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },

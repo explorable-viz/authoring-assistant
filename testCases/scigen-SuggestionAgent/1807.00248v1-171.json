@@ -3,10 +3,28 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 lists all hyper-parameters which have all been chosen using only training and validation data. The two encoders have been implemented using a "
+      "value": "Table 1 lists all hyper-parameters which have all been chosen using only "
     },
     {
-      "expression": "\"Bidirectional Long Short-Term Memory\"",
+      "expression": "\"training\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"validation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " data. The two encoders have been implemented using a "
+    },
+    {
+      "expression": "\"Bidirectional Long Short-Term Memory (B-LSTM)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -15,13 +33,13 @@
       "value": " ("
     },
     {
-      "expression": "\"B-LSTM\"",
+      "expression": "\"Hochreiter and Schmidhuber, 1997\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") (Hochreiter and Schmidhuber, 1997) while the decoder uses a unidirectional "
+      "value": ") while the decoder uses a unidirectional "
     },
     {
       "expression": "\"LSTM\"",
@@ -33,22 +51,22 @@
       "value": ". Both the encoders and the decoder use "
     },
     {
-      "expression": "\"two hidden layers\"",
+      "expression": "\"two\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". For the attention network, we have used the "
+      "value": " hidden layers. For the attention network, we have used the OpenNMT's general option ("
     },
     {
-      "expression": "\"OpenNMT's general option\"",
+      "expression": "\"Luong et al., 2015\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Luong et al., 2015)."
+      "value": ")."
     }
   ],
   "variables": {},

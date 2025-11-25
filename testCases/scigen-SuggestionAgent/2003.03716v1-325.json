@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " into the training state. γ is the weight of the "
+      "value": " into the training state. "
+    },
+    {
+      "expression": "\"γ\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the weight of the "
     },
     {
       "expression": "\"auxiliary EOS loss\"",

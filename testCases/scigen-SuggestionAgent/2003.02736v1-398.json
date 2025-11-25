@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Got it. I'll ensure that only a single category is used for each annotation. Here's the corrected output:\n\nOur results for citation needed detection are given in Table 1. The "
+      "value": "Our results for citation needed detection are given in Table 1. The vanilla "
     },
     {
-      "expression": "\"vanilla BERT\"",
+      "expression": "\"BERT\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model already significantly outperforms the state of the art model from Redi et al. (2019) ("
+      "value": " model already significantly outperforms the state of the art "
+    },
+    {
+      "expression": "\"model from Redi et al. (2019)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (a "
     },
     {
       "expression": "\"GRU network with global attention\"",
@@ -25,7 +34,7 @@
     },
     {
       "expression": "\"6\"",
-      "categories": ["comparison"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -60,13 +69,13 @@
       "value": " had "
     },
     {
-      "expression": "\"lower variance\"",
-      "categories": ["min-max"],
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", indicating more consistent performance across runs. The "
+      "value": " variance, indicating more consistent performance across runs. The "
     },
     {
       "expression": "\"best performing model\"",

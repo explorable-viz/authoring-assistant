@@ -8,7 +8,7 @@ public enum ExpressionCategory {
     DIFFERENCE("Difference"),
     AVERAGE("Average"),
     SUM("Sum"),
-    MIN_MAX("Min Max"),
+    MIN_MAX("Min/Max"),
     GENERALISED_QUANTIFIER("Generalised Quantifier");
 
 

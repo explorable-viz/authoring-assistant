@@ -23,7 +23,7 @@ public enum ExpressionCategory {
 
     public static ExpressionCategory of(String category) {
         for (ExpressionCategory cat : values()) {
-            if (cat.name().equalsIgnoreCase(category)) {
+            if (cat.getName().equalsIgnoreCase(category)) {
                 return cat;
             }
         }

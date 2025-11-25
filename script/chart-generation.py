@@ -222,6 +222,8 @@ def process_csv_file(csv_file):
     print(f"{'='*60}")
     
     df = pd.read_csv(csv_file, delimiter=';', quotechar='"', encoding='utf-8')
+    # Filter out rows where is-negative=true
+    df = df[df["is-negative"].astype(str).str.lower() != "true"]
     df["success"] = df["generated-expression"].notna().astype(int)
     df["target-value"] = df["target-value"].astype(int)
     df["attempts"] = pd.to_numeric(df["attempts"], errors="coerce")

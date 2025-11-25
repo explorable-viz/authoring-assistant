@@ -98,6 +98,9 @@ def generate_aggregated_plot(df, plot, fig_dir):
     plt.close()
 
 def generate_aggregated_boxplot(df, plot, fig_dir):
+    # Use the reusable function to count problems per category BEFORE exploding df
+    category_counts = count_problems_per_category(df)
+    
     df['expression-type'] = df['expression-type'].astype(str).str.strip('[]').str.split(',')
     df_exploded = df.explode('expression-type')
     df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
@@ -107,11 +110,7 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
         .agg(success_rate=("success", "mean"))
         .reset_index()
     )
-
-    # Use the reusable function to count problems per category
-    category_counts = count_problems_per_category(df)
-    category_counts_dict = category_counts.to_dict()
-
+    
     # labels for  target-value
     plt.figure(figsize=(8,6))
     label_map = {
@@ -130,28 +129,31 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
     )
     ax.legend(title="Target value", loc='lower right', bbox_to_anchor=(1.0, -0.25))
 
+    # Use categories from summary for iteration
     categories = sorted(summary['expression-type'].unique())
     target_values = sorted(summary['target-value'].unique())
     
     for i, category in enumerate(categories):
-        # Get problem count for this category
-        n_problems = category_counts_dict.get(category, 0)
-        n_runs = df_exploded['runId'].nunique()
-        count = n_problems // n_runs if n_runs > 0 else n_problems
+        # Get problem count for this category from category_counts
+        # category_counts already contains the total unique problems (not per run)
+        if category in category_counts.index:
+            count = int(category_counts[category])
+        else:
+            count = 0
         
         for j, target_val in enumerate(target_values):
-            if count > 0:
-                x_offset = -0.2 if j == 0 else 0.2
-                mask = (summary['expression-type'] == category) & (summary['target-value'] == target_val)
-                if mask.sum() > 0:
-                    median_y = summary[mask]['success_rate'].median()
-                else:
-                    median_y = 0.5  
-                
-                ax.text(i + x_offset, median_y, f'n:{count}', 
-                        ha='center', va='center', 
-                        fontsize=8, color='black', weight='bold',
-                        bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8))
+            x_offset = -0.2 if j == 0 else 0.2
+            mask = (summary['expression-type'] == category) & (summary['target-value'] == target_val)
+            if mask.sum() > 0:
+                median_y = summary[mask]['success_rate'].median()
+            else:
+                median_y = 0.5  
+            
+            # Always add the label
+            ax.text(i + x_offset, median_y, f'n={count}', 
+                    ha='center', va='center', 
+                    fontsize=8, color='black', weight='bold',
+                    bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8))
 
     # plt.title("Success Rate by Linguistic Category")
     plt.xlabel("Category")

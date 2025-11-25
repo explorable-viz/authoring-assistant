@@ -74,7 +74,7 @@ public class Main {
     }
 
     private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String agent, int learningContextSize) throws IOException {
-        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{Settings.getLogFolder()}/log_\{System.currentTimeMillis()}.csv"))) {
+        try (PrintWriter out = new PrintWriter(new FileOutputStream("results/results.csv"))) {
             String[] headers = {
                     "runId", "test-case", "llm-agent", "temperature", "num-token", "is-negative", "in-context-learning-size",
                     "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "nullExpressions", "onlyLiteralExpressions", "duration(ms)"

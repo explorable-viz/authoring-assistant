@@ -90,7 +90,7 @@ We believe that this is of interest to the ML community, at least from NLP and t
 
 > - Since "human" is a really central part in this system, it would be nice to get evaluated by actual human/users too.
 
-We agree that evaluating the tool with real users is important. However, this is beyond the scope of this work, as it would require a fully mature authoring tool. As discussed in more detail above (in the response to Reviewer Bezq), we plan to conduct a user study as future work, once the tool is finalised.
+We agree that evaluating the tool with real users is important. However, this is beyond the scope of the present work, as it would require a mature authoring tool. As discussed in more detail above (in response to Reviewer Bezq), we plan to conduct a user study as future work once the tool is finalised.
 
 > - The evaluation, from an LLM/NLP standpoint, is perhaps not enough. It would be nice to show if the system could do well on some document NLP tasks (like scientific literature?) to begin with.
 

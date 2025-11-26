@@ -5,6 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "./script/build.sh",
+    "downsample": "./script/downsample.sh",
+    "generate-scigen-manual": "./script/generate-scigen-manual.sh" ,
     "generate-charts": "./script/py-install-requirements-and-gen.sh",
     "install-dependencies": "./script/install-dependencies.sh",
     "ollama-install": "./script/ollama-install.sh",

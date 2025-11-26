@@ -36,40 +36,89 @@ Replace each detected phrase with:
 - Return the entire paragraph with the phrases replaced inline
 - Preserve all other text exactly (spacing, punctuation, line breaks)
 
-EXAMPLE
+EXAMPLES
+
+Example 1:
 
 Paragraph:
-For NER (Table 7), S-LSTM gives an F1-score of 91.57% on the CoNLL test set, which is significantly
-better compared with BiLSTMs. The minimum F1-score was obtained by BiLSTM.
-The average training time of the BiLSTM-small variants is 1.7 hours
-while the total training time required to run all the models is 28.5 hours.
-Stacking more layers of BiLSTMs leads to slightly better F1-scores
-compared with a single-layer BiLSTM. Our BiLSTM results are comparable to the results reported
-by Ma and Hovy (2016) and Lample et al. (2016).
-In contrast, S-LSTM gives the best reported results under the same settings.
-In the second section of Table 7, Yang et al. (2017) obtain an Fscore of 91.26%.
+The average rainfall across all regions was 850mm. The northern region had higher precipitation than the southern, 
+with a difference of 420mm between them.
 
 Data:
 [
-  {model: "BiLSTM", accuracy: 90.3, params_M: 6.8, train_time_h: 3.2, memory_GB: 1.1},
-  {model: "2 stacked BiLSTM", accuracy: 91.0, params_M: 9.1, train_time_h: 4.5, memory_GB: 1.6},
-  {model: "3 stacked BiLSTM", accuracy: 91.2, params_M: 11.4, train_time_h: 5.9, memory_GB: 2.0},
-  {model: "S-LSTM", accuracy: 92.4, params_M: 7.9, train_time_h: 3.8, memory_GB: 1.3},
-  {model: "yang2017transfer", accuracy: 91.1, params_M: 10.2, train_time_h: 6.0, memory_GB: 2.2},
-  {model: "BiLSTM-small-1", accuracy: 88.2, params_M: 3.4, train_time_h: 1.6, memory_GB: 0.7},
-  {model: "BiLSTM-small-2", accuracy: 88.6, params_M: 3.5, train_time_h: 1.7, memory_GB: 0.7},
-  {model: "BiLSTM-small-3", accuracy: 89.1, params_M: 3.6, train_time_h: 1.8, memory_GB: 0.8}
+  {region: "Northern", rainfall_mm: 1120},
+  {region: "Central", rainfall_mm: 780},
+  {region: "Southern", rainfall_mm: 700}
 ]
 
 Output:
-For NER (Table 7), [REPLACE value="S-LSTM" categories="DATA_RETRIEVAL"] gives an F1-score of [REPLACE value=91.57 categories="DATA_RETRIEVAL"]% on the CoNLL test set, which is significantly
-[REPLACE value="better" categories="COMPARISON,DATA_RETRIEVAL"] compared with [REPLACE value="BiLSTMs" categories="DATA_RETRIEVAL"].
-The average training time of the [REPLACE value="BiLSTM-small" categories="DATA_RETRIEVAL"] variants is [REPLACE value=1.7 categories="AVERAGE"] hours
-while the total training time required to run all the models is [REPLACE value=28.5 categories="SUM"] hours.
-The minimum F1-score was obtained by [REPLACE value="BiLSTM" categories="DATA_RETRIEVAL,MIN_MAX"]
-Stacking more layers of BiLSTMs to slightly [REPLACE value="better" categories="COMPARISON,DATA_RETRIEVAL"] F1-scores
-compared with a single-layer [REPLACE value="BiLSTM" categories="DATA_RETRIEVAL"].
-Our [REPLACE value="BiLSTM" categories="DATA_RETRIEVAL"] results are comparable to the results reported
-by Ma and Hovy (2016) and Lample et al. (2016).
-In contrast, [REPLACE value="S-LSTM" categories="DATA_RETRIEVAL"] gives the [REPLACE value="best" categories="RANK,DATA_RETRIEVAL"] reported results under the same settings.
-In the second section of Table 7, Yang et al. (2017) obtain an Fscore of [REPLACE value=91.26 categories="DATA_RETRIEVAL"]%.
+The average rainfall across all regions was [REPLACE value="850mm" categories="AVERAGE"]. The northern region had [REPLACE value="higher" categories="COMPARISON"] precipitation than the southern, with a difference of [REPLACE value="420mm" categories="DIFFERENCE"] between them.
+
+---
+
+Example 2:
+
+Paragraph:
+The total energy consumption was 2400 kWh. Building A consumed twice as much as Building B, 
+representing a ratio of 2.0.
+
+Data:
+[
+  {building: "Building A", energy_kwh: 1600},
+  {building: "Building B", energy_kwh: 800}
+]
+
+Output:
+The total energy consumption was [REPLACE value="2400 kWh" categories="SUM"]. Building A consumed [REPLACE value="twice as much" categories="RATIO,COMPARISON"] as Building B, representing a ratio of [REPLACE value="2.0" categories="RATIO"].
+
+---
+
+Example 3:
+
+Paragraph:
+The best performing product achieved 95% satisfaction, while the worst scored only 62%. 
+The mean satisfaction across all products was 78.5%.
+
+Data:
+[
+  {product: "Product X", satisfaction: 95},
+  {product: "Product Y", satisfaction: 78},
+  {product: "Product Z", satisfaction: 62}
+]
+
+Output:
+The [REPLACE value="best" categories="RANK,MIN_MAX"] performing product achieved [REPLACE value="95%" categories="MIN_MAX"], while the [REPLACE value="worst" categories="RANK,MIN_MAX"] scored only [REPLACE value="62%" categories="MIN_MAX"]. The mean satisfaction across all products was [REPLACE value="78.5%" categories="AVERAGE"].
+
+---
+
+Example 4:
+
+Paragraph:
+Combined sales reached $3.5M, with the top seller generating $1.8M. The gap between first and second place was $600K.
+
+Data:
+[
+  {seller: "Seller A", sales_m: 1.8},
+  {seller: "Seller B", sales_m: 1.2},
+  {seller: "Seller C", sales_m: 0.5}
+]
+
+Output:
+Combined sales reached [REPLACE value="$3.5M" categories="SUM"], with the top seller generating [REPLACE value="$1.8M" categories="MIN_MAX"]. The gap between first and second place was [REPLACE value="$600K" categories="DIFFERENCE"].
+
+---
+
+Example 5:
+
+Paragraph:
+The efficiency ratio improved from 0.65 to 0.82, an increase of 0.17. This is higher than the industry average of 0.74.
+
+Data:
+[
+  {period: "Before", efficiency: 0.65},
+  {period: "After", efficiency: 0.82},
+  {period: "Industry", efficiency: 0.74}
+]
+
+Output:
+The efficiency ratio improved from [REPLACE value="0.65" categories="DATA_RETRIEVAL"] to [REPLACE value="0.82" categories="DATA_RETRIEVAL"], an increase of [REPLACE value="0.17" categories="DIFFERENCE"]. This is [REPLACE value="higher" categories="COMPARISON"] than the industry average of [REPLACE value="0.74" categories="AVERAGE"].

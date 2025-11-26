@@ -24,3 +24,4 @@ while read -r json_path; do
     cp "$fld_path" "$TARGET_DIR/"
     
 done
+

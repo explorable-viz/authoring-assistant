@@ -2,8 +2,8 @@
 set -xe
 
 
-SOURCE_DIR="${1:-./testCases/scigen-SuggestionAgent-raw/}"
-TARGET_DIR="${2:-./testCases/scigen-manual-2/}"
+SOURCE_DIR="$1"
+TARGET_DIR="$2"
 TARGET_SIZE="${3:-20}"
 RANDOM_SEED="${4:-300}"
 

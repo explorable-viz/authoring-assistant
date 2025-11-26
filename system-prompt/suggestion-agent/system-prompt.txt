@@ -15,6 +15,8 @@ Each phrase quantitative or semi-quantitative phrase must labelled with the foll
    - String or numerical values that can be retrieved by a simple lookup in the dataset; including
    (non-computed) numerical values like "91.57", "6.5%"; lexical numerals like "three", "ten"; and primary keys
    such as emissions types, country codes, years, product ids
+   - DO NOT annotate references to tables, figures, sections, or other document structure elements
+   (e.g., "Table 3", "Figure 2", "Section 4.1")
 4. AVERAGE, SUM, MIN_MAX, RATIO, DIFFERENCE
    - Numerical values that can be computed as the average, sum, minimum/maximum, ratio or difference
    (respectively) of other values

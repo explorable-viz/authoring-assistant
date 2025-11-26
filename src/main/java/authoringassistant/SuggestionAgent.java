@@ -79,7 +79,11 @@ public class SuggestionAgent {
             // Expression
             String exprValue = matcher.group(1);
             HashSet<ExpressionCategory> categories = new HashSet<>();
-            categories.add(ExpressionCategory.of(matcher.group(2)));
+            // Split by comma to handle multiple categories
+            String categoriesStr = matcher.group(2);
+            for (String category : categoriesStr.split(",")) {
+                categories.add(ExpressionCategory.of(category.trim()));
+            }
             paragraph.add(new Expression(STR."\"\{exprValue}\"", exprValue, categories));
 
             lastIndex = matcher.end();

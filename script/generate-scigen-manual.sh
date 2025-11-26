@@ -1,15 +1,17 @@
 #!/bin/bash
 set -xe
 
-RAW_SCIGEN_DIR="./testCases/scigen-SuggestionAgent-raw/"
-TARGET_DIR="./testCases/scigen-manual-2/"
-RANDOM_SEED=2025 
-TARGET_SIZE=20
+
+SOURCE_DIR="${1:-./testCases/scigen-SuggestionAgent-raw/}"
+TARGET_DIR="${2:-./testCases/scigen-manual-2/}"
+TARGET_SIZE="${3:-20}"
+RANDOM_SEED="${4:-2025}"
+
 
 mkdir -p "$TARGET_DIR"
 
 # Find all json files, shuffle them and take up to target size
-find "$RAW_SCIGEN_DIR" -maxdepth 1 -name "*.json" | \
+find "$SOURCE_DIR" -maxdepth 1 -name "*.json" | \
 awk -v RANDOM_SEED="$RANDOM_SEED" 'BEGIN {srand(RANDOM_SEED)} {print rand() "\t" $0}' | \
 sort -k1,1n | \
 cut -f2- | \

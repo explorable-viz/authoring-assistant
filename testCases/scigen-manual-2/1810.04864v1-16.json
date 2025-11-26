@@ -1,0 +1,18 @@
+{
+    "datasets": [
+        "datasets/scigen_SuggestionAgent/1810.04864v1-16.json"
+    ],
+    "imports": [
+        "scigen",
+        "util",
+        "datasets/scigen_SuggestionAgent/_1810_04864v1_16"
+    ],
+    "variables": {},
+    "testing-variables": {},
+    "paragraph": [
+        {
+            "type": "literal",
+            "value": "On the WebNLG test set, the BLEU score of our best word-based model outperforms the best challenge submission by a small margin. The character-based model achieves a significantly higher ROUGE-L score than the wordbased model, whereas the BLEU score difference is not significant."
+        }
+    ]
+}

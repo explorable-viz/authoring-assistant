@@ -16,8 +16,8 @@
         },
         {
             "type": "expression",
-            "expression": "\"seven\"",
-            "categories": ["total"]
+            "expression": "sum (map (fun x -> 1) [(head tableData).insuranceqa, (head tableData).travel, (head tableData).cooking, (head tableData).academia, (head tableData).apple,  (head tableData).aviation, (head tableData).wikipassageqa]) ",
+            "categories": ["sum"]
         },
         {
             "type": "literal",
@@ -35,7 +35,7 @@
         {
             "type": "expression",
             "expression": "\"8.8\"",
-            "categories": ["min_max", "difference"]
+            "categories": ["min-max", "difference"]
         },
         {
             "type": "literal",

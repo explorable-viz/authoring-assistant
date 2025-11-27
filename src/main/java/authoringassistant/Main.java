@@ -3,6 +3,7 @@ package authoringassistant;
 import kotlin.Pair;
 
 import authoringassistant.Program.QueryResult;
+import authoringassistant.util.ThrowingConsumer;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -37,7 +38,13 @@ public class Main {
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             if(arguments.containsKey("suggestion-agent-only") && arguments.get("suggestion-agent-only").equals("true")) {
                 generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
-                return;
+            }
+            else if(arguments.containsKey("downsample") && arguments.get("downsample").equals("true")) {
+                int expressionPerCategory = Integer.parseInt(arguments.get("expression-per-category"));
+                int sampleSize = Integer.parseInt(arguments.get("sample-size"));
+                String outputFolder = STR."testCases/\{Path.of(Settings.getTestCaseFolder()).getFileName()}-downsampled";
+                downsamplePrograms(programs, expressionPerCategory, sampleSize)
+                    .forEach(ThrowingConsumer.toConsumer(program -> saveProgramToJson(program, outputFolder)));
             }
             else
             {
@@ -58,19 +65,77 @@ public class Main {
             System.exit(1);
         }
     }
+
+    private static void saveProgramToJson(Program program, String outputFolder) throws IOException {
+        String json = program.toJsonProgram().toString(2);
+        String fileName = STR."\{Path.of(program.getTestCaseFileName()).getFileName()}.json";
+        Path outputPath = Paths.get(outputFolder, fileName);
+        Files.createDirectories(outputPath.getParent());
+        Files.writeString(outputPath, json);
+        logger.info(STR."Generated program saved to: \{outputPath}");
+    }
+
     private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, IOException {
         SuggestionAgent sa = new SuggestionAgent(suggestionAgentClassName);
-        Files.createDirectories(Paths.get(outputFolder));
-
         for (Program program : programs) {
-            Program p = sa.generateTemplateProgram(program);
-            String json = p.toJsonProgram().toString(2);
-
-            String fileName = STR."\{Path.of(p.getTestCaseFileName()).getFileName()}.json";
-            Path outputPath = Paths.get(outputFolder, fileName);
-            Files.writeString(outputPath, json);
-            logger.info(STR."Generated program saved to: \{outputPath}");
+            saveProgramToJson(sa.generateTemplateProgram(program), outputFolder);
         }
+    }
+
+    public record ProgramExpression(int expressionIndex, Program program) {}
+
+    private static Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> groupProgramsByCategory(List<Program> programs) {
+        Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> categoryMap = new HashMap<>();
+        
+        for (Program program : programs) {
+            List<authoringassistant.paragraph.TextFragment> fragments = program.getParagraph();
+            for (int i = 0; i < fragments.size(); i++) {
+                authoringassistant.paragraph.TextFragment fragment = fragments.get(i);
+                if (fragment instanceof authoringassistant.paragraph.Expression expr) {
+                    for (authoringassistant.paragraph.ExpressionCategory category : expr.getCategories()) {
+                        categoryMap.computeIfAbsent(category, k -> new ArrayList<>())
+                                .add(new ProgramExpression(i, program));
+                    }
+                }
+            }
+        }
+        
+        return categoryMap;
+    }
+
+    private static List<Program> downsamplePrograms(List<Program> programs, int expressionsPerCategory, int sampleSize) {
+        Random random = new Random(0);
+        Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> expressionsByCategory = groupProgramsByCategory(programs);
+        Map<String, Program> selectedProgramsByTestFile = new HashMap<>();
+        
+        for (List<ProgramExpression> categoryExpressions : expressionsByCategory.values()) {
+            List<ProgramExpression> shuffled = new ArrayList<>(categoryExpressions);
+            Collections.shuffle(shuffled, random);
+            int toTake = Math.min(expressionsPerCategory, shuffled.size());
+            for (int i = 0; i < toTake; i++) {
+                ProgramExpression pe = shuffled.get(i);
+                selectedProgramsByTestFile.putIfAbsent(pe.program().getTestCaseFileName(), pe.program());
+            }
+        }
+        Set<Program> downsampled = new HashSet<>(selectedProgramsByTestFile.values());
+        
+        // If we still have room, add more programs randomly
+        if (downsampled.size() < sampleSize) {
+            List<Program> remaining = new ArrayList<>(programs);
+            remaining.removeAll(downsampled);
+            Collections.shuffle(remaining, random);
+            int additionalNeeded = Math.min(sampleSize - downsampled.size(), remaining.size());
+            downsampled.addAll(remaining.subList(0, additionalNeeded));
+        }
+        
+        // Convert to list and trim if exceeded maxPrograms
+        List<Program> result = new ArrayList<>(downsampled);
+        if (result.size() > sampleSize) {
+            Collections.shuffle(result, random);
+            result = result.subList(0, sampleSize);
+        }
+        
+        return result;
     }
 
     private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String agent, int learningContextSize) throws IOException {

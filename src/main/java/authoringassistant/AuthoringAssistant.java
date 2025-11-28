@@ -41,24 +41,24 @@ public class AuthoringAssistant {
 
     public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
-        List<Pair<Program, Expression>> programEdits;
+        List<Pair<Program, Expression>> problems;
         int i = 0;
         if (Settings.isSuggestionAgentEnabled()) {
             templateProgram = suggestionAgent.generateTemplateProgram(templateProgram);
         }
-        programEdits = templateProgram.asIndividualEdits(templateProgram);
-        int editId = 0;
-        while (!programEdits.isEmpty()) {
+        problems = templateProgram.getProblems(templateProgram);
+        int problemIndex = 0;
+        while (!problems.isEmpty()) {
             try {
-                Pair<Program, Expression> individualEdit = programEdits.get(i);
+                Pair<Program, Expression> problem = problems.get(i);
                 //selection
-                Program programEdit = individualEdit.getFirst();
-                QueryResult result = execute(individualEdit, editId++);
+                Program program = problem.getFirst();
+                QueryResult result = execute(problem, problemIndex++);
 
-                programEdit.replaceParagraph(programEdit.getParagraph().splice(result.correctResponse() == null ? individualEdit.getSecond() : result.correctResponse()));
-                results.add(new Pair<>(programEdit, result));
-                programEdits = programEdit.asIndividualEdits(templateProgram);
-                programEdit.toWebsite();
+                program.replaceParagraph(program.getParagraph().splice(result.correctResponse() == null ? problem.getSecond() : result.correctResponse()));
+                results.add(new Pair<>(program, result));
+                problems = program.getProblems(templateProgram);
+                program.toWebsite();
             } catch (Exception e) {
                 logger.severe("Error executing program edit: " + e.getMessage());
                 logger.info("Returning partial results obtained so far: " + results.size() + " results");

@@ -94,7 +94,7 @@ public class SuggestionAgent {
     }
 
     private static String extractText(Program p) throws IOException {
-        return !p.asIndividualEdits(p).isEmpty() ? p.asIndividualEdits(p)
+        return !p.getProblems(p).isEmpty() ? p.getProblems(p)
                 .getFirst()
                 .component1()
                 .getParagraph()

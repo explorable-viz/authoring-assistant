@@ -238,8 +238,8 @@ public class Program {
         return categories;
     }
 
-    public List<Pair<Program, Expression>> asIndividualEdits(Program template) throws IOException {
-        List<Pair<Expression, Paragraph>> paragraphsToCompute = paragraph.asIndividualEdits(template.paragraph);
+    public List<Pair<Program, Expression>> getProblems(Program template) throws IOException {
+        List<Pair<Expression, Paragraph>> paragraphsToCompute = paragraph.getProblems(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for (Pair<Expression, Paragraph> p : paragraphsToCompute) {
             programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName, this.test_datasets), p.getFirst()));

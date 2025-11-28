@@ -38,7 +38,7 @@ public class Paragraph extends ArrayList<TextFragment> {
         }).collect(Collectors.joining(" "))}\n\"\"\"";
     }
 
-    public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {
+    public List<Pair<Expression, Paragraph>> getProblems(Paragraph template) {
         final int numComputedExpr;
         if (template == this) {
             numComputedExpr = 0;

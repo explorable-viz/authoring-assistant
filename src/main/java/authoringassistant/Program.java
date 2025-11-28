@@ -90,18 +90,17 @@ public class Program {
 
     public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
         String value = extractValue(commandLineResponse);
-        logger.info(STR."Validating interpreter output: \{value}");
+        String info = STR."Validating interpreter output: \{value}";
         //interpreter errors detection -
         if (commandLineResponse.contains("Error: ")) {
-            logger.info("Validation failed because interpreter error");
+            logger.info(STR."\{info}\n  Failed with interpreter error");
             return Optional.of(value);
         }
-
         if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
-            logger.info("Validation passed");
+            logger.info(STR."\{info}\n  Suceeded");
             return Optional.empty();
         } else {
-            logger.info(STR."Validation failed: generated=\{value}, expected=\{expectedExpression.getValue()}");
+            logger.info(STR."\{info}\n  Failed with mismatched value (got \{value}, expected \{expectedExpression.getValue()})");
             return Optional.of(value);
         }
     }

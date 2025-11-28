@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1905_05979v2_93
+
+"""
+	For ellipsis, both models improve substantially over the baseline (by 19-51 percentage points), with concat stronger for inflection tasks and CADec stronger for VPellipsis.
+"""

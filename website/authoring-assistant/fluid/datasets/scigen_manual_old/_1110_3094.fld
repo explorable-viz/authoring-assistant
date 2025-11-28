@@ -1,2 +1,0 @@
-let tableData = loadJson "datasets/scigen_manual_old/1110.3094.json";
-

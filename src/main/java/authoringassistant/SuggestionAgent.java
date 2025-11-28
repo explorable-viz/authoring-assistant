@@ -41,7 +41,7 @@ public class SuggestionAgent {
         PromptList prompts = buildPrompts(text);
         String result;
         int attempts = 0;
-        while(attempts < Settings.getLimit()) {
+        while(attempts < Settings.getAgentLimit()) {
             attempts++;
             try {
                 result = llm.evaluate(prompts, null);
@@ -98,7 +98,7 @@ public class SuggestionAgent {
     }
 
     private static String extractText(Program p) throws IOException {
-        return !p.asIndividualEdits(p).isEmpty() ? p.asIndividualEdits(p)
+        return !p.asIndividualProblems(p).isEmpty() ? p.asIndividualProblems(p)
                 .getFirst()
                 .component1()
                 .getParagraph()

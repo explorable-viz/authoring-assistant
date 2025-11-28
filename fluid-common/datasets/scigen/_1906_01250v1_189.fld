@@ -1,0 +1,1 @@
+let tableData = loadJson "datasets/scigen/1906.01250v1-189.json";

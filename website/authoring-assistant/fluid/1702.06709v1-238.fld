@@ -1,9 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1702_06709v1_238
-
-"""
-	These results are shown in  ${"table 2"}  as feature level transfer-learning.
-These results are shown in  ${"table 2"}  as model level transfer learning.
- ${"Table 2"}  shows the results of the proposed method, its variants and the baseline methods.
-"""

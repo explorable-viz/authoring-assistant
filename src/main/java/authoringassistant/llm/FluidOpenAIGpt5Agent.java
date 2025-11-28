@@ -37,7 +37,7 @@ public class FluidOpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
 
     @Override
     public Expression evaluate(PromptList prompts, String grid) throws IOException {
-        logger.info("Execution of the FluidOpenAIGpt5Agent");
+        logger.config("Execution of the FluidOpenAIGpt5Agent");
         
         try {
             JSONObject requestBody = buildRequestBody(prompts);

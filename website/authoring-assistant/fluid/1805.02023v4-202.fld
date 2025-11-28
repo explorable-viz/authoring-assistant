@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1805_02023v4_202
-
-"""
-	Table 3 shows the values of hyper-parameters for our models,  In particular, the embedding sizes are set to  ${"50"}  and the hidden size of LSTM models to  ${"200"} . Dropout (Srivastava et al., 2014) is applied to both word and character embeddings with a rate of  ${"0.5"} . Stochastic gradient descent (SGD) is used for optimization, with an initial learning rate of  ${"0.015"}  and a decay rate of  ${"0.05"} .
-"""

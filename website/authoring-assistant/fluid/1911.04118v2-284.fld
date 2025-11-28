@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1911_04118v2_284
-
-"""
-	For each  ${"question"}  in  ${"ASNQ"} , the positive candidate answers are those sentences that occur in the long answer paragraphs in  ${"NQ"}  and contain annotated short answers. The remaining sentences from the document are labeled as negative for the target question.  while the  ${"ASNQ"}  statistics are reported in Table 1.   ${"ASNQ"}  contains  ${"57,242"}  distinct questions in the training set and  ${"2,672"}  distinct questions in the dev. set,
-"""

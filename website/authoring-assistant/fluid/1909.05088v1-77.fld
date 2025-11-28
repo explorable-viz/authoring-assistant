@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1909_05088v1_77
-
-"""
-	An overview of the  ${"language pairs"}  as well as the amount of  ${"annotated parallel sentences"}  per  ${"language pair"}  is given in Table 1.  Overview of  ${"annotated parallel sentences"}  per  ${"language pair"}
-"""

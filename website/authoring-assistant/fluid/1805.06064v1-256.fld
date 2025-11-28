@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1805_06064v1_256
-
-"""
-	We trained and evaluated our editing approach with  ${"1-6"}  iterations and the experimental results (Table 5) showed that the  ${"second"}  iteration produced the  ${"best"}  results.
-"""

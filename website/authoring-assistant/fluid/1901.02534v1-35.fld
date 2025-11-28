@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1901_02534v1_35
-
-"""
-	The named entity retrieval strategy boosts the evidence retrieval rate to  ${"80.8"} %,  The film retrievals raise evidence retrieval to  ${"81.2"} %.
-"""

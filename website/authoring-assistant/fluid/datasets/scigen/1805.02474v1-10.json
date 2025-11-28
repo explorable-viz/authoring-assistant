@@ -1,0 +1,92 @@
+[
+    {
+        "_model": "LSTM",
+        "_time": "67",
+        "_acc": "80.72",
+        "_no_param": "5,977K"
+    },
+    {
+        "_model": "BiLSTM",
+        "_time": "106",
+        "_acc": "81.73",
+        "_no_param": "7,059K"
+    },
+    {
+        "_model": "2 stacked BiLSTM",
+        "_time": "207",
+        "_acc": "81.97",
+        "_no_param": "9,221K"
+    },
+    {
+        "_model": "3 stacked BiLSTM",
+        "_time": "310",
+        "_acc": "81.53",
+        "_no_param": "11,383K"
+    },
+    {
+        "_model": "4 stacked BiLSTM",
+        "_time": "411",
+        "_acc": "81.37",
+        "_no_param": "13,546K"
+    },
+    {
+        "_model": "S-LSTM",
+        "_time": "65",
+        "_acc": "82.64*",
+        "_no_param": "8,768K"
+    },
+    {
+        "_model": "CNN",
+        "_time": "34",
+        "_acc": "80.35",
+        "_no_param": "5,637K"
+    },
+    {
+        "_model": "2 stacked CNN",
+        "_time": "40",
+        "_acc": "80.97",
+        "_no_param": "5,717K"
+    },
+    {
+        "_model": "3 stacked CNN",
+        "_time": "47",
+        "_acc": "81.46",
+        "_no_param": "5,808K"
+    },
+    {
+        "_model": "4 stacked CNN",
+        "_time": "51",
+        "_acc": "81.39",
+        "_no_param": "5,855K"
+    },
+    {
+        "_model": "Transformer (N=6)",
+        "_time": "138",
+        "_acc": "81.03",
+        "_no_param": "7,234K"
+    },
+    {
+        "_model": "Transformer (N=8)",
+        "_time": "174",
+        "_acc": "81.86",
+        "_no_param": "7,615K"
+    },
+    {
+        "_model": "Transformer (N=10)",
+        "_time": "214",
+        "_acc": "81.63",
+        "_no_param": "8,004K"
+    },
+    {
+        "_model": "BiLSTM+Attention",
+        "_time": "126",
+        "_acc": "82.37",
+        "_no_param": "7,419K"
+    },
+    {
+        "_model": "S-LSTM+Attention",
+        "_time": "87",
+        "_acc": "83.07*",
+        "_no_param": "8,858K"
+    }
+]

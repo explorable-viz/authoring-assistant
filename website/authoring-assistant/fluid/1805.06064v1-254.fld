@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1805_06064v1_254
-
-"""
-	Table 2 presents  ${"METEOR"}  (Denkowski and Lavie, 2014) and  ${"ROUGE-L"}  (Lin, 2004) scores for each method, where we can see score gains on  both metrics from the  ${"Editing Mechanism"} .  Table 2 shows that the human judges strongly favor the abstracts from our  ${"ED(2)"}  method.
-"""

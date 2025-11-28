@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1910_14539v1_353
-
-"""
-	Table 6 shows a  ${"5.7"}  BLEU  ${"improvement"}  on Rotowire-test by our English NLG model compared to the previous state of the art.
-"""

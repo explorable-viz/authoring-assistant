@@ -1,9 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1905_05543v2_41
-
-"""
-	each  ${"average"} .
-According to our results (Table 2), the  ${"Wikification success ratios"}  of  ${"eBay"}  and  ${"Illegal Onion named entities is comparable"}  and relatively low.
-However, sites selling legal drugs on  ${"Onion"}  have a  ${"much higher"}   ${"Wikification percentage"} .
-"""

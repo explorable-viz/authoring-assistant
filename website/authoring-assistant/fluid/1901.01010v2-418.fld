@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1901_01010v2_418
-
-"""
-	Table 4 shows the confusion matrix of  ${"JOINT"}  on  ${"Wikipedia"} . We can see that  ${"more than 50%"}  of documents for each quality class are correctly classified, except for the  ${"class"}  where  ${"more documents"}  are misclassified into  ${"B"} .
-"""

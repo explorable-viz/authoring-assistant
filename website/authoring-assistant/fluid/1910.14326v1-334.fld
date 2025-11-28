@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1910_14326v1_334
-
-"""
-	We present our results in  ${"Table 1"} . As shown in  ${"Table 1"} , our model  ${"CMAML"}  achieves good performance on  ${"quality"} ,  ${"personality"} , and  ${"diversity"} .
-"""

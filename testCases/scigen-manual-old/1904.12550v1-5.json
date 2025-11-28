@@ -1,0 +1,44 @@
+{
+  "datasets": [ "datasets/scigen_manual_old/1904.12550v1-5.json" ],
+  "imports": ["scigen", "util", "datasets/scigen_manual_old/_1904_12550v1_5"],
+  "variables": {},
+  "testing-variables": {
+    "label_f_google": [0.945, 0.950, 0.953, 0.956, 0.960],
+    "description_f_glove": [0.905, 0.910, 0.912, 0.915, 0.918],
+    "both_f_fasttext": [0.910, 0.914, 0.920, 0.925, 0.930],
+    "label_f_fasttext": [0.915, 0.920, 0.923, 0.926, 0.930]
+  },
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For TOP n COS SIM AVG, the tuning data results (Table 2) are somewhat more varied: First, there is no single best performing set of embeddings: Google yields the best F score for the Label setting ("
+    },
+    {
+      "type": "expression",
+      "expression": "(findWithKey_ \"concept_input____embeddings\" \"Google\" tableData).label___f",
+      "categories": ["data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "), while GloVe (though only barely) leads in the Description setting ("
+    },
+    {
+      "type": "expression",
+      "expression": "(findWithKey_ \"concept_input____embeddings\" \"GloVe\" tableData).description___f",
+      "categories": ["data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "). This time, it is fastText which produces the best F score in the Both setting, which is also the best overall tuning data F score for TOP n COS SIM AVG ("
+    },
+    {
+      "type": "expression",
+      "expression": "(findWithKey_ \"concept_input____embeddings\" \"fastText\" tableData).both___f",
+      "categories": ["data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ]
+}

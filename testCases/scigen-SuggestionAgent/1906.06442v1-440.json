@@ -289,7 +289,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen_SuggestionAgent/_1906_06442v1_440"
+    "datasets/scigen/_1906_06442v1_440"
   ],
-  "datasets": ["datasets/scigen_SuggestionAgent/1906.06442v1-440.json"]
+  "datasets": ["datasets/scigen/1906.06442v1-440.json"]
 }

@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1903_12626v1_99
-
-"""
-	The purpose of  ${"Table 5"}  is to show that the traditional  ${"CNN classifier"}  in  ${"Phase 2"}  was  ${"highly accurate"} .
-"""

@@ -40,7 +40,7 @@ public class AuthoringAssistant {
         this.jsonLogFolder = jsonLogFolder;
     }
 
-    public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
+    public List<Pair<Program, QueryResult>> runTestProblems() throws Exception {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
         List<Pair<Program, Expression>> problems;
         int i = 0;

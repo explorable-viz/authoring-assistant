@@ -96,10 +96,10 @@ public class Program {
             return Optional.of(value);
         }
         if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
-            logger.info(STR."Expected interpreter output: \{value}");
+            logger.info(STR."Matched expression value: \{value}");
             return Optional.empty();
         } else {
-            logger.info(STR."Unexpected interpreter output: \{value} (expected \{expectedExpression.getValue()})");
+            logger.info(STR."Mismatched expression value: \{value} (expected \{expectedExpression.getValue()})");
             return Optional.of(value);
         }
     }

@@ -139,7 +139,7 @@ public class Main {
                 long correct = results.stream()
                     .filter(r -> r.getSecond().correctResponse() != null)
                     .count();
-                logger.info(STR."Test case \{programCount++} of \{programs.size()}: \{correct} of \{results.size()} responses correct");
+                logger.info(STR."[Test case \{programCount++} of \{programs.size()}] \{correct} of \{results.size()} responses correct");
                 allResults.addAll(results);
             }
         }

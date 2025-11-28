@@ -1,6 +1,6 @@
 {
-  "datasets": [ "datasets/1110.3094.json" ],
-  "imports": ["scigen", "util", "datasets/_1110_3094"],
+  "datasets": [ "datasets/scigen_manual_old/1110.3094.json" ],
+  "imports": ["scigen", "util", "datasets/scigen_manual_old/_1110_3094"],
   "variables": {},
   "testing-variables": {
     "resp_svm1_precision": [85.4, 85.9, 83.2, 82.0, 93.8],

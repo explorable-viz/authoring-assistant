@@ -1,9 +1,9 @@
 {
-  "datasets": [ "datasets/scigen_manual/1805.02474v1-10.json" ],
+  "datasets": [ "datasets/scigen_manual_old/1805.02474v1-10.json" ],
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen_manual/_1805_02474v1_10"
+    "datasets/scigen_manual_old/_1805_02474v1_10"
   ],
   "testing-variables": {
     "time_lstm": [

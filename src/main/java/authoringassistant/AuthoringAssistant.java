@@ -49,23 +49,26 @@ public class AuthoringAssistant {
         }
         problems = templateProgram.asIndividualProblems(templateProgram);
         int problemIndex = 0;
-        while (!problems.isEmpty()) {
-            try {
-                Pair<Program, Expression> problem = problems.get(i);
-                Program program = problem.getFirst();
-                QueryResult result = execute(problem, problemIndex++);
+        if (problems.isEmpty()) {
+            templateProgram.toWebsite();
+        } else
+            do {
+                try {
+                    Pair<Program, Expression> problem = problems.get(i);
+                    Program program = problem.getFirst();
+                    QueryResult result = execute(problem, problemIndex++);
 
-                program.replaceParagraph(program.getParagraph().splice(result.correctResponse() == null ? problem.getSecond() : result.correctResponse()));
-                results.add(new Pair<>(program, result));
-                problems = program.asIndividualProblems(templateProgram);
-                program.toWebsite();
-            } catch (Exception e) {
-                logger.severe("Error executing program edit: " + e.getMessage());
-                logger.info("Returning partial results obtained so far: " + results.size() + " results");
-                // Restituisce i risultati parziali invece di propagare l'eccezione
-                return results;
-            }
-        }
+                    program.replaceParagraph(program.getParagraph().splice(result.correctResponse() == null ? problem.getSecond() : result.correctResponse()));
+                    results.add(new Pair<>(program, result));
+                    problems = program.asIndividualProblems(templateProgram);
+                    program.toWebsite();
+                } catch (Exception e) {
+                    logger.severe("Error executing program edit: " + e.getMessage());
+                    logger.info("Returning partial results obtained so far: " + results.size() + " results");
+                    // Restituisce i risultati parziali invece di propagare l'eccezione
+                    return results;
+                }
+            } while (!problems.isEmpty());
         return results;
     }
 

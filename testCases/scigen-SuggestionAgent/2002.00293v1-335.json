@@ -406,7 +406,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen_SuggestionAgent/_2002_00293v1_335"
+    "datasets/scigen/_2002_00293v1_335"
   ],
-  "datasets": ["datasets/scigen_SuggestionAgent/2002.00293v1-335.json"]
+  "datasets": ["datasets/scigen/2002.00293v1-335.json"]
 }

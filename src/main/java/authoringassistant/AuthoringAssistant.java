@@ -73,16 +73,17 @@ public class AuthoringAssistant {
     }
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
-        final int limit = llm instanceof LLMDummyAgent ? 1 : Settings.getLimit();
+        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getAgentLimit();
         // Add the input query to the KB that will be sent to the LLM
-        int attempts;
+        int attempt;
         final long start = System.currentTimeMillis();
         Program subProgram = test.getFirst();
         Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         int parseErrors=0, counterfactualFails=0, nullExpressions=0, onlyLiteralExpressions=0;
-        for (attempts = 0; attempts <= limit; attempts++) {
+        for (attempt = 1; attempt <= attemptLimit; attempt++) {
+            final String info = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}] Attempt #\{attempt}: ";
             boolean errors = false;
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
@@ -92,7 +93,7 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt("NULL");
                 sessionPrompts.addUserPrompt("ExpressionError: Received a NULL expression instead of a valid expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value.");
-                logger.info(STR."Attempt #\{attempts}: retry");
+                logger.info(STR."\{info}retry");
                 continue;
             }
             if(candidate.getExpr() != null && candidate.getExpr().equals(expected.getValue())) {
@@ -100,12 +101,12 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
                 sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
-                logger.info(STR."Attempt #\{attempts}: retry");
+                logger.info(STR."\{info}retry");
                 continue;
             }
             boolean firstTest = false;
             for (Map<String, String> datasets : subProgram.getTest_datasets()) {
-                logger.info(STR."Attempt #\{attempts}: received \{candidate.getExpr()}");
+                logger.info(STR."\{info}received \{candidate.getExpr()}");
                 Optional<String> error = Program.validate(
                         evaluateExpression(subProgram, datasets, candidate),
                         new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
@@ -126,13 +127,13 @@ public class AuthoringAssistant {
             if (!errors) {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr());
                 sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
-                return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
+                return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
             }
 
         }
         sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
-        logger.warning(STR."Expression validation failed after \{limit} attempts");
-        return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
+        logger.warning(STR."Expression validation failed after \{attemptLimit} attempts");
+        return new QueryResult(null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {

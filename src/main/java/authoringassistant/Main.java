@@ -134,13 +134,12 @@ public class Main {
             int programCount = 0;
             for (Program program : programs) {
                 AuthoringAssistant authoringAssistant = new AuthoringAssistant(inContextLearning, agent, program, suggestionAgent, k,jsonLogFolder);
-                logger.info(STR."Test case \{programCount++} of \{programs.size()}");
                 List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
 
                 long correct = results.stream()
                     .filter(r -> r.getSecond().correctResponse() != null)
                     .count();
-                logger.info(STR."\{correct} of \{results.size()} responses correct");
+                logger.info(STR."Test case \{programCount++} of \{programs.size()}: \{correct} of \{results.size()} responses correct");
                 allResults.addAll(results);
             }
         }

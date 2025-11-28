@@ -84,7 +84,6 @@ public class AuthoringAssistant {
         int parseErrors=0, counterfactualFails=0, nullExpressions=0, onlyLiteralExpressions=0;
         for (attempts = 0; attempts <= limit; attempts++) {
             boolean errors = false;
-            logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
@@ -93,6 +92,7 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt("NULL");
                 sessionPrompts.addUserPrompt("ExpressionError: Received a NULL expression instead of a valid expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value.");
+                logger.info(STR."Attempt #\{attempts}: retry");
                 continue;
             }
             if(candidate.getExpr() != null && candidate.getExpr().equals(expected.getValue())) {
@@ -100,11 +100,12 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
                 sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
+                logger.info(STR."Attempt #\{attempts}: retry");
                 continue;
             }
             boolean firstTest = false;
             for (Map<String, String> datasets : subProgram.getTest_datasets()) {
-                logger.info(STR."Received response: \{candidate.getExpr()}");
+                logger.info(STR."Attempt #\{attempts}: received \{candidate.getExpr()}");
                 Optional<String> error = Program.validate(
                         evaluateExpression(subProgram, datasets, candidate),
                         new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
@@ -141,7 +142,7 @@ public class AuthoringAssistant {
     }
 
     private LLMEvaluatorAgent<Expression> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        logger.info(STR."Initializing agent: \{agentClassName}");
+        logger.config(STR."Initializing agent: \{agentClassName}");
         LLMEvaluatorAgent<Expression> llmAgent;
         Class<?> agentClass = Class.forName(agentClassName);
         llmAgent = (LLMEvaluatorAgent<Expression>) agentClass

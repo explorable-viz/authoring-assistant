@@ -15,7 +15,7 @@ public class SuggestionDummyAgent extends LLMEvaluatorAgent<String> {
 
     @Override
     public String evaluate(PromptList list, String s) throws IOException {
-        logger.info("Execution of the DummyAgent");
+        logger.config("Execution of the DummyAgent");
         list.addSystemPrompt("dummy");
         return null;
     }

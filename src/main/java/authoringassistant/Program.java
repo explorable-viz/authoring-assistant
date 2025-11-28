@@ -89,8 +89,8 @@ public class Program {
     }
 
     public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
-        logger.info(STR."Validating command line output: \{commandLineResponse}");
         String value = extractValue(commandLineResponse);
+        logger.info(STR."Validating interpreter output: \{value}");
         //interpreter errors detection -
         if (commandLineResponse.contains("Error: ")) {
             logger.info("Validation failed because interpreter error");
@@ -150,7 +150,9 @@ public class Program {
     }
 
     public static ArrayList<Program> loadPrograms(String casesFolder, int numInstances) throws IOException {
-        if (numInstances == 0) return new ArrayList<>();
+        if (numInstances == 0)
+            return new ArrayList<>();
+
         Set<String> casePaths = Files.walk(Paths.get(casesFolder))
                 .filter(Files::isRegularFile) // Only process files, not directories
                 .map(path -> path.toAbsolutePath().toString()) // Get file name
@@ -158,13 +160,17 @@ public class Program {
                 .collect(Collectors.toSet());
 
         ArrayList<Program> programs = new ArrayList<>();
-        for (String casePath : casePaths) {
+
+        List<String> caseList = new ArrayList<>(casePaths);
+        for (int i = 0; i < caseList.size(); ++i) {
+            String casePath = caseList.get(i);
+            String shortCasePath = STR."\{casesFolder}\{Path.of(casePath).toString().substring(Path.of(casesFolder).toAbsolutePath().toString().length())}";
             String jsonContent = Files.readString(Path.of(STR."\{casePath}.json"));
             for (int k = 0; k < numInstances; k++) {
                 Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(k));
                 JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
                 JSONArray json_imports = testCase.getJSONArray("imports");
-                logger.info(STR."Loading test case \{casePath}.json");
+                logger.info(STR."[\{i} of \{caseList.size()}] Loading \{shortCasePath}.json");
                 Collection<String> datasets = datasets(testCase.getJSONArray("datasets"));
                 ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
                 String code = Files.readString(Path.of(STR."\{casePath}.fld"));

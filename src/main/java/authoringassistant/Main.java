@@ -22,8 +22,8 @@ public class Main {
 
     public static void main(String... args) {
         Map<String, String> arguments = parseArguments(args);
-        logger.info("Arguments passed from command line");
-        logger.info(arguments.toString().replace(",", "\n"));
+        logger.config("Arguments passed from command line");
+        logger.config(arguments.toString().replace(",", "\n"));
         final ArrayList<Program> programs;
         final InContextLearning inContextLearning;
 
@@ -116,7 +116,7 @@ public class Main {
     }
 
     private static float computeAccuracy(List<Pair<Program, QueryResult>> results) {
-        logger.info("Computing accuracy");
+        logger.config("Computing accuracy");
         long count = IntStream.range(0, results.size()).filter(i -> {
             QueryResult result = results.get(i).getSecond();
             return  result.correctResponse() != null && result.expected().getExpr().equals(result.correctResponse().getExpr());

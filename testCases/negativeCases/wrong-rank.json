@@ -43,7 +43,7 @@
     {
       "type": "expression",
       "expression": "\"maximum\"",
-      "categories": ["min_max"]
+      "categories": ["min-max"]
     },
     {
       "type": "literal",

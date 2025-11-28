@@ -20,7 +20,7 @@
   "add-expected-value": true,
   "learning-case-folder": "learningCases",
   "enable-editor-loop": false,
-  "test-case-folder": "testCases/scigen-manual",
+  "test-case-folder": "testCases/scigen-manual-old",
   "enable-suggestion-agent": false,
   "threshold": 0.0,
   "system-prompt-path": "system-prompt/interpretation-agent",

@@ -106,7 +106,7 @@ Data:
 ]
 
 Output:
-Combined sales reached [REPLACE value="$3.5M" categories="SUM"], with the top seller generating [REPLACE value="$1.8M" categories="MIN_MAX"]. The gap between first and second place was [REPLACE value="$600K" categories="DIFFERENCE"].
+Combined sales reached [REPLACE value="$3.5M" categories="SUM"], with the top seller generating [REPLACE value="$1.8M" categories="MIN_MAX"]. The gap between first and second place was [REPLACE value="$600K" categories="DIFFERENCE, RANK"].
 
 ---
 

@@ -18,7 +18,7 @@
     {
       "type": "expression",
       "expression": "(findWhere (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData).f_818",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",

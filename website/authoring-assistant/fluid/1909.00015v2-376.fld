@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1909_00015v2_376
-
-"""
-	We report test set tokenized  ${"BLEU"}  (Papineni et al., 2002) results in Table 1. We can see that replacing  ${"softmax"}  by  ${"entmax"}  does not hurt performance in any of the datasets; indeed, sparse attention Transformers tend to have slightly  ${"higher"}   ${"BLEU"} , but their sparsity leads to a better potential for analysis. In the next section, we make use of this potential by exploring the learned internal mechanics of the self-attention heads.
-"""

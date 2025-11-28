@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1912_00871v1_422
-
-"""
-	The values in  ${"the last column"}  of Table III are summarized in Table IV. How the models  ${"compare"}  with respect to  ${"accuracy"}  closely resembles the comparison of  ${"BLEU scores"} , presented earlier. Thus,  ${"BLEU scores"}  seem to correlate well with  ${"accuracy values"}  in our case.
-"""

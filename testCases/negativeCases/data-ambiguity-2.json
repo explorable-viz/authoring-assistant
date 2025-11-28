@@ -16,7 +16,7 @@
     {
       "type": "expression",
       "expression": "\"90\"",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",

@@ -18,7 +18,7 @@
     {
       "type": "expression",
       "expression": "last (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 5) `and` (x.max_chunk_size == \"k=6\")) tableData)) - head (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData))",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",
@@ -27,7 +27,7 @@
     {
       "type": "expression",
       "expression": "(findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).speedup",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",
@@ -36,7 +36,7 @@
     {
       "type": "expression",
       "expression": "(findWhere (fun x -> (x.layers == 5)) tableData).speedup",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",
@@ -45,7 +45,7 @@
     {
       "type": "expression",
       "expression": "(findWithKey_ \"max_chunk_size\" \"k in {1...6}\" tableData).bleu - (findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).bleu",
-      "categories": ["difference", "data_retrieval", "data_retrieval"]
+      "categories": ["difference", "data-retrieval", "data-retrieval"]
     },
     {
       "type": "literal",
@@ -54,7 +54,7 @@
     {
       "type": "expression",
       "expression": "(findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).speedup",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",
@@ -63,7 +63,7 @@
     {
       "type": "expression",
       "expression": "(findWithKey_ \"max_chunk_size\" \"k in {1...6}\" tableData).speedup",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     }
   ]
 }

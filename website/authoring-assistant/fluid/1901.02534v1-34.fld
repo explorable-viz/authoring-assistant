@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1901_02534v1_34
-
-"""
-	makes the  ${"FEVER Title Five Oracle"}  performance  ${"better"}  than  ${"FEVER Title Five"} .  The  ${"Transformer model"}  is accurate enough that oracle guessing does not help.
-"""

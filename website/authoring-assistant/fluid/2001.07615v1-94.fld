@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._2001_07615v1_94
-
-"""
-	All  ${"results"}  of these  ${"experiments"}  are presented in  ${"Table 3"}  with the  ${"absolute improvement"}  of the two main measures  ${"UAR"}  and  ${"eA"}  over the  ${"SVM-based approach"}
-"""

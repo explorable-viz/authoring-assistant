@@ -20,7 +20,7 @@
     {
       "type": "expression",
       "expression": "underOverPerformed (overallComparison [ compareCols \"proposed\" col (findWithKey_ \"dataset\" \"Average\" tableData) | col <- [\"glo_ve\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\"]])",
-      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
+      "categories": ["generalised_quantifier", "comparison", "data-retrieval"]
     },
     {
       "type": "literal",
@@ -29,7 +29,7 @@
     {
       "type": "expression",
       "expression": "let [avg, dev] = stats [(findWithKey_ \"dataset\" \"Average\" tableData).[col] | col <- [\"glo_ve\", \"word_2_vec\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\", \"proposed\"]] in unusuallyHighLow (overallComparison ( map (fun val -> distributionOutlier val avg dev 2) (getColumn \"spine\" tableData)))",
-      "categories": ["generalised_quantifier", "comparison", "data_retrieval"]
+      "categories": ["generalised_quantifier", "comparison", "data-retrieval"]
     },
     {
       "type": "literal",

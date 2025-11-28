@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._2003_02736v1_275
-
-"""
-	Our results are given in Table 4.  We found that the  ${"Wikipedia"}  and  ${"Twitter"}  datasets contained labels which were  ${"more general"} , evidenced by similar high F1 scores from both annotators (>  ${"0.8"} ). For  ${"political speeches"} , we observed that the human annotators both found many more examples to be check-worthy than were labelled in the dataset.
-"""

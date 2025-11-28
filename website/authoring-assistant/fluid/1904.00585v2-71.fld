@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1904_00585v2_71
-
-"""
-	Our results suggest that this hyper-parameter setting can overall (except  ${"Wiki-ScienceIE"}  and  ${"MIMIC-WetLab pairs"} ) produce  ${"better"}  performance compare to the default setting (Table 6).
-"""

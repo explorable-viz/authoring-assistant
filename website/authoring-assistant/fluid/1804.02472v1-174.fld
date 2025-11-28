@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1804_02472v1_174
-
-"""
-	Evidence of this complementarity can be seen in  ${"Table 6"} , which contains a breakdown of system performance by governing dependency relation, for both  ${"linear"}  and  ${"tree"}  models, on UDS-IH2-dev. In most cases, the  ${"L-biLSTM's mean prediction"}  is closer to the true mean. This appears to arise in part because the  ${"T-biLSTM"}  is less confident in its predictions – i.e. its mean prediction tends to be closer to  ${"0"} . This results in the  ${"L-biLSTM"}  being too confident in certain cases – e.g. in the case of the  ${"xcomp governing relation"} , where the  ${"T-biLSTM mean prediction"}  is closer to the true mean.
-"""

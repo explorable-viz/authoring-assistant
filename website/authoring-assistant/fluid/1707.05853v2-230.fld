@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1707_05853v2_230
+
+"""
+	Table 3 displays the results for our model evaluated on cnets for increasingly aggressive pruning levels (discarding only interjections, additionally discarding hypotheses with scores below 0.001 and 0.01, respectively). As can be seen, using the full cnet except for interjections does not improve over the baseline.  However, when pruning low-probability hypotheses both pooling strategies improve over the baseline. Yet, average pooling performs worse for the lower pruning threshold, which shows that the model is still affected by noise among the hypotheses.  Weighted pooling performs better for the lower pruning threshold of 0.001 with which we obtain the highest result overall, improving the joint goals accuracy by 1.6 percentage points compared to the baseline.  Moreover, we see that an ensemble model that averages the predictions of ten cnet models trained with different random seeds also outperforms an ensemble of ten baseline models.  Our ensemble models outperform Mrksic et al. (2017) for the joint requests but are a bit worse for the joint goals.
+"""

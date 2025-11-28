@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._2003_02736v1_273
+
+"""
+	The results for the tested systems are given in Table 2. Again we saw large gains from the BERT  based models over the baseline from (Zubiaga et al., 2017) and the 2-layer BiLSTM. Compared to training solely on PHEME, fine tuning from basic citation needed detection saw very little improvement (0.1 F1 points). However, fine tuning with a model trained using PU learning led to an increase of 1 F1 point over the non-PU learning model, indicating that PU learning enables the Wikipedia data to be useful for transferring to rumour detection. For PUC, we saw an improvement of 0.7 F1 points over the baseline and lower overall variance than vanilla PU learning, meaning that the results with PUC are more consistent across runs. When models are ensembled, pretraining with vanilla PU learning improved over no pretraining by almost 2 F1 points.
+"""

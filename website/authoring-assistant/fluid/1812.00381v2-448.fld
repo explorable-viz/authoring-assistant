@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen_SuggestionAgent._1812_00381v2_448
+
+"""
+	We label each reply into three categories: buy, sell and other. The distribution of reply types is highly dependant on the structure and rules of the forum as shown in Table III.
+"""

@@ -1,0 +1,23 @@
+[
+    {
+        "": "Global",
+        "metric": "SigVac",
+        "amazon": "0.6960",
+        "newsgroups": "0.6081",
+        "new_york_times": "0.6063"
+    },
+    {
+        "": "Global",
+        "metric": "SigUni",
+        "amazon": "0.6310",
+        "newsgroups": "0.4839",
+        "new_york_times": "0.4935"
+    },
+    {
+        "": "Global",
+        "metric": "Coherence",
+        "amazon": "0.4907",
+        "newsgroups": "0.4463",
+        "new_york_times": "0.3799"
+    }
+]

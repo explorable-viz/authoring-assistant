@@ -8,7 +8,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen_SuggestionAgent/_2001_02836v1_130"
+    "datasets/scigen/_2001_02836v1_130"
   ],
-  "datasets": ["datasets/scigen_SuggestionAgent/2001.02836v1-130.json"]
+  "datasets": ["datasets/scigen/2001.02836v1-130.json"]
 }

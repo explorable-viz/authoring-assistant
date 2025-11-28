@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._2002_00652v2_408
+
+"""
+	Taking CONCAT as a representative, we compare the performance of our model with other models, as shown in Table 1. As illustrated, our model outperforms baselines by a large margin with or without BERT, achieving new SOTA performances on both datasets. Compared with the previous SOTA without BERT on SPARC, our model improves Ques.Match and Int.Match by 10.6 and 5.4 points, respectively.
+"""

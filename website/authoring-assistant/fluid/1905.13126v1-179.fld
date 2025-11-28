@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1905_13126v1_179
-
-"""
-	Humans  ${"agree more often"}  with models trained on  ${"Amazon reviews"}  than on  ${"New York Times"} .  As seen in Table 3, we report the coefficient of determination (r2) for each metric and dataset.   ${"SWITCHP"}  most closely approximates human judgments of local topic quality, with an r2 which indicates a strong correlation.  As evidenced by the  ${"lower"}  r2 for  ${"SWITCHVI"} , even switching between related topics does not seem to line up with human judgments of local topic quality.
-"""

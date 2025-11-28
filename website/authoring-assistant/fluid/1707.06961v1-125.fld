@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1707_06961v1_125
-
-"""
-	Table 6 (morphosyntactic attribute tagging micro-F1).  In  ${"morphosyntactic tagging"} , gains are apparent for  ${"Slavic languages"}  and  ${"Chinese"} , but also for agglutinative languages — especially  ${"Tamil"}  and  ${"Turkish"}  — where the stable morpheme representation makes it easy for subword modeling to provide a type-level signal.
-"""

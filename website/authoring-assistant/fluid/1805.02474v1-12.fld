@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1805_02474v1_12
-
-"""
-	The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively.  As shown in Table 5, among the  ${"16"}  datasets   ${"S-LSTM"}  gives the  ${"best"}  results on  ${"12"} , compared with  ${"BiLSTM"}  and 2 layered BiLSTM models. The average accuracy of  ${"S-LSTM"}  is  ${"85.6%"} , significantly  ${"higher"}  compared with  ${"84.9%"}  by 2-layer stacked BiLSTM.  ${"3-layer stacked BiLSTM"}  gives an average accuracy of  ${"84.57%"} , which is  ${"lower"}  compared to a 2-layer stacked BiLSTM, with a training time per epoch of  ${"423.6"}  seconds.
-"""

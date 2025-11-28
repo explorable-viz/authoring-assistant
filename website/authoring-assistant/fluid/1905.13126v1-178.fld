@@ -1,7 +1,7 @@
 import scigen
 import util
-import datasets.scigen_SuggestionAgent._1905_13126v1_178
+import datasets.scigen._1905_13126v1_178
 
 """
-	As seen in Table 2, we report the  ${"coefficient of determination (r2)"}  for each global metric and dataset.  Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is moderate to poor, especially in the case of  ${"coherence"}
+	As seen in Table 2, we report the coefficient of determination (r2) for each global metric and dataset.  Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is moderate to poor, especially in the case of coherence
 """

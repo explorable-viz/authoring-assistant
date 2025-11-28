@@ -33,7 +33,7 @@
     {
       "type": "expression",
       "expression": "\"99\"",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",
@@ -42,7 +42,7 @@
     {
       "type": "expression",
       "expression": "\"106\"",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
 
     },
     {

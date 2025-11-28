@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1909_06194v1_486
-
-"""
-	Table VI reports the accuracy of the models on the four benchmark datasets. All the results are bold. It shows that  ${"Style-HAN"}  outperforms the baselines by  ${"2.38"} %,  ${"1.35"} %,  ${"8.73"} %, and  ${"4.46"} % over the  ${"CCAT10"} ,  ${"CCAT50"} ,  ${"BLOGs10"} , and  ${"BLOGS50"}  datasets, respectively.
-"""

@@ -38,20 +38,20 @@ public class Paragraph extends ArrayList<TextFragment> {
         }).collect(Collectors.joining(" "))}\n\"\"\"";
     }
 
-    public List<Pair<Expression, Paragraph>> asIndividualEdits(Paragraph template) {
+    public List<Pair<Expression, Paragraph>> getProblems(Paragraph template) {
         final int numComputedExpr;
         if (template == this) {
             numComputedExpr = 0;
         } else {
-            numComputedExpr = countExpressions(this);
+            numComputedExpr = countExpressions();
         }
-        return IntStream.range(0, countExpressions(template) - numComputedExpr)
+        return IntStream.range(0, template.countExpressions() - numComputedExpr)
                 .mapToObj(i -> testParagraph(template, numComputedExpr, i))
                 .toList();
     }
 
-    private int countExpressions(Paragraph paragraph) {
-        return (int) paragraph.stream().filter(Expression.class::isInstance).count();
+    public int countExpressions() {
+        return (int) stream().filter(Expression.class::isInstance).count();
     }
 
     private Pair<Expression, Paragraph> testParagraph(Paragraph template, int numComputedExpr, int index) {

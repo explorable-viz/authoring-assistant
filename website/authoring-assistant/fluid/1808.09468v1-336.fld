@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1808_09468v1_336
-
-"""
-	We compare three  ${"training configurations"} :  ${"WEBSPLIT only"} ,  ${"WIKISPLIT only"} , and  ${"BOTH"} , which is simply their concatenation.  The  ${"WEBSPLIT"}  model scores  ${"35.3"}  BLEU on the WebSplit validation set but fails to generalize beyond its narrow domain, as evidenced by reaching only  ${"4.2"}  BLEU on the WikiSplit validation set.  In contrast, the  ${"WIKISPLIT"}  model achieves  ${"59.4"}  BLEU on the WebSplit validation set,  Reintroducing the downsampled, in-domain training data ( ${"BOTH"} ) further improves performance on the WebSplit evaluation.
-"""

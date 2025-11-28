@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1906_04106v1_360
-
-"""
-	Table 6 shows that for all  ${"generative models"} , the evaluation scores computed by our method are  ${"higher"}  than those computed by  ${"prior method"} .
-"""

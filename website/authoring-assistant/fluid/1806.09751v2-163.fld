@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1806_09751v2_163
-
-"""
-	Finally, for the last setting, we tested the system using the  ${"three auto-annotation modes (i.e., FA, HFA, and UFA)"}  as shown in Table 3. While the  ${"auto-annotation mode"}  can allow us to reduce up to  ${"87%"}  of the data pool, this drastic saving also reduces the accuracy of the learned model, achieving, on average, around  ${"81%"}  F-Score. Overall, our framework presents a trade off between coverage and annotation cost. The  ${"HFA auto-annotation mode"}  shows the benefit, especially in a realistic enterprise setting, when we need to annotate  ${"33%"}  of the data to increase F-Score by only  ${"10%"}  (when comparing the on average performance of HFA with ESA) is unreasonable. Table 3 appears to show  ${"FA"}  being inferior to  ${"EAL"}  in terms of the percentage cut for the Location class, for example. In reality FA reduced sentence annotation by  ${"65%"}  to reach  ${"0.99 F-Score"} . But as our testing criteria demanded that we either reach 1.0 F-Score or finish all sentences from the pool, FA tried to finish the pool without any further performance improvement on the  ${"0.99 F-Score"} .
-"""

@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1911_04118v2_288
-
-"""
-	Table 6: Impact of different labels of ASNQ on fine-tuning BERT for answer sentence selection. Neg and Pos refers to question-answer (QA) pairs of that particular label being chosen for fine-tuning.  We carried out experiments by fine-tuning BERTBase on ASNQ with specific label categories assigned to the negative class. Table 6 shows the results: Label 3 is the most effective negative type of the three,
-"""

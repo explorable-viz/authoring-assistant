@@ -1,1 +1,1 @@
-let tableData = loadJson "datasets/scigen_manual/ipcc.json";
+let tableData = loadJson "datasets/scigen_manual_old/ipcc.json";

@@ -238,7 +238,7 @@ public class Program {
         return categories;
     }
 
-    public List<Pair<Program, Expression>> getProblems(Program template) throws IOException {
+    public List<Pair<Program, Expression>> asIndividualProblems(Program template) throws IOException {
         List<Pair<Expression, Paragraph>> paragraphsToCompute = paragraph.getProblems(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for (Pair<Expression, Paragraph> p : paragraphsToCompute) {

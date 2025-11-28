@@ -30,6 +30,7 @@ public class AuthoringAssistant {
     private final SuggestionAgent suggestionAgent;
     private final int runId;
     private final String jsonLogFolder;
+
     public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
@@ -46,18 +47,17 @@ public class AuthoringAssistant {
         if (Settings.isSuggestionAgentEnabled()) {
             templateProgram = suggestionAgent.generateTemplateProgram(templateProgram);
         }
-        problems = templateProgram.getProblems(templateProgram);
+        problems = templateProgram.asIndividualProblems(templateProgram);
         int problemIndex = 0;
         while (!problems.isEmpty()) {
             try {
                 Pair<Program, Expression> problem = problems.get(i);
-                //selection
                 Program program = problem.getFirst();
                 QueryResult result = execute(problem, problemIndex++);
 
                 program.replaceParagraph(program.getParagraph().splice(result.correctResponse() == null ? problem.getSecond() : result.correctResponse()));
                 results.add(new Pair<>(program, result));
-                problems = program.getProblems(templateProgram);
+                problems = program.asIndividualProblems(templateProgram);
                 program.toWebsite();
             } catch (Exception e) {
                 logger.severe("Error executing program edit: " + e.getMessage());

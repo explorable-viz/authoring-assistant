@@ -57,7 +57,7 @@ public class AuthoringAssistant {
                 try {
                     Pair<Program, Expression> problem = problems.get(i);
                     finalProgram = problem.getFirst();
-                    QueryResult result = execute(problem, problemIndex++);
+                    QueryResult result = runProblem(problem, problemIndex++);
 
                     finalProgram.replaceParagraph(finalProgram.getParagraph().splice(result.correctResponse() == null ? problem.getSecond() : result.correctResponse()));
                     results.add(new Pair<>(finalProgram, result));
@@ -72,7 +72,7 @@ public class AuthoringAssistant {
         return results;
     }
 
-    public QueryResult execute(Pair<Program, Expression> test, int editId) throws Exception {
+    public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
         final int limit = llm instanceof LLMDummyAgent ? 1 : Settings.getLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempts;
@@ -125,12 +125,12 @@ public class AuthoringAssistant {
             }
             if (!errors) {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{editId}.json");
+                sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
                 return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
             }
 
         }
-        sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{editId}.json");
+        sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
         logger.warning(STR."Expression validation failed after \{limit} attempts");
         return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
     }

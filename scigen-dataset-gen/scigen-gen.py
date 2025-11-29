@@ -30,6 +30,7 @@ def main(raw_file, tests_dir, datasets_dir):
         # Build dataset rows
         for value in values:
             row = {}
+            unnamed_counter = 1
             for i in range(len(value)):
                 # Remove HTML tags from keys and values
                 clean_key = strip_all_tags(keys[i])
@@ -37,7 +38,52 @@ def main(raw_file, tests_dir, datasets_dir):
                 
                 # Clean key: lowercase, replace spaces with underscores, remove [xxx] tags
                 cleaned_key = re.sub(r'\[\w+\]', 'key', clean_key.replace(' ', '_').lower())
+                
+                # Remove parenthesised terms from key anywhere (e.g., (s), (%), etc.)
+                cleaned_key = re.sub(r'_?\([^)]*\)_?', '_', cleaned_key)
+                
+                # Replace # with 'num' when it represents "number of" in keys
+                cleaned_key = re.sub(r'#', 'num_', cleaned_key)
+                
+                # Replace special characters with underscore
+                cleaned_key = re.sub(r'[/\.\-\*→%,\:\;\\\'"+<>@&\|\!\?\$\^`~]', '_', cleaned_key)
+                
+                # Remove leading/trailing underscores and collapse multiple underscores
+                cleaned_key = re.sub(r'_+', '_', cleaned_key).strip('_')
+                
+                # If key is empty, assign a default name with counter
+                if not cleaned_key or cleaned_key.strip() == '':
+                    cleaned_key = f'_{unnamed_counter}'
+                    unnamed_counter += 1
+                
                 cleaned_value = re.sub(r'\[\w+\]', '', clean_value)
+                
+                # Remove trailing parenthesised terms from value (e.g., (s), (%), etc.)
+                cleaned_value = re.sub(r'\s*\([^)]*\)\s*$', '', cleaned_value)
+                
+                # Remove ∼ prefix only when before a number (not between numbers)
+                cleaned_value = re.sub(r'(^|\s)∼\s*(?=\d)', r'\1', cleaned_value)
+                
+                # Remove asterisk after numbers including scientific notation (e.g., "5.48e-15**")
+                cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\*+', r'\1', cleaned_value)
+                
+                # Remove K/k suffix and % symbol only at the end of numeric values
+                # Also remove commas from numbers (e.g., 7,123K -> 7123)
+                cleaned_value = re.sub(r'[Kk]$', '', cleaned_value)  # Remove K or k at the end
+                cleaned_value = re.sub(r'%$', '', cleaned_value)  # Remove % at the end
+                cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)  # Remove commas followed by digits
+                
+                # Convert to numeric type if it's a valid number
+                try:
+                    # Try to convert to float first (handles scientific notation like 5.48e-15)
+                    if '.' in cleaned_value or 'e' in cleaned_value.lower():
+                        cleaned_value = float(cleaned_value)
+                    else:
+                        # Try integer
+                        cleaned_value = int(cleaned_value)
+                except (ValueError, AttributeError):
+                    # Keep as string if conversion fails
+                    pass
                 
                 row[cleaned_key] = cleaned_value
             dataset.append(row)

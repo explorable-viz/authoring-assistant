@@ -1,37 +1,37 @@
 [
-    {
-        "_model": "TF-IDF",
-        "_samsung_qa_1_in_2r@1": "0.939",
-        "_samsung_qa_1_in_10r@1": "0.834",
-        "_samsung_qa_1_in_10r@2": "0.897",
-        "_samsung_qa_1_in_10r@5": "0.953"
-    },
-    {
-        "_model": "RDE",
-        "_samsung_qa_1_in_2r@1": "0.978 ±0.002",
-        "_samsung_qa_1_in_10r@1": "0.869 ±0.009",
-        "_samsung_qa_1_in_10r@2": "0.966 ±0.003",
-        "_samsung_qa_1_in_10r@5": "0.997 ±0.001"
-    },
-    {
-        "_model": "RDE-LTC",
-        "_samsung_qa_1_in_2r@1": "0.981 ±0.002",
-        "_samsung_qa_1_in_10r@1": "0.880 ±0.009",
-        "_samsung_qa_1_in_10r@2": "0.970 ±0.003",
-        "_samsung_qa_1_in_10r@5": "0.997 ±0.001"
-    },
-    {
-        "_model": "HRDE",
-        "_samsung_qa_1_in_2r@1": "0.981 ±0.002",
-        "_samsung_qa_1_in_10r@1": "0.885 ±0.011",
-        "_samsung_qa_1_in_10r@2": "0.971 ±0.004",
-        "_samsung_qa_1_in_10r@5": "0.997 ±0.001"
-    },
-    {
-        "_model": "HRDE-LTC",
-        "_samsung_qa_1_in_2r@1": " 0.983 ±0.002",
-        "_samsung_qa_1_in_10r@1": " 0.890 ±0.010",
-        "_samsung_qa_1_in_10r@2": " 0.972 ±0.003",
-        "_samsung_qa_1_in_10r@5": " 0.998 ±0.001"
-    }
+  {
+    "model": "TF-IDF",
+    "samsung_qa_1_in_2r_1": 0.939,
+    "samsung_qa_1_in_10r_1": 0.834,
+    "samsung_qa_1_in_10r_2": 0.897,
+    "samsung_qa_1_in_10r_5": 0.953
+  },
+  {
+    "model": "RDE",
+    "samsung_qa_1_in_2r_1": "0.978 ±0.002",
+    "samsung_qa_1_in_10r_1": "0.869 ±0.009",
+    "samsung_qa_1_in_10r_2": "0.966 ±0.003",
+    "samsung_qa_1_in_10r_5": "0.997 ±0.001"
+  },
+  {
+    "model": "RDE-LTC",
+    "samsung_qa_1_in_2r_1": "0.981 ±0.002",
+    "samsung_qa_1_in_10r_1": "0.880 ±0.009",
+    "samsung_qa_1_in_10r_2": "0.970 ±0.003",
+    "samsung_qa_1_in_10r_5": "0.997 ±0.001"
+  },
+  {
+    "model": "HRDE",
+    "samsung_qa_1_in_2r_1": "0.981 ±0.002",
+    "samsung_qa_1_in_10r_1": "0.885 ±0.011",
+    "samsung_qa_1_in_10r_2": "0.971 ±0.004",
+    "samsung_qa_1_in_10r_5": "0.997 ±0.001"
+  },
+  {
+    "model": "HRDE-LTC",
+    "samsung_qa_1_in_2r_1": " 0.983 ±0.002",
+    "samsung_qa_1_in_10r_1": " 0.890 ±0.010",
+    "samsung_qa_1_in_10r_2": " 0.972 ±0.003",
+    "samsung_qa_1_in_10r_5": " 0.998 ±0.001"
+  }
 ]

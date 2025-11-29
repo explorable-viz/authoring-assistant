@@ -1,22 +1,22 @@
 [
-    {
-        "_model": "baseline (1.5m)",
-        "_bleu": "29.10"
-    },
-    {
-        "_model": "baseline (6m)",
-        "_bleu": " 32.40"
-    },
-    {
-        "_model": "concat",
-        "_bleu": "31.56"
-    },
-    {
-        "_model": "s-hier-to-2.tied",
-        "_bleu": "26.68"
-    },
-    {
-        "_model": "CADec",
-        "_bleu": " 32.38"
-    }
+  {
+    "model": "baseline",
+    "bleu": 29.1
+  },
+  {
+    "model": "baseline",
+    "bleu": 32.4
+  },
+  {
+    "model": "concat",
+    "bleu": 31.56
+  },
+  {
+    "model": "s-hier-to-2.tied",
+    "bleu": 26.68
+  },
+  {
+    "model": "CADec",
+    "bleu": 32.38
+  }
 ]

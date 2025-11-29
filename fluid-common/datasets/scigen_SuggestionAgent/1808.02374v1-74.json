@@ -1,74 +1,74 @@
 [
-    {
-        "model": " With specialized resources:",
-        "p": "",
-        "r": "",
-        "f": ""
-    },
-    {
-        "model": "Best Clinical TempEval (2016)",
-        "p": "58.8",
-        "r": "55.9",
-        "f": "57.3"
-    },
-    {
-        "model": "Lin et al. (2016)",
-        "p": "66.9",
-        "r": "53.4",
-        "f": "59.4"
-    },
-    {
-        "model": "Leeuwenberg et al. (2017)",
-        "p": "-",
-        "r": "-",
-        "f": "60.8"
-    },
-    {
-        "model": "Tourille et al. (2017)",
-        "p": "65.7",
-        "r": "57.5",
-        "f": "61.3"
-    },
-    {
-        "model": "Lin et al. (2017)",
-        "p": "66.2",
-        "r": "58.5",
-        "f": "62.1"
-    },
-    {
-        "model": " No specialized resources:",
-        "p": "",
-        "r": "",
-        "f": ""
-    },
-    {
-        "model": "RC (random initialization)",
-        "p": "67.9",
-        "r": "52.1",
-        "f": "58.9±0.2"
-    },
-    {
-        "model": "RC (SG initialization)",
-        "p": " 71.2",
-        "r": "52.0",
-        "f": "60.0±1.2"
-    },
-    {
-        "model": "RC (SG fixed)",
-        "p": "68.9",
-        "r": "54.6",
-        "f": "60.9±0.8"
-    },
-    {
-        "model": "RC + SG",
-        "p": "66.2",
-        "r": " 59.7",
-        "f": " 62.8±0.2"
-    },
-    {
-        "model": "RC + SGLR",
-        "p": "68.7",
-        "r": "57.5",
-        "f": "62.5±0.3"
-    }
+  {
+    "model": " With specialized resources:",
+    "p": "",
+    "r": "",
+    "f": ""
+  },
+  {
+    "model": "Best Clinical TempEval",
+    "p": 58.8,
+    "r": 55.9,
+    "f": 57.3
+  },
+  {
+    "model": "Lin et al.",
+    "p": 66.9,
+    "r": 53.4,
+    "f": 59.4
+  },
+  {
+    "model": "Leeuwenberg et al.",
+    "p": "-",
+    "r": "-",
+    "f": 60.8
+  },
+  {
+    "model": "Tourille et al.",
+    "p": 65.7,
+    "r": 57.5,
+    "f": 61.3
+  },
+  {
+    "model": "Lin et al.",
+    "p": 66.2,
+    "r": 58.5,
+    "f": 62.1
+  },
+  {
+    "model": " No specialized resources:",
+    "p": "",
+    "r": "",
+    "f": ""
+  },
+  {
+    "model": "RC",
+    "p": 67.9,
+    "r": 52.1,
+    "f": "58.9±0.2"
+  },
+  {
+    "model": "RC",
+    "p": 71.2,
+    "r": 52.0,
+    "f": "60.0±1.2"
+  },
+  {
+    "model": "RC",
+    "p": 68.9,
+    "r": 54.6,
+    "f": "60.9±0.8"
+  },
+  {
+    "model": "RC + SG",
+    "p": 66.2,
+    "r": 59.7,
+    "f": " 62.8±0.2"
+  },
+  {
+    "model": "RC + SGLR",
+    "p": 68.7,
+    "r": 57.5,
+    "f": "62.5±0.3"
+  }
 ]

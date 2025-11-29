@@ -1,23 +1,23 @@
 [
-    {
-        "_model": "Syntactic-HAN",
-        "_ccat10": "63.14",
-        "_ccat50": "41.30",
-        "_blogs10": "69.32",
-        "_blogs50": "57.76"
-    },
-    {
-        "_model": "Lexical-HAN",
-        "_ccat10": "86.04",
-        "_ccat50": "79.50",
-        "_blogs10": "70.81",
-        "_blogs50": "59.77"
-    },
-    {
-        "_model": "Style-HAN",
-        "_ccat10": " 90.58",
-        "_ccat50": " 82.35",
-        "_blogs10": " 72.83",
-        "_blogs50": " 61.19"
-    }
+  {
+    "model": "Syntactic-HAN",
+    "ccat10": 63.14,
+    "ccat50": 41.3,
+    "blogs10": 69.32,
+    "blogs50": 57.76
+  },
+  {
+    "model": "Lexical-HAN",
+    "ccat10": 86.04,
+    "ccat50": 79.5,
+    "blogs10": 70.81,
+    "blogs50": 59.77
+  },
+  {
+    "model": "Style-HAN",
+    "ccat10": 90.58,
+    "ccat50": 82.35,
+    "blogs10": 72.83,
+    "blogs50": 61.19
+  }
 ]

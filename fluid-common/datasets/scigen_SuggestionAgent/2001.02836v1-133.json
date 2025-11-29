@@ -1,22 +1,22 @@
 [
-    {
-        "training_strategy": " λ = 1",
-        "averaged_spa": "0.762",
-        "overall_ws": "0.476"
-    },
-    {
-        "training_strategy": " λ = 0",
-        "averaged_spa": "0.073",
-        "overall_ws": "0.018"
-    },
-    {
-        "training_strategy": " λ = 0.5",
-        "averaged_spa": "0.493",
-        "overall_ws": "0.323"
-    },
-    {
-        "training_strategy": "Alternating optimization",
-        "averaged_spa": "0.775",
-        "overall_ws": "0.476"
-    }
+  {
+    "training_strategy": " λ = 1",
+    "averaged_spa": 0.762,
+    "overall_ws": 0.476
+  },
+  {
+    "training_strategy": " λ = 0",
+    "averaged_spa": 0.073,
+    "overall_ws": 0.018
+  },
+  {
+    "training_strategy": " λ = 0.5",
+    "averaged_spa": 0.493,
+    "overall_ws": 0.323
+  },
+  {
+    "training_strategy": "Alternating optimization",
+    "averaged_spa": 0.775,
+    "overall_ws": 0.476
+  }
 ]

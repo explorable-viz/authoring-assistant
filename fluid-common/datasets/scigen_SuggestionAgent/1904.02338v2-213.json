@@ -1,14 +1,14 @@
 [
-    {
-        "": "Supervised (avg.)",
-        "basic": "28.72",
-        "pivot": "28.72",
-        "agree": " 29.17"
-    },
-    {
-        "": "Zero-shot (avg.)",
-        "basic": "12.61",
-        "pivot": " 17.68",
-        "agree": "15.23"
-    }
+  {
+    "_1": "Supervised",
+    "basic": 28.72,
+    "pivot": 28.72,
+    "agree": 29.17
+  },
+  {
+    "_1": "Zero-shot",
+    "basic": 12.61,
+    "pivot": 17.68,
+    "agree": 15.23
+  }
 ]

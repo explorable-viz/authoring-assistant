@@ -1,56 +1,56 @@
 [
-    {
-        "_γ": "0.05",
-        "#edge/#node": "2.09",
-        "las": "92.5",
-        "conn._ratio(%)": "100.0"
-    },
-    {
-        "_γ": "0.1",
-        "#edge/#node": "1.57",
-        "las": "91.2",
-        "conn._ratio(%)": "99.5"
-    },
-    {
-        "_γ": "0.2",
-        "#edge/#node": "1.34",
-        "las": "90.5",
-        "conn._ratio(%)": "94.2"
-    },
-    {
-        "_γ": "0.3",
-        "#edge/#node": "1.04",
-        "las": "88.0",
-        "conn._ratio(%)": "77.6"
-    },
-    {
-        "_γ": " K",
-        "#edge/#node": "#Edge/#Node",
-        "las": "LAS",
-        "conn._ratio(%)": "Conn. Ratio(%)"
-    },
-    {
-        "_γ": "1",
-        "#edge/#node": "1.00",
-        "las": "86.4",
-        "conn._ratio(%)": "100.0"
-    },
-    {
-        "_γ": "2",
-        "#edge/#node": "1.03",
-        "las": "87.3",
-        "conn._ratio(%)": "100.0"
-    },
-    {
-        "_γ": "5",
-        "#edge/#node": "1.09",
-        "las": "89.1",
-        "conn._ratio(%)": "100.0"
-    },
-    {
-        "_γ": "10",
-        "#edge/#node": "1.14",
-        "las": "89.8",
-        "conn._ratio(%)": "100.0"
-    }
+  {
+    "γ": 0.05,
+    "num_edge_num_node": 2.09,
+    "las": 92.5,
+    "conn_ratio": 100.0
+  },
+  {
+    "γ": 0.1,
+    "num_edge_num_node": 1.57,
+    "las": 91.2,
+    "conn_ratio": 99.5
+  },
+  {
+    "γ": 0.2,
+    "num_edge_num_node": 1.34,
+    "las": 90.5,
+    "conn_ratio": 94.2
+  },
+  {
+    "γ": 0.3,
+    "num_edge_num_node": 1.04,
+    "las": 88.0,
+    "conn_ratio": 77.6
+  },
+  {
+    "γ": " ",
+    "num_edge_num_node": "#Edge/#Node",
+    "las": "LAS",
+    "conn_ratio": "Conn. Ratio"
+  },
+  {
+    "γ": 1,
+    "num_edge_num_node": 1.0,
+    "las": 86.4,
+    "conn_ratio": 100.0
+  },
+  {
+    "γ": 2,
+    "num_edge_num_node": 1.03,
+    "las": 87.3,
+    "conn_ratio": 100.0
+  },
+  {
+    "γ": 5,
+    "num_edge_num_node": 1.09,
+    "las": 89.1,
+    "conn_ratio": 100.0
+  },
+  {
+    "γ": 10,
+    "num_edge_num_node": 1.14,
+    "las": 89.8,
+    "conn_ratio": 100.0
+  }
 ]

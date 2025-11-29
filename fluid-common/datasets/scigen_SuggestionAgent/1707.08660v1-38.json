@@ -1,37 +1,37 @@
 [
-    {
-        "": "",
-        "_only_in-vocabulary_pairs___up-to-now": "@10",
-        "_only_in-vocabulary_pairs___previous": "@10",
-        "_all_pairs,_including_oov___up-to-now": "@10",
-        "_all_pairs,_including_oov___previous": "@10"
-    },
-    {
-        "": " Separate",
-        "_only_in-vocabulary_pairs___up-to-now": "2.1",
-        "_only_in-vocabulary_pairs___previous": "2.4",
-        "_all_pairs,_including_oov___up-to-now": "1.6",
-        "_all_pairs,_including_oov___previous": "1.8"
-    },
-    {
-        "": " Cumulative",
-        "_only_in-vocabulary_pairs___up-to-now": "13.8",
-        "_only_in-vocabulary_pairs___previous": "15.2",
-        "_all_pairs,_including_oov___up-to-now": "12.2",
-        "_all_pairs,_including_oov___previous": "13.4"
-    },
-    {
-        "": " Incr. static",
-        "_only_in-vocabulary_pairs___up-to-now": "90.1",
-        "_only_in-vocabulary_pairs___previous": "84.8",
-        "_all_pairs,_including_oov___up-to-now": "34.2",
-        "_all_pairs,_including_oov___previous": "32.2"
-    },
-    {
-        "": " Incr. dynamic",
-        "_only_in-vocabulary_pairs___up-to-now": "72.2",
-        "_only_in-vocabulary_pairs___previous": "71.5",
-        "_all_pairs,_including_oov___up-to-now": " 62.9",
-        "_all_pairs,_including_oov___previous": "62.6"
-    }
+  {
+    "_1": "",
+    "only_in_vocabulary_pairs_up_to_now": "@10",
+    "only_in_vocabulary_pairs_previous": "@10",
+    "all_pairs_including_oov_up_to_now": "@10",
+    "all_pairs_including_oov_previous": "@10"
+  },
+  {
+    "_1": " Separate",
+    "only_in_vocabulary_pairs_up_to_now": 2.1,
+    "only_in_vocabulary_pairs_previous": 2.4,
+    "all_pairs_including_oov_up_to_now": 1.6,
+    "all_pairs_including_oov_previous": 1.8
+  },
+  {
+    "_1": " Cumulative",
+    "only_in_vocabulary_pairs_up_to_now": 13.8,
+    "only_in_vocabulary_pairs_previous": 15.2,
+    "all_pairs_including_oov_up_to_now": 12.2,
+    "all_pairs_including_oov_previous": 13.4
+  },
+  {
+    "_1": " Incr. static",
+    "only_in_vocabulary_pairs_up_to_now": 90.1,
+    "only_in_vocabulary_pairs_previous": 84.8,
+    "all_pairs_including_oov_up_to_now": 34.2,
+    "all_pairs_including_oov_previous": 32.2
+  },
+  {
+    "_1": " Incr. dynamic",
+    "only_in_vocabulary_pairs_up_to_now": 72.2,
+    "only_in_vocabulary_pairs_previous": 71.5,
+    "all_pairs_including_oov_up_to_now": 62.9,
+    "all_pairs_including_oov_previous": 62.6
+  }
 ]

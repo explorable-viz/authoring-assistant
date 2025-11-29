@@ -1,26 +1,26 @@
 [
-    {
-        "_model": "LSTM+Feed-Forward",
-        "_accuracy_(±0.01)": "0.518"
-    },
-    {
-        "_model": "LSTM+Gated CNN+Feed-Forward",
-        "_accuracy_(±0.01)": "0.524"
-    },
-    {
-        "_model": "BERT Features(512 tokens)+Feed-Forward",
-        "_accuracy_(±0.01)": "0.639"
-    },
-    {
-        "_model": "BERT Classifier(30 tokens / 15 tokens from each paragraph)",
-        "_accuracy_(±0.01)": "0.681"
-    },
-    {
-        "_model": "BERT Classifier(128 tokens / 64 tokens from each paragraph)",
-        "_accuracy_(±0.01)": "0.717"
-    },
-    {
-        "_model": "BERT Classifier(256 tokens / 128 tokens from each paragraph)",
-        "_accuracy_(±0.01)": "0.843"
-    }
+  {
+    "model": "LSTM+Feed-Forward",
+    "accuracy": 0.518
+  },
+  {
+    "model": "LSTM+Gated CNN+Feed-Forward",
+    "accuracy": 0.524
+  },
+  {
+    "model": "BERT Features(512 tokens)+Feed-Forward",
+    "accuracy": 0.639
+  },
+  {
+    "model": "BERT Classifier",
+    "accuracy": 0.681
+  },
+  {
+    "model": "BERT Classifier",
+    "accuracy": 0.717
+  },
+  {
+    "model": "BERT Classifier",
+    "accuracy": 0.843
+  }
 ]

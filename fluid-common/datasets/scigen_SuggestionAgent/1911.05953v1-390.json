@@ -1,74 +1,74 @@
 [
-    {
-        "2_data_type": "Headers",
-        "geth": "316.68",
-        "ethanos": "348.16",
-        "diff": "+31.48"
-    },
-    {
-        "2_data_type": "Bodies",
-        "geth": "11,110.00",
-        "ethanos": "12,750.00",
-        "diff": "+1,640.00"
-    },
-    {
-        "2_data_type": "Receipts",
-        "geth": "3,578.97",
-        "ethanos": "3,605.66",
-        "diff": "+26.69"
-    },
-    {
-        "2_data_type": "Difficulties",
-        "geth": "15.57",
-        "ethanos": "15.33",
-        "diff": "-0.24"
-    },
-    {
-        "2_data_type": "Block number -> hash",
-        "geth": "39.66",
-        "ethanos": "39.35",
-        "diff": "-0.31"
-    },
-    {
-        "2_data_type": "Block hash -> number",
-        "geth": "39.10",
-        "ethanos": "39.10",
-        "diff": "0"
-    },
-    {
-        "2_data_type": "Transaction Index",
-        "geth": "3,650.00",
-        "ethanos": "3,650.00",
-        "diff": "0"
-    },
-    {
-        "2_data_type": "Bloombit index",
-        "geth": "20.49",
-        "ethanos": "20.49",
-        "diff": "0"
-    },
-    {
-        "2_data_type": "Trie nodes",
-        "geth": "183,100.00",
-        "ethanos": "165,140.00",
-        "diff": "-17,960.00"
-    },
-    {
-        "2_data_type": "Trie preimages",
-        "geth": "857.00",
-        "ethanos": "888.11",
-        "diff": "+31.11"
-    },
-    {
-        "2_data_type": "total",
-        "geth": "202,727.47",
-        "ethanos": "186,496.20",
-        "diff": "-16,231.27"
-    },
-    {
-        "2_data_type": "2",
-        "geth": "",
-        "ethanos": "",
-        "diff": ""
-    }
+  {
+    "2_data_type": "Headers",
+    "geth": 316.68,
+    "ethanos": 348.16,
+    "diff": 31.48
+  },
+  {
+    "2_data_type": "Bodies",
+    "geth": 11110.0,
+    "ethanos": 12750.0,
+    "diff": 1640.0
+  },
+  {
+    "2_data_type": "Receipts",
+    "geth": 3578.97,
+    "ethanos": 3605.66,
+    "diff": 26.69
+  },
+  {
+    "2_data_type": "Difficulties",
+    "geth": 15.57,
+    "ethanos": 15.33,
+    "diff": -0.24
+  },
+  {
+    "2_data_type": "Block number -> hash",
+    "geth": 39.66,
+    "ethanos": 39.35,
+    "diff": -0.31
+  },
+  {
+    "2_data_type": "Block hash -> number",
+    "geth": 39.1,
+    "ethanos": 39.1,
+    "diff": 0
+  },
+  {
+    "2_data_type": "Transaction Index",
+    "geth": 3650.0,
+    "ethanos": 3650.0,
+    "diff": 0
+  },
+  {
+    "2_data_type": "Bloombit index",
+    "geth": 20.49,
+    "ethanos": 20.49,
+    "diff": 0
+  },
+  {
+    "2_data_type": "Trie nodes",
+    "geth": 183100.0,
+    "ethanos": 165140.0,
+    "diff": -17960.0
+  },
+  {
+    "2_data_type": "Trie preimages",
+    "geth": 857.0,
+    "ethanos": 888.11,
+    "diff": 31.11
+  },
+  {
+    "2_data_type": "total",
+    "geth": 202727.47,
+    "ethanos": 186496.2,
+    "diff": -16231.27
+  },
+  {
+    "2_data_type": 2,
+    "geth": "",
+    "ethanos": "",
+    "diff": ""
+  }
 ]

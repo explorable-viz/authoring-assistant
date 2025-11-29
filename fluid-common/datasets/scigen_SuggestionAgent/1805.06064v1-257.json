@@ -1,47 +1,47 @@
 [
-    {
-        "": "Different Titles",
-        "_#_tests": "50",
-        "_#_choices___per_test": "2",
-        "_non-expert___non-cs": "30%",
-        "_non-expert___cs": "15%",
-        "_nlp_expert___junior": "12%",
-        "_nlp_expert___senior": "0%"
-    },
-    {
-        "": "Different Titles",
-        "_#_tests": "20",
-        "_#_choices___per_test": "5",
-        "_non-expert___non-cs": "60%",
-        "_non-expert___cs": "20%",
-        "_nlp_expert___junior": "30%",
-        "_nlp_expert___senior": "20%"
-    },
-    {
-        "": "Different Titles",
-        "_#_tests": "10",
-        "_#_choices___per_test": "10",
-        "_non-expert___non-cs": "80%",
-        "_non-expert___cs": "30%",
-        "_nlp_expert___junior": "30%",
-        "_nlp_expert___senior": "20%"
-    },
-    {
-        "": "Same Title",
-        "_#_tests": "50",
-        "_#_choices___per_test": "2",
-        "_non-expert___non-cs": "54%",
-        "_non-expert___cs": "10%",
-        "_nlp_expert___junior": "4%",
-        "_nlp_expert___senior": "0%"
-    },
-    {
-        "": "Same Title",
-        "_#_tests": "20",
-        "_#_choices___per_test": "5",
-        "_non-expert___non-cs": "75%",
-        "_non-expert___cs": "25%",
-        "_nlp_expert___junior": "5%",
-        "_nlp_expert___senior": "5%"
-    }
+  {
+    "_1": "Different Titles",
+    "num_tests": 50,
+    "num_choices_per_test": 2,
+    "non_expert_non_cs": 30,
+    "non_expert_cs": 15,
+    "nlp_expert_junior": 12,
+    "nlp_expert_senior": 0
+  },
+  {
+    "_1": "Different Titles",
+    "num_tests": 20,
+    "num_choices_per_test": 5,
+    "non_expert_non_cs": 60,
+    "non_expert_cs": 20,
+    "nlp_expert_junior": 30,
+    "nlp_expert_senior": 20
+  },
+  {
+    "_1": "Different Titles",
+    "num_tests": 10,
+    "num_choices_per_test": 10,
+    "non_expert_non_cs": 80,
+    "non_expert_cs": 30,
+    "nlp_expert_junior": 30,
+    "nlp_expert_senior": 20
+  },
+  {
+    "_1": "Same Title",
+    "num_tests": 50,
+    "num_choices_per_test": 2,
+    "non_expert_non_cs": 54,
+    "non_expert_cs": 10,
+    "nlp_expert_junior": 4,
+    "nlp_expert_senior": 0
+  },
+  {
+    "_1": "Same Title",
+    "num_tests": 20,
+    "num_choices_per_test": 5,
+    "non_expert_non_cs": 75,
+    "non_expert_cs": 25,
+    "nlp_expert_junior": 5,
+    "nlp_expert_senior": 5
+  }
 ]

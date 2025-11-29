@@ -1,74 +1,74 @@
 [
-    {
-        "model": "Ours + ELMo w/o augmentation",
-        "acc.": "42.7",
-        "ma-f1": "72.7",
-        "mi-f1": "66.7"
-    },
-    {
-        "model": "Ours + ELMo w augmentation",
-        "acc.": "59.3",
-        "ma-f1": "76.5",
-        "mi-f1": "70.7"
-    },
-    {
-        "model": "Ours + ELMo w augmentation",
-        "acc.": "63.9",
-        "ma-f1": " 84.5",
-        "mi-f1": "78.9"
-    },
-    {
-        "model": "+ filter & relabel",
-        "acc.": "",
-        "ma-f1": "",
-        "mi-f1": ""
-    },
-    {
-        "model": "Ours + ELMo w augmentation",
-        "acc.": " 64.9",
-        "ma-f1": " 84.5",
-        "mi-f1": " 79.2"
-    },
-    {
-        "model": "by Choi et al. ( 2018 )",
-        "acc.": "",
-        "ma-f1": "",
-        "mi-f1": ""
-    },
-    {
-        "model": "BERT-Base, Uncased",
-        "acc.": "51.8",
-        "ma-f1": "76.6",
-        "mi-f1": "69.1"
-    },
-    {
-        "model": "Shimaoka et al. ( 2017 )",
-        "acc.": "51.7",
-        "ma-f1": "70.9",
-        "mi-f1": "64.9"
-    },
-    {
-        "model": "AFET Ren et al. ( 2016a )",
-        "acc.": "55.1",
-        "ma-f1": "71.1",
-        "mi-f1": "64.7"
-    },
-    {
-        "model": "PLE Ren et al. ( 2016b )",
-        "acc.": "57.2",
-        "ma-f1": "71.5",
-        "mi-f1": "66.1"
-    },
-    {
-        "model": "Choi et al. ( 2018 )",
-        "acc.": "59.5",
-        "ma-f1": "76.8",
-        "mi-f1": "71.8"
-    },
-    {
-        "model": "LabelGCN Xiong et al. ( 2019 )",
-        "acc.": "59.6",
-        "ma-f1": "77.8",
-        "mi-f1": "72.2"
-    }
+  {
+    "model": "Ours + ELMo w/o augmentation",
+    "acc": 42.7,
+    "ma_f1": 72.7,
+    "mi_f1": 66.7
+  },
+  {
+    "model": "Ours + ELMo w augmentation",
+    "acc": 59.3,
+    "ma_f1": 76.5,
+    "mi_f1": 70.7
+  },
+  {
+    "model": "Ours + ELMo w augmentation",
+    "acc": 63.9,
+    "ma_f1": 84.5,
+    "mi_f1": 78.9
+  },
+  {
+    "model": "+ filter & relabel",
+    "acc": "",
+    "ma_f1": "",
+    "mi_f1": ""
+  },
+  {
+    "model": "Ours + ELMo w augmentation",
+    "acc": 64.9,
+    "ma_f1": 84.5,
+    "mi_f1": 79.2
+  },
+  {
+    "model": "by Choi et al.",
+    "acc": "",
+    "ma_f1": "",
+    "mi_f1": ""
+  },
+  {
+    "model": "BERT-Base, Uncased",
+    "acc": 51.8,
+    "ma_f1": 76.6,
+    "mi_f1": 69.1
+  },
+  {
+    "model": "Shimaoka et al.",
+    "acc": 51.7,
+    "ma_f1": 70.9,
+    "mi_f1": 64.9
+  },
+  {
+    "model": "AFET Ren et al.",
+    "acc": 55.1,
+    "ma_f1": 71.1,
+    "mi_f1": 64.7
+  },
+  {
+    "model": "PLE Ren et al.",
+    "acc": 57.2,
+    "ma_f1": 71.5,
+    "mi_f1": 66.1
+  },
+  {
+    "model": "Choi et al.",
+    "acc": 59.5,
+    "ma_f1": 76.8,
+    "mi_f1": 71.8
+  },
+  {
+    "model": "LabelGCN Xiong et al.",
+    "acc": 59.6,
+    "ma_f1": 77.8,
+    "mi_f1": 72.2
+  }
 ]

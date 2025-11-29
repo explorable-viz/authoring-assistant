@@ -1,26 +1,26 @@
 [
-    {
-        "model": "PGC See17",
-        "incorrect": "8%",
-        "rouge-1": "39.49%",
-        "rouge-2": "17.24%",
-        "rouge-l": "36.35%",
-        "length": "59.7"
-    },
-    {
-        "model": "FAS Chen18",
-        "incorrect": "26%",
-        "rouge-1": "40.88%",
-        "rouge-2": "17.80%",
-        "rouge-l": "38.53%",
-        "length": "72.1"
-    },
-    {
-        "model": "BUS Gehrmann18",
-        "incorrect": "25%",
-        "rouge-1": "41.52%",
-        "rouge-2": "18.76%",
-        "rouge-l": "38.60%",
-        "length": "54.4"
-    }
+  {
+    "model": "PGC See17",
+    "incorrect": 8,
+    "rouge_1": 39.49,
+    "rouge_2": 17.24,
+    "rouge_l": 36.35,
+    "length": 59.7
+  },
+  {
+    "model": "FAS Chen18",
+    "incorrect": 26,
+    "rouge_1": 40.88,
+    "rouge_2": 17.8,
+    "rouge_l": 38.53,
+    "length": 72.1
+  },
+  {
+    "model": "BUS Gehrmann18",
+    "incorrect": 25,
+    "rouge_1": 41.52,
+    "rouge_2": 18.76,
+    "rouge_l": 38.6,
+    "length": 54.4
+  }
 ]

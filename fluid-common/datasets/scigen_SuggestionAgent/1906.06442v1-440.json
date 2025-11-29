@@ -1,67 +1,67 @@
 [
-    {
-        "a._forward_models_(enro)_model": "Gehring et al. ( 2017 )",
-        "a._forward_models_(enro)_dev": "",
-        "a._forward_models_(enro)_test": " 29.9"
-    },
-    {
-        "a._forward_models_(enro)_model": "Sennrich 2016 (BT)",
-        "a._forward_models_(enro)_dev": " 29.3",
-        "a._forward_models_(enro)_test": " 28.1"
-    },
-    {
-        "a._forward_models_(enro)_model": "bitext",
-        "a._forward_models_(enro)_dev": "26.5",
-        "a._forward_models_(enro)_test": "28.3"
-    },
-    {
-        "a._forward_models_(enro)_model": "BT",
-        "a._forward_models_(enro)_dev": "31.6",
-        "a._forward_models_(enro)_test": "32.6"
-    },
-    {
-        "a._forward_models_(enro)_model": "NoisedBT",
-        "a._forward_models_(enro)_dev": "29.9",
-        "a._forward_models_(enro)_test": "32.0"
-    },
-    {
-        "a._forward_models_(enro)_model": "TaggedBT",
-        "a._forward_models_(enro)_dev": "30.5",
-        "a._forward_models_(enro)_test": "33.0"
-    },
-    {
-        "a._forward_models_(enro)_model": "It.-3 BT",
-        "a._forward_models_(enro)_dev": "31.3",
-        "a._forward_models_(enro)_test": "32.8"
-    },
-    {
-        "a._forward_models_(enro)_model": "It.-3 NoisedBT",
-        "a._forward_models_(enro)_dev": "31.2",
-        "a._forward_models_(enro)_test": "32.6"
-    },
-    {
-        "a._forward_models_(enro)_model": "It.-3 TaggedBT",
-        "a._forward_models_(enro)_dev": "31.4",
-        "a._forward_models_(enro)_test": " 33.4"
-    },
-    {
-        "a._forward_models_(enro)_model": "b. Reverse models (RoEn)",
-        "a._forward_models_(enro)_dev": "b. Reverse models (RoEn)",
-        "a._forward_models_(enro)_test": "b. Reverse models (RoEn)"
-    },
-    {
-        "a._forward_models_(enro)_model": "Model",
-        "a._forward_models_(enro)_dev": "dev",
-        "a._forward_models_(enro)_test": "test"
-    },
-    {
-        "a._forward_models_(enro)_model": "bitext",
-        "a._forward_models_(enro)_dev": "32.9",
-        "a._forward_models_(enro)_test": "31.9"
-    },
-    {
-        "a._forward_models_(enro)_model": "It.-2 BT",
-        "a._forward_models_(enro)_dev": "39.5",
-        "a._forward_models_(enro)_test": " 37.3"
-    }
+  {
+    "a_forward_models_model": "Gehring et al.",
+    "a_forward_models_dev": "",
+    "a_forward_models_test": 29.9
+  },
+  {
+    "a_forward_models_model": "Sennrich 2016",
+    "a_forward_models_dev": 29.3,
+    "a_forward_models_test": 28.1
+  },
+  {
+    "a_forward_models_model": "bitext",
+    "a_forward_models_dev": 26.5,
+    "a_forward_models_test": 28.3
+  },
+  {
+    "a_forward_models_model": "BT",
+    "a_forward_models_dev": 31.6,
+    "a_forward_models_test": 32.6
+  },
+  {
+    "a_forward_models_model": "NoisedBT",
+    "a_forward_models_dev": 29.9,
+    "a_forward_models_test": 32.0
+  },
+  {
+    "a_forward_models_model": "TaggedBT",
+    "a_forward_models_dev": 30.5,
+    "a_forward_models_test": 33.0
+  },
+  {
+    "a_forward_models_model": "It.-3 BT",
+    "a_forward_models_dev": 31.3,
+    "a_forward_models_test": 32.8
+  },
+  {
+    "a_forward_models_model": "It.-3 NoisedBT",
+    "a_forward_models_dev": 31.2,
+    "a_forward_models_test": 32.6
+  },
+  {
+    "a_forward_models_model": "It.-3 TaggedBT",
+    "a_forward_models_dev": 31.4,
+    "a_forward_models_test": 33.4
+  },
+  {
+    "a_forward_models_model": "b. Reverse models",
+    "a_forward_models_dev": "b. Reverse models",
+    "a_forward_models_test": "b. Reverse models"
+  },
+  {
+    "a_forward_models_model": "Model",
+    "a_forward_models_dev": "dev",
+    "a_forward_models_test": "test"
+  },
+  {
+    "a_forward_models_model": "bitext",
+    "a_forward_models_dev": 32.9,
+    "a_forward_models_test": 31.9
+  },
+  {
+    "a_forward_models_model": "It.-2 BT",
+    "a_forward_models_dev": 39.5,
+    "a_forward_models_test": 37.3
+  }
 ]

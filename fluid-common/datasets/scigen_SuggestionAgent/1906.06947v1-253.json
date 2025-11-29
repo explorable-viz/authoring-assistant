@@ -1,18 +1,18 @@
 [
-    {
-        "_method": "DBLP:conf/acl/NguyenTFB15",
-        "_ave_slot_coherence": "0.10"
-    },
-    {
-        "_method": "ODEE-F",
-        "_ave_slot_coherence": "0.10"
-    },
-    {
-        "_method": "ODEE-FE",
-        "_ave_slot_coherence": "0.16"
-    },
-    {
-        "_method": "ODEE-FER",
-        "_ave_slot_coherence": " 0.18"
-    }
+  {
+    "method": "DBLP:conf/acl/NguyenTFB15",
+    "ave_slot_coherence": 0.1
+  },
+  {
+    "method": "ODEE-F",
+    "ave_slot_coherence": 0.1
+  },
+  {
+    "method": "ODEE-FE",
+    "ave_slot_coherence": 0.16
+  },
+  {
+    "method": "ODEE-FER",
+    "ave_slot_coherence": 0.18
+  }
 ]

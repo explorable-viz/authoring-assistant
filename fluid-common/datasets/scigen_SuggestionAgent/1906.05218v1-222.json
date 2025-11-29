@@ -1,20 +1,20 @@
 [
-    {
-        "statistics___i": " gi",
-        "statistics_1": "3",
-        "statistics_2": "4",
-        "statistics_3": "4",
-        "statistics_4": "4",
-        "scores___τ=2": "",
-        "scores___τ=|__y|": ""
-    },
-    {
-        "statistics___i": "AL  i",
-        "statistics_1": "3",
-        "statistics_2": "3",
-        "statistics_3": "2",
-        "statistics_4": "1",
-        "scores___τ=2": "AL = 3",
-        "scores___τ=|__y|": "AL = 2.25"
-    }
+  {
+    "statistics_i": " gi",
+    "statistics_1": 3,
+    "statistics_2": 4,
+    "statistics_3": 4,
+    "statistics_4": 4,
+    "scores_τ=2": "",
+    "scores_τ=_y": ""
+  },
+  {
+    "statistics_i": "AL  i",
+    "statistics_1": 3,
+    "statistics_2": 3,
+    "statistics_3": 2,
+    "statistics_4": 1,
+    "scores_τ=2": "AL = 3",
+    "scores_τ=_y": "AL = 2.25"
+  }
 ]

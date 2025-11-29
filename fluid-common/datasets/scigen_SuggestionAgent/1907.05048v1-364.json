@@ -1,38 +1,38 @@
 [
-    {
-        "_model": "TransWeight-feat",
-        "_w_param": " n+  n",
-        "_cos-d": "0.344",
-        "_q1": "2",
-        "_q2": "5",
-        "_q3": "28",
-        "≤__5": "50.82%"
-    },
-    {
-        "_model": "TransWeight-trans",
-        "_w_param": " t+  n",
-        "_cos-d": "0.338",
-        "_q1": "2",
-        "_q2": "5",
-        "_q3": "24",
-        "≤__5": "52.90%"
-    },
-    {
-        "_model": "TransWeight-mat",
-        "_w_param": " tn+  n",
-        "_cos-d": "0.338",
-        "_q1": "2",
-        "_q2": "5",
-        "_q3": "25",
-        "≤__5": "53.24%"
-    },
-    {
-        "_model": " TransWeight",
-        "_w_param": " tn2+  n",
-        "_cos-d": " 0.310",
-        "_q1": " 1",
-        "_q2": " 3",
-        "_q3": " 11",
-        "≤__5": " 65.21%"
-    }
+  {
+    "model": "TransWeight-feat",
+    "w_param": " n+  n",
+    "cos_d": 0.344,
+    "q1": 2,
+    "q2": 5,
+    "q3": 28,
+    "≤_5": 50.82
+  },
+  {
+    "model": "TransWeight-trans",
+    "w_param": " t+  n",
+    "cos_d": 0.338,
+    "q1": 2,
+    "q2": 5,
+    "q3": 24,
+    "≤_5": 52.9
+  },
+  {
+    "model": "TransWeight-mat",
+    "w_param": " tn+  n",
+    "cos_d": 0.338,
+    "q1": 2,
+    "q2": 5,
+    "q3": 25,
+    "≤_5": 53.24
+  },
+  {
+    "model": " TransWeight",
+    "w_param": " tn2+  n",
+    "cos_d": 0.31,
+    "q1": 1,
+    "q2": 3,
+    "q3": 11,
+    "≤_5": 65.21
+  }
 ]

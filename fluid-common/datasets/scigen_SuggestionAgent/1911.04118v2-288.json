@@ -1,37 +1,37 @@
 [
-    {
-        "model": "Neg: 1 Pos: 4",
-        "wikiqa_map": "0.870",
-        "wikiqa_mrr": "0.880",
-        "trec-qa_map": "0.808",
-        "trec-qa_mrr": "0.847"
-    },
-    {
-        "model": "Neg: 2 Pos: 4",
-        "wikiqa_map": "0.751",
-        "wikiqa_mrr": "0.763",
-        "trec-qa_map": "0.662",
-        "trec-qa_mrr": "0.751"
-    },
-    {
-        "model": "Neg: 3 Pos: 4",
-        "wikiqa_map": "0.881",
-        "wikiqa_mrr": "0.895",
-        "trec-qa_map": "0.821",
-        "trec-qa_mrr": "0.869"
-    },
-    {
-        "model": "Neg: 2,3 Pos: 4",
-        "wikiqa_map": "0.883",
-        "wikiqa_mrr": "0.898",
-        "trec-qa_map": "0.823",
-        "trec-qa_mrr": "0.871"
-    },
-    {
-        "model": "Neg: 1,2,3 Pos: 4",
-        "wikiqa_map": "0.884",
-        "wikiqa_mrr": "0.898",
-        "trec-qa_map": "0.823",
-        "trec-qa_mrr": "0.872"
-    }
+  {
+    "model": "Neg: 1 Pos: 4",
+    "wikiqa_map": 0.87,
+    "wikiqa_mrr": 0.88,
+    "trec_qa_map": 0.808,
+    "trec_qa_mrr": 0.847
+  },
+  {
+    "model": "Neg: 2 Pos: 4",
+    "wikiqa_map": 0.751,
+    "wikiqa_mrr": 0.763,
+    "trec_qa_map": 0.662,
+    "trec_qa_mrr": 0.751
+  },
+  {
+    "model": "Neg: 3 Pos: 4",
+    "wikiqa_map": 0.881,
+    "wikiqa_mrr": 0.895,
+    "trec_qa_map": 0.821,
+    "trec_qa_mrr": 0.869
+  },
+  {
+    "model": "Neg: 23 Pos: 4",
+    "wikiqa_map": 0.883,
+    "wikiqa_mrr": 0.898,
+    "trec_qa_map": 0.823,
+    "trec_qa_mrr": 0.871
+  },
+  {
+    "model": "Neg: 123 Pos: 4",
+    "wikiqa_map": 0.884,
+    "wikiqa_mrr": 0.898,
+    "trec_qa_map": 0.823,
+    "trec_qa_mrr": 0.872
+  }
 ]

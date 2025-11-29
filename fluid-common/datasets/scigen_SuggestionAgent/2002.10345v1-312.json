@@ -1,79 +1,79 @@
 [
-    {
-        "model": "Model",
-        "_k": " K",
-        "imdb": "IMDb",
-        "ag’s": "News",
-        "snli": "SNLI"
-    },
-    {
-        "model": "BERTSDV",
-        "_k": "1",
-        "imdb": "5.39",
-        "ag’s": " 5.38",
-        "snli": " 91.2"
-    },
-    {
-        "model": "BERTSDV",
-        "_k": "2",
-        "imdb": "5.44",
-        "ag’s": "5.39",
-        "snli": "91.1"
-    },
-    {
-        "model": "BERTSDV",
-        "_k": "3",
-        "imdb": "5.40",
-        "ag’s": "5.50",
-        "snli": " 91.2"
-    },
-    {
-        "model": "BERTSDV",
-        "_k": "4",
-        "imdb": "5.47",
-        "ag’s": "5.49",
-        "snli": " 91.2"
-    },
-    {
-        "model": "",
-        "_k": "5",
-        "imdb": " 5.35",
-        "ag’s": "5.55",
-        "snli": "91.1"
-    },
-    {
-        "model": "BERTSDA",
-        "_k": " T−1",
-        "imdb": "5.41",
-        "ag’s": " 5.29",
-        "snli": "91.0"
-    },
-    {
-        "model": "BERTSDA",
-        "_k": "2",
-        "imdb": "5.46",
-        "ag’s": "5.49",
-        "snli": " 91.2"
-    },
-    {
-        "model": "BERTSDA",
-        "_k": "3",
-        "imdb": "5.48",
-        "ag’s": "5.55",
-        "snli": "91.1"
-    },
-    {
-        "model": "BERTSDA",
-        "_k": "4",
-        "imdb": "5.44",
-        "ag’s": "5.52",
-        "snli": "91.1"
-    },
-    {
-        "model": "",
-        "_k": "5",
-        "imdb": " 5.29",
-        "ag’s": "5.41",
-        "snli": "91.1"
-    }
+  {
+    "model": "Model",
+    "k": " ",
+    "imdb": "IMDb",
+    "ag’s": "News",
+    "snli": "SNLI"
+  },
+  {
+    "model": "BERTSDV",
+    "k": 1,
+    "imdb": 5.39,
+    "ag’s": 5.38,
+    "snli": 91.2
+  },
+  {
+    "model": "BERTSDV",
+    "k": 2,
+    "imdb": 5.44,
+    "ag’s": 5.39,
+    "snli": 91.1
+  },
+  {
+    "model": "BERTSDV",
+    "k": 3,
+    "imdb": 5.4,
+    "ag’s": 5.5,
+    "snli": 91.2
+  },
+  {
+    "model": "BERTSDV",
+    "k": 4,
+    "imdb": 5.47,
+    "ag’s": 5.49,
+    "snli": 91.2
+  },
+  {
+    "model": "",
+    "k": 5,
+    "imdb": 5.35,
+    "ag’s": 5.55,
+    "snli": 91.1
+  },
+  {
+    "model": "BERTSDA",
+    "k": " T−1",
+    "imdb": 5.41,
+    "ag’s": 5.29,
+    "snli": 91.0
+  },
+  {
+    "model": "BERTSDA",
+    "k": 2,
+    "imdb": 5.46,
+    "ag’s": 5.49,
+    "snli": 91.2
+  },
+  {
+    "model": "BERTSDA",
+    "k": 3,
+    "imdb": 5.48,
+    "ag’s": 5.55,
+    "snli": 91.1
+  },
+  {
+    "model": "BERTSDA",
+    "k": 4,
+    "imdb": 5.44,
+    "ag’s": 5.52,
+    "snli": 91.1
+  },
+  {
+    "model": "",
+    "k": 5,
+    "imdb": 5.29,
+    "ag’s": 5.41,
+    "snli": 91.1
+  }
 ]

@@ -1,42 +1,42 @@
 [
-    {
-        "task_additional_models": "Metric",
-        "image-sentence_retrieval_scan_": "Mean Recall",
-        "phrase_grounding_qa_r-cnn_": "Accuracy",
-        "text-to-clip_tgn_": "Average",
-        "image_captioning_butd_": "CIDEr",
-        "vqa_ban": "Accuracy"
-    },
-    {
-        "task_additional_models": "Training from scratch",
-        "image-sentence_retrieval_scan_": "83.2",
-        "phrase_grounding_qa_r-cnn_": "50.23",
-        "text-to-clip_tgn_": "43.91",
-        "image_captioning_butd_": "109.8",
-        "vqa_ban": "68.98"
-    },
-    {
-        "task_additional_models": "FastText + ft",
-        "image-sentence_retrieval_scan_": "83.8",
-        "phrase_grounding_qa_r-cnn_": "53.01",
-        "text-to-clip_tgn_": "44.21",
-        "image_captioning_butd_": "110.3",
-        "vqa_ban": "69.91"
-    },
-    {
-        "task_additional_models": "GrOVLE (w/o multi-task pretraining) + ft",
-        "image-sentence_retrieval_scan_": "84.1",
-        "phrase_grounding_qa_r-cnn_": "53.88",
-        "text-to-clip_tgn_": " 45.26",
-        "image_captioning_butd_": "110.4",
-        "vqa_ban": "69.36"
-    },
-    {
-        "task_additional_models": "+ multi-task pretraining w/ target task + ft",
-        "image-sentence_retrieval_scan_": " 84.7",
-        "phrase_grounding_qa_r-cnn_": " 54.10",
-        "text-to-clip_tgn_": "43.61",
-        "image_captioning_butd_": " 111.6",
-        "vqa_ban": " 69.97"
-    }
+  {
+    "task_additional_models": "Metric",
+    "image_sentence_retrieval_scan": "Mean Recall",
+    "phrase_grounding_qa_r_cnn": "Accuracy",
+    "text_to_clip_tgn": "Average",
+    "image_captioning_butd": "CIDEr",
+    "vqa_ban": "Accuracy"
+  },
+  {
+    "task_additional_models": "Training from scratch",
+    "image_sentence_retrieval_scan": 83.2,
+    "phrase_grounding_qa_r_cnn": 50.23,
+    "text_to_clip_tgn": 43.91,
+    "image_captioning_butd": 109.8,
+    "vqa_ban": 68.98
+  },
+  {
+    "task_additional_models": "FastText + ft",
+    "image_sentence_retrieval_scan": 83.8,
+    "phrase_grounding_qa_r_cnn": 53.01,
+    "text_to_clip_tgn": 44.21,
+    "image_captioning_butd": 110.3,
+    "vqa_ban": 69.91
+  },
+  {
+    "task_additional_models": "GrOVLE (w/o multi-task pretraining) + ft",
+    "image_sentence_retrieval_scan": 84.1,
+    "phrase_grounding_qa_r_cnn": 53.88,
+    "text_to_clip_tgn": 45.26,
+    "image_captioning_butd": 110.4,
+    "vqa_ban": 69.36
+  },
+  {
+    "task_additional_models": "+ multi-task pretraining w/ target task + ft",
+    "image_sentence_retrieval_scan": 84.7,
+    "phrase_grounding_qa_r_cnn": 54.1,
+    "text_to_clip_tgn": 43.61,
+    "image_captioning_butd": 111.6,
+    "vqa_ban": 69.97
+  }
 ]

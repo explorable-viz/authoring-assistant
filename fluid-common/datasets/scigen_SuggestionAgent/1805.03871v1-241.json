@@ -1,22 +1,22 @@
 [
-    {
-        "_network": " bilstm",
-        "_training_time": "5h 30m",
-        "_parameters": "1,278M"
-    },
-    {
-        "_network": " bilstm-att",
-        "_training_time": "8h 30m",
-        "_parameters": "1,279M"
-    },
-    {
-        "_network": " x-bilstm-att",
-        "_training_time": "25h 40m",
-        "_parameters": "1,279M"
-    },
-    {
-        "_network": " h-bilstm-att",
-        "_training_time": "2h 30m",
-        "_parameters": "1,837M"
-    }
+  {
+    "network": " bilstm",
+    "training_time": "5h 30m",
+    "parameters": "1278M"
+  },
+  {
+    "network": " bilstm-att",
+    "training_time": "8h 30m",
+    "parameters": "1279M"
+  },
+  {
+    "network": " x-bilstm-att",
+    "training_time": "25h 40m",
+    "parameters": "1279M"
+  },
+  {
+    "network": " h-bilstm-att",
+    "training_time": "2h 30m",
+    "parameters": "1837M"
+  }
 ]

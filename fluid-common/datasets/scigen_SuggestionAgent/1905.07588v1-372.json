@@ -1,28 +1,28 @@
 [
-    {
-        "": "MRR",
-        "trecqa_base": "0.927",
-        "trecqa_large": " 0.961",
-        "wikiqa_base": "0.770",
-        "wikiqa_large": " 0.875",
-        "yahooqa_base": " 0.942",
-        "yahooqa_large": "0.938",
-        "semevalcqa-16_base": "0.872",
-        "semevalcqa-16_large": " 0.911",
-        "semevalcqa-17_base": "0.951",
-        "semevalcqa-17_large": " 0.958"
-    },
-    {
-        "": "MAP",
-        "trecqa_base": "0.877",
-        "trecqa_large": " 0.904",
-        "wikiqa_base": "0.753",
-        "wikiqa_large": " 0.860",
-        "yahooqa_base": " 0.942",
-        "yahooqa_large": "0.938",
-        "semevalcqa-16_base": "0.810",
-        "semevalcqa-16_large": " 0.844",
-        "semevalcqa-17_base": " 0.909",
-        "semevalcqa-17_large": "0.907"
-    }
+  {
+    "_1": "MRR",
+    "trecqa_base": 0.927,
+    "trecqa_large": 0.961,
+    "wikiqa_base": 0.77,
+    "wikiqa_large": 0.875,
+    "yahooqa_base": 0.942,
+    "yahooqa_large": 0.938,
+    "semevalcqa_16_base": 0.872,
+    "semevalcqa_16_large": 0.911,
+    "semevalcqa_17_base": 0.951,
+    "semevalcqa_17_large": 0.958
+  },
+  {
+    "_1": "MAP",
+    "trecqa_base": 0.877,
+    "trecqa_large": 0.904,
+    "wikiqa_base": 0.753,
+    "wikiqa_large": 0.86,
+    "yahooqa_base": 0.942,
+    "yahooqa_large": 0.938,
+    "semevalcqa_16_base": 0.81,
+    "semevalcqa_16_large": 0.844,
+    "semevalcqa_17_base": 0.909,
+    "semevalcqa_17_large": 0.907
+  }
 ]

@@ -1,56 +1,56 @@
 [
-    {
-        "attack": "arrest",
-        "kill": "charge",
-        "_word2vec_0.69": "0.53",
-        "_kce_0.3": "0.3"
-    },
-    {
-        "attack": "USA (E)",
-        "kill": "war",
-        "_word2vec_0.69": "0.46",
-        "_kce_0.3": "0.3"
-    },
-    {
-        "attack": "911 attack (E)",
-        "kill": "attack",
-        "_word2vec_0.69": "0.72",
-        "_kce_0.3": "0.3"
-    },
-    {
-        "attack": "attack",
-        "kill": "trade",
-        "_word2vec_0.69": "0.42",
-        "_kce_0.3": "0.9"
-    },
-    {
-        "attack": "hotel (E)",
-        "kill": "travel",
-        "_word2vec_0.69": "0.49",
-        "_kce_0.3": "0.9"
-    },
-    {
-        "attack": "charge",
-        "kill": "murder",
-        "_word2vec_0.69": "0.49",
-        "_kce_0.3": "0.7"
-    },
-    {
-        "attack": "business (E)",
-        "kill": "increase",
-        "_word2vec_0.69": "0.43",
-        "_kce_0.3": "0.7"
-    },
-    {
-        "attack": "attack",
-        "kill": "walk",
-        "_word2vec_0.69": "0.44",
-        "_kce_0.3": "-0.3"
-    },
-    {
-        "attack": "people (E)",
-        "kill": "work",
-        "_word2vec_0.69": "0.40",
-        "_kce_0.3": "-0.3"
-    }
+  {
+    "attack": "arrest",
+    "kill": "charge",
+    "word2vec_0_69": 0.53,
+    "kce_0_3": 0.3
+  },
+  {
+    "attack": "USA",
+    "kill": "war",
+    "word2vec_0_69": 0.46,
+    "kce_0_3": 0.3
+  },
+  {
+    "attack": "911 attac",
+    "kill": "attac",
+    "word2vec_0_69": 0.72,
+    "kce_0_3": 0.3
+  },
+  {
+    "attack": "attac",
+    "kill": "trade",
+    "word2vec_0_69": 0.42,
+    "kce_0_3": 0.9
+  },
+  {
+    "attack": "hotel",
+    "kill": "travel",
+    "word2vec_0_69": 0.49,
+    "kce_0_3": 0.9
+  },
+  {
+    "attack": "charge",
+    "kill": "murder",
+    "word2vec_0_69": 0.49,
+    "kce_0_3": 0.7
+  },
+  {
+    "attack": "business",
+    "kill": "increase",
+    "word2vec_0_69": 0.43,
+    "kce_0_3": 0.7
+  },
+  {
+    "attack": "attac",
+    "kill": "wal",
+    "word2vec_0_69": 0.44,
+    "kce_0_3": -0.3
+  },
+  {
+    "attack": "people",
+    "kill": "wor",
+    "word2vec_0_69": 0.4,
+    "kce_0_3": -0.3
+  }
 ]

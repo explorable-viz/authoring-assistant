@@ -1,41 +1,41 @@
 [
-    {
-        "": "epoch=3",
-        "trecqa_mrr": "0.927",
-        "trecqa_map": "0.877",
-        "wikiqa_mrr": "0.770",
-        "wikiqa_map": "0.753",
-        "yahooqa_mrr": "0.942",
-        "yahooqa_map": "0.942",
-        "semevalcqa-16_mrr": "0.872",
-        "semevalcqa-16_map": "0.810",
-        "semevalcqa-17_mrr": "0.951",
-        "semevalcqa-17_map": "0.909"
-    },
-    {
-        "": "epoch=5",
-        "trecqa_mrr": "0.944",
-        "trecqa_map": "0.883",
-        "wikiqa_mrr": "0.784",
-        "wikiqa_map": "0.769",
-        "yahooqa_mrr": "0.942",
-        "yahooqa_map": "0.942",
-        "semevalcqa-16_mrr": "0.890",
-        "semevalcqa-16_map": "0.816",
-        "semevalcqa-17_mrr": "0.953",
-        "semevalcqa-17_map": "0.908"
-    },
-    {
-        "": "SOTA",
-        "trecqa_mrr": "0.865",
-        "trecqa_map": "0.904",
-        "wikiqa_mrr": "0.758",
-        "wikiqa_map": "0.746",
-        "yahooqa_mrr": "-",
-        "yahooqa_map": "0.801",
-        "semevalcqa-16_mrr": "0.872",
-        "semevalcqa-16_map": "0.801",
-        "semevalcqa-17_mrr": "0.926",
-        "semevalcqa-17_map": "0.887"
-    }
+  {
+    "_1": "epoch=3",
+    "trecqa_mrr": 0.927,
+    "trecqa_map": 0.877,
+    "wikiqa_mrr": 0.77,
+    "wikiqa_map": 0.753,
+    "yahooqa_mrr": 0.942,
+    "yahooqa_map": 0.942,
+    "semevalcqa_16_mrr": 0.872,
+    "semevalcqa_16_map": 0.81,
+    "semevalcqa_17_mrr": 0.951,
+    "semevalcqa_17_map": 0.909
+  },
+  {
+    "_1": "epoch=5",
+    "trecqa_mrr": 0.944,
+    "trecqa_map": 0.883,
+    "wikiqa_mrr": 0.784,
+    "wikiqa_map": 0.769,
+    "yahooqa_mrr": 0.942,
+    "yahooqa_map": 0.942,
+    "semevalcqa_16_mrr": 0.89,
+    "semevalcqa_16_map": 0.816,
+    "semevalcqa_17_mrr": 0.953,
+    "semevalcqa_17_map": 0.908
+  },
+  {
+    "_1": "SOTA",
+    "trecqa_mrr": 0.865,
+    "trecqa_map": 0.904,
+    "wikiqa_mrr": 0.758,
+    "wikiqa_map": 0.746,
+    "yahooqa_mrr": "-",
+    "yahooqa_map": 0.801,
+    "semevalcqa_16_mrr": 0.872,
+    "semevalcqa_16_map": 0.801,
+    "semevalcqa_17_mrr": 0.926,
+    "semevalcqa_17_map": 0.887
+  }
 ]

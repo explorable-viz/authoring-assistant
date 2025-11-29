@@ -1,65 +1,65 @@
 [
-    {
-        "structuretask": "AdaBERT-SST-2",
-        "sst-2": " 91.9",
-        "mrpc": "78.1",
-        "qqp": "58.6",
-        "mnli": "64.0",
-        "qnli": "74.1",
-        "rte": "53.8"
-    },
-    {
-        "structuretask": "AdaBERT-MRPC",
-        "sst-2": "81.5",
-        "mrpc": " 84.7",
-        "qqp": "68.9",
-        "mnli": "75.9",
-        "qnli": "82.2",
-        "rte": "60.3"
-    },
-    {
-        "structuretask": "AdaBERT-QQP",
-        "sst-2": "81.9",
-        "mrpc": "84.1",
-        "qqp": " 70.5",
-        "mnli": "76.3",
-        "qnli": "82.5",
-        "rte": "60.5"
-    },
-    {
-        "structuretask": "AdaBERT-MNLI",
-        "sst-2": "82.1",
-        "mrpc": "81.5",
-        "qqp": "66.8",
-        "mnli": " 81.3",
-        "qnli": "86.1",
-        "rte": "63.2"
-    },
-    {
-        "structuretask": "AdaBERT-QNLI",
-        "sst-2": "81.6",
-        "mrpc": "82.3",
-        "qqp": "67.7",
-        "mnli": "79.2",
-        "qnli": " 87.2",
-        "rte": "62.9"
-    },
-    {
-        "structuretask": "AdaBERT-RTE",
-        "sst-2": "82.9",
-        "mrpc": "81.1",
-        "qqp": "66.5",
-        "mnli": "79.8",
-        "qnli": "86.0",
-        "rte": " 64.1"
-    },
-    {
-        "structuretask": "Random",
-        "sst-2": "80.4 ± 4.3",
-        "mrpc": "79.2 ± 2.8",
-        "qqp": "61.8 ± 4.9",
-        "mnli": "69.7 ± 6.7",
-        "qnli": "78.2 ± 5.5",
-        "rte": "55.3 ± 4.1"
-    }
+  {
+    "structuretask": "AdaBERT-SST-2",
+    "sst_2": 91.9,
+    "mrpc": 78.1,
+    "qqp": 58.6,
+    "mnli": 64.0,
+    "qnli": 74.1,
+    "rte": 53.8
+  },
+  {
+    "structuretask": "AdaBERT-MRPC",
+    "sst_2": 81.5,
+    "mrpc": 84.7,
+    "qqp": 68.9,
+    "mnli": 75.9,
+    "qnli": 82.2,
+    "rte": 60.3
+  },
+  {
+    "structuretask": "AdaBERT-QQP",
+    "sst_2": 81.9,
+    "mrpc": 84.1,
+    "qqp": 70.5,
+    "mnli": 76.3,
+    "qnli": 82.5,
+    "rte": 60.5
+  },
+  {
+    "structuretask": "AdaBERT-MNLI",
+    "sst_2": 82.1,
+    "mrpc": 81.5,
+    "qqp": 66.8,
+    "mnli": 81.3,
+    "qnli": 86.1,
+    "rte": 63.2
+  },
+  {
+    "structuretask": "AdaBERT-QNLI",
+    "sst_2": 81.6,
+    "mrpc": 82.3,
+    "qqp": 67.7,
+    "mnli": 79.2,
+    "qnli": 87.2,
+    "rte": 62.9
+  },
+  {
+    "structuretask": "AdaBERT-RTE",
+    "sst_2": 82.9,
+    "mrpc": 81.1,
+    "qqp": 66.5,
+    "mnli": 79.8,
+    "qnli": 86.0,
+    "rte": 64.1
+  },
+  {
+    "structuretask": "Random",
+    "sst_2": "80.4 ± 4.3",
+    "mrpc": "79.2 ± 2.8",
+    "qqp": "61.8 ± 4.9",
+    "mnli": "69.7 ± 6.7",
+    "qnli": "78.2 ± 5.5",
+    "rte": "55.3 ± 4.1"
+  }
 ]

@@ -1,42 +1,42 @@
 [
-    {
-        "class": "What",
-        "recall": "87.7%",
-        "precision": "76.0%"
-    },
-    {
-        "class": "Which",
-        "recall": "1.4%",
-        "precision": "38.0%"
-    },
-    {
-        "class": "Where",
-        "recall": "65.9%",
-        "precision": "55.8%"
-    },
-    {
-        "class": "When",
-        "recall": "49.2%",
-        "precision": "69.8%"
-    },
-    {
-        "class": "Who",
-        "recall": "76.9%",
-        "precision": "66.7%"
-    },
-    {
-        "class": "Why",
-        "recall": "50.1%",
-        "precision": "74.1%"
-    },
-    {
-        "class": "How",
-        "recall": "70.5%",
-        "precision": "79.0%"
-    },
-    {
-        "class": "Others",
-        "recall": "10.5%",
-        "precision": "57.0%"
-    }
+  {
+    "class": "What",
+    "recall": 87.7,
+    "precision": 76.0
+  },
+  {
+    "class": "Which",
+    "recall": 1.4,
+    "precision": 38.0
+  },
+  {
+    "class": "Where",
+    "recall": 65.9,
+    "precision": 55.8
+  },
+  {
+    "class": "When",
+    "recall": 49.2,
+    "precision": 69.8
+  },
+  {
+    "class": "Who",
+    "recall": 76.9,
+    "precision": 66.7
+  },
+  {
+    "class": "Why",
+    "recall": 50.1,
+    "precision": 74.1
+  },
+  {
+    "class": "How",
+    "recall": 70.5,
+    "precision": 79.0
+  },
+  {
+    "class": "Others",
+    "recall": 10.5,
+    "precision": 57.0
+  }
 ]

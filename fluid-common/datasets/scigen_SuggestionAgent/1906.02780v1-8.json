@@ -1,79 +1,79 @@
 [
-    {
-        "_model": "Baseline (  b=1)",
-        "_wmt_en-de_bleu": "25.82",
-        "_wmt_en-de_speedup": "1.15×",
-        "_wmt_de-en_bleu": "29.83",
-        "_wmt_de-en_speedup": "1.14×",
-        "_iwslt_en-de_bleu": "28.66",
-        "_iwslt_en-de_speedup": "1.16×",
-        "_wmt_en-fr_bleu": "39.41",
-        "_wmt_en-fr_speedup": "1.18×"
-    },
-    {
-        "_model": "Baseline (  b=4)",
-        "_wmt_en-de_bleu": "26.87",
-        "_wmt_en-de_speedup": "1.00×",
-        "_wmt_de-en_bleu": "30.73",
-        "_wmt_de-en_speedup": "1.00×",
-        "_iwslt_en-de_bleu": "30.00",
-        "_iwslt_en-de_speedup": "1.00×",
-        "_wmt_en-fr_bleu": "40.22",
-        "_wmt_en-fr_speedup": "1.00×"
-    },
-    {
-        "_model": "SAT (  k=2)",
-        "_wmt_en-de_bleu": "22.81",
-        "_wmt_en-de_speedup": "2.05×",
-        "_wmt_de-en_bleu": "26.78",
-        "_wmt_de-en_speedup": "2.04×",
-        "_iwslt_en-de_bleu": "25.48",
-        "_iwslt_en-de_speedup": "2.03×",
-        "_wmt_en-fr_bleu": "36.62",
-        "_wmt_en-fr_speedup": "2.14×"
-    },
-    {
-        "_model": "SAT (  k=4)",
-        "_wmt_en-de_bleu": "16.44",
-        "_wmt_en-de_speedup": "3.61×",
-        "_wmt_de-en_bleu": "21.27",
-        "_wmt_de-en_speedup": "3.58×",
-        "_iwslt_en-de_bleu": "20.25",
-        "_iwslt_en-de_speedup": "3.45×",
-        "_wmt_en-fr_bleu": "28.07",
-        "_wmt_en-fr_speedup": "3.34×"
-    },
-    {
-        "_model": "SAT (  k=6)",
-        "_wmt_en-de_bleu": "12.55",
-        "_wmt_en-de_speedup": "4.86×",
-        "_wmt_de-en_bleu": "15.23",
-        "_wmt_de-en_speedup": "4.27×",
-        "_iwslt_en-de_bleu": "14.02",
-        "_iwslt_en-de_speedup": "4.39×",
-        "_wmt_en-fr_bleu": "24.63",
-        "_wmt_en-fr_speedup": "4.77×"
-    },
-    {
-        "_model": "LT*",
-        "_wmt_en-de_bleu": "19.8",
-        "_wmt_en-de_speedup": "3.89×",
-        "_wmt_de-en_bleu": "-",
-        "_wmt_de-en_speedup": "-",
-        "_iwslt_en-de_bleu": "-",
-        "_iwslt_en-de_speedup": "-",
-        "_wmt_en-fr_bleu": "-",
-        "_wmt_en-fr_speedup": "-"
-    },
-    {
-        "_model": "SynST(  k=6)",
-        "_wmt_en-de_bleu": "20.74",
-        "_wmt_en-de_speedup": "4.86×",
-        "_wmt_de-en_bleu": "25.50",
-        "_wmt_de-en_speedup": "5.06×",
-        "_iwslt_en-de_bleu": "23.82",
-        "_iwslt_en-de_speedup": "3.78×",
-        "_wmt_en-fr_bleu": "33.47",
-        "_wmt_en-fr_speedup": "5.32×"
-    }
+  {
+    "model": "Baseline",
+    "wmt_en_de_bleu": 25.82,
+    "wmt_en_de_speedup": "1.15×",
+    "wmt_de_en_bleu": 29.83,
+    "wmt_de_en_speedup": "1.14×",
+    "iwslt_en_de_bleu": 28.66,
+    "iwslt_en_de_speedup": "1.16×",
+    "wmt_en_fr_bleu": 39.41,
+    "wmt_en_fr_speedup": "1.18×"
+  },
+  {
+    "model": "Baseline",
+    "wmt_en_de_bleu": 26.87,
+    "wmt_en_de_speedup": "1.00×",
+    "wmt_de_en_bleu": 30.73,
+    "wmt_de_en_speedup": "1.00×",
+    "iwslt_en_de_bleu": 30.0,
+    "iwslt_en_de_speedup": "1.00×",
+    "wmt_en_fr_bleu": 40.22,
+    "wmt_en_fr_speedup": "1.00×"
+  },
+  {
+    "model": "SAT",
+    "wmt_en_de_bleu": 22.81,
+    "wmt_en_de_speedup": "2.05×",
+    "wmt_de_en_bleu": 26.78,
+    "wmt_de_en_speedup": "2.04×",
+    "iwslt_en_de_bleu": 25.48,
+    "iwslt_en_de_speedup": "2.03×",
+    "wmt_en_fr_bleu": 36.62,
+    "wmt_en_fr_speedup": "2.14×"
+  },
+  {
+    "model": "SAT",
+    "wmt_en_de_bleu": 16.44,
+    "wmt_en_de_speedup": "3.61×",
+    "wmt_de_en_bleu": 21.27,
+    "wmt_de_en_speedup": "3.58×",
+    "iwslt_en_de_bleu": 20.25,
+    "iwslt_en_de_speedup": "3.45×",
+    "wmt_en_fr_bleu": 28.07,
+    "wmt_en_fr_speedup": "3.34×"
+  },
+  {
+    "model": "SAT",
+    "wmt_en_de_bleu": 12.55,
+    "wmt_en_de_speedup": "4.86×",
+    "wmt_de_en_bleu": 15.23,
+    "wmt_de_en_speedup": "4.27×",
+    "iwslt_en_de_bleu": 14.02,
+    "iwslt_en_de_speedup": "4.39×",
+    "wmt_en_fr_bleu": 24.63,
+    "wmt_en_fr_speedup": "4.77×"
+  },
+  {
+    "model": "LT*",
+    "wmt_en_de_bleu": 19.8,
+    "wmt_en_de_speedup": "3.89×",
+    "wmt_de_en_bleu": "-",
+    "wmt_de_en_speedup": "-",
+    "iwslt_en_de_bleu": "-",
+    "iwslt_en_de_speedup": "-",
+    "wmt_en_fr_bleu": "-",
+    "wmt_en_fr_speedup": "-"
+  },
+  {
+    "model": "SynST",
+    "wmt_en_de_bleu": 20.74,
+    "wmt_en_de_speedup": "4.86×",
+    "wmt_de_en_bleu": 25.5,
+    "wmt_de_en_speedup": "5.06×",
+    "iwslt_en_de_bleu": 23.82,
+    "iwslt_en_de_speedup": "3.78×",
+    "wmt_en_fr_bleu": 33.47,
+    "wmt_en_fr_speedup": "5.32×"
+  }
 ]

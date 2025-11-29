@@ -1,93 +1,93 @@
 [
-    {
-        "_type___pos_tags": " POS Tags",
-        "_type_noun": "Verb",
-        "_zh⇒en___21.0%": "0.3%",
-        "_en⇒fr_1.9%": " 25.0%",
-        "_en⇒ja_0.7%": "0.3%"
-    },
-    {
-        "_type___pos_tags": " POS Tags",
-        "_type_noun": "Adj.",
-        "_zh⇒en___21.0%": "0.4%",
-        "_en⇒fr_1.9%": "9.3%",
-        "_en⇒ja_0.7%": "0.7%"
-    },
-    {
-        "_type___pos_tags": " POS Tags",
-        "_type_noun": "Prep.",
-        "_zh⇒en___21.0%": "1.3%",
-        "_en⇒fr_1.9%": "4.5%",
-        "_en⇒ja_0.7%": " 26.7%"
-    },
-    {
-        "_type___pos_tags": " POS Tags",
-        "_type_noun": "Dete.",
-        "_zh⇒en___21.0%": "3.0%",
-        "_en⇒fr_1.9%": "5.7%",
-        "_en⇒ja_0.7%": "2.1%"
-    },
-    {
-        "_type___pos_tags": " POS Tags",
-        "_type_noun": "Punc.",
-        "_zh⇒en___21.0%": "3.5%",
-        "_en⇒fr_1.9%": " 18.3%",
-        "_en⇒ja_0.7%": " 30.5%"
-    },
-    {
-        "_type___pos_tags": " POS Tags",
-        "_type_noun": "Others",
-        "_zh⇒en___21.0%": "0.5%",
-        "_en⇒fr_1.9%": "1.2%",
-        "_en⇒ja_0.7%": "4.7%"
-    },
-    {
-        "_type___pos_tags": " Fertility",
-        "_type_noun": "≥2",
-        "_zh⇒en___21.0%": " 50.2%",
-        "_en⇒fr_1.9%": " 21.4%",
-        "_en⇒ja_0.7%": " 21.7%"
-    },
-    {
-        "_type___pos_tags": " Fertility",
-        "_type_noun": "1",
-        "_zh⇒en___21.0%": " 15.4%",
-        "_en⇒fr_1.9%": "7.0%",
-        "_en⇒ja_0.7%": "3.1%"
-    },
-    {
-        "_type___pos_tags": " Fertility",
-        "_type_noun": "(0,1)",
-        "_zh⇒en___21.0%": "2.5%",
-        "_en⇒fr_1.9%": "0.4%",
-        "_en⇒ja_0.7%": "3.0%"
-    },
-    {
-        "_type___pos_tags": " Fertility",
-        "_type_noun": "0",
-        "_zh⇒en___21.0%": "0.0%",
-        "_en⇒fr_1.9%": "1.9%",
-        "_en⇒ja_0.7%": "3.8%"
-    },
-    {
-        "_type___pos_tags": " Syntactic",
-        "_type_noun": "Low",
-        "_zh⇒en___21.0%": "1.6%",
-        "_en⇒fr_1.9%": "2.5%",
-        "_en⇒ja_0.7%": "1.2%"
-    },
-    {
-        "_type___pos_tags": " Syntactic",
-        "_type_noun": "Middle",
-        "_zh⇒en___21.0%": "0.3%",
-        "_en⇒fr_1.9%": "0.8%",
-        "_en⇒ja_0.7%": "1.4%"
-    },
-    {
-        "_type___pos_tags": " Syntactic",
-        "_type_noun": "High",
-        "_zh⇒en___21.0%": "0.0%",
-        "_en⇒fr_1.9%": "0.1%",
-        "_en⇒ja_0.7%": "0.1%"
-    }
+  {
+    "type_pos_tags": " POS Tags",
+    "type_noun": "Verb",
+    "zh⇒en_21_0": 0.3,
+    "en⇒fr_1_9": 25.0,
+    "en⇒ja_0_7": 0.3
+  },
+  {
+    "type_pos_tags": " POS Tags",
+    "type_noun": "Adj.",
+    "zh⇒en_21_0": 0.4,
+    "en⇒fr_1_9": 9.3,
+    "en⇒ja_0_7": 0.7
+  },
+  {
+    "type_pos_tags": " POS Tags",
+    "type_noun": "Prep.",
+    "zh⇒en_21_0": 1.3,
+    "en⇒fr_1_9": 4.5,
+    "en⇒ja_0_7": 26.7
+  },
+  {
+    "type_pos_tags": " POS Tags",
+    "type_noun": "Dete.",
+    "zh⇒en_21_0": 3.0,
+    "en⇒fr_1_9": 5.7,
+    "en⇒ja_0_7": 2.1
+  },
+  {
+    "type_pos_tags": " POS Tags",
+    "type_noun": "Punc.",
+    "zh⇒en_21_0": 3.5,
+    "en⇒fr_1_9": 18.3,
+    "en⇒ja_0_7": 30.5
+  },
+  {
+    "type_pos_tags": " POS Tags",
+    "type_noun": "Others",
+    "zh⇒en_21_0": 0.5,
+    "en⇒fr_1_9": 1.2,
+    "en⇒ja_0_7": 4.7
+  },
+  {
+    "type_pos_tags": " Fertility",
+    "type_noun": "≥2",
+    "zh⇒en_21_0": 50.2,
+    "en⇒fr_1_9": 21.4,
+    "en⇒ja_0_7": 21.7
+  },
+  {
+    "type_pos_tags": " Fertility",
+    "type_noun": 1,
+    "zh⇒en_21_0": 15.4,
+    "en⇒fr_1_9": 7.0,
+    "en⇒ja_0_7": 3.1
+  },
+  {
+    "type_pos_tags": " Fertility",
+    "type_noun": "",
+    "zh⇒en_21_0": 2.5,
+    "en⇒fr_1_9": 0.4,
+    "en⇒ja_0_7": 3.0
+  },
+  {
+    "type_pos_tags": " Fertility",
+    "type_noun": 0,
+    "zh⇒en_21_0": 0.0,
+    "en⇒fr_1_9": 1.9,
+    "en⇒ja_0_7": 3.8
+  },
+  {
+    "type_pos_tags": " Syntactic",
+    "type_noun": "Low",
+    "zh⇒en_21_0": 1.6,
+    "en⇒fr_1_9": 2.5,
+    "en⇒ja_0_7": 1.2
+  },
+  {
+    "type_pos_tags": " Syntactic",
+    "type_noun": "Middle",
+    "zh⇒en_21_0": 0.3,
+    "en⇒fr_1_9": 0.8,
+    "en⇒ja_0_7": 1.4
+  },
+  {
+    "type_pos_tags": " Syntactic",
+    "type_noun": "High",
+    "zh⇒en_21_0": 0.0,
+    "en⇒fr_1_9": 0.1,
+    "en⇒ja_0_7": 0.1
+  }
 ]

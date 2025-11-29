@@ -1,56 +1,50 @@
 [
-    {
-        "": "LSTM-CNN ",
-        "val": "-",
-        "unc_testa": "-",
-        "testb": "-",
-        "unc+_testa": "-",
-        "g-ref_val": "28.14",
-        "referit_test": "48.03"
-    },
-    {
-        "": "RMI ",
-        "val": "29.86",
-        "unc_testa": "45.69",
-        "testb": "29.50",
-        "unc+_testa": "30.48",
-        "g-ref_val": "34.52",
-        "referit_test": "58.73"
-    },
-    {
-        "": "DMN ",
-        "val": "38.88",
-        "unc_testa": "54.83",
-        "testb": "32.29",
-        "unc+_testa": "44.22",
-        "g-ref_val": "36.76",
-        "referit_test": "52.81"
-    },
-    {
-        "": "KWA ",
-        "val": "-",
-        "unc_testa": "-",
-        "testb": "-",
-        "unc+_testa": "-",
-        "g-ref_val": "36.92",
-        "referit_test": "59.09"
-    },
-    {
-        "": "RRN ",
-        "val": "39.75",
-        "unc_testa": "57.26",
-        "testb": "36.11",
-        "unc+_testa": "42.15",
-        "g-ref_val": "36.45",
-        "referit_test": "63.63"
-    },
-    {
-        "": "Ours",
-        "val": " 43.76",
-        "unc_testa": " 60.61",
-        "testb": " 37.89",
-        "unc+_testa": " 47.60",
-        "g-ref_val": " 39.98",
-        "referit_test": " 63.80"
-    }
+  {
+    "_1": "LSTM-CNN ",
+    "val": "-",
+    "unc_testa": "-",
+    "testb": "-",
+    "g_ref_val": 28.14,
+    "referit_test": 48.03
+  },
+  {
+    "_1": "RMI ",
+    "val": 29.86,
+    "unc_testa": 30.48,
+    "testb": 29.5,
+    "g_ref_val": 34.52,
+    "referit_test": 58.73
+  },
+  {
+    "_1": "DMN ",
+    "val": 38.88,
+    "unc_testa": 44.22,
+    "testb": 32.29,
+    "g_ref_val": 36.76,
+    "referit_test": 52.81
+  },
+  {
+    "_1": "KWA ",
+    "val": "-",
+    "unc_testa": "-",
+    "testb": "-",
+    "g_ref_val": 36.92,
+    "referit_test": 59.09
+  },
+  {
+    "_1": "RRN ",
+    "val": 39.75,
+    "unc_testa": 42.15,
+    "testb": 36.11,
+    "g_ref_val": 36.45,
+    "referit_test": 63.63
+  },
+  {
+    "_1": "Ours",
+    "val": 43.76,
+    "unc_testa": 47.6,
+    "testb": 37.89,
+    "g_ref_val": 39.98,
+    "referit_test": 63.8
+  }
 ]

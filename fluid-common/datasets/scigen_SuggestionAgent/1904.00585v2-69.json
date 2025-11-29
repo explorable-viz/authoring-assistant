@@ -1,22 +1,22 @@
 [
-    {
-        "": "TVC",
-        "_word_vectors": "00.454",
-        "_lms": "00.666"
-    },
-    {
-        "": "TVcC",
-        "_word_vectors": "00.469",
-        "_lms": "00.739"
-    },
-    {
-        "": "PPL",
-        "_word_vectors": "-0.398",
-        "_lms": "-0.618"
-    },
-    {
-        "": "WVV",
-        "_word_vectors": "-0.406",
-        "_lms": "-0.747"
-    }
+  {
+    "_1": "TVC",
+    "word_vectors": 0.454,
+    "lms": 0.666
+  },
+  {
+    "_1": "TVcC",
+    "word_vectors": 0.469,
+    "lms": 0.739
+  },
+  {
+    "_1": "PPL",
+    "word_vectors": -0.398,
+    "lms": -0.618
+  },
+  {
+    "_1": "WVV",
+    "word_vectors": -0.406,
+    "lms": -0.747
+  }
 ]

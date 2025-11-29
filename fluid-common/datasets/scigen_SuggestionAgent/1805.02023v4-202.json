@@ -1,22 +1,22 @@
 [
-    {
-        "_parameter_char_emb_size": "lattice emb size",
-        "_value_50": "200",
-        "_parameter_bigram_emb_size": "LSTM hidden"
-    },
-    {
-        "_parameter_char_emb_size": "char dropout",
-        "_value_50": "0.5",
-        "_parameter_bigram_emb_size": "lattice dropout"
-    },
-    {
-        "_parameter_char_emb_size": "LSTM layer",
-        "_value_50": "1e-8",
-        "_parameter_bigram_emb_size": "regularization   λ"
-    },
-    {
-        "_parameter_char_emb_size": "learning rate   lr",
-        "_value_50": "0.05",
-        "_parameter_bigram_emb_size": " lr decay"
-    }
+  {
+    "parameter_char_emb_size": "lattice emb size",
+    "value_50": 200,
+    "parameter_bigram_emb_size": "LSTM hidden"
+  },
+  {
+    "parameter_char_emb_size": "char dropout",
+    "value_50": 0.5,
+    "parameter_bigram_emb_size": "lattice dropout"
+  },
+  {
+    "parameter_char_emb_size": "LSTM layer",
+    "value_50": 1e-08,
+    "parameter_bigram_emb_size": "regularization   λ"
+  },
+  {
+    "parameter_char_emb_size": "learning rate   lr",
+    "value_50": 0.05,
+    "parameter_bigram_emb_size": " lr decay"
+  }
 ]

@@ -1,50 +1,50 @@
 [
-    {
-        "location___“be_in”": " “have”",
-        "location_(43,842)": "(3,175)",
-        "associatedmusicalartist___“be”": " “have”",
-        "associatedmusicalartist_(6,273)": "(3,600)",
-        "spouse___“be_wife_of”": " “be”",
-        "spouse_(1,965)": "(1,308)"
-    },
-    {
-        "location___“be_in”": " “be”",
-        "location_(43,842)": "(1,901)",
-        "associatedmusicalartist___“be”": " “be member of”",
-        "associatedmusicalartist_(6,273)": "(740)",
-        "spouse___“be_wife_of”": " “marry”",
-        "spouse_(1,965)": "(702)"
-    },
-    {
-        "location___“be_in”": " “be at”",
-        "location_(43,842)": "(1,109)",
-        "associatedmusicalartist___“be”": " “be guitarist of”",
-        "associatedmusicalartist_(6,273)": "(703)",
-        "spouse___“be_wife_of”": " “be widow of”",
-        "spouse_(1,965)": "(479)"
-    },
-    {
-        "location___“be_in”": " “be of”",
-        "location_(43,842)": "(706)",
-        "associatedmusicalartist___“be”": " “be drummer of”",
-        "associatedmusicalartist_(6,273)": "(458)",
-        "spouse___“be_wife_of”": " “have”",
-        "spouse_(1,965)": "(298)"
-    },
-    {
-        "location___“be_in”": " “be historic home",
-        "location_(43,842)": "(491)",
-        "associatedmusicalartist___“be”": " “be feature”",
-        "associatedmusicalartist_(6,273)": "(416)",
-        "spouse___“be_wife_of”": " “be husband of”",
-        "spouse_(1,965)": "(284)"
-    },
-    {
-        "location___“be_in”": " located at”",
-        "location_(43,842)": "",
-        "associatedmusicalartist___“be”": "",
-        "associatedmusicalartist_(6,273)": "",
-        "spouse___“be_wife_of”": "",
-        "spouse_(1,965)": ""
-    }
+  {
+    "location_“be_in”": " “have”",
+    "location": "",
+    "associatedmusicalartist_“be”": " “have”",
+    "associatedmusicalartist": "",
+    "spouse_“be_wife_of”": " “be”",
+    "spouse": ""
+  },
+  {
+    "location_“be_in”": " “be”",
+    "location": "",
+    "associatedmusicalartist_“be”": " “be member of”",
+    "associatedmusicalartist": "",
+    "spouse_“be_wife_of”": " “marry”",
+    "spouse": ""
+  },
+  {
+    "location_“be_in”": " “be at”",
+    "location": "",
+    "associatedmusicalartist_“be”": " “be guitarist of”",
+    "associatedmusicalartist": "",
+    "spouse_“be_wife_of”": " “be widow of”",
+    "spouse": ""
+  },
+  {
+    "location_“be_in”": " “be of”",
+    "location": "",
+    "associatedmusicalartist_“be”": " “be drummer of”",
+    "associatedmusicalartist": "",
+    "spouse_“be_wife_of”": " “have”",
+    "spouse": ""
+  },
+  {
+    "location_“be_in”": " “be historic home",
+    "location": "",
+    "associatedmusicalartist_“be”": " “be feature”",
+    "associatedmusicalartist": "",
+    "spouse_“be_wife_of”": " “be husband of”",
+    "spouse": ""
+  },
+  {
+    "location_“be_in”": " located at”",
+    "location": "",
+    "associatedmusicalartist_“be”": "",
+    "associatedmusicalartist": "",
+    "spouse_“be_wife_of”": "",
+    "spouse": ""
+  }
 ]

@@ -1,86 +1,86 @@
 [
-    {
-        "2_data_type": "Headers",
-        "fast_sync_geth": "276.66",
-        "fast_sync_ethanos": "303.83",
-        "compact_sync_geth": "276.66",
-        "compact_sync_ethanos": "303.83"
-    },
-    {
-        "2_data_type": "Bodies",
-        "fast_sync_geth": "9,260.00",
-        "fast_sync_ethanos": "10,130.00",
-        "compact_sync_geth": "8.12",
-        "compact_sync_ethanos": "13.02"
-    },
-    {
-        "2_data_type": "Receipts",
-        "fast_sync_geth": "2,973.66",
-        "fast_sync_ethanos": "2,979.81",
-        "compact_sync_geth": "10.43",
-        "compact_sync_ethanos": "10.44"
-    },
-    {
-        "2_data_type": "Difficulties",
-        "fast_sync_geth": "11.49",
-        "fast_sync_ethanos": "11.48",
-        "compact_sync_geth": "11.49",
-        "compact_sync_ethanos": "11.48"
-    },
-    {
-        "2_data_type": "Block number -> hash",
-        "fast_sync_geth": "31.86",
-        "fast_sync_ethanos": "31.88",
-        "compact_sync_geth": "31.86",
-        "compact_sync_ethanos": "31.88"
-    },
-    {
-        "2_data_type": "Block hash -> number",
-        "fast_sync_geth": "33.79",
-        "fast_sync_ethanos": "33.79",
-        "compact_sync_geth": "33.79",
-        "compact_sync_ethanos": "33.79"
-    },
-    {
-        "2_data_type": "Transaction Index",
-        "fast_sync_geth": "3,020.00",
-        "fast_sync_ethanos": "3,020.00",
-        "compact_sync_geth": "0.19",
-        "compact_sync_ethanos": "0.19"
-    },
-    {
-        "2_data_type": "Bloombit index",
-        "fast_sync_geth": "0",
-        "fast_sync_ethanos": "0",
-        "compact_sync_geth": "0",
-        "compact_sync_ethanos": "0"
-    },
-    {
-        "2_data_type": "Trie nodes",
-        "fast_sync_geth": "2,220.00",
-        "fast_sync_ethanos": "804.79",
-        "compact_sync_geth": "2,220.00",
-        "compact_sync_ethanos": "802.33"
-    },
-    {
-        "2_data_type": "Trie preimages",
-        "fast_sync_geth": "0",
-        "fast_sync_ethanos": "0.28",
-        "compact_sync_geth": "0",
-        "compact_sync_ethanos": "0"
-    },
-    {
-        "2_data_type": "total",
-        "fast_sync_geth": "17,827.46",
-        "fast_sync_ethanos": "17,315.86",
-        "compact_sync_geth": "2,592.54",
-        "compact_sync_ethanos": "1,206.97"
-    },
-    {
-        "2_data_type": "2",
-        "fast_sync_geth": "",
-        "fast_sync_ethanos": "",
-        "compact_sync_geth": "",
-        "compact_sync_ethanos": ""
-    }
+  {
+    "2_data_type": "Headers",
+    "fast_sync_geth": 276.66,
+    "fast_sync_ethanos": 303.83,
+    "compact_sync_geth": 276.66,
+    "compact_sync_ethanos": 303.83
+  },
+  {
+    "2_data_type": "Bodies",
+    "fast_sync_geth": 9260.0,
+    "fast_sync_ethanos": 10130.0,
+    "compact_sync_geth": 8.12,
+    "compact_sync_ethanos": 13.02
+  },
+  {
+    "2_data_type": "Receipts",
+    "fast_sync_geth": 2973.66,
+    "fast_sync_ethanos": 2979.81,
+    "compact_sync_geth": 10.43,
+    "compact_sync_ethanos": 10.44
+  },
+  {
+    "2_data_type": "Difficulties",
+    "fast_sync_geth": 11.49,
+    "fast_sync_ethanos": 11.48,
+    "compact_sync_geth": 11.49,
+    "compact_sync_ethanos": 11.48
+  },
+  {
+    "2_data_type": "Block number -> hash",
+    "fast_sync_geth": 31.86,
+    "fast_sync_ethanos": 31.88,
+    "compact_sync_geth": 31.86,
+    "compact_sync_ethanos": 31.88
+  },
+  {
+    "2_data_type": "Block hash -> number",
+    "fast_sync_geth": 33.79,
+    "fast_sync_ethanos": 33.79,
+    "compact_sync_geth": 33.79,
+    "compact_sync_ethanos": 33.79
+  },
+  {
+    "2_data_type": "Transaction Index",
+    "fast_sync_geth": 3020.0,
+    "fast_sync_ethanos": 3020.0,
+    "compact_sync_geth": 0.19,
+    "compact_sync_ethanos": 0.19
+  },
+  {
+    "2_data_type": "Bloombit index",
+    "fast_sync_geth": 0,
+    "fast_sync_ethanos": 0,
+    "compact_sync_geth": 0,
+    "compact_sync_ethanos": 0
+  },
+  {
+    "2_data_type": "Trie nodes",
+    "fast_sync_geth": 2220.0,
+    "fast_sync_ethanos": 804.79,
+    "compact_sync_geth": 2220.0,
+    "compact_sync_ethanos": 802.33
+  },
+  {
+    "2_data_type": "Trie preimages",
+    "fast_sync_geth": 0,
+    "fast_sync_ethanos": 0.28,
+    "compact_sync_geth": 0,
+    "compact_sync_ethanos": 0
+  },
+  {
+    "2_data_type": "total",
+    "fast_sync_geth": 17827.46,
+    "fast_sync_ethanos": 17315.86,
+    "compact_sync_geth": 2592.54,
+    "compact_sync_ethanos": 1206.97
+  },
+  {
+    "2_data_type": 2,
+    "fast_sync_geth": "",
+    "fast_sync_ethanos": "",
+    "compact_sync_geth": "",
+    "compact_sync_ethanos": ""
+  }
 ]

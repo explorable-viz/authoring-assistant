@@ -1,72 +1,72 @@
 [
-    {
-        "features": "text",
-        "model": "BERT",
-        "development_p": "0.69",
-        "development_r": "0.55",
-        "development_f": "0.61"
-    },
-    {
-        "features": "text",
-        "model": "BERT*",
-        "development_p": "0.57",
-        "development_r": "0.79",
-        "development_f": "0.66"
-    },
-    {
-        "features": "context",
-        "model": "BERT",
-        "development_p": "0.70",
-        "development_r": "0.53",
-        "development_f": "0.60"
-    },
-    {
-        "features": "context",
-        "model": "BERT*",
-        "development_p": "0.63",
-        "development_r": "0.67",
-        "development_f": "0.65"
-    },
-    {
-        "features": "BERT logits + handcrafted**",
-        "model": "LR",
-        "development_p": "0.70",
-        "development_r": "0.56",
-        "development_f": "0.61"
-    },
-    {
-        "features": "BERT logits + handcrafted**",
-        "model": "LR*",
-        "development_p": "0.60",
-        "development_r": "0.71",
-        "development_f": "0.65"
-    },
-    {
-        "features": "BERT logits + tagged spans",
-        "model": "LR",
-        "development_p": "0.70",
-        "development_r": "0.53",
-        "development_f": "0.60"
-    },
-    {
-        "features": "BERT logits + tagged spans",
-        "model": "LR*",
-        "development_p": "0.61",
-        "development_r": "0.71",
-        "development_f": "0.66"
-    },
-    {
-        "features": "BERT logits + all",
-        "model": "LR",
-        "development_p": "0.71",
-        "development_r": "0.52",
-        "development_f": "0.60"
-    },
-    {
-        "features": "BERT logits + all",
-        "model": "LR*",
-        "development_p": "0.61",
-        "development_r": "0.71",
-        "development_f": "0.66"
-    }
+  {
+    "features": "text",
+    "model": "BERT",
+    "development_p": 0.69,
+    "development_r": 0.55,
+    "development_f": 0.61
+  },
+  {
+    "features": "text",
+    "model": "BERT*",
+    "development_p": 0.57,
+    "development_r": 0.79,
+    "development_f": 0.66
+  },
+  {
+    "features": "context",
+    "model": "BERT",
+    "development_p": 0.7,
+    "development_r": 0.53,
+    "development_f": 0.6
+  },
+  {
+    "features": "context",
+    "model": "BERT*",
+    "development_p": 0.63,
+    "development_r": 0.67,
+    "development_f": 0.65
+  },
+  {
+    "features": "BERT logits + handcrafted**",
+    "model": "LR",
+    "development_p": 0.7,
+    "development_r": 0.56,
+    "development_f": 0.61
+  },
+  {
+    "features": "BERT logits + handcrafted**",
+    "model": "LR*",
+    "development_p": 0.6,
+    "development_r": 0.71,
+    "development_f": 0.65
+  },
+  {
+    "features": "BERT logits + tagged spans",
+    "model": "LR",
+    "development_p": 0.7,
+    "development_r": 0.53,
+    "development_f": 0.6
+  },
+  {
+    "features": "BERT logits + tagged spans",
+    "model": "LR*",
+    "development_p": 0.61,
+    "development_r": 0.71,
+    "development_f": 0.66
+  },
+  {
+    "features": "BERT logits + all",
+    "model": "LR",
+    "development_p": 0.71,
+    "development_r": 0.52,
+    "development_f": 0.6
+  },
+  {
+    "features": "BERT logits + all",
+    "model": "LR*",
+    "development_p": 0.61,
+    "development_r": 0.71,
+    "development_f": 0.66
+  }
 ]

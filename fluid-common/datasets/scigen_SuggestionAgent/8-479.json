@@ -1,38 +1,38 @@
 [
-    {
-        "": "",
-        "setup:_full_dbless": "GL",
-        "setup:_full_wbless": "GL",
-        "setup:_full_bibless": "GL",
-        "setup:_disjoint_dbless": "GL",
-        "setup:_disjoint_wbless": "GL",
-        "setup:_disjoint_bibless": "GL"
-    },
-    {
-        "": "lear [Vulic:2018naaclps]",
-        "setup:_full_dbless": ".955",
-        "setup:_full_wbless": ".910",
-        "setup:_full_bibless": ".875",
-        "setup:_disjoint_dbless": ".531",
-        "setup:_disjoint_wbless": ".529",
-        "setup:_disjoint_bibless": ".389"
-    },
-    {
-        "": "postle dffn",
-        "setup:_full_dbless": ".955",
-        "setup:_full_wbless": ".910",
-        "setup:_full_bibless": ".875",
-        "setup:_disjoint_dbless": ".825",
-        "setup:_disjoint_wbless": ".746",
-        "setup:_disjoint_bibless": ".677"
-    },
-    {
-        "": "postle adv",
-        "setup:_full_dbless": ".955",
-        "setup:_full_wbless": ".910",
-        "setup:_full_bibless": ".875",
-        "setup:_disjoint_dbless": ".888",
-        "setup:_disjoint_wbless": ".766",
-        "setup:_disjoint_bibless": ".690"
-    }
+  {
+    "_1": "",
+    "setup_full_dbless": "GL",
+    "setup_full_wbless": "GL",
+    "setup_full_bibless": "GL",
+    "setup_disjoint_dbless": "GL",
+    "setup_disjoint_wbless": "GL",
+    "setup_disjoint_bibless": "GL"
+  },
+  {
+    "_1": "lear [Vulic:2018naaclps]",
+    "setup_full_dbless": 0.955,
+    "setup_full_wbless": 0.91,
+    "setup_full_bibless": 0.875,
+    "setup_disjoint_dbless": 0.531,
+    "setup_disjoint_wbless": 0.529,
+    "setup_disjoint_bibless": 0.389
+  },
+  {
+    "_1": "postle dffn",
+    "setup_full_dbless": 0.955,
+    "setup_full_wbless": 0.91,
+    "setup_full_bibless": 0.875,
+    "setup_disjoint_dbless": 0.825,
+    "setup_disjoint_wbless": 0.746,
+    "setup_disjoint_bibless": 0.677
+  },
+  {
+    "_1": "postle adv",
+    "setup_full_dbless": 0.955,
+    "setup_full_wbless": 0.91,
+    "setup_full_bibless": 0.875,
+    "setup_disjoint_dbless": 0.888,
+    "setup_disjoint_wbless": 0.766,
+    "setup_disjoint_bibless": 0.69
+  }
 ]

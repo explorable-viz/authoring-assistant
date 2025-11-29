@@ -1,52 +1,52 @@
 [
-    {
-        "_feature": "Used for transportation",
-        "_representation": "Co-occurrence",
-        "_embedding": "word2vec SG",
-        "_window": "10",
-        "_dimension": "300",
-        "_precision": "74.5",
-        "_recall": "78.8",
-        "_f1": "76.6"
-    },
-    {
-        "_feature": "Is a weapon",
-        "_representation": "Backtranslation",
-        "_embedding": "word2vec CBOW",
-        "_window": "2",
-        "_dimension": "300",
-        "_precision": "71.4",
-        "_recall": "88.2",
-        "_f1": "78.9"
-    },
-    {
-        "_feature": "Is round",
-        "_representation": "Co-occurrence",
-        "_embedding": "word2vec CBOW",
-        "_window": "10",
-        "_dimension": "300",
-        "_precision": "56.2",
-        "_recall": "87.1",
-        "_f1": "68.4"
-    },
-    {
-        "_feature": "Has various colors",
-        "_representation": "Co-occurrence",
-        "_embedding": "GloVe",
-        "_window": "2",
-        "_dimension": "200",
-        "_precision": "70.6",
-        "_recall": "76.6",
-        "_f1": "73.5"
-    },
-    {
-        "_feature": "Made of metal",
-        "_representation": "Matrix",
-        "_embedding": "word2vec SG",
-        "_window": "5",
-        "_dimension": "300",
-        "_precision": "78.6",
-        "_recall": "61.1",
-        "_f1": "68.8"
-    }
+  {
+    "feature": "Used for transportation",
+    "representation": "Co-occurrence",
+    "embedding": "word2vec SG",
+    "window": 10,
+    "dimension": 300,
+    "precision": 74.5,
+    "recall": 78.8,
+    "f1": 76.6
+  },
+  {
+    "feature": "Is a weapon",
+    "representation": "Backtranslation",
+    "embedding": "word2vec CBOW",
+    "window": 2,
+    "dimension": 300,
+    "precision": 71.4,
+    "recall": 88.2,
+    "f1": 78.9
+  },
+  {
+    "feature": "Is round",
+    "representation": "Co-occurrence",
+    "embedding": "word2vec CBOW",
+    "window": 10,
+    "dimension": 300,
+    "precision": 56.2,
+    "recall": 87.1,
+    "f1": 68.4
+  },
+  {
+    "feature": "Has various colors",
+    "representation": "Co-occurrence",
+    "embedding": "GloVe",
+    "window": 2,
+    "dimension": 200,
+    "precision": 70.6,
+    "recall": 76.6,
+    "f1": 73.5
+  },
+  {
+    "feature": "Made of metal",
+    "representation": "Matrix",
+    "embedding": "word2vec SG",
+    "window": 5,
+    "dimension": 300,
+    "precision": 78.6,
+    "recall": 61.1,
+    "f1": 68.8
+  }
 ]

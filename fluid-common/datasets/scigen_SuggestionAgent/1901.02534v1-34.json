@@ -1,44 +1,44 @@
 [
-    {
-        "problem": "ESIM on FEVER Title Five Oracle",
-        "support_accuracy": "",
-        "support_kappa": "",
-        "claim_accuracy": ".591",
-        "claim_kappa": ".388"
-    },
-    {
-        "problem": "ESIM on FEVER Title Five",
-        "support_accuracy": "",
-        "support_kappa": "",
-        "claim_accuracy": ".573",
-        "claim_kappa": ".110"
-    },
-    {
-        "problem": "ESIM on FEVER Title One",
-        "support_accuracy": ".846",
-        "support_kappa": ".394",
-        "claim_accuracy": ".639",
-        "claim_kappa": ".433"
-    },
-    {
-        "problem": "Transformer on FEVER Title Five Oracle",
-        "support_accuracy": "",
-        "support_kappa": "",
-        "claim_accuracy": ".673",
-        "claim_kappa": ".511"
-    },
-    {
-        "problem": "Transformer on FEVER Title Five",
-        "support_accuracy": "",
-        "support_kappa": "",
-        "claim_accuracy": ".801",
-        "claim_kappa": ".609"
-    },
-    {
-        "problem": "Transformer on FEVER Title One",
-        "support_accuracy": ".958",
-        "support_kappa": ".660",
-        "claim_accuracy": ".823",
-        "claim_kappa": ".622"
-    }
+  {
+    "problem": "ESIM on FEVER Title Five Oracle",
+    "support_accuracy": "",
+    "support_kappa": "",
+    "claim_accuracy": 0.591,
+    "claim_kappa": 0.388
+  },
+  {
+    "problem": "ESIM on FEVER Title Five",
+    "support_accuracy": "",
+    "support_kappa": "",
+    "claim_accuracy": 0.573,
+    "claim_kappa": 0.11
+  },
+  {
+    "problem": "ESIM on FEVER Title One",
+    "support_accuracy": 0.846,
+    "support_kappa": 0.394,
+    "claim_accuracy": 0.639,
+    "claim_kappa": 0.433
+  },
+  {
+    "problem": "Transformer on FEVER Title Five Oracle",
+    "support_accuracy": "",
+    "support_kappa": "",
+    "claim_accuracy": 0.673,
+    "claim_kappa": 0.511
+  },
+  {
+    "problem": "Transformer on FEVER Title Five",
+    "support_accuracy": "",
+    "support_kappa": "",
+    "claim_accuracy": 0.801,
+    "claim_kappa": 0.609
+  },
+  {
+    "problem": "Transformer on FEVER Title One",
+    "support_accuracy": 0.958,
+    "support_kappa": 0.66,
+    "claim_accuracy": 0.823,
+    "claim_kappa": 0.622
+  }
 ]

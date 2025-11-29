@@ -1,44 +1,44 @@
 [
-    {
-        "": "CADEC",
-        "_word_vectors_glove": " 70.30",
-        "_word_vectors_ours": "70.27",
-        "_lms_elmo": " 71.91",
-        "_lms_ours": "70.46"
-    },
-    {
-        "": "CoNLL2003",
-        "_word_vectors_glove": " 90.25",
-        "_word_vectors_ours": "86.36",
-        "_lms_elmo": " 91.34",
-        "_lms_ours": "89.78"
-    },
-    {
-        "": "CRAFT",
-        "_word_vectors_glove": "74.22",
-        "_word_vectors_ours": " 75.45",
-        "_lms_elmo": " 75.77",
-        "_lms_ours": "75.45"
-    },
-    {
-        "": "JNLPBA",
-        "_word_vectors_glove": "73.19",
-        "_word_vectors_ours": " 73.24",
-        "_lms_elmo": "73.65",
-        "_lms_ours": " 74.29"
-    },
-    {
-        "": "ScienceIE",
-        "_word_vectors_glove": "37.10",
-        "_word_vectors_ours": " 37.91",
-        "_lms_elmo": "41.15",
-        "_lms_ours": " 42.07"
-    },
-    {
-        "": "WetLab",
-        "_word_vectors_glove": " 79.15",
-        "_word_vectors_ours": "78.93",
-        "_lms_elmo": "79.57",
-        "_lms_ours": " 79.62"
-    }
+  {
+    "_1": "CADEC",
+    "word_vectors_glove": 70.3,
+    "word_vectors_ours": 70.27,
+    "lms_elmo": 71.91,
+    "lms_ours": 70.46
+  },
+  {
+    "_1": "CoNLL2003",
+    "word_vectors_glove": 90.25,
+    "word_vectors_ours": 86.36,
+    "lms_elmo": 91.34,
+    "lms_ours": 89.78
+  },
+  {
+    "_1": "CRAFT",
+    "word_vectors_glove": 74.22,
+    "word_vectors_ours": 75.45,
+    "lms_elmo": 75.77,
+    "lms_ours": 75.45
+  },
+  {
+    "_1": "JNLPBA",
+    "word_vectors_glove": 73.19,
+    "word_vectors_ours": 73.24,
+    "lms_elmo": 73.65,
+    "lms_ours": 74.29
+  },
+  {
+    "_1": "ScienceIE",
+    "word_vectors_glove": 37.1,
+    "word_vectors_ours": 37.91,
+    "lms_elmo": 41.15,
+    "lms_ours": 42.07
+  },
+  {
+    "_1": "WetLab",
+    "word_vectors_glove": 79.15,
+    "word_vectors_ours": 78.93,
+    "lms_elmo": 79.57,
+    "lms_ours": 79.62
+  }
 ]

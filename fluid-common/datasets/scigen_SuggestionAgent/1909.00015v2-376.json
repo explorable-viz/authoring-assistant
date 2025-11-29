@@ -1,23 +1,23 @@
 [
-    {
-        "activation": "softmax",
-        "de→en": "29.79",
-        "ja→en": "21.57",
-        "ro→en": "32.70",
-        "en→de": "26.02"
-    },
-    {
-        "activation": "1.5-entmax",
-        "de→en": "29.83",
-        "ja→en": " 22.13",
-        "ro→en": " 33.10",
-        "en→de": "25.89"
-    },
-    {
-        "activation": " α-entmax",
-        "de→en": " 29.90",
-        "ja→en": "21.74",
-        "ro→en": "32.89",
-        "en→de": " 26.93"
-    }
+  {
+    "activation": "softmax",
+    "de_en": 29.79,
+    "ja_en": 21.57,
+    "ro_en": 32.7,
+    "en_de": 26.02
+  },
+  {
+    "activation": "1.5-entmax",
+    "de_en": 29.83,
+    "ja_en": 22.13,
+    "ro_en": 33.1,
+    "en_de": 25.89
+  },
+  {
+    "activation": " α-entmax",
+    "de_en": 29.9,
+    "ja_en": 21.74,
+    "ro_en": 32.89,
+    "en_de": 26.93
+  }
 ]

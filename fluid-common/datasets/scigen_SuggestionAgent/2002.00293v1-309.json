@@ -1,23 +1,23 @@
 [
-    {
-        "_resource": "DBiDAF",
-        "_dev___em": "63.0",
-        "_dev___f1": "76.9",
-        "_test___em": "62.6",
-        "_test___f1": "78.5"
-    },
-    {
-        "_resource": "DBERT",
-        "_dev___em": "59.2",
-        "_dev___f1": "74.3",
-        "_test___em": "63.9",
-        "_test___f1": "76.9"
-    },
-    {
-        "_resource": "DRoBERTa",
-        "_dev___em": "58.1",
-        "_dev___f1": "72.0",
-        "_test___em": "58.7",
-        "_test___f1": "73.7"
-    }
+  {
+    "resource": "DBiDAF",
+    "dev_em": 63.0,
+    "dev_f1": 76.9,
+    "test_em": 62.6,
+    "test_f1": 78.5
+  },
+  {
+    "resource": "DBERT",
+    "dev_em": 59.2,
+    "dev_f1": 74.3,
+    "test_em": 63.9,
+    "test_f1": 76.9
+  },
+  {
+    "resource": "DRoBERTa",
+    "dev_em": 58.1,
+    "dev_f1": 72.0,
+    "test_em": 58.7,
+    "test_f1": 73.7
+  }
 ]

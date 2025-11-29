@@ -1,26 +1,26 @@
 [
-    {
-        "all_labels": "All Labels",
-        "orig_f&c": "No-Leak F&C",
-        "train_587": "712",
-        "dev_5,418": "3,000",
-        "test_6,007": "4,497",
-        "all_12,012": "8,209"
-    },
-    {
-        "all_labels": "Subset Labels",
-        "orig_f&c": "Orig F&C",
-        "train_587": "361",
-        "dev_5,418": "3,311",
-        "test_6,007": "3,650",
-        "all_12,012": "7,322"
-    },
-    {
-        "all_labels": "Subset Labels",
-        "orig_f&c": "Clean F&C",
-        "train_587": "173",
-        "dev_5,418": "1,268",
-        "test_6,007": "1,523",
-        "all_12,012": "2,964"
-    }
+  {
+    "all_labels": "All Labels",
+    "orig_f_c": "No-Leak F&C",
+    "train_587": 712,
+    "dev_5_418": 3000,
+    "test_6_007": 4497,
+    "all_12_012": 8209
+  },
+  {
+    "all_labels": "Subset Labels",
+    "orig_f_c": "Orig F&C",
+    "train_587": 361,
+    "dev_5_418": 3311,
+    "test_6_007": 3650,
+    "all_12_012": 7322
+  },
+  {
+    "all_labels": "Subset Labels",
+    "orig_f_c": "Clean F&C",
+    "train_587": 173,
+    "dev_5_418": 1268,
+    "test_6_007": 1523,
+    "all_12_012": 2964
+  }
 ]

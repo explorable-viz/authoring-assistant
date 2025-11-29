@@ -1,50 +1,50 @@
 [
-    {
-        "team": "",
-        "test_data_1_in_domain": "F1",
-        "test_data_1_out_domain": "F1",
-        "test_data_1_total": "F1"
-    },
-    {
-        "team": "MorphoBERT",
-        "test_data_1_in_domain": "87.1",
-        "test_data_1_out_domain": "85",
-        "test_data_1_total": "85.9"
-    },
-    {
-        "team": "Beheshti-NER-1",
-        "test_data_1_in_domain": "84.8",
-        "test_data_1_out_domain": "83.5",
-        "test_data_1_total": "84"
-    },
-    {
-        "team": "Team-3",
-        "test_data_1_in_domain": "82",
-        "test_data_1_out_domain": "79.8",
-        "test_data_1_total": "80.7"
-    },
-    {
-        "team": "ICTRC-NLPGroup",
-        "test_data_1_in_domain": "81.3",
-        "test_data_1_out_domain": "77",
-        "test_data_1_total": "78.9"
-    },
-    {
-        "team": "UT-NLP-IR",
-        "test_data_1_in_domain": "72",
-        "test_data_1_out_domain": "66",
-        "test_data_1_total": "68.5"
-    },
-    {
-        "team": "SpeechTrans",
-        "test_data_1_in_domain": "40.5",
-        "test_data_1_out_domain": "40.8",
-        "test_data_1_total": "40.6"
-    },
-    {
-        "team": "Baseline",
-        "test_data_1_in_domain": "37.8",
-        "test_data_1_out_domain": "35.7",
-        "test_data_1_total": "36.6"
-    }
+  {
+    "team": "",
+    "test_data_1_in_domain": "F1",
+    "test_data_1_out_domain": "F1",
+    "test_data_1_total": "F1"
+  },
+  {
+    "team": "MorphoBERT",
+    "test_data_1_in_domain": 87.1,
+    "test_data_1_out_domain": 85,
+    "test_data_1_total": 85.9
+  },
+  {
+    "team": "Beheshti-NER-1",
+    "test_data_1_in_domain": 84.8,
+    "test_data_1_out_domain": 83.5,
+    "test_data_1_total": 84
+  },
+  {
+    "team": "Team-3",
+    "test_data_1_in_domain": 82,
+    "test_data_1_out_domain": 79.8,
+    "test_data_1_total": 80.7
+  },
+  {
+    "team": "ICTRC-NLPGroup",
+    "test_data_1_in_domain": 81.3,
+    "test_data_1_out_domain": 77,
+    "test_data_1_total": 78.9
+  },
+  {
+    "team": "UT-NLP-IR",
+    "test_data_1_in_domain": 72,
+    "test_data_1_out_domain": 66,
+    "test_data_1_total": 68.5
+  },
+  {
+    "team": "SpeechTrans",
+    "test_data_1_in_domain": 40.5,
+    "test_data_1_out_domain": 40.8,
+    "test_data_1_total": 40.6
+  },
+  {
+    "team": "Baseline",
+    "test_data_1_in_domain": 37.8,
+    "test_data_1_out_domain": 35.7,
+    "test_data_1_total": 36.6
+  }
 ]

@@ -1,56 +1,56 @@
 [
-    {
-        "_method": "LDA-Frames",
-        "_nmpu": " 52.60",
-        "_nipu": "45.84",
-        "_f1": " 48.98"
-    },
-    {
-        "_method": "Triframes Watset",
-        "_nmpu": "40.05",
-        "_nipu": "62.09",
-        "_f1": "48.69"
-    },
-    {
-        "_method": "NOAC",
-        "_nmpu": "37.19",
-        "_nipu": "64.09",
-        "_f1": "47.07"
-    },
-    {
-        "_method": "HOSG",
-        "_nmpu": "38.22",
-        "_nipu": "43.76",
-        "_f1": "40.80"
-    },
-    {
-        "_method": "Triadic Spectral",
-        "_nmpu": "35.76",
-        "_nipu": "38.96",
-        "_f1": "36.86"
-    },
-    {
-        "_method": "Triadic   k-Means",
-        "_nmpu": "52.22",
-        "_nipu": "27.43",
-        "_f1": "35.96"
-    },
-    {
-        "_method": "Triframes CW",
-        "_nmpu": "18.05",
-        "_nipu": "12.72",
-        "_f1": "14.92"
-    },
-    {
-        "_method": "Whole",
-        "_nmpu": "24.14",
-        "_nipu": " 79.09",
-        "_f1": "36.99"
-    },
-    {
-        "_method": "Singletons",
-        "_nmpu": "0.00",
-        "_nipu": "27.21",
-        "_f1": "0.00"
-    }
+  {
+    "method": "LDA-Frames",
+    "nmpu": 52.6,
+    "nipu": 45.84,
+    "f1": 48.98
+  },
+  {
+    "method": "Triframes Watset",
+    "nmpu": 40.05,
+    "nipu": 62.09,
+    "f1": 48.69
+  },
+  {
+    "method": "NOAC",
+    "nmpu": 37.19,
+    "nipu": 64.09,
+    "f1": 47.07
+  },
+  {
+    "method": "HOSG",
+    "nmpu": 38.22,
+    "nipu": 43.76,
+    "f1": 40.8
+  },
+  {
+    "method": "Triadic Spectral",
+    "nmpu": 35.76,
+    "nipu": 38.96,
+    "f1": 36.86
+  },
+  {
+    "method": "Triadic   k-Means",
+    "nmpu": 52.22,
+    "nipu": 27.43,
+    "f1": 35.96
+  },
+  {
+    "method": "Triframes CW",
+    "nmpu": 18.05,
+    "nipu": 12.72,
+    "f1": 14.92
+  },
+  {
+    "method": "Whole",
+    "nmpu": 24.14,
+    "nipu": 79.09,
+    "f1": 36.99
+  },
+  {
+    "method": "Singletons",
+    "nmpu": 0.0,
+    "nipu": 27.21,
+    "f1": 0.0
+  }
 ]

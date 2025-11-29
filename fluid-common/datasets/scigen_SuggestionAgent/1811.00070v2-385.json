@@ -1,42 +1,42 @@
 [
-    {
-        "": "",
-        "diagnosis": "Detection",
-        "prescription": "Reasons",
-        "penn_adverse_drug": "Reactions (ADR)",
-        "chemical–disease": "Relations (CDR)",
-        "drug–disease": "Relations"
-    },
-    {
-        "": "rand-LSTM-CRF",
-        "diagnosis": "77.3 ± 0.05",
-        "prescription": "69.6 ± 0.25",
-        "penn_adverse_drug": "53.8 ± 0.88",
-        "chemical–disease": "85.1 ± 0.10",
-        "drug–disease": "48.2 ± 1.12"
-    },
-    {
-        "": "HB-CRF",
-        "diagnosis": "82.0 ± 0.05",
-        "prescription": "78.5 ± 0.01",
-        "penn_adverse_drug": "58.8 ± 0.12",
-        "chemical–disease": "86.2 ± 0.02",
-        "drug–disease": "42.3 ± 0.30"
-    },
-    {
-        "": "ELMo-LSTM-CRF",
-        "diagnosis": "83.9 ± 0.35",
-        "prescription": "81.0 ± 0.20",
-        "penn_adverse_drug": "65.7 ± 0.35",
-        "chemical–disease": "88.2 ± 0.34",
-        "drug–disease": "50.6 ± 0.64"
-    },
-    {
-        "": "ELMo-LSTM-CRF-HB",
-        "diagnosis": " 85.3 ± 0.24∗∗∗",
-        "prescription": " 82.0 ± 0.03∗∗∗",
-        "penn_adverse_drug": " 68.5 ± 1.67∗",
-        "chemical–disease": " 89.9 ± 0.12∗∗∗",
-        "drug–disease": " 51.9 ± 0.52∗∗"
-    }
+  {
+    "_1": "",
+    "diagnosis": "Detection",
+    "prescription": "Reasons",
+    "penn_adverse_drug": "Reactions",
+    "chemical–disease": "Relations",
+    "drug–disease": "Relations"
+  },
+  {
+    "_1": "rand-LSTM-CRF",
+    "diagnosis": "77.3 ± 0.05",
+    "prescription": "69.6 ± 0.25",
+    "penn_adverse_drug": "53.8 ± 0.88",
+    "chemical–disease": "85.1 ± 0.10",
+    "drug–disease": "48.2 ± 1.12"
+  },
+  {
+    "_1": "HB-CRF",
+    "diagnosis": "82.0 ± 0.05",
+    "prescription": "78.5 ± 0.01",
+    "penn_adverse_drug": "58.8 ± 0.12",
+    "chemical–disease": "86.2 ± 0.02",
+    "drug–disease": "42.3 ± 0.30"
+  },
+  {
+    "_1": "ELMo-LSTM-CRF",
+    "diagnosis": "83.9 ± 0.35",
+    "prescription": "81.0 ± 0.20",
+    "penn_adverse_drug": "65.7 ± 0.35",
+    "chemical–disease": "88.2 ± 0.34",
+    "drug–disease": "50.6 ± 0.64"
+  },
+  {
+    "_1": "ELMo-LSTM-CRF-HB",
+    "diagnosis": " 85.3 ± 0.24∗∗∗",
+    "prescription": " 82.0 ± 0.03∗∗∗",
+    "penn_adverse_drug": " 68.5 ± 1.67∗",
+    "chemical–disease": " 89.9 ± 0.12∗∗∗",
+    "drug–disease": " 51.9 ± 0.52∗∗"
+  }
 ]

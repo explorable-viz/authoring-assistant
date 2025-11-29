@@ -1,68 +1,68 @@
 [
-    {
-        "encoder": "BiLSTM",
-        "bpe_size": "Char",
-        "bleu": "31.6",
-        "comp.": "1.00"
-    },
-    {
-        "encoder": "BiLSTM",
-        "bpe_size": "1k",
-        "bleu": "30.5",
-        "comp.": "0.44"
-    },
-    {
-        "encoder": "BiLSTM",
-        "bpe_size": "2k",
-        "bleu": "30.4",
-        "comp.": "0.35"
-    },
-    {
-        "encoder": "BiLSTM",
-        "bpe_size": "4k",
-        "bleu": "30.0",
-        "comp.": "0.29"
-    },
-    {
-        "encoder": "BiLSTM",
-        "bpe_size": "8k",
-        "bleu": "29.6",
-        "comp.": "0.25"
-    },
-    {
-        "encoder": "BiLSTM",
-        "bpe_size": "16k",
-        "bleu": "30.0",
-        "comp.": "0.22"
-    },
-    {
-        "encoder": "BiLSTM",
-        "bpe_size": "32k",
-        "bleu": "29.7",
-        "comp.": "0.20"
-    },
-    {
-        "encoder": "Lee et. al. reimpl",
-        "bpe_size": "Char",
-        "bleu": "28.0",
-        "comp.": "0.20"
-    },
-    {
-        "encoder": "BiLSTM + pooling",
-        "bpe_size": "Char",
-        "bleu": "30.0",
-        "comp.": "0.47"
-    },
-    {
-        "encoder": "HM, 3-layer",
-        "bpe_size": "Char",
-        "bleu": "31.2",
-        "comp.": "0.77"
-    },
-    {
-        "encoder": "HM, 2-layer",
-        "bpe_size": "Char",
-        "bleu": "30.9",
-        "comp.": "0.89"
-    }
+  {
+    "encoder": "BiLSTM",
+    "bpe_size": "Char",
+    "bleu": 31.6,
+    "comp": 1.0
+  },
+  {
+    "encoder": "BiLSTM",
+    "bpe_size": 1,
+    "bleu": 30.5,
+    "comp": 0.44
+  },
+  {
+    "encoder": "BiLSTM",
+    "bpe_size": 2,
+    "bleu": 30.4,
+    "comp": 0.35
+  },
+  {
+    "encoder": "BiLSTM",
+    "bpe_size": 4,
+    "bleu": 30.0,
+    "comp": 0.29
+  },
+  {
+    "encoder": "BiLSTM",
+    "bpe_size": 8,
+    "bleu": 29.6,
+    "comp": 0.25
+  },
+  {
+    "encoder": "BiLSTM",
+    "bpe_size": 16,
+    "bleu": 30.0,
+    "comp": 0.22
+  },
+  {
+    "encoder": "BiLSTM",
+    "bpe_size": 32,
+    "bleu": 29.7,
+    "comp": 0.2
+  },
+  {
+    "encoder": "Lee et. al. reimpl",
+    "bpe_size": "Char",
+    "bleu": 28.0,
+    "comp": 0.2
+  },
+  {
+    "encoder": "BiLSTM + pooling",
+    "bpe_size": "Char",
+    "bleu": 30.0,
+    "comp": 0.47
+  },
+  {
+    "encoder": "HM, 3-layer",
+    "bpe_size": "Char",
+    "bleu": 31.2,
+    "comp": 0.77
+  },
+  {
+    "encoder": "HM, 2-layer",
+    "bpe_size": "Char",
+    "bleu": 30.9,
+    "comp": 0.89
+  }
 ]

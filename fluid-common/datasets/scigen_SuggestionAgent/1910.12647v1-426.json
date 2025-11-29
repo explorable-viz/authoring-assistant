@@ -1,102 +1,102 @@
 [
-    {
-        "_model": "BERT",
-        "_target_corpus": "QNLI",
-        "_transfer_bert": "True",
-        "_transfer_filler": "–",
-        "_transfer_role": "–",
-        "_baseline_acc._(%)": "91.60",
-        "_fine-tuned_acc._(%)": "90.96",
-        "_gain_(%)": "– 0.64"
-    },
-    {
-        "_model": "BERT",
-        "_target_corpus": "MNLI",
-        "_transfer_bert": "True",
-        "_transfer_filler": "–",
-        "_transfer_role": "–",
-        "_baseline_acc._(%)": "84.15",
-        "_fine-tuned_acc._(%)": "84.41",
-        "_gain_(%)": "+ 0.26"
-    },
-    {
-        "_model": "BERT",
-        "_target_corpus": "RTE",
-        "_transfer_bert": "True",
-        "_transfer_filler": "–",
-        "_transfer_role": "–",
-        "_baseline_acc._(%)": "71.12",
-        "_fine-tuned_acc._(%)": "62.45",
-        "_gain_(%)": "– 8.67"
-    },
-    {
-        "_model": "BERT",
-        "_target_corpus": "SNLI",
-        "_transfer_bert": "True",
-        "_transfer_filler": "–",
-        "_transfer_role": "–",
-        "_baseline_acc._(%)": "90.45",
-        "_fine-tuned_acc._(%)": "90.88",
-        "_gain_(%)": "+ 0.43"
-    },
-    {
-        "_model": "BERT",
-        "_target_corpus": "SST",
-        "_transfer_bert": "True",
-        "_transfer_filler": "–",
-        "_transfer_role": "–",
-        "_baseline_acc._(%)": "93.23",
-        "_fine-tuned_acc._(%)": "92.09",
-        "_gain_(%)": "– 1.14"
-    },
-    {
-        "_model": "HUBERT (Transformer)",
-        "_target_corpus": "QNLI",
-        "_transfer_bert": "False",
-        "_transfer_filler": "True",
-        "_transfer_role": "True",
-        "_baseline_acc._(%)": "88.32",
-        "_fine-tuned_acc._(%)": "90.55",
-        "_gain_(%)": " + 2.23"
-    },
-    {
-        "_model": "HUBERT (Transformer)",
-        "_target_corpus": "MNLI",
-        "_transfer_bert": "False",
-        "_transfer_filler": "True",
-        "_transfer_role": "True",
-        "_baseline_acc._(%)": "84.30",
-        "_fine-tuned_acc._(%)": "85.24",
-        "_gain_(%)": " + 0.94"
-    },
-    {
-        "_model": "HUBERT (Transformer)",
-        "_target_corpus": "RTE",
-        "_transfer_bert": "False",
-        "_transfer_filler": "True",
-        "_transfer_role": "False",
-        "_baseline_acc._(%)": "61.73",
-        "_fine-tuned_acc._(%)": "65.70",
-        "_gain_(%)": " + 3.97"
-    },
-    {
-        "_model": "HUBERT (Transformer)",
-        "_target_corpus": "SNLI",
-        "_transfer_bert": "False",
-        "_transfer_filler": "False",
-        "_transfer_role": "True",
-        "_baseline_acc._(%)": "90.63",
-        "_fine-tuned_acc._(%)": "91.20",
-        "_gain_(%)": " + 0.57"
-    },
-    {
-        "_model": "HUBERT (Transformer)",
-        "_target_corpus": "SST",
-        "_transfer_bert": "True",
-        "_transfer_filler": "True",
-        "_transfer_role": "True",
-        "_baseline_acc._(%)": "86.12",
-        "_fine-tuned_acc._(%)": "91.06",
-        "_gain_(%)": " + 4.94"
-    }
+  {
+    "model": "BERT",
+    "target_corpus": "QNLI",
+    "transfer_bert": "True",
+    "transfer_filler": "–",
+    "transfer_role": "–",
+    "baseline_acc": 91.6,
+    "fine_tuned_acc": 90.96,
+    "gain": "– 0.64"
+  },
+  {
+    "model": "BERT",
+    "target_corpus": "MNLI",
+    "transfer_bert": "True",
+    "transfer_filler": "–",
+    "transfer_role": "–",
+    "baseline_acc": 84.15,
+    "fine_tuned_acc": 84.41,
+    "gain": "+ 0.26"
+  },
+  {
+    "model": "BERT",
+    "target_corpus": "RTE",
+    "transfer_bert": "True",
+    "transfer_filler": "–",
+    "transfer_role": "–",
+    "baseline_acc": 71.12,
+    "fine_tuned_acc": 62.45,
+    "gain": "– 8.67"
+  },
+  {
+    "model": "BERT",
+    "target_corpus": "SNLI",
+    "transfer_bert": "True",
+    "transfer_filler": "–",
+    "transfer_role": "–",
+    "baseline_acc": 90.45,
+    "fine_tuned_acc": 90.88,
+    "gain": "+ 0.43"
+  },
+  {
+    "model": "BERT",
+    "target_corpus": "SST",
+    "transfer_bert": "True",
+    "transfer_filler": "–",
+    "transfer_role": "–",
+    "baseline_acc": 93.23,
+    "fine_tuned_acc": 92.09,
+    "gain": "– 1.14"
+  },
+  {
+    "model": "HUBERT",
+    "target_corpus": "QNLI",
+    "transfer_bert": "False",
+    "transfer_filler": "True",
+    "transfer_role": "True",
+    "baseline_acc": 88.32,
+    "fine_tuned_acc": 90.55,
+    "gain": " + 2.23"
+  },
+  {
+    "model": "HUBERT",
+    "target_corpus": "MNLI",
+    "transfer_bert": "False",
+    "transfer_filler": "True",
+    "transfer_role": "True",
+    "baseline_acc": 84.3,
+    "fine_tuned_acc": 85.24,
+    "gain": " + 0.94"
+  },
+  {
+    "model": "HUBERT",
+    "target_corpus": "RTE",
+    "transfer_bert": "False",
+    "transfer_filler": "True",
+    "transfer_role": "False",
+    "baseline_acc": 61.73,
+    "fine_tuned_acc": 65.7,
+    "gain": " + 3.97"
+  },
+  {
+    "model": "HUBERT",
+    "target_corpus": "SNLI",
+    "transfer_bert": "False",
+    "transfer_filler": "False",
+    "transfer_role": "True",
+    "baseline_acc": 90.63,
+    "fine_tuned_acc": 91.2,
+    "gain": " + 0.57"
+  },
+  {
+    "model": "HUBERT",
+    "target_corpus": "SST",
+    "transfer_bert": "True",
+    "transfer_filler": "True",
+    "transfer_role": "True",
+    "baseline_acc": 86.12,
+    "fine_tuned_acc": 91.06,
+    "gain": " + 4.94"
+  }
 ]

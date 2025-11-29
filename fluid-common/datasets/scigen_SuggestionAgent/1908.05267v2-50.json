@@ -1,72 +1,72 @@
 [
-    {
-        "_bigram": "united states",
-        "_train___lmi_⋅10−6": "271",
-        "_train___p(__l|__w)": "0.64",
-        "_development___lmi_⋅10−6": "268",
-        "_development___p(__l|__w)": "0.44"
-    },
-    {
-        "_bigram": "least one",
-        "_train___lmi_⋅10−6": "269",
-        "_train___p(__l|__w)": "0.90",
-        "_development___lmi_⋅10−6": "267",
-        "_development___p(__l|__w)": "0.77"
-    },
-    {
-        "_bigram": "at least",
-        "_train___lmi_⋅10−6": "256",
-        "_train___p(__l|__w)": "0.72",
-        "_development___lmi_⋅10−6": "163",
-        "_development___p(__l|__w)": "0.48"
-    },
-    {
-        "_bigram": "person who",
-        "_train___lmi_⋅10−6": "162",
-        "_train___p(__l|__w)": "0.90",
-        "_development___lmi_⋅10−6": "135",
-        "_development___p(__l|__w)": "0.61"
-    },
-    {
-        "_bigram": "stars actor",
-        "_train___lmi_⋅10−6": "143",
-        "_train___p(__l|__w)": "0.86",
-        "_development___lmi_⋅10−6": "111",
-        "_development___p(__l|__w)": "0.71"
-    },
-    {
-        "_bigram": "won award",
-        "_train___lmi_⋅10−6": "133",
-        "_train___p(__l|__w)": "0.80",
-        "_development___lmi_⋅10−6": "50",
-        "_development___p(__l|__w)": "0.56"
-    },
-    {
-        "_bigram": "american actor",
-        "_train___lmi_⋅10−6": "126",
-        "_train___p(__l|__w)": "0.79",
-        "_development___lmi_⋅10−6": "55",
-        "_development___p(__l|__w)": "0.45"
-    },
-    {
-        "_bigram": "starred movie",
-        "_train___lmi_⋅10−6": "100",
-        "_train___p(__l|__w)": "0.88",
-        "_development___lmi_⋅10−6": "34",
-        "_development___p(__l|__w)": "0.80"
-    },
-    {
-        "_bigram": "from united",
-        "_train___lmi_⋅10−6": "100",
-        "_train___p(__l|__w)": "0.82",
-        "_development___lmi_⋅10−6": "108",
-        "_development___p(__l|__w)": "0.67"
-    },
-    {
-        "_bigram": "from america",
-        "_train___lmi_⋅10−6": "96",
-        "_train___p(__l|__w)": "0.89",
-        "_development___lmi_⋅10−6": "108",
-        "_development___p(__l|__w)": "0.74"
-    }
+  {
+    "bigram": "united states",
+    "train_lmi_⋅10−6": 271,
+    "train_p": 0.64,
+    "development_lmi_⋅10−6": 268,
+    "development_p": 0.44
+  },
+  {
+    "bigram": "least one",
+    "train_lmi_⋅10−6": 269,
+    "train_p": 0.9,
+    "development_lmi_⋅10−6": 267,
+    "development_p": 0.77
+  },
+  {
+    "bigram": "at least",
+    "train_lmi_⋅10−6": 256,
+    "train_p": 0.72,
+    "development_lmi_⋅10−6": 163,
+    "development_p": 0.48
+  },
+  {
+    "bigram": "person who",
+    "train_lmi_⋅10−6": 162,
+    "train_p": 0.9,
+    "development_lmi_⋅10−6": 135,
+    "development_p": 0.61
+  },
+  {
+    "bigram": "stars actor",
+    "train_lmi_⋅10−6": 143,
+    "train_p": 0.86,
+    "development_lmi_⋅10−6": 111,
+    "development_p": 0.71
+  },
+  {
+    "bigram": "won award",
+    "train_lmi_⋅10−6": 133,
+    "train_p": 0.8,
+    "development_lmi_⋅10−6": 50,
+    "development_p": 0.56
+  },
+  {
+    "bigram": "american actor",
+    "train_lmi_⋅10−6": 126,
+    "train_p": 0.79,
+    "development_lmi_⋅10−6": 55,
+    "development_p": 0.45
+  },
+  {
+    "bigram": "starred movie",
+    "train_lmi_⋅10−6": 100,
+    "train_p": 0.88,
+    "development_lmi_⋅10−6": 34,
+    "development_p": 0.8
+  },
+  {
+    "bigram": "from united",
+    "train_lmi_⋅10−6": 100,
+    "train_p": 0.82,
+    "development_lmi_⋅10−6": 108,
+    "development_p": 0.67
+  },
+  {
+    "bigram": "from america",
+    "train_lmi_⋅10−6": 96,
+    "train_p": 0.89,
+    "development_lmi_⋅10−6": 108,
+    "development_p": 0.74
+  }
 ]

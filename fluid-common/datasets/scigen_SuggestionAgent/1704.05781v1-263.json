@@ -1,32 +1,32 @@
 [
-    {
-        "_window_position": "OS left",
-        "_simlex999": "0.40",
-        "_analogies": "0.35"
-    },
-    {
-        "_window_position": "OS right",
-        "_simlex999": "0.43",
-        "_analogies": "0.35"
-    },
-    {
-        "_window_position": "OS symmetric",
-        "_simlex999": "0.43",
-        "_analogies": " 0.45"
-    },
-    {
-        "_window_position": "GW left",
-        "_simlex999": "0.43",
-        "_analogies": "0.64"
-    },
-    {
-        "_window_position": "GW right",
-        "_simlex999": "0.44",
-        "_analogies": "0.65"
-    },
-    {
-        "_window_position": "GW symmetric",
-        "_simlex999": "0.45",
-        "_analogies": " 0.68"
-    }
+  {
+    "window_position": "OS left",
+    "simlex999": 0.4,
+    "analogies": 0.35
+  },
+  {
+    "window_position": "OS right",
+    "simlex999": 0.43,
+    "analogies": 0.35
+  },
+  {
+    "window_position": "OS symmetric",
+    "simlex999": 0.43,
+    "analogies": 0.45
+  },
+  {
+    "window_position": "GW left",
+    "simlex999": 0.43,
+    "analogies": 0.64
+  },
+  {
+    "window_position": "GW right",
+    "simlex999": 0.44,
+    "analogies": 0.65
+  },
+  {
+    "window_position": "GW symmetric",
+    "simlex999": 0.45,
+    "analogies": 0.68
+  }
 ]

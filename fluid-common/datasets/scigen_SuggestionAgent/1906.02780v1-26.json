@@ -1,16 +1,14 @@
 [
-    {
-        "": "F1",
-        "__predicted_parse_vs._gold_parse_(separate)_": "65.48",
-        "__predicted_parse_vs._gold_parse_(joint)_": "69.64",
-        "__parsed_prediction_vs._gold_parse_": "79.16",
-        "__parsed_prediction_vs._predicted_parse_": "89.90"
-    },
-    {
-        "": "Exact match",
-        "__predicted_parse_vs._gold_parse_(separate)_": "4.23%",
-        "__predicted_parse_vs._gold_parse_(joint)_": "5.24%",
-        "__parsed_prediction_vs._gold_parse_": "5.94%",
-        "__parsed_prediction_vs._predicted_parse_": "43.10%"
-    }
+  {
+    "_1": "F1",
+    "predicted_parse_vs_gold_parse": 69.64,
+    "parsed_prediction_vs_gold_parse": 79.16,
+    "parsed_prediction_vs_predicted_parse": 89.9
+  },
+  {
+    "_1": "Exact match",
+    "predicted_parse_vs_gold_parse": 5.24,
+    "parsed_prediction_vs_gold_parse": 5.94,
+    "parsed_prediction_vs_predicted_parse": 43.1
+  }
 ]

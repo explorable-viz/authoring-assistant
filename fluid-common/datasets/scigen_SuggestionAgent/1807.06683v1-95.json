@@ -1,26 +1,26 @@
 [
-    {
-        "this_work_model": "ner",
-        "this_work_mean_f1-measure": "81.07"
-    },
-    {
-        "this_work_model": "joint1",
-        "this_work_mean_f1-measure": "81.28"
-    },
-    {
-        "this_work_model": "joint2",
-        "this_work_mean_f1-measure": "81.84"
-    },
-    {
-        "this_work_model": "j_multi",
-        "this_work_mean_f1-measure": " 83.21"
-    },
-    {
-        "this_work_model": "Previous work",
-        "this_work_mean_f1-measure": "Previous work"
-    },
-    {
-        "this_work_model": "ext_m_feat",
-        "this_work_mean_f1-measure": " 83.47"
-    }
+  {
+    "this_work_model": "ner",
+    "this_work_mean_f1_measure": 81.07
+  },
+  {
+    "this_work_model": "joint1",
+    "this_work_mean_f1_measure": 81.28
+  },
+  {
+    "this_work_model": "joint2",
+    "this_work_mean_f1_measure": 81.84
+  },
+  {
+    "this_work_model": "j_multi",
+    "this_work_mean_f1_measure": 83.21
+  },
+  {
+    "this_work_model": "Previous wor",
+    "this_work_mean_f1_measure": "Previous wor"
+  },
+  {
+    "this_work_model": "ext_m_feat",
+    "this_work_mean_f1_measure": 83.47
+  }
 ]

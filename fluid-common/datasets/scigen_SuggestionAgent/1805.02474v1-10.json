@@ -1,92 +1,92 @@
 [
-    {
-        "_model": "LSTM",
-        "_time_(s)": "67",
-        "_acc": "80.72",
-        "_#_param": "5,977K"
-    },
-    {
-        "_model": "BiLSTM",
-        "_time_(s)": "106",
-        "_acc": "81.73",
-        "_#_param": "7,059K"
-    },
-    {
-        "_model": "2 stacked BiLSTM",
-        "_time_(s)": "207",
-        "_acc": "81.97",
-        "_#_param": "9,221K"
-    },
-    {
-        "_model": "3 stacked BiLSTM",
-        "_time_(s)": "310",
-        "_acc": "81.53",
-        "_#_param": "11,383K"
-    },
-    {
-        "_model": "4 stacked BiLSTM",
-        "_time_(s)": "411",
-        "_acc": "81.37",
-        "_#_param": "13,546K"
-    },
-    {
-        "_model": "S-LSTM",
-        "_time_(s)": "65",
-        "_acc": "82.64*",
-        "_#_param": "8,768K"
-    },
-    {
-        "_model": "CNN",
-        "_time_(s)": "34",
-        "_acc": "80.35",
-        "_#_param": "5,637K"
-    },
-    {
-        "_model": "2 stacked CNN",
-        "_time_(s)": "40",
-        "_acc": "80.97",
-        "_#_param": "5,717K"
-    },
-    {
-        "_model": "3 stacked CNN",
-        "_time_(s)": "47",
-        "_acc": "81.46",
-        "_#_param": "5,808K"
-    },
-    {
-        "_model": "4 stacked CNN",
-        "_time_(s)": "51",
-        "_acc": "81.39",
-        "_#_param": "5,855K"
-    },
-    {
-        "_model": "Transformer (N=6)",
-        "_time_(s)": "138",
-        "_acc": "81.03",
-        "_#_param": "7,234K"
-    },
-    {
-        "_model": "Transformer (N=8)",
-        "_time_(s)": "174",
-        "_acc": "81.86",
-        "_#_param": "7,615K"
-    },
-    {
-        "_model": "Transformer (N=10)",
-        "_time_(s)": "214",
-        "_acc": "81.63",
-        "_#_param": "8,004K"
-    },
-    {
-        "_model": "BiLSTM+Attention",
-        "_time_(s)": "126",
-        "_acc": "82.37",
-        "_#_param": "7,419K"
-    },
-    {
-        "_model": "S-LSTM+Attention",
-        "_time_(s)": "87",
-        "_acc": "83.07*",
-        "_#_param": "8,858K"
-    }
+  {
+    "model": "LSTM",
+    "time": 67,
+    "acc": 80.72,
+    "num_param": 5977
+  },
+  {
+    "model": "BiLSTM",
+    "time": 106,
+    "acc": 81.73,
+    "num_param": 7059
+  },
+  {
+    "model": "2 stacked BiLSTM",
+    "time": 207,
+    "acc": 81.97,
+    "num_param": 9221
+  },
+  {
+    "model": "3 stacked BiLSTM",
+    "time": 310,
+    "acc": 81.53,
+    "num_param": 11383
+  },
+  {
+    "model": "4 stacked BiLSTM",
+    "time": 411,
+    "acc": 81.37,
+    "num_param": 13546
+  },
+  {
+    "model": "S-LSTM",
+    "time": 65,
+    "acc": 82.64,
+    "num_param": 8768
+  },
+  {
+    "model": "CNN",
+    "time": 34,
+    "acc": 80.35,
+    "num_param": 5637
+  },
+  {
+    "model": "2 stacked CNN",
+    "time": 40,
+    "acc": 80.97,
+    "num_param": 5717
+  },
+  {
+    "model": "3 stacked CNN",
+    "time": 47,
+    "acc": 81.46,
+    "num_param": 5808
+  },
+  {
+    "model": "4 stacked CNN",
+    "time": 51,
+    "acc": 81.39,
+    "num_param": 5855
+  },
+  {
+    "model": "Transformer",
+    "time": 138,
+    "acc": 81.03,
+    "num_param": 7234
+  },
+  {
+    "model": "Transformer",
+    "time": 174,
+    "acc": 81.86,
+    "num_param": 7615
+  },
+  {
+    "model": "Transformer",
+    "time": 214,
+    "acc": 81.63,
+    "num_param": 8004
+  },
+  {
+    "model": "BiLSTM+Attention",
+    "time": 126,
+    "acc": 82.37,
+    "num_param": 7419
+  },
+  {
+    "model": "S-LSTM+Attention",
+    "time": 87,
+    "acc": 83.07,
+    "num_param": 8858
+  }
 ]

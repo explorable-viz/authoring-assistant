@@ -1,62 +1,52 @@
 [
-    {
-        "_genre___written": "bible",
-        "_agreement___notional": "169",
-        "_agreement___strict": "487",
-        "_agreement___%_notional": "25.76"
-    },
-    {
-        "_genre___written": "newswire",
-        "_agreement___notional": "344",
-        "_agreement___strict": "843",
-        "_agreement___%_notional": "28.98"
-    },
-    {
-        "_genre___written": "translations",
-        "_agreement___notional": "55",
-        "_agreement___strict": "210",
-        "_agreement___%_notional": "20.75"
-    },
-    {
-        "_genre___written": "web",
-        "_agreement___notional": "48",
-        "_agreement___strict": "71",
-        "_agreement___%_notional": "40.33"
-    },
-    {
-        "_genre___written": " total written",
-        "_agreement___notional": "616",
-        "_agreement___strict": "1611",
-        "_agreement___%_notional": "27.66"
-    },
-    {
-        "_genre___written": " spoken",
-        "_agreement___notional": " notional",
-        "_agreement___strict": " strict",
-        "_agreement___%_notional": " % notional"
-    },
-    {
-        "_genre___written": "bc.conv",
-        "_agreement___notional": "237",
-        "_agreement___strict": "201",
-        "_agreement___%_notional": "54.11"
-    },
-    {
-        "_genre___written": "bc.news",
-        "_agreement___notional": "296",
-        "_agreement___strict": "378",
-        "_agreement___%_notional": "43.91"
-    },
-    {
-        "_genre___written": "phone",
-        "_agreement___notional": "60",
-        "_agreement___strict": "89",
-        "_agreement___%_notional": "40.26"
-    },
-    {
-        "_genre___written": " total spoken",
-        "_agreement___notional": "593",
-        "_agreement___strict": "668",
-        "_agreement___%_notional": "47.02"
-    }
+  {
+    "genre_written": "bible",
+    "agreement_notional": 25.76,
+    "agreement_strict": 487
+  },
+  {
+    "genre_written": "newswire",
+    "agreement_notional": 28.98,
+    "agreement_strict": 843
+  },
+  {
+    "genre_written": "translations",
+    "agreement_notional": 20.75,
+    "agreement_strict": 210
+  },
+  {
+    "genre_written": "web",
+    "agreement_notional": 40.33,
+    "agreement_strict": 71
+  },
+  {
+    "genre_written": " total written",
+    "agreement_notional": 27.66,
+    "agreement_strict": 1611
+  },
+  {
+    "genre_written": " spoken",
+    "agreement_notional": " % notional",
+    "agreement_strict": " strict"
+  },
+  {
+    "genre_written": "bc.conv",
+    "agreement_notional": 54.11,
+    "agreement_strict": 201
+  },
+  {
+    "genre_written": "bc.news",
+    "agreement_notional": 43.91,
+    "agreement_strict": 378
+  },
+  {
+    "genre_written": "phone",
+    "agreement_notional": 40.26,
+    "agreement_strict": 89
+  },
+  {
+    "genre_written": " total spoken",
+    "agreement_notional": 47.02,
+    "agreement_strict": 668
+  }
 ]

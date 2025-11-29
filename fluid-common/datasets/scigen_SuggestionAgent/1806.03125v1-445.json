@@ -1,34 +1,34 @@
 [
-    {
-        "class": "acq",
-        "number_of_samples": "2292"
-    },
-    {
-        "class": "crude",
-        "number_of_samples": "374"
-    },
-    {
-        "class": "earn",
-        "number_of_samples": "3923"
-    },
-    {
-        "class": "grain",
-        "number_of_samples": "51"
-    },
-    {
-        "class": "interest",
-        "number_of_samples": "271"
-    },
-    {
-        "class": "money-fx",
-        "number_of_samples": "293"
-    },
-    {
-        "class": "ship",
-        "number_of_samples": "144"
-    },
-    {
-        "class": "trade",
-        "number_of_samples": "326"
-    }
+  {
+    "class": "acq",
+    "number_of_samples": 2292
+  },
+  {
+    "class": "crude",
+    "number_of_samples": 374
+  },
+  {
+    "class": "earn",
+    "number_of_samples": 3923
+  },
+  {
+    "class": "grain",
+    "number_of_samples": 51
+  },
+  {
+    "class": "interest",
+    "number_of_samples": 271
+  },
+  {
+    "class": "money-fx",
+    "number_of_samples": 293
+  },
+  {
+    "class": "ship",
+    "number_of_samples": 144
+  },
+  {
+    "class": "trade",
+    "number_of_samples": 326
+  }
 ]

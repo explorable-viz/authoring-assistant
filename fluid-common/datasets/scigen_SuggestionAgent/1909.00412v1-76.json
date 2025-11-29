@@ -1,38 +1,38 @@
 [
-    {
-        "_model": "Frequency",
-        "_sentiment": "0.332",
-        "_stance": "0.397",
-        "_hate": "0.057"
-    },
-    {
-        "_model": "LING",
-        "_sentiment": "0.676",
-        "_stance": "0.569",
-        "_hate": "0.624"
-    },
-    {
-        "_model": "LING+random",
-        "_sentiment": "0.657",
-        "_stance": "0.571",
-        "_hate": "0.600"
-    },
-    {
-        "_model": "LING+PV",
-        "_sentiment": "0.671",
-        "_stance": "0.601∗",
-        "_hate": "0.667∗"
-    },
-    {
-        "_model": "LING+N2V",
-        "_sentiment": "0.672",
-        "_stance": "0.629∗⋄",
-        "_hate": "0.656∗"
-    },
-    {
-        "_model": "LING+GAT",
-        "_sentiment": "0.666",
-        "_stance": "0.640∗⋄†",
-        "_hate": "0.674∗⋄†"
-    }
+  {
+    "model": "Frequency",
+    "sentiment": 0.332,
+    "stance": 0.397,
+    "hate": 0.057
+  },
+  {
+    "model": "LING",
+    "sentiment": 0.676,
+    "stance": 0.569,
+    "hate": 0.624
+  },
+  {
+    "model": "LING+random",
+    "sentiment": 0.657,
+    "stance": 0.571,
+    "hate": 0.6
+  },
+  {
+    "model": "LING+PV",
+    "sentiment": 0.671,
+    "stance": "0.601∗",
+    "hate": "0.667∗"
+  },
+  {
+    "model": "LING+N2V",
+    "sentiment": 0.672,
+    "stance": "0.629∗⋄",
+    "hate": "0.656∗"
+  },
+  {
+    "model": "LING+GAT",
+    "sentiment": 0.666,
+    "stance": "0.640∗⋄†",
+    "hate": "0.674∗⋄†"
+  }
 ]

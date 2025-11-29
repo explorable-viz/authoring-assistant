@@ -1,38 +1,38 @@
 [
-    {
-        "": "First metric",
-        "___model_1": "First metric",
-        "___model_2": "",
-        "___model_3": ""
-    },
-    {
-        "": "0.08    Disp.",
-        "___model_1": " 0.94",
-        "___model_2": "0.72",
-        "___model_3": "0"
-    },
-    {
-        "": "0.08    Gen. perf.",
-        "___model_1": "0.68",
-        "___model_2": "0.63",
-        "___model_3": "1"
-    },
-    {
-        "": "Second metric",
-        "___model_1": "Second metric",
-        "___model_2": "",
-        "___model_3": ""
-    },
-    {
-        "": "0.08    Disp.",
-        "___model_1": "0.93",
-        "___model_2": " 0.96",
-        "___model_3": "0"
-    },
-    {
-        "": "0.08    Gen. perf.",
-        "___model_1": "0.68",
-        "___model_2": "0.68",
-        "___model_3": "1"
-    }
+  {
+    "_1": "First metric",
+    "model_1": "First metric",
+    "model_2": "",
+    "model_3": ""
+  },
+  {
+    "_1": "0.08    Disp.",
+    "model_1": 0.94,
+    "model_2": 0.72,
+    "model_3": 0
+  },
+  {
+    "_1": "0.08    Gen. perf.",
+    "model_1": 0.68,
+    "model_2": 0.63,
+    "model_3": 1
+  },
+  {
+    "_1": "Second metric",
+    "model_1": "Second metric",
+    "model_2": "",
+    "model_3": ""
+  },
+  {
+    "_1": "0.08    Disp.",
+    "model_1": 0.93,
+    "model_2": 0.96,
+    "model_3": 0
+  },
+  {
+    "_1": "0.08    Gen. perf.",
+    "model_1": 0.68,
+    "model_2": 0.68,
+    "model_3": 1
+  }
 ]

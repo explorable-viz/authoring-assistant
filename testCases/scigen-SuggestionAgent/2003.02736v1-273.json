@@ -73,7 +73,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen_SuggestionAgent/_2003_02736v1_273"
+    "datasets/scigen/_2003_02736v1_273"
   ],
-  "datasets": ["datasets/scigen_SuggestionAgent/2003.02736v1-273.json"]
+  "datasets": ["datasets/scigen/2003.02736v1-273.json"]
 }

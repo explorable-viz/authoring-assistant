@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1910_07973v2_450
-
-"""
-	are summarized in Table 1, where the  ${"score"}  for each  ${"task category"}  is calculated by  ${"averaging"}  the normalized values for the tasks within each category. Although the activations of  token hidden states are often used in fine-tuning BERT for classification tasks,  ${"Mean-pooling"}  of hidden states performs the  ${"best"}  in all task categories among all the pooling methods.
-"""

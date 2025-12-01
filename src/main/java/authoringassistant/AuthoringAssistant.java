@@ -30,6 +30,7 @@ public class AuthoringAssistant {
     private final SuggestionAgent suggestionAgent;
     private final int runId;
     private final String jsonLogFolder;
+
     public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
@@ -39,49 +40,51 @@ public class AuthoringAssistant {
         this.jsonLogFolder = jsonLogFolder;
     }
 
-    public List<Pair<Program, QueryResult>> executePrograms() throws Exception {
+    public List<Pair<Program, QueryResult>> runTestProblems() throws Exception {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
-        List<Pair<Program, Expression>> programEdits;
+        List<Pair<Program, Expression>> problems;
         int i = 0;
         if (Settings.isSuggestionAgentEnabled()) {
             templateProgram = suggestionAgent.generateTemplateProgram(templateProgram);
         }
-        programEdits = templateProgram.asIndividualEdits(templateProgram);
-        int editId = 0;
-        while (!programEdits.isEmpty()) {
-            try {
-                Pair<Program, Expression> individualEdit = programEdits.get(i);
-                //selection
-                Program programEdit = individualEdit.getFirst();
-                QueryResult result = execute(individualEdit, editId++);
+        problems = templateProgram.asIndividualProblems(templateProgram);
+        int problemIndex = 0;
+        Program finalProgram;
+        if (problems.isEmpty()) {
+            finalProgram = templateProgram;
+        } else
+            do {
+                try {
+                    Pair<Program, Expression> problem = problems.get(i);
+                    finalProgram = problem.getFirst();
+                    QueryResult result = runProblem(problem, problemIndex++);
 
-                programEdit.replaceParagraph(programEdit.getParagraph().splice(result.correctResponse() == null ? individualEdit.getSecond() : result.correctResponse()));
-                results.add(new Pair<>(programEdit, result));
-                programEdits = programEdit.asIndividualEdits(templateProgram);
-                programEdit.toWebsite();
-            } catch (Exception e) {
-                logger.severe("Error executing program edit: " + e.getMessage());
-                logger.info("Returning partial results obtained so far: " + results.size() + " results");
-                // Restituisce i risultati parziali invece di propagare l'eccezione
-                return results;
-            }
-        }
+                    finalProgram.replaceParagraph(finalProgram.getParagraph().splice(result.correctResponse() == null ? problem.getSecond() : result.correctResponse()));
+                    results.add(new Pair<>(finalProgram, result));
+                    problems = finalProgram.asIndividualProblems(templateProgram);
+                } catch (Exception e) {
+                    logger.severe("Error executing program edit: " + e.getMessage());
+                    logger.info("Returning partial results obtained so far: " + results.size() + " results");
+                    return results;
+                }
+            } while (!problems.isEmpty());
+        finalProgram.toWebsite();
         return results;
     }
 
-    public QueryResult execute(Pair<Program, Expression> test, int editId) throws Exception {
-        final int limit = llm instanceof LLMDummyAgent ? 1 : Settings.getLimit();
+    public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
+        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getAgentLimit();
         // Add the input query to the KB that will be sent to the LLM
-        int attempts;
+        int attempt;
         final long start = System.currentTimeMillis();
         Program subProgram = test.getFirst();
         Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         int parseErrors=0, counterfactualFails=0, nullExpressions=0, onlyLiteralExpressions=0;
-        for (attempts = 0; attempts <= limit; attempts++) {
+        final String info = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
+        for (attempt = 1; attempt <= attemptLimit; attempt++) {
             boolean errors = false;
-            logger.info(STR."Attempt #\{attempts}");
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
@@ -90,6 +93,7 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt("NULL");
                 sessionPrompts.addUserPrompt("ExpressionError: Received a NULL expression instead of a valid expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value.");
+                logger.fine(STR."\{info} Attempt #\{attempt}: retry");
                 continue;
             }
             if(candidate.getExpr() != null && candidate.getExpr().equals(expected.getValue())) {
@@ -97,11 +101,12 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
                 sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
+                logger.fine(STR."\{info} Attempt #\{attempt}: retry");
                 continue;
             }
             boolean firstTest = false;
             for (Map<String, String> datasets : subProgram.getTest_datasets()) {
-                logger.info(STR."Received response: \{candidate.getExpr()}");
+                logger.fine(STR."\{info} Attempt #\{attempt}: received \{candidate.getExpr()}");
                 Optional<String> error = Program.validate(
                         evaluateExpression(subProgram, datasets, candidate),
                         new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
@@ -121,14 +126,15 @@ public class AuthoringAssistant {
             }
             if (!errors) {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{editId}.json");
-                return new QueryResult(candidate, expected, attempts, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
+                sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+                logger.info(STR."\{info} Expression validation succeeded");
+                return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
             }
 
         }
-        sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{editId}.json");
-        logger.warning(STR."Expression validation failed after \{limit} attempts");
-        return new QueryResult(null, expected, attempts, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
+        sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+        logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
+        return new QueryResult(null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {
@@ -138,7 +144,7 @@ public class AuthoringAssistant {
     }
 
     private LLMEvaluatorAgent<Expression> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        logger.info(STR."Initializing agent: \{agentClassName}");
+        logger.config(STR."Initializing agent: \{agentClassName}");
         LLMEvaluatorAgent<Expression> llmAgent;
         Class<?> agentClass = Class.forName(agentClassName);
         llmAgent = (LLMEvaluatorAgent<Expression>) agentClass

@@ -23,8 +23,8 @@ public class Main {
 
     public static void main(String... args) {
         Map<String, String> arguments = parseArguments(args);
-        logger.info("Arguments passed from command line");
-        logger.info(arguments.toString().replace(",", "\n"));
+        logger.config("Arguments passed from command line");
+        logger.config(arguments.toString().replace(",", "\n"));
         final ArrayList<Program> programs;
         final InContextLearning inContextLearning;
 
@@ -181,7 +181,7 @@ public class Main {
     }
 
     private static float computeAccuracy(List<Pair<Program, QueryResult>> results) {
-        logger.info("Computing accuracy");
+        logger.config("Computing accuracy");
         long count = IntStream.range(0, results.size()).filter(i -> {
             QueryResult result = results.get(i).getSecond();
             return  result.correctResponse() != null && result.expected().getExpr().equals(result.correctResponse().getExpr());
@@ -190,24 +190,25 @@ public class Main {
     }
 
     private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, String suggestionAgent, List<Program> programs) throws Exception {
-        final ArrayList<Pair<Program, QueryResult>> results = new ArrayList<>();
+        final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
 
         for(int k = 0; k < Settings.numTestRuns(); k++)
         {
             String jsonLogFolder = STR."\{Settings.getLogFolder()}/json_\{agent}_\{k}_\{System.currentTimeMillis()}/";
             Files.createDirectories(Paths.get(jsonLogFolder));
-            int programId = 0;
+            int programCount = 0;
             for (Program program : programs) {
-                AuthoringAssistant workflow = new AuthoringAssistant(inContextLearning, agent, program, suggestionAgent, k,jsonLogFolder);
-                logger.info(STR."Analysing program id=\{(programId++)}");
-                results.addAll(workflow.executePrograms());
+                AuthoringAssistant authoringAssistant = new AuthoringAssistant(inContextLearning, agent, program, suggestionAgent, k,jsonLogFolder);
+                List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
+
+                long correct = results.stream()
+                    .filter(r -> r.getSecond().correctResponse() != null)
+                    .count();
+                logger.info(STR."[Test case \{programCount++} of \{programs.size()}] \{correct} of \{results.size()} responses correct");
+                allResults.addAll(results);
             }
         }
-        logger.info("Printing generated expression");
-        for (Pair<Program, QueryResult> result : results) {
-            logger.info(result.getSecond().correctResponse() != null ? result.getSecond().correctResponse().getExpr() : "NULL");
-        }
-        return results;
+        return allResults;
     }
 
     public static Map<String, String> parseArguments(String[] args) {

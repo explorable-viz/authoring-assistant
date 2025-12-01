@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._5_476
-
-"""
-	Table 1 shows the evaluation results. In line with the findings for sentence summarization (Cao et al., 2018; Li et al., 2018), we observe that factual errors are also a frequent problem for document summarization. Interestingly, the fraction of incorrect summaries is substantially  ${"higher"}  for  ${"FAS and BUS"}  compared to  ${"PGC"} . The length of the generated summaries appears to be unrelated to the number of errors. Instead, the  ${"higher"}  abstractiveness of summaries produced by  ${"FAS and BUS"} , as analyzed in their respective papers, seems to also increase the chance of introducing errors. In addition, we also observe that among the three systems correctness and ROUGE scores do not correlate, emphasizing one more time that a ROUGE based evaluation alone is far too limited to account for the full scope of the summarization task.
-"""

@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._2002_10345v1_312
-
-"""
-	We choose different  ${"teacher size"}   ${"K"}  and evaluate our models in three  ${"datasets"} . Table 2 shows that teacher size is sensitive to datasets. Therefore, we select the  ${"best"}  teacher size for each dataset in the following experiment.
-"""

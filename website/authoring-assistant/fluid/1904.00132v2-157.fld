@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1904_00132v2_157
-
-"""
-	The results are shown in Table 1. It shows that the proposed  ${"HRLCE"}  model performs the  ${"best"} . The performance of  ${"SLD"}  and  ${"SL"}  are very close to each other, on the dev set,  ${"SLD"}  performs  ${"better"}  than  ${"SL"}  but they have almost the same overall scores on the test set. The MacroF1 scores of each emotion category are very different from each other: the classification accuracy for emotion  ${"Sad"}  is the  ${"highest"}  in most of the cases, while the emotion  ${"Happy"}  is the least accurately classified by all the models. We also noticed that the performance on the dev set is generally slightly  ${"better"}  than that on the test set.
-"""

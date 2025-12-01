@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1907_11438v3_469
-
-"""
-	A now retired evaluation suite for word embeddings was  ${"wordvectors.org"}  (Faruqui and Dyer, 2014a).   ${"VecEval"}  (Nayak et al., 2016) is another web based suite for static English word embeddings that perform evaluation on a set of downstream tasks which may take several hours.  K¨ohn (2015) introduced an offline, multilingual probing suite for static embeddings limited in terms of the languages and the probing tasks.  A  ${"comparison"}  of the system features of previous studies is given in Table 1.
-"""

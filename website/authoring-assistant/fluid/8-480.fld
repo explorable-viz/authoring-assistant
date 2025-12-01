@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._8_480
-
-"""
-	The  ${"average precision"}  (AP) ranking scores achieved via cross-lingual transfer of  ${"POSTLE"}  are shown in Table 2. We report AP scores using three methods for cross-lingual word embedding induction, and  ${"compare"}  their performance to two baselines: 1) random word pair scoring, and 2) the original (FASTTEXT) vectors. The results uncover the inability of distributional vectors to capture LE – they yield  ${"lower"}  performance than the random baseline, which strongly emphasizes the need for the LE-specialization. The transferred POSTLE yields an immense improve
-"""

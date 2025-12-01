@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1805_04715v2_65
-
-"""
-	Table 4 presents results on the second dataset for the  ${"best"}  models identified on the first dataset. The  ${"LDA-Frames"}  yielded the  ${"best"}  results with our approach performing comparably in terms of the F1-score.
-"""

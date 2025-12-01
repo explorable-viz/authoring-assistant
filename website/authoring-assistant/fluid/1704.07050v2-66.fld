@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1704_07050v2_66
-
-"""
-	Table 1 shows these performance measures for  ${"French-English"} ,  using global structure greatly  ${"improves upon"}  the state of the art  ${"baseline performance"} .
-"""

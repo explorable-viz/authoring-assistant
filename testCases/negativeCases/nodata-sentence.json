@@ -16,7 +16,7 @@
     {
       "type": "expression",
       "expression": "\"BiCNN\"",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",
@@ -25,7 +25,7 @@
     {
       "type": "expression",
       "expression": "\"highest\"",
-      "categories": ["rank", "data_retrieval", "comparison"]
+      "categories": ["rank", "data-retrieval", "comparison"]
     },
     {
       "type": "literal",

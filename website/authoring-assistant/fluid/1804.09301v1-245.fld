@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1804_09301v1_245
-
-"""
-	We also identify so-called "gotcha" sentences in which pronoun gender does not match the  ${"occupation's majority gender"}  ( ${"BLS"} ) if  ${"OCCUPATION"}  is the correct answer; all systems perform  ${"worse"}  on these "gotchas."8 (See Table 2.)
-"""

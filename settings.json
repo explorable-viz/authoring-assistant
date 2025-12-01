@@ -14,7 +14,7 @@
   "fluid-temp-folder": "./fluid-temp",
   "agent-limit": 3,
   "base-path-library": "node_modules/@explorable-viz/fluid/dist/fluid/fluid",
-  "fluid-common-folder": "./fluid-common",
+  "fluid-common-folder": "./testCases-aux",
   "enable-reasoning": true,
   "split-multiple-replace-tag": true,
   "add-expected-value": true,

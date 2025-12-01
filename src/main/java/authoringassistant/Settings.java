@@ -37,7 +37,8 @@ public class Settings {
         return getInstance().settings;
     }
 
-    public static int getLimit() {
+    // TODO: better name
+    public static int getAgentLimit() {
         return getSettings().getInt("agent-limit");
     }
 

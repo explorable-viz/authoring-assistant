@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1906_01815v1_490
-
-"""
-	Table  ${"3"}  presents the performance of our baselines in the speaker-independent setup. In this case, the  ${"multimodal variants"}  do not greatly  ${"outperform"}  the  ${"unimodal counterparts"} . Unlike Table  ${"2"} , the audio channel plays a more important role, and it is slightly improved by adding text.  In multiple evaluations, the  ${"multimodal variants"}  were shown to significantly  ${"outperform"}  their  ${"unimodal counterparts"} , with relative error rate reductions of up to  ${"12.9%"} .
-"""

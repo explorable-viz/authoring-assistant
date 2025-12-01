@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1904_02338v2_210
-
-"""
-	We see that models trained with  ${"agreement"}  perform comparably to  ${"Pivot"} , outperforming it in some cases, e.g., when the target is  ${"Russian"} , perhaps because it is quite different linguistically from the  ${"English pivot"} .  unlike  ${"Dual-0"} ,  ${"Agree"}  maintains high performance in the supervised directions (within  ${"1"}  BLEU point compared to  ${"Basic"} ),
-"""

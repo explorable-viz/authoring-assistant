@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1907_07421v1_424
-
-"""
-	Table 2 shows the experimental results of the  ${"slot-independent SUMBT"}  model on MultiWOZ corpus.  The  ${"SUMBT"}  greatly surpassed the performances of previous approaches by yielding  ${"42.4%"}  joint accuracy.
-"""

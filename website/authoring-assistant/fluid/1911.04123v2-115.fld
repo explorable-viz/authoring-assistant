@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1911_04123v2_115
-
-"""
-	Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the  ${"previous state-of-the-art"}  and our baselines.   ${"TEXTONLY"}  gives a performance comparable with  ${"Bran"} . With  ${"1-best dependency trees"} , our  ${"DEPTREE"}  baseline gives  ${"better performances"}  than the previous state of the art.  both  ${"KBESTEISNERPS"}  and  ${"EDGEWISEPS"}  obtain significantly  ${"higher numbers"}  than  ${"DEPTREE"} .
-"""

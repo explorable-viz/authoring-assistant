@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1906_06947v1_250
-
-"""
-	a comparison with existing event extraction and event schema induction datasets, including  ${"ASTRE"}  ( ${"Nguyen et al."} , 2016a),  ${"MUC 4"} ,  ${"ACE 20052"}  and  ${"ERE3"} , is shown in Table 2. Compared with the other datasets,  ${"GNBusiness"}  has a  ${"much larger number of documents"}  (i.e., news clusters in GNBusiness), and a  ${"comparable number of labeled documents"} .
-"""

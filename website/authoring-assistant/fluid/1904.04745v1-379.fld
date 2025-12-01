@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1904_04745v1_379
-
-"""
-	As shown in Table 2, the  ${"proposed cross-modal self-attention"}  outperforms  ${"all other attention methods"}   ${"significantly"} .
-"""

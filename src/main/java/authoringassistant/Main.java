@@ -73,6 +73,12 @@ public class Main {
         Files.createDirectories(outputPath.getParent());
         Files.writeString(outputPath, json);
         logger.info(STR."Generated program saved to: \{outputPath}");
+        
+        // Create empty .fld file with same name
+        String fldFileName = fileName.replace(".json", ".fld");
+        Path fldPath = Paths.get(outputFolder, fldFileName);
+        Files.writeString(fldPath, "");
+        logger.info(STR."Empty .fld file created: \{fldPath}");
     }
 
     private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, IOException {

@@ -1,134 +1,134 @@
 [
-    {
-        "_dataset_/_model___wikipassageqa": "BM25",
-        "_metrics___map": "53.7",
-        "_metrics___p@5": "19.5",
-        "_metrics___p@10": "11.5"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "Memory-CNN-LSTM Cohen2018",
-        "_metrics___map": "56.1",
-        "_metrics___p@5": "20.8",
-        "_metrics___p@10": "12.3"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "Pre-trained BERT Embedding",
-        "_metrics___map": "55.0",
-        "_metrics___p@5": "21.6",
-        "_metrics___p@10": "13.7"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "SNLI Fine-tuned BERT Embedding",
-        "_metrics___map": "52.5",
-        "_metrics___p@5": "20.6",
-        "_metrics___p@10": "12.8"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "In-domain Fine-tuned BERT",
-        "_metrics___map": " 74.9",
-        "_metrics___p@5": " 27.2",
-        "_metrics___p@10": " 15.2"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": " InsuranceQA",
-        "_metrics___map": " P@1",
-        "_metrics___p@5": " P@5",
-        "_metrics___p@10": " P@10"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "BM25",
-        "_metrics___map": "60.2",
-        "_metrics___p@5": "19.5",
-        "_metrics___p@10": "10.9"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "SUBMULT+NN Wang2016g",
-        "_metrics___map": "75.6",
-        "_metrics___p@5": "-",
-        "_metrics___p@10": "-"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "DSSM Huang2013a",
-        "_metrics___map": "30.3",
-        "_metrics___p@5": "-",
-        "_metrics___p@10": "-"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "Pre-trained BERT Embedding",
-        "_metrics___map": "44.9",
-        "_metrics___p@5": "17.6",
-        "_metrics___p@10": "10.6"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "SNLI Fine-tuned BERT Embedding",
-        "_metrics___map": "48.0",
-        "_metrics___p@5": "18.5",
-        "_metrics___p@10": "11.0"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "In-domain Fine-tuned BERT",
-        "_metrics___map": " 78.3",
-        "_metrics___p@5": " 25.4",
-        "_metrics___p@10": " 13.7"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": " Quasar-t",
-        "_metrics___map": " R@1",
-        "_metrics___p@5": " R@5",
-        "_metrics___p@10": " R@10"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "BM25",
-        "_metrics___map": "38.7",
-        "_metrics___p@5": "59.2",
-        "_metrics___p@10": "66.0"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "Pre-trained BERT Embedding",
-        "_metrics___map": "48.6",
-        "_metrics___p@5": "66.6",
-        "_metrics___p@10": "71.7"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "SNLI Fine-tuned BERT Embedding",
-        "_metrics___map": "49.3",
-        "_metrics___p@5": "66.1",
-        "_metrics___p@10": "71.0"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "In-domain Fine-tuned BERT",
-        "_metrics___map": " 59.5",
-        "_metrics___p@5": " 70.9",
-        "_metrics___p@10": " 74.6"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": " SearchQA",
-        "_metrics___map": " R@1",
-        "_metrics___p@5": " R@5",
-        "_metrics___p@10": " R@10"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "BM25",
-        "_metrics___map": "50.5",
-        "_metrics___p@5": "83.3",
-        "_metrics___p@10": "90.9"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "Pre-trained BERT Embedding",
-        "_metrics___map": "66.2",
-        "_metrics___p@5": "89.7",
-        "_metrics___p@10": "95.0"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "SNLI Fine-tuned BERT Embedding",
-        "_metrics___map": "66.8",
-        "_metrics___p@5": "90.0",
-        "_metrics___p@10": "95.1"
-    },
-    {
-        "_dataset_/_model___wikipassageqa": "In-domain Fine-tuned BERT",
-        "_metrics___map": " 76.3",
-        "_metrics___p@5": " 93.0",
-        "_metrics___p@10": " 96.7"
-    }
+  {
+    "dataset_model_wikipassageqa": "BM25",
+    "metrics_map": 53.7,
+    "metrics_p_5": 19.5,
+    "metrics_p_10": 11.5
+  },
+  {
+    "dataset_model_wikipassageqa": "Memory-CNN-LSTM Cohen2018",
+    "metrics_map": 56.1,
+    "metrics_p_5": 20.8,
+    "metrics_p_10": 12.3
+  },
+  {
+    "dataset_model_wikipassageqa": "Pre-trained BERT Embedding",
+    "metrics_map": 55.0,
+    "metrics_p_5": 21.6,
+    "metrics_p_10": 13.7
+  },
+  {
+    "dataset_model_wikipassageqa": "SNLI Fine-tuned BERT Embedding",
+    "metrics_map": 52.5,
+    "metrics_p_5": 20.6,
+    "metrics_p_10": 12.8
+  },
+  {
+    "dataset_model_wikipassageqa": "In-domain Fine-tuned BERT",
+    "metrics_map": 74.9,
+    "metrics_p_5": 27.2,
+    "metrics_p_10": 15.2
+  },
+  {
+    "dataset_model_wikipassageqa": " InsuranceQA",
+    "metrics_map": " P@1",
+    "metrics_p_5": " P@5",
+    "metrics_p_10": " P@10"
+  },
+  {
+    "dataset_model_wikipassageqa": "BM25",
+    "metrics_map": 60.2,
+    "metrics_p_5": 19.5,
+    "metrics_p_10": 10.9
+  },
+  {
+    "dataset_model_wikipassageqa": "SUBMULT+NN Wang2016g",
+    "metrics_map": 75.6,
+    "metrics_p_5": "-",
+    "metrics_p_10": "-"
+  },
+  {
+    "dataset_model_wikipassageqa": "DSSM Huang2013a",
+    "metrics_map": 30.3,
+    "metrics_p_5": "-",
+    "metrics_p_10": "-"
+  },
+  {
+    "dataset_model_wikipassageqa": "Pre-trained BERT Embedding",
+    "metrics_map": 44.9,
+    "metrics_p_5": 17.6,
+    "metrics_p_10": 10.6
+  },
+  {
+    "dataset_model_wikipassageqa": "SNLI Fine-tuned BERT Embedding",
+    "metrics_map": 48.0,
+    "metrics_p_5": 18.5,
+    "metrics_p_10": 11.0
+  },
+  {
+    "dataset_model_wikipassageqa": "In-domain Fine-tuned BERT",
+    "metrics_map": 78.3,
+    "metrics_p_5": 25.4,
+    "metrics_p_10": 13.7
+  },
+  {
+    "dataset_model_wikipassageqa": " Quasar-t",
+    "metrics_map": " R@1",
+    "metrics_p_5": " R@5",
+    "metrics_p_10": " R@10"
+  },
+  {
+    "dataset_model_wikipassageqa": "BM25",
+    "metrics_map": 38.7,
+    "metrics_p_5": 59.2,
+    "metrics_p_10": 66.0
+  },
+  {
+    "dataset_model_wikipassageqa": "Pre-trained BERT Embedding",
+    "metrics_map": 48.6,
+    "metrics_p_5": 66.6,
+    "metrics_p_10": 71.7
+  },
+  {
+    "dataset_model_wikipassageqa": "SNLI Fine-tuned BERT Embedding",
+    "metrics_map": 49.3,
+    "metrics_p_5": 66.1,
+    "metrics_p_10": 71.0
+  },
+  {
+    "dataset_model_wikipassageqa": "In-domain Fine-tuned BERT",
+    "metrics_map": 59.5,
+    "metrics_p_5": 70.9,
+    "metrics_p_10": 74.6
+  },
+  {
+    "dataset_model_wikipassageqa": " SearchQA",
+    "metrics_map": " R@1",
+    "metrics_p_5": " R@5",
+    "metrics_p_10": " R@10"
+  },
+  {
+    "dataset_model_wikipassageqa": "BM25",
+    "metrics_map": 50.5,
+    "metrics_p_5": 83.3,
+    "metrics_p_10": 90.9
+  },
+  {
+    "dataset_model_wikipassageqa": "Pre-trained BERT Embedding",
+    "metrics_map": 66.2,
+    "metrics_p_5": 89.7,
+    "metrics_p_10": 95.0
+  },
+  {
+    "dataset_model_wikipassageqa": "SNLI Fine-tuned BERT Embedding",
+    "metrics_map": 66.8,
+    "metrics_p_5": 90.0,
+    "metrics_p_10": 95.1
+  },
+  {
+    "dataset_model_wikipassageqa": "In-domain Fine-tuned BERT",
+    "metrics_map": 76.3,
+    "metrics_p_5": 93.0,
+    "metrics_p_10": 96.7
+  }
 ]

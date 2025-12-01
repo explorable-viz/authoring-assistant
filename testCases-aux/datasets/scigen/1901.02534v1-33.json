@@ -1,23 +1,23 @@
 [
-    {
-        "problem": "ESIM on FEVER One",
-        "support_accuracy": ".760",
-        "support_kappa": ".260",
-        "claim_accuracy": ".517",
-        "claim_kappa": ".297"
-    },
-    {
-        "problem": "ESIM on FEVER Title One",
-        "support_accuracy": ".846",
-        "support_kappa": ".394",
-        "claim_accuracy": ".639",
-        "claim_kappa": ".433"
-    },
-    {
-        "problem": "Transformer on FEVER Title One",
-        "support_accuracy": ".958",
-        "support_kappa": ".660",
-        "claim_accuracy": ".823",
-        "claim_kappa": ".622"
-    }
+  {
+    "problem": "ESIM on FEVER One",
+    "support_accuracy": 0.76,
+    "support_kappa": 0.26,
+    "claim_accuracy": 0.517,
+    "claim_kappa": 0.297
+  },
+  {
+    "problem": "ESIM on FEVER Title One",
+    "support_accuracy": 0.846,
+    "support_kappa": 0.394,
+    "claim_accuracy": 0.639,
+    "claim_kappa": 0.433
+  },
+  {
+    "problem": "Transformer on FEVER Title One",
+    "support_accuracy": 0.958,
+    "support_kappa": 0.66,
+    "claim_accuracy": 0.823,
+    "claim_kappa": 0.622
+  }
 ]

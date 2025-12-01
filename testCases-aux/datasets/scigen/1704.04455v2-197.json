@@ -1,57 +1,57 @@
 [
-    {
-        "_p": "has part (creative work series)",
-        "#__s": "261",
-        "_baseline_p": ".050",
-        "_vanilla_p": ".333",
-        "_vanilla_r": ".316",
-        "_vanilla_f1": ".324",
-        "_only-nummod_p": ".353",
-        "_only-nummod_r": ".316",
-        "_only-nummod_f1": ".333"
-    },
-    {
-        "_p": "contains admin. terr. entity",
-        "#__s": "18,000",
-        "_baseline_p": ".034",
-        "_vanilla_p": ".390",
-        "_vanilla_r": ".188",
-        "_vanilla_f1": ".254",
-        "_only-nummod_p": ".548",
-        "_only-nummod_r": ".200",
-        "_only-nummod_f1": ".293"
-    },
-    {
-        "_p": "spouse",
-        "#__s": "45,917",
-        "_baseline_p": "0",
-        "_vanilla_p": ".014",
-        "_vanilla_r": ".011",
-        "_vanilla_f1": ".013",
-        "_only-nummod_p": ".028",
-        "_only-nummod_r": ".017",
-        "_only-nummod_f1": ".021"
-    },
-    {
-        "_p": "child",
-        "#__s": "35,057",
-        "_baseline_p": ".112",
-        "_vanilla_p": ".151",
-        "_vanilla_r": ".129",
-        "_vanilla_f1": ".139",
-        "_only-nummod_p": ".320",
-        "_only-nummod_r": ".219",
-        "_only-nummod_f1": ".260"
-    },
-    {
-        "_p": "child (manual ground truth)",
-        "#__s": "6,408",
-        "_baseline_p": "",
-        "_vanilla_p": "0.374",
-        "_vanilla_r": "0.309",
-        "_vanilla_f1": "0.338",
-        "_only-nummod_p": "0.452",
-        "_only-nummod_r": "0.315",
-        "_only-nummod_f1": "0.371"
-    }
+  {
+    "p": "has part",
+    "num_s": 261,
+    "baseline_p": 0.05,
+    "vanilla_p": 0.333,
+    "vanilla_r": 0.316,
+    "vanilla_f1": 0.324,
+    "only_nummod_p": 0.353,
+    "only_nummod_r": 0.316,
+    "only_nummod_f1": 0.333
+  },
+  {
+    "p": "contains admin. terr. entity",
+    "num_s": 18000,
+    "baseline_p": 0.034,
+    "vanilla_p": 0.39,
+    "vanilla_r": 0.188,
+    "vanilla_f1": 0.254,
+    "only_nummod_p": 0.548,
+    "only_nummod_r": 0.2,
+    "only_nummod_f1": 0.293
+  },
+  {
+    "p": "spouse",
+    "num_s": 45917,
+    "baseline_p": 0,
+    "vanilla_p": 0.014,
+    "vanilla_r": 0.011,
+    "vanilla_f1": 0.013,
+    "only_nummod_p": 0.028,
+    "only_nummod_r": 0.017,
+    "only_nummod_f1": 0.021
+  },
+  {
+    "p": "child",
+    "num_s": 35057,
+    "baseline_p": 0.112,
+    "vanilla_p": 0.151,
+    "vanilla_r": 0.129,
+    "vanilla_f1": 0.139,
+    "only_nummod_p": 0.32,
+    "only_nummod_r": 0.219,
+    "only_nummod_f1": 0.26
+  },
+  {
+    "p": "child",
+    "num_s": 6408,
+    "baseline_p": "",
+    "vanilla_p": 0.374,
+    "vanilla_r": 0.309,
+    "vanilla_f1": 0.338,
+    "only_nummod_p": 0.452,
+    "only_nummod_r": 0.315,
+    "only_nummod_f1": 0.371
+  }
 ]

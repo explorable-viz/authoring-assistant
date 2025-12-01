@@ -1,102 +1,102 @@
 [
-    {
-        "label_type": " /other",
-        "support": "42.6%",
-        "our_prec.": "0.838",
-        "our_rec.": "0.809",
-        "our_f-1": "0.823",
-        "afet_prec.": "0.774",
-        "afet_rec.": "0.962",
-        "afet_f-1": " 0.858"
-    },
-    {
-        "label_type": " /organization",
-        "support": "11.0%",
-        "our_prec.": "0.588",
-        "our_rec.": "0.490",
-        "our_f-1": " 0.534",
-        "afet_prec.": "0.903",
-        "afet_rec.": "0.273",
-        "afet_f-1": "0.419"
-    },
-    {
-        "label_type": " /person",
-        "support": "9.9%",
-        "our_prec.": "0.559",
-        "our_rec.": "0.467",
-        "our_f-1": " 0.508",
-        "afet_prec.": "0.669",
-        "afet_rec.": "0.352",
-        "afet_f-1": "0.461"
-    },
-    {
-        "label_type": " /organization/company",
-        "support": "7.8%",
-        "our_prec.": "0.932",
-        "our_rec.": "0.166",
-        "our_f-1": " 0.282",
-        "afet_prec.": "1.0",
-        "afet_rec.": "0.127",
-        "afet_f-1": "0.225"
-    },
-    {
-        "label_type": " /location",
-        "support": "7.5%",
-        "our_prec.": "0.687",
-        "our_rec.": "0.796",
-        "our_f-1": " 0.737",
-        "afet_prec.": "0.787",
-        "afet_rec.": "0.609",
-        "afet_f-1": "0.687"
-    },
-    {
-        "label_type": " /organization/government",
-        "support": "2.1%",
-        "our_prec.": "0",
-        "our_rec.": "0",
-        "our_f-1": "0",
-        "afet_prec.": "0",
-        "afet_rec.": "0",
-        "afet_f-1": "0"
-    },
-    {
-        "label_type": " /location/country",
-        "support": "2.0%",
-        "our_prec.": "0.783",
-        "our_rec.": "0.614",
-        "our_f-1": " 0.688",
-        "afet_prec.": "0.838",
-        "afet_rec.": "0.498",
-        "afet_f-1": "0.625"
-    },
-    {
-        "label_type": " /other/legal",
-        "support": "1.8%",
-        "our_prec.": "0",
-        "our_rec.": "0",
-        "our_f-1": "0",
-        "afet_prec.": "0",
-        "afet_rec.": "0",
-        "afet_f-1": "0"
-    },
-    {
-        "label_type": " /location/city",
-        "support": "1.8%",
-        "our_prec.": "0.919",
-        "our_rec.": "0.610",
-        "our_f-1": " 0.733",
-        "afet_prec.": "0.816",
-        "afet_rec.": "0.637",
-        "afet_f-1": "0.715"
-    },
-    {
-        "label_type": " /person/political_figure",
-        "support": "1.6%",
-        "our_prec.": "0",
-        "our_rec.": "0",
-        "our_f-1": "0",
-        "afet_prec.": "0",
-        "afet_rec.": "0",
-        "afet_f-1": "0"
-    }
+  {
+    "label_type": " /other",
+    "support": 42.6,
+    "our_prec": 0.838,
+    "our_rec": 0.809,
+    "our_f_1": 0.823,
+    "afet_prec": 0.774,
+    "afet_rec": 0.962,
+    "afet_f_1": 0.858
+  },
+  {
+    "label_type": " /organization",
+    "support": 11.0,
+    "our_prec": 0.588,
+    "our_rec": 0.49,
+    "our_f_1": 0.534,
+    "afet_prec": 0.903,
+    "afet_rec": 0.273,
+    "afet_f_1": 0.419
+  },
+  {
+    "label_type": " /person",
+    "support": 9.9,
+    "our_prec": 0.559,
+    "our_rec": 0.467,
+    "our_f_1": 0.508,
+    "afet_prec": 0.669,
+    "afet_rec": 0.352,
+    "afet_f_1": 0.461
+  },
+  {
+    "label_type": " /organization/company",
+    "support": 7.8,
+    "our_prec": 0.932,
+    "our_rec": 0.166,
+    "our_f_1": 0.282,
+    "afet_prec": 1.0,
+    "afet_rec": 0.127,
+    "afet_f_1": 0.225
+  },
+  {
+    "label_type": " /location",
+    "support": 7.5,
+    "our_prec": 0.687,
+    "our_rec": 0.796,
+    "our_f_1": 0.737,
+    "afet_prec": 0.787,
+    "afet_rec": 0.609,
+    "afet_f_1": 0.687
+  },
+  {
+    "label_type": " /organization/government",
+    "support": 2.1,
+    "our_prec": 0,
+    "our_rec": 0,
+    "our_f_1": 0,
+    "afet_prec": 0,
+    "afet_rec": 0,
+    "afet_f_1": 0
+  },
+  {
+    "label_type": " /location/country",
+    "support": 2.0,
+    "our_prec": 0.783,
+    "our_rec": 0.614,
+    "our_f_1": 0.688,
+    "afet_prec": 0.838,
+    "afet_rec": 0.498,
+    "afet_f_1": 0.625
+  },
+  {
+    "label_type": " /other/legal",
+    "support": 1.8,
+    "our_prec": 0,
+    "our_rec": 0,
+    "our_f_1": 0,
+    "afet_prec": 0,
+    "afet_rec": 0,
+    "afet_f_1": 0
+  },
+  {
+    "label_type": " /location/city",
+    "support": 1.8,
+    "our_prec": 0.919,
+    "our_rec": 0.61,
+    "our_f_1": 0.733,
+    "afet_prec": 0.816,
+    "afet_rec": 0.637,
+    "afet_f_1": 0.715
+  },
+  {
+    "label_type": " /person/political_figure",
+    "support": 1.6,
+    "our_prec": 0,
+    "our_rec": 0,
+    "our_f_1": 0,
+    "afet_prec": 0,
+    "afet_rec": 0,
+    "afet_f_1": 0
+  }
 ]

@@ -1,20 +1,23 @@
 [
-    {
-        "": "Sg",
-        "predicted_sg": "222",
-        "predicted_pl": "39",
-        "total": "261"
-    },
-    {
-        "": "Pl",
-        "predicted_sg": "7",
-        "predicted_pl": "81",
-        "total": "88"
-    },
-    {
-        "": "Total",
-        "predicted_sg": "229",
-        "predicted_pl": "120",
-        "total": "349"
-    }
+  {
+    "_1": "Actual",
+    "_2": "Sg",
+    "predicted_sg": 222,
+    "predicted_pl": 39,
+    "total": 261
+  },
+  {
+    "_1": "Actual",
+    "_2": "Pl",
+    "predicted_sg": 7,
+    "predicted_pl": 81,
+    "total": 88
+  },
+  {
+    "_1": "",
+    "_2": "Total",
+    "predicted_sg": 229,
+    "predicted_pl": 120,
+    "total": 349
+  }
 ]

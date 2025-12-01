@@ -1,22 +1,22 @@
 [
-    {
-        "_dataset": "CCAT10",
-        "_combined": "88.36",
-        "_parallel": "90.58"
-    },
-    {
-        "_dataset": "CCAT50",
-        "_combined": "81.21",
-        "_parallel": "82.35"
-    },
-    {
-        "_dataset": "BLOG10",
-        "_combined": "67.38",
-        "_parallel": "72.83"
-    },
-    {
-        "_dataset": "BLOG50",
-        "_combined": "58.81",
-        "_parallel": "61.19"
-    }
+  {
+    "dataset": "CCAT10",
+    "combined": 88.36,
+    "parallel": 90.58
+  },
+  {
+    "dataset": "CCAT50",
+    "combined": 81.21,
+    "parallel": 82.35
+  },
+  {
+    "dataset": "BLOG10",
+    "combined": 67.38,
+    "parallel": 72.83
+  },
+  {
+    "dataset": "BLOG50",
+    "combined": 58.81,
+    "parallel": 61.19
+  }
 ]

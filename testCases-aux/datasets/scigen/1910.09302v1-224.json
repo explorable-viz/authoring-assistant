@@ -1,86 +1,86 @@
 [
-    {
-        "_complexity": "MultiNLI Matched Dev Set",
-        "_ent.": "MultiNLI Matched Dev Set",
-        "_neutral": "MultiNLI Matched Dev Set",
-        "_cont.": "MultiNLI Matched Dev Set",
-        "_all": "MultiNLI Matched Dev Set"
-    },
-    {
-        "_complexity": " All",
-        "_ent.": "83.56",
-        "_neutral": "84.12",
-        "_cont.": "86.37",
-        "_all": " 84.66"
-    },
-    {
-        "_complexity": "Dative Alternation",
-        "_ent.": "Dative Alternation",
-        "_neutral": "Dative Alternation",
-        "_cont.": "Dative Alternation",
-        "_all": "Dative Alternation"
-    },
-    {
-        "_complexity": " Simple",
-        "_ent.": "100",
-        "_neutral": "-",
-        "_cont.": "4.22",
-        "_all": " 52.63"
-    },
-    {
-        "_complexity": " Medium",
-        "_ent.": "100",
-        "_neutral": "-",
-        "_cont.": "2.16",
-        "_all": " 49.27"
-    },
-    {
-        "_complexity": " Complex",
-        "_ent.": "99.77",
-        "_neutral": "-",
-        "_cont.": "0.36",
-        "_all": " 50.45"
-    },
-    {
-        "_complexity": " All",
-        "_ent.": "99.92",
-        "_neutral": "-",
-        "_cont.": "2.25",
-        "_all": " 50.78"
-    },
-    {
-        "_complexity": "Numerical Reasoning",
-        "_ent.": "Numerical Reasoning",
-        "_neutral": "Numerical Reasoning",
-        "_cont.": "Numerical Reasoning",
-        "_all": "Numerical Reasoning"
-    },
-    {
-        "_complexity": " Simple",
-        "_ent.": "38.14",
-        "_neutral": "0.66",
-        "_cont.": "69.53",
-        "_all": " 45.04"
-    },
-    {
-        "_complexity": " Medium",
-        "_ent.": "57.14",
-        "_neutral": "1.36",
-        "_cont.": "50.14",
-        "_all": " 38.11"
-    },
-    {
-        "_complexity": " Complex",
-        "_ent.": "55.48",
-        "_neutral": "3.04",
-        "_cont.": "46.26",
-        "_all": " 36.15"
-    },
-    {
-        "_complexity": " All",
-        "_ent.": "50.25",
-        "_neutral": "1.69",
-        "_cont.": "55.31",
-        "_all": " 39.77"
-    }
+  {
+    "complexity": "MultiNLI Matched Dev Set",
+    "ent": "MultiNLI Matched Dev Set",
+    "neutral": "MultiNLI Matched Dev Set",
+    "cont": "MultiNLI Matched Dev Set",
+    "all": "MultiNLI Matched Dev Set"
+  },
+  {
+    "complexity": " All",
+    "ent": 83.56,
+    "neutral": 84.12,
+    "cont": 86.37,
+    "all": 84.66
+  },
+  {
+    "complexity": "Dative Alternation",
+    "ent": "Dative Alternation",
+    "neutral": "Dative Alternation",
+    "cont": "Dative Alternation",
+    "all": "Dative Alternation"
+  },
+  {
+    "complexity": " Simple",
+    "ent": 100,
+    "neutral": "-",
+    "cont": 4.22,
+    "all": 52.63
+  },
+  {
+    "complexity": " Medium",
+    "ent": 100,
+    "neutral": "-",
+    "cont": 2.16,
+    "all": 49.27
+  },
+  {
+    "complexity": " Complex",
+    "ent": 99.77,
+    "neutral": "-",
+    "cont": 0.36,
+    "all": 50.45
+  },
+  {
+    "complexity": " All",
+    "ent": 99.92,
+    "neutral": "-",
+    "cont": 2.25,
+    "all": 50.78
+  },
+  {
+    "complexity": "Numerical Reasoning",
+    "ent": "Numerical Reasoning",
+    "neutral": "Numerical Reasoning",
+    "cont": "Numerical Reasoning",
+    "all": "Numerical Reasoning"
+  },
+  {
+    "complexity": " Simple",
+    "ent": 38.14,
+    "neutral": 0.66,
+    "cont": 69.53,
+    "all": 45.04
+  },
+  {
+    "complexity": " Medium",
+    "ent": 57.14,
+    "neutral": 1.36,
+    "cont": 50.14,
+    "all": 38.11
+  },
+  {
+    "complexity": " Complex",
+    "ent": 55.48,
+    "neutral": 3.04,
+    "cont": 46.26,
+    "all": 36.15
+  },
+  {
+    "complexity": " All",
+    "ent": 50.25,
+    "neutral": 1.69,
+    "cont": 55.31,
+    "all": 39.77
+  }
 ]

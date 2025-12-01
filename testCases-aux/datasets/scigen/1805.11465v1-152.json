@@ -1,77 +1,77 @@
 [
-    {
-        "_model": "Ours",
-        "_2015": "",
-        "_2017": ""
-    },
-    {
-        "_model": "local edge + projective decoder",
-        "_2015": "70.2 \\scalebox 0.8$±0.3$",
-        "_2017": " 71.0 ±0.5"
-    },
-    {
-        "_model": "local edge + fixed-tree decoder",
-        "_2015": "69.4 \\scalebox 0.8$±0.6$",
-        "_2017": "70.2 \\scalebox 0.8$±0.5$"
-    },
-    {
-        "_model": "K&G edge + projective decoder",
-        "_2015": "68.6 \\scalebox 0.8$±0.7$",
-        "_2017": "69.4 \\scalebox 0.8$±0.4$"
-    },
-    {
-        "_model": "K&G edge + fixed-tree decoder",
-        "_2015": "69.6 \\scalebox 0.8$±0.4$",
-        "_2017": "69.9 \\scalebox 0.8$±0.2$"
-    },
-    {
-        "_model": "Baselines",
-        "_2015": "",
-        "_2017": ""
-    },
-    {
-        "_model": "fixed-tree (type-unaware)",
-        "_2015": "26.0 \\scalebox 0.8$±0.6$",
-        "_2017": "27.9 \\scalebox 0.8$±0.6$"
-    },
-    {
-        "_model": "JAMR-style",
-        "_2015": "66.1",
-        "_2017": "66.2"
-    },
-    {
-        "_model": "Previous work",
-        "_2015": "",
-        "_2017": ""
-    },
-    {
-        "_model": "CAMR Wang et al. ( 2015 )",
-        "_2015": "66.5",
-        "_2017": "-"
-    },
-    {
-        "_model": "JAMR Flanigan et al. ( 2016 )",
-        "_2015": "67",
-        "_2017": "-"
-    },
-    {
-        "_model": "E17-1051",
-        "_2015": "64",
-        "_2017": "-"
-    },
-    {
-        "_model": "van2017neural",
-        "_2015": "68.5",
-        "_2017": " 71.0"
-    },
-    {
-        "_model": "foland2017abstract",
-        "_2015": " 70.7",
-        "_2017": "-"
-    },
-    {
-        "_model": "buys2017oxford",
-        "_2015": "-",
-        "_2017": "61.9"
-    }
+  {
+    "model": "Ours",
+    "2015": "",
+    "2017": ""
+  },
+  {
+    "model": "local edge + projective decoder",
+    "2015": "70.2 \\scalebox 0.8$±0.3$",
+    "2017": " 71.0 ±0.5"
+  },
+  {
+    "model": "local edge + fixed-tree decoder",
+    "2015": "69.4 \\scalebox 0.8$±0.6$",
+    "2017": "70.2 \\scalebox 0.8$±0.5$"
+  },
+  {
+    "model": "K&G edge + projective decoder",
+    "2015": "68.6 \\scalebox 0.8$±0.7$",
+    "2017": "69.4 \\scalebox 0.8$±0.4$"
+  },
+  {
+    "model": "K&G edge + fixed-tree decoder",
+    "2015": "69.6 \\scalebox 0.8$±0.4$",
+    "2017": "69.9 \\scalebox 0.8$±0.2$"
+  },
+  {
+    "model": "Baselines",
+    "2015": "",
+    "2017": ""
+  },
+  {
+    "model": "fixed-tree",
+    "2015": "26.0 \\scalebox 0.8$±0.6$",
+    "2017": "27.9 \\scalebox 0.8$±0.6$"
+  },
+  {
+    "model": "JAMR-style",
+    "2015": 66.1,
+    "2017": 66.2
+  },
+  {
+    "model": "Previous wor",
+    "2015": "",
+    "2017": ""
+  },
+  {
+    "model": "CAMR Wang et al.",
+    "2015": 66.5,
+    "2017": "-"
+  },
+  {
+    "model": "JAMR Flanigan et al.",
+    "2015": 67,
+    "2017": "-"
+  },
+  {
+    "model": "E17-1051",
+    "2015": 64,
+    "2017": "-"
+  },
+  {
+    "model": "van2017neural",
+    "2015": 68.5,
+    "2017": 71.0
+  },
+  {
+    "model": "foland2017abstract",
+    "2015": 70.7,
+    "2017": "-"
+  },
+  {
+    "model": "buys2017oxford",
+    "2015": "-",
+    "2017": 61.9
+  }
 ]

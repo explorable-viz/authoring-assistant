@@ -1,37 +1,37 @@
 [
-    {
-        "system": "TSP-gen",
-        "dev": "21.12",
-        "test": "22.44"
-    },
-    {
-        "system": "JAMR-gen",
-        "dev": "23.00",
-        "test": "23.00"
-    },
-    {
-        "system": "All",
-        "dev": " 25.24",
-        "test": " 25.62"
-    },
-    {
-        "system": "NoInducedRule",
-        "dev": "16.75",
-        "test": "17.43"
-    },
-    {
-        "system": "NoConceptRule",
-        "dev": "23.99",
-        "test": "24.86"
-    },
-    {
-        "system": "NoMovingDistance",
-        "dev": "23.48",
-        "test": "24.06"
-    },
-    {
-        "system": "NoReorderModel",
-        "dev": "25.09",
-        "test": "25.43"
-    }
+  {
+    "system": "TSP-gen",
+    "dev": 21.12,
+    "test": 22.44
+  },
+  {
+    "system": "JAMR-gen",
+    "dev": 23.0,
+    "test": 23.0
+  },
+  {
+    "system": "All",
+    "dev": 25.24,
+    "test": 25.62
+  },
+  {
+    "system": "NoInducedRule",
+    "dev": 16.75,
+    "test": 17.43
+  },
+  {
+    "system": "NoConceptRule",
+    "dev": 23.99,
+    "test": 24.86
+  },
+  {
+    "system": "NoMovingDistance",
+    "dev": 23.48,
+    "test": 24.06
+  },
+  {
+    "system": "NoReorderModel",
+    "dev": 25.09,
+    "test": 25.43
+  }
 ]

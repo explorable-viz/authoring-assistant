@@ -1,22 +1,22 @@
 [
-    {
-        "": "UB",
-        "en-test": ".932",
-        "de-test": ".920"
-    },
-    {
-        "": "EN-train",
-        "en-test": ".930",
-        "de-test": ".787"
-    },
-    {
-        "": "DE-train",
-        "en-test": ".852",
-        "de-test": ".790"
-    },
-    {
-        "": "RND",
-        "en-test": ".500",
-        "de-test": ".456"
-    }
+  {
+    "_1": "UB",
+    "en_test": 0.932,
+    "de_test": 0.92
+  },
+  {
+    "_1": "EN-train",
+    "en_test": 0.93,
+    "de_test": 0.787
+  },
+  {
+    "_1": "DE-train",
+    "en_test": 0.852,
+    "de_test": 0.79
+  },
+  {
+    "_1": "RND",
+    "en_test": 0.5,
+    "de_test": 0.456
+  }
 ]

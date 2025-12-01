@@ -1,38 +1,38 @@
 [
-    {
-        "_description": "All models",
-        "_average": "91.51"
-    },
-    {
-        "_description": "All prefix models",
-        "_average": " 94.43"
-    },
-    {
-        "_description": "All postfix models",
-        "_average": "92.37"
-    },
-    {
-        "_description": "All infix models",
-        "_average": "87.72"
-    },
-    {
-        "_description": "All pre-trained models",
-        "_average": "91.06"
-    },
-    {
-        "_description": "All non-pre-trained models",
-        "_average": "91.96"
-    },
-    {
-        "_description": "All medium (type 1) models",
-        "_average": "90.49"
-    },
-    {
-        "_description": "All small (type 2) models",
-        "_average": "92.09"
-    },
-    {
-        "_description": "All minimal (type 3) models",
-        "_average": "91.94"
-    }
+  {
+    "description": "All models",
+    "average": 91.51
+  },
+  {
+    "description": "All prefix models",
+    "average": 94.43
+  },
+  {
+    "description": "All postfix models",
+    "average": 92.37
+  },
+  {
+    "description": "All infix models",
+    "average": 87.72
+  },
+  {
+    "description": "All pre-trained models",
+    "average": 91.06
+  },
+  {
+    "description": "All non-pre-trained models",
+    "average": 91.96
+  },
+  {
+    "description": "All medium (type 1) models",
+    "average": 90.49
+  },
+  {
+    "description": "All small (type 2) models",
+    "average": 92.09
+  },
+  {
+    "description": "All minimal (type 3) models",
+    "average": 91.94
+  }
 ]

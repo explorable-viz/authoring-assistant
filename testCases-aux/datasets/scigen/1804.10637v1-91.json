@@ -1,92 +1,92 @@
 [
-    {
-        "methods": "milne2008learning",
-        "msnbc": "78",
-        "aquaint": "85",
-        "ace2004": "81",
-        "cweb": "64.1",
-        "wiki": "81.7",
-        "avg": "77.96"
-    },
-    {
-        "methods": "D11-1072",
-        "msnbc": "79",
-        "aquaint": "56",
-        "ace2004": "80",
-        "cweb": "58.6",
-        "wiki": "63",
-        "avg": "67.32"
-    },
-    {
-        "methods": "P11-1138",
-        "msnbc": "75",
-        "aquaint": "83",
-        "ace2004": "82",
-        "cweb": "56.2",
-        "wiki": "67.2",
-        "avg": "72.68"
-    },
-    {
-        "methods": "cheng-roth:2013:EMNLP",
-        "msnbc": "90",
-        "aquaint": " 90",
-        "ace2004": "86",
-        "cweb": "67.5",
-        "wiki": "73.4",
-        "avg": "81.38"
-    },
-    {
-        "methods": "guorobust",
-        "msnbc": "92",
-        "aquaint": "87",
-        "ace2004": "88",
-        "cweb": "77",
-        "wiki": " 84.5",
-        "avg": " 85.7"
-    },
-    {
-        "methods": "D17-1276",
-        "msnbc": "93.7 ± 0.1",
-        "aquaint": "88.5 ± 0.4",
-        "ace2004": "88.5 ± 0.3",
-        "cweb": " 77.9 ± 0.1",
-        "wiki": "77.5 ± 0.1",
-        "avg": "85.22"
-    },
-    {
-        "methods": "rel-norm",
-        "msnbc": "92.2 ± 0.3",
-        "aquaint": "86.7 ± 0.7",
-        "ace2004": "87.9 ± 0.3",
-        "cweb": "75.2 ± 0.5",
-        "wiki": "76.4 ± 0.3",
-        "avg": "83.67"
-    },
-    {
-        "methods": "ment-norm",
-        "msnbc": " 93.9 ± 0.2",
-        "aquaint": "88.3 ± 0.6",
-        "ace2004": " 89.9 ± 0.8",
-        "cweb": "77.5 ± 0.1",
-        "wiki": "78.0 ± 0.1",
-        "avg": "85.51"
-    },
-    {
-        "methods": "ment-norm (  K=1)",
-        "msnbc": "93.2 ± 0.3",
-        "aquaint": "88.4 ± 0.4",
-        "ace2004": "88.9 ± 1.0",
-        "cweb": "77.0 ± 0.2",
-        "wiki": "77.2 ± 0.1",
-        "avg": "84.94"
-    },
-    {
-        "methods": "ment-norm (no pad)",
-        "msnbc": "93.6 ± 0.3",
-        "aquaint": "87.8 ± 0.5",
-        "ace2004": " 90.0 ± 0.3",
-        "cweb": "77.0 ± 0.2",
-        "wiki": "77.3 ± 0.3",
-        "avg": "85.13"
-    }
+  {
+    "methods": "milne2008learning",
+    "msnbc": 78,
+    "aquaint": 85,
+    "ace2004": 81,
+    "cweb": 64.1,
+    "wiki": 81.7,
+    "avg": 77.96
+  },
+  {
+    "methods": "D11-1072",
+    "msnbc": 79,
+    "aquaint": 56,
+    "ace2004": 80,
+    "cweb": 58.6,
+    "wiki": 63,
+    "avg": 67.32
+  },
+  {
+    "methods": "P11-1138",
+    "msnbc": 75,
+    "aquaint": 83,
+    "ace2004": 82,
+    "cweb": 56.2,
+    "wiki": 67.2,
+    "avg": 72.68
+  },
+  {
+    "methods": "cheng-roth:2013:EMNLP",
+    "msnbc": 90,
+    "aquaint": 90,
+    "ace2004": 86,
+    "cweb": 67.5,
+    "wiki": 73.4,
+    "avg": 81.38
+  },
+  {
+    "methods": "guorobust",
+    "msnbc": 92,
+    "aquaint": 87,
+    "ace2004": 88,
+    "cweb": 77,
+    "wiki": 84.5,
+    "avg": 85.7
+  },
+  {
+    "methods": "D17-1276",
+    "msnbc": "93.7 ± 0.1",
+    "aquaint": "88.5 ± 0.4",
+    "ace2004": "88.5 ± 0.3",
+    "cweb": " 77.9 ± 0.1",
+    "wiki": "77.5 ± 0.1",
+    "avg": 85.22
+  },
+  {
+    "methods": "rel-norm",
+    "msnbc": "92.2 ± 0.3",
+    "aquaint": "86.7 ± 0.7",
+    "ace2004": "87.9 ± 0.3",
+    "cweb": "75.2 ± 0.5",
+    "wiki": "76.4 ± 0.3",
+    "avg": 83.67
+  },
+  {
+    "methods": "ment-norm",
+    "msnbc": " 93.9 ± 0.2",
+    "aquaint": "88.3 ± 0.6",
+    "ace2004": " 89.9 ± 0.8",
+    "cweb": "77.5 ± 0.1",
+    "wiki": "78.0 ± 0.1",
+    "avg": 85.51
+  },
+  {
+    "methods": "ment-norm",
+    "msnbc": "93.2 ± 0.3",
+    "aquaint": "88.4 ± 0.4",
+    "ace2004": "88.9 ± 1.0",
+    "cweb": "77.0 ± 0.2",
+    "wiki": "77.2 ± 0.1",
+    "avg": 84.94
+  },
+  {
+    "methods": "ment-norm",
+    "msnbc": "93.6 ± 0.3",
+    "aquaint": "87.8 ± 0.5",
+    "ace2004": " 90.0 ± 0.3",
+    "cweb": "77.0 ± 0.2",
+    "wiki": "77.3 ± 0.3",
+    "avg": 85.13
+  }
 ]

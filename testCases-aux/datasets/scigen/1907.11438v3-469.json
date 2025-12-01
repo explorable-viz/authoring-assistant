@@ -1,46 +1,46 @@
 [
-    {
-        "": "Faruqui and Dyer (2014a)",
-        "#lang": "4",
-        "#task-type": "10-WST",
-        "web": "×",
-        "offline": "×",
-        "static": "×",
-        "models": "",
-        "layers": "",
-        "epochs": ""
-    },
-    {
-        "": "Nayak et al. (2016)",
-        "#lang": "1",
-        "#task-type": "7-DT",
-        "web": "×",
-        "offline": "×",
-        "static": "×",
-        "models": "",
-        "layers": "",
-        "epochs": ""
-    },
-    {
-        "": "Köhn (2015)",
-        "#lang": "7",
-        "#task-type": "7-PT",
-        "web": "",
-        "offline": "×",
-        "static": "×",
-        "models": "",
-        "layers": "",
-        "epochs": ""
-    },
-    {
-        "": "Ours",
-        "#lang": "28",
-        "#task-type": "16-PT",
-        "web": "×",
-        "offline": "×",
-        "static": "×",
-        "models": "×",
-        "layers": "×",
-        "epochs": "×"
-    }
+  {
+    "_1": "Faruqui and Dyer",
+    "num_lang": 4,
+    "num_task_type": "10-WST",
+    "web": "×",
+    "offline": "×",
+    "static": "×",
+    "models": "",
+    "layers": "",
+    "epochs": ""
+  },
+  {
+    "_1": "Nayak et al.",
+    "num_lang": 1,
+    "num_task_type": "7-DT",
+    "web": "×",
+    "offline": "×",
+    "static": "×",
+    "models": "",
+    "layers": "",
+    "epochs": ""
+  },
+  {
+    "_1": "Köhn",
+    "num_lang": 7,
+    "num_task_type": "7-PT",
+    "web": "",
+    "offline": "×",
+    "static": "×",
+    "models": "",
+    "layers": "",
+    "epochs": ""
+  },
+  {
+    "_1": "Ours",
+    "num_lang": 28,
+    "num_task_type": "16-PT",
+    "web": "×",
+    "offline": "×",
+    "static": "×",
+    "models": "×",
+    "layers": "×",
+    "epochs": "×"
+  }
 ]

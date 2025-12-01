@@ -1,46 +1,46 @@
 [
-    {
-        "#_encoders": "encoder type",
-        "2": "B-LSTM"
-    },
-    {
-        "#_encoders": "encoder layers",
-        "2": "2"
-    },
-    {
-        "#_encoders": "encoder hidden dim",
-        "2": "500"
-    },
-    {
-        "#_encoders": "# decoders",
-        "2": "1"
-    },
-    {
-        "#_encoders": "decoder type",
-        "2": "LSTM"
-    },
-    {
-        "#_encoders": "decoder layers",
-        "2": "2"
-    },
-    {
-        "#_encoders": "decoder hidden dim",
-        "2": "500"
-    },
-    {
-        "#_encoders": "word vector dim",
-        "2": "300"
-    },
-    {
-        "#_encoders": "attention type",
-        "2": " general"
-    },
-    {
-        "#_encoders": "dropout",
-        "2": "0.3"
-    },
-    {
-        "#_encoders": "beam size",
-        "2": "5"
-    }
+  {
+    "num_encoders": "encoder type",
+    "2": "B-LSTM"
+  },
+  {
+    "num_encoders": "encoder layers",
+    "2": 2
+  },
+  {
+    "num_encoders": "encoder hidden dim",
+    "2": 500
+  },
+  {
+    "num_encoders": "# decoders",
+    "2": 1
+  },
+  {
+    "num_encoders": "decoder type",
+    "2": "LSTM"
+  },
+  {
+    "num_encoders": "decoder layers",
+    "2": 2
+  },
+  {
+    "num_encoders": "decoder hidden dim",
+    "2": 500
+  },
+  {
+    "num_encoders": "word vector dim",
+    "2": 300
+  },
+  {
+    "num_encoders": "attention type",
+    "2": " general"
+  },
+  {
+    "num_encoders": "dropout",
+    "2": 0.3
+  },
+  {
+    "num_encoders": "beam size",
+    "2": 5
+  }
 ]

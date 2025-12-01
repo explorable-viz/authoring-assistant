@@ -1,30 +1,30 @@
 [
-    {
-        "comparison_point_chen2018": "Wu2016",
-        "comparison_point_bpe": "BPE",
-        "comparison_point_enfr": "EnFr",
-        "ref_41.0": "39.0",
-        "ours_38.8": "38.8"
-    },
-    {
-        "comparison_point_chen2018": "Lee2017",
-        "comparison_point_bpe": "Char",
-        "comparison_point_enfr": "CsEn",
-        "ref_41.0": "22.5",
-        "ours_38.8": "25.9"
-    },
-    {
-        "comparison_point_chen2018": "",
-        "comparison_point_bpe": "",
-        "comparison_point_enfr": "DeEn",
-        "ref_41.0": "25.8",
-        "ours_38.8": "31.6"
-    },
-    {
-        "comparison_point_chen2018": "",
-        "comparison_point_bpe": "",
-        "comparison_point_enfr": "FiEn",
-        "ref_41.0": "13.1",
-        "ours_38.8": "19.3"
-    }
+  {
+    "comparison_point_chen2018": "Wu2016",
+    "comparison_point_bpe": "BPE",
+    "comparison_point_enfr": "EnFr",
+    "ref_41_0": 39.0,
+    "ours_38_8": 38.8
+  },
+  {
+    "comparison_point_chen2018": "Lee2017",
+    "comparison_point_bpe": "Char",
+    "comparison_point_enfr": "CsEn",
+    "ref_41_0": 22.5,
+    "ours_38_8": 25.9
+  },
+  {
+    "comparison_point_chen2018": "",
+    "comparison_point_bpe": "",
+    "comparison_point_enfr": "DeEn",
+    "ref_41_0": 25.8,
+    "ours_38_8": 31.6
+  },
+  {
+    "comparison_point_chen2018": "",
+    "comparison_point_bpe": "",
+    "comparison_point_enfr": "FiEn",
+    "ref_41_0": 13.1,
+    "ours_38_8": 19.3
+  }
 ]

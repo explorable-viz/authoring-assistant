@@ -1,26 +1,26 @@
 [
-    {
-        "method": "Konstantinovskiy et al.  2018",
-        "map": "0.267"
-    },
-    {
-        "method": "Hansen et al.  2019",
-        "map": "0.302"
-    },
-    {
-        "method": "BERT",
-        "map": " 0.346 ± 0.024"
-    },
-    {
-        "method": "BERT + Wiki",
-        "map": "0.339 ± 0.025"
-    },
-    {
-        "method": "BERT + Wiki + PU",
-        "map": "0.328 ± 0.027"
-    },
-    {
-        "method": "BERT + Wiki +   PUC",
-        "map": "0.321 ± 0.031"
-    }
+  {
+    "method": "Konstantinovskiy et al.  2018",
+    "map": 0.267
+  },
+  {
+    "method": "Hansen et al.  2019",
+    "map": 0.302
+  },
+  {
+    "method": "BERT",
+    "map": " 0.346 ± 0.024"
+  },
+  {
+    "method": "BERT + Wiki",
+    "map": "0.339 ± 0.025"
+  },
+  {
+    "method": "BERT + Wiki + PU",
+    "map": "0.328 ± 0.027"
+  },
+  {
+    "method": "BERT + Wiki +   PUC",
+    "map": "0.321 ± 0.031"
+  }
 ]

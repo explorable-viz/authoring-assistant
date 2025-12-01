@@ -1,227 +1,227 @@
 [
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC5",
-        "description_first_person_singular_pronoun_incidence": "Sentence length, number of words",
-        "estimate_1.80": "0.66",
-        "std.error_0.41": "0.18",
-        "statistic_4.38": "3.68",
-        "***": "***"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC15",
-        "description_first_person_singular_pronoun_incidence": "Estimates of hypernymy for nouns",
-        "estimate_1.80": "0.61",
-        "std.error_0.41": "0.19",
-        "statistic_4.38": "3.18",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC49",
-        "description_first_person_singular_pronoun_incidence": "Word Concreteness",
-        "estimate_1.80": "0.54",
-        "std.error_0.41": "0.17",
-        "statistic_4.38": "3.18",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC35",
-        "description_first_person_singular_pronoun_incidence": "Ratio of casual particles to causal verbs",
-        "estimate_1.80": "0.56",
-        "std.error_0.41": "0.18",
-        "statistic_4.38": "3.10",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC91",
-        "description_first_person_singular_pronoun_incidence": "Text Easability PC Referential cohesion",
-        "estimate_1.80": "0.45",
-        "std.error_0.41": "0.16",
-        "statistic_4.38": "2.89",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC20",
-        "description_first_person_singular_pronoun_incidence": "Incidence score of gerunds",
-        "estimate_1.80": "0.43",
-        "std.error_0.41": "0.16",
-        "statistic_4.38": "2.77",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": "RC32",
-        "description_first_person_singular_pronoun_incidence": "Expanded temporal connectives incidence",
-        "estimate_1.80": "0.44",
-        "std.error_0.41": "0.16",
-        "statistic_4.38": "2.75",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC9",
-        "description_first_person_singular_pronoun_incidence": "Third person singular pronoun incidence",
-        "estimate_1.80": "0.44",
-        "std.error_0.41": "0.16",
-        "statistic_4.38": "2.67",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": "RC43",
-        "description_first_person_singular_pronoun_incidence": "Word length, number of letters",
-        "estimate_1.80": "0.45",
-        "std.error_0.41": "0.20",
-        "statistic_4.38": "2.27",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": "RC46",
-        "description_first_person_singular_pronoun_incidence": "Verb phrase density",
-        "estimate_1.80": "0.37",
-        "std.error_0.41": "0.16",
-        "statistic_4.38": "2.25",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC97",
-        "description_first_person_singular_pronoun_incidence": "Coh-Metrix L2 Readability",
-        "estimate_1.80": "0.34",
-        "std.error_0.41": "0.16",
-        "statistic_4.38": "2.16",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": " RC61",
-        "description_first_person_singular_pronoun_incidence": "Average word frequency for all words",
-        "estimate_1.80": "0.50",
-        "std.error_0.41": "0.24",
-        "statistic_4.38": "2.13",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": "RC84",
-        "description_first_person_singular_pronoun_incidence": "The average givenness of each sentence",
-        "estimate_1.80": "0.37",
-        "std.error_0.41": "0.18",
-        "statistic_4.38": "2.11",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": "RC65",
-        "description_first_person_singular_pronoun_incidence": "Text Easability PC Syntactic simplicity",
-        "estimate_1.80": "0.38",
-        "std.error_0.41": "0.18",
-        "statistic_4.38": "2.08",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Satire associated",
-        "pca_component___rc19": "RC50",
-        "description_first_person_singular_pronoun_incidence": "Lexical diversity",
-        "estimate_1.80": "0.37",
-        "std.error_0.41": "0.18",
-        "statistic_4.38": "2.05",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": " RC30",
-        "description_first_person_singular_pronoun_incidence": "Agentless passive voice density",
-        "estimate_1.80": "-1.05",
-        "std.error_0.41": "0.21",
-        "statistic_4.38": "-4.96",
-        "***": "***"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": " RC73",
-        "description_first_person_singular_pronoun_incidence": "Average word frequency for content words",
-        "estimate_1.80": "-0.72",
-        "std.error_0.41": "0.20",
-        "statistic_4.38": "-3.68",
-        "***": "***"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": " RC59",
-        "description_first_person_singular_pronoun_incidence": "Adverb incidence",
-        "estimate_1.80": "-0.62",
-        "std.error_0.41": "0.18",
-        "statistic_4.38": "-3.43",
-        "***": "***"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": " RC55",
-        "description_first_person_singular_pronoun_incidence": "Number of sentences",
-        "estimate_1.80": "-0.79",
-        "std.error_0.41": "0.26",
-        "statistic_4.38": "-3.09",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": "RC62",
-        "description_first_person_singular_pronoun_incidence": "Causal and intentional connectives",
-        "estimate_1.80": "-0.42",
-        "std.error_0.41": "0.15",
-        "statistic_4.38": "-2.72",
-        "***": "**"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": " RC34",
-        "description_first_person_singular_pronoun_incidence": "LSA overlap between verbs",
-        "estimate_1.80": "-0.35",
-        "std.error_0.41": "0.16",
-        "statistic_4.38": "-2.22",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": " RC44",
-        "description_first_person_singular_pronoun_incidence": "LSA overlap, adjacent sentences",
-        "estimate_1.80": "-0.36",
-        "std.error_0.41": "0.16",
-        "statistic_4.38": "-2.16",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": "RC47",
-        "description_first_person_singular_pronoun_incidence": "Sentence length, number of words",
-        "estimate_1.80": "-0.36",
-        "std.error_0.41": "0.18",
-        "statistic_4.38": "-2.03",
-        "***": "*"
-    },
-    {
-        "satire_associated": "Fake news associated",
-        "pca_component___rc19": "RC89",
-        "description_first_person_singular_pronoun_incidence": "LSA overlap, all sentences in paragraph",
-        "estimate_1.80": "-0.34",
-        "std.error_0.41": "0.17",
-        "statistic_4.38": "-1.97",
-        "***": "*"
-    },
-    {
-        "satire_associated": "",
-        "pca_component___rc19": "(Intercept)",
-        "description_first_person_singular_pronoun_incidence": "",
-        "estimate_1.80": "-0.54",
-        "std.error_0.41": "0.19",
-        "statistic_4.38": "-2.91",
-        "***": ""
-    }
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC5",
+    "description_first_person_singular_pronoun_incidence": "Sentence length, number of words",
+    "estimate_1_80": 0.66,
+    "std_error_0_41": 0.18,
+    "statistic_4_38": 3.68,
+    "_1": "***"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC15",
+    "description_first_person_singular_pronoun_incidence": "Estimates of hypernymy for nouns",
+    "estimate_1_80": 0.61,
+    "std_error_0_41": 0.19,
+    "statistic_4_38": 3.18,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC49",
+    "description_first_person_singular_pronoun_incidence": "Word Concreteness",
+    "estimate_1_80": 0.54,
+    "std_error_0_41": 0.17,
+    "statistic_4_38": 3.18,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC35",
+    "description_first_person_singular_pronoun_incidence": "Ratio of casual particles to causal verbs",
+    "estimate_1_80": 0.56,
+    "std_error_0_41": 0.18,
+    "statistic_4_38": 3.1,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC91",
+    "description_first_person_singular_pronoun_incidence": "Text Easability PC Referential cohesion",
+    "estimate_1_80": 0.45,
+    "std_error_0_41": 0.16,
+    "statistic_4_38": 2.89,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC20",
+    "description_first_person_singular_pronoun_incidence": "Incidence score of gerunds",
+    "estimate_1_80": 0.43,
+    "std_error_0_41": 0.16,
+    "statistic_4_38": 2.77,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": "RC32",
+    "description_first_person_singular_pronoun_incidence": "Expanded temporal connectives incidence",
+    "estimate_1_80": 0.44,
+    "std_error_0_41": 0.16,
+    "statistic_4_38": 2.75,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC9",
+    "description_first_person_singular_pronoun_incidence": "Third person singular pronoun incidence",
+    "estimate_1_80": 0.44,
+    "std_error_0_41": 0.16,
+    "statistic_4_38": 2.67,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": "RC43",
+    "description_first_person_singular_pronoun_incidence": "Word length, number of letters",
+    "estimate_1_80": 0.45,
+    "std_error_0_41": 0.2,
+    "statistic_4_38": 2.27,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": "RC46",
+    "description_first_person_singular_pronoun_incidence": "Verb phrase density",
+    "estimate_1_80": 0.37,
+    "std_error_0_41": 0.16,
+    "statistic_4_38": 2.25,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC97",
+    "description_first_person_singular_pronoun_incidence": "Coh-Metrix L2 Readability",
+    "estimate_1_80": 0.34,
+    "std_error_0_41": 0.16,
+    "statistic_4_38": 2.16,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": " RC61",
+    "description_first_person_singular_pronoun_incidence": "Average word frequency for all words",
+    "estimate_1_80": 0.5,
+    "std_error_0_41": 0.24,
+    "statistic_4_38": 2.13,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": "RC84",
+    "description_first_person_singular_pronoun_incidence": "The average givenness of each sentence",
+    "estimate_1_80": 0.37,
+    "std_error_0_41": 0.18,
+    "statistic_4_38": 2.11,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": "RC65",
+    "description_first_person_singular_pronoun_incidence": "Text Easability PC Syntactic simplicity",
+    "estimate_1_80": 0.38,
+    "std_error_0_41": 0.18,
+    "statistic_4_38": 2.08,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Satire associated",
+    "pca_component_rc19": "RC50",
+    "description_first_person_singular_pronoun_incidence": "Lexical diversity",
+    "estimate_1_80": 0.37,
+    "std_error_0_41": 0.18,
+    "statistic_4_38": 2.05,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": " RC30",
+    "description_first_person_singular_pronoun_incidence": "Agentless passive voice density",
+    "estimate_1_80": -1.05,
+    "std_error_0_41": 0.21,
+    "statistic_4_38": -4.96,
+    "_1": "***"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": " RC73",
+    "description_first_person_singular_pronoun_incidence": "Average word frequency for content words",
+    "estimate_1_80": -0.72,
+    "std_error_0_41": 0.2,
+    "statistic_4_38": -3.68,
+    "_1": "***"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": " RC59",
+    "description_first_person_singular_pronoun_incidence": "Adverb incidence",
+    "estimate_1_80": -0.62,
+    "std_error_0_41": 0.18,
+    "statistic_4_38": -3.43,
+    "_1": "***"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": " RC55",
+    "description_first_person_singular_pronoun_incidence": "Number of sentences",
+    "estimate_1_80": -0.79,
+    "std_error_0_41": 0.26,
+    "statistic_4_38": -3.09,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": "RC62",
+    "description_first_person_singular_pronoun_incidence": "Causal and intentional connectives",
+    "estimate_1_80": -0.42,
+    "std_error_0_41": 0.15,
+    "statistic_4_38": -2.72,
+    "_1": "**"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": " RC34",
+    "description_first_person_singular_pronoun_incidence": "LSA overlap between verbs",
+    "estimate_1_80": -0.35,
+    "std_error_0_41": 0.16,
+    "statistic_4_38": -2.22,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": " RC44",
+    "description_first_person_singular_pronoun_incidence": "LSA overlap, adjacent sentences",
+    "estimate_1_80": -0.36,
+    "std_error_0_41": 0.16,
+    "statistic_4_38": -2.16,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": "RC47",
+    "description_first_person_singular_pronoun_incidence": "Sentence length, number of words",
+    "estimate_1_80": -0.36,
+    "std_error_0_41": 0.18,
+    "statistic_4_38": -2.03,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "Fake news associated",
+    "pca_component_rc19": "RC89",
+    "description_first_person_singular_pronoun_incidence": "LSA overlap, all sentences in paragraph",
+    "estimate_1_80": -0.34,
+    "std_error_0_41": 0.17,
+    "statistic_4_38": -1.97,
+    "_1": "*"
+  },
+  {
+    "satire_associated": "",
+    "pca_component_rc19": "",
+    "description_first_person_singular_pronoun_incidence": "",
+    "estimate_1_80": -0.54,
+    "std_error_0_41": 0.19,
+    "statistic_4_38": -2.91,
+    "_1": ""
+  }
 ]

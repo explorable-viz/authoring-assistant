@@ -1,135 +1,135 @@
 [
-    {
-        "propaganda_technique": "Appeal to Authority",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0.212"
-    },
-    {
-        "propaganda_technique": "Appeal to Fear/Prejudice",
-        "development_p": "0.285",
-        "development_r": "0.006",
-        "development_f": "0.011",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Bandwagon",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Black-and-White Fallacy",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Causal Oversimplification",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Doubt",
-        "development_p": "0.007",
-        "development_r": "0.001",
-        "development_f": "0.002",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Exaggeration,Minimisation",
-        "development_p": "0.833",
-        "development_r": "0.085",
-        "development_f": "0.154",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Flag-Waving",
-        "development_p": "0.534",
-        "development_r": "0.102",
-        "development_f": "0.171",
-        "test_f": "0.195"
-    },
-    {
-        "propaganda_technique": "Loaded Language",
-        "development_p": "0.471",
-        "development_r": "0.160",
-        "development_f": "0.237",
-        "test_f": "0.130"
-    },
-    {
-        "propaganda_technique": "Name Calling,Labeling",
-        "development_p": "0.270",
-        "development_r": "0.112",
-        "development_f": "0.158",
-        "test_f": "0.150"
-    },
-    {
-        "propaganda_technique": "O,IV,C",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Red Herring",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Reductio ad hitlerum",
-        "development_p": "0.318",
-        "development_r": "0.069",
-        "development_f": "0.113",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Repetition",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Slogans",
-        "development_p": "0.221",
-        "development_r": "0.034",
-        "development_f": "0.059",
-        "test_f": "0.003"
-    },
-    {
-        "propaganda_technique": "Straw Men",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Thought-terminating Cliches",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Whataboutism",
-        "development_p": "0",
-        "development_r": "0",
-        "development_f": "0",
-        "test_f": "0"
-    },
-    {
-        "propaganda_technique": "Overall",
-        "development_p": "0.365",
-        "development_r": "0.073",
-        "development_f": "0.122",
-        "test_f": "0.131∗"
-    }
+  {
+    "propaganda_technique": "Appeal to Authority",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0.212
+  },
+  {
+    "propaganda_technique": "Appeal to Fear/Prejudice",
+    "development_p": 0.285,
+    "development_r": 0.006,
+    "development_f": 0.011,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Bandwagon",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Black-and-White Fallacy",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Causal Oversimplification",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Doubt",
+    "development_p": 0.007,
+    "development_r": 0.001,
+    "development_f": 0.002,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Exaggeration,Minimisation",
+    "development_p": 0.833,
+    "development_r": 0.085,
+    "development_f": 0.154,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Flag-Waving",
+    "development_p": 0.534,
+    "development_r": 0.102,
+    "development_f": 0.171,
+    "test_f": 0.195
+  },
+  {
+    "propaganda_technique": "Loaded Language",
+    "development_p": 0.471,
+    "development_r": 0.16,
+    "development_f": 0.237,
+    "test_f": 0.13
+  },
+  {
+    "propaganda_technique": "Name Calling,Labeling",
+    "development_p": 0.27,
+    "development_r": 0.112,
+    "development_f": 0.158,
+    "test_f": 0.15
+  },
+  {
+    "propaganda_technique": "O,IV,C",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Red Herring",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Reductio ad hitlerum",
+    "development_p": 0.318,
+    "development_r": 0.069,
+    "development_f": 0.113,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Repetition",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Slogans",
+    "development_p": 0.221,
+    "development_r": 0.034,
+    "development_f": 0.059,
+    "test_f": 0.003
+  },
+  {
+    "propaganda_technique": "Straw Men",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Thought-terminating Cliches",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Whataboutism",
+    "development_p": 0,
+    "development_r": 0,
+    "development_f": 0,
+    "test_f": 0
+  },
+  {
+    "propaganda_technique": "Overall",
+    "development_p": 0.365,
+    "development_r": 0.073,
+    "development_f": 0.122,
+    "test_f": "0.131∗"
+  }
 ]

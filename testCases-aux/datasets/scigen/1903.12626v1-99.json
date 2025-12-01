@@ -1,9 +1,9 @@
 [
-    {
-        "dataset_input_∖_unseen_rate": " vw",
-        "dbpedia_50%": "0.993",
-        "dbpedia_25%": "0.992",
-        "20news_50%": "0.878",
-        "20news_25%": "0.861"
-    }
+  {
+    "dataset_input_∖_unseen_rate": " vw",
+    "dbpedia_50": 0.993,
+    "dbpedia_25": 0.992,
+    "20news_50": 0.878,
+    "20news_25": 0.861
+  }
 ]

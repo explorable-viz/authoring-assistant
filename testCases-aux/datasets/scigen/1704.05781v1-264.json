@@ -1,22 +1,22 @@
 [
-    {
-        "_cross-sentential": "OS False",
-        "_simlex999": " 0.44",
-        "_analogies": "0.34"
-    },
-    {
-        "_cross-sentential": "OS True",
-        "_simlex999": "0.40",
-        "_analogies": " 0.43"
-    },
-    {
-        "_cross-sentential": "GW False",
-        "_simlex999": "0.44",
-        "_analogies": "0.66"
-    },
-    {
-        "_cross-sentential": "GW True",
-        "_simlex999": "0.44",
-        "_analogies": "0.65"
-    }
+  {
+    "cross_sentential": "OS False",
+    "simlex999": 0.44,
+    "analogies": 0.34
+  },
+  {
+    "cross_sentential": "OS True",
+    "simlex999": 0.4,
+    "analogies": 0.43
+  },
+  {
+    "cross_sentential": "GW False",
+    "simlex999": 0.44,
+    "analogies": 0.66
+  },
+  {
+    "cross_sentential": "GW True",
+    "simlex999": 0.44,
+    "analogies": 0.65
+  }
 ]

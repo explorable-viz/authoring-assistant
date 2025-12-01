@@ -1,44 +1,44 @@
 [
-    {
-        "_model": "SyntaxSQL-con",
-        "_sparc_ques.match": "18.5",
-        "_sparc_int.match": "4.3",
-        "_cosql_ques.match": "15.1",
-        "_cosql_int.match": "2.7"
-    },
-    {
-        "_model": "CD-Seq2Seq",
-        "_sparc_ques.match": "21.9",
-        "_sparc_int.match": "8.1",
-        "_cosql_ques.match": "13.8",
-        "_cosql_int.match": "2.1"
-    },
-    {
-        "_model": "EditSQL",
-        "_sparc_ques.match": "33.0",
-        "_sparc_int.match": "16.4",
-        "_cosql_ques.match": "22.2",
-        "_cosql_int.match": "5.8"
-    },
-    {
-        "_model": "Ours",
-        "_sparc_ques.match": " 41.8",
-        "_sparc_int.match": " 20.6",
-        "_cosql_ques.match": " 33.5",
-        "_cosql_int.match": " 9.6"
-    },
-    {
-        "_model": "EditSQL + BERT",
-        "_sparc_ques.match": "47.2",
-        "_sparc_int.match": "29.5",
-        "_cosql_ques.match": "40.0",
-        "_cosql_int.match": "11.0"
-    },
-    {
-        "_model": "Ours + BERT",
-        "_sparc_ques.match": " 52.6",
-        "_sparc_int.match": " 29.9",
-        "_cosql_ques.match": " 41.0",
-        "_cosql_int.match": " 14.0"
-    }
+  {
+    "model": "SyntaxSQL-con",
+    "sparc_ques_match": 18.5,
+    "sparc_int_match": 4.3,
+    "cosql_ques_match": 15.1,
+    "cosql_int_match": 2.7
+  },
+  {
+    "model": "CD-Seq2Seq",
+    "sparc_ques_match": 21.9,
+    "sparc_int_match": 8.1,
+    "cosql_ques_match": 13.8,
+    "cosql_int_match": 2.1
+  },
+  {
+    "model": "EditSQL",
+    "sparc_ques_match": 33.0,
+    "sparc_int_match": 16.4,
+    "cosql_ques_match": 22.2,
+    "cosql_int_match": 5.8
+  },
+  {
+    "model": "Ours",
+    "sparc_ques_match": 41.8,
+    "sparc_int_match": 20.6,
+    "cosql_ques_match": 33.5,
+    "cosql_int_match": 9.6
+  },
+  {
+    "model": "EditSQL + BERT",
+    "sparc_ques_match": 47.2,
+    "sparc_int_match": 29.5,
+    "cosql_ques_match": 40.0,
+    "cosql_int_match": 11.0
+  },
+  {
+    "model": "Ours + BERT",
+    "sparc_ques_match": 52.6,
+    "sparc_int_match": 29.9,
+    "cosql_ques_match": 41.0,
+    "cosql_int_match": 14.0
+  }
 ]

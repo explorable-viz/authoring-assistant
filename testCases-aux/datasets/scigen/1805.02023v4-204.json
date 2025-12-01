@@ -1,79 +1,79 @@
 [
-    {
-        "_input": "Gold seg",
-        "_models": "Yang et al. ( 2016 )",
-        "_p": "65.59",
-        "_r": "71.84",
-        "_f1": "68.57"
-    },
-    {
-        "_input": "Gold seg",
-        "_models": "Yang et al. ( 2016 )*†",
-        "_p": "72.98",
-        "_r": " 80.15",
-        "_f1": " 76.40"
-    },
-    {
-        "_input": "Gold seg",
-        "_models": "Che et al. ( 2013 )*",
-        "_p": "77.71",
-        "_r": "72.51",
-        "_f1": "75.02"
-    },
-    {
-        "_input": "Gold seg",
-        "_models": "Wang et al. ( 2013 )*",
-        "_p": "76.43",
-        "_r": "72.32",
-        "_f1": "74.32"
-    },
-    {
-        "_input": "Gold seg",
-        "_models": "Word baseline",
-        "_p": "76.66",
-        "_r": "63.60",
-        "_f1": "69.52"
-    },
-    {
-        "_input": "Gold seg",
-        "_models": "+char+bichar LSTM",
-        "_p": " 78.62",
-        "_r": "73.13",
-        "_f1": "75.77"
-    },
-    {
-        "_input": "Auto seg",
-        "_models": "Word baseline",
-        "_p": "72.84",
-        "_r": "59.72",
-        "_f1": "65.63"
-    },
-    {
-        "_input": "Auto seg",
-        "_models": "+char+bichar LSTM",
-        "_p": "73.36",
-        "_r": "70.12",
-        "_f1": "71.70"
-    },
-    {
-        "_input": "No seg",
-        "_models": "Char baseline",
-        "_p": "68.79",
-        "_r": "60.35",
-        "_f1": "64.30"
-    },
-    {
-        "_input": "No seg",
-        "_models": "+bichar+softword",
-        "_p": "74.36",
-        "_r": "69.43",
-        "_f1": "71.81"
-    },
-    {
-        "_input": "No seg",
-        "_models": "Lattice",
-        "_p": " 76.35",
-        "_r": " 71.56",
-        "_f1": " 73.88"
-    }
+  {
+    "input": "Gold seg",
+    "models": "Yang et al.",
+    "p": 65.59,
+    "r": 71.84,
+    "f1": 68.57
+  },
+  {
+    "input": "Gold seg",
+    "models": "Yang et al. ( 2016 )*†",
+    "p": 72.98,
+    "r": 80.15,
+    "f1": 76.4
+  },
+  {
+    "input": "Gold seg",
+    "models": "Che et al. ( 2013 )*",
+    "p": 77.71,
+    "r": 72.51,
+    "f1": 75.02
+  },
+  {
+    "input": "Gold seg",
+    "models": "Wang et al. ( 2013 )*",
+    "p": 76.43,
+    "r": 72.32,
+    "f1": 74.32
+  },
+  {
+    "input": "Gold seg",
+    "models": "Word baseline",
+    "p": 76.66,
+    "r": 63.6,
+    "f1": 69.52
+  },
+  {
+    "input": "Gold seg",
+    "models": "+char+bichar LSTM",
+    "p": 78.62,
+    "r": 73.13,
+    "f1": 75.77
+  },
+  {
+    "input": "Auto seg",
+    "models": "Word baseline",
+    "p": 72.84,
+    "r": 59.72,
+    "f1": 65.63
+  },
+  {
+    "input": "Auto seg",
+    "models": "+char+bichar LSTM",
+    "p": 73.36,
+    "r": 70.12,
+    "f1": 71.7
+  },
+  {
+    "input": "No seg",
+    "models": "Char baseline",
+    "p": 68.79,
+    "r": 60.35,
+    "f1": 64.3
+  },
+  {
+    "input": "No seg",
+    "models": "+bichar+softword",
+    "p": 74.36,
+    "r": 69.43,
+    "f1": 71.81
+  },
+  {
+    "input": "No seg",
+    "models": "Lattice",
+    "p": 76.35,
+    "r": 71.56,
+    "f1": 73.88
+  }
 ]

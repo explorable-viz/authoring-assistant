@@ -1,74 +1,74 @@
 [
-    {
-        "split": "Val",
-        "nli_model": "Original",
-        "incor.": "42.1%",
-        "Δ": "",
-        "↑": "",
-        "↓": ""
-    },
-    {
-        "split": "Val",
-        "nli_model": "Random",
-        "incor.": "50.7%",
-        "Δ": "+8.6",
-        "↑": "16",
-        "↓": "26"
-    },
-    {
-        "split": "Val",
-        "nli_model": "DA",
-        "incor.": "51.4%",
-        "Δ": "+9.3",
-        "↑": "13",
-        "↓": "23"
-    },
-    {
-        "split": "Val",
-        "nli_model": "SSE",
-        "incor.": "45.8%",
-        "Δ": "+3.7",
-        "↑": "18",
-        "↓": "22"
-    },
-    {
-        "split": "Val",
-        "nli_model": "ESIM",
-        "incor.": "39.3%",
-        "Δ": "-2.8",
-        "↑": "23",
-        "↓": "20"
-    },
-    {
-        "split": "Val",
-        "nli_model": "InferSent",
-        "incor.": "38.3%",
-        "Δ": "-3.8",
-        "↑": "24",
-        "↓": "20"
-    },
-    {
-        "split": "",
-        "nli_model": "BERT",
-        "incor.": "28.0%",
-        "Δ": "-14.1",
-        "↑": "25",
-        "↓": "10"
-    },
-    {
-        "split": "Test",
-        "nli_model": "Original",
-        "incor.": "26.0%",
-        "Δ": "",
-        "↑": "",
-        "↓": ""
-    },
-    {
-        "split": "Test",
-        "nli_model": "ESIM",
-        "incor.": "29.0%",
-        "Δ": "+3.0",
-        "↑": "11",
-        "↓": "14"
-    }
+  {
+    "split": "Val",
+    "nli_model": "Original",
+    "incor": 42.1,
+    "δ": "",
+    "↑": "",
+    "↓": ""
+  },
+  {
+    "split": "Val",
+    "nli_model": "Random",
+    "incor": 50.7,
+    "δ": 8.6,
+    "↑": 16,
+    "↓": 26
+  },
+  {
+    "split": "Val",
+    "nli_model": "DA",
+    "incor": 51.4,
+    "δ": 9.3,
+    "↑": 13,
+    "↓": 23
+  },
+  {
+    "split": "Val",
+    "nli_model": "SSE",
+    "incor": 45.8,
+    "δ": 3.7,
+    "↑": 18,
+    "↓": 22
+  },
+  {
+    "split": "Val",
+    "nli_model": "ESIM",
+    "incor": 39.3,
+    "δ": -2.8,
+    "↑": 23,
+    "↓": 20
+  },
+  {
+    "split": "Val",
+    "nli_model": "InferSent",
+    "incor": 38.3,
+    "δ": -3.8,
+    "↑": 24,
+    "↓": 20
+  },
+  {
+    "split": "",
+    "nli_model": "BERT",
+    "incor": 28.0,
+    "δ": -14.1,
+    "↑": 25,
+    "↓": 10
+  },
+  {
+    "split": "Test",
+    "nli_model": "Original",
+    "incor": 26.0,
+    "δ": "",
+    "↑": "",
+    "↓": ""
+  },
+  {
+    "split": "Test",
+    "nli_model": "ESIM",
+    "incor": 29.0,
+    "δ": 3.0,
+    "↑": 11,
+    "↓": 14
+  }
 ]

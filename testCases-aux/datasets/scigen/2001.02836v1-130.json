@@ -1,112 +1,112 @@
 [
-    {
-        "model": "word2vec",
-        "downstream": "Friendly",
-        "keller_dobj": "0.29",
-        "keller_amod": "0.28",
-        "keller_average": "0.29",
-        "sp-10k_nsubj": "0.32",
-        "sp-10k_dobj": "0.53",
-        "sp-10k_amod": "0.62",
-        "sp-10k_average": "0.49"
-    },
-    {
-        "model": "GloVe",
-        "downstream": "Friendly",
-        "keller_dobj": "0.37",
-        "keller_amod": "0.32",
-        "keller_average": "0.35",
-        "sp-10k_nsubj": "0.57",
-        "sp-10k_dobj": "0.60",
-        "sp-10k_amod": "0.68",
-        "sp-10k_average": "0.62"
-    },
-    {
-        "model": "D-embeddings",
-        "downstream": "Friendly",
-        "keller_dobj": "0.19",
-        "keller_amod": "0.22",
-        "keller_average": "0.21",
-        "sp-10k_nsubj": "0.66",
-        "sp-10k_dobj": "0.71",
-        "sp-10k_amod": "0.77",
-        "sp-10k_average": "0.71"
-    },
-    {
-        "model": "ELMo",
-        "downstream": "Friendly",
-        "keller_dobj": "0.23",
-        "keller_amod": "0.06",
-        "keller_average": "0.15",
-        "sp-10k_nsubj": "0.09",
-        "sp-10k_dobj": "0.29",
-        "sp-10k_amod": "0.38",
-        "sp-10k_average": "0.25"
-    },
-    {
-        "model": "BERT (static)",
-        "downstream": "Friendly",
-        "keller_dobj": "0.11",
-        "keller_amod": "0.05",
-        "keller_average": "0.08",
-        "sp-10k_nsubj": "0.25",
-        "sp-10k_dobj": "0.32",
-        "sp-10k_amod": "0.27",
-        "sp-10k_average": "0.28"
-    },
-    {
-        "model": "BERT (dynamic)",
-        "downstream": "Friendly",
-        "keller_dobj": "0.19",
-        "keller_amod": "0.23",
-        "keller_average": "0.21",
-        "sp-10k_nsubj": "0.35",
-        "sp-10k_dobj": "0.45",
-        "sp-10k_amod": "0.51",
-        "sp-10k_average": "0.41"
-    },
-    {
-        "model": "PP",
-        "downstream": "Unfriendly",
-        "keller_dobj": " 0.66",
-        "keller_amod": "0.26",
-        "keller_average": "0.46",
-        "sp-10k_nsubj": "0.75",
-        "sp-10k_dobj": "0.74",
-        "sp-10k_amod": "0.75",
-        "sp-10k_average": "0.75"
-    },
-    {
-        "model": "DS",
-        "downstream": "Unfriendly",
-        "keller_dobj": "0.53",
-        "keller_amod": "0.32",
-        "keller_average": "0.43",
-        "sp-10k_nsubj": "0.59",
-        "sp-10k_dobj": "0.65",
-        "sp-10k_amod": "0.67",
-        "sp-10k_average": "0.64"
-    },
-    {
-        "model": "NN",
-        "downstream": "Unfriendly",
-        "keller_dobj": "0.16",
-        "keller_amod": "0.13",
-        "keller_average": "0.15",
-        "sp-10k_nsubj": "0.70",
-        "sp-10k_dobj": "0.68",
-        "sp-10k_amod": "0.68",
-        "sp-10k_average": "0.69"
-    },
-    {
-        "model": "MWE",
-        "downstream": "Friendly",
-        "keller_dobj": "0.63",
-        "keller_amod": " 0.43†",
-        "keller_average": " 0.53†",
-        "sp-10k_nsubj": " 0.76",
-        "sp-10k_dobj": " 0.79†",
-        "sp-10k_amod": " 0.78",
-        "sp-10k_average": " 0.78†"
-    }
+  {
+    "model": "word2vec",
+    "downstream": "Friendly",
+    "keller_dobj": 0.29,
+    "keller_amod": 0.28,
+    "keller_average": 0.29,
+    "sp_10k_nsubj": 0.32,
+    "sp_10k_dobj": 0.53,
+    "sp_10k_amod": 0.62,
+    "sp_10k_average": 0.49
+  },
+  {
+    "model": "GloVe",
+    "downstream": "Friendly",
+    "keller_dobj": 0.37,
+    "keller_amod": 0.32,
+    "keller_average": 0.35,
+    "sp_10k_nsubj": 0.57,
+    "sp_10k_dobj": 0.6,
+    "sp_10k_amod": 0.68,
+    "sp_10k_average": 0.62
+  },
+  {
+    "model": "D-embeddings",
+    "downstream": "Friendly",
+    "keller_dobj": 0.19,
+    "keller_amod": 0.22,
+    "keller_average": 0.21,
+    "sp_10k_nsubj": 0.66,
+    "sp_10k_dobj": 0.71,
+    "sp_10k_amod": 0.77,
+    "sp_10k_average": 0.71
+  },
+  {
+    "model": "ELMo",
+    "downstream": "Friendly",
+    "keller_dobj": 0.23,
+    "keller_amod": 0.06,
+    "keller_average": 0.15,
+    "sp_10k_nsubj": 0.09,
+    "sp_10k_dobj": 0.29,
+    "sp_10k_amod": 0.38,
+    "sp_10k_average": 0.25
+  },
+  {
+    "model": "BERT",
+    "downstream": "Friendly",
+    "keller_dobj": 0.11,
+    "keller_amod": 0.05,
+    "keller_average": 0.08,
+    "sp_10k_nsubj": 0.25,
+    "sp_10k_dobj": 0.32,
+    "sp_10k_amod": 0.27,
+    "sp_10k_average": 0.28
+  },
+  {
+    "model": "BERT",
+    "downstream": "Friendly",
+    "keller_dobj": 0.19,
+    "keller_amod": 0.23,
+    "keller_average": 0.21,
+    "sp_10k_nsubj": 0.35,
+    "sp_10k_dobj": 0.45,
+    "sp_10k_amod": 0.51,
+    "sp_10k_average": 0.41
+  },
+  {
+    "model": "PP",
+    "downstream": "Unfriendly",
+    "keller_dobj": 0.66,
+    "keller_amod": 0.26,
+    "keller_average": 0.46,
+    "sp_10k_nsubj": 0.75,
+    "sp_10k_dobj": 0.74,
+    "sp_10k_amod": 0.75,
+    "sp_10k_average": 0.75
+  },
+  {
+    "model": "DS",
+    "downstream": "Unfriendly",
+    "keller_dobj": 0.53,
+    "keller_amod": 0.32,
+    "keller_average": 0.43,
+    "sp_10k_nsubj": 0.59,
+    "sp_10k_dobj": 0.65,
+    "sp_10k_amod": 0.67,
+    "sp_10k_average": 0.64
+  },
+  {
+    "model": "NN",
+    "downstream": "Unfriendly",
+    "keller_dobj": 0.16,
+    "keller_amod": 0.13,
+    "keller_average": 0.15,
+    "sp_10k_nsubj": 0.7,
+    "sp_10k_dobj": 0.68,
+    "sp_10k_amod": 0.68,
+    "sp_10k_average": 0.69
+  },
+  {
+    "model": "MWE",
+    "downstream": "Friendly",
+    "keller_dobj": 0.63,
+    "keller_amod": " 0.43†",
+    "keller_average": " 0.53†",
+    "sp_10k_nsubj": 0.76,
+    "sp_10k_dobj": " 0.79†",
+    "sp_10k_amod": 0.78,
+    "sp_10k_average": " 0.78†"
+  }
 ]

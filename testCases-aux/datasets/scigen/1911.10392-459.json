@@ -1,72 +1,72 @@
 [
-    {
-        "": "was able to “understand” my questions",
-        "1_(strongly_agree)": "16.7%",
-        "2_(agree)": "50.0%",
-        "3_(disagree)": "33.3%",
-        "4_(strongly_disagree)": "00.0%"
-    },
-    {
-        "": "was able to provide answers to my questions",
-        "1_(strongly_agree)": "00.0%",
-        "2_(agree)": "50.0%",
-        "3_(disagree)": "50.0%",
-        "4_(strongly_disagree)": "00.0%"
-    },
-    {
-        "": "I was satisfied with the informativeness of the answers provided by",
-        "1_(strongly_agree)": "33.3%",
-        "2_(agree)": "33.3%",
-        "3_(disagree)": "00.0%",
-        "4_(strongly_disagree)": "33.3%"
-    },
-    {
-        "": "I was satisfied with the fluency of the answers provided by",
-        "1_(strongly_agree)": "16.7%",
-        "2_(agree)": "50.0%",
-        "3_(disagree)": "16.7%",
-        "4_(strongly_disagree)": "16.7%"
-    },
-    {
-        "": "could respond in a reasonable time",
-        "1_(strongly_agree)": "50.0%",
-        "2_(agree)": "33.3%",
-        "3_(disagree)": "16.7%",
-        "4_(strongly_disagree)": "00.0%"
-    },
-    {
-        "": "The GUI of was suitable for reading the provided answers",
-        "1_(strongly_agree)": "50.0%",
-        "2_(agree)": "00.0%",
-        "3_(disagree)": "33.3%",
-        "4_(strongly_disagree)": "16.7%"
-    },
-    {
-        "": "reduces my need to google a specific information",
-        "1_(strongly_agree)": "16.7%",
-        "2_(agree)": "66.7%",
-        "3_(disagree)": "00.0%",
-        "4_(strongly_disagree)": "16.7%"
-    },
-    {
-        "": "would help me save some time in my work",
-        "1_(strongly_agree)": "33.3%",
-        "2_(agree)": "33.3%",
-        "3_(disagree)": "33.3%",
-        "4_(strongly_disagree)": "00.0%"
-    },
-    {
-        "": "I would like to use in the future on a daily basis",
-        "1_(strongly_agree)": "00.0%",
-        "2_(agree)": "66.7%",
-        "3_(disagree)": "00.0%",
-        "4_(strongly_disagree)": "33.3%"
-    },
-    {
-        "": "I will use to plan for my next conference",
-        "1_(strongly_agree)": "16.7%",
-        "2_(agree)": "16.7%",
-        "3_(disagree)": "33.3%",
-        "4_(strongly_disagree)": "33.3%"
-    }
+  {
+    "_1": "was able to “understand” my questions",
+    "1": 16.7,
+    "2": 50.0,
+    "3": 33.3,
+    "4": 0.0
+  },
+  {
+    "_1": "was able to provide answers to my questions",
+    "1": 0.0,
+    "2": 50.0,
+    "3": 50.0,
+    "4": 0.0
+  },
+  {
+    "_1": "I was satisfied with the informativeness of the answers provided by",
+    "1": 33.3,
+    "2": 33.3,
+    "3": 0.0,
+    "4": 33.3
+  },
+  {
+    "_1": "I was satisfied with the fluency of the answers provided by",
+    "1": 16.7,
+    "2": 50.0,
+    "3": 16.7,
+    "4": 16.7
+  },
+  {
+    "_1": "could respond in a reasonable time",
+    "1": 50.0,
+    "2": 33.3,
+    "3": 16.7,
+    "4": 0.0
+  },
+  {
+    "_1": "The GUI of was suitable for reading the provided answers",
+    "1": 50.0,
+    "2": 0.0,
+    "3": 33.3,
+    "4": 16.7
+  },
+  {
+    "_1": "reduces my need to google a specific information",
+    "1": 16.7,
+    "2": 66.7,
+    "3": 0.0,
+    "4": 16.7
+  },
+  {
+    "_1": "would help me save some time in my wor",
+    "1": 33.3,
+    "2": 33.3,
+    "3": 33.3,
+    "4": 0.0
+  },
+  {
+    "_1": "I would like to use in the future on a daily basis",
+    "1": 0.0,
+    "2": 66.7,
+    "3": 0.0,
+    "4": 33.3
+  },
+  {
+    "_1": "I will use to plan for my next conference",
+    "1": 16.7,
+    "2": 16.7,
+    "3": 33.3,
+    "4": 33.3
+  }
 ]

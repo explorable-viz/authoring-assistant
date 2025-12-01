@@ -1,34 +1,34 @@
 [
-    {
-        "model": "fastText",
-        "accuracy": "68.7%"
-    },
-    {
-        "model": "GloVe",
-        "accuracy": "73.1%"
-    },
-    {
-        "model": " BioELMo Jin et al. ( 2019 )",
-        "accuracy": "78.2%"
-    },
-    {
-        "model": " ESIMw/  K Lu et al. ( 2019 )",
-        "accuracy": "77.8%"
-    },
-    {
-        "model": "fastText w/ KG+Sentiment",
-        "accuracy": "73.67%"
-    },
-    {
-        "model": "GloVe w/ KG+Sentiment",
-        "accuracy": "74.46%"
-    },
-    {
-        "model": "BioELMo w/ KG",
-        "accuracy": "78.76%"
-    },
-    {
-        "model": " BioELMo w/ KG+Sentiment",
-        "accuracy": " 79.04%"
-    }
+  {
+    "model": "fastText",
+    "accuracy": 68.7
+  },
+  {
+    "model": "GloVe",
+    "accuracy": 73.1
+  },
+  {
+    "model": " BioELMo Jin et al.",
+    "accuracy": 78.2
+  },
+  {
+    "model": " ESIMw/  K Lu et al.",
+    "accuracy": 77.8
+  },
+  {
+    "model": "fastText w/ KG+Sentiment",
+    "accuracy": 73.67
+  },
+  {
+    "model": "GloVe w/ KG+Sentiment",
+    "accuracy": 74.46
+  },
+  {
+    "model": "BioELMo w/ KG",
+    "accuracy": 78.76
+  },
+  {
+    "model": " BioELMo w/ KG+Sentiment",
+    "accuracy": 79.04
+  }
 ]

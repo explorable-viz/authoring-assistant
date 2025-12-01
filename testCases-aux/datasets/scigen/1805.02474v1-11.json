@@ -1,62 +1,62 @@
 [
-    {
-        "_model": "socher2011semi",
-        "_accuracy": "77.70",
-        "_train_(s)": "–",
-        "_test_(s)": "–"
-    },
-    {
-        "_model": "socher2012semantic",
-        "_accuracy": "79.00",
-        "_train_(s)": "–",
-        "_test_(s)": "–"
-    },
-    {
-        "_model": "kim2014convolutional",
-        "_accuracy": "81.50",
-        "_train_(s)": "–",
-        "_test_(s)": "–"
-    },
-    {
-        "_model": "qian2016linguistically",
-        "_accuracy": "81.50",
-        "_train_(s)": "–",
-        "_test_(s)": "–"
-    },
-    {
-        "_model": "BiLSTM",
-        "_accuracy": "81.61",
-        "_train_(s)": "51",
-        "_test_(s)": "1.62"
-    },
-    {
-        "_model": "2 stacked BiLSTM",
-        "_accuracy": "81.94",
-        "_train_(s)": "98",
-        "_test_(s)": "3.18"
-    },
-    {
-        "_model": "3 stacked BiLSTM",
-        "_accuracy": "81.71",
-        "_train_(s)": "137",
-        "_test_(s)": "4.67"
-    },
-    {
-        "_model": "3 stacked CNN",
-        "_accuracy": "81.59",
-        "_train_(s)": "31",
-        "_test_(s)": "1.04"
-    },
-    {
-        "_model": "Transformer (N=8)",
-        "_accuracy": "81.97",
-        "_train_(s)": "89",
-        "_test_(s)": "2.75"
-    },
-    {
-        "_model": "S-LSTM",
-        "_accuracy": " 82.45*",
-        "_train_(s)": "41",
-        "_test_(s)": "1.53"
-    }
+  {
+    "model": "socher2011semi",
+    "accuracy": 77.7,
+    "train": "–",
+    "test": "–"
+  },
+  {
+    "model": "socher2012semantic",
+    "accuracy": 79.0,
+    "train": "–",
+    "test": "–"
+  },
+  {
+    "model": "kim2014convolutional",
+    "accuracy": 81.5,
+    "train": "–",
+    "test": "–"
+  },
+  {
+    "model": "qian2016linguistically",
+    "accuracy": 81.5,
+    "train": "–",
+    "test": "–"
+  },
+  {
+    "model": "BiLSTM",
+    "accuracy": 81.61,
+    "train": 51,
+    "test": 1.62
+  },
+  {
+    "model": "2 stacked BiLSTM",
+    "accuracy": 81.94,
+    "train": 98,
+    "test": 3.18
+  },
+  {
+    "model": "3 stacked BiLSTM",
+    "accuracy": 81.71,
+    "train": 137,
+    "test": 4.67
+  },
+  {
+    "model": "3 stacked CNN",
+    "accuracy": 81.59,
+    "train": 31,
+    "test": 1.04
+  },
+  {
+    "model": "Transformer",
+    "accuracy": 81.97,
+    "train": 89,
+    "test": 2.75
+  },
+  {
+    "model": "S-LSTM",
+    "accuracy": 82.45,
+    "train": 41,
+    "test": 1.53
+  }
 ]

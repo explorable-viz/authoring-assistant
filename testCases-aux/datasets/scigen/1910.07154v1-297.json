@@ -1,26 +1,26 @@
 [
-    {
-        "_type_of_fever_set": "Training Set",
-        "_total_claims": "145449",
-        "_claims_converted_to_questions": "131969",
-        "_conversion_accuracy": "90.73",
-        "_total_questions": "395717",
-        "_questions_per_claim_(median)": "3"
-    },
-    {
-        "_type_of_fever_set": "Development Set",
-        "_total_claims": "19998",
-        "_claims_converted_to_questions": "17749",
-        "_conversion_accuracy": "88.75",
-        "_total_questions": "54422",
-        "_questions_per_claim_(median)": "3"
-    },
-    {
-        "_type_of_fever_set": "Test Set",
-        "_total_claims": "9999",
-        "_claims_converted_to_questions": "8863",
-        "_conversion_accuracy": "88.63",
-        "_total_questions": "27359",
-        "_questions_per_claim_(median)": "3"
-    }
+  {
+    "type_of_fever_set": "Training Set",
+    "total_claims": 145449,
+    "claims_converted_to_questions": 131969,
+    "conversion_accuracy": 90.73,
+    "total_questions": 395717,
+    "questions_per_claim": 3
+  },
+  {
+    "type_of_fever_set": "Development Set",
+    "total_claims": 19998,
+    "claims_converted_to_questions": 17749,
+    "conversion_accuracy": 88.75,
+    "total_questions": 54422,
+    "questions_per_claim": 3
+  },
+  {
+    "type_of_fever_set": "Test Set",
+    "total_claims": 9999,
+    "claims_converted_to_questions": 8863,
+    "conversion_accuracy": 88.63,
+    "total_questions": 27359,
+    "questions_per_claim": 3
+  }
 ]

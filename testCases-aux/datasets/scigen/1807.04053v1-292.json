@@ -1,26 +1,26 @@
 [
-    {
-        "_algorithm": "Eisner (generic)",
-        "_en_ud": "96.35",
-        "_en_ptb": "479.1",
-        "_sents/s": "∼ 80"
-    },
-    {
-        "_algorithm": "Eisner (ours)",
-        "_en_ud": "1.496",
-        "_en_ptb": "6.31",
-        "_sents/s": "∼ 6009"
-    },
-    {
-        "_algorithm": "CLE (generic)",
-        "_en_ud": "19.12",
-        "_en_ptb": "93.8",
-        "_sents/s": "∼ 404"
-    },
-    {
-        "_algorithm": "CLE (ours)",
-        "_en_ud": "1.764",
-        "_en_ptb": "6.98",
-        "_sents/s": "∼ 5436"
-    }
+  {
+    "algorithm": "Eisner",
+    "en_ud": 96.35,
+    "en_ptb": 479.1,
+    "sents_s": 80
+  },
+  {
+    "algorithm": "Eisner",
+    "en_ud": 1.496,
+    "en_ptb": 6.31,
+    "sents_s": 6009
+  },
+  {
+    "algorithm": "CLE",
+    "en_ud": 19.12,
+    "en_ptb": 93.8,
+    "sents_s": 404
+  },
+  {
+    "algorithm": "CLE",
+    "en_ud": 1.764,
+    "en_ptb": 6.98,
+    "sents_s": 5436
+  }
 ]

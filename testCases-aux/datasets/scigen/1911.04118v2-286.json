@@ -1,62 +1,62 @@
 [
-    {
-        "_model": "Comp-Agg + LM + LC",
-        "_map": "0.868",
-        "_mrr": "0.928"
-    },
-    {
-        "_model": "Comp-Agg + LM + LC + TL(QNLI)",
-        "_map": "0.875",
-        "_mrr": "0.940"
-    },
-    {
-        "_model": "BERT-B FT TREC-QA",
-        "_map": "0.857",
-        "_mrr": "0.937"
-    },
-    {
-        "_model": "BERT-B FT ASNQ",
-        "_map": "0.823",
-        "_mrr": "0.872"
-    },
-    {
-        "_model": "BERT-B TandA (ASNQ → TREC-QA)",
-        "_map": "0.912",
-        "_mrr": "0.951"
-    },
-    {
-        "_model": "BERT-L FT TREC-QA",
-        "_map": "0.904",
-        "_mrr": "0.946"
-    },
-    {
-        "_model": "BERT-L FT ASNQ",
-        "_map": "0.824",
-        "_mrr": "0.872"
-    },
-    {
-        "_model": "BERT-L TandA (ASNQ → TREC-QA )",
-        "_map": "0.912",
-        "_mrr": "0.967"
-    },
-    {
-        "_model": "RoBERTa-B FT ASNQ",
-        "_map": "0.849",
-        "_mrr": "0.907"
-    },
-    {
-        "_model": "RoBERTa-B TandA (ASNQ →TREC-QA )",
-        "_map": "0.914",
-        "_mrr": "0.952"
-    },
-    {
-        "_model": "RoBERTa-L FT ASNQ",
-        "_map": "0.880",
-        "_mrr": "0.928"
-    },
-    {
-        "_model": "RoBERTa-L TandA (ASNQ → TREC-QA)",
-        "_map": " 0.943",
-        "_mrr": " 0.974"
-    }
+  {
+    "model": "Comp-Agg + LM + LC",
+    "map": 0.868,
+    "mrr": 0.928
+  },
+  {
+    "model": "Comp-Agg + LM + LC + TL",
+    "map": 0.875,
+    "mrr": 0.94
+  },
+  {
+    "model": "BERT-B FT TREC-QA",
+    "map": 0.857,
+    "mrr": 0.937
+  },
+  {
+    "model": "BERT-B FT ASNQ",
+    "map": 0.823,
+    "mrr": 0.872
+  },
+  {
+    "model": "BERT-B TandA",
+    "map": 0.912,
+    "mrr": 0.951
+  },
+  {
+    "model": "BERT-L FT TREC-QA",
+    "map": 0.904,
+    "mrr": 0.946
+  },
+  {
+    "model": "BERT-L FT ASNQ",
+    "map": 0.824,
+    "mrr": 0.872
+  },
+  {
+    "model": "BERT-L TandA",
+    "map": 0.912,
+    "mrr": 0.967
+  },
+  {
+    "model": "RoBERTa-B FT ASNQ",
+    "map": 0.849,
+    "mrr": 0.907
+  },
+  {
+    "model": "RoBERTa-B TandA",
+    "map": 0.914,
+    "mrr": 0.952
+  },
+  {
+    "model": "RoBERTa-L FT ASNQ",
+    "map": 0.88,
+    "mrr": 0.928
+  },
+  {
+    "model": "RoBERTa-L TandA",
+    "map": 0.943,
+    "mrr": 0.974
+  }
 ]

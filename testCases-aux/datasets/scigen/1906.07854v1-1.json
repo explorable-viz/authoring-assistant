@@ -1,65 +1,65 @@
 [
-    {
-        "_dataset": "MedNLI",
-        "_bert_dev": "79.56",
-        "_bert_test": "77.49",
-        "_biobert_dev": "82.15",
-        "_biobert_test": "79.04"
-    },
-    {
-        "_dataset": "MNLI (M)",
-        "_bert_dev": "83.52",
-        "_bert_test": "-",
-        "_biobert_dev": "81.23",
-        "_biobert_test": "-"
-    },
-    {
-        "_dataset": "SNLI (S)",
-        "_bert_dev": "90.39",
-        "_bert_test": "-",
-        "_biobert_dev": "89.10",
-        "_biobert_test": "-"
-    },
-    {
-        "_dataset": "M → MedNLI",
-        "_bert_dev": "80.14",
-        "_bert_test": " 78.62",
-        "_biobert_dev": "82.72",
-        "_biobert_test": "80.80"
-    },
-    {
-        "_dataset": "S → MedNLI",
-        "_bert_dev": "80.28",
-        "_bert_test": "78.19",
-        "_biobert_dev": "83.29",
-        "_biobert_test": "81.29"
-    },
-    {
-        "_dataset": "M → S → MedNLI",
-        "_bert_dev": "80.43",
-        "_bert_test": "78.12",
-        "_biobert_dev": "83.29",
-        "_biobert_test": "80.30"
-    },
-    {
-        "_dataset": "S → M → MedNLI",
-        "_bert_dev": " 81.72",
-        "_bert_test": "77.98",
-        "_biobert_dev": " 83.51",
-        "_biobert_test": " 82.63"
-    },
-    {
-        "_dataset": "MedNLI (expanded)",
-        "_bert_dev": "79.13",
-        "_bert_test": "77.07",
-        "_biobert_dev": " 83.87",
-        "_biobert_test": "79.95"
-    },
-    {
-        "_dataset": "S → M → MedNLI (expanded)",
-        "_bert_dev": " 82.15",
-        "_bert_test": " 79.95",
-        "_biobert_dev": "83.08",
-        "_biobert_test": " 81.85"
-    }
+  {
+    "dataset": "MedNLI",
+    "bert_dev": 79.56,
+    "bert_test": 77.49,
+    "biobert_dev": 82.15,
+    "biobert_test": 79.04
+  },
+  {
+    "dataset": "MNLI",
+    "bert_dev": 83.52,
+    "bert_test": "-",
+    "biobert_dev": 81.23,
+    "biobert_test": "-"
+  },
+  {
+    "dataset": "SNLI",
+    "bert_dev": 90.39,
+    "bert_test": "-",
+    "biobert_dev": 89.1,
+    "biobert_test": "-"
+  },
+  {
+    "dataset": "M → MedNLI",
+    "bert_dev": 80.14,
+    "bert_test": 78.62,
+    "biobert_dev": 82.72,
+    "biobert_test": 80.8
+  },
+  {
+    "dataset": "S → MedNLI",
+    "bert_dev": 80.28,
+    "bert_test": 78.19,
+    "biobert_dev": 83.29,
+    "biobert_test": 81.29
+  },
+  {
+    "dataset": "M → S → MedNLI",
+    "bert_dev": 80.43,
+    "bert_test": 78.12,
+    "biobert_dev": 83.29,
+    "biobert_test": 80.3
+  },
+  {
+    "dataset": "S → M → MedNLI",
+    "bert_dev": 81.72,
+    "bert_test": 77.98,
+    "biobert_dev": 83.51,
+    "biobert_test": 82.63
+  },
+  {
+    "dataset": "MedNLI",
+    "bert_dev": 79.13,
+    "bert_test": 77.07,
+    "biobert_dev": 83.87,
+    "biobert_test": 79.95
+  },
+  {
+    "dataset": "S → M → MedNLI",
+    "bert_dev": 82.15,
+    "bert_test": 79.95,
+    "biobert_dev": 83.08,
+    "biobert_test": 81.85
+  }
 ]

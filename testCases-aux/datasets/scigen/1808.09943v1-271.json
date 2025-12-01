@@ -1,32 +1,32 @@
 [
-    {
-        "error_type": "Lexical Choice",
-        "bpe": "19",
-        "char": "8"
-    },
-    {
-        "error_type": "Compounds",
-        "bpe": "13",
-        "char": "1"
-    },
-    {
-        "error_type": "Proper Names",
-        "bpe": "2",
-        "char": "1"
-    },
-    {
-        "error_type": "Morphological",
-        "bpe": "2",
-        "char": "2"
-    },
-    {
-        "error_type": "Other lexical",
-        "bpe": "2",
-        "char": "4"
-    },
-    {
-        "error_type": "Dropped Content",
-        "bpe": "7",
-        "char": "0"
-    }
+  {
+    "error_type": "Lexical Choice",
+    "bpe": 19,
+    "char": 8
+  },
+  {
+    "error_type": "Compounds",
+    "bpe": 13,
+    "char": 1
+  },
+  {
+    "error_type": "Proper Names",
+    "bpe": 2,
+    "char": 1
+  },
+  {
+    "error_type": "Morphological",
+    "bpe": 2,
+    "char": 2
+  },
+  {
+    "error_type": "Other lexical",
+    "bpe": 2,
+    "char": 4
+  },
+  {
+    "error_type": "Dropped Content",
+    "bpe": 7,
+    "char": 0
+  }
 ]

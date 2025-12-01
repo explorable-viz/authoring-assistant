@@ -1,57 +1,57 @@
 [
-    {
-        "": "Health → All-biomed",
-        "_es2en___khresmoi": "52.1",
-        "_es2en___health": "36.7",
-        "_es2en___bio": "37.0",
-        "_es2en___test": "42.4",
-        "_en2es___khresmoi": "44.2",
-        "_en2es___health": "35.0",
-        "_en2es___bio": "39.0",
-        "_en2es___test": "44.9"
-    },
-    {
-        "": "Health → All-biomed → Health",
-        "_es2en___khresmoi": "51.1",
-        "_es2en___health": "37.0",
-        "_es2en___bio": "37.2",
-        "_es2en___test": "-",
-        "_en2es___khresmoi": "44.0",
-        "_en2es___health": "36.3",
-        "_en2es___bio": "39.5",
-        "_en2es___test": "-"
-    },
-    {
-        "": "Health → All-biomed → Bio",
-        "_es2en___khresmoi": "50.6",
-        "_es2en___health": "36.0",
-        "_es2en___bio": "38.0",
-        "_es2en___test": "-",
-        "_en2es___khresmoi": "45.2",
-        "_en2es___health": "35.3",
-        "_en2es___bio": "41.3",
-        "_en2es___test": "-"
-    },
-    {
-        "": "Uniform ensemble",
-        "_es2en___khresmoi": " 52.2",
-        "_es2en___health": "36.9",
-        "_es2en___bio": "37.9",
-        "_es2en___test": " 43.0",
-        "_en2es___khresmoi": " 45.1",
-        "_en2es___health": "35.6",
-        "_en2es___bio": "40.2",
-        "_en2es___test": "45.4"
-    },
-    {
-        "": "BI ensemble (  α=0.5)",
-        "_es2en___khresmoi": "52.1",
-        "_es2en___health": " 37.0",
-        "_es2en___bio": " 38.1",
-        "_es2en___test": "42.9",
-        "_en2es___khresmoi": "44.5",
-        "_en2es___health": " 35.7",
-        "_en2es___bio": " 41.2",
-        "_en2es___test": " 45.6"
-    }
+  {
+    "_1": "Health → All-biomed",
+    "es2en_khresmoi": 52.1,
+    "es2en_health": 36.7,
+    "es2en_bio": 37.0,
+    "es2en_test": 42.4,
+    "en2es_khresmoi": 44.2,
+    "en2es_health": 35.0,
+    "en2es_bio": 39.0,
+    "en2es_test": 44.9
+  },
+  {
+    "_1": "Health → All-biomed → Health",
+    "es2en_khresmoi": 51.1,
+    "es2en_health": 37.0,
+    "es2en_bio": 37.2,
+    "es2en_test": "-",
+    "en2es_khresmoi": 44.0,
+    "en2es_health": 36.3,
+    "en2es_bio": 39.5,
+    "en2es_test": "-"
+  },
+  {
+    "_1": "Health → All-biomed → Bio",
+    "es2en_khresmoi": 50.6,
+    "es2en_health": 36.0,
+    "es2en_bio": 38.0,
+    "es2en_test": "-",
+    "en2es_khresmoi": 45.2,
+    "en2es_health": 35.3,
+    "en2es_bio": 41.3,
+    "en2es_test": "-"
+  },
+  {
+    "_1": "Uniform ensemble",
+    "es2en_khresmoi": 52.2,
+    "es2en_health": 36.9,
+    "es2en_bio": 37.9,
+    "es2en_test": 43.0,
+    "en2es_khresmoi": 45.1,
+    "en2es_health": 35.6,
+    "en2es_bio": 40.2,
+    "en2es_test": 45.4
+  },
+  {
+    "_1": "BI ensemble",
+    "es2en_khresmoi": 52.1,
+    "es2en_health": 37.0,
+    "es2en_bio": 38.1,
+    "es2en_test": 42.9,
+    "en2es_khresmoi": 44.5,
+    "en2es_health": 35.7,
+    "en2es_bio": 41.2,
+    "en2es_test": 45.6
+  }
 ]

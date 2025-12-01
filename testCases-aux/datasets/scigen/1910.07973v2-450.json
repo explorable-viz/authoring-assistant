@@ -1,44 +1,51 @@
 [
-    {
-        "_task": "Semantic Similarity",
-        "_": "13.0",
-        "_mean": " 84.5",
-        "_max": "80.7"
-    },
-    {
-        "_task": "Text Classification",
-        "_": "88.9",
-        "_mean": " 95.4",
-        "_max": "89.7"
-    },
-    {
-        "_task": "Entailment",
-        "_": "66.1",
-        "_mean": " 89.3",
-        "_max": "87.1"
-    },
-    {
-        "_task": "Surface Information",
-        "_": "42.8",
-        "_mean": " 78.9",
-        "_max": "47.3"
-    },
-    {
-        "_task": "Syntactic Information",
-        "_": "72.2",
-        "_mean": " 86.0",
-        "_max": "75.7"
-    },
-    {
-        "_task": "Semantic Information",
-        "_": "86.7",
-        "_mean": " 93.7",
-        "_max": "89.5"
-    },
-    {
-        "_task": "Average Score",
-        "_": "61.6",
-        "_mean": " 88.0",
-        "_max": "78.3"
-    }
+  {
+    "task": "Semantic Similarity",
+    "_1": 34.1,
+    "mean": 84.5,
+    "max": 80.7,
+    "_2": 13.0
+  },
+  {
+    "task": "Text Classification",
+    "_1": 90.7,
+    "mean": 95.4,
+    "max": 89.7,
+    "_2": 88.9
+  },
+  {
+    "task": "Entailment",
+    "_1": 72.4,
+    "mean": 89.3,
+    "max": 87.1,
+    "_2": 66.1
+  },
+  {
+    "task": "Surface Information",
+    "_1": 45.6,
+    "mean": 78.9,
+    "max": 47.3,
+    "_2": 42.8
+  },
+  {
+    "task": "Syntactic Information",
+    "_1": 78.2,
+    "mean": 86.0,
+    "max": 75.7,
+    "_2": 72.2
+  },
+  {
+    "task": "Semantic Information",
+    "_1": 90.3,
+    "mean": 93.7,
+    "max": 89.5,
+    "_2": 86.7
+  },
+  {
+    "task": "Average Score",
+    "_1": 68.6,
+    "mean": 88.0,
+    "max": 78.3,
+    "_2": 61.6
+  }
 ]

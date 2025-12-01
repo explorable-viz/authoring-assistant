@@ -1,57 +1,57 @@
 [
-    {
-        "": "Count based p(x,y)",
-        "detection_(average_precision)_bless": ".49",
-        "detection_(average_precision)_eval": ".38",
-        "detection_(average_precision)_leds": ".71",
-        "detection_(average_precision)_shwartz": ".29",
-        "detection_(average_precision)_wbless": ".74",
-        "direction_(average_accuracy)_bless": ".46",
-        "direction_(average_accuracy)_wbless": ".69",
-        "direction_(average_accuracy)_bibless": ".62"
-    },
-    {
-        "": "ppmi(x,y)",
-        "detection_(average_precision)_bless": ".45",
-        "detection_(average_precision)_eval": ".36",
-        "detection_(average_precision)_leds": ".70",
-        "detection_(average_precision)_shwartz": ".28",
-        "detection_(average_precision)_wbless": ".72",
-        "direction_(average_accuracy)_bless": ".46",
-        "direction_(average_accuracy)_wbless": ".68",
-        "direction_(average_accuracy)_bibless": ".61"
-    },
-    {
-        "": "SVD ppmi(x,y)",
-        "detection_(average_precision)_bless": ".76",
-        "detection_(average_precision)_eval": ".48",
-        "detection_(average_precision)_leds": ".84",
-        "detection_(average_precision)_shwartz": ".44",
-        "detection_(average_precision)_wbless": ".96",
-        "direction_(average_accuracy)_bless": ".96",
-        "direction_(average_accuracy)_wbless": ".87",
-        "direction_(average_accuracy)_bibless": ".85"
-    },
-    {
-        "": "HyperbolicCones",
-        "detection_(average_precision)_bless": " .81",
-        "detection_(average_precision)_eval": " .50",
-        "detection_(average_precision)_leds": ".89",
-        "detection_(average_precision)_shwartz": " .50",
-        "detection_(average_precision)_wbless": " .98",
-        "direction_(average_accuracy)_bless": ".94",
-        "direction_(average_accuracy)_wbless": ".90",
-        "direction_(average_accuracy)_bibless": ".  87"
-    },
-    {
-        "": "Proposed SPON",
-        "detection_(average_precision)_bless": " .81",
-        "detection_(average_precision)_eval": " .50",
-        "detection_(average_precision)_leds": " .91",
-        "detection_(average_precision)_shwartz": " .50",
-        "detection_(average_precision)_wbless": " .98",
-        "direction_(average_accuracy)_bless": " .97",
-        "direction_(average_accuracy)_wbless": " .91",
-        "direction_(average_accuracy)_bibless": " .87"
-    }
+  {
+    "_1": "Count based p",
+    "detection_bless": 0.49,
+    "detection_eval": 0.38,
+    "detection_leds": 0.71,
+    "detection_shwartz": 0.29,
+    "detection_wbless": 0.74,
+    "direction_bless": 0.46,
+    "direction_wbless": 0.69,
+    "direction_bibless": 0.62
+  },
+  {
+    "_1": "ppmi",
+    "detection_bless": 0.45,
+    "detection_eval": 0.36,
+    "detection_leds": 0.7,
+    "detection_shwartz": 0.28,
+    "detection_wbless": 0.72,
+    "direction_bless": 0.46,
+    "direction_wbless": 0.68,
+    "direction_bibless": 0.61
+  },
+  {
+    "_1": "SVD ppmi",
+    "detection_bless": 0.76,
+    "detection_eval": 0.48,
+    "detection_leds": 0.84,
+    "detection_shwartz": 0.44,
+    "detection_wbless": 0.96,
+    "direction_bless": 0.96,
+    "direction_wbless": 0.87,
+    "direction_bibless": 0.85
+  },
+  {
+    "_1": "HyperbolicCones",
+    "detection_bless": 0.81,
+    "detection_eval": 0.5,
+    "detection_leds": 0.89,
+    "detection_shwartz": 0.5,
+    "detection_wbless": 0.98,
+    "direction_bless": 0.94,
+    "direction_wbless": 0.9,
+    "direction_bibless": ".  87"
+  },
+  {
+    "_1": "Proposed SPON",
+    "detection_bless": 0.81,
+    "detection_eval": 0.5,
+    "detection_leds": 0.91,
+    "detection_shwartz": 0.5,
+    "detection_wbless": 0.98,
+    "direction_bless": 0.97,
+    "direction_wbless": 0.91,
+    "direction_bibless": 0.87
+  }
 ]

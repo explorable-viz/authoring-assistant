@@ -1,30 +1,30 @@
 [
-    {
-        "_model": "catSeq",
-        "_present___f1@__m": "0.367",
-        "_present___f1@5": "0.291",
-        "_absent___f1@__m": "0.032",
-        "_absent___f1@5": "0.015"
-    },
-    {
-        "_model": "catSeq-  RF1",
-        "_present___f1@__m": "0.380",
-        "_present___f1@5": "0.336",
-        "_absent___f1@__m": "0.006",
-        "_absent___f1@5": "0.003"
-    },
-    {
-        "_model": "catSeq-2  F1",
-        "_present___f1@__m": "0.378",
-        "_present___f1@5": "0.278",
-        "_absent___f1@__m": "0.042",
-        "_absent___f1@5": "0.020"
-    },
-    {
-        "_model": "catSeq-2  RF1",
-        "_present___f1@__m": "0.383",
-        "_present___f1@5": "0.310",
-        "_absent___f1@__m": "0.047",
-        "_absent___f1@5": "0.024"
-    }
+  {
+    "model": "catSeq",
+    "present_f1_m": 0.367,
+    "present_f1_5": 0.291,
+    "absent_f1_m": 0.032,
+    "absent_f1_5": 0.015
+  },
+  {
+    "model": "catSeq-  RF1",
+    "present_f1_m": 0.38,
+    "present_f1_5": 0.336,
+    "absent_f1_m": 0.006,
+    "absent_f1_5": 0.003
+  },
+  {
+    "model": "catSeq-2  F1",
+    "present_f1_m": 0.378,
+    "present_f1_5": 0.278,
+    "absent_f1_m": 0.042,
+    "absent_f1_5": 0.02
+  },
+  {
+    "model": "catSeq-2  RF1",
+    "present_f1_m": 0.383,
+    "present_f1_5": 0.31,
+    "absent_f1_m": 0.047,
+    "absent_f1_5": 0.024
+  }
 ]

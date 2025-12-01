@@ -1,68 +1,68 @@
 [
-    {
-        "_genre": "Fiction",
-        "_cbow": "67.5",
-        "_esim": "73.0",
-        "_inneratt": "73.2"
-    },
-    {
-        "_genre": "Government",
-        "_cbow": "67.5",
-        "_esim": "74.8",
-        "_inneratt": "75.2"
-    },
-    {
-        "_genre": "Slate",
-        "_cbow": "60.6",
-        "_esim": "67.9",
-        "_inneratt": "67.2"
-    },
-    {
-        "_genre": "Telephone",
-        "_cbow": "63.7",
-        "_esim": "72.2",
-        "_inneratt": "73.0"
-    },
-    {
-        "_genre": "Travel",
-        "_cbow": "64.6",
-        "_esim": "73.7",
-        "_inneratt": "72.8"
-    },
-    {
-        "_genre": "9/11",
-        "_cbow": "63.2",
-        "_esim": "71.9",
-        "_inneratt": "70.5"
-    },
-    {
-        "_genre": "Face-to-face",
-        "_cbow": "66.3",
-        "_esim": "71.2",
-        "_inneratt": "74.5"
-    },
-    {
-        "_genre": "Letters",
-        "_cbow": "68.3",
-        "_esim": "74.7",
-        "_inneratt": "75.4"
-    },
-    {
-        "_genre": "Oup",
-        "_cbow": "62.8",
-        "_esim": "71.7",
-        "_inneratt": "71.5"
-    },
-    {
-        "_genre": "Verbatim",
-        "_cbow": "62.7",
-        "_esim": "71.9",
-        "_inneratt": "69.5"
-    },
-    {
-        "_genre": " MultiNLI Overall",
-        "_cbow": " 64.7",
-        "_esim": " 72.2",
-        "_inneratt": " 72.3"
-    }
+  {
+    "genre": "Fiction",
+    "cbow": 67.5,
+    "esim": 73.0,
+    "inneratt": 73.2
+  },
+  {
+    "genre": "Government",
+    "cbow": 67.5,
+    "esim": 74.8,
+    "inneratt": 75.2
+  },
+  {
+    "genre": "Slate",
+    "cbow": 60.6,
+    "esim": 67.9,
+    "inneratt": 67.2
+  },
+  {
+    "genre": "Telephone",
+    "cbow": 63.7,
+    "esim": 72.2,
+    "inneratt": 73.0
+  },
+  {
+    "genre": "Travel",
+    "cbow": 64.6,
+    "esim": 73.7,
+    "inneratt": 72.8
+  },
+  {
+    "genre": "9/11",
+    "cbow": 63.2,
+    "esim": 71.9,
+    "inneratt": 70.5
+  },
+  {
+    "genre": "Face-to-face",
+    "cbow": 66.3,
+    "esim": 71.2,
+    "inneratt": 74.5
+  },
+  {
+    "genre": "Letters",
+    "cbow": 68.3,
+    "esim": 74.7,
+    "inneratt": 75.4
+  },
+  {
+    "genre": "Oup",
+    "cbow": 62.8,
+    "esim": 71.7,
+    "inneratt": 71.5
+  },
+  {
+    "genre": "Verbatim",
+    "cbow": 62.7,
+    "esim": 71.9,
+    "inneratt": 69.5
+  },
+  {
+    "genre": " MultiNLI Overall",
+    "cbow": 64.7,
+    "esim": 72.2,
+    "inneratt": 72.3
+  }
 ]

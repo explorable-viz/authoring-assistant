@@ -1,17 +1,14 @@
 [
-    {
-        "_type_of_set": "Training Set",
-        "_label_accuracy_(__ϕ_=_0.76)": "81.52",
-        "_label_accuracy_(__ϕ_=_0.67)": "88.05"
-    },
-    {
-        "_type_of_set": "Development Set",
-        "_label_accuracy_(__ϕ_=_0.76)": "80.20",
-        "_label_accuracy_(__ϕ_=_0.67)": "86.7"
-    },
-    {
-        "_type_of_set": "Test Set",
-        "_label_accuracy_(__ϕ_=_0.76)": "80.25",
-        "_label_accuracy_(__ϕ_=_0.67)": "87.04"
-    }
+  {
+    "type_of_set": "Training Set",
+    "label_accuracy": 88.05
+  },
+  {
+    "type_of_set": "Development Set",
+    "label_accuracy": 86.7
+  },
+  {
+    "type_of_set": "Test Set",
+    "label_accuracy": 87.04
+  }
 ]

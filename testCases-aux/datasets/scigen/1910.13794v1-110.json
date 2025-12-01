@@ -1,65 +1,65 @@
 [
-    {
-        "accuracy": " Only QG*",
-        "bleu-1": " 45.63",
-        "bleu-2": " 30.43",
-        "bleu-3": " 22.51",
-        "bleu-4": " 17.30",
-        "meteor": " 21.06",
-        "rouge-l": " 45.42"
-    },
-    {
-        "accuracy": "60%",
-        "bleu-1": "45.80",
-        "bleu-2": "30.61",
-        "bleu-3": "22.57",
-        "bleu-4": "17.30",
-        "meteor": "21.47",
-        "rouge-l": "44.70"
-    },
-    {
-        "accuracy": "70%",
-        "bleu-1": "47.05",
-        "bleu-2": "31.62",
-        "bleu-3": "23.46",
-        "bleu-4": "18.05",
-        "meteor": "22.00",
-        "rouge-l": "45.88"
-    },
-    {
-        "accuracy": " IWAQG (73.8%)",
-        "bleu-1": " 47.69",
-        "bleu-2": " 32.24",
-        "bleu-3": " 24.01",
-        "bleu-4": " 18.53",
-        "meteor": " 22.33",
-        "rouge-l": " 46.94"
-    },
-    {
-        "accuracy": "80%",
-        "bleu-1": "48.11",
-        "bleu-2": "32.36",
-        "bleu-3": "24.00",
-        "bleu-4": "18.42",
-        "meteor": "22.43",
-        "rouge-l": "47.22"
-    },
-    {
-        "accuracy": "90%",
-        "bleu-1": "49.33",
-        "bleu-2": "33.43",
-        "bleu-3": "24.91",
-        "bleu-4": "19.20",
-        "meteor": "22.98",
-        "rouge-l": "48.41"
-    },
-    {
-        "accuracy": " Upper Bound (100%)",
-        "bleu-1": " 50.51",
-        "bleu-2": " 34.28",
-        "bleu-3": " 25.60",
-        "bleu-4": " 19.75",
-        "meteor": " 23.45",
-        "rouge-l": " 49.65"
-    }
+  {
+    "accuracy": " Only QG*",
+    "bleu_1": 45.63,
+    "bleu_2": 30.43,
+    "bleu_3": 22.51,
+    "bleu_4": 17.3,
+    "meteor": 21.06,
+    "rouge_l": 45.42
+  },
+  {
+    "accuracy": 60,
+    "bleu_1": 45.8,
+    "bleu_2": 30.61,
+    "bleu_3": 22.57,
+    "bleu_4": 17.3,
+    "meteor": 21.47,
+    "rouge_l": 44.7
+  },
+  {
+    "accuracy": 70,
+    "bleu_1": 47.05,
+    "bleu_2": 31.62,
+    "bleu_3": 23.46,
+    "bleu_4": 18.05,
+    "meteor": 22.0,
+    "rouge_l": 45.88
+  },
+  {
+    "accuracy": " IWAQG",
+    "bleu_1": 47.69,
+    "bleu_2": 32.24,
+    "bleu_3": 24.01,
+    "bleu_4": 18.53,
+    "meteor": 22.33,
+    "rouge_l": 46.94
+  },
+  {
+    "accuracy": 80,
+    "bleu_1": 48.11,
+    "bleu_2": 32.36,
+    "bleu_3": 24.0,
+    "bleu_4": 18.42,
+    "meteor": 22.43,
+    "rouge_l": 47.22
+  },
+  {
+    "accuracy": 90,
+    "bleu_1": 49.33,
+    "bleu_2": 33.43,
+    "bleu_3": 24.91,
+    "bleu_4": 19.2,
+    "meteor": 22.98,
+    "rouge_l": 48.41
+  },
+  {
+    "accuracy": " Upper Bound",
+    "bleu_1": 50.51,
+    "bleu_2": 34.28,
+    "bleu_3": 25.6,
+    "bleu_4": 19.75,
+    "meteor": 23.45,
+    "rouge_l": 49.65
+  }
 ]

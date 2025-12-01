@@ -1,20 +1,20 @@
 [
-    {
-        "perturbation_radius": "SST-word",
-        "_δ=1": "49",
-        "_δ=2": "674",
-        "_δ=3": "5,136"
-    },
-    {
-        "perturbation_radius": "SST-character",
-        "_δ=1": "206",
-        "_δ=2": "21,116",
-        "_δ=3": "1,436,026"
-    },
-    {
-        "perturbation_radius": "AG-character",
-        "_δ=1": "722",
-        "_δ=2": "260,282",
-        "_δ=3": "-"
-    }
+  {
+    "perturbation_radius": "SST-word",
+    "δ=1": 49,
+    "δ=2": 674,
+    "δ=3": 5136
+  },
+  {
+    "perturbation_radius": "SST-character",
+    "δ=1": 206,
+    "δ=2": 21116,
+    "δ=3": 1436026
+  },
+  {
+    "perturbation_radius": "AG-character",
+    "δ=1": 722,
+    "δ=2": 260282,
+    "δ=3": "-"
+  }
 ]

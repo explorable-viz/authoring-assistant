@@ -1,38 +1,38 @@
 [
-    {
-        "": "Movie",
-        "embdi_p": " .75",
-        "embdi_r": " .86",
-        "embdi_f": " .80",
-        "seep__p_p": " .75",
-        "seep__p_r": ".62",
-        "seep__p_f": ".68",
-        "seep__l_p": " .75",
-        "seep__l_r": ".75",
-        "seep__l_f": ".75"
-    },
-    {
-        "": "RefS",
-        "embdi_p": " 1",
-        "embdi_r": " 1",
-        "embdi_f": " 1",
-        "seep__p_p": ".75",
-        "seep__p_r": ".75",
-        "seep__p_f": ".75",
-        "seep__l_p": ".88",
-        "seep__l_r": ".75",
-        "seep__l_f": ".81"
-    },
-    {
-        "": "RefL",
-        "embdi_p": " .71",
-        "embdi_r": ".83",
-        "embdi_f": " .77",
-        "seep__p_p": ".50",
-        "seep__p_r": ".75",
-        "seep__p_f": ".60",
-        "seep__l_p": ".63",
-        "seep__l_r": " .88",
-        "seep__l_f": ".73"
-    }
+  {
+    "_1": "Movie",
+    "embdi_p": 0.75,
+    "embdi_r": 0.86,
+    "embdi_f": 0.8,
+    "seep_p_p": 0.75,
+    "seep_p_r": 0.62,
+    "seep_p_f": 0.68,
+    "seep_l_p": 0.75,
+    "seep_l_r": 0.75,
+    "seep_l_f": 0.75
+  },
+  {
+    "_1": "RefS",
+    "embdi_p": 1,
+    "embdi_r": 1,
+    "embdi_f": 1,
+    "seep_p_p": 0.75,
+    "seep_p_r": 0.75,
+    "seep_p_f": 0.75,
+    "seep_l_p": 0.88,
+    "seep_l_r": 0.75,
+    "seep_l_f": 0.81
+  },
+  {
+    "_1": "RefL",
+    "embdi_p": 0.71,
+    "embdi_r": 0.83,
+    "embdi_f": 0.77,
+    "seep_p_p": 0.5,
+    "seep_p_r": 0.75,
+    "seep_p_f": 0.6,
+    "seep_l_p": 0.63,
+    "seep_l_r": 0.88,
+    "seep_l_f": 0.73
+  }
 ]

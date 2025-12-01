@@ -1,66 +1,66 @@
 [
-    {
-        "ru": "✓",
-        "ja": "✓",
-        "en": "✓",
-        "#sent.": "913",
-        "usage_test": "600",
-        "usage_development": "313"
-    },
-    {
-        "ru": "✓",
-        "ja": "✓",
-        "en": "",
-        "#sent.": "173",
-        "usage_test": "-",
-        "usage_development": "173"
-    },
-    {
-        "ru": "",
-        "ja": "✓",
-        "en": "✓",
-        "#sent.": "276",
-        "usage_test": "-",
-        "usage_development": "276"
-    },
-    {
-        "ru": "✓",
-        "ja": "",
-        "en": "✓",
-        "#sent.": "0",
-        "usage_test": "-",
-        "usage_development": "-"
-    },
-    {
-        "ru": "✓",
-        "ja": "",
-        "en": "",
-        "#sent.": "4",
-        "usage_test": "-",
-        "usage_development": "-"
-    },
-    {
-        "ru": "",
-        "ja": "✓",
-        "en": "",
-        "#sent.": "287",
-        "usage_test": "-",
-        "usage_development": "-"
-    },
-    {
-        "ru": "",
-        "ja": "",
-        "en": "✓",
-        "#sent.": "1",
-        "usage_test": "-",
-        "usage_development": "-"
-    },
-    {
-        "ru": "Total",
-        "ja": "Total",
-        "en": "Total",
-        "#sent.": "1,654",
-        "usage_test": "-",
-        "usage_development": "-"
-    }
+  {
+    "ru": "✓",
+    "ja": "✓",
+    "en": "✓",
+    "num_sent": 913,
+    "usage_test": 600,
+    "usage_development": 313
+  },
+  {
+    "ru": "✓",
+    "ja": "✓",
+    "en": "",
+    "num_sent": 173,
+    "usage_test": "-",
+    "usage_development": 173
+  },
+  {
+    "ru": "",
+    "ja": "✓",
+    "en": "✓",
+    "num_sent": 276,
+    "usage_test": "-",
+    "usage_development": 276
+  },
+  {
+    "ru": "✓",
+    "ja": "",
+    "en": "✓",
+    "num_sent": 0,
+    "usage_test": "-",
+    "usage_development": "-"
+  },
+  {
+    "ru": "✓",
+    "ja": "",
+    "en": "",
+    "num_sent": 4,
+    "usage_test": "-",
+    "usage_development": "-"
+  },
+  {
+    "ru": "",
+    "ja": "✓",
+    "en": "",
+    "num_sent": 287,
+    "usage_test": "-",
+    "usage_development": "-"
+  },
+  {
+    "ru": "",
+    "ja": "",
+    "en": "✓",
+    "num_sent": 1,
+    "usage_test": "-",
+    "usage_development": "-"
+  },
+  {
+    "ru": "Total",
+    "ja": "Total",
+    "en": "Total",
+    "num_sent": 1654,
+    "usage_test": "-",
+    "usage_development": "-"
+  }
 ]

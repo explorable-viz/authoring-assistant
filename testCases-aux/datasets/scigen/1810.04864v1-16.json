@@ -1,52 +1,52 @@
 [
-    {
-        "system": "challenge",
-        "bleu": "challenge",
-        "rouge-l": "challenge"
-    },
-    {
-        "system": "baseline",
-        "bleu": "32.1",
-        "rouge-l": "43.3"
-    },
-    {
-        "system": "Melbourne",
-        "bleu": "43.4",
-        "rouge-l": " 61.0"
-    },
-    {
-        "system": "Tilburg-SMT",
-        "bleu": "43.1",
-        "rouge-l": "58.0"
-    },
-    {
-        "system": "UPF-FORGe",
-        "bleu": "37.5",
-        "rouge-l": "58.8"
-    },
-    {
-        "system": "own",
-        "bleu": "own",
-        "rouge-l": "own"
-    },
-    {
-        "system": "word (best on dev.)",
-        "bleu": " 44.2",
-        "rouge-l": "60.9"
-    },
-    {
-        "system": "char. (best on dev.)",
-        "bleu": "41.3",
-        "rouge-l": "58.4"
-    },
-    {
-        "system": "word",
-        "bleu": "37.0±3.8",
-        "rouge-l": "56.3±2.6"
-    },
-    {
-        "system": "character",
-        "bleu": "39.7±1.7",
-        "rouge-l": "58.4±0.7"
-    }
+  {
+    "system": "challenge",
+    "bleu": "challenge",
+    "rouge_l": "challenge"
+  },
+  {
+    "system": "baseline",
+    "bleu": 32.1,
+    "rouge_l": 43.3
+  },
+  {
+    "system": "Melbourne",
+    "bleu": 43.4,
+    "rouge_l": 61.0
+  },
+  {
+    "system": "Tilburg-SMT",
+    "bleu": 43.1,
+    "rouge_l": 58.0
+  },
+  {
+    "system": "UPF-FORGe",
+    "bleu": 37.5,
+    "rouge_l": 58.8
+  },
+  {
+    "system": "own",
+    "bleu": "own",
+    "rouge_l": "own"
+  },
+  {
+    "system": "word",
+    "bleu": 44.2,
+    "rouge_l": 60.9
+  },
+  {
+    "system": "char.",
+    "bleu": 41.3,
+    "rouge_l": 58.4
+  },
+  {
+    "system": "word",
+    "bleu": "37.0±3.8",
+    "rouge_l": "56.3±2.6"
+  },
+  {
+    "system": "character",
+    "bleu": "39.7±1.7",
+    "rouge_l": "58.4±0.7"
+  }
 ]

@@ -1,32 +1,27 @@
 [
-    {
-        "error_type": "Cross-Clause Relations (CCR)",
-        "rc_+_sg": "42",
-        "rc_(sg_fixed)": "39",
-        "rc_(sg_init.)": "36"
-    },
-    {
-        "error_type": "Infrequent Arguments (<10)",
-        "rc_+_sg": "11",
-        "rc_(sg_fixed)": "15",
-        "rc_(sg_init.)": "26"
-    },
-    {
-        "error_type": "Frequent Arguments (>250)",
-        "rc_+_sg": "37",
-        "rc_(sg_fixed)": "50",
-        "rc_(sg_init.)": "40"
-    },
-    {
-        "error_type": "Mistake in Ground-Truth",
-        "rc_+_sg": "10",
-        "rc_(sg_fixed)": "8",
-        "rc_(sg_init.)": "5"
-    },
-    {
-        "error_type": "Other",
-        "rc_+_sg": "21",
-        "rc_(sg_fixed)": "15",
-        "rc_(sg_init.)": "28"
-    }
+  {
+    "error_type": "Cross-Clause Relations",
+    "rc_sg": 42,
+    "rc": 36
+  },
+  {
+    "error_type": "Infrequent Arguments",
+    "rc_sg": 11,
+    "rc": 26
+  },
+  {
+    "error_type": "Frequent Arguments",
+    "rc_sg": 37,
+    "rc": 40
+  },
+  {
+    "error_type": "Mistake in Ground-Truth",
+    "rc_sg": 10,
+    "rc": 5
+  },
+  {
+    "error_type": "Other",
+    "rc_sg": 21,
+    "rc": 28
+  }
 ]

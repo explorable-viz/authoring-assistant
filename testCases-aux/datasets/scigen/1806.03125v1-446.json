@@ -1,80 +1,80 @@
 [
-    {
-        "method": "SA",
-        "feature": "w2v",
-        "accuracy_(%)": "78.73",
-        "std._deviation": "1.56"
-    },
-    {
-        "method": "MSM",
-        "feature": "w2v",
-        "accuracy_(%)": " 90.62",
-        "std._deviation": "0.42"
-    },
-    {
-        "method": "TF-MSM",
-        "feature": "w2v",
-        "accuracy_(%)": " 92.01",
-        "std._deviation": "0.30"
-    },
-    {
-        "method": "MVB",
-        "feature": "binBOW",
-        "accuracy_(%)": "62.70",
-        "std._deviation": "0.69"
-    },
-    {
-        "method": "MNB",
-        "feature": "tfBOW",
-        "accuracy_(%)": " 91.47",
-        "std._deviation": "0.37"
-    },
-    {
-        "method": "LSA",
-        "feature": "w2v",
-        "accuracy_(%)": "34.58",
-        "std._deviation": "0.40"
-    },
-    {
-        "method": "LSA",
-        "feature": "binBOW",
-        "accuracy_(%)": "86.92",
-        "std._deviation": "0.74"
-    },
-    {
-        "method": "LSA",
-        "feature": "tfBOW",
-        "accuracy_(%)": "86.23",
-        "std._deviation": "0.96"
-    },
-    {
-        "method": "LSA",
-        "feature": "tfidfBOW",
-        "accuracy_(%)": "86.35",
-        "std._deviation": "1.03"
-    },
-    {
-        "method": "SVM",
-        "feature": "w2v",
-        "accuracy_(%)": "26.61",
-        "std._deviation": "0.30"
-    },
-    {
-        "method": "SVM",
-        "feature": "binBOW",
-        "accuracy_(%)": "89.23",
-        "std._deviation": "0.24"
-    },
-    {
-        "method": "SVM",
-        "feature": "tfBOW",
-        "accuracy_(%)": "89.10",
-        "std._deviation": "0.29"
-    },
-    {
-        "method": "SVM",
-        "feature": "tfidfBOW",
-        "accuracy_(%)": "88.78",
-        "std._deviation": "0.40"
-    }
+  {
+    "method": "SA",
+    "feature": "w2v",
+    "accuracy": 78.73,
+    "std_deviation": 1.56
+  },
+  {
+    "method": "MSM",
+    "feature": "w2v",
+    "accuracy": 90.62,
+    "std_deviation": 0.42
+  },
+  {
+    "method": "TF-MSM",
+    "feature": "w2v",
+    "accuracy": 92.01,
+    "std_deviation": 0.3
+  },
+  {
+    "method": "MVB",
+    "feature": "binBOW",
+    "accuracy": 62.7,
+    "std_deviation": 0.69
+  },
+  {
+    "method": "MNB",
+    "feature": "tfBOW",
+    "accuracy": 91.47,
+    "std_deviation": 0.37
+  },
+  {
+    "method": "LSA",
+    "feature": "w2v",
+    "accuracy": 34.58,
+    "std_deviation": 0.4
+  },
+  {
+    "method": "LSA",
+    "feature": "binBOW",
+    "accuracy": 86.92,
+    "std_deviation": 0.74
+  },
+  {
+    "method": "LSA",
+    "feature": "tfBOW",
+    "accuracy": 86.23,
+    "std_deviation": 0.96
+  },
+  {
+    "method": "LSA",
+    "feature": "tfidfBOW",
+    "accuracy": 86.35,
+    "std_deviation": 1.03
+  },
+  {
+    "method": "SVM",
+    "feature": "w2v",
+    "accuracy": 26.61,
+    "std_deviation": 0.3
+  },
+  {
+    "method": "SVM",
+    "feature": "binBOW",
+    "accuracy": 89.23,
+    "std_deviation": 0.24
+  },
+  {
+    "method": "SVM",
+    "feature": "tfBOW",
+    "accuracy": 89.1,
+    "std_deviation": 0.29
+  },
+  {
+    "method": "SVM",
+    "feature": "tfidfBOW",
+    "accuracy": 88.78,
+    "std_deviation": 0.4
+  }
 ]

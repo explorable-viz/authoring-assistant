@@ -1,112 +1,112 @@
 [
-    {
-        "diagnosis_detection_label": "Other",
-        "diagnosis_detection_support": "74888",
-        "diagnosis_detection_f1_score": "95.3",
-        "diagnosis_detection_improvement": "1.4%",
-        "prescription_reasons_label": "Other",
-        "prescription_reasons_support": "83618",
-        "prescription_reasons_f1_score": "95.8",
-        "prescription_reasons_improvement": "0.9%"
-    },
-    {
-        "diagnosis_detection_label": "Positive",
-        "diagnosis_detection_support": "24489",
-        "diagnosis_detection_f1_score": "86.1",
-        "diagnosis_detection_improvement": "4.4%",
-        "prescription_reasons_label": "Reason",
-        "prescription_reasons_support": "9114",
-        "prescription_reasons_f1_score": "64.7",
-        "prescription_reasons_improvement": "8.6%"
-    },
-    {
-        "diagnosis_detection_label": "Ruled-out",
-        "diagnosis_detection_support": "2797",
-        "diagnosis_detection_f1_score": "86.4",
-        "diagnosis_detection_improvement": "3.6%",
-        "prescription_reasons_label": "Prescribed",
-        "prescription_reasons_support": "5967",
-        "prescription_reasons_f1_score": "84.7",
-        "prescription_reasons_improvement": "4.4%"
-    },
-    {
-        "diagnosis_detection_label": "Concern",
-        "diagnosis_detection_support": "2780",
-        "diagnosis_detection_f1_score": "72.1",
-        "diagnosis_detection_improvement": "5.6%",
-        "prescription_reasons_label": "Discontinued",
-        "prescription_reasons_support": "2754",
-        "prescription_reasons_f1_score": "82.7",
-        "prescription_reasons_improvement": "5.6%"
-    },
-    {
-        "diagnosis_detection_label": "Chemical–Disease Relations (CDR)",
-        "diagnosis_detection_support": "Chemical–Disease Relations (CDR)",
-        "diagnosis_detection_f1_score": "Chemical–Disease Relations (CDR)",
-        "diagnosis_detection_improvement": "Chemical–Disease Relations (CDR)",
-        "prescription_reasons_label": "Drug–Disease Relations",
-        "prescription_reasons_support": "Drug–Disease Relations",
-        "prescription_reasons_f1_score": "Drug–Disease Relations",
-        "prescription_reasons_improvement": "Drug–Disease Relations"
-    },
-    {
-        "diagnosis_detection_label": "Label",
-        "diagnosis_detection_support": "Support",
-        "diagnosis_detection_f1_score": "F1 score",
-        "diagnosis_detection_improvement": "Improvement",
-        "prescription_reasons_label": "Label",
-        "prescription_reasons_support": "Support",
-        "prescription_reasons_f1_score": "F1 score",
-        "prescription_reasons_improvement": "Improvement"
-    },
-    {
-        "diagnosis_detection_label": "Other",
-        "diagnosis_detection_support": "104530",
-        "diagnosis_detection_f1_score": "98.3",
-        "diagnosis_detection_improvement": "0.5%",
-        "prescription_reasons_label": "Other",
-        "prescription_reasons_support": "10634",
-        "prescription_reasons_f1_score": "90.8",
-        "prescription_reasons_improvement": "2.3%"
-    },
-    {
-        "diagnosis_detection_label": "Disease",
-        "diagnosis_detection_support": "6887",
-        "diagnosis_detection_f1_score": "84.2",
-        "diagnosis_detection_improvement": "6.3%",
-        "prescription_reasons_label": "Treats",
-        "prescription_reasons_support": "3671",
-        "prescription_reasons_f1_score": "76.0",
-        "prescription_reasons_improvement": "5.7%"
-    },
-    {
-        "diagnosis_detection_label": "Chemical",
-        "diagnosis_detection_support": "6270",
-        "diagnosis_detection_f1_score": "87.0",
-        "diagnosis_detection_improvement": "6.7%",
-        "prescription_reasons_label": "Unrelated",
-        "prescription_reasons_support": "1145",
-        "prescription_reasons_f1_score": "53.8",
-        "prescription_reasons_improvement": "71.3%"
-    },
-    {
-        "diagnosis_detection_label": "",
-        "diagnosis_detection_support": "",
-        "diagnosis_detection_f1_score": "",
-        "diagnosis_detection_improvement": "",
-        "prescription_reasons_label": "Prevents",
-        "prescription_reasons_support": "320",
-        "prescription_reasons_f1_score": "41.1",
-        "prescription_reasons_improvement": "103.5%"
-    },
-    {
-        "diagnosis_detection_label": "",
-        "diagnosis_detection_support": "",
-        "diagnosis_detection_f1_score": "",
-        "diagnosis_detection_improvement": "",
-        "prescription_reasons_label": "Contraindicated-for",
-        "prescription_reasons_support": "69",
-        "prescription_reasons_f1_score": "0",
-        "prescription_reasons_improvement": "–"
-    }
+  {
+    "diagnosis_detection_label": "Other",
+    "diagnosis_detection_support": 74888,
+    "diagnosis_detection_f1_score": 95.3,
+    "diagnosis_detection_improvement": 1.4,
+    "prescription_reasons_label": "Other",
+    "prescription_reasons_support": 83618,
+    "prescription_reasons_f1_score": 95.8,
+    "prescription_reasons_improvement": 0.9
+  },
+  {
+    "diagnosis_detection_label": "Positive",
+    "diagnosis_detection_support": 24489,
+    "diagnosis_detection_f1_score": 86.1,
+    "diagnosis_detection_improvement": 4.4,
+    "prescription_reasons_label": "Reason",
+    "prescription_reasons_support": 9114,
+    "prescription_reasons_f1_score": 64.7,
+    "prescription_reasons_improvement": 8.6
+  },
+  {
+    "diagnosis_detection_label": "Ruled-out",
+    "diagnosis_detection_support": 2797,
+    "diagnosis_detection_f1_score": 86.4,
+    "diagnosis_detection_improvement": 3.6,
+    "prescription_reasons_label": "Prescribed",
+    "prescription_reasons_support": 5967,
+    "prescription_reasons_f1_score": 84.7,
+    "prescription_reasons_improvement": 4.4
+  },
+  {
+    "diagnosis_detection_label": "Concern",
+    "diagnosis_detection_support": 2780,
+    "diagnosis_detection_f1_score": 72.1,
+    "diagnosis_detection_improvement": 5.6,
+    "prescription_reasons_label": "Discontinued",
+    "prescription_reasons_support": 2754,
+    "prescription_reasons_f1_score": 82.7,
+    "prescription_reasons_improvement": 5.6
+  },
+  {
+    "diagnosis_detection_label": "Chemical–Disease Relations",
+    "diagnosis_detection_support": "Chemical–Disease Relations",
+    "diagnosis_detection_f1_score": "Chemical–Disease Relations",
+    "diagnosis_detection_improvement": "Chemical–Disease Relations",
+    "prescription_reasons_label": "Drug–Disease Relations",
+    "prescription_reasons_support": "Drug–Disease Relations",
+    "prescription_reasons_f1_score": "Drug–Disease Relations",
+    "prescription_reasons_improvement": "Drug–Disease Relations"
+  },
+  {
+    "diagnosis_detection_label": "Label",
+    "diagnosis_detection_support": "Support",
+    "diagnosis_detection_f1_score": "F1 score",
+    "diagnosis_detection_improvement": "Improvement",
+    "prescription_reasons_label": "Label",
+    "prescription_reasons_support": "Support",
+    "prescription_reasons_f1_score": "F1 score",
+    "prescription_reasons_improvement": "Improvement"
+  },
+  {
+    "diagnosis_detection_label": "Other",
+    "diagnosis_detection_support": 104530,
+    "diagnosis_detection_f1_score": 98.3,
+    "diagnosis_detection_improvement": 0.5,
+    "prescription_reasons_label": "Other",
+    "prescription_reasons_support": 10634,
+    "prescription_reasons_f1_score": 90.8,
+    "prescription_reasons_improvement": 2.3
+  },
+  {
+    "diagnosis_detection_label": "Disease",
+    "diagnosis_detection_support": 6887,
+    "diagnosis_detection_f1_score": 84.2,
+    "diagnosis_detection_improvement": 6.3,
+    "prescription_reasons_label": "Treats",
+    "prescription_reasons_support": 3671,
+    "prescription_reasons_f1_score": 76.0,
+    "prescription_reasons_improvement": 5.7
+  },
+  {
+    "diagnosis_detection_label": "Chemical",
+    "diagnosis_detection_support": 6270,
+    "diagnosis_detection_f1_score": 87.0,
+    "diagnosis_detection_improvement": 6.7,
+    "prescription_reasons_label": "Unrelated",
+    "prescription_reasons_support": 1145,
+    "prescription_reasons_f1_score": 53.8,
+    "prescription_reasons_improvement": 71.3
+  },
+  {
+    "diagnosis_detection_label": "",
+    "diagnosis_detection_support": "",
+    "diagnosis_detection_f1_score": "",
+    "diagnosis_detection_improvement": "",
+    "prescription_reasons_label": "Prevents",
+    "prescription_reasons_support": 320,
+    "prescription_reasons_f1_score": 41.1,
+    "prescription_reasons_improvement": 103.5
+  },
+  {
+    "diagnosis_detection_label": "",
+    "diagnosis_detection_support": "",
+    "diagnosis_detection_f1_score": "",
+    "diagnosis_detection_improvement": "",
+    "prescription_reasons_label": "Contraindicated-for",
+    "prescription_reasons_support": 69,
+    "prescription_reasons_f1_score": 0,
+    "prescription_reasons_improvement": "–"
+  }
 ]

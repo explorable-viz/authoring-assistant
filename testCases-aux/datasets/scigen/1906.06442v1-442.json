@@ -1,38 +1,38 @@
 [
-    {
-        "model": "Bitext baseline",
-        "asr0": "0.31",
-        "asr|__x|": "10.21",
-        "~h": "0.504"
-    },
-    {
-        "model": "BT",
-        "asr0": "0.28",
-        "asr|__x|": "10.98",
-        "~h": " 0.455"
-    },
-    {
-        "model": "P3BT",
-        "asr0": "0.37",
-        "asr|__x|": "7.66",
-        "~h": "0.558"
-    },
-    {
-        "model": "NoisedBT",
-        "asr0": "1.01",
-        "asr|__x|": "3.96",
-        "~h": "0.619"
-    },
-    {
-        "model": "TaggedBT",
-        "asr0": " 5.31",
-        "asr|__x|": "5.31",
-        "~h": "0.597"
-    },
-    {
-        "model": "TaggedNoisedBT",
-        "asr0": " 7.33",
-        "asr|__x|": "7.33",
-        "~h": "0.491"
-    }
+  {
+    "model": "Bitext baseline",
+    "asr0": 0.31,
+    "asr_x": 10.21,
+    "h": 0.504
+  },
+  {
+    "model": "BT",
+    "asr0": 0.28,
+    "asr_x": 10.98,
+    "h": 0.455
+  },
+  {
+    "model": "P3BT",
+    "asr0": 0.37,
+    "asr_x": 7.66,
+    "h": 0.558
+  },
+  {
+    "model": "NoisedBT",
+    "asr0": 1.01,
+    "asr_x": 3.96,
+    "h": 0.619
+  },
+  {
+    "model": "TaggedBT",
+    "asr0": 5.31,
+    "asr_x": 5.31,
+    "h": 0.597
+  },
+  {
+    "model": "TaggedNoisedBT",
+    "asr0": 7.33,
+    "asr_x": 7.33,
+    "h": 0.491
+  }
 ]

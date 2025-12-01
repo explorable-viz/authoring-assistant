@@ -1,30 +1,30 @@
 [
-    {
-        "": "Essentia",
-        "_dataset": "Snips",
-        "_#_of_extracted_pairs": "173",
-        "_#_of_valid_pairs": "84",
-        "_precision": "48.55%"
-    },
-    {
-        "": "Essentia",
-        "_dataset": "HotelQA",
-        "_#_of_extracted_pairs": "2221",
-        "_#_of_valid_pairs": "642",
-        "_precision": "28.91%"
-    },
-    {
-        "": "FSA",
-        "_dataset": "Snips",
-        "_#_of_extracted_pairs": "18",
-        "_#_of_valid_pairs": "15",
-        "_precision": "83.33%"
-    },
-    {
-        "": "FSA",
-        "_dataset": "HotelQA",
-        "_#_of_extracted_pairs": "342",
-        "_#_of_valid_pairs": "185",
-        "_precision": "54.09 %"
-    }
+  {
+    "_1": "Essentia",
+    "dataset": "Snips",
+    "num_of_extracted_pairs": 173,
+    "num_of_valid_pairs": 84,
+    "precision": 48.55
+  },
+  {
+    "_1": "Essentia",
+    "dataset": "HotelQA",
+    "num_of_extracted_pairs": 2221,
+    "num_of_valid_pairs": 642,
+    "precision": 28.91
+  },
+  {
+    "_1": "FSA",
+    "dataset": "Snips",
+    "num_of_extracted_pairs": 18,
+    "num_of_valid_pairs": 15,
+    "precision": 83.33
+  },
+  {
+    "_1": "FSA",
+    "dataset": "HotelQA",
+    "num_of_extracted_pairs": 342,
+    "num_of_valid_pairs": 185,
+    "precision": 54.09
+  }
 ]

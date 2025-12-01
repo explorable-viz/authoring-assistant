@@ -1,62 +1,62 @@
 [
-    {
-        "_model": "+0 dummy node",
-        "_time_(s)": "56",
-        "_acc": "81.76",
-        "_#_param": "7,216K"
-    },
-    {
-        "_model": "+1 dummy node",
-        "_time_(s)": "65",
-        "_acc": "82.64",
-        "_#_param": "8,768K"
-    },
-    {
-        "_model": "+2 dummy node",
-        "_time_(s)": "76",
-        "_acc": "82.24",
-        "_#_param": "10,321K"
-    },
-    {
-        "_model": "Hidden size 100",
-        "_time_(s)": "42",
-        "_acc": "81.75",
-        "_#_param": "4,891K"
-    },
-    {
-        "_model": "Hidden size 200",
-        "_time_(s)": "54",
-        "_acc": "82.04",
-        "_#_param": "6,002K"
-    },
-    {
-        "_model": "Hidden size 300",
-        "_time_(s)": "65",
-        "_acc": "82.64",
-        "_#_param": "8,768K"
-    },
-    {
-        "_model": "Hidden size 600",
-        "_time_(s)": "175",
-        "_acc": "81.84",
-        "_#_param": "17,648K"
-    },
-    {
-        "_model": "Hidden size 900",
-        "_time_(s)": "235",
-        "_acc": "81.66",
-        "_#_param": "33,942K"
-    },
-    {
-        "_model": "Without ⟨s⟩, ⟨/s⟩",
-        "_time_(s)": "63",
-        "_acc": "82.36",
-        "_#_param": "8,768K"
-    },
-    {
-        "_model": "With ⟨s⟩, ⟨/s⟩",
-        "_time_(s)": "65",
-        "_acc": "82.64",
-        "_#_param": "8,768K"
-    }
+  {
+    "model": "+0 dummy node",
+    "time": 56,
+    "acc": 81.76,
+    "num_param": 7216
+  },
+  {
+    "model": "+1 dummy node",
+    "time": 65,
+    "acc": 82.64,
+    "num_param": 8768
+  },
+  {
+    "model": "+2 dummy node",
+    "time": 76,
+    "acc": 82.24,
+    "num_param": 10321
+  },
+  {
+    "model": "Hidden size 100",
+    "time": 42,
+    "acc": 81.75,
+    "num_param": 4891
+  },
+  {
+    "model": "Hidden size 200",
+    "time": 54,
+    "acc": 82.04,
+    "num_param": 6002
+  },
+  {
+    "model": "Hidden size 300",
+    "time": 65,
+    "acc": 82.64,
+    "num_param": 8768
+  },
+  {
+    "model": "Hidden size 600",
+    "time": 175,
+    "acc": 81.84,
+    "num_param": 17648
+  },
+  {
+    "model": "Hidden size 900",
+    "time": 235,
+    "acc": 81.66,
+    "num_param": 33942
+  },
+  {
+    "model": "Without ⟨s⟩, ⟨/s⟩",
+    "time": 63,
+    "acc": 82.36,
+    "num_param": 8768
+  },
+  {
+    "model": "With ⟨s⟩, ⟨/s⟩",
+    "time": 65,
+    "acc": 82.64,
+    "num_param": 8768
+  }
 ]

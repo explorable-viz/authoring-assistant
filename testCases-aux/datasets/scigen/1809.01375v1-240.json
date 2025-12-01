@@ -1,418 +1,418 @@
 [
-    {
-        "feature": "is_heavy",
-        "cos": "0.15",
-        "f1-neigh": "0.15",
-        "f1-lr": "0.17",
-        "f1-net": "0.21",
-        "type": "op"
-    },
-    {
-        "feature": "is_strong",
-        "cos": "0.15",
-        "f1-neigh": "0.13",
-        "f1-lr": "0.13",
-        "f1-net": "0.34",
-        "type": "e"
-    },
-    {
-        "feature": "is_thin",
-        "cos": "0.16",
-        "f1-neigh": "0",
-        "f1-lr": "0.05",
-        "f1-net": "0.1",
-        "type": "vp"
-    },
-    {
-        "feature": "is_hard",
-        "cos": "0.16",
-        "f1-neigh": "0.15",
-        "f1-lr": "0.08",
-        "f1-net": "0.26",
-        "type": "op"
-    },
-    {
-        "feature": "is_expensive",
-        "cos": "0.16",
-        "f1-neigh": "0",
-        "f1-lr": "0.28",
-        "f1-net": "0.37",
-        "type": "e"
-    },
-    {
-        "feature": "…",
-        "cos": "…",
-        "f1-neigh": "…",
-        "f1-lr": "…",
-        "f1-net": "…",
-        "type": ""
-    },
-    {
-        "feature": "is_black",
-        "cos": "0.2",
-        "f1-neigh": "0.29",
-        "f1-lr": "0.23",
-        "f1-net": "0.24",
-        "type": "vp"
-    },
-    {
-        "feature": "is_electric",
-        "cos": "0.21",
-        "f1-neigh": "0.48",
-        "f1-lr": "0.5",
-        "f1-net": "0.69",
-        "type": "vp"
-    },
-    {
-        "feature": "is_dangerous",
-        "cos": "0.21",
-        "f1-neigh": "0.53",
-        "f1-lr": "0.57",
-        "f1-net": "0.59",
-        "type": "e"
-    },
-    {
-        "feature": "is_colourful",
-        "cos": "0.21",
-        "f1-neigh": "0.14",
-        "f1-lr": "0.25",
-        "f1-net": "0.32",
-        "type": "vp"
-    },
-    {
-        "feature": "is_brown",
-        "cos": "0.21",
-        "f1-neigh": "0.13",
-        "f1-lr": "0.22",
-        "f1-net": "0.33",
-        "type": "vp"
-    },
-    {
-        "feature": "has_a_handle _handles",
-        "cos": "0.22",
-        "f1-neigh": "0.44",
-        "f1-lr": "0.57",
-        "f1-net": "0.58",
-        "type": "p"
-    },
-    {
-        "feature": "has_a_seat _seats",
-        "cos": "0.22",
-        "f1-neigh": "0.43",
-        "f1-lr": "0.3",
-        "f1-net": "0.48",
-        "type": "p"
-    },
-    {
-        "feature": "does_smell _is_smelly",
-        "cos": "0.22",
-        "f1-neigh": "0.08",
-        "f1-lr": "0.15",
-        "f1-net": "0.37",
-        "type": "op"
-    },
-    {
-        "feature": "made_of_glass",
-        "cos": "0.22",
-        "f1-neigh": "0.29",
-        "f1-lr": "0",
-        "f1-net": "0.28",
-        "type": "vp"
-    },
-    {
-        "feature": "has_a_point",
-        "cos": "0.23",
-        "f1-neigh": "0.38",
-        "f1-lr": "0.23",
-        "f1-net": "0.47",
-        "type": "p"
-    },
-    {
-        "feature": "does_protect",
-        "cos": "0.24",
-        "f1-neigh": "0.38",
-        "f1-lr": "0.26",
-        "f1-net": "0.37",
-        "type": "f"
-    },
-    {
-        "feature": "is_yellow",
-        "cos": "0.24",
-        "f1-neigh": "0.22",
-        "f1-lr": "0",
-        "f1-net": "0.23",
-        "type": "vp"
-    },
-    {
-        "feature": "is_soft",
-        "cos": "0.24",
-        "f1-neigh": "0.12",
-        "f1-lr": "0",
-        "f1-net": "0.16",
-        "type": "op"
-    },
-    {
-        "feature": "is_red",
-        "cos": "0.25",
-        "f1-neigh": "0.34",
-        "f1-lr": "0.13",
-        "f1-net": "0.27",
-        "type": "vp"
-    },
-    {
-        "feature": "is_fast",
-        "cos": "0.25",
-        "f1-neigh": "0.3",
-        "f1-lr": "0.31",
-        "f1-net": "0.48",
-        "type": "vp"
-    },
-    {
-        "feature": "is_tall",
-        "cos": "0.25",
-        "f1-neigh": "0.43",
-        "f1-lr": "0.57",
-        "f1-net": "0.65",
-        "type": "vp"
-    },
-    {
-        "feature": "is_a_tool",
-        "cos": "0.26",
-        "f1-neigh": "0.5",
-        "f1-lr": "0.51",
-        "f1-net": "0.47",
-        "type": "t"
-    },
-    {
-        "feature": "…",
-        "cos": "…",
-        "f1-neigh": "…",
-        "f1-lr": "…",
-        "f1-net": "…",
-        "type": ""
-    },
-    {
-        "feature": "is_a_weapon",
-        "cos": "0.3",
-        "f1-neigh": "0.74",
-        "f1-lr": "0.56",
-        "f1-net": "0.63",
-        "type": "t"
-    },
-    {
-        "feature": "is_green",
-        "cos": "0.31",
-        "f1-neigh": "0.45",
-        "f1-lr": "0.45",
-        "f1-net": "0.45",
-        "type": "vp"
-    },
-    {
-        "feature": "has_a_ blade_blades",
-        "cos": "0.32",
-        "f1-neigh": "0.68",
-        "f1-lr": "0.65",
-        "f1-net": "0.74",
-        "type": "p"
-    },
-    {
-        "feature": "is_worn",
-        "cos": "0.32",
-        "f1-neigh": "0.47",
-        "f1-lr": "0.86",
-        "f1-net": "0.9",
-        "type": "f"
-    },
-    {
-        "feature": "has_wheels",
-        "cos": "0.32",
-        "f1-neigh": "0.82",
-        "f1-lr": "0.83",
-        "f1-net": "0.87",
-        "type": "p"
-    },
-    {
-        "feature": "is_found _in_kitchens",
-        "cos": "0.33",
-        "f1-neigh": "0.56",
-        "f1-lr": "0.73",
-        "f1-net": "0.76",
-        "type": "e"
-    },
-    {
-        "feature": "does_fly",
-        "cos": "0.33",
-        "f1-neigh": "0.57",
-        "f1-lr": "0.76",
-        "f1-net": "0.76",
-        "type": "f"
-    },
-    {
-        "feature": "has_a_tail",
-        "cos": "0.33",
-        "f1-neigh": "0.53",
-        "f1-lr": "0.68",
-        "f1-net": "0.69",
-        "type": "p"
-    },
-    {
-        "feature": "is_an_animal",
-        "cos": "0.33",
-        "f1-neigh": "0.64",
-        "f1-lr": "0.76",
-        "f1-net": "0.78",
-        "type": "t"
-    },
-    {
-        "feature": "is_eaten_edible",
-        "cos": "0.33",
-        "f1-neigh": "0.37",
-        "f1-lr": "0.88",
-        "f1-net": "0.85",
-        "type": "f"
-    },
-    {
-        "feature": "has_four_legs",
-        "cos": "0.34",
-        "f1-neigh": "0.67",
-        "f1-lr": "0.66",
-        "f1-net": "0.66",
-        "type": "p"
-    },
-    {
-        "feature": "is_a_vehicle",
-        "cos": "0.34",
-        "f1-neigh": "0.76",
-        "f1-lr": "0.69",
-        "f1-net": "0.79",
-        "type": "t"
-    },
-    {
-        "feature": "does_eat",
-        "cos": "0.34",
-        "f1-neigh": "0.68",
-        "f1-lr": "0.71",
-        "f1-net": "0.68",
-        "type": "f"
-    },
-    {
-        "feature": "…",
-        "cos": "…",
-        "f1-neigh": "…",
-        "f1-lr": "…",
-        "f1-net": "…",
-        "type": ""
-    },
-    {
-        "feature": "has_a_beak",
-        "cos": "0.37",
-        "f1-neigh": "0.63",
-        "f1-lr": "0.83",
-        "f1-net": "0.87",
-        "type": "p"
-    },
-    {
-        "feature": "made_of_cotton",
-        "cos": "0.37",
-        "f1-neigh": "0.68",
-        "f1-lr": "0.56",
-        "f1-net": "0.64",
-        "type": "vp"
-    },
-    {
-        "feature": "has_roots",
-        "cos": "0.37",
-        "f1-neigh": "0.3",
-        "f1-lr": "0.65",
-        "f1-net": "0.72",
-        "type": "p"
-    },
-    {
-        "feature": "is_a_mammal",
-        "cos": "0.37",
-        "f1-neigh": "0.69",
-        "f1-lr": "0.85",
-        "f1-net": "0.86",
-        "type": "t"
-    },
-    {
-        "feature": "does_grow",
-        "cos": "0.37",
-        "f1-neigh": "0.52",
-        "f1-lr": "0.81",
-        "f1-net": "0.81",
-        "type": "e"
-    },
-    {
-        "feature": "is_a_plant",
-        "cos": "0.37",
-        "f1-neigh": "0.43",
-        "f1-lr": "0.63",
-        "f1-net": "0.64",
-        "type": "t"
-    },
-    {
-        "feature": "has_leaves",
-        "cos": "0.37",
-        "f1-neigh": "0.41",
-        "f1-lr": "0.71",
-        "f1-net": "0.78",
-        "type": "p"
-    },
-    {
-        "feature": "…",
-        "cos": "…",
-        "f1-neigh": "…",
-        "f1-lr": "…",
-        "f1-net": "…",
-        "type": ""
-    },
-    {
-        "feature": "has_pips_seeds",
-        "cos": "0.47",
-        "f1-neigh": "0.5",
-        "f1-lr": "0.08",
-        "f1-net": "0.46",
-        "type": "p"
-    },
-    {
-        "feature": "is_juicy",
-        "cos": "0.5",
-        "f1-neigh": "0.71",
-        "f1-lr": "0.48",
-        "f1-net": "0.56",
-        "type": "op"
-    },
-    {
-        "feature": "is_a_vegetable",
-        "cos": "0.52",
-        "f1-neigh": "0.78",
-        "f1-lr": "0.75",
-        "f1-net": "0.81",
-        "type": "t"
-    },
-    {
-        "feature": "is_played _does_play",
-        "cos": "0.53",
-        "f1-neigh": "0.9",
-        "f1-lr": "0.98",
-        "f1-net": "0.98",
-        "type": "f"
-    },
-    {
-        "feature": "does_make_music",
-        "cos": "0.55",
-        "f1-neigh": "0.89",
-        "f1-lr": "0.95",
-        "f1-net": "0.92",
-        "type": "f"
-    },
-    {
-        "feature": "spearman-r",
-        "cos": "",
-        "f1-neigh": "0.72",
-        "f1-lr": "0.52",
-        "f1-net": "0.59",
-        "type": ""
-    }
+  {
+    "feature": "is_heavy",
+    "cos": 0.15,
+    "f1_neigh": 0.15,
+    "f1_lr": 0.17,
+    "f1_net": 0.21,
+    "type": "op"
+  },
+  {
+    "feature": "is_strong",
+    "cos": 0.15,
+    "f1_neigh": 0.13,
+    "f1_lr": 0.13,
+    "f1_net": 0.34,
+    "type": "e"
+  },
+  {
+    "feature": "is_thin",
+    "cos": 0.16,
+    "f1_neigh": 0,
+    "f1_lr": 0.05,
+    "f1_net": 0.1,
+    "type": "vp"
+  },
+  {
+    "feature": "is_hard",
+    "cos": 0.16,
+    "f1_neigh": 0.15,
+    "f1_lr": 0.08,
+    "f1_net": 0.26,
+    "type": "op"
+  },
+  {
+    "feature": "is_expensive",
+    "cos": 0.16,
+    "f1_neigh": 0,
+    "f1_lr": 0.28,
+    "f1_net": 0.37,
+    "type": "e"
+  },
+  {
+    "feature": "…",
+    "cos": "…",
+    "f1_neigh": "…",
+    "f1_lr": "…",
+    "f1_net": "…",
+    "type": ""
+  },
+  {
+    "feature": "is_blac",
+    "cos": 0.2,
+    "f1_neigh": 0.29,
+    "f1_lr": 0.23,
+    "f1_net": 0.24,
+    "type": "vp"
+  },
+  {
+    "feature": "is_electric",
+    "cos": 0.21,
+    "f1_neigh": 0.48,
+    "f1_lr": 0.5,
+    "f1_net": 0.69,
+    "type": "vp"
+  },
+  {
+    "feature": "is_dangerous",
+    "cos": 0.21,
+    "f1_neigh": 0.53,
+    "f1_lr": 0.57,
+    "f1_net": 0.59,
+    "type": "e"
+  },
+  {
+    "feature": "is_colourful",
+    "cos": 0.21,
+    "f1_neigh": 0.14,
+    "f1_lr": 0.25,
+    "f1_net": 0.32,
+    "type": "vp"
+  },
+  {
+    "feature": "is_brown",
+    "cos": 0.21,
+    "f1_neigh": 0.13,
+    "f1_lr": 0.22,
+    "f1_net": 0.33,
+    "type": "vp"
+  },
+  {
+    "feature": "has_a_handle _handles",
+    "cos": 0.22,
+    "f1_neigh": 0.44,
+    "f1_lr": 0.57,
+    "f1_net": 0.58,
+    "type": "p"
+  },
+  {
+    "feature": "has_a_seat _seats",
+    "cos": 0.22,
+    "f1_neigh": 0.43,
+    "f1_lr": 0.3,
+    "f1_net": 0.48,
+    "type": "p"
+  },
+  {
+    "feature": "does_smell _is_smelly",
+    "cos": 0.22,
+    "f1_neigh": 0.08,
+    "f1_lr": 0.15,
+    "f1_net": 0.37,
+    "type": "op"
+  },
+  {
+    "feature": "made_of_glass",
+    "cos": 0.22,
+    "f1_neigh": 0.29,
+    "f1_lr": 0,
+    "f1_net": 0.28,
+    "type": "vp"
+  },
+  {
+    "feature": "has_a_point",
+    "cos": 0.23,
+    "f1_neigh": 0.38,
+    "f1_lr": 0.23,
+    "f1_net": 0.47,
+    "type": "p"
+  },
+  {
+    "feature": "does_protect",
+    "cos": 0.24,
+    "f1_neigh": 0.38,
+    "f1_lr": 0.26,
+    "f1_net": 0.37,
+    "type": "f"
+  },
+  {
+    "feature": "is_yellow",
+    "cos": 0.24,
+    "f1_neigh": 0.22,
+    "f1_lr": 0,
+    "f1_net": 0.23,
+    "type": "vp"
+  },
+  {
+    "feature": "is_soft",
+    "cos": 0.24,
+    "f1_neigh": 0.12,
+    "f1_lr": 0,
+    "f1_net": 0.16,
+    "type": "op"
+  },
+  {
+    "feature": "is_red",
+    "cos": 0.25,
+    "f1_neigh": 0.34,
+    "f1_lr": 0.13,
+    "f1_net": 0.27,
+    "type": "vp"
+  },
+  {
+    "feature": "is_fast",
+    "cos": 0.25,
+    "f1_neigh": 0.3,
+    "f1_lr": 0.31,
+    "f1_net": 0.48,
+    "type": "vp"
+  },
+  {
+    "feature": "is_tall",
+    "cos": 0.25,
+    "f1_neigh": 0.43,
+    "f1_lr": 0.57,
+    "f1_net": 0.65,
+    "type": "vp"
+  },
+  {
+    "feature": "is_a_tool",
+    "cos": 0.26,
+    "f1_neigh": 0.5,
+    "f1_lr": 0.51,
+    "f1_net": 0.47,
+    "type": "t"
+  },
+  {
+    "feature": "…",
+    "cos": "…",
+    "f1_neigh": "…",
+    "f1_lr": "…",
+    "f1_net": "…",
+    "type": ""
+  },
+  {
+    "feature": "is_a_weapon",
+    "cos": 0.3,
+    "f1_neigh": 0.74,
+    "f1_lr": 0.56,
+    "f1_net": 0.63,
+    "type": "t"
+  },
+  {
+    "feature": "is_green",
+    "cos": 0.31,
+    "f1_neigh": 0.45,
+    "f1_lr": 0.45,
+    "f1_net": 0.45,
+    "type": "vp"
+  },
+  {
+    "feature": "has_a_ blade_blades",
+    "cos": 0.32,
+    "f1_neigh": 0.68,
+    "f1_lr": 0.65,
+    "f1_net": 0.74,
+    "type": "p"
+  },
+  {
+    "feature": "is_worn",
+    "cos": 0.32,
+    "f1_neigh": 0.47,
+    "f1_lr": 0.86,
+    "f1_net": 0.9,
+    "type": "f"
+  },
+  {
+    "feature": "has_wheels",
+    "cos": 0.32,
+    "f1_neigh": 0.82,
+    "f1_lr": 0.83,
+    "f1_net": 0.87,
+    "type": "p"
+  },
+  {
+    "feature": "is_found _in_kitchens",
+    "cos": 0.33,
+    "f1_neigh": 0.56,
+    "f1_lr": 0.73,
+    "f1_net": 0.76,
+    "type": "e"
+  },
+  {
+    "feature": "does_fly",
+    "cos": 0.33,
+    "f1_neigh": 0.57,
+    "f1_lr": 0.76,
+    "f1_net": 0.76,
+    "type": "f"
+  },
+  {
+    "feature": "has_a_tail",
+    "cos": 0.33,
+    "f1_neigh": 0.53,
+    "f1_lr": 0.68,
+    "f1_net": 0.69,
+    "type": "p"
+  },
+  {
+    "feature": "is_an_animal",
+    "cos": 0.33,
+    "f1_neigh": 0.64,
+    "f1_lr": 0.76,
+    "f1_net": 0.78,
+    "type": "t"
+  },
+  {
+    "feature": "is_eaten_edible",
+    "cos": 0.33,
+    "f1_neigh": 0.37,
+    "f1_lr": 0.88,
+    "f1_net": 0.85,
+    "type": "f"
+  },
+  {
+    "feature": "has_four_legs",
+    "cos": 0.34,
+    "f1_neigh": 0.67,
+    "f1_lr": 0.66,
+    "f1_net": 0.66,
+    "type": "p"
+  },
+  {
+    "feature": "is_a_vehicle",
+    "cos": 0.34,
+    "f1_neigh": 0.76,
+    "f1_lr": 0.69,
+    "f1_net": 0.79,
+    "type": "t"
+  },
+  {
+    "feature": "does_eat",
+    "cos": 0.34,
+    "f1_neigh": 0.68,
+    "f1_lr": 0.71,
+    "f1_net": 0.68,
+    "type": "f"
+  },
+  {
+    "feature": "…",
+    "cos": "…",
+    "f1_neigh": "…",
+    "f1_lr": "…",
+    "f1_net": "…",
+    "type": ""
+  },
+  {
+    "feature": "has_a_bea",
+    "cos": 0.37,
+    "f1_neigh": 0.63,
+    "f1_lr": 0.83,
+    "f1_net": 0.87,
+    "type": "p"
+  },
+  {
+    "feature": "made_of_cotton",
+    "cos": 0.37,
+    "f1_neigh": 0.68,
+    "f1_lr": 0.56,
+    "f1_net": 0.64,
+    "type": "vp"
+  },
+  {
+    "feature": "has_roots",
+    "cos": 0.37,
+    "f1_neigh": 0.3,
+    "f1_lr": 0.65,
+    "f1_net": 0.72,
+    "type": "p"
+  },
+  {
+    "feature": "is_a_mammal",
+    "cos": 0.37,
+    "f1_neigh": 0.69,
+    "f1_lr": 0.85,
+    "f1_net": 0.86,
+    "type": "t"
+  },
+  {
+    "feature": "does_grow",
+    "cos": 0.37,
+    "f1_neigh": 0.52,
+    "f1_lr": 0.81,
+    "f1_net": 0.81,
+    "type": "e"
+  },
+  {
+    "feature": "is_a_plant",
+    "cos": 0.37,
+    "f1_neigh": 0.43,
+    "f1_lr": 0.63,
+    "f1_net": 0.64,
+    "type": "t"
+  },
+  {
+    "feature": "has_leaves",
+    "cos": 0.37,
+    "f1_neigh": 0.41,
+    "f1_lr": 0.71,
+    "f1_net": 0.78,
+    "type": "p"
+  },
+  {
+    "feature": "…",
+    "cos": "…",
+    "f1_neigh": "…",
+    "f1_lr": "…",
+    "f1_net": "…",
+    "type": ""
+  },
+  {
+    "feature": "has_pips_seeds",
+    "cos": 0.47,
+    "f1_neigh": 0.5,
+    "f1_lr": 0.08,
+    "f1_net": 0.46,
+    "type": "p"
+  },
+  {
+    "feature": "is_juicy",
+    "cos": 0.5,
+    "f1_neigh": 0.71,
+    "f1_lr": 0.48,
+    "f1_net": 0.56,
+    "type": "op"
+  },
+  {
+    "feature": "is_a_vegetable",
+    "cos": 0.52,
+    "f1_neigh": 0.78,
+    "f1_lr": 0.75,
+    "f1_net": 0.81,
+    "type": "t"
+  },
+  {
+    "feature": "is_played _does_play",
+    "cos": 0.53,
+    "f1_neigh": 0.9,
+    "f1_lr": 0.98,
+    "f1_net": 0.98,
+    "type": "f"
+  },
+  {
+    "feature": "does_make_music",
+    "cos": 0.55,
+    "f1_neigh": 0.89,
+    "f1_lr": 0.95,
+    "f1_net": 0.92,
+    "type": "f"
+  },
+  {
+    "feature": "spearman-r",
+    "cos": "",
+    "f1_neigh": 0.72,
+    "f1_lr": 0.52,
+    "f1_net": 0.59,
+    "type": ""
+  }
 ]

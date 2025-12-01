@@ -1,37 +1,37 @@
 [
-    {
-        "model": "",
-        "dataset_1___vs._simulator": "# Turns",
-        "dataset_1___vs._human": "# Turns",
-        "dataset_2___vs._simulator": "# Turns",
-        "dataset_2___vs._human": "# Turns"
-    },
-    {
-        "model": "Seq2Seq(goal)",
-        "dataset_1___vs._simulator": "4.74",
-        "dataset_1___vs._human": "7.87",
-        "dataset_2___vs._simulator": "7.38",
-        "dataset_2___vs._human": "7.56"
-    },
-    {
-        "model": "Seq2Seq(goal+state)",
-        "dataset_1___vs._simulator": "4.74",
-        "dataset_1___vs._human": "6.35",
-        "dataset_2___vs._simulator": "7.42",
-        "dataset_2___vs._human": "8.04"
-    },
-    {
-        "model": "Seq2Seq(goal+look)",
-        "dataset_1___vs._simulator": "6.54",
-        "dataset_1___vs._human": "5.41",
-        "dataset_2___vs._simulator": " 5.82",
-        "dataset_2___vs._human": " 6.94"
-    },
-    {
-        "model": "Seq2Seq(goal+look+state)",
-        "dataset_1___vs._simulator": " 4.10",
-        "dataset_1___vs._human": " 5.02",
-        "dataset_2___vs._simulator": "6.36",
-        "dataset_2___vs._human": "7.30"
-    }
+  {
+    "model": "",
+    "dataset_1_vs_simulator": "# Turns",
+    "dataset_1_vs_human": "# Turns",
+    "dataset_2_vs_simulator": "# Turns",
+    "dataset_2_vs_human": "# Turns"
+  },
+  {
+    "model": "Seq2Seq",
+    "dataset_1_vs_simulator": 4.74,
+    "dataset_1_vs_human": 7.87,
+    "dataset_2_vs_simulator": 7.38,
+    "dataset_2_vs_human": 7.56
+  },
+  {
+    "model": "Seq2Seq",
+    "dataset_1_vs_simulator": 4.74,
+    "dataset_1_vs_human": 6.35,
+    "dataset_2_vs_simulator": 7.42,
+    "dataset_2_vs_human": 8.04
+  },
+  {
+    "model": "Seq2Seq",
+    "dataset_1_vs_simulator": 6.54,
+    "dataset_1_vs_human": 5.41,
+    "dataset_2_vs_simulator": 5.82,
+    "dataset_2_vs_human": 6.94
+  },
+  {
+    "model": "Seq2Seq",
+    "dataset_1_vs_simulator": 4.1,
+    "dataset_1_vs_human": 5.02,
+    "dataset_2_vs_simulator": 6.36,
+    "dataset_2_vs_human": 7.3
+  }
 ]

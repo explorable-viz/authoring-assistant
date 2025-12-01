@@ -1,110 +1,110 @@
 [
-    {
-        "": " With Gold-Standard Segments",
-        "overall": " With Gold-Standard Segments",
-        "eval": " With Gold-Standard Segments",
-        "req": " With Gold-Standard Segments",
-        "fact": " With Gold-Standard Segments",
-        "ref": " With Gold-Standard Segments",
-        "quot": " With Gold-Standard Segments"
-    },
-    {
-        "": "Majority",
-        "overall": "40.75",
-        "eval": "57.90",
-        "req": "–",
-        "fact": "–",
-        "ref": "–",
-        "quot": "–"
-    },
-    {
-        "": "PropLexicon",
-        "overall": "36.83",
-        "eval": "40.42",
-        "req": "36.07",
-        "fact": "32.23",
-        "ref": "59.57",
-        "quot": "31.28"
-    },
-    {
-        "": "SVM",
-        "overall": "60.98",
-        "eval": "63.88",
-        "req": " 69.02",
-        "fact": "54.74",
-        "ref": " 69.47",
-        "quot": "7.69"
-    },
-    {
-        "": "CNN",
-        "overall": " 66.56∗",
-        "eval": " 69.02",
-        "req": "63.26",
-        "fact": " 66.17",
-        "ref": "67.44",
-        "quot": " 52.94"
-    },
-    {
-        "": " With Predicted Segments",
-        "overall": " With Predicted Segments",
-        "eval": " With Predicted Segments",
-        "req": " With Predicted Segments",
-        "fact": " With Predicted Segments",
-        "ref": " With Predicted Segments",
-        "quot": " With Predicted Segments"
-    },
-    {
-        "": "Majority",
-        "overall": "33.30",
-        "eval": "47.60",
-        "req": "–",
-        "fact": "–",
-        "ref": "–",
-        "quot": "–"
-    },
-    {
-        "": "PropLexicon",
-        "overall": "23.21",
-        "eval": "22.45",
-        "req": "23.97",
-        "fact": "23.73",
-        "ref": "35.96",
-        "quot": "16.67"
-    },
-    {
-        "": "SVM",
-        "overall": "51.46",
-        "eval": "54.05",
-        "req": "48.16",
-        "fact": "52.77",
-        "ref": "52.27",
-        "quot": "4.71"
-    },
-    {
-        "": "CNN",
-        "overall": "55.48",
-        "eval": "57.75",
-        "req": "53.71",
-        "fact": "55.19",
-        "ref": "48.78",
-        "quot": "33.33"
-    },
-    {
-        "": "CRF-joint",
-        "overall": "50.69",
-        "eval": "46.78",
-        "req": "55.74",
-        "fact": "52.27",
-        "ref": " 55.77",
-        "quot": "26.47"
-    },
-    {
-        "": "BiLSTM-CRF-joint",
-        "overall": " 62.64∗",
-        "eval": " 62.36∗",
-        "req": " 67.31∗",
-        "fact": " 61.86",
-        "ref": "54.74",
-        "quot": " 37.36"
-    }
+  {
+    "_1": " With Gold-Standard Segments",
+    "overall": " With Gold-Standard Segments",
+    "eval": " With Gold-Standard Segments",
+    "req": " With Gold-Standard Segments",
+    "fact": " With Gold-Standard Segments",
+    "ref": " With Gold-Standard Segments",
+    "quot": " With Gold-Standard Segments"
+  },
+  {
+    "_1": "Majority",
+    "overall": 40.75,
+    "eval": 57.9,
+    "req": "–",
+    "fact": "–",
+    "ref": "–",
+    "quot": "–"
+  },
+  {
+    "_1": "PropLexicon",
+    "overall": 36.83,
+    "eval": 40.42,
+    "req": 36.07,
+    "fact": 32.23,
+    "ref": 59.57,
+    "quot": 31.28
+  },
+  {
+    "_1": "SVM",
+    "overall": 60.98,
+    "eval": 63.88,
+    "req": 69.02,
+    "fact": 54.74,
+    "ref": 69.47,
+    "quot": 7.69
+  },
+  {
+    "_1": "CNN",
+    "overall": " 66.56∗",
+    "eval": 69.02,
+    "req": 63.26,
+    "fact": 66.17,
+    "ref": 67.44,
+    "quot": 52.94
+  },
+  {
+    "_1": " With Predicted Segments",
+    "overall": " With Predicted Segments",
+    "eval": " With Predicted Segments",
+    "req": " With Predicted Segments",
+    "fact": " With Predicted Segments",
+    "ref": " With Predicted Segments",
+    "quot": " With Predicted Segments"
+  },
+  {
+    "_1": "Majority",
+    "overall": 33.3,
+    "eval": 47.6,
+    "req": "–",
+    "fact": "–",
+    "ref": "–",
+    "quot": "–"
+  },
+  {
+    "_1": "PropLexicon",
+    "overall": 23.21,
+    "eval": 22.45,
+    "req": 23.97,
+    "fact": 23.73,
+    "ref": 35.96,
+    "quot": 16.67
+  },
+  {
+    "_1": "SVM",
+    "overall": 51.46,
+    "eval": 54.05,
+    "req": 48.16,
+    "fact": 52.77,
+    "ref": 52.27,
+    "quot": 4.71
+  },
+  {
+    "_1": "CNN",
+    "overall": 55.48,
+    "eval": 57.75,
+    "req": 53.71,
+    "fact": 55.19,
+    "ref": 48.78,
+    "quot": 33.33
+  },
+  {
+    "_1": "CRF-joint",
+    "overall": 50.69,
+    "eval": 46.78,
+    "req": 55.74,
+    "fact": 52.27,
+    "ref": 55.77,
+    "quot": 26.47
+  },
+  {
+    "_1": "BiLSTM-CRF-joint",
+    "overall": " 62.64∗",
+    "eval": " 62.36∗",
+    "req": " 67.31∗",
+    "fact": 61.86,
+    "ref": 54.74,
+    "quot": 37.36
+  }
 ]

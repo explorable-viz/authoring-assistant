@@ -1,146 +1,146 @@
 [
-    {
-        "test_set_embeddings": "char→tag",
-        "missing_embeddings": "",
-        "full_vocabulary": "with",
-        "oov_(ud)": "with"
-    },
-    {
-        "test_set_embeddings": "Persian",
-        "missing_embeddings": "2.2%",
-        "full_vocabulary": " 0.41",
-        "oov_(ud)": " 0.81"
-    },
-    {
-        "test_set_embeddings": "Hindi",
-        "missing_embeddings": "3.8%",
-        "full_vocabulary": "0.21",
-        "oov_(ud)": "0.36"
-    },
-    {
-        "test_set_embeddings": "English",
-        "missing_embeddings": "4.5%",
-        "full_vocabulary": "0.25",
-        "oov_(ud)": "0.49"
-    },
-    {
-        "test_set_embeddings": "Spanish",
-        "missing_embeddings": "5.2%",
-        "full_vocabulary": "-0.26",
-        "oov_(ud)": "-0.66"
-    },
-    {
-        "test_set_embeddings": "Italian",
-        "missing_embeddings": "6.6%",
-        "full_vocabulary": "0.28",
-        "oov_(ud)": "0.21"
-    },
-    {
-        "test_set_embeddings": "Danish",
-        "missing_embeddings": "7.8%",
-        "full_vocabulary": " 0.99",
-        "oov_(ud)": " 1.72"
-    },
-    {
-        "test_set_embeddings": "Hebrew",
-        "missing_embeddings": "9.2%",
-        "full_vocabulary": " 0.40",
-        "oov_(ud)": "0.06"
-    },
-    {
-        "test_set_embeddings": "Swedish",
-        "missing_embeddings": "9.2%",
-        "full_vocabulary": " 0.55",
-        "oov_(ud)": " 1.79"
-    },
-    {
-        "test_set_embeddings": "Bulgarian",
-        "missing_embeddings": "9.4%",
-        "full_vocabulary": "0.12",
-        "oov_(ud)": "-0.11"
-    },
-    {
-        "test_set_embeddings": "Czech",
-        "missing_embeddings": "10.6%",
-        "full_vocabulary": " 1.32",
-        "oov_(ud)": " 2.20"
-    },
-    {
-        "test_set_embeddings": "Latvian",
-        "missing_embeddings": "11.1%",
-        "full_vocabulary": " 1.03",
-        "oov_(ud)": " 2.71"
-    },
-    {
-        "test_set_embeddings": "Hungarian",
-        "missing_embeddings": "11.6%",
-        "full_vocabulary": " 2.01",
-        "oov_(ud)": " 4.85"
-    },
-    {
-        "test_set_embeddings": "Turkish",
-        "missing_embeddings": "14.5%",
-        "full_vocabulary": " 1.69",
-        "oov_(ud)": " 2.71"
-    },
-    {
-        "test_set_embeddings": "Tamil*",
-        "missing_embeddings": "16.2%",
-        "full_vocabulary": "0.35",
-        "oov_(ud)": "1.35"
-    },
-    {
-        "test_set_embeddings": "Russian",
-        "missing_embeddings": "16.5%",
-        "full_vocabulary": " 1.82",
-        "oov_(ud)": " 3.52"
-    },
-    {
-        "test_set_embeddings": "Greek",
-        "missing_embeddings": "17.5%",
-        "full_vocabulary": "0.34",
-        "oov_(ud)": "1.17"
-    },
-    {
-        "test_set_embeddings": "Indonesian",
-        "missing_embeddings": "19.1%",
-        "full_vocabulary": "0.25",
-        "oov_(ud)": "0.75"
-    },
-    {
-        "test_set_embeddings": "Kazakh*",
-        "missing_embeddings": "21.0%",
-        "full_vocabulary": "1.24",
-        "oov_(ud)": " 4.20"
-    },
-    {
-        "test_set_embeddings": "Vietnamese",
-        "missing_embeddings": "21.9%",
-        "full_vocabulary": " 1.18",
-        "oov_(ud)": " 5.73"
-    },
-    {
-        "test_set_embeddings": "Romanian",
-        "missing_embeddings": "27.1%",
-        "full_vocabulary": " 0.47",
-        "oov_(ud)": " 1.24"
-    },
-    {
-        "test_set_embeddings": "Arabic",
-        "missing_embeddings": "27.1%",
-        "full_vocabulary": " 0.32",
-        "oov_(ud)": "0.22"
-    },
-    {
-        "test_set_embeddings": "Basque",
-        "missing_embeddings": "35.3%",
-        "full_vocabulary": " 1.06",
-        "oov_(ud)": " 1.68"
-    },
-    {
-        "test_set_embeddings": "Chinese",
-        "missing_embeddings": "69.9%",
-        "full_vocabulary": " 2.57",
-        "oov_(ud)": " 5.24"
-    }
+  {
+    "test_set_embeddings": "char→tag",
+    "missing_embeddings": "",
+    "full_vocabulary": "with",
+    "oov": "with"
+  },
+  {
+    "test_set_embeddings": "Persian",
+    "missing_embeddings": 2.2,
+    "full_vocabulary": 0.41,
+    "oov": 0.81
+  },
+  {
+    "test_set_embeddings": "Hindi",
+    "missing_embeddings": 3.8,
+    "full_vocabulary": 0.21,
+    "oov": 0.36
+  },
+  {
+    "test_set_embeddings": "English",
+    "missing_embeddings": 4.5,
+    "full_vocabulary": 0.25,
+    "oov": 0.49
+  },
+  {
+    "test_set_embeddings": "Spanish",
+    "missing_embeddings": 5.2,
+    "full_vocabulary": -0.26,
+    "oov": -0.66
+  },
+  {
+    "test_set_embeddings": "Italian",
+    "missing_embeddings": 6.6,
+    "full_vocabulary": 0.28,
+    "oov": 0.21
+  },
+  {
+    "test_set_embeddings": "Danish",
+    "missing_embeddings": 7.8,
+    "full_vocabulary": 0.99,
+    "oov": 1.72
+  },
+  {
+    "test_set_embeddings": "Hebrew",
+    "missing_embeddings": 9.2,
+    "full_vocabulary": 0.4,
+    "oov": 0.06
+  },
+  {
+    "test_set_embeddings": "Swedish",
+    "missing_embeddings": 9.2,
+    "full_vocabulary": 0.55,
+    "oov": 1.79
+  },
+  {
+    "test_set_embeddings": "Bulgarian",
+    "missing_embeddings": 9.4,
+    "full_vocabulary": 0.12,
+    "oov": -0.11
+  },
+  {
+    "test_set_embeddings": "Czech",
+    "missing_embeddings": 10.6,
+    "full_vocabulary": 1.32,
+    "oov": 2.2
+  },
+  {
+    "test_set_embeddings": "Latvian",
+    "missing_embeddings": 11.1,
+    "full_vocabulary": 1.03,
+    "oov": 2.71
+  },
+  {
+    "test_set_embeddings": "Hungarian",
+    "missing_embeddings": 11.6,
+    "full_vocabulary": 2.01,
+    "oov": 4.85
+  },
+  {
+    "test_set_embeddings": "Turkish",
+    "missing_embeddings": 14.5,
+    "full_vocabulary": 1.69,
+    "oov": 2.71
+  },
+  {
+    "test_set_embeddings": "Tamil*",
+    "missing_embeddings": 16.2,
+    "full_vocabulary": 0.35,
+    "oov": 1.35
+  },
+  {
+    "test_set_embeddings": "Russian",
+    "missing_embeddings": 16.5,
+    "full_vocabulary": 1.82,
+    "oov": 3.52
+  },
+  {
+    "test_set_embeddings": "Gree",
+    "missing_embeddings": 17.5,
+    "full_vocabulary": 0.34,
+    "oov": 1.17
+  },
+  {
+    "test_set_embeddings": "Indonesian",
+    "missing_embeddings": 19.1,
+    "full_vocabulary": 0.25,
+    "oov": 0.75
+  },
+  {
+    "test_set_embeddings": "Kazakh*",
+    "missing_embeddings": 21.0,
+    "full_vocabulary": 1.24,
+    "oov": 4.2
+  },
+  {
+    "test_set_embeddings": "Vietnamese",
+    "missing_embeddings": 21.9,
+    "full_vocabulary": 1.18,
+    "oov": 5.73
+  },
+  {
+    "test_set_embeddings": "Romanian",
+    "missing_embeddings": 27.1,
+    "full_vocabulary": 0.47,
+    "oov": 1.24
+  },
+  {
+    "test_set_embeddings": "Arabic",
+    "missing_embeddings": 27.1,
+    "full_vocabulary": 0.32,
+    "oov": 0.22
+  },
+  {
+    "test_set_embeddings": "Basque",
+    "missing_embeddings": 35.3,
+    "full_vocabulary": 1.06,
+    "oov": 1.68
+  },
+  {
+    "test_set_embeddings": "Chinese",
+    "missing_embeddings": 69.9,
+    "full_vocabulary": 2.57,
+    "oov": 5.24
+  }
 ]

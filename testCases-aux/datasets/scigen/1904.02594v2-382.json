@@ -1,67 +1,67 @@
 [
-    {
-        "_model": "TF-IDF GloVe",
-        "_swda": "66.5",
-        "_mrda": "78.7"
-    },
-    {
-        "_model": "Kalchbrenner and Blunsom ( 2013 )",
-        "_swda": "73.9",
-        "_mrda": "-"
-    },
-    {
-        "_model": "Lee and Dernoncourt ( 2016 )",
-        "_swda": "73.9",
-        "_mrda": "84.6"
-    },
-    {
-        "_model": "Khanpour et al. ( 2016 )",
-        "_swda": "75.8",
-        "_mrda": "86.8"
-    },
-    {
-        "_model": "Ji et al. ( 2016 )",
-        "_swda": "77.0",
-        "_mrda": "-"
-    },
-    {
-        "_model": "Shen and Lee ( 2016 )",
-        "_swda": "72.6",
-        "_mrda": "-"
-    },
-    {
-        "_model": "Li and Wu ( 2016 )",
-        "_swda": "79.4",
-        "_mrda": "-"
-    },
-    {
-        "_model": "Ortega and Vu ( 2017 )",
-        "_swda": "73.8",
-        "_mrda": "84.3"
-    },
-    {
-        "_model": "Tran et al. ( 2017 )",
-        "_swda": "74.5",
-        "_mrda": "-"
-    },
-    {
-        "_model": "Kumar et al. ( 2018 )",
-        "_swda": "79.2",
-        "_mrda": "90.9"
-    },
-    {
-        "_model": "Chen et al. ( 2018 )",
-        "_swda": "81.3",
-        "_mrda": " 91.7"
-    },
-    {
-        "_model": " Our Method",
-        "_swda": " 82.9",
-        "_mrda": "91.1"
-    },
-    {
-        "_model": " Human Agreement",
-        "_swda": "84.0",
-        "_mrda": "-"
-    }
+  {
+    "model": "TF-IDF GloVe",
+    "swda": 66.5,
+    "mrda": 78.7
+  },
+  {
+    "model": "Kalchbrenner and Blunsom",
+    "swda": 73.9,
+    "mrda": "-"
+  },
+  {
+    "model": "Lee and Dernoncourt",
+    "swda": 73.9,
+    "mrda": 84.6
+  },
+  {
+    "model": "Khanpour et al.",
+    "swda": 75.8,
+    "mrda": 86.8
+  },
+  {
+    "model": "Ji et al.",
+    "swda": 77.0,
+    "mrda": "-"
+  },
+  {
+    "model": "Shen and Lee",
+    "swda": 72.6,
+    "mrda": "-"
+  },
+  {
+    "model": "Li and Wu",
+    "swda": 79.4,
+    "mrda": "-"
+  },
+  {
+    "model": "Ortega and Vu",
+    "swda": 73.8,
+    "mrda": 84.3
+  },
+  {
+    "model": "Tran et al.",
+    "swda": 74.5,
+    "mrda": "-"
+  },
+  {
+    "model": "Kumar et al.",
+    "swda": 79.2,
+    "mrda": 90.9
+  },
+  {
+    "model": "Chen et al.",
+    "swda": 81.3,
+    "mrda": 91.7
+  },
+  {
+    "model": " Our Method",
+    "swda": 82.9,
+    "mrda": 91.1
+  },
+  {
+    "model": " Human Agreement",
+    "swda": 84.0,
+    "mrda": "-"
+  }
 ]

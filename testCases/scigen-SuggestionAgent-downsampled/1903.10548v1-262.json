@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Different approaches have been used to solve this task. The "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " result belongs to classifying order of paragraphs using pre-trained "
+    },
+    {
+      "expression": "\"BERT model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". It achieves around "
+    },
+    {
+      "expression": "\"84%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy on test set which "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " other models significantly.  First, each paragraph is encoded with "
+    },
+    {
+      "expression": "\"LSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The hidden state at the end of each sentence is extracted, and the resulting matrix is going through gated CNN (Dauphin et al., 2017) for extraction of single encoding for each paragraph. The accuracy is barely above "
+    },
+    {
+      "expression": "\"50%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which depicts that this method is not very promising.  We have used a pre-trained "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in two different ways. First, as a feature extractor without fine-tuning, and second, by fine-tuning the weights during training.  In the case of fine-tuning, we have used different numbers for "
+    },
+    {
+      "expression": "\"maximum sequence length\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to test the capability of "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in this task.  we increased the number of tokens and accuracy respectively increases.  We found this method very promising and the accuracy significantly increases with respect to previous methods (Table 3). This result reveals fine-tuning pre-trained "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " can approximately learn the order of the paragraphs and arrow of the time in the stories."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1903_10548v1_262"
+  ],
+  "datasets": ["datasets/scigen/1903.10548v1-262.json"]
+}

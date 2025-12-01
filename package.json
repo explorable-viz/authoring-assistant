@@ -20,7 +20,7 @@
     "suggestion-agent": "./script/authoring-assistant.sh suggestion-agent-only=true",
     "test-websites": "./script/test-websites.sh",
     "zip-artifact" : "./script/zip-artifact.sh",
-    "downsample-category": "./script/authoring-assistant.sh downsample=true expression-per-category=5 sample-size=10"
+    "downsample-category": "./script/authoring-assistant.sh \"downsample=true expression-per-category=5 sample-size=30  test-case-folder=./testCases/scigen-SuggestionAgent\""
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "dependencies": {

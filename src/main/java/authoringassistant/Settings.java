@@ -6,20 +6,27 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Map;
 
 public class Settings {
 
     private static Settings instance;
     private final JSONObject settings;
+    private static Map<String, String> commandLineArgs;
 
     private static Settings getInstance() {
         if (instance == null) throw new AssertionError("You have to call init first");
         return instance;
     }
 
-    public static Settings init(String settingsPath) throws IOException {
+    public static Settings init(String settingsPath, Map<String, String> args) throws IOException {
+        commandLineArgs = args;
         instance = new Settings(settingsPath);
         return instance;
+    }
+
+    public static Settings init(String settingsPath) throws IOException {
+        return init(settingsPath, null);
     }
 
     private Settings(String settingsPath) throws IOException {
@@ -73,7 +80,7 @@ public class Settings {
     }
 
     public static String getTestCaseFolder() {
-        return getSettings().getString("test-case-folder");
+        return commandLineArgs.get("test-case-folder");
     }
 
     public static float getThreshold() {

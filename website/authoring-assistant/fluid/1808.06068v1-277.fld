@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1808_06068v1_277
-
-"""
-	Table 3 shows that the  ${"10rvw"}  variant consistently  ${"outperforms"}  the  ${"word-level"}  baseline.
-"""

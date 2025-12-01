@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1805_10564v1_246
-
-"""
-	The results of the experiments are reported in  ${"Table 1"} . A  ${"facts-to-seq model"}  exploiting our positional fact encoding performs adequately. With an additional attention mechanism ( ${"Facts-to-seq w. Attention"} ), the results are even  ${"better"} . The analysis of the Static Memory approach amounts to an ablation study,  the  ${"DMN+"}  is even  ${"outperformed"}  by our  ${"Facts-to-seq baseline"} .
-"""

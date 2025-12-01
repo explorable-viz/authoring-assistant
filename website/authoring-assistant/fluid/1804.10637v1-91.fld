@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1804_10637v1_91
-
-"""
-	Table 2 shows micro F1 scores on  ${"5"}  out-domain test sets. Besides ours, only  ${"Cheng and Roth (2013)"}  employs several mention relations.  ${"Mentnorm"}  achieves the  ${"highest"}  F1 scores on  ${"MSNBC"}  and  ${"ACE2004"} . On average,  ${"ment-norm's"}  F1 score is  ${"0.3%"}  higher than that of  ${"Ganea and Hofmann (2017)"} , but  ${"0.2%"}  lower than  ${"Guo and Barbosa (2016)'s"} . It is worth noting that  ${"Guo and Barbosa (2016)"}  performs exceptionally well on  ${"WIKI"} , but substantially  ${"worse"}  than  ${"ment-norm"}  on all other datasets. Our other three models, however, have  ${"lower"}  average F1 scores compared to the  ${"best"}  previous model.  The experimental results show that  ${"ment-norm"}  outperforms  ${"rel-norm"} , and that mention padding plays an important role.
-"""

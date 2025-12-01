@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1904_12162v2_276
-
-"""
-	Table shows the number of correct predictions, precision, recall, and F1 values with all tools including our method ( ${"n-gram auto-sklearn"} ).  We can see that the number of correct predictions are  ${"higher"}  with our method in all three datasets, and our method achieved the  ${"highest"}  F1 values for all three positive, all three negative, and one neutral.  In summary, our method using n-gram IDF and automated machine learning (auto-sklearn) largely outperformed existing sentiment analysis tools.
-"""

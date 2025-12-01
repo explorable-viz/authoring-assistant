@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1904_12324v1_370
-
-"""
-	Tab. 4 shows the  ${"most frequent"}  open relations aligned to the DBpedia relations  ${"location"} ,  ${"associatedMusicalArtist"} , and  ${"spouse"} . The frequencies correspond to the number of OIE triples that (1) have the specified open relation (e.g., "be wife of ") and (2) have a KB hit with the specified KB relation (e.g., spouse). There is clearly no 1:1 correspondence between open relations and KB relations. On the one hand, open relations can be highly ambiguous (e.g., "be" has hits to location and associatedMusicalArtits). On the other hand, open relations can also be more specific than KB relations (e.g., "be guitarist of " is more specific than associatedMusicalArtist) or semantically different (e.g., "be widow of " and spouse) than the KB relations they align to.
-"""

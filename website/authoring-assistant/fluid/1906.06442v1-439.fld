@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1906_06442v1_439
-
-"""
-	We first show that  ${"noising"}   ${"EnDe"}  bitext sources does not seriously impact the translation quality of the  ${"transformer-base"}  baseline.  Table 2 shows results for various values of  ${"p"} . Specifically, it presents the somewhat unexpected finding that even when noising  ${"100%"}  of the source bitext (so the model has never seen wellformed English), BLEU on well-formed test data only drops by  ${"2.5"} .
-"""

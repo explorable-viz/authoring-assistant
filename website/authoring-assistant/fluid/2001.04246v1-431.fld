@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._2001_04246v1_431
-
-"""
-	The  ${"model performance"}  and corresponding  ${"model size"}  are reported in Table 5. On the one hand, removing the efficiency-aware loss ( ${"β"}  =  ${"0"} ) leads to the increase in  ${"model parameter size"} , on the other hand, a more aggressive efficiency preference ( ${"β"}  =  ${"8"} ) results in the small  ${"model size"}  but degraded  ${"performance"} , since a large  ${"β"}  encourages the compressed model to adopt more lightweight operations such as zero and skip which hurt the  ${"performance"} . A moderate efficiency constraint ( ${"β"}  =  ${"4"} ) provides a regularization, guiding the AdaBERT method to achieve a trade-off between the small  ${"parameter size"}  and the good  ${"performance"} .
-"""

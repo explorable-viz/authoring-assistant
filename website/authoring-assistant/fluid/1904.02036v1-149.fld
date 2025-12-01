@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1904_02036v1_149
-
-"""
-	Table  ${"1"}  gives an overview of the historical datasets.  covering  ${"eight"}  languages from different language families— ${"English"} ,  ${"German"} ,  ${"Hungarian"} ,  ${"Icelandic"} ,  ${"Spanish"} ,  ${"Portuguese"} ,  ${"Slovene"} , and  ${"Swedish"} —as well as different text genres and time periods.
-"""

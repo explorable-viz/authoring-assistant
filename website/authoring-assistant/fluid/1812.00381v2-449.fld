@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1812_00381v2_449
-
-"""
-	Similarly a  ${"single classifier"}  outperforms the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric,  ${"Logistic Regression"}  performed the  ${"best"}  across both datasets, providing  ${"0.874"}  precision on  ${"Antichat"}  and  ${"0.852"}  precision on  ${"Hack Forums"} .
-"""

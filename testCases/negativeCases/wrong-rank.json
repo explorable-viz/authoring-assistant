@@ -16,7 +16,7 @@
     {
       "type": "expression",
       "expression": "\"CNN\"",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",
@@ -25,7 +25,7 @@
     {
       "type": "expression",
       "expression": "\"highest\"",
-      "categories": ["rank", "data_retrieval", "comparison"]
+      "categories": ["rank", "data-retrieval", "comparison"]
     },
     {
       "type": "literal",
@@ -34,7 +34,7 @@
     {
       "type": "expression",
       "expression": "\"81.46\"",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",
@@ -43,7 +43,7 @@
     {
       "type": "expression",
       "expression": "\"maximum\"",
-      "categories": ["min_max"]
+      "categories": ["min-max"]
     },
     {
       "type": "literal",

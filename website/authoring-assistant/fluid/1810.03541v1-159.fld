@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1810_03541v1_159
-
-"""
-	Table 4 shows the results. From this table, we can see that our alignment consistently improves all the parsers by a margin ranging from  ${"0.5"}  to  ${"1.7"} .
-"""

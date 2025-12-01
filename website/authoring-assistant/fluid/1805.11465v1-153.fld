@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1805_11465v1_153
-
-"""
-	Table  ${"2"}  analyzes the performance of our two  ${"best"}  systems ( ${"PD"}  = projective,  ${"FTD"}  = fixed-tree) in more detail,  and compares them to Wang's, Flanigan's, and Damonte's AMR parsers on the  ${"2015"}  set and , and van Noord and Bos (2017b) for the  ${"2017"}  dataset.  The good scores we achieve on reentrancy identification,
-"""

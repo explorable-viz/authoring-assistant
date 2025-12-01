@@ -41,7 +41,7 @@ public class SuggestionAgent {
         PromptList prompts = buildPrompts(text);
         String result;
         int attempts = 0;
-        while(attempts < Settings.getLimit()) {
+        while(attempts < Settings.getAgentLimit()) {
             attempts++;
             try {
                 result = llm.evaluate(prompts, null);
@@ -79,7 +79,11 @@ public class SuggestionAgent {
             // Expression
             String exprValue = matcher.group(1);
             HashSet<ExpressionCategory> categories = new HashSet<>();
-            categories.add(ExpressionCategory.of(matcher.group(2)));
+            // Split by comma to handle multiple categories
+            String categoriesStr = matcher.group(2);
+            for (String category : categoriesStr.split(",")) {
+                categories.add(ExpressionCategory.of(category.trim()));
+            }
             paragraph.add(new Expression(STR."\"\{exprValue}\"", exprValue, categories));
 
             lastIndex = matcher.end();
@@ -94,7 +98,7 @@ public class SuggestionAgent {
     }
 
     private static String extractText(Program p) throws IOException {
-        return !p.asIndividualEdits(p).isEmpty() ? p.asIndividualEdits(p)
+        return !p.asIndividualProblems(p).isEmpty() ? p.asIndividualProblems(p)
                 .getFirst()
                 .component1()
                 .getParagraph()

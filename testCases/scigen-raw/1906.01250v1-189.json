@@ -1,11 +1,11 @@
 {
     "datasets": [
-        "datasets/scigen_SuggestionAgent/1906.01250v1-189.json"
+        "datasets/scigen/1906.01250v1-189.json"
     ],
     "imports": [
         "scigen",
         "util",
-        "datasets/scigen_SuggestionAgent/_1906_01250v1_189"
+        "datasets/scigen/_1906_01250v1_189"
     ],
     "variables": {},
     "testing-variables": {},

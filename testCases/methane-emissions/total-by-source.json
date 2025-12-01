@@ -39,7 +39,7 @@
     {
       "type": "expression",
       "expression": "record.emissions",
-      "categories": ["data_retrieval"]
+      "categories": ["data-retrieval"]
     },
     {
       "type": "literal",

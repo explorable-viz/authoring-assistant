@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1707_05853v2_231
-
-"""
-	As can be seen from Table 2, the  ${"DST accuracy"}  slightly  ${"increases"}  for the  ${"higher-quality live ASR outputs"} . More importantly, the  ${"DST performance"}  drastically  ${"increases"}  , when we evaluate on the  ${"manual transcripts"}  that reflect the true user utterances nearly perfectly.
-"""

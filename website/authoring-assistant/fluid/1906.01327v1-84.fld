@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_SuggestionAgent._1906_01327v1_84
-
-"""
-	noun comparatives is on RELATIVE (Bagherinezhad et al., 2016), presented in Table 5. We report the results of the original work, where the  ${"best"}  score used a combination of visual and textual signals, achieving  ${"83.5%"}  accuracy. We also tested the method by Yang et al. (2018) on this dataset. The accuracy achieved by this method is  ${"85.8%"} , surpassing the previous method by  ${"more than 2 points"} . We evaluated our method on this dataset, achieving a new state-of-the-art result of  ${"87.7%"}  accuracy with k =  ${"10"}  as a filter method.
-"""

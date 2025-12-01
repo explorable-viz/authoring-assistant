@@ -1,0 +1,2 @@
+let tableData = loadJson "datasets/scigen_manual_old/ipcc.json";
+

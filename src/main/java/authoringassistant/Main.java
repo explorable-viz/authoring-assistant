@@ -29,7 +29,7 @@ public class Main {
         final InContextLearning inContextLearning;
 
         try {
-            Settings.init("settings.json");
+            Settings.init("settings.json", arguments);
             final String agent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json

@@ -17,7 +17,7 @@
   },
   {
     "model": "KBestEisnerPS",
-    "f1_score": "**52.4"
+    "f1_score": 52.4
   },
   {
     "model": "EdgewisePS",

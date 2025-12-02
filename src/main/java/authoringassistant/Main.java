@@ -152,7 +152,7 @@ public class Main {
                         QueryResult queryResult = result.getSecond();
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
-                                result.getFirst().getTestCaseFileName(),
+                                STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),

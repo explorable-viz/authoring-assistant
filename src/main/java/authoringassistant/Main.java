@@ -48,10 +48,25 @@ public class Main {
             }
             else
             {
-                final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, suggestionAgent, programs);
-                float accuracy = computeAccuracy(results);
+                final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
+                boolean originalAddExpectedValue = Settings.isAddExpectedValueEnabled();
+                
+                try {
+                    // Run experiment for both add-expected-value settings
+                    for (boolean addExpectedValue : new boolean[]{false, true}) {
+                        Settings.setAddExpectedValue(addExpectedValue);
+                        System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
+                        final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, suggestionAgent, programs);
+                        allResults.addAll(results);
+                    }
+                } finally {
+                    // Restore original setting
+                    Settings.setAddExpectedValue(originalAddExpectedValue);
+                }
+                
+                float accuracy = computeAccuracy(allResults);
                 generateLinks();
-                writeLog(results, agent, inContextLearning.size());
+                writeLog(allResults, agent, inContextLearning.size());
                 if (accuracy >= Settings.getThreshold()) {
                     System.out.println(STR."Accuracy OK =\{accuracy}");
                     System.exit(0);

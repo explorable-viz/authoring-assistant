@@ -75,6 +75,10 @@ public class Settings {
         return getSettings().getBoolean("add-expected-value");
     }
 
+    public static void setAddExpectedValue(boolean value) {
+        getSettings().put("add-expected-value", value);
+    }
+
     public static String getLearningCaseFolder() {
         return getSettings().getString("learning-case-folder");
     }

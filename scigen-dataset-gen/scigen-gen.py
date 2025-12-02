@@ -58,11 +58,14 @@ def main(raw_file, tests_dir, datasets_dir):
                 
                 cleaned_value = re.sub(r'\[\w+\]', '', clean_value)
                 
-                # Remove trailing parenthesised terms from value (e.g., (s), (%), etc.)
-                cleaned_value = re.sub(r'\s*\([^)]*\)\s*$', '', cleaned_value)
+                # Remove parenthesised terms only when they follow a number and contain specific units like (s) or (%)
+                cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\([s%]\)', r'\1', cleaned_value)
                 
                 # Remove ∼ prefix only when before a number (not between numbers)
                 cleaned_value = re.sub(r'(^|\s)∼\s*(?=\d)', r'\1', cleaned_value)
+                
+                # Extract only the first number when ± symbol is present (e.g., "5.2 ± 0.3" -> "5.2")
+                cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*±\s*\d+(?:\.\d+)?(?:[eE][+-]?\d+)?', r'\1', cleaned_value)
                 
                 # Remove asterisk after numbers including scientific notation (e.g., "5.48e-15**")
                 cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\*+', r'\1', cleaned_value)

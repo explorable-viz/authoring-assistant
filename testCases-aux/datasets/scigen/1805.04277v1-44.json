@@ -63,13 +63,13 @@
     "s15": 62.5
   },
   {
-    "_1": "One or more context sentences",
-    "all": "One or more context sentences",
-    "s2": "One or more context sentences",
-    "s3": "One or more context sentences",
-    "s07": "One or more context sentences",
-    "s13": "One or more context sentences",
-    "s15": "One or more context sentences"
+    "_1": "One or more context sentences (#  words≥20)",
+    "all": "One or more context sentences (#  words≥20)",
+    "s2": "One or more context sentences (#  words≥20)",
+    "s3": "One or more context sentences (#  words≥20)",
+    "s07": "One or more context sentences (#  words≥20)",
+    "s13": "One or more context sentences (#  words≥20)",
+    "s15": "One or more context sentences (#  words≥20)"
   },
   {
     "_1": "ppr_w2w",

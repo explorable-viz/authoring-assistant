@@ -1,10 +1,10 @@
 [
   {
-    "data": "TaggedBT",
+    "data": "TaggedBT (standard decode)",
     "src_tgt_unigram_overlap": 8.9
   },
   {
-    "data": "TaggedBT",
+    "data": "TaggedBT (tagged decode)",
     "src_tgt_unigram_overlap": 10.7
   },
   {

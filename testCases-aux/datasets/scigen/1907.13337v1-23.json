@@ -10,12 +10,12 @@
     "cr": 0.38
   },
   {
-    "model": "Filippova et al.",
+    "model": "Filippova et al. ( 2015 )",
     "f1": 82.0,
     "cr": 0.38
   },
   {
-    "model": "Zhao et al.",
+    "model": "Zhao et al. ( 2018 )",
     "f1": 85.1,
     "cr": 0.39
   },

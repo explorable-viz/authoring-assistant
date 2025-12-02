@@ -1,6 +1,6 @@
 [
   {
-    "system": "FEVER Baseline",
+    "system": "FEVER Baseline (TFIDF)",
     "retrieval": 66.1
   },
   {

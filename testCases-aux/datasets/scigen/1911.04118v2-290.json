@@ -24,7 +24,7 @@
     "sample_3_mrr": 0.561
   },
   {
-    "model": "TANDA",
+    "model": "TANDA (ASNQ → NAD)",
     "sample_1_prec_1": 58.7,
     "sample_1_map": 0.585,
     "sample_1_mrr": 0.703,
@@ -60,7 +60,7 @@
     "sample_3_mrr": 0.585
   },
   {
-    "model": "TANDA",
+    "model": "TANDA (ASNQ → NAD)",
     "sample_1_prec_1": 61.54,
     "sample_1_map": 0.607,
     "sample_1_mrr": 0.725,
@@ -96,7 +96,7 @@
     "sample_3_mrr": 0.608
   },
   {
-    "model": "TANDA",
+    "model": "TANDA (ASNQ → NAD)",
     "sample_1_prec_1": 65.59,
     "sample_1_map": 0.623,
     "sample_1_mrr": 0.757,
@@ -132,7 +132,7 @@
     "sample_3_mrr": 0.674
   },
   {
-    "model": "TANDA",
+    "model": "TANDA (ASNQ → NAD)",
     "sample_1_prec_1": 71.26,
     "sample_1_map": 0.68,
     "sample_1_mrr": 0.805,

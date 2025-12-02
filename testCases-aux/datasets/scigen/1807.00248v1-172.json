@@ -1,21 +1,21 @@
 [
   {
-    "model": "MT Bojar et al.",
+    "model": "MT Bojar et al. ( 2017 )",
     "ter": 24.48,
     "bleu": 62.49
   },
   {
-    "model": "SPE Bojar et al.",
+    "model": "SPE Bojar et al. ( 2017 )",
     "ter": 24.69,
     "bleu": 62.97
   },
   {
-    "model": "Varis and Bojar",
+    "model": "Varis and Bojar ( 2017 )",
     "ter": 24.03,
     "bleu": 64.28
   },
   {
-    "model": "Bérard et al.",
+    "model": "Bérard et al. ( 2017 )",
     "ter": 22.81,
     "bleu": 65.91
   },

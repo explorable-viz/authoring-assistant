@@ -1,8 +1,8 @@
 [
   {
-    "test_data": " train on transcripts + batch ASR",
-    "goals": " train on transcripts + batch ASR",
-    "requests": " train on transcripts + batch ASR"
+    "test_data": " train on transcripts + batch ASR (baseline)",
+    "goals": " train on transcripts + batch ASR (baseline)",
+    "requests": " train on transcripts + batch ASR (baseline)"
   },
   {
     "test_data": " batch ASR",

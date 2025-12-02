@@ -20,7 +20,7 @@
     "bleu": 27.35
   },
   {
-    "search_strategy": "Beam Search",
+    "search_strategy": "Beam Search (B=10)",
     "bleu": 28.21
   }
 ]

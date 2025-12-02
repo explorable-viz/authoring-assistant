@@ -1,16 +1,16 @@
 [
   {
-    "error_type": "Cross-Clause Relations",
+    "error_type": "Cross-Clause Relations (CCR)",
     "rc_sg": 42,
     "rc": 36
   },
   {
-    "error_type": "Infrequent Arguments",
+    "error_type": "Infrequent Arguments (<10)",
     "rc_sg": 11,
     "rc": 26
   },
   {
-    "error_type": "Frequent Arguments",
+    "error_type": "Frequent Arguments (>250)",
     "rc_sg": 37,
     "rc": 40
   },

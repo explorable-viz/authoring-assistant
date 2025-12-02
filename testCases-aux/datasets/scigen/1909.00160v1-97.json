@@ -8,11 +8,11 @@
     "accuracy": 73.1
   },
   {
-    "model": " BioELMo Jin et al.",
+    "model": " BioELMo Jin et al. ( 2019 )",
     "accuracy": 78.2
   },
   {
-    "model": " ESIMw/  K Lu et al.",
+    "model": " ESIMw/  K Lu et al. ( 2019 )",
     "accuracy": 77.8
   },
   {

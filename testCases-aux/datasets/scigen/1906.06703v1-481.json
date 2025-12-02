@@ -10,75 +10,75 @@
   },
   {
     "_1": "Stanford rule-based",
-    "conll_max": 55.6,
-    "conll_mina": 57.55,
-    "conll_head": 57.38,
-    "lea_max": 47.31,
-    "lea_mina": 49.65,
-    "lea_head": 49.44
+    "conll_max": "55.60 (8)",
+    "conll_mina": "57.55 (8)",
+    "conll_head": "57.38 (8)",
+    "lea_max": "47.31 (8)",
+    "lea_mina": "49.65 (8)",
+    "lea_head": "49.44 (8)"
   },
   {
     "_1": "cort",
-    "conll_max": 63.03,
-    "conll_mina": 64.6,
-    "conll_head": 64.51,
-    "lea_max": 56.1,
-    "lea_mina": 58.05,
-    "lea_head": 57.93
+    "conll_max": "63.03 (7)",
+    "conll_mina": "64.60 (6)",
+    "conll_head": "64.51 (6)",
+    "lea_max": "56.10 (6)",
+    "lea_mina": "58.05 (6)",
+    "lea_head": "57.93 (6)"
   },
   {
     "_1": "Peng et al.",
-    "conll_max": 63.05,
-    "conll_mina": 63.5,
-    "conll_head": 63.54,
-    "lea_max": 55.22,
-    "lea_mina": 55.76,
-    "lea_head": 55.8
+    "conll_max": "63.05 (6)",
+    "conll_mina": "63.50 (7)",
+    "conll_head": "63.54 (7)",
+    "lea_max": "55.22 (7)",
+    "lea_mina": "55.76 (7)",
+    "lea_head": "55.80 (7)"
   },
   {
     "_1": "deep-coref ranking",
-    "conll_max": 65.59,
-    "conll_mina": 67.29,
-    "conll_head": 67.09,
-    "lea_max": 59.58,
-    "lea_mina": 61.7,
-    "lea_head": 61.43
+    "conll_max": "65.59 (5)",
+    "conll_mina": "67.29 (5)",
+    "conll_head": "67.09 (5)",
+    "lea_max": "59.58 (5)",
+    "lea_mina": "61.70 (5)",
+    "lea_head": "61.43 (5)"
   },
   {
     "_1": "deep-coref RL",
-    "conll_max": 65.81,
-    "conll_mina": 67.5,
-    "conll_head": 67.36,
-    "lea_max": 59.76,
-    "lea_mina": 61.84,
-    "lea_head": 61.64
+    "conll_max": "65.81 (4)",
+    "conll_mina": "67.50 (4)",
+    "conll_head": "67.36 (4)",
+    "lea_max": "59.76 (4)",
+    "lea_mina": "61.84 (4)",
+    "lea_head": "61.64 (4)"
   },
   {
     "_1": "Lee et al. 2017 single",
-    "conll_max": 67.23,
-    "conll_mina": 68.55,
-    "conll_head": 68.53,
-    "lea_max": 61.24,
-    "lea_mina": 62.87,
-    "lea_head": 62.82
+    "conll_max": "67.23 (3)",
+    "conll_mina": "68.55 (3)",
+    "conll_head": "68.53 (3)",
+    "lea_max": "61.24 (3)",
+    "lea_mina": "62.87 (3)",
+    "lea_head": "62.82 (3)"
   },
   {
     "_1": "Lee et al. 2017 ensemble",
-    "conll_max": 68.87,
-    "conll_mina": 70.12,
-    "conll_head": 70.05,
-    "lea_max": 63.19,
-    "lea_mina": 64.76,
-    "lea_head": 64.64
+    "conll_max": "68.87 (2)",
+    "conll_mina": "70.12 (2)",
+    "conll_head": "70.05 (2)",
+    "lea_max": "63.19 (2)",
+    "lea_mina": "64.76 (2)",
+    "lea_head": "64.64 (2)"
   },
   {
     "_1": "Lee et al. 2018",
-    "conll_max": 72.96,
-    "conll_mina": 74.26,
-    "conll_head": 75.29,
-    "lea_max": 67.73,
-    "lea_mina": 69.32,
-    "lea_head": 70.4
+    "conll_max": "72.96 (1)",
+    "conll_mina": "74.26 (1)",
+    "conll_head": "75.29 (1)",
+    "lea_max": "67.73 (1)",
+    "lea_mina": "69.32 (1)",
+    "lea_head": "70.40 (1)"
   },
   {
     "_1": "",
@@ -91,56 +91,56 @@
   },
   {
     "_1": "Stanford rule-based",
-    "conll_max": 51.78,
-    "conll_mina": 53.79,
-    "conll_head": 57.1,
-    "lea_max": 43.28,
-    "lea_mina": 45.48,
-    "lea_head": 49.28
+    "conll_max": "51.78 (4)",
+    "conll_mina": "53.79 (5)",
+    "conll_head": "57.10 (4)",
+    "lea_max": "43.28 (5)",
+    "lea_mina": "45.48 (6)",
+    "lea_head": "49.28 (4)"
   },
   {
     "_1": "deep-coref ranking",
-    "conll_max": 52.9,
-    "conll_mina": 55.16,
-    "conll_head": 57.13,
-    "lea_max": 44.4,
-    "lea_mina": 46.98,
-    "lea_head": 49.05
+    "conll_max": "52.90 (3)",
+    "conll_mina": "55.16 (2)",
+    "conll_head": "57.13 (3)",
+    "lea_max": "44.40 (3)",
+    "lea_mina": "46.98 (3)",
+    "lea_head": "49.05 (5)"
   },
   {
     "_1": "deep-coref RL",
-    "conll_max": 50.73,
-    "conll_mina": 54.26,
-    "conll_head": 57.16,
-    "lea_max": 41.98,
-    "lea_mina": 46.02,
-    "lea_head": 49.29
+    "conll_max": "50.73 (5)",
+    "conll_mina": "54.26 (4)",
+    "conll_head": "57.16 (2)",
+    "lea_max": "41.98 (6)",
+    "lea_mina": "46.02 (4)",
+    "lea_head": "49.29 (3)"
   },
   {
     "_1": "Lee et al. 2017 single",
-    "conll_max": 50.38,
-    "conll_mina": 52.16,
-    "conll_head": 54.02,
-    "lea_max": 43.86,
-    "lea_mina": 45.75,
-    "lea_head": 47.69
+    "conll_max": "50.38 (6)",
+    "conll_mina": "52.16 (6)",
+    "conll_head": "54.02 (6)",
+    "lea_max": "43.86 (4)",
+    "lea_mina": "45.75 (5)",
+    "lea_head": "47.69 (6)"
   },
   {
     "_1": "Lee et al. 2017 ensemble",
-    "conll_max": 53.63,
-    "conll_mina": 55.03,
-    "conll_head": 56.8,
-    "lea_max": 47.5,
-    "lea_mina": 48.98,
-    "lea_head": 50.87
+    "conll_max": "53.63 (2)",
+    "conll_mina": "55.03 (3)",
+    "conll_head": "56.80 (5)",
+    "lea_max": "47.50 (2)",
+    "lea_mina": "48.98 (2)",
+    "lea_head": "50.87 (2)"
   },
   {
     "_1": "Lee et al. 2018",
-    "conll_max": 57.89,
-    "conll_mina": 59.9,
-    "conll_head": 61.33,
-    "lea_max": 52.42,
-    "lea_mina": 54.63,
-    "lea_head": 56.19
+    "conll_max": "57.89 (1)",
+    "conll_mina": "59.90 (1)",
+    "conll_head": "61.33 (1)",
+    "lea_max": "52.42 (1)",
+    "lea_mina": "54.63 (1)",
+    "lea_head": "56.19 (1)"
   }
 ]

@@ -11,7 +11,7 @@
   },
   {
     "dataset": " CoNLL-2014",
-    "system": "Yannakoudakis et al.",
+    "system": "Yannakoudakis et al. ( 2017 )",
     "errant_p": "-",
     "errant_r": "-",
     "errant_f0_5": "-",
@@ -21,7 +21,7 @@
   },
   {
     "dataset": " CoNLL-2014",
-    "system": "Chollampatt and Ng",
+    "system": "Chollampatt and Ng ( 2017 )",
     "errant_p": "-",
     "errant_r": "-",
     "errant_f0_5": "-",
@@ -31,7 +31,7 @@
   },
   {
     "dataset": " CoNLL-2014",
-    "system": "Chollampatt and Ng",
+    "system": "Chollampatt and Ng ( 2018 )",
     "errant_p": "-",
     "errant_r": "-",
     "errant_f0_5": "-",
@@ -41,7 +41,7 @@
   },
   {
     "dataset": " CoNLL-2014",
-    "system": "Ge et al.",
+    "system": "Ge et al. ( 2018 )",
     "errant_p": "-",
     "errant_r": "-",
     "errant_f0_5": "-",
@@ -51,7 +51,7 @@
   },
   {
     "dataset": " CoNLL-2014",
-    "system": "Bryant and Briscoe",
+    "system": "Bryant and Briscoe ( 2018 )",
     "errant_p": 36.62,
     "errant_r": 19.93,
     "errant_f0_5": 31.37,
@@ -91,7 +91,7 @@
   },
   {
     "dataset": " FCE",
-    "system": "Yannakoudakis et al.",
+    "system": "Yannakoudakis et al. ( 2017 )",
     "errant_p": "-",
     "errant_r": "-",
     "errant_f0_5": "-",
@@ -101,7 +101,7 @@
   },
   {
     "dataset": " FCE",
-    "system": "Bryant and Briscoe",
+    "system": "Bryant and Briscoe ( 2018 )",
     "errant_p": 41.92,
     "errant_r": 13.62,
     "errant_f0_5": 29.61,

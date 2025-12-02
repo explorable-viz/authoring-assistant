@@ -32,7 +32,7 @@
     "num": 39
   },
   {
-    "modal": "ca",
+    "modal": "ca(n’t)",
     "negated": "yes",
     "mean_label": -0.72,
     "linear_mae": 1.28,

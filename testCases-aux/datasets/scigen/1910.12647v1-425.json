@@ -50,7 +50,7 @@
     "gain": "– 0.45"
   },
   {
-    "model": "HUBERT",
+    "model": "HUBERT (Transformer)",
     "target_corpus": "QNLI",
     "transfer_bert": "True",
     "transfer_filler": "True",
@@ -60,7 +60,7 @@
     "gain": " + 0.60"
   },
   {
-    "model": "HUBERT",
+    "model": "HUBERT (Transformer)",
     "target_corpus": "QQP",
     "transfer_bert": "False",
     "transfer_filler": "False",
@@ -70,7 +70,7 @@
     "gain": " + 0.61"
   },
   {
-    "model": "HUBERT",
+    "model": "HUBERT (Transformer)",
     "target_corpus": "RTE",
     "transfer_bert": "True",
     "transfer_filler": "True",
@@ -80,7 +80,7 @@
     "gain": " + 12.28"
   },
   {
-    "model": "HUBERT",
+    "model": "HUBERT (Transformer)",
     "target_corpus": "SNLI",
     "transfer_bert": "True",
     "transfer_filler": "False",
@@ -90,7 +90,7 @@
     "gain": " + 0.70"
   },
   {
-    "model": "HUBERT",
+    "model": "HUBERT (Transformer)",
     "target_corpus": "SST",
     "transfer_bert": "True",
     "transfer_filler": "False",

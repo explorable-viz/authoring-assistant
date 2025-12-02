@@ -1,11 +1,11 @@
 [
   {
-    "a_forward_models_model": "Gehring et al.",
+    "a_forward_models_model": "Gehring et al. ( 2017 )",
     "a_forward_models_dev": "",
     "a_forward_models_test": 29.9
   },
   {
-    "a_forward_models_model": "Sennrich 2016",
+    "a_forward_models_model": "Sennrich 2016 (BT)",
     "a_forward_models_dev": 29.3,
     "a_forward_models_test": 28.1
   },
@@ -45,9 +45,9 @@
     "a_forward_models_test": 33.4
   },
   {
-    "a_forward_models_model": "b. Reverse models",
-    "a_forward_models_dev": "b. Reverse models",
-    "a_forward_models_test": "b. Reverse models"
+    "a_forward_models_model": "b. Reverse models (RoEn)",
+    "a_forward_models_dev": "b. Reverse models (RoEn)",
+    "a_forward_models_test": "b. Reverse models (RoEn)"
   },
   {
     "a_forward_models_model": "Model",

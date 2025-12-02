@@ -18,13 +18,13 @@
     "human_prefer": 22
   },
   {
-    "method": "ED",
+    "method": "ED(1)",
     "meteor": 13.3,
     "rouge_l": 20.3,
     "human_prefer": 30
   },
   {
-    "method": "ED",
+    "method": "ED(2)",
     "meteor": 14.0,
     "rouge_l": 19.8,
     "human_prefer": 48

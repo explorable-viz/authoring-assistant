@@ -22,7 +22,7 @@
     "vqa": "Accuracy"
   },
   {
-    "_1": "",
+    "_1": " (a)",
     "task_dataset": " Word2Vec + wn ",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",
@@ -66,7 +66,7 @@
     "vqa": 61.06
   },
   {
-    "_1": "",
+    "_1": " (b)",
     "task_dataset": " GrOVLE",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",
@@ -110,7 +110,7 @@
     "vqa": 61.22
   },
   {
-    "_1": "",
+    "_1": " (c)",
     "task_dataset": " Visual Word2Vec ",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",
@@ -154,8 +154,8 @@
     "vqa": 61.15
   },
   {
-    "_1": "",
-    "task_dataset": " HGLMM",
+    "_1": " (d)",
+    "task_dataset": " HGLMM (300-D) ",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",
     "phrase_grounding_flickr30k": "",
@@ -198,8 +198,8 @@
     "vqa": 61.44
   },
   {
-    "_1": "",
-    "task_dataset": " HGLMM",
+    "_1": " (e)",
+    "task_dataset": " HGLMM (6K-D) ",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",
     "phrase_grounding_flickr30k": "",

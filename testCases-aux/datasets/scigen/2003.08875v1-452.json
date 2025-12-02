@@ -1,20 +1,20 @@
 [
   {
-    "_1": "Bokaei and Mahmoudi Bokaei and Mahmoudi",
+    "_1": "Bokaei and Mahmoudi Bokaei and Mahmoudi ( 2018 )",
     "arman_word": 81.5,
     "arman_phrase": 76.79,
     "peyma_word": "-",
     "peyma_phrase": "-"
   },
   {
-    "_1": "Shahshahani et al.Shahshahani et al.",
+    "_1": "Shahshahani et al.Shahshahani et al. ( 2018 )",
     "arman_word": "-",
     "arman_phrase": "-",
     "peyma_word": 80.0,
     "peyma_phrase": "-"
   },
   {
-    "_1": "Beheshti-NER",
+    "_1": "Beheshti-NER (Our Model)",
     "arman_word": 84.03,
     "arman_phrase": 79.93,
     "peyma_word": 90.59,

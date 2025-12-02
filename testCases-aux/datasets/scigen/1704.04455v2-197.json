@@ -1,6 +1,6 @@
 [
   {
-    "p": "has part",
+    "p": "has part (creative work series)",
     "num_s": 261,
     "baseline_p": 0.05,
     "vanilla_p": 0.333,
@@ -44,7 +44,7 @@
     "only_nummod_f1": 0.26
   },
   {
-    "p": "child",
+    "p": "child (manual ground truth)",
     "num_s": 6408,
     "baseline_p": "",
     "vanilla_p": 0.374,

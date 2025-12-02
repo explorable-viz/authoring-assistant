@@ -70,7 +70,7 @@
     "framenet_1_7_ambiguous": " YAGS Test Set "
   },
   {
-    "model": "SEMAFOR",
+    "model": "SEMAFOR (Reported by )",
     "framenet_1_5_all": 60.01,
     "framenet_1_5_ambiguous": "-",
     "framenet_1_7_all": "-",

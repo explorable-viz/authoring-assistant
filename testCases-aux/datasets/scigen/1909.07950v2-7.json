@@ -1,6 +1,6 @@
 [
   {
-    "model": "Baseline",
+    "model": "Baseline (BL)",
     "cnn_full": " full: 19.7 dict: 56.0",
     "cnn_dict": " full: 19.7 dict: 56.0",
     "cnn_list": " full: 19.7 dict: 56.0",
@@ -12,7 +12,7 @@
     "lstm_mrr": " full: 17.9"
   },
   {
-    "model": "BL+ Glove",
+    "model": "BL+ Glove (Jeffrey:14)",
     "cnn_full": 22.0,
     "cnn_dict": 62.5,
     "cnn_list": 75.8,
@@ -24,7 +24,7 @@
     "lstm_mrr": 78.8
   },
   {
-    "model": "BL+C-LSTM",
+    "model": "BL+C-LSTM (Chunting:15)",
     "cnn_full": 21.4,
     "cnn_dict": 61.0,
     "cnn_list": 71.3,
@@ -36,7 +36,7 @@
     "lstm_mrr": 80.7
   },
   {
-    "model": "BL+CNN-RNN",
+    "model": "BL+CNN-RNN (Xingyou:16)",
     "cnn_full": 21.7,
     "cnn_dict": 61.8,
     "cnn_list": 73.3,
@@ -48,7 +48,7 @@
     "lstm_mrr": 80.9
   },
   {
-    "model": "BL+MVCNN",
+    "model": "BL+MVCNN (Wenpeng:16)",
     "cnn_full": 21.3,
     "cnn_dict": 60.6,
     "cnn_list": 71.9,
@@ -60,7 +60,7 @@
     "lstm_mrr": 78.8
   },
   {
-    "model": "BL+Attentive LSTM",
+    "model": "BL+Attentive LSTM (Ming:16)",
     "cnn_full": 21.9,
     "cnn_dict": 62.4,
     "cnn_list": 74.0,
@@ -72,7 +72,7 @@
     "lstm_mrr": 80.2
   },
   {
-    "model": "BL+fasttext",
+    "model": "BL+fasttext (Armand:17)",
     "cnn_full": 21.9,
     "cnn_dict": 62.2,
     "cnn_list": 75.4,
@@ -84,7 +84,7 @@
     "lstm_mrr": 80.3
   },
   {
-    "model": "BL+InferSent",
+    "model": "BL+InferSent (Alexis:17)",
     "cnn_full": 22.0,
     "cnn_dict": 62.5,
     "cnn_list": 75.8,
@@ -96,7 +96,7 @@
     "lstm_mrr": 79.7
   },
   {
-    "model": "BL+USE-T",
+    "model": "BL+USE-T (Daniel:18)",
     "cnn_full": 22.0,
     "cnn_dict": 62.5,
     "cnn_list": 78.3,
@@ -108,7 +108,7 @@
     "lstm_mrr": 79.5
   },
   {
-    "model": "BL+TWE",
+    "model": "BL+TWE (Ahmed:18)",
     "cnn_full": 22.2,
     "cnn_dict": 63.0,
     "cnn_list": 76.3,
@@ -120,7 +120,7 @@
     "lstm_mrr": 80.2
   },
   {
-    "model": "BL+FDCLSTM",
+    "model": "BL+FDCLSTM (ours)",
     "cnn_full": 22.3,
     "cnn_dict": 63.3,
     "cnn_list": 75.1,
@@ -132,7 +132,7 @@
     "lstm_mrr": 79.8
   },
   {
-    "model": "BL+FDCLSTM  AT",
+    "model": "BL+FDCLSTM  AT (ours)",
     "cnn_full": 22.4,
     "cnn_dict": 63.7,
     "cnn_list": 75.5,
@@ -144,7 +144,7 @@
     "lstm_mrr": 81.8
   },
   {
-    "model": "BL+FDCLSTM  lexicon",
+    "model": "BL+FDCLSTM  lexicon (ours)",
     "cnn_full": 22.6,
     "cnn_dict": 64.3,
     "cnn_list": 76.3,
@@ -156,7 +156,7 @@
     "lstm_mrr": 78.8
   },
   {
-    "model": "BL+FDCLSTM  AT+  lexicon",
+    "model": "BL+FDCLSTM  AT+  lexicon (ours)",
     "cnn_full": 22.6,
     "cnn_dict": 64.3,
     "cnn_list": 76.3,

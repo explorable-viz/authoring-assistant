@@ -7,7 +7,7 @@
     "new_data_test": 0.5
   },
   {
-    "model_dataset": "Yang et al.",
+    "model_dataset": "Yang et al. (PCE LSTM)",
     "f_c_clean_dev": 0.86,
     "f_c_clean_test": 0.87,
     "new_data_dev": 0.6,

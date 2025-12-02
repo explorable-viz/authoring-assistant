@@ -22,7 +22,7 @@
   },
   {
     "setup": "Speaker Dependent",
-    "features": "Best",
+    "features": "Best (T + V)",
     "precision": 72.0,
     "recall": 71.6,
     "f_score": 71.8
@@ -64,7 +64,7 @@
   },
   {
     "setup": "Speaker Independent",
-    "features": "Best",
+    "features": "Best (T + A)",
     "precision": 64.7,
     "recall": 62.9,
     "f_score": 63.1

@@ -5,7 +5,7 @@
     "mrr": 0.928
   },
   {
-    "model": "Comp-Agg + LM + LC + TL",
+    "model": "Comp-Agg + LM + LC + TL(QNLI)",
     "map": 0.875,
     "mrr": 0.94
   },
@@ -20,7 +20,7 @@
     "mrr": 0.872
   },
   {
-    "model": "BERT-B TandA",
+    "model": "BERT-B TandA (ASNQ → TREC-QA)",
     "map": 0.912,
     "mrr": 0.951
   },
@@ -35,7 +35,7 @@
     "mrr": 0.872
   },
   {
-    "model": "BERT-L TandA",
+    "model": "BERT-L TandA (ASNQ → TREC-QA )",
     "map": 0.912,
     "mrr": 0.967
   },
@@ -45,7 +45,7 @@
     "mrr": 0.907
   },
   {
-    "model": "RoBERTa-B TandA",
+    "model": "RoBERTa-B TandA (ASNQ →TREC-QA )",
     "map": 0.914,
     "mrr": 0.952
   },
@@ -55,7 +55,7 @@
     "mrr": 0.928
   },
   {
-    "model": "RoBERTa-L TandA",
+    "model": "RoBERTa-L TandA (ASNQ → TREC-QA)",
     "map": 0.943,
     "mrr": 0.974
   }

@@ -25,42 +25,42 @@
     "label_accuracy": 72.72
   },
   {
-    "model": "BERT & BERT",
+    "model": "BERT & BERT (Pointwise)",
     "fever_score": 71.38,
     "label_accuracy": 73.51
   },
   {
-    "model": "BERT & BERT",
+    "model": "BERT & BERT (Pointwise + HNM)",
     "fever_score": 71.33,
     "label_accuracy": 73.54
   },
   {
-    "model": "BERT (Large) & BERT",
+    "model": "BERT (Large) & BERT (Pointwise)",
     "fever_score": 72.42,
     "label_accuracy": 74.58
   },
   {
-    "model": "BERT (Large) & BERT",
+    "model": "BERT (Large) & BERT (Pointwise + HNM)",
     "fever_score": 72.42,
     "label_accuracy": 74.59
   },
   {
-    "model": "BERT & BERT",
+    "model": "BERT & BERT (Pairwise Ranknet)",
     "fever_score": 71.02,
     "label_accuracy": 73.22
   },
   {
-    "model": "BERT & BERT",
+    "model": "BERT & BERT (Pairwise Ranknet + HNM)",
     "fever_score": 70.99,
     "label_accuracy": 73.02
   },
   {
-    "model": "BERT & BERT",
+    "model": "BERT & BERT (Pairwise Hinge)",
     "fever_score": 71.6,
     "label_accuracy": 72.74
   },
   {
-    "model": "BERT & BERT",
+    "model": "BERT & BERT (Pairwise Hinge + HNM)",
     "fever_score": 70.7,
     "label_accuracy": 72.76
   }

@@ -1,22 +1,22 @@
 [
   {
     "method": " mean",
-    "w_o_chars": "71.3 ± 1.2",
-    "w_chars": "71.3 ± 0.7"
+    "w_o_chars": 71.3,
+    "w_chars": 71.3
   },
   {
     "method": " sum",
-    "w_o_chars": "70.7 ± 1.0",
-    "w_chars": "70.9 ± 0.8"
+    "w_o_chars": 70.7,
+    "w_chars": 70.9
   },
   {
     "method": " last",
-    "w_o_chars": "70.9 ± 0.6",
-    "w_chars": "71.0 ± 1.2"
+    "w_o_chars": 70.9,
+    "w_chars": 71.0
   },
   {
     "method": " max",
-    "w_o_chars": "70.6 ± 1.1",
-    "w_chars": "71.0 ± 1.1"
+    "w_o_chars": 70.6,
+    "w_chars": 71.0
   }
 ]

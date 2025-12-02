@@ -11,7 +11,7 @@
   },
   {
     "model": "",
-    "trained_on": " DSQuAD",
+    "trained_on": " DSQuAD(10K)",
     "evaluation_dataset_dsquad": 54.6,
     "evaluation_dataset_dbidaf": 15.1,
     "evaluation_dataset_dbert": 12.8,
@@ -51,7 +51,7 @@
   },
   {
     "model": "",
-    "trained_on": " DSQuAD",
+    "trained_on": " DSQuAD(10K)",
     "evaluation_dataset_dsquad": 83.6,
     "evaluation_dataset_dbidaf": 50.3,
     "evaluation_dataset_dbert": 26.5,
@@ -91,7 +91,7 @@
   },
   {
     "model": "",
-    "trained_on": " DSQuAD",
+    "trained_on": " DSQuAD(10K)",
     "evaluation_dataset_dsquad": 83.7,
     "evaluation_dataset_dbidaf": 55.4,
     "evaluation_dataset_dbert": 33.7,

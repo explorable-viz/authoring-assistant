@@ -1,10 +1,10 @@
 [
   {
-    "model": "baseline",
+    "model": "baseline (1.5m)",
     "bleu": 29.1
   },
   {
-    "model": "baseline",
+    "model": "baseline (6m)",
     "bleu": 32.4
   },
   {

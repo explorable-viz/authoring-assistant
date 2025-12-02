@@ -1,6 +1,6 @@
 [
   {
-    "_1": "Faruqui and Dyer",
+    "_1": "Faruqui and Dyer (2014a)",
     "num_lang": 4,
     "num_task_type": "10-WST",
     "web": "×",
@@ -11,7 +11,7 @@
     "epochs": ""
   },
   {
-    "_1": "Nayak et al.",
+    "_1": "Nayak et al. (2016)",
     "num_lang": 1,
     "num_task_type": "7-DT",
     "web": "×",
@@ -22,7 +22,7 @@
     "epochs": ""
   },
   {
-    "_1": "Köhn",
+    "_1": "Köhn (2015)",
     "num_lang": 7,
     "num_task_type": "7-PT",
     "web": "",

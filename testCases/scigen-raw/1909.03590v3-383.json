@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1909.03590v3-383.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1909_03590v3_383"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We report experimental results on four common benchmark datasets (totalling 1241 testing data points) in Table 1.  As shown in Table 1, the average performance increases from RANDOM to APPEAR-AP: a trend that becomes particularly obvious for F1@10."
-        }
-    ]
+  "datasets": [
+    "datasets/1909.03590v3-383.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1909_03590v3_383"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We report experimental results on four common benchmark datasets (totalling 1241 testing data points) in Table 1.  As shown in Table 1, the average performance increases from RANDOM to APPEAR-AP: a trend that becomes particularly obvious for F1@10."
+    }
+  ]
 }

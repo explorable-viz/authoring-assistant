@@ -14,7 +14,7 @@
     "0_90": 0
   },
   {
-    "threshold": "Fleiss’ Kappa",
+    "threshold": "Fleiss’ Kappa (  κ)",
     "0_50": 0.38,
     "0_66": 0.42,
     "0_75": 0.44,

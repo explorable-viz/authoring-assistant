@@ -15,7 +15,7 @@
     "pixel_iu": 93.01
   },
   {
-    "method": "wavelength*",
+    "method": "wavelength* (tight polygons) ",
     "line_iu": 97.86,
     "pixel_iu": 97.05
   },

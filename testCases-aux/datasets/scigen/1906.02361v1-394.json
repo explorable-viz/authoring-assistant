@@ -1,6 +1,6 @@
 [
   {
-    "method": "BERT",
+    "method": "BERT (baseline)",
     "accuracy": 63.8
   },
   {

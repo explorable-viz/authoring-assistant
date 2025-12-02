@@ -1,6 +1,6 @@
 [
   {
-    "dataset_language": "German",
+    "dataset_language": "German (Anselm)",
     "time_period": "14th–16th c.",
     "genre": "Religious",
     "tokens_train": 233947,
@@ -8,7 +8,7 @@
     "tokens_test": 45999
   },
   {
-    "dataset_language": "German",
+    "dataset_language": "German (RIDGES)",
     "time_period": "1482–1652",
     "genre": "Science",
     "tokens_train": 41857,
@@ -56,7 +56,7 @@
     "tokens_test": 27078
   },
   {
-    "dataset_language": "Slovene",
+    "dataset_language": "Slovene (Bohorič)",
     "time_period": "1750–1840s",
     "genre": "Diverse",
     "tokens_train": 50023,
@@ -64,7 +64,7 @@
     "tokens_test": 5969
   },
   {
-    "dataset_language": "Slovene",
+    "dataset_language": "Slovene (Gaj)",
     "time_period": "1840s–1899",
     "genre": "Diverse",
     "tokens_train": 161211,

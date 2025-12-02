@@ -5,7 +5,7 @@
     "pixel_iu": 81.52
   },
   {
-    "method_from_gt": "wavelength",
+    "method_from_gt": "wavelength (tight polygons) ",
     "line_iu": 99.25,
     "pixel_iu": 98.95
   },

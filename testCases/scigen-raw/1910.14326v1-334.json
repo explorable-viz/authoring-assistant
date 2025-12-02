@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1910.14326v1-334.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1910_14326v1_334"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We present our results in Table 1. As shown in Table 1, our model CMAML achieves good performance on quality, personality, and diversity."
-        }
-    ]
+  "datasets": [
+    "datasets/1910.14326v1-334.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1910_14326v1_334"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We present our results in Table 1. As shown in Table 1, our model CMAML achieves good performance on quality, personality, and diversity."
+    }
+  ]
 }

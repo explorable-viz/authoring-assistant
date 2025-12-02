@@ -15,7 +15,7 @@
     "frame_f1": 57.87
   },
   {
-    "method": "HOSG Cotterell et al.",
+    "method": "HOSG Cotterell et al. ( 2017 )",
     "verb_nmpu": 44.41,
     "verb_nipu": 68.43,
     "verb_f1": 53.86,
@@ -30,7 +30,7 @@
     "frame_f1": 52.96
   },
   {
-    "method": "NOAC Egurnov et al.",
+    "method": "NOAC Egurnov et al. ( 2017 )",
     "verb_nmpu": 20.73,
     "verb_nipu": 88.38,
     "verb_f1": 33.58,
@@ -75,7 +75,7 @@
     "frame_f1": 34.97
   },
   {
-    "method": "LDA-Frames Materna",
+    "method": "LDA-Frames Materna ( 2013 )",
     "verb_nmpu": 26.11,
     "verb_nipu": 66.92,
     "verb_f1": 37.56,

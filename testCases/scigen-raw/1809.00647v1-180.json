@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1809.00647v1-180.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1809_00647v1_180"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We summarize the main results in Table 3.  Frequency is the best performing baseline. Its precision at 1 and 5 are higher than 40%. PageRank performs worse than Frequency on all  the precision and recall metrics. Location performs the worst.  LeToR outperforms the baselines significantly on all metrics. Particularly, its P@1 value outperforms the Frequency baseline the most (4.64%), indicating a much better estimation on the most salient event. In terms of AUC, LeToR outperforms Frequency by a large margin (11.19% relative gain).  The KCE model further beats LeToR significantly on all metrics, by around 5% on AUC and precision values, and by around 10% on the recall values. Notably, the P@1 score is much higher, reaching 50%. The large relative gain on all the recall metrics and the high performance on precision show that KCE works really well on the top of the rank list.  To understand the source of performance gain of KCE, we conduct an ablation study by removing its components: -E removes of entity kernels; -EF removes the entity kernels and the features. We observe a performance drop in both cases."
-        }
-    ]
+  "datasets": [
+    "datasets/1809.00647v1-180.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1809_00647v1_180"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We summarize the main results in Table 3.  Frequency is the best performing baseline. Its precision at 1 and 5 are higher than 40%. PageRank performs worse than Frequency on all  the precision and recall metrics. Location performs the worst.  LeToR outperforms the baselines significantly on all metrics. Particularly, its P@1 value outperforms the Frequency baseline the most (4.64%), indicating a much better estimation on the most salient event. In terms of AUC, LeToR outperforms Frequency by a large margin (11.19% relative gain).  The KCE model further beats LeToR significantly on all metrics, by around 5% on AUC and precision values, and by around 10% on the recall values. Notably, the P@1 score is much higher, reaching 50%. The large relative gain on all the recall metrics and the high performance on precision show that KCE works really well on the top of the rank list.  To understand the source of performance gain of KCE, we conduct an ablation study by removing its components: -E removes of entity kernels; -EF removes the entity kernels and the features. We observe a performance drop in both cases."
+    }
+  ]
 }

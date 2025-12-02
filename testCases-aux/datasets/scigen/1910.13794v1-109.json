@@ -1,6 +1,6 @@
 [
   {
-    "model": "Zhou et al.",
+    "model": "Zhou et al. ( 2017 )",
     "bleu_1": "-",
     "bleu_2": "-",
     "bleu_3": "-",
@@ -18,7 +18,7 @@
     "rouge_l": 44.99
   },
   {
-    "model": "Kim et al.",
+    "model": "Kim et al. ( 2019 )",
     "bleu_1": "-",
     "bleu_2": "-",
     "bleu_3": "-",
@@ -27,7 +27,7 @@
     "rouge_l": "-"
   },
   {
-    "model": "Liu et al.",
+    "model": "Liu et al. ( 2019 )",
     "bleu_1": 46.58,
     "bleu_2": 30.9,
     "bleu_3": 22.82,

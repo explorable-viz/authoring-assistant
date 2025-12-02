@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1911.04118v2-285.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1911_04118v2_285"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 3: Performance of different models on WikiQA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed by Yoon et al. (2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively.  Table 3 reports the MAP and MRR of different pre-trained transformers models for two methods: standard fine-tuning (FT) and TANDA. The latter takes two arguments that we indicate as transfer dataset → adapt dataset."
-        }
-    ]
+  "datasets": [
+    "datasets/1911.04118v2-285.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1911_04118v2_285"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3: Performance of different models on WikiQA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed by Yoon et al. (2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively.  Table 3 reports the MAP and MRR of different pre-trained transformers models for two methods: standard fine-tuning (FT) and TANDA. The latter takes two arguments that we indicate as transfer dataset → adapt dataset."
+    }
+  ]
 }

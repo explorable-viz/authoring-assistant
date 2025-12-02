@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1907.07421v1-424.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1907_07421v1_424"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 2 shows the experimental results of the slot-independent SUMBT model on MultiWOZ corpus.  The SUMBT greatly surpassed the performances of previous approaches by yielding 42.4% joint accuracy."
-        }
-    ]
+  "datasets": [
+    "datasets/1907.07421v1-424.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1907_07421v1_424"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the experimental results of the slot-independent SUMBT model on MultiWOZ corpus.  The SUMBT greatly surpassed the performances of previous approaches by yielding 42.4% joint accuracy."
+    }
+  ]
 }

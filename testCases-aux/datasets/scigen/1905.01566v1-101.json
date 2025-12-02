@@ -42,7 +42,7 @@
     "f1": 32.0
   },
   {
-    "model": "LabelGCN Xiong et al.",
+    "model": "LabelGCN Xiong et al. ( 2019 )",
     "p": 50.3,
     "r": 29.2,
     "f1": 36.9

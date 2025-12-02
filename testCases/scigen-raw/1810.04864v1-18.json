@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1810.04864v1-18.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1810_04864v1_18"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 4 shows the BLEU and ROUGE-L development set scores when treating each human reference as prediction once and evaluating it against the remaining references, compared to the scores of the word-based and  character-based models  Strikingly, on the E2E development set, both model variants significantly outperform human texts by far with respect to both automatic evaluation measures. While the human BLEU score is significantly higher than those of both systems on the WebNLG development set, there is no statistical difference between human and system ROUGE-L scores."
-        }
-    ]
+  "datasets": [
+    "datasets/1810.04864v1-18.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1810_04864v1_18"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows the BLEU and ROUGE-L development set scores when treating each human reference as prediction once and evaluating it against the remaining references, compared to the scores of the word-based and  character-based models  Strikingly, on the E2E development set, both model variants significantly outperform human texts by far with respect to both automatic evaluation measures. While the human BLEU score is significantly higher than those of both systems on the WebNLG development set, there is no statistical difference between human and system ROUGE-L scores."
+    }
+  ]
 }

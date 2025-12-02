@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1906.00434v1-221.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1906_00434v1_221"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We show the experiment results in Table 2.  our method consistently performs better than all baselines in all settings.  our method is also better than LOF (Softmax).  we observe that on the ATIS dataset, the performance of unknown intent detection dramatically drops as the known intent increases."
-        }
-    ]
+  "datasets": [
+    "datasets/1906.00434v1-221.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1906_00434v1_221"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We show the experiment results in Table 2.  our method consistently performs better than all baselines in all settings.  our method is also better than LOF (Softmax).  we observe that on the ATIS dataset, the performance of unknown intent detection dramatically drops as the known intent increases."
+    }
+  ]
 }

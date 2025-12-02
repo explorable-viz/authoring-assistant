@@ -21,7 +21,7 @@
     "extra": 8.6
   },
   {
-    "approach": "",
+    "approach": "(BERT)",
     "easy": 42.9,
     "medium": 24.9,
     "hard": 21.9,
@@ -35,7 +35,7 @@
     "extra": 19.1
   },
   {
-    "approach": " IRNet",
+    "approach": " IRNet(BERT)",
     "easy": 77.2,
     "medium": 58.7,
     "hard": 48.1,

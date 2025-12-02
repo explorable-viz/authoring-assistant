@@ -1,7 +1,7 @@
 [
   {
     "input": "Gold seg",
-    "models": "Yang et al.",
+    "models": "Yang et al. ( 2016 )",
     "p": 65.59,
     "r": 71.84,
     "f1": 68.57

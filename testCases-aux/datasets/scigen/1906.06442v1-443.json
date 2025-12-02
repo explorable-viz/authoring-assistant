@@ -14,7 +14,7 @@
   },
   {
     "model": "",
-    "decode_type": "as BT",
+    "decode_type": "as BT (tagged)",
     "avg_13_17": 30.3,
     "2010": 24.3,
     "2011": 22.2,
@@ -40,7 +40,7 @@
   },
   {
     "model": "",
-    "decode_type": "as BT",
+    "decode_type": "as BT (noised)",
     "avg_13_17": 10.66,
     "2010": 8.1,
     "2011": 6.5,

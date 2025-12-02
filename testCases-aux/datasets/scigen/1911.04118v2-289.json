@@ -14,14 +14,14 @@
     "trec_qa_mrr": 0.872
   },
   {
-    "bert_base": "TandA",
+    "bert_base": "TandA (QNLI →)",
     "wikiqa_map": 0.832,
     "wikiqa_mrr": 0.852,
     "trec_qa_map": 0.863,
     "trec_qa_mrr": 0.906
   },
   {
-    "bert_base": "TandA",
+    "bert_base": "TandA (ASNQ →)",
     "wikiqa_map": 0.893,
     "wikiqa_mrr": 0.903,
     "trec_qa_map": 0.912,

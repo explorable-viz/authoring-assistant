@@ -10,7 +10,7 @@
     "avg": ""
   },
   {
-    "methods": "Milne and Witten",
+    "methods": "Milne and Witten ( 2008 )",
     "aida_b": "-",
     "msnbc": 78,
     "aquaint": 85,
@@ -20,7 +20,7 @@
     "avg": 77.96
   },
   {
-    "methods": "Ratinov et al.",
+    "methods": "Ratinov et al. ( 2011a )",
     "aida_b": "-",
     "msnbc": 75,
     "aquaint": 83,
@@ -30,7 +30,7 @@
     "avg": 72.68
   },
   {
-    "methods": "Hoffart et al.",
+    "methods": "Hoffart et al. ( 2011 )",
     "aida_b": "-",
     "msnbc": 79,
     "aquaint": 56,
@@ -40,7 +40,7 @@
     "avg": 67.32
   },
   {
-    "methods": "Cheng and Roth",
+    "methods": "Cheng and Roth ( 2013 )",
     "aida_b": "-",
     "msnbc": 90,
     "aquaint": 90,
@@ -50,7 +50,7 @@
     "avg": 81.38
   },
   {
-    "methods": "Chisholm and Hachey",
+    "methods": "Chisholm and Hachey ( 2015 )",
     "aida_b": 84.9,
     "msnbc": "-",
     "aquaint": "-",
@@ -70,7 +70,7 @@
     "avg": ""
   },
   {
-    "methods": "Lazic et al.",
+    "methods": "Lazic et al. ( 2015 )",
     "aida_b": 86.4,
     "msnbc": "-",
     "aquaint": "-",
@@ -81,12 +81,12 @@
   },
   {
     "methods": "Our model",
-    "aida_b": " 89.66 ±0.16",
-    "msnbc": " 92.2 ±0.2",
-    "aquaint": " 90.7 ±0.2",
-    "ace2004": " 88.1 ±0.0",
-    "cweb": " 78.2 ±0.2",
-    "wiki": " 81.7 ±0.1",
+    "aida_b": 89.66,
+    "msnbc": 92.2,
+    "aquaint": 90.7,
+    "ace2004": 88.1,
+    "cweb": 78.2,
+    "wiki": 81.7,
     "avg": 86.18
   },
   {
@@ -100,7 +100,7 @@
     "avg": ""
   },
   {
-    "methods": "Chisholm and Hachey",
+    "methods": "Chisholm and Hachey ( 2015 )",
     "aida_b": 88.7,
     "msnbc": "-",
     "aquaint": "-",
@@ -130,7 +130,7 @@
     "avg": ""
   },
   {
-    "methods": "Guo and Barbosa",
+    "methods": "Guo and Barbosa ( 2016 )",
     "aida_b": 89.0,
     "msnbc": 92,
     "aquaint": 87,
@@ -140,7 +140,7 @@
     "avg": 85.7
   },
   {
-    "methods": "Globerson et al.",
+    "methods": "Globerson et al. ( 2016 )",
     "aida_b": 91.0,
     "msnbc": "-",
     "aquaint": "-",
@@ -150,7 +150,7 @@
     "avg": "-"
   },
   {
-    "methods": "Yamada et al.",
+    "methods": "Yamada et al. ( 2016 )",
     "aida_b": 91.5,
     "msnbc": "-",
     "aquaint": "-",
@@ -160,23 +160,23 @@
     "avg": "-"
   },
   {
-    "methods": "Ganea and Hofmann",
-    "aida_b": "92.22 ±0.14",
-    "msnbc": "93.7 ±0.1",
-    "aquaint": "88.5 ±0.4",
-    "ace2004": "88.5 ±0.3",
-    "cweb": "77.9 ±0.1",
-    "wiki": "77.5 ±0.1",
+    "methods": "Ganea and Hofmann ( 2017 )",
+    "aida_b": 92.22,
+    "msnbc": 93.7,
+    "aquaint": 88.5,
+    "ace2004": 88.5,
+    "cweb": 77.9,
+    "wiki": 77.5,
     "avg": 85.22
   },
   {
-    "methods": "Le and Titov",
-    "aida_b": "93.07 ±0.27",
-    "msnbc": "93.9 ±0.2",
-    "aquaint": "88.3 ±0.6",
-    "ace2004": "89.9 ±0.8",
-    "cweb": "77.5 ±0.1",
-    "wiki": "78.0 ±0.1",
+    "methods": "Le and Titov ( 2018 )",
+    "aida_b": 93.07,
+    "msnbc": 93.9,
+    "aquaint": 88.3,
+    "ace2004": 89.9,
+    "cweb": 77.5,
+    "wiki": 78.0,
     "avg": 85.5
   }
 ]

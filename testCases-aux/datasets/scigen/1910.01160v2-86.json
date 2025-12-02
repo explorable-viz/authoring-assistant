@@ -217,7 +217,7 @@
   },
   {
     "satire_associated": "",
-    "pca_component_rc19": "",
+    "pca_component_rc19": "(Intercept)",
     "description_first_person_singular_pronoun_incidence": "",
     "estimate_1_80": -0.54,
     "std_error_0_41": 0.19,

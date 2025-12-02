@@ -50,17 +50,17 @@
     "swbd2": 54.08
   },
   {
-    "models": "HN-ATT Yang et al.",
+    "models": "HN-ATT Yang et al. ( 2016 )",
     "swbd": 73.68,
     "swbd2": 85.71
   },
   {
-    "models": "CNN Kim",
+    "models": "CNN Kim ( 2014 )",
     "swbd": 84.21,
     "swbd2": 93.87
   },
   {
-    "models": "HN-SA",
+    "models": "HN-SA (our model)",
     "swbd": 89.47,
     "swbd2": 95.92
   }

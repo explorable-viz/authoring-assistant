@@ -1,44 +1,44 @@
 [
   {
     "model": "Proto (CNN)*",
-    "5_way_1_shot_0_nota": "74.52±0.07",
-    "5_way_1_shot_15_nota": "62.18±0.22",
-    "5_way_1_shot_30_nota": "53.38±0.14",
-    "5_way_1_shot_50_nota": "37.26±0.04"
+    "5_way_1_shot_0_nota": 74.52,
+    "5_way_1_shot_15_nota": 62.18,
+    "5_way_1_shot_30_nota": 53.38,
+    "5_way_1_shot_50_nota": 37.26
   },
   {
-    "model": "Proto",
-    "5_way_1_shot_0_nota": "69.17±0.07",
-    "5_way_1_shot_15_nota": "60.59±0.05",
-    "5_way_1_shot_30_nota": "53.18±0.12",
-    "5_way_1_shot_50_nota": "40.00±0.10"
+    "model": "Proto (CNN)",
+    "5_way_1_shot_0_nota": 69.17,
+    "5_way_1_shot_15_nota": 60.59,
+    "5_way_1_shot_30_nota": 53.18,
+    "5_way_1_shot_50_nota": 40.0
   },
   {
     "model": "Proto (BERT)*",
-    "5_way_1_shot_0_nota": "80.68±0.28",
-    "5_way_1_shot_15_nota": "67.92±0.31",
-    "5_way_1_shot_30_nota": "58.22±0.20",
-    "5_way_1_shot_50_nota": "40.64±0.14"
+    "5_way_1_shot_0_nota": 80.68,
+    "5_way_1_shot_15_nota": 67.92,
+    "5_way_1_shot_30_nota": 58.22,
+    "5_way_1_shot_50_nota": 40.64
   },
   {
-    "model": "Proto",
-    "5_way_1_shot_0_nota": "81.65±0.97",
-    "5_way_1_shot_15_nota": "70.02±0.23",
-    "5_way_1_shot_30_nota": "61.08±0.28",
-    "5_way_1_shot_50_nota": "45.94±0.50"
+    "model": "Proto (BERT)",
+    "5_way_1_shot_0_nota": 81.65,
+    "5_way_1_shot_15_nota": 70.02,
+    "5_way_1_shot_30_nota": 61.08,
+    "5_way_1_shot_50_nota": 45.94
   },
   {
     "model": "BERT-PAIR*",
-    "5_way_1_shot_0_nota": "88.32±0.64",
-    "5_way_1_shot_15_nota": "73.60±0.51",
-    "5_way_1_shot_30_nota": "63.00±0.47",
-    "5_way_1_shot_50_nota": "43.99±0.09"
+    "5_way_1_shot_0_nota": 88.32,
+    "5_way_1_shot_15_nota": 73.6,
+    "5_way_1_shot_30_nota": 63.0,
+    "5_way_1_shot_50_nota": 43.99
   },
   {
     "model": "BERT-PAIR",
-    "5_way_1_shot_0_nota": "76.73±0.55",
-    "5_way_1_shot_15_nota": "77.67±0.14",
-    "5_way_1_shot_30_nota": "78.49±0.21",
-    "5_way_1_shot_50_nota": "80.31±0.12"
+    "5_way_1_shot_0_nota": 76.73,
+    "5_way_1_shot_15_nota": 77.67,
+    "5_way_1_shot_30_nota": 78.49,
+    "5_way_1_shot_50_nota": 80.31
   }
 ]

@@ -7,14 +7,14 @@
     "biobert_test": 79.04
   },
   {
-    "dataset": "MNLI",
+    "dataset": "MNLI (M)",
     "bert_dev": 83.52,
     "bert_test": "-",
     "biobert_dev": 81.23,
     "biobert_test": "-"
   },
   {
-    "dataset": "SNLI",
+    "dataset": "SNLI (S)",
     "bert_dev": 90.39,
     "bert_test": "-",
     "biobert_dev": 89.1,
@@ -49,14 +49,14 @@
     "biobert_test": 82.63
   },
   {
-    "dataset": "MedNLI",
+    "dataset": "MedNLI (expanded)",
     "bert_dev": 79.13,
     "bert_test": 77.07,
     "biobert_dev": 83.87,
     "biobert_test": 79.95
   },
   {
-    "dataset": "S → M → MedNLI",
+    "dataset": "S → M → MedNLI (expanded)",
     "bert_dev": 82.15,
     "bert_test": 79.95,
     "biobert_dev": 83.08,

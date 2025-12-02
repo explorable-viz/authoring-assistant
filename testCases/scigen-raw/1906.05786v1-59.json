@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1906.05786v1-59.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1906_05786v1_59"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Consequently in Table 5 we experiment with BI (α = 0.1). In this case BI matches or out-performs the uniform ensemble. Notably, for en2es, where BI (α = 0.5) performed well, taking α = 0.1 does not harm performance."
-        }
-    ]
+  "datasets": [
+    "datasets/1906.05786v1-59.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1906_05786v1_59"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Consequently in Table 5 we experiment with BI (α = 0.1). In this case BI matches or out-performs the uniform ensemble. Notably, for en2es, where BI (α = 0.5) performed well, taking α = 0.1 does not harm performance."
+    }
+  ]
 }

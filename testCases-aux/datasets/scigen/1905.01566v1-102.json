@@ -92,7 +92,7 @@
   },
   {
     "type": "",
-    "denoising_method": "Choi et al.",
+    "denoising_method": "Choi et al. ( 2018 )",
     "el_head_p": 48.1,
     "el_head_r": 23.2,
     "el_head_f1": 31.3,

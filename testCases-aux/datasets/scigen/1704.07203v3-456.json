@@ -151,12 +151,12 @@
   },
   {
     "target_source_sys_↓": "LR",
-    "mt_cnn_rand": "single feature groups",
-    "oc_cnn_rand": "single feature groups",
-    "pe_cnn_rand": "single feature groups",
-    "vg_cnn_rand": "single feature groups",
-    "wd_cnn_rand": "single feature groups",
-    "wtp_cnn_rand": "single feature groups",
+    "mt_cnn_rand": "single feature groups (averages across all source domains)",
+    "oc_cnn_rand": "single feature groups (averages across all source domains)",
+    "pe_cnn_rand": "single feature groups (averages across all source domains)",
+    "vg_cnn_rand": "single feature groups (averages across all source domains)",
+    "wd_cnn_rand": "single feature groups (averages across all source domains)",
+    "wtp_cnn_rand": "single feature groups (averages across all source domains)",
     "average": ""
   },
   {

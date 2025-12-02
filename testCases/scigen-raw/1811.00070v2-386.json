@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1811.00070v2-386.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1811_00070v2_386"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 3 suggests that the combined model does make progress here, in that the largest gains, across all relevant datasets, tend to be for the smallest categories."
-        }
-    ]
+  "datasets": [
+    "datasets/1811.00070v2-386.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1811_00070v2_386"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 suggests that the combined model does make progress here, in that the largest gains, across all relevant datasets, tend to be for the smallest categories."
+    }
+  ]
 }

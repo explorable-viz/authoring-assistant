@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1904.02338v2-208.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1904_02338v2_208"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Tables 1 and 2 show results on the UNCorpus datasets.  Our approach consistently outperforms Basic and Dual-0, despite the latter being trained with additional monolingual data (Sestorain et al., 2018)."
-        }
-    ]
+  "datasets": [
+    "datasets/1904.02338v2-208.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1904_02338v2_208"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Tables 1 and 2 show results on the UNCorpus datasets.  Our approach consistently outperforms Basic and Dual-0, despite the latter being trained with additional monolingual data (Sestorain et al., 2018)."
+    }
+  ]
 }

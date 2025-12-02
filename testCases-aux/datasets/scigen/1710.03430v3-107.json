@@ -8,31 +8,31 @@
   },
   {
     "model": "RNN ",
-    "ubuntu_v2_1_in_2r_1": "0.907 ±0.002",
-    "ubuntu_v2_1_in_10r_1": "0.664 ±0.004",
-    "ubuntu_v2_1_in_10r_2": "0.799 ±0.004",
-    "ubuntu_v2_1_in_10r_5": "0.951 ±0.001"
+    "ubuntu_v2_1_in_2r_1": 0.907,
+    "ubuntu_v2_1_in_10r_1": 0.664,
+    "ubuntu_v2_1_in_10r_2": 0.799,
+    "ubuntu_v2_1_in_10r_5": 0.951
   },
   {
     "model": "CNN ",
-    "ubuntu_v2_1_in_2r_1": "0.863 ±0.003",
-    "ubuntu_v2_1_in_10r_1": "0.587 ±0.004",
-    "ubuntu_v2_1_in_10r_2": "0.721 ±0.005",
-    "ubuntu_v2_1_in_10r_5": "0.907 ±0.003"
+    "ubuntu_v2_1_in_2r_1": 0.863,
+    "ubuntu_v2_1_in_10r_1": 0.587,
+    "ubuntu_v2_1_in_10r_2": 0.721,
+    "ubuntu_v2_1_in_10r_5": 0.907
   },
   {
     "model": "RNN-CNN ",
-    "ubuntu_v2_1_in_2r_1": "0.911 ±0.001",
-    "ubuntu_v2_1_in_10r_1": " 0.672 ±0.002",
-    "ubuntu_v2_1_in_10r_2": "0.809 ±0.002",
-    "ubuntu_v2_1_in_10r_5": "0.956 ±0.001"
+    "ubuntu_v2_1_in_2r_1": 0.911,
+    "ubuntu_v2_1_in_10r_1": 0.672,
+    "ubuntu_v2_1_in_10r_2": 0.809,
+    "ubuntu_v2_1_in_10r_5": 0.956
   },
   {
-    "model": "Attention \\scriptsize{}",
-    "ubuntu_v2_1_in_2r_1": "0.903 ±0.002",
-    "ubuntu_v2_1_in_10r_1": "0.653 ±0.005",
-    "ubuntu_v2_1_in_10r_2": "0.788 ±0.005",
-    "ubuntu_v2_1_in_10r_5": "0.945 ±0.002"
+    "model": "Attention \\scriptsize{}(RNN-CNN)",
+    "ubuntu_v2_1_in_2r_1": 0.903,
+    "ubuntu_v2_1_in_10r_1": 0.653,
+    "ubuntu_v2_1_in_10r_2": 0.788,
+    "ubuntu_v2_1_in_10r_5": 0.945
   },
   {
     "model": "CompAgg ",
@@ -50,30 +50,30 @@
   },
   {
     "model": "RDE",
-    "ubuntu_v2_1_in_2r_1": "0.894 ±0.002",
-    "ubuntu_v2_1_in_10r_1": "0.610 ±0.008",
-    "ubuntu_v2_1_in_10r_2": "0.776 ±0.006",
-    "ubuntu_v2_1_in_10r_5": "0.947 ±0.002"
+    "ubuntu_v2_1_in_2r_1": 0.894,
+    "ubuntu_v2_1_in_10r_1": 0.61,
+    "ubuntu_v2_1_in_10r_2": 0.776,
+    "ubuntu_v2_1_in_10r_5": 0.947
   },
   {
     "model": "RDE-LTC",
-    "ubuntu_v2_1_in_2r_1": "0.899 ±0.002",
-    "ubuntu_v2_1_in_10r_1": "0.625 ±0.004",
-    "ubuntu_v2_1_in_10r_2": "0.788 ±0.004",
-    "ubuntu_v2_1_in_10r_5": "0.951 ±0.001"
+    "ubuntu_v2_1_in_2r_1": 0.899,
+    "ubuntu_v2_1_in_10r_1": 0.625,
+    "ubuntu_v2_1_in_10r_2": 0.788,
+    "ubuntu_v2_1_in_10r_5": 0.951
   },
   {
     "model": "HRDE",
-    "ubuntu_v2_1_in_2r_1": "0.914 ±0.001",
-    "ubuntu_v2_1_in_10r_1": "0.649 ±0.001",
-    "ubuntu_v2_1_in_10r_2": "0.813 ±0.001",
-    "ubuntu_v2_1_in_10r_5": "0.964 ±0.001"
+    "ubuntu_v2_1_in_2r_1": 0.914,
+    "ubuntu_v2_1_in_10r_1": 0.649,
+    "ubuntu_v2_1_in_10r_2": 0.813,
+    "ubuntu_v2_1_in_10r_5": 0.964
   },
   {
     "model": "HRDE-LTC",
-    "ubuntu_v2_1_in_2r_1": " 0.915 ±0.002",
-    "ubuntu_v2_1_in_10r_1": "0.652 ±0.003",
-    "ubuntu_v2_1_in_10r_2": " 0.815 ±0.001",
-    "ubuntu_v2_1_in_10r_5": " 0.966 ±0.001"
+    "ubuntu_v2_1_in_2r_1": 0.915,
+    "ubuntu_v2_1_in_10r_1": 0.652,
+    "ubuntu_v2_1_in_10r_2": 0.815,
+    "ubuntu_v2_1_in_10r_5": 0.966
   }
 ]

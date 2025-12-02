@@ -1,6 +1,6 @@
 [
   {
-    "model": "SVM",
+    "model": "SVM (original)",
     "original_data_ρ": 0.5,
     "original_data_rmse": 0.23,
     "original_data_qwκ": 0.44,
@@ -9,7 +9,7 @@
     "new_data_qwκ": "–"
   },
   {
-    "model": "SVM",
+    "model": "SVM (reproduced)",
     "original_data_ρ": 0.49,
     "original_data_rmse": 0.24,
     "original_data_qwκ": 0.47,

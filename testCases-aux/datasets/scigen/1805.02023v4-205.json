@@ -1,6 +1,6 @@
 [
   {
-    "models": "Chen et al.",
+    "models": "Chen et al. ( 2006a )",
     "p": 91.22,
     "r": 81.71,
     "f1": 86.2
@@ -12,19 +12,19 @@
     "f1": 91.18
   },
   {
-    "models": "Zhou et al.",
+    "models": "Zhou et al. ( 2013 )",
     "p": 91.86,
     "r": 88.75,
     "f1": 90.28
   },
   {
-    "models": "Lu et al.",
+    "models": "Lu et al. ( 2016 )",
     "p": "–",
     "r": "–",
     "f1": 87.94
   },
   {
-    "models": "Dong et al.",
+    "models": "Dong et al. ( 2016 )",
     "p": 91.28,
     "r": 90.62,
     "f1": 90.95

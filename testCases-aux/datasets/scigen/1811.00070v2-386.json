@@ -40,10 +40,10 @@
     "prescription_reasons_improvement": 5.6
   },
   {
-    "diagnosis_detection_label": "Chemical–Disease Relations",
-    "diagnosis_detection_support": "Chemical–Disease Relations",
-    "diagnosis_detection_f1_score": "Chemical–Disease Relations",
-    "diagnosis_detection_improvement": "Chemical–Disease Relations",
+    "diagnosis_detection_label": "Chemical–Disease Relations (CDR)",
+    "diagnosis_detection_support": "Chemical–Disease Relations (CDR)",
+    "diagnosis_detection_f1_score": "Chemical–Disease Relations (CDR)",
+    "diagnosis_detection_improvement": "Chemical–Disease Relations (CDR)",
     "prescription_reasons_label": "Drug–Disease Relations",
     "prescription_reasons_support": "Drug–Disease Relations",
     "prescription_reasons_f1_score": "Drug–Disease Relations",

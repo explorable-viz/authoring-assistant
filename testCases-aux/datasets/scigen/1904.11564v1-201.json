@@ -1,30 +1,30 @@
 [
   {
-    "model": "Neural MRS",
+    "model": "Neural MRS (gold)",
     "bleu": 69.27,
     "exact_match": 24.09,
     "coverage": 100
   },
   {
-    "model": "Neural MRS",
+    "model": "Neural MRS (silver)",
     "bleu": 77.13,
     "exact_match": 25.82,
     "coverage": 100
   },
   {
-    "model": "Neural MRS",
+    "model": "Neural MRS (gold + silver)",
     "bleu": 79.15,
     "exact_match": 32.07,
     "coverage": 100
   },
   {
-    "model": "ACE",
+    "model": "ACE (ERG)",
     "bleu": 62.05,
     "exact_match": 15.08,
     "coverage": 78
   },
   {
-    "model": "DAG transducer Ye et al.",
+    "model": "DAG transducer Ye et al. ( 2018 )",
     "bleu": "–",
     "exact_match": "–",
     "coverage": 100

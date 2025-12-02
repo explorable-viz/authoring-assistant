@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1906.06905v2-471.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1906_06905v2_471"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "The right-hand side of table 1 shows the performance of our SVM and the two neural methods. The results indicate that the SVM setup is well suited for the difficulty prediction task and that it successfully generalizes to new data."
-        }
-    ]
+  "datasets": [
+    "datasets/1906.06905v2-471.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1906_06905v2_471"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The right-hand side of table 1 shows the performance of our SVM and the two neural methods. The results indicate that the SVM setup is well suited for the difficulty prediction task and that it successfully generalizes to new data."
+    }
+  ]
 }

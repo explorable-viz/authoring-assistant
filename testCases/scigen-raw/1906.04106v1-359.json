@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1906.04106v1-359.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1906_04106v1_359"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We conduct an ablation study to further analyze our reinforcement learning algorithm. The results are reported in Table 5.  As seen in Table 5, although the performance of catSeq-RF1 is competitive to catSeq-2RF1 on predicting present keyphrases, it yields an extremely poor performance on absent keyphrase prediction.  By comparing the last two rows in Table 5, we observe that our RF1 reward function slightly outperforms the F1 reward function."
-        }
-    ]
+  "datasets": [
+    "datasets/1906.04106v1-359.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1906_04106v1_359"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We conduct an ablation study to further analyze our reinforcement learning algorithm. The results are reported in Table 5.  As seen in Table 5, although the performance of catSeq-RF1 is competitive to catSeq-2RF1 on predicting present keyphrases, it yields an extremely poor performance on absent keyphrase prediction.  By comparing the last two rows in Table 5, we observe that our RF1 reward function slightly outperforms the F1 reward function."
+    }
+  ]
 }

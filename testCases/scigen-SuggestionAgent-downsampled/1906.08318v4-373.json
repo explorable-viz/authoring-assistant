@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "table 6, where we "
+    },
+    {
+      "expression": "\"compare\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hyperparameter tuning methodologies.  Perturbations on the hyperparameter search are listed in table 6 and "
+    },
+    {
+      "expression": "\"compare performance with different hyperparameter values found using different tuning strategies\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We tested how manual tuning, requiring less expert knowledge than Bayesian optimization, would "
+    },
+    {
+      "expression": "\"compare to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the random search strategy in table 6. For both "
+    },
+    {
+      "expression": "\"i2b2 and ddi corpora\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"manual search\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperformed "
+    },
+    {
+      "expression": "\"random search\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_08318v4_373"
+  ],
+  "datasets": ["datasets/scigen/1906.08318v4-373.json"]
+}

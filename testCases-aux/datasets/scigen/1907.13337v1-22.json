@@ -12,13 +12,13 @@
     "rl": 19.94
   },
   {
-    "model": "Schumann",
+    "model": "Schumann ( 2018 )",
     "r1": 22.19,
     "r2": 4.56,
     "rl": 19.88
   },
   {
-    "model": "Wang and Lee",
+    "model": "Wang and Lee ( 2018 )",
     "r1": 27.09,
     "r2": 9.86,
     "rl": 24.97
@@ -30,7 +30,7 @@
     "rl": 24.41
   },
   {
-    "model": "Cao et al.",
+    "model": "Cao et al. ( 2018 )",
     "r1": 37.04,
     "r2": 19.03,
     "rl": 34.46

@@ -1,0 +1,246 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 3, BiLSTM gives significantly"
+    },
+    {
+      "expression": "trendWord (model_ \"BiLSTM\").acc (model_ \"LSTM\").acc betterWorse",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "accuracies compared to uni-directional LSTM2, with the training time per epoch"
+    },
+    {
+      "expression": "trendWord (model_ \"BiLSTM\").time_s (model_ \"LSTM\").time_s growShrink",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "from"
+    },
+    {
+      "expression": "(model_ \"LSTM\").time_s",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "seconds to"
+    },
+    {
+      "expression": "(model_ \"BiLSTM\").time_s",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "seconds. Stacking 2 layers of BiLSTM gives"
+    },
+    {
+      "expression": "trendWord (model_ \"2 stacked BiLSTM\").acc (model_ \"BiLSTM\").acc improvements",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "to development results, with a"
+    },
+    {
+      "expression": "trendWord (model_ \"2 stacked BiLSTM\").time_s (model_ \"BiLSTM\").time_s smallerHigher",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "time of"
+    },
+    {
+      "expression": "(model_ \"2 stacked BiLSTM\").time_s",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "seconds. 3 layers of stacked BiLSTM"
+    },
+    {
+      "expression": "trendWord (model_ \"3 stacked BiLSTM\").acc (model_ \"BiLSTM\").acc improve",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "the results. In contrast, S-LSTM gives a development result of"
+    },
+    {
+      "expression": "(model_ \"S-LSTM\").acc",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, which is significantly"
+    },
+    {
+      "expression": "trendWord (model_ \"S-LSTM\").acc (model_ \"2 stacked BiLSTM\").acc betterWorse",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "compared to 2-layer stacked BiLSTM, with a"
+    },
+    {
+      "expression": "trendWord (model_ \"S-LSTM\").param (model_ \"2 stacked BiLSTM\").param smallerHigher",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "number of model parameters and a"
+    },
+    {
+      "expression": "trendWord (model_ \"S-LSTM\").time_s (model_ \"2 stacked BiLSTM\").time_s shorterLonger",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "time of"
+    },
+    {
+      "expression": "(model_ \"S-LSTM\").time_s",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "seconds.  We additionally make comparisons with stacked CNNs and hierarchical attention (Vaswani et al., 2017), shown in Table 3 (the CNN and Transformer rows),"
+    },
+    {
+      "expression": "(findWithKey_ \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "is the"
+    },
+    {
+      "expression": "rankLabel \"most efficient\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))",
+      "categories": [
+        "data-retrieval",
+        "rank",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "among all models compared, with the"
+    },
+    {
+      "expression": "rankLabel \"smallest\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.param < b.param) tableData))",
+      "categories": [
+        "data-retrieval",
+        "rank",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "model size. On the other hand, a 3-layer stacked CNN gives an accuracy of"
+    },
+    {
+      "expression": "(model \"3 stacked CNN\" tableData).acc",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "%, which is also the"
+    },
+    {
+      "expression": "rankLabel \"lowest\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "compared with BiLSTM, hierarchical attention and S-LSTM. The"
+    },
+    {
+      "expression": "rankLabel \"best\" (findIndex \"model\" \"S-LSTM+Attention\" (insertionSort (fun a b -> b.acc < a.acc) tableData))",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "performance of hierarchical attention is obtained by S-LSTM+Attention in terms of both accuracy and efficiency. S-LSTM gives significantly"
+    },
+    {
+      "expression": "trendWord (model_ \"S-LSTM\").acc (model_ \"CNN\").acc betterWorse",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "accuracies compared with both CNN and hierarchical attention. Table 3 additionally shows the results of BiLSTM and S-LSTM when external attention is used. Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still"
+    },
+    {
+      "expression": "trendWord (model_ \"S-LSTM\").acc (model_ \"BiLSTM\").acc underOverPerforming",
+      "categories": [
+        "data-retrieval",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "BiLSTM significantly."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen_manual/_1805_02474v1_10"
+  ],
+  "datasets": ["datasets/scigen_manual/1805.02474v1-10.json"]
+}

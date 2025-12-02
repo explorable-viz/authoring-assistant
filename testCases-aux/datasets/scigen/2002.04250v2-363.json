@@ -1,24 +1,24 @@
 [
   {
-    "_1": "NAT",
+    "_1": "NAT (Gu et al.,  2018 )",
     "wmt14_en_de": 17.69,
     "wmt14_de_en": 20.62,
     "wmt16_ro_en": 29.79
   },
   {
-    "_1": "iNAT",
+    "_1": "iNAT (Lee et al.,  2018 )",
     "wmt14_en_de": 21.54,
     "wmt14_de_en": 25.43,
     "wmt16_ro_en": 29.32
   },
   {
-    "_1": "FlowSeq-large (raw data)",
+    "_1": "FlowSeq-large (raw data) (Ma et al.,  2019 )",
     "wmt14_en_de": 20.85,
     "wmt14_de_en": 25.4,
     "wmt16_ro_en": 29.86
   },
   {
-    "_1": "NAT",
+    "_1": "NAT (our implementation)",
     "wmt14_en_de": 22.32,
     "wmt14_de_en": 24.83,
     "wmt16_ro_en": 29.93
@@ -31,8 +31,8 @@
   },
   {
     "_1": "",
-    "wmt14_en_de": "",
-    "wmt14_de_en": "",
-    "wmt16_ro_en": ""
+    "wmt14_en_de": "(+1.48)",
+    "wmt14_de_en": "(+1.22)",
+    "wmt16_ro_en": "(+0.57)"
   }
 ]

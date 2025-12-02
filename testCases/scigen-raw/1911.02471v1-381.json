@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1911.02471v1-381.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1911_02471v1_381"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We report metric results when grouping crowd workers into 5 bins using the full range of ADR of the dataset. The ADR-based bias measures (Tab. 2) follow the expected trend (model 1 appears more biased than models 2 and 3) contrary to the protected attributes-based measures. Model 1 trained with MV labels exhibits similar performance across demographic groups  Model 2's performance is different across groups"
-        }
-    ]
+  "datasets": [
+    "datasets/1911.02471v1-381.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1911_02471v1_381"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We report metric results when grouping crowd workers into 5 bins using the full range of ADR of the dataset. The ADR-based bias measures (Tab. 2) follow the expected trend (model 1 appears more biased than models 2 and 3) contrary to the protected attributes-based measures. Model 1 trained with MV labels exhibits similar performance across demographic groups  Model 2's performance is different across groups"
+    }
+  ]
 }

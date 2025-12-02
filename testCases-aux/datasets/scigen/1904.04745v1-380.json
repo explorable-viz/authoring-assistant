@@ -72,7 +72,7 @@
     "iou": 57.08
   },
   {
-    "method": "CMSA+GF",
+    "method": "CMSA+GF(Ours)",
     "prec_0_5": 66.44,
     "prec_0_6": 59.7,
     "prec_0_7": 50.77,

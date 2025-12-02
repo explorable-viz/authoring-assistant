@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1704.07050v2-66.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1704_07050v2_66"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 1 shows these performance measures for French-English,  using global structure greatly improves upon the state of the art baseline performance."
-        }
-    ]
+  "datasets": [
+    "datasets/1704.07050v2-66.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1704_07050v2_66"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 shows these performance measures for French-English,  using global structure greatly improves upon the state of the art baseline performance."
+    }
+  ]
 }

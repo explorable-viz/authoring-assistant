@@ -14,21 +14,21 @@
     "atis_25": 61.6
   },
   {
-    "of_known_intents": "DOC",
+    "of_known_intents": "DOC (Softmax)",
     "snips_25": 72.8,
     "50": 63.3,
     "75": 38.7,
     "atis_25": 63.6
   },
   {
-    "of_known_intents": "LOF",
+    "of_known_intents": "LOF (Softmax)",
     "snips_25": 76.0,
     "50": 61.8,
     "75": 38.9,
     "atis_25": 67.3
   },
   {
-    "of_known_intents": "LOF",
+    "of_known_intents": "LOF (LMCL)",
     "snips_25": 79.2,
     "50": 63.4,
     "75": 39.6,

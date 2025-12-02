@@ -1,6 +1,6 @@
 [
   {
-    "model": "RC",
+    "model": "RC (random initializations)",
     "ee": 44.5,
     "te": 64.4,
     "0_100": 40.5,
@@ -9,7 +9,7 @@
     "all": 53.4
   },
   {
-    "model": "RC",
+    "model": "RC (SG initializations)",
     "ee": 49.5,
     "te": 68.6,
     "0_100": 44.1,
@@ -18,7 +18,7 @@
     "all": 57.3
   },
   {
-    "model": "RC",
+    "model": "RC (SG fixed)",
     "ee": 48.9,
     "te": 68.7,
     "0_100": 44.1,

@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1906.01392v1-261.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1906_01392v1_261"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 2 shows the results of our method and all the baselines on tasks with different topics.  We can first observe that the proposed RCN consistently outperformed all the baselines across all topics. Despite being modest, all the improvements of RCN over the baselines are statistically significant at p < 0.05 with a two-tailed t-test.  BiLSTM performed the worst, showing that only using the RNN encoder for sequence encoding is not sufficient for obtaining optimal results.  DeAT and BiMPM performed similarly well;  RCN performed the best, with relative improvements from 2.1% to 10.4% over the second best."
-        }
-    ]
+  "datasets": [
+    "datasets/1906.01392v1-261.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1906_01392v1_261"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the results of our method and all the baselines on tasks with different topics.  We can first observe that the proposed RCN consistently outperformed all the baselines across all topics. Despite being modest, all the improvements of RCN over the baselines are statistically significant at p < 0.05 with a two-tailed t-test.  BiLSTM performed the worst, showing that only using the RNN encoder for sequence encoding is not sufficient for obtaining optimal results.  DeAT and BiMPM performed similarly well;  RCN performed the best, with relative improvements from 2.1% to 10.4% over the second best."
+    }
+  ]
 }

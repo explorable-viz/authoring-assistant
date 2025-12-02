@@ -2,127 +2,127 @@
   {
     "total_triples": "Triples with semantic annotations",
     "opiec_341_0": 166.3,
-    "opiec": "",
+    "opiec": "(49%)",
     "opiec_clean_104_0": 51.46,
-    "opiec_clean": "",
+    "opiec_clean": "(49%)",
     "opiec_linked_5_8": 3.37,
-    "opiec_linked": ""
+    "opiec_linked": "(58%)"
   },
   {
     "total_triples": "negative polarity",
     "opiec_341_0": 5.3,
-    "opiec": "",
+    "opiec": "(2%)",
     "opiec_clean_104_0": 1.33,
-    "opiec_clean": "",
+    "opiec_clean": "(1%)",
     "opiec_linked_5_8": 0.01,
-    "opiec_linked": ""
+    "opiec_linked": "(0%)"
   },
   {
     "total_triples": "possibility modality",
     "opiec_341_0": 13.9,
-    "opiec": "",
+    "opiec": "(4%)",
     "opiec_clean_104_0": 3.27,
-    "opiec_clean": "",
+    "opiec_clean": "(3%)",
     "opiec_linked_5_8": 0.04,
-    "opiec_linked": ""
+    "opiec_linked": "(1%)"
   },
   {
     "total_triples": "quantities",
     "opiec_341_0": 59.4,
-    "opiec": "",
+    "opiec": "(17%)",
     "opiec_clean_104_0": 15.91,
-    "opiec_clean": "",
+    "opiec_clean": "(15%)",
     "opiec_linked_5_8": 0.45,
-    "opiec_linked": ""
+    "opiec_linked": "(8%)"
   },
   {
     "total_triples": "attribution",
     "opiec_341_0": 6.4,
-    "opiec": "",
+    "opiec": "(2%)",
     "opiec_clean_104_0": 1.44,
-    "opiec_clean": "",
+    "opiec_clean": "(1%)",
     "opiec_linked_5_8": 0.01,
-    "opiec_linked": ""
+    "opiec_linked": "(0%)"
   },
   {
     "total_triples": "time",
     "opiec_341_0": 65.3,
-    "opiec": "",
+    "opiec": "(19%)",
     "opiec_clean_104_0": 19.66,
-    "opiec_clean": "",
+    "opiec_clean": "(19%)",
     "opiec_linked_5_8": 0.58,
-    "opiec_linked": ""
+    "opiec_linked": "(1%)"
   },
   {
     "total_triples": "space",
     "opiec_341_0": 61.5,
-    "opiec": "",
+    "opiec": "(18%)",
     "opiec_clean_104_0": 22.11,
-    "opiec_clean": "",
+    "opiec_clean": "(21%)",
     "opiec_linked_5_8": 2.64,
-    "opiec_linked": ""
+    "opiec_linked": "(45%)"
   },
   {
     "total_triples": "space OR time",
     "opiec_341_0": 111.3,
-    "opiec": "",
+    "opiec": "(33%)",
     "opiec_clean_104_0": 37.22,
-    "opiec_clean": "",
+    "opiec_clean": "(36%)",
     "opiec_linked_5_8": 3.01,
-    "opiec_linked": ""
+    "opiec_linked": "(52%)"
   },
   {
     "total_triples": "space AND time",
     "opiec_341_0": 15.4,
-    "opiec": "",
+    "opiec": "(5%)",
     "opiec_clean_104_0": 4.54,
-    "opiec_clean": "",
+    "opiec_clean": "(4%)",
     "opiec_linked_5_8": 0.2,
-    "opiec_linked": ""
+    "opiec_linked": "(4%)"
   },
   {
-    "total_triples": "Triple length in tokens",
-    "opiec_341_0": "7.66±4.25",
-    "opiec": "7.66±4.25",
-    "opiec_clean_104_0": "6.06±2.82",
-    "opiec_clean": "6.06±2.82",
-    "opiec_linked_5_8": "6.45±2.65",
-    "opiec_linked": "6.45±2.65"
+    "total_triples": "Triple length in tokens (  μ±  σ)",
+    "opiec_341_0": 7.66,
+    "opiec": 7.66,
+    "opiec_clean_104_0": 6.06,
+    "opiec_clean": 6.06,
+    "opiec_linked_5_8": 6.45,
+    "opiec_linked": 6.45
   },
   {
-    "total_triples": "subject",
-    "opiec_341_0": "2.12±2.12",
-    "opiec": "2.12±2.12",
-    "opiec_clean_104_0": "1.48±0.79",
-    "opiec_clean": "1.48±0.79",
-    "opiec_linked_5_8": "1.92±0.94",
-    "opiec_linked": "1.92±0.94"
+    "total_triples": "subject (  μ±  σ)",
+    "opiec_341_0": 2.12,
+    "opiec": 2.12,
+    "opiec_clean_104_0": 1.48,
+    "opiec_clean": 1.48,
+    "opiec_linked_5_8": 1.92,
+    "opiec_linked": 1.92
   },
   {
-    "total_triples": "relation",
-    "opiec_341_0": "3.01±2.47",
-    "opiec": "3.01±2.47",
-    "opiec_clean_104_0": "3.10±2.56",
-    "opiec_clean": "3.10±2.56",
-    "opiec_linked_5_8": "2.77±2.14",
-    "opiec_linked": "2.77±2.14"
+    "total_triples": "relation (  μ±  σ)",
+    "opiec_341_0": 3.01,
+    "opiec": 3.01,
+    "opiec_clean_104_0": 3.1,
+    "opiec_clean": 3.1,
+    "opiec_linked_5_8": 2.77,
+    "opiec_linked": 2.77
   },
   {
-    "total_triples": "object",
-    "opiec_341_0": "2.52±2.69",
-    "opiec": "2.52±2.69",
-    "opiec_clean_104_0": "1.48±0.79",
-    "opiec_clean": "1.48±0.79",
-    "opiec_linked_5_8": "1.76±0.94",
-    "opiec_linked": "1.76±0.94"
+    "total_triples": "object (  μ±  σ)",
+    "opiec_341_0": 2.52,
+    "opiec": 2.52,
+    "opiec_clean_104_0": 1.48,
+    "opiec_clean": 1.48,
+    "opiec_linked_5_8": 1.76,
+    "opiec_linked": 1.76
   },
   {
-    "total_triples": "Confidence score",
-    "opiec_341_0": "0.53±0.23",
-    "opiec": "0.53±0.23",
-    "opiec_clean_104_0": "0.59±0.23",
-    "opiec_clean": "0.59±0.23",
-    "opiec_linked_5_8": "0.61±0.26",
-    "opiec_linked": "0.61±0.26"
+    "total_triples": "Confidence score (  μ±  σ)",
+    "opiec_341_0": 0.53,
+    "opiec": 0.53,
+    "opiec_clean_104_0": 0.59,
+    "opiec_clean": 0.59,
+    "opiec_linked_5_8": 0.61,
+    "opiec_linked": 0.61
   }
 ]

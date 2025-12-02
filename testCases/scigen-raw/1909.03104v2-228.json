@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1909.03104v2-228.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1909_03104v2_228"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 4 shows the best results for the various models as reported in Kayal and Tsat  saronis (2019), in addition to the best performance of our model denoted as c.  Note that the DCT-based model, DCT*, described in Kayal and Tsatsaronis (2019) performed relatively poorly in all tasks, while our model achieved close to state-of-the-art performance in both the 20-NG and R-8 tasks. Our model outperformed EignSent on all tasks and generally performed better than or on par with p-means, ELMo, BERT, and EigenSent⊕Avg on both the 20-NG and R-8. On the other hand, both EigenSent⊕Avg and ELMo performed better than all other models on SST-5."
-        }
-    ]
+  "datasets": [
+    "datasets/1909.03104v2-228.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1909_03104v2_228"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows the best results for the various models as reported in Kayal and Tsat  saronis (2019), in addition to the best performance of our model denoted as c.  Note that the DCT-based model, DCT*, described in Kayal and Tsatsaronis (2019) performed relatively poorly in all tasks, while our model achieved close to state-of-the-art performance in both the 20-NG and R-8 tasks. Our model outperformed EignSent on all tasks and generally performed better than or on par with p-means, ELMo, BERT, and EigenSent⊕Avg on both the 20-NG and R-8. On the other hand, both EigenSent⊕Avg and ELMo performed better than all other models on SST-5."
+    }
+  ]
 }

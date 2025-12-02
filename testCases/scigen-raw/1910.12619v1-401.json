@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1910.12619v1-401.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1910_12619v1_401"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We find that normalization of both structural and lexical features leads to a significant performance gain. Normalization of the frequency feature seems to hurt performance (Table 3)"
-        }
-    ]
+  "datasets": [
+    "datasets/1910.12619v1-401.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1910_12619v1_401"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We find that normalization of both structural and lexical features leads to a significant performance gain. Normalization of the frequency feature seems to hurt performance (Table 3)"
+    }
+  ]
 }

@@ -12,37 +12,37 @@
     "semeval_15": " Graph-based vs vector-based measures"
   },
   {
-    "model": "LCH",
+    "model": "LCH (WordNet)",
     "senseval2": "0.547↓0.000",
     "senseval3": "0.494↓0.000",
     "semeval_15": "0.550↓0.000"
   },
   {
-    "model": "LCH",
+    "model": "LCH (path2vec)",
     "senseval2": "0.527↓0.020",
     "senseval3": "0.472↓0.022",
     "semeval_15": "0.536↓0.014"
   },
   {
-    "model": "ShP",
+    "model": "ShP (WordNet)",
     "senseval2": "0.548↓0.000",
     "senseval3": "0.495↓0.000",
     "semeval_15": "0.550↓0.000"
   },
   {
-    "model": "ShP",
+    "model": "ShP (path2vec)",
     "senseval2": "0.534↓0.014",
     "senseval3": "0.489↓0.006",
     "semeval_15": "0.563↑0.013"
   },
   {
-    "model": "WuP",
+    "model": "WuP (WordNet)",
     "senseval2": "0.547↓0.000",
     "senseval3": "0.487↓0.000",
     "semeval_15": "0.542↓0.000"
   },
   {
-    "model": "WuP",
+    "model": "WuP (path2vec)",
     "senseval2": "0.543↓0.004",
     "senseval3": "0.489↑0.002",
     "semeval_15": "0.545↑0.003"

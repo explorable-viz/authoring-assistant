@@ -16,7 +16,15 @@
         },
         {
             "type": "literal",
-            "value": "33.5 and 31.6"
+            "value": "33.5"
+        },
+        {
+            "type": "literal",
+            "value": "and"
+        },
+        {
+            "type": "literal",
+            "value": "31.6"
         },
         {
             "type": "literal",

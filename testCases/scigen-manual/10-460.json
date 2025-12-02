@@ -12,52 +12,7 @@
     "paragraph": [
         {
             "type": "literal",
-            "value": "We compare all approaches across the InsuranceQA and WikiPassageQA benchmarks as well as the five StackExchange datasets in Table 2. For the cQA answer selection datasets we measure the accuracy, which is the ratio of correctly selected answers, and for the passage retrieval in WikiPassageQA we report MAP/MRR. The results show that COALA substantially outperforms all other relevance matching and semantic similarity approaches on all 7 datasets. For instance, on the cQA datasets COALA improves by "
-        },
-        {
-            "type": "expression",
-            "expression": "\"4.5\"",
-            "categories": ["difference", "ratio"]
-        },
-        {
-            "type": "literal",
-            "value": "pp over CA-Wang and by "
-        },
-        {
-            "type": "expression",
-            "expression": "\"8.8\"",
-            "categories": ["min-max", "difference", "ratio"]
-        },
-        {
-            "type": "literal",
-            "value": "pp over the best semantic similarity method on average.  Our extended approach COALA p-means improves the performance of COALA on these datasets by an additional "
-        },
-        {
-            "type": "expression",
-            "expression": "\"1.6\"",
-            "categories": ["difference", "ratio"]
-        },
-        {
-            "type": "literal",
-            "value": "pp. The proposed power mean aggregation achieves a strong improvement on four datasets and results in a small performance decrease in the remaining three cases.  The results in Table 2 show that our proposed syntax-aware extension COALA syntax-aware, which incorporates syntactic roles of word sequences to learn syntax-aware aspect representations, improves the results in"
-        },
-        {
-            "type": "expression",
-            "expression": "\"5\"",
-            "categories": ["sum"]
-        },
-        {
-            "type": "literal",
-            "value": "out of 7 cases.  It thereby achieves an an average improvement of"
-        },
-        {
-            "type": "expression",
-            "expression": "\"0.7\"",
-            "categories": ["average", "difference", "ratio"]
-        },
-        {
-            "type": "literal",
-            "value": "pp over COALA in our cQA datasets."
+            "value": "We compare all approaches across the InsuranceQA and WikiPassageQA benchmarks as well as the five StackExchange datasets in Table 2. For the cQA answer selection datasets we measure the accuracy, which is the ratio of correctly selected answers, and for the passage retrieval in WikiPassageQA we report MAP/MRR. The results show that COALA substantially outperforms all other relevance matching and semantic similarity approaches on all seven datasets. For instance, on the cQA datasets COALA improves by 4.5pp over CA-Wang and by 8.8pp over the best semantic similarity method on average.  Our extended approach COALA p-means improves the performance of COALA on these datasets by an additional 1.6pp. The proposed power mean aggregation achieves a strong improvement on four datasets and results in a small performance decrease in the remaining three cases.  The results in Table 2 show that our proposed syntax-aware extension COALA syntax-aware, which incorporates syntactic roles of word sequences to learn syntax-aware aspect representations, improves the results in five out of seven cases.  It thereby achieves an an average improvement of 0.7pp over COALA in our cQA datasets."
         }
     ]
 }

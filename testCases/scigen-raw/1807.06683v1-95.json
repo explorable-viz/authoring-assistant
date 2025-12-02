@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1807.06683v1-95.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1807_06683v1_95"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "The results are shown in Table 1. We see that the mean NER performance increases in joint models.  As one can see from the table, it achieved the best results compared to our joint models. However, we cannot confirm the difference between EXT M FEAT and J MULTI models as the calculated p is well above .05."
-        }
-    ]
+  "datasets": [
+    "datasets/1807.06683v1-95.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1807_06683v1_95"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results are shown in Table 1. We see that the mean NER performance increases in joint models.  As one can see from the table, it achieved the best results compared to our joint models. However, we cannot confirm the difference between EXT M FEAT and J MULTI models as the calculated p is well above .05."
+    }
+  ]
 }

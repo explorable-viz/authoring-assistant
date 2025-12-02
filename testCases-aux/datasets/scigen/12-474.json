@@ -73,7 +73,7 @@
   },
   {
     "_1": "FrameNet",
-    "model": "our_mm",
+    "model": "our_mm (im, synsV)",
     "with_lexicon_acc": 88.82,
     "with_lexicon_acc_amb": 75.28,
     "with_lexicon_f1_m": 76.77,
@@ -133,7 +133,7 @@
   },
   {
     "_1": "SALSA",
-    "model": "our_mm",
+    "model": "our_mm (im)",
     "with_lexicon_acc": 80.71,
     "with_lexicon_acc_amb": 75.58,
     "with_lexicon_f1_m": 48.29,

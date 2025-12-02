@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1805.04277v1-42.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1805_04277v1_42"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "The two top rows in Table 1 show conflicting results for UKB.  As the results show, that paper reports a suboptimal use of UKB.  the table also reports the  best performing knowledge-based systems on this dataset.  also report We (Chaplot and Sakajhutdinov, 2018), the latest work on this area, as well as the most frequent sense as given by WordNet counts  The table shows that UKB yields the best overall result."
-        }
-    ]
+  "datasets": [
+    "datasets/1805.04277v1-42.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1805_04277v1_42"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The two top rows in Table 1 show conflicting results for UKB.  As the results show, that paper reports a suboptimal use of UKB.  the table also reports the  best performing knowledge-based systems on this dataset.  also report We (Chaplot and Sakajhutdinov, 2018), the latest work on this area, as well as the most frequent sense as given by WordNet counts  The table shows that UKB yields the best overall result."
+    }
+  ]
 }

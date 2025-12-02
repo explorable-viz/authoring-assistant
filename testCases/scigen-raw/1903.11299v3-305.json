@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1903.11299v3-305.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1903_11299v3_305"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "The table 1 shows the caption retrieval recall on COCO dataset. The first two lines show the state-of-the-art results. The second pair of lines present the results of our model, with W2V and FastText embeddings used as the baseline.  We can see that our model is close to the Deep SemanticVisual Embedding (DSVE) method  while the W2V method is slightly worst, as the representation power of the word embedding is reduced.  The BIVEC English-French method is used in English and on both languages simultaneously. If trained only on English, i.e. only on the COCO dataset like the two previous methods, it shows performance similar to the one of the state-of-the-art. This means training using BIVEC does not weaken the English representation. When trained on English and French together, the recall is increased by 3.35 %, going from 65.58 % to 67.78 %. We can also see an improvement for recall@5 and recall@10, with respectively 1.17 % and 0.85 % of increase. This implies that the similarity learning with French captions increases English recognition when using BIVEC.  First of all, when training with MUSE for English only, we can see a sharp decrease in performance, with a recall going from 66.08 % to 63.10 %. By comparing the model trained with W2V, we obtain similar results. This could come from the fact that both MUSE and W2V embeddings do not have representation for out of vocabulary words like the FastText ones. Moreover, rare words have much more chance to be wrongly projected because of space transformation. When we train the model with additional languages, we can see a slight decrease in performance in English. The maximum decrease is 1.01 % for recall@10, but it is counterbalanced by an increase of 0.29 % for the recall@1.  We evaluated our method on the COCO dataset for English-only results and shown that using BIVEC embeddings enables the use of another language in order to improve the performance. The obtained improvement is a 3.35 % increase in performance on the COCO dataset, and a 15.15 % increase on the Multi30K dataset."
-        }
-    ]
+  "datasets": [
+    "datasets/1903.11299v3-305.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1903_11299v3_305"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The table 1 shows the caption retrieval recall on COCO dataset. The first two lines show the state-of-the-art results. The second pair of lines present the results of our model, with W2V and FastText embeddings used as the baseline.  We can see that our model is close to the Deep SemanticVisual Embedding (DSVE) method  while the W2V method is slightly worst, as the representation power of the word embedding is reduced.  The BIVEC English-French method is used in English and on both languages simultaneously. If trained only on English, i.e. only on the COCO dataset like the two previous methods, it shows performance similar to the one of the state-of-the-art. This means training using BIVEC does not weaken the English representation. When trained on English and French together, the recall is increased by 3.35 %, going from 65.58 % to 67.78 %. We can also see an improvement for recall@5 and recall@10, with respectively 1.17 % and 0.85 % of increase. This implies that the similarity learning with French captions increases English recognition when using BIVEC.  First of all, when training with MUSE for English only, we can see a sharp decrease in performance, with a recall going from 66.08 % to 63.10 %. By comparing the model trained with W2V, we obtain similar results. This could come from the fact that both MUSE and W2V embeddings do not have representation for out of vocabulary words like the FastText ones. Moreover, rare words have much more chance to be wrongly projected because of space transformation. When we train the model with additional languages, we can see a slight decrease in performance in English. The maximum decrease is 1.01 % for recall@10, but it is counterbalanced by an increase of 0.29 % for the recall@1.  We evaluated our method on the COCO dataset for English-only results and shown that using BIVEC embeddings enables the use of another language in order to improve the performance. The obtained improvement is a 3.35 % increase in performance on the COCO dataset, and a 15.15 % increase on the Multi30K dataset."
+    }
+  ]
 }

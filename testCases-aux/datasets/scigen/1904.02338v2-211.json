@@ -48,7 +48,7 @@
     "agree": 33.3
   },
   {
-    "_1": "Supervised",
+    "_1": "Supervised (avg.)",
     "previous_work_soft‡": "—",
     "previous_work_distill†": "—",
     "our_baselines_basic": 31.52,
@@ -104,7 +104,7 @@
     "agree": 19.15
   },
   {
-    "_1": "Zero-shot",
+    "_1": "Zero-shot (avg.)",
     "previous_work_soft‡": "—",
     "previous_work_distill†": "—",
     "our_baselines_basic": 22.25,

@@ -1,6 +1,6 @@
 [
   {
-    "_1": "Supervised",
+    "_1": "Supervised (avg.)",
     "previous_work_sota†": 24.1,
     "previous_work_cpg‡": 19.75,
     "our_baselines_basic": 24.63,
@@ -8,7 +8,7 @@
     "agree": 23.97
   },
   {
-    "_1": "Zero-shot",
+    "_1": "Zero-shot (avg.)",
     "previous_work_sota†": 20.55,
     "previous_work_cpg‡": 11.69,
     "our_baselines_basic": 19.86,

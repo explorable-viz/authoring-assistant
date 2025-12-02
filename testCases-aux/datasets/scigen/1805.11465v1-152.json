@@ -7,7 +7,7 @@
   {
     "model": "local edge + projective decoder",
     "2015": "70.2 \\scalebox 0.8$±0.3$",
-    "2017": " 71.0 ±0.5"
+    "2017": 71.0
   },
   {
     "model": "local edge + fixed-tree decoder",
@@ -30,7 +30,7 @@
     "2017": ""
   },
   {
-    "model": "fixed-tree",
+    "model": "fixed-tree (type-unaware)",
     "2015": "26.0 \\scalebox 0.8$±0.6$",
     "2017": "27.9 \\scalebox 0.8$±0.6$"
   },
@@ -45,12 +45,12 @@
     "2017": ""
   },
   {
-    "model": "CAMR Wang et al.",
+    "model": "CAMR Wang et al. ( 2015 )",
     "2015": 66.5,
     "2017": "-"
   },
   {
-    "model": "JAMR Flanigan et al.",
+    "model": "JAMR Flanigan et al. ( 2016 )",
     "2015": 67,
     "2017": "-"
   },

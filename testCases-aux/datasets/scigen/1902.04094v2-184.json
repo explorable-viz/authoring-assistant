@@ -1,20 +1,20 @@
 [
   {
     "model": "Model",
-    "self_bleu": "Self-BLEU",
+    "self_bleu": "Self-BLEU (↓)",
     "unique_n_grams_self": "n=4",
     "unique_n_grams_wt103": "n=4",
     "unique_n_grams_tbc": "n=4"
   },
   {
-    "model": "BERT",
+    "model": "BERT (large)",
     "self_bleu": 9.43,
     "unique_n_grams_self": 98.01,
     "unique_n_grams_wt103": 98.43,
     "unique_n_grams_tbc": 98.59
   },
   {
-    "model": "BERT",
+    "model": "BERT (base)",
     "self_bleu": 10.06,
     "unique_n_grams_self": 98.14,
     "unique_n_grams_wt103": 98.55,

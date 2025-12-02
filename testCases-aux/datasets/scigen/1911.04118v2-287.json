@@ -27,7 +27,7 @@
     "trec_qa_mrr": 0.843
   },
   {
-    "bert_base": "No noise TandA",
+    "bert_base": "No noise TandA (ASNQ → *)",
     "wikiqa_map": 0.893,
     "wikiqa_drop": "-",
     "wikiqa_mrr": 0.903,
@@ -36,7 +36,7 @@
     "trec_qa_mrr": 0.951
   },
   {
-    "bert_base": "10% noise TandA",
+    "bert_base": "10% noise TandA (ASNQ → *)",
     "wikiqa_map": 0.876,
     "wikiqa_drop": 1.55,
     "wikiqa_mrr": 0.889,
@@ -45,7 +45,7 @@
     "trec_qa_mrr": 0.941
   },
   {
-    "bert_base": "20% noise TandA",
+    "bert_base": "20% noise TandA (ASNQ → *)",
     "wikiqa_map": 0.87,
     "wikiqa_drop": 1.88,
     "wikiqa_mrr": 0.886,

@@ -1,6 +1,6 @@
 [
   {
-    "model": "Baseline",
+    "model": "Baseline (  b=1)",
     "wmt_en_de_bleu": 25.82,
     "wmt_en_de_speedup": "1.15×",
     "wmt_de_en_bleu": 29.83,
@@ -11,7 +11,7 @@
     "wmt_en_fr_speedup": "1.18×"
   },
   {
-    "model": "Baseline",
+    "model": "Baseline (  b=4)",
     "wmt_en_de_bleu": 26.87,
     "wmt_en_de_speedup": "1.00×",
     "wmt_de_en_bleu": 30.73,
@@ -22,7 +22,7 @@
     "wmt_en_fr_speedup": "1.00×"
   },
   {
-    "model": "SAT",
+    "model": "SAT (  k=2)",
     "wmt_en_de_bleu": 22.81,
     "wmt_en_de_speedup": "2.05×",
     "wmt_de_en_bleu": 26.78,
@@ -33,7 +33,7 @@
     "wmt_en_fr_speedup": "2.14×"
   },
   {
-    "model": "SAT",
+    "model": "SAT (  k=4)",
     "wmt_en_de_bleu": 16.44,
     "wmt_en_de_speedup": "3.61×",
     "wmt_de_en_bleu": 21.27,
@@ -44,7 +44,7 @@
     "wmt_en_fr_speedup": "3.34×"
   },
   {
-    "model": "SAT",
+    "model": "SAT (  k=6)",
     "wmt_en_de_bleu": 12.55,
     "wmt_en_de_speedup": "4.86×",
     "wmt_de_en_bleu": 15.23,
@@ -66,7 +66,7 @@
     "wmt_en_fr_speedup": "-"
   },
   {
-    "model": "SynST",
+    "model": "SynST(  k=6)",
     "wmt_en_de_bleu": 20.74,
     "wmt_en_de_speedup": "4.86×",
     "wmt_de_en_bleu": 25.5,

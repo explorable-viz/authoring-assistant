@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1906.07040v1-120.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1906_07040v1_120"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Discussion of Results The left part of Table 1 shows results with the WordNet similarity scores used as gold standard. Path2vec outperforms other graph embeddings, achieving high correlations with WordNet similarities. This shows that our model efficiently approximates different graph measures. The right part of Table 1 shows results  for the correlations with human judgments (SimLex999). We report the results for the best models for each method, all of them (except FSE) using vector size 300 for comparability."
-        }
-    ]
+  "datasets": [
+    "datasets/1906.07040v1-120.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1906_07040v1_120"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Discussion of Results The left part of Table 1 shows results with the WordNet similarity scores used as gold standard. Path2vec outperforms other graph embeddings, achieving high correlations with WordNet similarities. This shows that our model efficiently approximates different graph measures. The right part of Table 1 shows results  for the correlations with human judgments (SimLex999). We report the results for the best models for each method, all of them (except FSE) using vector size 300 for comparability."
+    }
+  ]
 }

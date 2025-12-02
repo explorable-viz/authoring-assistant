@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1905.13126v1-178.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1905_13126v1_178"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "As seen in Table 2, we report the coefficient of determination (r2) for each global metric and dataset.  Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is moderate to poor, especially in the case of coherence"
-        }
-    ]
+  "datasets": [
+    "datasets/1905.13126v1-178.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1905_13126v1_178"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As seen in Table 2, we report the coefficient of determination (r2) for each global metric and dataset.  Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is moderate to poor, especially in the case of coherence"
+    }
+  ]
 }

@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1911.06919v1-311.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1911_06919v1_311"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We present the test results in Table 2.  We are able to reproduce the performance of the baseline model (\"CNN w/ GloVe\"), and find that once again, adding the shallow discourse features improves results.  Interestingly, we found that replacing the CNN with an LSTM results in improved MAE, but worse MAPE. Adding discourse features to this model generally has marginal improvement in all cases.  When we replace the word sequence with EDUs (\"Bi-LSTM w/ latent\" and \"Bi-LSTM w/ shallow\"), we see that the latent features outperform the shallow features."
-        }
-    ]
+  "datasets": [
+    "datasets/1911.06919v1-311.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1911_06919v1_311"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We present the test results in Table 2.  We are able to reproduce the performance of the baseline model (\"CNN w/ GloVe\"), and find that once again, adding the shallow discourse features improves results.  Interestingly, we found that replacing the CNN with an LSTM results in improved MAE, but worse MAPE. Adding discourse features to this model generally has marginal improvement in all cases.  When we replace the word sequence with EDUs (\"Bi-LSTM w/ latent\" and \"Bi-LSTM w/ shallow\"), we see that the latent features outperform the shallow features."
+    }
+  ]
 }

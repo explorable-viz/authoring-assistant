@@ -8,7 +8,7 @@
     "average_precision": 0.795
   },
   {
-    "method": "SPON",
+    "method": "SPON (Our Approach)",
     "average_precision": 0.811
   }
 ]

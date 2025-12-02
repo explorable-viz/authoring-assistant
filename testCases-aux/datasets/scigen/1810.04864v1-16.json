@@ -30,23 +30,23 @@
     "rouge_l": "own"
   },
   {
-    "system": "word",
+    "system": "word (best on dev.)",
     "bleu": 44.2,
     "rouge_l": 60.9
   },
   {
-    "system": "char.",
+    "system": "char. (best on dev.)",
     "bleu": 41.3,
     "rouge_l": 58.4
   },
   {
     "system": "word",
-    "bleu": "37.0±3.8",
-    "rouge_l": "56.3±2.6"
+    "bleu": 37.0,
+    "rouge_l": 56.3
   },
   {
     "system": "character",
-    "bleu": "39.7±1.7",
-    "rouge_l": "58.4±0.7"
+    "bleu": 39.7,
+    "rouge_l": 58.4
   }
 ]

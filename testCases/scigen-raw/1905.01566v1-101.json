@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1905.01566v1-101.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1905_01566v1_101"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach outperforms the concurrently-published Xiong et al. (2019);"
-        }
-    ]
+  "datasets": [
+    "datasets/1905.01566v1-101.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1905_01566v1_101"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach outperforms the concurrently-published Xiong et al. (2019);"
+    }
+  ]
 }

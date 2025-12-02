@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1809.00344v1-214.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1809_00344v1_214"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "For the Europarl data, we see decent improvements with InitDec for En-Et (+1.11 BLEU) and En-De (+1.60 BLEU), and with InitDec+AddDec for En-Fr (+1.19 BLEU). We also observe that, for all language-pairs, both translation directions benefit from context,  On the other hand, for the Subtitles data, we see a maximum improvement of +0.30 BLEU for InitDec+AddDec.  The next set of experiments evaluates the five different approaches for computing the sourceside context. from Table 2 that for English-Estonian and English-German, our model indeed benefits from using is evident  Finally, our results with source, target and dual contexts are reported. Interestingly, just using the source context is sufficient for English-Estonian and English-German. For English-French, on the other hand, we see significant improvements for the models using the target-side conversation history over using only the source-side.  Unlike Europarl, for Subtitles, we see improvements for our Src-TgtMix dual context variant over the Src-Tgt one for En→Ru,  To summarise, for majority of the cases our Language-Specific Sentence-level Attention is a winner or a close second. Using the Target Context is useful when the base model generates reasonable-quality translations; otherwise, using the Source Context should suffice."
-        }
-    ]
+  "datasets": [
+    "datasets/1809.00344v1-214.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1809_00344v1_214"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For the Europarl data, we see decent improvements with InitDec for En-Et (+1.11 BLEU) and En-De (+1.60 BLEU), and with InitDec+AddDec for En-Fr (+1.19 BLEU). We also observe that, for all language-pairs, both translation directions benefit from context,  On the other hand, for the Subtitles data, we see a maximum improvement of +0.30 BLEU for InitDec+AddDec.  The next set of experiments evaluates the five different approaches for computing the sourceside context. from Table 2 that for English-Estonian and English-German, our model indeed benefits from using is evident  Finally, our results with source, target and dual contexts are reported. Interestingly, just using the source context is sufficient for English-Estonian and English-German. For English-French, on the other hand, we see significant improvements for the models using the target-side conversation history over using only the source-side.  Unlike Europarl, for Subtitles, we see improvements for our Src-TgtMix dual context variant over the Src-Tgt one for En→Ru,  To summarise, for majority of the cases our Language-Specific Sentence-level Attention is a winner or a close second. Using the Target Context is useful when the base model generates reasonable-quality translations; otherwise, using the Source Context should suffice."
+    }
+  ]
 }

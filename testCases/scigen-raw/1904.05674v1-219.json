@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1904.05674v1-219.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1904_05674v1_219"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Evaluation results on text classification are presented in Table 2. We observe that our model performs better than the baseline across all metrics for both averaging approaches (AvgCD, AvgD), while the usage of dominant topics appears to have lower performance (MaxCD). Specifically, we get an improvement of 2 − 2.5% on topic-based average and 0.5 − 1% on simple average combination compared to using Global-DSM."
-        }
-    ]
+  "datasets": [
+    "datasets/1904.05674v1-219.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1904_05674v1_219"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Evaluation results on text classification are presented in Table 2. We observe that our model performs better than the baseline across all metrics for both averaging approaches (AvgCD, AvgD), while the usage of dominant topics appears to have lower performance (MaxCD). Specifically, we get an improvement of 2 − 2.5% on topic-based average and 0.5 − 1% on simple average combination compared to using Global-DSM."
+    }
+  ]
 }

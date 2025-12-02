@@ -1,33 +1,33 @@
 [
   {
     "model": " Hard",
-    "roc": 62.2,
-    "sst": 75.5,
-    "amazon": 88.5
+    "roc": "62.2 (4K)",
+    "sst": "75.5 (6K)",
+    "amazon": "88.5 (67K)"
   },
   {
     "model": " DAN",
-    "roc": 64.3,
-    "sst": 83.1,
-    "amazon": 85.4
+    "roc": "64.3 (91K)",
+    "sst": "83.1 (91K)",
+    "amazon": "85.4 (91K)"
   },
   {
     "model": " BiLSTM",
-    "roc": 65.2,
-    "sst": 84.8,
-    "amazon": 90.8
+    "roc": "65.2 (844K)",
+    "sst": "84.8 (1.5M)",
+    "amazon": " 90.8 (844K)"
   },
   {
     "model": " CNN",
-    "roc": 64.3,
-    "sst": 82.2,
-    "amazon": 90.2
+    "roc": "64.3 (155K)",
+    "sst": "82.2 (62K)",
+    "amazon": "90.2 (305K)"
   },
   {
     "model": " SoPa",
-    "roc": 66.5,
-    "sst": 85.6,
-    "amazon": 90.5
+    "roc": " 66.5 (255K)",
+    "sst": " 85.6 (255K)",
+    "amazon": "90.5 (256K)"
   },
   {
     "model": " SoPa  ms1",

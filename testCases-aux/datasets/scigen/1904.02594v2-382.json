@@ -5,52 +5,52 @@
     "mrda": 78.7
   },
   {
-    "model": "Kalchbrenner and Blunsom",
+    "model": "Kalchbrenner and Blunsom ( 2013 )",
     "swda": 73.9,
     "mrda": "-"
   },
   {
-    "model": "Lee and Dernoncourt",
+    "model": "Lee and Dernoncourt ( 2016 )",
     "swda": 73.9,
     "mrda": 84.6
   },
   {
-    "model": "Khanpour et al.",
+    "model": "Khanpour et al. ( 2016 )",
     "swda": 75.8,
     "mrda": 86.8
   },
   {
-    "model": "Ji et al.",
+    "model": "Ji et al. ( 2016 )",
     "swda": 77.0,
     "mrda": "-"
   },
   {
-    "model": "Shen and Lee",
+    "model": "Shen and Lee ( 2016 )",
     "swda": 72.6,
     "mrda": "-"
   },
   {
-    "model": "Li and Wu",
+    "model": "Li and Wu ( 2016 )",
     "swda": 79.4,
     "mrda": "-"
   },
   {
-    "model": "Ortega and Vu",
+    "model": "Ortega and Vu ( 2017 )",
     "swda": 73.8,
     "mrda": 84.3
   },
   {
-    "model": "Tran et al.",
+    "model": "Tran et al. ( 2017 )",
     "swda": 74.5,
     "mrda": "-"
   },
   {
-    "model": "Kumar et al.",
+    "model": "Kumar et al. ( 2018 )",
     "swda": 79.2,
     "mrda": 90.9
   },
   {
-    "model": "Chen et al.",
+    "model": "Chen et al. ( 2018 )",
     "swda": 81.3,
     "mrda": 91.7
   },

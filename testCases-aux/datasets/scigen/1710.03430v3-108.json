@@ -8,30 +8,30 @@
   },
   {
     "model": "RDE",
-    "samsung_qa_1_in_2r_1": "0.978 ±0.002",
-    "samsung_qa_1_in_10r_1": "0.869 ±0.009",
-    "samsung_qa_1_in_10r_2": "0.966 ±0.003",
-    "samsung_qa_1_in_10r_5": "0.997 ±0.001"
+    "samsung_qa_1_in_2r_1": 0.978,
+    "samsung_qa_1_in_10r_1": 0.869,
+    "samsung_qa_1_in_10r_2": 0.966,
+    "samsung_qa_1_in_10r_5": 0.997
   },
   {
     "model": "RDE-LTC",
-    "samsung_qa_1_in_2r_1": "0.981 ±0.002",
-    "samsung_qa_1_in_10r_1": "0.880 ±0.009",
-    "samsung_qa_1_in_10r_2": "0.970 ±0.003",
-    "samsung_qa_1_in_10r_5": "0.997 ±0.001"
+    "samsung_qa_1_in_2r_1": 0.981,
+    "samsung_qa_1_in_10r_1": 0.88,
+    "samsung_qa_1_in_10r_2": 0.97,
+    "samsung_qa_1_in_10r_5": 0.997
   },
   {
     "model": "HRDE",
-    "samsung_qa_1_in_2r_1": "0.981 ±0.002",
-    "samsung_qa_1_in_10r_1": "0.885 ±0.011",
-    "samsung_qa_1_in_10r_2": "0.971 ±0.004",
-    "samsung_qa_1_in_10r_5": "0.997 ±0.001"
+    "samsung_qa_1_in_2r_1": 0.981,
+    "samsung_qa_1_in_10r_1": 0.885,
+    "samsung_qa_1_in_10r_2": 0.971,
+    "samsung_qa_1_in_10r_5": 0.997
   },
   {
     "model": "HRDE-LTC",
-    "samsung_qa_1_in_2r_1": " 0.983 ±0.002",
-    "samsung_qa_1_in_10r_1": " 0.890 ±0.010",
-    "samsung_qa_1_in_10r_2": " 0.972 ±0.003",
-    "samsung_qa_1_in_10r_5": " 0.998 ±0.001"
+    "samsung_qa_1_in_2r_1": 0.983,
+    "samsung_qa_1_in_10r_1": 0.89,
+    "samsung_qa_1_in_10r_2": 0.972,
+    "samsung_qa_1_in_10r_5": 0.998
   }
 ]

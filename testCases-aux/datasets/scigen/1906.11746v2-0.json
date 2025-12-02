@@ -1,6 +1,6 @@
 [
   {
-    "_1": "Groschwitz et al.",
+    "_1": "Groschwitz et al. ( 2018 )",
     "dm_id_f": "-",
     "dm_ood_f": "-",
     "pas_id_f": "-",
@@ -13,7 +13,7 @@
     "amr_2017_smatch_f": 71.0
   },
   {
-    "_1": "Lyu and Titov",
+    "_1": "Lyu and Titov ( 2018 )",
     "dm_id_f": "-",
     "dm_ood_f": "-",
     "pas_id_f": "-",
@@ -23,10 +23,10 @@
     "eds_smatch_f": "-",
     "eds_edm": "-",
     "amr_2015_smatch_f": 73.7,
-    "amr_2017_smatch_f": "74.4 ±0.16"
+    "amr_2017_smatch_f": 74.4
   },
   {
-    "_1": "Zhang et al.",
+    "_1": "Zhang et al. ( 2019 )",
     "dm_id_f": "-",
     "dm_ood_f": "-",
     "pas_id_f": "-",
@@ -36,7 +36,7 @@
     "eds_smatch_f": "-",
     "eds_edm": "-",
     "amr_2015_smatch_f": "-",
-    "amr_2017_smatch_f": " 76.3 ±0.1"
+    "amr_2017_smatch_f": 76.3
   },
   {
     "_1": "Peng et al. ( 2017 ) Basic",
@@ -52,7 +52,7 @@
     "amr_2017_smatch_f": "-"
   },
   {
-    "_1": "Dozat and Manning",
+    "_1": "Dozat and Manning ( 2018 )",
     "dm_id_f": 93.7,
     "dm_ood_f": 88.9,
     "pas_id_f": 94.0,
@@ -65,7 +65,7 @@
     "amr_2017_smatch_f": "-"
   },
   {
-    "_1": "Buys and Blunsom",
+    "_1": "Buys and Blunsom ( 2017 )",
     "dm_id_f": "-",
     "dm_ood_f": "-",
     "pas_id_f": "-",
@@ -78,7 +78,7 @@
     "amr_2017_smatch_f": "-"
   },
   {
-    "_1": "Chen et al.",
+    "_1": "Chen et al. ( 2018 )",
     "dm_id_f": "-",
     "dm_ood_f": "-",
     "pas_id_f": "-",
@@ -91,30 +91,30 @@
     "amr_2017_smatch_f": "-"
   },
   {
-    "_1": "This paper",
-    "dm_id_f": "90.4 ±0.2",
-    "dm_ood_f": "84.3 ±0.2",
-    "pas_id_f": "91.4 ±0.1",
-    "pas_ood_f": "86.6 ±0.1",
-    "psd_id_f": "78.1 ±0.2",
-    "psd_ood_f": "74.5 ±0.2",
-    "eds_smatch_f": "87.6 ±0.1",
-    "eds_edm": "82.5 ±0.1",
-    "amr_2015_smatch_f": "69.2 ±0.4",
-    "amr_2017_smatch_f": "70.7 ±0.2"
+    "_1": "This paper (GloVe)",
+    "dm_id_f": 90.4,
+    "dm_ood_f": 84.3,
+    "pas_id_f": 91.4,
+    "pas_ood_f": 86.6,
+    "psd_id_f": 78.1,
+    "psd_ood_f": 74.5,
+    "eds_smatch_f": 87.6,
+    "eds_edm": 82.5,
+    "amr_2015_smatch_f": 69.2,
+    "amr_2017_smatch_f": 70.7
   },
   {
-    "_1": "This paper",
-    "dm_id_f": " 93.9 ±0.1",
-    "dm_ood_f": " 90.3 ±0.1",
-    "pas_id_f": " 94.5 ±0.1",
-    "pas_ood_f": " 92.5 ±0.1",
-    "psd_id_f": " 82.0 ±0.1",
-    "psd_ood_f": " 81.5 ±0.3",
-    "eds_smatch_f": "90.1 ±0.1",
-    "eds_edm": "84.9 ±0.1",
-    "amr_2015_smatch_f": " 74.3 ±0.2",
-    "amr_2017_smatch_f": "75.3 ±0.2"
+    "_1": "This paper (BERT)",
+    "dm_id_f": 93.9,
+    "dm_ood_f": 90.3,
+    "pas_id_f": 94.5,
+    "pas_ood_f": 92.5,
+    "psd_id_f": 82.0,
+    "psd_ood_f": 81.5,
+    "eds_smatch_f": 90.1,
+    "eds_edm": 84.9,
+    "amr_2015_smatch_f": 74.3,
+    "amr_2017_smatch_f": 75.3
   },
   {
     "_1": "Peng et al. ( 2017 ) Freda1",
@@ -143,29 +143,29 @@
     "amr_2017_smatch_f": "-"
   },
   {
-    "_1": "This paper, MTL",
-    "dm_id_f": "91.2 ±0.1",
-    "dm_ood_f": "85.7 ±0.0",
-    "pas_id_f": "92.2 ±0.2",
-    "pas_ood_f": "88.0 ±0.3",
-    "psd_id_f": "78.9 ±0.3",
-    "psd_ood_f": "76.2 ±0.4",
-    "eds_smatch_f": "88.2 ±0.1",
-    "eds_edm": "83.3 ±0.1",
+    "_1": "This paper, MTL (GloVe)",
+    "dm_id_f": 91.2,
+    "dm_ood_f": 85.7,
+    "pas_id_f": 92.2,
+    "pas_ood_f": 88.0,
+    "psd_id_f": 78.9,
+    "psd_ood_f": 76.2,
+    "eds_smatch_f": 88.2,
+    "eds_edm": 83.3,
     "amr_2015_smatch_f": "(70.4) ±0.2",
-    "amr_2017_smatch_f": "71.2 ±0.2"
+    "amr_2017_smatch_f": 71.2
   },
   {
-    "_1": "This paper, MTL",
-    "dm_id_f": " 94.1 ±0.1",
-    "dm_ood_f": " 90.5 ±0.1",
-    "pas_id_f": " 94.7 ±0.1",
-    "pas_ood_f": " 92.8 ±0.1",
-    "psd_id_f": " 82.1 ±0.2",
-    "psd_ood_f": " 81.6 ±0.1",
-    "eds_smatch_f": "90.4 ±0.1",
-    "eds_edm": "85.2 ±0.1",
-    "amr_2015_smatch_f": "(74.5)3 ±0.1",
-    "amr_2017_smatch_f": "75.3 ±0.1"
+    "_1": "This paper, MTL (BERT)",
+    "dm_id_f": 94.1,
+    "dm_ood_f": 90.5,
+    "pas_id_f": 94.7,
+    "pas_ood_f": 92.8,
+    "psd_id_f": 82.1,
+    "psd_ood_f": 81.6,
+    "eds_smatch_f": 90.4,
+    "eds_edm": 85.2,
+    "amr_2015_smatch_f": "(74.5)3",
+    "amr_2017_smatch_f": 75.3
   }
 ]

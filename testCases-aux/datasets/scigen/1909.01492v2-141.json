@@ -24,7 +24,7 @@
     "ag_char_level_adv_acc": 77.5
   },
   {
-    "training": "Verifiable",
+    "training": "Verifiable (IBP)",
     "acc": 87.6,
     "sst_char_level_adv_acc": 73.1,
     "oracle": 87.1,

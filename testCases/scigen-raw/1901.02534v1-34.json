@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1901.02534v1-34.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1901_02534v1_34"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "makes the FEVER Title Five Oracle performance better than FEVER Title Five.  The Transformer model is accurate enough that oracle guessing does not help."
-        }
-    ]
+  "datasets": [
+    "datasets/1901.02534v1-34.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1901_02534v1_34"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "makes the FEVER Title Five Oracle performance better than FEVER Title Five.  The Transformer model is accurate enough that oracle guessing does not help."
+    }
+  ]
 }

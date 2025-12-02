@@ -20,7 +20,7 @@
     "r_2": 26.02
   },
   {
-    "model": "Two-Stage + RL",
+    "model": "Two-Stage + RL (Ours)",
     "r_1": 45.33,
     "r_2": 26.53
   }

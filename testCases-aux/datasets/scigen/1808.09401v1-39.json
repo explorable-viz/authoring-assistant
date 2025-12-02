@@ -1,6 +1,6 @@
 [
   {
-    "model": " Indirect:   O",
+    "model": " Indirect:   O(  n2)",
     "te3‡_p": "",
     "te3‡_r": "",
     "te3‡_f": "",
@@ -9,7 +9,7 @@
     "td‡_f": ""
   },
   {
-    "model": "TL2RTL",
+    "model": "TL2RTL (  Lτ)",
     "te3‡_p": 53.5,
     "te3‡_r": 51.1,
     "te3‡_f": 52.3,
@@ -18,7 +18,7 @@
     "td‡_f": 60.1
   },
   {
-    "model": "TL2RTL",
+    "model": "TL2RTL (  Lτce)",
     "te3‡_p": 53.9,
     "te3‡_r": 51.7,
     "te3‡_f": 52.8,
@@ -27,7 +27,7 @@
     "td‡_f": 60.9
   },
   {
-    "model": "TL2RTL",
+    "model": "TL2RTL (  Lτh)",
     "te3‡_p": 52.8,
     "te3‡_r": 51.1,
     "te3‡_f": 51.9,
@@ -36,7 +36,7 @@
     "td‡_f": 59.2
   },
   {
-    "model": "TL2RTL",
+    "model": "TL2RTL (  L∗)",
     "te3‡_p": 52.6,
     "te3‡_r": 52.0,
     "te3‡_f": 52.3,
@@ -45,7 +45,7 @@
     "td‡_f": 62.3
   },
   {
-    "model": " Direct:   O",
+    "model": " Direct:   O(  n)",
     "te3‡_p": "",
     "te3‡_r": "",
     "te3‡_f": "",
@@ -54,7 +54,7 @@
     "td‡_f": ""
   },
   {
-    "model": "S-TLM",
+    "model": "S-TLM (  Lτ)",
     "te3‡_p": 50.1,
     "te3‡_r": 50.4,
     "te3‡_f": 50.2,
@@ -63,7 +63,7 @@
     "td‡_f": 58.6
   },
   {
-    "model": "S-TLM",
+    "model": "S-TLM (  Lτce)",
     "te3‡_p": 50.1,
     "te3‡_r": 50.0,
     "te3‡_f": 50.1,
@@ -72,7 +72,7 @@
     "td‡_f": 53.5
   },
   {
-    "model": "S-TLM",
+    "model": "S-TLM (  Lτh)",
     "te3‡_p": 51.5,
     "te3‡_r": 51.7,
     "te3‡_f": 51.6,
@@ -81,7 +81,7 @@
     "td‡_f": 55.7
   },
   {
-    "model": "S-TLM",
+    "model": "S-TLM (  L∗)",
     "te3‡_p": 50.9,
     "te3‡_r": 51.0,
     "te3‡_f": 51.0,
@@ -90,7 +90,7 @@
     "td‡_f": 55.9
   },
   {
-    "model": "C-TLM",
+    "model": "C-TLM (  Lτ)",
     "te3‡_p": 56.2,
     "te3‡_r": 56.1,
     "te3‡_f": 56.1,
@@ -99,7 +99,7 @@
     "td‡_f": 58.4
   },
   {
-    "model": "C-TLM",
+    "model": "C-TLM (  Lτce)",
     "te3‡_p": 54.4,
     "te3‡_r": 55.4,
     "te3‡_f": 54.9,
@@ -108,7 +108,7 @@
     "td‡_f": 54.7
   },
   {
-    "model": "C-TLM",
+    "model": "C-TLM (  Lτh)",
     "te3‡_p": 55.7,
     "te3‡_r": 55.5,
     "te3‡_f": 55.6,
@@ -117,7 +117,7 @@
     "td‡_f": 55.1
   },
   {
-    "model": "C-TLM",
+    "model": "C-TLM (  L∗)",
     "te3‡_p": 54.0,
     "te3‡_r": 54.3,
     "te3‡_f": 54.1,

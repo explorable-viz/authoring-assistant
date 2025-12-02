@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1904.05426v1-143.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1904_05426v1_143"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "we evaluate our four labeling strategies using the many-to-one approach, as presented in Table 1.  In all cases, clustering by type with Brown-based algorithms works better than using a sophisticated tagger such as A-HMM."
-        }
-    ]
+  "datasets": [
+    "datasets/1904.05426v1-143.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1904_05426v1_143"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "we evaluate our four labeling strategies using the many-to-one approach, as presented in Table 1.  In all cases, clustering by type with Brown-based algorithms works better than using a sophisticated tagger such as A-HMM."
+    }
+  ]
 }

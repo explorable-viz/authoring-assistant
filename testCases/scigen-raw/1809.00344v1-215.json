@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1809.00344v1-215.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1809_00344v1_215"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "From Table 3, it can be seen that our model surpasses the local-context baseline for Europarl showing that the wider context is indeed beneficial  For En-Ru, it can be seen that using previous sentence is sufficient"
-        }
-    ]
+  "datasets": [
+    "datasets/1809.00344v1-215.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1809_00344v1_215"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "From Table 3, it can be seen that our model surpasses the local-context baseline for Europarl showing that the wider context is indeed beneficial  For En-Ru, it can be seen that using previous sentence is sufficient"
+    }
+  ]
 }

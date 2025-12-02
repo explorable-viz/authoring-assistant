@@ -6,13 +6,13 @@
     "kce_0_3": 0.3
   },
   {
-    "attack": "USA",
+    "attack": "USA (E)",
     "kill": "war",
     "word2vec_0_69": 0.46,
     "kce_0_3": 0.3
   },
   {
-    "attack": "911 attac",
+    "attack": "911 attack (E)",
     "kill": "attac",
     "word2vec_0_69": 0.72,
     "kce_0_3": 0.3
@@ -24,7 +24,7 @@
     "kce_0_3": 0.9
   },
   {
-    "attack": "hotel",
+    "attack": "hotel (E)",
     "kill": "travel",
     "word2vec_0_69": 0.49,
     "kce_0_3": 0.9
@@ -36,7 +36,7 @@
     "kce_0_3": 0.7
   },
   {
-    "attack": "business",
+    "attack": "business (E)",
     "kill": "increase",
     "word2vec_0_69": 0.43,
     "kce_0_3": 0.7
@@ -48,7 +48,7 @@
     "kce_0_3": -0.3
   },
   {
-    "attack": "people",
+    "attack": "people (E)",
     "kill": "wor",
     "word2vec_0_69": 0.4,
     "kce_0_3": -0.3

@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1809.00647v1-183.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1809_00647v1_183"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We inspect some pairs of events and entities in different kernels and list some examples in Table 5.  The pairs in Table 3 exhibit interesting types of relations: e.g.,\"arrest-charge\" and \"attack-kill\" form script-like chains; \"911 attack\" forms a quasiidentity relation (Recasens et al., 2010) with \"attack\"; \"business\" and \"increase\" are candidates as frame-argument structure."
-        }
-    ]
+  "datasets": [
+    "datasets/1809.00647v1-183.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1809_00647v1_183"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We inspect some pairs of events and entities in different kernels and list some examples in Table 5.  The pairs in Table 3 exhibit interesting types of relations: e.g.,\"arrest-charge\" and \"attack-kill\" form script-like chains; \"911 attack\" forms a quasiidentity relation (Recasens et al., 2010) with \"attack\"; \"business\" and \"increase\" are candidates as frame-argument structure."
+    }
+  ]
 }

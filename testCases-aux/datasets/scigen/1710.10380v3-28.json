@@ -41,7 +41,7 @@
   {
     "encoder_type": "RNN",
     "encoder_dim": "2x300",
-    "decoder_type": "CNN",
+    "decoder_type": "CNN(10)",
     "decoder_dim": "600-1200-300",
     "hrs": 11,
     "sick_r": 0.8474,
@@ -54,7 +54,7 @@
   {
     "encoder_type": "RNN",
     "encoder_dim": "2x300",
-    "decoder_type": "CNN",
+    "decoder_type": "CNN(50)",
     "decoder_dim": "600-1200-300",
     "hrs": 27,
     "sick_r": 0.8533,
@@ -195,10 +195,10 @@
     "trec": 92.2
   },
   {
-    "encoder_type": "Skip-thought",
-    "encoder_dim": "Skip-thought",
-    "decoder_type": "Skip-thought",
-    "decoder_dim": "Skip-thought",
+    "encoder_type": "Skip-thought (Kiros et al.,  2015 )",
+    "encoder_dim": "Skip-thought (Kiros et al.,  2015 )",
+    "decoder_type": "Skip-thought (Kiros et al.,  2015 )",
+    "decoder_dim": "Skip-thought (Kiros et al.,  2015 )",
     "hrs": 336,
     "sick_r": 0.8584,
     "sick_e": 82.3,
@@ -208,10 +208,10 @@
     "trec": 92.2
   },
   {
-    "encoder_type": "Skip-thought+LN",
-    "encoder_dim": "Skip-thought+LN",
-    "decoder_type": "Skip-thought+LN",
-    "decoder_dim": "Skip-thought+LN",
+    "encoder_type": "Skip-thought+LN (Ba et al.,  2016 )",
+    "encoder_dim": "Skip-thought+LN (Ba et al.,  2016 )",
+    "decoder_type": "Skip-thought+LN (Ba et al.,  2016 )",
+    "decoder_dim": "Skip-thought+LN (Ba et al.,  2016 )",
     "hrs": 720,
     "sick_r": 0.858,
     "sick_e": 79.5,

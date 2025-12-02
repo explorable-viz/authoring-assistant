@@ -44,7 +44,7 @@
     "sp_10k_average": 0.25
   },
   {
-    "model": "BERT",
+    "model": "BERT (static)",
     "downstream": "Friendly",
     "keller_dobj": 0.11,
     "keller_amod": 0.05,
@@ -55,7 +55,7 @@
     "sp_10k_average": 0.28
   },
   {
-    "model": "BERT",
+    "model": "BERT (dynamic)",
     "downstream": "Friendly",
     "keller_dobj": 0.19,
     "keller_amod": 0.23,

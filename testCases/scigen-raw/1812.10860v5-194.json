@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1812.10860v5-194.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1812_10860v5_194"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Tables 2 and 3 respectively show results for our pretraining and intermediate training experiments.  Looking to Table 3, using ELMo uniformly improves over training the encoder from scratch. The ELMo-augmented random baseline is strong, lagging behind the single-task baseline by less than a point. Most intermediate tasks beat the random baseline, but several fail to significantly outperform the single-task baseline. MNLI and English–German translation perform best with ELMo, with SkipThought and DisSent also beating the single-task baseline. Intermediate multitask training on all the non-GLUE tasks produces our best-performing ELMo model. Using BERT consistently outperforms ELMo and pretraining from scratch. We find that intermediate training on each of MNLI, QQP, and STS leads to improvements over no intermediate training, while intermediate training on the other tasks harms transfer performance. The improve  ments gained via STS, a small-data task, versus the negative impact of fairly large-data tasks (e.g. QNLI), suggests that the benefit of intermediate training is not solely due to additional training, but that the signal provided by the intermediate task complements the original language modeling objective. Intermediate training on generation tasks such as MT and SkipThought significantly impairs BERT's transfer ability. We speculate that this degradation may be due to catastrophic forgetting in fine-tuning for a task substantially different from the tasks BERT was originally trained on. This phenomenon might be mitigated in our ELMo models via the frozen encoder and skip connection. On the test set, we lag slightly behind the BERT base results from Devlin et al. (2019), likely due in part to our limited hyperparameter tuning."
-        }
-    ]
+  "datasets": [
+    "datasets/1812.10860v5-194.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1812_10860v5_194"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Tables 2 and 3 respectively show results for our pretraining and intermediate training experiments.  Looking to Table 3, using ELMo uniformly improves over training the encoder from scratch. The ELMo-augmented random baseline is strong, lagging behind the single-task baseline by less than a point. Most intermediate tasks beat the random baseline, but several fail to significantly outperform the single-task baseline. MNLI and English–German translation perform best with ELMo, with SkipThought and DisSent also beating the single-task baseline. Intermediate multitask training on all the non-GLUE tasks produces our best-performing ELMo model. Using BERT consistently outperforms ELMo and pretraining from scratch. We find that intermediate training on each of MNLI, QQP, and STS leads to improvements over no intermediate training, while intermediate training on the other tasks harms transfer performance. The improve  ments gained via STS, a small-data task, versus the negative impact of fairly large-data tasks (e.g. QNLI), suggests that the benefit of intermediate training is not solely due to additional training, but that the signal provided by the intermediate task complements the original language modeling objective. Intermediate training on generation tasks such as MT and SkipThought significantly impairs BERT's transfer ability. We speculate that this degradation may be due to catastrophic forgetting in fine-tuning for a task substantially different from the tasks BERT was originally trained on. This phenomenon might be mitigated in our ELMo models via the frozen encoder and skip connection. On the test set, we lag slightly behind the BERT base results from Devlin et al. (2019), likely due in part to our limited hyperparameter tuning."
+    }
+  ]
 }

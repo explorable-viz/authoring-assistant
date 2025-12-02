@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1910.07154v1-297.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1910_07154v1_297"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "For the subtask of question generation, the results in Table 1 show that the system is able to generate questions given a claim with considerably good accuracy. The conversion accuracy is defined as the ratio of the number of claims in which the named entities are extracted to the number of claims. The results also support our assumption that the claims generally feature information about one or more entities.  Ta"
-        }
-    ]
+  "datasets": [
+    "datasets/1910.07154v1-297.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1910_07154v1_297"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For the subtask of question generation, the results in Table 1 show that the system is able to generate questions given a claim with considerably good accuracy. The conversion accuracy is defined as the ratio of the number of claims in which the named entities are extracted to the number of claims. The results also support our assumption that the claims generally feature information about one or more entities.  Ta"
+    }
+  ]
 }

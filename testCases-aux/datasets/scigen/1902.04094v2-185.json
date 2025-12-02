@@ -1,12 +1,12 @@
 [
   {
-    "model": "BERT",
+    "model": "BERT (large)",
     "corpus_bleu_wt103": 5.05,
     "corpus_bleu_tbc": 7.6,
     "ppl": 331.47
   },
   {
-    "model": "BERT",
+    "model": "BERT (base)",
     "corpus_bleu_wt103": 7.8,
     "corpus_bleu_tbc": 7.06,
     "ppl": 279.1

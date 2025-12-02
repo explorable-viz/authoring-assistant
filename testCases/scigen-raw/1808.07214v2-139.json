@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1808.07214v2-139.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1808_07214v2_139"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 3 gives an overview of the impact on performance when specific features are removed: the entire lexicon, lexicon expansion, letter identity, 'vowel' features from Section 3.1, and both of the latter. Performance is high even in ablation scenarios, though we keep in mind that baselines for the task are high (e.g. 'most frequent lookup', the UDPipe strategy, achieves close to 90%). The results show the centrality of the lexicon: removing lexicon lookup features degrades performance by about 3.5% perfect accuracy, or 5.5 F-score points. All other ablations impact performance by less than 1% or 1.5 F-score points. Expanding the lexicon using Wikipedia data offers a contribution of 0.3–0.4 points, confirming the original lexicon's incompleteness.10 Looking more closely at the other features, it is surprising that identity of the letters is not crucial, as long as we have access to dictionary lookup using the letters. Nevertheless, removing letter identity impacts especially boundary recall, perhaps  does not break down drastically. The impact on Wiki5k is stronger, possibly because the necessary memorization of familiar contexts is less effective out of domain.  because some letters receive identical lookup values (e.g. single letter prepositions such as b 'in', l 'to') but have different segmentation likelihoods. The 'vowel' features, though ostensibly redundant with letter identity, help a little, causing 0.33 SPMRL F-score point degradation if removed. A"
-        }
-    ]
+  "datasets": [
+    "datasets/1808.07214v2-139.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1808_07214v2_139"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 gives an overview of the impact on performance when specific features are removed: the entire lexicon, lexicon expansion, letter identity, 'vowel' features from Section 3.1, and both of the latter. Performance is high even in ablation scenarios, though we keep in mind that baselines for the task are high (e.g. 'most frequent lookup', the UDPipe strategy, achieves close to 90%). The results show the centrality of the lexicon: removing lexicon lookup features degrades performance by about 3.5% perfect accuracy, or 5.5 F-score points. All other ablations impact performance by less than 1% or 1.5 F-score points. Expanding the lexicon using Wikipedia data offers a contribution of 0.3–0.4 points, confirming the original lexicon's incompleteness.10 Looking more closely at the other features, it is surprising that identity of the letters is not crucial, as long as we have access to dictionary lookup using the letters. Nevertheless, removing letter identity impacts especially boundary recall, perhaps  does not break down drastically. The impact on Wiki5k is stronger, possibly because the necessary memorization of familiar contexts is less effective out of domain.  because some letters receive identical lookup values (e.g. single letter prepositions such as b 'in', l 'to') but have different segmentation likelihoods. The 'vowel' features, though ostensibly redundant with letter identity, help a little, causing 0.33 SPMRL F-score point degradation if removed. A"
+    }
+  ]
 }

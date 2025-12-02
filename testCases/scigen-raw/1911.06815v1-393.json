@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1911.06815v1-393.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1911_06815v1_393"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "The left side of Table 1 shows the performance for the three baselines and for our multi-granularity network on the FLC task.  Table 1 (right) shows that using additional information from the sentence-level for the token-level classification (BERT-Granularity) yields small improvements. The multi-granularity models outperform all baselines thanks to their higher precision. This shows the effect of the model excluding sentences that it determined to be non-propagandistic from being considered for token-level classification.  The right side of Table 1 shows the results for the SLC task. We apply our multi-granularity network model to the sentence-level classification task to see its effect on low granularity when we train the model with a high granularity task. Interestingly, it yields huge performance improvements on the sentence-level classification result. Compared to the BERT baseline, it increases the recall by 8.42%, resulting in a 3.24% increase of the F1 score."
-        }
-    ]
+  "datasets": [
+    "datasets/1911.06815v1-393.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1911_06815v1_393"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The left side of Table 1 shows the performance for the three baselines and for our multi-granularity network on the FLC task.  Table 1 (right) shows that using additional information from the sentence-level for the token-level classification (BERT-Granularity) yields small improvements. The multi-granularity models outperform all baselines thanks to their higher precision. This shows the effect of the model excluding sentences that it determined to be non-propagandistic from being considered for token-level classification.  The right side of Table 1 shows the results for the SLC task. We apply our multi-granularity network model to the sentence-level classification task to see its effect on low granularity when we train the model with a high granularity task. Interestingly, it yields huge performance improvements on the sentence-level classification result. Compared to the BERT baseline, it increases the recall by 8.42%, resulting in a 3.24% increase of the F1 score."
+    }
+  ]
 }

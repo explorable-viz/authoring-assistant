@@ -7,14 +7,14 @@
     "avg_mt02_–_08_rd": ""
   },
   {
-    "_1": "Search",
+    "_1": "Search (0.2)",
     "avg_mt02_–_08_bleu": 32.42,
     "avg_mt02_–_08_he": 3.22,
     "avg_mt02_–_08_chrf1": 0.82,
     "avg_mt02_–_08_rd": 0.184
   },
   {
-    "_1": "Search",
+    "_1": "Search (0.3)",
     "avg_mt02_–_08_bleu": 28.83,
     "avg_mt02_–_08_he": 2.45,
     "avg_mt02_–_08_chrf1": 0.77,
@@ -35,14 +35,14 @@
     "avg_mt02_–_08_rd": ""
   },
   {
-    "_1": "Search",
+    "_1": "Search (0.2)",
     "avg_mt02_–_08_bleu": 34.27,
     "avg_mt02_–_08_he": 3.87,
     "avg_mt02_–_08_chrf1": 0.89,
     "avg_mt02_–_08_rd": 0.21
   },
   {
-    "_1": "Search",
+    "_1": "Search (0.4)",
     "avg_mt02_–_08_bleu": 27.27,
     "avg_mt02_–_08_he": 2.91,
     "avg_mt02_–_08_chrf1": 0.8,
@@ -63,14 +63,14 @@
     "avg_mt02_–_08_rd": ""
   },
   {
-    "_1": "Search",
+    "_1": "Search (0.2)",
     "avg_mt02_–_08_bleu": 31.83,
     "avg_mt02_–_08_he": 3.83,
     "avg_mt02_–_08_chrf1": 0.89,
     "avg_mt02_–_08_rd": 0.192
   },
   {
-    "_1": "Search",
+    "_1": "Search (0.4)",
     "avg_mt02_–_08_bleu": 26.13,
     "avg_mt02_–_08_he": 2.82,
     "avg_mt02_–_08_chrf1": 0.79,

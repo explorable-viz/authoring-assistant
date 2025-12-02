@@ -15,12 +15,12 @@
     "test": 0.5539
   },
   {
-    "system": "FEVER Title One",
+    "system": "FEVER Title One (Narrow Evidence)",
     "development": 0.555,
     "test": "—"
   },
   {
-    "system": "FEVER Title One",
+    "system": "FEVER Title One (Entire Articles)",
     "development": 0.5844,
     "test": 0.5736
   }

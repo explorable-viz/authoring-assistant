@@ -27,7 +27,7 @@
     "rouge_l": 45.88
   },
   {
-    "accuracy": " IWAQG",
+    "accuracy": " IWAQG (73.8%)",
     "bleu_1": 47.69,
     "bleu_2": 32.24,
     "bleu_3": 24.01,
@@ -54,7 +54,7 @@
     "rouge_l": 48.41
   },
   {
-    "accuracy": " Upper Bound",
+    "accuracy": " Upper Bound (100%)",
     "bleu_1": 50.51,
     "bleu_2": 34.28,
     "bleu_3": 25.6,

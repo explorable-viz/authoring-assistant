@@ -1,10 +1,10 @@
 [
   {
-    "method": "RC",
+    "method": "RC (Talmor et al.,  2019 )",
     "accuracy": 47.7
   },
   {
-    "method": "GPT",
+    "method": "GPT (Talmor et al.,  2019 )",
     "accuracy": 54.8
   },
   {
@@ -16,7 +16,7 @@
     "accuracy": 64.7
   },
   {
-    "method": "Human",
+    "method": "Human (Talmor et al.,  2019 )",
     "accuracy": 95.3
   }
 ]

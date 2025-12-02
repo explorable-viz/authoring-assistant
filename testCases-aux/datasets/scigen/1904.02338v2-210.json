@@ -54,7 +54,7 @@
     "agree": 44.67
   },
   {
-    "_1": "Supervised",
+    "_1": "Supervised (avg.)",
     "sestorain_et_al_pbsmt": 53.22,
     "sestorain_et_al_nmt_0": 40.55,
     "sestorain_et_al_dual_0": 36.74,
@@ -117,7 +117,7 @@
     "agree": 29.53
   },
   {
-    "_1": "Zero-shot",
+    "_1": "Zero-shot (avg.)",
     "sestorain_et_al_pbsmt": 45.23,
     "sestorain_et_al_nmt_0": 26.26,
     "sestorain_et_al_dual_0": 29.88,

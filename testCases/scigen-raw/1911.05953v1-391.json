@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1911.05953v1-391.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1911_05953v1_391"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 2 shows storage size of geth and ethanos for each bootstrapping mode. Ethanos reduces Trie nodes size of geth from 2,220MB to 804.79MB; however, it increases the transaction size (Bodies, Receipts) with block headers (Headers). Therefore, ethanos did not reduce the size of fast sync much, but it significantly reduced compact sync from 2,592.54MB of geth to 1,206.97MB, which is less than 50%. Our result shows that the trie node size of each checkpoint is about 800MB,"
-        }
-    ]
+  "datasets": [
+    "datasets/1911.05953v1-391.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1911_05953v1_391"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows storage size of geth and ethanos for each bootstrapping mode. Ethanos reduces Trie nodes size of geth from 2,220MB to 804.79MB; however, it increases the transaction size (Bodies, Receipts) with block headers (Headers). Therefore, ethanos did not reduce the size of fast sync much, but it significantly reduced compact sync from 2,592.54MB of geth to 1,206.97MB, which is less than 50%. Our result shows that the trie node size of each checkpoint is about 800MB,"
+    }
+  ]
 }

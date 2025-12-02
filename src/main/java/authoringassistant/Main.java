@@ -48,10 +48,25 @@ public class Main {
             }
             else
             {
-                final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, suggestionAgent, programs);
-                float accuracy = computeAccuracy(results);
+                final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
+                boolean originalAddExpectedValue = Settings.isAddExpectedValueEnabled();
+                
+                try {
+                    // Run experiment for both add-expected-value settings
+                    for (boolean addExpectedValue : new boolean[]{false, true}) {
+                        Settings.setAddExpectedValue(addExpectedValue);
+                        System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
+                        final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, suggestionAgent, programs);
+                        allResults.addAll(results);
+                    }
+                } finally {
+                    // Restore original setting
+                    Settings.setAddExpectedValue(originalAddExpectedValue);
+                }
+                
+                float accuracy = computeAccuracy(allResults);
                 generateLinks();
-                writeLog(results, agent, inContextLearning.size());
+                writeLog(allResults, agent, inContextLearning.size());
                 if (accuracy >= Settings.getThreshold()) {
                     System.out.println(STR."Accuracy OK =\{accuracy}");
                     System.exit(0);
@@ -73,6 +88,12 @@ public class Main {
         Files.createDirectories(outputPath.getParent());
         Files.writeString(outputPath, json);
         logger.info(STR."Generated program saved to: \{outputPath}");
+        
+        // Create empty .fld file with same name
+        String fldFileName = fileName.replace(".json", ".fld");
+        Path fldPath = Paths.get(outputFolder, fldFileName);
+        Files.writeString(fldPath, "");
+        logger.info(STR."Empty .fld file created: \{fldPath}");
     }
 
     private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, IOException {
@@ -152,7 +173,7 @@ public class Main {
                         QueryResult queryResult = result.getSecond();
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
-                                result.getFirst().getTestCaseFileName(),
+                                STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
                                 agent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),

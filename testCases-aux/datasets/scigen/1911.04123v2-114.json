@@ -27,7 +27,7 @@
     "γ": " ",
     "num_edge_num_node": "#Edge/#Node",
     "las": "LAS",
-    "conn_ratio": "Conn. Ratio"
+    "conn_ratio": "Conn. Ratio(%)"
   },
   {
     "γ": 1,

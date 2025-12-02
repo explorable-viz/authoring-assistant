@@ -1,14 +1,14 @@
 [
   {
     "model": "Model",
-    "imdb": "Test Error Rate",
-    "ag’s_news": "Test Error Rate",
-    "dbpedia": "Test Error Rate",
-    "yelp_p": "Test Error Rate",
-    "yelp_f": "Test Error Rate",
+    "imdb": "Test Error Rate (%)",
+    "ag’s_news": "Test Error Rate (%)",
+    "dbpedia": "Test Error Rate (%)",
+    "yelp_p": "Test Error Rate (%)",
+    "yelp_f": "Test Error Rate (%)",
     "avg_δ": "Avg. Δ",
-    "snli": "Accuracy",
-    "mnli": "Accuracy"
+    "snli": "Accuracy (%)",
+    "mnli": "Accuracy (%)"
   },
   {
     "model": "ULMFiT ",
@@ -44,7 +44,7 @@
     "mnli": "84.6/83.3"
   },
   {
-    "model": "BERTVOTE",
+    "model": "BERTVOTE (  K=4)",
     "imdb": 5.6,
     "ag’s_news": 5.41,
     "dbpedia": 0.67,
@@ -55,7 +55,7 @@
     "mnli": "85.3/84.4"
   },
   {
-    "model": "BERTAVG",
+    "model": "BERTAVG (  K=4)",
     "imdb": 5.68,
     "ag’s_news": 5.53,
     "dbpedia": 0.68,
@@ -66,7 +66,7 @@
     "mnli": "85.1/84.2"
   },
   {
-    "model": "BERTSE",
+    "model": "BERTSE (ours)",
     "imdb": 5.82,
     "ag’s_news": 5.59,
     "dbpedia": 0.65,
@@ -77,7 +77,7 @@
     "mnli": "84.2/83.3"
   },
   {
-    "model": "BERTSDV",
+    "model": "BERTSDV (ours)",
     "imdb": 5.35,
     "ag’s_news": 5.38,
     "dbpedia": 0.68,
@@ -88,7 +88,7 @@
     "mnli": " 85.3/84.3"
   },
   {
-    "model": "BERTSDA",
+    "model": "BERTSDA (ours)",
     "imdb": 5.29,
     "ag’s_news": 5.29,
     "dbpedia": 0.68,

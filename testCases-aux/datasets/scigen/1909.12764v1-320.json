@@ -12,7 +12,7 @@
     "avg": ""
   },
   {
-    "method": "Han",
+    "method": "Han ( 2018 )",
     "bas": 88.2,
     "blo": 61.4,
     "cal": 81.5,
@@ -24,7 +24,7 @@
     "avg": 79.0
   },
   {
-    "method": "Su and Yan",
+    "method": "Su and Yan ( 2017 )",
     "bas": 88.2,
     "blo": 62.2,
     "cal": 82.1,
@@ -36,7 +36,7 @@
     "avg": 80.6
   },
   {
-    "method": "Herzig and Berant",
+    "method": "Herzig and Berant ( 2017 )",
     "bas": 86.2,
     "blo": 62.7,
     "cal": 82.1,
@@ -60,7 +60,7 @@
     "avg": ""
   },
   {
-    "method": "Shaw et al.",
+    "method": "Shaw et al. ( 2019 )",
     "bas": 89.3,
     "blo": 63.7,
     "cal": 81.5,
@@ -72,7 +72,7 @@
     "avg": 82.1
   },
   {
-    "method": "G-R",
+    "method": "G-R (Beam-10)",
     "bas": 88.7,
     "blo": 66.4,
     "cal": 83.3,
@@ -84,7 +84,7 @@
     "avg": 82.5
   },
   {
-    "method": "G-R",
+    "method": "G-R (Beam-10 & pQ)",
     "bas": 89.0,
     "blo": 65.2,
     "cal": 83.3,
@@ -96,7 +96,7 @@
     "avg": 82.7
   },
   {
-    "method": "G-R",
+    "method": "G-R (Beam-25)",
     "bas": 89.0,
     "blo": 67.7,
     "cal": 83.3,
@@ -108,7 +108,7 @@
     "avg": 83.4
   },
   {
-    "method": "G-R",
+    "method": "G-R (Beam-25 & pQ)",
     "bas": 89.3,
     "blo": 66.7,
     "cal": 84.5,
@@ -120,7 +120,7 @@
     "avg": 83.5
   },
   {
-    "method": "G-R",
+    "method": "G-R (Beam-25 & pQ & TH1)",
     "bas": 89.0,
     "blo": 65.7,
     "cal": 85.1,
@@ -132,7 +132,7 @@
     "avg": 83.7
   },
   {
-    "method": "G-R",
+    "method": "G-R (Beam-25 & pQ & TH2)",
     "bas": 88.7,
     "blo": 66.4,
     "cal": 82.7,

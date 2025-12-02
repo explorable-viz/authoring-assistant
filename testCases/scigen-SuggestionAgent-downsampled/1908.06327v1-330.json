@@ -1,0 +1,205 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We see a small, but consistent improvement across most of the vision-language tasks using "
+    },
+    {
+      "expression": "\"GrOVLE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as seen in "
+    },
+    {
+      "expression": "\"Table 2(b)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". These changes result in an embedding with comparable performance to the "
+    },
+    {
+      "expression": "\"HGLMM 6K-D features\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which are reported in "
+    },
+    {
+      "expression": "\"Table 2(e)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, our word embedding tends to perform "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when embeddings are the same size (i.e. "
+    },
+    {
+      "expression": "\"300-D\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). For the generation-based tasks (i.e. captioning and VQA), the benefits of using adapted embeddings are less clear. This may simply be an artifact of the challenges in evaluating these tasks (i.e., the captions are improving in a way the metrics don't capture).  "
+    },
+    {
+      "expression": "\"Visual Word2Vec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs comparably amongst results for generation tasks (i.e. image captioning and VQA), but these tasks have little variance in results, with less than a point of difference across the adapted embeddings.  The small gain provided in generation tasks by "
+    },
+    {
+      "expression": "\"Visual Word2Vec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " does not out-weight the drops in performance across other tasks such as the significant mean recall drop of "
+    },
+    {
+      "expression": "\"6.3\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to "
+    },
+    {
+      "expression": "\"HGLMM's 6K-D Self-Attention result\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in line two of "
+    },
+    {
+      "expression": "\"Table 2(c)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Table 2(e)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for image-sentence retrieval of Flickr30K. For comparison, "
+    },
+    {
+      "expression": "\"GrOVLE's Self-Attention result\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in "
+    },
+    {
+      "expression": "\"Table 2(b)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is only "
+    },
+    {
+      "expression": "\"3 points lower\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Finally, we report results using HGLMM of different dimension. "
+    },
+    {
+      "expression": "\"HGLMM 300-D features\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are used for a more fair comparison to other embeddings. While the "
+    },
+    {
+      "expression": "\"HGLMM 6K-D representation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " primarily results in the "
+    },
+    {
+      "expression": "\"highest performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it performs more poorly on generation tasks and also results in high variance. For example, column one in "
+    },
+    {
+      "expression": "\"Table 2(e)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows a range of "
+    },
+    {
+      "expression": "\"7.1\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in mean recall, unlike GrOVLE which has a range of "
+    },
+    {
+      "expression": "\"2.6\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1908_06327v1_330"
+  ],
+  "datasets": ["datasets/scigen/1908.06327v1-330.json"]
+}

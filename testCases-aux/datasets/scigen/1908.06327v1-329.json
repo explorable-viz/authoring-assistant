@@ -33,7 +33,7 @@
     "vqa_vqa": "Accuracy"
   },
   {
-    "_1": "",
+    "_1": " (a)",
     "task_dataset": " Training from scratch",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",
@@ -77,7 +77,7 @@
     "vqa_vqa": 60.95
   },
   {
-    "_1": "",
+    "_1": " (b)",
     "task_dataset": " Word2Vec ",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",
@@ -154,7 +154,7 @@
     "vqa_vqa": 61.35
   },
   {
-    "_1": "",
+    "_1": " (c)",
     "task_dataset": " FastText ",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",
@@ -231,7 +231,7 @@
     "vqa_vqa": 61.66
   },
   {
-    "_1": "",
+    "_1": " (d)",
     "task_dataset": " Sentence-Level",
     "image_sentence_retrieval_flickr30k": "",
     "image_sentence_retrieval_mscoco": "",

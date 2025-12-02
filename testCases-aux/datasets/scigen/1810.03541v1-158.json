@@ -1,8 +1,8 @@
 [
   {
     "aligner": "",
-    "alignment_f1": "",
-    "oracle’s_smatch": ""
+    "alignment_f1": "(on hand-align)",
+    "oracle’s_smatch": "(on dev. dataset)"
   },
   {
     "aligner": "JAMR",

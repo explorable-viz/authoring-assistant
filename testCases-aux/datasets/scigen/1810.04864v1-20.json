@@ -1,56 +1,56 @@
 [
   {
     "_1": "unique sents.",
-    "e2e_human": "866.3±16.5",
-    "e2e_word": "203.5±30.6",
-    "e2e_character": "366.8±60.0",
-    "webnlg_human": "1185.0±12.6",
-    "webnlg_word": "603.7±144.3",
-    "webnlg_character": "875.4±30.2"
+    "e2e_human": 866.3,
+    "e2e_word": 203.5,
+    "e2e_character": 366.8,
+    "webnlg_human": 1185.0,
+    "webnlg_word": 603.7,
+    "webnlg_character": 875.4
   },
   {
     "_1": "unique words",
-    "e2e_human": "419.7±16.7",
-    "e2e_word": "64.4±2.3",
-    "e2e_character": "73.1±7.2",
-    "webnlg_human": "1447.3±7.4",
-    "webnlg_word": "620.3±35.5",
-    "webnlg_character": "881.5±26.0"
+    "e2e_human": 419.7,
+    "e2e_word": 64.4,
+    "e2e_character": 73.1,
+    "webnlg_human": 1447.3,
+    "webnlg_word": 620.3,
+    "webnlg_character": 881.5
   },
   {
     "_1": "word E",
-    "e2e_human": "6.5±0.0",
-    "e2e_word": "5.1±0.0",
-    "e2e_character": "5.5±0.0",
-    "webnlg_human": "7.1±0.0",
-    "webnlg_word": "6.3±0.0",
-    "webnlg_character": "6.6±0.0"
+    "e2e_human": 6.5,
+    "e2e_word": 5.1,
+    "e2e_character": 5.5,
+    "webnlg_human": 7.1,
+    "webnlg_word": 6.3,
+    "webnlg_character": 6.6
   },
   {
     "_1": "1-3-grams E",
-    "e2e_human": "10.4±0.0",
-    "e2e_word": "7.7±0.1",
-    "e2e_character": "8.2±0.1",
-    "webnlg_human": "11.6±0.0",
-    "webnlg_word": "10.1±0.1",
-    "webnlg_character": "10.5±0.1"
+    "e2e_human": 10.4,
+    "e2e_word": 7.7,
+    "e2e_character": 8.2,
+    "webnlg_human": 11.6,
+    "webnlg_word": 10.1,
+    "webnlg_character": 10.5
   },
   {
     "_1": "% new texts",
-    "e2e_human": "99.7±0.2",
-    "e2e_word": "98.2±0.3",
-    "e2e_character": "98.8±0.2",
-    "webnlg_human": "91.1±0.3",
-    "webnlg_word": "69.8±4.8",
-    "webnlg_character": "87.5±0.6"
+    "e2e_human": 99.7,
+    "e2e_word": 98.2,
+    "e2e_character": 98.8,
+    "webnlg_human": 91.1,
+    "webnlg_word": 69.8,
+    "webnlg_character": 87.5
   },
   {
     "_1": "% new sents.",
-    "e2e_human": "85.1±1.1",
-    "e2e_word": "61.8±6.4",
-    "e2e_character": "71.4±4.7",
-    "webnlg_human": "87.4±0.4",
-    "webnlg_word": "57.2±5.8",
-    "webnlg_character": "82.1±1.2"
+    "e2e_human": 85.1,
+    "e2e_word": 61.8,
+    "e2e_character": 71.4,
+    "webnlg_human": 87.4,
+    "webnlg_word": 57.2,
+    "webnlg_character": 82.1
   }
 ]

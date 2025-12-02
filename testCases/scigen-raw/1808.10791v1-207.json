@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1808.10791v1-207.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1808_10791v1_207"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 3 shows the development set results for Estonian. Cognate Morfessor outperforms the comparable BPE system according to both measures for Estonian. The cross-lingual segmentation is particularly beneficial for Estonian. For Estonian, we have two ensemble configurations one combining 3 monolingually finetuned independent runs, and one combining 5 monolingually finetuned savepoints from 4 independent runs."
-        }
-    ]
+  "datasets": [
+    "datasets/1808.10791v1-207.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1808_10791v1_207"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the development set results for Estonian. Cognate Morfessor outperforms the comparable BPE system according to both measures for Estonian. The cross-lingual segmentation is particularly beneficial for Estonian. For Estonian, we have two ensemble configurations one combining 3 monolingually finetuned independent runs, and one combining 5 monolingually finetuned savepoints from 4 independent runs."
+    }
+  ]
 }

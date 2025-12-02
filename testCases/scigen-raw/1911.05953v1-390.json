@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1911.05953v1-390.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1911_05953v1_390"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 1 gives full archive sync size of each data type for geth and ethanos at the 8M block. Ethanos reduces the total blockchain size about 16GB compared to geth. Especially, it reduces the size of Trie nodes about 18GB, because ethanos only maintains the state trie only with active accounts during a month which are only 10% of the total accounts. However, hash field of bloom filter in block header slightly increases Headers, and restore transactions increment Bodies and Receipts about 1.6GB. As a result, ethanos reduced full archive node by about 8% compared to ethereum."
-        }
-    ]
+  "datasets": [
+    "datasets/1911.05953v1-390.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1911_05953v1_390"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 gives full archive sync size of each data type for geth and ethanos at the 8M block. Ethanos reduces the total blockchain size about 16GB compared to geth. Especially, it reduces the size of Trie nodes about 18GB, because ethanos only maintains the state trie only with active accounts during a month which are only 10% of the total accounts. However, hash field of bloom filter in block header slightly increases Headers, and restore transactions increment Bodies and Receipts about 1.6GB. As a result, ethanos reduced full archive node by about 8% compared to ethereum."
+    }
+  ]
 }

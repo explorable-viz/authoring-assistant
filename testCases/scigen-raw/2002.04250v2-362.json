@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/2002.04250v2-362.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_2002_04250v2_362"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "For dialogue coherence trend is 3. that NonAR+MMI than AR+MMI, followed by AR and Non-AR. AR is slightly better than Non-AR. For Content Richness, the is significantly better proposed NonAR+MMI than AR+MMI, and the gap is greater than dialogue coherence.  The output from the AR+MMI model is thus by far less diverse than nonAR+MMI, which obtains the MMI score for each generated token."
-        }
-    ]
+  "datasets": [
+    "datasets/2002.04250v2-362.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_2002_04250v2_362"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For dialogue coherence trend is 3. that NonAR+MMI than AR+MMI, followed by AR and Non-AR. AR is slightly better than Non-AR. For Content Richness, the is significantly better proposed NonAR+MMI than AR+MMI, and the gap is greater than dialogue coherence.  The output from the AR+MMI model is thus by far less diverse than nonAR+MMI, which obtains the MMI score for each generated token."
+    }
+  ]
 }

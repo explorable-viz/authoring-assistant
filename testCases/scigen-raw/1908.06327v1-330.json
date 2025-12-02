@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1908.06327v1-330.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1908_06327v1_330"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "We see a small, but consistent improvement across most of the vision-language tasks using GrOVLE as seen in Table 2(b). These changes result in an embedding with comparable performance to the HGLMM 6K-D features, which are reported in Table 2(e). However, our word embedding tends to perform better when embeddings are the same size (i.e. 300-D). For the generation-based tasks (i.e. captioning and VQA), the benefits of using adapted embeddings are less clear. This may simply be an artifact of the challenges in evaluating these tasks (i.e., the captions are improving in a way the metrics don't capture).  Visual Word2Vec performs comparably amongst results for generation tasks (i.e. image captioning and VQA), but these tasks have little variance in results, with less than a point of difference across the adapted embeddings.  The small gain provided in generation tasks by Visual Word2Vec does not out-weight the drops in performance across other tasks such as the significant mean recall drop of 6.3 compared to HGLMM's 6K-D Self-Attention result in line two of Table 2(c) and Table 2(e) for image-sentence retrieval of Flickr30K. For comparison, GrOVLE's Self-Attention result in Table 2(b) is only 3 points lower.  Finally, we report results using HGLMM of different dimension. HGLMM 300-D features are used for a more fair comparison to other embeddings. While the HGLMM 6K-D representation primarily results in the highest performance, it performs more poorly on generation tasks and also results in high variance. For example, column one in Table 2(e) shows a range of 7.1 in mean recall, unlike GrOVLE which has a range of 2.6."
-        }
-    ]
+  "datasets": [
+    "datasets/1908.06327v1-330.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1908_06327v1_330"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We see a small, but consistent improvement across most of the vision-language tasks using GrOVLE as seen in Table 2(b). These changes result in an embedding with comparable performance to the HGLMM 6K-D features, which are reported in Table 2(e). However, our word embedding tends to perform better when embeddings are the same size (i.e. 300-D). For the generation-based tasks (i.e. captioning and VQA), the benefits of using adapted embeddings are less clear. This may simply be an artifact of the challenges in evaluating these tasks (i.e., the captions are improving in a way the metrics don't capture).  Visual Word2Vec performs comparably amongst results for generation tasks (i.e. image captioning and VQA), but these tasks have little variance in results, with less than a point of difference across the adapted embeddings.  The small gain provided in generation tasks by Visual Word2Vec does not out-weight the drops in performance across other tasks such as the significant mean recall drop of 6.3 compared to HGLMM's 6K-D Self-Attention result in line two of Table 2(c) and Table 2(e) for image-sentence retrieval of Flickr30K. For comparison, GrOVLE's Self-Attention result in Table 2(b) is only 3 points lower.  Finally, we report results using HGLMM of different dimension. HGLMM 300-D features are used for a more fair comparison to other embeddings. While the HGLMM 6K-D representation primarily results in the highest performance, it performs more poorly on generation tasks and also results in high variance. For example, column one in Table 2(e) shows a range of 7.1 in mean recall, unlike GrOVLE which has a range of 2.6."
+    }
+  ]
 }

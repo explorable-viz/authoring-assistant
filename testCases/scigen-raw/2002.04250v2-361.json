@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/2002.04250v2-361.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_2002_04250v2_361"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Results are shown in Table 1.  When comparing AR with AR+MMI, AR+MMI significantly outperforms AR across all metrics,  lookahead strategy to estimate For the variants of AR+MMI, AR+MMI+diverse generates a more diverse N-best list for reranking, and thus outperforms AR+MMI; AR+MMI+RL uses future and thus outperforms backward probability, AR+MMI as well.  It's hard to tell which model performs better, AR or non-AR: AR performs better than non-AR for BLEU and adversarial success, but worse for the other metrics. This means comparing with AR model, non-AR model tends to generate more diverse responses, but might be less coherent.  When comparing non-AR with AR+MMI+diverse, non-AR has relatively lower distinct score, but significantly higher scores BLEU and adversarial success."
-        }
-    ]
+  "datasets": [
+    "datasets/2002.04250v2-361.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_2002_04250v2_361"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results are shown in Table 1.  When comparing AR with AR+MMI, AR+MMI significantly outperforms AR across all metrics,  lookahead strategy to estimate For the variants of AR+MMI, AR+MMI+diverse generates a more diverse N-best list for reranking, and thus outperforms AR+MMI; AR+MMI+RL uses future and thus outperforms backward probability, AR+MMI as well.  It's hard to tell which model performs better, AR or non-AR: AR performs better than non-AR for BLEU and adversarial success, but worse for the other metrics. This means comparing with AR model, non-AR model tends to generate more diverse responses, but might be less coherent.  When comparing non-AR with AR+MMI+diverse, non-AR has relatively lower distinct score, but significantly higher scores BLEU and adversarial success."
+    }
+  ]
 }

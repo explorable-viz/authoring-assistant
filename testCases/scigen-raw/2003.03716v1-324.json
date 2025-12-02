@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/2003.03716v1-324.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_2003_03716v1_324"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 3: We show the results of applying LA module to the transformer model trained on the WMT14 dataset. We find that the LA module slightly improves the original model but harms the performance when the LA time step is 5. We suggest one of the reasons of these results are caused by the EOS problem."
-        }
-    ]
+  "datasets": [
+    "datasets/2003.03716v1-324.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_2003_03716v1_324"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3: We show the results of applying LA module to the transformer model trained on the WMT14 dataset. We find that the LA module slightly improves the original model but harms the performance when the LA time step is 5. We suggest one of the reasons of these results are caused by the EOS problem."
+    }
+  ]
 }

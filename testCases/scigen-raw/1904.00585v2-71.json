@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1904.00585v2-71.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1904_00585v2_71"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Our results suggest that this hyper-parameter setting can overall (except Wiki-ScienceIE and MIMIC-WetLab pairs) produce better performance compare to the default setting (Table 6)."
-        }
-    ]
+  "datasets": [
+    "datasets/1904.00585v2-71.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1904_00585v2_71"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our results suggest that this hyper-parameter setting can overall (except Wiki-ScienceIE and MIMIC-WetLab pairs) produce better performance compare to the default setting (Table 6)."
+    }
+  ]
 }

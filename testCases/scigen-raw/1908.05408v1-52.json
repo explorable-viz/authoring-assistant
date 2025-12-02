@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1908.05408v1-52.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1908_05408v1_52"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 3 shows the performance of baselines against user simulator and human on the two datasets.  Equation (11)) is also proven effective in deliver  ing more achievement, which can be seen from the second and last rows of Table 3.  The results are consistent with those in Table 3."
-        }
-    ]
+  "datasets": [
+    "datasets/1908.05408v1-52.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1908_05408v1_52"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 shows the performance of baselines against user simulator and human on the two datasets.  Equation (11)) is also proven effective in deliver  ing more achievement, which can be seen from the second and last rows of Table 3.  The results are consistent with those in Table 3."
+    }
+  ]
 }

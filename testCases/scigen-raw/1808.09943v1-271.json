@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1808.09943v1-271.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1808_09943v1_271"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "BPE and character sys  tems differ most in the number of lexical choice errors, and in the extent to which they drop content.  Regarding lexical choice, the two systems differ not only in the number of errors, but in the nature of those errors. In particular, the BPE model had more trouble handling German compound nouns.  We also found that both systems occasionally mistranslate proper names."
-        }
-    ]
+  "datasets": [
+    "datasets/1808.09943v1-271.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1808_09943v1_271"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "BPE and character sys  tems differ most in the number of lexical choice errors, and in the extent to which they drop content.  Regarding lexical choice, the two systems differ not only in the number of errors, but in the nature of those errors. In particular, the BPE model had more trouble handling German compound nouns.  We also found that both systems occasionally mistranslate proper names."
+    }
+  ]
 }

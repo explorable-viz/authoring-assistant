@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1902.09243v2-412.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1902_09243v2_412"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Also we compare performance of our model with two recent models, we see 2.39 ROUGE-1 improvements compared to the ML+RL with intra-attn approach(previous SOTA) carries over to this dataset, which is a large margin. On ROUGE-2, our model also get an im- provement of 0.51. The experiment proves that our approach can outperform competitive methods on different data distributions."
-        }
-    ]
+  "datasets": [
+    "datasets/1902.09243v2-412.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1902_09243v2_412"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Also we compare performance of our model with two recent models, we see 2.39 ROUGE-1 improvements compared to the ML+RL with intra-attn approach(previous SOTA) carries over to this dataset, which is a large margin. On ROUGE-2, our model also get an im- provement of 0.51. The experiment proves that our approach can outperform competitive methods on different data distributions."
+    }
+  ]
 }

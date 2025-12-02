@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1707.06480v1-30.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1707_06480v1_30"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "The results of the pre-selection are reported in Table 1. All syllable-aware models comfortably outperform the Char-CNN when the budget is limited to 5M parameters. Surprisingly, a pure word-level model,6 LSTM-Word, also beats the character-aware one under such budget. The three best configurations are Syl-Concat, Syl-Sum, and Syl-CNN-"
-        }
-    ]
+  "datasets": [
+    "datasets/1707.06480v1-30.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1707_06480v1_30"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of the pre-selection are reported in Table 1. All syllable-aware models comfortably outperform the Char-CNN when the budget is limited to 5M parameters. Surprisingly, a pure word-level model,6 LSTM-Word, also beats the character-aware one under such budget. The three best configurations are Syl-Concat, Syl-Sum, and Syl-CNN-"
+    }
+  ]
 }

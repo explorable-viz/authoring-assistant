@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1804.02472v1-177.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1804_02472v1_177"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 5 illustrates the influence of modals and negation on the factuality of the events they have direct scope over. The context with the highest factuality on average is no direct modal and no negation (first row); all other modal contexts have varying degrees of negative mean factuality scores, with will as the most negative."
-        }
-    ]
+  "datasets": [
+    "datasets/1804.02472v1-177.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1804_02472v1_177"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 5 illustrates the influence of modals and negation on the factuality of the events they have direct scope over. The context with the highest factuality on average is no direct modal and no negation (first row); all other modal contexts have varying degrees of negative mean factuality scores, with will as the most negative."
+    }
+  ]
 }

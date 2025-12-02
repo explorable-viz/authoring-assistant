@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1903.01306v1-119.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1903_01306v1_119"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "From the evaluation results in Table 2, we observe that the performance slightly degraded without coarse-tofine attention,  We also noticed that the performance slightly degraded without KG or using word embeddings, and the performance significantly degraded when we removed GCNs."
-        }
-    ]
+  "datasets": [
+    "datasets/1903.01306v1-119.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1903_01306v1_119"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "From the evaluation results in Table 2, we observe that the performance slightly degraded without coarse-tofine attention,  We also noticed that the performance slightly degraded without KG or using word embeddings, and the performance significantly degraded when we removed GCNs."
+    }
+  ]
 }

@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1903.11299v3-306.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1903_11299v3_306"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Given a sentence, in any language, we evaluate the rank of the corresponding image. The evaluation is again made by batches of 1000. The results are presented in table 2.  The first two lines of the table present the state-of-the-art results, with W2V and FastText embeddings. We can see similar results as in the previous experiment. With BIVEC, we have results close to the FastText embeddings when training only in English. This time, the recall is better with an increase of 2.68 % for recall@1. When trained with English and French, the recall@1 is increased by 3.65 %. This implies, again, that we can improve performance by learning on an additional language.  Our model is able to use the multi-language representing the effectiveness of MUSE embeddings. We train the model with English, and different combinations of French, German and Czech. On English only, we have similar results to the W2V approach. When adding new languages, we can see a decrease in performance for English. We obtain a maximum decrease of 2.62 % for recall@1 when the models saw English, French, German and Czech.  For image retrieval from a caption in 4 languages, we obtain a 49.38 % recall@10 on the Multi30K dataset."
-        }
-    ]
+  "datasets": [
+    "datasets/1903.11299v3-306.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1903_11299v3_306"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Given a sentence, in any language, we evaluate the rank of the corresponding image. The evaluation is again made by batches of 1000. The results are presented in table 2.  The first two lines of the table present the state-of-the-art results, with W2V and FastText embeddings. We can see similar results as in the previous experiment. With BIVEC, we have results close to the FastText embeddings when training only in English. This time, the recall is better with an increase of 2.68 % for recall@1. When trained with English and French, the recall@1 is increased by 3.65 %. This implies, again, that we can improve performance by learning on an additional language.  Our model is able to use the multi-language representing the effectiveness of MUSE embeddings. We train the model with English, and different combinations of French, German and Czech. On English only, we have similar results to the W2V approach. When adding new languages, we can see a decrease in performance for English. We obtain a maximum decrease of 2.62 % for recall@1 when the models saw English, French, German and Czech.  For image retrieval from a caption in 4 languages, we obtain a 49.38 % recall@10 on the Multi30K dataset."
+    }
+  ]
 }

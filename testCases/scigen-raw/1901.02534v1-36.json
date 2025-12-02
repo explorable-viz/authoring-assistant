@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1901.02534v1-36.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1901_02534v1_36"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Limiting evidence in this way when only five statements are retrieved (\"narrow evidence\" in Table 4) pushes FEVER score down very little, to .5550 from .5617 on the development set,  Indeed, when the system reviews the extra evidence, FEVER score goes up to .5844 on the development set."
-        }
-    ]
+  "datasets": [
+    "datasets/1901.02534v1-36.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1901_02534v1_36"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Limiting evidence in this way when only five statements are retrieved (\"narrow evidence\" in Table 4) pushes FEVER score down very little, to .5550 from .5617 on the development set,  Indeed, when the system reviews the extra evidence, FEVER score goes up to .5844 on the development set."
+    }
+  ]
 }

@@ -1,18 +1,18 @@
 {
-    "datasets": [
-        "datasets/scigen/1808.02374v1-74.json"
-    ],
-    "imports": [
-        "scigen",
-        "util",
-        "datasets/scigen/_1808_02374v1_74"
-    ],
-    "variables": {},
-    "testing-variables": {},
-    "paragraph": [
-        {
-            "type": "literal",
-            "value": "Table 2 shows that initializing the model with the pre-trained embeddings gives a significant 4 1.1 point increase in F-measure compared to random initialization, due to an increase in precision.  Fixing the embeddings gives slightly better performance than using them as initialization, an increase of 0.9 point in F-measure, mostly due to higher recall.  When extending the loss with the SGLR loss, we gain6 1.6 in F-measure compared to fixing the word embeddings, and also surpass the state of the art by 0.4 even without specialized resources.  If we train our model using the SG loss extension we obtain the best results, and gain6 1.9 points in F-measure compared to using pre-trained fixed word embeddings.  This setting also exceeds the state of the art (Lin et al., 2017) by 0.7 points in F-measure, due to a gain of 1.2 points in recall, again without using any specialized clinical NLP tools for feature engineering, in contrast to all state-of-the-art baselines."
-        }
-    ]
+  "datasets": [
+    "datasets/1808.02374v1-74.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_1808_02374v1_74"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows that initializing the model with the pre-trained embeddings gives a significant 4 1.1 point increase in F-measure compared to random initialization, due to an increase in precision.  Fixing the embeddings gives slightly better performance than using them as initialization, an increase of 0.9 point in F-measure, mostly due to higher recall.  When extending the loss with the SGLR loss, we gain6 1.6 in F-measure compared to fixing the word embeddings, and also surpass the state of the art by 0.4 even without specialized resources.  If we train our model using the SG loss extension we obtain the best results, and gain6 1.9 points in F-measure compared to using pre-trained fixed word embeddings.  This setting also exceeds the state of the art (Lin et al., 2017) by 0.7 points in F-measure, due to a gain of 1.2 points in recall, again without using any specialized clinical NLP tools for feature engineering, in contrast to all state-of-the-art baselines."
+    }
+  ]
 }

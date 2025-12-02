@@ -1,0 +1,124 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We present sample generations, quality results, and diversity results respectively in Tables "
+    },
+    {
+      "expression": "\"1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We find that, compared to "
+    },
+    {
+      "expression": "\"GPT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generations are of "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " quality, but are "
+    },
+    {
+      "expression": "\"more diverse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Surprisingly, the outside language model, which was trained on Wikipedia, is "
+    },
+    {
+      "expression": "\"less perplexed\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by the "
+    },
+    {
+      "expression": "\"GPT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generations than the "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generations, even though GPT was only trained on romance novels and BERT was trained on romance novels and Wikipedia. On actual data from TBC, the outside language model is about as perplexed as on the "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generations, which suggests that domain shift is an issue in using a trained language  model for evaluating generations and that the "
+    },
+    {
+      "expression": "\"GPT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generations might have collapsed to fairly generic and simple sentences.  The perplexity on BERT samples is not absurdly high, and in reading the samples, we find that many are fairly coherent."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1902_04094v2_185"
+  ],
+  "datasets": ["datasets/scigen/1902.04094v2-185.json"]
+}

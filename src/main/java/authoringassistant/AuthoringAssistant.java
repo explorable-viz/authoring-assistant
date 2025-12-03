@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import authoringassistant.Program.QueryResult;
 
 import static authoringassistant.Program.extractValue;
+import static authoringassistant.Program.logger;
 import static authoringassistant.Program.writeFluidFiles;
 
 public class AuthoringAssistant {
@@ -91,7 +92,7 @@ public class AuthoringAssistant {
             if(candidate == null) {
                 nullExpressions++;
                 sessionPrompts.addAssistantPrompt("NULL");
-                sessionPrompts.addUserPrompt("ExpressionError: Received a NULL expression instead of a valid expression. " +
+                sessionPrompts.addUserPrompt("Received a NULL expression instead of a valid expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value.");
                 logger.fine(STR."\{info} Attempt #\{attempt}: retry");
                 continue;
@@ -99,8 +100,7 @@ public class AuthoringAssistant {
             if(candidate.getExpr() != null && candidate.getExpr().equals(expected.getValue())) {
                 onlyLiteralExpressions++;
                 sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
-                sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
-                        "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
+                sessionPrompts.addUserPrompt("This is just the original literal value. \nInstead provide an expression that computes that literal value from the dataset");
                 logger.fine(STR."\{info} Attempt #\{attempt}: retry");
                 continue;
             }
@@ -128,13 +128,13 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt(candidate.getExpr());
                 sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
                 logger.info(STR."\{info} Expression validation succeeded");
-                return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
+                return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions, Settings.isAddExpectedValueEnabled());
             }
 
         }
         sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
+        return new QueryResult(null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions, Settings.isAddExpectedValueEnabled());
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {
@@ -156,22 +156,34 @@ public class AuthoringAssistant {
 
     private String generateLoopBackMessage(String response, String errorDetails) {
         String errorMessage;
-        if (errorDetails.toLowerCase().contains("key") && errorDetails.toLowerCase().contains("not found")) {
+        String errorLower = errorDetails.toLowerCase();
+        
+        if (errorLower.contains("parseerror") || errorLower.contains("parse error") || 
+            errorLower.contains("syntax error") || errorLower.contains("unexpected token")) {
             errorMessage = String.format(
-                    "KeyNotFound Error. The generated expression %s is trying to access a key that does not exist. " +
-                            "Check the code and regenerate the expression. Remember: reply only with the expression, without any other comment.",
-                    response
-            );
-        } else if (errorDetails.toLowerCase().contains("parseerror") || errorDetails.toLowerCase().contains("error:")) {
-            errorMessage = String.format(
-                    "SyntacticError. The generated expression %s caused the following error: \n%s. " +
-                            "Check the code, the parenthesis and regenerate the expression. Remember: reply only with the expression, without any other comment.",
+                    "The generated expression %s contains a syntax error and cannot be parsed: \n%s. " +
+                            "Check the syntax, parentheses, and regenerate the expression. Remember: reply only with the expression, without any other comment.",
                     response, errorDetails
             );
-        } else {
+        }
+        else if (errorLower.contains("key") && errorLower.contains("not found")) {
             errorMessage = String.format(
-                    "ValueMismatchError. The generated expression %s produced an unexpected value. " +
-                            "Check the code and regenerate the expression. Remember: reply only with the expression, without any other comment.",
+                    "The generated expression %s is trying to access a key that does not exist: \n%s. " +
+                            "Check the available keys in the dataset and regenerate the expression. Remember: reply only with the expression, without any other comment.",
+                    response, errorDetails
+            );
+        } 
+        else if (errorLower.contains("error:")) {
+            errorMessage = String.format(
+                    "The generated expression %s caused an error during execution: \n%s. " +
+                            "Check the expression logic, types, and regenerate the expression. Remember: reply only with the expression, without any other comment.",
+                    response, errorDetails
+            );
+        } 
+        else {
+            errorMessage = String.format(
+                    "The generated expression %s produced an unexpected value. " +
+                            "Check the expression logic and regenerate the expression. Remember: reply only with the expression, without any other comment.",
                     response
             );
         }

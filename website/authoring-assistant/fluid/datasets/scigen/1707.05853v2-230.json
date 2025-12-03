@@ -1,0 +1,82 @@
+[
+  {
+    "method": "1-best baseline",
+    "goals": "63.6 66.658.7",
+    "requests": "96.8 97.196.5"
+  },
+  {
+    "method": " cnet - no pruning",
+    "goals": " cnet - no pruning",
+    "requests": " cnet - no pruning"
+  },
+  {
+    "method": "weighted pooling",
+    "goals": "63.7 65.661.6",
+    "requests": "96.7 97.096.3"
+  },
+  {
+    "method": " cnet - score threshold 0.001",
+    "goals": " cnet - score threshold 0.001",
+    "requests": " cnet - score threshold 0.001"
+  },
+  {
+    "method": "average pooling",
+    "goals": "63.7 66.460.0",
+    "requests": "96.6 96.896.0"
+  },
+  {
+    "method": "weighted pooling",
+    "goals": " 65.2 68.559.1",
+    "requests": "97.0 97.496.6"
+  },
+  {
+    "method": " cnet - score threshold 0.01",
+    "goals": " cnet - score threshold 0.01",
+    "requests": " cnet - score threshold 0.01"
+  },
+  {
+    "method": "average pooling",
+    "goals": "64.6 67.959.7",
+    "requests": "96.9⋆ 97.296.5"
+  },
+  {
+    "method": "weighted pooling",
+    "goals": "64.7 68.462.2",
+    "requests": " 97.1⋆ 97.396.9"
+  },
+  {
+    "method": " ensemble models",
+    "goals": " ensemble models",
+    "requests": " ensemble models"
+  },
+  {
+    "method": "baseline",
+    "goals": 69.7,
+    "requests": 96.7
+  },
+  {
+    "method": "cnet",
+    "goals": 71.4,
+    "requests": 97.2
+  },
+  {
+    "method": " results from related wor",
+    "goals": " results from related wor",
+    "requests": " results from related wor"
+  },
+  {
+    "method": "Vodolán et al. ( 2017 )",
+    "goals": 80.0,
+    "requests": "-"
+  },
+  {
+    "method": "Williams ( 2014 )",
+    "goals": 78.4,
+    "requests": 98.0
+  },
+  {
+    "method": "Mrksic et al. ( 2017 )",
+    "goals": 73.4,
+    "requests": 96.5
+  }
+]

@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen_manual_old._1805_02474v1_14
-
-"""
-	For NER (Table 7), S-LSTM gives an F1-score of ${(findWithKey_ "model" "S-LSTM" tableData).f1} % on the CoNLL test set, which is significantly better compared with BiLSTMs. Stacking more layers of BiLSTMs leads to slightly better F1-scores compared with a single-layer BiLSTM. Our BiLSTM results are comparable to the results reported by Ma and Hovy (2016) and Lample et al. (2016),  In contrast, S-LSTM gives the best reported results under the same settings. In the second section of Table 7, Yang et al. (2017) obtain an Fscore of ${(findWithKey_ "model" "yang2017transfer" tableData).f1} %
-"""

@@ -1,5 +1,0 @@
-import datasets.scigen_manual_old.ipcc_
-
-"""
-	A further two datasets, Berkeley Earth (Rohde et al., 2013) and that of the Japan Meteorological Agency (JMA), are provided in Table 1.1. This working definition provides an updated estimate of ${head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == "Average") tableData))} °C for the warming over the period 1880 - 2012 based on a linear trend. This quantity was quoted as ${head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == "NOAAGlobalTemp") tableData))} °C in the AR5. Hence the inclusion of the Cowtan-Way dataset ( ${head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == "Cowtan-Way") tableData))} ) does not introduce any inconsistency with the AR5.
-"""

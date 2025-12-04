@@ -381,7 +381,6 @@ public class Program {
         Path testCasePath = Path.of(this.testCaseFileName);
         String path = STR."\{websiteRoot}\{testCasePath.getParent().getFileName()}/";
         String page = STR."\{path}\{testCasePath.getFileName()}";
-        logger.info(STR."Generating \{page}");
         Files.createDirectories(Path.of(page));
 
         String fluidSrcPath = "../../fluid";
@@ -400,7 +399,9 @@ public class Program {
         html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
         html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{testCasePath.getFileName()}.fld\"");
-        try (FileWriter file = new FileWriter(STR."\{page}/index.html")) {
+        final String htmlFile = STR."\{page}/index.html";
+        logger.info(STR."Generating \{htmlFile}");
+        try (FileWriter file = new FileWriter(htmlFile)) {
             file.write(html);
             file.flush();
         } catch (IOException e) {

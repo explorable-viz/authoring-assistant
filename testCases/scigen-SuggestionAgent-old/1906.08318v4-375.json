@@ -1,0 +1,151 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "No statistical significance is seen even when the test set result "
+    },
+    {
+      "expression": "\"worsens\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in performance for "
+    },
+    {
+      "expression": "\"BERTCLS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Piecewise Pool\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in table 5 where it "
+    },
+    {
+      "expression": "\"hurts\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test set performance on "
+    },
+    {
+      "expression": "\"ddi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " but is not statistically significant when cross validation is performed. In table 5, we tested the generalizability of the commonly used piecewise pooling technique While piecewise pooling helps "
+    },
+    {
+      "expression": "\"i2b2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"1%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", it "
+    },
+    {
+      "expression": "\"hurts\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test set performance on "
+    },
+    {
+      "expression": "\"ddi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and doesn't affect performance on "
+    },
+    {
+      "expression": "\"semeval\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We found "
+    },
+    {
+      "expression": "\"ELMo\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BER tokens\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to boost performance significantly for all datasets, but that "
+    },
+    {
+      "expression": "\"BERT-CLS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hurt performance for the medical datasets. While "
+    },
+    {
+      "expression": "\"BERT-CLS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " boosted test set performance for "
+    },
+    {
+      "expression": "\"semeval\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", this was not found to be a statistically significant difference for cross validation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_08318v4_375"
+  ],
+  "datasets": ["datasets/scigen/1906.08318v4-375.json"]
+}

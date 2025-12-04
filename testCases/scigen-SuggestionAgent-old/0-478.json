@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The two best-performing approaches in the task of generating sentences from dependency trees have been feature-based incremental text generation (Bohnet et al., 2010; Liu et al., 2015; Puduppully et al., 2016; King and White, 2018) and 2http://universaldependencies.org/ techniques performing more global input-output mapping (Castro Ferreira et al., 2018; Elder and Hokamp, 2018).  Each of these approaches has their advantages and limitations (Table 2)."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_0_478"
+  ],
+  "datasets": ["datasets/scigen/0-478.json"]
+}

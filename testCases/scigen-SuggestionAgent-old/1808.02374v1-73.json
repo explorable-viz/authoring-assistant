@@ -1,0 +1,112 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "In Table 1 we can see that also for our model, "
+    },
+    {
+      "expression": "\"EE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
+    },
+    {
+      "expression": "\"harder to recognize than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the "
+    },
+    {
+      "expression": "\"TE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as all models achieve "
+    },
+    {
+      "expression": "\"higher scores\"",
+      "categories": [
+        "average",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for TE compared to EE relations.  What is interesting to see is that when training with the combined loss ("
+    },
+    {
+      "expression": "\"SG or SGLR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") we obtain a clear improvement on the more difficult "
+    },
+    {
+      "expression": "\"EE relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and perform slightly "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on TE relations compared to using pre-trained embeddings (the three upper settings).  What can be observed is that the "
+    },
+    {
+      "expression": "\"RC+SG model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for low-frequency words, and "
+    },
+    {
+      "expression": "\"RC+SGLR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs  best for the higher frequency ranges.  When evaluating on the full Dev set, both combined loss settings outperform the baselines consistently."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1808_02374v1_73"
+  ],
+  "datasets": ["datasets/scigen/1808.02374v1-73.json"]
+}

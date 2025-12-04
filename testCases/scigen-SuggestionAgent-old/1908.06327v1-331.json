@@ -1,0 +1,91 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "To address this, we "
+    },
+    {
+      "expression": "\"fine-tune\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " GrOVLE across the five VL tasks. We provide results for a four and five "
+    },
+    {
+      "expression": "\"multi-task trained embedding\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The four task experiments are performed with the final task embedding fixed to demonstrate how well the embeddings would generalize to new tasks. We also provide results for pretraining on five tasks with and without "
+    },
+    {
+      "expression": "\"finetuning during the last task\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  This multi-task variant is the "
+    },
+    {
+      "expression": "\"best performing\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across all tasks, thus we release this embedding for public use.  To verify that the multi-task GrOVLE performance improvements generalize across task model architecture, we provide results using additional task models in "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " provides more models per task and demonstrates consistent results: embeddings can significantly affect performance and GrOVLE variants are still the "
+    },
+    {
+      "expression": "\"best embedding\"",
+      "categories": [
+        "data-retrieval",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " overall. As we move down the table we find even larger performance improvements made by using the five-task pretrained GrOVLE with fine-tuning than in "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1908_06327v1_331"
+  ],
+  "datasets": ["datasets/scigen/1908.06327v1-331.json"]
+}

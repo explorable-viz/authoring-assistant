@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We used the Reuters-8 dataset without stop words from "
+    },
+    {
+      "expression": "\"aiming at single-label classification\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is a preprocessed format of the Reuters-215782. Words in the texts were considered as they appeared, without performing stemming or typo correction. This database has "
+    },
+    {
+      "expression": "\"eight different classes\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with the number of samples varying from "
+    },
+    {
+      "expression": "\"51\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to over "
+    },
+    {
+      "expression": "\"3000 documents\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", as can be seen in Table I."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1806_03125v1_445"
+  ],
+  "datasets": ["datasets/scigen/1806.03125v1-445.json"]
+}

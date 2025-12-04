@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For TOP n COS SIM AVG, the tuning data results (Table 2) are somewhat "
+    },
+    {
+      "expression": "\"more varied\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ": First, there is no single "
+    },
+    {
+      "expression": "\"best performing\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " set of embeddings: Google yields the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F score for the Label setting ("
+    },
+    {
+      "expression": "\".953\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), while GloVe (though only barely) leads in the Description setting ("
+    },
+    {
+      "expression": "\".912\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). This time, it is fastText which produces the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F score in the Both setting, which is also the "
+    },
+    {
+      "expression": "\"best overall\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " tuning data F score for TOP n COS SIM AVG ("
+    },
+    {
+      "expression": "\".954\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1904_12550v1_5"
+  ],
+  "datasets": ["datasets/scigen/1904.12550v1-5.json"]
+}

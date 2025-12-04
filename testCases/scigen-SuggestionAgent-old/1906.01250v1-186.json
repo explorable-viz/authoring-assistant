@@ -1,0 +1,133 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "First, we "
+    },
+    {
+      "expression": "\"compare to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " systems which relied on "
+    },
+    {
+      "expression": "\"Wikipedia\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and those which used "
+    },
+    {
+      "expression": "\"Wikipedia\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " along with unlabeled data ('"
+    },
+    {
+      "expression": "\"Wikipedia + unlab\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "'), i.e. the top half of Table 1. These methods are "
+    },
+    {
+      "expression": "\"comparable to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ours, as they use the same type of information as supervision. Our model outperformed all of them on all test sets.  When evaluated on "
+    },
+    {
+      "expression": "\"AIDA-B\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", their scores are still "
+    },
+    {
+      "expression": "\"lower than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ours, though significantly higher that those of the previous systems suggesting that web links are indeed valuable.  Second, we "
+    },
+    {
+      "expression": "\"compare to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " fully-supervised systems, which were estimated on "
+    },
+    {
+      "expression": "\"AIDA-CoNLL documents\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We distinguish results on a test set taken from "
+    },
+    {
+      "expression": "\"AIDA-CoNLL (AIDA-B)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the other standard test sets not directly corresponding to the "
+    },
+    {
+      "expression": "\"AIDA-CoNLL domain\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". When tested on the latter, our approach is very effective, on average outperforming fully-supervised techniques.  As expected, on the in-domain test set ("
+    },
+    {
+      "expression": "\"AIDA-B\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), the majority of recent fully-supervised methods are more accurate than our model. However, even on this test set our model is not as far behind, for example, outperforming the system of "
+    },
+    {
+      "expression": "\"Guo and Barbosa (2016)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_01250v1_186"
+  ],
+  "datasets": ["datasets/scigen/1906.01250v1-186.json"]
+}

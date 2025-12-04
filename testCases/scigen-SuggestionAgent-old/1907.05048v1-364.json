@@ -1,0 +1,124 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 compares the performance of the four weighting variants introduced in Section 3.2. "
+    },
+    {
+      "expression": "\"TransWeight-feat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which sums the transformed representations and then weights each component of the summed representation, has the weakest performance, with only "
+    },
+    {
+      "expression": "\"50.82%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the test compounds receiving a rank that is lower than 5. A "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance \u2013 "
+    },
+    {
+      "expression": "\"52.90%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " \u2013 is obtained by applying the same weighting for each column of the transformations matrix H. The results of "
+    },
+    {
+      "expression": "\"TransWeight-trans\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are interesting in two respects: first, it outperforms the feature variation, "
+    },
+    {
+      "expression": "\"TransWeight-feat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", despite training a smaller number of parameters ("
+    },
+    {
+      "expression": "\"300 vs. 400\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in our setup). Second, it performs on par with the "
+    },
+    {
+      "expression": "\"TransWeight-mat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " variation, although the latter has a larger number of parameters ("
+    },
+    {
+      "expression": "\"20,200\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in our setup). This suggests that an effective combination method needs to take into account full transformations, i.e. entire rows of H and combine them in a systematic way. "
+    },
+    {
+      "expression": "\"TransWeight\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " builds on this insight by making each element of the final composed representation p dependent on each component of the transformed representation H. The result is a noteworthy increase in the quality of the predictions, with "
+    },
+    {
+      "expression": "\"∼12%\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " more of the test representations having a rank ≤5. Although this weighting does use significantly more parameters than the previous weightings ("
+    },
+    {
+      "expression": "\"4,000,200\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " parameters), the number of parameters is relative to the number of transformations t and does not grow with the size of the vocabulary. As the results in the next subsection show, a relatively small number of transformations is sufficient even for larger training vocabularies."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1907_05048v1_364"
+  ],
+  "datasets": ["datasets/scigen/1907.05048v1-364.json"]
+}

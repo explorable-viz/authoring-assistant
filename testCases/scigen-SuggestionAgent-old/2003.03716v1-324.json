@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3: We show "
+    },
+    {
+      "expression": "\"the results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of applying LA module to the transformer model trained on the WMT14 dataset. We find that the LA module slightly "
+    },
+    {
+      "expression": "\"improves\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the original model but "
+    },
+    {
+      "expression": "\"harms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the performance when the LA time step is "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We suggest one of the reasons of these results are caused by the EOS problem."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2003_03716v1_324"
+  ],
+  "datasets": ["datasets/scigen/2003.03716v1-324.json"]
+}

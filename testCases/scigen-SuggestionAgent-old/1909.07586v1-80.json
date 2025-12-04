@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Because of the small size of the dataset, we report the "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance over 5 runs with different random seeds.  Table 1 shows the results. Compared with WM18, our RGB model "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " under all conditions.  According to the cosine similarity, the HSV model is "
+    },
+    {
+      "expression": "\"superior\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for most test conditions (confirming our hypothesis about simpler modifier behaviour in this space). However for Delta-E, the RGB model and ensemble perform "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Unlike cosine, Delta-E is sensitive to differences in vector length, and we would argue it is the "
+    },
+    {
+      "expression": "\"most appropriate\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " metric because lengths are critical to measuring the extent of lightness and darkness of colors. Accordingly the HSV model does "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " under this metric, as it more directly models the direction of color modifiers, but as a consequence this leads to errors in its length predictions. Over- all the ensemble does well according to both met rics, and has the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance for several test conditions with Delta-E."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_07586v1_80"
+  ],
+  "datasets": ["datasets/scigen/1909.07586v1-80.json"]
+}

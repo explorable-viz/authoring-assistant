@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The model is trained with English only, then with English and French (en+fr), with English, French, and German (en+fr+de) and with English, French, German and Czech (all). We can see a decrease in performance when adding "
+    },
+    {
+      "expression": "\"French\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " that is not present with other languages. Otherwise, every time we add a new language the recall for this language logically increase. The "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance is achieved with English+French+German+Czech, with an increase of "
+    },
+    {
+      "expression": "\"6.42 %\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for multilingual retrieval.  By using MUSE embeddings, we are able to embed more languages in the same model. We showed that adding other languages decrease performance for English, but increase the recall in a multilingual environment."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1903_11299v3_307"
+  ],
+  "datasets": ["datasets/scigen/1903.11299v3-307.json"]
+}

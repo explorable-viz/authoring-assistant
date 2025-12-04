@@ -1,0 +1,88 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We find that word vectors and LMs pretrained on "
+    },
+    {
+      "expression": "\"small\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " similar sources can achieve competitive or even "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than the ones pretrained on larger sources (Table 5). On "
+    },
+    {
+      "expression": "\"JNLPBA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"ScienceIE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Wetlab\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", LMs pretrained on the small similar source perform "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while word vectors pretrained on the small similar source perform "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"CRAFT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", JNLPBA, and ScienceIE."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1904_00585v2_70"
+  ],
+  "datasets": ["datasets/scigen/1904.00585v2-70.json"]
+}

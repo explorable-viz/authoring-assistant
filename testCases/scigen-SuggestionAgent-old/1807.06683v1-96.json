@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As can be seen from Table 2, we are very close to the state of the art "
+    },
+    {
+      "expression": "\"MD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance even if we only trained with a low number of parameters as stated in the beginning of this section. We have to also note that in contrast with the "
+    },
+    {
+      "expression": "\"NER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task, the "
+    },
+    {
+      "expression": "\"MD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " task did not enjoy a performance increase from joint learning."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1807_06683v1_96"
+  ],
+  "datasets": ["datasets/scigen/1807.06683v1-96.json"]
+}

@@ -1,0 +1,100 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Furthermore, "
+    },
+    {
+      "expression": "\"Table 5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " illustrates the results on the unsupervised hypernym detection task for "
+    },
+    {
+      "expression": "\"BLESS dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", wherein we "
+    },
+    {
+      "expression": "\"compare\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " our proposed "
+    },
+    {
+      "expression": "\"SPON model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to other supervised "
+    },
+    {
+      "expression": "\"SOTA approaches\"",
+      "categories": [
+        "data-retrieval",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for hypernym prediction task, namely "
+    },
+    {
+      "expression": "\"Order Embeddings (OE) approach\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as introduced by ("
+    },
+    {
+      "expression": "\"Vendrov et al. 2016\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and "
+    },
+    {
+      "expression": "\"Smoothed Box model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as introduced by ("
+    },
+    {
+      "expression": "\"Li et al. 2019\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_10572v2_411"
+  ],
+  "datasets": ["datasets/scigen/1909.10572v2-411.json"]
+}

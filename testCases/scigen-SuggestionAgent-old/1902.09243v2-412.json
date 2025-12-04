@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Also we compare performance of our model with two recent models, we see "
+    },
+    {
+      "expression": "\"2.39 ROUGE-1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvements compared to the ML+RL with intra-attn approach(previous SOTA) carries over to this dataset, which is a "
+    },
+    {
+      "expression": "\"large margin\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". On "
+    },
+    {
+      "expression": "\"ROUGE-2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", our model also get an im- provement of "
+    },
+    {
+      "expression": "\"0.51\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The experiment proves that our approach can "
+    },
+    {
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " competitive methods on different data distributions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1902_09243v2_412"
+  ],
+  "datasets": ["datasets/scigen/1902.09243v2-412.json"]
+}

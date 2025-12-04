@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 3 displays the best performing DSMfor each property. There is a preference to word2vec and to a higher embedding dimension."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_04772v1_173"
+  ],
+  "datasets": ["datasets/scigen/1906.04772v1-173.json"]
+}

@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 gives single model validation scores for es2en and en2es models with standard and iterative transfer learning. We find that the all-biomed domain gains "
+    },
+    {
+      "expression": "\"1-2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU points from transfer learning."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_05786v1_56"
+  ],
+  "datasets": ["datasets/scigen/1906.05786v1-56.json"]
+}

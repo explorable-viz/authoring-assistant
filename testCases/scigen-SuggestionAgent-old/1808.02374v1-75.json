@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "From Table 3 we can see that all models have difficulties with distant relations that cross sentence or clause boundaries ("
+    },
+    {
+      "expression": "\"CCR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Furthermore, arguments that are frequent in the supervised data ("
+    },
+    {
+      "expression": "\"> 250\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") are a dominant error category. Furthermore it can be noticed that RC+SG has "
+    },
+    {
+      "expression": "\"less errors\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for infrequent arguments ("
+    },
+    {
+      "expression": "\"< 10\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") in the supervised data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1808_02374v1_75"
+  ],
+  "datasets": ["datasets/scigen/1808.02374v1-75.json"]
+}

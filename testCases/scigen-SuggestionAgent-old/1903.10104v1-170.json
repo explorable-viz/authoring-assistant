@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "F1 scores for all propositions and each type are reported in Table 5.  CNN performs "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for types with significantly more training samples, i.e., "
+    },
+    {
+      "expression": "\"evaluation\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"fact\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", indicating the effect of data size on neural model's performance. Joint models (CRF-joint and BiLSTM-CRF-joint) yield "
+    },
+    {
+      "expression": "\"the best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1 scores for all categories when gold-standard segmentation is unavailable."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1903_10104v1_170"
+  ],
+  "datasets": ["datasets/scigen/1903.10104v1-170.json"]
+}

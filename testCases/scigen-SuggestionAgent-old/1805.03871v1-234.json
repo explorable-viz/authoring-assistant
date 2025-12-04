@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 reports the precision, recall, F1 score, area under the precision-recall curve (AUC) per class, as well as micro- and macro-averages. The self-attention mechanism ("
+    },
+    {
+      "expression": "\"BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") leads to clear overall improvements (in "
+    },
+    {
+      "expression": "\"macro and micro F1 and AUC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", Table 3) "
+    },
+    {
+      "expression": "\"comparing to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the plain "
+    },
+    {
+      "expression": "\"BILSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", supporting the hypothesis that selfattention allows the classifier to focus on indicative tokens. Allowing the BILSTM to consider tokens of neighboring sentences ("
+    },
+    {
+      "expression": "\"X-BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") does not lead to any clear overall improvements. The hierarchical "
+    },
+    {
+      "expression": "\"H-BILSTM-ATT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " clearly "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the other three methods, supporting the hypothesis that considering entire sections and allowing the sentence embeddings to interact in the upper BILSTM (Fig. 3) is beneficial."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1805_03871v1_234"
+  ],
+  "datasets": ["datasets/scigen/1805.03871v1-234.json"]
+}

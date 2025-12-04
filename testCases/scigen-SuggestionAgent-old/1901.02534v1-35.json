@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The "
+    },
+    {
+      "expression": "\"named entity retrieval strategy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " boosts the evidence retrieval rate to "
+    },
+    {
+      "expression": "\"80.8%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ",  The "
+    },
+    {
+      "expression": "\"film retrievals\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " raise evidence retrieval to "
+    },
+    {
+      "expression": "\"81.2%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1901_02534v1_35"
+  ],
+  "datasets": ["datasets/scigen/1901.02534v1-35.json"]
+}

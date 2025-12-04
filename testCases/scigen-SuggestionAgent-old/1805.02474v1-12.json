@@ -1,0 +1,151 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively. As shown in Table 5, among the "
+    },
+    {
+      "expression": "\"16\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets S-LSTM gives the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results on "
+    },
+    {
+      "expression": "\"12\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", compared with BiLSTM and "
+    },
+    {
+      "expression": "\"2 layered\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BiLSTM models. The "
+    },
+    {
+      "expression": "\"average accuracy\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of S-LSTM is "
+    },
+    {
+      "expression": "\"85.6%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"significantly higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared with "
+    },
+    {
+      "expression": "\"84.9%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by "
+    },
+    {
+      "expression": "\"2-layer stacked BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". "
+    },
+    {
+      "expression": "\"3-layer stacked BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives an "
+    },
+    {
+      "expression": "\"average accuracy\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"84.57%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to a "
+    },
+    {
+      "expression": "\"2-layer stacked BiLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", with a training time per epoch of "
+    },
+    {
+      "expression": "\"423.6 seconds\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1805_02474v1_12"
+  ],
+  "datasets": ["datasets/scigen/1805.02474v1-12.json"]
+}

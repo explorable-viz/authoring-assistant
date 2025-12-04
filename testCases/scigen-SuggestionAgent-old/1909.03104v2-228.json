@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows "
+    },
+    {
+      "expression": "\"the best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the various models as reported in Kayal and Tsatsaronis (2019), in addition to "
+    },
+    {
+      "expression": "\"the best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of our model denoted as c. Note that the DCT-based model, DCT*, described in Kayal and Tsatsaronis (2019) performed "
+    },
+    {
+      "expression": "\"relatively poorly\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all tasks, while our model achieved "
+    },
+    {
+      "expression": "\"close to state-of-the-art performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in both the 20-NG and R-8 tasks. Our model outperformed EignSent on all tasks and generally performed "
+    },
+    {
+      "expression": "\"better than or on par with\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " p-means, ELMo, BERT, and EigenSent⊕Avg on both the 20-NG and R-8. On the other hand, both EigenSent⊕Avg and ELMo performed "
+    },
+    {
+      "expression": "\"better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " all other models on SST-5."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_03104v2_228"
+  ],
+  "datasets": ["datasets/scigen/1909.03104v2-228.json"]
+}

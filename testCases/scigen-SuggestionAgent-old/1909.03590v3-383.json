@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We report experimental results on four common benchmark datasets (totalling "
+    },
+    {
+      "expression": "\"1241\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " testing data points) in Table 1. As shown in Table 1, the "
+    },
+    {
+      "expression": "\"average performance\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increases from RANDOM to APPEAR-AP: a trend that becomes particularly obvious for "
+    },
+    {
+      "expression": "\"F1@10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_03590v3_383"
+  ],
+  "datasets": ["datasets/scigen/1909.03590v3-383.json"]
+}

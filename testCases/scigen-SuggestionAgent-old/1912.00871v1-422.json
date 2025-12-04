@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The values in "
+    },
+    {
+      "expression": "\"the last column of Table III\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are summarized in "
+    },
+    {
+      "expression": "\"Table IV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". How the models compare with respect to "
+    },
+    {
+      "expression": "\"accuracy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " closely resembles the comparison of "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", presented earlier. Thus, "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " seem to correlate well with "
+    },
+    {
+      "expression": "\"accuracy values\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in our case."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1912_00871v1_422"
+  ],
+  "datasets": ["datasets/scigen/1912.00871v1-422.json"]
+}

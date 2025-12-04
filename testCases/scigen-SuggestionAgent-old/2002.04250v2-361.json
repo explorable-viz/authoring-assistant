@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results are shown in Table 1.  When "
+    },
+    {
+      "expression": "\"comparing\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " AR with AR+MMI, AR+MMI "
+    },
+    {
+      "expression": "\"significantly outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " AR across all metrics, lookahead strategy to estimate For the variants of AR+MMI, AR+MMI+diverse generates a "
+    },
+    {
+      "expression": "\"more diverse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " N-best list for reranking, and thus "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " AR+MMI; AR+MMI+RL uses future and thus "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " backward probability, AR+MMI as well.  It's hard to tell which model performs better, AR or non-AR: AR "
+    },
+    {
+      "expression": "\"performs better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non-AR for BLEU and adversarial success, but "
+    },
+    {
+      "expression": "\"worse for the other metrics\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This means "
+    },
+    {
+      "expression": "\"comparing with\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " AR model, non-AR model tends to generate more diverse responses, but might be less coherent.  When "
+    },
+    {
+      "expression": "\"comparing\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non-AR with AR+MMI+diverse, non-AR has relatively lower distinct score, but "
+    },
+    {
+      "expression": "\"significantly higher scores\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU and adversarial success."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2002_04250v2_361"
+  ],
+  "datasets": ["datasets/scigen/2002.04250v2-361.json"]
+}

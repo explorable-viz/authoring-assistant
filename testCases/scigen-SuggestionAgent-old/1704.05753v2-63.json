@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We "
+    },
+    {
+      "expression": "\"consider\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " variations in instructions, incentives, data domains, and workflows. We "
+    },
+    {
+      "expression": "\"manually analyzed paraphrases\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for correctness, grammaticality, and linguistic diversity. Our observations provide new insight into the trade-offs between accuracy and diversity in crowd responses that arise as a result of task design,  Our analysis shows that the most important factor is how workers are "
+    },
+    {
+      "expression": "\"primed\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for a task, with the choice of examples and the prompt sentence affecting diversity and correctness significantly.  There was relatively little variation in grammaticality or time across the conditions.  Priming had a major impact, with the shift to lexical examples leading to a significant improvement in correctness, but much lower diversity. The surprising increase in correctness when "
+    },
+    {
+      "expression": "\"providing no examples\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "  changing the incentives by providing either a bonus for novelty, or no bonus at all, did not substantially impact any of the metrics.  Changing the number of paraphrases written by each worker did not significantly impact diversity (we worried that collecting more than one may lead to a decrease).  the "
+    },
+    {
+      "expression": "\"One Paraphrase condition\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " did have lower grammaticality,  Changing the source of the prompt sentence to create a chain of paraphrases led to a significant increase in diversity.  showing the answer to the question being paraphrased did not significantly affect correctness or diversity,"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1704_05753v2_63"
+  ],
+  "datasets": ["datasets/scigen/1704.05753v2-63.json"]
+}

@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results are summarized in Table  Almost all the methods performed "
+    },
+    {
+      "expression": "\"similar\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to random guess, showing that SQA on our dataset has its unique challenges."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1908_07855v1_304"
+  ],
+  "datasets": ["datasets/scigen/1908.07855v1-304.json"]
+}

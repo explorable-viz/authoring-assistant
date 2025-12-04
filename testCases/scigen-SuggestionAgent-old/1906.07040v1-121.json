@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Discussion of Results Table 2 presents the WSD micro-F1 scores using "
+    },
+    {
+      "expression": "\"raw WordNet similarities\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"300D path2vec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"DeepWalk\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"node2vec models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and the "
+    },
+    {
+      "expression": "\"128D FSE model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We evaluate on the following all-words English WSD test sets:  "
+    },
+    {
+      "expression": "\"Senseval-2 (Palmer et al., 2001)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"Senseval-3 (Mihalcea et al., 2004)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"SemEval-15 Task 13 (Moro and Navigli, 2015)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The raw WordNet similarities have a "
+    },
+    {
+      "expression": "\"small edge\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over their vector approximations in the majority of the cases yet the path2vec models consistently closely follow them while "
+    },
+    {
+      "expression": "\"outperforming\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " other graph embedding baselines: We indicate the differences with respect to the original with a subscript number."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_07040v1_121"
+  ],
+  "datasets": ["datasets/scigen/1906.07040v1-121.json"]
+}

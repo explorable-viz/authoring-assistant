@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "each average. According to our results (Table 2), the "
+    },
+    {
+      "expression": "\"Wikification success ratios\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
+    },
+    {
+      "expression": "\"eBay\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Illegal Onion\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " named entities is "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"relatively low\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, sites selling legal drugs on Onion have a "
+    },
+    {
+      "expression": "\"much higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " Wikification percentage."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1905_05543v2_41"
+  ],
+  "datasets": ["datasets/scigen/1905.05543v2-41.json"]
+}

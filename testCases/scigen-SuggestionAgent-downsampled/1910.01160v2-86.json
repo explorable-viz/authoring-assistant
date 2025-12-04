@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "as our dependent variable. Significant features of the logistic regression model are shown in Table 1 with the respective significance levels. We also run a step-wise backward elimination regression. Those components that are also significant in the step-wise model appear in bold. Observing the significant features, in bold in Table 1, we see a combination of surface level related features, such as sentence length and average word frequency, as well as semantic features including LSA (Latent Semantic Analysis) overlaps between verbs and between adjacent sentences. Semantic features which are associated with the gist representation of content are particularly interesting to see among the predictors since based on Fuzzytrace theory (Reyna, 2012), a well-known theory of decision making under risk, gist representation of content drives individual's decision to spread misinformation online. Also among the significant features, we observe the causal connectives, that are proven to be important in text comprehension, and two indices related to the text easability and readability, both suggesting that satire articles are "
+    },
+    {
+      "expression": "\"more sophisticated\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", or "
+    },
+    {
+      "expression": "\"less easy to read\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", than fake news articles."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1910_01160v2_86"
+  ],
+  "datasets": ["datasets/scigen/1910.01160v2-86.json"]
+}

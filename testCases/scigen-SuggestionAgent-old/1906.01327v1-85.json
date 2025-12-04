@@ -1,0 +1,133 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of the intrinsic evaluation on a sample of DOQ are shown in "
+    },
+    {
+      "expression": "\"Table 7\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The total agreement is "
+    },
+    {
+      "expression": "\"69%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while the specific agreements for "
+    },
+    {
+      "expression": "\"MASS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"LENGTH\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"SPEED\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"CURRENCY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
+    },
+    {
+      "expression": "\"61%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"79%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"77%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"58%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " respectively.  We re-annotated the samples in the "
+    },
+    {
+      "expression": "\"currency\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " category with annotators from the U.S. and found a "
+    },
+    {
+      "expression": "\"much higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " agreement score: "
+    },
+    {
+      "expression": "\"76%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_01327v1_85"
+  ],
+  "datasets": ["datasets/scigen/1906.01327v1-85.json"]
+}

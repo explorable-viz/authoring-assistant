@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The left side of "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the performance for the three baselines and for our multi-granularity network on the FLC task. "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (right) shows that using additional information from the sentence-level for the token-level classification (BERT-Granularity) yields small improvements. The multi-granularity models outperform all baselines thanks to their "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision. This shows the effect of the model excluding sentences that it determined to be non-propagandistic from being considered for token-level classification.  The right side of "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the results for the SLC task. We apply our multi-granularity network model to the sentence-level classification task to see its effect on low granularity when we train the model with a high granularity task. Interestingly, it yields huge performance improvements on the sentence-level classification result. Compared to the BERT baseline, it increases the recall by "
+    },
+    {
+      "expression": "\"8.42%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", resulting in a "
+    },
+    {
+      "expression": "\"3.24%\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increase of the F1 score."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1911_06815v1_393"
+  ],
+  "datasets": ["datasets/scigen/1911.06815v1-393.json"]
+}

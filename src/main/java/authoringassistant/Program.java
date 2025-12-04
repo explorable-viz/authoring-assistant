@@ -381,7 +381,7 @@ public class Program {
         Path testCasePath = Path.of(this.testCaseFileName);
         String path = STR."\{websiteRoot}\{testCasePath.getParent().getFileName()}/";
         String page = STR."\{path}\{testCasePath.getFileName()}";
-        logger.info(STR."Generating web page \{page}");
+        logger.info(STR."Generating \{page}");
         Files.createDirectories(Path.of(page));
 
         String fluidSrcPath = "../../fluid";

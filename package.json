@@ -15,7 +15,7 @@
     "pull-llama3": "./script/model-pull.sh llama3",
     "pull-llama3-1": "./script/ollama-model-pull.sh llama3.1",
     "serve": "./script/serve.sh",
-    "test-mock": "./script/authoring-assistant.sh test-case-folder=./testCases/scigen-manual-old",
+    "test-mock": "./script/authoring-assistant.sh test-case-folder=./testCases/scigen-manual",
     "test": "./script/authoring-assistant.sh",
     "suggestion-agent": "./script/authoring-assistant.sh suggestion-agent-only=true",
     "test-websites": "./script/test-websites.sh",

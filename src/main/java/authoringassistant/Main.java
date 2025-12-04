@@ -33,7 +33,7 @@ public class Main {
             final String agent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json
-            cleanWebsiteFolders("website/authoring-assistant/");
+            cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             if(arguments.containsKey("suggestion-agent-only") && arguments.get("suggestion-agent-only").equals("true")) {

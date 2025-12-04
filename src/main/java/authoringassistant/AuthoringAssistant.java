@@ -68,7 +68,7 @@ public class AuthoringAssistant {
                     return results;
                 }
             } while (!problems.isEmpty());
-        finalProgram.toWebsite();
+        finalProgram.toWebpage();
         return results;
     }
 

@@ -376,13 +376,15 @@ public class Program {
     public record QueryResult(Expression correctResponse, Expression expected, int attempt, long duration, int runId, int parseErrors, int counterfactualFails, int nullExpressions, int onlyLiteralExpressions) {
     }
 
-    public void toWebsite() throws IOException {
+    public void toWebpage() throws IOException {
+        final String websiteRoot = "website/authoring-assistant/";
         Path testCasePath = Path.of(this.testCaseFileName);
-        String path = "website/authoring-assistant/";
-        String sitePath = STR."\{path}\{testCasePath.getParent().getFileName()}-\{testCasePath.getFileName()}";
-        Files.createDirectories(Path.of(sitePath));
+        String path = STR."\{websiteRoot}\{testCasePath.getParent().getFileName()}/";
+        String page = STR."\{path}\{testCasePath.getFileName()}";
+        logger.info(STR."Generating web page \{page}");
+        Files.createDirectories(Path.of(page));
 
-        String fluidSrcPath = "../fluid";
+        String fluidSrcPath = "../../fluid";
         final String jsonSpec = STR."""
         const jsonSpec = {
                \"fluidSrcPath\": [\"\{fluidSrcPath}\"],
@@ -393,19 +395,19 @@ public class Program {
         """;
 
         /* html generation */
-        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{path}/template.html").toURI())));
-        html = html.replaceAll("##TITLE##", String.valueOf(Path.of(this.testCaseFileName).getParent().getFileName()));
+        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{websiteRoot}/template.html").toURI())));
+        html = html.replaceAll("##TITLE##", String.valueOf(testCasePath.getParent().getFileName()));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
         html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{testCasePath.getFileName()}.fld\"");
-        try (FileWriter file = new FileWriter(STR."\{sitePath}/index.html")) {
+        try (FileWriter file = new FileWriter(STR."\{page}/index.html")) {
             file.write(html);
             file.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{path}fluid/", STR."\{testCasePath.getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{testCasePath.getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {

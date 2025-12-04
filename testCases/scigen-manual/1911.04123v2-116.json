@@ -12,7 +12,23 @@
     "paragraph": [
         {
             "type": "literal",
-            "value": "Table 3 shows the comparison with previous work on the PGR testset, where our models are significantly better than the existing models.  With 1-best trees, DEPTREE is 2.9 points better than TEXTONLY,  both KBESTEISNERPS and EDGEWISEPS significantly outperform DEPTR"
+            "value": "Table 3 shows the comparison with previous work on the PGR testset, where our models are significantly better than the existing models.  With 1-best trees, DEPTREE is"
+        },
+        {
+            "type": "literal",
+            "value": "2.9"
+        },
+        {
+            "type": "literal",
+            "value": "points better than TEXTONLY,  both KBESTEISNERPS and EDGEWISEPS significantly"
+        },
+        {
+            "type": "literal",
+            "value": "outperform"
+        },
+        {
+            "type": "literal",
+            "value": "DEPTR"
         }
     ]
 }

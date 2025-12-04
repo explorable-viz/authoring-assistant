@@ -1,0 +1,72 @@
+[
+  {
+    "_1": " deixis (d)",
+    "total": " deixis (d)",
+    "latest_relevant_context_1st": " deixis",
+    "latest_relevant_context_2nd": "",
+    "latest_relevant_context_3rd": ""
+  },
+  {
+    "_1": "baseline (d)",
+    "total": 50.0,
+    "latest_relevant_context_1st": 50.0,
+    "latest_relevant_context_2nd": 50.0,
+    "latest_relevant_context_3rd": 50.0
+  },
+  {
+    "_1": "concat (d)",
+    "total": 83.5,
+    "latest_relevant_context_1st": 88.8,
+    "latest_relevant_context_2nd": 85.6,
+    "latest_relevant_context_3rd": 76.4
+  },
+  {
+    "_1": "s-hier-to-2.tied (d)",
+    "total": 60.9,
+    "latest_relevant_context_1st": 83.0,
+    "latest_relevant_context_2nd": 50.1,
+    "latest_relevant_context_3rd": 50.0
+  },
+  {
+    "_1": "CADec (d)",
+    "total": 81.6,
+    "latest_relevant_context_1st": 84.6,
+    "latest_relevant_context_2nd": 84.4,
+    "latest_relevant_context_3rd": 75.9
+  },
+  {
+    "_1": " lexical cohesion (l)",
+    "total": " lexical cohesion (l)",
+    "latest_relevant_context_1st": " lexical cohesion",
+    "latest_relevant_context_2nd": "",
+    "latest_relevant_context_3rd": ""
+  },
+  {
+    "_1": "baseline (l)",
+    "total": 45.9,
+    "latest_relevant_context_1st": 46.1,
+    "latest_relevant_context_2nd": 45.9,
+    "latest_relevant_context_3rd": 45.4
+  },
+  {
+    "_1": "concat (l)",
+    "total": 47.5,
+    "latest_relevant_context_1st": 48.6,
+    "latest_relevant_context_2nd": 46.7,
+    "latest_relevant_context_3rd": 46.7
+  },
+  {
+    "_1": "s-hier-to-2.tied (l)",
+    "total": 48.9,
+    "latest_relevant_context_1st": 53.0,
+    "latest_relevant_context_2nd": 46.1,
+    "latest_relevant_context_3rd": 45.4
+  },
+  {
+    "_1": "CADec (l)",
+    "total": 58.1,
+    "latest_relevant_context_1st": 63.2,
+    "latest_relevant_context_2nd": 52.0,
+    "latest_relevant_context_3rd": 56.7
+  }
+]

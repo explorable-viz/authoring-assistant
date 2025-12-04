@@ -20,7 +20,7 @@
       120,
       130
     ],
-    "_timelstm": [
+    "timelstm": [
       65,
       60,
       70,
@@ -64,7 +64,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"BiLSTM\")._acc (model_ \"LSTM\")._acc betterWorse",
+      "expression": "trendWord (model_ \"BiLSTM\").acc (model_ \"LSTM\").acc betterWorse",
       "categories": ["data-retrieval", "data-retrieval","comparison"]
     },
     {
@@ -73,7 +73,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"BiLSTM\")._time (model_ \"LSTM\")._time growShrink",
+      "expression": "trendWord (model_ \"BiLSTM\").time (model_ \"LSTM\").time growShrink",
       "categories": ["data-retrieval", "data-retrieval","comparison"]
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"LSTM\")._time",
+      "expression": "(model_ \"LSTM\").time",
       "categories": ["data-retrieval"]
     },
     {
@@ -91,7 +91,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"BiLSTM\")._time",
+      "expression": "(model_ \"BiLSTM\").time",
       "categories": ["data-retrieval"]
 
     },
@@ -101,7 +101,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"2 stacked BiLSTM\")._acc (model_ \"BiLSTM\")._acc improvements",
+      "expression": "trendWord (model_ \"2 stacked BiLSTM\").acc (model_ \"BiLSTM\").acc improvements",
       "categories": ["data-retrieval", "data-retrieval", "comparison"]
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"2 stacked BiLSTM\")._time (model_ \"BiLSTM\")._time smallerHigher",
+      "expression": "trendWord (model_ \"2 stacked BiLSTM\").time (model_ \"BiLSTM\").time smallerHigher",
       "categories": ["data-retrieval", "data-retrieval","comparison"]
     },
     {
@@ -119,7 +119,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"2 stacked BiLSTM\")._time",
+      "expression": "(model_ \"2 stacked BiLSTM\").time",
       "categories": ["data-retrieval"]
     },
     {
@@ -128,7 +128,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"3 stacked BiLSTM\")._acc (model_ \"BiLSTM\")._acc improve",
+      "expression": "trendWord (model_ \"3 stacked BiLSTM\").acc (model_ \"BiLSTM\").acc improve",
       "categories": ["data-retrieval", "data-retrieval","comparison"]
     },
     {
@@ -137,7 +137,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"S-LSTM\")._acc",
+      "expression": "(model_ \"S-LSTM\").acc",
       "categories": ["data-retrieval"]
     },
     {
@@ -146,7 +146,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"S-LSTM\")._acc (model_ \"2 stacked BiLSTM\")._acc betterWorse",
+      "expression": "trendWord (model_ \"S-LSTM\").acc (model_ \"2 stacked BiLSTM\").acc betterWorse",
       "categories": ["data-retrieval", "data-retrieval","comparison"]
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"S-LSTM\")._no_param (model_ \"2 stacked BiLSTM\")._no_param smallerHigher",
+      "expression": "trendWord (model_ \"S-LSTM\").num_param (model_ \"2 stacked BiLSTM\").num_param smallerHigher",
       "categories": ["data-retrieval","data-retrieval","comparison"]
     },
     {
@@ -164,7 +164,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"S-LSTM\")._time (model_ \"2 stacked BiLSTM\")._time shorterLonger",
+      "expression": "trendWord (model_ \"S-LSTM\").time (model_ \"2 stacked BiLSTM\").time shorterLonger",
       "categories": ["comparison", "data-retrieval", "data-retrieval"]
     },
     {
@@ -173,7 +173,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"S-LSTM\")._time",
+      "expression": "(model_ \"S-LSTM\").time",
       "categories": ["data-retrieval"]
     },
     {
@@ -182,7 +182,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey_ \"_time\" (minimum (map (fun y -> y._time) tableData)) tableData)._model",
+      "expression": "(findWithKey_ \"time\" (minimum (map (fun y -> y.time) tableData)) tableData).model",
       "categories": ["data-retrieval"]
     },
     {
@@ -191,7 +191,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"most efficient\" (findIndex \"_model\" \"CNN\" (insertionSort (fun a b -> a._time < b._time) tableData))",
+      "expression": "rankLabel \"most efficient\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time < b.time) tableData))",
       "categories": ["rank", "data-retrieval", "comparison"]
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"smallest\" (findIndex \"_model\" \"CNN\" (insertionSort (fun a b -> a._no_param < b._no_param) tableData))",
+      "expression": "rankLabel \"smallest\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.num_param < b.num_param) tableData))",
       "categories": ["rank", "data-retrieval", "comparison"]
     },
     {
@@ -209,7 +209,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model \"3 stacked CNN\" tableData)._acc",
+      "expression": "(model \"3 stacked CNN\" tableData).acc",
       "categories": ["data-retrieval"]
     },
     {
@@ -218,7 +218,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"lowest\" (findIndex \"_model\" \"CNN\" (insertionSort (fun a b -> a._time < b._time) tableData))",
+      "expression": "rankLabel \"lowest\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time < b.time) tableData))",
       "categories": ["rank"]
     },
     {
@@ -227,7 +227,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"best\" (findIndex \"_model\" \"S-LSTM+Attention\" (insertionSort (fun a b -> b._acc < a._acc) tableData))",
+      "expression": "rankLabel \"best\" (findIndex \"model\" \"S-LSTM+Attention\" (insertionSort (fun a b -> b.acc < a.acc) tableData))",
       "categories": ["comparison", "data-retrieval"]
     },
     {
@@ -236,7 +236,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"S-LSTM\")._acc (model_ \"CNN\")._acc betterWorse",
+      "expression": "trendWord (model_ \"S-LSTM\").acc (model_ \"CNN\").acc betterWorse",
       "categories": ["comparison", "data-retrieval","data-retrieval"]
     },
     {
@@ -245,7 +245,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"S-LSTM\")._acc (model_ \"BiLSTM\")._acc underOverPerforming",
+      "expression": "trendWord (model_ \"S-LSTM\").acc (model_ \"BiLSTM\").acc underOverPerforming",
       "categories": ["comparison", "data-retrieval","data-retrieval"]
     },
     {

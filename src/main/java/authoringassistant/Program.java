@@ -291,19 +291,19 @@ public class Program {
 
     public JSONObject toJsonProgram() {
         JSONObject object = new JSONObject();
-        
+
         // Add datasets (file names only, not content)
         object.put("datasets", new JSONArray(datasets.stream().toList()));
-        
+
         // Add imports
         object.put("imports", new JSONArray(imports));
-        
+
         // Add testing-variables (empty object for now)
         object.put("testing-variables", new JSONObject());
-        
+
         // Add variables (empty object for now)
         object.put("variables", new JSONObject());
-        
+
         // Add paragraph
         JSONArray paragraphArray = new JSONArray(
             paragraph.stream()
@@ -328,7 +328,7 @@ public class Program {
                 .toList()
         );
         object.put("paragraph", paragraphArray);
-        
+
         return object;
     }
 
@@ -376,12 +376,14 @@ public class Program {
     public record QueryResult(Expression correctResponse, Expression expected, int attempt, long duration, int runId, int parseErrors, int counterfactualFails, int nullExpressions, int onlyLiteralExpressions) {
     }
 
-    public void toWebsite() throws IOException {
-        String path = "website/authoring-assistant/";
-        String sitePath = STR."\{path}\{Path.of(this.testCaseFileName).getParent().getFileName()}-\{Path.of(this.testCaseFileName).getFileName()}";
-        Files.createDirectories(Path.of(sitePath));
+    public void toWebpage() throws IOException {
+        final String websiteRoot = "website/authoring-assistant/";
+        Path testCasePath = Path.of(this.testCaseFileName);
+        String path = STR."\{websiteRoot}\{testCasePath.getParent().getFileName()}/";
+        String page = STR."\{path}\{testCasePath.getFileName()}";
+        Files.createDirectories(Path.of(page));
 
-        String fluidSrcPath = "../fluid";
+        String fluidSrcPath = "../../fluid";
         final String jsonSpec = STR."""
         const jsonSpec = {
                \"fluidSrcPath\": [\"\{fluidSrcPath}\"],
@@ -392,19 +394,21 @@ public class Program {
         """;
 
         /* html generation */
-        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{path}/template.html").toURI())));
-        html = html.replaceAll("##TITLE##", String.valueOf(Path.of(this.testCaseFileName).getParent().getFileName()));
-        html = html.replaceAll("##TEST_NAME##", String.valueOf(Path.of(this.testCaseFileName).getFileName()));
+        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{websiteRoot}/template.html").toURI())));
+        html = html.replaceAll("##TITLE##", String.valueOf(testCasePath.getParent().getFileName()));
+        html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
-        html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{Path.of(this.testCaseFileName).getFileName()}.fld\"");
-        try (FileWriter file = new FileWriter(STR."\{sitePath}/index.html")) {
+        html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{testCasePath.getFileName()}.fld\"");
+        final String htmlFile = STR."\{page}/index.html";
+        logger.info(STR."Generating \{htmlFile}");
+        try (FileWriter file = new FileWriter(htmlFile)) {
             file.write(html);
             file.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{path}fluid/", STR."\{Path.of(this.testCaseFileName).getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{testCasePath.getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {

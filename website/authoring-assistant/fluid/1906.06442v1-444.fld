@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1906_06442v1_444
+
+"""
+	We quantify the copy rate with the unigram overlap between source and target as a percentage of tokens in the target side, and compare those statistics to the bitext and the back-translated data (Table 9).
+"""

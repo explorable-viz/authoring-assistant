@@ -20,7 +20,7 @@ let findWithKey_ fName x table =
 let findWhere pred table =
    fromSome (find pred table);
 
-let model m t = findWithKey_ "_model" m t;
+let model m t = findWithKey_ "model" m t;
 
 let maximumBy f [] = error "Empty list!";
     maximumBy f (x : xs) =

@@ -12,7 +12,15 @@
     "paragraph": [
         {
             "type": "literal",
-            "value": "As shown in table 2, BioBERT trained on PubMed+PMC performs the best."
+            "value": "As shown in table 2, BioBERT trained on PubMed+PMC performs the"
+        },
+        {
+            "type": "literal",
+            "value": "best"
+        },
+        {
+            "type": "literal",
+            "value": "."
         }
     ]
 }

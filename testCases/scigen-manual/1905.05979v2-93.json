@@ -12,7 +12,23 @@
     "paragraph": [
         {
             "type": "literal",
-            "value": "For ellipsis, both models improve substantially over the baseline (by 19-51 percentage points), with concat stronger for inflection tasks and CADec stronger for VPellipsis."
+            "value": "For ellipsis, both models improve substantially over the baseline (by"
+        },
+        {
+            "type": "literal",
+            "value": "19"
+        },
+        {
+            "type": "literal",
+            "value": "-"
+        },
+        {
+            "type": "literal",
+            "value": "51"
+        },
+        {
+            "type": "literal",
+            "value": "percentage points), with concat stronger for inflection tasks and CADec stronger for VPellipsis."
         }
     ]
 }

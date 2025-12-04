@@ -1,0 +1,189 @@
+[
+  {
+    "model": "Unsupervised IR Baselines",
+    "∑": "Unsupervised IR Baselines",
+    "insuranceqa": "Unsupervised IR Baselines",
+    "travel": "Unsupervised IR Baselines",
+    "cooking": "Unsupervised IR Baselines",
+    "academia": "Unsupervised IR Baselines",
+    "apple": "",
+    "aviation": "",
+    "wikipassageqa": ""
+  },
+  {
+    "model": "BM25",
+    "∑": 30.3,
+    "insuranceqa": 24.9,
+    "travel": 38.1,
+    "cooking": 30.9,
+    "academia": 29.2,
+    "apple": 21.8,
+    "aviation": 37.0,
+    "wikipassageqa": "53.00 / 61.71"
+  },
+  {
+    "model": "TF*IDF",
+    "∑": 32.4,
+    "insuranceqa": 18.7,
+    "travel": 39.9,
+    "cooking": 35.1,
+    "academia": 32.2,
+    "apple": 26.7,
+    "aviation": 41.9,
+    "wikipassageqa": "39.92 / 46.38"
+  },
+  {
+    "model": "Semantic Similarity Methods",
+    "∑": "Semantic Similarity Methods",
+    "insuranceqa": "Semantic Similarity Methods",
+    "travel": "Semantic Similarity Methods",
+    "cooking": "Semantic Similarity Methods",
+    "academia": "Semantic Similarity Methods",
+    "apple": "",
+    "aviation": "",
+    "wikipassageqa": ""
+  },
+  {
+    "model": "InferSent",
+    "∑": 23.0,
+    "insuranceqa": 14.8,
+    "travel": 27.0,
+    "cooking": 21.3,
+    "academia": 22.5,
+    "apple": 22.8,
+    "aviation": 29.3,
+    "wikipassageqa": "43.62 / 50.53"
+  },
+  {
+    "model": "p-mean Embeddings",
+    "∑": 25.7,
+    "insuranceqa": 17.0,
+    "travel": 32.1,
+    "cooking": 29.3,
+    "academia": 24.3,
+    "apple": 19.6,
+    "aviation": 31.7,
+    "wikipassageqa": "42.82 / 50.44"
+  },
+  {
+    "model": "CNN",
+    "∑": 25.9,
+    "insuranceqa": 24.4,
+    "travel": 36.9,
+    "cooking": 25.9,
+    "academia": 22.5,
+    "apple": 20.2,
+    "aviation": 25.3,
+    "wikipassageqa": "27.33 / 31.48"
+  },
+  {
+    "model": "BiLSTM",
+    "∑": 34.8,
+    "insuranceqa": 32.4,
+    "travel": 45.3,
+    "cooking": 35.2,
+    "academia": 31.5,
+    "apple": 27.2,
+    "aviation": 37.3,
+    "wikipassageqa": "46.16 / 52.89"
+  },
+  {
+    "model": "Att.-BiLSTM",
+    "∑": 34.5,
+    "insuranceqa": 37.9,
+    "travel": 43.0,
+    "cooking": 36.2,
+    "academia": 31.2,
+    "apple": 24.7,
+    "aviation": 33.9,
+    "wikipassageqa": "47.04 / 54.36"
+  },
+  {
+    "model": "AP-BiLSTM",
+    "∑": 31.3,
+    "insuranceqa": 31.9,
+    "travel": 38.8,
+    "cooking": 32.2,
+    "academia": 27.3,
+    "apple": 22.9,
+    "aviation": 34.5,
+    "wikipassageqa": "46.98 / 55.20"
+  },
+  {
+    "model": "LW-BiLSTM",
+    "∑": 34.1,
+    "insuranceqa": 36.9,
+    "travel": 43.2,
+    "cooking": 32.3,
+    "academia": 30.2,
+    "apple": 23.4,
+    "aviation": 38.5,
+    "wikipassageqa": "47.56 / 54.33"
+  },
+  {
+    "model": "Relevance Matching Methods",
+    "∑": "Relevance Matching Methods",
+    "insuranceqa": "Relevance Matching Methods",
+    "travel": "Relevance Matching Methods",
+    "cooking": "Relevance Matching Methods",
+    "academia": "Relevance Matching Methods",
+    "apple": "",
+    "aviation": "",
+    "wikipassageqa": ""
+  },
+  {
+    "model": "Bigrams",
+    "∑": 18.3,
+    "insuranceqa": 19.4,
+    "travel": 19.3,
+    "cooking": 16.7,
+    "academia": 19.8,
+    "apple": 13.0,
+    "aviation": 21.5,
+    "wikipassageqa": "39.84 / 47.55"
+  },
+  {
+    "model": "CA-Wang",
+    "∑": 39.1,
+    "insuranceqa": 37.0,
+    "travel": 46.5,
+    "cooking": 39.4,
+    "academia": 36.1,
+    "apple": 29.2,
+    "aviation": 46.5,
+    "wikipassageqa": "48.71 / 56.11"
+  },
+  {
+    "model": "COALA",
+    "∑": 43.6,
+    "insuranceqa": 38.0,
+    "travel": 53.8,
+    "cooking": 47.3,
+    "academia": 42.2,
+    "apple": 32.0,
+    "aviation": 48.4,
+    "wikipassageqa": "60.58 / 69.40"
+  },
+  {
+    "model": "COALA p-means",
+    "∑": 45.2,
+    "insuranceqa": 39.9,
+    "travel": 53.4,
+    "cooking": 46.5,
+    "academia": 44.2,
+    "apple": 34.5,
+    "aviation": 52.9,
+    "wikipassageqa": "59.29 / 68.48"
+  },
+  {
+    "model": "COALA syntax-aware",
+    "∑": 44.3,
+    "insuranceqa": 39.5,
+    "travel": 54.1,
+    "cooking": 47.8,
+    "academia": 43.5,
+    "apple": 32.7,
+    "aviation": 48.3,
+    "wikipassageqa": "60.48 / 68.75"
+  }
+]

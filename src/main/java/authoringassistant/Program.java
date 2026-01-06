@@ -147,6 +147,7 @@ public class Program {
     }
 
     public static ArrayList<Program> loadPrograms(String casesFolder, int numInstances) throws IOException {
+        casesFolder = STR."testCases/\{casesFolder}";
         if (numInstances == 0)
             return new ArrayList<>();
 

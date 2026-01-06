@@ -16,7 +16,7 @@
         },
         {
             "type": "expression",
-            "expression": "(findWithKey_ \"_1\" \"concat (d)\" tableData).total - (findWithKey_ \"_1\" \"baseline (d)\" tableData).total",
+            "expression": "(findWithKey_ \"_1\" \"concat\" tableData).total - (findWithKey_ \"_1\" \"baseline\" tableData).total",
             "categories": ["data-retrieval", "data-retrieval", "difference"]
         },
         {
@@ -25,7 +25,7 @@
         },
         {
             "type": "expression",
-            "expression": "(findWithKey_ \"_1\" \"CADec (d)\" tableData).total - (findWithKey_ \"_1\" \"baseline (d)\" tableData).total",
+            "expression": "(findWithKey_ \"_1\" \"CADec\" tableData).total - (findWithKey_ \"_1\" \"baseline\" tableData).total",
             "categories": ["data-retrieval", "data-retrieval", "difference"]
         },
         {
@@ -34,7 +34,7 @@
         },
         {
             "type": "expression",
-            "expression": "(findWithKey_ \"_1\" \"CADec (l)\" tableData).total - (findWithKey_ \"_1\" \"baseline (l)\" tableData).total",
+            "expression": "(findWithKey_ \"_1\" \"CADec\" tableData).total - (findWithKey_ \"_1\" \"baseline\" tableData).total",
             "categories": ["data-retrieval", "data-retrieval", "data-retrieval"]
         },
         {

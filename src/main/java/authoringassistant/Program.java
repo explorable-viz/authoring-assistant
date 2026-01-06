@@ -222,8 +222,8 @@ public class Program {
                     parseCategories(json_paragraph.getJSONObject(i))
                 );
                 paragraph.add(candidate);
-                validate(commandLineResult, candidate).ifPresent(value -> {
-                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test exception\{value}");
+                validate(commandLineResult, candidate).ifPresent(error -> {
+                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test exception\{error}");
                 });
             }
         }

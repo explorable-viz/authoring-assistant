@@ -1,42 +1,42 @@
 [
   {
     "_1": "T1",
-    "easy_sel": "–",
-    "easy_size": "–",
+    "easy_dec_sel": "–",
+    "easy_dec_size": "–",
     "default_def": 0.3,
-    "hard_sel": "–",
-    "hard_size": "–"
+    "hard_inc_sel": "–",
+    "hard_inc_size": "–"
   },
   {
     "_1": "T2",
-    "easy_sel": ".17∗",
-    "easy_size": ".11∗",
+    "easy_dec_sel": ".17∗",
+    "easy_dec_size": ".11∗",
     "default_def": 0.34,
-    "hard_sel": ".66∗",
-    "hard_size": ".44∗"
+    "hard_inc_sel": ".66∗",
+    "hard_inc_size": ".44∗"
   },
   {
     "_1": "T3",
-    "easy_sel": ".16∗",
-    "easy_size": ".10∗",
+    "easy_dec_sel": ".16∗",
+    "easy_dec_size": ".10∗",
     "default_def": 0.27,
-    "hard_sel": ".52∗",
-    "hard_size": ".43∗"
+    "hard_inc_sel": ".52∗",
+    "hard_inc_size": ".43∗"
   },
   {
     "_1": "T4",
-    "easy_sel": 0.28,
-    "easy_size": ".09∗",
+    "easy_dec_sel": 0.28,
+    "easy_dec_size": ".09∗",
     "default_def": 0.3,
-    "hard_sel": ".43∗",
-    "hard_size": ".45∗"
+    "hard_inc_sel": ".43∗",
+    "hard_inc_size": ".45∗"
   },
   {
     "_1": "Average",
-    "easy_sel": ".20∗",
-    "easy_size": ".10∗",
+    "easy_dec_sel": ".20∗",
+    "easy_dec_size": ".10∗",
     "default_def": 0.3,
-    "hard_sel": ".53∗",
-    "hard_size": ".44∗"
+    "hard_inc_sel": ".53∗",
+    "hard_inc_size": ".44∗"
   }
 ]

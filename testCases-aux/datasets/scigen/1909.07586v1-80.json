@@ -1,114 +1,114 @@
 [
   {
     "test_condition": "Seen Pairings",
-    "cosine_similarity_±_sd_rgb": 0.954,
-    "cosine_similarity_±_sd_wm18": 0.953,
-    "cosine_similarity_±_sd_hsv": 0.934,
-    "cosine_similarity_±_sd_ensemble": 0.954,
-    "cosine_similarity_±_sd_wm18∗": 0.68
+    "cosine_similarity_±_sd_↑_rgb": 0.954,
+    "cosine_similarity_±_sd_↑_wm18": 0.953,
+    "cosine_similarity_±_sd_↑_hsv": 0.934,
+    "cosine_similarity_±_sd_↑_ensemble": 0.954,
+    "cosine_similarity_±_sd_↑_wm18∗": 0.68
   },
   {
     "test_condition": "Unseen Pairings",
-    "cosine_similarity_±_sd_rgb": 0.799,
-    "cosine_similarity_±_sd_wm18": 0.771,
-    "cosine_similarity_±_sd_hsv": 0.843,
-    "cosine_similarity_±_sd_ensemble": 0.797,
-    "cosine_similarity_±_sd_wm18∗": 0.68
+    "cosine_similarity_±_sd_↑_rgb": 0.799,
+    "cosine_similarity_±_sd_↑_wm18": 0.771,
+    "cosine_similarity_±_sd_↑_hsv": 0.843,
+    "cosine_similarity_±_sd_↑_ensemble": 0.797,
+    "cosine_similarity_±_sd_↑_wm18∗": 0.68
   },
   {
     "test_condition": "Unseen Ref. Color",
-    "cosine_similarity_±_sd_rgb": 0.781,
-    "cosine_similarity_±_sd_wm18": 0.767,
-    "cosine_similarity_±_sd_hsv": 0.945,
-    "cosine_similarity_±_sd_ensemble": 0.804,
-    "cosine_similarity_±_sd_wm18∗": 0.4
+    "cosine_similarity_±_sd_↑_rgb": 0.781,
+    "cosine_similarity_±_sd_↑_wm18": 0.767,
+    "cosine_similarity_±_sd_↑_hsv": 0.945,
+    "cosine_similarity_±_sd_↑_ensemble": 0.804,
+    "cosine_similarity_±_sd_↑_wm18∗": 0.4
   },
   {
     "test_condition": "Unseen Modifiers",
-    "cosine_similarity_±_sd_rgb": 0.633,
-    "cosine_similarity_±_sd_wm18": 0.637,
-    "cosine_similarity_±_sd_hsv": 0.724,
-    "cosine_similarity_±_sd_ensemble": 0.629,
-    "cosine_similarity_±_sd_wm18∗": 0.41
+    "cosine_similarity_±_sd_↑_rgb": 0.633,
+    "cosine_similarity_±_sd_↑_wm18": 0.637,
+    "cosine_similarity_±_sd_↑_hsv": 0.724,
+    "cosine_similarity_±_sd_↑_ensemble": 0.629,
+    "cosine_similarity_±_sd_↑_wm18∗": 0.41
   },
   {
     "test_condition": "Fully Unseen",
-    "cosine_similarity_±_sd_rgb": 0.37,
-    "cosine_similarity_±_sd_wm18": 0.358,
-    "cosine_similarity_±_sd_hsv": 0.919,
-    "cosine_similarity_±_sd_ensemble": 0.445,
-    "cosine_similarity_±_sd_wm18∗": -0.21
+    "cosine_similarity_±_sd_↑_rgb": 0.37,
+    "cosine_similarity_±_sd_↑_wm18": 0.358,
+    "cosine_similarity_±_sd_↑_hsv": 0.919,
+    "cosine_similarity_±_sd_↑_ensemble": 0.445,
+    "cosine_similarity_±_sd_↑_wm18∗": -0.21
   },
   {
     "test_condition": "Overall",
-    "cosine_similarity_±_sd_rgb": 0.858,
-    "cosine_similarity_±_sd_wm18": 0.856,
-    "cosine_similarity_±_sd_hsv": 0.911,
-    "cosine_similarity_±_sd_ensemble": 0.868,
-    "cosine_similarity_±_sd_wm18∗": 0.65
+    "cosine_similarity_±_sd_↑_rgb": 0.858,
+    "cosine_similarity_±_sd_↑_wm18": 0.856,
+    "cosine_similarity_±_sd_↑_hsv": 0.911,
+    "cosine_similarity_±_sd_↑_ensemble": 0.868,
+    "cosine_similarity_±_sd_↑_wm18∗": 0.65
   },
   {
     "test_condition": "",
-    "cosine_similarity_±_sd_rgb": " Delta-E ± SD  (↓)",
-    "cosine_similarity_±_sd_wm18": " Delta-E ± SD  (↓)",
-    "cosine_similarity_±_sd_hsv": " Delta-E ± SD  (↓)",
-    "cosine_similarity_±_sd_ensemble": " Delta-E ± SD  (↓)",
-    "cosine_similarity_±_sd_wm18∗": " Delta-E ± SD  (↓)"
+    "cosine_similarity_±_sd_↑_rgb": " Delta-E ± SD  (↓)",
+    "cosine_similarity_±_sd_↑_wm18": " Delta-E ± SD  (↓)",
+    "cosine_similarity_±_sd_↑_hsv": " Delta-E ± SD  (↓)",
+    "cosine_similarity_±_sd_↑_ensemble": " Delta-E ± SD  (↓)",
+    "cosine_similarity_±_sd_↑_wm18∗": " Delta-E ± SD  (↓)"
   },
   {
     "test_condition": "Test Condition",
-    "cosine_similarity_±_sd_rgb": "RGB",
-    "cosine_similarity_±_sd_wm18": "WM18",
-    "cosine_similarity_±_sd_hsv": "HSV",
-    "cosine_similarity_±_sd_ensemble": "Ensemble",
-    "cosine_similarity_±_sd_wm18∗": "WM18∗"
+    "cosine_similarity_±_sd_↑_rgb": "RGB",
+    "cosine_similarity_±_sd_↑_wm18": "WM18",
+    "cosine_similarity_±_sd_↑_hsv": "HSV",
+    "cosine_similarity_±_sd_↑_ensemble": "Ensemble",
+    "cosine_similarity_±_sd_↑_wm18∗": "WM18∗"
   },
   {
     "test_condition": "Seen Pairings",
-    "cosine_similarity_±_sd_rgb": 3.121,
-    "cosine_similarity_±_sd_wm18": 3.188,
-    "cosine_similarity_±_sd_hsv": 5.38,
-    "cosine_similarity_±_sd_ensemble": 4.093,
-    "cosine_similarity_±_sd_wm18∗": 6.1
+    "cosine_similarity_±_sd_↑_rgb": 3.121,
+    "cosine_similarity_±_sd_↑_wm18": 3.188,
+    "cosine_similarity_±_sd_↑_hsv": 5.38,
+    "cosine_similarity_±_sd_↑_ensemble": 4.093,
+    "cosine_similarity_±_sd_↑_wm18∗": 6.1
   },
   {
     "test_condition": "Unseen Pairings",
-    "cosine_similarity_±_sd_rgb": 6.454,
-    "cosine_similarity_±_sd_wm18": 6.825,
-    "cosine_similarity_±_sd_hsv": 11.701,
-    "cosine_similarity_±_sd_ensemble": 5.873,
-    "cosine_similarity_±_sd_wm18∗": 7.9
+    "cosine_similarity_±_sd_↑_rgb": 6.454,
+    "cosine_similarity_±_sd_↑_wm18": 6.825,
+    "cosine_similarity_±_sd_↑_hsv": 11.701,
+    "cosine_similarity_±_sd_↑_ensemble": 5.873,
+    "cosine_similarity_±_sd_↑_wm18∗": 7.9
   },
   {
     "test_condition": "Unseen Ref. Color",
-    "cosine_similarity_±_sd_rgb": 7.456,
-    "cosine_similarity_±_sd_wm18": 7.658,
-    "cosine_similarity_±_sd_hsv": 10.429,
-    "cosine_similarity_±_sd_ensemble": 7.171,
-    "cosine_similarity_±_sd_wm18∗": 11.4
+    "cosine_similarity_±_sd_↑_rgb": 7.456,
+    "cosine_similarity_±_sd_↑_wm18": 7.658,
+    "cosine_similarity_±_sd_↑_hsv": 10.429,
+    "cosine_similarity_±_sd_↑_ensemble": 7.171,
+    "cosine_similarity_±_sd_↑_wm18∗": 11.4
   },
   {
     "test_condition": "Unseen Modifiers",
-    "cosine_similarity_±_sd_rgb": 13.288,
-    "cosine_similarity_±_sd_wm18": 13.891,
-    "cosine_similarity_±_sd_hsv": 14.183,
-    "cosine_similarity_±_sd_ensemble": 10.927,
-    "cosine_similarity_±_sd_wm18∗": 10.5
+    "cosine_similarity_±_sd_↑_rgb": 13.288,
+    "cosine_similarity_±_sd_↑_wm18": 13.891,
+    "cosine_similarity_±_sd_↑_hsv": 14.183,
+    "cosine_similarity_±_sd_↑_ensemble": 10.927,
+    "cosine_similarity_±_sd_↑_wm18∗": 10.5
   },
   {
     "test_condition": "Fully Unseen",
-    "cosine_similarity_±_sd_rgb": 13.859,
-    "cosine_similarity_±_sd_wm18": 14.516,
-    "cosine_similarity_±_sd_hsv": 12.432,
-    "cosine_similarity_±_sd_ensemble": 13.448,
-    "cosine_similarity_±_sd_wm18∗": 15.9
+    "cosine_similarity_±_sd_↑_rgb": 13.859,
+    "cosine_similarity_±_sd_↑_wm18": 14.516,
+    "cosine_similarity_±_sd_↑_hsv": 12.432,
+    "cosine_similarity_±_sd_↑_ensemble": 13.448,
+    "cosine_similarity_±_sd_↑_wm18∗": 15.9
   },
   {
     "test_condition": "Overall",
-    "cosine_similarity_±_sd_rgb": 5.412,
-    "cosine_similarity_±_sd_wm18": 5.595,
-    "cosine_similarity_±_sd_hsv": 7.487,
-    "cosine_similarity_±_sd_ensemble": 5.777,
-    "cosine_similarity_±_sd_wm18∗": 6.8
+    "cosine_similarity_±_sd_↑_rgb": 5.412,
+    "cosine_similarity_±_sd_↑_wm18": 5.595,
+    "cosine_similarity_±_sd_↑_hsv": 7.487,
+    "cosine_similarity_±_sd_↑_ensemble": 5.777,
+    "cosine_similarity_±_sd_↑_wm18∗": 6.8
   }
 ]

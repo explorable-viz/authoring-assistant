@@ -1,6 +1,6 @@
 [
   {
-    "training_instances_hits_k": "+KATT",
+    "training_instances_hits_k_macro": "+KATT",
     "100_10": 35.3,
     "100_15": 62.4,
     "100_20": 65.1,
@@ -9,7 +9,7 @@
     "200_20": 69.2
   },
   {
-    "training_instances_hits_k": "w/o hier",
+    "training_instances_hits_k_macro": "w/o hier",
     "100_10": 34.2,
     "100_15": 62.1,
     "100_20": 65.1,
@@ -18,7 +18,7 @@
     "200_20": 68.1
   },
   {
-    "training_instances_hits_k": "w/o GCNs",
+    "training_instances_hits_k_macro": "w/o GCNs",
     "100_10": 30.5,
     "100_15": 61.9,
     "100_20": 63.1,
@@ -27,7 +27,7 @@
     "200_20": 66.1
   },
   {
-    "training_instances_hits_k": "Word2vec",
+    "training_instances_hits_k_macro": "Word2vec",
     "100_10": 30.2,
     "100_15": 62.0,
     "100_20": 62.5,
@@ -36,7 +36,7 @@
     "200_20": 65.8
   },
   {
-    "training_instances_hits_k": "w/o KG",
+    "training_instances_hits_k_macro": "w/o KG",
     "100_10": 30.0,
     "100_15": 61.0,
     "100_20": 61.3,

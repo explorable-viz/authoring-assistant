@@ -9,6 +9,15 @@ def strip_all_tags(text):
     """Remove HTML tags from text."""
     return re.sub(r'<[^>]*>', '', text)
 
+def replace_parens(match):
+    before = match.group(1) or ''
+    content = match.group(2)
+    after = match.group(3) or ''
+
+    lead = '' if before == '_' else '_'
+    trail = '' if after == '_' else '_'
+
+    return f"{before}{lead}{content}{trail}{after}"
 
 def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
     # Read input JSON file
@@ -46,8 +55,8 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 # Clean key: lowercase, replace spaces with underscores, remove [xxx] tags
                 cleaned_key = re.sub(r'\[\w+\]', 'key', clean_key.replace(' ', '_').lower())
 
-                # Remove parenthesised terms from key anywhere (e.g., (s), (%), etc.)
-                cleaned_key = re.sub(r'_?\([^)]*\)_?', '_', cleaned_key)
+                # Replace parentheses by underscores (omitting underscore if already present)
+                cleaned_key = re.sub(r'(_)?\(([^)]*)\)(_)?', replace_parens, cleaned_key)
 
                 # Replace # with 'num' when it represents "number of" in keys
                 cleaned_key = re.sub(r'#', 'num_', cleaned_key)
@@ -66,7 +75,7 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 cleaned_value = re.sub(r'\[\w+\]', '', clean_value)
 
                 # Remove parenthesised terms only when they follow a number and contain specific units like (s) or (%)
-                cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\([s%]\)', r'\1', cleaned_value)
+                # cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\([s%]\)', r'\1', cleaned_value)
 
                 # Remove ∼ prefix only when before a number (not between numbers)
                 cleaned_value = re.sub(r'(^|\s)∼\s*(?=\d)', r'\1', cleaned_value)

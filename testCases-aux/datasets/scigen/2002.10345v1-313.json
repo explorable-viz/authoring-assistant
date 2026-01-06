@@ -8,7 +8,7 @@
     "yelp_f": "Test Error Rate (%)",
     "avg_δ": "Avg. Δ",
     "snli": "Accuracy (%)",
-    "mnli": "Accuracy (%)"
+    "mnli_m_mm": "Accuracy (%)"
   },
   {
     "model": "ULMFiT ",
@@ -19,7 +19,7 @@
     "yelp_f": 29.98,
     "avg_δ": "/",
     "snli": "/",
-    "mnli": "/"
+    "mnli_m_mm": "/"
   },
   {
     "model": "BERTBASE *",
@@ -30,7 +30,7 @@
     "yelp_f": 30.06,
     "avg_δ": "/",
     "snli": "/",
-    "mnli": "/"
+    "mnli_m_mm": "/"
   },
   {
     "model": "BERTBASE",
@@ -41,7 +41,7 @@
     "yelp_f": 30.37,
     "avg_δ": "-",
     "snli": 90.7,
-    "mnli": "84.6/83.3"
+    "mnli_m_mm": "84.6/83.3"
   },
   {
     "model": "BERTVOTE (  K=4)",
@@ -52,7 +52,7 @@
     "yelp_f": 29.44,
     "avg_δ": 5.5,
     "snli": 91.2,
-    "mnli": "85.3/84.4"
+    "mnli_m_mm": "85.3/84.4"
   },
   {
     "model": "BERTAVG (  K=4)",
@@ -63,7 +63,7 @@
     "yelp_f": 30.03,
     "avg_δ": 3.24,
     "snli": 90.8,
-    "mnli": "85.1/84.2"
+    "mnli_m_mm": "85.1/84.2"
   },
   {
     "model": "BERTSE (ours)",
@@ -74,7 +74,7 @@
     "yelp_f": 30.48,
     "avg_δ": -0.51,
     "snli": 90.8,
-    "mnli": "84.2/83.3"
+    "mnli_m_mm": "84.2/83.3"
   },
   {
     "model": "BERTSDV (ours)",
@@ -85,7 +85,7 @@
     "yelp_f": 29.88,
     "avg_δ": 5.3,
     "snli": 91.2,
-    "mnli": " 85.3/84.3"
+    "mnli_m_mm": " 85.3/84.3"
   },
   {
     "model": "BERTSDA (ours)",
@@ -96,6 +96,6 @@
     "yelp_f": 29.88,
     "avg_δ": 4.65,
     "snli": 91.2,
-    "mnli": "85.0/84.3"
+    "mnli_m_mm": "85.0/84.3"
   }
 ]

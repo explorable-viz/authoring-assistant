@@ -1,104 +1,104 @@
 [
   {
-    "overall": "bow-svm",
-    "overall_p": 56.3,
-    "overall_r": 45.5,
-    "overall_f1": 50.4
+    "overall_all_labels": "bow-svm",
+    "overall_all_labels_p": 56.3,
+    "overall_all_labels_r": 45.5,
+    "overall_all_labels_f1": 50.4
   },
   {
-    "overall": "bigru-att",
-    "overall_p": 62.6,
-    "overall_r": 50.9,
-    "overall_f1": 56.2
+    "overall_all_labels": "bigru-att",
+    "overall_all_labels_p": 62.6,
+    "overall_all_labels_r": 50.9,
+    "overall_all_labels_f1": 56.2
   },
   {
-    "overall": "han",
-    "overall_p": 65.0,
-    "overall_r": 55.5,
-    "overall_f1": 59.9
+    "overall_all_labels": "han",
+    "overall_all_labels_p": 65.0,
+    "overall_all_labels_r": 55.5,
+    "overall_all_labels_f1": 59.9
   },
   {
-    "overall": "lwan",
-    "overall_p": 62.5,
-    "overall_r": 53.5,
-    "overall_f1": 57.6
+    "overall_all_labels": "lwan",
+    "overall_all_labels_p": 62.5,
+    "overall_all_labels_r": 53.5,
+    "overall_all_labels_f1": 57.6
   },
   {
-    "overall": "hier-bert",
-    "overall_p": 65.9,
-    "overall_r": 55.1,
-    "overall_f1": 60.0
+    "overall_all_labels": "hier-bert",
+    "overall_all_labels_p": 65.9,
+    "overall_all_labels_r": 55.1,
+    "overall_all_labels_f1": 60.0
   },
   {
-    "overall": "frequent (≥50)",
-    "overall_p": "frequent (≥50)",
-    "overall_r": "frequent (≥50)",
-    "overall_f1": "frequent (≥50)"
+    "overall_all_labels": "frequent (≥50)",
+    "overall_all_labels_p": "frequent (≥50)",
+    "overall_all_labels_r": "frequent (≥50)",
+    "overall_all_labels_f1": "frequent (≥50)"
   },
   {
-    "overall": "bow-svm",
-    "overall_p": 56.3,
-    "overall_r": 45.6,
-    "overall_f1": 50.4
+    "overall_all_labels": "bow-svm",
+    "overall_all_labels_p": 56.3,
+    "overall_all_labels_r": 45.6,
+    "overall_all_labels_f1": 50.4
   },
   {
-    "overall": "bigru-att",
-    "overall_p": 62.7,
-    "overall_r": 52.2,
-    "overall_f1": 57.0
+    "overall_all_labels": "bigru-att",
+    "overall_all_labels_p": 62.7,
+    "overall_all_labels_r": 52.2,
+    "overall_all_labels_f1": 57.0
   },
   {
-    "overall": "han",
-    "overall_p": 65.1,
-    "overall_r": 57.0,
-    "overall_f1": 60.8
+    "overall_all_labels": "han",
+    "overall_all_labels_p": 65.1,
+    "overall_all_labels_r": 57.0,
+    "overall_all_labels_f1": 60.8
   },
   {
-    "overall": "lwan",
-    "overall_p": 62.8,
-    "overall_r": 54.7,
-    "overall_f1": 58.5
+    "overall_all_labels": "lwan",
+    "overall_all_labels_p": 62.8,
+    "overall_all_labels_r": 54.7,
+    "overall_all_labels_f1": 58.5
   },
   {
-    "overall": "hier-bert",
-    "overall_p": 66.0,
-    "overall_r": 56.5,
-    "overall_f1": 60.8
+    "overall_all_labels": "hier-bert",
+    "overall_all_labels_p": 66.0,
+    "overall_all_labels_r": 56.5,
+    "overall_all_labels_f1": 60.8
   },
   {
-    "overall": "few ([150))",
-    "overall_p": "few ([150))",
-    "overall_r": "few ([150))",
-    "overall_f1": "few ([150))"
+    "overall_all_labels": "few ([150))",
+    "overall_all_labels_p": "few ([150))",
+    "overall_all_labels_r": "few ([150))",
+    "overall_all_labels_f1": "few ([150))"
   },
   {
-    "overall": "bow-svm",
-    "overall_p": "-",
-    "overall_r": "-",
-    "overall_f1": "-"
+    "overall_all_labels": "bow-svm",
+    "overall_all_labels_p": "-",
+    "overall_all_labels_r": "-",
+    "overall_all_labels_f1": "-"
   },
   {
-    "overall": "bigru-att",
-    "overall_p": 36.3,
-    "overall_r": 3.2,
-    "overall_f1": 5.6
+    "overall_all_labels": "bigru-att",
+    "overall_all_labels_p": 36.3,
+    "overall_all_labels_r": 3.2,
+    "overall_all_labels_f1": 5.6
   },
   {
-    "overall": "han",
-    "overall_p": 30.2,
-    "overall_r": 1.6,
-    "overall_f1": 2.8
+    "overall_all_labels": "han",
+    "overall_all_labels_p": 30.2,
+    "overall_all_labels_r": 1.6,
+    "overall_all_labels_f1": 2.8
   },
   {
-    "overall": "lwan",
-    "overall_p": 24.9,
-    "overall_r": 7.0,
-    "overall_f1": 10.6
+    "overall_all_labels": "lwan",
+    "overall_all_labels_p": 24.9,
+    "overall_all_labels_r": 7.0,
+    "overall_all_labels_f1": 10.6
   },
   {
-    "overall": "hier-bert",
-    "overall_p": 43.6,
-    "overall_r": 5.0,
-    "overall_f1": 8.9
+    "overall_all_labels": "hier-bert",
+    "overall_all_labels_p": 43.6,
+    "overall_all_labels_r": 5.0,
+    "overall_all_labels_f1": 8.9
   }
 ]

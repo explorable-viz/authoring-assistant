@@ -3,7 +3,7 @@
     "condition": "Baseline",
     "accuracy_corr": 74,
     "accuracy_gram": 97,
-    "time": 36,
+    "time_s": 36,
     "diversity_distinct": 99,
     "diversity_pinc": 68
   },
@@ -11,7 +11,7 @@
     "condition": "Lexical Examples",
     "accuracy_corr": " 90†",
     "accuracy_gram": 98,
-    "time": 27,
+    "time_s": 27,
     "diversity_distinct": 93,
     "diversity_pinc": " 55†"
   },
@@ -19,7 +19,7 @@
     "condition": "Mixed Examples",
     "accuracy_corr": " 89†",
     "accuracy_gram": 96,
-    "time": 36,
+    "time_s": 36,
     "diversity_distinct": " 87†",
     "diversity_pinc": " 58†"
   },
@@ -27,7 +27,7 @@
     "condition": "No Examples",
     "accuracy_corr": 84,
     "accuracy_gram": 96,
-    "time": 30,
+    "time_s": 30,
     "diversity_distinct": 95,
     "diversity_pinc": 63
   },
@@ -35,7 +35,7 @@
     "condition": "Novelty Bonus",
     "accuracy_corr": 72,
     "accuracy_gram": 96,
-    "time": 30,
+    "time_s": 30,
     "diversity_distinct": 99,
     "diversity_pinc": 69
   },
@@ -43,7 +43,7 @@
     "condition": "No Bonus",
     "accuracy_corr": 78,
     "accuracy_gram": 94,
-    "time": 28,
+    "time_s": 28,
     "diversity_distinct": 99,
     "diversity_pinc": 66
   },
@@ -51,7 +51,7 @@
     "condition": "One Paraphrase",
     "accuracy_corr": 82,
     "accuracy_gram": 89,
-    "time": 38,
+    "time_s": 38,
     "diversity_distinct": 96,
     "diversity_pinc": 65
   },
@@ -59,7 +59,7 @@
     "condition": "Chain",
     "accuracy_corr": 68,
     "accuracy_gram": 94,
-    "time": 25,
+    "time_s": 25,
     "diversity_distinct": 98,
     "diversity_pinc": 74
   },
@@ -67,7 +67,7 @@
     "condition": "Answers",
     "accuracy_corr": 80,
     "accuracy_gram": 94,
-    "time": 29,
+    "time_s": 29,
     "diversity_distinct": 96,
     "diversity_pinc": 65
   },
@@ -75,7 +75,7 @@
     "condition": "advising",
     "accuracy_corr": 78,
     "accuracy_gram": 94,
-    "time": 31,
+    "time_s": 31,
     "diversity_distinct": 97,
     "diversity_pinc": 70
   },
@@ -83,7 +83,7 @@
     "condition": "geoquery",
     "accuracy_corr": 77,
     "accuracy_gram": " 85†",
-    "time": " 25†",
+    "time_s": " 25†",
     "diversity_distinct": 94,
     "diversity_pinc": 63
   },
@@ -91,7 +91,7 @@
     "condition": "wsj",
     "accuracy_corr": 68,
     "accuracy_gram": 90,
-    "time": " 61†",
+    "time_s": " 61†",
     "diversity_distinct": " 94†",
     "diversity_pinc": " 38†"
   },
@@ -99,7 +99,7 @@
     "condition": "ubuntu",
     "accuracy_corr": " 56†",
     "accuracy_gram": 92,
-    "time": 44,
+    "time_s": 44,
     "diversity_distinct": 97,
     "diversity_pinc": 67
   }

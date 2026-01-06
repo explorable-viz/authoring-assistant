@@ -4,35 +4,35 @@
     "num_samples_train": "1M",
     "num_samples_val": 35609,
     "num_samples_test": 35517,
-    "message_num_tokens": 162.47,
-    "message_num_groups": 8.43,
-    "message_num_tokens_group": 20.14,
-    "response_num_tokens": 14.44,
-    "response_num_groups": 1,
-    "response_num_tokens_group": "-"
+    "message_avg_num_tokens": 162.47,
+    "message_avg_num_groups": 8.43,
+    "message_avg_num_tokens_group": 20.14,
+    "response_avg_num_tokens": 14.44,
+    "response_avg_num_groups": 1,
+    "response_avg_num_tokens_group": "-"
   },
   {
     "dataset": "Ubuntu-v2",
     "num_samples_train": "1M",
     "num_samples_val": 19560,
     "num_samples_test": 18920,
-    "message_num_tokens": 85.92,
-    "message_num_groups": 4.95,
-    "message_num_tokens_group": 20.73,
-    "response_num_tokens": 17.01,
-    "response_num_groups": 1,
-    "response_num_tokens_group": "-"
+    "message_avg_num_tokens": 85.92,
+    "message_avg_num_groups": 4.95,
+    "message_avg_num_tokens_group": 20.73,
+    "response_avg_num_tokens": 17.01,
+    "response_avg_num_groups": 1,
+    "response_avg_num_tokens_group": "-"
   },
   {
     "dataset": "Samsung QA",
     "num_samples_train": 163616,
     "num_samples_val": 10000,
     "num_samples_test": 10000,
-    "message_num_tokens": 12.84,
-    "message_num_groups": 1,
-    "message_num_tokens_group": "-",
-    "response_num_tokens": 173.48,
-    "response_num_groups": 6.09,
-    "response_num_tokens_group": 29.28
+    "message_avg_num_tokens": 12.84,
+    "message_avg_num_groups": 1,
+    "message_avg_num_tokens_group": "-",
+    "response_avg_num_tokens": 173.48,
+    "response_avg_num_groups": 6.09,
+    "response_avg_num_tokens_group": 29.28
   }
 ]

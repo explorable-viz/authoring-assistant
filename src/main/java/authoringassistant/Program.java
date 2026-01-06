@@ -385,10 +385,10 @@ public class Program {
         String page = STR."\{websiteRoot}\{testCasePath.getFileName()}";
         Files.createDirectories(Path.of(page));
 
-        String fluidSrcPath = "../fluid";
+        String localFluidPath = "../fluid";
         final String jsonSpec = STR."""
         const jsonSpec = {
-               \"fluidSrcPath\": [\"\{fluidSrcPath}\"],
+               \"fluidSrcPath\": [\"\{localFluidPath}\", \"../../fluid\"],
                \"inputs\": [\"tableData\"],
                \"query\": false,
                \"linking\": true
@@ -400,7 +400,7 @@ public class Program {
         html = html.replaceAll("##TITLE##", String.valueOf(websiteName));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
-        html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{testCasePath.getFileName()}.fld\"");
+        html = html.replaceAll("##FLUID_FILE##", STR."\"\{localFluidPath}/\{testCasePath.getFileName()}.fld\"");
         final String htmlFile = STR."\{page}/index.html";
         logger.info(STR."Generating \{htmlFile}");
         try (FileWriter file = new FileWriter(htmlFile)) {

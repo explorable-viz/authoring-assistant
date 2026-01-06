@@ -42,7 +42,7 @@ public class Main {
             else if(arguments.containsKey("downsample") && arguments.get("downsample").equals("true")) {
                 int expressionPerCategory = Integer.parseInt(arguments.get("expression-per-category"));
                 int sampleSize = Integer.parseInt(arguments.get("sample-size"));
-                String outputFolder = STR."testCases/\{Path.of(Settings.getTestCaseFolder()).getFileName()}-downsampled";
+                String outputFolder = STR."testCases/\{Settings.getTestCaseFolder()}-downsampled";
                 downsamplePrograms(programs, expressionPerCategory, sampleSize)
                     .forEach(ThrowingConsumer.toConsumer(program -> saveProgramToJson(program, outputFolder)));
             }
@@ -50,7 +50,7 @@ public class Main {
             {
                 final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
                 boolean originalAddExpectedValue = Settings.isAddExpectedValueEnabled();
-                
+
                 try {
                     // Run experiment for both add-expected-value settings
                     for (boolean addExpectedValue : new boolean[]{false, true}) {
@@ -63,7 +63,7 @@ public class Main {
                     // Restore original setting
                     Settings.setAddExpectedValue(originalAddExpectedValue);
                 }
-                
+
                 float accuracy = computeAccuracy(allResults);
                 generateLinks();
                 writeLog(allResults, agent, inContextLearning.size());
@@ -88,7 +88,7 @@ public class Main {
         Files.createDirectories(outputPath.getParent());
         Files.writeString(outputPath, json);
         logger.info(STR."Generated program saved to: \{outputPath}");
-        
+
         // Create empty .fld file with same name
         String fldFileName = fileName.replace(".json", ".fld");
         Path fldPath = Paths.get(outputFolder, fldFileName);
@@ -107,7 +107,7 @@ public class Main {
 
     private static Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> groupProgramsByCategory(List<Program> programs) {
         Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> categoryMap = new HashMap<>();
-        
+
         for (Program program : programs) {
             List<authoringassistant.paragraph.TextFragment> fragments = program.getParagraph();
             for (int i = 0; i < fragments.size(); i++) {
@@ -120,7 +120,7 @@ public class Main {
                 }
             }
         }
-        
+
         return categoryMap;
     }
 
@@ -128,7 +128,7 @@ public class Main {
         Random random = new Random(0);
         Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> expressionsByCategory = groupProgramsByCategory(programs);
         Map<String, Program> selectedProgramsByTestFile = new HashMap<>();
-        
+
         for (List<ProgramExpression> categoryExpressions : expressionsByCategory.values()) {
             List<ProgramExpression> shuffled = new ArrayList<>(categoryExpressions);
             Collections.shuffle(shuffled, random);
@@ -139,7 +139,7 @@ public class Main {
             }
         }
         Set<Program> downsampled = new HashSet<>(selectedProgramsByTestFile.values());
-        
+
         // If we still have room, add more programs randomly
         if (downsampled.size() < sampleSize) {
             List<Program> remaining = new ArrayList<>(programs);
@@ -148,20 +148,20 @@ public class Main {
             int additionalNeeded = Math.min(sampleSize - downsampled.size(), remaining.size());
             downsampled.addAll(remaining.subList(0, additionalNeeded));
         }
-        
+
         // Convert to list and trim if exceeded maxPrograms
         List<Program> result = new ArrayList<>(downsampled);
         if (result.size() > sampleSize) {
             Collections.shuffle(result, random);
             result = result.subList(0, sampleSize);
         }
-        
+
         return result;
     }
 
     private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String agent, int learningContextSize) throws IOException {
-        Files.createDirectories(Path.of(STR."results/\{Path.of(Settings.getTestCaseFolder()).getFileName()}/"));
-        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Path.of(Settings.getTestCaseFolder()).getFileName()}/results.csv"))) {
+        Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
+        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
                     "runId", "test-case", "llm-agent", "temperature", "num-token", "is-negative", "in-context-learning-size",
                     "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "nullExpressions", "onlyLiteralExpressions", "duration(ms)"

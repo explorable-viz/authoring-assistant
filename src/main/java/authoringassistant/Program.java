@@ -90,7 +90,6 @@ public class Program {
 
     public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
         String value = extractValue(commandLineResponse);
-        //interpreter errors detection -
         if (commandLineResponse.contains("Error: ")) {
             logger.info(STR."Interpreter error: \{value}");
             return Optional.of(value);
@@ -148,6 +147,7 @@ public class Program {
     }
 
     public static ArrayList<Program> loadPrograms(String casesFolder, int numInstances) throws IOException {
+        casesFolder = STR."testCases/\{casesFolder}";
         if (numInstances == 0)
             return new ArrayList<>();
 
@@ -223,8 +223,8 @@ public class Program {
                     parseCategories(json_paragraph.getJSONObject(i))
                 );
                 paragraph.add(candidate);
-                validate(commandLineResult, candidate).ifPresent(value -> {
-                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test exception\{value}");
+                validate(commandLineResult, candidate).ifPresent(error -> {
+                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test exception\{error}");
                 });
             }
         }
@@ -377,16 +377,18 @@ public class Program {
     }
 
     public void toWebpage() throws IOException {
-        final String websiteRoot = "website/authoring-assistant/";
+        final String websitesRoot = "website/authoring-assistant/";
         Path testCasePath = Path.of(this.testCaseFileName);
-        String path = STR."\{websiteRoot}\{testCasePath.getParent().getFileName()}/";
-        String page = STR."\{path}\{testCasePath.getFileName()}";
+        Path websiteName = testCasePath.getParent().getFileName();
+        logger.info(STR."Adding page to website \{websiteName}");
+        String websiteRoot = STR."\{websitesRoot}\{websiteName}/";
+        String page = STR."\{websiteRoot}\{testCasePath.getFileName()}";
         Files.createDirectories(Path.of(page));
 
-        String fluidSrcPath = "../../fluid";
+        String localFluidPath = "../fluid";
         final String jsonSpec = STR."""
         const jsonSpec = {
-               \"fluidSrcPath\": [\"\{fluidSrcPath}\"],
+               \"fluidSrcPath\": [\"\{localFluidPath}\", \"../../fluid\"],
                \"inputs\": [\"tableData\"],
                \"query\": false,
                \"linking\": true
@@ -394,11 +396,11 @@ public class Program {
         """;
 
         /* html generation */
-        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{websiteRoot}/template.html").toURI())));
-        html = html.replaceAll("##TITLE##", String.valueOf(testCasePath.getParent().getFileName()));
+        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{websitesRoot}/template.html").toURI())));
+        html = html.replaceAll("##TITLE##", String.valueOf(websiteName));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
-        html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{testCasePath.getFileName()}.fld\"");
+        html = html.replaceAll("##FLUID_FILE##", STR."\"\{localFluidPath}/\{testCasePath.getFileName()}.fld\"");
         final String htmlFile = STR."\{page}/index.html";
         logger.info(STR."Generating \{htmlFile}");
         try (FileWriter file = new FileWriter(htmlFile)) {
@@ -420,11 +422,13 @@ public class Program {
                         try {
                             FileUtils.deleteDirectory(dir.toFile());
                         } catch (IOException e) {
+                            logger.info("Error during clean of website folder");
                             throw new RuntimeException(e);
                         }
                     });
         } catch (IOException e) {
-            System.err.println(STR."Error during clean of website folder: \{e.getMessage()}");
+            logger.info("Error during clean of website folder");
+            throw new RuntimeException(e);
         }
     }
 

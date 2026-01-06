@@ -182,7 +182,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey_ \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData)._model",
+      "expression": "(findWithKey_ \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model",
       "categories": ["data-retrieval"]
     },
     {
@@ -191,7 +191,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"most efficient\" (findIndex \"_model\" \"CNN\" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))",
+      "expression": "rankLabel \"most efficient\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))",
       "categories": ["rank", "data-retrieval", "comparison"]
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"smallest\" (findIndex \"_model\" \"CNN\" (insertionSort (fun a b -> a.param < b.param) tableData))",
+      "expression": "rankLabel \"smallest\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.param < b.param) tableData))",
       "categories": ["rank", "data-retrieval", "comparison"]
     },
     {
@@ -218,7 +218,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"lowest\" (findIndex \"_model\" \"CNN\" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))",
+      "expression": "rankLabel \"lowest\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))",
       "categories": ["rank"]
     },
     {
@@ -227,7 +227,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"best\" (findIndex \"_model\" \"S-LSTM+Attention\" (insertionSort (fun a b -> b._acc < a._acc) tableData))",
+      "expression": "rankLabel \"best\" (findIndex \"model\" \"S-LSTM+Attention\" (insertionSort (fun a b -> b._acc < a._acc) tableData))",
       "categories": ["comparison", "data-retrieval"]
     },
     {

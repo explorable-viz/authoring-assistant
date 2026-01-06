@@ -73,7 +73,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"BiLSTM\").time (model_ \"LSTM\").time growShrink",
+      "expression": "trendWord (model_ \"BiLSTM\").time_s (model_ \"LSTM\").time_s growShrink",
       "categories": ["data-retrieval", "data-retrieval","comparison"]
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"LSTM\").time",
+      "expression": "(model_ \"LSTM\").time_s",
       "categories": ["data-retrieval"]
     },
     {
@@ -91,7 +91,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"BiLSTM\").time",
+      "expression": "(model_ \"BiLSTM\").time_s",
       "categories": ["data-retrieval"]
 
     },
@@ -110,7 +110,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"2 stacked BiLSTM\").time (model_ \"BiLSTM\").time smallerHigher",
+      "expression": "trendWord (model_ \"2 stacked BiLSTM\").time_s (model_ \"BiLSTM\").time_s smallerHigher",
       "categories": ["data-retrieval", "data-retrieval","comparison"]
     },
     {
@@ -119,7 +119,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"2 stacked BiLSTM\").time",
+      "expression": "(model_ \"2 stacked BiLSTM\").time_s",
       "categories": ["data-retrieval"]
     },
     {
@@ -164,7 +164,7 @@
     },
     {
       "type": "expression",
-      "expression": "trendWord (model_ \"S-LSTM\").time (model_ \"2 stacked BiLSTM\").time shorterLonger",
+      "expression": "trendWord (model_ \"S-LSTM\").time_s (model_ \"2 stacked BiLSTM\").time_s shorterLonger",
       "categories": ["comparison", "data-retrieval", "data-retrieval"]
     },
     {
@@ -173,7 +173,7 @@
     },
     {
       "type": "expression",
-      "expression": "(model_ \"S-LSTM\").time",
+      "expression": "(model_ \"S-LSTM\").time_s",
       "categories": ["data-retrieval"]
     },
     {
@@ -182,7 +182,7 @@
     },
     {
       "type": "expression",
-      "expression": "(findWithKey_ \"time\" (minimum (map (fun y -> y.time) tableData)) tableData).model",
+      "expression": "(findWithKey_ \"time_s\" (minimum (map (fun y -> y.time_s) tableData)) tableData).model",
       "categories": ["data-retrieval"]
     },
     {
@@ -191,7 +191,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"most efficient\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time < b.time) tableData))",
+      "expression": "rankLabel \"most efficient\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))",
       "categories": ["rank", "data-retrieval", "comparison"]
     },
     {
@@ -218,7 +218,7 @@
     },
     {
       "type": "expression",
-      "expression": "rankLabel \"lowest\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time < b.time) tableData))",
+      "expression": "rankLabel \"lowest\" (findIndex \"model\" \"CNN\" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))",
       "categories": ["rank"]
     },
     {

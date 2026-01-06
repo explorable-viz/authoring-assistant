@@ -1,6 +1,6 @@
 [
   {
-    "gong_et_al": "Gong et al.   ( 2018   )",
+    "gong_et_al_2018": "Gong et al.   ( 2018   )",
     "topic_science": "topic_wiki",
     "p_758": 0.75,
     "p_±_012": "±.009",
@@ -10,7 +10,7 @@
     "f_±_028": "±.007"
   },
   {
-    "gong_et_al": " Method",
+    "gong_et_al_2018": " Method",
     "topic_science": " Conc. Input",
     "p_758": "",
     "p_±_012": "",
@@ -20,7 +20,7 @@
     "f_±_028": ""
   },
   {
-    "gong_et_al": " AVG_COS_SIM",
+    "gong_et_al_2018": " AVG_COS_SIM",
     "topic_science": "Label",
     "p_758": 0.939,
     "p_±_012": "±.043",
@@ -30,7 +30,7 @@
     "f_±_028": "±.038"
   },
   {
-    "gong_et_al": " AVG_COS_SIM",
+    "gong_et_al_2018": " AVG_COS_SIM",
     "topic_science": "Description",
     "p_758": 0.87,
     "p_±_012": "±.068",
@@ -40,7 +40,7 @@
     "f_±_028": "±.038"
   },
   {
-    "gong_et_al": " AVG_COS_SIM",
+    "gong_et_al_2018": " AVG_COS_SIM",
     "topic_science": "Both",
     "p_758": 0.915,
     "p_±_012": "±.040",
@@ -50,7 +50,7 @@
     "f_±_028": "±.038"
   },
   {
-    "gong_et_al": " TOP_n_COS_SIM_AVG",
+    "gong_et_al_2018": " TOP_n_COS_SIM_AVG",
     "topic_science": "Label",
     "p_758": 0.854,
     "p_±_012": "±.077",
@@ -60,7 +60,7 @@
     "f_±_028": "±.054"
   },
   {
-    "gong_et_al": " TOP_n_COS_SIM_AVG",
+    "gong_et_al_2018": " TOP_n_COS_SIM_AVG",
     "topic_science": "Description",
     "p_758": 0.799,
     "p_±_012": "±.063",
@@ -70,7 +70,7 @@
     "f_±_028": "±.068"
   },
   {
-    "gong_et_al": " TOP_n_COS_SIM_AVG",
+    "gong_et_al_2018": " TOP_n_COS_SIM_AVG",
     "topic_science": "Both",
     "p_758": 0.85,
     "p_±_012": "±.059",

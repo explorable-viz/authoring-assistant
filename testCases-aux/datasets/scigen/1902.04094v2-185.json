@@ -1,32 +1,32 @@
 [
   {
     "model": "BERT (large)",
-    "corpus_bleu_wt103": 5.05,
-    "corpus_bleu_tbc": 7.6,
-    "ppl": 331.47
+    "corpus_bleu_↑_wt103": 5.05,
+    "corpus_bleu_↑_tbc": 7.6,
+    "ppl_↓": 331.47
   },
   {
     "model": "BERT (base)",
-    "corpus_bleu_wt103": 7.8,
-    "corpus_bleu_tbc": 7.06,
-    "ppl": 279.1
+    "corpus_bleu_↑_wt103": 7.8,
+    "corpus_bleu_↑_tbc": 7.06,
+    "ppl_↓": 279.1
   },
   {
     "model": "GPT",
-    "corpus_bleu_wt103": 10.81,
-    "corpus_bleu_tbc": 30.75,
-    "ppl": 154.29
+    "corpus_bleu_↑_wt103": 10.81,
+    "corpus_bleu_↑_tbc": 30.75,
+    "ppl_↓": 154.29
   },
   {
     "model": "WT103",
-    "corpus_bleu_wt103": 17.48,
-    "corpus_bleu_tbc": 6.57,
-    "ppl": 54.0
+    "corpus_bleu_↑_wt103": 17.48,
+    "corpus_bleu_↑_tbc": 6.57,
+    "ppl_↓": 54.0
   },
   {
     "model": "TBC",
-    "corpus_bleu_wt103": 10.05,
-    "corpus_bleu_tbc": 23.05,
-    "ppl": 314.28
+    "corpus_bleu_↑_wt103": 10.05,
+    "corpus_bleu_↑_tbc": 23.05,
+    "ppl_↓": 314.28
   }
 ]

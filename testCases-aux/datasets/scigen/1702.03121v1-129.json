@@ -9,10 +9,10 @@
     "std_error_script": 0.279,
     "std_error_linguistic": 0.321,
     "std_error_base": 0.791,
-    "pr_human": "<2e-16",
-    "pr_script": "<2e-16",
-    "pr_linguistic": "<2e-16",
-    "pr_base": 0.00011
+    "pr_∣_z∣_human": "<2e-16",
+    "pr_∣_z∣_script": "<2e-16",
+    "pr_∣_z∣_linguistic": "<2e-16",
+    "pr_∣_z∣_base": 0.00011
   },
   {
     "_1": "recency",
@@ -24,10 +24,10 @@
     "std_error_script": 0.095,
     "std_error_linguistic": 0.096,
     "std_error_base": 0.097,
-    "pr_human": "<2e-16",
-    "pr_script": "<2e-16",
-    "pr_linguistic": "<2e-16",
-    "pr_base": "<2e-16"
+    "pr_∣_z∣_human": "<2e-16",
+    "pr_∣_z∣_script": "<2e-16",
+    "pr_∣_z∣_linguistic": "<2e-16",
+    "pr_∣_z∣_base": "<2e-16"
   },
   {
     "_1": "frequency",
@@ -39,10 +39,10 @@
     "std_error_script": 0.097,
     "std_error_linguistic": 0.098,
     "std_error_base": 0.102,
-    "pr_human": 0.317,
-    "pr_script": 0.289,
-    "pr_linguistic": 0.251,
-    "pr_base": 0.262
+    "pr_∣_z∣_human": 0.317,
+    "pr_∣_z∣_script": 0.289,
+    "pr_∣_z∣_linguistic": 0.251,
+    "pr_∣_z∣_base": 0.262
   },
   {
     "_1": "pastObj",
@@ -54,10 +54,10 @@
     "std_error_script": 0.294,
     "std_error_linguistic": 0.295,
     "std_error_base": 0.3,
-    "pr_human": 0.165,
-    "pr_script": 0.178,
-    "pr_linguistic": 0.151,
-    "pr_base": 0.189
+    "pr_∣_z∣_human": 0.165,
+    "pr_∣_z∣_script": 0.178,
+    "pr_∣_z∣_linguistic": 0.151,
+    "pr_∣_z∣_base": 0.189
   },
   {
     "_1": "pastSubj",
@@ -69,10 +69,10 @@
     "std_error_script": 0.564,
     "std_error_linguistic": 0.562,
     "std_error_base": 0.565,
-    "pr_human": "0.0838 .",
-    "pr_script": "0.0846 .",
-    "pr_linguistic": 0.106,
-    "pr_base": 0.101
+    "pr_∣_z∣_human": "0.0838 .",
+    "pr_∣_z∣_script": "0.0846 .",
+    "pr_∣_z∣_linguistic": 0.106,
+    "pr_∣_z∣_base": 0.101
   },
   {
     "_1": "pastExpPronoun",
@@ -84,10 +84,10 @@
     "std_error_script": 0.207,
     "std_error_linguistic": 0.208,
     "std_error_base": 0.245,
-    "pr_human": 2.19e-14,
-    "pr_script": 5.48e-15,
-    "pr_linguistic": 7.59e-15,
-    "pr_base": 6.11e-11
+    "pr_∣_z∣_human": 2.19e-14,
+    "pr_∣_z∣_script": 5.48e-15,
+    "pr_∣_z∣_linguistic": 7.59e-15,
+    "pr_∣_z∣_base": 6.11e-11
   },
   {
     "_1": "depTypeSubj",
@@ -99,10 +99,10 @@
     "std_error_script": 0.347,
     "std_error_linguistic": 0.429,
     "std_error_base": 1.113,
-    "pr_human": "<2e-16",
-    "pr_script": "<2e-16",
-    "pr_linguistic": 5.68e-10,
-    "pr_base": 0.02994
+    "pr_∣_z∣_human": "<2e-16",
+    "pr_∣_z∣_script": "<2e-16",
+    "pr_∣_z∣_linguistic": 5.68e-10,
+    "pr_∣_z∣_base": 0.02994
   },
   {
     "_1": "depTypeObj",
@@ -114,10 +114,10 @@
     "std_error_script": 0.306,
     "std_error_linguistic": 0.389,
     "std_error_base": 1.109,
-    "pr_human": 1.35e-06,
-    "pr_script": 6.05e-05,
-    "pr_linguistic": 0.0119,
-    "pr_base": 0.525
+    "pr_∣_z∣_human": 1.35e-06,
+    "pr_∣_z∣_script": 6.05e-05,
+    "pr_∣_z∣_linguistic": 0.0119,
+    "pr_∣_z∣_base": 0.525
   },
   {
     "_1": "surprisal",
@@ -129,10 +129,10 @@
     "std_error_script": 0.097,
     "std_error_linguistic": 0.117,
     "std_error_base": 0.387,
-    "pr_human": 0.684,
-    "pr_script": 0.951,
-    "pr_linguistic": 0.988,
-    "pr_base": 0.735
+    "pr_∣_z∣_human": 0.684,
+    "pr_∣_z∣_script": 0.951,
+    "pr_∣_z∣_linguistic": 0.988,
+    "pr_∣_z∣_base": 0.735
   },
   {
     "_1": "residualEntropy",
@@ -144,9 +144,9 @@
     "std_error_script": 0.128,
     "std_error_linguistic": 0.168,
     "std_error_base": 0.258,
-    "pr_human": 0.916,
-    "pr_script": 0.859,
-    "pr_linguistic": 0.401,
-    "pr_base": 0.619
+    "pr_∣_z∣_human": 0.916,
+    "pr_∣_z∣_script": 0.859,
+    "pr_∣_z∣_linguistic": 0.401,
+    "pr_∣_z∣_base": 0.619
   }
 ]

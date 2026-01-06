@@ -8,7 +8,7 @@
     "sick_r": " Dimension of Sentence Representation: 1200",
     "sick_e": " Dimension of Sentence Representation: 1200",
     "sts14": " Dimension of Sentence Representation: 1200",
-    "msrp": " Dimension of Sentence Representation: 1200",
+    "msrp_acc_f1": " Dimension of Sentence Representation: 1200",
     "sst": " Dimension of Sentence Representation: 1200",
     "trec": " Dimension of Sentence Representation: 1200"
   },
@@ -21,7 +21,7 @@
     "sick_r": 0.853,
     "sick_e": 82.6,
     "sts14": "0.58/0.56",
-    "msrp": " 75.6/  82.9",
+    "msrp_acc_f1": " 75.6/  82.9",
     "sst": 82.8,
     "trec": 89.2
   },
@@ -34,7 +34,7 @@
     "sick_r": 0.8515,
     "sick_e": 82.7,
     "sts14": "0.58/0.56",
-    "msrp": "75.3/82.5",
+    "msrp_acc_f1": "75.3/82.5",
     "sst": 82.9,
     "trec": 85.2
   },
@@ -47,7 +47,7 @@
     "sick_r": 0.8474,
     "sick_e": 82.9,
     "sts14": "0.57/0.55",
-    "msrp": "74.2/81.6",
+    "msrp_acc_f1": "74.2/81.6",
     "sst": 82.8,
     "trec": 88.0
   },
@@ -60,7 +60,7 @@
     "sick_r": 0.8533,
     "sick_e": 82.5,
     "sts14": "0.57/0.55",
-    "msrp": "74.7/82.2",
+    "msrp_acc_f1": "74.7/82.2",
     "sst": 81.5,
     "trec": 86.2
   },
@@ -73,7 +73,7 @@
     "sick_r": 0.853,
     "sick_e": 82.6,
     "sts14": "0.51/0.50",
-    "msrp": "74.1/81.7",
+    "msrp_acc_f1": "74.1/81.7",
     "sst": 81.0,
     "trec": 89.0
   },
@@ -86,7 +86,7 @@
     "sick_r": 0.8117,
     "sick_e": 80.5,
     "sts14": "0.44/0.42",
-    "msrp": "72.7/80.7",
+    "msrp_acc_f1": "72.7/80.7",
     "sst": 78.4,
     "trec": 85.0
   },
@@ -99,7 +99,7 @@
     "sick_r": 0.857,
     "sick_e": 84.0,
     "sts14": "0.58/0.56",
-    "msrp": "74.3/81.5",
+    "msrp_acc_f1": "74.3/81.5",
     "sst": 82.8,
     "trec": 88.2
   },
@@ -112,7 +112,7 @@
     "sick_r": 0.8541,
     "sick_e": 83.0,
     "sts14": " 0.59/  0.57",
-    "msrp": "74.3/82.2",
+    "msrp_acc_f1": "74.3/82.2",
     "sst": 82.9,
     "trec": 89.0
   },
@@ -125,7 +125,7 @@
     "sick_r": " Dimension of Sentence Representation: 2400",
     "sick_e": " Dimension of Sentence Representation: 2400",
     "sts14": " Dimension of Sentence Representation: 2400",
-    "msrp": " Dimension of Sentence Representation: 2400",
+    "msrp_acc_f1": " Dimension of Sentence Representation: 2400",
     "sst": " Dimension of Sentence Representation: 2400",
     "trec": " Dimension of Sentence Representation: 2400"
   },
@@ -138,7 +138,7 @@
     "sick_r": 0.8631,
     "sick_e": 83.9,
     "sts14": " 0.58/  0.55",
-    "msrp": " 74.7/  83.1",
+    "msrp_acc_f1": " 74.7/  83.1",
     "sst": 83.4,
     "trec": 90.2
   },
@@ -151,7 +151,7 @@
     "sick_r": 0.8647,
     "sick_e": 84.2,
     "sts14": "0.52/0.51",
-    "msrp": "74.0/81.2",
+    "msrp_acc_f1": "74.0/81.2",
     "sst": 84.2,
     "trec": 87.6
   },
@@ -164,7 +164,7 @@
     "sick_r": 0.8132,
     "sick_e": "-",
     "sts14": "-",
-    "msrp": "71.9/81.9",
+    "msrp_acc_f1": "71.9/81.9",
     "sst": "-",
     "trec": 86.6
   },
@@ -177,7 +177,7 @@
     "sick_r": " Dimension of Sentence Representation: 4800",
     "sick_e": " Dimension of Sentence Representation: 4800",
     "sts14": " Dimension of Sentence Representation: 4800",
-    "msrp": " Dimension of Sentence Representation: 4800",
+    "msrp_acc_f1": " Dimension of Sentence Representation: 4800",
     "sst": " Dimension of Sentence Representation: 4800",
     "trec": " Dimension of Sentence Representation: 4800"
   },
@@ -190,7 +190,7 @@
     "sick_r": 0.8698,
     "sick_e": 85.2,
     "sts14": " 0.59/  0.57",
-    "msrp": " 75.1/  83.2",
+    "msrp_acc_f1": " 75.1/  83.2",
     "sst": 84.1,
     "trec": 92.2
   },
@@ -203,7 +203,7 @@
     "sick_r": 0.8584,
     "sick_e": 82.3,
     "sts14": "0.29/0.35",
-    "msrp": "73.0/82.0",
+    "msrp_acc_f1": "73.0/82.0",
     "sst": 82.0,
     "trec": 92.2
   },
@@ -216,7 +216,7 @@
     "sick_r": 0.858,
     "sick_e": 79.5,
     "sts14": "0.44/0.45",
-    "msrp": "-",
+    "msrp_acc_f1": "-",
     "sst": 82.9,
     "trec": 88.4
   }

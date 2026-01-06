@@ -4,41 +4,41 @@
     "bilstm": 68.1,
     "deat": 70.9,
     "bimpm": 71.5,
-    "rcn": " 73.0∗"
+    "rcn_our": " 73.0∗"
   },
   {
     "topic": "HC",
     "bilstm": 52.5,
     "deat": 56.9,
     "bimpm": 56.4,
-    "rcn": " 58.6∗∗"
+    "rcn_our": " 58.6∗∗"
   },
   {
     "topic": "FM",
     "bilstm": 58.3,
     "deat": 60.67,
     "bimpm": 59.8,
-    "rcn": " 64.4∗∗"
+    "rcn_our": " 64.4∗∗"
   },
   {
     "topic": "AT",
     "bilstm": 67.5,
     "deat": 69.5,
     "bimpm": 70.3,
-    "rcn": " 72.2∗"
+    "rcn_our": " 72.2∗"
   },
   {
     "topic": "LA",
     "bilstm": 61.3,
     "deat": 63.2,
     "bimpm": 62.4,
-    "rcn": " 64.5∗∗"
+    "rcn_our": " 64.5∗∗"
   },
   {
     "topic": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
     "bilstm": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
     "deat": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
     "bimpm": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "rcn": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05"
+    "rcn_our": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05"
   }
 ]

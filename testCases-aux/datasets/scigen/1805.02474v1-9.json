@@ -1,61 +1,61 @@
 [
   {
     "model": "+0 dummy node",
-    "time": 56,
+    "time_s": 56,
     "acc": 81.76,
     "num_param": 7216
   },
   {
     "model": "+1 dummy node",
-    "time": 65,
+    "time_s": 65,
     "acc": 82.64,
     "num_param": 8768
   },
   {
     "model": "+2 dummy node",
-    "time": 76,
+    "time_s": 76,
     "acc": 82.24,
     "num_param": 10321
   },
   {
     "model": "Hidden size 100",
-    "time": 42,
+    "time_s": 42,
     "acc": 81.75,
     "num_param": 4891
   },
   {
     "model": "Hidden size 200",
-    "time": 54,
+    "time_s": 54,
     "acc": 82.04,
     "num_param": 6002
   },
   {
     "model": "Hidden size 300",
-    "time": 65,
+    "time_s": 65,
     "acc": 82.64,
     "num_param": 8768
   },
   {
     "model": "Hidden size 600",
-    "time": 175,
+    "time_s": 175,
     "acc": 81.84,
     "num_param": 17648
   },
   {
     "model": "Hidden size 900",
-    "time": 235,
+    "time_s": 235,
     "acc": 81.66,
     "num_param": 33942
   },
   {
     "model": "Without ⟨s⟩, ⟨/s⟩",
-    "time": 63,
+    "time_s": 63,
     "acc": 82.36,
     "num_param": 8768
   },
   {
     "model": "With ⟨s⟩, ⟨/s⟩",
-    "time": 65,
+    "time_s": 65,
     "acc": 82.64,
     "num_param": 8768
   }

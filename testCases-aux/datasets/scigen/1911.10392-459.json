@@ -1,72 +1,72 @@
 [
   {
     "_1": "was able to “understand” my questions",
-    "1": 16.7,
-    "2": 50.0,
-    "3": 33.3,
-    "4": 0.0
+    "1_strongly_agree": 16.7,
+    "2_agree": 50.0,
+    "3_disagree": 33.3,
+    "4_strongly_disagree": 0.0
   },
   {
     "_1": "was able to provide answers to my questions",
-    "1": 0.0,
-    "2": 50.0,
-    "3": 50.0,
-    "4": 0.0
+    "1_strongly_agree": 0.0,
+    "2_agree": 50.0,
+    "3_disagree": 50.0,
+    "4_strongly_disagree": 0.0
   },
   {
     "_1": "I was satisfied with the informativeness of the answers provided by",
-    "1": 33.3,
-    "2": 33.3,
-    "3": 0.0,
-    "4": 33.3
+    "1_strongly_agree": 33.3,
+    "2_agree": 33.3,
+    "3_disagree": 0.0,
+    "4_strongly_disagree": 33.3
   },
   {
     "_1": "I was satisfied with the fluency of the answers provided by",
-    "1": 16.7,
-    "2": 50.0,
-    "3": 16.7,
-    "4": 16.7
+    "1_strongly_agree": 16.7,
+    "2_agree": 50.0,
+    "3_disagree": 16.7,
+    "4_strongly_disagree": 16.7
   },
   {
     "_1": "could respond in a reasonable time",
-    "1": 50.0,
-    "2": 33.3,
-    "3": 16.7,
-    "4": 0.0
+    "1_strongly_agree": 50.0,
+    "2_agree": 33.3,
+    "3_disagree": 16.7,
+    "4_strongly_disagree": 0.0
   },
   {
     "_1": "The GUI of was suitable for reading the provided answers",
-    "1": 50.0,
-    "2": 0.0,
-    "3": 33.3,
-    "4": 16.7
+    "1_strongly_agree": 50.0,
+    "2_agree": 0.0,
+    "3_disagree": 33.3,
+    "4_strongly_disagree": 16.7
   },
   {
     "_1": "reduces my need to google a specific information",
-    "1": 16.7,
-    "2": 66.7,
-    "3": 0.0,
-    "4": 16.7
+    "1_strongly_agree": 16.7,
+    "2_agree": 66.7,
+    "3_disagree": 0.0,
+    "4_strongly_disagree": 16.7
   },
   {
     "_1": "would help me save some time in my wor",
-    "1": 33.3,
-    "2": 33.3,
-    "3": 33.3,
-    "4": 0.0
+    "1_strongly_agree": 33.3,
+    "2_agree": 33.3,
+    "3_disagree": 33.3,
+    "4_strongly_disagree": 0.0
   },
   {
     "_1": "I would like to use in the future on a daily basis",
-    "1": 0.0,
-    "2": 66.7,
-    "3": 0.0,
-    "4": 33.3
+    "1_strongly_agree": 0.0,
+    "2_agree": 66.7,
+    "3_disagree": 0.0,
+    "4_strongly_disagree": 33.3
   },
   {
     "_1": "I will use to plan for my next conference",
-    "1": 16.7,
-    "2": 16.7,
-    "3": 33.3,
-    "4": 33.3
+    "1_strongly_agree": 16.7,
+    "2_agree": 16.7,
+    "3_disagree": 33.3,
+    "4_strongly_disagree": 33.3
   }
 ]

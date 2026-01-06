@@ -5,7 +5,7 @@
     "claims_converted_to_questions": 131969,
     "conversion_accuracy": 90.73,
     "total_questions": 395717,
-    "questions_per_claim": 3
+    "questions_per_claim_median": 3
   },
   {
     "type_of_fever_set": "Development Set",
@@ -13,7 +13,7 @@
     "claims_converted_to_questions": 17749,
     "conversion_accuracy": 88.75,
     "total_questions": 54422,
-    "questions_per_claim": 3
+    "questions_per_claim_median": 3
   },
   {
     "type_of_fever_set": "Test Set",
@@ -21,6 +21,6 @@
     "claims_converted_to_questions": 8863,
     "conversion_accuracy": 88.63,
     "total_questions": 27359,
-    "questions_per_claim": 3
+    "questions_per_claim_median": 3
   }
 ]

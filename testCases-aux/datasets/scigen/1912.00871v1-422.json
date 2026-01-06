@@ -1,6 +1,6 @@
 [
   {
-    "model": " Hosseini, et.al.",
+    "type_model": " Hosseini, et.al.",
     "ai2": 77.7,
     "cc": "–",
     "il": "–",
@@ -8,7 +8,7 @@
     "average": "∗77.7"
   },
   {
-    "model": " Kushman, et.al.",
+    "type_model": " Kushman, et.al.",
     "ai2": 64.0,
     "cc": 73.7,
     "il": 2.3,
@@ -16,7 +16,7 @@
     "average": "∗46.7"
   },
   {
-    "model": " Roy, et.al.",
+    "type_model": " Roy, et.al.",
     "ai2": "–",
     "cc": "–",
     "il": 52.7,
@@ -24,7 +24,7 @@
     "average": "∗52.7"
   },
   {
-    "model": " Robaidek, et.al.",
+    "type_model": " Robaidek, et.al.",
     "ai2": "–",
     "cc": "–",
     "il": "–",
@@ -32,7 +32,7 @@
     "average": "∗62.8"
   },
   {
-    "model": " Wang, et.al.",
+    "type_model": " Wang, et.al.",
     "ai2": 78.5,
     "cc": 75.5,
     "il": 73.3,
@@ -40,7 +40,7 @@
     "average": "∗75.4"
   },
   {
-    "model": " Pre-trained",
+    "type_model": " Pre-trained",
     "ai2": "",
     "cc": "",
     "il": "",
@@ -48,7 +48,7 @@
     "average": ""
   },
   {
-    "model": "(1) Prefix-Transformer",
+    "type_model": "(1) Prefix-Transformer",
     "ai2": 70.2,
     "cc": 91.1,
     "il": 95.2,
@@ -56,7 +56,7 @@
     "average": 84.7
   },
   {
-    "model": "(1) Postfix-Transformer",
+    "type_model": "(1) Postfix-Transformer",
     "ai2": 68.4,
     "cc": 90.0,
     "il": 92.9,
@@ -64,7 +64,7 @@
     "average": 83.5
   },
   {
-    "model": "(1) Infix-Transformer",
+    "type_model": "(1) Infix-Transformer",
     "ai2": 75.4,
     "cc": 74.4,
     "il": 64.3,
@@ -72,7 +72,7 @@
     "average": 67.6
   },
   {
-    "model": "(2) Prefix-Transformer",
+    "type_model": "(2) Prefix-Transformer",
     "ai2": 66.7,
     "cc": 91.1,
     "il": 96.4,
@@ -80,7 +80,7 @@
     "average": 84.1
   },
   {
-    "model": "(2) Postfix-Transformer",
+    "type_model": "(2) Postfix-Transformer",
     "ai2": 73.7,
     "cc": 93.3,
     "il": 94.1,
@@ -88,7 +88,7 @@
     "average": 85.9
   },
   {
-    "model": "(2) Infix-Transformer",
+    "type_model": "(2) Infix-Transformer",
     "ai2": 75.4,
     "cc": 75.6,
     "il": 66.7,
@@ -96,7 +96,7 @@
     "average": 69.2
   },
   {
-    "model": "(3) Prefix-Transformer",
+    "type_model": "(3) Prefix-Transformer",
     "ai2": 70.2,
     "cc": 91.1,
     "il": 95.2,
@@ -104,7 +104,7 @@
     "average": 84.7
   },
   {
-    "model": "(3) Postfix-Transformer",
+    "type_model": "(3) Postfix-Transformer",
     "ai2": 73.7,
     "cc": 92.2,
     "il": 94.1,
@@ -112,7 +112,7 @@
     "average": 85.5
   },
   {
-    "model": "(3) Infix-Transformer",
+    "type_model": "(3) Infix-Transformer",
     "ai2": 75.4,
     "cc": 75.6,
     "il": 64.3,
@@ -120,7 +120,7 @@
     "average": 68.5
   },
   {
-    "model": " Non-pre-trained",
+    "type_model": " Non-pre-trained",
     "ai2": "",
     "cc": "",
     "il": "",
@@ -128,7 +128,7 @@
     "average": ""
   },
   {
-    "model": "(1) Prefix-Transformer",
+    "type_model": "(1) Prefix-Transformer",
     "ai2": 71.9,
     "cc": 94.4,
     "il": 95.2,
@@ -136,7 +136,7 @@
     "average": 86.3
   },
   {
-    "model": "(1) Postfix-Transformer",
+    "type_model": "(1) Postfix-Transformer",
     "ai2": 73.7,
     "cc": 81.1,
     "il": 92.9,
@@ -144,7 +144,7 @@
     "average": 80.8
   },
   {
-    "model": "(1) Infix-Transformer",
+    "type_model": "(1) Infix-Transformer",
     "ai2": 77.2,
     "cc": 73.3,
     "il": 61.9,
@@ -152,7 +152,7 @@
     "average": 67.3
   },
   {
-    "model": "(2) Prefix-Transformer",
+    "type_model": "(2) Prefix-Transformer",
     "ai2": 71.9,
     "cc": 94.4,
     "il": 94.1,
@@ -160,7 +160,7 @@
     "average": 86.3
   },
   {
-    "model": "(2) Postfix-Transformer",
+    "type_model": "(2) Postfix-Transformer",
     "ai2": 77.2,
     "cc": 94.4,
     "il": 94.1,
@@ -168,7 +168,7 @@
     "average": 87.2
   },
   {
-    "model": "(2) Infix-Transformer",
+    "type_model": "(2) Infix-Transformer",
     "ai2": 77.2,
     "cc": 76.7,
     "il": 66.7,
@@ -176,7 +176,7 @@
     "average": 70.5
   },
   {
-    "model": "(3) Prefix-Transformer",
+    "type_model": "(3) Prefix-Transformer",
     "ai2": 71.9,
     "cc": 93.3,
     "il": 95.2,
@@ -184,7 +184,7 @@
     "average": 86.2
   },
   {
-    "model": "(3) Postfix-Transformer",
+    "type_model": "(3) Postfix-Transformer",
     "ai2": 77.2,
     "cc": 94.4,
     "il": 94.1,
@@ -192,7 +192,7 @@
     "average": 87.0
   },
   {
-    "model": "(3) Infix-Transformer",
+    "type_model": "(3) Infix-Transformer",
     "ai2": 77.2,
     "cc": 76.7,
     "il": 66.7,

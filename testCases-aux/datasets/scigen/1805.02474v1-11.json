@@ -2,61 +2,61 @@
   {
     "model": "socher2011semi",
     "accuracy": 77.7,
-    "train": "–",
-    "test": "–"
+    "train_s": "–",
+    "test_s": "–"
   },
   {
     "model": "socher2012semantic",
     "accuracy": 79.0,
-    "train": "–",
-    "test": "–"
+    "train_s": "–",
+    "test_s": "–"
   },
   {
     "model": "kim2014convolutional",
     "accuracy": 81.5,
-    "train": "–",
-    "test": "–"
+    "train_s": "–",
+    "test_s": "–"
   },
   {
     "model": "qian2016linguistically",
     "accuracy": 81.5,
-    "train": "–",
-    "test": "–"
+    "train_s": "–",
+    "test_s": "–"
   },
   {
     "model": "BiLSTM",
     "accuracy": 81.61,
-    "train": 51,
-    "test": 1.62
+    "train_s": 51,
+    "test_s": 1.62
   },
   {
     "model": "2 stacked BiLSTM",
     "accuracy": 81.94,
-    "train": 98,
-    "test": 3.18
+    "train_s": 98,
+    "test_s": 3.18
   },
   {
     "model": "3 stacked BiLSTM",
     "accuracy": 81.71,
-    "train": 137,
-    "test": 4.67
+    "train_s": 137,
+    "test_s": 4.67
   },
   {
     "model": "3 stacked CNN",
     "accuracy": 81.59,
-    "train": 31,
-    "test": 1.04
+    "train_s": 31,
+    "test_s": 1.04
   },
   {
     "model": "Transformer (N=8)",
     "accuracy": 81.97,
-    "train": 89,
-    "test": 2.75
+    "train_s": 89,
+    "test_s": 2.75
   },
   {
     "model": "S-LSTM",
     "accuracy": 82.45,
-    "train": 41,
-    "test": 1.53
+    "train_s": 41,
+    "test_s": 1.53
   }
 ]

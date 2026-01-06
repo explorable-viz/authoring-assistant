@@ -6,7 +6,7 @@ python3 -m venv .venv-chart
 
 source .venv-chart/bin/activate
 pip install pandas seaborn matplotlib
-python ./script/chart-generation.py
+python ./script/generate-charts.py
 
 #delete the virtual-env
 rm -r .venv-chart

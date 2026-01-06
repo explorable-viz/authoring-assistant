@@ -37,13 +37,13 @@
 <script type="module">
     import { loadFigureSpec } from "../../shared/load-figure.js"
     const jsonSpec = {
-       "fluidSrcPath": ["../../fluid"],
+       "fluidSrcPath": ["../fluid", "../../fluid"],
        "inputs": ["tableData"],
        "query": false,
        "linking": true
    }
 
-    loadFigureSpec(jsonSpec)("../../fluid/2003.02736v1-273.fld")()
+    loadFigureSpec(jsonSpec)("../fluid/2003.02736v1-273.fld")()
 </script>
 </body>
 </html>

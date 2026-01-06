@@ -377,13 +377,15 @@ public class Program {
     }
 
     public void toWebpage() throws IOException {
-        final String websiteRoot = "website/authoring-assistant/";
+        final String websitesRoot = "website/authoring-assistant/";
         Path testCasePath = Path.of(this.testCaseFileName);
-        String path = STR."\{websiteRoot}\{testCasePath.getParent().getFileName()}/";
-        String page = STR."\{path}\{testCasePath.getFileName()}";
+        Path websiteName = testCasePath.getParent().getFileName();
+        logger.info(STR."Adding page to website \{websiteName}");
+        String websiteRoot = STR."\{websitesRoot}\{websiteName}/";
+        String page = STR."\{websiteRoot}\{testCasePath.getFileName()}";
         Files.createDirectories(Path.of(page));
 
-        String fluidSrcPath = "../../fluid";
+        String fluidSrcPath = "../fluid";
         final String jsonSpec = STR."""
         const jsonSpec = {
                \"fluidSrcPath\": [\"\{fluidSrcPath}\"],
@@ -394,8 +396,8 @@ public class Program {
         """;
 
         /* html generation */
-        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{websiteRoot}/template.html").toURI())));
-        html = html.replaceAll("##TITLE##", String.valueOf(testCasePath.getParent().getFileName()));
+        String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{websitesRoot}/template.html").toURI())));
+        html = html.replaceAll("##TITLE##", String.valueOf(websiteName));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
         html = html.replaceAll("##FLUID_FILE##", STR."\"\{fluidSrcPath}/\{testCasePath.getFileName()}.fld\"");

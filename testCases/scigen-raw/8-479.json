@@ -1,0 +1,18 @@
+{
+  "datasets": [
+    "datasets/8-479.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/_8_479"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The accuracy scores on *BLESS test sets are provided in Table 1.8 Our POSTLE models display exactly the same performance as LEAR in the FULL setting: this is simply because all words found in *BLESS datasets are covered by the lexical constraints, and POSTLE does not generalize the initial LEAR transformation to unseen test words. In the DISJOINT setting, however, LEAR is left \"blind\" as it has not seen a single test word in the constraints: it leaves distributional vectors of *BLESS test words identical. In this setting, LEAR performance is equivalent to the original distributional space. In contrast, learning to generalize the LE specialization function from LEAR-specializations of other words, POSTLE models are able to successfully LE-specialize vectors of test *BLESS words. As in the graded LE, the adversarial POSTLE architecture outperforms the simpler DFFN model."
+    }
+  ]
+}

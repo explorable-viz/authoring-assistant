@@ -1,6 +1,7 @@
 import json
 import re
 import sys
+import shutil
 from pathlib import Path
 
 
@@ -14,10 +15,15 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
     with open(raw_file, 'r', encoding='utf-8') as f:
         datas = json.load(f)
 
-    # Create output directories
+    # Clean target directories
     datasets_path = tests_aux_dir / datasets_dir
-    datasets_path.mkdir(parents=True, exist_ok=True)
-    tests_dir.mkdir(parents=True, exist_ok=True)
+    if datasets_path.exists():
+        shutil.rmtree(datasets_path)
+    datasets_path.mkdir()
+
+    if tests_dir.exists():
+        shutil.rmtree(tests_dir)
+    tests_dir.mkdir()
 
     k = 0
     for data in datas.values():

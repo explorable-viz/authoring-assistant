@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fluid: ##TITLE##</title>
+    <title>Fluid: scigen-manual-old</title>
     <link href="../../css/styles.css" rel="stylesheet" type="text/css">
     <link href="../../css/view-styles.css" rel="stylesheet" type="text/css">
     <script src="../../shared/util.js"></script>
@@ -20,7 +20,7 @@
     <div></div>
     <div></div>
     <div class="flex-left-align">
-        <h3>##TEST_NAME##</h3>
+        <h3>1805.02474v1-14</h3>
     </div>
 
     <div class="flex-right-align data-pane">
@@ -36,8 +36,14 @@
 
 <script type="module">
     import { loadFigureSpec } from "../../shared/load-figure.js"
-    ##JSON_SPEC##
-    loadFigureSpec(jsonSpec)(##FLUID_FILE##)()
+    const jsonSpec = {
+       "fluidSrcPath": ["../fluid", "../../fluid"],
+       "inputs": ["tableData"],
+       "query": false,
+       "linking": true
+   }
+
+    loadFigureSpec(jsonSpec)("../fluid/1805.02474v1-14.fld")()
 </script>
 </body>
 </html>

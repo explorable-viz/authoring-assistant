@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1906_07854v1_260
+
+"""
+	As shown in table 2, BioBERT trained on PubMed+PMC performs the best .
+"""

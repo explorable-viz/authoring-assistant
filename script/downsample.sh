@@ -17,11 +17,10 @@ sort -k1,1n | \
 cut -f2- | \
 head -n "$TARGET_SIZE" | \
 while read -r json_path; do
-    
+
     # Copy json then .fld file
     cp "$json_path" "$TARGET_DIR/"
     fld_path="${json_path%.json}.fld"
     cp "$fld_path" "$TARGET_DIR/"
-    
-done
 
+done

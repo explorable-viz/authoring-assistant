@@ -18,7 +18,7 @@
     "test-mock": "./script/authoring-assistant.sh test-case-folder=scigen-manual-old",
     "test": "./script/authoring-assistant.sh",
     "suggestion-agent": "./script/authoring-assistant.sh suggestion-agent-only=true",
-    "test-websites": "./script/test-websites.sh",
+    "test-website": "./script/test-website.sh",
     "zip-artifact" : "./script/zip-artifact.sh",
     "downsample-category": "./script/authoring-assistant.sh \"downsample=true expression-per-category=5 sample-size=30  test-case-folder=./testCases/scigen-SuggestionAgent\""
   },

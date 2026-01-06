@@ -2,7 +2,6 @@
 # Build the project package with maven.
 set -xe
 
-# Ensure JAVA_HOME set correctly
 if [[ $OSTYPE == 'darwin'* ]]; then
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-22.0.2.jdk/Contents/Home"
 fi

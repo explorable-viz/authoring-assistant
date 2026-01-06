@@ -58,7 +58,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version> <!-- O usa una versione aggiornata -->
                 <configuration>
-                    <source>22</source> <!-- Specifica la versione del JDK (ad esempio 21) -->
+                    <source>22</source>
                     <target>22</target>
                     <compilerArgs>
                         <arg>--enable-preview</arg>
@@ -72,7 +72,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>authoringassistant.Main</mainClass> <!-- Main Class -->
+                            <mainClass>authoringassistant.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

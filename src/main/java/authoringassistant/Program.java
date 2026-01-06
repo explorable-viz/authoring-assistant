@@ -90,7 +90,6 @@ public class Program {
 
     public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
         String value = extractValue(commandLineResponse);
-        //interpreter errors detection -
         if (commandLineResponse.contains("Error: ")) {
             logger.info(STR."Interpreter error: \{value}");
             return Optional.of(value);

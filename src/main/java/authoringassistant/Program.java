@@ -421,11 +421,13 @@ public class Program {
                         try {
                             FileUtils.deleteDirectory(dir.toFile());
                         } catch (IOException e) {
+                            logger.info("Error during clean of website folder");
                             throw new RuntimeException(e);
                         }
                     });
         } catch (IOException e) {
-            System.err.println(STR."Error during clean of website folder: \{e.getMessage()}");
+            logger.info("Error during clean of website folder");
+            throw new RuntimeException(e);
         }
     }
 

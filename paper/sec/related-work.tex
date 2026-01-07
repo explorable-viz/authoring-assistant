@@ -2,55 +2,51 @@
 \label{sec:related}
 
 \paragraph{Argument mining.}
-\emph{Argument mining} is an area of NLP which involves identifying argumentative structures in text, such as
-claims, premises, and conclusions, and mapping them to formal
-representations~\citep{palau2009argumentation,lippi2015argument}. Early work focused on rule-based approaches,
-while more recent work has leveraged machine learning and deep learning
-techniques~\citep{stab2014identifying,stab2017parsing,eger2017neural}. The field has also emphasized defining
-annotation schemes for the task, such as the Argumentative Zoning
-framework~\citep{teufel2002summarizing,teufel2009towards}, as well as schemes more directly tailored to
-argument mining~\citep{stab2014annotating}. The field has focused on various domains, starting from legal
-texts~\citep{toulmin2003uses}, and has relied on online resources such as
-Debatepedia~\citep{cabrio2013natural}. The community has also rapidly engaged with work that explores the use
-of argument mining in scientific texts~\citep{liakata12,lauscher2018investigating} to better understand the
-structure of scientific arguments and the relationships between different claims and evidence. While the
-advent of LLMs has improved performance~\citep{gorur2025can,vrakatseli2025can}, argument mining remains a
-challenging task, particularly when it comes to identifying implicit argumentative relations between discourse
-units, and reasoning about relationships among different argumentative components, especially in cross-domain
-settings where models struggle to generalise~\citep{gemechu2024aries}. While in our work we do not directly
-perform traditional argument mining, this work similarly relies on the identification of claims in text, which
-we evaluate following established practices in the field.
+
+\emph{Argument mining} is an area of NLP which involves identifying argumentative structures in text, such as claims,
+premises, and conclusions, and mapping them to formal representations~\citep{palau2009,lippi2015}. Early work focused on
+rule-based approaches, while more recent work has leveraged machine learning and deep learning
+techniques~\citep{stab2014a,stab2017,eger2017}. The field has also emphasized defining annotation schemes for the task,
+such as the Argumentative Zoning framework~\citep{teufel2002,teufel2009}, as well as schemes more directly tailored to
+argument mining~\citep{stab2014}. The field has focused on various domains, starting from legal
+texts~\citep{toulmin2003}, and has relied on online resources such as Debatepedia~\citep{cabrio2013}. The community has
+also rapidly engaged with work that explores the use of argument mining in scientific
+texts~\citep{liakata2012,lauscher2018a} to better understand the structure of scientific arguments and the relationships
+between different claims and evidence. While the advent of LLMs has improved
+performance~\citep{gorur2025,vrakatseli2025}, argument mining remains a challenging task, particularly when it comes to
+identifying implicit argumentative relations between discourse units, and reasoning about relationships among different
+argumentative components, especially in cross-domain settings where models struggle to generalise~\citep{gemechu2024}.
+While in our work we do not directly perform traditional argument mining, this work similarly relies on the
+identification of claims in text, which we evaluate following established practices in the field.
 
 \paragraph{NLP and scientific writing.}
-The intersection of NLP and scientific writing has gained increasing attention in the last decade, with a
-focus on improving the clarity, coherence, and overall quality of scientific texts. On the authoring side,
-tools such as automated writing assistants can support researchers in producing more fluent and accessible
-text, for instance through grammar correction, summarisation and text
-simplification~\citep{napoles2017jfleg,stiennon2020learning,takeshita2024cross,saggion2017automatic}. Other
-approaches specifically target the argumentative structure of scientific papers, helping writers to organise
-contributions and claims more effectively~\citep{lauscher2018arguminsci}. Nowadays, general purpose LLMs such
-as ChatGPT or tools tailored for the task such as Grammarly show the variety of support that NLP tools can
-provide to authors~\citep{wu2023chatgpt,ahn2024transformative,khalifa2024using}.
 
-At the same time, NLP methods are being developed to assist reviewers and editors in evaluating submissions.
-These include systems for detecting potential issues such as lack of clarity, weak argumentative support, or
-even factual inconsistencies and up to scientific fraud~\citep{thakkar2025can, fromm2021argument,
-freedman2024detecting}. Such tools can also facilitate meta-reviewing by providing summaries of peer reviews
-and identifying points of disagreement among reviewers~\citep{kumar2023reviewers}. While AI tools show
-promises in improving the peer-review process~\citep{tyser2024ai}, there are also various risks associated
-such as breaches of confidentiality, lack of transparency and biases~\citep{perlis2025artificial}. Our current
-work situates itself in the context of NLP tools for supporting the understanding of scientific writing;
-specifically, it addresses one of the major critiques toward the automation of such process by offering a
-transparent way of examining its workflow.
+The intersection of NLP and scientific writing has gained increasing attention in the last decade, with a focus on
+improving the clarity, coherence, and overall quality of scientific texts. On the authoring side, tools such as
+automated writing assistants can support researchers in producing more fluent and accessible text, for instance through
+grammar correction, summarisation and text simplification~\citep{napoles2017,stiennon2020,takeshita2024,saggion2017}.
+Other approaches specifically target the argumentative structure of scientific papers, helping writers to organise
+contributions and claims more effectively~\citep{lauscher2018}. Nowadays, general purpose LLMs such as ChatGPT
+or tools tailored for the task such as Grammarly show the variety of support that NLP tools can provide to
+authors~\citep{wu2023,ahn2024,khalifa2024}.
+
+At the same time, NLP methods are being developed to assist reviewers and editors in evaluating submissions. These
+include systems for detecting potential issues such as lack of clarity, weak argumentative support, or even factual
+inconsistencies and up to scientific fraud~\citep{thakkar2025, fromm2021, freedman2024}. Such tools can also facilitate
+meta-reviewing by providing summaries of peer reviews and identifying points of disagreement among
+reviewers~\citep{kumar2023}. While AI tools show promises in improving the peer-review process~\citep{tyser2024}, there
+are also various risks associated such as breaches of confidentiality, lack of transparency and
+biases~\citep{perlis2025}. Our current work situates itself in the context of NLP tools for supporting the understanding
+of scientific writing; specifically, it addresses one of the major critiques toward the automation of such process by
+offering a transparent way of examining its workflow.
 
 \paragraph{Interpretable NLP.}
 
-As \figref{scigen-example-website} illustrates, scientific texts routinely make use of comparatives like
-``faster'' while leaving one of the argument slots implicit, with the context determining the omitted
-referent. LLMs demonstrate considerable competence in resolving these and other more syntactic forms of
-anaphora such as pronouns~\citep{zhu25}, but the resolved referent itself -- concretely, what was being
-referred to -- remains implicit. Interpretable NLP is a recent research direction which aims to support
-comprehension (and production) of text in a more explicit and transparent way~\citep{yulan23}. By generating
-code that formalises the interpretation of a comparative like ``faster'', our approach also makes these
-implicit references explicit; combining our system with interpretable NLP would allow the user to explore the
-linguistic interpretation as well.
+As \figref{scigen-example-website} illustrates, scientific texts routinely make use of comparatives like ``faster''
+while leaving one of the argument slots implicit, with the context determining the omitted referent. LLMs demonstrate
+considerable competence in resolving these and other more syntactic forms of anaphora such as pronouns~\citep{zhu2025},
+but the resolved referent itself -- concretely, what was being referred to -- remains implicit. Interpretable NLP is a
+recent research direction which aims to support comprehension (and production) of text in a more explicit and
+transparent way~\citep{he2023}. By generating code that formalises the interpretation of a comparative like ``faster'',
+our approach also makes these implicit references explicit; combining our system with interpretable NLP would allow the
+user to explore the linguistic interpretation as well.

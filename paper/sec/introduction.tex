@@ -2,13 +2,13 @@
 
 When interpreting or verifying data-driven claims, a key challenge lies in tracing specific claims back to the
 relevant data. In peer review, for example, empirical claims typically lack author-supplied links to data,
-making them hard for reviewers to check directly~\citep{weber20}. Paper retractions, meanwhile, are often
-attributable not to fraud, but to simple errors in data management or analysis~\citep{hu25}. The use of large
+making them hard for reviewers to check directly~\citep{weber2020}. Paper retractions, meanwhile, are often
+attributable not to fraud, but to simple errors in data management or analysis~\citep{hu2025}. The use of large
 language models (LLMs) to interpret scholarly documents has seen considerable attention recently, from
-fact-checking~\citep{abu-ahmad25} to interpretation of charts and figures~\citep{roberts24}, but current LLM
+fact-checking~\citep{abuahmad2025} to interpretation of charts and figures~\citep{roberts2024}, but current LLM
 interfaces do not support direct interrogation of visual or other outputs for traceability to inputs.
 
-Recent advances in data provenance and data visualisation~\citep{psallidas18smoke,bond25}, on the other hand,
+Recent advances in data provenance and data visualisation~\citep{psallidas2018,bond2025}, on the other hand,
 have pushed in this direction using a more infrastructural approach. These approaches link computed outputs
 to their data sources directly by tracking dependency information. This allows visual outputs to support
 \emph{provenance queries}, user interactions (e.g. mousing over visual elements) that reveal how output
@@ -20,7 +20,7 @@ to natural language itself, where the main claims of most scholarly articles are
 
 In this paper, we address this gap by combining two complementary approaches: the ability of LLMs to
 understand technical language and synthesise queries over data, plus the provenance-tracking infrastructure of
-an open source programming language called Fluid (\url{https://f.luid.org/})~\citep{perera22,bond25}.
+an open source programming language called Fluid (\url{https://f.luid.org/})~\citep{perera2022,bond2025}.
 Together, these two technologies enable the creation of \emph{transparent documents}, web-based scholarly
 articles with two key transparency features:
 \begin{enumerate}
@@ -33,14 +33,14 @@ data elements that support them, through embedded provenance queries.
 \end{enumerate}
 
 \figref{scigen-example-website}, generated from our implementation, illustrates these two features. The upper
-section shows a ``transparent'' excerpt from \cite{zhang18}, a scholarly article comparing text encoding
+section shows a ``transparent'' excerpt from \cite{zhang2018}, a scholarly article comparing text encoding
 techniques. When a reader hovers over the phrase \textfrag{does not further improve}, the relevant data are
 highlighted on the left. Other fragments (e.g. \textfrag{better than}, \textfrag{further improvements}) that
 refer to the same data are also marked, allowing the reader to explore supporting and contrasting evidence.
 The lower section shows a counterfactual situation where the authors' experiments had produced different
 results: here the phrase \textfrag{does not further improve} is replaced by \textfrag{further improves}.
 
-\begin{figure}%[h]
+\begin{figure*}%[h]
     \centering
     \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-with-pointer.png}
     \vspace{1mm}
@@ -48,7 +48,7 @@ results: here the phrase \textfrag{does not further improve} is replaced by \tex
     \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-counterfactual-with-pointer.png}
     \caption{Two versions of a transparent document, showing text fragments linked to data}
     \label{fig:scigen-example-website}
-\end{figure}
+\end{figure*}
 
 This transparent version of the document was implemented in Fluid. The source code is shown in
 \figref{fluid-example-paragraph}, and makes use of several helper functions, a representative subset of which

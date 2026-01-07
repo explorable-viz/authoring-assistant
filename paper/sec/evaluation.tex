@@ -27,7 +27,7 @@ or adversarial phrasing. Table~\ref{tab:problematic_cases} shows some of cases w
 sense; in these cases, producing a valid expression is likely to be challenging because of ambiguities in the
 input data or accompanying natural language.
 
-\begin{figure}
+\begin{figure*}
     \centering
     \begin{subfigure}{0.48\linewidth}
         \centering
@@ -43,81 +43,12 @@ input data or accompanying natural language.
     \end{subfigure}
     \caption{Success rate of the proposed system, measured over 5 runs with \gptfour}
     \label{fig:success_rate_comparison}
-\end{figure}
+\end{figure*}
 
 \subsection{Results}
 
-
-%\begin{table}[h!]
-%    \scriptsize
-%
-%    \centering
-%    \begin{subtable}{0.45\linewidth}
-%        \centering
-%        \begin{tabular}{lcccc}
-%            \hline
-%            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
-%            & \textbf{Success Rate (\%)} & \textbf{SD (\%)} & \textbf{Success Rate} & \textbf{SD (\%)} \\
-%            \hline
-%            Comparison     & 68.2   & 3.2 & 77.4 & 2 \\
-%            Data Retrieval & 77.3   & 3.7 & 77.4 & 2 \\
-%            Difference     & 20.0   & 44.7 & 77.4 & 2 \\
-%            Min/max        & 97.0   & 5.6 & 77.4 & 2 \\
-%            Rank           & 0.0   & 0.0 & 77.4 & 2 \\
-%            Sum            & 100   & 0.0 & 77.4 & 2 \\
-%            Ratio          & 100   & 0.0 & 77.4 & 2 \\
-%            Agerage        & 100   & 0.0 & 77.4 & 2 \\
-%            Overall        & 74.9 & 3 & 77.4 & 2 \\
-%            \hline
-%        \end{tabular}
-%        \caption{Results with target-value = true}
-%        \label{tab:results_true}
-%    \end{subtable}%
-%    \hfill
-%    \begin{subtable}{0.45\linewidth}
-%        \centering
-%        \begin{tabular}{lcccc}
-%            \hline
-%            & \multicolumn{2}{c}{\textbf{\gptfour}} & \multicolumn{2}{c}{\textbf{\gptfive}} \\
-%            & \textbf{Success Rate (\%)} & \textbf{SD (\%)} & \textbf{Success Rate} & \textbf{SD (\%)} \\
-%            \hline
-%            Comparison     & 33.3 & 3.1 & -- & -- \\
-%            Data Retrieval & 62.0 & 1.6 & -- & -- \\
-%            Difference     & 75.0 & 50.0 & -- & -- \\
-%            Min/max        & 90.6 & 12.6 & -- & -- \\
-%            Rank           & 0.0 & 0.0 & -- & -- \\
-%            Sum            & 100.0 & 0.0 & -- & -- \\
-%            Ratio          & 100.0 & 0.0 & -- & -- \\
-%            Average        & 100.0 & 0.0 & -- & -- \\
-%            Overall        & 57.1 & 0.8 & -- & -- \\
-%            \hline
-%        \end{tabular}
-%        \caption{Results without target-value}
-%        \label{tab:results_no_target}
-%    \end{subtable}
-%    \caption{Success rates (with standard deviation) for \textbf{\gptfour} and \textbf{\gptfive} across different task categories}
-%    \label{tab:results_combined}
-%\end{table}
-
-
-%\figref{success_rate_by_category} shows the results obtained in generating expression by categories.
-
-
-%Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model, \gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
-%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
-
-
-
-%Figure~\ref{fig:success_rate_by_category} illustrates the success rate of \gptfour % under two different settings: with target-value sharing enabled and without target-value sharing.
-%for each category, both with and without target-value sharing.
-%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%) \cdnote{this needs to be updated for target sharing and not target sharing or removed}.
-
-%Table \ref{tab:results_combined} summarizes the performance of \gptfour and the most recent OpenAI model,
-%\gptfive, under two different settings: with target-value sharing enabled and without target-value sharing.
-%Overall, the system produced a valid Fluid expression in 74.9\% of the cases (S.D. 3\%).
-
 \paragraph{Interpretation Accuracy across Linguistic Idioms and Complexity.} To evaluate RQ1, we used a sample
-of the \SciGen dataset~\citep{moosavi21}, an open source dataset consisting of tables from scientific articles
+of the \SciGen dataset~\citep{moosavi2021}, an open source dataset consisting of tables from scientific articles
 and their corresponding descriptions. We aggregated the results according to the linguistic categories from
 Table~\ref{tab:natural-language-forms}. Figure~\ref{fig:success_rate_by_category} illustrates the success rate
 for each category, both with and without target-value sharing.
@@ -138,21 +69,6 @@ categories assigned to each expression: success rates are 62\% for single-catego
 that \emph{moderate composition can actually aid performance, perhaps by giving the model clearer structural
 cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
 
-%The results show that providing the target value (text fragment or numerical
-%value) is crucial for achieving a high success rate. Overall the \InterpretationAgent generates a correct
-%expression in approximately in 74.9\% of the cases (S.D. 3.0\%).
-
-%Figure~\ref{fig:success_rate_by_complexity} reports the success rate as a function of the number of categories assigned to each expression.
-%Fluid instructions combining multiple operations were associated with multiple categories.
-%Results show that the success rate was 62\% for simple expressions (one category), increased to 91\% for two categories,
-%while no correct expression was generated for expression with 3 categories.
-
-%In addition to evaluating performance when the target expression is provided, we also assessed the model’s ability to produce a
-%correct expression when no reference string was given.
-%On the \SciGen dataset, the model achieved a 74.9\% success rate when provided with the target string.
-%Without the target string, performance decreased moderately to 57.1\%, indicating that the model retains substantial
-%ability to reconstruct valid solutions even without explicit guidance
-
 \paragraph{Generalisability and Robustness.} As a preliminary attempt to address RQ2, we carried out
 \emph{counterfactual testing} to evaluate the robustness of generated expressions under changes to the
 underlying data. In this setup, the input tables were modified according to hand-craft test specifications,
@@ -172,7 +88,7 @@ itself. For future work (\secref{conclusion}), we plan to investigate automatic 
 tests, allowing these additional robustness checks to be integrated into the document authoring workflow.
 
 
-\begin{table}[t]
+\begin{table*}[t]
     \centering
     \small
     \begin{tabular}{l p{6cm} p{4cm}}
@@ -195,4 +111,4 @@ tests, allowing these additional robustness checks to be integrated into the doc
     \end{tabular}
     \caption{Categories of problematic example}
     \label{tab:problematic_cases}
-\end{table}
+\end{table*}

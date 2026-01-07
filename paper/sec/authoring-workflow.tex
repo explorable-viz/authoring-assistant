@@ -30,7 +30,7 @@ expression. This is intended to cover the situation where the author has made a 
 expression which generates a different value from the one specified by the user.
 
 \item \textbf{Code synthesis step.} The expression synthesis step is an error-guided iterative prompting
-loop~\citep{skreta23}, beginning with an initial prompt sent to the LLM (see \emph{Prompt design} below)
+loop~\citep{skreta2023}, beginning with an initial prompt sent to the LLM (see \emph{Prompt design} below)
 requesting the generation of an expression $e$. Using the Fluid command-line interface, the expression is
 validated to check that it evaluates without error, produces a value coercible to a string $s'$, and finally
 that $s'$ is equal to the target fragment $s$. Any failure triggers prompt augmentation with the appropriate

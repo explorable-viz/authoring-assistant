@@ -28,25 +28,25 @@ grammar correction, summarisation and text simplification~\citep{napoles2017,sti
 Other approaches specifically target the argumentative structure of scientific papers, helping writers to organise
 contributions and claims more effectively~\citep{lauscher2018}. Nowadays, general purpose LLMs such as ChatGPT
 or tools tailored for the task such as Grammarly show the variety of support that NLP tools can provide to
-authors~\citep{wu2023chatgpt,ahn2024transformative,khalifa2024using}.
+authors~\citep{wu2023,ahn2024,khalifa2024}.
 
 At the same time, NLP methods are being developed to assist reviewers and editors in evaluating submissions. These
 include systems for detecting potential issues such as lack of clarity, weak argumentative support, or even factual
-inconsistencies and up to scientific fraud~\citep{thakkar2025can, fromm2021argument, freedman2024detecting}. Such tools
-can also facilitate meta-reviewing by providing summaries of peer reviews and identifying points of disagreement among
-reviewers~\citep{kumar2023reviewers}. While AI tools show promises in improving the peer-review
-process~\citep{tyser2024ai}, there are also various risks associated such as breaches of confidentiality, lack of
-transparency and biases~\citep{perlis2025artificial}. Our current work situates itself in the context of NLP tools for
-supporting the understanding of scientific writing; specifically, it addresses one of the major critiques toward the
-automation of such process by offering a transparent way of examining its workflow.
+inconsistencies and up to scientific fraud~\citep{thakkar2025, fromm2021, freedman2024}. Such tools can also facilitate
+meta-reviewing by providing summaries of peer reviews and identifying points of disagreement among
+reviewers~\citep{kumar2023}. While AI tools show promises in improving the peer-review process~\citep{tyser2024}, there
+are also various risks associated such as breaches of confidentiality, lack of transparency and
+biases~\citep{perlis2025}. Our current work situates itself in the context of NLP tools for supporting the understanding
+of scientific writing; specifically, it addresses one of the major critiques toward the automation of such process by
+offering a transparent way of examining its workflow.
 
 \paragraph{Interpretable NLP.}
 
 As \figref{scigen-example-website} illustrates, scientific texts routinely make use of comparatives like ``faster''
 while leaving one of the argument slots implicit, with the context determining the omitted referent. LLMs demonstrate
-considerable competence in resolving these and other more syntactic forms of anaphora such as pronouns~\citep{zhu25},
+considerable competence in resolving these and other more syntactic forms of anaphora such as pronouns~\citep{zhu2025},
 but the resolved referent itself -- concretely, what was being referred to -- remains implicit. Interpretable NLP is a
 recent research direction which aims to support comprehension (and production) of text in a more explicit and
-transparent way~\citep{yulan23}. By generating code that formalises the interpretation of a comparative like ``faster'',
+transparent way~\citep{he2023}. By generating code that formalises the interpretation of a comparative like ``faster'',
 our approach also makes these implicit references explicit; combining our system with interpretable NLP would allow the
 user to explore the linguistic interpretation as well.

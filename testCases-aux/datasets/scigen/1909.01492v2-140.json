@@ -3,18 +3,18 @@
     "perturbation_radius": "SST-word",
     "δ=1": 49,
     "δ=2": 674,
-    "δ=3": 5136
+    "δ=3": 5
   },
   {
     "perturbation_radius": "SST-character",
     "δ=1": 206,
-    "δ=2": 21116,
-    "δ=3": 1436026
+    "δ=2": 21,
+    "δ=3": 1
   },
   {
     "perturbation_radius": "AG-character",
     "δ=1": 722,
-    "δ=2": 260282,
+    "δ=2": 260,
     "δ=3": "-"
   }
 ]

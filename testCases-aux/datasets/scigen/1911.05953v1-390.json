@@ -7,14 +7,14 @@
   },
   {
     "2_data_type": "Bodies",
-    "geth": 11110.0,
-    "ethanos": 12750.0,
+    "geth": 11,
+    "ethanos": 12,
     "diff": 1640.0
   },
   {
     "2_data_type": "Receipts",
-    "geth": 3578.97,
-    "ethanos": 3605.66,
+    "geth": 3,
+    "ethanos": 3,
     "diff": 26.69
   },
   {
@@ -36,22 +36,22 @@
     "diff": 0
   },
   {
-    "2_data_type": "Transaction Index",
-    "geth": 3650.0,
-    "ethanos": 3650.0,
+    "2_data_type": "Transaction Inde",
+    "geth": 3,
+    "ethanos": 3,
     "diff": 0
   },
   {
-    "2_data_type": "Bloombit index",
+    "2_data_type": "Bloombit inde",
     "geth": 20.49,
     "ethanos": 20.49,
     "diff": 0
   },
   {
     "2_data_type": "Trie nodes",
-    "geth": 183100.0,
-    "ethanos": 165140.0,
-    "diff": -17960.0
+    "geth": 183,
+    "ethanos": 165,
+    "diff": -17
   },
   {
     "2_data_type": "Trie preimages",
@@ -61,9 +61,9 @@
   },
   {
     "2_data_type": "total",
-    "geth": 202727.47,
-    "ethanos": 186496.2,
-    "diff": -16231.27
+    "geth": 202,
+    "ethanos": 186,
+    "diff": -16
   },
   {
     "2_data_type": 2,

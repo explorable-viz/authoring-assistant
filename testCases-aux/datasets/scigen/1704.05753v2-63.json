@@ -9,19 +9,19 @@
   },
   {
     "condition": "Lexical Examples",
-    "accuracy_corr": " 90†",
+    "accuracy_corr": 90,
     "accuracy_gram": 98,
     "time_s": 27,
     "diversity_distinct": 93,
-    "diversity_pinc": " 55†"
+    "diversity_pinc": 55
   },
   {
     "condition": "Mixed Examples",
-    "accuracy_corr": " 89†",
+    "accuracy_corr": 89,
     "accuracy_gram": 96,
     "time_s": 36,
-    "diversity_distinct": " 87†",
-    "diversity_pinc": " 58†"
+    "diversity_distinct": 87,
+    "diversity_pinc": 58
   },
   {
     "condition": "No Examples",
@@ -82,8 +82,8 @@
   {
     "condition": "geoquery",
     "accuracy_corr": 77,
-    "accuracy_gram": " 85†",
-    "time_s": " 25†",
+    "accuracy_gram": 85,
+    "time_s": 25,
     "diversity_distinct": 94,
     "diversity_pinc": 63
   },
@@ -91,13 +91,13 @@
     "condition": "wsj",
     "accuracy_corr": 68,
     "accuracy_gram": 90,
-    "time_s": " 61†",
-    "diversity_distinct": " 94†",
-    "diversity_pinc": " 38†"
+    "time_s": 61,
+    "diversity_distinct": 94,
+    "diversity_pinc": 38
   },
   {
     "condition": "ubuntu",
-    "accuracy_corr": " 56†",
+    "accuracy_corr": 56,
     "accuracy_gram": 92,
     "time_s": 44,
     "diversity_distinct": 97,

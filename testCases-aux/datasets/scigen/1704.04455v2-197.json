@@ -12,7 +12,7 @@
   },
   {
     "p": "contains admin. terr. entity",
-    "num_s": 18000,
+    "num_s": 18,
     "baseline_p": 0.034,
     "vanilla_p": 0.39,
     "vanilla_r": 0.188,
@@ -23,7 +23,7 @@
   },
   {
     "p": "spouse",
-    "num_s": 45917,
+    "num_s": 45,
     "baseline_p": 0,
     "vanilla_p": 0.014,
     "vanilla_r": 0.011,
@@ -34,7 +34,7 @@
   },
   {
     "p": "child",
-    "num_s": 35057,
+    "num_s": 35,
     "baseline_p": 0.112,
     "vanilla_p": 0.151,
     "vanilla_r": 0.129,
@@ -45,7 +45,7 @@
   },
   {
     "p": "child (manual ground truth)",
-    "num_s": 6408,
+    "num_s": 6,
     "baseline_p": "",
     "vanilla_p": 0.374,
     "vanilla_r": 0.309,

@@ -60,7 +60,7 @@
     "bleu_score_en_ru": "∙  17.89"
   },
   {
-    "id": "2-13 #4",
+    "id": 2,
     "pseudo_parallel_data_involved_ja∗_ru": "-",
     "pseudo_parallel_data_involved_ru∗_ja": "-",
     "pseudo_parallel_data_involved_ja∗_en": "✓",
@@ -105,7 +105,7 @@
     "bleu_score_en_ru": 16.8
   },
   {
-    "id": "2-13 #7",
+    "id": 2,
     "pseudo_parallel_data_involved_ja∗_ru": "-",
     "pseudo_parallel_data_involved_ru∗_ja": "-",
     "pseudo_parallel_data_involved_ja∗_en": "-",
@@ -150,7 +150,7 @@
     "bleu_score_en_ru": 17.26
   },
   {
-    "id": "2-13 #10",
+    "id": 2,
     "pseudo_parallel_data_involved_ja∗_ru": "✓",
     "pseudo_parallel_data_involved_ru∗_ja": "✓",
     "pseudo_parallel_data_involved_ja∗_en": "✓",

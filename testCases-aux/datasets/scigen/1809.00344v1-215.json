@@ -8,9 +8,9 @@
   },
   {
     "_1": "Our Model",
-    "europarl_en_fr": " 38.46†",
+    "europarl_en_fr": 38.46,
     "europarl_en_et": 21.84,
-    "europarl_en_de": " 26.49†",
+    "europarl_en_de": 26.49,
     "subtitles_en_ru": 19.09
   }
 ]

@@ -22,16 +22,16 @@
   {
     "external_representation": "Linearized derivation",
     "internal_representation": "Plain BPE",
-    "test_bleu": "29.4†"
+    "test_bleu": 29.4
   },
   {
     "external_representation": "POS/BPE",
     "internal_representation": "Plain BPE",
-    "test_bleu": "29.3†"
+    "test_bleu": 29.3
   },
   {
     "external_representation": "Plain BPE",
     "internal_representation": "POS/BPE",
-    "test_bleu": "29.4†"
+    "test_bleu": 29.4
   }
 ]

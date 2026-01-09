@@ -3,60 +3,60 @@
     "model": "+0 dummy node",
     "time_s": 56,
     "acc": 81.76,
-    "num_param": 7216
+    "num_param": 7
   },
   {
     "model": "+1 dummy node",
     "time_s": 65,
     "acc": 82.64,
-    "num_param": 8768
+    "num_param": 8
   },
   {
     "model": "+2 dummy node",
     "time_s": 76,
     "acc": 82.24,
-    "num_param": 10321
+    "num_param": 10
   },
   {
     "model": "Hidden size 100",
     "time_s": 42,
     "acc": 81.75,
-    "num_param": 4891
+    "num_param": 4
   },
   {
     "model": "Hidden size 200",
     "time_s": 54,
     "acc": 82.04,
-    "num_param": 6002
+    "num_param": 6
   },
   {
     "model": "Hidden size 300",
     "time_s": 65,
     "acc": 82.64,
-    "num_param": 8768
+    "num_param": 8
   },
   {
     "model": "Hidden size 600",
     "time_s": 175,
     "acc": 81.84,
-    "num_param": 17648
+    "num_param": 17
   },
   {
     "model": "Hidden size 900",
     "time_s": 235,
     "acc": 81.66,
-    "num_param": 33942
+    "num_param": 33
   },
   {
     "model": "Without ⟨s⟩, ⟨/s⟩",
     "time_s": 63,
     "acc": 82.36,
-    "num_param": 8768
+    "num_param": 8
   },
   {
     "model": "With ⟨s⟩, ⟨/s⟩",
     "time_s": 65,
     "acc": 82.64,
-    "num_param": 8768
+    "num_param": 8
   }
 ]

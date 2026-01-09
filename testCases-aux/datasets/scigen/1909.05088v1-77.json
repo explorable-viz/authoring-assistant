@@ -1,56 +1,56 @@
 [
   {
     "languages_en–bg": " EN–CS",
-    "num_sents_306_380": 491848,
+    "num_sents_306_380": 491,
     "languages_en–it": " EN–LT",
-    "num_sents_1_297_635": 481570
+    "num_sents_1_297_635": 481
   },
   {
     "languages_en–bg": " EN–DA",
-    "num_sents_306_380": 1421197,
+    "num_sents_306_380": 1,
     "languages_en–it": " EN–LV",
-    "num_sents_1_297_635": 487287
+    "num_sents_1_297_635": 487
   },
   {
     "languages_en–bg": " EN–DE",
-    "num_sents_306_380": 1296843,
+    "num_sents_306_380": 1,
     "languages_en–it": " EN–NL",
-    "num_sents_1_297_635": 1419359
+    "num_sents_1_297_635": 1
   },
   {
     "languages_en–bg": " EN–EL",
-    "num_sents_306_380": 921540,
+    "num_sents_306_380": 921,
     "languages_en–it": " EN–PL",
-    "num_sents_1_297_635": 478008
+    "num_sents_1_297_635": 478
   },
   {
     "languages_en–bg": " EN–ES",
-    "num_sents_306_380": 1419507,
+    "num_sents_306_380": 1,
     "languages_en–it": " EN–PT",
-    "num_sents_1_297_635": 1426043
+    "num_sents_1_297_635": 1
   },
   {
     "languages_en–bg": " EN–ET",
-    "num_sents_306_380": 494645,
+    "num_sents_306_380": 494,
     "languages_en–it": " EN–RO",
-    "num_sents_1_297_635": 303396
+    "num_sents_1_297_635": 303
   },
   {
     "languages_en–bg": " EN–FI",
-    "num_sents_306_380": 1393572,
+    "num_sents_306_380": 1,
     "languages_en–it": " EN–S",
-    "num_sents_1_297_635": 488351
+    "num_sents_1_297_635": 488
   },
   {
     "languages_en–bg": " EN–FR",
-    "num_sents_306_380": 1440620,
+    "num_sents_306_380": 1,
     "languages_en–it": " EN–SL",
-    "num_sents_1_297_635": 479313
+    "num_sents_1_297_635": 479
   },
   {
     "languages_en–bg": " EN–HU",
-    "num_sents_306_380": 251833,
+    "num_sents_306_380": 251,
     "languages_en–it": " EN–SV",
-    "num_sents_1_297_635": 1349472
+    "num_sents_1_297_635": 1
   }
 ]

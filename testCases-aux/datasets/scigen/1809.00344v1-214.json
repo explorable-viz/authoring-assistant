@@ -22,23 +22,23 @@
   },
   {
     "_1": "InitDec",
-    "europarl_en_fr": "36.86†",
-    "europarl_en_et": " 28.33†",
-    "europarl_en_de": "29.39†",
+    "europarl_en_fr": 36.86,
+    "europarl_en_et": 28.33,
+    "europarl_en_de": 29.39,
     "subtitles_en_ru": 22.56
   },
   {
     "_1": "AddDec",
-    "europarl_en_fr": "36.98†",
-    "europarl_en_et": "27.48†",
-    "europarl_en_de": " 29.52†",
+    "europarl_en_fr": 36.98,
+    "europarl_en_et": 27.48,
+    "europarl_en_de": 29.52,
     "subtitles_en_ru": 23.12
   },
   {
     "_1": "InitDec+AddDec",
-    "europarl_en_fr": " 37.14†",
-    "europarl_en_et": "27.55†",
-    "europarl_en_de": "29.30†",
+    "europarl_en_fr": 37.14,
+    "europarl_en_et": 27.55,
+    "europarl_en_de": 29.3,
     "subtitles_en_ru": 23.14
   },
   {
@@ -50,37 +50,37 @@
   },
   {
     "_1": "Direct Tranformation",
-    "europarl_en_fr": "36.96†",
-    "europarl_en_et": "28.07†",
-    "europarl_en_de": "29.22†",
+    "europarl_en_fr": 36.96,
+    "europarl_en_et": 28.07,
+    "europarl_en_de": 29.22,
     "subtitles_en_ru": 22.76
   },
   {
     "_1": "Hierarchical Gating",
-    "europarl_en_fr": "36.89†",
-    "europarl_en_et": "27.64†",
-    "europarl_en_de": "29.45†",
+    "europarl_en_fr": 36.89,
+    "europarl_en_et": 27.64,
+    "europarl_en_de": 29.45,
     "subtitles_en_ru": 22.73
   },
   {
     "_1": "Lang-Specific Attention",
-    "europarl_en_fr": "36.86†",
-    "europarl_en_et": "28.33†",
-    "europarl_en_de": "29.39†",
+    "europarl_en_fr": 36.86,
+    "europarl_en_et": 28.33,
+    "europarl_en_de": 29.39,
     "subtitles_en_ru": 23.14
   },
   {
     "_1": "Combined Attention",
-    "europarl_en_fr": "36.94†",
-    "europarl_en_et": "27.90†",
-    "europarl_en_de": "29.44†",
+    "europarl_en_fr": 36.94,
+    "europarl_en_et": 27.9,
+    "europarl_en_de": 29.44,
     "subtitles_en_ru": 22.92
   },
   {
     "_1": "Lang-Specific S-Attention",
-    "europarl_en_fr": " 37.06†",
-    "europarl_en_et": " 28.43†",
-    "europarl_en_de": " 29.49†",
+    "europarl_en_fr": 37.06,
+    "europarl_en_et": 28.43,
+    "europarl_en_de": 29.49,
     "subtitles_en_ru": 22.98
   },
   {
@@ -92,30 +92,30 @@
   },
   {
     "_1": "Source Context",
-    "europarl_en_fr": "37.06†",
-    "europarl_en_et": " 28.43†",
-    "europarl_en_de": "29.49†",
+    "europarl_en_fr": 37.06,
+    "europarl_en_et": 28.43,
+    "europarl_en_de": 29.49,
     "subtitles_en_ru": 22.98
   },
   {
     "_1": "Target Context",
-    "europarl_en_fr": "37.35†",
-    "europarl_en_et": "27.86†",
-    "europarl_en_de": "29.26†",
+    "europarl_en_fr": 37.35,
+    "europarl_en_et": 27.86,
+    "europarl_en_de": 29.26,
     "subtitles_en_ru": 23.23
   },
   {
     "_1": "Dual Context Src-Tgt",
-    "europarl_en_fr": " 37.50†",
-    "europarl_en_et": "27.98†",
-    "europarl_en_de": " 29.50†",
+    "europarl_en_fr": 37.5,
+    "europarl_en_et": 27.98,
+    "europarl_en_de": 29.5,
     "subtitles_en_ru": 23.06
   },
   {
-    "_1": "Dual Context Src-Tgt-Mix",
-    "europarl_en_fr": "37.43†",
-    "europarl_en_et": "27.71†",
-    "europarl_en_de": "29.48†",
+    "_1": "Dual Context Src-Tgt-Mi",
+    "europarl_en_fr": 37.43,
+    "europarl_en_et": 27.71,
+    "europarl_en_de": 29.48,
     "subtitles_en_ru": 23.01
   }
 ]

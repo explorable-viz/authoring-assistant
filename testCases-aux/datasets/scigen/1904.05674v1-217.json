@@ -25,9 +25,9 @@
     "maxsimc": 68.2
   },
   {
-    "method": " 300-dimensions",
-    "avgsimc": " 300-dimensions",
-    "maxsimc": " 300-dimensions"
+    "method": 300,
+    "avgsimc": 300,
+    "maxsimc": 300
   },
   {
     "method": "Global-DSM",
@@ -70,9 +70,9 @@
     "maxsimc": 67.8
   },
   {
-    "method": " 500-dimensions",
-    "avgsimc": " 500-dimensions",
-    "maxsimc": " 500-dimensions"
+    "method": 500,
+    "avgsimc": 500,
+    "maxsimc": 500
   },
   {
     "method": "Global-DSM",

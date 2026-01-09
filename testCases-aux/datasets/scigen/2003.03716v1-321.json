@@ -4,19 +4,19 @@
     "bleu": 86.24
   },
   {
-    "search_strategy": "2-LA",
+    "search_strategy": 2,
     "bleu": 86.65
   },
   {
-    "search_strategy": "3-LA",
+    "search_strategy": 3,
     "bleu": 86.71
   },
   {
-    "search_strategy": "4-LA",
+    "search_strategy": 4,
     "bleu": 86.77
   },
   {
-    "search_strategy": "5-LA",
+    "search_strategy": 5,
     "bleu": 86.79
   },
   {

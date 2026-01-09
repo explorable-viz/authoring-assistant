@@ -2,7 +2,7 @@
   {
     "_1": "majority",
     "mae": " .369 ± .000",
-    "spearman’s_ρ": " N/  A*"
+    "spearman’s_ρ": " N/  A "
   },
   {
     "_1": "bow-svr",

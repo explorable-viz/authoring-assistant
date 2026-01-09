@@ -9,11 +9,11 @@
   },
   {
     "[width=10em]preprocessdataset": "Original",
-    "semeval": "80.85 (1.31)",
-    "ddi_class": "82.23 (0.32)",
-    "ddi_detect": "88.40 (0.48)",
-    "i2b2_class": "70.10 (0.85)",
-    "i2b2_detect": "86.45 (0.58)"
+    "semeval": 80.85,
+    "ddi_class": 82.23,
+    "ddi_detect": 88.4,
+    "i2b2_class": 70.1,
+    "i2b2_detect": 86.45
   },
   {
     "[width=10em]preprocessdataset": "Entity Blinding",
@@ -25,11 +25,11 @@
   },
   {
     "[width=10em]preprocessdataset": "Entity Blinding",
-    "semeval": "71.31 (1.14)",
-    "ddi_class": "83.56 (2.05)•",
-    "ddi_detect": "89.45 (1.05)•",
-    "i2b2_class": "76.59 (1.07)",
-    "i2b2_detect": "88.41 (0.37)"
+    "semeval": 71.31,
+    "ddi_class": 83.56,
+    "ddi_detect": 89.45,
+    "i2b2_class": 76.59,
+    "i2b2_detect": 88.41
   },
   {
     "[width=10em]preprocessdataset": "Punct and Digit",
@@ -41,11 +41,11 @@
   },
   {
     "[width=10em]preprocessdataset": "Punct and Digit",
-    "semeval": "80.95 (1.21)•",
-    "ddi_class": "80.44 (1.77)",
-    "ddi_detect": "87.52 (0.98)",
-    "i2b2_class": "69.37 (1.43)•",
-    "i2b2_detect": "85.82 (0.43)"
+    "semeval": 80.95,
+    "ddi_class": 80.44,
+    "ddi_detect": 87.52,
+    "i2b2_class": 69.37,
+    "i2b2_detect": 85.82
   },
   {
     "[width=10em]preprocessdataset": "Punct, Digit and Stop",
@@ -57,11 +57,11 @@
   },
   {
     "[width=10em]preprocessdataset": "Punct, Digit and Stop",
-    "semeval": "71.61 (1.25)",
-    "ddi_class": "78.52 (1.99)",
-    "ddi_detect": "85.65 (1.21)",
-    "i2b2_class": "68.14 (2.05)•",
-    "i2b2_detect": "84.84 (0.77)"
+    "semeval": 71.61,
+    "ddi_class": 78.52,
+    "ddi_detect": 85.65,
+    "i2b2_class": 68.14,
+    "i2b2_detect": 84.84
   },
   {
     "[width=10em]preprocessdataset": "NER Blinding",
@@ -73,10 +73,10 @@
   },
   {
     "[width=10em]preprocessdataset": "NER Blinding",
-    "semeval": "80.85 (1.07)•",
-    "ddi_class": "78.06 (1.45)",
-    "ddi_detect": "86.79 (0.65)",
-    "i2b2_class": "66.26 (2.44)",
-    "i2b2_detect": "86.72 (0.57)•"
+    "semeval": 80.85,
+    "ddi_class": 78.06,
+    "ddi_detect": 86.79,
+    "i2b2_class": 66.26,
+    "i2b2_detect": 86.72
   }
 ]

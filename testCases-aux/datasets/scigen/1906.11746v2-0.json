@@ -85,7 +85,7 @@
     "pas_ood_f": "-",
     "psd_id_f": "-",
     "psd_ood_f": "-",
-    "eds_smatch_f": " 90.9,",
+    "eds_smatch_f": 90.9,
     "eds_edm": 90.41,
     "amr_2015_smatch_f": "-",
     "amr_2017_smatch_f": "-"

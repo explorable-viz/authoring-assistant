@@ -1,37 +1,37 @@
 [
   {
     "en⇒de": "Vanilla",
-    "params": "98.7M",
-    "emb": "54.5M",
+    "params": 98.7,
+    "emb": 54.5,
     "red": 0,
     "bleu": 27.62
   },
   {
     "en⇒de": "Direct bridging",
-    "params": "98.9M",
-    "emb": "54.5M",
+    "params": 98.9,
+    "emb": 54.5,
     "red": 0,
     "bleu": 27.79
   },
   {
     "en⇒de": "Decoder WT",
-    "params": "80.4M",
-    "emb": "36.2M",
+    "params": 80.4,
+    "emb": 36.2,
     "red": 33.6,
     "bleu": 27.51
   },
   {
     "en⇒de": "Three-way WT",
-    "params": "63.1M",
-    "emb": "18.9M",
+    "params": 63.1,
+    "emb": 18.9,
     "red": 65.3,
     "bleu": 27.39
   },
   {
     "en⇒de": " Shared-private",
-    "params": "65.0M",
-    "emb": "20.9M",
+    "params": 65.0,
+    "emb": 20.9,
     "red": 63.1,
-    "bleu": "28.06‡"
+    "bleu": 28.06
   }
 ]

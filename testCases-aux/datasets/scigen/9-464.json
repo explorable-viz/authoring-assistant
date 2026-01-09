@@ -66,7 +66,7 @@
     "bm25": 0.751,
     "emb": 0.572,
     "feat": 0.802,
-    "auto_cosine": "0.163.",
+    "auto_cosine": 0.163,
     "auto_rank": 0.671,
     "auto_rank_bm25": 0.82,
     "auto_rank_feat": 0.901

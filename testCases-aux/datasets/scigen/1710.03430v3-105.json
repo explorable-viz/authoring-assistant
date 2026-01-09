@@ -1,9 +1,9 @@
 [
   {
     "dataset": "Ubuntu-v1",
-    "num_samples_train": "1M",
-    "num_samples_val": 35609,
-    "num_samples_test": 35517,
+    "num_samples_train": 1,
+    "num_samples_val": 35,
+    "num_samples_test": 35,
     "message_avg_num_tokens": 162.47,
     "message_avg_num_groups": 8.43,
     "message_avg_num_tokens_group": 20.14,
@@ -13,9 +13,9 @@
   },
   {
     "dataset": "Ubuntu-v2",
-    "num_samples_train": "1M",
-    "num_samples_val": 19560,
-    "num_samples_test": 18920,
+    "num_samples_train": 1,
+    "num_samples_val": 19,
+    "num_samples_test": 18,
     "message_avg_num_tokens": 85.92,
     "message_avg_num_groups": 4.95,
     "message_avg_num_tokens_group": 20.73,
@@ -25,9 +25,9 @@
   },
   {
     "dataset": "Samsung QA",
-    "num_samples_train": 163616,
-    "num_samples_val": 10000,
-    "num_samples_test": 10000,
+    "num_samples_train": 163,
+    "num_samples_val": 10,
+    "num_samples_test": 10,
     "message_avg_num_tokens": 12.84,
     "message_avg_num_groups": 1,
     "message_avg_num_tokens_group": "-",

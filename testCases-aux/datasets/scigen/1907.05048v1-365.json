@@ -72,7 +72,7 @@
     "adverb_adjective_phrases_≤_5": 71.94
   },
   {
-    "model": "Matrix",
+    "model": "Matri",
     "nominal_compounds_cos_d": 0.354,
     "nominal_compounds_q1": 1,
     "nominal_compounds_q2": 2,
@@ -234,7 +234,7 @@
     "adverb_adjective_phrases_≤_5": 51.12
   },
   {
-    "model": "Matrix",
+    "model": "Matri",
     "nominal_compounds_cos_d": 0.363,
     "nominal_compounds_q1": 3,
     "nominal_compounds_q2": 8,
@@ -396,7 +396,7 @@
     "adverb_adjective_phrases_≤_5": 63.18
   },
   {
-    "model": "Matrix",
+    "model": "Matri",
     "nominal_compounds_cos_d": 0.411,
     "nominal_compounds_q1": 2,
     "nominal_compounds_q2": 5,

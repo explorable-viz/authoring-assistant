@@ -1,20 +1,20 @@
 [
   {
-    "activation": "softmax",
+    "activation": "softma",
     "de_en": 29.79,
     "ja_en": 21.57,
     "ro_en": 32.7,
     "en_de": 26.02
   },
   {
-    "activation": "1.5-entmax",
+    "activation": 1.5,
     "de_en": 29.83,
     "ja_en": 22.13,
     "ro_en": 33.1,
     "en_de": 25.89
   },
   {
-    "activation": " α-entmax",
+    "activation": " α-entma",
     "de_en": 29.9,
     "ja_en": 21.74,
     "ro_en": 32.89,

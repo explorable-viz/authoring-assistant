@@ -1,6 +1,6 @@
 [
   {
-    "architecture": "SMT*",
+    "architecture": "SMT ",
     "zh⇒en": "-",
     "params": "-",
     "emb": "-",
@@ -13,10 +13,10 @@
     "all": 33.39
   },
   {
-    "architecture": "RNNsearch*",
+    "architecture": "RNNsearch ",
     "zh⇒en": "Vanilla",
-    "params": "74.8M",
-    "emb": "55.8M",
+    "params": 74.8,
+    "emb": 55.8,
     "red": 0,
     "dev": 35.92,
     "mt02": 37.88,
@@ -26,10 +26,10 @@
     "all": 34.81
   },
   {
-    "architecture": "RNNsearch*",
+    "architecture": "RNNsearch ",
     "zh⇒en": "Source bridging",
-    "params": "78.5M",
-    "emb": "55.8M",
+    "params": 78.5,
+    "emb": 55.8,
     "red": 0,
     "dev": 36.79,
     "mt02": 38.71,
@@ -39,10 +39,10 @@
     "all": 35.91
   },
   {
-    "architecture": "RNNsearch*",
+    "architecture": "RNNsearch ",
     "zh⇒en": "Target bridging",
-    "params": "76.6M",
-    "emb": "55.8M",
+    "params": 76.6,
+    "emb": 55.8,
     "red": 0,
     "dev": 36.69,
     "mt02": 39.04,
@@ -52,10 +52,10 @@
     "all": 36.27
   },
   {
-    "architecture": "RNNsearch*",
+    "architecture": "RNNsearch ",
     "zh⇒en": "Direct bridging",
-    "params": "78.9M",
-    "emb": "55.8M",
+    "params": 78.9,
+    "emb": 55.8,
     "red": 0,
     "dev": 36.97,
     "mt02": 39.77,
@@ -67,8 +67,8 @@
   {
     "architecture": "Transformer",
     "zh⇒en": "Vanilla",
-    "params": "90.2M",
-    "emb": "46.1M",
+    "params": 90.2,
+    "emb": 46.1,
     "red": 0,
     "dev": 41.37,
     "mt02": 42.53,
@@ -80,8 +80,8 @@
   {
     "architecture": "Transformer",
     "zh⇒en": "Direct bridging",
-    "params": "90.5M",
-    "emb": "46.1M",
+    "params": 90.5,
+    "emb": 46.1,
     "red": 0,
     "dev": 41.67,
     "mt02": 42.89,
@@ -93,8 +93,8 @@
   {
     "architecture": "Transformer",
     "zh⇒en": "Decoder WT",
-    "params": "74.9M",
-    "emb": "30.7M",
+    "params": 74.9,
+    "emb": 30.7,
     "red": 33.4,
     "dev": 41.9,
     "mt02": 43.02,
@@ -106,14 +106,14 @@
   {
     "architecture": "Transformer",
     "zh⇒en": " Shared-private",
-    "params": "62.8M",
-    "emb": "18.7M",
+    "params": 62.8,
+    "emb": 18.7,
     "red": 59.4,
-    "dev": "42.57↑",
-    "mt02": "43.73↑",
-    "mt03": "41.99↑",
-    "mt04": "44.53↑",
-    "mt08": "33.81⇑",
-    "all": "41.61⇑"
+    "dev": 42.57,
+    "mt02": 43.73,
+    "mt03": 41.99,
+    "mt04": 44.53,
+    "mt08": 33.81,
+    "all": 41.61
   }
 ]

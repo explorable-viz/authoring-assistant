@@ -8,21 +8,21 @@
   },
   {
     "input": "Gold seg",
-    "models": "Yang et al. ( 2016 )*†",
+    "models": "Yang et al. ( 2016 ) †",
     "p": 72.98,
     "r": 80.15,
     "f1": 76.4
   },
   {
     "input": "Gold seg",
-    "models": "Che et al. ( 2013 )*",
+    "models": "Che et al. ( 2013 ) ",
     "p": 77.71,
     "r": 72.51,
     "f1": 75.02
   },
   {
     "input": "Gold seg",
-    "models": "Wang et al. ( 2013 )*",
+    "models": "Wang et al. ( 2013 ) ",
     "p": 76.43,
     "r": 72.32,
     "f1": 74.32

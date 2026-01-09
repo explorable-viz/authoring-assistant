@@ -1,19 +1,19 @@
 [
   {
     "gold_class": "None",
-    "train": 15401,
-    "dev": 3905,
-    "test": 4141
+    "train": 15,
+    "dev": 3,
+    "test": 4
   },
   {
     "gold_class": "Obligation",
-    "train": 11005,
-    "dev": 2860,
+    "train": 11,
+    "dev": 2,
     "test": 970
   },
   {
     "gold_class": "Prohibition",
-    "train": 1172,
+    "train": 1,
     "dev": 314,
     "test": 108
   },
@@ -37,8 +37,8 @@
   },
   {
     "gold_class": " Total",
-    "train": 31545,
-    "dev": 8036,
-    "test": 5563
+    "train": 31,
+    "dev": 8,
+    "test": 5
   }
 ]

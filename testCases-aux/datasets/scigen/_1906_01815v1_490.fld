@@ -1,1 +1,1 @@
-let tableData = loadJson "datasets/scigen/1906.01815v1-490.json";
+let tableData = loadJson "datasets\scigen/1906.01815v1-490.json";

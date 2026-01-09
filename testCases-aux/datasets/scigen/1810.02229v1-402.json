@@ -1,15 +1,15 @@
 [
   {
     "pos": "Noun",
-    "training": 6710,
+    "training": 6,
     "dev": 111,
-    "test": 1499
+    "test": 1
   },
   {
     "pos": "Verb",
-    "training": 11269,
+    "training": 11,
     "dev": 193,
-    "test": 2426
+    "test": 2
   },
   {
     "pos": "Adjective",
@@ -25,8 +25,8 @@
   },
   {
     "pos": "Overall Event Tokens",
-    "training": 18735,
+    "training": 18,
     "dev": 314,
-    "test": 4068
+    "test": 4
   }
 ]

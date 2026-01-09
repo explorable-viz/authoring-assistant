@@ -74,6 +74,9 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
 
                 cleaned_value = re.sub(r'\[\w+\]', '', clean_value)
 
+                # Replace unicode U+2004 (THREE-PER-EM SPACE) with regular space for consistent processing
+                cleaned_value = cleaned_value.replace('\u2004', ' ')
+
                 # Remove parenthesised terms only when they follow a number and contain specific units like (s) or (%)
                 # cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\([s%]\)', r'\1', cleaned_value)
 
@@ -81,15 +84,27 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 cleaned_value = re.sub(r'(^|\s)∼\s*(?=\d)', r'\1', cleaned_value)
 
                 # Extract only the first number when ± symbol is present (e.g., "5.2 ± 0.3" -> "5.2")
-                cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*±\s*\d+(?:\.\d+)?(?:[eE][+-]?\d+)?', r'\1', cleaned_value)
+                cleaned_value = re.sub(r'(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*±\s*\d+(?:\.\d+)?(?:[eE][+-]?\d+)?', r'\1', cleaned_value)
 
-                # Remove asterisk before and after numbers including scientific notation (e.g., "**52.4**" -> "52.4", "*5.48e-15" -> "5.48e-15")
-                cleaned_value = re.sub(r'\*+(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)', r'\1', cleaned_value)  # Remove leading asterisks
-                cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\*+', r'\1', cleaned_value)  # Remove trailing asterisks
+                # Remove asterisk and star symbols (e.g., "**52.4**" -> "52.4", "96.9⋆" -> "96.9 ")
+                # Replace with space to preserve separation between numbers
+                cleaned_value = re.sub(r'[\*⋆]+', ' ', cleaned_value)
+                
+                # Extract only the first number from the string (e.g., "96.9 97.296.5" -> "96.9", " 65.2 68.559.1" -> "65.2")
+                match = re.match(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)', cleaned_value)
+                if match:
+                    cleaned_value = match.group(1)
 
-                # Remove K/k suffix and % symbol only at the end of numeric values
-                # Also remove commas from numbers (e.g., 7,123K -> 7123)
-                cleaned_value = re.sub(r'[Kk]$', '', cleaned_value)  # Remove K or k at the end
+                # Remove K/k/x suffix and % symbol only at the end of numeric values
+                # Also remove commas from numbers (e.g., 7,123K -> 7123, 1.9x -> 1.9)
+                cleaned_value = re.sub(r'[Kkx]$', '', cleaned_value)  # Remove K, k, or x at the end
+                cleaned_value = re.sub(r'%$', '', cleaned_value)  # Remove % at the end
+                cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)  # Remove commas followed by digits
+                
+                # Extract only the first number from the string (e.g., "63.7 65.661.6" -> "63.7", "96.9 97.296.5" -> "96.9")
+                match = re.match(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)', cleaned_value)
+                if match:
+                    cleaned_value = match.group(1)
                 cleaned_value = re.sub(r'%$', '', cleaned_value)  # Remove % at the end
                 cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)  # Remove commas followed by digits
 

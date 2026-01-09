@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1909_01120v1_341
+
+"""
+	As baseline, we use our unsupervised algorithm with EmbDI embeddings and pre-trained embeddings. We also test our local embeddings in the supervised setting with a state of the art ER system (DeepERL), comparing its results to the ones obtained with pre-trained embeddings (DeepERP).  Results in  ${"Table " ++ numToStr(4)}  show that EmbDI embeddings obtain  ${betterWorse GT}  quality results in all scenarios in both settings. As observed in the SM experiments, using local embeddings instead of pre-trained ones increases significantly the quality of an existing system. In this case, supervised DeepER shows an average  ${numToStr(6) ++ "%"}  absolute improvement in F-measure in the tested setting with  ${numToStr(5) ++ "%"}  of the ground truth passed as training data. The improvements decreases to  ${numToStr(4) ++ "%"}  with more training data ( ${numToStr(10) ++ "%"} ). Also for ER, the local embeddings obtained with the basic method lead to  ${numToStr(0)}  row matched.  Execut
+"""

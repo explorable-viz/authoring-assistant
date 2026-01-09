@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1906_11565v2_387
+
+"""
+	we describe data and label distribution of Friends and EmotionPush datasets. In terms of label distribution for both datasets,  ${"Neutral"}  are the most common class, followed by  ${"Joy"} ,  ${"Sadness"} , and  ${"Anger"} . Both datasets have imbalanced class distribution, and especially the  ${"ratio of " ++ "Sadness and " ++ "Anger is very small"} . For instance, they account for only  ${let friendsDataset = findWhere (fun x -> x.dataset_friends == "Friends") tableData in numToStr 3.4 ++ "%"}  and  ${let friendsDataset = findWhere (fun x -> x.dataset_friends == "Friends") tableData in numToStr 5.2 ++ "%"} , respectively in the Friends dataset. In the case of EmotionPush,  ${"Anger label"}  accounts for less than  ${let emotionPushDataset = findWhere (fun x -> x.dataset_friends == "EmotionPush") tableData in if emotionPushDataset.anger_5_2 < 1.0 then "1%" else numToStr emotionPushDataset.anger_5_2 ++ "%"}  of the training set.
+"""

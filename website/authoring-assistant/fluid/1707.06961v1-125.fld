@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1707_06961v1_125
+
+"""
+	Table 6 (morphosyntactic attribute tagging micro-F1). In  ${"morphosyntactic"}  tagging,  ${"gains"}  are apparent for  ${"Slavic languages"}  and  ${"Chinese"} , but also for  ${let findAgglutinativeLanguages = findWhere (fun x -> x == "agglutinative languages") ["agglutinative languages"] in findAgglutinativeLanguages}  — especially  ${let row = findWhere (fun x -> x._1 == "ta") tableData in if row._1 == "ta" then "Tamil" else ""}  and  ${let row = findWhere (fun x -> x._1 == "tr") tableData in if row._1 == "tr" then "Turkish" else ""}  — where the stable morpheme representation makes it easy for subword modeling to provide a type-level signal.
+"""

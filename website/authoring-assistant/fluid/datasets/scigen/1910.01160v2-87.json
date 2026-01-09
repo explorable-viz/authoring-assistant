@@ -1,0 +1,20 @@
+[
+  {
+    "model": "Headline only",
+    "p": 0.46,
+    "r": 0.89,
+    "f1": 0.61
+  },
+  {
+    "model": "Text body only",
+    "p": 0.78,
+    "r": 0.52,
+    "f1": 0.62
+  },
+  {
+    "model": "Headline + text body",
+    "p": 0.81,
+    "r": 0.75,
+    "f1": 0.78
+  }
+]

@@ -26,7 +26,5 @@
   "max-program-variants": 1,
   "num-learning-case-to-generate": 0,
   "num-test-data-variants": 1,
-  "num-test-runs": 1,
-  "authoring-agent-class": "authoringassistant.llm.LLMDummyAgent",
-  "suggestion-agent-class": "authoringassistant.llm.suggestion.QwenCoderAgent"
+  "num-test-runs": 2
 }

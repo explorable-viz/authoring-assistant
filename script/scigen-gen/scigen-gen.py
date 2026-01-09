@@ -77,9 +77,6 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 # Replace unicode U+2004 (THREE-PER-EM SPACE) with regular space for consistent processing
                 cleaned_value = cleaned_value.replace('\u2004', ' ')
 
-                # Remove parenthesised terms only when they follow a number and contain specific units like (s) or (%)
-                # cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\([s%]\)', r'\1', cleaned_value)
-
                 # Remove ∼ prefix only when before a number (not between numbers)
                 cleaned_value = re.sub(r'(^|\s)∼\s*(?=\d)', r'\1', cleaned_value)
 

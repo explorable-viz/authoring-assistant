@@ -48,7 +48,7 @@
     "type": ""
   },
   {
-    "feature": "is_blac",
+    "feature": "is_black",
     "cos": 0.2,
     "f1_neigh": 0.29,
     "f1_lr": 0.23,
@@ -304,7 +304,7 @@
     "type": ""
   },
   {
-    "feature": "has_a_bea",
+    "feature": "has_a_beak",
     "cos": 0.37,
     "f1_neigh": 0.63,
     "f1_lr": 0.83,

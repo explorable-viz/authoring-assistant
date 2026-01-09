@@ -13,7 +13,7 @@
     "wnli_baselines": 31.0
   },
   {
-    "pretr_baselines": " Single-Tas",
+    "pretr_baselines": " Single-Task",
     "avg_baselines": 69.1,
     "cola_baselines": 21.3,
     "sst_baselines": 89.0,

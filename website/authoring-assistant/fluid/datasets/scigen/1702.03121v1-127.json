@@ -1,0 +1,123 @@
+[
+  {
+    "scenario": "Grocery Shopping",
+    "human_model_accuracy": 74.8,
+    "human_model_perplexity": 2.13,
+    "script_model_accuracy": 68.17,
+    "script_model_perplexity": 3.16,
+    "linguistic_model_accuracy": 53.85,
+    "linguistic_model_perplexity": 6.54,
+    "tily_model_accuracy": 32.89,
+    "tily_model_perplexity": 24.48
+  },
+  {
+    "scenario": "Repairing a flat bicycle tyre",
+    "human_model_accuracy": 78.34,
+    "human_model_perplexity": 2.72,
+    "script_model_accuracy": 62.09,
+    "script_model_perplexity": 3.89,
+    "linguistic_model_accuracy": 51.26,
+    "linguistic_model_perplexity": 6.38,
+    "tily_model_accuracy": 29.24,
+    "tily_model_perplexity": 19.08
+  },
+  {
+    "scenario": "Riding a public bus",
+    "human_model_accuracy": 72.19,
+    "human_model_perplexity": 2.28,
+    "script_model_accuracy": 64.57,
+    "script_model_perplexity": 3.67,
+    "linguistic_model_accuracy": 52.65,
+    "linguistic_model_perplexity": 6.34,
+    "tily_model_accuracy": 32.78,
+    "tily_model_perplexity": 23.39
+  },
+  {
+    "scenario": "Getting a haircut",
+    "human_model_accuracy": 71.06,
+    "human_model_perplexity": 2.45,
+    "script_model_accuracy": 58.82,
+    "script_model_perplexity": 3.79,
+    "linguistic_model_accuracy": 42.82,
+    "linguistic_model_perplexity": 7.11,
+    "tily_model_accuracy": 28.7,
+    "tily_model_perplexity": 15.4
+  },
+  {
+    "scenario": "Planting a tree",
+    "human_model_accuracy": 71.86,
+    "human_model_perplexity": 2.46,
+    "script_model_accuracy": 59.32,
+    "script_model_perplexity": 4.25,
+    "linguistic_model_accuracy": 47.8,
+    "linguistic_model_perplexity": 7.31,
+    "tily_model_accuracy": 28.14,
+    "tily_model_perplexity": 24.28
+  },
+  {
+    "scenario": "Borrowing book from library",
+    "human_model_accuracy": 77.49,
+    "human_model_perplexity": 1.93,
+    "script_model_accuracy": 64.07,
+    "script_model_perplexity": 3.55,
+    "linguistic_model_accuracy": 43.29,
+    "linguistic_model_perplexity": 8.4,
+    "tily_model_accuracy": 33.33,
+    "tily_model_perplexity": 20.26
+  },
+  {
+    "scenario": "Taking Bath",
+    "human_model_accuracy": 81.29,
+    "human_model_perplexity": 1.84,
+    "script_model_accuracy": 67.42,
+    "script_model_perplexity": 3.14,
+    "linguistic_model_accuracy": 61.29,
+    "linguistic_model_perplexity": 4.33,
+    "tily_model_accuracy": 43.23,
+    "tily_model_perplexity": 16.33
+  },
+  {
+    "scenario": "Going on a train",
+    "human_model_accuracy": 70.79,
+    "human_model_perplexity": 2.39,
+    "script_model_accuracy": 58.73,
+    "script_model_perplexity": 4.2,
+    "linguistic_model_accuracy": 47.62,
+    "linguistic_model_perplexity": 7.68,
+    "tily_model_accuracy": 30.16,
+    "tily_model_perplexity": 35.11
+  },
+  {
+    "scenario": "Baking a cake",
+    "human_model_accuracy": 76.43,
+    "human_model_perplexity": 2.16,
+    "script_model_accuracy": 61.79,
+    "script_model_perplexity": 5.11,
+    "linguistic_model_accuracy": 46.4,
+    "linguistic_model_perplexity": 9.16,
+    "tily_model_accuracy": 24.07,
+    "tily_model_perplexity": 23.67
+  },
+  {
+    "scenario": "Flying in an airplane",
+    "human_model_accuracy": 62.04,
+    "human_model_perplexity": 3.08,
+    "script_model_accuracy": 61.31,
+    "script_model_perplexity": 4.01,
+    "linguistic_model_accuracy": 48.18,
+    "linguistic_model_perplexity": 7.27,
+    "tily_model_accuracy": 30.9,
+    "tily_model_perplexity": 30.18
+  },
+  {
+    "scenario": "Average",
+    "human_model_accuracy": 73.63,
+    "human_model_perplexity": 2.34,
+    "script_model_accuracy": 62.63,
+    "script_model_perplexity": 3.88,
+    "linguistic_model_accuracy": 49.52,
+    "linguistic_model_perplexity": 7.05,
+    "tily_model_accuracy": 31.34,
+    "tily_model_perplexity": 23.22
+  }
+]

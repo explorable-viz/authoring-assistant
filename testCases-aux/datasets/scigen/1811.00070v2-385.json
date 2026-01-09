@@ -33,10 +33,10 @@
   },
   {
     "_1": "ELMo-LSTM-CRF-HB",
-    "diagnosis": " 85.3∗∗∗",
-    "prescription": " 82.0∗∗∗",
-    "penn_adverse_drug": " 68.5∗",
-    "chemical–disease": " 89.9∗∗∗",
-    "drug–disease": " 51.9∗∗"
+    "diagnosis": 85.3,
+    "prescription": 82.0,
+    "penn_adverse_drug": 68.5,
+    "chemical–disease": 89.9,
+    "drug–disease": 51.9
   }
 ]

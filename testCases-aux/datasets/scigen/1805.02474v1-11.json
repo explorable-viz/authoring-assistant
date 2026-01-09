@@ -30,19 +30,19 @@
     "test_s": 1.62
   },
   {
-    "model": "2 stacked BiLSTM",
+    "model": 2,
     "accuracy": 81.94,
     "train_s": 98,
     "test_s": 3.18
   },
   {
-    "model": "3 stacked BiLSTM",
+    "model": 3,
     "accuracy": 81.71,
     "train_s": 137,
     "test_s": 4.67
   },
   {
-    "model": "3 stacked CNN",
+    "model": 3,
     "accuracy": 81.59,
     "train_s": 31,
     "test_s": 1.04

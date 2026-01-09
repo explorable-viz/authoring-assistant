@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1908_08528v1_294
+
+"""
+	In  ${"Table " ++ numToStr 3} , we compare the combined distance measure with each of the two components used alone. The results show that combining the edit distance with the embedding similarity is  ${"stronger"}  than using any of the measures alone. The embedding similarity alone performs  ${"much better"}  than the edit distance alone.
+"""

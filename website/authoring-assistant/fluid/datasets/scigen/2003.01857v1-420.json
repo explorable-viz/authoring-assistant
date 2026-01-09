@@ -1,0 +1,102 @@
+[
+  {
+    "data_set": " - our model",
+    "ag": "",
+    "sogou": ""
+  },
+  {
+    "data_set": "SeMemNN-ct",
+    "ag": 16.72,
+    "sogou": 10.82
+  },
+  {
+    "data_set": "SeMemNN-abs",
+    "ag": 15.32,
+    "sogou": 9.8
+  },
+  {
+    "data_set": "B-SeMemNN-ct",
+    "ag": 15.37,
+    "sogou": 9.37
+  },
+  {
+    "data_set": "B-SeMemNN-abs",
+    "ag": 14.35,
+    "sogou": 8.76
+  },
+  {
+    "data_set": "SAB-SeMemNN-ct",
+    "ag": 14.07,
+    "sogou": 7.95
+  },
+  {
+    "data_set": "SAB-SeMemNN-abs",
+    "ag": 13.79,
+    "sogou": 7.89
+  },
+  {
+    "data_set": " - related studies",
+    "ag": "",
+    "sogou": ""
+  },
+  {
+    "data_set": "Bow ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "Bow TFIDF ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "ngrams TFIDF ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "Bag-of-means ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "LSTM ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "char-CNN ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "VDCNN ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "VDCNN",
+    "ag": 19.25,
+    "sogou": "unable"
+  },
+  {
+    "data_set": "XLNet ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "ULMFiT ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "CNN ",
+    "ag": "-",
+    "sogou": "-"
+  },
+  {
+    "data_set": "DPCNN ",
+    "ag": "-",
+    "sogou": "-"
+  }
+]

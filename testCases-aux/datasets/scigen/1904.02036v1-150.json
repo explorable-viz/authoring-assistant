@@ -133,14 +133,14 @@
     "method": "†SMT (Pettersson et al.,  2014 )",
     "dataset_dea": "–",
     "dataset_der": "–",
-    "dataset_en": "94.3–",
+    "dataset_en": 94.3,
     "dataset_es": "–",
-    "dataset_hu": "80.1–",
-    "dataset_is": "71.8–",
+    "dataset_hu": 80.1,
+    "dataset_is": 71.8,
     "dataset_pt": "–",
     "dataset_slb": "–",
     "dataset_slg": "–",
-    "dataset_sv": "92.9–"
+    "dataset_sv": 92.9
   },
   {
     "method": "†NMT (Tang et al.,  2018 )",

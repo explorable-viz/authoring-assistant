@@ -6,8 +6,8 @@
   },
   {
     "test_data": " batch ASR",
-    "goals": "63.6 66.658.7",
-    "requests": "96.8 97.196.5"
+    "goals": 63.6,
+    "requests": 96.8
   },
   {
     "test_data": " train on transcripts + live ASR",
@@ -16,12 +16,12 @@
   },
   {
     "test_data": " live ASR",
-    "goals": "63.8 67.060.2",
-    "requests": "97.5 97.797.2"
+    "goals": 63.8,
+    "requests": 97.5
   },
   {
     "test_data": "transcripts",
-    "goals": "78.3 82.474.3",
-    "requests": "98.7 99.098.0"
+    "goals": 78.3,
+    "requests": 98.7
   }
 ]

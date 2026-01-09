@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1905_05543v2_41
+
+"""
+	each average. According to our results (Table 2), the  ${let searchValue = "Wikification success ratios" in searchValue}  of  ${let eBayEntry = findWhere (fun x -> x._1 == "eBay") tableData in eBayEntry._1}  and  ${let illegalOnionEntry = findWhere (fun x -> x._1 == "Illegal Onion") tableData in illegalOnionEntry._1}  named entities is  ${"comparable"}  and  ${"relatively low"} . However, sites selling legal drugs on Onion have a  ${let legalOnionEntry = findWhere (fun x -> x._1 == "Legal Onion") tableData in if legalOnionEntry.wikifiable > 50.0 then "much higher" else "lower"}  Wikification percentage.
+"""

@@ -20,19 +20,19 @@
   {
     "model": "LING+PV",
     "sentiment": 0.671,
-    "stance": "0.601∗",
-    "hate": "0.667∗"
+    "stance": 0.601,
+    "hate": 0.667
   },
   {
     "model": "LING+N2V",
     "sentiment": 0.672,
-    "stance": "0.629∗⋄",
-    "hate": "0.656∗"
+    "stance": 0.629,
+    "hate": 0.656
   },
   {
     "model": "LING+GAT",
     "sentiment": 0.666,
-    "stance": "0.640∗⋄†",
-    "hate": "0.674∗⋄†"
+    "stance": 0.64,
+    "hate": 0.674
   }
 ]

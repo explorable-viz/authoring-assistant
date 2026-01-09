@@ -15,7 +15,7 @@
   },
   {
     "dataset": "positive: 178",
-    "tool": "NLT",
+    "tool": "NLTK",
     "num_correct_prediction": 1168,
     "positive_precision": 0.317,
     "positive_recall": 0.244,
@@ -113,7 +113,7 @@
   },
   {
     "dataset": "positive: 186",
-    "tool": "NLT",
+    "tool": "NLTK",
     "num_correct_prediction": 184,
     "positive_precision": 0.751,
     "positive_recall": 0.812,
@@ -211,7 +211,7 @@
   },
   {
     "dataset": "positive: 290",
-    "tool": "NLT",
+    "tool": "NLTK",
     "num_correct_prediction": 276,
     "positive_precision": 0.84,
     "positive_recall": 0.362,

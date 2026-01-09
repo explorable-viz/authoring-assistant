@@ -13,6 +13,6 @@
   },
   {
     "model": "SUMBT",
-    "joint_accuracy": " 0.4240 (±0.0187)"
+    "joint_accuracy": 0.424
   }
 ]

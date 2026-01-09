@@ -4,27 +4,27 @@
     "bleu": 32.34,
     "deixis": 84.1,
     "lex_c": 48.7,
-    "ellipsis": "65 / 75"
+    "ellipsis": 65
   },
   {
     "p": " p=0.25",
     "bleu": 32.31,
     "deixis": 83.3,
     "lex_c": 52.4,
-    "ellipsis": "67 / 78"
+    "ellipsis": 67
   },
   {
     "p": " p=0.5",
     "bleu": 32.38,
     "deixis": 81.6,
     "lex_c": 58.1,
-    "ellipsis": "72 / 80"
+    "ellipsis": 72
   },
   {
     "p": " p=0.75",
     "bleu": 32.45,
     "deixis": 80.0,
     "lex_c": 65.0,
-    "ellipsis": "70 / 80"
+    "ellipsis": 70
   }
 ]

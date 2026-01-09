@@ -1,0 +1,22 @@
+[
+  {
+    "type_of_context": "No context (Base Model)",
+    "bleu": 24.74
+  },
+  {
+    "type_of_context": "Current Turn",
+    "bleu": 26.39
+  },
+  {
+    "type_of_context": "Current Language from Previous Turns",
+    "bleu": 26.21
+  },
+  {
+    "type_of_context": "Other Language from Previous Turns",
+    "bleu": 26.32
+  },
+  {
+    "type_of_context": "Complete Context",
+    "bleu": 26.49
+  }
+]

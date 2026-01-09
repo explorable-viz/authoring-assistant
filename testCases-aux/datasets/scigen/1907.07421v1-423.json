@@ -21,18 +21,18 @@
   },
   {
     "model": "BERT+RNN (baseline 1)",
-    "joint_accuracy": "0.892 (±0.011)"
+    "joint_accuracy": 0.892
   },
   {
     "model": "BERT+RNN+Ontology (baseline 2)",
-    "joint_accuracy": "0.893 (±0.013)"
+    "joint_accuracy": 0.893
   },
   {
     "model": "Slot-dependent SUMBT (baseline 3)",
-    "joint_accuracy": "0.891 (±0.010)"
+    "joint_accuracy": 0.891
   },
   {
     "model": "Slot-independent SUMBT (proposed)",
-    "joint_accuracy": " 0.910 (±0.010)"
+    "joint_accuracy": 0.91
   }
 ]

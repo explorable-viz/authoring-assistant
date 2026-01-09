@@ -119,9 +119,9 @@ public class Settings {
     }
 
     public static String getSuggestionAgentName() {
-        return getSettings().getString("suggestion-agent-class");
+        return commandLineArgs.get("suggestion-agent-class");
     }
     public static String getAuthoringAgentName() {
-        return getSettings().getString("authoring-agent-class");
+        return commandLineArgs.get("authoring-agent-class");
     }
 }

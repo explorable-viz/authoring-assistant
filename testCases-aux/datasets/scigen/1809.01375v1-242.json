@@ -16,7 +16,7 @@
     "net2": 0.98
   },
   {
-    "property": "full_is_blac",
+    "property": "full_is_black",
     "av_cos": 0.19,
     "neigh": 0.35,
     "lr": 0.75,

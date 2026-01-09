@@ -66,25 +66,25 @@
   {
     "data": "N",
     "method": "BiLSTM-XR-Dev Estimation",
-    "semeval_15_acc": " 83.31∗± 0.62",
+    "semeval_15_acc": 83.31,
     "semeval_15_macro_f1": 62.24,
-    "semeval_16_acc": " 87.68∗± 0.47",
+    "semeval_16_acc": 87.68,
     "semeval_16_macro_f1": 63.23
   },
   {
     "data": "N",
     "method": "BiLSTM-XR",
-    "semeval_15_acc": " 83.31∗± 0.77",
+    "semeval_15_acc": 83.31,
     "semeval_15_macro_f1": 64.42,
-    "semeval_16_acc": " 88.12∗± 0.24",
+    "semeval_16_acc": 88.12,
     "semeval_16_macro_f1": 68.6
   },
   {
     "data": "N+A",
     "method": "BiLSTM-XR →Aspect Based Finetuning",
-    "semeval_15_acc": " 83.44∗± 0.74",
+    "semeval_15_acc": 83.44,
     "semeval_15_macro_f1": 67.23,
-    "semeval_16_acc": " 87.66∗± 0.28",
-    "semeval_16_macro_f1": " 71.19†± 1.40"
+    "semeval_16_acc": 87.66,
+    "semeval_16_macro_f1": 71.19
   }
 ]

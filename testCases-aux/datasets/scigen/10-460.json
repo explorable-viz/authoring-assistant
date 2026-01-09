@@ -19,7 +19,7 @@
     "academia": 29.2,
     "apple": 21.8,
     "aviation": 37.0,
-    "wikipassageqa": "53.00 / 61.71"
+    "wikipassageqa": 53.0
   },
   {
     "model": "TF*IDF",
@@ -30,7 +30,7 @@
     "academia": 32.2,
     "apple": 26.7,
     "aviation": 41.9,
-    "wikipassageqa": "39.92 / 46.38"
+    "wikipassageqa": 39.92
   },
   {
     "model": "Semantic Similarity Methods",
@@ -52,10 +52,10 @@
     "academia": 22.5,
     "apple": 22.8,
     "aviation": 29.3,
-    "wikipassageqa": "43.62 / 50.53"
+    "wikipassageqa": 43.62
   },
   {
-    "model": "p-mean Embeddings",
+    "model": "p-mean Embeddings",
     "∑": 25.7,
     "insuranceqa": 17.0,
     "travel": 32.1,
@@ -63,7 +63,7 @@
     "academia": 24.3,
     "apple": 19.6,
     "aviation": 31.7,
-    "wikipassageqa": "42.82 / 50.44"
+    "wikipassageqa": 42.82
   },
   {
     "model": "CNN",
@@ -74,7 +74,7 @@
     "academia": 22.5,
     "apple": 20.2,
     "aviation": 25.3,
-    "wikipassageqa": "27.33 / 31.48"
+    "wikipassageqa": 27.33
   },
   {
     "model": "BiLSTM",
@@ -85,7 +85,7 @@
     "academia": 31.5,
     "apple": 27.2,
     "aviation": 37.3,
-    "wikipassageqa": "46.16 / 52.89"
+    "wikipassageqa": 46.16
   },
   {
     "model": "Att.-BiLSTM",
@@ -96,7 +96,7 @@
     "academia": 31.2,
     "apple": 24.7,
     "aviation": 33.9,
-    "wikipassageqa": "47.04 / 54.36"
+    "wikipassageqa": 47.04
   },
   {
     "model": "AP-BiLSTM",
@@ -107,7 +107,7 @@
     "academia": 27.3,
     "apple": 22.9,
     "aviation": 34.5,
-    "wikipassageqa": "46.98 / 55.20"
+    "wikipassageqa": 46.98
   },
   {
     "model": "LW-BiLSTM",
@@ -118,7 +118,7 @@
     "academia": 30.2,
     "apple": 23.4,
     "aviation": 38.5,
-    "wikipassageqa": "47.56 / 54.33"
+    "wikipassageqa": 47.56
   },
   {
     "model": "Relevance Matching Methods",
@@ -140,7 +140,7 @@
     "academia": 19.8,
     "apple": 13.0,
     "aviation": 21.5,
-    "wikipassageqa": "39.84 / 47.55"
+    "wikipassageqa": 39.84
   },
   {
     "model": "CA-Wang",
@@ -151,7 +151,7 @@
     "academia": 36.1,
     "apple": 29.2,
     "aviation": 46.5,
-    "wikipassageqa": "48.71 / 56.11"
+    "wikipassageqa": 48.71
   },
   {
     "model": "COALA",
@@ -162,10 +162,10 @@
     "academia": 42.2,
     "apple": 32.0,
     "aviation": 48.4,
-    "wikipassageqa": "60.58 / 69.40"
+    "wikipassageqa": 60.58
   },
   {
-    "model": "COALA p-means",
+    "model": "COALA p-means",
     "∑": 45.2,
     "insuranceqa": 39.9,
     "travel": 53.4,
@@ -173,10 +173,10 @@
     "academia": 44.2,
     "apple": 34.5,
     "aviation": 52.9,
-    "wikipassageqa": "59.29 / 68.48"
+    "wikipassageqa": 59.29
   },
   {
-    "model": "COALA syntax-aware",
+    "model": "COALA syntax-aware",
     "∑": 44.3,
     "insuranceqa": 39.5,
     "travel": 54.1,
@@ -184,6 +184,6 @@
     "academia": 43.5,
     "apple": 32.7,
     "aviation": 48.3,
-    "wikipassageqa": "60.48 / 68.75"
+    "wikipassageqa": 60.48
   }
 ]

@@ -48,13 +48,13 @@
     "test_s": 22.5
   },
   {
-    "model": "2 stacked BiLSTM",
+    "model": 2,
     "accuracy": 97.41,
     "train_s": 501,
     "test_s": 43.99
   },
   {
-    "model": "3 stacked BiLSTM",
+    "model": 3,
     "accuracy": 97.4,
     "train_s": 746,
     "test_s": 64.96

@@ -2,7 +2,7 @@
   {
     "_1": "",
     "task_dataset": "Dataset",
-    "image_sentence_retrieval_flickr30k": "Flickr30",
+    "image_sentence_retrieval_flickr30k": "Flickr30K",
     "image_sentence_retrieval_mscoco": "MSCOCO",
     "phrase_grounding_flickr30k": "Entities",
     "phrase_grounding_referit": "ReferIt",

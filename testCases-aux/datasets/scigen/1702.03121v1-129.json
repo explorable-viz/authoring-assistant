@@ -69,8 +69,8 @@
     "std_error_script": 0.564,
     "std_error_linguistic": 0.562,
     "std_error_base": 0.565,
-    "pr_∣_z∣_human": "0.0838 .",
-    "pr_∣_z∣_script": "0.0846 .",
+    "pr_∣_z∣_human": 0.0838,
+    "pr_∣_z∣_script": 0.0846,
     "pr_∣_z∣_linguistic": 0.106,
     "pr_∣_z∣_base": 0.101
   },

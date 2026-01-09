@@ -30,7 +30,7 @@
     "inneratt": 72.8
   },
   {
-    "genre": "9/11",
+    "genre": 9,
     "cbow": 63.2,
     "esim": 71.9,
     "inneratt": 70.5

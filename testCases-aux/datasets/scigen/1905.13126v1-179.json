@@ -15,7 +15,7 @@
   },
   {
     "_1": "Local",
-    "metric": "AvgRan",
+    "metric": "AvgRank",
     "amazon": 0.5103,
     "newsgroups": 0.5089,
     "new_york_times": 0.4473

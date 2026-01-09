@@ -102,11 +102,11 @@
     "model": "MWE",
     "downstream": "Friendly",
     "keller_dobj": 0.63,
-    "keller_amod": " 0.43†",
-    "keller_average": " 0.53†",
+    "keller_amod": 0.43,
+    "keller_average": 0.53,
     "sp_10k_nsubj": 0.76,
-    "sp_10k_dobj": " 0.79†",
+    "sp_10k_dobj": 0.79,
     "sp_10k_amod": 0.78,
-    "sp_10k_average": " 0.78†"
+    "sp_10k_average": 0.78
   }
 ]

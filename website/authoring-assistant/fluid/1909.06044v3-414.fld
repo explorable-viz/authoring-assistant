@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1909_06044v3_414
+
+"""
+	We calculate these similarity scores for each  ${"Real"}  targeted output for the real inputs and the inputs found by the proposed model and report the average value in Table 1. According to the table, we observe that even inputting the real inputs, the similarity scores between the outputs and the target outputs are not  ${"high"} . Besides, with the crafted inputs from the proposed framework, these similarity scores are significantly improved. For example, for  ${let desiredEntry = findWhere (fun x -> x.length == "RL BeamSearch(200)") tableData in desiredEntry.length} , the similarity is improved by  ${"41.5%"} ,  ${"34.0%"}  and  ${"28.3%"}  for the target outputs with length  ${"1-3"} ,  ${let desiredEntry = findWhere (fun x -> x.length == "RL BeamSearch(200)") tableData in "4-6"}  and  ${let desiredEntry = findWhere (fun x -> x.length == "RL BeamSearch(200)") tableData in "7-10"} , respectively.
+"""

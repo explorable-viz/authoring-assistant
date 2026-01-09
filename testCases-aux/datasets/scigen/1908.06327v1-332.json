@@ -9,7 +9,7 @@
     "vqa_accuracy": 61.46
   },
   {
-    "task_metric": "+ multi-task pretraining w/o target tas",
+    "task_metric": "+ multi-task pretraining w/o target task",
     "image_sentence_retrieval_mean_recall": 76.4,
     "phrase_grounding_accuracy": 52.21,
     "text_to_clip_average": 34.57,
@@ -18,7 +18,7 @@
     "vqa_accuracy": 61.47
   },
   {
-    "task_metric": "+ multi-task pretraining w/ target tas",
+    "task_metric": "+ multi-task pretraining w/ target task",
     "image_sentence_retrieval_mean_recall": 80.2,
     "phrase_grounding_accuracy": 52.64,
     "text_to_clip_average": 34.82,

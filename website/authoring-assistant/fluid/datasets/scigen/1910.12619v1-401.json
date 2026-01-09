@@ -1,0 +1,50 @@
+[
+  {
+    "normalized_features_new": "domain",
+    "normalized_features_trained": "on",
+    "none_bal": "Acc.",
+    "none_κ": "",
+    "structural_bal": "Acc.",
+    "structural_κ": "",
+    "lexical_bal": "Acc.",
+    "lexical_κ": "",
+    "frequency_bal": "Acc.",
+    "frequency_κ": ""
+  },
+  {
+    "normalized_features_new": "Tools",
+    "normalized_features_trained": "Fruit+Music",
+    "none_bal": 0.69,
+    "none_κ": 0.4,
+    "structural_bal": 0.84,
+    "structural_κ": 0.74,
+    "lexical_bal": 0.83,
+    "lexical_κ": 0.68,
+    "frequency_bal": 0.65,
+    "frequency_κ": 0.3
+  },
+  {
+    "normalized_features_new": "Fruit",
+    "normalized_features_trained": "Tools+Music",
+    "none_bal": 0.66,
+    "none_κ": 0.3,
+    "structural_bal": 0.82,
+    "structural_κ": 0.62,
+    "lexical_bal": 0.73,
+    "lexical_κ": 0.43,
+    "frequency_bal": 0.66,
+    "frequency_κ": 0.31
+  },
+  {
+    "normalized_features_new": "Music",
+    "normalized_features_trained": "Tools+Fruit",
+    "none_bal": 0.62,
+    "none_κ": 0.27,
+    "structural_bal": 0.68,
+    "structural_κ": 0.37,
+    "lexical_bal": 0.73,
+    "lexical_κ": 0.41,
+    "frequency_bal": 0.55,
+    "frequency_κ": 0.12
+  }
+]

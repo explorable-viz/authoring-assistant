@@ -7,14 +7,14 @@
   },
   {
     "2_data_type": "Bodies",
-    "geth": 11,
-    "ethanos": 12,
+    "geth": 11110.0,
+    "ethanos": 12750.0,
     "diff": 1640.0
   },
   {
     "2_data_type": "Receipts",
-    "geth": 3,
-    "ethanos": 3,
+    "geth": 3578.97,
+    "ethanos": 3605.66,
     "diff": 26.69
   },
   {
@@ -37,8 +37,8 @@
   },
   {
     "2_data_type": "Transaction Index",
-    "geth": 3,
-    "ethanos": 3,
+    "geth": 3650.0,
+    "ethanos": 3650.0,
     "diff": 0
   },
   {
@@ -49,9 +49,9 @@
   },
   {
     "2_data_type": "Trie nodes",
-    "geth": 183,
-    "ethanos": 165,
-    "diff": -17
+    "geth": 183100.0,
+    "ethanos": 165140.0,
+    "diff": -17960.0
   },
   {
     "2_data_type": "Trie preimages",
@@ -61,9 +61,9 @@
   },
   {
     "2_data_type": "total",
-    "geth": 202,
-    "ethanos": 186,
-    "diff": -16
+    "geth": 202727.47,
+    "ethanos": 186496.2,
+    "diff": -16231.27
   },
   {
     "2_data_type": 2,

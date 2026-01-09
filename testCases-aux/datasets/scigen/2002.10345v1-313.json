@@ -22,7 +22,7 @@
     "mnli_m_mm": "/"
   },
   {
-    "model": "BERTBASE *",
+    "model": "BERTBASE",
     "imdb": 5.4,
     "ag’s_news": 5.25,
     "dbpedia": 0.71,

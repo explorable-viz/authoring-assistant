@@ -1,6 +1,6 @@
 [
   {
-    "method": 1,
+    "method": "1-best baseline",
     "goals": 63.6,
     "requests": 96.8
   },

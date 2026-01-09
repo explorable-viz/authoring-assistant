@@ -1,9 +1,9 @@
 [
   {
     "class": "OCCURRENCE",
-    "training": 9,
+    "training": 9041,
     "dev": 162,
-    "test": 1
+    "test": 1949
   },
   {
     "class": "ASPECTUAL",
@@ -13,13 +13,13 @@
   },
   {
     "class": "I_STATE",
-    "training": 1,
+    "training": 1599,
     "dev": 29,
     "test": 355
   },
   {
     "class": "I_ACTION",
-    "training": 1,
+    "training": 1476,
     "dev": 25,
     "test": 357
   },
@@ -37,14 +37,14 @@
   },
   {
     "class": "STATE",
-    "training": 4,
+    "training": 4090,
     "dev": 61,
     "test": 843
   },
   {
     "class": "Overall Events",
-    "training": 17,
+    "training": 17528,
     "dev": 301,
-    "test": 3
+    "test": 3798
   }
 ]

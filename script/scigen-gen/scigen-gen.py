@@ -86,26 +86,33 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 # Extract only the first number when ± symbol is present (e.g., "5.2 ± 0.3" -> "5.2")
                 cleaned_value = re.sub(r'(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*±\s*\d+(?:\.\d+)?(?:[eE][+-]?\d+)?', r'\1', cleaned_value)
 
-                # Remove asterisk and star symbols only adjacent to numbers (e.g., "**52.4**" -> "52.4", "96.9⋆" -> "96.9")
+                # Remove commas used as thousands separators (e.g., "18,000" -> "18000", "7,123K" -> "7123K")
+                cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)
+                
+                # Remove asterisk and star symbols adjacent to numbers or after spaces (e.g., "**52.4**" -> "52.4", "2.19e-14 ***" -> "2.19e-14")
                 cleaned_value = re.sub(r'[\*⋆]+(?=\d)|(?<=\d)[\*⋆]+', '', cleaned_value)
+                cleaned_value = re.sub(r'\s+[\*⋆]+\s*$', '', cleaned_value)  # Remove trailing asterisks after spaces
                 
-                # Extract only the first number from the string (e.g., "96.9 97.296.5" -> "96.9", " 65.2 68.559.1" -> "65.2")
-                match = re.match(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)', cleaned_value)
-                if match:
-                    cleaned_value = match.group(1)
+                # Remove parenthetical information after numbers (e.g., "62.2 (4K)" -> "62.2"), but only if starts with number
+                if re.match(r'^\s*-?\d', cleaned_value):
+                    cleaned_value = re.sub(r'\s*\([^)]+\)\s*$', '', cleaned_value)
+                
+                # Check if value contains alphanumeric identifiers (e.g., "1-best", "2x3") that should remain as strings
+                # Look for: digit followed by letter/hyphen (like "1-best"), or letter followed by digit
+                # But NOT leading minus sign (which is for negative numbers like "-0.51")
+                has_mixed_alphanumeric = bool(re.search(r'\d[a-zA-Z\-]|[a-zA-Z]\d', cleaned_value.rstrip('KkxX%MBGTPHzmsμn')))
+                
+                if not has_mixed_alphanumeric:
+                    # Extract only the first number from the string (e.g., "96.9 97.296.5" -> "96.9", " 65.2 68.559.1" -> "65.2")
+                    match = re.match(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)', cleaned_value)
+                    if match:
+                        cleaned_value = match.group(1)
 
-                # Remove K/k/x suffix and % symbol only at the end of numeric values
-                # Also remove commas from numbers (e.g., 7,123K -> 7123, 1.9x -> 1.9)
-                cleaned_value = re.sub(r'(\d)[Kkx]$', r'\1', cleaned_value)  # Remove K, k, or x at the end only after a digit
-                cleaned_value = re.sub(r'%$', '', cleaned_value)  # Remove % at the end
-                cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)  # Remove commas followed by digits
-                
-                # Extract only the first number from the string (e.g., "63.7 65.661.6" -> "63.7", "96.9 97.296.5" -> "96.9")
-                match = re.match(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)', cleaned_value)
-                if match:
-                    cleaned_value = match.group(1)
-                cleaned_value = re.sub(r'%$', '', cleaned_value)  # Remove % at the end
-                cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)  # Remove commas followed by digits
+                    # Remove K/k/x suffix, % symbol, and units of measurement only when preceded by a digit
+                    cleaned_value = re.sub(r'(\d)[KkxX]$', r'\1', cleaned_value)  # Remove K, k, x, X at the end only after a digit
+                    cleaned_value = re.sub(r'%$', '', cleaned_value)  # Remove % at the end
+                    # Remove common units of measurement only when preceded by digits
+                    cleaned_value = re.sub(r'(\d)\s*(TB|GB|MB|KB|PB|GHz|MHz|KHz|Hz|ms|μs|ns|M)$', r'\1', cleaned_value, flags=re.IGNORECASE)
 
                 # Convert to numeric type if it's a valid number
                 try:

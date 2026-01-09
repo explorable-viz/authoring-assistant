@@ -1,7 +1,7 @@
 [
   {
     "dataset": "Chatzakou:2017:MBD:3091478.3091487",
-    "num_tweets": 9,
+    "num_tweets": 9484,
     "labels": "aggressive, bullying, spam, normal",
     "annotators_tweet": 5
   },
@@ -19,13 +19,13 @@
   },
   {
     "dataset": "Golbeck2017",
-    "num_tweets": 35,
+    "num_tweets": 35000,
     "labels": "the worst, threats, hate speech, direct",
     "annotators_tweet": 2
   },
   {
     "dataset": "Golbeck2017",
-    "num_tweets": 35,
+    "num_tweets": 35000,
     "labels": "harassment, potentially offensive, non-harassment",
     "annotators_tweet": 2
   },
@@ -43,19 +43,19 @@
   },
   {
     "dataset": "hatelingo",
-    "num_tweets": 28,
+    "num_tweets": 28608,
     "labels": "directed, generalized + target = archaic, class, disability,",
     "annotators_tweet": 3
   },
   {
     "dataset": "hatelingo",
-    "num_tweets": 28,
+    "num_tweets": 28608,
     "labels": "ethnicity, gender, nationality, religion, sexual orientation",
     "annotators_tweet": 3
   },
   {
     "dataset": "Ours",
-    "num_tweets": 13,
+    "num_tweets": 13000,
     "labels": "Labels for five different aspects",
     "annotators_tweet": 5
   }

@@ -5,22 +5,22 @@
     "bleu_target_len≥25": 23.86
   },
   {
-    "search_strategy": 2,
+    "search_strategy": "2-LA",
     "bleu": 32.07,
     "bleu_target_len≥25": 21.5
   },
   {
-    "search_strategy": 3,
+    "search_strategy": "3-LA",
     "bleu": 32.2,
     "bleu_target_len≥25": 22.78
   },
   {
-    "search_strategy": 4,
+    "search_strategy": "4-LA",
     "bleu": 32.42,
     "bleu_target_len≥25": 22.45
   },
   {
-    "search_strategy": 5,
+    "search_strategy": "5-LA",
     "bleu": 32.41,
     "bleu_target_len≥25": 23.3
   },

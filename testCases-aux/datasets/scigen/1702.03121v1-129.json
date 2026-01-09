@@ -9,9 +9,9 @@
     "std_error_script": 0.279,
     "std_error_linguistic": 0.321,
     "std_error_base": 0.791,
-    "pr_∣_z∣_human": "<2e-16 ***",
-    "pr_∣_z∣_script": "<2e-16 ***",
-    "pr_∣_z∣_linguistic": "<2e-16 ***",
+    "pr_∣_z∣_human": "<2e-16",
+    "pr_∣_z∣_script": "<2e-16",
+    "pr_∣_z∣_linguistic": "<2e-16",
     "pr_∣_z∣_base": 0.00011
   },
   {
@@ -24,10 +24,10 @@
     "std_error_script": 0.095,
     "std_error_linguistic": 0.096,
     "std_error_base": 0.097,
-    "pr_∣_z∣_human": "<2e-16 ***",
-    "pr_∣_z∣_script": "<2e-16 ***",
-    "pr_∣_z∣_linguistic": "<2e-16 ***",
-    "pr_∣_z∣_base": "<2e-16 ***"
+    "pr_∣_z∣_human": "<2e-16",
+    "pr_∣_z∣_script": "<2e-16",
+    "pr_∣_z∣_linguistic": "<2e-16",
+    "pr_∣_z∣_base": "<2e-16"
   },
   {
     "_1": "frequency",
@@ -99,8 +99,8 @@
     "std_error_script": 0.347,
     "std_error_linguistic": 0.429,
     "std_error_base": 1.113,
-    "pr_∣_z∣_human": "<2e-16 ***",
-    "pr_∣_z∣_script": "<2e-16 ***",
+    "pr_∣_z∣_human": "<2e-16",
+    "pr_∣_z∣_script": "<2e-16",
     "pr_∣_z∣_linguistic": 5.68e-10,
     "pr_∣_z∣_base": 0.02994
   },

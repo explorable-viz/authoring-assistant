@@ -7,7 +7,7 @@
     "en_de": 26.02
   },
   {
-    "activation": 1.5,
+    "activation": "1.5-entmax",
     "de_en": 29.83,
     "ja_en": 22.13,
     "ro_en": 33.1,

@@ -3,28 +3,28 @@
     "label": 1,
     "s_∈_la": "No",
     "sa_∈_s": "No",
-    "num_train": 19,
-    "num_dev": 870
+    "num_train": 19446120,
+    "num_dev": 870404
   },
   {
     "label": 2,
     "s_∈_la": "No",
     "sa_∈_s": "Yes",
-    "num_train": 428,
-    "num_dev": 25
+    "num_train": 428122,
+    "num_dev": 25814
   },
   {
     "label": 3,
     "s_∈_la": "Yes",
     "sa_∈_s": "No",
-    "num_train": 442,
-    "num_dev": 29
+    "num_train": 442140,
+    "num_dev": 29558
   },
   {
     "label": 4,
     "s_∈_la": "Yes",
     "sa_∈_s": "Yes",
-    "num_train": 61,
-    "num_dev": 4
+    "num_train": 61186,
+    "num_dev": 4286
   }
 ]

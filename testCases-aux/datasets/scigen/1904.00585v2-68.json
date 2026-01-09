@@ -1,37 +1,37 @@
 [
   {
     "data_set": "CADEC",
-    "size": 120,
+    "size": 120341,
     "entity_types": "Adverse Drug Event, Disease, Drug, Finding, Symptom",
     "description": "Posts taken from AskaPatient, which is a forum where consumers can discuss their experiences with medications."
   },
   {
     "data_set": "CoNLL2003",
-    "size": 301,
+    "size": 301418,
     "entity_types": "Person, Organization, Location, Miscellany",
     "description": "Newswire from the Reuters RCV1 corpus."
   },
   {
     "data_set": "CRAFT",
-    "size": 561,
+    "size": 561015,
     "entity_types": "Cell, Chemical entity, Biological taxa, Protein, Biomacromolecular sequence, Entrez gene, Biological process and molecular function, Cellular component",
     "description": "Full-length, open-access journal articles about biology."
   },
   {
     "data_set": "JNLPBA",
-    "size": 593,
+    "size": 593590,
     "entity_types": "Protein, DNA, RNA, Cell line and Cell type",
     "description": "Abstract of journal articles about biology."
   },
   {
     "data_set": "ScienceIE",
-    "size": 99,
+    "size": 99555,
     "entity_types": "Process (including methods, equipment), Task and Material (including corpora, physical materials)",
     "description": "Journal articles about Computer Science, Material Sciences and Physics."
   },
   {
     "data_set": "Wetlab",
-    "size": 220,
+    "size": 220618,
     "entity_types": "Action, 9 object-based (Amount, Concentration, Device, Location, Method, Reagent, Speed, Temperature, Time) entity types, 5 measure-based (Numerical, Generic-Measure, Size, pH, Measure-Type) and 3 other (Mention, Modifier, Seal) types",
     "description": "Protocols written by researchers about conducting biology and chemistry experiments."
   }

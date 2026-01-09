@@ -43,10 +43,10 @@
   },
   {
     "model": " Model",
-    "5_way_1_shot_on_1_0": 10,
-    "5_way_1_shot_on_2_0": 10,
-    "5_way_5_shot_on_1_0": 10,
-    "5_way_5_shot_on_2_0": 10
+    "5_way_1_shot_on_1_0": " 10-Way 1-Shot",
+    "5_way_1_shot_on_2_0": " 10-Way 1-Shot",
+    "5_way_5_shot_on_1_0": " 10-Way 5-Shot",
+    "5_way_5_shot_on_2_0": " 10-Way 5-Shot"
   },
   {
     "model": " Model",

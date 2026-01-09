@@ -1,6 +1,6 @@
 [
   {
-    "architecture": "SMT ",
+    "architecture": "SMT*",
     "zh⇒en": "-",
     "params": "-",
     "emb": "-",
@@ -13,7 +13,7 @@
     "all": 33.39
   },
   {
-    "architecture": "RNNsearch ",
+    "architecture": "RNNsearch*",
     "zh⇒en": "Vanilla",
     "params": 74.8,
     "emb": 55.8,
@@ -26,7 +26,7 @@
     "all": 34.81
   },
   {
-    "architecture": "RNNsearch ",
+    "architecture": "RNNsearch*",
     "zh⇒en": "Source bridging",
     "params": 78.5,
     "emb": 55.8,
@@ -39,7 +39,7 @@
     "all": 35.91
   },
   {
-    "architecture": "RNNsearch ",
+    "architecture": "RNNsearch*",
     "zh⇒en": "Target bridging",
     "params": 76.6,
     "emb": 55.8,
@@ -52,7 +52,7 @@
     "all": 36.27
   },
   {
-    "architecture": "RNNsearch ",
+    "architecture": "RNNsearch*",
     "zh⇒en": "Direct bridging",
     "params": 78.9,
     "emb": 55.8,

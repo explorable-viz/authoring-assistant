@@ -1,6 +1,6 @@
 [
   {
-    "model": "Proto (CNN) ",
+    "model": "Proto (CNN)*",
     "5_way_1_shot_0_nota": 74.52,
     "5_way_1_shot_15_nota": 62.18,
     "5_way_1_shot_30_nota": 53.38,
@@ -14,7 +14,7 @@
     "5_way_1_shot_50_nota": 40.0
   },
   {
-    "model": "Proto (BERT) ",
+    "model": "Proto (BERT)*",
     "5_way_1_shot_0_nota": 80.68,
     "5_way_1_shot_15_nota": 67.92,
     "5_way_1_shot_30_nota": 58.22,
@@ -28,7 +28,7 @@
     "5_way_1_shot_50_nota": 45.94
   },
   {
-    "model": "BERT-PAIR ",
+    "model": "BERT-PAIR*",
     "5_way_1_shot_0_nota": 88.32,
     "5_way_1_shot_15_nota": 73.6,
     "5_way_1_shot_30_nota": 63.0,

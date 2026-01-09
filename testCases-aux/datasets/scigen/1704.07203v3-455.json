@@ -90,7 +90,7 @@
     "average_neural_network_models": 40.2
   },
   {
-    "target_system_↓_neural_network_models": "-Synta",
+    "target_system_↓_neural_network_models": "-Syntax",
     "mt_neural_network_models": 70.3,
     "oc_neural_network_models": 22.9,
     "pe_neural_network_models": 62.5,
@@ -160,7 +160,7 @@
     "average_neural_network_models": 28.2
   },
   {
-    "target_system_↓_neural_network_models": "+Synta",
+    "target_system_↓_neural_network_models": "+Syntax",
     "mt_neural_network_models": 52.5,
     "oc_neural_network_models": 21.0,
     "pe_neural_network_models": 52.9,

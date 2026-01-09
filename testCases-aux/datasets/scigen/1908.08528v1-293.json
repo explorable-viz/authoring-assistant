@@ -160,7 +160,7 @@
     "err_red_23_1": 43.6
   },
   {
-    "treebank_ar_padt": "no_nynors",
+    "treebank_ar_padt": "no_nynorsk",
     "baseline_form": "form",
     "baseline_4_19": 2.73,
     "our_3_90": 2.52,
@@ -192,7 +192,7 @@
     "err_red_23_1": 7.2
   },
   {
-    "treebank_ar_padt": "sk_sn",
+    "treebank_ar_padt": "sk_snk",
     "baseline_form": "form5",
     "baseline_4_19": 2.87,
     "our_3_90": 2.01,

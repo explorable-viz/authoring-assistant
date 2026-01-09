@@ -22,7 +22,7 @@
     "wikipassageqa": 53.0
   },
   {
-    "model": "TF IDF",
+    "model": "TF*IDF",
     "∑": 32.4,
     "insuranceqa": 18.7,
     "travel": 39.9,

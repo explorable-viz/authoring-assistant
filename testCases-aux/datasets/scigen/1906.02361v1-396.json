@@ -16,7 +16,7 @@
     "accuracy": 84.5
   },
   {
-    "method": "CoS-E-open-ended ",
+    "method": "CoS-E-open-ended*",
     "accuracy": 89.8
   }
 ]

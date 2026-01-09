@@ -1,6 +1,6 @@
 [
   {
-    "typing_methods": " FIGER  ",
+    "typing_methods": " FIGER* ",
     "wiki_figer_gold_acc": 0.474,
     "wiki_figer_gold_ma_f1": 0.692,
     "wiki_figer_gold_mi_f1": 0.655,
@@ -12,7 +12,7 @@
     "bbn_mi_f1": 0.612
   },
   {
-    "typing_methods": " HYENA  ",
+    "typing_methods": " HYENA* ",
     "wiki_figer_gold_acc": 0.288,
     "wiki_figer_gold_ma_f1": 0.528,
     "wiki_figer_gold_mi_f1": 0.506,
@@ -24,7 +24,7 @@
     "bbn_mi_f1": 0.587
   },
   {
-    "typing_methods": " AFET-NoCo  ",
+    "typing_methods": " AFET-NoCo* ",
     "wiki_figer_gold_acc": 0.526,
     "wiki_figer_gold_ma_f1": 0.693,
     "wiki_figer_gold_mi_f1": 0.654,
@@ -36,7 +36,7 @@
     "bbn_mi_f1": 0.716
   },
   {
-    "typing_methods": " AFET-CoH  ",
+    "typing_methods": " AFET-CoH* ",
     "wiki_figer_gold_acc": 0.433,
     "wiki_figer_gold_ma_f1": 0.583,
     "wiki_figer_gold_mi_f1": 0.551,
@@ -48,7 +48,7 @@
     "bbn_mi_f1": 0.712
   },
   {
-    "typing_methods": " AFET  ",
+    "typing_methods": " AFET* ",
     "wiki_figer_gold_acc": 0.533,
     "wiki_figer_gold_ma_f1": 0.693,
     "wiki_figer_gold_mi_f1": 0.664,

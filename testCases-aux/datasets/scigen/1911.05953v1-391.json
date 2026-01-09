@@ -42,14 +42,14 @@
     "compact_sync_ethanos": 33.79
   },
   {
-    "2_data_type": "Transaction Inde",
+    "2_data_type": "Transaction Index",
     "fast_sync_geth": 3,
     "fast_sync_ethanos": 3,
     "compact_sync_geth": 0.19,
     "compact_sync_ethanos": 0.19
   },
   {
-    "2_data_type": "Bloombit inde",
+    "2_data_type": "Bloombit index",
     "fast_sync_geth": 0,
     "fast_sync_ethanos": 0,
     "compact_sync_geth": 0,

@@ -66,7 +66,7 @@
     "semeval_15": 0.489
   },
   {
-    "model": "DeepWal",
+    "model": "DeepWalk",
     "senseval2": 0.528,
     "senseval3": 0.476,
     "semeval_15": 0.552

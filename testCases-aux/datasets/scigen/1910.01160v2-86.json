@@ -6,7 +6,7 @@
     "estimate_1_80": 0.66,
     "std_error_0_41": 0.18,
     "statistic_4_38": 3.68,
-    "_1": " "
+    "_1": "***"
   },
   {
     "satire_associated": "Satire associated",
@@ -15,7 +15,7 @@
     "estimate_1_80": 0.61,
     "std_error_0_41": 0.19,
     "statistic_4_38": 3.18,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Satire associated",
@@ -24,7 +24,7 @@
     "estimate_1_80": 0.54,
     "std_error_0_41": 0.17,
     "statistic_4_38": 3.18,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Satire associated",
@@ -33,7 +33,7 @@
     "estimate_1_80": 0.56,
     "std_error_0_41": 0.18,
     "statistic_4_38": 3.1,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Satire associated",
@@ -42,7 +42,7 @@
     "estimate_1_80": 0.45,
     "std_error_0_41": 0.16,
     "statistic_4_38": 2.89,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Satire associated",
@@ -51,7 +51,7 @@
     "estimate_1_80": 0.43,
     "std_error_0_41": 0.16,
     "statistic_4_38": 2.77,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Satire associated",
@@ -60,7 +60,7 @@
     "estimate_1_80": 0.44,
     "std_error_0_41": 0.16,
     "statistic_4_38": 2.75,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Satire associated",
@@ -69,7 +69,7 @@
     "estimate_1_80": 0.44,
     "std_error_0_41": 0.16,
     "statistic_4_38": 2.67,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Satire associated",
@@ -78,7 +78,7 @@
     "estimate_1_80": 0.45,
     "std_error_0_41": 0.2,
     "statistic_4_38": 2.27,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Satire associated",
@@ -87,7 +87,7 @@
     "estimate_1_80": 0.37,
     "std_error_0_41": 0.16,
     "statistic_4_38": 2.25,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Satire associated",
@@ -96,7 +96,7 @@
     "estimate_1_80": 0.34,
     "std_error_0_41": 0.16,
     "statistic_4_38": 2.16,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Satire associated",
@@ -105,7 +105,7 @@
     "estimate_1_80": 0.5,
     "std_error_0_41": 0.24,
     "statistic_4_38": 2.13,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Satire associated",
@@ -114,7 +114,7 @@
     "estimate_1_80": 0.37,
     "std_error_0_41": 0.18,
     "statistic_4_38": 2.11,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Satire associated",
@@ -123,7 +123,7 @@
     "estimate_1_80": 0.38,
     "std_error_0_41": 0.18,
     "statistic_4_38": 2.08,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Satire associated",
@@ -132,7 +132,7 @@
     "estimate_1_80": 0.37,
     "std_error_0_41": 0.18,
     "statistic_4_38": 2.05,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Fake news associated",
@@ -141,7 +141,7 @@
     "estimate_1_80": -1.05,
     "std_error_0_41": 0.21,
     "statistic_4_38": -4.96,
-    "_1": " "
+    "_1": "***"
   },
   {
     "satire_associated": "Fake news associated",
@@ -150,7 +150,7 @@
     "estimate_1_80": -0.72,
     "std_error_0_41": 0.2,
     "statistic_4_38": -3.68,
-    "_1": " "
+    "_1": "***"
   },
   {
     "satire_associated": "Fake news associated",
@@ -159,7 +159,7 @@
     "estimate_1_80": -0.62,
     "std_error_0_41": 0.18,
     "statistic_4_38": -3.43,
-    "_1": " "
+    "_1": "***"
   },
   {
     "satire_associated": "Fake news associated",
@@ -168,7 +168,7 @@
     "estimate_1_80": -0.79,
     "std_error_0_41": 0.26,
     "statistic_4_38": -3.09,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Fake news associated",
@@ -177,7 +177,7 @@
     "estimate_1_80": -0.42,
     "std_error_0_41": 0.15,
     "statistic_4_38": -2.72,
-    "_1": " "
+    "_1": "**"
   },
   {
     "satire_associated": "Fake news associated",
@@ -186,7 +186,7 @@
     "estimate_1_80": -0.35,
     "std_error_0_41": 0.16,
     "statistic_4_38": -2.22,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Fake news associated",
@@ -195,7 +195,7 @@
     "estimate_1_80": -0.36,
     "std_error_0_41": 0.16,
     "statistic_4_38": -2.16,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Fake news associated",
@@ -204,7 +204,7 @@
     "estimate_1_80": -0.36,
     "std_error_0_41": 0.18,
     "statistic_4_38": -2.03,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "Fake news associated",
@@ -213,7 +213,7 @@
     "estimate_1_80": -0.34,
     "std_error_0_41": 0.17,
     "statistic_4_38": -1.97,
-    "_1": " "
+    "_1": "*"
   },
   {
     "satire_associated": "",

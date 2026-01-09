@@ -41,7 +41,7 @@
   },
   {
     "feature": "Made of metal",
-    "representation": "Matri",
+    "representation": "Matrix",
     "embedding": "word2vec SG",
     "window": 5,
     "dimension": 300,

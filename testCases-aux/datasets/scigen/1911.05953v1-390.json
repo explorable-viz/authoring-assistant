@@ -36,13 +36,13 @@
     "diff": 0
   },
   {
-    "2_data_type": "Transaction Inde",
+    "2_data_type": "Transaction Index",
     "geth": 3,
     "ethanos": 3,
     "diff": 0
   },
   {
-    "2_data_type": "Bloombit inde",
+    "2_data_type": "Bloombit index",
     "geth": 20.49,
     "ethanos": 20.49,
     "diff": 0

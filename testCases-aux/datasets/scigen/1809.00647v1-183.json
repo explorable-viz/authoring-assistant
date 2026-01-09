@@ -13,12 +13,12 @@
   },
   {
     "attack": 911,
-    "kill": "attac",
+    "kill": "attack",
     "word2vec_0_69": 0.72,
     "kce_0_3": 0.3
   },
   {
-    "attack": "attac",
+    "attack": "attack",
     "kill": "trade",
     "word2vec_0_69": 0.42,
     "kce_0_3": 0.9
@@ -42,14 +42,14 @@
     "kce_0_3": 0.7
   },
   {
-    "attack": "attac",
-    "kill": "wal",
+    "attack": "attack",
+    "kill": "walk",
     "word2vec_0_69": 0.44,
     "kce_0_3": -0.3
   },
   {
     "attack": "people (E)",
-    "kill": "wor",
+    "kill": "work",
     "word2vec_0_69": 0.4,
     "kce_0_3": -0.3
   }

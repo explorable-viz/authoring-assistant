@@ -1,6 +1,6 @@
 [
   {
-    "method_location": "PageRan",
+    "method_location": "PageRank",
     "p_01_0_3555": 0.3628,
     "p_01_–": "–",
     "p_05_0_3077": 0.3438,
@@ -88,7 +88,7 @@
     "auc_–": "–/–/–"
   },
   {
-    "method_location": "PageRan",
+    "method_location": "PageRank",
     "p_01_0_3555": 0.0758,
     "p_01_–": "–",
     "p_05_0_3077": 0.276,

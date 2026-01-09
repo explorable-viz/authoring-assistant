@@ -21,6 +21,6 @@
   },
   {
     "model": "EdgewisePS",
-    "f1_score": 85.7
+    "f1_score": "**  85.7"
   }
 ]

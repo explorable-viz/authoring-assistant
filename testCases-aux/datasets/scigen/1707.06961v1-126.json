@@ -84,7 +84,7 @@
     "oov_ud": 2.71
   },
   {
-    "test_set_embeddings": "Tamil ",
+    "test_set_embeddings": "Tamil*",
     "missing_embeddings": 16.2,
     "full_vocabulary": 0.35,
     "oov_ud": 1.35
@@ -96,7 +96,7 @@
     "oov_ud": 3.52
   },
   {
-    "test_set_embeddings": "Gree",
+    "test_set_embeddings": "Greek",
     "missing_embeddings": 17.5,
     "full_vocabulary": 0.34,
     "oov_ud": 1.17
@@ -108,7 +108,7 @@
     "oov_ud": 0.75
   },
   {
-    "test_set_embeddings": "Kazakh ",
+    "test_set_embeddings": "Kazakh*",
     "missing_embeddings": 21.0,
     "full_vocabulary": 1.24,
     "oov_ud": 4.2

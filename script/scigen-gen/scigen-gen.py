@@ -86,9 +86,8 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 # Extract only the first number when ± symbol is present (e.g., "5.2 ± 0.3" -> "5.2")
                 cleaned_value = re.sub(r'(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*±\s*\d+(?:\.\d+)?(?:[eE][+-]?\d+)?', r'\1', cleaned_value)
 
-                # Remove asterisk and star symbols (e.g., "**52.4**" -> "52.4", "96.9⋆" -> "96.9 ")
-                # Replace with space to preserve separation between numbers
-                cleaned_value = re.sub(r'[\*⋆]+', ' ', cleaned_value)
+                # Remove asterisk and star symbols only adjacent to numbers (e.g., "**52.4**" -> "52.4", "96.9⋆" -> "96.9")
+                cleaned_value = re.sub(r'[\*⋆]+(?=\d)|(?<=\d)[\*⋆]+', '', cleaned_value)
                 
                 # Extract only the first number from the string (e.g., "96.9 97.296.5" -> "96.9", " 65.2 68.559.1" -> "65.2")
                 match = re.match(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)', cleaned_value)
@@ -97,7 +96,7 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
 
                 # Remove K/k/x suffix and % symbol only at the end of numeric values
                 # Also remove commas from numbers (e.g., 7,123K -> 7123, 1.9x -> 1.9)
-                cleaned_value = re.sub(r'[Kkx]$', '', cleaned_value)  # Remove K, k, or x at the end
+                cleaned_value = re.sub(r'(\d)[Kkx]$', r'\1', cleaned_value)  # Remove K, k, or x at the end only after a digit
                 cleaned_value = re.sub(r'%$', '', cleaned_value)  # Remove % at the end
                 cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)  # Remove commas followed by digits
                 

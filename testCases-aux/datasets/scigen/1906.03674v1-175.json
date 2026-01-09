@@ -30,7 +30,7 @@
     "num_words": 1
   },
   {
-    "lexicons": "Emole",
+    "lexicons": "Emolex",
     "annotations": "emotion",
     "num_dim": 19,
     "num_words": 14

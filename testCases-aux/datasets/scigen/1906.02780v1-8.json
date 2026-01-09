@@ -55,7 +55,7 @@
     "wmt_en_fr_speedup": 4.77
   },
   {
-    "model": "LT ",
+    "model": "LT*",
     "wmt_en_de_bleu": 19.8,
     "wmt_en_de_speedup": 3.89,
     "wmt_de_en_bleu": "-",

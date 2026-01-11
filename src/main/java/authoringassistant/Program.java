@@ -56,7 +56,7 @@ public class Program {
     public static HashMap<String, String> loadDatasetsFiles(Collection<String> datasets, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
         for (String dataset : datasets) {
-            loadedDatasets.put(dataset, replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.getFluidCommonFolder()}/\{dataset}").toURI()))), variables));
+            loadedDatasets.put(dataset, replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.FLUID_COMMON_FOLDER}/\{dataset}").toURI()))), variables));
         }
         return loadedDatasets;
     }
@@ -70,11 +70,11 @@ public class Program {
     private static ArrayList<String> loadImports(List<String> imports) throws IOException {
         ArrayList<String> loadedImports = new ArrayList<>();
         for (String path : imports) {
-            File importLib = new File(STR."\{Settings.getFluidCommonFolder()}/\{path}.fld");
+            File importLib = new File(STR."\{Settings.FLUID_COMMON_FOLDER}/\{path}.fld");
             if (importLib.exists()) {
                 loadedImports.add(new String(Files.readAllBytes(importLib.toPath())));
             } else {
-                loadedImports.add(new String(Files.readAllBytes(Paths.get(STR."\{Settings.getLibrariesBasePath()}/\{path}.fld"))));
+                loadedImports.add(new String(Files.readAllBytes(Paths.get(STR."\{Settings.BASE_PATH_LIBRARY}/\{path}.fld"))));
             }
         }
         return loadedImports;
@@ -128,7 +128,7 @@ public class Program {
         usedVars.addAll(extractVariables(code, pattern));
         for (String dataset : datasets) {
             logger.info(dataset);
-            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.getFluidCommonFolder(), dataset)), pattern));
+            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.FLUID_COMMON_FOLDER, dataset)), pattern));
         }
         for (Map.Entry<String, ValueOptions> variable : variables.entrySet()) {
             if (!usedVars.contains(variable.getKey())) {
@@ -215,7 +215,7 @@ public class Program {
                 paragraph.add(new Literal(json_paragraph.getJSONObject(i).getString("value"), null));
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
-                writeFluidFiles(Settings.getFluidTempFolder(), fluidFileName, expression, datasets, loadDatasetsFiles(datasets, testVariables), imports, loadImports(imports), code);
+                writeFluidFiles(Settings.FLUID_TEMP_FOLDER, fluidFileName, expression, datasets, loadDatasetsFiles(datasets, testVariables), imports, loadImports(imports), code);
                 String commandLineResult = new FluidCLI().evaluate(fluidFileName);
                 Expression candidate = new Expression(
                     expression,

@@ -17,7 +17,7 @@ public class FluidCLI {
         StringBuilder command = new StringBuilder();
 
         command.append(STR."yarn fluid evaluate -l -p \"")
-                .append(Settings.getFluidTempFolder())
+                .append(Settings.FLUID_TEMP_FOLDER)
                 .append("/\" -f ")
                 .append(fluidFileName);
 
@@ -34,7 +34,7 @@ public class FluidCLI {
         processBuilder.redirectErrorStream(true);
         Process process = processBuilder.start();
         String output = new String(process.getInputStream().readAllBytes());
-        FileUtils.deleteDirectory(new File(Settings.getFluidTempFolder()));
+        FileUtils.deleteDirectory(new File(Settings.FLUID_TEMP_FOLDER));
         return output;
     }
 

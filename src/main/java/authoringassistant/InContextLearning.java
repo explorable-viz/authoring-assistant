@@ -25,7 +25,7 @@ public class InContextLearning {
     }
 
     public static InContextLearning loadLearningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
-        ArrayList<Program> learningCases = loadPrograms(Settings.getLearningCaseFolder(), numCasesToGenerate);
+        ArrayList<Program> learningCases = loadPrograms(Settings.LEARNING_CASE_FOLDER, numCasesToGenerate);
         return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
     }
 

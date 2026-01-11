@@ -34,7 +34,7 @@ public class Main {
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json
             cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
-            inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
+            inContextLearning = InContextLearning.loadLearningCases(Settings.SYSTEM_PROMPT_PATH, Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             if(suggestionAgent != null && interpretationAgent == null) {
                 generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
@@ -216,7 +216,7 @@ public class Main {
 
         for(int k = 0; k < Settings.numTestRuns(); k++)
         {
-            String jsonLogFolder = STR."\{Settings.getLogFolder()}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
+            String jsonLogFolder = STR."\{Settings.LOG_FOLDER}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
             Files.createDirectories(Paths.get(jsonLogFolder));
             int programCount = 0;
             for (Program program : programs) {

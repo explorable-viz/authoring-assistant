@@ -10,6 +10,15 @@ import java.util.Map;
 
 public class Settings {
 
+    // Constants for unchanging configuration values
+    public static final String LOG_FOLDER = "logs/";
+    public static final String FLUID_TEMP_FOLDER = "./fluid-temp";
+    public static final String FLUID_COMPILER_PATH = "./";
+    public static final String BASE_PATH_LIBRARY = "node_modules/@explorable-viz/fluid/dist/fluid/fluid";
+    public static final String FLUID_COMMON_FOLDER = "./testCases-aux";
+    public static final String LEARNING_CASE_FOLDER = "learningCases";
+    public static final String SYSTEM_PROMPT_PATH = "system-prompt/interpretation-agent";
+
     private static Settings instance;
     private final JSONObject settings;
     private static Map<String, String> commandLineArgs;
@@ -42,28 +51,12 @@ public class Settings {
         return getSettings().getInt("test-limit");
     }
 
-    public static String getFluidTempFolder() {
-        return getSettings().getString("fluid-temp-folder");
-    }
-
-    public static String getLibrariesBasePath() {
-        return getSettings().getString("base-path-library");
-    }
-
-    public static String getFluidCommonFolder() {
-        return getSettings().getString("fluid-common-folder");
-    }
-
     public static float getTemperature() {
         return getSettings().getFloat("temperature");
     }
 
     public static int getNumContextToken() {
         return getSettings().getInt("num_ctx");
-    }
-
-    public static String getLogFolder() {
-        return getSettings().getString("log-folder");
     }
 
     public static boolean isReasoningEnabled() {
@@ -79,20 +72,12 @@ public class Settings {
         getSettings().put("add-expected-value", value);
     }
 
-    public static String getLearningCaseFolder() {
-        return getSettings().getString("learning-case-folder");
-    }
-
     public static String getTestCaseFolder() {
         return commandLineArgs.get("test-case-folder");
     }
 
     public static float getThreshold() {
         return getSettings().getFloat("threshold");
-    }
-
-    public static String getSystemPromptPath() {
-        return getSettings().getString("system-prompt-path");
     }
 
     public static int maxProgramVariants() {

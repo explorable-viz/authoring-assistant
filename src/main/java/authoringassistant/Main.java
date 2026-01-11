@@ -1,7 +1,7 @@
 package authoringassistant;
 
 import kotlin.Pair;
-
+import authoringassistant.Main.ProgramExpression;
 import authoringassistant.Program.QueryResult;
 import authoringassistant.util.ThrowingConsumer;
 
@@ -30,13 +30,13 @@ public class Main {
 
         try {
             Settings.init("settings.json", arguments);
-            final String agent = Settings.getAuthoringAgentName();
+            final String interpretationAgent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json
             cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
             inContextLearning = InContextLearning.loadLearningCases(Settings.getSystemPromptPath(), Settings.getNumLearningCaseToGenerate());
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
-            if(arguments.containsKey("suggestion-agent-only") && arguments.get("suggestion-agent-only").equals("true")) {
+            if(suggestionAgent != null && interpretationAgent == null) {
                 generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
             }
             else if(arguments.containsKey("downsample") && arguments.get("downsample").equals("true")) {
@@ -49,24 +49,18 @@ public class Main {
             else
             {
                 final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
-                boolean originalAddExpectedValue = Settings.isAddExpectedValueEnabled();
-
-                try {
-                    // Run experiment for both add-expected-value settings
-                    for (boolean addExpectedValue : new boolean[]{false, true}) {
-                        Settings.setAddExpectedValue(addExpectedValue);
-                        System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
-                        final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, agent, suggestionAgent, programs);
-                        allResults.addAll(results);
-                    }
-                } finally {
-                    // Restore original setting
-                    Settings.setAddExpectedValue(originalAddExpectedValue);
+                boolean[] cases = interpretationAgent.equals("authoringassistant.llm.LLMDummyAgent") ? new boolean[]{false} : new boolean[]{false, true};
+                // Run experiment for both add-expected-value settings
+                for (boolean addExpectedValue : cases) {
+                    Settings.setAddExpectedValue(addExpectedValue);
+                    System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
+                    final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, interpretationAgent, suggestionAgent, programs);
+                    allResults.addAll(results);
                 }
 
                 float accuracy = computeAccuracy(allResults);
                 generateLinks();
-                writeLog(allResults, agent, inContextLearning.size());
+                writeLog(allResults, interpretationAgent, inContextLearning.size());
                 if (accuracy >= Settings.getThreshold()) {
                     System.out.println(STR."Accuracy OK =\{accuracy}");
                     System.exit(0);
@@ -96,16 +90,20 @@ public class Main {
         logger.info(STR."Empty .fld file created: \{fldPath}");
     }
 
-    private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, IOException {
+    private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder)
+            throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException,
+            IllegalAccessException, IOException {
         SuggestionAgent sa = new SuggestionAgent(suggestionAgentClassName);
         for (Program program : programs) {
             saveProgramToJson(sa.generateTemplateProgram(program), outputFolder);
         }
     }
 
-    public record ProgramExpression(int expressionIndex, Program program) {}
+    public record ProgramExpression(int expressionIndex, Program program) {
+    }
 
-    private static Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> groupProgramsByCategory(List<Program> programs) {
+    private static Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> groupProgramsByCategory(
+            List<Program> programs) {
         Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> categoryMap = new HashMap<>();
 
         for (Program program : programs) {
@@ -124,9 +122,11 @@ public class Main {
         return categoryMap;
     }
 
-    private static List<Program> downsamplePrograms(List<Program> programs, int expressionsPerCategory, int sampleSize) {
+    private static List<Program> downsamplePrograms(List<Program> programs, int expressionsPerCategory,
+            int sampleSize) {
         Random random = new Random(0);
-        Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> expressionsByCategory = groupProgramsByCategory(programs);
+        Map<authoringassistant.paragraph.ExpressionCategory, List<ProgramExpression>> expressionsByCategory = groupProgramsByCategory(
+                programs);
         Map<String, Program> selectedProgramsByTestFile = new HashMap<>();
 
         for (List<ProgramExpression> categoryExpressions : expressionsByCategory.values()) {
@@ -159,7 +159,7 @@ public class Main {
         return result;
     }
 
-    private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String agent, int learningContextSize) throws IOException {
+    private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String interpretationAgent, int learningContextSize) throws IOException {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
@@ -174,7 +174,7 @@ public class Main {
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
-                                agent,
+                                interpretationAgent,
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
                                 String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
@@ -205,21 +205,22 @@ public class Main {
         logger.config("Computing accuracy");
         long count = IntStream.range(0, results.size()).filter(i -> {
             QueryResult result = results.get(i).getSecond();
-            return  result.correctResponse() != null && result.expected().getExpr().equals(result.correctResponse().getExpr());
+            return result.correctResponse() != null
+                    && result.expected().getExpr().equals(result.correctResponse().getExpr());
         }).count();
         return (float) count / results.size();
     }
 
-    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String agent, String suggestionAgent, List<Program> programs) throws Exception {
+    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String interpretationAgent, String suggestionAgent, List<Program> programs) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
 
         for(int k = 0; k < Settings.numTestRuns(); k++)
         {
-            String jsonLogFolder = STR."\{Settings.getLogFolder()}/json_\{agent}_\{k}_\{System.currentTimeMillis()}/";
+            String jsonLogFolder = STR."\{Settings.getLogFolder()}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
             Files.createDirectories(Paths.get(jsonLogFolder));
             int programCount = 0;
             for (Program program : programs) {
-                AuthoringAssistant authoringAssistant = new AuthoringAssistant(inContextLearning, agent, program, suggestionAgent, k,jsonLogFolder);
+                AuthoringAssistant authoringAssistant = new AuthoringAssistant(inContextLearning, interpretationAgent, program, suggestionAgent, k,jsonLogFolder);
                 List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
 
                 long correct = results.stream()
@@ -240,8 +241,7 @@ public class Main {
                 .collect(Collectors.toMap(
                         keyValue -> keyValue[0],
                         keyValue -> keyValue[1],
-                        (_, replacement) -> replacement
-                ));
+                        (_, replacement) -> replacement));
     }
 
     public static void generateLinks() throws Exception {

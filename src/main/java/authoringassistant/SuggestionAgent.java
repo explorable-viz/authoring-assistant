@@ -41,7 +41,7 @@ public class SuggestionAgent {
         PromptList prompts = buildPrompts(text);
         String result;
         int attempts = 0;
-        while(attempts < Settings.getAgentLimit()) {
+        while(attempts < Settings.getTestLimit()) {
             attempts++;
             try {
                 result = llm.evaluate(prompts, null);

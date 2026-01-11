@@ -34,7 +34,7 @@ public class AuthoringAssistant {
     public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
         this.prompts = inContextLearning.toPromptList();
         llm = initialiseAgent(agentClassName);
-        this.suggestionAgent = new SuggestionAgent(suggestionAgentClassName);
+        this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(suggestionAgentClassName) : null;
         this.templateProgram = templateProgram;
         this.runId = runId;
         this.jsonLogFolder = jsonLogFolder;
@@ -44,7 +44,7 @@ public class AuthoringAssistant {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
         List<Pair<Program, Expression>> problems;
         int i = 0;
-        if (Settings.isSuggestionAgentEnabled()) {
+        if (this.suggestionAgent != null) {
             templateProgram = suggestionAgent.generateTemplateProgram(templateProgram);
         }
         problems = templateProgram.asIndividualProblems(templateProgram);
@@ -73,7 +73,7 @@ public class AuthoringAssistant {
     }
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
-        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getAgentLimit();
+        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getTestLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempt;
         final long start = System.currentTimeMillis();

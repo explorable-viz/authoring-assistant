@@ -12,21 +12,14 @@
   "log-folder": "logs/",
   "fluid-compiler-path": "./",
   "fluid-temp-folder": "./fluid-temp",
-  "agent-limit": 3,
+  "test-limit": 3,
   "base-path-library": "node_modules/@explorable-viz/fluid/dist/fluid/fluid",
   "fluid-common-folder": "./testCases-aux",
-  "enable-reasoning": true,
-  "split-multiple-replace-tag": true,
-  "add-expected-value": true,
   "learning-case-folder": "learningCases",
-  "enable-editor-loop": false,
-  "enable-suggestion-agent": false,
   "threshold": 0.0,
   "system-prompt-path": "system-prompt/interpretation-agent",
   "max-program-variants": 1,
   "num-learning-case-to-generate": 0,
   "num-test-data-variants": 1,
-  "num-test-runs": 1,
-  "authoring-agent-class": "authoringassistant.llm.LLMDummyAgent",
-  "suggestion-agent-class": "authoringassistant.llm.suggestion.QwenCoderAgent"
+  "num-test-runs": 1
 }

@@ -60,12 +60,7 @@ public class Settings {
         return getSettings().getInt("num-context-token");
     }
 
-    public static boolean isReasoningEnabled() {
-        return getSettings().getBoolean("enable-reasoning");
-    }
-    public static boolean isSplitMultipleTagEnabled() {
-        return getSettings().getBoolean("split-multiple-replace-tag");
-    }public static boolean isAddExpectedValueEnabled() {
+    public static boolean isAddExpectedValueEnabled() {
         return getSettings().getBoolean("add-expected-value");
     }
 

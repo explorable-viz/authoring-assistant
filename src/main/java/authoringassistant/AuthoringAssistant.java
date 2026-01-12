@@ -73,7 +73,7 @@ public class AuthoringAssistant {
     }
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
-        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getTestLimit();
+        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempt;
         final long start = System.currentTimeMillis();

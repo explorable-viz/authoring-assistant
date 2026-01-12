@@ -45,8 +45,12 @@ public class Settings {
         return getInstance().settings;
     }
 
-    public static int getTestLimit() {
-        return getSettings().getInt("test-limit");
+    public static int getInterpretationAgentLoopbackLimit() {
+        return getSettings().getInt("interpretation-agent-loopback-limit");
+    }
+
+    public static int getSuggestionAgentLoopbackLimit() {
+        return getSettings().getInt("suggestion-agent-loopback-limit");
     }
 
     public static float getTemperature() {

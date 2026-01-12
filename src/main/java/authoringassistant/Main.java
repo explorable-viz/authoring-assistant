@@ -60,7 +60,7 @@ public class Main {
 
                 float accuracy = computeAccuracy(allResults);
                 generateLinks();
-                writeLog(allResults, interpretationAgent, inContextLearning.size());
+                writeLog(allResults, interpretationAgent);
                 if (accuracy >= Settings.getThreshold()) {
                     System.out.println(STR."Accuracy OK =\{accuracy}");
                     System.exit(0);
@@ -163,7 +163,7 @@ public class Main {
         return result;
     }
 
-    private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String interpretationAgent, int learningContextSize) throws IOException {
+    private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String interpretationAgent) throws IOException {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
@@ -182,7 +182,6 @@ public class Main {
                                 String.valueOf(Settings.getTemperature()),
                                 String.valueOf(Settings.getNumContextToken()),
                                 String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
-                                String.valueOf(learningContextSize),
                                 //program.getParagraph().toFluidSyntax(),
                                 String.valueOf(queryResult.attempt()),
                                 queryResult.correctResponse() != null ? "OK" : "KO",

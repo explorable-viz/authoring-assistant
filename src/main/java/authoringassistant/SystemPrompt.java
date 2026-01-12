@@ -10,15 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class InContextLearning {
+public class SystemPrompt {
     private final String systemPrompt;
 
-    public InContextLearning(String systemPrompt) {
+    public SystemPrompt(String systemPrompt) {
         this.systemPrompt = systemPrompt;
     }
 
-    public static InContextLearning loadLearningCases(String systemPromptPath) throws Exception {
-        return new InContextLearning(loadSystemPrompt(systemPromptPath));
+    public static SystemPrompt load(String systemPromptPath) throws Exception {
+        return new SystemPrompt(loadSystemPrompt(systemPromptPath));
     }
 
     public PromptList toPromptList() {
@@ -27,7 +27,7 @@ public class InContextLearning {
         return promptList;
     }
 
-    public static String loadSystemPrompt(String directoryPath) throws IOException {
+    private static String loadSystemPrompt(String directoryPath) throws IOException {
         Path systemPromptPath = Paths.get(directoryPath, "system-prompt.txt");
         String systemPrompt = Files.exists(systemPromptPath) ? STR."\{Files.readString(systemPromptPath)}\n" : "";
         List<String> fluidFileContents = new ArrayList<>();

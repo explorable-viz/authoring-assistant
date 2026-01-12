@@ -31,8 +31,8 @@ public class AuthoringAssistant {
     private final int runId;
     private final String jsonLogFolder;
 
-    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
-        this.prompts = inContextLearning.toPromptList();
+    public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
+        this.prompts = systemPrompt.toPromptList();
         llm = initialiseAgent(agentClassName);
         this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(suggestionAgentClassName) : null;
         this.templateProgram = templateProgram;

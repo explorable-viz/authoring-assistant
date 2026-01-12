@@ -1,7 +1,6 @@
 package authoringassistant;
 
 import kotlin.Pair;
-import authoringassistant.Main.ProgramExpression;
 import authoringassistant.Program.QueryResult;
 import authoringassistant.util.ThrowingConsumer;
 
@@ -26,7 +25,7 @@ public class Main {
         logger.config("Arguments passed from command line");
         logger.config(arguments.toString().replace(",", "\n"));
         final ArrayList<Program> programs;
-        final InContextLearning inContextLearning;
+        final SystemPrompt systemPrompt;
 
         try {
             Settings.init("settings.json", arguments);
@@ -34,7 +33,7 @@ public class Main {
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json
             cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
-            inContextLearning = InContextLearning.loadLearningCases(Settings.SYSTEM_PROMPT_PATH);
+            systemPrompt = SystemPrompt.load(Settings.SYSTEM_PROMPT_PATH);
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             if(suggestionAgent != null && interpretationAgent == null) {
                 generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
@@ -54,7 +53,7 @@ public class Main {
                 for (boolean addExpectedValue : cases) {
                     Settings.setAddExpectedValue(addExpectedValue);
                     System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
-                    final ArrayList<Pair<Program, QueryResult>> results = execute(inContextLearning, interpretationAgent, suggestionAgent, programs);
+                    final ArrayList<Pair<Program, QueryResult>> results = execute(systemPrompt, interpretationAgent, suggestionAgent, programs);
                     allResults.addAll(results);
                 }
 
@@ -213,7 +212,7 @@ public class Main {
         return (float) count / results.size();
     }
 
-    private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String interpretationAgent, String suggestionAgent, List<Program> programs) throws Exception {
+    private static ArrayList<Pair<Program, QueryResult>> execute(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> programs) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
         final int numRuns = isTestMock(interpretationAgent) ? 1 : Settings.numTestRuns();
 
@@ -223,7 +222,7 @@ public class Main {
             Files.createDirectories(Paths.get(jsonLogFolder));
             int programCount = 0;
             for (Program program : programs) {
-                AuthoringAssistant authoringAssistant = new AuthoringAssistant(inContextLearning, interpretationAgent, program, suggestionAgent, k,jsonLogFolder);
+                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, program, suggestionAgent, k,jsonLogFolder);
                 List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
 
                 long correct = results.stream()

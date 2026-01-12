@@ -148,8 +148,6 @@ public class Program {
 
     public static ArrayList<Program> loadPrograms(String casesFolder, int numInstances) throws IOException {
         casesFolder = STR."testCases/\{casesFolder}";
-        if (numInstances == 0)
-            return new ArrayList<>();
 
         Set<String> casePaths = Files.walk(Paths.get(casesFolder))
                 .filter(Files::isRegularFile) // Only process files, not directories
@@ -164,46 +162,44 @@ public class Program {
             String casePath = caseList.get(i);
             String shortCasePath = STR."\{casesFolder}\{Path.of(casePath).toString().substring(Path.of(casesFolder).toAbsolutePath().toString().length())}";
             String jsonContent = Files.readString(Path.of(STR."\{casePath}.json"));
-            for (int k = 0; k < numInstances; k++) {
-                Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(k));
-                JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
-                JSONArray json_imports = testCase.getJSONArray("imports");
-                logger.info(STR."[\{i + 1} of \{caseList.size()}] Loading \{shortCasePath}.json");
-                Collection<String> datasets = datasets(testCase.getJSONArray("datasets"));
-                ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
-                String code = Files.readString(Path.of(STR."\{casePath}.fld"));
-                try {
-                    isValidTestCase(jsonContent, code, datasets, variables);
-                } catch (RuntimeException e) {
-                    System.err.println(STR."Error in \{casePath}");
-                    e.printStackTrace();
-                    System.exit(1);
-                }
-                Variables tv = Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("testing-variables"));
-                int maxVariants = 1;
-                for(Map.Entry<String, ValueOptions> entry : tv.entrySet() ) {
-                    if(entry.getValue() instanceof ValueOptions.List values) {
-                        maxVariants = Math.max(maxVariants, values.get().size());
-                    }
-                }
-                Variables.Flat testVariables = expandVariables(tv, new SplittableRandom(k));
-                for (int n = 0; n < maxVariants; n++) {
-                    test_configurations.add(loadDatasetsFiles(datasets, expandVariables(tv, new SplittableRandom(n))));
-                }
-                List<String> imports = IntStream.range(0, json_imports.length())
-                        .mapToObj(json_imports::getString)
-                        .toList();
-
-                programs.add(new Program(
-                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath),
-                        datasets,
-                        imports,
-                        replaceVariables(code, variables),
-                        loadDatasetsFiles(datasets, expandVariables(tv, null)),
-                        casePath,
-                        test_configurations
-                ));
+            Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(0));
+            JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
+            JSONArray json_imports = testCase.getJSONArray("imports");
+            logger.info(STR."[\{i + 1} of \{caseList.size()}] Loading \{shortCasePath}.json");
+            Collection<String> datasets = datasets(testCase.getJSONArray("datasets"));
+            ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
+            String code = Files.readString(Path.of(STR."\{casePath}.fld"));
+            try {
+                isValidTestCase(jsonContent, code, datasets, variables);
+            } catch (RuntimeException e) {
+                System.err.println(STR."Error in \{casePath}");
+                e.printStackTrace();
+                System.exit(1);
             }
+            Variables tv = Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("testing-variables"));
+            int maxVariants = 1;
+            for(Map.Entry<String, ValueOptions> entry : tv.entrySet() ) {
+                if(entry.getValue() instanceof ValueOptions.List values) {
+                    maxVariants = Math.max(maxVariants, values.get().size());
+                }
+            }
+            Variables.Flat testVariables = expandVariables(tv, new SplittableRandom(0));
+            for (int n = 0; n < maxVariants; n++) {
+                test_configurations.add(loadDatasetsFiles(datasets, expandVariables(tv, new SplittableRandom(n))));
+            }
+            List<String> imports = IntStream.range(0, json_imports.length())
+                    .mapToObj(json_imports::getString)
+                    .toList();
+
+            programs.add(new Program(
+                    paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath),
+                    datasets,
+                    imports,
+                    replaceVariables(code, variables),
+                    loadDatasetsFiles(datasets, expandVariables(tv, null)),
+                    casePath,
+                    test_configurations
+            ));
         }
         return programs;
     }
@@ -388,10 +384,10 @@ public class Program {
         String localFluidPath = "../fluid";
         final String jsonSpec = STR."""
         const jsonSpec = {
-               \"fluidSrcPath\": [\"\{localFluidPath}\", \"../../fluid\"],
-               \"inputs\": [\"tableData\"],
-               \"query\": false,
-               \"linking\": true
+               "fluidSrcPath": [\"\{localFluidPath}", "../../fluid"],
+               "inputs": ["tableData"],
+               "query": false,
+               "linking": true
            }
         """;
 

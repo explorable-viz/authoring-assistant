@@ -24,9 +24,9 @@ public class InContextLearning {
         this.cases = cases;
     }
 
-    public static InContextLearning loadLearningCases(String jsonLearningCasePath, int numCasesToGenerate) throws Exception {
-        ArrayList<Program> learningCases = loadPrograms(Settings.LEARNING_CASE_FOLDER, numCasesToGenerate);
-        return new InContextLearning(loadSystemPrompt(jsonLearningCasePath), learningCases);
+    public static InContextLearning loadLearningCases(String systemPromptPath) throws Exception {
+        ArrayList<Program> learningCases = new ArrayList<>();
+        return new InContextLearning(loadSystemPrompt(systemPromptPath), learningCases);
     }
 
     public PromptList toPromptList() throws IOException {

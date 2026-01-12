@@ -34,7 +34,7 @@ public class Main {
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json
             cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
-            inContextLearning = InContextLearning.loadLearningCases(Settings.SYSTEM_PROMPT_PATH, Settings.getNumLearningCaseToGenerate());
+            inContextLearning = InContextLearning.loadLearningCases(Settings.SYSTEM_PROMPT_PATH);
             programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
             if(suggestionAgent != null && interpretationAgent == null) {
                 generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");

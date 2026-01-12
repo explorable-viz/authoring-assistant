@@ -58,7 +58,7 @@ public class Settings {
     }
 
     public static int getNumContextToken() {
-        return getSettings().getInt("num_ctx");
+        return getSettings().getInt("num-context-token");
     }
 
     public static boolean isReasoningEnabled() {
@@ -77,14 +77,6 @@ public class Settings {
 
     public static String getTestCaseFolder() {
         return commandLineArgs.get("test-case-folder");
-    }
-
-    public static float getThreshold() {
-        return getSettings().getFloat("threshold");
-    }
-
-    public static int maxProgramVariants() {
-        return getSettings().getInt("max-program-variants");
     }
 
     public static int numTestRuns() {

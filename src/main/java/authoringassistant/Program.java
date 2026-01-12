@@ -146,7 +146,7 @@ public class Program {
         return result;
     }
 
-    public static ArrayList<Program> loadPrograms(String casesFolder, int numInstances) throws IOException {
+    public static ArrayList<Program> loadPrograms(String casesFolder) throws IOException {
         casesFolder = STR."testCases/\{casesFolder}";
 
         Set<String> casePaths = Files.walk(Paths.get(casesFolder))

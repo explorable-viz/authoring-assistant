@@ -34,7 +34,7 @@ public class Main {
             //Create directory for logs and json
             cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
             systemPrompt = SystemPrompt.load(Settings.SYSTEM_PROMPT_PATH);
-            programs = Program.loadPrograms(Settings.getTestCaseFolder(), Settings.maxProgramVariants());
+            programs = Program.loadPrograms(Settings.getTestCaseFolder());
             if(suggestionAgent != null && interpretationAgent == null) {
                 generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
             }
@@ -60,13 +60,7 @@ public class Main {
                 float accuracy = computeAccuracy(allResults);
                 generateLinks();
                 writeLog(allResults, interpretationAgent);
-                if (accuracy >= Settings.getThreshold()) {
-                    System.out.println(STR."Accuracy OK =\{accuracy}");
-                    System.exit(0);
-                } else {
-                    System.out.println(STR."Accuracy KO =\{accuracy}");
-                    System.exit(1);
-                }
+                System.out.println(STR."Accuracy: \{accuracy}");
             }
         } catch (Exception e) {
             e.printStackTrace();

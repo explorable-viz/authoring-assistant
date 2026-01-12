@@ -1,8 +1,6 @@
 package authoringassistant;
 
-import authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
-import kotlin.Pair;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,33 +10,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static authoringassistant.Program.loadPrograms;
-
 public class InContextLearning {
     private final String systemPrompt;
 
-    private final ArrayList<Program> cases;
-
-    public InContextLearning(String systemPrompt, ArrayList<Program> cases) {
+    public InContextLearning(String systemPrompt) {
         this.systemPrompt = systemPrompt;
-        this.cases = cases;
     }
 
     public static InContextLearning loadLearningCases(String systemPromptPath) throws Exception {
-        ArrayList<Program> learningCases = new ArrayList<>();
-        return new InContextLearning(loadSystemPrompt(systemPromptPath), learningCases);
+        return new InContextLearning(loadSystemPrompt(systemPromptPath));
     }
 
-    public PromptList toPromptList() throws IOException {
-        PromptList inContextLearning = new PromptList();
-        inContextLearning.addSystemPrompt(this.systemPrompt);
-        for (Program initialStatesFromTemplate : this.cases) {
-            List<Pair<Program, Expression>> initialProgramStates = initialStatesFromTemplate.asIndividualProblems(initialStatesFromTemplate);
-            for(Pair<Program, Expression> initialProgramState : initialProgramStates) {
-                inContextLearning.addPairPrompt(initialProgramState.getFirst().toUserPrompt(), initialProgramState.getSecond().getExpr());
-            }
-        }
-        return inContextLearning;
+    public PromptList toPromptList() {
+        PromptList promptList = new PromptList();
+        promptList.addSystemPrompt(this.systemPrompt);
+        return promptList;
     }
 
     public static String loadSystemPrompt(String directoryPath) throws IOException {
@@ -53,9 +39,5 @@ public class InContextLearning {
             }
         }
         return STR."\{systemPrompt}\n\{String.join("\n", fluidFileContents)}";
-    }
-
-    public int size() {
-        return this.cases.size();
     }
 }

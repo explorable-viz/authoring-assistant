@@ -60,7 +60,7 @@ public class Settings {
         return getSettings().getInt("num-context-token");
     }
 
-    public static boolean isAddExpectedValueEnabled() {
+    public static boolean isAddExpectedValue() {
         return getSettings().getBoolean("add-expected-value");
     }
 
@@ -75,13 +75,6 @@ public class Settings {
 
     public static int numTestRuns() {
         return getSettings().getInt("num-test-runs");
-    }
-
-    public static boolean isEditorLoopEnabled() {
-        return getSettings().getBoolean("enable-editor-loop");
-    }
-    public static boolean isSuggestionAgentEnabled() {
-        return getSettings().getBoolean("enable-suggestion-agent");
     }
 
     public static String getSuggestionAgentName() {

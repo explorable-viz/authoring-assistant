@@ -279,7 +279,7 @@ public class Program {
         object.put("imports", get_loadedImports());
         object.put("code", getCode());
         object.put("paragraph", getParagraph().toFluidSyntax(false));
-        if(Settings.isAddExpectedValueEnabled()) {
+        if(Settings.isAddExpectedValue()) {
             object.put("paragraphValue", getParagraph().toFluidSyntax(true));
         }
         return object.toString();

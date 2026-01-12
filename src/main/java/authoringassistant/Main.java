@@ -178,7 +178,7 @@ public class Main {
                                 //program.getParagraph().toFluidSyntax(),
                                 String.valueOf(queryResult.attempt()),
                                 queryResult.correctResponse() != null ? "OK" : "KO",
-                                String.valueOf(Settings.isAddExpectedValueEnabled() ? 1 : 0),
+                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
 //                                queryResult.correctResponse() != null ? "generated" : "NULL",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",

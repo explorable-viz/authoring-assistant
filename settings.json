@@ -15,5 +15,5 @@
   "max-program-variants": 1,
   "num-learning-case-to-generate": 0,
   "num-test-data-variants": 1,
-  "num-test-runs": 1
+  "num-test-runs": 3
 }

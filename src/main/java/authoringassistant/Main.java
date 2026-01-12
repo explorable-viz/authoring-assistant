@@ -49,7 +49,7 @@ public class Main {
             else
             {
                 final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
-                boolean[] cases = interpretationAgent.equals("authoringassistant.llm.LLMDummyAgent") ? new boolean[]{false} : new boolean[]{false, true};
+                boolean[] cases = isTestMock(interpretationAgent) ? new boolean[]{false} : new boolean[]{false, true};
                 // Run experiment for both add-expected-value settings
                 for (boolean addExpectedValue : cases) {
                     Settings.setAddExpectedValue(addExpectedValue);
@@ -73,6 +73,10 @@ public class Main {
             e.printStackTrace();
             System.exit(1);
         }
+    }
+
+    private static boolean isTestMock(String interpretationAgent) {
+        return interpretationAgent.equals("authoringassistant.llm.LLMDummyAgent");
     }
 
     private static void saveProgramToJson(Program program, String outputFolder) throws IOException {
@@ -212,8 +216,9 @@ public class Main {
 
     private static ArrayList<Pair<Program, QueryResult>> execute(InContextLearning inContextLearning, String interpretationAgent, String suggestionAgent, List<Program> programs) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
+        final int numRuns = isTestMock(interpretationAgent) ? 1 : Settings.numTestRuns();
 
-        for(int k = 0; k < Settings.numTestRuns(); k++)
+        for(int k = 0; k < numRuns; k++)
         {
             String jsonLogFolder = STR."\{Settings.LOG_FOLDER}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
             Files.createDirectories(Paths.get(jsonLogFolder));

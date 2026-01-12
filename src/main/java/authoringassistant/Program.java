@@ -168,7 +168,7 @@ public class Program {
                 Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(k));
                 JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
                 JSONArray json_imports = testCase.getJSONArray("imports");
-                logger.info(STR."[\{i} of \{caseList.size()}] Loading \{shortCasePath}.json");
+                logger.info(STR."[\{i + 1} of \{caseList.size()}] Loading \{shortCasePath}.json");
                 Collection<String> datasets = datasets(testCase.getJSONArray("datasets"));
                 ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
                 String code = Files.readString(Path.of(STR."\{casePath}.fld"));

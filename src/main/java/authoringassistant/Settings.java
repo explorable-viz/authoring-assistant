@@ -70,6 +70,7 @@ public class Settings {
         return getSettings().getBoolean("add-expected-value");
     }
 
+    // TODO: don't treat as a "setting"
     public static void setAddExpectedValue(boolean value) {
         getSettings().put("add-expected-value", value);
     }

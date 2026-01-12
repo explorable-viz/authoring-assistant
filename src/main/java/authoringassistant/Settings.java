@@ -13,7 +13,6 @@ public class Settings {
     // Constants for unchanging configuration values
     public static final String LOG_FOLDER = "logs/";
     public static final String FLUID_TEMP_FOLDER = "./fluid-temp";
-    public static final String FLUID_COMPILER_PATH = "./";
     public static final String BASE_PATH_LIBRARY = "node_modules/@explorable-viz/fluid/dist/fluid/fluid";
     public static final String FLUID_COMMON_FOLDER = "./testCases-aux";
     public static final String LEARNING_CASE_FOLDER = "learningCases";

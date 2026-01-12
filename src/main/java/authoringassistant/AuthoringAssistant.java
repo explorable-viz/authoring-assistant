@@ -31,10 +31,10 @@ public class AuthoringAssistant {
     private final int runId;
     private final String jsonLogFolder;
 
-    public AuthoringAssistant(InContextLearning inContextLearning, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
-        this.prompts = inContextLearning.toPromptList();
+    public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
+        this.prompts = systemPrompt.toPromptList();
         llm = initialiseAgent(agentClassName);
-        this.suggestionAgent = new SuggestionAgent(suggestionAgentClassName);
+        this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(suggestionAgentClassName) : null;
         this.templateProgram = templateProgram;
         this.runId = runId;
         this.jsonLogFolder = jsonLogFolder;
@@ -44,7 +44,7 @@ public class AuthoringAssistant {
         List<Pair<Program, QueryResult>> results = new ArrayList<>();
         List<Pair<Program, Expression>> problems;
         int i = 0;
-        if (Settings.isSuggestionAgentEnabled()) {
+        if (this.suggestionAgent != null) {
             templateProgram = suggestionAgent.generateTemplateProgram(templateProgram);
         }
         problems = templateProgram.asIndividualProblems(templateProgram);
@@ -73,7 +73,7 @@ public class AuthoringAssistant {
     }
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
-        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getAgentLimit();
+        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempt;
         final long start = System.currentTimeMillis();
@@ -139,7 +139,7 @@ public class AuthoringAssistant {
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {
         final FluidCLI fluidCLI = new FluidCLI();
-        writeFluidFiles(Settings.getFluidTempFolder(), Program.fluidFileName, expression.getExpr(), p.getDatasets(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
+        writeFluidFiles(Settings.FLUID_TEMP_FOLDER, Program.fluidFileName, expression.getExpr(), p.getDatasets(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
         return fluidCLI.evaluate(p.getFluidFileName());
     }
 

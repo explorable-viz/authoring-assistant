@@ -191,7 +191,7 @@ def generate_success_rate_by_category_count(df, plot, fig_dir):
 
     #plt.title("Success Rate by Complexity")
     plt.xlabel("Complexity")
-    plt.ylabel("Average Success Rate over 5 runs")
+    plt.ylabel(f"Average Success Rate over {df['runId'].nunique()} runs")
     plt.xticks(rotation=45, ha="right")
     plt.ylim(0, 1.1)
     plt.tight_layout()

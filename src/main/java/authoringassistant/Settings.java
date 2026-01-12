@@ -45,7 +45,6 @@ public class Settings {
         return getInstance().settings;
     }
 
-    // TODO: better name
     public static int getTestLimit() {
         return getSettings().getInt("test-limit");
     }

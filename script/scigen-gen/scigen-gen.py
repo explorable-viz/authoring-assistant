@@ -105,8 +105,7 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                     )
 
                 # Remove parenthetical information after numbers, optionally followed by •
-                if re.match(r'^\s*-?\d', cleaned_value):
-                    cleaned_value = re.sub(r'\s*\([^)]+\)\s*•?\s*$', '', cleaned_value)
+                cleaned_value = re.sub(r'^(\s*-?\d+(?:\.\d+)?%?)\s*\([^)]+\)\s*•?\s*$', r'\1', cleaned_value)
 
                 # Discard any suffix starting with \scalebox
                 cleaned_value = re.sub(r'\s*\\scalebox.*$', '', cleaned_value)

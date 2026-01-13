@@ -180,7 +180,8 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
         dataset_file = datasets_path / f"{dataset_name}.json"
         with open(dataset_file, 'w', encoding='utf-8') as f:
             json.dump(dataset, f, indent=2, ensure_ascii=False)
-
+            f.write('\n')
+            
         # Write .fld file with loadJson instruction
         fld_name = f"_{dataset_name.replace('-', '_').replace('.', '_')}"
         fld_content = f'let tableData = loadJson "{datasets_dir}/{dataset_name}.json";'

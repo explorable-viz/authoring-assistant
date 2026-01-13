@@ -95,11 +95,12 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 cleaned_value = re.sub(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*[±↓↑⇑]\s*.*$', r'\1', cleaned_value)
 
                 # Reduce "n / m / k", "n | m | k", or "n, m, k" to "n"
-                cleaned_value = re.sub(
-                    r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(?:\s*[/|,]\s*-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)*\s*$',
-                    r'\1',
-                    cleaned_value
-                )
+                if keys[i] != " Genre": # special case for 1707.03103v2-267
+                    cleaned_value = re.sub(
+                        r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(?:\s*[/|,]\s*-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)*\s*$',
+                        r'\1',
+                        cleaned_value
+                    )
 
                 # Remove parenthetical information after numbers, optionally followed by •
                 if re.match(r'^\s*-?\d', cleaned_value):

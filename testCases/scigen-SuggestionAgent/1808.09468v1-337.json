@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 6, the BOTH model produced "
+    },
+    {
+      "expression": "\"the most accurate\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " output ("
+    },
+    {
+      "expression": "\"95%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " correct simple sentences), with the "
+    },
+    {
+      "expression": "\"lowest incidence of missed or unsupported statements\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". outputs from Aharoni and Goldberg(2018) (AG18), which were "
+    },
+    {
+      "expression": "\"22%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accurate."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1808_09468v1_337"
+  ],
+  "datasets": ["datasets/scigen/1808.09468v1-337.json"]
+}

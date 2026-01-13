@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "With BIVEC embeddings, we learn two languages at the same time, and test retrieval on one or two of these languages. Results are shown in "
+    },
+    {
+      "expression": "\"table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Trained in English alone, the model gives "
+    },
+    {
+      "expression": "\"worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than MUSE for languages not seen previously. For example, with English-German BIVEC and a model trained only in English, and test on German, we obtain only "
+    },
+    {
+      "expression": "\"22.96 %\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recall@10, where MUSE embeddings obtain "
+    },
+    {
+      "expression": "\"44.18 %\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". But when train on English and French, we obtain "
+    },
+    {
+      "expression": "\"55.22 %\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recall, an increase of "
+    },
+    {
+      "expression": "\"26.39 %\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to MUSE. With German and English training, we have an increase of "
+    },
+    {
+      "expression": "\"15.16 %\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on English only recall, with a recall of "
+    },
+    {
+      "expression": "\"61.44 %\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Meaning that, once again, learning a new language with BIVEC enables "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results in English, as the same kind of results is visible with French as well."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1903_11299v3_308"
+  ],
+  "datasets": ["datasets/scigen/1903.11299v3-308.json"]
+}

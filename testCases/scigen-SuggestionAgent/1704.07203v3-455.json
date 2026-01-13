@@ -1,0 +1,82 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The "
+    },
+    {
+      "expression": "\"average performances\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of LR−syntax and CNN:rand are virtually identical, both for Macro6Described as FscoreM in Sokolova and Lapalme (2009). F1 and Claim-F1, with a slight advantage for the feature-based approach, but their "
+    },
+    {
+      "expression": "\"difference\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is not statistically significant (p ≤ 0.05). Altogether, these two systems exhibit "
+    },
+    {
+      "expression": "\"significantly better average performances\"",
+      "categories": [
+        "comparison",
+        "average"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than all other models surveyed here, both those relying on and those not relying on hand-crafted features (p ≤ 0.05). The performance of the learners is quite divergent across datasets, with Macro-F1 scores6 ranging from "
+    },
+    {
+      "expression": "\"60%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (WTP) to "
+    },
+    {
+      "expression": "\"80%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (MT), average "
+    },
+    {
+      "expression": "\"67%\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (see Table 2). On all datasets, our "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " systems clearly outperform both baselines. In isolation, lexical, embedding, and syntax features are most helpful, whereas structural features did not help in most cases. Discourse features only contribute significantly on MT. When looking at the performance of the feature-based approaches, the most striking finding is the importance of lexical (in our setup, unigram) information."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1704_07203v3_455"
+  ],
+  "datasets": ["datasets/scigen/1704.07203v3-455.json"]
+}

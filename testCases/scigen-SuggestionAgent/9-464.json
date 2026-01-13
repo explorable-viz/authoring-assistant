@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "In Table 3 we have listed the average MAP and nDCG scores of the test sets. The tf-idf model is outperformed by most of the other models. However, bm25, which additionally takes the length of a document into account, performs very tf-idf and bm25 have the major benefit of well. fast computation. The feat model slightly outperforms the auto  auto-rank + feat model is slightly better than the auto-rank + bm25 model, both of which have the overall best performance. This shows, that the auto-encoder learns something orthogonal to term frequency and document length. The best model with respect to document ranking is the auto-rank + feat model. In Figure 3 we show the correlation between the different models. Interestingly, the bm25 and the feat strongly correlate. However, the scores of bm25 do not correlate with the scores of the combination of auto-rank and bm25. This indicates, that the model does not primarily learn to use the bm25 score but also focuses on the the auto-encoded representation. This underlines the hypothesis that the auto-encoder is able to represent latent features of the relationship of the query terms in the document. rank model. The distance features are a strong indicator for the semantic dependency between entities. These relationships need to be learned in the auto-rank model. The cosine similarity of a query and a document (auto/cos) does not yield a good result. This shows that the auto-encoder has learned many features, most of which do not correlate with our task. We also find that emb does not yield an equal performance to auto-rank. The combination of the"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_9_464"
+  ],
+  "datasets": ["datasets/scigen/9-464.json"]
+}

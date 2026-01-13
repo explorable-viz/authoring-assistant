@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows the confusion matrix of JOINT on Wikipedia. We can see that "
+    },
+    {
+      "expression": "\"more than 50%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of documents for each quality class are correctly classified, except for the "
+    },
+    {
+      "expression": "\"class where more documents\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are misclassified into B."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1901_01010v2_418"
+  ],
+  "datasets": ["datasets/scigen/1901.01010v2-418.json"]
+}

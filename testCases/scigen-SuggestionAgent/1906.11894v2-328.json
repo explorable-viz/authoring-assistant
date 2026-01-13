@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The answer is in Table II where we performed the same task, but this time we swapped our semantic segmentation network with the pixel-level ground-truth provided along with the data. This represents the "
+    },
+    {
+      "expression": "\"upper-bound performances\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " , as no tool will produce a better segmentation than the ground-truth. In this scenario our method performed at "
+    },
+    {
+      "expression": "\"100%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " line IU, reinforcing our previous observation that our text-line extraction method has made the mistakes only in the presence of wrong results from the semantic segmentation step."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_11894v2_328"
+  ],
+  "datasets": ["datasets/scigen/1906.11894v2-328.json"]
+}

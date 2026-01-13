@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "A sample of the SQuAD v1.1 test set (only the first paragraph of each of the 48 Wikipedia pages) has been translated by humans in French and Japanese. We here evaluate the performance of the fine-tuned multilingual BERT on them and compare the results to a baseline . "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " displays the Exact Match (EM) and F1-score of the baseline and multilingual BERT on the selected datasets. We can observe that multilingual BERT is able to significantly "
+    },
+    {
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the baseline on both the Japanese and the French question answering task.  was already noted in the public benchmarks and we add here that BERT has a high ability for QA zero-shot transfer. It is even able to significantly "
+    },
+    {
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the baseline"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1910_04659v1_349"
+  ],
+  "datasets": ["datasets/scigen/1910.04659v1-349.json"]
+}

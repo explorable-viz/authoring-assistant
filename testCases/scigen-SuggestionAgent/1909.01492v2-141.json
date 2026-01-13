@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 1 shows the results of IBP training and baseline models under δ = 3 and δ = 24 perturbations on SST and AG News, respectively.  In Table 1, comparing adversarial accuracy with exhaustive verification accuracy (oracle), we observe that although adversarial training is effective at defending against HotFlip attacks (74.9 / 76.8 / 85.5%), the oracle adversarial accuracy under exhaustive testing (25.8 / 74.6 / 81.6%) is much lower in SST-character / SST-word / AG-character level, respectively.  In Table 1, when the perturbation space is larger (SST character-level vs. SST word-level), (a) across models, there is a larger gap in adversarial accuracy and true robustness (oracle); (b) the difference in oracle robustness between IBP and adversarial training is even larger (73.1% vs. 25.8% and 76.5% vs. 74.6%).  The resulting models achieve the highest exhaustively verified accuracy at the cost of only moderate deterioration in nominal accuracy (Table 1)."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_01492v2_141"
+  ],
+  "datasets": ["datasets/scigen/1909.01492v2-141.json"]
+}

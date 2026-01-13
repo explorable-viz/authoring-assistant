@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 2 reports the results on SNLI, with the configurations that performed best on the validation set for each of the adversarial methods.  both training methods perform worse than our unmodified, non-adversarial InferSent baseline on SNLI's test set, since they remove biases that may be useful for performing this task. The difference for AdvCls is minimal, and it even slightly outperforms InferSent on the validation set. While AdvDat's results are noticeably lower than the non-adversarial InferSent, the drops are still less than 6% points."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1907_04389v1_247"
+  ],
+  "datasets": ["datasets/scigen/1907.04389v1-247.json"]
+}

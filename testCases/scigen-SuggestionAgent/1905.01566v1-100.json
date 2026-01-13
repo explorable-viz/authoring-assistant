@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 compares the performance of these systems on the development set. Our model with no augmentation already "
+    },
+    {
+      "expression": "\"matches\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the system of Choi et al. (2018) with augmentation, and incorporating ELMo gives further gains on both "
+    },
+    {
+      "expression": "\"precision\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". On top of this model, adding the distantly-annotated data "
+    },
+    {
+      "expression": "\"lowers\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the performance; the loss function-based approach of (Choi et al., 2018) does not sufficiently mitigate the noise in this data. However, denoising makes the distantlyannotated data useful, improving "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by a substantial margin especially in the general class.  BERT performs "
+    },
+    {
+      "expression": "\"similarly to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ELMo with denoised distant data. As can be seen in the performance breakdown, BERT gains from improvements in "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the fine class."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1905_01566v1_100"
+  ],
+  "datasets": ["datasets/scigen/1905.01566v1-100.json"]
+}

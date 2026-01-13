@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We then tested the BLEU scores between machine translation results and corresponding gold standard post-editing results on the "
+    },
+    {
+      "expression": "\"original development set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
+    },
+    {
+      "expression": "\"training set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"synthetic data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as shown in Table 1.  Table 1 shows that there is a significant gap between the "
+    },
+    {
+      "expression": "\"synthetic eScape data set (Negri et al., 2018)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the real-life data sets ("
+    },
+    {
+      "expression": "\"the development set\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the original training set from posteditors),"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1908_03402v1_60"
+  ],
+  "datasets": ["datasets/scigen/1908.03402v1-60.json"]
+}

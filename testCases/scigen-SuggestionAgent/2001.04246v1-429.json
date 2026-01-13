@@ -1,0 +1,133 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The compression results on the six adopted datasets, including parameter size, inference speedup and classification accuracy, are summarized in Table 1.  Overall speaking, on all the evaluated datasets, the proposed AdaBERT method achieves significant efficiency improvement while maintaining comparable performance. Compared to the "
+    },
+    {
+      "expression": "\"BERT12-T\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the compressed models are "
+    },
+    {
+      "expression": "\"11.5x\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"17.0x\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " smaller in parameter size and "
+    },
+    {
+      "expression": "\"12.7x\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"29.3x\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " faster in inference speed with an average performance degradation of "
+    },
+    {
+      "expression": "\"2.79%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Comparing structureheterogeneous method, BiLSTMSOF , AdaBERT searches CNN-based models and achieves much another with "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvements, especially on the "
+    },
+    {
+      "expression": "\"MNLI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dataset.  Comparing with different Transformers-based compression baselines, the proposed AdaBERT method is "
+    },
+    {
+      "expression": "\"1.35x\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"3.12x\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " faster than the fastest baseline, "
+    },
+    {
+      "expression": "\"TinyBERT4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and achieves comparable performance with the two baselines that have the best averaged accuracy, "
+    },
+    {
+      "expression": "\"BERT6-PKD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"TinyBERT4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2001_04246v1_429"
+  ],
+  "datasets": ["datasets/scigen/2001.04246v1-429.json"]
+}

@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2: The performances of the LSTM model trained on the WMT16 multimodal translation dataset with different LA steps. We show the look-ahead module is able to improve the model on the entire testing set. However, either the LA module or the beam search method harm the models when the length of the target sentences is "
+    },
+    {
+      "expression": "\"longer than 25 words\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2003_03716v1_323"
+  ],
+  "datasets": ["datasets/scigen/2003.03716v1-323.json"]
+}

@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Results for different values of "
+    },
+    {
+      "expression": "\"p\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are given in Table 9. All models have about the same "
+    },
+    {
+      "expression": "\"BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", not statistically significantly different from the baseline, but they are quite different in terms of incorporating context. The denoising positively influences almost all tasks except for "
+    },
+    {
+      "expression": "\"deixis\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", yielding the largest improvement on "
+    },
+    {
+      "expression": "\"lexical cohesion\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1905_05979v2_98"
+  ],
+  "datasets": ["datasets/scigen/1905.05979v2-98.json"]
+}

@@ -1,0 +1,121 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We test an unsupervised setting using (1) the algorithm proposed in Section 4.4 with "
+    },
+    {
+      "expression": "\"EmbDI local embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and (2) an existing matching system  with both pre-trained embeddings ("
+    },
+    {
+      "expression": "\"SeepP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and our local embeddings ("
+    },
+    {
+      "expression": "\"SeepL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Pre-trained embeddings for tokens and tuples have been obtained from "
+    },
+    {
+      "expression": "\"Glove\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Table 3 reports the results w.r.t. manually defined attribute matches. The simple unsupervised method with EmbDI local embeddings outperforms the baseline in terms of "
+    },
+    {
+      "expression": "\"Fmeasure\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all scenarios. Results of "
+    },
+    {
+      "expression": "\"RefS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " because of the high overlap between its datasets. The baseline improves when it is executed with EmbDI local embeddings, showing their superior quality w.r.t. pre-trained ones. The Basic local embeddings lead to "
+    },
+    {
+      "expression": "\"0 attribute matches\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We also observe that results for SeepPreTrain depend on the quality of the original attribute labels. If we replace the original (expressive and correct) labels with synthetic ones, Seep-PreTrain obtains F-measure values between "
+    },
+    {
+      "expression": "\".30 and .38\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Local embeddings from EmbDI do not depend on the presence of the attribute labels.  Similarly, decreasing the size of the walks to "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the SM task raises the F-measure for RefL to "
+    },
+    {
+      "expression": "\".92 (from .77)\"",
+      "categories": [
+        "difference",
+        "average"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_01120v1_340"
+  ],
+  "datasets": ["datasets/scigen/1909.01120v1-340.json"]
+}

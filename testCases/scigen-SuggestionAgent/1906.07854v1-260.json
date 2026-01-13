@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in table 2, BioBERT trained on PubMed+PMC performs the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_07854v1_260"
+  ],
+  "datasets": ["datasets/scigen/1906.07854v1-260.json"]
+}

@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We report metric results when grouping crowd workers into "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " bins using the full range of "
+    },
+    {
+      "expression": "\"ADR\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the dataset. The "
+    },
+    {
+      "expression": "\"ADR-based\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " bias measures (Tab. 2) follow the expected trend ("
+    },
+    {
+      "expression": "\"model 1 appears more biased than models 2 and 3\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") contrary to the protected attributes-based measures. "
+    },
+    {
+      "expression": "\"Model 1 trained with MV labels exhibits similar performance across demographic groups\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " Model 2's performance is "
+    },
+    {
+      "expression": "\"different\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across groups"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1911_02471v1_381"
+  ],
+  "datasets": ["datasets/scigen/1911.02471v1-381.json"]
+}

@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "No statistical significance is seen even when the test set result worsens in performance for BERTCLS and Piecewise Pool in table 5 where it hurts test set performance on ddi but is not statistically significant when cross validation is performed.  In table 5, we tested the generalizability of the commonly used piecewise pooling technique  While piecewise pooling helps i2b2 by 1%, it hurts test set performance on ddi and doesn't affect performance on semeval.  We found ELMo and BER tokens to boost performance significantly for all datasets, but that BERT-CLS hurt performance for the medical datasets. While BERT-CLS boosted test set performance for semeval, this was not found to be a statistically significant difference for cross validation."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_08318v4_375"
+  ],
+  "datasets": ["datasets/scigen/1906.08318v4-375.json"]
+}

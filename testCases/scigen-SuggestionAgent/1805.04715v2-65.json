@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 presents results on "
+    },
+    {
+      "expression": "\"the second dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
+    },
+    {
+      "expression": "\"the best models\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " identified on "
+    },
+    {
+      "expression": "\"the first dataset\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The LDA-Frames yielded "
+    },
+    {
+      "expression": "\"the best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with our approach performing "
+    },
+    {
+      "expression": "\"comparably\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in terms of the F1-score."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1805_04715v2_65"
+  ],
+  "datasets": ["datasets/scigen/1805.04715v2-65.json"]
+}

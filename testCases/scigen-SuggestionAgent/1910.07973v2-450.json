@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "are summarized in Table 1, where the score for each task category is calculated by averaging the normalized values for the tasks within each category. Although the activations of "
+    },
+    {
+      "expression": "\"token\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " hidden states are often used in fine-tuning BERT for classification tasks, "
+    },
+    {
+      "expression": "\"Mean-pooling\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of hidden states performs the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all task categories among all the pooling methods."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1910_07973v2_450"
+  ],
+  "datasets": ["datasets/scigen/1910.07973v2-450.json"]
+}

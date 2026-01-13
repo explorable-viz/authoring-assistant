@@ -2,7 +2,7 @@
   {
     "dataset_friends": "Friends",
     "dataset_training": "Test",
-    "num_dialogues_num_utterances_4_000_58_012": 240,
+    "num_dialogues_num_utterances_4_000_58_012": "240 / 3296",
     "num_avg_utterances_per_dialogue_14_50": 13.73,
     "num_avg_length_of_dialogues_160_92": 156.38,
     "neutral_45_0": 31.4,
@@ -14,7 +14,7 @@
   {
     "dataset_friends": "EmotionPush",
     "dataset_training": "Training",
-    "num_dialogues_num_utterances_4_000_58_012": 4000,
+    "num_dialogues_num_utterances_4_000_58_012": "4000 / 58968",
     "num_avg_utterances_per_dialogue_14_50": 14.74,
     "num_avg_length_of_dialogues_160_92": 114.96,
     "neutral_45_0": 66.8,
@@ -26,7 +26,7 @@
   {
     "dataset_friends": "EmotionPush",
     "dataset_training": "Test",
-    "num_dialogues_num_utterances_4_000_58_012": 240,
+    "num_dialogues_num_utterances_4_000_58_012": "240 / 3536",
     "num_avg_utterances_per_dialogue_14_50": 14.73,
     "num_avg_length_of_dialogues_160_92": 92.43,
     "neutral_45_0": 60.7,

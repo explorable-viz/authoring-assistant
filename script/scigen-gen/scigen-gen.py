@@ -95,7 +95,9 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 cleaned_value = re.sub(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*[±↓↑⇑]\s*.*$', r'\1', cleaned_value)
 
                 # Reduce "n / m / k", "n | m | k", or "n, m, k" to "n"
-                if keys[i] != " Genre": # special case for 1707.03103v2-267
+                # Exclude some files from this rule
+                print(dataset_name)
+                if dataset_name not in ["1707.03103v2-267", "1906.11565v2-387"]:
                     cleaned_value = re.sub(
                         r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(?:\s*[/|,]\s*-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)*\s*$',
                         r'\1',

@@ -1,92 +1,92 @@
 [
   {
-    "source_corpus": "MNLI",
-    "target_corpus": "QNLI",
-    "hubert_transfer_bert": "True",
-    "hubert_transfer_filler": "True",
-    "hubert_transfer_role": "False",
-    "bert_acc": 90.5,
-    "hubert_acc": 90.5
+    "Source_Corpus": "MNLI",
+    "Target_Corpus": "QNLI",
+    "HUBERT_Transfer_BERT": "True",
+    "HUBERT_Transfer_Filler": "True",
+    "HUBERT_Transfer_Role": "False",
+    "BERT_Acc": 90.5,
+    "HUBERT_Acc": 90.5
   },
   {
-    "source_corpus": "MNLI",
-    "target_corpus": "QQP",
-    "hubert_transfer_bert": "False",
-    "hubert_transfer_filler": "False",
-    "hubert_transfer_role": "True",
-    "bert_acc": 89.2,
-    "hubert_acc": 89.3
+    "Source_Corpus": "MNLI",
+    "Target_Corpus": "QQP",
+    "HUBERT_Transfer_BERT": "False",
+    "HUBERT_Transfer_Filler": "False",
+    "HUBERT_Transfer_Role": "True",
+    "BERT_Acc": 89.2,
+    "HUBERT_Acc": 89.3
   },
   {
-    "source_corpus": "MNLI",
-    "target_corpus": "RTE",
-    "hubert_transfer_bert": "True",
-    "hubert_transfer_filler": "True",
-    "hubert_transfer_role": "True",
-    "bert_acc": 66.4,
-    "hubert_acc": 69.3
+    "Source_Corpus": "MNLI",
+    "Target_Corpus": "RTE",
+    "HUBERT_Transfer_BERT": "True",
+    "HUBERT_Transfer_Filler": "True",
+    "HUBERT_Transfer_Role": "True",
+    "BERT_Acc": 66.4,
+    "HUBERT_Acc": 69.3
   },
   {
-    "source_corpus": "MNLI",
-    "target_corpus": "SNLI",
-    "hubert_transfer_bert": "True",
-    "hubert_transfer_filler": "False",
-    "hubert_transfer_role": "True",
-    "bert_acc": 89.2,
-    "hubert_acc": 90.35
+    "Source_Corpus": "MNLI",
+    "Target_Corpus": "SNLI",
+    "HUBERT_Transfer_BERT": "True",
+    "HUBERT_Transfer_Filler": "False",
+    "HUBERT_Transfer_Role": "True",
+    "BERT_Acc": 89.2,
+    "HUBERT_Acc": 90.35
   },
   {
-    "source_corpus": "MNLI",
-    "target_corpus": "SST",
-    "hubert_transfer_bert": "True",
-    "hubert_transfer_filler": "False",
-    "hubert_transfer_role": "True",
-    "bert_acc": 93.5,
-    "hubert_acc": 92.6
+    "Source_Corpus": "MNLI",
+    "Target_Corpus": "SST",
+    "HUBERT_Transfer_BERT": "True",
+    "HUBERT_Transfer_Filler": "False",
+    "HUBERT_Transfer_Role": "True",
+    "BERT_Acc": 93.5,
+    "HUBERT_Acc": 92.6
   },
   {
-    "source_corpus": "QQP",
-    "target_corpus": "QNLI",
-    "hubert_transfer_bert": "False",
-    "hubert_transfer_filler": "True",
-    "hubert_transfer_role": "True",
-    "bert_acc": 90.5,
-    "hubert_acc": 90.7
+    "Source_Corpus": "QQP",
+    "Target_Corpus": "QNLI",
+    "HUBERT_Transfer_BERT": "False",
+    "HUBERT_Transfer_Filler": "True",
+    "HUBERT_Transfer_Role": "True",
+    "BERT_Acc": 90.5,
+    "HUBERT_Acc": 90.7
   },
   {
-    "source_corpus": "QQP",
-    "target_corpus": "MNLI",
-    "hubert_transfer_bert": "False",
-    "hubert_transfer_filler": "True",
-    "hubert_transfer_role": "True",
-    "bert_acc": 84.6,
-    "hubert_acc": 84.7
+    "Source_Corpus": "QQP",
+    "Target_Corpus": "MNLI",
+    "HUBERT_Transfer_BERT": "False",
+    "HUBERT_Transfer_Filler": "True",
+    "HUBERT_Transfer_Role": "True",
+    "BERT_Acc": 84.6,
+    "HUBERT_Acc": 84.7
   },
   {
-    "source_corpus": "QQP",
-    "target_corpus": "RTE",
-    "hubert_transfer_bert": "False",
-    "hubert_transfer_filler": "True",
-    "hubert_transfer_role": "False",
-    "bert_acc": 66.4,
-    "hubert_acc": 63.2
+    "Source_Corpus": "QQP",
+    "Target_Corpus": "RTE",
+    "HUBERT_Transfer_BERT": "False",
+    "HUBERT_Transfer_Filler": "True",
+    "HUBERT_Transfer_Role": "False",
+    "BERT_Acc": 66.4,
+    "HUBERT_Acc": 63.2
   },
   {
-    "source_corpus": "QQP",
-    "target_corpus": "SNLI",
-    "hubert_transfer_bert": "False",
-    "hubert_transfer_filler": "False",
-    "hubert_transfer_role": "True",
-    "bert_acc": 89.2,
-    "hubert_acc": 90.36
+    "Source_Corpus": "QQP",
+    "Target_Corpus": "SNLI",
+    "HUBERT_Transfer_BERT": "False",
+    "HUBERT_Transfer_Filler": "False",
+    "HUBERT_Transfer_Role": "True",
+    "BERT_Acc": 89.2,
+    "HUBERT_Acc": 90.36
   },
   {
-    "source_corpus": "QQP",
-    "target_corpus": "SST",
-    "hubert_transfer_bert": "True",
-    "hubert_transfer_filler": "True",
-    "hubert_transfer_role": "True",
-    "bert_acc": 93.5,
-    "hubert_acc": 91.0
+    "Source_Corpus": "QQP",
+    "Target_Corpus": "SST",
+    "HUBERT_Transfer_BERT": "True",
+    "HUBERT_Transfer_Filler": "True",
+    "HUBERT_Transfer_Role": "True",
+    "BERT_Acc": 93.5,
+    "HUBERT_Acc": 91.0
   }
 ]

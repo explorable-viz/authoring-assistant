@@ -1,44 +1,44 @@
 [
   {
     "model": "Model",
-    "self_bleu_↓": "Self-BLEU (↓)",
-    "unique_n_grams_↑_self": "n=4",
-    "unique_n_grams_↑_wt103": "n=4",
-    "unique_n_grams_↑_tbc": "n=4"
+    "self_BLEU_↓": "Self-BLEU (↓)",
+    "Unique_n_grams_↑_Self": "n=4",
+    "Unique_n_grams_↑_WT103": "n=4",
+    "Unique_n_grams_↑_TBC": "n=4"
   },
   {
     "model": "BERT (large)",
-    "self_bleu_↓": 9.43,
-    "unique_n_grams_↑_self": 98.01,
-    "unique_n_grams_↑_wt103": 98.43,
-    "unique_n_grams_↑_tbc": 98.59
+    "self_BLEU_↓": 9.43,
+    "Unique_n_grams_↑_Self": 98.01,
+    "Unique_n_grams_↑_WT103": 98.43,
+    "Unique_n_grams_↑_TBC": 98.59
   },
   {
     "model": "BERT (base)",
-    "self_bleu_↓": 10.06,
-    "unique_n_grams_↑_self": 98.14,
-    "unique_n_grams_↑_wt103": 98.55,
-    "unique_n_grams_↑_tbc": 98.56
+    "self_BLEU_↓": 10.06,
+    "Unique_n_grams_↑_Self": 98.14,
+    "Unique_n_grams_↑_WT103": 98.55,
+    "Unique_n_grams_↑_TBC": 98.56
   },
   {
     "model": "GPT",
-    "self_bleu_↓": 40.02,
-    "unique_n_grams_↑_self": 87.28,
-    "unique_n_grams_↑_wt103": 91.12,
-    "unique_n_grams_↑_tbc": 88.42
+    "self_BLEU_↓": 40.02,
+    "Unique_n_grams_↑_Self": 87.28,
+    "Unique_n_grams_↑_WT103": 91.12,
+    "Unique_n_grams_↑_TBC": 88.42
   },
   {
     "model": "WT103",
-    "self_bleu_↓": 9.8,
-    "unique_n_grams_↑_self": 99.05,
-    "unique_n_grams_↑_wt103": 97.44,
-    "unique_n_grams_↑_tbc": 99.23
+    "self_BLEU_↓": 9.8,
+    "Unique_n_grams_↑_Self": 99.05,
+    "Unique_n_grams_↑_WT103": 97.44,
+    "Unique_n_grams_↑_TBC": 99.23
   },
   {
     "model": "TBC",
-    "self_bleu_↓": 12.51,
-    "unique_n_grams_↑_self": 98.73,
-    "unique_n_grams_↑_wt103": 98.81,
-    "unique_n_grams_↑_tbc": 96.31
+    "self_BLEU_↓": 12.51,
+    "Unique_n_grams_↑_Self": 98.73,
+    "Unique_n_grams_↑_WT103": 98.81,
+    "Unique_n_grams_↑_TBC": 96.31
   }
 ]

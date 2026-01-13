@@ -1,22 +1,22 @@
 [
   {
     "data": "EL",
-    "general_add": 0.87,
-    "general_del": 0.01,
-    "fine_add": 0.36,
-    "fine_del": 0.17,
-    "ultra_fine_add": 2.03,
-    "ultra_fine_del": 0.12,
+    "general_Add": 0.87,
+    "general_Del": 0.01,
+    "fine_Add": 0.36,
+    "fine_Del": 0.17,
+    "ultra_Fine_Add": 2.03,
+    "ultra_Fine_Del": 0.12,
     "filter": 9.4
   },
   {
     "data": "HEAD",
-    "general_add": 1.18,
-    "general_del": 0.0,
-    "fine_add": 0.51,
-    "fine_del": 0.01,
-    "ultra_fine_add": 1.15,
-    "ultra_fine_del": 0.16,
+    "general_Add": 1.18,
+    "general_Del": 0.0,
+    "fine_Add": 0.51,
+    "fine_Del": 0.01,
+    "ultra_Fine_Add": 1.15,
+    "ultra_Fine_Del": 0.16,
     "filter": 10.0
   }
 ]

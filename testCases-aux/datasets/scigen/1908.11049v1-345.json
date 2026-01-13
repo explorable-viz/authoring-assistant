@@ -1,62 +1,62 @@
 [
   {
     "dataset": "Chatzakou:2017:MBD:3091478.3091487",
-    "num_tweets": 9484,
+    "num_Tweets": 9484,
     "labels": "aggressive, bullying, spam, normal",
-    "annotators_tweet": 5
+    "annotators_Tweet": 5
   },
   {
     "dataset": "DBLP:conf/naacl/WaseemH16",
-    "num_tweets": "16, 914",
+    "num_Tweets": "16, 914",
     "labels": "racist, sexist, normal",
-    "annotators_tweet": 1
+    "annotators_Tweet": 1
   },
   {
     "dataset": "DavidsonWMW17",
-    "num_tweets": "24, 802",
+    "num_Tweets": "24, 802",
     "labels": "hateful, offensive (but not hateful), neither",
-    "annotators_tweet": "3 or more"
+    "annotators_Tweet": "3 or more"
   },
   {
     "dataset": "Golbeck2017",
-    "num_tweets": 35000,
+    "num_Tweets": 35000,
     "labels": "the worst, threats, hate speech, direct",
-    "annotators_tweet": "2 to 3"
+    "annotators_Tweet": "2 to 3"
   },
   {
     "dataset": "Golbeck2017",
-    "num_tweets": 35000,
+    "num_Tweets": 35000,
     "labels": "harassment, potentially offensive, non-harassment",
-    "annotators_tweet": "2 to 3"
+    "annotators_Tweet": "2 to 3"
   },
   {
     "dataset": "FountaDCLBSVSK18",
-    "num_tweets": "80, 000",
+    "num_Tweets": "80, 000",
     "labels": "offensive, abusive, hateful speech,",
-    "annotators_tweet": "5 to 20"
+    "annotators_Tweet": "5 to 20"
   },
   {
     "dataset": "FountaDCLBSVSK18",
-    "num_tweets": "80, 000",
+    "num_Tweets": "80, 000",
     "labels": "aggressive, cyberbullying, spam, normal",
-    "annotators_tweet": "5 to 20"
+    "annotators_Tweet": "5 to 20"
   },
   {
     "dataset": "hatelingo",
-    "num_tweets": 28608,
+    "num_Tweets": 28608,
     "labels": "directed, generalized + target = archaic, class, disability,",
-    "annotators_tweet": 3
+    "annotators_Tweet": 3
   },
   {
     "dataset": "hatelingo",
-    "num_tweets": 28608,
+    "num_Tweets": 28608,
     "labels": "ethnicity, gender, nationality, religion, sexual orientation",
-    "annotators_tweet": 3
+    "annotators_Tweet": 3
   },
   {
     "dataset": "Ours",
-    "num_tweets": 13000,
+    "num_Tweets": 13000,
     "labels": "Labels for five different aspects",
-    "annotators_tweet": 5
+    "annotators_Tweet": 5
   }
 ]

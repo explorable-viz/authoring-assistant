@@ -1,42 +1,42 @@
 [
   {
-    "approach": "Seq2Seq",
-    "sql": 1.9,
-    "semql": 11.4
+    "Approach": "Seq2Seq",
+    "SQL": 1.9,
+    "SemQL": 11.4
   },
   {
-    "approach": "Seq2Seq + Attention",
-    "sql": 1.8,
-    "semql": 14.7
+    "Approach": "Seq2Seq + Attention",
+    "SQL": 1.8,
+    "SemQL": 14.7
   },
   {
-    "approach": "Seq2Seq + Copying",
-    "sql": 4.1,
-    "semql": 18.5
+    "Approach": "Seq2Seq + Copying",
+    "SQL": 4.1,
+    "SemQL": 18.5
   },
   {
-    "approach": "TypeSQL",
-    "sql": 8.0,
-    "semql": 14.4
+    "Approach": "TypeSQL",
+    "SQL": 8.0,
+    "SemQL": 14.4
   },
   {
-    "approach": "SQLNet",
-    "sql": 10.9,
-    "semql": 17.5
+    "Approach": "SQLNet",
+    "SQL": 10.9,
+    "SemQL": 17.5
   },
   {
-    "approach": "SyntaxSQLNet",
-    "sql": 18.9,
-    "semql": 27.5
+    "Approach": "SyntaxSQLNet",
+    "SQL": 18.9,
+    "SemQL": 27.5
   },
   {
-    "approach": " BERT",
-    "sql": "",
-    "semql": ""
+    "Approach": " BERT",
+    "SQL": "",
+    "SemQL": ""
   },
   {
-    "approach": "SyntaxSQLNet(BERT)",
-    "sql": 25.0,
-    "semql": 35.8
+    "Approach": "SyntaxSQLNet(BERT)",
+    "SQL": 25.0,
+    "SemQL": 35.8
   }
 ]

@@ -1,32 +1,32 @@
 [
   {
-    "models": "Word baseline",
-    "p": 93.72,
-    "r": 93.44,
-    "f1": 93.58
+    "Models": "Word baseline",
+    "P": 93.72,
+    "R": 93.44,
+    "F1": 93.58
   },
   {
-    "models": "+char+bichar LSTM",
-    "p": 94.07,
-    "r": 94.42,
-    "f1": 94.24
+    "Models": "+char+bichar LSTM",
+    "P": 94.07,
+    "R": 94.42,
+    "F1": 94.24
   },
   {
-    "models": "Char baseline",
-    "p": 93.66,
-    "r": 93.31,
-    "f1": 93.48
+    "Models": "Char baseline",
+    "P": 93.66,
+    "R": 93.31,
+    "F1": 93.48
   },
   {
-    "models": "+bichar+softword",
-    "p": 94.53,
-    "r": 94.29,
-    "f1": 94.41
+    "Models": "+bichar+softword",
+    "P": 94.53,
+    "R": 94.29,
+    "F1": 94.41
   },
   {
-    "models": "Lattice",
-    "p": 94.81,
-    "r": 94.11,
-    "f1": 94.46
+    "Models": "Lattice",
+    "P": 94.81,
+    "R": 94.11,
+    "F1": 94.46
   }
 ]

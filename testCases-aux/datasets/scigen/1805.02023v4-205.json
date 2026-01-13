@@ -1,62 +1,62 @@
 [
   {
-    "models": "Chen et al. ( 2006a )",
-    "p": 91.22,
-    "r": 81.71,
-    "f1": 86.2
+    "Models": "Chen et al. ( 2006a )",
+    "P": 91.22,
+    "R": 81.71,
+    "F1": 86.2
   },
   {
-    "models": "Zhang et al. ( 2006 )*",
-    "p": 92.2,
-    "r": 90.18,
-    "f1": 91.18
+    "Models": "Zhang et al. ( 2006 )*",
+    "P": 92.2,
+    "R": 90.18,
+    "F1": 91.18
   },
   {
-    "models": "Zhou et al. ( 2013 )",
-    "p": 91.86,
-    "r": 88.75,
-    "f1": 90.28
+    "Models": "Zhou et al. ( 2013 )",
+    "P": 91.86,
+    "R": 88.75,
+    "F1": 90.28
   },
   {
-    "models": "Lu et al. ( 2016 )",
-    "p": "–",
-    "r": "–",
-    "f1": 87.94
+    "Models": "Lu et al. ( 2016 )",
+    "P": "–",
+    "R": "–",
+    "F1": 87.94
   },
   {
-    "models": "Dong et al. ( 2016 )",
-    "p": 91.28,
-    "r": 90.62,
-    "f1": 90.95
+    "Models": "Dong et al. ( 2016 )",
+    "P": 91.28,
+    "R": 90.62,
+    "F1": 90.95
   },
   {
-    "models": "Word baseline",
-    "p": 90.57,
-    "r": 83.06,
-    "f1": 86.65
+    "Models": "Word baseline",
+    "P": 90.57,
+    "R": 83.06,
+    "F1": 86.65
   },
   {
-    "models": "+char+bichar LSTM",
-    "p": 91.05,
-    "r": 89.53,
-    "f1": 90.28
+    "Models": "+char+bichar LSTM",
+    "P": 91.05,
+    "R": 89.53,
+    "F1": 90.28
   },
   {
-    "models": "Char baseline",
-    "p": 90.74,
-    "r": 86.96,
-    "f1": 88.81
+    "Models": "Char baseline",
+    "P": 90.74,
+    "R": 86.96,
+    "F1": 88.81
   },
   {
-    "models": "+bichar+softword",
-    "p": 92.97,
-    "r": 90.8,
-    "f1": 91.87
+    "Models": "+bichar+softword",
+    "P": 92.97,
+    "R": 90.8,
+    "F1": 91.87
   },
   {
-    "models": "Lattice",
-    "p": 93.57,
-    "r": 92.79,
-    "f1": 93.18
+    "Models": "Lattice",
+    "P": 93.57,
+    "R": 92.79,
+    "F1": 93.18
   }
 ]

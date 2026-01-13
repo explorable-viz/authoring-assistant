@@ -1,44 +1,44 @@
 [
   {
-    "approach": " Approach",
-    "easy": " Easy",
-    "medium": " Medium",
-    "hard": " Hard",
-    "extra": " Hard"
+    "Approach": " Approach",
+    "Easy": " Easy",
+    "Medium": " Medium",
+    "Hard": " Hard",
+    "Extra": " Hard"
   },
   {
-    "approach": "SyntaxSQLNet",
-    "easy": 38.6,
-    "medium": 17.6,
-    "hard": 16.3,
-    "extra": 4.9
+    "Approach": "SyntaxSQLNet",
+    "Easy": 38.6,
+    "Medium": 17.6,
+    "Hard": 16.3,
+    "Extra": 4.9
   },
   {
-    "approach": "SyntaxSQLNet",
-    "easy": 42.9,
-    "medium": 24.9,
-    "hard": 21.9,
-    "extra": 8.6
+    "Approach": "SyntaxSQLNet",
+    "Easy": 42.9,
+    "Medium": 24.9,
+    "Hard": 21.9,
+    "Extra": 8.6
   },
   {
-    "approach": "(BERT)",
-    "easy": 42.9,
-    "medium": 24.9,
-    "hard": 21.9,
-    "extra": 8.6
+    "Approach": "(BERT)",
+    "Easy": 42.9,
+    "Medium": 24.9,
+    "Hard": 21.9,
+    "Extra": 8.6
   },
   {
-    "approach": " IRNet",
-    "easy": 70.1,
-    "medium": 49.2,
-    "hard": 39.5,
-    "extra": 19.1
+    "Approach": " IRNet",
+    "Easy": 70.1,
+    "Medium": 49.2,
+    "Hard": 39.5,
+    "Extra": 19.1
   },
   {
-    "approach": " IRNet(BERT)",
-    "easy": 77.2,
-    "medium": 58.7,
-    "hard": 48.1,
-    "extra": 25.3
+    "Approach": " IRNet(BERT)",
+    "Easy": 77.2,
+    "Medium": 58.7,
+    "Hard": 48.1,
+    "Extra": 25.3
   }
 ]

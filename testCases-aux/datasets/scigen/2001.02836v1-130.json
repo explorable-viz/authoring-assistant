@@ -5,10 +5,10 @@
     "keller_dobj": 0.29,
     "keller_amod": 0.28,
     "keller_average": 0.29,
-    "sp_10k_nsubj": 0.32,
-    "sp_10k_dobj": 0.53,
-    "sp_10k_amod": 0.62,
-    "sp_10k_average": 0.49
+    "sP_10K_nsubj": 0.32,
+    "sP_10K_dobj": 0.53,
+    "sP_10K_amod": 0.62,
+    "sP_10K_average": 0.49
   },
   {
     "model": "GloVe",
@@ -16,10 +16,10 @@
     "keller_dobj": 0.37,
     "keller_amod": 0.32,
     "keller_average": 0.35,
-    "sp_10k_nsubj": 0.57,
-    "sp_10k_dobj": 0.6,
-    "sp_10k_amod": 0.68,
-    "sp_10k_average": 0.62
+    "sP_10K_nsubj": 0.57,
+    "sP_10K_dobj": 0.6,
+    "sP_10K_amod": 0.68,
+    "sP_10K_average": 0.62
   },
   {
     "model": "D-embeddings",
@@ -27,10 +27,10 @@
     "keller_dobj": 0.19,
     "keller_amod": 0.22,
     "keller_average": 0.21,
-    "sp_10k_nsubj": 0.66,
-    "sp_10k_dobj": 0.71,
-    "sp_10k_amod": 0.77,
-    "sp_10k_average": 0.71
+    "sP_10K_nsubj": 0.66,
+    "sP_10K_dobj": 0.71,
+    "sP_10K_amod": 0.77,
+    "sP_10K_average": 0.71
   },
   {
     "model": "ELMo",
@@ -38,10 +38,10 @@
     "keller_dobj": 0.23,
     "keller_amod": 0.06,
     "keller_average": 0.15,
-    "sp_10k_nsubj": 0.09,
-    "sp_10k_dobj": 0.29,
-    "sp_10k_amod": 0.38,
-    "sp_10k_average": 0.25
+    "sP_10K_nsubj": 0.09,
+    "sP_10K_dobj": 0.29,
+    "sP_10K_amod": 0.38,
+    "sP_10K_average": 0.25
   },
   {
     "model": "BERT (static)",
@@ -49,10 +49,10 @@
     "keller_dobj": 0.11,
     "keller_amod": 0.05,
     "keller_average": 0.08,
-    "sp_10k_nsubj": 0.25,
-    "sp_10k_dobj": 0.32,
-    "sp_10k_amod": 0.27,
-    "sp_10k_average": 0.28
+    "sP_10K_nsubj": 0.25,
+    "sP_10K_dobj": 0.32,
+    "sP_10K_amod": 0.27,
+    "sP_10K_average": 0.28
   },
   {
     "model": "BERT (dynamic)",
@@ -60,10 +60,10 @@
     "keller_dobj": 0.19,
     "keller_amod": 0.23,
     "keller_average": 0.21,
-    "sp_10k_nsubj": 0.35,
-    "sp_10k_dobj": 0.45,
-    "sp_10k_amod": 0.51,
-    "sp_10k_average": 0.41
+    "sP_10K_nsubj": 0.35,
+    "sP_10K_dobj": 0.45,
+    "sP_10K_amod": 0.51,
+    "sP_10K_average": 0.41
   },
   {
     "model": "PP",
@@ -71,10 +71,10 @@
     "keller_dobj": 0.66,
     "keller_amod": 0.26,
     "keller_average": 0.46,
-    "sp_10k_nsubj": 0.75,
-    "sp_10k_dobj": 0.74,
-    "sp_10k_amod": 0.75,
-    "sp_10k_average": 0.75
+    "sP_10K_nsubj": 0.75,
+    "sP_10K_dobj": 0.74,
+    "sP_10K_amod": 0.75,
+    "sP_10K_average": 0.75
   },
   {
     "model": "DS",
@@ -82,10 +82,10 @@
     "keller_dobj": 0.53,
     "keller_amod": 0.32,
     "keller_average": 0.43,
-    "sp_10k_nsubj": 0.59,
-    "sp_10k_dobj": 0.65,
-    "sp_10k_amod": 0.67,
-    "sp_10k_average": 0.64
+    "sP_10K_nsubj": 0.59,
+    "sP_10K_dobj": 0.65,
+    "sP_10K_amod": 0.67,
+    "sP_10K_average": 0.64
   },
   {
     "model": "NN",
@@ -93,10 +93,10 @@
     "keller_dobj": 0.16,
     "keller_amod": 0.13,
     "keller_average": 0.15,
-    "sp_10k_nsubj": 0.7,
-    "sp_10k_dobj": 0.68,
-    "sp_10k_amod": 0.68,
-    "sp_10k_average": 0.69
+    "sP_10K_nsubj": 0.7,
+    "sP_10K_dobj": 0.68,
+    "sP_10K_amod": 0.68,
+    "sP_10K_average": 0.69
   },
   {
     "model": "MWE",
@@ -104,9 +104,9 @@
     "keller_dobj": 0.63,
     "keller_amod": 0.43,
     "keller_average": 0.53,
-    "sp_10k_nsubj": 0.76,
-    "sp_10k_dobj": 0.79,
-    "sp_10k_amod": 0.78,
-    "sp_10k_average": 0.78
+    "sP_10K_nsubj": 0.76,
+    "sP_10K_dobj": 0.79,
+    "sP_10K_amod": 0.78,
+    "sP_10K_average": 0.78
   }
 ]

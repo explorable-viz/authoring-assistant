@@ -1,38 +1,38 @@
 [
   {
-    "model": "TransWeight-feat",
-    "w_param": " n+  n",
-    "cos_d": 0.344,
-    "q1": 2,
-    "q2": 5,
-    "q3": 28,
+    "Model": "TransWeight-feat",
+    "W_param": " n+  n",
+    "Cos_d": 0.344,
+    "Q1": 2,
+    "Q2": 5,
+    "Q3": 28,
     "≤_5": 50.82
   },
   {
-    "model": "TransWeight-trans",
-    "w_param": " t+  n",
-    "cos_d": 0.338,
-    "q1": 2,
-    "q2": 5,
-    "q3": 24,
+    "Model": "TransWeight-trans",
+    "W_param": " t+  n",
+    "Cos_d": 0.338,
+    "Q1": 2,
+    "Q2": 5,
+    "Q3": 24,
     "≤_5": 52.9
   },
   {
-    "model": "TransWeight-mat",
-    "w_param": " tn+  n",
-    "cos_d": 0.338,
-    "q1": 2,
-    "q2": 5,
-    "q3": 25,
+    "Model": "TransWeight-mat",
+    "W_param": " tn+  n",
+    "Cos_d": 0.338,
+    "Q1": 2,
+    "Q2": 5,
+    "Q3": 25,
     "≤_5": 53.24
   },
   {
-    "model": " TransWeight",
-    "w_param": " tn2+  n",
-    "cos_d": 0.31,
-    "q1": 1,
-    "q2": 3,
-    "q3": 11,
+    "Model": " TransWeight",
+    "W_param": " tn2+  n",
+    "Cos_d": 0.31,
+    "Q1": 1,
+    "Q2": 3,
+    "Q3": 11,
     "≤_5": 65.21
   }
 ]

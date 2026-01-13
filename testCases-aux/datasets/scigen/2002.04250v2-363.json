@@ -1,38 +1,38 @@
 [
   {
     "_1": "NAT (Gu et al.,  2018 )",
-    "wmt14_en_de": 17.69,
-    "wmt14_de_en": 20.62,
-    "wmt16_ro_en": 29.79
+    "WMT14_En_De": 17.69,
+    "WMT14_De_En": 20.62,
+    "WMT16_Ro_En": 29.79
   },
   {
     "_1": "iNAT (Lee et al.,  2018 )",
-    "wmt14_en_de": 21.54,
-    "wmt14_de_en": 25.43,
-    "wmt16_ro_en": 29.32
+    "WMT14_En_De": 21.54,
+    "WMT14_De_En": 25.43,
+    "WMT16_Ro_En": 29.32
   },
   {
     "_1": "FlowSeq-large (raw data) (Ma et al.,  2019 )",
-    "wmt14_en_de": 20.85,
-    "wmt14_de_en": 25.4,
-    "wmt16_ro_en": 29.86
+    "WMT14_En_De": 20.85,
+    "WMT14_De_En": 25.4,
+    "WMT16_Ro_En": 29.86
   },
   {
     "_1": "NAT (our implementation)",
-    "wmt14_en_de": 22.32,
-    "wmt14_de_en": 24.83,
-    "wmt16_ro_en": 29.93
+    "WMT14_En_De": 22.32,
+    "WMT14_De_En": 24.83,
+    "WMT16_Ro_En": 29.93
   },
   {
     "_1": "NAT +MMI",
-    "wmt14_en_de": 23.8,
-    "wmt14_de_en": 26.05,
-    "wmt16_ro_en": 30.5
+    "WMT14_En_De": 23.8,
+    "WMT14_De_En": 26.05,
+    "WMT16_Ro_En": 30.5
   },
   {
     "_1": "",
-    "wmt14_en_de": "(+1.48)",
-    "wmt14_de_en": "(+1.22)",
-    "wmt16_ro_en": "(+0.57)"
+    "WMT14_En_De": "(+1.48)",
+    "WMT14_De_En": "(+1.22)",
+    "WMT16_Ro_En": "(+0.57)"
   }
 ]

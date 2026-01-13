@@ -1,65 +1,65 @@
 [
   {
-    "transfer_learning_schedule": "Health",
-    "es2en_khresmoi": 45.1,
-    "es2en_health": 35.7,
-    "es2en_bio": 34.0,
-    "en2es_khresmoi": 41.2,
-    "en2es_health": 34.7,
-    "en2es_bio": 36.1
+    "Transfer_learning_schedule": "Health",
+    "es2en_Khresmoi": 45.1,
+    "es2en_Health": 35.7,
+    "es2en_Bio": 34.0,
+    "en2es_Khresmoi": 41.2,
+    "en2es_Health": 34.7,
+    "en2es_Bio": 36.1
   },
   {
-    "transfer_learning_schedule": "All-biomed",
-    "es2en_khresmoi": 49.8,
-    "es2en_health": 35.4,
-    "es2en_bio": 35.7,
-    "en2es_khresmoi": 43.4,
-    "en2es_health": 33.9,
-    "en2es_bio": 37.5
+    "Transfer_learning_schedule": "All-biomed",
+    "es2en_Khresmoi": 49.8,
+    "es2en_Health": 35.4,
+    "es2en_Bio": 35.7,
+    "en2es_Khresmoi": 43.4,
+    "en2es_Health": 33.9,
+    "en2es_Bio": 37.5
   },
   {
-    "transfer_learning_schedule": "All-biomed → Health",
-    "es2en_khresmoi": 48.9,
-    "es2en_health": 36.4,
-    "es2en_bio": 35.9,
-    "en2es_khresmoi": 43.0,
-    "en2es_health": 35.2,
-    "en2es_bio": 38.0
+    "Transfer_learning_schedule": "All-biomed → Health",
+    "es2en_Khresmoi": 48.9,
+    "es2en_Health": 36.4,
+    "es2en_Bio": 35.9,
+    "en2es_Khresmoi": 43.0,
+    "en2es_Health": 35.2,
+    "en2es_Bio": 38.0
   },
   {
-    "transfer_learning_schedule": "All-biomed → Bio",
-    "es2en_khresmoi": 48.0,
-    "es2en_health": 34.6,
-    "es2en_bio": 37.2,
-    "en2es_khresmoi": 43.2,
-    "en2es_health": 34.1,
-    "en2es_bio": 40.5
+    "Transfer_learning_schedule": "All-biomed → Bio",
+    "es2en_Khresmoi": 48.0,
+    "es2en_Health": 34.6,
+    "es2en_Bio": 37.2,
+    "en2es_Khresmoi": 43.2,
+    "en2es_Health": 34.1,
+    "en2es_Bio": 40.5
   },
   {
-    "transfer_learning_schedule": "Health → All-biomed",
-    "es2en_khresmoi": 52.1,
-    "es2en_health": 36.7,
-    "es2en_bio": 37.0,
-    "en2es_khresmoi": 44.2,
-    "en2es_health": 35.0,
-    "en2es_bio": 39.0
+    "Transfer_learning_schedule": "Health → All-biomed",
+    "es2en_Khresmoi": 52.1,
+    "es2en_Health": 36.7,
+    "es2en_Bio": 37.0,
+    "en2es_Khresmoi": 44.2,
+    "en2es_Health": 35.0,
+    "en2es_Bio": 39.0
   },
   {
-    "transfer_learning_schedule": "Health → All-biomed → Health",
-    "es2en_khresmoi": 51.1,
-    "es2en_health": 37.0,
-    "es2en_bio": 37.2,
-    "en2es_khresmoi": 44.0,
-    "en2es_health": 36.3,
-    "en2es_bio": 39.5
+    "Transfer_learning_schedule": "Health → All-biomed → Health",
+    "es2en_Khresmoi": 51.1,
+    "es2en_Health": 37.0,
+    "es2en_Bio": 37.2,
+    "en2es_Khresmoi": 44.0,
+    "en2es_Health": 36.3,
+    "en2es_Bio": 39.5
   },
   {
-    "transfer_learning_schedule": "Health → All-biomed → Bio",
-    "es2en_khresmoi": 50.6,
-    "es2en_health": 36.0,
-    "es2en_bio": 38.0,
-    "en2es_khresmoi": 45.2,
-    "en2es_health": 35.3,
-    "en2es_bio": 41.3
+    "Transfer_learning_schedule": "Health → All-biomed → Bio",
+    "es2en_Khresmoi": 50.6,
+    "es2en_Health": 36.0,
+    "es2en_Bio": 38.0,
+    "en2es_Khresmoi": 45.2,
+    "en2es_Health": 35.3,
+    "en2es_Bio": 41.3
   }
 ]

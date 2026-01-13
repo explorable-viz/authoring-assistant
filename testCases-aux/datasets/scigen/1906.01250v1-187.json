@@ -1,26 +1,26 @@
 [
   {
     "our_model": "weakly-supervised",
-    "aida_a": 88.05,
-    "aida_b": 89.66,
+    "aIDA_A": 88.05,
+    "aIDA_B": 89.66,
     "avg": 86.18
   },
   {
     "our_model": "fully-supervised",
-    "aida_a": "",
-    "aida_b": "",
+    "aIDA_A": "",
+    "aIDA_B": "",
     "avg": ""
   },
   {
     "our_model": "on Wikipedia",
-    "aida_a": 87.23,
-    "aida_b": 87.83,
+    "aIDA_A": 87.23,
+    "aIDA_B": 87.83,
     "avg": 85.84
   },
   {
     "our_model": "on AIDA CoNLL",
-    "aida_a": 91.34,
-    "aida_b": 91.87,
+    "aIDA_A": 91.34,
+    "aIDA_B": 91.87,
     "avg": 84.55
   }
 ]

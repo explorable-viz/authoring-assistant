@@ -1,74 +1,74 @@
 [
   {
-    "model": "UNC ",
-    "precision": 36.39,
-    "recall_5": 86.79,
-    "f1": 51.38
+    "Model": "UNC ",
+    "Precision": 36.39,
+    "Recall_5": 86.79,
+    "F1": 51.38
   },
   {
-    "model": "UCL ",
-    "precision": 22.74,
-    "recall_5": 84.54,
-    "f1": 35.84
+    "Model": "UCL ",
+    "Precision": 22.74,
+    "Recall_5": 84.54,
+    "F1": 35.84
   },
   {
-    "model": "UKP-Athene ",
-    "precision": 23.67,
-    "recall_5": 85.81,
-    "f1": 37.11
+    "Model": "UKP-Athene ",
+    "Precision": 23.67,
+    "Recall_5": 85.81,
+    "F1": 37.11
   },
   {
-    "model": "DREAM-XLNet ",
-    "precision": 26.6,
-    "recall_5": 87.33,
-    "f1": 40.79
+    "Model": "DREAM-XLNet ",
+    "Precision": 26.6,
+    "Recall_5": 87.33,
+    "F1": 40.79
   },
   {
-    "model": "DREAM-RoBERTa ",
-    "precision": 26.67,
-    "recall_5": 87.64,
-    "f1": 40.9
+    "Model": "DREAM-RoBERTa ",
+    "Precision": 26.67,
+    "Recall_5": 87.64,
+    "F1": 40.9
   },
   {
-    "model": "Pointwise",
-    "precision": 25.14,
-    "recall_5": 88.25,
-    "f1": 39.13
+    "Model": "Pointwise",
+    "Precision": 25.14,
+    "Recall_5": 88.25,
+    "F1": 39.13
   },
   {
-    "model": "Pointwise + Threshold",
-    "precision": 38.18,
-    "recall_5": 88.0,
-    "f1": 53.25
+    "Model": "Pointwise + Threshold",
+    "Precision": 38.18,
+    "Recall_5": 88.0,
+    "F1": 53.25
   },
   {
-    "model": "Pointwise + HNM",
-    "precision": 25.13,
-    "recall_5": 88.29,
-    "f1": 39.13
+    "Model": "Pointwise + HNM",
+    "Precision": 25.13,
+    "Recall_5": 88.29,
+    "F1": 39.13
   },
   {
-    "model": "Pairwise Ranknet",
-    "precision": 24.97,
-    "recall_5": 88.2,
-    "f1": 38.93
+    "Model": "Pairwise Ranknet",
+    "Precision": 24.97,
+    "Recall_5": 88.2,
+    "F1": 38.93
   },
   {
-    "model": "Pairwise Ranknet + HNM",
-    "precision": 24.97,
-    "recall_5": 88.32,
-    "f1": 38.93
+    "Model": "Pairwise Ranknet + HNM",
+    "Precision": 24.97,
+    "Recall_5": 88.32,
+    "F1": 38.93
   },
   {
-    "model": "Pairwise Hinge",
-    "precision": 24.94,
-    "recall_5": 88.07,
-    "f1": 38.88
+    "Model": "Pairwise Hinge",
+    "Precision": 24.94,
+    "Recall_5": 88.07,
+    "F1": 38.88
   },
   {
-    "model": "Pairwise Hinge + HNM",
-    "precision": 25.01,
-    "recall_5": 88.28,
-    "f1": 38.98
+    "Model": "Pairwise Hinge + HNM",
+    "Precision": 25.01,
+    "Recall_5": 88.28,
+    "F1": 38.98
   }
 ]

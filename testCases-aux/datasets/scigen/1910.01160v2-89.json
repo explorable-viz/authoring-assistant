@@ -1,20 +1,20 @@
 [
   {
-    "method": "Baseline",
-    "p": 0.7,
-    "r": 0.64,
-    "f1": 0.67
+    "Method": "Baseline",
+    "P": 0.7,
+    "R": 0.64,
+    "F1": 0.67
   },
   {
-    "method": "Coh-Metrix",
-    "p": 0.72,
-    "r": 0.66,
-    "f1": 0.74
+    "Method": "Coh-Metrix",
+    "P": 0.72,
+    "R": 0.66,
+    "F1": 0.74
   },
   {
-    "method": "Pre-trained BERT",
-    "p": 0.81,
-    "r": 0.75,
-    "f1": 0.78
+    "Method": "Pre-trained BERT",
+    "P": 0.81,
+    "R": 0.75,
+    "F1": 0.78
   }
 ]

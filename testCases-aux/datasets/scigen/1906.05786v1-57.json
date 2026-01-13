@@ -1,57 +1,57 @@
 [
   {
     "_1": "Health → All-biomed",
-    "es2en_khresmoi": 52.1,
-    "es2en_health": 36.7,
-    "es2en_bio": 37.0,
-    "es2en_test": 42.4,
-    "en2es_khresmoi": 44.2,
-    "en2es_health": 35.0,
-    "en2es_bio": 39.0,
-    "en2es_test": 44.9
+    "es2en_Khresmoi": 52.1,
+    "es2en_Health": 36.7,
+    "es2en_Bio": 37.0,
+    "es2en_Test": 42.4,
+    "en2es_Khresmoi": 44.2,
+    "en2es_Health": 35.0,
+    "en2es_Bio": 39.0,
+    "en2es_Test": 44.9
   },
   {
     "_1": "Health → All-biomed → Health",
-    "es2en_khresmoi": 51.1,
-    "es2en_health": 37.0,
-    "es2en_bio": 37.2,
-    "es2en_test": "-",
-    "en2es_khresmoi": 44.0,
-    "en2es_health": 36.3,
-    "en2es_bio": 39.5,
-    "en2es_test": "-"
+    "es2en_Khresmoi": 51.1,
+    "es2en_Health": 37.0,
+    "es2en_Bio": 37.2,
+    "es2en_Test": "-",
+    "en2es_Khresmoi": 44.0,
+    "en2es_Health": 36.3,
+    "en2es_Bio": 39.5,
+    "en2es_Test": "-"
   },
   {
     "_1": "Health → All-biomed → Bio",
-    "es2en_khresmoi": 50.6,
-    "es2en_health": 36.0,
-    "es2en_bio": 38.0,
-    "es2en_test": "-",
-    "en2es_khresmoi": 45.2,
-    "en2es_health": 35.3,
-    "en2es_bio": 41.3,
-    "en2es_test": "-"
+    "es2en_Khresmoi": 50.6,
+    "es2en_Health": 36.0,
+    "es2en_Bio": 38.0,
+    "es2en_Test": "-",
+    "en2es_Khresmoi": 45.2,
+    "en2es_Health": 35.3,
+    "en2es_Bio": 41.3,
+    "en2es_Test": "-"
   },
   {
     "_1": "Uniform ensemble",
-    "es2en_khresmoi": 52.2,
-    "es2en_health": 36.9,
-    "es2en_bio": 37.9,
-    "es2en_test": 43.0,
-    "en2es_khresmoi": 45.1,
-    "en2es_health": 35.6,
-    "en2es_bio": 40.2,
-    "en2es_test": 45.4
+    "es2en_Khresmoi": 52.2,
+    "es2en_Health": 36.9,
+    "es2en_Bio": 37.9,
+    "es2en_Test": 43.0,
+    "en2es_Khresmoi": 45.1,
+    "en2es_Health": 35.6,
+    "en2es_Bio": 40.2,
+    "en2es_Test": 45.4
   },
   {
     "_1": "BI ensemble (  α=0.5)",
-    "es2en_khresmoi": 52.1,
-    "es2en_health": 37.0,
-    "es2en_bio": 38.1,
-    "es2en_test": 42.9,
-    "en2es_khresmoi": 44.5,
-    "en2es_health": 35.7,
-    "en2es_bio": 41.2,
-    "en2es_test": 45.6
+    "es2en_Khresmoi": 52.1,
+    "es2en_Health": 37.0,
+    "es2en_Bio": 38.1,
+    "es2en_Test": 42.9,
+    "en2es_Khresmoi": 44.5,
+    "en2es_Health": 35.7,
+    "en2es_Bio": 41.2,
+    "en2es_Test": 45.6
   }
 ]

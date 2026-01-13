@@ -1,67 +1,67 @@
 [
   {
-    "model": "TF-IDF GloVe",
-    "swda": 66.5,
-    "mrda": 78.7
+    "Model": "TF-IDF GloVe",
+    "SwDA": 66.5,
+    "MRDA": 78.7
   },
   {
-    "model": "Kalchbrenner and Blunsom ( 2013 )",
-    "swda": 73.9,
-    "mrda": "-"
+    "Model": "Kalchbrenner and Blunsom ( 2013 )",
+    "SwDA": 73.9,
+    "MRDA": "-"
   },
   {
-    "model": "Lee and Dernoncourt ( 2016 )",
-    "swda": 73.9,
-    "mrda": 84.6
+    "Model": "Lee and Dernoncourt ( 2016 )",
+    "SwDA": 73.9,
+    "MRDA": 84.6
   },
   {
-    "model": "Khanpour et al. ( 2016 )",
-    "swda": 75.8,
-    "mrda": 86.8
+    "Model": "Khanpour et al. ( 2016 )",
+    "SwDA": 75.8,
+    "MRDA": 86.8
   },
   {
-    "model": "Ji et al. ( 2016 )",
-    "swda": 77.0,
-    "mrda": "-"
+    "Model": "Ji et al. ( 2016 )",
+    "SwDA": 77.0,
+    "MRDA": "-"
   },
   {
-    "model": "Shen and Lee ( 2016 )",
-    "swda": 72.6,
-    "mrda": "-"
+    "Model": "Shen and Lee ( 2016 )",
+    "SwDA": 72.6,
+    "MRDA": "-"
   },
   {
-    "model": "Li and Wu ( 2016 )",
-    "swda": 79.4,
-    "mrda": "-"
+    "Model": "Li and Wu ( 2016 )",
+    "SwDA": 79.4,
+    "MRDA": "-"
   },
   {
-    "model": "Ortega and Vu ( 2017 )",
-    "swda": 73.8,
-    "mrda": 84.3
+    "Model": "Ortega and Vu ( 2017 )",
+    "SwDA": 73.8,
+    "MRDA": 84.3
   },
   {
-    "model": "Tran et al. ( 2017 )",
-    "swda": 74.5,
-    "mrda": "-"
+    "Model": "Tran et al. ( 2017 )",
+    "SwDA": 74.5,
+    "MRDA": "-"
   },
   {
-    "model": "Kumar et al. ( 2018 )",
-    "swda": 79.2,
-    "mrda": 90.9
+    "Model": "Kumar et al. ( 2018 )",
+    "SwDA": 79.2,
+    "MRDA": 90.9
   },
   {
-    "model": "Chen et al. ( 2018 )",
-    "swda": 81.3,
-    "mrda": 91.7
+    "Model": "Chen et al. ( 2018 )",
+    "SwDA": 81.3,
+    "MRDA": 91.7
   },
   {
-    "model": " Our Method",
-    "swda": 82.9,
-    "mrda": 91.1
+    "Model": " Our Method",
+    "SwDA": 82.9,
+    "MRDA": 91.1
   },
   {
-    "model": " Human Agreement",
-    "swda": 84.0,
-    "mrda": "-"
+    "Model": " Human Agreement",
+    "SwDA": 84.0,
+    "MRDA": "-"
   }
 ]

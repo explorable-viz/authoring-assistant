@@ -1,28 +1,28 @@
 [
   {
     "_1": "MRR",
-    "trecqa_base": 0.927,
-    "trecqa_large": 0.961,
-    "wikiqa_base": 0.77,
-    "wikiqa_large": 0.875,
-    "yahooqa_base": 0.942,
-    "yahooqa_large": 0.938,
-    "semevalcqa_16_base": 0.872,
-    "semevalcqa_16_large": 0.911,
-    "semevalcqa_17_base": 0.951,
-    "semevalcqa_17_large": 0.958
+    "trecQA_base": 0.927,
+    "trecQA_large": 0.961,
+    "wikiQA_base": 0.77,
+    "wikiQA_large": 0.875,
+    "yahooQA_base": 0.942,
+    "yahooQA_large": 0.938,
+    "semEvalcQA_16_base": 0.872,
+    "semEvalcQA_16_large": 0.911,
+    "semEvalcQA_17_base": 0.951,
+    "semEvalcQA_17_large": 0.958
   },
   {
     "_1": "MAP",
-    "trecqa_base": 0.877,
-    "trecqa_large": 0.904,
-    "wikiqa_base": 0.753,
-    "wikiqa_large": 0.86,
-    "yahooqa_base": 0.942,
-    "yahooqa_large": 0.938,
-    "semevalcqa_16_base": 0.81,
-    "semevalcqa_16_large": 0.844,
-    "semevalcqa_17_base": 0.909,
-    "semevalcqa_17_large": 0.907
+    "trecQA_base": 0.877,
+    "trecQA_large": 0.904,
+    "wikiQA_base": 0.753,
+    "wikiQA_large": 0.86,
+    "yahooQA_base": 0.942,
+    "yahooQA_large": 0.938,
+    "semEvalcQA_16_base": 0.81,
+    "semEvalcQA_16_large": 0.844,
+    "semEvalcQA_17_base": 0.909,
+    "semEvalcQA_17_large": 0.907
   }
 ]

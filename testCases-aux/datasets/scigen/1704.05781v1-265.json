@@ -1,22 +1,22 @@
 [
   {
-    "stop_words_removal": "OS no removal",
-    "simlex999": 0.41,
-    "analogies": 0.34
+    "Stop_words_removal": "OS no removal",
+    "SimLex999": 0.41,
+    "Analogies": 0.34
   },
   {
-    "stop_words_removal": "OS with removal",
-    "simlex999": 0.42,
-    "analogies": 0.43
+    "Stop_words_removal": "OS with removal",
+    "SimLex999": 0.42,
+    "Analogies": 0.43
   },
   {
-    "stop_words_removal": "GW no removal",
-    "simlex999": 0.44,
-    "analogies": 0.64
+    "Stop_words_removal": "GW no removal",
+    "SimLex999": 0.44,
+    "Analogies": 0.64
   },
   {
-    "stop_words_removal": "GW with removal",
-    "simlex999": 0.44,
-    "analogies": 0.68
+    "Stop_words_removal": "GW with removal",
+    "SimLex999": 0.44,
+    "Analogies": 0.68
   }
 ]

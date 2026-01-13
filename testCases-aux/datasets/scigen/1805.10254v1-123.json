@@ -1,101 +1,101 @@
 [
   {
     "_1": " Baseline",
-    "w_system_retrieval_bleu": " Baseline",
-    "w_system_retrieval_mtr": " Baseline",
-    "w_system_retrieval_len": " Baseline",
-    "w_oracle_retrieval_bleu": " Baseline",
-    "w_oracle_retrieval_mtr": " Baseline",
-    "w_oracle_retrieval_len": " Baseline"
+    "w_System_Retrieval_BLEU": " Baseline",
+    "w_System_Retrieval_MTR": " Baseline",
+    "w_System_Retrieval_Len": " Baseline",
+    "w_Oracle_Retrieval_BLEU": " Baseline",
+    "w_Oracle_Retrieval_MTR": " Baseline",
+    "w_Oracle_Retrieval_Len": " Baseline"
   },
   {
     "_1": "Retrieval",
-    "w_system_retrieval_bleu": 15.32,
-    "w_system_retrieval_mtr": 12.19,
-    "w_system_retrieval_len": 151.2,
-    "w_oracle_retrieval_bleu": 10.24,
-    "w_oracle_retrieval_mtr": 16.22,
-    "w_oracle_retrieval_len": 132.7
+    "w_System_Retrieval_BLEU": 15.32,
+    "w_System_Retrieval_MTR": 12.19,
+    "w_System_Retrieval_Len": 151.2,
+    "w_Oracle_Retrieval_BLEU": 10.24,
+    "w_Oracle_Retrieval_MTR": 16.22,
+    "w_Oracle_Retrieval_Len": 132.7
   },
   {
     "_1": " Comparisons",
-    "w_system_retrieval_bleu": " Comparisons",
-    "w_system_retrieval_mtr": " Comparisons",
-    "w_system_retrieval_len": " Comparisons",
-    "w_oracle_retrieval_bleu": " Comparisons",
-    "w_oracle_retrieval_mtr": " Comparisons",
-    "w_oracle_retrieval_len": " Comparisons"
+    "w_System_Retrieval_BLEU": " Comparisons",
+    "w_System_Retrieval_MTR": " Comparisons",
+    "w_System_Retrieval_Len": " Comparisons",
+    "w_Oracle_Retrieval_BLEU": " Comparisons",
+    "w_Oracle_Retrieval_MTR": " Comparisons",
+    "w_Oracle_Retrieval_Len": " Comparisons"
   },
   {
     "_1": "Seq2seq",
-    "w_system_retrieval_bleu": 10.21,
-    "w_system_retrieval_mtr": 5.74,
-    "w_system_retrieval_len": 34.9,
-    "w_oracle_retrieval_bleu": 7.44,
-    "w_oracle_retrieval_mtr": 5.25,
-    "w_oracle_retrieval_len": 31.1
+    "w_System_Retrieval_BLEU": 10.21,
+    "w_System_Retrieval_MTR": 5.74,
+    "w_System_Retrieval_Len": 34.9,
+    "w_Oracle_Retrieval_BLEU": 7.44,
+    "w_Oracle_Retrieval_MTR": 5.25,
+    "w_Oracle_Retrieval_Len": 31.1
   },
   {
     "_1": "+   encode evd",
-    "w_system_retrieval_bleu": 18.03,
-    "w_system_retrieval_mtr": 7.32,
-    "w_system_retrieval_len": 67.0,
-    "w_oracle_retrieval_bleu": 13.79,
-    "w_oracle_retrieval_mtr": 10.06,
-    "w_oracle_retrieval_len": 68.1
+    "w_System_Retrieval_BLEU": 18.03,
+    "w_System_Retrieval_MTR": 7.32,
+    "w_System_Retrieval_Len": 67.0,
+    "w_Oracle_Retrieval_BLEU": 13.79,
+    "w_Oracle_Retrieval_MTR": 10.06,
+    "w_Oracle_Retrieval_Len": 68.1
   },
   {
     "_1": "+   encode KP",
-    "w_system_retrieval_bleu": 21.94,
-    "w_system_retrieval_mtr": 8.63,
-    "w_system_retrieval_len": 74.4,
-    "w_oracle_retrieval_bleu": 12.96,
-    "w_oracle_retrieval_mtr": 10.5,
-    "w_oracle_retrieval_len": 78.2
+    "w_System_Retrieval_BLEU": 21.94,
+    "w_System_Retrieval_MTR": 8.63,
+    "w_System_Retrieval_Len": 74.4,
+    "w_Oracle_Retrieval_BLEU": 12.96,
+    "w_Oracle_Retrieval_MTR": 10.5,
+    "w_Oracle_Retrieval_Len": 78.2
   },
   {
     "_1": " Our Models",
-    "w_system_retrieval_bleu": " Our Models",
-    "w_system_retrieval_mtr": " Our Models",
-    "w_system_retrieval_len": " Our Models",
-    "w_oracle_retrieval_bleu": " Our Models",
-    "w_oracle_retrieval_mtr": " Our Models",
-    "w_oracle_retrieval_len": " Our Models"
+    "w_System_Retrieval_BLEU": " Our Models",
+    "w_System_Retrieval_MTR": " Our Models",
+    "w_System_Retrieval_Len": " Our Models",
+    "w_Oracle_Retrieval_BLEU": " Our Models",
+    "w_Oracle_Retrieval_MTR": " Our Models",
+    "w_Oracle_Retrieval_Len": " Our Models"
   },
   {
     "_1": "Dec-shared",
-    "w_system_retrieval_bleu": 21.22,
-    "w_system_retrieval_mtr": 8.91,
-    "w_system_retrieval_len": 69.1,
-    "w_oracle_retrieval_bleu": 15.78,
-    "w_oracle_retrieval_mtr": 11.52,
-    "w_oracle_retrieval_len": 68.2
+    "w_System_Retrieval_BLEU": 21.22,
+    "w_System_Retrieval_MTR": 8.91,
+    "w_System_Retrieval_Len": 69.1,
+    "w_Oracle_Retrieval_BLEU": 15.78,
+    "w_Oracle_Retrieval_MTR": 11.52,
+    "w_Oracle_Retrieval_Len": 68.2
   },
   {
     "_1": "+   attend KP",
-    "w_system_retrieval_bleu": 24.71,
-    "w_system_retrieval_mtr": 10.05,
-    "w_system_retrieval_len": 74.8,
-    "w_oracle_retrieval_bleu": 11.48,
-    "w_oracle_retrieval_mtr": 10.08,
-    "w_oracle_retrieval_len": 40.5
+    "w_System_Retrieval_BLEU": 24.71,
+    "w_System_Retrieval_MTR": 10.05,
+    "w_System_Retrieval_Len": 74.8,
+    "w_Oracle_Retrieval_BLEU": 11.48,
+    "w_Oracle_Retrieval_MTR": 10.08,
+    "w_Oracle_Retrieval_Len": 40.5
   },
   {
     "_1": "Dec-separate",
-    "w_system_retrieval_bleu": 24.24,
-    "w_system_retrieval_mtr": 10.63,
-    "w_system_retrieval_len": 88.6,
-    "w_oracle_retrieval_bleu": 17.48,
-    "w_oracle_retrieval_mtr": 13.15,
-    "w_oracle_retrieval_len": 86.9
+    "w_System_Retrieval_BLEU": 24.24,
+    "w_System_Retrieval_MTR": 10.63,
+    "w_System_Retrieval_Len": 88.6,
+    "w_Oracle_Retrieval_BLEU": 17.48,
+    "w_Oracle_Retrieval_MTR": 13.15,
+    "w_Oracle_Retrieval_Len": 86.9
   },
   {
     "_1": "+   attend KP",
-    "w_system_retrieval_bleu": 24.52,
-    "w_system_retrieval_mtr": 11.27,
-    "w_system_retrieval_len": 88.3,
-    "w_oracle_retrieval_bleu": 17.8,
-    "w_oracle_retrieval_mtr": 13.67,
-    "w_oracle_retrieval_len": 86.8
+    "w_System_Retrieval_BLEU": 24.52,
+    "w_System_Retrieval_MTR": 11.27,
+    "w_System_Retrieval_Len": 88.3,
+    "w_Oracle_Retrieval_BLEU": 17.8,
+    "w_Oracle_Retrieval_MTR": 13.67,
+    "w_Oracle_Retrieval_Len": 86.8
   }
 ]

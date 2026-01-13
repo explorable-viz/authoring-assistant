@@ -1,26 +1,26 @@
 [
   {
     "models": "MT as PE",
-    "bleu": 76.76
+    "bLEU": 76.76
   },
   {
     "models": "Processed MT",
-    "bleu": 76.61
+    "bLEU": 76.61
   },
   {
     "models": "Base",
-    "bleu": 76.91
+    "bLEU": 76.91
   },
   {
     "models": "Gaussian",
-    "bleu": 76.94
+    "bLEU": 76.94
   },
   {
     "models": "Uniform",
-    "bleu": 77.01
+    "bLEU": 77.01
   },
   {
     "models": "Ensemble x5",
-    "bleu": 77.22
+    "bLEU": 77.22
   }
 ]

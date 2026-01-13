@@ -1,82 +1,82 @@
 [
   {
-    "[width=10em]modelingdataset": "CRCNN",
+    "[width=10em]ModelingDataset": "CRCNN",
     "semeval": 81.55,
-    "ddi_class": 65.53,
-    "ddi_detect": 81.74,
-    "i2b2_class": 59.75,
-    "i2b2_detect": 83.17
+    "ddi_Class": 65.53,
+    "ddi_Detect": 81.74,
+    "i2b2_Class": 59.75,
+    "i2b2_Detect": 83.17
   },
   {
-    "[width=10em]modelingdataset": "CRCNN",
+    "[width=10em]ModelingDataset": "CRCNN",
     "semeval": 80.85,
-    "ddi_class": 82.23,
-    "ddi_detect": 88.4,
-    "i2b2_class": 70.1,
-    "i2b2_detect": 86.45
+    "ddi_Class": 82.23,
+    "ddi_Detect": 88.4,
+    "i2b2_Class": 70.1,
+    "i2b2_Detect": 86.45
   },
   {
-    "[width=10em]modelingdataset": "Piecewise pool",
+    "[width=10em]ModelingDataset": "Piecewise pool",
     "semeval": 81.59,
-    "ddi_class": 63.01,
-    "ddi_detect": 80.62,
-    "i2b2_class": 60.85,
-    "i2b2_detect": 83.69
+    "ddi_Class": 63.01,
+    "ddi_Detect": 80.62,
+    "i2b2_Class": 60.85,
+    "i2b2_Detect": 83.69
   },
   {
-    "[width=10em]modelingdataset": "Piecewise pool",
+    "[width=10em]ModelingDataset": "Piecewise pool",
     "semeval": 80.55,
-    "ddi_class": 81.99,
-    "ddi_detect": 88.47,
-    "i2b2_class": 73.79,
-    "i2b2_detect": 89.29
+    "ddi_Class": 81.99,
+    "ddi_Detect": 88.47,
+    "i2b2_Class": 73.79,
+    "i2b2_Detect": 89.29
   },
   {
-    "[width=10em]modelingdataset": "BERT-tokens",
+    "[width=10em]ModelingDataset": "BERT-tokens",
     "semeval": 85.67,
-    "ddi_class": 71.97,
-    "ddi_detect": 86.53,
-    "i2b2_class": 63.11,
-    "i2b2_detect": 84.91
+    "ddi_Class": 71.97,
+    "ddi_Detect": 86.53,
+    "i2b2_Class": 63.11,
+    "i2b2_Detect": 84.91
   },
   {
-    "[width=10em]modelingdataset": "BERT-tokens",
+    "[width=10em]ModelingDataset": "BERT-tokens",
     "semeval": 85.63,
-    "ddi_class": 85.35,
-    "ddi_detect": 90.7,
-    "i2b2_class": 72.06,
-    "i2b2_detect": 87.57
+    "ddi_Class": 85.35,
+    "ddi_Detect": 90.7,
+    "i2b2_Class": 72.06,
+    "i2b2_Detect": 87.57
   },
   {
-    "[width=10em]modelingdataset": "BERT-CLS",
+    "[width=10em]ModelingDataset": "BERT-CLS",
     "semeval": 82.42,
-    "ddi_class": 61.3,
-    "ddi_detect": 79.63,
-    "i2b2_class": 56.79,
-    "i2b2_detect": 81.91
+    "ddi_Class": 61.3,
+    "ddi_Detect": 79.63,
+    "i2b2_Class": 56.79,
+    "i2b2_Detect": 81.91
   },
   {
-    "[width=10em]modelingdataset": "BERT-CLS",
+    "[width=10em]ModelingDataset": "BERT-CLS",
     "semeval": 80.83,
-    "ddi_class": 82.71,
-    "ddi_detect": 88.35,
-    "i2b2_class": 67.37,
-    "i2b2_detect": 85.43
+    "ddi_Class": 82.71,
+    "ddi_Detect": 88.35,
+    "i2b2_Class": 67.37,
+    "i2b2_Detect": 85.43
   },
   {
-    "[width=10em]modelingdataset": "ELMo",
+    "[width=10em]ModelingDataset": "ELMo",
     "semeval": 85.89,
-    "ddi_class": 66.63,
-    "ddi_detect": 83.05,
-    "i2b2_class": 63.18,
-    "i2b2_detect": 84.54
+    "ddi_Class": 66.63,
+    "ddi_Detect": 83.05,
+    "i2b2_Class": 63.18,
+    "i2b2_Detect": 84.54
   },
   {
-    "[width=10em]modelingdataset": "ELMo",
+    "[width=10em]ModelingDataset": "ELMo",
     "semeval": 84.79,
-    "ddi_class": 84.53,
-    "ddi_detect": 90.11,
-    "i2b2_class": 72.53,
-    "i2b2_detect": 87.81
+    "ddi_Class": 84.53,
+    "ddi_Detect": 90.11,
+    "i2b2_Class": 72.53,
+    "i2b2_Detect": 87.81
   }
 ]

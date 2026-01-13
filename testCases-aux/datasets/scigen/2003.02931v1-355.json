@@ -1,29 +1,29 @@
 [
   {
     "_1": "zero-shot",
-    "tnt": "—",
+    "tnT": "—",
     "neural_in_lang_plain": "—",
-    "neural_in_lang_poly": "—",
-    "neural_transfer_medium_src": 58.29,
-    "neural_transfer_large_src": 61.18,
-    "neural_transfer_finetune": "—"
+    "neural_in_lang_Poly": "—",
+    "neural_transfer_Medium_src": 58.29,
+    "neural_transfer_Large_src": 61.18,
+    "neural_transfer_FineTune": "—"
   },
   {
     "_1": "Tiny",
-    "tnt": 37.48,
+    "tnT": 37.48,
     "neural_in_lang_plain": 36.17,
-    "neural_in_lang_poly": 56.05,
-    "neural_transfer_medium_src": 67.14,
-    "neural_transfer_large_src": 67.49,
-    "neural_transfer_finetune": 62.07
+    "neural_in_lang_Poly": 56.05,
+    "neural_transfer_Medium_src": 67.14,
+    "neural_transfer_Large_src": 67.49,
+    "neural_transfer_FineTune": 62.07
   },
   {
     "_1": "Small",
-    "tnt": 44.3,
+    "tnT": 44.3,
     "neural_in_lang_plain": 51.9,
-    "neural_in_lang_poly": 67.18,
-    "neural_transfer_medium_src": 70.82,
-    "neural_transfer_large_src": 70.01,
-    "neural_transfer_finetune": 65.63
+    "neural_in_lang_Poly": 67.18,
+    "neural_transfer_Medium_src": 70.82,
+    "neural_transfer_Large_src": 70.01,
+    "neural_transfer_FineTune": 65.63
   }
 ]

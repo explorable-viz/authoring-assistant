@@ -1,65 +1,65 @@
 [
   {
-    "model": "oracle",
-    "present_mae": 0.0,
-    "present_avg_num": 2.837,
-    "absent_mae": 0.0,
-    "absent_avg_num": 2.432
+    "Model": "oracle",
+    "Present_MAE": 0.0,
+    "Present_Avg_num": 2.837,
+    "Absent_MAE": 0.0,
+    "Absent_Avg_num": 2.432
   },
   {
-    "model": "catSeq",
-    "present_mae": 2.271,
-    "present_avg_num": 3.781,
-    "absent_mae": 1.943,
-    "absent_avg_num": 0.659
+    "Model": "catSeq",
+    "Present_MAE": 2.271,
+    "Present_Avg_num": 3.781,
+    "Absent_MAE": 1.943,
+    "Absent_Avg_num": 0.659
   },
   {
-    "model": "catSeqD",
-    "present_mae": 2.225,
-    "present_avg_num": 3.694,
-    "absent_mae": 1.961,
-    "absent_avg_num": 0.629
+    "Model": "catSeqD",
+    "Present_MAE": 2.225,
+    "Present_Avg_num": 3.694,
+    "Absent_MAE": 1.961,
+    "Absent_Avg_num": 0.629
   },
   {
-    "model": "catSeqCorr",
-    "present_mae": 2.292,
-    "present_avg_num": 3.79,
-    "absent_mae": 1.914,
-    "absent_avg_num": 0.703
+    "Model": "catSeqCorr",
+    "Present_MAE": 2.292,
+    "Present_Avg_num": 3.79,
+    "Absent_MAE": 1.914,
+    "Absent_Avg_num": 0.703
   },
   {
-    "model": "catSeqTG",
-    "present_mae": 2.276,
-    "present_avg_num": 3.78,
-    "absent_mae": 1.956,
-    "absent_avg_num": 0.638
+    "Model": "catSeqTG",
+    "Present_MAE": 2.276,
+    "Present_Avg_num": 3.78,
+    "Absent_MAE": 1.956,
+    "Absent_Avg_num": 0.638
   },
   {
-    "model": "catSeq-2  RF1",
-    "present_mae": 2.118,
-    "present_avg_num": 3.733,
-    "absent_mae": 1.494,
-    "absent_avg_num": 1.574
+    "Model": "catSeq-2  RF1",
+    "Present_MAE": 2.118,
+    "Present_Avg_num": 3.733,
+    "Absent_MAE": 1.494,
+    "Absent_Avg_num": 1.574
   },
   {
-    "model": "catSeqD-2  RF1",
-    "present_mae": 2.087,
-    "present_avg_num": 3.666,
-    "absent_mae": 1.541,
-    "absent_avg_num": 1.455
+    "Model": "catSeqD-2  RF1",
+    "Present_MAE": 2.087,
+    "Present_Avg_num": 3.666,
+    "Absent_MAE": 1.541,
+    "Absent_Avg_num": 1.455
   },
   {
-    "model": "catSeqCorr-2  RF1",
-    "present_mae": 2.107,
-    "present_avg_num": 3.696,
-    "absent_mae": 1.557,
-    "absent_avg_num": 1.409
+    "Model": "catSeqCorr-2  RF1",
+    "Present_MAE": 2.107,
+    "Present_Avg_num": 3.696,
+    "Absent_MAE": 1.557,
+    "Absent_Avg_num": 1.409
   },
   {
-    "model": "catSeqTG-2  RF1",
-    "present_mae": 2.204,
-    "present_avg_num": 3.865,
-    "absent_mae": 1.439,
-    "absent_avg_num": 1.749
+    "Model": "catSeqTG-2  RF1",
+    "Present_MAE": 2.204,
+    "Present_Avg_num": 3.865,
+    "Absent_MAE": 1.439,
+    "Absent_Avg_num": 1.749
   }
 ]

@@ -1,47 +1,47 @@
 [
   {
     "_1": "Different Titles",
-    "num_tests": 50,
-    "num_choices_per_test": 2,
-    "non_expert_non_cs": 30,
-    "non_expert_cs": 15,
-    "nlp_expert_junior": 12,
-    "nlp_expert_senior": 0
+    "num_Tests": 50,
+    "num_Choices_per_Test": 2,
+    "Non_expert_Non_CS": 30,
+    "Non_expert_CS": 15,
+    "NLP_Expert_Junior": 12,
+    "NLP_Expert_Senior": 0
   },
   {
     "_1": "Different Titles",
-    "num_tests": 20,
-    "num_choices_per_test": 5,
-    "non_expert_non_cs": 60,
-    "non_expert_cs": 20,
-    "nlp_expert_junior": 30,
-    "nlp_expert_senior": 20
+    "num_Tests": 20,
+    "num_Choices_per_Test": 5,
+    "Non_expert_Non_CS": 60,
+    "Non_expert_CS": 20,
+    "NLP_Expert_Junior": 30,
+    "NLP_Expert_Senior": 20
   },
   {
     "_1": "Different Titles",
-    "num_tests": 10,
-    "num_choices_per_test": 10,
-    "non_expert_non_cs": 80,
-    "non_expert_cs": 30,
-    "nlp_expert_junior": 30,
-    "nlp_expert_senior": 20
+    "num_Tests": 10,
+    "num_Choices_per_Test": 10,
+    "Non_expert_Non_CS": 80,
+    "Non_expert_CS": 30,
+    "NLP_Expert_Junior": 30,
+    "NLP_Expert_Senior": 20
   },
   {
     "_1": "Same Title",
-    "num_tests": 50,
-    "num_choices_per_test": 2,
-    "non_expert_non_cs": 54,
-    "non_expert_cs": 10,
-    "nlp_expert_junior": 4,
-    "nlp_expert_senior": 0
+    "num_Tests": 50,
+    "num_Choices_per_Test": 2,
+    "Non_expert_Non_CS": 54,
+    "Non_expert_CS": 10,
+    "NLP_Expert_Junior": 4,
+    "NLP_Expert_Senior": 0
   },
   {
     "_1": "Same Title",
-    "num_tests": 20,
-    "num_choices_per_test": 5,
-    "non_expert_non_cs": 75,
-    "non_expert_cs": 25,
-    "nlp_expert_junior": 5,
-    "nlp_expert_senior": 5
+    "num_Tests": 20,
+    "num_Choices_per_Test": 5,
+    "Non_expert_Non_CS": 75,
+    "Non_expert_CS": 25,
+    "NLP_Expert_Junior": 5,
+    "NLP_Expert_Senior": 5
   }
 ]

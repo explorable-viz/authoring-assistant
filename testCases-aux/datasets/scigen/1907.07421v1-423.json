@@ -1,38 +1,38 @@
 [
   {
     "model": "NBT-DNN Mrkšić et al. ( 2017 )",
-    "joint_accuracy": 0.844
+    "joint_Accuracy": 0.844
   },
   {
     "model": "BT-CNN Ramadan et al. ( 2018 )",
-    "joint_accuracy": 0.855
+    "joint_Accuracy": 0.855
   },
   {
     "model": "GLAD Zhong et al. ( 2018 )",
-    "joint_accuracy": 0.881
+    "joint_Accuracy": 0.881
   },
   {
     "model": "GCE Nouri and Hosseini-Asl ( 2018 )",
-    "joint_accuracy": 0.885
+    "joint_Accuracy": 0.885
   },
   {
     "model": "StateNetPSI Ren et al. ( 2018 )",
-    "joint_accuracy": 0.889
+    "joint_Accuracy": 0.889
   },
   {
     "model": "BERT+RNN (baseline 1)",
-    "joint_accuracy": 0.892
+    "joint_Accuracy": 0.892
   },
   {
     "model": "BERT+RNN+Ontology (baseline 2)",
-    "joint_accuracy": 0.893
+    "joint_Accuracy": 0.893
   },
   {
     "model": "Slot-dependent SUMBT (baseline 3)",
-    "joint_accuracy": 0.891
+    "joint_Accuracy": 0.891
   },
   {
     "model": "Slot-independent SUMBT (proposed)",
-    "joint_accuracy": 0.91
+    "joint_Accuracy": 0.91
   }
 ]

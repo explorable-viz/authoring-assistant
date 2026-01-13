@@ -1,44 +1,44 @@
 [
   {
     "_1": "CADEC",
-    "word_vectors_glove": 70.3,
-    "word_vectors_ours": 70.27,
-    "lms_elmo": 71.91,
-    "lms_ours": 70.46
+    "Word_vectors_GloVe": 70.3,
+    "Word_vectors_Ours": 70.27,
+    "LMs_ELMo": 71.91,
+    "LMs_Ours": 70.46
   },
   {
     "_1": "CoNLL2003",
-    "word_vectors_glove": 90.25,
-    "word_vectors_ours": 86.36,
-    "lms_elmo": 91.34,
-    "lms_ours": 89.78
+    "Word_vectors_GloVe": 90.25,
+    "Word_vectors_Ours": 86.36,
+    "LMs_ELMo": 91.34,
+    "LMs_Ours": 89.78
   },
   {
     "_1": "CRAFT",
-    "word_vectors_glove": 74.22,
-    "word_vectors_ours": 75.45,
-    "lms_elmo": 75.77,
-    "lms_ours": 75.45
+    "Word_vectors_GloVe": 74.22,
+    "Word_vectors_Ours": 75.45,
+    "LMs_ELMo": 75.77,
+    "LMs_Ours": 75.45
   },
   {
     "_1": "JNLPBA",
-    "word_vectors_glove": 73.19,
-    "word_vectors_ours": 73.24,
-    "lms_elmo": 73.65,
-    "lms_ours": 74.29
+    "Word_vectors_GloVe": 73.19,
+    "Word_vectors_Ours": 73.24,
+    "LMs_ELMo": 73.65,
+    "LMs_Ours": 74.29
   },
   {
     "_1": "ScienceIE",
-    "word_vectors_glove": 37.1,
-    "word_vectors_ours": 37.91,
-    "lms_elmo": 41.15,
-    "lms_ours": 42.07
+    "Word_vectors_GloVe": 37.1,
+    "Word_vectors_Ours": 37.91,
+    "LMs_ELMo": 41.15,
+    "LMs_Ours": 42.07
   },
   {
     "_1": "WetLab",
-    "word_vectors_glove": 79.15,
-    "word_vectors_ours": 78.93,
-    "lms_elmo": 79.57,
-    "lms_ours": 79.62
+    "Word_vectors_GloVe": 79.15,
+    "Word_vectors_Ours": 78.93,
+    "LMs_ELMo": 79.57,
+    "LMs_Ours": 79.62
   }
 ]

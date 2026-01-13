@@ -1,38 +1,38 @@
 [
   {
-    "description": "All models",
-    "average": 91.51
+    "Description": "All models",
+    "Average": 91.51
   },
   {
-    "description": "All prefix models",
-    "average": 94.43
+    "Description": "All prefix models",
+    "Average": 94.43
   },
   {
-    "description": "All postfix models",
-    "average": 92.37
+    "Description": "All postfix models",
+    "Average": 92.37
   },
   {
-    "description": "All infix models",
-    "average": 87.72
+    "Description": "All infix models",
+    "Average": 87.72
   },
   {
-    "description": "All pre-trained models",
-    "average": 91.06
+    "Description": "All pre-trained models",
+    "Average": 91.06
   },
   {
-    "description": "All non-pre-trained models",
-    "average": 91.96
+    "Description": "All non-pre-trained models",
+    "Average": 91.96
   },
   {
-    "description": "All medium (type 1) models",
-    "average": 90.49
+    "Description": "All medium (type 1) models",
+    "Average": 90.49
   },
   {
-    "description": "All small (type 2) models",
-    "average": 92.09
+    "Description": "All small (type 2) models",
+    "Average": 92.09
   },
   {
-    "description": "All minimal (type 3) models",
-    "average": 91.94
+    "Description": "All minimal (type 3) models",
+    "Average": 91.94
   }
 ]

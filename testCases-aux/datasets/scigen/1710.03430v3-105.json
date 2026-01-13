@@ -1,38 +1,38 @@
 [
   {
-    "dataset": "Ubuntu-v1",
-    "num_samples_train": 1000000.0,
-    "num_samples_val": 35609,
-    "num_samples_test": 35517,
-    "message_avg_num_tokens": 162.47,
-    "message_avg_num_groups": 8.43,
-    "message_avg_num_tokens_group": 20.14,
-    "response_avg_num_tokens": 14.44,
-    "response_avg_num_groups": 1,
-    "response_avg_num_tokens_group": "-"
+    "Dataset": "Ubuntu-v1",
+    "num_Samples_Train": 1000000.0,
+    "num_Samples_Val": 35609,
+    "num_Samples_Test": 35517,
+    "Message_Avg_num_tokens": 162.47,
+    "Message_Avg_num_groups": 8.43,
+    "Message_Avg_num_tokens_group": 20.14,
+    "Response_Avg_num_tokens": 14.44,
+    "Response_Avg_num_groups": 1,
+    "Response_Avg_num_tokens_group": "-"
   },
   {
-    "dataset": "Ubuntu-v2",
-    "num_samples_train": 1000000.0,
-    "num_samples_val": 19560,
-    "num_samples_test": 18920,
-    "message_avg_num_tokens": 85.92,
-    "message_avg_num_groups": 4.95,
-    "message_avg_num_tokens_group": 20.73,
-    "response_avg_num_tokens": 17.01,
-    "response_avg_num_groups": 1,
-    "response_avg_num_tokens_group": "-"
+    "Dataset": "Ubuntu-v2",
+    "num_Samples_Train": 1000000.0,
+    "num_Samples_Val": 19560,
+    "num_Samples_Test": 18920,
+    "Message_Avg_num_tokens": 85.92,
+    "Message_Avg_num_groups": 4.95,
+    "Message_Avg_num_tokens_group": 20.73,
+    "Response_Avg_num_tokens": 17.01,
+    "Response_Avg_num_groups": 1,
+    "Response_Avg_num_tokens_group": "-"
   },
   {
-    "dataset": "Samsung QA",
-    "num_samples_train": 163616,
-    "num_samples_val": 10000,
-    "num_samples_test": 10000,
-    "message_avg_num_tokens": 12.84,
-    "message_avg_num_groups": 1,
-    "message_avg_num_tokens_group": "-",
-    "response_avg_num_tokens": 173.48,
-    "response_avg_num_groups": 6.09,
-    "response_avg_num_tokens_group": 29.28
+    "Dataset": "Samsung QA",
+    "num_Samples_Train": 163616,
+    "num_Samples_Val": 10000,
+    "num_Samples_Test": 10000,
+    "Message_Avg_num_tokens": 12.84,
+    "Message_Avg_num_groups": 1,
+    "Message_Avg_num_tokens_group": "-",
+    "Response_Avg_num_tokens": 173.48,
+    "Response_Avg_num_groups": 6.09,
+    "Response_Avg_num_tokens_group": 29.28
   }
 ]

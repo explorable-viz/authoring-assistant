@@ -1,18 +1,18 @@
 [
   {
-    "ablation": "All attributes",
-    "bleu": 72.06
+    "Ablation": "All attributes",
+    "BLEU": 72.06
   },
   {
-    "ablation": "No node attributes",
-    "bleu": 59.37
+    "Ablation": "No node attributes",
+    "BLEU": 59.37
   },
   {
-    "ablation": "No node attr except num, tense",
-    "bleu": 67.34
+    "Ablation": "No node attr except num, tense",
+    "BLEU": 67.34
   },
   {
-    "ablation": "No edge features",
-    "bleu": 71.27
+    "Ablation": "No edge features",
+    "BLEU": 71.27
   }
 ]

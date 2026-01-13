@@ -1,37 +1,37 @@
 [
   {
     "_1": " Model",
-    "antichat_product": "F1",
-    "antichat_reply": "F1",
-    "hack_forums_product": "F1",
-    "hack_forums_reply": "F1"
+    "Antichat_Product": "F1",
+    "Antichat_Reply": "F1",
+    "Hack_Forums_Product": "F1",
+    "Hack_Forums_Reply": "F1"
   },
   {
     "_1": " FastText",
-    "antichat_product": 0.764,
-    "antichat_reply": 0.45,
-    "hack_forums_product": 0.627,
-    "hack_forums_reply": 0.539
+    "Antichat_Product": 0.764,
+    "Antichat_Reply": 0.45,
+    "Hack_Forums_Product": 0.627,
+    "Hack_Forums_Reply": 0.539
   },
   {
     "_1": " Logistic Regression",
-    "antichat_product": 0.753,
-    "antichat_reply": 0.381,
-    "hack_forums_product": 0.617,
-    "hack_forums_reply": 0.492
+    "Antichat_Product": 0.753,
+    "Antichat_Reply": 0.381,
+    "Hack_Forums_Product": 0.617,
+    "Hack_Forums_Reply": 0.492
   },
   {
     "_1": " SVM",
-    "antichat_product": 0.767,
-    "antichat_reply": 0.301,
-    "hack_forums_product": 0.614,
-    "hack_forums_reply": 0.44
+    "Antichat_Product": 0.767,
+    "Antichat_Reply": 0.301,
+    "Hack_Forums_Product": 0.614,
+    "Hack_Forums_Reply": 0.44
   },
   {
     "_1": " XGBoost",
-    "antichat_product": 0.729,
-    "antichat_reply": 0.328,
-    "hack_forums_product": 0.627,
-    "hack_forums_reply": 0.465
+    "Antichat_Product": 0.729,
+    "Antichat_Reply": 0.328,
+    "Hack_Forums_Product": 0.627,
+    "Hack_Forums_Reply": 0.465
   }
 ]

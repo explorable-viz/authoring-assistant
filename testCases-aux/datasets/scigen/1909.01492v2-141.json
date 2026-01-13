@@ -1,34 +1,34 @@
 [
   {
-    "training": "Normal",
-    "acc": 89.5,
-    "sst_char_level_adv_acc": 36.5,
-    "oracle": 65.1,
-    "sst_word_level_adv_acc": 71.3,
-    "ag_char_level_adv_acc": 75.4
+    "Training": "Normal",
+    "Acc": 89.5,
+    "SST_Char_Level_Adv_Acc": 36.5,
+    "Oracle": 65.1,
+    "SST_Word_Level_Adv_Acc": 71.3,
+    "AG_Char_Level_Adv_Acc": 75.4
   },
   {
-    "training": "Adversarial",
-    "acc": 90.5,
-    "sst_char_level_adv_acc": 74.9,
-    "oracle": 81.6,
-    "sst_word_level_adv_acc": 76.8,
-    "ag_char_level_adv_acc": 85.5
+    "Training": "Adversarial",
+    "Acc": 90.5,
+    "SST_Char_Level_Adv_Acc": 74.9,
+    "Oracle": 81.6,
+    "SST_Word_Level_Adv_Acc": 76.8,
+    "AG_Char_Level_Adv_Acc": 85.5
   },
   {
-    "training": "Data aug.",
-    "acc": 88.4,
-    "sst_char_level_adv_acc": 37.8,
-    "oracle": 72.0,
-    "sst_word_level_adv_acc": 72.7,
-    "ag_char_level_adv_acc": 77.5
+    "Training": "Data aug.",
+    "Acc": 88.4,
+    "SST_Char_Level_Adv_Acc": 37.8,
+    "Oracle": 72.0,
+    "SST_Word_Level_Adv_Acc": 72.7,
+    "AG_Char_Level_Adv_Acc": 77.5
   },
   {
-    "training": "Verifiable (IBP)",
-    "acc": 87.6,
-    "sst_char_level_adv_acc": 73.1,
-    "oracle": 87.1,
-    "sst_word_level_adv_acc": 77.2,
-    "ag_char_level_adv_acc": 87.1
+    "Training": "Verifiable (IBP)",
+    "Acc": 87.6,
+    "SST_Char_Level_Adv_Acc": 73.1,
+    "Oracle": 87.1,
+    "SST_Word_Level_Adv_Acc": 77.2,
+    "AG_Char_Level_Adv_Acc": 87.1
   }
 ]

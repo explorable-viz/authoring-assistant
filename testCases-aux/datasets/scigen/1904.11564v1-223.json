@@ -1,17 +1,17 @@
 [
   {
-    "representation": "AMR",
-    "train_on_gold": 22.0,
-    "train_on_gold_silver": 33.8
+    "Representation": "AMR",
+    "Train_on_Gold": 22.0,
+    "Train_on_Gold_Silver": 33.8
   },
   {
-    "representation": "DMRS - no attributes",
-    "train_on_gold": 40.1,
-    "train_on_gold_silver": 63.6
+    "Representation": "DMRS - no attributes",
+    "Train_on_Gold": 40.1,
+    "Train_on_Gold_Silver": 63.6
   },
   {
-    "representation": "DMRS - all attributes",
-    "train_on_gold": 56.9,
-    "train_on_gold_silver": 75.8
+    "Representation": "DMRS - all attributes",
+    "Train_on_Gold": 56.9,
+    "Train_on_Gold_Silver": 75.8
   }
 ]

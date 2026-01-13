@@ -1,26 +1,26 @@
 [
   {
-    "search_strategy": "Greedy Search",
-    "bleu": 86.24
+    "search_Strategy": "Greedy Search",
+    "bLEU": 86.24
   },
   {
-    "search_strategy": "2-LA",
-    "bleu": 86.65
+    "search_Strategy": "2-LA",
+    "bLEU": 86.65
   },
   {
-    "search_strategy": "3-LA",
-    "bleu": 86.71
+    "search_Strategy": "3-LA",
+    "bLEU": 86.71
   },
   {
-    "search_strategy": "4-LA",
-    "bleu": 86.77
+    "search_Strategy": "4-LA",
+    "bLEU": 86.77
   },
   {
-    "search_strategy": "5-LA",
-    "bleu": 86.79
+    "search_Strategy": "5-LA",
+    "bLEU": 86.79
   },
   {
-    "search_strategy": "Beam Search (B=10)",
-    "bleu": 86.28
+    "search_Strategy": "Beam Search (B=10)",
+    "bLEU": 86.28
   }
 ]

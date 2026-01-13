@@ -1,32 +1,32 @@
 [
   {
-    "method": "",
-    "meteor": "",
-    "rouge_l": "",
-    "human_prefer": " ENCE"
+    "Method": "",
+    "METEOR": "",
+    "ROUGE_L": "",
+    "HUMAN_PREFER": " ENCE"
   },
   {
-    "method": "LSTM-LM",
-    "meteor": 8.7,
-    "rouge_l": 15.1,
-    "human_prefer": 0
+    "Method": "LSTM-LM",
+    "METEOR": 8.7,
+    "ROUGE_L": 15.1,
+    "HUMAN_PREFER": 0
   },
   {
-    "method": "Seq2seq",
-    "meteor": 13.5,
-    "rouge_l": 19.2,
-    "human_prefer": 22
+    "Method": "Seq2seq",
+    "METEOR": 13.5,
+    "ROUGE_L": 19.2,
+    "HUMAN_PREFER": 22
   },
   {
-    "method": "ED(1)",
-    "meteor": 13.3,
-    "rouge_l": 20.3,
-    "human_prefer": 30
+    "Method": "ED(1)",
+    "METEOR": 13.3,
+    "ROUGE_L": 20.3,
+    "HUMAN_PREFER": 30
   },
   {
-    "method": "ED(2)",
-    "meteor": 14.0,
-    "rouge_l": 19.8,
-    "human_prefer": 48
+    "Method": "ED(2)",
+    "METEOR": 14.0,
+    "ROUGE_L": 19.8,
+    "HUMAN_PREFER": 48
   }
 ]

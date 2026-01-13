@@ -1,0 +1,26 @@
+[
+  {
+    "_1": "Movie",
+    "unsupervised_basic": 0,
+    "unsupervised_glove": 0.43,
+    "unsupervised_embdi": 0.78,
+    "supervised_deeper_p": 0.82,
+    "supervised_deeper_l": 0.88
+  },
+  {
+    "_1": "RefS",
+    "unsupervised_basic": 0,
+    "unsupervised_glove": 0.84,
+    "unsupervised_embdi": 0.95,
+    "supervised_deeper_p": 0.84,
+    "supervised_deeper_l": 0.89
+  },
+  {
+    "_1": "RefL",
+    "unsupervised_basic": 0,
+    "unsupervised_glove": 0.73,
+    "unsupervised_embdi": 0.8,
+    "supervised_deeper_p": 0.8,
+    "supervised_deeper_l": 0.87
+  }
+]

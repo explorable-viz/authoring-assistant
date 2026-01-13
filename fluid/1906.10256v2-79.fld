@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1906_10256v2_79
+
+"""
+	The main results of our experiments are shown in Table 1. We notice that  ${"M.1"}  ( ${"Bag-of-words + Logistic Regression"} ) and  ${"M.2"}  ( ${"BiLSTM"} ) show a statistically significant difference between the two genders, with  ${"higher"}  predicted positive class probabilities for sentences with  ${let fMValue = findWhere (fun x -> x.model == " M.1 (BoW+LogReg)") tableData in if fMValue.f_m > 0.03 then "female nouns" else "male nouns"} . On the contrary,  ${"M.3"}  ( ${"BERT"} ) shows that sentences with  ${let fMValue = findWhere (fun x -> x.model == " M.3 (BERT)") tableData in if fMValue.f_m < 0 then "male nouns" else "female nouns"}  have a statistically significant  ${"higher"}  predicted positive class probability than sentences with  ${let fMValue = findWhere (fun x -> x.model == " M.3 (BERT)") tableData in if fMValue.f_m < 0 then "female nouns" else "male nouns"} .
+"""

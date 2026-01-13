@@ -4,27 +4,27 @@
     "unsupported": 82,
     "missing": 45,
     "repeated": 12,
-    "correct": 26
+    "correct": "26/119"
   },
   {
     "training": "WebSplit",
     "unsupported": 58,
     "missing": 47,
     "repeated": 13,
-    "correct": 32
+    "correct": "32/100"
   },
   {
     "training": "WikiSplit",
     "unsupported": 8,
     "missing": 5,
     "repeated": 0,
-    "correct": 91
+    "correct": "91/100"
   },
   {
     "training": "Both",
     "unsupported": 4,
     "missing": 4,
     "repeated": 0,
-    "correct": 95
+    "correct": " 95/100"
   }
 ]

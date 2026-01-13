@@ -157,7 +157,7 @@
   },
   {
     "encoder_type": "CNN",
-    "encoder_dim": "3x800‡",
+    "encoder_dim": "3x800",
     "decoder_type": "RNN",
     "decoder_dim": 600,
     "hrs": 8,

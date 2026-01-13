@@ -5,7 +5,7 @@
     "cc": "–",
     "il": "–",
     "mawps": "–",
-    "average": "∗77.7"
+    "average": 77.7
   },
   {
     "type_model": " Kushman, et.al.",
@@ -13,7 +13,7 @@
     "cc": 73.7,
     "il": 2.3,
     "mawps": "–",
-    "average": "∗46.7"
+    "average": 46.7
   },
   {
     "type_model": " Roy, et.al.",
@@ -21,7 +21,7 @@
     "cc": "–",
     "il": 52.7,
     "mawps": "–",
-    "average": "∗52.7"
+    "average": 52.7
   },
   {
     "type_model": " Robaidek, et.al.",
@@ -29,7 +29,7 @@
     "cc": "–",
     "il": "–",
     "mawps": 62.8,
-    "average": "∗62.8"
+    "average": 62.8
   },
   {
     "type_model": " Wang, et.al.",
@@ -37,7 +37,7 @@
     "cc": 75.5,
     "il": 73.3,
     "mawps": "–",
-    "average": "∗75.4"
+    "average": 75.4
   },
   {
     "type_model": " Pre-trained",

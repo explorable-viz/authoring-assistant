@@ -13,7 +13,7 @@
   },
   {
     "method": "BERT12",
-    "num_params": 109,
+    "num_params": 109000000.0,
     "inference": 1,
     "sst_2": 93.5,
     "mrpc": 88.9,
@@ -25,7 +25,7 @@
   },
   {
     "method": "BERT12-T",
-    "num_params": 109,
+    "num_params": 109000000.0,
     "inference": 1,
     "sst_2": 93.3,
     "mrpc": 88.7,
@@ -37,7 +37,7 @@
   },
   {
     "method": "BERT6-PKD",
-    "num_params": 67.0,
+    "num_params": 67000000.0,
     "inference": 1.9,
     "sst_2": 92.0,
     "mrpc": 85.0,
@@ -49,7 +49,7 @@
   },
   {
     "method": "BERT3-PKD",
-    "num_params": 45.7,
+    "num_params": 45700000.0,
     "inference": 3.7,
     "sst_2": 87.5,
     "mrpc": 80.7,
@@ -61,7 +61,7 @@
   },
   {
     "method": "DistilBERT4",
-    "num_params": 52.2,
+    "num_params": 52200000.0,
     "inference": 3.0,
     "sst_2": 91.4,
     "mrpc": 82.4,
@@ -73,7 +73,7 @@
   },
   {
     "method": "TinyBert4",
-    "num_params": 14.5,
+    "num_params": 14500000.0,
     "inference": 9.4,
     "sst_2": 92.6,
     "mrpc": 86.4,
@@ -85,7 +85,7 @@
   },
   {
     "method": "BiLSTM  SOFT",
-    "num_params": 10.1,
+    "num_params": 10100000.0,
     "inference": 7.6,
     "sst_2": 90.7,
     "mrpc": "-",

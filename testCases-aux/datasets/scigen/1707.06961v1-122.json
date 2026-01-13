@@ -51,7 +51,7 @@
   {
     "_1": "Fasttext",
     "emb": 300,
-    "vocab": 2.51,
+    "vocab": 2510000.0,
     "polyglot": "",
     "all": 47.3
   }

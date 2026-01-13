@@ -1,7 +1,7 @@
 [
   {
     "dataset": "Ubuntu-v1",
-    "num_samples_train": 1,
+    "num_samples_train": 1000000.0,
     "num_samples_val": 35609,
     "num_samples_test": 35517,
     "message_avg_num_tokens": 162.47,
@@ -13,7 +13,7 @@
   },
   {
     "dataset": "Ubuntu-v2",
-    "num_samples_train": 1,
+    "num_samples_train": 1000000.0,
     "num_samples_val": 19560,
     "num_samples_test": 18920,
     "message_avg_num_tokens": 85.92,

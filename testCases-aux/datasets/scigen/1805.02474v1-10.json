@@ -12,19 +12,19 @@
     "num_param": 7059
   },
   {
-    "model": 2,
+    "model": "2 stacked BiLSTM",
     "time_s": 207,
     "acc": 81.97,
     "num_param": 9221
   },
   {
-    "model": 3,
+    "model": "3 stacked BiLSTM",
     "time_s": 310,
     "acc": 81.53,
     "num_param": 11383
   },
   {
-    "model": 4,
+    "model": "4 stacked BiLSTM",
     "time_s": 411,
     "acc": 81.37,
     "num_param": 13546
@@ -42,19 +42,19 @@
     "num_param": 5637
   },
   {
-    "model": 2,
+    "model": "2 stacked CNN",
     "time_s": 40,
     "acc": 80.97,
     "num_param": 5717
   },
   {
-    "model": 3,
+    "model": "3 stacked CNN",
     "time_s": 47,
     "acc": 81.46,
     "num_param": 5808
   },
   {
-    "model": 4,
+    "model": "4 stacked CNN",
     "time_s": 51,
     "acc": 81.39,
     "num_param": 5855

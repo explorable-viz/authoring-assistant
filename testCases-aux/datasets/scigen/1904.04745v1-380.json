@@ -9,7 +9,7 @@
     "iou": 45.18
   },
   {
-    "method": "RRN-CNN ∗",
+    "method": "RRN-CNN",
     "prec_0_5": 47.59,
     "prec_0_6": 38.76,
     "prec_0_7": 26.53,

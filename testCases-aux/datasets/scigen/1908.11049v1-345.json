@@ -15,31 +15,31 @@
     "dataset": "DavidsonWMW17",
     "num_tweets": 24,
     "labels": "hateful, offensive (but not hateful), neither",
-    "annotators_tweet": 3
+    "annotators_tweet": "3 or more"
   },
   {
     "dataset": "Golbeck2017",
     "num_tweets": 35000,
     "labels": "the worst, threats, hate speech, direct",
-    "annotators_tweet": 2
+    "annotators_tweet": "2 to 3"
   },
   {
     "dataset": "Golbeck2017",
     "num_tweets": 35000,
     "labels": "harassment, potentially offensive, non-harassment",
-    "annotators_tweet": 2
+    "annotators_tweet": "2 to 3"
   },
   {
     "dataset": "FountaDCLBSVSK18",
     "num_tweets": 80,
     "labels": "offensive, abusive, hateful speech,",
-    "annotators_tweet": 5
+    "annotators_tweet": "5 to 20"
   },
   {
     "dataset": "FountaDCLBSVSK18",
     "num_tweets": 80,
     "labels": "aggressive, cyberbullying, spam, normal",
-    "annotators_tweet": 5
+    "annotators_tweet": "5 to 20"
   },
   {
     "dataset": "hatelingo",

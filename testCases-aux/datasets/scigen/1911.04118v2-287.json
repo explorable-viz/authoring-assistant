@@ -9,7 +9,7 @@
     "trec_qa_mrr": 0.937
   },
   {
-    "bert_base": 10,
+    "bert_base": "10% noise Fine-tuning",
     "wikiqa_map": 0.775,
     "wikiqa_drop": 4.22,
     "wikiqa_mrr": 0.793,
@@ -18,7 +18,7 @@
     "trec_qa_mrr": 0.902
   },
   {
-    "bert_base": 20,
+    "bert_base": "20% noise Fine-tuning",
     "wikiqa_map": 0.629,
     "wikiqa_drop": 22.1,
     "wikiqa_mrr": 0.645,
@@ -36,7 +36,7 @@
     "trec_qa_mrr": 0.951
   },
   {
-    "bert_base": 10,
+    "bert_base": "10% noise TandA",
     "wikiqa_map": 0.876,
     "wikiqa_drop": 1.55,
     "wikiqa_mrr": 0.889,
@@ -45,7 +45,7 @@
     "trec_qa_mrr": 0.941
   },
   {
-    "bert_base": 20,
+    "bert_base": "20% noise TandA",
     "wikiqa_map": 0.87,
     "wikiqa_drop": 1.88,
     "wikiqa_mrr": 0.886,

@@ -9,7 +9,7 @@
   },
   {
     "dataset_language": "German (RIDGES)",
-    "time_period": 1482,
+    "time_period": "1482–1652",
     "genre": "Science",
     "tokens_train": 41857,
     "tokens_dev": 9712,
@@ -17,7 +17,7 @@
   },
   {
     "dataset_language": "English",
-    "time_period": 1386,
+    "time_period": "1386–1698",
     "genre": "Letters",
     "tokens_train": 147826,
     "tokens_dev": 16334,
@@ -33,7 +33,7 @@
   },
   {
     "dataset_language": "Hungarian",
-    "time_period": 1440,
+    "time_period": "1440–1541",
     "genre": "Religious",
     "tokens_train": 134028,
     "tokens_dev": 16707,
@@ -57,7 +57,7 @@
   },
   {
     "dataset_language": "Slovene (Bohorič)",
-    "time_period": 1750,
+    "time_period": "1750–1840s",
     "genre": "Diverse",
     "tokens_train": 50023,
     "tokens_dev": 5841,
@@ -73,7 +73,7 @@
   },
   {
     "dataset_language": "Swedish",
-    "time_period": 1527,
+    "time_period": "1527–1812",
     "genre": "Diverse",
     "tokens_train": 24458,
     "tokens_dev": 2245,

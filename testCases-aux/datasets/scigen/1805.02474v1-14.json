@@ -60,13 +60,13 @@
     "test_s": 9.89
   },
   {
-    "model": 2,
+    "model": "2 stacked BiLSTM",
     "f1": 91.02,
     "train_s": 159,
     "test_s": 18.88
   },
   {
-    "model": 3,
+    "model": "3 stacked BiLSTM",
     "f1": 91.06,
     "train_s": 235,
     "test_s": 30.97

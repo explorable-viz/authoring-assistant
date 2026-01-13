@@ -61,7 +61,7 @@
     "cosine_similarity_±_sd_↑_wm18": "WM18",
     "cosine_similarity_±_sd_↑_hsv": "HSV",
     "cosine_similarity_±_sd_↑_ensemble": "Ensemble",
-    "cosine_similarity_±_sd_↑_wm18∗": "WM18∗"
+    "cosine_similarity_±_sd_↑_wm18∗": "WM18"
   },
   {
     "test_condition": "Seen Pairings",

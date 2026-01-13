@@ -15,8 +15,8 @@
   {
     "architecture": "RNNsearch*",
     "zh⇒en": "Vanilla",
-    "params": "74.8M",
-    "emb": "55.8M",
+    "params": 74800000.0,
+    "emb": 55800000.0,
     "red": 0,
     "dev": 35.92,
     "mt02": 37.88,
@@ -28,8 +28,8 @@
   {
     "architecture": "RNNsearch*",
     "zh⇒en": "Source bridging",
-    "params": "78.5M",
-    "emb": "55.8M",
+    "params": 78500000.0,
+    "emb": 55800000.0,
     "red": 0,
     "dev": 36.79,
     "mt02": 38.71,
@@ -41,8 +41,8 @@
   {
     "architecture": "RNNsearch*",
     "zh⇒en": "Target bridging",
-    "params": "76.6M",
-    "emb": "55.8M",
+    "params": 76600000.0,
+    "emb": 55800000.0,
     "red": 0,
     "dev": 36.69,
     "mt02": 39.04,
@@ -54,8 +54,8 @@
   {
     "architecture": "RNNsearch*",
     "zh⇒en": "Direct bridging",
-    "params": "78.9M",
-    "emb": "55.8M",
+    "params": 78900000.0,
+    "emb": 55800000.0,
     "red": 0,
     "dev": 36.97,
     "mt02": 39.77,
@@ -67,8 +67,8 @@
   {
     "architecture": "Transformer",
     "zh⇒en": "Vanilla",
-    "params": "90.2M",
-    "emb": "46.1M",
+    "params": 90200000.0,
+    "emb": 46100000.0,
     "red": 0,
     "dev": 41.37,
     "mt02": 42.53,
@@ -80,8 +80,8 @@
   {
     "architecture": "Transformer",
     "zh⇒en": "Direct bridging",
-    "params": "90.5M",
-    "emb": "46.1M",
+    "params": 90500000.0,
+    "emb": 46100000.0,
     "red": 0,
     "dev": 41.67,
     "mt02": 42.89,
@@ -93,8 +93,8 @@
   {
     "architecture": "Transformer",
     "zh⇒en": "Decoder WT",
-    "params": "74.9M",
-    "emb": "30.7M",
+    "params": 74900000.0,
+    "emb": 30700000.0,
     "red": 33.4,
     "dev": 41.9,
     "mt02": 43.02,
@@ -106,14 +106,14 @@
   {
     "architecture": "Transformer",
     "zh⇒en": " Shared-private",
-    "params": "62.8M",
-    "emb": "18.7M",
+    "params": 62800000.0,
+    "emb": 18700000.0,
     "red": 59.4,
-    "dev": "42.57↑",
-    "mt02": "43.73↑",
-    "mt03": "41.99↑",
-    "mt04": "44.53↑",
-    "mt08": "33.81⇑",
-    "all": "41.61⇑"
+    "dev": 42.57,
+    "mt02": 43.73,
+    "mt03": 41.99,
+    "mt04": 44.53,
+    "mt08": 33.81,
+    "all": 41.61
   }
 ]

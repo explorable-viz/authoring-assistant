@@ -33,7 +33,7 @@
     "relaxed_evaluation_f1_class": 0.756
   },
   {
-    "embedding_parameter": "ILC-ItWac",
+    "embedding_parameter": "ILC-ItWack",
     "strict_evaluation_r": 0.831,
     "strict_evaluation_p": 0.884,
     "strict_evaluation_f1": 0.856,

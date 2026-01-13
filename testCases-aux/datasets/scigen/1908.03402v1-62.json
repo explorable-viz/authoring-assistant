@@ -9,15 +9,15 @@
   },
   {
     "models": "Base",
-    "bleu": "76.91 77.13"
+    "bleu": 76.91
   },
   {
     "models": "Gaussian",
-    "bleu": "76.94 77.08"
+    "bleu": 76.94
   },
   {
     "models": "Uniform",
-    "bleu": "77.01 77.10"
+    "bleu": 77.01
   },
   {
     "models": "Ensemble x5",

@@ -25,7 +25,7 @@
     "_1": "Stanovsky et al. 2017",
     "factbank_mae": 0.59,
     "factbank_r": 0.71,
-    "uw_mae": " 0.42†",
+    "uw_mae": 0.42,
     "uw_r": 0.66,
     "meantime_mae": 0.34,
     "meantime_r": 0.47,
@@ -40,7 +40,7 @@
     "uw_r": 0.719,
     "meantime_mae": 0.427,
     "meantime_r": 0.335,
-    "uds_ih2_mae": " 0.960†",
+    "uds_ih2_mae": 0.96,
     "uds_ih2_r": 0.768
   },
   {
@@ -127,7 +127,7 @@
     "uw_mae": 0.496,
     "uw_r": 0.724,
     "meantime_mae": 0.278,
-    "meantime_r": " 0.613†",
+    "meantime_r": 0.613,
     "uds_ih2_mae": "-",
     "uds_ih2_r": "-"
   },
@@ -148,7 +148,7 @@
     "factbank_r": 0.823,
     "uw_mae": 0.516,
     "uw_r": 0.698,
-    "meantime_mae": " 0.229†",
+    "meantime_mae": 0.229,
     "meantime_r": 0.599,
     "uds_ih2_mae": "-",
     "uds_ih2_r": "-"
@@ -184,7 +184,7 @@
     "meantime_mae": 0.367,
     "meantime_r": 0.469,
     "uds_ih2_mae": 0.965,
-    "uds_ih2_r": " 0.771†"
+    "uds_ih2_r": 0.771
   },
   {
     "_1": "T-biLSTM(2)-MultiSimp w/UDS-IH2",
@@ -210,8 +210,8 @@
   },
   {
     "_1": "H-biLSTM(1)-MultiSimp",
-    "factbank_mae": " 0.313†",
-    "factbank_r": " 0.857†",
+    "factbank_mae": 0.313,
+    "factbank_r": 0.857,
     "uw_mae": 0.528,
     "uw_r": 0.704,
     "meantime_mae": 0.314,
@@ -246,7 +246,7 @@
     "factbank_mae": 0.393,
     "factbank_r": 0.82,
     "uw_mae": 0.481,
-    "uw_r": " 0.749†",
+    "uw_r": 0.749,
     "meantime_mae": 0.374,
     "meantime_r": 0.495,
     "uds_ih2_mae": 0.969,

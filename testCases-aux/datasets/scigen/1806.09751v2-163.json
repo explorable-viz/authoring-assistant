@@ -11,56 +11,56 @@
     "dataset_name": "CoNLL-2003",
     "entity_class": "Location",
     "eal_1_0_f": 55,
-    "eaa_annotation_mode_fa": "0.99 (46%)",
-    "eaa_annotation_mode_hfa": "0.93 (83%)",
-    "eaa_annotation_mode_ufa": "0.82 (91%)"
+    "eaa_annotation_mode_fa": 0.99,
+    "eaa_annotation_mode_hfa": 0.93,
+    "eaa_annotation_mode_ufa": 0.82
   },
   {
     "dataset_name": "CoNLL-2003",
     "entity_class": "Person",
     "eal_1_0_f": 59,
-    "eaa_annotation_mode_fa": "0.99 (48%)",
-    "eaa_annotation_mode_hfa": "0.95 (81%)",
-    "eaa_annotation_mode_ufa": "0.85 (90%)"
+    "eaa_annotation_mode_fa": 0.99,
+    "eaa_annotation_mode_hfa": 0.95,
+    "eaa_annotation_mode_ufa": 0.85
   },
   {
     "dataset_name": "BioCreAtIvE II",
     "entity_class": "Gene",
     "eal_1_0_f": 35,
-    "eaa_annotation_mode_fa": "1.00 (35%)",
-    "eaa_annotation_mode_hfa": "0.96 (50%)",
-    "eaa_annotation_mode_ufa": "0.89 (69%)"
+    "eaa_annotation_mode_fa": 1.0,
+    "eaa_annotation_mode_hfa": 0.96,
+    "eaa_annotation_mode_ufa": 0.89
   },
   {
     "dataset_name": "GENIA 3.02",
     "entity_class": "Protein Molecule",
     "eal_1_0_f": 33,
-    "eaa_annotation_mode_fa": "0.98 (36%)",
-    "eaa_annotation_mode_hfa": "0.87 (71%)",
-    "eaa_annotation_mode_ufa": "0.74 (85%)"
+    "eaa_annotation_mode_fa": 0.98,
+    "eaa_annotation_mode_hfa": 0.87,
+    "eaa_annotation_mode_ufa": 0.74
   },
   {
     "dataset_name": "GENIA 3.02",
     "entity_class": "Cell Type",
     "eal_1_0_f": 62,
-    "eaa_annotation_mode_fa": "0.94 (70%)",
-    "eaa_annotation_mode_hfa": "0.82 (86%)",
-    "eaa_annotation_mode_ufa": "0.74 (91%)"
+    "eaa_annotation_mode_fa": 0.94,
+    "eaa_annotation_mode_hfa": 0.82,
+    "eaa_annotation_mode_ufa": 0.74
   },
   {
     "dataset_name": "GENIA 3.02",
     "entity_class": "Virus",
     "eal_1_0_f": 24,
-    "eaa_annotation_mode_fa": "0.97 (79%)",
-    "eaa_annotation_mode_hfa": "0.89 (94%)",
-    "eaa_annotation_mode_ufa": "0.84 (96%)"
+    "eaa_annotation_mode_fa": 0.97,
+    "eaa_annotation_mode_hfa": 0.89,
+    "eaa_annotation_mode_ufa": 0.84
   },
   {
     "dataset_name": " Average",
     "entity_class": " Average",
     "eal_1_0_f": 45,
-    "eaa_annotation_mode_fa": "0.98 (52%)",
-    "eaa_annotation_mode_hfa": "0.90 (78%)",
-    "eaa_annotation_mode_ufa": "0.81 (87%)"
+    "eaa_annotation_mode_fa": 0.98,
+    "eaa_annotation_mode_hfa": 0.9,
+    "eaa_annotation_mode_ufa": 0.81
   }
 ]

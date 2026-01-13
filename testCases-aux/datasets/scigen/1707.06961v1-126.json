@@ -96,7 +96,7 @@
     "oov_ud": 3.52
   },
   {
-    "test_set_embeddings": "Gree",
+    "test_set_embeddings": "Greek",
     "missing_embeddings": 17.5,
     "full_vocabulary": 0.34,
     "oov_ud": 1.17

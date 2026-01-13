@@ -22,23 +22,23 @@
   },
   {
     "_1": "  +src",
-    "memory_to_context_bleu": "22.10†",
-    "memory_to_context_meteor": "25.92†",
-    "memory_to_output_bleu": "21.50†",
-    "memory_to_output_meteor": "25.44†"
+    "memory_to_context_bleu": 22.1,
+    "memory_to_context_meteor": 25.92,
+    "memory_to_output_bleu": 21.5,
+    "memory_to_output_meteor": 25.44
   },
   {
     "_1": "  +trg",
-    "memory_to_context_bleu": "21.94†",
-    "memory_to_context_meteor": "25.89†",
-    "memory_to_output_bleu": "21.82†",
-    "memory_to_output_meteor": "25.93†"
+    "memory_to_context_bleu": 21.94,
+    "memory_to_context_meteor": 25.89,
+    "memory_to_output_bleu": 21.82,
+    "memory_to_output_meteor": 25.93
   },
   {
     "_1": "  +both",
-    "memory_to_context_bleu": " 22.32†",
-    "memory_to_context_meteor": " 26.34†",
-    "memory_to_output_bleu": " 22.20†",
-    "memory_to_output_meteor": " 26.10†"
+    "memory_to_context_bleu": 22.32,
+    "memory_to_context_meteor": 26.34,
+    "memory_to_output_bleu": 22.2,
+    "memory_to_output_meteor": 26.1
   }
 ]

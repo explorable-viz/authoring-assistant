@@ -1,9 +1,9 @@
 [
   {
     "dataset": "MRPC",
-    "pre_trained": "0/31.6",
-    "fine_tuned_initialized_with_normal_distr": "81.2/68.3",
-    "fine_tuned_initialized_with_pre_trained": "87.9/82.3",
+    "pre_trained": 0,
+    "fine_tuned_initialized_with_normal_distr": 81.2,
+    "fine_tuned_initialized_with_pre_trained": 87.9,
     "metric": "F1/Acc",
     "size": 5.8
   },
@@ -25,9 +25,9 @@
   },
   {
     "dataset": "QQP",
-    "pre_trained": "0/60.9",
-    "fine_tuned_initialized_with_normal_distr": "0/63.2",
-    "fine_tuned_initialized_with_pre_trained": "65.2/78.6",
+    "pre_trained": 0,
+    "fine_tuned_initialized_with_normal_distr": 0,
+    "fine_tuned_initialized_with_pre_trained": 65.2,
     "metric": "F1/Acc",
     "size": 400
   },

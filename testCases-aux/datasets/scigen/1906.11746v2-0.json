@@ -165,7 +165,7 @@
     "psd_ood_f": 81.6,
     "eds_smatch_f": 90.4,
     "eds_edm": 85.2,
-    "amr_2015_smatch_f": "(74.5)3",
+    "amr_2015_smatch_f": "(74.5)3 ±0.1",
     "amr_2017_smatch_f": 75.3
   }
 ]

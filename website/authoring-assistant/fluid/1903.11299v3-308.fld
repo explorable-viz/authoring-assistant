@@ -1,0 +1,7 @@
+import scigen
+import util
+import datasets.scigen._1903_11299v3_308
+
+"""
+	With BIVEC embeddings, we learn two languages at the same time, and test retrieval on one or two of these languages. Results are shown in table 4. Trained in English alone, the model gives  ${betterWorse LT}  performance than  MUSE for languages not seen previously. For example, with English-German BIVEC and a model trained only in English, and test on German, we obtain only  ${let record = (findWhere (fun x -> x.train_lang == "en") tableData) in numToStr record.de ++ " %"}  recall@10, where MUSE embeddings obtain  ${"44.18 %"} . But when train on English and French, we obtain  ${let record = (findWhere (fun x -> x.train_lang == "en+fr") tableData) in numToStr record.fr ++ " %"}  recall, an increase of  ${"26.39 %"}  compared to MUSE. With German and English training, we have an increase of  ${"15.16 %"}  on English only recall, with a recall of  ${let record = (findWhere (fun x -> x.train_lang == "en+de") tableData) in numToStr record.en ++ " %"} . Meaning that, once again, learning a new language with BIVEC enables  ${betterWorse GT}  results in English, as the same kind of results is visible with French as well.
+"""

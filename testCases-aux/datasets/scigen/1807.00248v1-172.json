@@ -20,17 +20,17 @@
     "bleu": 65.91
   },
   {
-    "model": "train 11",
+    "model": "train 11K",
     "ter": 41.58,
     "bleu": 43.05
   },
   {
-    "model": "train 23",
+    "model": "train 23K",
     "ter": 30.23,
     "bleu": 57.14
   },
   {
-    "model": "train 23K + 500",
+    "model": "train 23K + 500K",
     "ter": 22.6,
     "bleu": 66.21
   }

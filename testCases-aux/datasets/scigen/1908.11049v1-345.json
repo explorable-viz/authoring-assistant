@@ -7,13 +7,13 @@
   },
   {
     "dataset": "DBLP:conf/naacl/WaseemH16",
-    "num_tweets": 16,
+    "num_tweets": "16, 914",
     "labels": "racist, sexist, normal",
     "annotators_tweet": 1
   },
   {
     "dataset": "DavidsonWMW17",
-    "num_tweets": 24,
+    "num_tweets": "24, 802",
     "labels": "hateful, offensive (but not hateful), neither",
     "annotators_tweet": "3 or more"
   },
@@ -31,13 +31,13 @@
   },
   {
     "dataset": "FountaDCLBSVSK18",
-    "num_tweets": 80,
+    "num_tweets": "80, 000",
     "labels": "offensive, abusive, hateful speech,",
     "annotators_tweet": "5 to 20"
   },
   {
     "dataset": "FountaDCLBSVSK18",
-    "num_tweets": 80,
+    "num_tweets": "80, 000",
     "labels": "aggressive, cyberbullying, spam, normal",
     "annotators_tweet": "5 to 20"
   },

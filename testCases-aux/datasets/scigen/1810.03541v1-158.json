@@ -1,17 +1,17 @@
 [
   {
     "aligner": "",
-    "alignment_f1": "(on hand-align)",
-    "oracle’s_smatch": "(on dev. dataset)"
+    "alignment_F1": "(on hand-align)",
+    "oracle’s_Smatch": "(on dev. dataset)"
   },
   {
     "aligner": "JAMR",
-    "alignment_f1": 90.6,
-    "oracle’s_smatch": 91.7
+    "alignment_F1": 90.6,
+    "oracle’s_Smatch": 91.7
   },
   {
     "aligner": "Our",
-    "alignment_f1": 95.2,
-    "oracle’s_smatch": 94.7
+    "alignment_F1": 95.2,
+    "oracle’s_Smatch": 94.7
   }
 ]

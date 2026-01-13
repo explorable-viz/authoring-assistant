@@ -1,202 +1,202 @@
 [
   {
-    "type_model": " Hosseini, et.al.",
-    "ai2": 77.7,
-    "cc": "–",
-    "il": "–",
-    "mawps": "–",
-    "average": 77.7
+    "Type_Model": " Hosseini, et.al.",
+    "AI2": 77.7,
+    "CC": "–",
+    "IL": "–",
+    "MAWPS": "–",
+    "Average": 77.7
   },
   {
-    "type_model": " Kushman, et.al.",
-    "ai2": 64.0,
-    "cc": 73.7,
-    "il": 2.3,
-    "mawps": "–",
-    "average": 46.7
+    "Type_Model": " Kushman, et.al.",
+    "AI2": 64.0,
+    "CC": 73.7,
+    "IL": 2.3,
+    "MAWPS": "–",
+    "Average": 46.7
   },
   {
-    "type_model": " Roy, et.al.",
-    "ai2": "–",
-    "cc": "–",
-    "il": 52.7,
-    "mawps": "–",
-    "average": 52.7
+    "Type_Model": " Roy, et.al.",
+    "AI2": "–",
+    "CC": "–",
+    "IL": 52.7,
+    "MAWPS": "–",
+    "Average": 52.7
   },
   {
-    "type_model": " Robaidek, et.al.",
-    "ai2": "–",
-    "cc": "–",
-    "il": "–",
-    "mawps": 62.8,
-    "average": 62.8
+    "Type_Model": " Robaidek, et.al.",
+    "AI2": "–",
+    "CC": "–",
+    "IL": "–",
+    "MAWPS": 62.8,
+    "Average": 62.8
   },
   {
-    "type_model": " Wang, et.al.",
-    "ai2": 78.5,
-    "cc": 75.5,
-    "il": 73.3,
-    "mawps": "–",
-    "average": 75.4
+    "Type_Model": " Wang, et.al.",
+    "AI2": 78.5,
+    "CC": 75.5,
+    "IL": 73.3,
+    "MAWPS": "–",
+    "Average": 75.4
   },
   {
-    "type_model": " Pre-trained",
-    "ai2": "",
-    "cc": "",
-    "il": "",
-    "mawps": "",
-    "average": ""
+    "Type_Model": " Pre-trained",
+    "AI2": "",
+    "CC": "",
+    "IL": "",
+    "MAWPS": "",
+    "Average": ""
   },
   {
-    "type_model": "(1) Prefix-Transformer",
-    "ai2": 70.2,
-    "cc": 91.1,
-    "il": 95.2,
-    "mawps": 82.4,
-    "average": 84.7
+    "Type_Model": "(1) Prefix-Transformer",
+    "AI2": 70.2,
+    "CC": 91.1,
+    "IL": 95.2,
+    "MAWPS": 82.4,
+    "Average": 84.7
   },
   {
-    "type_model": "(1) Postfix-Transformer",
-    "ai2": 68.4,
-    "cc": 90.0,
-    "il": 92.9,
-    "mawps": 82.7,
-    "average": 83.5
+    "Type_Model": "(1) Postfix-Transformer",
+    "AI2": 68.4,
+    "CC": 90.0,
+    "IL": 92.9,
+    "MAWPS": 82.7,
+    "Average": 83.5
   },
   {
-    "type_model": "(1) Infix-Transformer",
-    "ai2": 75.4,
-    "cc": 74.4,
-    "il": 64.3,
-    "mawps": 56.4,
-    "average": 67.6
+    "Type_Model": "(1) Infix-Transformer",
+    "AI2": 75.4,
+    "CC": 74.4,
+    "IL": 64.3,
+    "MAWPS": 56.4,
+    "Average": 67.6
   },
   {
-    "type_model": "(2) Prefix-Transformer",
-    "ai2": 66.7,
-    "cc": 91.1,
-    "il": 96.4,
-    "mawps": 82.1,
-    "average": 84.1
+    "Type_Model": "(2) Prefix-Transformer",
+    "AI2": 66.7,
+    "CC": 91.1,
+    "IL": 96.4,
+    "MAWPS": 82.1,
+    "Average": 84.1
   },
   {
-    "type_model": "(2) Postfix-Transformer",
-    "ai2": 73.7,
-    "cc": 93.3,
-    "il": 94.1,
-    "mawps": 82.4,
-    "average": 85.9
+    "Type_Model": "(2) Postfix-Transformer",
+    "AI2": 73.7,
+    "CC": 93.3,
+    "IL": 94.1,
+    "MAWPS": 82.4,
+    "Average": 85.9
   },
   {
-    "type_model": "(2) Infix-Transformer",
-    "ai2": 75.4,
-    "cc": 75.6,
-    "il": 66.7,
-    "mawps": 59.0,
-    "average": 69.2
+    "Type_Model": "(2) Infix-Transformer",
+    "AI2": 75.4,
+    "CC": 75.6,
+    "IL": 66.7,
+    "MAWPS": 59.0,
+    "Average": 69.2
   },
   {
-    "type_model": "(3) Prefix-Transformer",
-    "ai2": 70.2,
-    "cc": 91.1,
-    "il": 95.2,
-    "mawps": 82.4,
-    "average": 84.7
+    "Type_Model": "(3) Prefix-Transformer",
+    "AI2": 70.2,
+    "CC": 91.1,
+    "IL": 95.2,
+    "MAWPS": 82.4,
+    "Average": 84.7
   },
   {
-    "type_model": "(3) Postfix-Transformer",
-    "ai2": 73.7,
-    "cc": 92.2,
-    "il": 94.1,
-    "mawps": 82.1,
-    "average": 85.5
+    "Type_Model": "(3) Postfix-Transformer",
+    "AI2": 73.7,
+    "CC": 92.2,
+    "IL": 94.1,
+    "MAWPS": 82.1,
+    "Average": 85.5
   },
   {
-    "type_model": "(3) Infix-Transformer",
-    "ai2": 75.4,
-    "cc": 75.6,
-    "il": 64.3,
-    "mawps": 58.7,
-    "average": 68.5
+    "Type_Model": "(3) Infix-Transformer",
+    "AI2": 75.4,
+    "CC": 75.6,
+    "IL": 64.3,
+    "MAWPS": 58.7,
+    "Average": 68.5
   },
   {
-    "type_model": " Non-pre-trained",
-    "ai2": "",
-    "cc": "",
-    "il": "",
-    "mawps": "",
-    "average": ""
+    "Type_Model": " Non-pre-trained",
+    "AI2": "",
+    "CC": "",
+    "IL": "",
+    "MAWPS": "",
+    "Average": ""
   },
   {
-    "type_model": "(1) Prefix-Transformer",
-    "ai2": 71.9,
-    "cc": 94.4,
-    "il": 95.2,
-    "mawps": 83.4,
-    "average": 86.3
+    "Type_Model": "(1) Prefix-Transformer",
+    "AI2": 71.9,
+    "CC": 94.4,
+    "IL": 95.2,
+    "MAWPS": 83.4,
+    "Average": 86.3
   },
   {
-    "type_model": "(1) Postfix-Transformer",
-    "ai2": 73.7,
-    "cc": 81.1,
-    "il": 92.9,
-    "mawps": 75.7,
-    "average": 80.8
+    "Type_Model": "(1) Postfix-Transformer",
+    "AI2": 73.7,
+    "CC": 81.1,
+    "IL": 92.9,
+    "MAWPS": 75.7,
+    "Average": 80.8
   },
   {
-    "type_model": "(1) Infix-Transformer",
-    "ai2": 77.2,
-    "cc": 73.3,
-    "il": 61.9,
-    "mawps": 56.8,
-    "average": 67.3
+    "Type_Model": "(1) Infix-Transformer",
+    "AI2": 77.2,
+    "CC": 73.3,
+    "IL": 61.9,
+    "MAWPS": 56.8,
+    "Average": 67.3
   },
   {
-    "type_model": "(2) Prefix-Transformer",
-    "ai2": 71.9,
-    "cc": 94.4,
-    "il": 94.1,
-    "mawps": 84.7,
-    "average": 86.3
+    "Type_Model": "(2) Prefix-Transformer",
+    "AI2": 71.9,
+    "CC": 94.4,
+    "IL": 94.1,
+    "MAWPS": 84.7,
+    "Average": 86.3
   },
   {
-    "type_model": "(2) Postfix-Transformer",
-    "ai2": 77.2,
-    "cc": 94.4,
-    "il": 94.1,
-    "mawps": 83.1,
-    "average": 87.2
+    "Type_Model": "(2) Postfix-Transformer",
+    "AI2": 77.2,
+    "CC": 94.4,
+    "IL": 94.1,
+    "MAWPS": 83.1,
+    "Average": 87.2
   },
   {
-    "type_model": "(2) Infix-Transformer",
-    "ai2": 77.2,
-    "cc": 76.7,
-    "il": 66.7,
-    "mawps": 61.5,
-    "average": 70.5
+    "Type_Model": "(2) Infix-Transformer",
+    "AI2": 77.2,
+    "CC": 76.7,
+    "IL": 66.7,
+    "MAWPS": 61.5,
+    "Average": 70.5
   },
   {
-    "type_model": "(3) Prefix-Transformer",
-    "ai2": 71.9,
-    "cc": 93.3,
-    "il": 95.2,
-    "mawps": 84.1,
-    "average": 86.2
+    "Type_Model": "(3) Prefix-Transformer",
+    "AI2": 71.9,
+    "CC": 93.3,
+    "IL": 95.2,
+    "MAWPS": 84.1,
+    "Average": 86.2
   },
   {
-    "type_model": "(3) Postfix-Transformer",
-    "ai2": 77.2,
-    "cc": 94.4,
-    "il": 94.1,
-    "mawps": 82.4,
-    "average": 87.0
+    "Type_Model": "(3) Postfix-Transformer",
+    "AI2": 77.2,
+    "CC": 94.4,
+    "IL": 94.1,
+    "MAWPS": 82.4,
+    "Average": 87.0
   },
   {
-    "type_model": "(3) Infix-Transformer",
-    "ai2": 77.2,
-    "cc": 76.7,
-    "il": 66.7,
-    "mawps": 62.4,
-    "average": 70.7
+    "Type_Model": "(3) Infix-Transformer",
+    "AI2": 77.2,
+    "CC": 76.7,
+    "IL": 66.7,
+    "MAWPS": 62.4,
+    "Average": 70.7
   }
 ]

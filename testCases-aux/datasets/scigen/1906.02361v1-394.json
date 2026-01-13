@@ -1,14 +1,14 @@
 [
   {
-    "method": "BERT (baseline)",
-    "accuracy": 63.8
+    "Method": "BERT (baseline)",
+    "Accuracy": 63.8
   },
   {
-    "method": "CoS-E-open-ended",
-    "accuracy": 65.5
+    "Method": "CoS-E-open-ended",
+    "Accuracy": 65.5
   },
   {
-    "method": "CAGE-reasoning",
-    "accuracy": 72.6
+    "Method": "CAGE-reasoning",
+    "Accuracy": 72.6
   }
 ]

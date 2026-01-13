@@ -1,32 +1,32 @@
 [
   {
     "model": "BERT (large)",
-    "corpus_bleu_↑_wt103": 5.05,
-    "corpus_bleu_↑_tbc": 7.6,
-    "ppl_↓": 331.47
+    "corpus_BLEU_↑_WT103": 5.05,
+    "corpus_BLEU_↑_TBC": 7.6,
+    "pPL_↓": 331.47
   },
   {
     "model": "BERT (base)",
-    "corpus_bleu_↑_wt103": 7.8,
-    "corpus_bleu_↑_tbc": 7.06,
-    "ppl_↓": 279.1
+    "corpus_BLEU_↑_WT103": 7.8,
+    "corpus_BLEU_↑_TBC": 7.06,
+    "pPL_↓": 279.1
   },
   {
     "model": "GPT",
-    "corpus_bleu_↑_wt103": 10.81,
-    "corpus_bleu_↑_tbc": 30.75,
-    "ppl_↓": 154.29
+    "corpus_BLEU_↑_WT103": 10.81,
+    "corpus_BLEU_↑_TBC": 30.75,
+    "pPL_↓": 154.29
   },
   {
     "model": "WT103",
-    "corpus_bleu_↑_wt103": 17.48,
-    "corpus_bleu_↑_tbc": 6.57,
-    "ppl_↓": 54.0
+    "corpus_BLEU_↑_WT103": 17.48,
+    "corpus_BLEU_↑_TBC": 6.57,
+    "pPL_↓": 54.0
   },
   {
     "model": "TBC",
-    "corpus_bleu_↑_wt103": 10.05,
-    "corpus_bleu_↑_tbc": 23.05,
-    "ppl_↓": 314.28
+    "corpus_BLEU_↑_WT103": 10.05,
+    "corpus_BLEU_↑_TBC": 23.05,
+    "pPL_↓": 314.28
   }
 ]

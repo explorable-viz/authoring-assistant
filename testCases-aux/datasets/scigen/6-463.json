@@ -1,22 +1,22 @@
 [
   {
     "_1": "UB",
-    "en_test": 0.932,
-    "de_test": 0.92
+    "eN_test": 0.932,
+    "dE_test": 0.92
   },
   {
     "_1": "EN-train",
-    "en_test": 0.93,
-    "de_test": 0.787
+    "eN_test": 0.93,
+    "dE_test": 0.787
   },
   {
     "_1": "DE-train",
-    "en_test": 0.852,
-    "de_test": 0.79
+    "eN_test": 0.852,
+    "dE_test": 0.79
   },
   {
     "_1": "RND",
-    "en_test": 0.5,
-    "de_test": 0.456
+    "eN_test": 0.5,
+    "dE_test": 0.456
   }
 ]

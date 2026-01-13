@@ -1,16 +1,16 @@
 [
   {
     "_1": "Baseline",
-    "french_f1": 61.88,
-    "french_em": 40.67,
-    "japanese_f1": 52.19,
-    "japanese_em": 37.0
+    "french_F1": 61.88,
+    "french_EM": 40.67,
+    "japanese_F1": 52.19,
+    "japanese_EM": 37.0
   },
   {
     "_1": "Multilingual BERT",
-    "french_f1": 76.65,
-    "french_em": 61.77,
-    "japanese_f1": 61.83,
-    "japanese_em": 59.94
+    "french_F1": 76.65,
+    "french_EM": 61.77,
+    "japanese_F1": 61.83,
+    "japanese_EM": 59.94
   }
 ]

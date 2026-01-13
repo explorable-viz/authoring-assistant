@@ -4,55 +4,55 @@
     "metric": "SwitchP",
     "amazon": 0.9077,
     "newsgroups": 0.8737,
-    "new_york_times": 0.7022
+    "new_York_Times": 0.7022
   },
   {
     "_1": "Local",
     "metric": "SwitchVI",
     "amazon": 0.8485,
     "newsgroups": 0.8181,
-    "new_york_times": 0.6977
+    "new_York_Times": 0.6977
   },
   {
     "_1": "Local",
     "metric": "AvgRank",
     "amazon": 0.5103,
     "newsgroups": 0.5089,
-    "new_york_times": 0.4473
+    "new_York_Times": 0.4473
   },
   {
     "_1": "Local",
     "metric": "Window",
     "amazon": 0.4884,
     "newsgroups": 0.3024,
-    "new_york_times": 0.1127
+    "new_York_Times": 0.1127
   },
   {
     "_1": "Local",
     "metric": "WordDiv",
     "amazon": 0.3112,
     "newsgroups": 0.2197,
-    "new_york_times": 0.0836
+    "new_York_Times": 0.0836
   },
   {
     "_1": "Global",
     "metric": "SigVac",
     "amazon": 0.696,
     "newsgroups": 0.6081,
-    "new_york_times": 0.6063
+    "new_York_Times": 0.6063
   },
   {
     "_1": "Global",
     "metric": "SigUni",
     "amazon": 0.631,
     "newsgroups": 0.4839,
-    "new_york_times": 0.4935
+    "new_York_Times": 0.4935
   },
   {
     "_1": "Global",
     "metric": "Coherence",
     "amazon": 0.4907,
     "newsgroups": 0.4463,
-    "new_york_times": 0.3799
+    "new_York_Times": 0.3799
   }
 ]

@@ -1,56 +1,56 @@
 [
   {
-    "bert_base": "No noise Fine-tuning",
-    "wikiqa_map": 0.813,
-    "wikiqa_drop": "-",
-    "wikiqa_mrr": 0.828,
-    "trec_qa_map": 0.857,
-    "trec_qa_drop": "-",
-    "trec_qa_mrr": 0.937
+    "BERT_base": "No noise Fine-tuning",
+    "wikiQA_MAP": 0.813,
+    "wikiQA_Drop": "-",
+    "wikiQA_MRR": 0.828,
+    "tREC_QA_MAP": 0.857,
+    "tREC_QA_Drop": "-",
+    "tREC_QA_MRR": 0.937
   },
   {
-    "bert_base": "10% noise Fine-tuning",
-    "wikiqa_map": 0.775,
-    "wikiqa_drop": 4.22,
-    "wikiqa_mrr": 0.793,
-    "trec_qa_map": 0.826,
-    "trec_qa_drop": 3.73,
-    "trec_qa_mrr": 0.902
+    "BERT_base": "10% noise Fine-tuning",
+    "wikiQA_MAP": 0.775,
+    "wikiQA_Drop": 4.22,
+    "wikiQA_MRR": 0.793,
+    "tREC_QA_MAP": 0.826,
+    "tREC_QA_Drop": 3.73,
+    "tREC_QA_MRR": 0.902
   },
   {
-    "bert_base": "20% noise Fine-tuning",
-    "wikiqa_map": 0.629,
-    "wikiqa_drop": 22.1,
-    "wikiqa_mrr": 0.645,
-    "trec_qa_map": 0.738,
-    "trec_qa_drop": 10.03,
-    "trec_qa_mrr": 0.843
+    "BERT_base": "20% noise Fine-tuning",
+    "wikiQA_MAP": 0.629,
+    "wikiQA_Drop": 22.1,
+    "wikiQA_MRR": 0.645,
+    "tREC_QA_MAP": 0.738,
+    "tREC_QA_Drop": 10.03,
+    "tREC_QA_MRR": 0.843
   },
   {
-    "bert_base": "No noise TandA (ASNQ → *)",
-    "wikiqa_map": 0.893,
-    "wikiqa_drop": "-",
-    "wikiqa_mrr": 0.903,
-    "trec_qa_map": 0.912,
-    "trec_qa_drop": "-",
-    "trec_qa_mrr": 0.951
+    "BERT_base": "No noise TandA (ASNQ → *)",
+    "wikiQA_MAP": 0.893,
+    "wikiQA_Drop": "-",
+    "wikiQA_MRR": 0.903,
+    "tREC_QA_MAP": 0.912,
+    "tREC_QA_Drop": "-",
+    "tREC_QA_MRR": 0.951
   },
   {
-    "bert_base": "10% noise TandA (ASNQ → *)",
-    "wikiqa_map": 0.876,
-    "wikiqa_drop": 1.55,
-    "wikiqa_mrr": 0.889,
-    "trec_qa_map": 0.896,
-    "trec_qa_drop": 1.05,
-    "trec_qa_mrr": 0.941
+    "BERT_base": "10% noise TandA (ASNQ → *)",
+    "wikiQA_MAP": 0.876,
+    "wikiQA_Drop": 1.55,
+    "wikiQA_MRR": 0.889,
+    "tREC_QA_MAP": 0.896,
+    "tREC_QA_Drop": 1.05,
+    "tREC_QA_MRR": 0.941
   },
   {
-    "bert_base": "20% noise TandA (ASNQ → *)",
-    "wikiqa_map": 0.87,
-    "wikiqa_drop": 1.88,
-    "wikiqa_mrr": 0.886,
-    "trec_qa_map": 0.891,
-    "trec_qa_drop": 1.47,
-    "trec_qa_mrr": 0.937
+    "BERT_base": "20% noise TandA (ASNQ → *)",
+    "wikiQA_MAP": 0.87,
+    "wikiQA_Drop": 1.88,
+    "wikiQA_MRR": 0.886,
+    "tREC_QA_MAP": 0.891,
+    "tREC_QA_Drop": 1.47,
+    "tREC_QA_MRR": 0.937
   }
 ]

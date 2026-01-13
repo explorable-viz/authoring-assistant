@@ -1,38 +1,38 @@
 [
   {
-    "data_set": "CADEC",
-    "size": 120341,
-    "entity_types": "Adverse Drug Event, Disease, Drug, Finding, Symptom",
-    "description": "Posts taken from AskaPatient, which is a forum where consumers can discuss their experiences with medications."
+    "Data_set": "CADEC",
+    "Size": 120341,
+    "Entity_Types": "Adverse Drug Event, Disease, Drug, Finding, Symptom",
+    "Description": "Posts taken from AskaPatient, which is a forum where consumers can discuss their experiences with medications."
   },
   {
-    "data_set": "CoNLL2003",
-    "size": 301418,
-    "entity_types": "Person, Organization, Location, Miscellany",
-    "description": "Newswire from the Reuters RCV1 corpus."
+    "Data_set": "CoNLL2003",
+    "Size": 301418,
+    "Entity_Types": "Person, Organization, Location, Miscellany",
+    "Description": "Newswire from the Reuters RCV1 corpus."
   },
   {
-    "data_set": "CRAFT",
-    "size": 561015,
-    "entity_types": "Cell, Chemical entity, Biological taxa, Protein, Biomacromolecular sequence, Entrez gene, Biological process and molecular function, Cellular component",
-    "description": "Full-length, open-access journal articles about biology."
+    "Data_set": "CRAFT",
+    "Size": 561015,
+    "Entity_Types": "Cell, Chemical entity, Biological taxa, Protein, Biomacromolecular sequence, Entrez gene, Biological process and molecular function, Cellular component",
+    "Description": "Full-length, open-access journal articles about biology."
   },
   {
-    "data_set": "JNLPBA",
-    "size": 593590,
-    "entity_types": "Protein, DNA, RNA, Cell line and Cell type",
-    "description": "Abstract of journal articles about biology."
+    "Data_set": "JNLPBA",
+    "Size": 593590,
+    "Entity_Types": "Protein, DNA, RNA, Cell line and Cell type",
+    "Description": "Abstract of journal articles about biology."
   },
   {
-    "data_set": "ScienceIE",
-    "size": 99555,
-    "entity_types": "Process (including methods, equipment), Task and Material (including corpora, physical materials)",
-    "description": "Journal articles about Computer Science, Material Sciences and Physics."
+    "Data_set": "ScienceIE",
+    "Size": 99555,
+    "Entity_Types": "Process (including methods, equipment), Task and Material (including corpora, physical materials)",
+    "Description": "Journal articles about Computer Science, Material Sciences and Physics."
   },
   {
-    "data_set": "Wetlab",
-    "size": 220618,
-    "entity_types": "Action, 9 object-based (Amount, Concentration, Device, Location, Method, Reagent, Speed, Temperature, Time) entity types, 5 measure-based (Numerical, Generic-Measure, Size, pH, Measure-Type) and 3 other (Mention, Modifier, Seal) types",
-    "description": "Protocols written by researchers about conducting biology and chemistry experiments."
+    "Data_set": "Wetlab",
+    "Size": 220618,
+    "Entity_Types": "Action, 9 object-based (Amount, Concentration, Device, Location, Method, Reagent, Speed, Temperature, Time) entity types, 5 measure-based (Numerical, Generic-Measure, Size, pH, Measure-Type) and 3 other (Mention, Modifier, Seal) types",
+    "Description": "Protocols written by researchers about conducting biology and chemistry experiments."
   }
 ]

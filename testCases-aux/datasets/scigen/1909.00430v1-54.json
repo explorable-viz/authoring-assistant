@@ -2,89 +2,89 @@
   {
     "data": "A",
     "method": "TDLSTM+ATT Tang et al. ( 2016a )",
-    "semeval_15_acc": 77.1,
-    "semeval_15_macro_f1": 59.46,
-    "semeval_16_acc": 83.11,
-    "semeval_16_macro_f1": 57.53
+    "semEval_15_Acc": 77.1,
+    "semEval_15_Macro_F1": 59.46,
+    "semEval_16_Acc": 83.11,
+    "semEval_16_Macro_F1": 57.53
   },
   {
     "data": "A",
     "method": "ATAE-LSTM Wang et al. ( 2016 )",
-    "semeval_15_acc": 78.48,
-    "semeval_15_macro_f1": 62.84,
-    "semeval_16_acc": 83.77,
-    "semeval_16_macro_f1": 61.71
+    "semEval_15_Acc": 78.48,
+    "semEval_15_Macro_F1": 62.84,
+    "semEval_16_Acc": 83.77,
+    "semEval_16_Macro_F1": 61.71
   },
   {
     "data": "A",
     "method": "MM Tang et al. ( 2016b )",
-    "semeval_15_acc": 77.89,
-    "semeval_15_macro_f1": 59.52,
-    "semeval_16_acc": 83.04,
-    "semeval_16_macro_f1": 57.91
+    "semEval_15_Acc": 77.89,
+    "semEval_15_Macro_F1": 59.52,
+    "semEval_16_Acc": 83.04,
+    "semEval_16_Macro_F1": 57.91
   },
   {
     "data": "A",
     "method": "RAM Chen et al. ( 2017 )",
-    "semeval_15_acc": 79.98,
-    "semeval_15_macro_f1": 60.57,
-    "semeval_16_acc": 83.88,
-    "semeval_16_macro_f1": 62.14
+    "semEval_15_Acc": 79.98,
+    "semEval_15_Macro_F1": 60.57,
+    "semEval_16_Acc": 83.88,
+    "semEval_16_Macro_F1": 62.14
   },
   {
     "data": "A",
     "method": "LSTM+SynATT+TarRep He et al. ( 2018a )",
-    "semeval_15_acc": 81.67,
-    "semeval_15_macro_f1": 66.05,
-    "semeval_16_acc": 84.61,
-    "semeval_16_macro_f1": 67.45
+    "semEval_15_Acc": 81.67,
+    "semEval_15_Macro_F1": 66.05,
+    "semEval_16_Acc": 84.61,
+    "semEval_16_Macro_F1": 67.45
   },
   {
     "data": "S+A",
     "method": "Semisupervised He et al. ( 2018b )",
-    "semeval_15_acc": 81.3,
-    "semeval_15_macro_f1": 68.74,
-    "semeval_16_acc": 85.58,
-    "semeval_16_macro_f1": 69.76
+    "semEval_15_Acc": 81.3,
+    "semEval_15_Macro_F1": 68.74,
+    "semEval_16_Acc": 85.58,
+    "semEval_16_Macro_F1": 69.76
   },
   {
     "data": "S",
     "method": "BiLSTM-104 Sentence Training",
-    "semeval_15_acc": 80.24,
-    "semeval_15_macro_f1": 61.89,
-    "semeval_16_acc": 80.89,
-    "semeval_16_macro_f1": 61.4
+    "semEval_15_Acc": 80.24,
+    "semEval_15_Macro_F1": 61.89,
+    "semEval_16_Acc": 80.89,
+    "semEval_16_Macro_F1": 61.4
   },
   {
     "data": "S+A",
     "method": "BiLSTM-104 Sentence Training →Aspect Based Finetuning",
-    "semeval_15_acc": 77.75,
-    "semeval_15_macro_f1": 60.83,
-    "semeval_16_acc": 84.87,
-    "semeval_16_macro_f1": 61.87
+    "semEval_15_Acc": 77.75,
+    "semEval_15_Macro_F1": 60.83,
+    "semEval_16_Acc": 84.87,
+    "semEval_16_Macro_F1": 61.87
   },
   {
     "data": "N",
     "method": "BiLSTM-XR-Dev Estimation",
-    "semeval_15_acc": 83.31,
-    "semeval_15_macro_f1": 62.24,
-    "semeval_16_acc": 87.68,
-    "semeval_16_macro_f1": 63.23
+    "semEval_15_Acc": 83.31,
+    "semEval_15_Macro_F1": 62.24,
+    "semEval_16_Acc": 87.68,
+    "semEval_16_Macro_F1": 63.23
   },
   {
     "data": "N",
     "method": "BiLSTM-XR",
-    "semeval_15_acc": 83.31,
-    "semeval_15_macro_f1": 64.42,
-    "semeval_16_acc": 88.12,
-    "semeval_16_macro_f1": 68.6
+    "semEval_15_Acc": 83.31,
+    "semEval_15_Macro_F1": 64.42,
+    "semEval_16_Acc": 88.12,
+    "semEval_16_Macro_F1": 68.6
   },
   {
     "data": "N+A",
     "method": "BiLSTM-XR →Aspect Based Finetuning",
-    "semeval_15_acc": 83.44,
-    "semeval_15_macro_f1": 67.23,
-    "semeval_16_acc": 87.66,
-    "semeval_16_macro_f1": 71.19
+    "semEval_15_Acc": 83.44,
+    "semEval_15_Macro_F1": 67.23,
+    "semEval_16_Acc": 87.66,
+    "semEval_16_Macro_F1": 71.19
   }
 ]

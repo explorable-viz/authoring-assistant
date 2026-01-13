@@ -1,44 +1,44 @@
 [
   {
-    "model_num_param": "",
-    "basernn_13m": " F@10",
-    "bigrnn_37m": " F@10",
-    "transformer_80m": " F@10"
+    "Model_num_Param": "",
+    "BaseRNN_13M": " F@10",
+    "BigRNN_37M": " F@10",
+    "Transformer_80M": " F@10"
   },
   {
-    "model_num_param": " Random",
-    "basernn_13m": 0.304,
-    "bigrnn_37m": 0.305,
-    "transformer_80m": 0.289
+    "Model_num_Param": " Random",
+    "BaseRNN_13M": 0.304,
+    "BigRNN_37M": 0.305,
+    "Transformer_80M": 0.289
   },
   {
-    "model_num_param": " Length",
-    "basernn_13m": 0.319,
-    "bigrnn_37m": 0.321,
-    "transformer_80m": 0.318
+    "Model_num_Param": " Length",
+    "BaseRNN_13M": 0.319,
+    "BigRNN_37M": 0.321,
+    "Transformer_80M": 0.318
   },
   {
-    "model_num_param": " No-Sort",
-    "basernn_13m": 0.325,
-    "bigrnn_37m": 0.329,
-    "transformer_80m": 0.329
+    "Model_num_Param": " No-Sort",
+    "BaseRNN_13M": 0.325,
+    "BigRNN_37M": 0.329,
+    "Transformer_80M": 0.329
   },
   {
-    "model_num_param": " Alpha",
-    "basernn_13m": 0.341,
-    "bigrnn_37m": 0.341,
-    "transformer_80m": 0.336
+    "Model_num_Param": " Alpha",
+    "BaseRNN_13M": 0.341,
+    "BigRNN_37M": 0.341,
+    "Transformer_80M": 0.336
   },
   {
-    "model_num_param": " Appear-Pre",
-    "basernn_13m": 0.345,
-    "bigrnn_37m": 0.341,
-    "transformer_80m": 0.343
+    "Model_num_Param": " Appear-Pre",
+    "BaseRNN_13M": 0.345,
+    "BigRNN_37M": 0.341,
+    "Transformer_80M": 0.343
   },
   {
-    "model_num_param": " Appear-Ap",
-    "basernn_13m": 0.347,
-    "bigrnn_37m": 0.346,
-    "transformer_80m": 0.345
+    "Model_num_Param": " Appear-Ap",
+    "BaseRNN_13M": 0.347,
+    "BigRNN_37M": 0.346,
+    "Transformer_80M": 0.345
   }
 ]

@@ -1,72 +1,72 @@
 [
   {
-    "2_data_type": "Headers",
+    "2_Data_type": "Headers",
     "geth": 316.68,
     "ethanos": 348.16,
     "diff": 31.48
   },
   {
-    "2_data_type": "Bodies",
+    "2_Data_type": "Bodies",
     "geth": 11110.0,
     "ethanos": 12750.0,
     "diff": 1640.0
   },
   {
-    "2_data_type": "Receipts",
+    "2_Data_type": "Receipts",
     "geth": 3578.97,
     "ethanos": 3605.66,
     "diff": 26.69
   },
   {
-    "2_data_type": "Difficulties",
+    "2_Data_type": "Difficulties",
     "geth": 15.57,
     "ethanos": 15.33,
     "diff": -0.24
   },
   {
-    "2_data_type": "Block number -> hash",
+    "2_Data_type": "Block number -> hash",
     "geth": 39.66,
     "ethanos": 39.35,
     "diff": -0.31
   },
   {
-    "2_data_type": "Block hash -> number",
+    "2_Data_type": "Block hash -> number",
     "geth": 39.1,
     "ethanos": 39.1,
     "diff": 0
   },
   {
-    "2_data_type": "Transaction Index",
+    "2_Data_type": "Transaction Index",
     "geth": 3650.0,
     "ethanos": 3650.0,
     "diff": 0
   },
   {
-    "2_data_type": "Bloombit index",
+    "2_Data_type": "Bloombit index",
     "geth": 20.49,
     "ethanos": 20.49,
     "diff": 0
   },
   {
-    "2_data_type": "Trie nodes",
+    "2_Data_type": "Trie nodes",
     "geth": 183100.0,
     "ethanos": 165140.0,
     "diff": -17960.0
   },
   {
-    "2_data_type": "Trie preimages",
+    "2_Data_type": "Trie preimages",
     "geth": 857.0,
     "ethanos": 888.11,
     "diff": 31.11
   },
   {
-    "2_data_type": "total",
+    "2_Data_type": "total",
     "geth": 202727.47,
     "ethanos": 186496.2,
     "diff": -16231.27
   },
   {
-    "2_data_type": 2,
+    "2_Data_type": 2,
     "geth": "",
     "ethanos": "",
     "diff": ""

@@ -1,37 +1,37 @@
 [
   {
     "_1": "1BWB",
-    "scienceie_def": 34.4,
-    "scienceie_opt": 34.57,
-    "wetlab_def": 78.66,
-    "wetlab_opt": 79.12
+    "ScienceIE_Def": 34.4,
+    "ScienceIE_Opt": 34.57,
+    "WetLab_Def": 78.66,
+    "WetLab_Opt": 79.12
   },
   {
     "_1": "MIMIC",
-    "scienceie_def": 31.23,
-    "scienceie_opt": 34.14,
-    "wetlab_def": 78.68,
-    "wetlab_opt": 78.65
+    "ScienceIE_Def": 31.23,
+    "ScienceIE_Opt": 34.14,
+    "WetLab_Def": 78.68,
+    "WetLab_Opt": 78.65
   },
   {
     "_1": "PubMed",
-    "scienceie_def": 37.91,
-    "scienceie_opt": 38.86,
-    "wetlab_def": 78.93,
-    "wetlab_opt": 79.28
+    "ScienceIE_Def": 37.91,
+    "ScienceIE_Opt": 38.86,
+    "WetLab_Def": 78.93,
+    "WetLab_Opt": 79.28
   },
   {
     "_1": "Wiki",
-    "scienceie_def": 36.15,
-    "scienceie_opt": 35.63,
-    "wetlab_def": 78.45,
-    "wetlab_opt": 78.99
+    "ScienceIE_Def": 36.15,
+    "ScienceIE_Opt": 35.63,
+    "WetLab_Def": 78.45,
+    "WetLab_Opt": 78.99
   },
   {
     "_1": "Yelp",
-    "scienceie_def": 33.92,
-    "scienceie_opt": 34.25,
-    "wetlab_def": 78.48,
-    "wetlab_opt": 78.78
+    "ScienceIE_Def": 33.92,
+    "ScienceIE_Opt": 34.25,
+    "WetLab_Def": 78.48,
+    "WetLab_Opt": 78.78
   }
 ]

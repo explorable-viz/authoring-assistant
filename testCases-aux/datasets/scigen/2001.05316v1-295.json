@@ -1,6 +1,6 @@
 [
   {
-    "num_of_authors": "samples/author",
+    "num_of_Authors": "samples/author",
     "6": 1100,
     "8": 931,
     "10": 849,
@@ -8,7 +8,7 @@
     "14": 469
   },
   {
-    "num_of_authors": "Char-CNN",
+    "num_of_Authors": "Char-CNN",
     "6": 96,
     "8": 92,
     "10": 86,
@@ -16,7 +16,7 @@
     "14": 69
   },
   {
-    "num_of_authors": "W2V(CBOW)",
+    "num_of_Authors": "W2V(CBOW)",
     "6": 97,
     "8": 82.8,
     "10": 83.3,
@@ -24,7 +24,7 @@
     "14": 71.8
   },
   {
-    "num_of_authors": "fastText(CBOW)",
+    "num_of_Authors": "fastText(CBOW)",
     "6": 73,
     "8": 58,
     "10": 35.7,
@@ -32,7 +32,7 @@
     "14": 40.3
   },
   {
-    "num_of_authors": "W2V(Skip)",
+    "num_of_Authors": "W2V(Skip)",
     "6": 94,
     "8": 91.1,
     "10": 85.4,
@@ -40,7 +40,7 @@
     "14": 78.6
   },
   {
-    "num_of_authors": "fastText(Skip)",
+    "num_of_Authors": "fastText(Skip)",
     "6": 98,
     "8": 95.2,
     "10": 86.35,

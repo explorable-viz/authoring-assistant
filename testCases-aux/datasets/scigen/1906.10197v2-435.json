@@ -1,23 +1,23 @@
 [
   {
-    "score": 0.2,
+    "Score": 0.2,
     "omniglot": 24304,
-    "omniglot_classifier": 2144,
+    "omniglot_Classifier": 2144,
     "imagenet": 1280,
-    "imagenet_classifier": 2048
+    "imagenet_Classifier": 2048
   },
   {
-    "score": 0.1,
+    "Score": 0.1,
     "omniglot": 99248,
-    "omniglot_classifier": 22912,
+    "omniglot_Classifier": 22912,
     "imagenet": 8448,
-    "imagenet_classifier": 3072
+    "imagenet_Classifier": 3072
   },
   {
-    "score": 0.05,
+    "Score": 0.05,
     "omniglot": 160608,
-    "omniglot_classifier": 43328,
+    "omniglot_Classifier": 43328,
     "imagenet": 111872,
-    "imagenet_classifier": 8960
+    "imagenet_Classifier": 8960
   }
 ]

@@ -2,22 +2,22 @@
   {
     "model": "RHN-Char-CNN",
     "depth": 8,
-    "dlm": 650,
+    "dLM": 650,
     "size": 20000000.0,
-    "ppl": 67.6
+    "pPL": 67.6
   },
   {
     "model": "RHN-Syl-Concat",
     "depth": 8,
-    "dlm": 439,
+    "dLM": 439,
     "size": 13000000.0,
-    "ppl": 72.0
+    "pPL": 72.0
   },
   {
     "model": "RHN-Syl-Concat",
     "depth": 8,
-    "dlm": 650,
+    "dLM": 650,
     "size": 20000000.0,
-    "ppl": 69.4
+    "pPL": 69.4
   }
 ]

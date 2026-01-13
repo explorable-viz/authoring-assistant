@@ -1,44 +1,44 @@
 [
   {
-    "gold_class": "None",
-    "train": 15401,
-    "dev": 3905,
-    "test": 4141
+    "Gold_Class": "None",
+    "Train": 15401,
+    "Dev": 3905,
+    "Test": 4141
   },
   {
-    "gold_class": "Obligation",
-    "train": 11005,
-    "dev": 2860,
-    "test": 970
+    "Gold_Class": "Obligation",
+    "Train": 11005,
+    "Dev": 2860,
+    "Test": 970
   },
   {
-    "gold_class": "Prohibition",
-    "train": 1172,
-    "dev": 314,
-    "test": 108
+    "Gold_Class": "Prohibition",
+    "Train": 1172,
+    "Dev": 314,
+    "Test": 108
   },
   {
-    "gold_class": "Obligation List Intro",
-    "train": 828,
-    "dev": 203,
-    "test": 70
+    "Gold_Class": "Obligation List Intro",
+    "Train": 828,
+    "Dev": 203,
+    "Test": 70
   },
   {
-    "gold_class": "Obligation List Item",
-    "train": 2888,
-    "dev": 726,
-    "test": 255
+    "Gold_Class": "Obligation List Item",
+    "Train": 2888,
+    "Dev": 726,
+    "Test": 255
   },
   {
-    "gold_class": "Prohibition List Item",
-    "train": 251,
-    "dev": 28,
-    "test": 19
+    "Gold_Class": "Prohibition List Item",
+    "Train": 251,
+    "Dev": 28,
+    "Test": 19
   },
   {
-    "gold_class": " Total",
-    "train": 31545,
-    "dev": 8036,
-    "test": 5563
+    "Gold_Class": " Total",
+    "Train": 31545,
+    "Dev": 8036,
+    "Test": 5563
   }
 ]

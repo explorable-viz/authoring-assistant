@@ -1,26 +1,26 @@
 [
   {
     "method": "Konstantinovskiy et al.  2018",
-    "map": 0.267
+    "mAP": 0.267
   },
   {
     "method": "Hansen et al.  2019",
-    "map": 0.302
+    "mAP": 0.302
   },
   {
     "method": "BERT",
-    "map": 0.346
+    "mAP": 0.346
   },
   {
     "method": "BERT + Wiki",
-    "map": 0.339
+    "mAP": 0.339
   },
   {
     "method": "BERT + Wiki + PU",
-    "map": 0.328
+    "mAP": 0.328
   },
   {
     "method": "BERT + Wiki +   PUC",
-    "map": 0.321
+    "mAP": 0.321
   }
 ]

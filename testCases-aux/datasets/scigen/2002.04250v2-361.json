@@ -1,7 +1,7 @@
 [
   {
     "model": "Human",
-    "bleu": "-",
+    "bLEU": "-",
     "distinct_1": 16.8,
     "distinct_2": 58.1,
     "avg_length": 14.2,
@@ -10,7 +10,7 @@
   },
   {
     "model": "AR",
-    "bleu": 1.64,
+    "bLEU": 1.64,
     "distinct_1": 3.7,
     "distinct_2": 9.5,
     "avg_length": 6.4,
@@ -19,7 +19,7 @@
   },
   {
     "model": "AR+MMI",
-    "bleu": 2.1,
+    "bLEU": 2.1,
     "distinct_1": 10.6,
     "distinct_2": 20.5,
     "avg_length": 7.2,
@@ -28,7 +28,7 @@
   },
   {
     "model": "AR+MMI+diverse",
-    "bleu": 2.16,
+    "bLEU": 2.16,
     "distinct_1": 16.0,
     "distinct_2": 27.3,
     "avg_length": 7.5,
@@ -37,7 +37,7 @@
   },
   {
     "model": "AR+MMI+RL",
-    "bleu": 2.34,
+    "bLEU": 2.34,
     "distinct_1": 13.7,
     "distinct_2": 25.2,
     "avg_length": 7.3,
@@ -46,7 +46,7 @@
   },
   {
     "model": "NonAR",
-    "bleu": 1.54,
+    "bLEU": 1.54,
     "distinct_1": 8.9,
     "distinct_2": 14.6,
     "avg_length": 7.1,
@@ -55,7 +55,7 @@
   },
   {
     "model": "NonAR+MMI",
-    "bleu": 2.68,
+    "bLEU": 2.68,
     "distinct_1": 15.9,
     "distinct_2": 27.0,
     "avg_length": 7.4,

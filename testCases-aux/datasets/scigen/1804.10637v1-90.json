@@ -1,38 +1,38 @@
 [
   {
     "methods": "Q15-1011",
-    "aida_b": 88.7
+    "aida_B": 88.7
   },
   {
     "methods": "guorobust",
-    "aida_b": 89.0
+    "aida_B": 89.0
   },
   {
     "methods": "P16-1059",
-    "aida_b": 91.0
+    "aida_B": 91.0
   },
   {
     "methods": "K16-1025",
-    "aida_b": 91.5
+    "aida_B": 91.5
   },
   {
     "methods": "D17-1276",
-    "aida_b": 92.22
+    "aida_B": 92.22
   },
   {
     "methods": "rel-norm",
-    "aida_b": 92.41
+    "aida_B": 92.41
   },
   {
     "methods": "ment-norm",
-    "aida_b": 93.07
+    "aida_B": 93.07
   },
   {
     "methods": "ment-norm (  K=1)",
-    "aida_b": 92.89
+    "aida_B": 92.89
   },
   {
     "methods": "ment-norm (no pad)",
-    "aida_b": 92.37
+    "aida_B": 92.37
   }
 ]

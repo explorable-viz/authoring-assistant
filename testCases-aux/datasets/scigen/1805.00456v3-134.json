@@ -3,36 +3,36 @@
     "representation": "Plain BPE",
     "batches_update": 1,
     "learning_rate": 0.025,
-    "test_bleu": 27.5
+    "test_BLEU": 27.5
   },
   {
     "representation": "Plain BPE",
     "batches_update": 1,
     "learning_rate": 0.2,
-    "test_bleu": 27.2
+    "test_BLEU": 27.2
   },
   {
     "representation": "Plain BPE",
     "batches_update": 8,
     "learning_rate": 0.2,
-    "test_bleu": 28.9
+    "test_BLEU": 28.9
   },
   {
     "representation": "Linearized derivation",
     "batches_update": 1,
     "learning_rate": 0.025,
-    "test_bleu": 25.6
+    "test_BLEU": 25.6
   },
   {
     "representation": "Linearized derivation",
     "batches_update": 1,
     "learning_rate": 0.2,
-    "test_bleu": 25.6
+    "test_BLEU": 25.6
   },
   {
     "representation": "Linearized derivation",
     "batches_update": 8,
     "learning_rate": 0.2,
-    "test_bleu": 28.7
+    "test_BLEU": 28.7
   }
 ]

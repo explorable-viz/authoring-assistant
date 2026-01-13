@@ -1,38 +1,38 @@
 [
   {
     "_1": "News",
-    "de2en_khresmoi": 43.8,
-    "de2en_cochrane": 46.8,
-    "de2en_test": "-",
-    "en2de_khresmoi": 30.4,
-    "en2de_cochrane": 40.7,
-    "en2de_test": "-"
+    "de2en_Khresmoi": 43.8,
+    "de2en_Cochrane": 46.8,
+    "de2en_Test": "-",
+    "en2de_Khresmoi": 30.4,
+    "en2de_Cochrane": 40.7,
+    "en2de_Test": "-"
   },
   {
     "_1": "News → All-biomed",
-    "de2en_khresmoi": 44.5,
-    "de2en_cochrane": 47.6,
-    "de2en_test": 27.4,
-    "en2de_khresmoi": 31.1,
-    "en2de_cochrane": 39.5,
-    "en2de_test": 26.5
+    "de2en_Khresmoi": 44.5,
+    "de2en_Cochrane": 47.6,
+    "de2en_Test": 27.4,
+    "en2de_Khresmoi": 31.1,
+    "en2de_Cochrane": 39.5,
+    "en2de_Test": 26.5
   },
   {
     "_1": "Uniform ensemble",
-    "de2en_khresmoi": 45.3,
-    "de2en_cochrane": 48.4,
-    "de2en_test": 28.6,
-    "en2de_khresmoi": 32.6,
-    "en2de_cochrane": 42.9,
-    "en2de_test": 27.2
+    "de2en_Khresmoi": 45.3,
+    "de2en_Cochrane": 48.4,
+    "de2en_Test": 28.6,
+    "en2de_Khresmoi": 32.6,
+    "en2de_Cochrane": 42.9,
+    "en2de_Test": 27.2
   },
   {
     "_1": "BI ensemble (  α=0.5)",
-    "de2en_khresmoi": 45.4,
-    "de2en_cochrane": 48.8,
-    "de2en_test": 28.5,
-    "en2de_khresmoi": 32.4,
-    "en2de_cochrane": 43.1,
-    "en2de_test": 26.4
+    "de2en_Khresmoi": 45.4,
+    "de2en_Cochrane": 48.8,
+    "de2en_Test": 28.5,
+    "en2de_Khresmoi": 32.4,
+    "en2de_Cochrane": 43.1,
+    "en2de_Test": 26.4
   }
 ]

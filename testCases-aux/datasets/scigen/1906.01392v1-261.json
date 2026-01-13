@@ -1,44 +1,44 @@
 [
   {
     "topic": "CC",
-    "bilstm": 68.1,
-    "deat": 70.9,
-    "bimpm": 71.5,
-    "rcn_our": 73.0
+    "biLSTM": 68.1,
+    "deAT": 70.9,
+    "biMPM": 71.5,
+    "rCN_Our": 73.0
   },
   {
     "topic": "HC",
-    "bilstm": 52.5,
-    "deat": 56.9,
-    "bimpm": 56.4,
-    "rcn_our": 58.6
+    "biLSTM": 52.5,
+    "deAT": 56.9,
+    "biMPM": 56.4,
+    "rCN_Our": 58.6
   },
   {
     "topic": "FM",
-    "bilstm": 58.3,
-    "deat": 60.6,
-    "bimpm": 59.8,
-    "rcn_our": 64.4
+    "biLSTM": 58.3,
+    "deAT": 60.6,
+    "biMPM": 59.8,
+    "rCN_Our": 64.4
   },
   {
     "topic": "AT",
-    "bilstm": 67.5,
-    "deat": 69.5,
-    "bimpm": 70.3,
-    "rcn_our": 72.2
+    "biLSTM": 67.5,
+    "deAT": 69.5,
+    "biMPM": 70.3,
+    "rCN_Our": 72.2
   },
   {
     "topic": "LA",
-    "bilstm": 61.3,
-    "deat": 63.2,
-    "bimpm": 62.4,
-    "rcn_our": 64.5
+    "biLSTM": 61.3,
+    "deAT": 63.2,
+    "biMPM": 62.4,
+    "rCN_Our": 64.5
   },
   {
     "topic": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "bilstm": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "deat": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "bimpm": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "rcn_our": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05"
+    "biLSTM": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+    "deAT": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+    "biMPM": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+    "rCN_Our": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05"
   }
 ]

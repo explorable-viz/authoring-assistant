@@ -1,37 +1,37 @@
 [
   {
     "model": "MT Bojar et al. ( 2017 )",
-    "ter": 24.48,
-    "bleu": 62.49
+    "tER": 24.48,
+    "bLEU": 62.49
   },
   {
     "model": "SPE Bojar et al. ( 2017 )",
-    "ter": 24.69,
-    "bleu": 62.97
+    "tER": 24.69,
+    "bLEU": 62.97
   },
   {
     "model": "Varis and Bojar ( 2017 )",
-    "ter": 24.03,
-    "bleu": 64.28
+    "tER": 24.03,
+    "bLEU": 64.28
   },
   {
     "model": "Bérard et al. ( 2017 )",
-    "ter": 22.81,
-    "bleu": 65.91
+    "tER": 22.81,
+    "bLEU": 65.91
   },
   {
     "model": "train 11K",
-    "ter": 41.58,
-    "bleu": 43.05
+    "tER": 41.58,
+    "bLEU": 43.05
   },
   {
     "model": "train 23K",
-    "ter": 30.23,
-    "bleu": 57.14
+    "tER": 30.23,
+    "bLEU": 57.14
   },
   {
     "model": "train 23K + 500K",
-    "ter": 22.6,
-    "bleu": 66.21
+    "tER": 22.6,
+    "bLEU": 66.21
   }
 ]

@@ -1,52 +1,52 @@
 [
   {
     "system": "challenge",
-    "bleu": "challenge",
-    "rouge_l": "challenge"
+    "bLEU": "challenge",
+    "rOUGE_L": "challenge"
   },
   {
     "system": "baseline",
-    "bleu": 32.1,
-    "rouge_l": 43.3
+    "bLEU": 32.1,
+    "rOUGE_L": 43.3
   },
   {
     "system": "Melbourne",
-    "bleu": 43.4,
-    "rouge_l": 61.0
+    "bLEU": 43.4,
+    "rOUGE_L": 61.0
   },
   {
     "system": "Tilburg-SMT",
-    "bleu": 43.1,
-    "rouge_l": 58.0
+    "bLEU": 43.1,
+    "rOUGE_L": 58.0
   },
   {
     "system": "UPF-FORGe",
-    "bleu": 37.5,
-    "rouge_l": 58.8
+    "bLEU": 37.5,
+    "rOUGE_L": 58.8
   },
   {
     "system": "own",
-    "bleu": "own",
-    "rouge_l": "own"
+    "bLEU": "own",
+    "rOUGE_L": "own"
   },
   {
     "system": "word (best on dev.)",
-    "bleu": 44.2,
-    "rouge_l": 60.9
+    "bLEU": 44.2,
+    "rOUGE_L": 60.9
   },
   {
     "system": "char. (best on dev.)",
-    "bleu": 41.3,
-    "rouge_l": 58.4
+    "bLEU": 41.3,
+    "rOUGE_L": 58.4
   },
   {
     "system": "word",
-    "bleu": 37.0,
-    "rouge_l": 56.3
+    "bLEU": 37.0,
+    "rOUGE_L": 56.3
   },
   {
     "system": "character",
-    "bleu": 39.7,
-    "rouge_l": 58.4
+    "bLEU": 39.7,
+    "rOUGE_L": 58.4
   }
 ]

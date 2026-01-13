@@ -1,37 +1,37 @@
 [
   {
     "system": "Rule",
-    "“gotcha”": "no",
+    "“Gotcha”": "no",
     "female": 38.3,
     "male": 51.7
   },
   {
     "system": "Rule",
-    "“gotcha”": "CBCEFByes",
+    "“Gotcha”": "CBCEFByes",
     "female": "CBCEFB10.0",
     "male": "CBCEFB37.5"
   },
   {
     "system": "Stat",
-    "“gotcha”": "no",
+    "“Gotcha”": "no",
     "female": 50.8,
     "male": 61.7
   },
   {
     "system": "Stat",
-    "“gotcha”": "CBCEFByes",
+    "“Gotcha”": "CBCEFByes",
     "female": "CBCEFB45.8",
     "male": "CBCEFB40.0"
   },
   {
     "system": "Neural",
-    "“gotcha”": "no",
+    "“Gotcha”": "no",
     "female": 50.8,
     "male": 49.2
   },
   {
     "system": "Neural",
-    "“gotcha”": "CBCEFByes",
+    "“Gotcha”": "CBCEFByes",
     "female": "CBCEFB36.7",
     "male": "CBCEFB46.7"
   }

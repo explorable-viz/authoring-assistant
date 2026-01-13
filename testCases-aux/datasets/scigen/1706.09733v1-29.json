@@ -1,26 +1,26 @@
 [
   {
     "_1": "Words 50K",
-    "wmt_de_en": 31.6,
-    "wmt_en_fi": 12.6,
-    "wmt_ro_en": 27.1,
-    "iwslt_en_fr": 33.6,
-    "iwslt_cs_en": 21.0
+    "wMT_DE_EN": 31.6,
+    "wMT_EN_FI": 12.6,
+    "wMT_RO_EN": 27.1,
+    "iWSLT_EN_FR": 33.6,
+    "iWSLT_CS_EN": 21.0
   },
   {
     "_1": "BPE 32K",
-    "wmt_de_en": 33.5,
-    "wmt_en_fi": 14.7,
-    "wmt_ro_en": 27.8,
-    "iwslt_en_fr": 34.5,
-    "iwslt_cs_en": 22.6
+    "wMT_DE_EN": 33.5,
+    "wMT_EN_FI": 14.7,
+    "wMT_RO_EN": 27.8,
+    "iWSLT_EN_FR": 34.5,
+    "iWSLT_CS_EN": 22.6
   },
   {
     "_1": "BPE 16K",
-    "wmt_de_en": 33.1,
-    "wmt_en_fi": 14.7,
-    "wmt_ro_en": 27.8,
-    "iwslt_en_fr": 34.8,
-    "iwslt_cs_en": 23.0
+    "wMT_DE_EN": 33.1,
+    "wMT_EN_FI": 14.7,
+    "wMT_RO_EN": 27.8,
+    "iWSLT_EN_FR": 34.8,
+    "iWSLT_CS_EN": 23.0
   }
 ]

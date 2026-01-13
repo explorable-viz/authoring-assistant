@@ -1,38 +1,38 @@
 [
   {
-    "task_metric": "GrOVLE w/o multi-task pretraining",
-    "image_sentence_retrieval_mean_recall": 75.0,
-    "phrase_grounding_accuracy": 52.15,
-    "text_to_clip_average": 34.45,
-    "image_captioning_bleu_4": 28.5,
-    "image_captioning_cider": 92.7,
-    "vqa_accuracy": 61.46
+    "task_Metric": "GrOVLE w/o multi-task pretraining",
+    "image_Sentence_Retrieval_Mean_Recall": 75.0,
+    "phrase_Grounding_Accuracy": 52.15,
+    "text_to_Clip_Average": 34.45,
+    "image_Captioning_BLEU_4": 28.5,
+    "image_Captioning_CIDEr": 92.7,
+    "vQA_Accuracy": 61.46
   },
   {
-    "task_metric": "+ multi-task pretraining w/o target task",
-    "image_sentence_retrieval_mean_recall": 76.4,
-    "phrase_grounding_accuracy": 52.21,
-    "text_to_clip_average": 34.57,
-    "image_captioning_bleu_4": 28.8,
-    "image_captioning_cider": 93.3,
-    "vqa_accuracy": 61.47
+    "task_Metric": "+ multi-task pretraining w/o target task",
+    "image_Sentence_Retrieval_Mean_Recall": 76.4,
+    "phrase_Grounding_Accuracy": 52.21,
+    "text_to_Clip_Average": 34.57,
+    "image_Captioning_BLEU_4": 28.8,
+    "image_Captioning_CIDEr": 93.3,
+    "vQA_Accuracy": 61.47
   },
   {
-    "task_metric": "+ multi-task pretraining w/ target task",
-    "image_sentence_retrieval_mean_recall": 80.2,
-    "phrase_grounding_accuracy": 52.64,
-    "text_to_clip_average": 34.82,
-    "image_captioning_bleu_4": 28.5,
-    "image_captioning_cider": 92.7,
-    "vqa_accuracy": 61.53
+    "task_Metric": "+ multi-task pretraining w/ target task",
+    "image_Sentence_Retrieval_Mean_Recall": 80.2,
+    "phrase_Grounding_Accuracy": 52.64,
+    "text_to_Clip_Average": 34.82,
+    "image_Captioning_BLEU_4": 28.5,
+    "image_Captioning_CIDEr": 92.7,
+    "vQA_Accuracy": 61.53
   },
   {
-    "task_metric": "+ multi-task pretraining w/ target task + ft",
-    "image_sentence_retrieval_mean_recall": 81.3,
-    "phrase_grounding_accuracy": 54.51,
-    "text_to_clip_average": 35.09,
-    "image_captioning_bleu_4": 28.7,
-    "image_captioning_cider": 93.2,
-    "vqa_accuracy": 61.46
+    "task_Metric": "+ multi-task pretraining w/ target task + ft",
+    "image_Sentence_Retrieval_Mean_Recall": 81.3,
+    "phrase_Grounding_Accuracy": 54.51,
+    "text_to_Clip_Average": 35.09,
+    "image_Captioning_BLEU_4": 28.7,
+    "image_Captioning_CIDEr": 93.2,
+    "vQA_Accuracy": 61.46
   }
 ]

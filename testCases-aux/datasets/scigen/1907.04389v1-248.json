@@ -3,90 +3,90 @@
     "word": "sleeping",
     "count": 108,
     "score_p_l_w": 0.88,
-    "score_baseline": 0.24,
-    "percentage_decrease_from_baseline_advcls_1_1": 15.63,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 53.13,
-    "percentage_decrease_from_baseline_advdat_1_1": -81.25
+    "score_Baseline": 0.24,
+    "percentage_decrease_from_baseline_AdvCls_1_1": 15.63,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 53.13,
+    "percentage_decrease_from_baseline_AdvDat_1_1": -81.25
   },
   {
     "word": "driving",
     "count": 53,
     "score_p_l_w": 0.81,
-    "score_baseline": 0.32,
-    "percentage_decrease_from_baseline_advcls_1_1": -8.33,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 50,
-    "percentage_decrease_from_baseline_advdat_1_1": -66.67
+    "score_Baseline": 0.32,
+    "percentage_decrease_from_baseline_AdvCls_1_1": -8.33,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 50,
+    "percentage_decrease_from_baseline_AdvDat_1_1": -66.67
   },
   {
     "word": "Nobody",
     "count": 52,
     "score_p_l_w": 1,
-    "score_baseline": 0.42,
-    "percentage_decrease_from_baseline_advcls_1_1": 14.29,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 42.86,
-    "percentage_decrease_from_baseline_advdat_1_1": 14.29
+    "score_Baseline": 0.42,
+    "percentage_decrease_from_baseline_AdvCls_1_1": 14.29,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 42.86,
+    "percentage_decrease_from_baseline_AdvDat_1_1": 14.29
   },
   {
     "word": "alone",
     "count": 50,
     "score_p_l_w": 0.9,
-    "score_baseline": 0.32,
-    "percentage_decrease_from_baseline_advcls_1_1": 0,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 83.33,
-    "percentage_decrease_from_baseline_advdat_1_1": 0
+    "score_Baseline": 0.32,
+    "percentage_decrease_from_baseline_AdvCls_1_1": 0,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 83.33,
+    "percentage_decrease_from_baseline_AdvDat_1_1": 0
   },
   {
     "word": "cat",
     "count": 49,
     "score_p_l_w": 0.84,
-    "score_baseline": 0.31,
-    "percentage_decrease_from_baseline_advcls_1_1": 7.14,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 57.14,
-    "percentage_decrease_from_baseline_advdat_1_1": -85.71
+    "score_Baseline": 0.31,
+    "percentage_decrease_from_baseline_AdvCls_1_1": 7.14,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 57.14,
+    "percentage_decrease_from_baseline_AdvDat_1_1": -85.71
   },
   {
     "word": "asleep",
     "count": 43,
     "score_p_l_w": 0.91,
-    "score_baseline": 0.39,
-    "percentage_decrease_from_baseline_advcls_1_1": -18.75,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 50,
-    "percentage_decrease_from_baseline_advdat_1_1": 12.5
+    "score_Baseline": 0.39,
+    "percentage_decrease_from_baseline_AdvCls_1_1": -18.75,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 50,
+    "percentage_decrease_from_baseline_AdvDat_1_1": 12.5
   },
   {
     "word": "no",
     "count": 31,
     "score_p_l_w": 0.84,
-    "score_baseline": 0.36,
-    "percentage_decrease_from_baseline_advcls_1_1": 0,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 52.94,
-    "percentage_decrease_from_baseline_advdat_1_1": -52.94
+    "score_Baseline": 0.36,
+    "percentage_decrease_from_baseline_AdvCls_1_1": 0,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 52.94,
+    "percentage_decrease_from_baseline_AdvDat_1_1": -52.94
   },
   {
     "word": "empty",
     "count": 28,
     "score_p_l_w": 0.93,
-    "score_baseline": 0.3,
-    "percentage_decrease_from_baseline_advcls_1_1": -16.67,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 83.33,
-    "percentage_decrease_from_baseline_advdat_1_1": -16.67
+    "score_Baseline": 0.3,
+    "percentage_decrease_from_baseline_AdvCls_1_1": -16.67,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 83.33,
+    "percentage_decrease_from_baseline_AdvDat_1_1": -16.67
   },
   {
     "word": "eats",
     "count": 24,
     "score_p_l_w": 0.83,
-    "score_baseline": 0.3,
-    "percentage_decrease_from_baseline_advcls_1_1": 37.5,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 87.5,
-    "percentage_decrease_from_baseline_advdat_1_1": -25
+    "score_Baseline": 0.3,
+    "percentage_decrease_from_baseline_AdvCls_1_1": 37.5,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 87.5,
+    "percentage_decrease_from_baseline_AdvDat_1_1": -25
   },
   {
     "word": "naked",
     "count": 20,
     "score_p_l_w": 0.95,
-    "score_baseline": 0.46,
-    "percentage_decrease_from_baseline_advcls_1_1": 0,
-    "percentage_decrease_from_baseline_advdat_0_4_1": 83.33,
-    "percentage_decrease_from_baseline_advdat_1_1": -33.33
+    "score_Baseline": 0.46,
+    "percentage_decrease_from_baseline_AdvCls_1_1": 0,
+    "percentage_decrease_from_baseline_AdvDat_0_4_1": 83.33,
+    "percentage_decrease_from_baseline_AdvDat_1_1": -33.33
   }
 ]

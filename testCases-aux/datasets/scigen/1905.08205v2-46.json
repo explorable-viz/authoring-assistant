@@ -1,57 +1,57 @@
 [
   {
-    "approach": "Seq2Seq",
-    "dev": 1.9,
-    "test": 3.7
+    "Approach": "Seq2Seq",
+    "Dev": 1.9,
+    "Test": 3.7
   },
   {
-    "approach": "Seq2Seq + Attention",
-    "dev": 1.8,
-    "test": 4.8
+    "Approach": "Seq2Seq + Attention",
+    "Dev": 1.8,
+    "Test": 4.8
   },
   {
-    "approach": "Seq2Seq + Copying",
-    "dev": 4.1,
-    "test": 5.3
+    "Approach": "Seq2Seq + Copying",
+    "Dev": 4.1,
+    "Test": 5.3
   },
   {
-    "approach": "TypeSQL",
-    "dev": 8.0,
-    "test": 8.2
+    "Approach": "TypeSQL",
+    "Dev": 8.0,
+    "Test": 8.2
   },
   {
-    "approach": "SQLNet",
-    "dev": 10.9,
-    "test": 12.4
+    "Approach": "SQLNet",
+    "Dev": 10.9,
+    "Test": 12.4
   },
   {
-    "approach": "SyntaxSQLNet",
-    "dev": 18.9,
-    "test": 19.7
+    "Approach": "SyntaxSQLNet",
+    "Dev": 18.9,
+    "Test": 19.7
   },
   {
-    "approach": "SyntaxSQLNet(augment)",
-    "dev": 24.8,
-    "test": 27.2
+    "Approach": "SyntaxSQLNet(augment)",
+    "Dev": 24.8,
+    "Test": 27.2
   },
   {
-    "approach": " IRNet",
-    "dev": 53.2,
-    "test": 46.7
+    "Approach": " IRNet",
+    "Dev": 53.2,
+    "Test": 46.7
   },
   {
-    "approach": " BERT",
-    "dev": "",
-    "test": ""
+    "Approach": " BERT",
+    "Dev": "",
+    "Test": ""
   },
   {
-    "approach": "SyntaxSQLNet(BERT)",
-    "dev": 25.0,
-    "test": 25.4
+    "Approach": "SyntaxSQLNet(BERT)",
+    "Dev": 25.0,
+    "Test": 25.4
   },
   {
-    "approach": " IRNet(BERT)",
-    "dev": 61.9,
-    "test": 54.7
+    "Approach": " IRNet(BERT)",
+    "Dev": 61.9,
+    "Test": 54.7
   }
 ]

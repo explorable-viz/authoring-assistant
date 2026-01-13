@@ -2,43 +2,43 @@
   {
     "architecture": "Seq2seq (8-model ensemble)",
     "representation": "Best WAT17 result Morishita et al. ( 2017 )",
-    "dev_bleu": "-",
-    "test_bleu": 28.4
+    "dev_BLEU": "-",
+    "test_BLEU": 28.4
   },
   {
     "architecture": "Seq2seq",
     "representation": "Plain BPE",
-    "dev_bleu": 21.6,
-    "test_bleu": 21.2
+    "dev_BLEU": 21.6,
+    "test_BLEU": 21.2
   },
   {
     "architecture": "Seq2seq",
     "representation": "Linearized derivation",
-    "dev_bleu": 21.9,
-    "test_bleu": 21.2
+    "dev_BLEU": 21.9,
+    "test_BLEU": 21.2
   },
   {
     "architecture": "Transformer",
     "representation": "Plain BPE",
-    "dev_bleu": 28.0,
-    "test_bleu": 28.9
+    "dev_BLEU": 28.0,
+    "test_BLEU": 28.9
   },
   {
     "architecture": "Transformer",
     "representation": "Linearized tree",
-    "dev_bleu": 28.2,
-    "test_bleu": 28.4
+    "dev_BLEU": 28.2,
+    "test_BLEU": 28.4
   },
   {
     "architecture": "Transformer",
     "representation": "Linearized derivation",
-    "dev_bleu": 28.5,
-    "test_bleu": 28.7
+    "dev_BLEU": 28.5,
+    "test_BLEU": 28.7
   },
   {
     "architecture": "Transformer",
     "representation": "POS/BPE",
-    "dev_bleu": 28.5,
-    "test_bleu": 29.1
+    "dev_BLEU": 28.5,
+    "test_BLEU": 29.1
   }
 ]

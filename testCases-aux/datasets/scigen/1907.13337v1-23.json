@@ -2,26 +2,26 @@
   {
     "model": "F&A Unsupervised",
     "f1": 52.3,
-    "cr": "-"
+    "cR": "-"
   },
   {
     "model": "Contextual Match",
     "f1": 60.9,
-    "cr": 0.38
+    "cR": 0.38
   },
   {
     "model": "Filippova et al. ( 2015 )",
     "f1": 82.0,
-    "cr": 0.38
+    "cR": 0.38
   },
   {
     "model": "Zhao et al. ( 2018 )",
     "f1": 85.1,
-    "cr": 0.39
+    "cR": 0.39
   },
   {
     "model": "Contextual Oracle",
     "f1": 82.1,
-    "cr": 0.39
+    "cR": 0.39
   }
 ]

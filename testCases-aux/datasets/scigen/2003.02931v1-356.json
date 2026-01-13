@@ -2,57 +2,57 @@
   {
     "dev": "Majority",
     "all": 44.4,
-    "per": 61.8,
-    "loc": 0.0,
-    "org": 0.0,
-    "misc": "—"
+    "pER": 61.8,
+    "lOC": 0.0,
+    "oRG": 0.0,
+    "mISC": "—"
   },
   {
     "dev": "DKIE",
     "all": 58.9,
-    "per": 68.9,
-    "loc": 63.6,
-    "org": 23.3,
-    "misc": "—"
+    "pER": 68.9,
+    "lOC": 63.6,
+    "oRG": 23.3,
+    "mISC": "—"
   },
   {
     "dev": "Polyglot",
     "all": 64.5,
-    "per": 73.7,
-    "loc": 73.4,
-    "org": 36.8,
-    "misc": "—"
+    "pER": 73.7,
+    "lOC": 73.4,
+    "oRG": 36.8,
+    "mISC": "—"
   },
   {
     "dev": "Bilstm",
     "all": 70.8,
-    "per": 83.3,
-    "loc": 71.8,
-    "org": 60.0,
-    "misc": 23.9
+    "pER": 83.3,
+    "lOC": 71.8,
+    "oRG": 60.0,
+    "mISC": 23.9
   },
   {
     "dev": "Test",
     "all": "All",
-    "per": "PER",
-    "loc": "LOC",
-    "org": "ORG",
-    "misc": "MISC"
+    "pER": "PER",
+    "lOC": "LOC",
+    "oRG": "ORG",
+    "mISC": "MISC"
   },
   {
     "dev": "Polyglot",
     "all": 61.6,
-    "per": 78.4,
-    "loc": 69.7,
-    "org": 24.7,
-    "misc": "—"
+    "pER": 78.4,
+    "lOC": 69.7,
+    "oRG": 24.7,
+    "mISC": "—"
   },
   {
     "dev": "Bilstm",
     "all": 66.0,
-    "per": 86.6,
-    "loc": 63.6,
-    "org": 42.5,
-    "misc": 24.8
+    "pER": 86.6,
+    "lOC": 63.6,
+    "oRG": 42.5,
+    "mISC": 24.8
   }
 ]

@@ -1,68 +1,68 @@
 [
   {
-    "model": "manning2011part",
-    "accuracy": 97.28,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "manning2011part",
+    "Accuracy": 97.28,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "collobert2011natural",
-    "accuracy": 97.29,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "collobert2011natural",
+    "Accuracy": 97.29,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "sun2014structure",
-    "accuracy": 97.36,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "sun2014structure",
+    "Accuracy": 97.36,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "sogaard2011semisupervised",
-    "accuracy": 97.5,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "sogaard2011semisupervised",
+    "Accuracy": 97.5,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "huang2015bidirectional",
-    "accuracy": 97.55,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "huang2015bidirectional",
+    "Accuracy": 97.55,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "ma2016end",
-    "accuracy": 97.55,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "ma2016end",
+    "Accuracy": 97.55,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "yang2017transfer",
-    "accuracy": 97.55,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "yang2017transfer",
+    "Accuracy": 97.55,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "BiLSTM",
-    "accuracy": 97.35,
-    "train_s": 254,
-    "test_s": 22.5
+    "Model": "BiLSTM",
+    "Accuracy": 97.35,
+    "Train_s": 254,
+    "Test_s": 22.5
   },
   {
-    "model": "2 stacked BiLSTM",
-    "accuracy": 97.41,
-    "train_s": 501,
-    "test_s": 43.99
+    "Model": "2 stacked BiLSTM",
+    "Accuracy": 97.41,
+    "Train_s": 501,
+    "Test_s": 43.99
   },
   {
-    "model": "3 stacked BiLSTM",
-    "accuracy": 97.4,
-    "train_s": 746,
-    "test_s": 64.96
+    "Model": "3 stacked BiLSTM",
+    "Accuracy": 97.4,
+    "Train_s": 746,
+    "Test_s": 64.96
   },
   {
-    "model": "S-LSTM",
-    "accuracy": 97.55,
-    "train_s": 237,
-    "test_s": 22.16
+    "Model": "S-LSTM",
+    "Accuracy": 97.55,
+    "Train_s": 237,
+    "Test_s": 22.16
   }
 ]

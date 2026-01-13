@@ -1,42 +1,42 @@
 [
   {
     "_1": "T1",
-    "easy_dec_sel": "–",
-    "easy_dec_size": "–",
-    "default_def": 0.3,
-    "hard_inc_sel": "–",
-    "hard_inc_size": "–"
+    "easy_dec_SEL": "–",
+    "easy_dec_SIZE": "–",
+    "default_DEF": 0.3,
+    "hard_inc_SEL": "–",
+    "hard_inc_SIZE": "–"
   },
   {
     "_1": "T2",
-    "easy_dec_sel": 0.17,
-    "easy_dec_size": 0.11,
-    "default_def": 0.34,
-    "hard_inc_sel": 0.66,
-    "hard_inc_size": 0.44
+    "easy_dec_SEL": 0.17,
+    "easy_dec_SIZE": 0.11,
+    "default_DEF": 0.34,
+    "hard_inc_SEL": 0.66,
+    "hard_inc_SIZE": 0.44
   },
   {
     "_1": "T3",
-    "easy_dec_sel": 0.16,
-    "easy_dec_size": 0.1,
-    "default_def": 0.27,
-    "hard_inc_sel": 0.52,
-    "hard_inc_size": 0.43
+    "easy_dec_SEL": 0.16,
+    "easy_dec_SIZE": 0.1,
+    "default_DEF": 0.27,
+    "hard_inc_SEL": 0.52,
+    "hard_inc_SIZE": 0.43
   },
   {
     "_1": "T4",
-    "easy_dec_sel": 0.28,
-    "easy_dec_size": 0.09,
-    "default_def": 0.3,
-    "hard_inc_sel": 0.43,
-    "hard_inc_size": 0.45
+    "easy_dec_SEL": 0.28,
+    "easy_dec_SIZE": 0.09,
+    "default_DEF": 0.3,
+    "hard_inc_SEL": 0.43,
+    "hard_inc_SIZE": 0.45
   },
   {
     "_1": "Average",
-    "easy_dec_sel": 0.2,
-    "easy_dec_size": 0.1,
-    "default_def": 0.3,
-    "hard_inc_sel": 0.53,
-    "hard_inc_size": 0.44
+    "easy_dec_SEL": 0.2,
+    "easy_dec_SIZE": 0.1,
+    "default_DEF": 0.3,
+    "hard_inc_SEL": 0.53,
+    "hard_inc_SIZE": 0.44
   }
 ]

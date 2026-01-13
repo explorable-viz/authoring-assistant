@@ -1,22 +1,22 @@
 [
   {
     "tool": "slate",
-    "time_minutes_ubuntu": 10,
-    "time_minutes_macos": 16
+    "time_minutes_Ubuntu": 10,
+    "time_minutes_macOS": 16
   },
   {
     "tool": "YEDDA",
-    "time_minutes_ubuntu": 14,
-    "time_minutes_macos": 14
+    "time_minutes_Ubuntu": 14,
+    "time_minutes_macOS": 14
   },
   {
     "tool": "GATE",
-    "time_minutes_ubuntu": 21,
-    "time_minutes_macos": 22
+    "time_minutes_Ubuntu": 21,
+    "time_minutes_macOS": 22
   },
   {
     "tool": "brat",
-    "time_minutes_ubuntu": "-",
-    "time_minutes_macos": "-"
+    "time_minutes_Ubuntu": "-",
+    "time_minutes_macOS": "-"
   }
 ]

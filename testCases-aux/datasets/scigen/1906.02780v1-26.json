@@ -1,16 +1,16 @@
 [
   {
     "_1": "F1",
-    "predicted_parse_vs_gold_parse_separate": 65.48,
-    "predicted_parse_vs_gold_parse_joint": 69.64,
-    "parsed_prediction_vs_gold_parse": 79.16,
-    "parsed_prediction_vs_predicted_parse": 89.9
+    "Predicted_parse_vs_Gold_parse_separate": 65.48,
+    "Predicted_parse_vs_Gold_parse_joint": 69.64,
+    "Parsed_prediction_vs_Gold_parse": 79.16,
+    "Parsed_prediction_vs_Predicted_parse": 89.9
   },
   {
     "_1": "Exact match",
-    "predicted_parse_vs_gold_parse_separate": 4.23,
-    "predicted_parse_vs_gold_parse_joint": 5.24,
-    "parsed_prediction_vs_gold_parse": 5.94,
-    "parsed_prediction_vs_predicted_parse": 43.1
+    "Predicted_parse_vs_Gold_parse_separate": 4.23,
+    "Predicted_parse_vs_Gold_parse_joint": 5.24,
+    "Parsed_prediction_vs_Gold_parse": 5.94,
+    "Parsed_prediction_vs_Predicted_parse": 43.1
   }
 ]

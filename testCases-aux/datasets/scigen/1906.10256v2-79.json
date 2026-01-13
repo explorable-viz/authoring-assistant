@@ -1,17 +1,17 @@
 [
   {
-    "model": " M.1 (BoW+LogReg)",
-    "dev_acc": 0.827,
-    "f_m": 0.035
+    "Model": " M.1 (BoW+LogReg)",
+    "Dev_Acc": 0.827,
+    "F_M": 0.035
   },
   {
-    "model": " M.2 (BiLSTM)",
-    "dev_acc": 0.841,
-    "f_m": 0.077
+    "Model": " M.2 (BiLSTM)",
+    "Dev_Acc": 0.841,
+    "F_M": 0.077
   },
   {
-    "model": " M.3 (BERT)",
-    "dev_acc": 0.93,
-    "f_m": -0.04
+    "Model": " M.3 (BERT)",
+    "Dev_Acc": 0.93,
+    "F_M": -0.04
   }
 ]

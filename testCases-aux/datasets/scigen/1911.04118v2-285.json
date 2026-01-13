@@ -1,62 +1,62 @@
 [
   {
-    "model": "Comp-Agg + LM + LC",
-    "map": 0.764,
-    "mrr": 0.784
+    "Model": "Comp-Agg + LM + LC",
+    "MAP": 0.764,
+    "MRR": 0.784
   },
   {
-    "model": "Comp-Agg + LM + LC+ TL(QNLI)",
-    "map": 0.834,
-    "mrr": 0.848
+    "Model": "Comp-Agg + LM + LC+ TL(QNLI)",
+    "MAP": 0.834,
+    "MRR": 0.848
   },
   {
-    "model": "BERT-B FT WikiQA",
-    "map": 0.813,
-    "mrr": 0.828
+    "Model": "BERT-B FT WikiQA",
+    "MAP": 0.813,
+    "MRR": 0.828
   },
   {
-    "model": "BERT-B FT ASNQ",
-    "map": 0.884,
-    "mrr": 0.898
+    "Model": "BERT-B FT ASNQ",
+    "MAP": 0.884,
+    "MRR": 0.898
   },
   {
-    "model": "BERT-B TandA (ASNQ → WikiQA )",
-    "map": 0.893,
-    "mrr": 0.903
+    "Model": "BERT-B TandA (ASNQ → WikiQA )",
+    "MAP": 0.893,
+    "MRR": 0.903
   },
   {
-    "model": "BERT-L FT WikiQA",
-    "map": 0.836,
-    "mrr": 0.853
+    "Model": "BERT-L FT WikiQA",
+    "MAP": 0.836,
+    "MRR": 0.853
   },
   {
-    "model": "BERT-L FT ASNQ",
-    "map": 0.892,
-    "mrr": 0.904
+    "Model": "BERT-L FT ASNQ",
+    "MAP": 0.892,
+    "MRR": 0.904
   },
   {
-    "model": "BERT-L TandA (ASNQ → WikiQA)",
-    "map": 0.904,
-    "mrr": 0.912
+    "Model": "BERT-L TandA (ASNQ → WikiQA)",
+    "MAP": 0.904,
+    "MRR": 0.912
   },
   {
-    "model": "RoBERTa-B FT ASNQ",
-    "map": 0.882,
-    "mrr": 0.894
+    "Model": "RoBERTa-B FT ASNQ",
+    "MAP": 0.882,
+    "MRR": 0.894
   },
   {
-    "model": "RoBERTa-B TandA (ASNQ → WikiQA)",
-    "map": 0.889,
-    "mrr": 0.901
+    "Model": "RoBERTa-B TandA (ASNQ → WikiQA)",
+    "MAP": 0.889,
+    "MRR": 0.901
   },
   {
-    "model": "RoBERTa-L FT ASNQ",
-    "map": 0.91,
-    "mrr": 0.919
+    "Model": "RoBERTa-L FT ASNQ",
+    "MAP": 0.91,
+    "MRR": 0.919
   },
   {
-    "model": "RoBERTa-L TandA (ASNQ → WikiQA )",
-    "map": 0.92,
-    "mrr": 0.933
+    "Model": "RoBERTa-L TandA (ASNQ → WikiQA )",
+    "MAP": 0.92,
+    "MRR": 0.933
   }
 ]

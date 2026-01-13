@@ -4,143 +4,143 @@
     "model": "Data Baseline",
     "with_lexicon_acc": 79.06,
     "with_lexicon_acc_amb": 69.73,
-    "with_lexicon_f1_m": 33.0,
-    "with_lexicon_f1_m_amb_28_452756pt": 37.42,
+    "with_lexicon_F1_m": 33.0,
+    "with_lexicon_F1_m_amb_28_452756pt": 37.42,
     "without_lexicon_acc": 79.06,
     "without_lexicon_acc_amb": 69.73,
-    "without_lexicon_f1_m": 33.0,
-    "without_lexicon_f1_m_amb": 37.42
+    "without_lexicon_F1_m": 33.0,
+    "without_lexicon_F1_m_amb": 37.42
   },
   {
     "_1": "FrameNet",
     "model": "Lexicon Baseline",
     "with_lexicon_acc": 79.89,
     "with_lexicon_acc_amb": 55.52,
-    "with_lexicon_f1_m": 65.61,
-    "with_lexicon_f1_m_amb_28_452756pt": 30.95,
+    "with_lexicon_F1_m": 65.61,
+    "with_lexicon_F1_m_amb_28_452756pt": 30.95,
     "without_lexicon_acc": "–",
     "without_lexicon_acc_amb": "–",
-    "without_lexicon_f1_m": "–",
-    "without_lexicon_f1_m_amb": "–"
+    "without_lexicon_F1_m": "–",
+    "without_lexicon_F1_m_amb": "–"
   },
   {
     "_1": "FrameNet",
     "model": "Data-Lexicon Baseline",
     "with_lexicon_acc": 86.32,
     "with_lexicon_acc_amb": 69.73,
-    "with_lexicon_f1_m": 64.54,
-    "with_lexicon_f1_m_amb_28_452756pt": 37.42,
+    "with_lexicon_F1_m": 64.54,
+    "with_lexicon_F1_m_amb_28_452756pt": 37.42,
     "without_lexicon_acc": "–",
     "without_lexicon_acc_amb": "–",
-    "without_lexicon_f1_m": "–",
-    "without_lexicon_f1_m_amb": "–"
+    "without_lexicon_F1_m": "–",
+    "without_lexicon_F1_m_amb": "–"
   },
   {
     "_1": "FrameNet",
     "model": "hermann2014semantic",
     "with_lexicon_acc": 88.41,
     "with_lexicon_acc_amb": 73.1,
-    "with_lexicon_f1_m": "–",
-    "with_lexicon_f1_m_amb_28_452756pt": "– 28.452756pt",
+    "with_lexicon_F1_m": "–",
+    "with_lexicon_F1_m_amb_28_452756pt": "– 28.452756pt",
     "without_lexicon_acc": "–",
     "without_lexicon_acc_amb": "–",
-    "without_lexicon_f1_m": "–",
-    "without_lexicon_f1_m_amb": "–"
+    "without_lexicon_F1_m": "–",
+    "without_lexicon_F1_m_amb": "–"
   },
   {
     "_1": "FrameNet",
     "model": "Hartmann2017OOD",
     "with_lexicon_acc": 87.63,
     "with_lexicon_acc_amb": 73.8,
-    "with_lexicon_f1_m": "–",
-    "with_lexicon_f1_m_amb_28_452756pt": "– 28.452756pt",
+    "with_lexicon_F1_m": "–",
+    "with_lexicon_F1_m_amb_28_452756pt": "– 28.452756pt",
     "without_lexicon_acc": 77.49,
     "without_lexicon_acc_amb": "–",
-    "without_lexicon_f1_m": "–",
-    "without_lexicon_f1_m_amb": "–"
+    "without_lexicon_F1_m": "–",
+    "without_lexicon_F1_m_amb": "–"
   },
   {
     "_1": "FrameNet",
     "model": "our_uni",
     "with_lexicon_acc": 88.66,
     "with_lexicon_acc_amb": 74.92,
-    "with_lexicon_f1_m": 76.65,
-    "with_lexicon_f1_m_amb_28_452756pt": 53.86,
+    "with_lexicon_F1_m": 76.65,
+    "with_lexicon_F1_m_amb_28_452756pt": 53.86,
     "without_lexicon_acc": 79.96,
     "without_lexicon_acc_amb": 71.7,
-    "without_lexicon_f1_m": 57.07,
-    "without_lexicon_f1_m_amb": 47.4
+    "without_lexicon_F1_m": 57.07,
+    "without_lexicon_F1_m_amb": 47.4
   },
   {
     "_1": "FrameNet",
     "model": "our_mm (im, synsV)",
     "with_lexicon_acc": 88.82,
     "with_lexicon_acc_amb": 75.28,
-    "with_lexicon_f1_m": 76.77,
-    "with_lexicon_f1_m_amb_28_452756pt": 54.8,
+    "with_lexicon_F1_m": 76.77,
+    "with_lexicon_F1_m_amb_28_452756pt": 54.8,
     "without_lexicon_acc": 81.21,
     "without_lexicon_acc_amb": 72.51,
-    "without_lexicon_f1_m": 57.81,
-    "without_lexicon_f1_m_amb": 49.38
+    "without_lexicon_F1_m": 57.81,
+    "without_lexicon_F1_m_amb": 49.38
   },
   {
     "_1": "SALSA",
     "model": "Data Baseline",
     "with_lexicon_acc": 77.0,
     "with_lexicon_acc_amb": 70.51,
-    "with_lexicon_f1_m": 37.4,
-    "with_lexicon_f1_m_amb_28_452756pt": 28.87,
+    "with_lexicon_F1_m": 37.4,
+    "with_lexicon_F1_m_amb_28_452756pt": 28.87,
     "without_lexicon_acc": 77.0,
     "without_lexicon_acc_amb": 70.51,
-    "without_lexicon_f1_m": 37.4,
-    "without_lexicon_f1_m_amb": 28.87
+    "without_lexicon_F1_m": 37.4,
+    "without_lexicon_F1_m_amb": 28.87
   },
   {
     "_1": "SALSA",
     "model": "Lexicon Baseline",
     "with_lexicon_acc": 61.57,
     "with_lexicon_acc_amb": 52.5,
-    "with_lexicon_f1_m": 19.36,
-    "with_lexicon_f1_m_amb_28_452756pt": 15.68,
+    "with_lexicon_F1_m": 19.36,
+    "with_lexicon_F1_m_amb_28_452756pt": 15.68,
     "without_lexicon_acc": "–",
     "without_lexicon_acc_amb": "–",
-    "without_lexicon_f1_m": "–",
-    "without_lexicon_f1_m_amb": "–"
+    "without_lexicon_F1_m": "–",
+    "without_lexicon_F1_m_amb": "–"
   },
   {
     "_1": "SALSA",
     "model": "Data-Lexicon Baseline",
     "with_lexicon_acc": 77.16,
     "with_lexicon_acc_amb": 70.51,
-    "with_lexicon_f1_m": 38.48,
-    "with_lexicon_f1_m_amb_28_452756pt": 28.87,
+    "with_lexicon_F1_m": 38.48,
+    "with_lexicon_F1_m_amb_28_452756pt": 28.87,
     "without_lexicon_acc": "–",
     "without_lexicon_acc_amb": "–",
-    "without_lexicon_f1_m": "–",
-    "without_lexicon_f1_m_amb": "–"
+    "without_lexicon_F1_m": "–",
+    "without_lexicon_F1_m_amb": "–"
   },
   {
     "_1": "SALSA",
     "model": "our_uni",
     "with_lexicon_acc": 80.76,
     "with_lexicon_acc_amb": 75.59,
-    "with_lexicon_f1_m": 48.42,
-    "with_lexicon_f1_m_amb_28_452756pt": 41.38,
+    "with_lexicon_F1_m": 48.42,
+    "with_lexicon_F1_m_amb_28_452756pt": 41.38,
     "without_lexicon_acc": 80.59,
     "without_lexicon_acc_amb": 75.52,
-    "without_lexicon_f1_m": 47.64,
-    "without_lexicon_f1_m_amb": 41.17
+    "without_lexicon_F1_m": 47.64,
+    "without_lexicon_F1_m_amb": 41.17
   },
   {
     "_1": "SALSA",
     "model": "our_mm (im)",
     "with_lexicon_acc": 80.71,
     "with_lexicon_acc_amb": 75.58,
-    "with_lexicon_f1_m": 48.29,
-    "with_lexicon_f1_m_amb_28_452756pt": 41.19,
+    "with_lexicon_F1_m": 48.29,
+    "with_lexicon_F1_m_amb_28_452756pt": 41.19,
     "without_lexicon_acc": 80.51,
     "without_lexicon_acc_amb": 75.51,
-    "without_lexicon_f1_m": 47.36,
-    "without_lexicon_f1_m_amb": 40.93
+    "without_lexicon_F1_m": 47.36,
+    "without_lexicon_F1_m_amb": 40.93
   }
 ]

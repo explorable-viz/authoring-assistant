@@ -1,23 +1,23 @@
 [
   {
-    "resource": "DBiDAF",
-    "dev_em": 63.0,
-    "dev_f1": 76.9,
-    "test_em": 62.6,
-    "test_f1": 78.5
+    "Resource": "DBiDAF",
+    "Dev_EM": 63.0,
+    "Dev_F1": 76.9,
+    "Test_EM": 62.6,
+    "Test_F1": 78.5
   },
   {
-    "resource": "DBERT",
-    "dev_em": 59.2,
-    "dev_f1": 74.3,
-    "test_em": 63.9,
-    "test_f1": 76.9
+    "Resource": "DBERT",
+    "Dev_EM": 59.2,
+    "Dev_F1": 74.3,
+    "Test_EM": 63.9,
+    "Test_F1": 76.9
   },
   {
-    "resource": "DRoBERTa",
-    "dev_em": 58.1,
-    "dev_f1": 72.0,
-    "test_em": 58.7,
-    "test_f1": 73.7
+    "Resource": "DRoBERTa",
+    "Dev_EM": 58.1,
+    "Dev_F1": 72.0,
+    "Test_EM": 58.7,
+    "Test_F1": 73.7
   }
 ]

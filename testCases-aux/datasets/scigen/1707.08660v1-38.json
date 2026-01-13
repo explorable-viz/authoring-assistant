@@ -1,37 +1,37 @@
 [
   {
     "_1": "",
-    "only_in_vocabulary_pairs_up_to_now": "@10",
-    "only_in_vocabulary_pairs_previous": "@10",
-    "all_pairs_including_oov_up_to_now": "@10",
-    "all_pairs_including_oov_previous": "@10"
+    "Only_in_vocabulary_pairs_up_to_now": "@10",
+    "Only_in_vocabulary_pairs_previous": "@10",
+    "All_pairs_including_OOV_up_to_now": "@10",
+    "All_pairs_including_OOV_previous": "@10"
   },
   {
     "_1": " Separate",
-    "only_in_vocabulary_pairs_up_to_now": 2.1,
-    "only_in_vocabulary_pairs_previous": 2.4,
-    "all_pairs_including_oov_up_to_now": 1.6,
-    "all_pairs_including_oov_previous": 1.8
+    "Only_in_vocabulary_pairs_up_to_now": 2.1,
+    "Only_in_vocabulary_pairs_previous": 2.4,
+    "All_pairs_including_OOV_up_to_now": 1.6,
+    "All_pairs_including_OOV_previous": 1.8
   },
   {
     "_1": " Cumulative",
-    "only_in_vocabulary_pairs_up_to_now": 13.8,
-    "only_in_vocabulary_pairs_previous": 15.2,
-    "all_pairs_including_oov_up_to_now": 12.2,
-    "all_pairs_including_oov_previous": 13.4
+    "Only_in_vocabulary_pairs_up_to_now": 13.8,
+    "Only_in_vocabulary_pairs_previous": 15.2,
+    "All_pairs_including_OOV_up_to_now": 12.2,
+    "All_pairs_including_OOV_previous": 13.4
   },
   {
     "_1": " Incr. static",
-    "only_in_vocabulary_pairs_up_to_now": 90.1,
-    "only_in_vocabulary_pairs_previous": 84.8,
-    "all_pairs_including_oov_up_to_now": 34.2,
-    "all_pairs_including_oov_previous": 32.2
+    "Only_in_vocabulary_pairs_up_to_now": 90.1,
+    "Only_in_vocabulary_pairs_previous": 84.8,
+    "All_pairs_including_OOV_up_to_now": 34.2,
+    "All_pairs_including_OOV_previous": 32.2
   },
   {
     "_1": " Incr. dynamic",
-    "only_in_vocabulary_pairs_up_to_now": 72.2,
-    "only_in_vocabulary_pairs_previous": 71.5,
-    "all_pairs_including_oov_up_to_now": 62.9,
-    "all_pairs_including_oov_previous": 62.6
+    "Only_in_vocabulary_pairs_up_to_now": 72.2,
+    "Only_in_vocabulary_pairs_previous": 71.5,
+    "All_pairs_including_OOV_up_to_now": 62.9,
+    "All_pairs_including_OOV_previous": 62.6
   }
 ]

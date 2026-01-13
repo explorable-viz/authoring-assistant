@@ -1,82 +1,82 @@
 [
   {
-    "dataset_language": "German (Anselm)",
-    "time_period": "14th–16th c.",
-    "genre": "Religious",
-    "tokens_train": 233947,
-    "tokens_dev": 45996,
-    "tokens_test": 45999
+    "Dataset_Language": "German (Anselm)",
+    "Time_Period": "14th–16th c.",
+    "Genre": "Religious",
+    "Tokens_Train": 233947,
+    "Tokens_Dev": 45996,
+    "Tokens_Test": 45999
   },
   {
-    "dataset_language": "German (RIDGES)",
-    "time_period": "1482–1652",
-    "genre": "Science",
-    "tokens_train": 41857,
-    "tokens_dev": 9712,
-    "tokens_test": 9587
+    "Dataset_Language": "German (RIDGES)",
+    "Time_Period": "1482–1652",
+    "Genre": "Science",
+    "Tokens_Train": 41857,
+    "Tokens_Dev": 9712,
+    "Tokens_Test": 9587
   },
   {
-    "dataset_language": "English",
-    "time_period": "1386–1698",
-    "genre": "Letters",
-    "tokens_train": 147826,
-    "tokens_dev": 16334,
-    "tokens_test": 17644
+    "Dataset_Language": "English",
+    "Time_Period": "1386–1698",
+    "Genre": "Letters",
+    "Tokens_Train": 147826,
+    "Tokens_Dev": 16334,
+    "Tokens_Test": 17644
   },
   {
-    "dataset_language": "Spanish",
-    "time_period": "15th–19th c.",
-    "genre": "Letters",
-    "tokens_train": 97320,
-    "tokens_dev": 11650,
-    "tokens_test": 12479
+    "Dataset_Language": "Spanish",
+    "Time_Period": "15th–19th c.",
+    "Genre": "Letters",
+    "Tokens_Train": 97320,
+    "Tokens_Dev": 11650,
+    "Tokens_Test": 12479
   },
   {
-    "dataset_language": "Hungarian",
-    "time_period": "1440–1541",
-    "genre": "Religious",
-    "tokens_train": 134028,
-    "tokens_dev": 16707,
-    "tokens_test": 16779
+    "Dataset_Language": "Hungarian",
+    "Time_Period": "1440–1541",
+    "Genre": "Religious",
+    "Tokens_Train": 134028,
+    "Tokens_Dev": 16707,
+    "Tokens_Test": 16779
   },
   {
-    "dataset_language": "Icelandic",
-    "time_period": "15th c.",
-    "genre": "Religious",
-    "tokens_train": 49633,
-    "tokens_dev": 6109,
-    "tokens_test": 6037
+    "Dataset_Language": "Icelandic",
+    "Time_Period": "15th c.",
+    "Genre": "Religious",
+    "Tokens_Train": 49633,
+    "Tokens_Dev": 6109,
+    "Tokens_Test": 6037
   },
   {
-    "dataset_language": "Portuguese",
-    "time_period": "15th–19th c.",
-    "genre": "Letters",
-    "tokens_train": 222525,
-    "tokens_dev": 26749,
-    "tokens_test": 27078
+    "Dataset_Language": "Portuguese",
+    "Time_Period": "15th–19th c.",
+    "Genre": "Letters",
+    "Tokens_Train": 222525,
+    "Tokens_Dev": 26749,
+    "Tokens_Test": 27078
   },
   {
-    "dataset_language": "Slovene (Bohorič)",
-    "time_period": "1750–1840s",
-    "genre": "Diverse",
-    "tokens_train": 50023,
-    "tokens_dev": 5841,
-    "tokens_test": 5969
+    "Dataset_Language": "Slovene (Bohorič)",
+    "Time_Period": "1750–1840s",
+    "Genre": "Diverse",
+    "Tokens_Train": 50023,
+    "Tokens_Dev": 5841,
+    "Tokens_Test": 5969
   },
   {
-    "dataset_language": "Slovene (Gaj)",
-    "time_period": "1840s–1899",
-    "genre": "Diverse",
-    "tokens_train": 161211,
-    "tokens_dev": 20878,
-    "tokens_test": 21493
+    "Dataset_Language": "Slovene (Gaj)",
+    "Time_Period": "1840s–1899",
+    "Genre": "Diverse",
+    "Tokens_Train": 161211,
+    "Tokens_Dev": 20878,
+    "Tokens_Test": 21493
   },
   {
-    "dataset_language": "Swedish",
-    "time_period": "1527–1812",
-    "genre": "Diverse",
-    "tokens_train": 24458,
-    "tokens_dev": 2245,
-    "tokens_test": 29184
+    "Dataset_Language": "Swedish",
+    "Time_Period": "1527–1812",
+    "Genre": "Diverse",
+    "Tokens_Train": 24458,
+    "Tokens_Dev": 2245,
+    "Tokens_Test": 29184
   }
 ]

@@ -1,67 +1,67 @@
 [
   {
-    "models": "BoW + Logsitic",
-    "swbd": 78.95,
-    "swbd2": 87.76
+    "Models": "BoW + Logsitic",
+    "SWBD": 78.95,
+    "SWBD2": 87.76
   },
   {
-    "models": "BoW + SVM",
-    "swbd": 73.68,
-    "swbd2": 90.82
+    "Models": "BoW + SVM",
+    "SWBD": 73.68,
+    "SWBD2": 90.82
   },
   {
-    "models": "Bigram + SVM",
-    "swbd": 52.63,
-    "swbd2": 79.59
+    "Models": "Bigram + SVM",
+    "SWBD": 52.63,
+    "SWBD2": 79.59
   },
   {
-    "models": "BoW + TF-IDF + Logistic",
-    "swbd": 52.63,
-    "swbd2": 81.63
+    "Models": "BoW + TF-IDF + Logistic",
+    "SWBD": 52.63,
+    "SWBD2": 81.63
   },
   {
-    "models": "nGram + Logistic",
-    "swbd": 52.63,
-    "swbd2": 78.57
+    "Models": "nGram + Logistic",
+    "SWBD": 52.63,
+    "SWBD2": 78.57
   },
   {
-    "models": "nGram + TF-IDF + Logistic",
-    "swbd": 57.89,
-    "swbd2": 87.76
+    "Models": "nGram + TF-IDF + Logistic",
+    "SWBD": 57.89,
+    "SWBD2": 87.76
   },
   {
-    "models": "Bag of Means + Logistic",
-    "swbd": 78.95,
-    "swbd2": 87.76
+    "Models": "Bag of Means + Logistic",
+    "SWBD": 78.95,
+    "SWBD2": 87.76
   },
   {
-    "models": "Avg. Skipgram + Logistic",
-    "swbd": 26.32,
-    "swbd2": 59.18
+    "Models": "Avg. Skipgram + Logistic",
+    "SWBD": 26.32,
+    "SWBD2": 59.18
   },
   {
-    "models": "Doc2Vec + SVM",
-    "swbd": 73.68,
-    "swbd2": 86.73
+    "Models": "Doc2Vec + SVM",
+    "SWBD": 73.68,
+    "SWBD2": 86.73
   },
   {
-    "models": "HN",
-    "swbd": 31.58,
-    "swbd2": 54.08
+    "Models": "HN",
+    "SWBD": 31.58,
+    "SWBD2": 54.08
   },
   {
-    "models": "HN-ATT Yang et al. ( 2016 )",
-    "swbd": 73.68,
-    "swbd2": 85.71
+    "Models": "HN-ATT Yang et al. ( 2016 )",
+    "SWBD": 73.68,
+    "SWBD2": 85.71
   },
   {
-    "models": "CNN Kim ( 2014 )",
-    "swbd": 84.21,
-    "swbd2": 93.87
+    "Models": "CNN Kim ( 2014 )",
+    "SWBD": 84.21,
+    "SWBD2": 93.87
   },
   {
-    "models": "HN-SA (our model)",
-    "swbd": 89.47,
-    "swbd2": 95.92
+    "Models": "HN-SA (our model)",
+    "SWBD": 89.47,
+    "SWBD2": 95.92
   }
 ]

@@ -54,11 +54,8 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
 
                 # Clean key: replace spaces with underscores, remove [xxx] tags,
                 # ensure first character is lowercase
-                print(clean_key)
                 tmp_key = re.sub(r'\[\w+\]', 'key', clean_key.replace(' ', '_'))
-                print(tmp_key)
                 cleaned_key = tmp_key[:1].lower() + tmp_key[1:]
-                print(cleaned_key)
 
                 # Replace parentheses by underscores (omitting underscore if already present)
                 cleaned_key = re.sub(r'(_)?\(([^)]*)\)(_)?', replace_parens, cleaned_key)

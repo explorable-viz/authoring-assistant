@@ -17,7 +17,7 @@
     "serve": "./script/serve.sh",
     "test-mock": "./script/test-mock.sh scigen-manual-old",
     "test": "./script/authoring-assistant.sh test-case-folder=./testCases/ authoring-agent-class=authoringassistant.llm.FluidOpenAIGpt4oAgent",
-    "suggestion-agent": "./script/authoring-assistant.sh suggestion-agent-class=authoringassistant.llm.suggestion.QwenCoderAgent",
+    "suggestion-agent": "./script/suggestion-agent.sh suggestion-agent-class=authoringassistant.llm.suggestion.QwenCoderAgent",
     "zip-artifact" : "./script/zip-artifact.sh",
     "downsample-category": "./script/authoring-assistant.sh \"downsample=true expression-per-category=5 sample-size=30  test-case-folder=./testCases/scigen-SuggestionAgent\"",
     "count-categories": "python ./script/count-categories.py "

@@ -36,7 +36,7 @@ public class Main {
             systemPrompt = SystemPrompt.load(Settings.SYSTEM_PROMPT_PATH);
             programs = Program.loadPrograms(Settings.getTestCaseFolder());
             if(suggestionAgent != null && interpretationAgent == null) {
-                generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
+                generatePrograms(programs, suggestionAgent, Settings.getTestCaseFolder() + "-SuggestionAgent");
             }
             else if(arguments.containsKey("downsample") && arguments.get("downsample").equals("true")) {
                 int expressionPerCategory = Integer.parseInt(arguments.get("expression-per-category"));

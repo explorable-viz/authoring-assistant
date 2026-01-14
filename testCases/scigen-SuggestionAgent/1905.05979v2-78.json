@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We "
+    },
+    {
+      "expression": "\"classified\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ellipsis examples which lead to errors in sentence-level translations by the type of error they cause. Results are provided in "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". From "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we see that the two most frequent types of ambiguity caused by the presence of an elliptical structure have different nature, hence we construct individual test sets for each of them."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1905_05979v2_78"
+  ],
+  "datasets": ["datasets/scigen/1905.05979v2-78.json"]
+}

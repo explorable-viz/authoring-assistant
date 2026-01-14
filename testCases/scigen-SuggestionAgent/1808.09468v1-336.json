@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare three training configurations: "
+    },
+    {
+      "expression": "\"WEBSPLIT only\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"WIKISPLIT only\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"BOTH\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", which is simply their concatenation.  The WEBSPLIT model scores "
+    },
+    {
+      "expression": "\"35.3 BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the WebSplit validation set but fails to generalize beyond its narrow domain, as evidenced by reaching only "
+    },
+    {
+      "expression": "\"4.2 BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the WikiSplit validation set.  In contrast, the WIKISPLIT model achieves "
+    },
+    {
+      "expression": "\"59.4 BLEU\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the WebSplit validation set,  Reintroducing the downsampled, in-domain training data (BOTH) further improves performance on the WebSplit evaluation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1808_09468v1_336"
+  ],
+  "datasets": ["datasets/scigen/1808.09468v1-336.json"]
+}

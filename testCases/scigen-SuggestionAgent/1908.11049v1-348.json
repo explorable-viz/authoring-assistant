@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "When we jointly train each task on the three languages, the performance decreases in most cases, other than the target group classification tasks.  Yet, "
+    },
+    {
+      "expression": "\"multilingual training\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the "
+    },
+    {
+      "expression": "\"target group classification task\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improves in all languages. Since the target group classification task involves "
+    },
+    {
+      "expression": "\"16 labels\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the amount of data annotated for each label is lower than in other tasks. Hence, when aggregating annotated data in different languages, the size of the training data also increases, due to the relative regularity of identification words of different groups in all three languages in comparison to other tasks."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1908_11049v1_348"
+  ],
+  "datasets": ["datasets/scigen/1908.11049v1-348.json"]
+}

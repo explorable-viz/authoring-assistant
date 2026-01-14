@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 5: Model accuracy when noise is injected into WikiQA and TREC-QA datasets. ∗ indicates the target dataset for the second step of fine-tuning (adapt step).  Table 5 shows the MAP and MRR of BERTBase using FT and TANDA, also indicating the drop percentage (% ) in accuracy due to the injection of noise."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1911_04118v2_287"
+  ],
+  "datasets": ["datasets/scigen/1911.04118v2-287.json"]
+}

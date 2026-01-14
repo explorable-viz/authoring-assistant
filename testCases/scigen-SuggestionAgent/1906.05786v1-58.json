@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We see small gains from using "
+    },
+    {
+      "expression": "\"BI with ensembles\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on most validation sets, but only on "
+    },
+    {
+      "expression": "\"en2es\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " test. For "
+    },
+    {
+      "expression": "\"en2de\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", by contrast, uniform ensembling is consistently "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than oracles on the dev sets, and outperforms "
+    },
+    {
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the test data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_05786v1_58"
+  ],
+  "datasets": ["datasets/scigen/1906.05786v1-58.json"]
+}

@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 3 compares the results on the development set.  On top of the baseline ORIGINAL, adding synonyms and hypernyms by consulting external knowledge does not improve the performance.  the PAIR technique results in small gains over ORIGINAL. OVERLAP is the most ef  fective heuristic technique. This simple  heuristic improves recall on EL.  FILTER,  gives similar improvements to PAIR and OVERLAP on the HEAD setting,  RELABEL and OVERLAP both improve performance on both EL and HEAD while other methods do poorly on EL.  FILTER & RELABEL outperforms all the baselines."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1905_01566v1_102"
+  ],
+  "datasets": ["datasets/scigen/1905.01566v1-102.json"]
+}

@@ -1,0 +1,97 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the results, where the two cases are denoted as "
+    },
+    {
+      "expression": "\"ΔIV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"ΔOOV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The general trend in the results is that the improvements of both models in the "
+    },
+    {
+      "expression": "\"OOV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case are "
+    },
+    {
+      "expression": "\"larger than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in the "
+    },
+    {
+      "expression": "\"IV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case, which means that the character composition models indeed alleviates the "
+    },
+    {
+      "expression": "\"OOV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " problem. Also, CNN improves on seven languages in the "
+    },
+    {
+      "expression": "\"IV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case and eight languages in the "
+    },
+    {
+      "expression": "\"OOV\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " case, and it performs "
+    },
+    {
+      "expression": "\"consistently better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " LSTM in both cases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1705_10814v1_199"
+  ],
+  "datasets": ["datasets/scigen/1705.10814v1-199.json"]
+}

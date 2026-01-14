@@ -1,11 +1,11 @@
 {
   "datasets": [
-    "datasets/1808.07733v1-2.json"
+    "datasets/scigen/1808.07733v1-2.json"
   ],
   "imports": [
     "scigen",
     "util",
-    "datasets/_1808_07733v1_2"
+    "datasets/scigen/_1808_07733v1_2"
   ],
   "variables": {},
   "testing-variables": {},

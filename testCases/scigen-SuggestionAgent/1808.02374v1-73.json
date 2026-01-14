@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "In Table 1 we can see that also for our model, EE relations are harder to recognize than the TE relations, as all models achieve higher scores for TE compared to EE relations.  What is interesting to see is that when training with the combined loss (SG or SGLR) we obtain a clear improvement on the more difficult EE relations, and perform slightly worse on TE relations compared to using pre-trained embeddings (the three upper settings).  What can be observed is that the RC+SG model performs best for low-frequency words, and RC+SGLR performs  best for the higher frequency ranges.  When evaluating on the full Dev set, both combined loss settings outperform the baselines consistently."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1808_02374v1_73"
+  ],
+  "datasets": ["datasets/scigen/1808.02374v1-73.json"]
+}

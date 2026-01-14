@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results, shown in Table 3, demonstrate that the MIMICK RNN recovers about "
+    },
+    {
+      "expression": "\"half\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the loss in performance incurred by the original Polyglot training model due to out-of-vocabulary words in the \"All pairs\" condition. MIMICK also "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " VarEmbed. FastText can be considered an upper bound: with a vocabulary that is "
+    },
+    {
+      "expression": "\"25 times larger\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the other models, it was missing words from only "
+    },
+    {
+      "expression": "\"44 pairs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on this data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1707_06961v1_122"
+  ],
+  "datasets": ["datasets/scigen/1707.06961v1-122.json"]
+}

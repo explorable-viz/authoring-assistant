@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "In Table 3 and Figure 1, the results of the experiment are presented. Triframes based on "
+    },
+    {
+      "expression": "\"WATSET\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " clustering outperformed the other methods on both "
+    },
+    {
+      "expression": "\"Verb F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and overall "
+    },
+    {
+      "expression": "\"Frame F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  the use of the "
+    },
+    {
+      "expression": "\"WATSET\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " fuzzy clustering algorithm that splits the hubs by disambiguating them leads to the "
+    },
+    {
+      "expression": "\"best results\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (see Table 3)."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1805_04715v2_64"
+  ],
+  "datasets": ["datasets/scigen/1805.04715v2-64.json"]
+}

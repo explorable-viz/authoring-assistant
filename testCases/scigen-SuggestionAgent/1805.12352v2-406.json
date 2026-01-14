@@ -1,0 +1,67 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "To validate the previous results, we further conduct a human evaluation with Amazon Mechanical Turk. We randomly selected "
+    },
+    {
+      "expression": "\"50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " dialogues from the test set of DailyDialog. For each dialogue context, we generated "
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " responses from each of the four models. Responses for each context were inspected by "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " participants who were asked to choose the model which performs the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in regarding to coherence, diversity and informative while being blind to the underlying algorithms. The average percentages that each model was selected as the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to a specific criterion are shown in Table 5."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1805_12352v2_406"
+  ],
+  "datasets": ["datasets/scigen/1805.12352v2-406.json"]
+}

@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "To understand how the model treats the tag and what biases it learns from the data, we investigate the "
+    },
+    {
+      "expression": "\"entropy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the attention probability distribution, as well as the attention captured by the tag.  For the tagged variants, there is heavy attention on the tag when it is present (Table 6), indicating that the model relies on the information signalled by the tag.  Table 6 reports the "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " length-normalized "
+    },
+    {
+      "expression": "\"Shannon entropy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ":  The "
+    },
+    {
+      "expression": "\"entropy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the attention probabilities from the model trained on BT data is the clear outlier."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_06442v1_442"
+  ],
+  "datasets": ["datasets/scigen/1906.06442v1-442.json"]
+}

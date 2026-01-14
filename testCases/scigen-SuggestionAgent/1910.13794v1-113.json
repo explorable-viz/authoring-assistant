@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "In addition, we provide the recall and precision per class for our final interrogative-word classifier (CLS + AT + NER in Table 7).  However, the recall of which is very low.  Our model has also problem with why  Lastly, the recall of 'when is also low"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1910_13794v1_113"
+  ],
+  "datasets": ["datasets/scigen/1910.13794v1-113.json"]
+}

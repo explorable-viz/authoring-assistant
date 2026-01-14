@@ -1,0 +1,109 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table VI reports the accuracy of the models on the four benchmark datasets. All the results are bold. It shows that Style-HAN "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the baselines by "
+    },
+    {
+      "expression": "\"2.38%\"",
+      "categories": [
+        "data-retrieval",
+        "difference"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"1.35%\"",
+      "categories": [
+        "data-retrieval",
+        "difference"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"8.73%\"",
+      "categories": [
+        "data-retrieval",
+        "difference"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"4.46%\"",
+      "categories": [
+        "data-retrieval",
+        "difference"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the "
+    },
+    {
+      "expression": "\"CCAT10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"CCAT50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"BLOGs10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"BLOGS50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets, respectively."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_06194v1_486"
+  ],
+  "datasets": ["datasets/scigen/1909.06194v1-486.json"]
+}

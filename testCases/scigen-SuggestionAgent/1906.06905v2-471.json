@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The right-hand side of table 1 shows the performance of our "
+    },
+    {
+      "expression": "\"SVM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the two "
+    },
+    {
+      "expression": "\"neural methods\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The results indicate that the "
+    },
+    {
+      "expression": "\"SVM setup\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is well suited for the "
+    },
+    {
+      "expression": "\"difficulty prediction task\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and that it successfully generalizes to new data."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_06905v2_471"
+  ],
+  "datasets": ["datasets/scigen/1906.06905v2-471.json"]
+}

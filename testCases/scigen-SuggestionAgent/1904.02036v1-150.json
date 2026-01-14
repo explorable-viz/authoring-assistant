@@ -1,0 +1,115 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the results of this evaluation. The extent of spelling variation varies greatly between datasets, with "
+    },
+    {
+      "expression": "\"less than 15%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of tokens requiring normalization (SLG) to "
+    },
+    {
+      "expression": "\"more than 80%\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (HU). The "
+    },
+    {
+      "expression": "\"maximum accuracy\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is above "
+    },
+    {
+      "expression": "\"97%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for most datasets, For the normalization systems, we observe "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " word accuracy with SMT than NMT on "
+    },
+    {
+      "expression": "\"four\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the datasets, and "
+    },
+    {
+      "expression": "\"non-significant differences\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on five others. There is only one dataset ("
+    },
+    {
+      "expression": "\"DEA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") where the NMT system by Tang et al. (2018) gets "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " word accuracy than other systems. Overall, the deep NMT model by Tang et al. (2018) consistently "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the shallow one by Bollmann (2018). Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "
+    },
+    {
+      "expression": "\"significantly behind\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the SMT and NMT methods."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1904_02036v1_150"
+  ],
+  "datasets": ["datasets/scigen/1904.02036v1-150.json"]
+}

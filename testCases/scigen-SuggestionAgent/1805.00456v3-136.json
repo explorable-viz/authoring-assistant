@@ -1,0 +1,37 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Ensembles of two identical models trained with different seeds only "
+    },
+    {
+      "expression": "\"slightly\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improve over the single model (Table 5). However, an ensemble of models producing plain BPE and linearized derivations improves by "
+    },
+    {
+      "expression": "\"0.5 BLEU\"",
+      "categories": [
+        "data-retrieval",
+        "difference"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the plain BPE baseline."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1805_00456v3_136"
+  ],
+  "datasets": ["datasets/scigen/1805.00456v3-136.json"]
+}

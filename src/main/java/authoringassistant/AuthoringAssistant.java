@@ -94,43 +94,42 @@ public class AuthoringAssistant {
                 sessionPrompts.addUserPrompt("ExpressionError: Received a NULL expression instead of a valid expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value.");
                 logger.fine(STR."\{info} Attempt #\{attempt}: retry");
-                continue;
-            }
-            if(candidate.getExpr() != null && candidate.getExpr().equals(expected.getValue())) {
-                onlyLiteralExpressions++;
-                sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
-                sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
-                        "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
-                logger.fine(STR."\{info} Attempt #\{attempt}: retry");
-                continue;
-            }
-            boolean firstTest = false;
-            for (Map<String, String> datasets : subProgram.getTest_datasets()) {
-                logger.fine(STR."\{info} Attempt #\{attempt}: received \{candidate.getExpr()}");
-                Optional<String> error = Program.validate(
-                        evaluateExpression(subProgram, datasets, candidate),
-                        new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
-
-                if (error.isPresent()) {
-                    sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
-                    sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
-                    errors = true;
-                    if(firstTest) {
-                        parseErrors++;
-                    } else {
-                        counterfactualFails++;
-                    }
-                    break;
+            } else {
+                if (candidate.getExpr().equals(expected.getValue())) {
+                    onlyLiteralExpressions++;
+                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
+                    sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
+                            "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
+                    logger.fine(STR."\{info} Attempt #\{attempt}: retry");
+                    continue;
                 }
-                firstTest = true;
-            }
-            if (!errors) {
-                sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
-                logger.info(STR."\{info} Expression validation succeeded");
-                return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
-            }
+                boolean firstTest = false;
+                for (Map<String, String> datasets : subProgram.getTest_datasets()) {
+                    logger.fine(STR."\{info} Attempt #\{attempt}: received \{candidate.getExpr()}");
+                    Optional<String> error = Program.validate(
+                            evaluateExpression(subProgram, datasets, candidate),
+                            new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
 
+                    if (error.isPresent()) {
+                        sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
+                        sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
+                        errors = true;
+                        if (firstTest) {
+                            parseErrors++;
+                        } else {
+                            counterfactualFails++;
+                        }
+                        break;
+                    }
+                    firstTest = true;
+                }
+                if (!errors) {
+                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
+                    sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+                    logger.info(STR."\{info} Expression validation succeeded");
+                    return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
+                }
+            }
         }
         sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");

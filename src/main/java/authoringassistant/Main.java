@@ -32,11 +32,10 @@ public class Main {
             final String interpretationAgent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json
-            cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
             systemPrompt = SystemPrompt.load(Settings.SYSTEM_PROMPT_PATH);
             programs = Program.loadPrograms(Settings.getTestCaseFolder());
             if(suggestionAgent != null && interpretationAgent == null) {
-                generatePrograms(programs, suggestionAgent, Settings.getTestCaseFolder() + "-SuggestionAgent");
+                generatePrograms(programs, suggestionAgent, STR."testCases/\{Settings.getTestCaseFolder()}-SuggestionAgent");
             }
             else if(arguments.containsKey("downsample") && arguments.get("downsample").equals("true")) {
                 int expressionPerCategory = Integer.parseInt(arguments.get("expression-per-category"));
@@ -47,6 +46,7 @@ public class Main {
             }
             else
             {
+                cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
                 final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
                 boolean[] cases = isTestMock(interpretationAgent) ? new boolean[]{false} : new boolean[]{false, true};
                 // Run experiment for both add-expected-value settings
@@ -91,9 +91,51 @@ public class Main {
             throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException,
             IllegalAccessException, IOException {
         SuggestionAgent sa = new SuggestionAgent(suggestionAgentClassName);
+        List<Integer> attemptsList = new ArrayList<>();
         for (Program program : programs) {
-            saveProgramToJson(sa.generateTemplateProgram(program), outputFolder);
+            SuggestionAgent.SuggestionAgentResult result = sa.generateTemplateProgram(program);
+            saveProgramToJson(result.program(), outputFolder);
+            attemptsList.add(result.attempts());
         }
+        
+        // Write loopback statistics
+        writeLoopbackStats(attemptsList, outputFolder);
+    }
+    
+    private static void writeLoopbackStats(List<Integer> attemptsList, String outputFolder) throws IOException {
+        Path statsFile = Paths.get(outputFolder, "loopback-stats.txt");
+        
+        Map<Integer, Long> distribution = attemptsList.stream()
+            .collect(Collectors.groupingBy(a -> a, Collectors.counting()));
+        
+        double average = attemptsList.stream().mapToInt(Integer::intValue).average().orElse(0.0);
+        int max = attemptsList.stream().mapToInt(Integer::intValue).max().orElse(0);
+        int maxLimit = Settings.getSuggestionAgentLoopbackLimit();
+        long reachedLimit = attemptsList.stream().filter(a -> a >= maxLimit).count();
+        
+        StringBuilder sb = new StringBuilder();
+        sb.append("============================================================\n");
+        sb.append("Loopback Statistics:\n");
+        sb.append("============================================================\n\n");
+        sb.append(STR."Total programs: \{attemptsList.size()}\n");
+        sb.append(STR."Average attempts: \{String.format("%.2f", average)}\n");
+        sb.append(STR."Max attempts: \{max}\n");
+        sb.append(STR."Programs reaching limit (\{maxLimit}): \{reachedLimit} (\{String.format("%.1f", (reachedLimit * 100.0 / attemptsList.size()))}%)\n\n");
+        sb.append("Distribution by attempts:\n");
+        
+        distribution.entrySet().stream()
+            .sorted(Map.Entry.comparingByKey())
+            .forEach(entry -> {
+                int attempts = entry.getKey();
+                long count = entry.getValue();
+                double percentage = count * 100.0 / attemptsList.size();
+                sb.append(STR."  \{attempts} \{attempts == 1 ? "attempt " : "attempts"}: \{count} programs (\{String.format("%.1f", percentage)}%)\n");
+            });
+        
+        sb.append("\n============================================================\n");
+        
+        Files.writeString(statsFile, sb.toString());
+        logger.info(STR."Loopback statistics written to: \{statsFile}");
     }
 
     public record ProgramExpression(int expressionIndex, Program program) {

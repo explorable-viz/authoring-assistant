@@ -22,6 +22,8 @@ import java.util.regex.Pattern;
 
 public class SuggestionAgent {
 
+    public record SuggestionAgentResult(Program program, int attempts) {}
+
     private static final Pattern REPLACE = Pattern.compile("\\[REPLACE value=\"?(.*?)\"? categories=\"?(.*?)\"?]");
     private static final Path SYSTEM_PROMPT_PATH = Path.of("system-prompt", "suggestion-agent", "system-prompt.txt");
     private final LLMEvaluatorAgent<String> llm;
@@ -30,7 +32,7 @@ public class SuggestionAgent {
         llm = initialiseAgent(agent);
     }
 
-    public Program generateTemplateProgram(Program p) throws IOException {
+    public SuggestionAgentResult generateTemplateProgram(Program p) throws IOException {
         String text;
         if(p.getTestCaseFileName().equals("web-case")) {
             text = p.getParagraph().getFirst().getValue();
@@ -46,22 +48,22 @@ public class SuggestionAgent {
             try {
                 result = llm.evaluate(prompts, null);
                 if (result == null) {
-                    return p;
+                    return new SuggestionAgentResult(p, attempts);
                 }
                 Paragraph paragraph = parseParagraph(result);
                 if(!p.getParagraph().equals(paragraph)) {
                     prompts.addUserPrompt("Your response contains extra text outside the annotated paragraph. Please provide ONLY the original text with [REPLACE value=\"...\" categories=\"...\"] annotations inserted inline. Do not add any explanations, comments, markdown formatting, or other additional content.");
                     continue;
                 }
-                return new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCaseFileName(),p.getTest_datasets());
+                return new SuggestionAgentResult(new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCaseFileName(),p.getTest_datasets()), attempts);
             } catch (IllegalArgumentException ex) {
-                prompts.addUserPrompt("Invalid category! Please use only the following categories: COMPARISON, RANK, RATIO, DATA_RETRIEVAL, DIFFERENCE, AVERAGE, SUM, MIN_MAX. Return ONLY the annotated paragraph with [REPLACE ...] tags, without any additional comments or explanations.");
+                prompts.addUserPrompt(STR."Invalid category! Please use only the following categories: \{ExpressionCategory.values()}. Return ONLY the annotated paragraph with [REPLACE ...] tags, without any additional comments or explanations.");
                 continue;
             }
         }
         
         // Limite di tentativi raggiunto, restituisci il programma originale
-        return p;
+        return new SuggestionAgentResult(p, attempts);
 
     }
 

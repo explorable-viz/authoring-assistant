@@ -63,8 +63,13 @@ def count_expressions_per_category(test_cases_folder):
             total_expressions += 1
     
     # Display results
+    # Remove -SuggestionAgent suffix from display name if present
+    display_name = test_cases_folder.rstrip('/\\')
+    if display_name.endswith('-SuggestionAgent'):
+        display_name = display_name[:-len('-SuggestionAgent')]
+    
     print(f"\n{'='*60}")
-    print(f"Test Cases Folder: {test_cases_folder}")
+    print(f"Original Test Cases Folder: {display_name}")
     print(f"{'='*60}")
     print(f"Total JSON files processed: {total_files}")
     print(f"Total files with expressions: {total_expressions}")

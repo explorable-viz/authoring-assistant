@@ -160,8 +160,8 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "temperature", "num-token", "is-negative", "in-context-learning-size",
-                    "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "nullExpressions", "onlyLiteralExpressions"
+                    "runId", "test-case", "llm-agent", "is-negative", "in-context-learning-size",
+                    "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
@@ -172,11 +172,8 @@ public class Main {
                                 String.valueOf(queryResult.runId()),
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
                                 interpretationAgent,
-                                String.valueOf(Settings.getTemperature()),
-                                String.valueOf(Settings.getNumContextToken()),
                                 String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
-                                //program.getParagraph().toFluidSyntax(),
-                                String.valueOf(queryResult.attempt()),
+                                String.valueOf(queryResult.attempts()),
                                 queryResult.correctResponse() != null ? "OK" : "KO",
                                 String.valueOf(Settings.isAddExpectedValueEnabled() ? 1 : 0),
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
@@ -186,8 +183,8 @@ public class Main {
                                 queryResult.expected().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\""),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),
-                                String.valueOf(queryResult.nullExpressions()),
-                                String.valueOf(queryResult.onlyLiteralExpressions())
+                                String.valueOf(queryResult.missingResponses()),
+                                String.valueOf(queryResult.literalResponses())
                         };
                         return String.join(";", Arrays.stream(values).map(s -> STR."\"\{s}\"").toList());
                     })

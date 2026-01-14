@@ -1,0 +1,45 @@
+
+============================================================
+Test Cases Folder: testcases/scigen-raw-SuggestionAgent
+============================================================
+Total JSON files processed: 492
+Total files with expressions: 319
+
+============================================================
+Distribution of Expressions per Category:
+============================================================
+
+  data-retrieval           :  271 expressions ( 85.0%)
+  comparison               :  185 expressions ( 58.0%)
+  rank                     :  103 expressions ( 32.3%)
+  difference               :   46 expressions ( 14.4%)
+  min-max                  :   43 expressions ( 13.5%)
+  average                  :   20 expressions (  6.3%)
+  ratio                    :    9 expressions (  2.8%)
+  sum                      :    2 expressions (  0.6%)
+
+============================================================
+Total unique categories: 8
+============================================================
+
+============================================================
+Expressions by Number of Categories:
+============================================================
+
+  1 category    :   97 expressions ( 30.4%)
+  2 categories  :  122 expressions ( 38.2%)
+  3 categories  :   70 expressions ( 21.9%)
+  4 categories  :   22 expressions (  6.9%)
+  5 categories  :    8 expressions (  2.5%)
+
+  Total with multiple categories:  222 expressions ( 69.6%)
+
+============================================================
+
+
+============================================================
+Total unique categories: 8
+============================================================
+
+
+Execution time: 0 seconds

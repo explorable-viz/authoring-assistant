@@ -63,9 +63,8 @@ public class AuthoringAssistant {
                     results.add(new Pair<>(finalProgram, result));
                     problems = finalProgram.asIndividualProblems(templateProgram);
                 } catch (Exception e) {
-                    logger.severe("Error executing program edit: " + e.getMessage());
-                    logger.info("Returning partial results obtained so far: " + results.size() + " results");
-                    return results;
+                    logger.severe("Error executing program edit; aborting.\n" + e.getMessage());
+                    throw e;
                 }
             } while (!problems.isEmpty());
         finalProgram.toWebpage();

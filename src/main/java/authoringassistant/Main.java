@@ -34,7 +34,13 @@ public class Main {
             //Create directory for logs and json
             cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
             systemPrompt = SystemPrompt.load(Settings.SYSTEM_PROMPT_PATH);
+            logger.info("****************************************");
+            logger.info(STR."Validating test cases in \{Settings.getTestCaseFolder()}");
+            logger.info("****************************************");
             programs = Program.loadPrograms(Settings.getTestCaseFolder());
+            logger.info("****************************************");
+            logger.info(STR."Validated test cases in \{Settings.getTestCaseFolder()}");
+            logger.info("****************************************");
             if(suggestionAgent != null && interpretationAgent == null) {
                 generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
             }

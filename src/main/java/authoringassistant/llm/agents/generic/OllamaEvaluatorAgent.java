@@ -1,4 +1,4 @@
-package authoringassistant.llm.generic;
+package authoringassistant.llm.agents.generic;
 
 import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.prompt.Prompt;

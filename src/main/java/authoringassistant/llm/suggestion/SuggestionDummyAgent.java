@@ -1,7 +1,7 @@
 package authoringassistant.llm.suggestion;
 
-import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
-import it.unisa.cluelab.lllm.llm.prompt.PromptList;
+import authoringassistant.llm.LLMEvaluatorAgent;
+import authoringassistant.llm.prompt.PromptList;
 import org.json.JSONObject;
 
 import java.io.IOException;

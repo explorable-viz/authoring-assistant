@@ -4,8 +4,8 @@ import authoringassistant.paragraph.Expression;
 import authoringassistant.paragraph.ExpressionCategory;
 import authoringassistant.paragraph.Literal;
 import authoringassistant.paragraph.Paragraph;
-import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
-import it.unisa.cluelab.lllm.llm.prompt.PromptList;
+import authoringassistant.llm.LLMEvaluatorAgent;
+import authoringassistant.llm.prompt.PromptList;
 import kotlin.Pair;
 import org.json.JSONObject;
 

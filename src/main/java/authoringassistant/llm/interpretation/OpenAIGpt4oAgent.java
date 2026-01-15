@@ -7,8 +7,8 @@ import com.theokanning.openai.completion.chat.ChatMessage;
 import com.theokanning.openai.service.FunctionExecutor;
 import com.theokanning.openai.service.OpenAiService;
 import authoringassistant.paragraph.Expression;
-import it.unisa.cluelab.lllm.llm.agents.generic.OpenAIEvaluatorAgent;
-import it.unisa.cluelab.lllm.llm.prompt.PromptList;
+import authoringassistant.llm.agents.generic.OpenAIEvaluatorAgent;
+import authoringassistant.llm.prompt.PromptList;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 

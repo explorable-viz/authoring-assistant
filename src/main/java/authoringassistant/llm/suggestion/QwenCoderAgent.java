@@ -1,9 +1,9 @@
 package authoringassistant.llm.suggestion;
 
-import it.unisa.cluelab.lllm.llm.agents.generic.OLLAMAEvaluatorAgent;
+import authoringassistant.llm.agents.generic.OllamaEvaluatorAgent;
 import org.json.JSONObject;
 
-public class QwenCoderAgent extends OLLAMAEvaluatorAgent<String> {
+public class QwenCoderAgent extends OllamaEvaluatorAgent<String> {
 
     public QwenCoderAgent(JSONObject settings) {
         super(settings);

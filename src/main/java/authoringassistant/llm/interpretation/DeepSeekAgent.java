@@ -1,10 +1,10 @@
 package authoringassistant.llm.interpretation;
 
+import authoringassistant.llm.agents.generic.OllamaEvaluatorAgent;
 import authoringassistant.paragraph.Expression;
-import it.unisa.cluelab.lllm.llm.agents.generic.OLLAMAEvaluatorAgent;
 import org.json.JSONObject;
 
-public class DeepSeekAgent extends OLLAMAEvaluatorAgent<Expression> {
+public class DeepSeekAgent extends OllamaEvaluatorAgent<Expression> {
 
     public DeepSeekAgent(JSONObject settings) {
         super(settings);

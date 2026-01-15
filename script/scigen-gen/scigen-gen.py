@@ -186,7 +186,7 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
             
         # Write .fld file with loadJson instruction
         fld_name = f"_{dataset_name.replace('-', '_').replace('.', '_')}"
-        fld_content = f'let tableData = loadJson "{datasets_dir}/{dataset_name}.json";'
+        fld_content = f'let tableData = loadJson "{datasets_dir.as_posix()}/{dataset_name}.json";'
         fld_file = datasets_path / f"{fld_name}.fld"
         with open(fld_file, 'w', encoding='utf-8') as f:
             f.write(fld_content)

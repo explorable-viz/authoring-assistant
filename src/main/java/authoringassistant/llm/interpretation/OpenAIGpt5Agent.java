@@ -36,7 +36,7 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
     }
 
     @Override
-    public Expression evaluate(PromptList prompts, String grid) throws IOException {
+    public Expression evaluate(PromptList prompts, String grid) throws IOException, InterruptedException {
         logger.config("Execution of the OpenAIGpt5Agent");
         
         try {
@@ -44,9 +44,9 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
             String response = makeHttpRequest(requestBody);
             return parseResponse(response);
             
-        } catch (Exception e) {
+        } catch (IOException | InterruptedException e) {
             logger.severe("Error calling GPT-5 API: " + e.getMessage());
-            return null;
+            throw e;
         }
     }
     

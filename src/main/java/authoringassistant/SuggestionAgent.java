@@ -30,7 +30,7 @@ public class SuggestionAgent {
         llm = initialiseAgent(agent);
     }
 
-    public Program generateTemplateProgram(Program p) throws IOException {
+    public Program generateTemplateProgram(Program p) throws IOException, InterruptedException {
         String text;
         if(p.getTestCaseFileName().equals("web-case")) {
             text = p.getParagraph().getFirst().getValue();

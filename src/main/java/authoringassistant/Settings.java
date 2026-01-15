@@ -77,8 +77,9 @@ public class Settings {
         return getSettings().getInt("timeout");
     }
 
+    // TODO: rename property now all uses factor through this method
     public static int getNumContextToken() {
-        return getSettings().getInt("num-context-token");
+        return getSettings().getInt("num_ctx");
     }
 
     public static boolean isAddExpectedValue() {

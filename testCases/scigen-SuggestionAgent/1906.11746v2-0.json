@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 (upper part) shows the results of our basic semantic parser (with GloVe embeddings) on all six graphbanks  Our "
+    },
+    {
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are competitive across the board, and set a new state of the art for EDS Smatch scores ("
+    },
+    {
+      "expression": "\"Cai and Knight, 2013\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") among EDS parsers which are not trained on gold syntax information.  Our EDM score ("
+    },
+    {
+      "expression": "\"Dridan and Oepen, 2011\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") on EDS is "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ",  The use of BERT embeddings is highly effective across the board. We set a new state of the art (without gold syntax) on all graphbanks except AMR 2017;  The improvement is particularly pronounced in the out-of-domain evaluations, illustrating BERT's ability to transfer across domains.  The results on the test dataset are shown in Table 1 (bottom). With GloVe, multi-task learning led to substantial improvements; with BERT the improvements are "
+    },
+    {
+      "expression": "\"smaller\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " but still noticeable."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_11746v2_0"
+  ],
+  "datasets": ["datasets/scigen/1906.11746v2-0.json"]
+}

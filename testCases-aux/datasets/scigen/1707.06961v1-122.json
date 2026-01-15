@@ -28,7 +28,7 @@
     "all": 8.7
   },
   {
-    "_1": "mimic",
+    "_1": "mimick",
     "emb": 64,
     "vocab": 0,
     "polyglot": 17.9,
@@ -42,7 +42,7 @@
     "all": 27.0
   },
   {
-    "_1": "+mimic",
+    "_1": "+mimick",
     "emb": 64,
     "vocab": 100,
     "polyglot": 40.8,
@@ -51,7 +51,7 @@
   {
     "_1": "Fasttext",
     "emb": 300,
-    "vocab": "2.51M",
+    "vocab": 2510000.0,
     "polyglot": "",
     "all": 47.3
   }

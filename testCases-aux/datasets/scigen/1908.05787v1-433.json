@@ -1,44 +1,44 @@
 [
   {
-    "task_metric": "SOTA3",
-    "ba↑": 77.1,
+    "task_Metric": "SOTA3",
+    "bA↑": 77.1,
     "f1↑": 77.0,
-    "mae↓": 0.968,
+    "mAE↓": 0.968,
     "corr↑": 0.625
   },
   {
-    "task_metric": "SOTA2",
-    "ba↑": 77.4,
+    "task_Metric": "SOTA2",
+    "bA↑": 77.4,
     "f1↑": 77.3,
-    "mae↓": 0.965,
+    "mAE↓": 0.965,
     "corr↑": 0.632
   },
   {
-    "task_metric": "SOTA1",
-    "ba↑": 78.4,
+    "task_Metric": "SOTA1",
+    "bA↑": 78.4,
     "f1↑": 78.0,
-    "mae↓": 0.922,
+    "mAE↓": 0.922,
     "corr↑": 0.681
   },
   {
-    "task_metric": "BERT",
-    "ba↑": 83.36,
+    "task_Metric": "BERT",
+    "bA↑": 83.36,
     "f1↑": 85.53,
-    "mae↓": 0.736,
+    "mAE↓": 0.736,
     "corr↑": 0.777
   },
   {
-    "task_metric": "M-BERT",
-    "ba↑": 84.38,
+    "task_Metric": "M-BERT",
+    "bA↑": 84.38,
     "f1↑": 86.34,
-    "mae↓": 0.732,
+    "mAE↓": 0.732,
     "corr↑": 0.79
   },
   {
-    "task_metric": "Δ  SOTA",
-    "ba↑": "↑   5.98",
+    "task_Metric": "Δ  SOTA",
+    "bA↑": "↑   5.98",
     "f1↑": "↑   8.34",
-    "mae↓": "↓   0.19",
+    "mAE↓": "↓   0.19",
     "corr↑": "↑  0.11"
   }
 ]

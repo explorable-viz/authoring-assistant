@@ -1,80 +1,80 @@
 [
   {
-    "model": "collobert2011natural",
-    "f1": 89.59,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "collobert2011natural",
+    "F1": 89.59,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "passos2014lexicon",
-    "f1": 90.9,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "passos2014lexicon",
+    "F1": 90.9,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "luo2015joint",
-    "f1": 91.2,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "luo2015joint",
+    "F1": 91.2,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "huang2015bidirectional",
-    "f1": 90.1,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "huang2015bidirectional",
+    "F1": 90.1,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "lample2016neural",
-    "f1": 90.94,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "lample2016neural",
+    "F1": 90.94,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "ma2016end",
-    "f1": 91.21,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "ma2016end",
+    "F1": 91.21,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "yang2017transfer",
-    "f1": 91.26,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "yang2017transfer",
+    "F1": 91.26,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "rei:2017:Long",
-    "f1": 86.26,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "rei:2017:Long",
+    "F1": 86.26,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "peters2017semi",
-    "f1": 91.93,
-    "train_s": "–",
-    "test_s": "–"
+    "Model": "peters2017semi",
+    "F1": 91.93,
+    "Train_s": "–",
+    "Test_s": "–"
   },
   {
-    "model": "BiLSTM",
-    "f1": 90.96,
-    "train_s": 82,
-    "test_s": 9.89
+    "Model": "BiLSTM",
+    "F1": 90.96,
+    "Train_s": 82,
+    "Test_s": 9.89
   },
   {
-    "model": "2 stacked BiLSTM",
-    "f1": 91.02,
-    "train_s": 159,
-    "test_s": 18.88
+    "Model": "2 stacked BiLSTM",
+    "F1": 91.02,
+    "Train_s": 159,
+    "Test_s": 18.88
   },
   {
-    "model": "3 stacked BiLSTM",
-    "f1": 91.06,
-    "train_s": 235,
-    "test_s": 30.97
+    "Model": "3 stacked BiLSTM",
+    "F1": 91.06,
+    "Train_s": 235,
+    "Test_s": 30.97
   },
   {
-    "model": "S-LSTM",
-    "f1": 91.57,
-    "train_s": 79,
-    "test_s": 9.78
+    "Model": "S-LSTM",
+    "F1": 91.57,
+    "Train_s": 79,
+    "Test_s": 9.78
   }
 ]

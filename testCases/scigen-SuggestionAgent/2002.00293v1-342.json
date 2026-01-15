@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "For example, RoBERTa trained on DRoBERTa reaches "
+    },
+    {
+      "expression": "\"38.9F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on DRoBERTa, and this number further increases to "
+    },
+    {
+      "expression": "\"47.2F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " when including SQuAD during training (cf. Table 6).  In Table 6 we show experimental results for the same models and training datasets, but now including SQuAD as additional training data. In this training setup we generally see improved generalisation to DBiDAF, DBERT, and DRoBERTa. Interestingly, the relative differences between DBiDAF, DBERT, and DRoBERTa as training set used in conjunction with SQuAD are now much diminished, and especially DRoBERTa as (part of the) training set now generalises "
+    },
+    {
+      "expression": "\"substantially better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". RoBERTa achieves the strongest results on any of the DBiDAF, DBERT, and DRoBERTa evaluation sets, in particular when trained on DSQuAD+DRoBERTa.  we identify a risk of datasets constructed with weaker models in the loop becoming outdated. For example, RoBERTa achieves "
+    },
+    {
+      "expression": "\"58.2EM/73.2F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on DBiDAF, in contrast to "
+    },
+    {
+      "expression": "\"0.0EM/5.5F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for BiDAF \u2013 which is not far from non-expert human performance of "
+    },
+    {
+      "expression": "\"62.6EM/78.5F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  We furthermore observe a gradual decrease in generalisation to SQuAD when training on DBiDAF towards training on DRoBERTa. This suggests that the stronger the model used in the annotation loop, the more dissimilar the data distribution becomes from the original SQuAD distribution. We will later find further support for this explanation in a qualitative analysis (Section 5). It may however also be due to a limitation of BERT and RoBERTa \u2013 similar to BiDAF \u2013 in learning from a data distribution designed to beat these models; an even stronger model might learn more e.g. from DRoBERTa."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2002_00293v1_342"
+  ],
+  "datasets": ["datasets/scigen/2002.00293v1-342.json"]
+}

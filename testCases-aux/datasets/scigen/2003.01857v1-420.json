@@ -1,142 +1,142 @@
 [
   {
     "data_set": " - our model",
-    "ag": "",
+    "aG": "",
     "sogou": "",
-    "ag_5k": "",
+    "aG_5k": "",
     "sogou_10k": ""
   },
   {
     "data_set": "SeMemNN-ct",
-    "ag": 9.29,
+    "aG": 9.29,
     "sogou": 4.73,
-    "ag_5k": 16.72,
+    "aG_5k": 16.72,
     "sogou_10k": 10.82
   },
   {
     "data_set": "SeMemNN-abs",
-    "ag": 9.04,
+    "aG": 9.04,
     "sogou": 4.62,
-    "ag_5k": 15.32,
+    "aG_5k": 15.32,
     "sogou_10k": 9.8
   },
   {
     "data_set": "B-SeMemNN-ct",
-    "ag": 9.01,
+    "aG": 9.01,
     "sogou": 4.52,
-    "ag_5k": 15.37,
+    "aG_5k": 15.37,
     "sogou_10k": 9.37
   },
   {
     "data_set": "B-SeMemNN-abs",
-    "ag": 8.68,
+    "aG": 8.68,
     "sogou": 4.19,
-    "ag_5k": 14.35,
+    "aG_5k": 14.35,
     "sogou_10k": 8.76
   },
   {
     "data_set": "SAB-SeMemNN-ct",
-    "ag": 8.88,
+    "aG": 8.88,
     "sogou": 4.33,
-    "ag_5k": 14.07,
+    "aG_5k": 14.07,
     "sogou_10k": 7.95
   },
   {
     "data_set": "SAB-SeMemNN-abs",
-    "ag": 8.37,
+    "aG": 8.37,
     "sogou": 3.67,
-    "ag_5k": 13.79,
+    "aG_5k": 13.79,
     "sogou_10k": 7.89
   },
   {
     "data_set": " - related studies",
-    "ag": "",
+    "aG": "",
     "sogou": "",
-    "ag_5k": "",
+    "aG_5k": "",
     "sogou_10k": ""
   },
   {
     "data_set": "Bow ",
-    "ag": 11.19,
+    "aG": 11.19,
     "sogou": 7.15,
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "Bow TFIDF ",
-    "ag": 10.36,
+    "aG": 10.36,
     "sogou": 6.55,
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "ngrams TFIDF ",
-    "ag": 7.64,
+    "aG": 7.64,
     "sogou": 2.81,
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "Bag-of-means ",
-    "ag": 16.91,
+    "aG": 16.91,
     "sogou": 10.79,
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "LSTM ",
-    "ag": 13.94,
+    "aG": 13.94,
     "sogou": 4.82,
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "char-CNN ",
-    "ag": 9.51,
+    "aG": 9.51,
     "sogou": 4.39,
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "VDCNN ",
-    "ag": 8.67,
+    "aG": 8.67,
     "sogou": 3.18,
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "VDCNN",
-    "ag": 10.64,
+    "aG": 10.64,
     "sogou": 6.53,
-    "ag_5k": 19.25,
+    "aG_5k": 19.25,
     "sogou_10k": "unable"
   },
   {
     "data_set": "XLNet ",
-    "ag": 4.49,
+    "aG": 4.49,
     "sogou": "-",
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "ULMFiT ",
-    "ag": 5.01,
+    "aG": 5.01,
     "sogou": "-",
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "CNN ",
-    "ag": 6.57,
+    "aG": 6.57,
     "sogou": "-",
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   },
   {
     "data_set": "DPCNN ",
-    "ag": 6.87,
+    "aG": 6.87,
     "sogou": 1.84,
-    "ag_5k": "-",
+    "aG_5k": "-",
     "sogou_10k": "-"
   }
 ]

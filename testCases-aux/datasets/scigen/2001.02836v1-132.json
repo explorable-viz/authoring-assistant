@@ -1,20 +1,20 @@
 [
   {
     "model": "ELMo",
-    "ws": 0.434,
+    "wS": 0.434,
     "dimension": 512,
-    "training_time": "≈40"
+    "training_Time": "≈40"
   },
   {
     "model": "BERT",
-    "ws": 0.486,
+    "wS": 0.486,
     "dimension": 768,
-    "training_time": "≈300"
+    "training_Time": "≈300"
   },
   {
     "model": "MWE",
-    "ws": 0.476,
+    "wS": 0.476,
     "dimension": 300,
-    "training_time": 4.17
+    "training_Time": 4.17
   }
 ]

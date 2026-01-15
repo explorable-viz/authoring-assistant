@@ -1,8 +1,8 @@
 [
   {
     "_1": "Faruqui and Dyer (2014a)",
-    "num_lang": 4,
-    "num_task_type": "10-WST",
+    "num_Lang": 4,
+    "num_Task_Type": "10-WST",
     "web": "×",
     "offline": "×",
     "static": "×",
@@ -12,8 +12,8 @@
   },
   {
     "_1": "Nayak et al. (2016)",
-    "num_lang": 1,
-    "num_task_type": "7-DT",
+    "num_Lang": 1,
+    "num_Task_Type": "7-DT",
     "web": "×",
     "offline": "×",
     "static": "×",
@@ -23,8 +23,8 @@
   },
   {
     "_1": "Köhn (2015)",
-    "num_lang": 7,
-    "num_task_type": "7-PT",
+    "num_Lang": 7,
+    "num_Task_Type": "7-PT",
     "web": "",
     "offline": "×",
     "static": "×",
@@ -34,8 +34,8 @@
   },
   {
     "_1": "Ours",
-    "num_lang": 28,
-    "num_task_type": "16-PT",
+    "num_Lang": 28,
+    "num_Task_Type": "16-PT",
     "web": "×",
     "offline": "×",
     "static": "×",

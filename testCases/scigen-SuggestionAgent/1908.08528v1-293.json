@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Our experiments on 23 languages show our approach to be promising, surpassing the baseline on 23 of the 28 evaluation datasets.  We evaluate our setup on 28 datasets for 23 languages, finding that it outperforms the baseline on 23 of the datasets,  This results in a set of 28 treebanks for 23 languages  listed in Table 2.  The results are listed in Table 2.  the oracle does not reach 100%;  We also express the performance of our method as error reduction on the scale from baseline (0%) to upper bound (100%).  For 23 of the 28 datasets, our method achieves a positive error reduction; the median error reduction is 23%. Because of the extreme result for Korean, the average does not make much sense here. The results are worst for Korean and Japanese,  the \"form\" baseline very close to the upper bound  our results are very low here. We also observe deteriorations for a treebank of Italian Tweets and for treebanks of historical Latin,  On all other datasets, we observe an improvement over the baseline, with an error reduction typically between 10% and 35%. The performance is especially good for Slavic languages (cs, hr, pl, sk, uk), where the error reduction is often around 50%.  The evaluation showed the approach to be promising, surpassing the baseline on most of the evaluation datasets."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1908_08528v1_293"
+  ],
+  "datasets": ["datasets/scigen/1908.08528v1-293.json"]
+}

@@ -3,19 +3,19 @@
     "wikipedia": "cs.ai",
     "majority_16_7": 92.2,
     "benchmark_46_7±0_34": 92.6,
-    "doc2vec_23_2±1_41": 73.3,
+    "doc2Vec_23_2±1_41": 73.3,
     "inceptionfixed_43_7±0_51": 92.3,
-    "bilstm_54_1±0_47": 91.5,
+    "biLSTM_54_1±0_47": 91.5,
     "inception_57_0±0_63": 92.8,
-    "joint_59_4±0_47_†": " 93.4%†"
+    "joint_59_4±0_47_†": 93.4
   },
   {
     "wikipedia": "cs.cl",
     "majority_16_7": 68.9,
     "benchmark_46_7±0_34": 75.7,
-    "doc2vec_23_2±1_41": 66.2,
+    "doc2Vec_23_2±1_41": 66.2,
     "inceptionfixed_43_7±0_51": 75.0,
-    "bilstm_54_1±0_47": 76.2,
+    "biLSTM_54_1±0_47": 76.2,
     "inception_57_0±0_63": 76.2,
     "joint_59_4±0_47_†": 77.1
   },
@@ -23,9 +23,9 @@
     "wikipedia": "cs.lg",
     "majority_16_7": 67.9,
     "benchmark_46_7±0_34": 70.7,
-    "doc2vec_23_2±1_41": 64.7,
+    "doc2Vec_23_2±1_41": 64.7,
     "inceptionfixed_43_7±0_51": 73.9,
-    "bilstm_54_1±0_47": 81.1,
+    "biLSTM_54_1±0_47": 81.1,
     "inception_57_0±0_63": 79.3,
     "joint_59_4±0_47_†": 79.9
   }

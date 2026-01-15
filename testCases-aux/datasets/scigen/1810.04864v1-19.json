@@ -1,93 +1,93 @@
 [
   {
     "_1": "content errors",
-    "e2e_word": "content errors",
-    "e2e_char": "content errors",
-    "webnlg_word": "content errors",
-    "webnlg_char": "content errors"
+    "e2E_word": "content errors",
+    "e2E_char": "content errors",
+    "webNLG_word": "content errors",
+    "webNLG_char": "content errors"
   },
   {
     "_1": "info. dropped",
-    "e2e_word": 40.0,
-    "e2e_char": 30.0,
-    "webnlg_word": 42.9,
-    "webnlg_char": 66.7
+    "e2E_word": 40.0,
+    "e2E_char": 30.0,
+    "webNLG_word": 42.9,
+    "webNLG_char": 66.7
   },
   {
     "_1": "info. added",
-    "e2e_word": 0.0,
-    "e2e_char": 0.0,
-    "webnlg_word": 6.7,
-    "webnlg_char": 1.9
+    "e2E_word": 0.0,
+    "e2E_char": 0.0,
+    "webNLG_word": 6.7,
+    "webNLG_char": 1.9
   },
   {
     "_1": "info. modified",
-    "e2e_word": 4.4,
-    "e2e_char": 0.0,
-    "webnlg_word": 19.0,
-    "webnlg_char": 1.9
+    "e2E_word": 4.4,
+    "e2E_char": 0.0,
+    "webNLG_word": 19.0,
+    "webNLG_char": 1.9
   },
   {
     "_1": "info. repeated",
-    "e2e_word": 0.0,
-    "e2e_char": 0.0,
-    "webnlg_word": 15.2,
-    "webnlg_char": 28.6
+    "e2E_word": 0.0,
+    "e2E_char": 0.0,
+    "webNLG_word": 15.2,
+    "webNLG_char": 28.6
   },
   {
     "_1": "linguistic errors",
-    "e2e_word": "linguistic errors",
-    "e2e_char": "linguistic errors",
-    "webnlg_word": "linguistic errors",
-    "webnlg_char": "linguistic errors"
+    "e2E_word": "linguistic errors",
+    "e2E_char": "linguistic errors",
+    "webNLG_word": "linguistic errors",
+    "webNLG_char": "linguistic errors"
   },
   {
     "_1": "punctuation errors",
-    "e2e_word": 5.6,
-    "e2e_char": 5.6,
-    "webnlg_word": 8.6,
-    "webnlg_char": 3.8
+    "e2E_word": 5.6,
+    "e2E_char": 5.6,
+    "webNLG_word": 8.6,
+    "webNLG_char": 3.8
   },
   {
     "_1": "grammatical errors",
-    "e2e_word": 13.3,
-    "e2e_char": 14.4,
-    "webnlg_word": 15.2,
-    "webnlg_char": 12.4
+    "e2E_word": 13.3,
+    "e2E_char": 14.4,
+    "webNLG_word": 15.2,
+    "webNLG_char": 12.4
   },
   {
     "_1": "spelling mistakes",
-    "e2e_word": 0.0,
-    "e2e_char": 0.0,
-    "webnlg_word": 9.5,
-    "webnlg_char": 5.7
+    "e2E_word": 0.0,
+    "e2E_char": 0.0,
+    "webNLG_word": 9.5,
+    "webNLG_char": 5.7
   },
   {
     "_1": "overall correctness",
-    "e2e_word": "overall correctness",
-    "e2e_char": "overall correctness",
-    "webnlg_word": "overall correctness",
-    "webnlg_char": "overall correctness"
+    "e2E_word": "overall correctness",
+    "e2E_char": "overall correctness",
+    "webNLG_word": "overall correctness",
+    "webNLG_char": "overall correctness"
   },
   {
     "_1": "content correct",
-    "e2e_word": 55.6,
-    "e2e_char": 70.0,
-    "webnlg_word": 46.7,
-    "webnlg_char": 31.4
+    "e2E_word": 55.6,
+    "e2E_char": 70.0,
+    "webNLG_word": 46.7,
+    "webNLG_char": 31.4
   },
   {
     "_1": "language correct",
-    "e2e_word": 83.3,
-    "e2e_char": 81.1,
-    "webnlg_word": 69.5,
-    "webnlg_char": 79.0
+    "e2E_word": 83.3,
+    "e2E_char": 81.1,
+    "webNLG_word": 69.5,
+    "webNLG_char": 79.0
   },
   {
     "_1": "all correct",
-    "e2e_word": 48.9,
-    "e2e_char": 61.1,
-    "webnlg_word": 33.3,
-    "webnlg_char": 26.7
+    "e2E_word": 48.9,
+    "e2E_char": 61.1,
+    "webNLG_word": 33.3,
+    "webNLG_char": 26.7
   }
 ]

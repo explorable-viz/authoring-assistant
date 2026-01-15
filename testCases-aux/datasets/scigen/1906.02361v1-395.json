@@ -1,22 +1,22 @@
 [
   {
-    "method": "RC (Talmor et al.,  2019 )",
-    "accuracy": 47.7
+    "Method": "RC (Talmor et al.,  2019 )",
+    "Accuracy": 47.7
   },
   {
-    "method": "GPT (Talmor et al.,  2019 )",
-    "accuracy": 54.8
+    "Method": "GPT (Talmor et al.,  2019 )",
+    "Accuracy": 54.8
   },
   {
-    "method": "CoS-E-open-ended",
-    "accuracy": 60.2
+    "Method": "CoS-E-open-ended",
+    "Accuracy": 60.2
   },
   {
-    "method": "CAGE-reasoning",
-    "accuracy": 64.7
+    "Method": "CAGE-reasoning",
+    "Accuracy": 64.7
   },
   {
-    "method": "Human (Talmor et al.,  2019 )",
-    "accuracy": 95.3
+    "Method": "Human (Talmor et al.,  2019 )",
+    "Accuracy": 95.3
   }
 ]

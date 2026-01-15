@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 3 shows the results of fine-tuning the BERT-base model on five text classification datasets and two NLI datasets. For ensemble BERT, both the voted BERT (BERTVOTE) and averaged BERT (BERTAVG) outperform the single BERT (BERTBASE). The average improvement of BERTVOTE is 5.44% (for text clas  sification) and 5.50% (for NLI), while BERTAVG follows closely with 4.07% and 3.24%. BERTVOTE outperforms BERTAVG on all tasks, which adheres to our intuition since BERTVOTE is more complicated. The self-ensemble BERT (BERTSE) has a slight improvement in classification tasks of 2.50%, but it does not work on NLI tasks. This is also a reason why we need self-distillation to improve the base models. Overall, self-distillation model has significant improvement on both classification and NLI tasks. Table 3 shows that BERTSDA and BERTSDV outperform BERTBASE on all datasets. Generally speaking, BERTSDA performs better than BERTSDV on text classification tasks with the improvement of 6.26% vs. 5.65%, but the latter performs better on NLI tasks (BERTSDA vs. BERTSDV is 4.65% vs. 5.30%). Our proposed fine-tuning strategies also outperform the previous method in [Sun et al., 2019] on text classification tasks, which makes extensive efforts to find sophisticated hyperparameters."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2002_10345v1_313"
+  ],
+  "datasets": ["datasets/scigen/2002.10345v1-313.json"]
+}

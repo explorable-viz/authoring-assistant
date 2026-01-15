@@ -1,27 +1,27 @@
 [
   {
-    "training": "AG18",
+    "Training": "AG18",
     "unsupported": 82,
     "missing": 45,
     "repeated": 12,
     "correct": "26/119 (22%)"
   },
   {
-    "training": "WebSplit",
+    "Training": "WebSplit",
     "unsupported": 58,
     "missing": 47,
     "repeated": 13,
     "correct": "32/100 (32%)"
   },
   {
-    "training": "WikiSplit",
+    "Training": "WikiSplit",
     "unsupported": 8,
     "missing": 5,
     "repeated": 0,
     "correct": "91/100 (91%)"
   },
   {
-    "training": "Both",
+    "Training": "Both",
     "unsupported": 4,
     "missing": 4,
     "repeated": 0,

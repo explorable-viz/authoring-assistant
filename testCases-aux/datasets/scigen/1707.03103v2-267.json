@@ -1,68 +1,68 @@
 [
   {
-    "genre": "Fiction",
-    "cbow": 67.5,
-    "esim": 73.0,
-    "inneratt": 73.2
+    "Genre": "Fiction",
+    "CBOW": 67.5,
+    "ESIM": 73.0,
+    "InnerAtt": 73.2
   },
   {
-    "genre": "Government",
-    "cbow": 67.5,
-    "esim": 74.8,
-    "inneratt": 75.2
+    "Genre": "Government",
+    "CBOW": 67.5,
+    "ESIM": 74.8,
+    "InnerAtt": 75.2
   },
   {
-    "genre": "Slate",
-    "cbow": 60.6,
-    "esim": 67.9,
-    "inneratt": 67.2
+    "Genre": "Slate",
+    "CBOW": 60.6,
+    "ESIM": 67.9,
+    "InnerAtt": 67.2
   },
   {
-    "genre": "Telephone",
-    "cbow": 63.7,
-    "esim": 72.2,
-    "inneratt": 73.0
+    "Genre": "Telephone",
+    "CBOW": 63.7,
+    "ESIM": 72.2,
+    "InnerAtt": 73.0
   },
   {
-    "genre": "Travel",
-    "cbow": 64.6,
-    "esim": 73.7,
-    "inneratt": 72.8
+    "Genre": "Travel",
+    "CBOW": 64.6,
+    "ESIM": 73.7,
+    "InnerAtt": 72.8
   },
   {
-    "genre": "9/11",
-    "cbow": 63.2,
-    "esim": 71.9,
-    "inneratt": 70.5
+    "Genre": "9/11",
+    "CBOW": 63.2,
+    "ESIM": 71.9,
+    "InnerAtt": 70.5
   },
   {
-    "genre": "Face-to-face",
-    "cbow": 66.3,
-    "esim": 71.2,
-    "inneratt": 74.5
+    "Genre": "Face-to-face",
+    "CBOW": 66.3,
+    "ESIM": 71.2,
+    "InnerAtt": 74.5
   },
   {
-    "genre": "Letters",
-    "cbow": 68.3,
-    "esim": 74.7,
-    "inneratt": 75.4
+    "Genre": "Letters",
+    "CBOW": 68.3,
+    "ESIM": 74.7,
+    "InnerAtt": 75.4
   },
   {
-    "genre": "Oup",
-    "cbow": 62.8,
-    "esim": 71.7,
-    "inneratt": 71.5
+    "Genre": "Oup",
+    "CBOW": 62.8,
+    "ESIM": 71.7,
+    "InnerAtt": 71.5
   },
   {
-    "genre": "Verbatim",
-    "cbow": 62.7,
-    "esim": 71.9,
-    "inneratt": 69.5
+    "Genre": "Verbatim",
+    "CBOW": 62.7,
+    "ESIM": 71.9,
+    "InnerAtt": 69.5
   },
   {
-    "genre": " MultiNLI Overall",
-    "cbow": 64.7,
-    "esim": 72.2,
-    "inneratt": 72.3
+    "Genre": " MultiNLI Overall",
+    "CBOW": 64.7,
+    "ESIM": 72.2,
+    "InnerAtt": 72.3
   }
 ]

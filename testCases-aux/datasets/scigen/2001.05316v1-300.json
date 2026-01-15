@@ -1,6 +1,6 @@
 [
   {
-    "num_of_authors": "#of samples/class",
+    "num_of_Authors": "#of samples/class",
     "6": 1100,
     "8": 931,
     "10": 849,
@@ -8,7 +8,7 @@
     "14": 469
   },
   {
-    "num_of_authors": "Pretrained Embedding",
+    "num_of_Authors": "Pretrained Embedding",
     "6": 96,
     "8": 92,
     "10": 86,
@@ -16,7 +16,7 @@
     "14": 69
   },
   {
-    "num_of_authors": "Not pretrained",
+    "num_of_Authors": "Not pretrained",
     "6": 95,
     "8": 82,
     "10": 83,

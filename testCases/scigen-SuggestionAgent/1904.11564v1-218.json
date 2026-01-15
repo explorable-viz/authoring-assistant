@@ -1,0 +1,82 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We evaluate the in- and out-of-domain performance of our approach by training models on either "
+    },
+    {
+      "expression": "\"WSJ gold data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " only, or both "
+    },
+    {
+      "expression": "\"WSJ gold data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Gigaword silver data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and evaluating on different domains. The results in Table 2 show that while the generator performs "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on test data which matches the training domain ("
+    },
+    {
+      "expression": "\"news\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), semisupervised training leads to substantial out-ofdomain improvements on the "
+    },
+    {
+      "expression": "\"Wikipedia\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"Brown corpus\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " portions of the test set."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1904_11564v1_218"
+  ],
+  "datasets": ["datasets/scigen/1904.11564v1-218.json"]
+}

@@ -1,62 +1,62 @@
 [
   {
-    "model": "Comp-Agg + LM + LC",
-    "map": 0.868,
-    "mrr": 0.928
+    "Model": "Comp-Agg + LM + LC",
+    "MAP": 0.868,
+    "MRR": 0.928
   },
   {
-    "model": "Comp-Agg + LM + LC + TL(QNLI)",
-    "map": 0.875,
-    "mrr": 0.94
+    "Model": "Comp-Agg + LM + LC + TL(QNLI)",
+    "MAP": 0.875,
+    "MRR": 0.94
   },
   {
-    "model": "BERT-B FT TREC-QA",
-    "map": 0.857,
-    "mrr": 0.937
+    "Model": "BERT-B FT TREC-QA",
+    "MAP": 0.857,
+    "MRR": 0.937
   },
   {
-    "model": "BERT-B FT ASNQ",
-    "map": 0.823,
-    "mrr": 0.872
+    "Model": "BERT-B FT ASNQ",
+    "MAP": 0.823,
+    "MRR": 0.872
   },
   {
-    "model": "BERT-B TandA (ASNQ → TREC-QA)",
-    "map": 0.912,
-    "mrr": 0.951
+    "Model": "BERT-B TandA (ASNQ → TREC-QA)",
+    "MAP": 0.912,
+    "MRR": 0.951
   },
   {
-    "model": "BERT-L FT TREC-QA",
-    "map": 0.904,
-    "mrr": 0.946
+    "Model": "BERT-L FT TREC-QA",
+    "MAP": 0.904,
+    "MRR": 0.946
   },
   {
-    "model": "BERT-L FT ASNQ",
-    "map": 0.824,
-    "mrr": 0.872
+    "Model": "BERT-L FT ASNQ",
+    "MAP": 0.824,
+    "MRR": 0.872
   },
   {
-    "model": "BERT-L TandA (ASNQ → TREC-QA )",
-    "map": 0.912,
-    "mrr": 0.967
+    "Model": "BERT-L TandA (ASNQ → TREC-QA )",
+    "MAP": 0.912,
+    "MRR": 0.967
   },
   {
-    "model": "RoBERTa-B FT ASNQ",
-    "map": 0.849,
-    "mrr": 0.907
+    "Model": "RoBERTa-B FT ASNQ",
+    "MAP": 0.849,
+    "MRR": 0.907
   },
   {
-    "model": "RoBERTa-B TandA (ASNQ →TREC-QA )",
-    "map": 0.914,
-    "mrr": 0.952
+    "Model": "RoBERTa-B TandA (ASNQ →TREC-QA )",
+    "MAP": 0.914,
+    "MRR": 0.952
   },
   {
-    "model": "RoBERTa-L FT ASNQ",
-    "map": 0.88,
-    "mrr": 0.928
+    "Model": "RoBERTa-L FT ASNQ",
+    "MAP": 0.88,
+    "MRR": 0.928
   },
   {
-    "model": "RoBERTa-L TandA (ASNQ → TREC-QA)",
-    "map": 0.943,
-    "mrr": 0.974
+    "Model": "RoBERTa-L TandA (ASNQ → TREC-QA)",
+    "MAP": 0.943,
+    "MRR": 0.974
   }
 ]

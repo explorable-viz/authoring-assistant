@@ -1,38 +1,38 @@
 [
   {
-    "cl": "en",
-    "cipher_avg_p": 47.7,
-    "cipher_avg_r": 64.4,
-    "cipher_avg_f1": 54.81,
-    "supervised_p": 94.04,
-    "supervised_r": 90.44,
-    "supervised_f1": 92.2
+    "cL": "en",
+    "cipher_avg_P": 47.7,
+    "cipher_avg_R": 64.4,
+    "cipher_avg_F1": 54.81,
+    "supervised_P": 94.04,
+    "supervised_R": 90.44,
+    "supervised_F1": 92.2
   },
   {
-    "cl": "fr",
-    "cipher_avg_p": 56.26,
-    "cipher_avg_r": 78.82,
-    "cipher_avg_f1": 65.65,
-    "supervised_p": 96.15,
-    "supervised_r": 93.72,
-    "supervised_f1": 94.92
+    "cL": "fr",
+    "cipher_avg_P": 56.26,
+    "cipher_avg_R": 78.82,
+    "cipher_avg_F1": 65.65,
+    "supervised_P": 96.15,
+    "supervised_R": 93.72,
+    "supervised_F1": 94.92
   },
   {
-    "cl": "fa",
-    "cipher_avg_p": 64.94,
-    "cipher_avg_r": 51.23,
-    "cipher_avg_f1": 57.27,
-    "supervised_p": 96.48,
-    "supervised_r": 97.77,
-    "supervised_f1": 97.12
+    "cL": "fa",
+    "cipher_avg_P": 64.94,
+    "cipher_avg_R": 51.23,
+    "cipher_avg_F1": 57.27,
+    "supervised_P": 96.48,
+    "supervised_R": 97.77,
+    "supervised_F1": 97.12
   },
   {
-    "cl": "sw",
-    "cipher_avg_p": 53.46,
-    "cipher_avg_r": 51.82,
-    "cipher_avg_f1": 52.63,
-    "supervised_p": 98.88,
-    "supervised_r": 97.5,
-    "supervised_f1": 98.18
+    "cL": "sw",
+    "cipher_avg_P": 53.46,
+    "cipher_avg_R": 51.82,
+    "cipher_avg_F1": 52.63,
+    "supervised_P": 98.88,
+    "supervised_R": 97.5,
+    "supervised_F1": 98.18
   }
 ]

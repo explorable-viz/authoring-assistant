@@ -1,22 +1,22 @@
 [
   {
-    "network": " bilstm",
-    "training_time": "5h 30m",
-    "parameters": "1278M"
+    "Network": " bilstm",
+    "Training_Time": "5h 30m",
+    "Parameters": 1278000000.0
   },
   {
-    "network": " bilstm-att",
-    "training_time": "8h 30m",
-    "parameters": "1279M"
+    "Network": " bilstm-att",
+    "Training_Time": "8h 30m",
+    "Parameters": 1279000000.0
   },
   {
-    "network": " x-bilstm-att",
-    "training_time": "25h 40m",
-    "parameters": "1279M"
+    "Network": " x-bilstm-att",
+    "Training_Time": "25h 40m",
+    "Parameters": 1279000000.0
   },
   {
-    "network": " h-bilstm-att",
-    "training_time": "2h 30m",
-    "parameters": "1837M"
+    "Network": " h-bilstm-att",
+    "Training_Time": "2h 30m",
+    "Parameters": 1837000000.0
   }
 ]

@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Looking at the actual classifications obtained by the classifier produces the confusion matrix in Table 2. The matrix makes it clear that the classifier is very good at avoiding errors against the majority class: it almost never guesses 'notional' when it shouldn't. Conversely, about "
+    },
+    {
+      "expression": "\"1/3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of actual notional cases are misclassified, predicted to be 'strict'. Among the erroneous cases, only "
+    },
+    {
+      "expression": "\"6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " belong to Type III (about "
+    },
+    {
+      "expression": "\"15%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of errors) , showing that the classifier largely handles this type quite well next to the other types, since Type III covers about "
+    },
+    {
+      "expression": "\"20%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of plural-to-singular agreement cases."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1804_07375v1_165"
+  ],
+  "datasets": ["datasets/scigen/1804.07375v1-165.json"]
+}

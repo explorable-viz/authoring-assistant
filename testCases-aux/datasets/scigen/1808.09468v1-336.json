@@ -1,27 +1,27 @@
 [
   {
     "↓train_eval": "Source",
-    "websplit_1_0": 58.0,
-    "wikisplit": 73.4
+    "webSplit_1_0": 58.0,
+    "wikiSplit": 73.4
   },
   {
     "↓train_eval": "SplitHalf",
-    "websplit_1_0": 54.9,
-    "wikisplit": 71.7
+    "webSplit_1_0": 54.9,
+    "wikiSplit": 71.7
   },
   {
     "↓train_eval": "WebSplit",
-    "websplit_1_0": 35.3,
-    "wikisplit": 4.2
+    "webSplit_1_0": 35.3,
+    "wikiSplit": 4.2
   },
   {
     "↓train_eval": "WikiSplit",
-    "websplit_1_0": 59.4,
-    "wikisplit": 76.0
+    "webSplit_1_0": 59.4,
+    "wikiSplit": 76.0
   },
   {
     "↓train_eval": "Both",
-    "websplit_1_0": 61.4,
-    "wikisplit": 76.1
+    "webSplit_1_0": 61.4,
+    "wikiSplit": 76.1
   }
 ]

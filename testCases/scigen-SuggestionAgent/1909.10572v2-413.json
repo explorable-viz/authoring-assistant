@@ -1,0 +1,61 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Similarly, Table 7 shows the results on the two domain-specific tasks of "
+    },
+    {
+      "expression": "\"music\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"medical\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " domain corpora. "
+    },
+    {
+      "expression": "\"SPON\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms the "
+    },
+    {
+      "expression": "\"SOTA systems\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in all tasks except for the medical domain in which it achieves "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_10572v2_413"
+  ],
+  "datasets": ["datasets/scigen/1909.10572v2-413.json"]
+}

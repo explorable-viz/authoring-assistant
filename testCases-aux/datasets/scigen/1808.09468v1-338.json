@@ -1,51 +1,51 @@
 [
   {
     "_1": "Reference",
-    "bleu": "",
-    "sbleu": "–",
-    "num_s_c": 2.5,
-    "num_t_s": 10.9
+    "bLEU": "",
+    "sBLEU": "–",
+    "num_S_C": 2.5,
+    "num_T_S": 10.9
   },
   {
     "_1": "Source",
-    "bleu": 58.7,
-    "sbleu": 56.1,
-    "num_s_c": 1.0,
-    "num_t_s": 20.5
+    "bLEU": 58.7,
+    "sBLEU": 56.1,
+    "num_S_C": 1.0,
+    "num_T_S": 20.5
   },
   {
     "_1": "SplitHalf",
-    "bleu": 55.7,
-    "sbleu": 53.0,
-    "num_s_c": 2.0,
-    "num_t_s": 10.8
+    "bLEU": 55.7,
+    "sBLEU": 53.0,
+    "num_S_C": 2.0,
+    "num_T_S": 10.8
   },
   {
     "_1": "AG18",
-    "bleu": 30.5,
-    "sbleu": 25.5,
-    "num_s_c": 2.3,
-    "num_t_s": 11.8
+    "bLEU": 30.5,
+    "sBLEU": 25.5,
+    "num_S_C": 2.3,
+    "num_T_S": 11.8
   },
   {
     "_1": "WebSplit",
-    "bleu": 34.2,
-    "sbleu": 30.5,
-    "num_s_c": 2.0,
-    "num_t_s": 8.8
+    "bLEU": 34.2,
+    "sBLEU": 30.5,
+    "num_S_C": 2.0,
+    "num_T_S": 8.8
   },
   {
     "_1": "WikiSplit",
-    "bleu": 60.4,
-    "sbleu": 58.0,
-    "num_s_c": 2.0,
-    "num_t_s": 11.2
+    "bLEU": 60.4,
+    "sBLEU": 58.0,
+    "num_S_C": 2.0,
+    "num_T_S": 11.2
   },
   {
     "_1": "Both",
-    "bleu": 62.4,
-    "sbleu": 60.1,
-    "num_s_c": 2.0,
-    "num_t_s": 11.0
+    "bLEU": 62.4,
+    "sBLEU": 60.1,
+    "num_S_C": 2.0,
+    "num_T_S": 11.0
   }
 ]

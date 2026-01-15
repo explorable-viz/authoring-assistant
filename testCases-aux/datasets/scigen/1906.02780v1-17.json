@@ -1,38 +1,38 @@
 [
   {
-    "num_layers": 1,
-    "max_chunk_size": " k=6",
-    "speedup": "3.8×",
-    "bleu": 23.82
+    "num_Layers": 1,
+    "max_Chunk_Size": " k=6",
+    "speedup": 3.8,
+    "bLEU": 23.82
   },
   {
-    "num_layers": 2,
-    "max_chunk_size": " k=6",
-    "speedup": "2.8×",
-    "bleu": 23.98
+    "num_Layers": 2,
+    "max_Chunk_Size": " k=6",
+    "speedup": 2.8,
+    "bLEU": 23.98
   },
   {
-    "num_layers": 3,
-    "max_chunk_size": " k=6",
-    "speedup": "2.2×",
-    "bleu": 24.54
+    "num_Layers": 3,
+    "max_Chunk_Size": " k=6",
+    "speedup": 2.2,
+    "bLEU": 24.54
   },
   {
-    "num_layers": 4,
-    "max_chunk_size": " k=6",
-    "speedup": "1.8×",
-    "bleu": 24.04
+    "num_Layers": 4,
+    "max_Chunk_Size": " k=6",
+    "speedup": 1.8,
+    "bLEU": 24.04
   },
   {
-    "num_layers": 5,
-    "max_chunk_size": " k=6",
-    "speedup": "1.4×",
-    "bleu": 24.34
+    "num_Layers": 5,
+    "max_Chunk_Size": " k=6",
+    "speedup": 1.4,
+    "bLEU": 24.34
   },
   {
-    "num_layers": 1,
-    "max_chunk_size": " k∈{1…6}",
-    "speedup": "3.1×",
-    "bleu": 25.31
+    "num_Layers": 1,
+    "max_Chunk_Size": " k∈{1…6}",
+    "speedup": 3.1,
+    "bLEU": 25.31
   }
 ]

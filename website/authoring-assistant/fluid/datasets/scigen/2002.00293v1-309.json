@@ -1,0 +1,23 @@
+[
+  {
+    "resource": "DBiDAF",
+    "dev_em": 63.0,
+    "dev_f1": 76.9,
+    "test_em": 62.6,
+    "test_f1": 78.5
+  },
+  {
+    "resource": "DBERT",
+    "dev_em": 59.2,
+    "dev_f1": 74.3,
+    "test_em": 63.9,
+    "test_f1": 76.9
+  },
+  {
+    "resource": "DRoBERTa",
+    "dev_em": 58.1,
+    "dev_f1": 72.0,
+    "test_em": 58.7,
+    "test_f1": 73.7
+  }
+]

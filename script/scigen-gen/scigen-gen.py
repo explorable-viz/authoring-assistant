@@ -52,13 +52,15 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 clean_key = strip_all_tags(keys[i])
                 clean_value = strip_all_tags(value[i])
 
-                # Clean key: lowercase, replace spaces with underscores, remove [xxx] tags
-                cleaned_key = re.sub(r'\[\w+\]', 'key', clean_key.replace(' ', '_').lower())
+                # Clean key: replace spaces with underscores, remove [xxx] tags,
+                # ensure first character is lowercase
+                tmp_key = re.sub(r'\[\w+\]', 'key', clean_key.replace(' ', '_'))
+                cleaned_key = tmp_key[:1].lower() + tmp_key[1:]
 
                 # Replace parentheses by underscores (omitting underscore if already present)
                 cleaned_key = re.sub(r'(_)?\(([^)]*)\)(_)?', replace_parens, cleaned_key)
 
-                # Replace # with 'num' when it represents "number of" in keys
+                # Replace # with 'num_'
                 cleaned_key = re.sub(r'#', 'num_', cleaned_key)
 
                 # Replace special characters with underscore
@@ -72,26 +74,72 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                     cleaned_key = f'_{unnamed_counter}'
                     unnamed_counter += 1
 
+                # Remove bracket tags of the form [word]
                 cleaned_value = re.sub(r'\[\w+\]', '', clean_value)
 
-                # Remove parenthesised terms only when they follow a number and contain specific units like (s) or (%)
-                # cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\([s%]\)', r'\1', cleaned_value)
+                # Replace unicode U+2004 (THREE-PER-EM SPACE) with regular space for consistent processing
+                cleaned_value = cleaned_value.replace('\u2004', ' ')
 
                 # Remove ∼ prefix only when before a number (not between numbers)
                 cleaned_value = re.sub(r'(^|\s)∼\s*(?=\d)', r'\1', cleaned_value)
 
-                # Extract only the first number when ± symbol is present (e.g., "5.2 ± 0.3" -> "5.2")
-                cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*±\s*\d+(?:\.\d+)?(?:[eE][+-]?\d+)?', r'\1', cleaned_value)
+                # Remove commas used as thousands separators (e.g., "18,000" -> "18000", "7,123K" -> "7123K")
+                cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)
 
-                # Remove asterisk before and after numbers including scientific notation (e.g., "**52.4**" -> "52.4", "*5.48e-15" -> "5.48e-15")
-                cleaned_value = re.sub(r'\*+(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)', r'\1', cleaned_value)  # Remove leading asterisks
-                cleaned_value = re.sub(r'(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*\*+', r'\1', cleaned_value)  # Remove trailing asterisks
+                # Remove asterisks adjacent to numbers or after spaces (e.g., "**52.4**" -> "52.4", "2.19e-14 ***" -> "2.19e-14")
+                cleaned_value = re.sub(r'[\*⋆∗]+(?=\d)|(?<=\d)[\*⋆∗]+', '', cleaned_value)
+                cleaned_value = re.sub(r'\s+[\*⋆∗]+\s*$', '', cleaned_value)  # Remove trailing asterisks after spaces
 
-                # Remove K/k suffix and % symbol only at the end of numeric values
-                # Also remove commas from numbers (e.g., 7,123K -> 7123)
-                cleaned_value = re.sub(r'[Kk]$', '', cleaned_value)  # Remove K or k at the end
-                cleaned_value = re.sub(r'%$', '', cleaned_value)  # Remove % at the end
-                cleaned_value = re.sub(r',(?=\d)', '', cleaned_value)  # Remove commas followed by digits
+                # Remove dagger-like symbols (†, ‡, ⋄) immediately following a digit
+                cleaned_value = re.sub(r'(?<=\d)[†‡⋄]+', '', cleaned_value)
+
+                # Reduce "n op anything" to "n" for op in {±, ↓}
+                cleaned_value = re.sub(r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\s*[±↓↑⇑]\s*.*$', r'\1', cleaned_value)
+
+                # Reduce "n / m / k", "n | m | k", or "n, m, k" to "n"
+                # Exclude some files from this rule
+                print(dataset_name)
+                if dataset_name not in ["1707.03103v2-267", "1906.11565v2-387", "1908.11049v1-345"]:
+                    cleaned_value = re.sub(
+                        r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(?:\s*[/|,]\s*-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)*\s*$',
+                        r'\1',
+                        cleaned_value
+                    )
+
+                # Remove parenthetical information after numbers, optionally followed by •
+                cleaned_value = re.sub(r'^(\s*-?\d+(?:\.\d+)?%?)\s*\([^)]+\)\s*•?\s*$', r'\1', cleaned_value)
+
+                # Discard any suffix starting with \scalebox
+                cleaned_value = re.sub(r'\s*\\scalebox.*$', '', cleaned_value)
+
+                # If the value starts with a number, discard any trailing garbage that looks like
+                # a space followed by digits and/or decimal points (e.g. "96.9 97.296.5" → "96.9")
+                match = re.match(
+                    r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(?:\s+[\d\.]+)?\s*$',
+                    cleaned_value
+                )
+                if match:
+                    cleaned_value = match.group(1)
+
+                # Remove trailing (↑, ⇑) when they follow a number
+                cleaned_value = re.sub(r'(?<=\d)\s*[↑⇑]\s*$', '', cleaned_value)
+
+                # Remove K/k/x/× suffix only when the entire value is numeric
+                cleaned_value = re.sub(r'^\s*(-?\d+(?:\.\d+)?)[KkxX×]\s*$', r'\1', cleaned_value)
+
+                # Remove terminal dash sequence only if it follows a digit or %
+                cleaned_value = re.sub(r'^(.+[0-9%])\s*[–—−]+$', r'\1', cleaned_value)
+
+                # Remove terminal %
+                cleaned_value = re.sub(r'%$', '', cleaned_value)
+
+                # Remove common units of measurement only when preceded by digits
+                cleaned_value = re.sub(r'(\d)\s*(TB|GB|MB|KB|PB|GHz|MHz|KHz|Hz|ms|μs|ns)$', r'\1', cleaned_value, flags=re.IGNORECASE)
+
+                # Convert values like "2.51M" -> 2510000
+                m = re.match(r'^\s*(-?\d+(?:\.\d+)?)M\s*$', cleaned_value)
+                if m:
+                    cleaned_value = str(float(m.group(1)) * 1_000_000)
 
                 # Convert to numeric type if it's a valid number
                 try:
@@ -134,7 +182,8 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
         dataset_file = datasets_path / f"{dataset_name}.json"
         with open(dataset_file, 'w', encoding='utf-8') as f:
             json.dump(dataset, f, indent=2, ensure_ascii=False)
-
+            f.write('\n')
+            
         # Write .fld file with loadJson instruction
         fld_name = f"_{dataset_name.replace('-', '_').replace('.', '_')}"
         fld_content = f'let tableData = loadJson "{datasets_dir}/{dataset_name}.json";'

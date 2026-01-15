@@ -1,23 +1,23 @@
 [
   {
-    "all_labels": "All Labels",
-    "orig_f_c": "No-Leak F&C",
+    "all_Labels": "All Labels",
+    "orig_F_C": "No-Leak F&C",
     "train_587": 712,
     "dev_5_418": 3000,
     "test_6_007": 4497,
     "all_12_012": 8209
   },
   {
-    "all_labels": "Subset Labels",
-    "orig_f_c": "Orig F&C",
+    "all_Labels": "Subset Labels",
+    "orig_F_C": "Orig F&C",
     "train_587": 361,
     "dev_5_418": 3311,
     "test_6_007": 3650,
     "all_12_012": 7322
   },
   {
-    "all_labels": "Subset Labels",
-    "orig_f_c": "Clean F&C",
+    "all_Labels": "Subset Labels",
+    "orig_F_C": "Clean F&C",
     "train_587": 173,
     "dev_5_418": 1268,
     "test_6_007": 1523,

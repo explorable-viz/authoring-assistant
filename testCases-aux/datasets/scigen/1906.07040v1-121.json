@@ -1,80 +1,80 @@
 [
   {
-    "model": "Random sense",
-    "senseval2": 0.381,
-    "senseval3": 0.312,
-    "semeval_15": 0.393
+    "Model": "Random sense",
+    "Senseval2": 0.381,
+    "Senseval3": 0.312,
+    "SemEval_15": 0.393
   },
   {
-    "model": " Graph-based vs vector-based measures",
-    "senseval2": " Graph-based vs vector-based measures",
-    "senseval3": " Graph-based vs vector-based measures",
-    "semeval_15": " Graph-based vs vector-based measures"
+    "Model": " Graph-based vs vector-based measures",
+    "Senseval2": " Graph-based vs vector-based measures",
+    "Senseval3": " Graph-based vs vector-based measures",
+    "SemEval_15": " Graph-based vs vector-based measures"
   },
   {
-    "model": "LCH (WordNet)",
-    "senseval2": "0.547↓0.000",
-    "senseval3": "0.494↓0.000",
-    "semeval_15": "0.550↓0.000"
+    "Model": "LCH (WordNet)",
+    "Senseval2": 0.547,
+    "Senseval3": 0.494,
+    "SemEval_15": 0.55
   },
   {
-    "model": "LCH (path2vec)",
-    "senseval2": "0.527↓0.020",
-    "senseval3": "0.472↓0.022",
-    "semeval_15": "0.536↓0.014"
+    "Model": "LCH (path2vec)",
+    "Senseval2": 0.527,
+    "Senseval3": 0.472,
+    "SemEval_15": 0.536
   },
   {
-    "model": "ShP (WordNet)",
-    "senseval2": "0.548↓0.000",
-    "senseval3": "0.495↓0.000",
-    "semeval_15": "0.550↓0.000"
+    "Model": "ShP (WordNet)",
+    "Senseval2": 0.548,
+    "Senseval3": 0.495,
+    "SemEval_15": 0.55
   },
   {
-    "model": "ShP (path2vec)",
-    "senseval2": "0.534↓0.014",
-    "senseval3": "0.489↓0.006",
-    "semeval_15": "0.563↑0.013"
+    "Model": "ShP (path2vec)",
+    "Senseval2": 0.534,
+    "Senseval3": 0.489,
+    "SemEval_15": 0.563
   },
   {
-    "model": "WuP (WordNet)",
-    "senseval2": "0.547↓0.000",
-    "senseval3": "0.487↓0.000",
-    "semeval_15": "0.542↓0.000"
+    "Model": "WuP (WordNet)",
+    "Senseval2": 0.547,
+    "Senseval3": 0.487,
+    "SemEval_15": 0.542
   },
   {
-    "model": "WuP (path2vec)",
-    "senseval2": "0.543↓0.004",
-    "senseval3": "0.489↑0.002",
-    "semeval_15": "0.545↑0.003"
+    "Model": "WuP (path2vec)",
+    "Senseval2": 0.543,
+    "Senseval3": 0.489,
+    "SemEval_15": 0.545
   },
   {
-    "model": " Various baseline graph embeddings trained on WordNet",
-    "senseval2": " Various baseline graph embeddings trained on WordNet",
-    "senseval3": " Various baseline graph embeddings trained on WordNet",
-    "semeval_15": " Various baseline graph embeddings trained on WordNet"
+    "Model": " Various baseline graph embeddings trained on WordNet",
+    "Senseval2": " Various baseline graph embeddings trained on WordNet",
+    "Senseval3": " Various baseline graph embeddings trained on WordNet",
+    "SemEval_15": " Various baseline graph embeddings trained on WordNet"
   },
   {
-    "model": "TransR",
-    "senseval2": 0.54,
-    "senseval3": 0.466,
-    "semeval_15": 0.536
+    "Model": "TransR",
+    "Senseval2": 0.54,
+    "Senseval3": 0.466,
+    "SemEval_15": 0.536
   },
   {
-    "model": "node2vec",
-    "senseval2": 0.503,
-    "senseval3": 0.467,
-    "semeval_15": 0.489
+    "Model": "node2vec",
+    "Senseval2": 0.503,
+    "Senseval3": 0.467,
+    "SemEval_15": 0.489
   },
   {
-    "model": "DeepWal",
-    "senseval2": 0.528,
-    "senseval3": 0.476,
-    "semeval_15": 0.552
+    "Model": "DeepWalk",
+    "Senseval2": 0.528,
+    "Senseval3": 0.476,
+    "SemEval_15": 0.552
   },
   {
-    "model": "FSE",
-    "senseval2": 0.536,
-    "senseval3": 0.476,
-    "semeval_15": 0.523
+    "Model": "FSE",
+    "Senseval2": 0.536,
+    "Senseval3": 0.476,
+    "SemEval_15": 0.523
   }
 ]

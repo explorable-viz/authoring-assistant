@@ -1,50 +1,50 @@
 [
   {
     "model": "Model",
-    "imdb": "IMDb",
-    "ag’s": "News",
-    "avg_δ": "Avg. Δ",
-    "snli": "SNLI",
+    "iMDb": "IMDb",
+    "aG’s": "News",
+    "avg_Δ": "Avg. Δ",
+    "sNLI": "SNLI",
     "δ": "Δ"
   },
   {
     "model": "MT-DNN ",
-    "imdb": "/",
-    "ag’s": "/",
-    "avg_δ": "/",
-    "snli": 91.6,
+    "iMDb": "/",
+    "aG’s": "/",
+    "avg_Δ": "/",
+    "sNLI": 91.6,
     "δ": "/"
   },
   {
     "model": "BERT-L",
-    "imdb": 4.98,
-    "ag’s": 5.45,
-    "avg_δ": "-",
-    "snli": 90.9,
+    "iMDb": 4.98,
+    "aG’s": 5.45,
+    "avg_Δ": "-",
+    "sNLI": 90.9,
     "δ": "-"
   },
   {
     "model": "(our implementation)",
-    "imdb": 4.98,
-    "ag’s": 5.45,
-    "avg_δ": "-",
-    "snli": 90.9,
+    "iMDb": 4.98,
+    "aG’s": 5.45,
+    "avg_Δ": "-",
+    "sNLI": 90.9,
     "δ": "-"
   },
   {
     "model": "BERT-LSDA(  K=1)",
-    "imdb": 4.66,
-    "ag’s": 5.21,
-    "avg_δ": 5.62,
-    "snli": 91.5,
+    "iMDb": 4.66,
+    "aG’s": 5.21,
+    "avg_Δ": 5.62,
+    "sNLI": 91.5,
     "δ": 6.59
   },
   {
     "model": "BERT-LSDA(  K=  T−1)",
-    "imdb": 4.58,
-    "ag’s": 5.15,
-    "avg_δ": 7.02,
-    "snli": 91.4,
+    "iMDb": 4.58,
+    "aG’s": 5.15,
+    "avg_Δ": 7.02,
+    "sNLI": 91.4,
     "δ": 5.49
   }
 ]

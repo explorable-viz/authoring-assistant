@@ -2,56 +2,56 @@
   {
     "p": "has part (creative work series)",
     "num_s": 261,
-    "baseline_p": 0.05,
-    "vanilla_p": 0.333,
-    "vanilla_r": 0.316,
-    "vanilla_f1": 0.324,
-    "only_nummod_p": 0.353,
-    "only_nummod_r": 0.316,
-    "only_nummod_f1": 0.333
+    "baseline_P": 0.05,
+    "vanilla_P": 0.333,
+    "vanilla_R": 0.316,
+    "vanilla_F1": 0.324,
+    "only_nummod_P": 0.353,
+    "only_nummod_R": 0.316,
+    "only_nummod_F1": 0.333
   },
   {
     "p": "contains admin. terr. entity",
     "num_s": 18000,
-    "baseline_p": 0.034,
-    "vanilla_p": 0.39,
-    "vanilla_r": 0.188,
-    "vanilla_f1": 0.254,
-    "only_nummod_p": 0.548,
-    "only_nummod_r": 0.2,
-    "only_nummod_f1": 0.293
+    "baseline_P": 0.034,
+    "vanilla_P": 0.39,
+    "vanilla_R": 0.188,
+    "vanilla_F1": 0.254,
+    "only_nummod_P": 0.548,
+    "only_nummod_R": 0.2,
+    "only_nummod_F1": 0.293
   },
   {
     "p": "spouse",
     "num_s": 45917,
-    "baseline_p": 0,
-    "vanilla_p": 0.014,
-    "vanilla_r": 0.011,
-    "vanilla_f1": 0.013,
-    "only_nummod_p": 0.028,
-    "only_nummod_r": 0.017,
-    "only_nummod_f1": 0.021
+    "baseline_P": 0,
+    "vanilla_P": 0.014,
+    "vanilla_R": 0.011,
+    "vanilla_F1": 0.013,
+    "only_nummod_P": 0.028,
+    "only_nummod_R": 0.017,
+    "only_nummod_F1": 0.021
   },
   {
     "p": "child",
     "num_s": 35057,
-    "baseline_p": 0.112,
-    "vanilla_p": 0.151,
-    "vanilla_r": 0.129,
-    "vanilla_f1": 0.139,
-    "only_nummod_p": 0.32,
-    "only_nummod_r": 0.219,
-    "only_nummod_f1": 0.26
+    "baseline_P": 0.112,
+    "vanilla_P": 0.151,
+    "vanilla_R": 0.129,
+    "vanilla_F1": 0.139,
+    "only_nummod_P": 0.32,
+    "only_nummod_R": 0.219,
+    "only_nummod_F1": 0.26
   },
   {
     "p": "child (manual ground truth)",
     "num_s": 6408,
-    "baseline_p": "",
-    "vanilla_p": 0.374,
-    "vanilla_r": 0.309,
-    "vanilla_f1": 0.338,
-    "only_nummod_p": 0.452,
-    "only_nummod_r": 0.315,
-    "only_nummod_f1": 0.371
+    "baseline_P": "",
+    "vanilla_P": 0.374,
+    "vanilla_R": 0.309,
+    "vanilla_F1": 0.338,
+    "only_nummod_P": 0.452,
+    "only_nummod_R": 0.315,
+    "only_nummod_F1": 0.371
   }
 ]

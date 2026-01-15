@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 presents comparisons of our method with existing state-of-the-art approaches. Our proposed method consistently outperforms "
+    },
+    {
+      "expression": "\"all other methods\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all four datasets. The improvement is particularly significant on the "
+    },
+    {
+      "expression": "\"more challenging\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " datasets, such as "
+    },
+    {
+      "expression": "\"UNC+\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which has no location words and "
+    },
+    {
+      "expression": "\"G-Ref\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " which contains longer and richer query expressions."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1904_04745v1_378"
+  ],
+  "datasets": ["datasets/scigen/1904.04745v1-378.json"]
+}

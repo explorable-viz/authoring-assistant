@@ -1,58 +1,58 @@
 [
   {
-    "dataset": "MRPC",
-    "pre_trained": "0/31.6",
-    "fine_tuned_initialized_with_normal_distr": "81.2/68.3",
-    "fine_tuned_initialized_with_pre_trained": "87.9/82.3",
-    "metric": "F1/Acc",
-    "size": 5.8
+    "Dataset": "MRPC",
+    "Pre_trained": 0,
+    "Fine_tuned_initialized_with_normal_distr": 81.2,
+    "Fine_tuned_initialized_with_pre_trained": 87.9,
+    "Metric": "F1/Acc",
+    "Size": 5.8
   },
   {
-    "dataset": "STS-B",
-    "pre_trained": 33.1,
-    "fine_tuned_initialized_with_normal_distr": 2.9,
-    "fine_tuned_initialized_with_pre_trained": 82.7,
-    "metric": "Acc",
-    "size": 8.6
+    "Dataset": "STS-B",
+    "Pre_trained": 33.1,
+    "Fine_tuned_initialized_with_normal_distr": 2.9,
+    "Fine_tuned_initialized_with_pre_trained": 82.7,
+    "Metric": "Acc",
+    "Size": 8.6
   },
   {
-    "dataset": "SST-2",
-    "pre_trained": 49.1,
-    "fine_tuned_initialized_with_normal_distr": 80.5,
-    "fine_tuned_initialized_with_pre_trained": 92,
-    "metric": "Acc",
-    "size": 70
+    "Dataset": "SST-2",
+    "Pre_trained": 49.1,
+    "Fine_tuned_initialized_with_normal_distr": 80.5,
+    "Fine_tuned_initialized_with_pre_trained": 92,
+    "Metric": "Acc",
+    "Size": 70
   },
   {
-    "dataset": "QQP",
-    "pre_trained": "0/60.9",
-    "fine_tuned_initialized_with_normal_distr": "0/63.2",
-    "fine_tuned_initialized_with_pre_trained": "65.2/78.6",
-    "metric": "F1/Acc",
-    "size": 400
+    "Dataset": "QQP",
+    "Pre_trained": 0,
+    "Fine_tuned_initialized_with_normal_distr": 0,
+    "Fine_tuned_initialized_with_pre_trained": 65.2,
+    "Metric": "F1/Acc",
+    "Size": 400
   },
   {
-    "dataset": "RTE",
-    "pre_trained": 52.7,
-    "fine_tuned_initialized_with_normal_distr": 52.7,
-    "fine_tuned_initialized_with_pre_trained": 64.6,
-    "metric": "Acc",
-    "size": 2.7
+    "Dataset": "RTE",
+    "Pre_trained": 52.7,
+    "Fine_tuned_initialized_with_normal_distr": 52.7,
+    "Fine_tuned_initialized_with_pre_trained": 64.6,
+    "Metric": "Acc",
+    "Size": 2.7
   },
   {
-    "dataset": "QNLI",
-    "pre_trained": 52.8,
-    "fine_tuned_initialized_with_normal_distr": 49.5,
-    "fine_tuned_initialized_with_pre_trained": 84.4,
-    "metric": "Acc",
-    "size": 130
+    "Dataset": "QNLI",
+    "Pre_trained": 52.8,
+    "Fine_tuned_initialized_with_normal_distr": 49.5,
+    "Fine_tuned_initialized_with_pre_trained": 84.4,
+    "Metric": "Acc",
+    "Size": 130
   },
   {
-    "dataset": "MNLI-m",
-    "pre_trained": 31.7,
-    "fine_tuned_initialized_with_normal_distr": 61.0,
-    "fine_tuned_initialized_with_pre_trained": 78.6,
-    "metric": "Acc",
-    "size": 440
+    "Dataset": "MNLI-m",
+    "Pre_trained": 31.7,
+    "Fine_tuned_initialized_with_normal_distr": 61.0,
+    "Fine_tuned_initialized_with_pre_trained": 78.6,
+    "Metric": "Acc",
+    "Size": 440
   }
 ]

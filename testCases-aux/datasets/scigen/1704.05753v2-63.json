@@ -1,106 +1,106 @@
 [
   {
     "condition": "Baseline",
-    "accuracy_corr": 74,
-    "accuracy_gram": 97,
+    "accuracy_Corr": 74,
+    "accuracy_Gram": 97,
     "time_s": 36,
-    "diversity_distinct": 99,
-    "diversity_pinc": 68
+    "diversity_Distinct": 99,
+    "diversity_PINC": 68
   },
   {
     "condition": "Lexical Examples",
-    "accuracy_corr": " 90†",
-    "accuracy_gram": 98,
+    "accuracy_Corr": 90,
+    "accuracy_Gram": 98,
     "time_s": 27,
-    "diversity_distinct": 93,
-    "diversity_pinc": " 55†"
+    "diversity_Distinct": 93,
+    "diversity_PINC": 55
   },
   {
     "condition": "Mixed Examples",
-    "accuracy_corr": " 89†",
-    "accuracy_gram": 96,
+    "accuracy_Corr": 89,
+    "accuracy_Gram": 96,
     "time_s": 36,
-    "diversity_distinct": " 87†",
-    "diversity_pinc": " 58†"
+    "diversity_Distinct": 87,
+    "diversity_PINC": 58
   },
   {
     "condition": "No Examples",
-    "accuracy_corr": 84,
-    "accuracy_gram": 96,
+    "accuracy_Corr": 84,
+    "accuracy_Gram": 96,
     "time_s": 30,
-    "diversity_distinct": 95,
-    "diversity_pinc": 63
+    "diversity_Distinct": 95,
+    "diversity_PINC": 63
   },
   {
     "condition": "Novelty Bonus",
-    "accuracy_corr": 72,
-    "accuracy_gram": 96,
+    "accuracy_Corr": 72,
+    "accuracy_Gram": 96,
     "time_s": 30,
-    "diversity_distinct": 99,
-    "diversity_pinc": 69
+    "diversity_Distinct": 99,
+    "diversity_PINC": 69
   },
   {
     "condition": "No Bonus",
-    "accuracy_corr": 78,
-    "accuracy_gram": 94,
+    "accuracy_Corr": 78,
+    "accuracy_Gram": 94,
     "time_s": 28,
-    "diversity_distinct": 99,
-    "diversity_pinc": 66
+    "diversity_Distinct": 99,
+    "diversity_PINC": 66
   },
   {
     "condition": "One Paraphrase",
-    "accuracy_corr": 82,
-    "accuracy_gram": 89,
+    "accuracy_Corr": 82,
+    "accuracy_Gram": 89,
     "time_s": 38,
-    "diversity_distinct": 96,
-    "diversity_pinc": 65
+    "diversity_Distinct": 96,
+    "diversity_PINC": 65
   },
   {
     "condition": "Chain",
-    "accuracy_corr": 68,
-    "accuracy_gram": 94,
+    "accuracy_Corr": 68,
+    "accuracy_Gram": 94,
     "time_s": 25,
-    "diversity_distinct": 98,
-    "diversity_pinc": 74
+    "diversity_Distinct": 98,
+    "diversity_PINC": 74
   },
   {
     "condition": "Answers",
-    "accuracy_corr": 80,
-    "accuracy_gram": 94,
+    "accuracy_Corr": 80,
+    "accuracy_Gram": 94,
     "time_s": 29,
-    "diversity_distinct": 96,
-    "diversity_pinc": 65
+    "diversity_Distinct": 96,
+    "diversity_PINC": 65
   },
   {
     "condition": "advising",
-    "accuracy_corr": 78,
-    "accuracy_gram": 94,
+    "accuracy_Corr": 78,
+    "accuracy_Gram": 94,
     "time_s": 31,
-    "diversity_distinct": 97,
-    "diversity_pinc": 70
+    "diversity_Distinct": 97,
+    "diversity_PINC": 70
   },
   {
     "condition": "geoquery",
-    "accuracy_corr": 77,
-    "accuracy_gram": " 85†",
-    "time_s": " 25†",
-    "diversity_distinct": 94,
-    "diversity_pinc": 63
+    "accuracy_Corr": 77,
+    "accuracy_Gram": 85,
+    "time_s": 25,
+    "diversity_Distinct": 94,
+    "diversity_PINC": 63
   },
   {
     "condition": "wsj",
-    "accuracy_corr": 68,
-    "accuracy_gram": 90,
-    "time_s": " 61†",
-    "diversity_distinct": " 94†",
-    "diversity_pinc": " 38†"
+    "accuracy_Corr": 68,
+    "accuracy_Gram": 90,
+    "time_s": 61,
+    "diversity_Distinct": 94,
+    "diversity_PINC": 38
   },
   {
     "condition": "ubuntu",
-    "accuracy_corr": " 56†",
-    "accuracy_gram": 92,
+    "accuracy_Corr": 56,
+    "accuracy_Gram": 92,
     "time_s": 44,
-    "diversity_distinct": 97,
-    "diversity_pinc": 67
+    "diversity_Distinct": 97,
+    "diversity_PINC": 67
   }
 ]

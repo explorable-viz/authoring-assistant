@@ -1,38 +1,38 @@
 [
   {
-    "dataset_friends": "Friends",
-    "dataset_training": "Test",
-    "num_dialogues_num_utterances_4_000_58_012": "240 / 3296",
-    "num_avg_utterances_per_dialogue_14_50": 13.73,
-    "num_avg_length_of_dialogues_160_92": 156.38,
+    "Dataset_Friends": "Friends",
+    "Dataset_Training": "Test",
+    "num_Dialogues_num_Utterances_4_000_58_012": "240 / 3296",
+    "num_Avg_utterances_per_dialogue_14_50": 13.73,
+    "num_Avg_length_of_dialogues_160_92": 156.38,
     "neutral_45_0": 31.4,
     "joy_11_8": 15.3,
     "sadness_3_4": 3.7,
     "anger_5_2": 4.3,
-    "out_of_domain_34_6": 45.3
+    "out_Of_Domain_34_6": 45.3
   },
   {
-    "dataset_friends": "EmotionPush",
-    "dataset_training": "Training",
-    "num_dialogues_num_utterances_4_000_58_012": "4000 / 58968",
-    "num_avg_utterances_per_dialogue_14_50": 14.74,
-    "num_avg_length_of_dialogues_160_92": 114.96,
+    "Dataset_Friends": "EmotionPush",
+    "Dataset_Training": "Training",
+    "num_Dialogues_num_Utterances_4_000_58_012": "4000 / 58968",
+    "num_Avg_utterances_per_dialogue_14_50": 14.74,
+    "num_Avg_length_of_dialogues_160_92": 114.96,
     "neutral_45_0": 66.8,
     "joy_11_8": 14.2,
     "sadness_3_4": 3.5,
     "anger_5_2": 0.9,
-    "out_of_domain_34_6": 14.6
+    "out_Of_Domain_34_6": 14.6
   },
   {
-    "dataset_friends": "EmotionPush",
-    "dataset_training": "Test",
-    "num_dialogues_num_utterances_4_000_58_012": "240 / 3536",
-    "num_avg_utterances_per_dialogue_14_50": 14.73,
-    "num_avg_length_of_dialogues_160_92": 92.43,
+    "Dataset_Friends": "EmotionPush",
+    "Dataset_Training": "Test",
+    "num_Dialogues_num_Utterances_4_000_58_012": "240 / 3536",
+    "num_Avg_utterances_per_dialogue_14_50": 14.73,
+    "num_Avg_length_of_dialogues_160_92": 92.43,
     "neutral_45_0": 60.7,
     "joy_11_8": 17.0,
     "sadness_3_4": 3.1,
     "anger_5_2": 0.8,
-    "out_of_domain_34_6": 18.4
+    "out_Of_Domain_34_6": 18.4
   }
 ]

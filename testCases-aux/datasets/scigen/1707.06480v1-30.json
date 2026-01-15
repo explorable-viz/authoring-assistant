@@ -1,32 +1,32 @@
 [
   {
-    "model_lstm_word": "Syl-LSTM",
-    "ppl_88_0": 88.7,
-    "model_char_cnn": "Syl-Avg",
-    "ppl_92_3": 88.5
+    "model_LSTM_Word": "Syl-LSTM",
+    "pPL_88_0": 88.7,
+    "model_Char_CNN": "Syl-Avg",
+    "pPL_92_3": 88.5
   },
   {
-    "model_lstm_word": "Syl-CNN-2",
-    "ppl_88_0": 86.6,
-    "model_char_cnn": "Syl-Avg-A",
-    "ppl_92_3": 91.4
+    "model_LSTM_Word": "Syl-CNN-2",
+    "pPL_88_0": 86.6,
+    "model_Char_CNN": "Syl-Avg-A",
+    "pPL_92_3": 91.4
   },
   {
-    "model_lstm_word": "Syl-CNN-3",
-    "ppl_88_0": 84.6,
-    "model_char_cnn": "Syl-Avg-B",
-    "ppl_92_3": 88.5
+    "model_LSTM_Word": "Syl-CNN-3",
+    "pPL_88_0": 84.6,
+    "model_Char_CNN": "Syl-Avg-B",
+    "pPL_92_3": 88.5
   },
   {
-    "model_lstm_word": "Syl-CNN-4",
-    "ppl_88_0": 86.8,
-    "model_char_cnn": "Syl-Concat",
-    "ppl_92_3": 83.7
+    "model_LSTM_Word": "Syl-CNN-4",
+    "pPL_88_0": 86.8,
+    "model_Char_CNN": "Syl-Concat",
+    "pPL_92_3": 83.7
   },
   {
-    "model_lstm_word": "Syl-Sum",
-    "ppl_88_0": 84.6,
-    "model_char_cnn": "",
-    "ppl_92_3": ""
+    "model_LSTM_Word": "Syl-Sum",
+    "pPL_88_0": 84.6,
+    "model_Char_CNN": "",
+    "pPL_92_3": ""
   }
 ]

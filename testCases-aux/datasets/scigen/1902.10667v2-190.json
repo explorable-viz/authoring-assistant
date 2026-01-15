@@ -2,127 +2,127 @@
   {
     "_1": "",
     "_2": "",
-    "all_token": "based",
-    "all_mwe": "based",
+    "all_Token": "based",
+    "all_MWE": "based",
     "discontinuous": "MWE-based"
   },
   {
     "_1": "L",
     "_2": "model",
-    "all_token": "F",
-    "all_mwe": "F",
+    "all_Token": "F",
+    "all_MWE": "F",
     "discontinuous": "F"
   },
   {
     "_1": "EN",
     "_2": "baseline",
-    "all_token": 41.37,
-    "all_mwe": 35.38,
+    "all_Token": 41.37,
+    "all_MWE": 35.38,
     "discontinuous": 14.67
   },
   {
     "_1": "",
     "_2": "GCN-based",
-    "all_token": 39.78,
-    "all_mwe": 39.11,
+    "all_Token": 39.78,
+    "all_MWE": 39.11,
     "discontinuous": 22.97
   },
   {
     "_1": "",
     "_2": "Att-based",
-    "all_token": 33.33,
-    "all_mwe": 31.79,
+    "all_Token": 33.33,
+    "all_MWE": 31.79,
     "discontinuous": 21.9
   },
   {
     "_1": "",
     "_2": "H-combined",
-    "all_token": 41.63,
-    "all_mwe": 40.76,
+    "all_Token": 41.63,
+    "all_MWE": 40.76,
     "discontinuous": 28.15
   },
   {
     "_1": "DE",
     "_2": "baseline",
-    "all_token": 62.27,
-    "all_mwe": 57.17,
+    "all_Token": 62.27,
+    "all_MWE": 57.17,
     "discontinuous": 54.9
   },
   {
     "_1": "",
     "_2": "GCN-based",
-    "all_token": 65.48,
-    "all_mwe": 61.17,
+    "all_Token": 65.48,
+    "all_MWE": 61.17,
     "discontinuous": 55.08
   },
   {
     "_1": "",
     "_2": "Att-based",
-    "all_token": 61.2,
-    "all_mwe": 58.19,
+    "all_Token": 61.2,
+    "all_MWE": 58.19,
     "discontinuous": 53.37
   },
   {
     "_1": "",
     "_2": "H-combined",
-    "all_token": 63.8,
-    "all_mwe": 60.71,
+    "all_Token": 63.8,
+    "all_MWE": 60.71,
     "discontinuous": 57.53
   },
   {
     "_1": "FR",
     "_2": "baseline",
-    "all_token": 76.62,
-    "all_mwe": 72.16,
+    "all_Token": 76.62,
+    "all_MWE": 72.16,
     "discontinuous": 61.54
   },
   {
     "_1": "",
     "_2": "GCN-based",
-    "all_token": 79.59,
-    "all_mwe": 75.15,
+    "all_Token": 79.59,
+    "all_MWE": 75.15,
     "discontinuous": 66.09
   },
   {
     "_1": "",
     "_2": "Att-based",
-    "all_token": 78.21,
-    "all_mwe": 74.23,
+    "all_Token": 78.21,
+    "all_MWE": 74.23,
     "discontinuous": 65.59
   },
   {
     "_1": "",
     "_2": "H-combined",
-    "all_token": 80.25,
-    "all_mwe": 76.56,
+    "all_Token": 80.25,
+    "all_MWE": 76.56,
     "discontinuous": 67.23
   },
   {
     "_1": "FA",
     "_2": "baseline",
-    "all_token": 88.45,
-    "all_mwe": 86.5,
+    "all_Token": 88.45,
+    "all_MWE": 86.5,
     "discontinuous": 61.29
   },
   {
     "_1": "",
     "_2": "GCN-based",
-    "all_token": 87.78,
-    "all_mwe": 86.42,
+    "all_Token": 87.78,
+    "all_MWE": 86.42,
     "discontinuous": 64.35
   },
   {
     "_1": "",
     "_2": "Att-based",
-    "all_token": 87.55,
-    "all_mwe": 84.2,
+    "all_Token": 87.55,
+    "all_MWE": 84.2,
     "discontinuous": 62.77
   },
   {
     "_1": "",
     "_2": "H-combined",
-    "all_token": 88.76,
-    "all_mwe": 87.15,
+    "all_Token": 88.76,
+    "all_MWE": 87.15,
     "discontinuous": 68.8
   }
 ]

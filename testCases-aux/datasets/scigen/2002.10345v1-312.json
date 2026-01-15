@@ -1,79 +1,79 @@
 [
   {
     "model": "Model",
-    "k": " ",
-    "imdb": "IMDb",
-    "ag’s": "News",
-    "snli": "SNLI"
+    "K": " K",
+    "iMDb": "IMDb",
+    "aG’s": "News",
+    "sNLI": "SNLI"
   },
   {
     "model": "BERTSDV",
-    "k": 1,
-    "imdb": 5.39,
-    "ag’s": 5.38,
-    "snli": 91.2
+    "K": 1,
+    "iMDb": 5.39,
+    "aG’s": 5.38,
+    "sNLI": 91.2
   },
   {
     "model": "BERTSDV",
-    "k": 2,
-    "imdb": 5.44,
-    "ag’s": 5.39,
-    "snli": 91.1
+    "K": 2,
+    "iMDb": 5.44,
+    "aG’s": 5.39,
+    "sNLI": 91.1
   },
   {
     "model": "BERTSDV",
-    "k": 3,
-    "imdb": 5.4,
-    "ag’s": 5.5,
-    "snli": 91.2
+    "K": 3,
+    "iMDb": 5.4,
+    "aG’s": 5.5,
+    "sNLI": 91.2
   },
   {
     "model": "BERTSDV",
-    "k": 4,
-    "imdb": 5.47,
-    "ag’s": 5.49,
-    "snli": 91.2
+    "K": 4,
+    "iMDb": 5.47,
+    "aG’s": 5.49,
+    "sNLI": 91.2
   },
   {
     "model": "",
-    "k": 5,
-    "imdb": 5.35,
-    "ag’s": 5.55,
-    "snli": 91.1
+    "K": 5,
+    "iMDb": 5.35,
+    "aG’s": 5.55,
+    "sNLI": 91.1
   },
   {
     "model": "BERTSDA",
-    "k": " T−1",
-    "imdb": 5.41,
-    "ag’s": 5.29,
-    "snli": 91.0
+    "K": " T−1",
+    "iMDb": 5.41,
+    "aG’s": 5.29,
+    "sNLI": 91.0
   },
   {
     "model": "BERTSDA",
-    "k": 2,
-    "imdb": 5.46,
-    "ag’s": 5.49,
-    "snli": 91.2
+    "K": 2,
+    "iMDb": 5.46,
+    "aG’s": 5.49,
+    "sNLI": 91.2
   },
   {
     "model": "BERTSDA",
-    "k": 3,
-    "imdb": 5.48,
-    "ag’s": 5.55,
-    "snli": 91.1
+    "K": 3,
+    "iMDb": 5.48,
+    "aG’s": 5.55,
+    "sNLI": 91.1
   },
   {
     "model": "BERTSDA",
-    "k": 4,
-    "imdb": 5.44,
-    "ag’s": 5.52,
-    "snli": 91.1
+    "K": 4,
+    "iMDb": 5.44,
+    "aG’s": 5.52,
+    "sNLI": 91.1
   },
   {
     "model": "",
-    "k": 5,
-    "imdb": 5.29,
-    "ag’s": 5.41,
-    "snli": 91.1
+    "K": 5,
+    "iMDb": 5.29,
+    "aG’s": 5.41,
+    "sNLI": 91.1
   }
 ]

@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "We also investigate whether self-distillation has similar findings for the BERTlarge model (BERT-L), which contains 24 Transformer layers. Due to the limitation of our devices, we only conduct an experiment on two text classification datasets and one NLI datasets and evaluate strategy BERTSDA, namely self-distillation with averaged BERT as a teacher. We set two different teacher sizes for comparison. As shown in Table 4, self-distillation also gets a significant gain while fine-tuning the BERT-large model. On two text classification tasks, BERT-LSDA(K =  − 1) gives better results and the average improvement is 7.02%. For NLI task, BERT-LSDA(K = 1) gives better result and the improvement is 6.59%."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2002_10345v1_314"
+  ],
+  "datasets": ["datasets/scigen/2002.10345v1-314.json"]
+}

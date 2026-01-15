@@ -1,50 +1,50 @@
 [
   {
-    "[width=13em]hyperparam_tuningdataset": "Default",
+    "[width=13em]Hyperparam_TuningDataset": "Default",
     "semeval": 81.55,
-    "ddi_class": 62.55,
-    "ddi_detect": 80.29,
-    "i2b2_class": 55.15,
-    "i2b2_detect": 81.98
+    "ddi_Class": 62.55,
+    "ddi_Detect": 80.29,
+    "i2b2_Class": 55.15,
+    "i2b2_Detect": 81.98
   },
   {
-    "[width=13em]hyperparam_tuningdataset": "Default",
-    "semeval": "80.85 (1.31)",
-    "ddi_class": "81.62 (1.35)",
-    "ddi_detect": "87.76 (1.03)",
-    "i2b2_class": "67.28 (1.83)",
-    "i2b2_detect": "86.57 (0.58)"
+    "[width=13em]Hyperparam_TuningDataset": "Default",
+    "semeval": 80.85,
+    "ddi_Class": 81.62,
+    "ddi_Detect": 87.76,
+    "i2b2_Class": 67.28,
+    "i2b2_Detect": 86.57
   },
   {
-    "[width=13em]hyperparam_tuningdataset": "Manual Search",
+    "[width=13em]Hyperparam_TuningDataset": "Manual Search",
     "semeval": "-",
-    "ddi_class": 65.53,
-    "ddi_detect": 81.74,
-    "i2b2_class": 59.75,
-    "i2b2_detect": 83.17
+    "ddi_Class": 65.53,
+    "ddi_Detect": 81.74,
+    "i2b2_Class": 59.75,
+    "i2b2_Detect": 83.17
   },
   {
-    "[width=13em]hyperparam_tuningdataset": "Manual Search",
+    "[width=13em]Hyperparam_TuningDataset": "Manual Search",
     "semeval": "",
-    "ddi_class": "82.23 (0.32)•",
-    "ddi_detect": "88.40 (0.48)•",
-    "i2b2_class": "70.10 (0.85)",
-    "i2b2_detect": "86.45 (0.58)•"
+    "ddi_Class": 82.23,
+    "ddi_Detect": 88.4,
+    "i2b2_Class": 70.1,
+    "i2b2_Detect": 86.45
   },
   {
-    "[width=13em]hyperparam_tuningdataset": "Random Search",
+    "[width=13em]Hyperparam_TuningDataset": "Random Search",
     "semeval": 82.2,
-    "ddi_class": 62.29,
-    "ddi_detect": 79.04,
-    "i2b2_class": 55.0,
-    "i2b2_detect": 80.77
+    "ddi_Class": 62.29,
+    "ddi_Detect": 79.04,
+    "i2b2_Class": 55.0,
+    "i2b2_Detect": 80.77
   },
   {
-    "[width=13em]hyperparam_tuningdataset": "Random Search",
-    "semeval": "81.10 (1.26)•",
-    "ddi_class": "75.43 (1.48)",
-    "ddi_detect": "83.54 (0.60)",
-    "i2b2_class": "60.66 (1.43)",
-    "i2b2_detect": "82.73 (0.49)"
+    "[width=13em]Hyperparam_TuningDataset": "Random Search",
+    "semeval": 81.1,
+    "ddi_Class": 75.43,
+    "ddi_Detect": 83.54,
+    "i2b2_Class": 60.66,
+    "i2b2_Detect": 82.73
   }
 ]

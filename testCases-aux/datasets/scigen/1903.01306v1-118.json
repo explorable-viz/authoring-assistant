@@ -1,6 +1,6 @@
 [
   {
-    "training_instances_hits_k_macro": "+ATT",
+    "training_Instances_Hits_K_Macro": "+ATT",
     "100_10": "<5.0",
     "100_15": "<5.0",
     "100_20": 18.5,
@@ -9,7 +9,7 @@
     "200_20": 33.3
   },
   {
-    "training_instances_hits_k_macro": "+HATT",
+    "training_Instances_Hits_K_Macro": "+HATT",
     "100_10": 5.6,
     "100_15": 31.5,
     "100_20": 57.4,
@@ -18,7 +18,7 @@
     "200_20": 65.1
   },
   {
-    "training_instances_hits_k_macro": "+KATT",
+    "training_Instances_Hits_K_Macro": "+KATT",
     "100_10": 9.1,
     "100_15": 41.3,
     "100_20": 58.5,
@@ -27,7 +27,7 @@
     "200_20": 65.4
   },
   {
-    "training_instances_hits_k_macro": "+ATT",
+    "training_Instances_Hits_K_Macro": "+ATT",
     "100_10": "<5.0",
     "100_15": 7.4,
     "100_20": 40.7,
@@ -36,7 +36,7 @@
     "200_20": 51.5
   },
   {
-    "training_instances_hits_k_macro": "+HATT",
+    "training_Instances_Hits_K_Macro": "+HATT",
     "100_10": 29.6,
     "100_15": 51.9,
     "100_20": 61.1,
@@ -45,7 +45,7 @@
     "200_20": 68.2
   },
   {
-    "training_instances_hits_k_macro": "+KATT",
+    "training_Instances_Hits_K_Macro": "+KATT",
     "100_10": 35.3,
     "100_15": 62.4,
     "100_20": 65.1,

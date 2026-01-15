@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "The automatic evaluation scores are presented in Table 1 and Table 2.  Our method outperforms commonly used prefix baselines for this task which take the first 75 characters or 8 words of the source as a summary. Our system achieves comparable results to Wang and Lee (2018) a system based on both GANs and reinforcement training.  In Table 1, we also list scores of the stateof-the-art supervised model, an attention based  seq-to-seq model of our own implementation, as well as the oracle scores of our method obtained by choosing the best summary among all finished hypothesis from beam search.  The oracle scores are much higher, indicating that our unsupervised method does allow summaries of better quality,"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1907_13337v1_22"
+  ],
+  "datasets": ["datasets/scigen/1907.13337v1-22.json"]
+}

@@ -1,44 +1,44 @@
 [
   {
     "_1": "",
-    "memory_to_context_bleu": "Et→En",
-    "memory_to_context_meteor": "Et→En",
-    "memory_to_output_bleu": "Et→En",
-    "memory_to_output_meteor": "Et→En"
+    "Memory_to_Context_BLEU": "Et→En",
+    "Memory_to_Context_METEOR": "Et→En",
+    "Memory_to_Output_BLEU": "Et→En",
+    "Memory_to_Output_METEOR": "Et→En"
   },
   {
     "_1": "",
-    "memory_to_context_bleu": "",
-    "memory_to_context_meteor": "",
-    "memory_to_output_bleu": "",
-    "memory_to_output_meteor": ""
+    "Memory_to_Context_BLEU": "",
+    "Memory_to_Context_METEOR": "",
+    "Memory_to_Output_BLEU": "",
+    "Memory_to_Output_METEOR": ""
   },
   {
     "_1": " S-NMT",
-    "memory_to_context_bleu": 20.42,
-    "memory_to_context_meteor": 24.65,
-    "memory_to_output_bleu": 20.42,
-    "memory_to_output_meteor": 24.65
+    "Memory_to_Context_BLEU": 20.42,
+    "Memory_to_Context_METEOR": 24.65,
+    "Memory_to_Output_BLEU": 20.42,
+    "Memory_to_Output_METEOR": 24.65
   },
   {
     "_1": "  +src",
-    "memory_to_context_bleu": "22.10†",
-    "memory_to_context_meteor": "25.92†",
-    "memory_to_output_bleu": "21.50†",
-    "memory_to_output_meteor": "25.44†"
+    "Memory_to_Context_BLEU": 22.1,
+    "Memory_to_Context_METEOR": 25.92,
+    "Memory_to_Output_BLEU": 21.5,
+    "Memory_to_Output_METEOR": 25.44
   },
   {
     "_1": "  +trg",
-    "memory_to_context_bleu": "21.94†",
-    "memory_to_context_meteor": "25.89†",
-    "memory_to_output_bleu": "21.82†",
-    "memory_to_output_meteor": "25.93†"
+    "Memory_to_Context_BLEU": 21.94,
+    "Memory_to_Context_METEOR": 25.89,
+    "Memory_to_Output_BLEU": 21.82,
+    "Memory_to_Output_METEOR": 25.93
   },
   {
     "_1": "  +both",
-    "memory_to_context_bleu": " 22.32†",
-    "memory_to_context_meteor": " 26.34†",
-    "memory_to_output_bleu": " 22.20†",
-    "memory_to_output_meteor": " 26.10†"
+    "Memory_to_Context_BLEU": 22.32,
+    "Memory_to_Context_METEOR": 26.34,
+    "Memory_to_Output_BLEU": 22.2,
+    "Memory_to_Output_METEOR": 26.1
   }
 ]

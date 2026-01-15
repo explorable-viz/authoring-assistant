@@ -1,62 +1,62 @@
 [
   {
-    "model": "+0 dummy node",
-    "time_s": 56,
-    "acc": 81.76,
-    "num_param": 7216
+    "Model": "+0 dummy node",
+    "Time_s": 56,
+    "Acc": 81.76,
+    "num_Param": 7216
   },
   {
-    "model": "+1 dummy node",
-    "time_s": 65,
-    "acc": 82.64,
-    "num_param": 8768
+    "Model": "+1 dummy node",
+    "Time_s": 65,
+    "Acc": 82.64,
+    "num_Param": 8768
   },
   {
-    "model": "+2 dummy node",
-    "time_s": 76,
-    "acc": 82.24,
-    "num_param": 10321
+    "Model": "+2 dummy node",
+    "Time_s": 76,
+    "Acc": 82.24,
+    "num_Param": 10321
   },
   {
-    "model": "Hidden size 100",
-    "time_s": 42,
-    "acc": 81.75,
-    "num_param": 4891
+    "Model": "Hidden size 100",
+    "Time_s": 42,
+    "Acc": 81.75,
+    "num_Param": 4891
   },
   {
-    "model": "Hidden size 200",
-    "time_s": 54,
-    "acc": 82.04,
-    "num_param": 6002
+    "Model": "Hidden size 200",
+    "Time_s": 54,
+    "Acc": 82.04,
+    "num_Param": 6002
   },
   {
-    "model": "Hidden size 300",
-    "time_s": 65,
-    "acc": 82.64,
-    "num_param": 8768
+    "Model": "Hidden size 300",
+    "Time_s": 65,
+    "Acc": 82.64,
+    "num_Param": 8768
   },
   {
-    "model": "Hidden size 600",
-    "time_s": 175,
-    "acc": 81.84,
-    "num_param": 17648
+    "Model": "Hidden size 600",
+    "Time_s": 175,
+    "Acc": 81.84,
+    "num_Param": 17648
   },
   {
-    "model": "Hidden size 900",
-    "time_s": 235,
-    "acc": 81.66,
-    "num_param": 33942
+    "Model": "Hidden size 900",
+    "Time_s": 235,
+    "Acc": 81.66,
+    "num_Param": 33942
   },
   {
-    "model": "Without ⟨s⟩, ⟨/s⟩",
-    "time_s": 63,
-    "acc": 82.36,
-    "num_param": 8768
+    "Model": "Without ⟨s⟩, ⟨/s⟩",
+    "Time_s": 63,
+    "Acc": 82.36,
+    "num_Param": 8768
   },
   {
-    "model": "With ⟨s⟩, ⟨/s⟩",
-    "time_s": 65,
-    "acc": 82.64,
-    "num_param": 8768
+    "Model": "With ⟨s⟩, ⟨/s⟩",
+    "Time_s": 65,
+    "Acc": 82.64,
+    "num_Param": 8768
   }
 ]

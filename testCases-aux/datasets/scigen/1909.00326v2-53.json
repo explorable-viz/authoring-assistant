@@ -1,93 +1,93 @@
 [
   {
-    "type_pos_tags": " POS Tags",
-    "type_noun": "Verb",
-    "zh⇒en_21_0": 0.3,
-    "en⇒fr_1_9": 25.0,
-    "en⇒ja_0_7": 0.3
+    "Type_POS_Tags": " POS Tags",
+    "Type_Noun": "Verb",
+    "Zh⇒En_21_0": 0.3,
+    "En⇒Fr_1_9": 25.0,
+    "En⇒Ja_0_7": 0.3
   },
   {
-    "type_pos_tags": " POS Tags",
-    "type_noun": "Adj.",
-    "zh⇒en_21_0": 0.4,
-    "en⇒fr_1_9": 9.3,
-    "en⇒ja_0_7": 0.7
+    "Type_POS_Tags": " POS Tags",
+    "Type_Noun": "Adj.",
+    "Zh⇒En_21_0": 0.4,
+    "En⇒Fr_1_9": 9.3,
+    "En⇒Ja_0_7": 0.7
   },
   {
-    "type_pos_tags": " POS Tags",
-    "type_noun": "Prep.",
-    "zh⇒en_21_0": 1.3,
-    "en⇒fr_1_9": 4.5,
-    "en⇒ja_0_7": 26.7
+    "Type_POS_Tags": " POS Tags",
+    "Type_Noun": "Prep.",
+    "Zh⇒En_21_0": 1.3,
+    "En⇒Fr_1_9": 4.5,
+    "En⇒Ja_0_7": 26.7
   },
   {
-    "type_pos_tags": " POS Tags",
-    "type_noun": "Dete.",
-    "zh⇒en_21_0": 3.0,
-    "en⇒fr_1_9": 5.7,
-    "en⇒ja_0_7": 2.1
+    "Type_POS_Tags": " POS Tags",
+    "Type_Noun": "Dete.",
+    "Zh⇒En_21_0": 3.0,
+    "En⇒Fr_1_9": 5.7,
+    "En⇒Ja_0_7": 2.1
   },
   {
-    "type_pos_tags": " POS Tags",
-    "type_noun": "Punc.",
-    "zh⇒en_21_0": 3.5,
-    "en⇒fr_1_9": 18.3,
-    "en⇒ja_0_7": 30.5
+    "Type_POS_Tags": " POS Tags",
+    "Type_Noun": "Punc.",
+    "Zh⇒En_21_0": 3.5,
+    "En⇒Fr_1_9": 18.3,
+    "En⇒Ja_0_7": 30.5
   },
   {
-    "type_pos_tags": " POS Tags",
-    "type_noun": "Others",
-    "zh⇒en_21_0": 0.5,
-    "en⇒fr_1_9": 1.2,
-    "en⇒ja_0_7": 4.7
+    "Type_POS_Tags": " POS Tags",
+    "Type_Noun": "Others",
+    "Zh⇒En_21_0": 0.5,
+    "En⇒Fr_1_9": 1.2,
+    "En⇒Ja_0_7": 4.7
   },
   {
-    "type_pos_tags": " Fertility",
-    "type_noun": "≥2",
-    "zh⇒en_21_0": 50.2,
-    "en⇒fr_1_9": 21.4,
-    "en⇒ja_0_7": 21.7
+    "Type_POS_Tags": " Fertility",
+    "Type_Noun": "≥2",
+    "Zh⇒En_21_0": 50.2,
+    "En⇒Fr_1_9": 21.4,
+    "En⇒Ja_0_7": 21.7
   },
   {
-    "type_pos_tags": " Fertility",
-    "type_noun": 1,
-    "zh⇒en_21_0": 15.4,
-    "en⇒fr_1_9": 7.0,
-    "en⇒ja_0_7": 3.1
+    "Type_POS_Tags": " Fertility",
+    "Type_Noun": 1,
+    "Zh⇒En_21_0": 15.4,
+    "En⇒Fr_1_9": 7.0,
+    "En⇒Ja_0_7": 3.1
   },
   {
-    "type_pos_tags": " Fertility",
-    "type_noun": "(01)",
-    "zh⇒en_21_0": 2.5,
-    "en⇒fr_1_9": 0.4,
-    "en⇒ja_0_7": 3.0
+    "Type_POS_Tags": " Fertility",
+    "Type_Noun": "(01)",
+    "Zh⇒En_21_0": 2.5,
+    "En⇒Fr_1_9": 0.4,
+    "En⇒Ja_0_7": 3.0
   },
   {
-    "type_pos_tags": " Fertility",
-    "type_noun": 0,
-    "zh⇒en_21_0": 0.0,
-    "en⇒fr_1_9": 1.9,
-    "en⇒ja_0_7": 3.8
+    "Type_POS_Tags": " Fertility",
+    "Type_Noun": 0,
+    "Zh⇒En_21_0": 0.0,
+    "En⇒Fr_1_9": 1.9,
+    "En⇒Ja_0_7": 3.8
   },
   {
-    "type_pos_tags": " Syntactic",
-    "type_noun": "Low",
-    "zh⇒en_21_0": 1.6,
-    "en⇒fr_1_9": 2.5,
-    "en⇒ja_0_7": 1.2
+    "Type_POS_Tags": " Syntactic",
+    "Type_Noun": "Low",
+    "Zh⇒En_21_0": 1.6,
+    "En⇒Fr_1_9": 2.5,
+    "En⇒Ja_0_7": 1.2
   },
   {
-    "type_pos_tags": " Syntactic",
-    "type_noun": "Middle",
-    "zh⇒en_21_0": 0.3,
-    "en⇒fr_1_9": 0.8,
-    "en⇒ja_0_7": 1.4
+    "Type_POS_Tags": " Syntactic",
+    "Type_Noun": "Middle",
+    "Zh⇒En_21_0": 0.3,
+    "En⇒Fr_1_9": 0.8,
+    "En⇒Ja_0_7": 1.4
   },
   {
-    "type_pos_tags": " Syntactic",
-    "type_noun": "High",
-    "zh⇒en_21_0": 0.0,
-    "en⇒fr_1_9": 0.1,
-    "en⇒ja_0_7": 0.1
+    "Type_POS_Tags": " Syntactic",
+    "Type_Noun": "High",
+    "Zh⇒En_21_0": 0.0,
+    "En⇒Fr_1_9": 0.1,
+    "En⇒Ja_0_7": 0.1
   }
 ]

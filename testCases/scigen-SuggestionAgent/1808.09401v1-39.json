@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "We compared our three proposed models for the three loss functions Lτ , Lτ ce, and Lτ h, and their linear (unweighted) combination L∗, on TE3\u2021 and TD\u2021, for which the results are shown in Table 4.  A trend that can be observed is that overall performance on TD\u2021 is higher than that of TE3\u2021  If we compare loss functions Lτ , Lτ ce, and Lτh, and combination L∗, it can be noticed that, although all loss functions seem to give fairly similar performance, Lτ gives the most robust results (never lowest), especially noticeable for the smaller dataset TD\u2021.  The combination of losses L∗ shows mixed results, and has lower performance for S-TLM and C-TLM, but better performance for TL2RTL.  Moreover, we can clearly see that on TE3\u2021, CTLM performs better than the indirect models, across all loss functions.  On TD\u2021, the indirect models seem to perform slightly better.  the difference between C-TLM and S-TLM is small on the smaller TD\u2021  on TE3\u2021, the larger dataset, C-TLM clearly outperforms S-TLM across all loss functions,"
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1808_09401v1_39"
+  ],
+  "datasets": ["datasets/scigen/1808.09401v1-39.json"]
+}

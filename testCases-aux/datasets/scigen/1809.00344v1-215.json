@@ -1,16 +1,16 @@
 [
   {
     "_1": " Prev Sent",
-    "europarl_en_fr": 38.15,
-    "europarl_en_et": 21.7,
-    "europarl_en_de": 26.09,
-    "subtitles_en_ru": 19.13
+    "Europarl_En_Fr": 38.15,
+    "Europarl_En_Et": 21.7,
+    "Europarl_En_De": 26.09,
+    "Subtitles_En_Ru": 19.13
   },
   {
     "_1": "Our Model",
-    "europarl_en_fr": " 38.46†",
-    "europarl_en_et": 21.84,
-    "europarl_en_de": " 26.49†",
-    "subtitles_en_ru": 19.09
+    "Europarl_En_Fr": 38.46,
+    "Europarl_En_Et": 21.84,
+    "Europarl_En_De": 26.49,
+    "Subtitles_En_Ru": 19.09
   }
 ]

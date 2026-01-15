@@ -1,121 +1,121 @@
 [
   {
     "_1": "",
-    "europarl_en_fr": "Fr→En",
-    "europarl_en_et": "Et→En",
-    "europarl_en_de": "De→En",
-    "subtitles_en_ru": "Ru→En"
+    "Europarl_En_Fr": "Fr→En",
+    "Europarl_En_Et": "Et→En",
+    "Europarl_En_De": "De→En",
+    "Subtitles_En_Ru": "Ru→En"
   },
   {
     "_1": " Base Model",
-    "europarl_en_fr": 36.03,
-    "europarl_en_et": 26.65,
-    "europarl_en_de": 27.74,
-    "subtitles_en_ru": 23.04
+    "Europarl_En_Fr": 36.03,
+    "Europarl_En_Et": 26.65,
+    "Europarl_En_De": 27.74,
+    "Subtitles_En_Ru": 23.04
   },
   {
     "_1": "+  Source Context as Lang-Specific Attention via",
-    "europarl_en_fr": "+  Source Context as Lang-Specific Attention via",
-    "europarl_en_et": "+  Source Context as Lang-Specific Attention via",
-    "europarl_en_de": "+  Source Context as Lang-Specific Attention via",
-    "subtitles_en_ru": ""
+    "Europarl_En_Fr": "+  Source Context as Lang-Specific Attention via",
+    "Europarl_En_Et": "+  Source Context as Lang-Specific Attention via",
+    "Europarl_En_De": "+  Source Context as Lang-Specific Attention via",
+    "Subtitles_En_Ru": ""
   },
   {
     "_1": "InitDec",
-    "europarl_en_fr": "36.86†",
-    "europarl_en_et": " 28.33†",
-    "europarl_en_de": "29.39†",
-    "subtitles_en_ru": 22.56
+    "Europarl_En_Fr": 36.86,
+    "Europarl_En_Et": 28.33,
+    "Europarl_En_De": 29.39,
+    "Subtitles_En_Ru": 22.56
   },
   {
     "_1": "AddDec",
-    "europarl_en_fr": "36.98†",
-    "europarl_en_et": "27.48†",
-    "europarl_en_de": " 29.52†",
-    "subtitles_en_ru": 23.12
+    "Europarl_En_Fr": 36.98,
+    "Europarl_En_Et": 27.48,
+    "Europarl_En_De": 29.52,
+    "Subtitles_En_Ru": 23.12
   },
   {
     "_1": "InitDec+AddDec",
-    "europarl_en_fr": " 37.14†",
-    "europarl_en_et": "27.55†",
-    "europarl_en_de": "29.30†",
-    "subtitles_en_ru": 23.14
+    "Europarl_En_Fr": 37.14,
+    "Europarl_En_Et": 27.55,
+    "Europarl_En_De": 29.3,
+    "Subtitles_En_Ru": 23.14
   },
   {
     "_1": "+  Source Context via",
-    "europarl_en_fr": "+  Source Context via",
-    "europarl_en_et": "+  Source Context via",
-    "europarl_en_de": "+  Source Context via",
-    "subtitles_en_ru": ""
+    "Europarl_En_Fr": "+  Source Context via",
+    "Europarl_En_Et": "+  Source Context via",
+    "Europarl_En_De": "+  Source Context via",
+    "Subtitles_En_Ru": ""
   },
   {
     "_1": "Direct Tranformation",
-    "europarl_en_fr": "36.96†",
-    "europarl_en_et": "28.07†",
-    "europarl_en_de": "29.22†",
-    "subtitles_en_ru": 22.76
+    "Europarl_En_Fr": 36.96,
+    "Europarl_En_Et": 28.07,
+    "Europarl_En_De": 29.22,
+    "Subtitles_En_Ru": 22.76
   },
   {
     "_1": "Hierarchical Gating",
-    "europarl_en_fr": "36.89†",
-    "europarl_en_et": "27.64†",
-    "europarl_en_de": "29.45†",
-    "subtitles_en_ru": 22.73
+    "Europarl_En_Fr": 36.89,
+    "Europarl_En_Et": 27.64,
+    "Europarl_En_De": 29.45,
+    "Subtitles_En_Ru": 22.73
   },
   {
     "_1": "Lang-Specific Attention",
-    "europarl_en_fr": "36.86†",
-    "europarl_en_et": "28.33†",
-    "europarl_en_de": "29.39†",
-    "subtitles_en_ru": 23.14
+    "Europarl_En_Fr": 36.86,
+    "Europarl_En_Et": 28.33,
+    "Europarl_En_De": 29.39,
+    "Subtitles_En_Ru": 23.14
   },
   {
     "_1": "Combined Attention",
-    "europarl_en_fr": "36.94†",
-    "europarl_en_et": "27.90†",
-    "europarl_en_de": "29.44†",
-    "subtitles_en_ru": 22.92
+    "Europarl_En_Fr": 36.94,
+    "Europarl_En_Et": 27.9,
+    "Europarl_En_De": 29.44,
+    "Subtitles_En_Ru": 22.92
   },
   {
     "_1": "Lang-Specific S-Attention",
-    "europarl_en_fr": " 37.06†",
-    "europarl_en_et": " 28.43†",
-    "europarl_en_de": " 29.49†",
-    "subtitles_en_ru": 22.98
+    "Europarl_En_Fr": 37.06,
+    "Europarl_En_Et": 28.43,
+    "Europarl_En_De": 29.49,
+    "Subtitles_En_Ru": 22.98
   },
   {
     "_1": "+  Lang-Specific S-Attention using",
-    "europarl_en_fr": "+  Lang-Specific S-Attention using",
-    "europarl_en_et": "+  Lang-Specific S-Attention using",
-    "europarl_en_de": "+  Lang-Specific S-Attention using",
-    "subtitles_en_ru": ""
+    "Europarl_En_Fr": "+  Lang-Specific S-Attention using",
+    "Europarl_En_Et": "+  Lang-Specific S-Attention using",
+    "Europarl_En_De": "+  Lang-Specific S-Attention using",
+    "Subtitles_En_Ru": ""
   },
   {
     "_1": "Source Context",
-    "europarl_en_fr": "37.06†",
-    "europarl_en_et": " 28.43†",
-    "europarl_en_de": "29.49†",
-    "subtitles_en_ru": 22.98
+    "Europarl_En_Fr": 37.06,
+    "Europarl_En_Et": 28.43,
+    "Europarl_En_De": 29.49,
+    "Subtitles_En_Ru": 22.98
   },
   {
     "_1": "Target Context",
-    "europarl_en_fr": "37.35†",
-    "europarl_en_et": "27.86†",
-    "europarl_en_de": "29.26†",
-    "subtitles_en_ru": 23.23
+    "Europarl_En_Fr": 37.35,
+    "Europarl_En_Et": 27.86,
+    "Europarl_En_De": 29.26,
+    "Subtitles_En_Ru": 23.23
   },
   {
     "_1": "Dual Context Src-Tgt",
-    "europarl_en_fr": " 37.50†",
-    "europarl_en_et": "27.98†",
-    "europarl_en_de": " 29.50†",
-    "subtitles_en_ru": 23.06
+    "Europarl_En_Fr": 37.5,
+    "Europarl_En_Et": 27.98,
+    "Europarl_En_De": 29.5,
+    "Subtitles_En_Ru": 23.06
   },
   {
     "_1": "Dual Context Src-Tgt-Mix",
-    "europarl_en_fr": "37.43†",
-    "europarl_en_et": "27.71†",
-    "europarl_en_de": "29.48†",
-    "subtitles_en_ru": 23.01
+    "Europarl_En_Fr": 37.43,
+    "Europarl_En_Et": 27.71,
+    "Europarl_En_De": 29.48,
+    "Subtitles_En_Ru": 23.01
   }
 ]

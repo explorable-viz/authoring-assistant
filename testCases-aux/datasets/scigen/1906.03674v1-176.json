@@ -1,74 +1,74 @@
 [
   {
     "model": "baseline",
-    "sst_5": 43.5,
+    "sST_5": 43.5,
     "sent17": 68.3,
-    "phychexp": 53.2,
+    "phychExp": 53.2,
     "irony18": 46.3,
-    "scv1": 64.1,
-    "scv2": 74.0
+    "sCv1": 64.1,
+    "sCv2": 74.0
   },
   {
     "model": "emb. conc.",
-    "sst_5": 43.3,
+    "sST_5": 43.3,
     "sent17": 68.4,
-    "phychexp": 57.1,
+    "phychExp": 57.1,
     "irony18": 48.1,
-    "scv1": 64.2,
-    "scv2": 74.2
+    "sCv1": 64.2,
+    "sCv2": 74.2
   },
   {
     "model": "conc.",
-    "sst_5": 44.0,
+    "sST_5": 44.0,
     "sent17": 68.6,
-    "phychexp": 54.3,
+    "phychExp": 54.3,
     "irony18": 47.4,
-    "scv1": 65.1,
-    "scv2": 74.3
+    "sCv1": 65.1,
+    "sCv2": 74.3
   },
   {
     "model": "gate",
-    "sst_5": 44.2,
+    "sST_5": 44.2,
     "sent17": 68.7,
-    "phychexp": 53.4,
+    "phychExp": 53.4,
     "irony18": 48.5,
-    "scv1": 64.7,
-    "scv2": 74.3
+    "sCv1": 64.7,
+    "sCv2": 74.3
   },
   {
     "model": "affine",
-    "sst_5": 43.2,
+    "sST_5": 43.2,
     "sent17": 68.5,
-    "phychexp": 53.1,
+    "phychExp": 53.1,
     "irony18": 45.3,
-    "scv1": 60.3,
-    "scv2": 74.0
+    "sCv1": 60.3,
+    "sCv2": 74.0
   },
   {
     "model": "gate+emb.conc.",
-    "sst_5": 46.2,
+    "sST_5": 46.2,
     "sent17": 68.9,
-    "phychexp": 57.2,
+    "phychExp": 57.2,
     "irony18": 48.4,
-    "scv1": 64.9,
-    "scv2": 74.4
+    "sCv1": 64.9,
+    "sCv2": 74.4
   },
   {
     "model": "state-of-the-art",
-    "sst_5": 51.7,
+    "sST_5": 51.7,
     "sent17": 68.5,
-    "phychexp": 57.0,
+    "phychExp": 57.0,
     "irony18": 53.6,
-    "scv1": 69.0,
-    "scv2": 76.0
+    "sCv1": 69.0,
+    "sCv2": 76.0
   },
   {
     "model": "state-of-the-art",
-    "sst_5": "Shen et al. ( 2018 )",
+    "sST_5": "Shen et al. ( 2018 )",
     "sent17": "Cliche ( 2017 )",
-    "phychexp": "Felbo et al. ( 2017 )",
+    "phychExp": "Felbo et al. ( 2017 )",
     "irony18": "Baziotis et al. ( 2018 )",
-    "scv1": "Felbo et al. ( 2017 )",
-    "scv2": "Ilić et al. ( 2018 )"
+    "sCv1": "Felbo et al. ( 2017 )",
+    "sCv2": "Ilić et al. ( 2018 )"
   }
 ]

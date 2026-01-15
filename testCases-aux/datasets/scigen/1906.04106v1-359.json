@@ -1,30 +1,30 @@
 [
   {
-    "model": "catSeq",
-    "present_f1_m": 0.367,
-    "present_f1_5": 0.291,
-    "absent_f1_m": 0.032,
-    "absent_f1_5": 0.015
+    "Model": "catSeq",
+    "Present_F1_M": 0.367,
+    "Present_F1_5": 0.291,
+    "Absent_F1_M": 0.032,
+    "Absent_F1_5": 0.015
   },
   {
-    "model": "catSeq-  RF1",
-    "present_f1_m": 0.38,
-    "present_f1_5": 0.336,
-    "absent_f1_m": 0.006,
-    "absent_f1_5": 0.003
+    "Model": "catSeq-  RF1",
+    "Present_F1_M": 0.38,
+    "Present_F1_5": 0.336,
+    "Absent_F1_M": 0.006,
+    "Absent_F1_5": 0.003
   },
   {
-    "model": "catSeq-2  F1",
-    "present_f1_m": 0.378,
-    "present_f1_5": 0.278,
-    "absent_f1_m": 0.042,
-    "absent_f1_5": 0.02
+    "Model": "catSeq-2  F1",
+    "Present_F1_M": 0.378,
+    "Present_F1_5": 0.278,
+    "Absent_F1_M": 0.042,
+    "Absent_F1_5": 0.02
   },
   {
-    "model": "catSeq-2  RF1",
-    "present_f1_m": 0.383,
-    "present_f1_5": 0.31,
-    "absent_f1_m": 0.047,
-    "absent_f1_5": 0.024
+    "Model": "catSeq-2  RF1",
+    "Present_F1_M": 0.383,
+    "Present_F1_5": 0.31,
+    "Absent_F1_M": 0.047,
+    "Absent_F1_5": 0.024
   }
 ]

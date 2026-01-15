@@ -1,79 +1,79 @@
 [
   {
-    "input": "Auto seg",
-    "models": "Word baseline",
-    "p": 73.2,
-    "r": 57.05,
-    "f1": 64.12
+    "Input": "Auto seg",
+    "Models": "Word baseline",
+    "P": 73.2,
+    "R": 57.05,
+    "F1": 64.12
   },
   {
-    "input": "Auto seg",
-    "models": "+char LSTM",
-    "p": 71.98,
-    "r": 65.41,
-    "f1": 68.54
+    "Input": "Auto seg",
+    "Models": "+char LSTM",
+    "P": 71.98,
+    "R": 65.41,
+    "F1": 68.54
   },
   {
-    "input": "Auto seg",
-    "models": "+char LSTM′",
-    "p": 71.08,
-    "r": 65.83,
-    "f1": 68.35
+    "Input": "Auto seg",
+    "Models": "+char LSTM′",
+    "P": 71.08,
+    "R": 65.83,
+    "F1": 68.35
   },
   {
-    "input": "Auto seg",
-    "models": "+char+bichar LSTM",
-    "p": 72.63,
-    "r": 67.6,
-    "f1": 70.03
+    "Input": "Auto seg",
+    "Models": "+char+bichar LSTM",
+    "P": 72.63,
+    "R": 67.6,
+    "F1": 70.03
   },
   {
-    "input": "Auto seg",
-    "models": "+char CNN",
-    "p": 73.06,
-    "r": 66.29,
-    "f1": 69.51
+    "Input": "Auto seg",
+    "Models": "+char CNN",
+    "P": 73.06,
+    "R": 66.29,
+    "F1": 69.51
   },
   {
-    "input": "Auto seg",
-    "models": "+char+bichar CNN",
-    "p": 72.01,
-    "r": 65.5,
-    "f1": 68.6
+    "Input": "Auto seg",
+    "Models": "+char+bichar CNN",
+    "P": 72.01,
+    "R": 65.5,
+    "F1": 68.6
   },
   {
-    "input": "No seg",
-    "models": "Char baseline",
-    "p": 67.12,
-    "r": 58.42,
-    "f1": 62.47
+    "Input": "No seg",
+    "Models": "Char baseline",
+    "P": 67.12,
+    "R": 58.42,
+    "F1": 62.47
   },
   {
-    "input": "No seg",
-    "models": "+softword",
-    "p": 69.3,
-    "r": 62.47,
-    "f1": 65.71
+    "Input": "No seg",
+    "Models": "+softword",
+    "P": 69.3,
+    "R": 62.47,
+    "F1": 65.71
   },
   {
-    "input": "No seg",
-    "models": "+bichar",
-    "p": 71.67,
-    "r": 64.02,
-    "f1": 67.63
+    "Input": "No seg",
+    "Models": "+bichar",
+    "P": 71.67,
+    "R": 64.02,
+    "F1": 67.63
   },
   {
-    "input": "No seg",
-    "models": "+bichar+softword",
-    "p": 72.64,
-    "r": 66.89,
-    "f1": 69.64
+    "Input": "No seg",
+    "Models": "+bichar+softword",
+    "P": 72.64,
+    "R": 66.89,
+    "F1": 69.64
   },
   {
-    "input": "No seg",
-    "models": "Lattice",
-    "p": 74.64,
-    "r": 68.83,
-    "f1": 71.62
+    "Input": "No seg",
+    "Models": "Lattice",
+    "P": 74.64,
+    "R": 68.83,
+    "F1": 71.62
   }
 ]

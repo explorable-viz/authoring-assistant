@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "We present our results on two freely available large scale datasets introduced by Zhang et al. . We also shrink the scale of training samples by randomly picking up the same amount of data in each category (see Table 1).  AG News The AG News corpus consists of news articles from the AG's corpus of news articles on the web pertaining to the 4 largest classes, which are Work, Sports, Business, Sci/Tech. The data set contains 30,000 training samples for each class, 1,900 samples for each class for testing. In this data set, there are three columns which are label, title, description, we treat title as abstract input and description as contents input. Sogou News A Chinese news data set. This data set is a combination of the SogouCA and SogouCS news corpora pertaining to 5 categories, which are Sports, Finance, Entertainment, Automobile and Technology. It contains 450,000 training samples and 60,000 samples for testing in total. Sogou New also has three columns in data set files, label, title, description, similarly, we treat title as abstract input and description as contents input."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2003_01857v1_419"
+  ],
+  "datasets": ["datasets/scigen/2003.01857v1-419.json"]
+}

@@ -1,20 +1,20 @@
 [
   {
-    "length_of_sentence": "4-7",
-    "attention": 1.46,
-    "gaussian_mask_only": 1.13,
-    "gaussian_mask_rl_model": 1.33
+    "Length_of_sentence": "4-7",
+    "Attention": 1.46,
+    "Gaussian_Mask_only": 1.13,
+    "Gaussian_Mask_RL_model": 1.33
   },
   {
-    "length_of_sentence": "8-11",
-    "attention": 2.32,
-    "gaussian_mask_only": 1.96,
-    "gaussian_mask_rl_model": 2.12
+    "Length_of_sentence": "8-11",
+    "Attention": 2.32,
+    "Gaussian_Mask_only": 1.96,
+    "Gaussian_Mask_RL_model": 2.12
   },
   {
-    "length_of_sentence": "12-15",
-    "attention": 2.86,
-    "gaussian_mask_only": 2.43,
-    "gaussian_mask_rl_model": 2.61
+    "Length_of_sentence": "12-15",
+    "Attention": 2.86,
+    "Gaussian_Mask_only": 2.43,
+    "Gaussian_Mask_RL_model": 2.61
   }
 ]

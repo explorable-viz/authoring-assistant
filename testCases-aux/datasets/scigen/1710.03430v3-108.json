@@ -1,37 +1,37 @@
 [
   {
-    "model": "TF-IDF",
-    "samsung_qa_1_in_2r_1": 0.939,
-    "samsung_qa_1_in_10r_1": 0.834,
-    "samsung_qa_1_in_10r_2": 0.897,
-    "samsung_qa_1_in_10r_5": 0.953
+    "Model": "TF-IDF",
+    "Samsung_QA_1_in_2R_1": 0.939,
+    "Samsung_QA_1_in_10R_1": 0.834,
+    "Samsung_QA_1_in_10R_2": 0.897,
+    "Samsung_QA_1_in_10R_5": 0.953
   },
   {
-    "model": "RDE",
-    "samsung_qa_1_in_2r_1": 0.978,
-    "samsung_qa_1_in_10r_1": 0.869,
-    "samsung_qa_1_in_10r_2": 0.966,
-    "samsung_qa_1_in_10r_5": 0.997
+    "Model": "RDE",
+    "Samsung_QA_1_in_2R_1": 0.978,
+    "Samsung_QA_1_in_10R_1": 0.869,
+    "Samsung_QA_1_in_10R_2": 0.966,
+    "Samsung_QA_1_in_10R_5": 0.997
   },
   {
-    "model": "RDE-LTC",
-    "samsung_qa_1_in_2r_1": 0.981,
-    "samsung_qa_1_in_10r_1": 0.88,
-    "samsung_qa_1_in_10r_2": 0.97,
-    "samsung_qa_1_in_10r_5": 0.997
+    "Model": "RDE-LTC",
+    "Samsung_QA_1_in_2R_1": 0.981,
+    "Samsung_QA_1_in_10R_1": 0.88,
+    "Samsung_QA_1_in_10R_2": 0.97,
+    "Samsung_QA_1_in_10R_5": 0.997
   },
   {
-    "model": "HRDE",
-    "samsung_qa_1_in_2r_1": 0.981,
-    "samsung_qa_1_in_10r_1": 0.885,
-    "samsung_qa_1_in_10r_2": 0.971,
-    "samsung_qa_1_in_10r_5": 0.997
+    "Model": "HRDE",
+    "Samsung_QA_1_in_2R_1": 0.981,
+    "Samsung_QA_1_in_10R_1": 0.885,
+    "Samsung_QA_1_in_10R_2": 0.971,
+    "Samsung_QA_1_in_10R_5": 0.997
   },
   {
-    "model": "HRDE-LTC",
-    "samsung_qa_1_in_2r_1": 0.983,
-    "samsung_qa_1_in_10r_1": 0.89,
-    "samsung_qa_1_in_10r_2": 0.972,
-    "samsung_qa_1_in_10r_5": 0.998
+    "Model": "HRDE-LTC",
+    "Samsung_QA_1_in_2R_1": 0.983,
+    "Samsung_QA_1_in_10R_1": 0.89,
+    "Samsung_QA_1_in_10R_2": 0.972,
+    "Samsung_QA_1_in_10R_5": 0.998
   }
 ]

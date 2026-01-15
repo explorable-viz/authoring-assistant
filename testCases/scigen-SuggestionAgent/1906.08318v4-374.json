@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "importance of pre-processing in performance improvements. Experiments in table 4 reveal that they can cause larger variations in performance than modeling.  Punctuation and digits hold more importance for the ddi dataset, which is a biomedical dataset, compared to the other two datasets.  We found that stop words seem to be important for relation extraction for all three datasets that we looked at, to a smaller degree for i2b2 compared to the other two datasets.  Entity blinding causes almost 9% improvement in classification performance and 1% improvement in detection performance.  While entity blinding hurts performance for semeval, possibly due to the coarse-grained nature of the replacement, NER blinding does not hurt performance.  entity blinding seems to help test set performance for ddi in table 4, but shows no statistical significance."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_08318v4_374"
+  ],
+  "datasets": ["datasets/scigen/1906.08318v4-374.json"]
+}

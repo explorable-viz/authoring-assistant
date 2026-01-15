@@ -1,22 +1,22 @@
 [
   {
-    "dataset": "CCAT10",
-    "combined": 88.36,
-    "parallel": 90.58
+    "Dataset": "CCAT10",
+    "Combined": 88.36,
+    "Parallel": 90.58
   },
   {
-    "dataset": "CCAT50",
-    "combined": 81.21,
-    "parallel": 82.35
+    "Dataset": "CCAT50",
+    "Combined": 81.21,
+    "Parallel": 82.35
   },
   {
-    "dataset": "BLOG10",
-    "combined": 67.38,
-    "parallel": 72.83
+    "Dataset": "BLOG10",
+    "Combined": 67.38,
+    "Parallel": 72.83
   },
   {
-    "dataset": "BLOG50",
-    "combined": 58.81,
-    "parallel": 61.19
+    "Dataset": "BLOG50",
+    "Combined": 58.81,
+    "Parallel": 61.19
   }
 ]

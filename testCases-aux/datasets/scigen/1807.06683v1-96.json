@@ -1,30 +1,30 @@
 [
   {
-    "this_work_model": "md",
-    "this_work_mean_accuracy": 88.61
+    "this_work_Model": "md",
+    "this_work_Mean_Accuracy": 88.61
   },
   {
-    "this_work_model": "joint1",
-    "this_work_mean_accuracy": 88.17
+    "this_work_Model": "joint1",
+    "this_work_Mean_Accuracy": 88.17
   },
   {
-    "this_work_model": "joint2",
-    "this_work_mean_accuracy": 86.86
+    "this_work_Model": "joint2",
+    "this_work_Mean_Accuracy": 86.86
   },
   {
-    "this_work_model": "j_multi",
-    "this_work_mean_accuracy": 88.05
+    "this_work_Model": "j_multi",
+    "this_work_Mean_Accuracy": 88.05
   },
   {
-    "this_work_model": "Previous wor",
-    "this_work_mean_accuracy": "Previous wor"
+    "this_work_Model": "Previous work",
+    "this_work_Mean_Accuracy": "Previous work"
   },
   {
-    "this_work_model": "yuret2006decision_lists",
-    "this_work_mean_accuracy": 89.55
+    "this_work_Model": "yuret2006decision_lists",
+    "this_work_Mean_Accuracy": 89.55
   },
   {
-    "this_work_model": "shen2016role",
-    "this_work_mean_accuracy": 91.03
+    "this_work_Model": "shen2016role",
+    "this_work_Mean_Accuracy": 91.03
   }
 ]

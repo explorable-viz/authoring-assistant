@@ -26,7 +26,18 @@ public class Settings {
 
     public static Settings init(String settingsPath, Map<String, String> args) throws IOException {
         commandLineArgs = args;
-        instance = new Settings(settingsPath);
+        
+        // Load default settings
+        JSONObject defaultSettings = loadSettingsFile(settingsPath);
+        
+        // If config parameter is specified, merge with settings/<config>.json
+        if (args != null && args.containsKey("config")) {
+            String configFile = STR."settings/\{args.get("config")}.json";
+            JSONObject specificSettings = loadSettingsFile(configFile);
+            defaultSettings = rightBiasedUnion(defaultSettings, specificSettings);
+        }
+        
+        instance = new Settings(defaultSettings);
         return instance;
     }
 
@@ -35,7 +46,23 @@ public class Settings {
     }
 
     private Settings(String settingsPath) throws IOException {
-        this.settings = new JSONObject(new String(Files.readAllBytes(Paths.get(new File(settingsPath).toURI()))));
+        this.settings = loadSettingsFile(settingsPath);
+    }
+    
+    private Settings(JSONObject settings) {
+        this.settings = settings;
+    }
+    
+    private static JSONObject loadSettingsFile(String settingsPath) throws IOException {
+        return new JSONObject(new String(Files.readAllBytes(Paths.get(new File(settingsPath).toURI()))));
+    }
+    
+    public static JSONObject rightBiasedUnion(JSONObject left, JSONObject right) {
+        JSONObject result = new JSONObject(left.toString()); // defensive copy
+        for (String key : right.keySet()) {
+            result.put(key, right.get(key));
+        }
+        return result;
     }
 
     public static JSONObject getSettings() {
@@ -92,7 +119,7 @@ public class Settings {
     }
 
     public static String getTestCaseFolder() {
-        return commandLineArgs.get("test-case-folder");
+        return getSettings().getString("test-case-folder");
     }
 
     public static int numTestRuns() {
@@ -100,9 +127,10 @@ public class Settings {
     }
 
     public static String getSuggestionAgentName() {
-        return commandLineArgs.get("suggestion-agent-class");
+        return getSettings().optString("suggestion-agent-class", null);
     }
+    
     public static String getAuthoringAgentName() {
-        return commandLineArgs.get("authoring-agent-class");
+        return getSettings().optString("authoring-agent-class", null);
     }
 }

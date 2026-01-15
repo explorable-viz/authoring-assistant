@@ -1,0 +1,5 @@
+{
+  "suggestion-agent-class": "authoringassistant.llm.suggestion.QwenCoderAgent",
+  "authoring-agent-class": null,
+  "test-case-folder": "scigen-raw"
+}

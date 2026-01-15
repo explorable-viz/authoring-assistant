@@ -1,0 +1,18 @@
+{
+  "temperature": 1.0,
+  "timeout": 1800,
+  "num_ctx": 4096,
+  "gemini-token": "",
+  "gemini-projectId": "",
+  "gemini-location": "",
+  "claude-token": "",
+  "ollama-url": "https://fire.cluelab.di.unisa.it",
+  "ollama-port": 8430,
+  "interpretation-agent-loopback-limit": 2,
+  "suggestion-agent-loopback-limit": 2,
+  "num-test-runs": 1,
+  "add-expected-value": true,
+  "authoring-agent-class": "authoringassistant.llm.interpretation.OpenAIGpt5Agent",
+  "suggestion-agent-class": null,
+  "test-case-folder": "scigen-manual-old"
+}

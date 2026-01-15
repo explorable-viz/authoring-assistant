@@ -158,11 +158,11 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
 
         # Create test structure
         test = {
-            'datasets': [f"datasets/{dataset_name}.json"],
+            'datasets': [f"{datasets_dir.as_posix()}/{dataset_name}.json"],
             'imports': [
                 "scigen",
                 "util",
-                f"datasets/_{dataset_name.replace('-', '_').replace('.', '_')}"
+                f"{datasets_dir.as_posix()}/_{dataset_name.replace('-', '_').replace('.', '_')}"
             ],
             'variables': {},
             'testing-variables': {}

@@ -2,7 +2,7 @@
   "temperature": 1.0,
   "timeout": 1800,
   "num_ctx": 4096,
-  "openai-token": "",
+  "openai-token": "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",
   "gemini-token": "",
   "gemini-projectId": "",
   "gemini-location": "",

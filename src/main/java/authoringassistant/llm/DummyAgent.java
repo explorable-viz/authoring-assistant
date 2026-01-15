@@ -8,10 +8,10 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-public class LLMDummyAgent extends LLMEvaluatorAgent<Expression> {
-    public static Logger logger = Logger.getLogger(LLMDummyAgent.class.getName());
+public class DummyAgent extends LLMEvaluatorAgent<Expression> {
+    public static Logger logger = Logger.getLogger(DummyAgent.class.getName());
 
-    public LLMDummyAgent(JSONObject settings) {
+    public DummyAgent(JSONObject settings) {
         super(settings);
     }
 

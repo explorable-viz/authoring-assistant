@@ -1,0 +1,91 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The OntoNotes test results are shown in Table 5. With gold-standard segmentation, our word-based methods give "
+    },
+    {
+      "expression": "\"competitive\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results to the state-of-the-art on the dataset (Che et al., 2013; Wang et al., 2013),  In addition, the results show  that our word-based models can serve as highly competitive baselines. With automatic segmentation, the F1-score of word+char+bichar LSTM decreases from "
+    },
+    {
+      "expression": "\"75.77%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"71.70%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", showing the influence of segmentation to NER. Consistent with observations on the development set, adding lattice word information leads to an "
+    },
+    {
+      "expression": "\"88.81%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " → "
+    },
+    {
+      "expression": "\"93.18%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " increasement of F1-score over the character baseline, as compared with "
+    },
+    {
+      "expression": "\"88.81%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " → "
+    },
+    {
+      "expression": "\"91.87%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by adding bichar+softword. The lattice model gives significantly the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F1-score on automatic segmentation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1805_02023v4_204"
+  ],
+  "datasets": ["datasets/scigen/1805.02023v4-204.json"]
+}

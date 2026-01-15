@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As can be seen in Table 6, S-LSTM gives "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results compared with BiLSTM on the WSJ dataset. It also gives "
+    },
+    {
+      "expression": "\"competitive accuracies\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as compared with existing methods in the literature. Stacking two layers of BiLSTMs leads to "
+    },
+    {
+      "expression": "\"improved results\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared to one-layer BiLSTM, but the accuracy does not further improve  with three layers of stacked LSTMs."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1805_02474v1_13"
+  ],
+  "datasets": ["datasets/scigen/1805.02474v1-13.json"]
+}

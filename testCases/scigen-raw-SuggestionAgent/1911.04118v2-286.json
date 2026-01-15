@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 4: Performance of different models on TREC-QA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed in (Yoon et al. 2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively.  Table 4 reports the results of our experiments with TREC-QA."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1911_04118v2_286"
+  ],
+  "datasets": ["datasets/scigen/1911.04118v2-286.json"]
+}

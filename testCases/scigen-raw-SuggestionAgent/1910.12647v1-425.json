@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 summarizes the results for these transfer learning experiments when the source task is MNLI. "
+    },
+    {
+      "expression": "\"Gain\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows the difference between Fine-tuned model's accuracy and Baseline's accuracy. For HUBERT (Transformer), we observe substantial "
+    },
+    {
+      "expression": "\"gain\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across all 5 target corpora after transfer. However, for BERT we have a "
+    },
+    {
+      "expression": "\"drop\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for QNLI, QQP, and SST."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1910_12647v1_425"
+  ],
+  "datasets": ["datasets/scigen/1910.12647v1-425.json"]
+}

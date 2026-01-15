@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "First, we compare to systems which relied on Wikipedia and those which used Wikipedia along with unlabeled data ('Wikipedia + unlab'), i.e. the top half of Table 1. These methods are comparable to ours, as they use the same type of information as supervision. Our model outperformed all of them on all test sets.  When evaluated on AIDA-B, their scores are still lower than ours, though significantly higher that those of the previous systems suggesting that web links are indeed valuable.  Second, we compare to fully-supervised systems, which were estimated on AIDA-CoNLL documents.  We distinguish results on a test set taken from AIDA-CoNLL (AIDA-B) and the other standard test sets not directly corresponding to the AIDA-CoNLL domain. When tested on the latter, our approach is very effective, on average outperforming fully-supervised techniques.  As expected, on the in-domain test set (AIDA-B), the majority of recent fully-supervised methods are more accurate than our model. However, even on this test set our model is not as far behind, for example, outperforming the system of Guo and Barbosa (2016)."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_01250v1_186"
+  ],
+  "datasets": ["datasets/scigen/1906.01250v1-186.json"]
+}

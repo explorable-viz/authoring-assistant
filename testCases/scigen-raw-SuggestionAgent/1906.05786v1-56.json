@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 gives single model validation scores for "
+    },
+    {
+      "expression": "\"es2en\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"en2es\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models with standard and iterative transfer learning. We find that the "
+    },
+    {
+      "expression": "\"all-biomed domain\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gains "
+    },
+    {
+      "expression": "\"1-2 BLEU points\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from transfer learning."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_05786v1_56"
+  ],
+  "datasets": ["datasets/scigen/1906.05786v1-56.json"]
+}

@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Similarly a single classifier outperforms the rest in reply classification, as seen in Table IV. By our weighted nonother precision metric, Logistic Regression performed the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " across both datasets, providing "
+    },
+    {
+      "expression": "\"0.874\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision on Antichat and "
+    },
+    {
+      "expression": "\"0.852\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " precision on Hack Forums."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1812_00381v2_449"
+  ],
+  "datasets": ["datasets/scigen/1812.00381v2-449.json"]
+}

@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "BPE and character sys"
+    },
+    {
+      "expression": "\"tem\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "s differ most in the number of "
+    },
+    {
+      "expression": "\"lexical choice errors\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and in the extent to which they drop content.  Regarding lexical choice, the two systems differ not only in the number of errors, but in the nature of those errors. In particular, the BPE model had more trouble handling German compound nouns.  We also found that both systems occasionally mistranslate proper names."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1808_09943v1_271"
+  ],
+  "datasets": ["datasets/scigen/1808.09943v1-271.json"]
+}

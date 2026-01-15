@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We show the main result in Table 2 and 3. Despite training on a "
+    },
+    {
+      "expression": "\"fraction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the data available, the proposed BERT-based models "
+    },
+    {
+      "expression": "\"surpass\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the previous state-of-the-art models by a "
+    },
+    {
+      "expression": "\"large margin\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on all datasets"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1905_07588v1_372"
+  ],
+  "datasets": ["datasets/scigen/1905.07588v1-372.json"]
+}

@@ -1,0 +1,52 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 1 shows and "
+    },
+    {
+      "expression": "\"compares\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " MSE and R2 reported from these experiments. The results show that in "
+    },
+    {
+      "expression": "\"experiment 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the mean squared error is "
+    },
+    {
+      "expression": "\"reduced\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the r2 score is "
+    },
+    {
+      "expression": "\"increased\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_02776v2_482"
+  ],
+  "datasets": ["datasets/scigen/1909.02776v2-482.json"]
+}

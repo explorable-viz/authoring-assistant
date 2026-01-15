@@ -45,7 +45,7 @@ public class AuthoringAssistant {
         List<Pair<Program, Expression>> problems;
         int i = 0;
         if (this.suggestionAgent != null) {
-            templateProgram = suggestionAgent.generateTemplateProgram(templateProgram);
+            templateProgram = suggestionAgent.generateTemplateProgram(templateProgram).program();
         }
         problems = templateProgram.asIndividualProblems(templateProgram);
         int problemIndex = 0;

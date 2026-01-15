@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We also report "
+    },
+    {
+      "expression": "\"the average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " number of generated keyphrases per document, denoted as  \"Avg. #\". The results are shown in Table 4, where oracle is a model that always generates the ground-truth keyphrases. The resultant MAEs demonstrate that our deep reinforced models "
+    },
+    {
+      "expression": "\"notably outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the baselines on predicting the number of absent keyphrases and "
+    },
+    {
+      "expression": "\"slightly outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the baselines on predicting the number of present keyphrases. Moreover, our deep reinforced models generate "
+    },
+    {
+      "expression": "\"significantly more\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " absent keyphrases than the baselines  Besides, the baseline models and our reinforced models generate similar numbers of present keyphrases, while our reinforced models achieve "
+    },
+    {
+      "expression": "\"notably higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F -measures, implying that our methods generate present keyphrases "
+    },
+    {
+      "expression": "\"more accurately\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the baselines."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1906_04106v1_358"
+  ],
+  "datasets": ["datasets/scigen/1906.04106v1-358.json"]
+}

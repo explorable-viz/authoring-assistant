@@ -1,0 +1,100 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "To run cross-lingual tests, we build six additional datasets from the existing ones by mixing context in one language with question in another language. The mixed datasets will be made available online  in a github repository. The performance of BERT on all datasets is displayed in "
+    },
+    {
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  the performance is the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the En-En dataset. The performance on Fr-Fr and Jap-Jap is also very good as noted in the first experiment. We additionally note here that results on cross-lingual sets are close to monolingual results: either "
+    },
+    {
+      "expression": "\"as good\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", or "
+    },
+    {
+      "expression": "\"slightly worse\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " or "
+    },
+    {
+      "expression": "\"slightly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For instance, the exact match on the En-Fr dataset is "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the exact match on the Fr-Fr dataset. We also observe that, in general, the exact match and F1-score are close together when the context is in Japanese whereas there is generally a larger gap for the other two languages.  the performance on Jap-En is "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than on Jap-Jap whereas the performance on En-Fr is "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than on Fr-Fr,  Results for the Jap-Jap dataset are "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than results for the Jap-En dataset"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1910_04659v1_350"
+  ],
+  "datasets": ["datasets/scigen/1910.04659v1-350.json"]
+}

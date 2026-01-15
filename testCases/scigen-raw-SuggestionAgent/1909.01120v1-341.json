@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As baseline, we use our unsupervised algorithm with "
+    },
+    {
+      "expression": "\"EmbDI embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and pre-trained embeddings. We also test our local embeddings in the supervised setting with a state of the art ER system ("
+    },
+    {
+      "expression": "\"DeepERL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), comparing its results to the ones obtained with pre-trained embeddings ("
+    },
+    {
+      "expression": "\"DeepERP\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Results in Table 4 show that "
+    },
+    {
+      "expression": "\"EmbDI embeddings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " obtain "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " quality results in all scenarios in both settings. As observed in the SM experiments, using local embeddings instead of pre-trained ones increases significantly the quality of an existing system. In this case, supervised DeepER shows an average "
+    },
+    {
+      "expression": "\"6%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " absolute improvement in F-measure in the tested setting with "
+    },
+    {
+      "expression": "\"5%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the ground truth passed as training data. The improvements decreases to "
+    },
+    {
+      "expression": "\"4%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with more training data ("
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Also for ER, the local embeddings obtained with the basic method lead to "
+    },
+    {
+      "expression": "\"0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " row matched.  Execut"
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_01120v1_341"
+  ],
+  "datasets": ["datasets/scigen/1909.01120v1-341.json"]
+}

@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 3 compares the performance of the four weighting variants introduced in Section 3.2. TransWeight-feat, which sums the transformed representations and then weights each component of the summed representation, has the weakest performance, with only 50.82% of the test compounds receiving a rank that is lower than 5. A better performance \u2013 52.90% \u2013 is obtained by applying the same weighting for each column of the transformations matrix H. The results of TransWeight-trans are interesting in two respects: first, it outperforms the feature variation, TransWeight-feat, despite training a smaller number of parameters (300 vs. 400 in our setup). Second, it performs on par with the TransWeight-mat variation, although the latter has a larger number of parameters (20,200 in our setup). This suggests that an effective combination method needs to take into account full transformations, i.e. entire rows of H and combine them in a systematic way. TransWeight builds on this insight by making each element of the final composed representation p dependent on each component of the transformed representation H. The result is a noteworthy increase in the quality of the predictions, with ∼12% more of the test representations having a rank ≤5. Although this weighting does use significantly more parameters than the previous weightings (4,000,200 parameters), the number of parameters is relative to the number of transformations t and does not grow with the size of the vocabulary. As the results in the next subsection show, a relatively small number of transformations is sufficient even for larger training vocabularies."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1907_05048v1_364"
+  ],
+  "datasets": ["datasets/scigen/1907.05048v1-364.json"]
+}

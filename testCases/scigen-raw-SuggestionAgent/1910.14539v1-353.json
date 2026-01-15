@@ -1,0 +1,37 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 6 shows a "
+    },
+    {
+      "expression": "\"5.7 BLEU\"",
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvement on Rotowire-test by our English NLG model compared to the "
+    },
+    {
+      "expression": "\"previous state of the art\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1910_14539v1_353"
+  ],
+  "datasets": ["datasets/scigen/1910.14539v1-353.json"]
+}

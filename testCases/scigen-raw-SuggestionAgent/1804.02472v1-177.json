@@ -1,0 +1,46 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 5 illustrates the influence of modals and negation on the factuality of the events they have direct scope over. The context with the "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " factuality on average is no direct modal and no negation (first row); all other modal contexts have varying degrees of "
+    },
+    {
+      "expression": "\"negative\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " mean factuality scores, with will as the "
+    },
+    {
+      "expression": "\"most negative\"",
+      "categories": [
+        "comparison",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1804_02472v1_177"
+  ],
+  "datasets": ["datasets/scigen/1804.02472v1-177.json"]
+}

@@ -1,0 +1,124 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare our model to Float Parser (FP) (Pasupat and Liang, 2015), Neural Programmer (NP) (Neelakantan et al., 2016b), DYNSP (Iyyer et al., 2017) and CAMP (Sun et al., 2018b) in Table 1. We observe that our model improves the SOTA from "
+    },
+    {
+      "expression": "\"45.6%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by CAMP to "
+    },
+    {
+      "expression": "\"55.1%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in question accuracy (ALL), reducing the relative error rate by "
+    },
+    {
+      "expression": "\"18%\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For the initial question (POS1), however, it is "
+    },
+    {
+      "expression": "\"behind\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " DYNSP by "
+    },
+    {
+      "expression": "\"3.7%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". More interestingly, our model handles follow up questions especially well outperforming the previously best model FP by "
+    },
+    {
+      "expression": "\"20%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on POS3, a "
+    },
+    {
+      "expression": "\"28%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " relative error reduction. We observe that our model effectively leverages the context information by improving the average question accuracy from "
+    },
+    {
+      "expression": "\"45.1%\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"55.1%\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in comparison to the use of context in DYNSP yielding "
+    },
+    {
+      "expression": "\"2.7%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improvement. If we provide the previous reference answers, the average question accuracy jumps to "
+    },
+    {
+      "expression": "\"61.7%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", showing that "
+    },
+    {
+      "expression": "\"6.6%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the errors are due to error propagation."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1908_11787v1_161"
+  ],
+  "datasets": ["datasets/scigen/1908.11787v1-161.json"]
+}

@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the previous state-of-the-art and our baselines. "
+    },
+    {
+      "expression": "\"TEXTONLY\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives a performance comparable with "
+    },
+    {
+      "expression": "\"Bran\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". With 1-best dependency trees, our "
+    },
+    {
+      "expression": "\"DEPTREE baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives "
+    },
+    {
+      "expression": "\"better performances\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the previous state of the art. both "
+    },
+    {
+      "expression": "\"KBESTEISNERPS and EDGEWISEPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " obtain significantly "
+    },
+    {
+      "expression": "\"higher numbers\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than DEPTREE."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1911_04123v2_115"
+  ],
+  "datasets": ["datasets/scigen/1911.04123v2-115.json"]
+}

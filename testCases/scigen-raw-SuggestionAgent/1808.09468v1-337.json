@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "As shown in Table 6, the BOTH model produced the most accurate output (95% correct simple sentences), with the lowest incidence of missed or unsupported statements.  outputs from Aharoni and Goldberg(2018) (AG18), which were 22% accurate."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1808_09468v1_337"
+  ],
+  "datasets": ["datasets/scigen/1808.09468v1-337.json"]
+}

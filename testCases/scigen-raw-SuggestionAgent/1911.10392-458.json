@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "First, we represent utterances by their TF-IDF representations as feature-vectors. We then supply the vector representation of each utterance to a Support Vector Machine (SVM) with a linear kernel for domain and intent identification, and to a Hidden Markov Model (HMM) for slot filling. Second, we encode words in a dialogue utterance by GLoVe, as benchmark pre-trained word embeddings, to include the semantic relationships among words. We compute "
+    },
+    {
+      "expression": "\"the average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of word embeddings in an utterance to represent the utterance by a vector. Table 2 shows the performance of the described models."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1911_10392_458"
+  ],
+  "datasets": ["datasets/scigen/1911.10392-458.json"]
+}

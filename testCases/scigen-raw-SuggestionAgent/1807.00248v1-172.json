@@ -1,0 +1,106 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 compares the accuracy of our model on the test data with "
+    },
+    {
+      "expression": "\"two baselines\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"two state-of-theart\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " comparable systems. The MT baseline simply consists of the accuracy of the mt sentences with respect to the pe ground truth. The other baseline is given by a statistical PE (SPE) system (Simard et al., 2007) chosen by the WMT17 organizers. Table 2 shows that when our model is trained with only the "
+    },
+    {
+      "expression": "\"11K\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " WMT17 official training sentences, it cannot even approach the baselines. Even when the "
+    },
+    {
+      "expression": "\"12K\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " WMT16 sentences are added, its accuracy is still well below that of the baselines. However, when the "
+    },
+    {
+      "expression": "\"500K artificial data\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are added, it reports a major improvement and it outperforms them both significantly. In addition, we have compared our model with two recent systems that have used our same training settings ("
+    },
+    {
+      "expression": "\"500K artificial triplets + 23K manual triplets oversampled 10 times\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), reporting a slightly higher accuracy than both ("
+    },
+    {
+      "expression": "\"1.43 TER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"1.93 BLEU p.p.\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over (Varis and Bojar, 2017) and "
+    },
+    {
+      "expression": "\"0.21 TER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"0.30 BLEU p.p.\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over (B´erard et al., 2017)). Since their models explicitly predicts edit operations rather than post-edited sentences, we speculate that these two tasks are of comparable intrinsic complexity."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1807_00248v1_172"
+  ],
+  "datasets": ["datasets/scigen/1807.00248v1-172.json"]
+}

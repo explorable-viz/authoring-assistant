@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of evaluating these "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models on small ("
+    },
+    {
+      "expression": "\"1M tokens\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and medium-sized ("
+    },
+    {
+      "expression": "\"17M\u2013 57M tokens\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") data sets against Char-CNN for different languages are provided in Table 3. The models demonstrate similar performance on small data, but Char-CNN scales "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on medium-sized data. From the three syllable-aware models, Syl-Concat looks the most advantageous as it demonstrates stable results and has the "
+    },
+    {
+      "expression": "\"least  number of parameters\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Therefore in what follows we will make a more detailed comparison of "
+    },
+    {
+      "expression": "\"SylConcat\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with Char-CNN."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1707_06480v1_31"
+  ],
+  "datasets": ["datasets/scigen/1707.06480v1-31.json"]
+}

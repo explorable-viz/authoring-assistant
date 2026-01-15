@@ -1,0 +1,124 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Finally, for the last setting, we tested the system using the three auto-annotation modes (i.e., "
+    },
+    {
+      "expression": "\"FA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"HFA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ",  and "
+    },
+    {
+      "expression": "\"UFA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") as shown in Table 3. While the auto-annotation mode can allow us to reduce up to "
+    },
+    {
+      "expression": "\"87%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the data pool, this drastic saving also reduces the accuracy of the learned model, achieving, on average, around "
+    },
+    {
+      "expression": "\"81%\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F-Score. Overall, our framework presents a trade off between coverage and annotation cost. The "
+    },
+    {
+      "expression": "\"HFA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " auto-annotation mode shows the benefit, especially in a realistic enterprise setting, when we need to annotate "
+    },
+    {
+      "expression": "\"33%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the data to increase F-Score by only "
+    },
+    {
+      "expression": "\"10%\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (when comparing the on average performance of HFA with ESA) is unreasonable. Table 3 appears to show "
+    },
+    {
+      "expression": "\"FA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " being inferior to EAL in terms of the percentage cut for the Location class, for example. In reality FA reduced sentence annotation by "
+    },
+    {
+      "expression": "\"65%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to reach "
+    },
+    {
+      "expression": "\"0.99\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F-Score. But as our testing criteria demanded that we either reach 1.0 F-Score or finish all sentences from the pool, FA tried to finish the pool without any further performance improvement on the "
+    },
+    {
+      "expression": "\"0.99\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " F-Score."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1806_09751v2_163"
+  ],
+  "datasets": ["datasets/scigen/1806.09751v2-163.json"]
+}

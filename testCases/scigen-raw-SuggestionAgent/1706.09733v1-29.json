@@ -1,0 +1,34 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "As shown in Table 2, sub-word systems "
+    },
+    {
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " full-word systems across the board, despite having "
+    },
+    {
+      "expression": "\"fewer\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " total parameters. Systems built on larger data generally benefit from larger vocabularies while smaller systems perform better with smaller vocabularies."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1706_09733v1_29"
+  ],
+  "datasets": ["datasets/scigen/1706.09733v1-29.json"]
+}

@@ -1,0 +1,85 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We compare the classification accuracy of our model against several other recent methods (Table 3). Our model outperforms "
+    },
+    {
+      "expression": "\"state-of-the-art\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " methods by "
+    },
+    {
+      "expression": "\"1.6%\"",
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on SwDA, the primary dataset for this task, and comes within "
+    },
+    {
+      "expression": "\"0.6%\"",
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on MRDA. It also beats a TF-IDF GloVe baseline (described in Section 5.2) by "
+    },
+    {
+      "expression": "\"16.4%\"",
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"12.2%\"",
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively. The improvements that the model is able to make over the other methods are significant, however, the gains on MRDA still fall short of the state-of-the-art by "
+    },
+    {
+      "expression": "\"0.6%\"",
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1904_02594v2_382"
+  ],
+  "datasets": ["datasets/scigen/1904.02594v2-382.json"]
+}

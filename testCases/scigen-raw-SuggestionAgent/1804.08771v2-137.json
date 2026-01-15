@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 1 demonstrates the effect of computing BLEU scores with different reference tokenizations.  The changes in each column show the effect these different schemes have, as high as 1.8 for one arc, and averaging around 1.0. The biggest is the treatment of case, which is well known, yet many papers are not clear about whether they report cased or case-insensitive BLEU.  The variations in Table 1 are only some of the possible configurations, since there is no limit to the preprocessing that a group could apply."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1804_08771v2_137"
+  ],
+  "datasets": ["datasets/scigen/1804.08771v2-137.json"]
+}

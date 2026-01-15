@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Evidence of this complementarity can be seen in Table 6, which contains a breakdown of system performance by governing dependency relation, for both linear and tree models, on UDS-IH2-dev. In most cases, the L-biLSTM's "
+    },
+    {
+      "expression": "\"mean prediction\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"closer to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the true "
+    },
+    {
+      "expression": "\"mean\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This appears to arise in part because the T-biLSTM is "
+    },
+    {
+      "expression": "\"less confident\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in its predictions \u2013 i.e. its mean prediction tends to be closer to "
+    },
+    {
+      "expression": "\"0\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". This results in the L-biLSTM being too "
+    },
+    {
+      "expression": "\"confident\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in certain cases \u2013 e.g. in the case of the xcomp governing relation, where the T-biLSTM mean prediction is "
+    },
+    {
+      "expression": "\"closer to\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the true mean."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1804_02472v1_174"
+  ],
+  "datasets": ["datasets/scigen/1804.02472v1-174.json"]
+}

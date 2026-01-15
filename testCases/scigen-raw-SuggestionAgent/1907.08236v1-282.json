@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 2 presents the time required to install each tool and complete the first annotation task.  SLATE and YEDDA are comparable in effort, which fits with their common design as simple tools with minimal dependencies. Participants had great difficulty with brat, with only two managing to install it, one just as their time finished."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1907_08236v1_282"
+  ],
+  "datasets": ["datasets/scigen/1907.08236v1-282.json"]
+}

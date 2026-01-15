@@ -1,0 +1,14 @@
+{
+  "testing-variables": {},
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 1 shows the quality of word representations in terms of the correlation between word similarity  scores obtained by the proposed models and word similarity scores defined by humans.  for that can see First, we each task, character only models had significantly worse performance than every other model trained on the same dataset.  Further, bold results show the overall trend that vector gates outperformed the other methods regardless of training dataset.  Additionally, results from the MNLI row in general, and underlined results in particular, show that training on MultiNLI produces word representations better at capturing word similarity.  Exceptions to the previous rule are models evaluated in MEN and RW.  More notably, in the RareWords dataset (Luthe word only, concat, ong et al., 2013), and scalar gate methods performed equally, despite having been trained in different datasets (p > 0.1), and the char only method performed significantly worse when trained in MultiNLI.  The vector gate, however, performed significantly better than its counterpart trained in SNLI."
+  }],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1904_05584v1_243"
+  ],
+  "datasets": ["datasets/scigen/1904.05584v1-243.json"]
+}

@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our results in "
+    },
+    {
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are consistent with these observations, where we see improvements in most tasks, but the "
+    },
+    {
+      "expression": "\"difference is not as significant\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as the probing tasks, except in TREC question classification where increasing K leads to "
+    },
+    {
+      "expression": "\"much better performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1909_03104v2_227"
+  ],
+  "datasets": ["datasets/scigen/1909.03104v2-227.json"]
+}

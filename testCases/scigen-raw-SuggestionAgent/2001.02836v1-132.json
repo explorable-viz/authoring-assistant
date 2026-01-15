@@ -1,0 +1,70 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We also compare "
+    },
+    {
+      "expression": "\"MWE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with pre-trained contextualized word embedding models in Table 4 for this task, with overall performance, embedding dimensions, and training times reported. It is observed that that "
+    },
+    {
+      "expression": "\"MWE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ELMo and achieves "
+    },
+    {
+      "expression": "\"comparable results\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with BERT with "
+    },
+    {
+      "expression": "\"smaller\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embedding dimension and much "
+    },
+    {
+      "expression": "\"less\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training complexities."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2001_02836v1_132"
+  ],
+  "datasets": ["datasets/scigen/2001.02836v1-132.json"]
+}

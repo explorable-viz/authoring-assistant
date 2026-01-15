@@ -1,0 +1,43 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table shows the number of correct predictions, precision, recall, and F1 values with all tools including our method (n-gram auto-sklearn). We can see that the "
+    },
+    {
+      "expression": "\"number of correct predictions\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with our method in all three datasets, and our method achieved the "
+    },
+    {
+      "expression": "\"highest F1 values\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for all three positive, all three negative, and one neutral. In summary, our method using n-gram IDF and automated machine learning (auto-sklearn) largely outperformed existing sentiment analysis tools."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1904_12162v2_276"
+  ],
+  "datasets": ["datasets/scigen/1904.12162v2-276.json"]
+}

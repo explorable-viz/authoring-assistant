@@ -1,0 +1,25 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our annotation pipeline is designed to reject any samples where the model correctly predicts the answer. How reproducible is this when retraining the same model with the same data? To measure this, we evaluate the performance of two models of identical setup for each respective architecture, which differ only in their random initialisation and data order during SGD sampling. We can thus isolate how strongly the resulting dataset depends on the particular random initialisation and order of data points used to train the model. The results of this experiment are shown in "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_2002_00293v1_333"
+  ],
+  "datasets": ["datasets/scigen/2002.00293v1-333.json"]
+}

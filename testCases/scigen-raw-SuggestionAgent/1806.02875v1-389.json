@@ -1,0 +1,79 @@
+{
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The classification of BR and US datasets used the "
+    },
+    {
+      "expression": "\"60\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"49\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " most relevant features, respectively. The test accuracy for the BR and US datasets were "
+    },
+    {
+      "expression": "\"85%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"72%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", respectively, with a baseline score of "
+    },
+    {
+      "expression": "\"50%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The combined dataset used a reduced set of features consisting of an intersection of the most relevant features observed in both BR and US, achieving a test score of "
+    },
+    {
+      "expression": "\"70%\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " using only "
+    },
+    {
+      "expression": "\"18\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " features.  classes. We have shown that these features may be used to classify news articles in a language other than English."
+    }
+  ],
+  "variables": {},
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1806_02875v1_389"
+  ],
+  "datasets": ["datasets/scigen/1806.02875v1-389.json"]
+}

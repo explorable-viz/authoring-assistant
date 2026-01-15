@@ -1,5 +1,6 @@
 package authoringassistant;
 
+import authoringassistant.llm.DummyAgent;
 import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
 import authoringassistant.util.ThrowingConsumer;
@@ -72,7 +73,7 @@ public class Main {
     }
 
     private static boolean isTestMock(String interpretationAgent) {
-        return interpretationAgent.equals("authoringassistant.llm.LLMDummyAgent");
+        return interpretationAgent.equals(DummyAgent.class.getName());
     }
 
     private static void saveProgramToJson(Program program, String outputFolder) throws IOException {

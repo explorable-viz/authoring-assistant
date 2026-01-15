@@ -42,8 +42,15 @@ public class Settings {
         return getInstance().settings;
     }
 
+    // treat claude-token, gemini-token in the same way to allow for local settings?
     public static String getOpenAIToken() {
-        return getSettings().getString("openai-token");
+        String envVar = "OPENAI_API_KEY";
+        final String apiKey = System.getenv(envVar);
+
+        if (apiKey == null || apiKey.isBlank()) {
+            throw new IllegalStateException(STR."\{envVar} not set");
+        }
+        return apiKey;
     }
 
     public static String getOllamaURL() {

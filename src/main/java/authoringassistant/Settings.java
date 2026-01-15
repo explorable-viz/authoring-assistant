@@ -19,7 +19,7 @@ public class Settings {
     private final JSONObject settings;
     private static Map<String, String> commandLineArgs;
 
-    private static Settings getInstance() {
+    public static Settings getInstance() {
         if (instance == null) throw new AssertionError("You have to call init first");
         return instance;
     }
@@ -42,6 +42,25 @@ public class Settings {
         return getInstance().settings;
     }
 
+    // treat claude-token, gemini-token in the same way to allow for local settings?
+    public static String getOpenAIToken() {
+        String envVar = "OPENAI_API_KEY";
+        final String apiKey = System.getenv(envVar);
+
+        if (apiKey == null || apiKey.isBlank()) {
+            throw new IllegalStateException(STR."\{envVar} not set");
+        }
+        return apiKey;
+    }
+
+    public static String getOllamaURL() {
+        return getSettings().getString("ollama-url");
+    }
+
+    public static int getOllamaPort() {
+        return getSettings().getInt("ollama-port");
+    }
+
     public static int getInterpretationAgentLoopbackLimit() {
         return getSettings().getInt("interpretation-agent-loopback-limit");
     }
@@ -54,8 +73,13 @@ public class Settings {
         return getSettings().getFloat("temperature");
     }
 
+    public static int getTimeout() {
+        return getSettings().getInt("timeout");
+    }
+
+    // TODO: rename property now all uses factor through this method
     public static int getNumContextToken() {
-        return getSettings().getInt("num-context-token");
+        return getSettings().getInt("num_ctx");
     }
 
     public static boolean isAddExpectedValue() {

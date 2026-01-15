@@ -1,6 +1,6 @@
 package authoringassistant;
 
-import it.unisa.cluelab.lllm.llm.prompt.PromptList;
+import authoringassistant.llm.prompt.PromptList;
 
 import java.io.IOException;
 import java.nio.file.Files;

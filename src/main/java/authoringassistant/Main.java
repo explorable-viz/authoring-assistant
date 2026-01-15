@@ -1,6 +1,6 @@
 package authoringassistant;
 
-import authoringassistant.llm.DummyAgent;
+import authoringassistant.llm.interpretation.DummyAgent;
 import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
 import authoringassistant.util.ThrowingConsumer;
@@ -93,7 +93,7 @@ public class Main {
 
     private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder)
             throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException,
-            IllegalAccessException, IOException {
+            IllegalAccessException, IOException, InterruptedException {
         SuggestionAgent sa = new SuggestionAgent(suggestionAgentClassName);
         for (Program program : programs) {
             saveProgramToJson(sa.generateTemplateProgram(program), outputFolder);

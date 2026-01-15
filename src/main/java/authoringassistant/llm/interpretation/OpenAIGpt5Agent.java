@@ -1,10 +1,11 @@
-package authoringassistant.llm;
+package authoringassistant.llm.interpretation;
 
+import authoringassistant.Settings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import authoringassistant.paragraph.Expression;
-import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
-import it.unisa.cluelab.lllm.llm.prompt.Prompt;
-import it.unisa.cluelab.lllm.llm.prompt.PromptList;
+import authoringassistant.llm.LLMEvaluatorAgent;
+import authoringassistant.llm.prompt.Prompt;
+import authoringassistant.llm.prompt.PromptList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -24,11 +25,10 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
     private final double temperature;
     private final int ctx;
 
-    public OpenAIGpt5Agent(JSONObject settings) {
-        super(settings);
-        this.token = settings.getString("openai-token");
-        this.temperature = (double)settings.getFloat("temperature");
-        this.ctx = settings.getInt("num_ctx");
+    public OpenAIGpt5Agent(Settings settings) {
+        this.token = settings.getOpenAIToken();
+        this.temperature = settings.getTemperature();
+        this.ctx = settings.getNumContextToken();
         this.httpClient = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(30))
                 .build();
@@ -36,7 +36,7 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
     }
 
     @Override
-    public Expression evaluate(PromptList prompts, String grid) throws IOException {
+    public Expression evaluate(PromptList prompts, String grid) throws IOException, InterruptedException {
         logger.config("Execution of the OpenAIGpt5Agent");
         
         try {
@@ -44,9 +44,9 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
             String response = makeHttpRequest(requestBody);
             return parseResponse(response);
             
-        } catch (Exception e) {
+        } catch (IOException | InterruptedException e) {
             logger.severe("Error calling GPT-5 API: " + e.getMessage());
-            return null;
+            throw e;
         }
     }
     

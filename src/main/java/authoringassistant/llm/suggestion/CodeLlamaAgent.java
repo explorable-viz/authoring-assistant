@@ -1,11 +1,12 @@
 package authoringassistant.llm.suggestion;
 
-import it.unisa.cluelab.lllm.llm.agents.generic.OLLAMAEvaluatorAgent;
+import authoringassistant.Settings;
+import authoringassistant.llm.agents.generic.OllamaEvaluatorAgent;
 import org.json.JSONObject;
 
-public class CodeLlamaAgent extends OLLAMAEvaluatorAgent<String> {
+public class CodeLlamaAgent extends OllamaEvaluatorAgent<String> {
 
-    public CodeLlamaAgent(JSONObject settings) {
+    public CodeLlamaAgent(Settings settings) {
         super(settings);
         setModel("codellama:34b");
     }

@@ -2,14 +2,13 @@
   "temperature": 1.0,
   "timeout": 1800,
   "num_ctx": 4096,
-  "openai-token": "",
   "gemini-token": "",
   "gemini-projectId": "",
   "gemini-location": "",
   "claude-token": "",
   "ollama-url": "http://fire.cluelab.di.unisa.it",
   "ollama-port": 8030,
-  "interpretation-agent-loopback-limit": 3,
-  "suggestion-agent-loopback-limit": 3,
-  "num-test-runs": 3
+  "interpretation-agent-loopback-limit": 2,
+  "suggestion-agent-loopback-limit": 2,
+  "num-test-runs": 1
 }

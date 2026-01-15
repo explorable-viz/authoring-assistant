@@ -1,7 +1,7 @@
 {
   "temperature": 1.0,
   "timeout": 1800,
-  "num-context-token": 4096,
+  "num_ctx": 4096,
   "openai-token": "",
   "gemini-token": "",
   "gemini-projectId": "",

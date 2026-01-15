@@ -5,8 +5,8 @@ import org.json.JSONObject;
 
 public class CodeLLamaAgent extends OLLAMAEvaluatorAgent<String> {
 
-    public CodeLLamaAgent(JSONObject setttings) {
-        super(setttings);
+    public CodeLLamaAgent(JSONObject settings) {
+        super(settings);
         setModel("codellama:34b");
     }
 

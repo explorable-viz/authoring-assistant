@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 
 public class SuggestionDummyAgent extends LLMEvaluatorAgent<String> {
     public static Logger logger = Logger.getLogger(SuggestionDummyAgent.class.getName());
+    
     public SuggestionDummyAgent(JSONObject settings) {
         super(settings);
     }

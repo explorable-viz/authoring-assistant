@@ -3,11 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We calculate these similarity scores for each Real targeted output for the real inputs and the inputs found by the proposed model and report the average value in Table 1. According to the table, we observe that even inputting the real inputs, the similarity scores between the outputs and the target outputs are not "
+      "value": "We calculate these similarity scores for each Real targeted output for the real inputs and the inputs found by the proposed model and report the "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " value in Table 1. According to the table, we observe that even inputting the real inputs, the similarity scores between the outputs and the target outputs are not "
     },
     {
       "expression": "\"high\"",
-      "categories": ["rank"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -25,7 +34,7 @@
     },
     {
       "expression": "\"41.5%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -34,7 +43,7 @@
     },
     {
       "expression": "\"34.0%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {
@@ -43,7 +52,7 @@
     },
     {
       "expression": "\"28.3%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["ratio"],
       "type": "expression"
     },
     {

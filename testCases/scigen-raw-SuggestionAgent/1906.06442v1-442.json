@@ -3,43 +3,28 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "To understand how the model treats the tag and what biases it learns from the data, we investigate the "
+      "value": "To understand how the model treats the tag and what biases it learns from the data, we investigate the entropy of the attention probability distribution, as well as the attention captured by the tag. For the tagged variants, there is "
     },
     {
-      "expression": "\"entropy\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"heavy\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the attention probability distribution, as well as the attention captured by the tag.  For the tagged variants, there is heavy attention on the tag when it is present (Table 6), indicating that the model relies on the information signalled by the tag.  Table 6 reports the "
+      "value": " attention on the tag when it is present (Table 6), indicating that the model relies on the information signalled by the tag. Table 6 reports the average length-normalized Shannon entropy: The entropy of the attention probabilities from the model trained on BT data is the "
     },
     {
-      "expression": "\"average\"",
-      "categories": ["average"],
+      "expression": "\"clear outlier\"",
+      "categories": [
+        "comparison",
+        "rank"
+      ],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " length-normalized "
-    },
-    {
-      "expression": "\"Shannon entropy\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ":  The "
-    },
-    {
-      "expression": "\"entropy\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the attention probabilities from the model trained on BT data is the clear outlier."
+      "value": "."
     }
   ],
   "variables": {},

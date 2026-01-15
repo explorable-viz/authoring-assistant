@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": ", we report the coefficient of determination (r2) for each global metric and dataset. Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is "
+      "value": ", we report the coefficient of determination ("
+    },
+    {
+      "expression": "\"r2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") for each global metric and dataset. Note that global metrics do correlate somewhat with human judgment of local topic quality. However, the correlation is "
     },
     {
       "expression": "\"moderate to poor\"",

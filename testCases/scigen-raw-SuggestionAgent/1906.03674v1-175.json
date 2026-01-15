@@ -1,9 +1,29 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "we augment our models with existing linguistic and affective knowledge from human experts. Specifically, we leverage lexica containing psycho-linguistic, sentiment and emotion annotations. the word's annotations from the lexicons shown in Table 1. As prior knowledge, we leverage the lexicons presented in Table 1. We selected widely-used lexicons that represent different facets of affective and psycho-linguistic features, namely;"
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "we augment our models with existing linguistic and affective knowledge from human experts. Specifically, we leverage lexica containing psycho-linguistic, sentiment and emotion annotations. the word's annotations from the lexicons shown in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". As prior knowledge, we leverage the lexicons presented in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We selected widely-used lexicons that represent different facets of affective and psycho-linguistic features, namely;"
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

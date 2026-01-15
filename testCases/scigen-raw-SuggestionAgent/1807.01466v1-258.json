@@ -1,9 +1,74 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "The results of unimodal sentiment prediction experiments are shown in Table 2.  The verbal models have the best performance here,  On each modality, the best performance is achieved by a multi-task learning model.  All unimodal models have significantly different performance. p = 0.009 for S+P and S+P+I Visual models, p << 0.001 for Visual and Vocal S+I models.  In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the S model, the S+P model has increased focus on the polarity of sentiment, while the S+I model has increased focus on the intensity of sentiment. On the verbal modality, the S+P model achieved the best performance, while on the visual modality the S+I model achieved the best performance.  For the vocal modality, the S+P+I model achieved the best performance, and the S+P model yielded improved performance over that of the S model."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results of unimodal sentiment prediction experiments are shown in Table 2. The verbal models have "
+    },
+    {
+      "expression": "\"the best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " here, On each modality, the "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is achieved by a multi-task learning model. All unimodal models have significantly different performance. p = 0.009 for S+P and S+P+I Visual models, p << 0.001 for Visual and Vocal S+I models. In multi-task learning, the main task gains additional information from the auxillary tasks. Compared to the S model, the S+P model has "
+    },
+    {
+      "expression": "\"increased focus\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the polarity of sentiment, while the S+I model has "
+    },
+    {
+      "expression": "\"increased focus\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the intensity of sentiment. On the verbal modality, the S+P model achieved "
+    },
+    {
+      "expression": "\"the best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", while on the visual modality the S+I model achieved "
+    },
+    {
+      "expression": "\"the best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". For the vocal modality, the S+P+I model achieved "
+    },
+    {
+      "expression": "\"the best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and the S+P model yielded improved performance over that of the S model."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

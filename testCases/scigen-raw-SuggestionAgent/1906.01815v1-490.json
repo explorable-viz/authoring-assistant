@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " the unimodal counterparts. Unlike Table 2, the audio channel plays a more important role, and it is slightly improved by adding text.  In multiple evaluations, the multimodal variants were shown to significantly "
+      "value": " the unimodal counterparts. Unlike Table 2, the audio channel plays a more important role, and it is slightly "
+    },
+    {
+      "expression": "\"improved\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " by adding text. In multiple evaluations, the multimodal variants were shown to significantly "
     },
     {
       "expression": "\"outperform\"",
@@ -25,7 +34,7 @@
     },
     {
       "expression": "\"12.9%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

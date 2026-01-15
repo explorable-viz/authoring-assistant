@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Results for different values of "
-    },
-    {
-      "expression": "\"p\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are given in Table 9. All models have about the same "
+      "value": "Results for different values of p are given in Table 9. All models have about the same "
     },
     {
       "expression": "\"BLEU\"",

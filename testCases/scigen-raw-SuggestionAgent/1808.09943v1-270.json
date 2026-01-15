@@ -1,20 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Table 2 clearly shows the characterlevel systems "
-    },
-    {
-      "expression": "\"outperforming\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " BPE for all language pairs."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 2 clearly shows the characterlevel systems outperforming BPE for all language pairs."
+  }],
   "variables": {},
   "imports": [
     "scigen",

@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We gradually add feature groups to the Frequency baseline. The combination of "
+      "value": "We gradually add feature groups to the "
     },
     {
-      "expression": "\"Location (sentence location)\"",
+      "expression": "\"Frequency\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": " baseline. The combination of "
+    },
+    {
+      "expression": "\"Location\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (sentence location) and "
     },
     {
       "expression": "\"Frequency\"",
@@ -30,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " of them are statistically significant over Frequency+Location. To understand the contribution of individual features, we conduct an ablation study of various feature settings in Table 4."
+      "value": " of them are statistically significant over "
+    },
+    {
+      "expression": "\"Frequency+Location\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". To understand the contribution of individual features, we conduct an ablation study of various feature settings in Table 4."
     }
   ],
   "variables": {},

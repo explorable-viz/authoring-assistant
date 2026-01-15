@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 6 shows that the C-LSTM model performs well on the scientific embeddings, but consistently "
+      "value": "Table 6 shows that the C-LSTM model performs "
+    },
+    {
+      "expression": "\"well\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the scientific embeddings, but consistently "
     },
     {
       "expression": "\"worse\"",

@@ -12,34 +12,16 @@
     },
     {
       "type": "literal",
-      "value": ", "
+      "value": ", BiLSTM gives "
     },
     {
-      "expression": "\"BiLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " gives "
-    },
-    {
-      "expression": "\"significantly better accuracies\"",
+      "expression": "\"significantly better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared to "
-    },
-    {
-      "expression": "\"uni-directional LSTM2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", with the training time per epoch growing from "
+      "value": " accuracies compared to uni-directional LSTM2, with the training time per epoch growing from "
     },
     {
       "expression": "\"67 seconds\"",
@@ -66,29 +48,11 @@
     },
     {
       "type": "literal",
-      "value": ". "
-    },
-    {
-      "expression": "\"3 layers\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of stacked BiLSTM does not further improve the results. In contrast, "
-    },
-    {
-      "expression": "\"S-LSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " gives a development result of "
+      "value": ". 3 layers of stacked BiLSTM does not further improve the results. In contrast, S-LSTM gives a development result of "
     },
     {
       "expression": "\"82.64%\"",
-      "categories": ["min-max"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -120,7 +84,7 @@
     },
     {
       "type": "literal",
-      "value": ". We additionally make comparisons with stacked CNNs and hierarchical attention ("
+      "value": ".  We additionally make comparisons with stacked CNNs and hierarchical attention ("
     },
     {
       "expression": "\"Vaswani et al., 2017\"",
@@ -138,7 +102,25 @@
     },
     {
       "type": "literal",
-      "value": " (the CNN and Transformer rows), "
+      "value": " (the "
+    },
+    {
+      "expression": "\"CNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rows),  "
     },
     {
       "expression": "\"CNN\"",
@@ -160,48 +142,33 @@
     },
     {
       "expression": "\"81.46%\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", which is also "
-    },
-    {
-      "expression": "\"the lowest\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. The "
-    },
-    {
-      "expression": "\"best performance\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. "
-    },
-    {
-      "expression": "\"S-LSTM\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " gives "
+      "value": ", which is also  the "
     },
     {
-      "expression": "\"significantly better accuracies\"",
+      "expression": "\"lowest\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " compared with BiLSTM, hierarchical attention and S-LSTM. The best performance of hierarchical attention is between single-layer and two-layer BiLSTMs in terms of both accuracy and efficiency. S-LSTM gives "
+    },
+    {
+      "expression": "\"significantly better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " compared with both CNN and hierarchical attention. "
+      "value": " accuracies compared with both CNN and hierarchical attention.  "
     },
     {
       "expression": "\"Table 3\"",
@@ -210,7 +177,16 @@
     },
     {
       "type": "literal",
-      "value": " additionally shows the results of BiLSTM and S-LSTM when external attention is used Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still outperforming BiLSTM significantly."
+      "value": " additionally shows the results of BiLSTM and S-LSTM when external attention is used  Attention leads to improved accuracies for both BiLSTM and S-LSTM in classification, with S-LSTM still outperforming BiLSTM "
+    },
+    {
+      "expression": "\"significantly\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

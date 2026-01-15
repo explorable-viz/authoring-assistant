@@ -16,7 +16,10 @@
     },
     {
       "expression": "\"3.4%\"",
-      "categories": ["data-retrieval"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
@@ -25,7 +28,10 @@
     },
     {
       "expression": "\"3.3%\"",
-      "categories": ["data-retrieval"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {

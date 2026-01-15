@@ -3,10 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "From Table 3 we can see that all models have difficulties with distant relations that cross sentence or clause boundaries (CCR).  Furthermore, arguments that are frequent in the supervised data (> "
+      "value": "From Table 3 we can see that all models have difficulties with distant relations that cross sentence or clause boundaries (CCR).  Furthermore, arguments that are frequent in the supervised data ("
     },
     {
-      "expression": "\"250\"",
+      "expression": "\"> 250\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -15,16 +15,16 @@
       "value": ") are a dominant error category.  Furthermore it can be noticed that RC+SG has "
     },
     {
-      "expression": "\"less\"",
+      "expression": "\"less errors\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " errors for infrequent arguments (< "
+      "value": " for infrequent arguments ("
     },
     {
-      "expression": "\"10\"",
+      "expression": "\"< 10\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

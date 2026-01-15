@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 3: We show the results of applying LA module to the transformer model trained on the "
+      "value": "Table 3: We show the results of applying LA module to the transformer model trained on the WMT14 dataset. We find that the LA module slightly "
     },
     {
-      "expression": "\"WMT14\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"improves\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " dataset. We find that the LA module slightly improves the original model but harms the performance when the LA time step is "
+      "value": " the original model but "
+    },
+    {
+      "expression": "\"harms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the performance when the LA time step is "
     },
     {
       "expression": "\"5\"",

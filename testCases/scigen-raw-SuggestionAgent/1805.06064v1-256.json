@@ -12,23 +12,11 @@
     },
     {
       "type": "literal",
-      "value": " iterations and the experimental results ("
-    },
-    {
-      "expression": "\"Table 5\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") showed that the "
+      "value": " iterations and the experimental results (Table 5) showed that the "
     },
     {
       "expression": "\"second\"",
-      "categories": [
-        "data-retrieval",
-        "rank"
-      ],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -37,10 +25,7 @@
     },
     {
       "expression": "\"best\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
+      "categories": ["rank"],
       "type": "expression"
     },
     {

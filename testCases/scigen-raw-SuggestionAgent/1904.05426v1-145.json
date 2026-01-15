@@ -12,100 +12,46 @@
     },
     {
       "type": "literal",
-      "value": " with that of a vanilla supervised neural model.11 Table 3 shows "
+      "value": " with that of a vanilla supervised neural model.11 Table 3 shows precision, recall, and F1 scores for the NOUN tag. Even though CIPHER-AVG achieved mixed results (mid to low accuracy), the model robustly achieves mid-range "
     },
     {
-      "expression": "\"precision, recall, and F1 scores\"",
+      "expression": "\"performance\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for the "
+      "value": " according to F1-score for all CLs. The results are even more optimistic in terms of recall for "
     },
     {
-      "expression": "\"NOUN tag\"",
+      "expression": "\"English\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".  Even though CIPHER-AVG achieved "
+      "value": " and "
     },
     {
-      "expression": "\"mixed results (mid to low accuracy)\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", the model robustly achieves "
-    },
-    {
-      "expression": "\"mid-range performance\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " according to "
-    },
-    {
-      "expression": "\"F1-score\"",
+      "expression": "\"French\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for all "
+      "value": ", and in terms of precision for "
     },
     {
-      "expression": "\"CLs\"",
+      "expression": "\"Farsi\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".  The results are even more "
+      "value": " and "
     },
     {
-      "expression": "\"optimistic\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in terms of "
-    },
-    {
-      "expression": "\"recall\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
-    },
-    {
-      "expression": "\"English and French\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", and in terms of "
-    },
-    {
-      "expression": "\"precision\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
-    },
-    {
-      "expression": "\"Farsi and Swahili\"",
+      "expression": "\"Swahili\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

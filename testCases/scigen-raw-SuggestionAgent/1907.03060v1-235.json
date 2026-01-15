@@ -12,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " achieved by several reasonable combinations of six-way pseudo-parallel data. We observed that the use of all six-way pseudo-parallel data (#10) significantly improved the base model for all the translation directions, except En→Ru. A translation direction often benefited when the pseudo-parallel data for that specific direction was used.  However, the resulting "
+      "value": " achieved by several reasonable combinations of six-way pseudo-parallel data. We observed that the use of all six-way pseudo-parallel data (#10) significantly improved the base model for all the translation directions, except En→Ru. A translation direction often benefited when the "
     },
     {
-      "expression": "\"BLEU scores\"",
+      "expression": "\"pseudo-parallel data\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for Ja→Ru and Ru→Ja tasks do not exceed "
+      "value": " for that specific direction was used.  However, the resulting BLEU scores for Ja→Ru and Ru→Ja tasks do not exceed "
     },
     {
       "expression": "\"10 BLEU points\"",
@@ -39,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"BLEU scores\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than (b3) in Table 5, a weak baseline without using any monolingual data, and #10 in Table 8, a strong baseline established with monolingual data."
+      "value": " BLEU scores than (b3) in Table 5, a weak baseline without using any monolingual data, and #10 in Table 8, a strong baseline established with monolingual data."
     }
   ],
   "variables": {},

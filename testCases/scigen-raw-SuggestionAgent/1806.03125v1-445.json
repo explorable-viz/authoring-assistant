@@ -3,43 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We used the "
-    },
-    {
-      "expression": "\"Reuters-8\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dataset without stop words from "
-    },
-    {
-      "expression": "\"aiming at single-label classification\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", which is a preprocessed format of the Reuters-21578"
-    },
-    {
-      "expression": "\"2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Words in the texts were considered as they appeared, without performing stemming or typo correction. This database has "
-    },
-    {
-      "expression": "\"eight different classes\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with the number of samples varying from "
+      "value": "We used the Reuters-8 dataset without stop words from aiming at single-label classification, which is a preprocessed format of the Reuters-215782. Words in the texts were considered as they appeared, without performing stemming or typo correction. This database has eight different classes with the number of samples varying from "
     },
     {
       "expression": "\"51\"",

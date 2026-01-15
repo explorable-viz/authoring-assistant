@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are shown in Table 1. It shows that the proposed HRLCE model performs the "
+      "value": "The results are shown in Table 1. It shows that the proposed "
+    },
+    {
+      "expression": "\"HRLCE model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performs the "
     },
     {
       "expression": "\"best\"",
@@ -15,16 +24,34 @@
     },
     {
       "type": "literal",
-      "value": ". The performance of SLD and SL are very close to each other, on the dev set, SLD performs "
+      "value": ". The performance of "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"SLD and SL\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are very close to each other, on the dev set, "
+    },
+    {
+      "expression": "\"SLD performs better than SL\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than SL but they have almost the same overall scores on the test set. The MacroF1 scores of each emotion category are very different from each other: the classification accuracy for emotion Sad is the "
+      "value": " but they have almost the same overall scores on the test set. The MacroF1 scores of each emotion category are very different from each other: the classification accuracy for emotion "
+    },
+    {
+      "expression": "\"Sad\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is the "
     },
     {
       "expression": "\"highest\"",
@@ -36,28 +63,25 @@
     },
     {
       "type": "literal",
-      "value": " in most of the cases, while the emotion Happy is the "
+      "value": " in most of the cases, while the emotion "
     },
     {
-      "expression": "\"least accurately classified\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
+      "expression": "\"Happy\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " by all the models. We also noticed that the performance on the dev set is generally slightly "
+      "value": " is the least accurately classified by all the models. We also noticed that the performance on the dev set is generally slightly "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"better than\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than that on the test set."
+      "value": " that on the test set."
     }
   ],
   "variables": {},

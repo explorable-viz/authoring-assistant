@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "To find out whether this was the case we replaced the LSTM by a Variational RHN (Zilly et al., 2017), and that resulted in a significant reduction of "
+      "value": "To find out whether this was the case we replaced the LSTM by a Variational RHN (Zilly et al., 2017), and that resulted in a "
     },
     {
-      "expression": "\"perplexities\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"significant reduction\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on PTB for both Char-CNN and Syl-Concat (Table 5). Moreover, increasing dLM from "
+      "value": " of perplexities on PTB for both Char-CNN and Syl-Concat (Table 5). Moreover, increasing dLM from "
     },
     {
       "expression": "\"439\"",
@@ -33,13 +33,13 @@
       "value": " did result in "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"better performance\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance for Syl-Concat."
+      "value": " for Syl-Concat."
     }
   ],
   "variables": {},

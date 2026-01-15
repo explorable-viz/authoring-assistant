@@ -3,20 +3,23 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We compare the classification accuracy of our model against several other recent methods (Table 3). Our model "
+      "value": "We compare the classification accuracy of our model against several other recent methods (Table 3). Our model outperforms "
     },
     {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
+      "expression": "\"state-of-the-art\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " state-of-the-art methods by "
+      "value": " methods by "
     },
     {
       "expression": "\"1.6%\"",
-      "categories": ["difference"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
@@ -25,25 +28,22 @@
     },
     {
       "expression": "\"0.6%\"",
-      "categories": ["difference"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on MRDA. It also "
-    },
-    {
-      "expression": "\"beats\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " a TF-IDF GloVe baseline (described in Section 5.2) by "
+      "value": " on MRDA. It also beats a TF-IDF GloVe baseline (described in Section 5.2) by "
     },
     {
       "expression": "\"16.4%\"",
-      "categories": ["difference"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
@@ -52,7 +52,10 @@
     },
     {
       "expression": "\"12.2%\"",
-      "categories": ["difference"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
@@ -61,7 +64,10 @@
     },
     {
       "expression": "\"0.6%\"",
-      "categories": ["difference"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {

@@ -33,13 +33,13 @@
       "value": " generally contain "
     },
     {
-      "expression": "\"more edges\"",
+      "expression": "\"more\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than those from "
+      "value": " edges than those from "
     },
     {
       "expression": "\"KBESTEISNER\"",
@@ -75,16 +75,7 @@
     },
     {
       "type": "literal",
-      "value": " being connected with γ ≤ "
-    },
-    {
-      "expression": "\"0.2\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " being connected with γ ≤ 0.2."
     }
   ],
   "variables": {},

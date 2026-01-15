@@ -1,29 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "The named entity retrieval strategy boosts the evidence retrieval rate to "
-    },
-    {
-      "expression": "\"80.8%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ",  The film retrievals raise evidence retrieval to "
-    },
-    {
-      "expression": "\"81.2%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "The named entity retrieval strategy boosts the evidence retrieval rate to 80.8%,  The film retrievals raise evidence retrieval to 81.2%."
+  }],
   "variables": {},
   "imports": [
     "scigen",

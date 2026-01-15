@@ -3,34 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The BLEU scores of each decoding method are presented in Table 7.  The "
+      "value": "The BLEU scores of each decoding method are presented in Table 7.  The noised decode \u2013 decoding newstest sentences with the NoisedBT model after noising the source \u2013 yields "
     },
     {
-      "expression": "\"noised\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"poor\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " decode \u2013 decoding newstest sentences with the "
-    },
-    {
-      "expression": "\"NoisedBT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " model after noising the source \u2013 yields poor performance.  The "
-    },
-    {
-      "expression": "\"tagged\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " decode, however, yields only "
+      "value": " performance.  The tagged decode, however, yields only "
     },
     {
       "expression": "\"somewhat lower\"",
@@ -39,28 +21,19 @@
     },
     {
       "type": "literal",
-      "value": " performance than the "
+      "value": " performance than the standard decode on the same model ("
     },
     {
-      "expression": "\"standard\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " decode on the same model ("
-    },
-    {
-      "expression": "\"-2.9BLEU\"",
+      "expression": "\"-2.9BLEU on average\"",
       "categories": [
-        "data-retrieval",
-        "difference"
+        "difference",
+        "average"
       ],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on average)."
+      "value": ")."
     }
   ],
   "variables": {},

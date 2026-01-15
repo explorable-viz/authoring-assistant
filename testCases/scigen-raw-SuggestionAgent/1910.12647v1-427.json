@@ -12,7 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " the test set results for HUBERT (Transformer) and BERT. The results are obtained by submitting models to the GLUE evaluation server. The results are presented in Table 5."
+      "value": " the test set results for "
+    },
+    {
+      "expression": "\"HUBERT (Transformer)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The results are obtained by submitting models to the GLUE evaluation server. The results are presented in Table 5."
     }
   ],
   "variables": {},

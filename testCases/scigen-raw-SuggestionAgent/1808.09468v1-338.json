@@ -15,7 +15,7 @@
       "value": " by reporting scores on its test set in Table 5. Our "
     },
     {
-      "expression": "\"best performance\"",
+      "expression": "\"best\"",
       "categories": [
         "min-max",
         "rank"
@@ -24,7 +24,7 @@
     },
     {
       "type": "literal",
-      "value": " in BLEU is again obtained by combining the proposed WikiSplit dataset with the downsampled WebSplit, yielding a "
+      "value": " performance in BLEU is again obtained by combining the proposed WikiSplit dataset with the downsampled WebSplit, yielding a "
     },
     {
       "expression": "\"32 point improvement\"",

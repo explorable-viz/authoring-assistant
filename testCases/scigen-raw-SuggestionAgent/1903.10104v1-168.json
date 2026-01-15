@@ -1,9 +1,38 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Table 4 shows that BiLSTM-CRF outperforms other methods in F1. More importantly, the perfor  mance on reviews is lower than those reached on existing datasets, e.g., an F1 of 86.7 is obtained by CRF for essays (Stab and Gurevych, 2017)."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 4 shows that BiLSTM-CRF "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " other methods in F1. More importantly, the performance on reviews is "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than those reached on existing datasets, e.g., an F1 of "
+    },
+    {
+      "expression": "\"86.7\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is obtained by CRF for essays (Stab and Gurevych, 2017)."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

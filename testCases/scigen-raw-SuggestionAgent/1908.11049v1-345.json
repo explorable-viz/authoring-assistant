@@ -3,19 +3,28 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We use Amazon Mechanical Turk to label around "
+      "value": "We use Amazon Mechanical Turk to label around 13,000 potentially derogatory tweets  Table 1 compares different labelsets that exist in the literature. For instance, Waseem and Hovy (2016) use "
     },
     {
-      "expression": "\"13,000\"",
+      "expression": "\"racist\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " potentially derogatory tweets  Table 1 compares different labelsets that exist in the literature. For instance, Waseem and Hovy (2016) use "
+      "value": ", "
     },
     {
-      "expression": "\"racist, sexist, and normal\"",
+      "expression": "\"sexist\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"normal\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -24,7 +33,25 @@
       "value": " as labels; Davidson et al. (2017) label their data as "
     },
     {
-      "expression": "\"hateful, offensive (but not hateful), and neither\"",
+      "expression": "\"hateful\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"offensive (but not hateful)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"neither\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -33,7 +60,16 @@
       "value": ", while ElSherief et al. (2018) present an English dataset that records the target category based on which hate speech discriminates against people, such as ethnicity, gender, or sexual orientation and ask human annotators to classify the tweets as "
     },
     {
-      "expression": "\"hate and non hate\"",
+      "expression": "\"hate\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"non hate\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -42,7 +78,61 @@
       "value": ". Founta et al. (2018) label their data as "
     },
     {
-      "expression": "\"offensive, abusive, hateful, aggressive, cyberbullying, spam, and normal\"",
+      "expression": "\"offensive\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"abusive\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"hateful\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"aggressive\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"cyberbullying\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"spam\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", and "
+    },
+    {
+      "expression": "\"normal\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

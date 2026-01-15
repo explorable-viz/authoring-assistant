@@ -17,8 +17,8 @@
     {
       "expression": "\"0.5 BLEU\"",
       "categories": [
-        "data-retrieval",
-        "difference"
+        "difference",
+        "data-retrieval"
       ],
       "type": "expression"
     },

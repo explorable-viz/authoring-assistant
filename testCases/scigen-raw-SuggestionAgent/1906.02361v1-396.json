@@ -16,7 +16,7 @@
     },
     {
       "expression": "\"72%\"",
-      "categories": ["average"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -25,7 +25,7 @@
     },
     {
       "expression": "\"90%\"",
-      "categories": ["min-max"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

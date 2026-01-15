@@ -42,13 +42,13 @@
       "value": " test data respectively. While the cross-lingual performance is "
     },
     {
-      "expression": "\"expectedly lower\"",
+      "expression": "\"expectedly lower than\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than the monolingual performance, it "
+      "value": " the monolingual performance, it "
     },
     {
       "expression": "\"outperforms\"",

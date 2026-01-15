@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Basic statistics such as corpus sizes, frequency of various semantic annotations, and information about the length of the extracted triples of OPIEC and its subcorpora are shown in Tab. 2.  Roughly "
+      "value": "Basic statistics such as corpus sizes, frequency of various semantic annotations, and information about the length of the extracted triples of OPIEC and its subcorpora are shown in "
+    },
+    {
+      "expression": "\"Tab. 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Roughly "
     },
     {
       "expression": "\"30%\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ") in OPIEC are clean according to the above constraints. Table 2 shows that clean triples are generally shorter on average and tend to have a higher confidence score than the full set of triples in OPIEC.  About "
+      "value": ") in OPIEC are clean according to the above constraints. "
+    },
+    {
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows that clean triples are generally shorter on average and tend to have a higher confidence score than the full set of triples in OPIEC. About "
     },
     {
       "expression": "\"49%\"",
@@ -30,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " of all triples in OPIEC contain some sort of semantic annotation (cf. Tab. 2); in OPIEC-Linked, the fraction increases to "
+      "value": " of all triples in OPIEC contain some sort of semantic annotation (cf. "
+    },
+    {
+      "expression": "\"Tab. 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "); in OPIEC-Linked, the fraction increases to "
     },
     {
       "expression": "\"58%\"",

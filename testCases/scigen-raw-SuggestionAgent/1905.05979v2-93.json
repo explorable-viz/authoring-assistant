@@ -3,34 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For ellipsis, both models improve substantially over the baseline ("
+      "value": "For ellipsis, "
     },
     {
-      "expression": "\"by 19-51 percentage points\"",
+      "expression": "\"both models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improve "
+    },
+    {
+      "expression": "\"substantially\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the baseline (by "
+    },
+    {
+      "expression": "\"19-51 percentage points\"",
       "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "), with "
-    },
-    {
-      "expression": "\"concat\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " stronger for inflection tasks and "
-    },
-    {
-      "expression": "\"CADec\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " stronger for VPellipsis."
+      "value": "), with concat stronger for inflection tasks and CADec stronger for VPellipsis."
     }
   ],
   "variables": {},

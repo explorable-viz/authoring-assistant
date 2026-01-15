@@ -6,13 +6,31 @@
       "value": "Table 2 lists the importance of each variable in the global model and in the three single domain models, where the variable with the "
     },
     {
-      "expression": "\"highest weight\"",
-      "categories": ["min-max"],
+      "expression": "\"highest\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is ranked 1. The lists are relatively stable, with some marked differences, such as the importance of the gloss length and the number of partOf relations for "
+      "value": " weight is ranked 1. The lists are relatively stable, with some marked differences, such as the importance of the "
+    },
+    {
+      "expression": "\"gloss length\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"number of partOf relations\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
     },
     {
       "expression": "\"music\"",

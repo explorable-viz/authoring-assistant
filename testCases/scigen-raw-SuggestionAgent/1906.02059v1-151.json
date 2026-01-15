@@ -16,7 +16,10 @@
     },
     {
       "expression": "\"10%\"",
-      "categories": ["data-retrieval"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
@@ -25,7 +28,10 @@
     },
     {
       "expression": "\"3%\"",
-      "categories": ["data-retrieval"],
+      "categories": [
+        "difference",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
@@ -34,7 +40,7 @@
     },
     {
       "expression": "\"17%\"",
-      "categories": ["comparison"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -57,16 +63,7 @@
     },
     {
       "type": "literal",
-      "value": "), indicating a moderate positive correlation (> "
-    },
-    {
-      "expression": "\"0.5\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "), which is not the case for the rest of the methods."
+      "value": "), indicating a moderate positive correlation (> 0.5), which is not the case for the rest of the methods."
     }
   ],
   "variables": {},

@@ -15,7 +15,7 @@
       "value": ", and (2) an existing matching system  with both pre-trained embeddings ("
     },
     {
-      "expression": "\"SeepP\"",
+      "expression": "\"SeepP \"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -43,7 +43,7 @@
     },
     {
       "expression": "\"Fmeasure\"",
-      "categories": ["average"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -69,7 +69,16 @@
     },
     {
       "type": "literal",
-      "value": " because of the high overlap between its datasets. The baseline improves when it is executed with EmbDI local embeddings, showing their superior quality w.r.t. pre-trained ones. The Basic local embeddings lead to "
+      "value": " because of the high overlap between its datasets. The baseline improves when it is executed with EmbDI local embeddings, showing their superior quality w.r.t. pre-trained ones. The "
+    },
+    {
+      "expression": "\"Basic\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " local embeddings lead to "
     },
     {
       "expression": "\"0 attribute matches\"",
@@ -78,16 +87,25 @@
     },
     {
       "type": "literal",
-      "value": ".  We also observe that results for SeepPreTrain depend on the quality of the original attribute labels. If we replace the original (expressive and correct) labels with synthetic ones, Seep-PreTrain obtains F-measure values between "
+      "value": ".  We also observe that results for "
     },
     {
-      "expression": "\".30 and .38\"",
-      "categories": ["average"],
+      "expression": "\"SeepPreTrain\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Local embeddings from EmbDI do not depend on the presence of the attribute labels.  Similarly, decreasing the size of the walks to "
+      "value": " depend on the quality of the original attribute labels. If we replace the original (expressive and correct) labels with synthetic ones, "
+    },
+    {
+      "expression": "\"Seep-PreTrain\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " obtains F-measure values between .30 and .38. Local embeddings from EmbDI do not depend on the presence of the attribute labels.  Similarly, decreasing the size of the walks to "
     },
     {
       "expression": "\"5\"",
@@ -96,19 +114,16 @@
     },
     {
       "type": "literal",
-      "value": " for the SM task raises the F-measure for RefL to "
+      "value": " for the SM task raises the F-measure for "
     },
     {
-      "expression": "\".92 (from .77)\"",
-      "categories": [
-        "difference",
-        "average"
-      ],
+      "expression": "\"RefL\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " to .92 (from .77)."
     }
   ],
   "variables": {},

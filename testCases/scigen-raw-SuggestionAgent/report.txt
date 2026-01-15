@@ -1,22 +1,22 @@
 
 ============================================================
-Test Cases Folder: testcases/scigen-raw-SuggestionAgent
+Original Test Cases Folder: testCases/scigen-raw
 ============================================================
 Total JSON files processed: 492
-Total files with expressions: 319
+Total files with expressions: 329
 
 ============================================================
 Distribution of Expressions per Category:
 ============================================================
 
-  data-retrieval           :  271 expressions ( 85.0%)
-  comparison               :  185 expressions ( 58.0%)
-  rank                     :  103 expressions ( 32.3%)
-  difference               :   46 expressions ( 14.4%)
-  min-max                  :   43 expressions ( 13.5%)
-  average                  :   20 expressions (  6.3%)
-  ratio                    :    9 expressions (  2.8%)
-  sum                      :    2 expressions (  0.6%)
+  data-retrieval           :  276 expressions ( 83.9%)
+  comparison               :  190 expressions ( 57.8%)
+  rank                     :  105 expressions ( 31.9%)
+  min-max                  :   53 expressions ( 16.1%)
+  difference               :   45 expressions ( 13.7%)
+  average                  :   32 expressions (  9.7%)
+  ratio                    :   10 expressions (  3.0%)
+  sum                      :    1 expressions (  0.3%)
 
 ============================================================
 Total unique categories: 8
@@ -26,13 +26,14 @@ Total unique categories: 8
 Expressions by Number of Categories:
 ============================================================
 
-  1 category    :   97 expressions ( 30.4%)
-  2 categories  :  122 expressions ( 38.2%)
-  3 categories  :   70 expressions ( 21.9%)
-  4 categories  :   22 expressions (  6.9%)
-  5 categories  :    8 expressions (  2.5%)
+  1 category    :  103 expressions ( 31.3%)
+  2 categories  :  119 expressions ( 36.2%)
+  3 categories  :   68 expressions ( 20.7%)
+  4 categories  :   30 expressions (  9.1%)
+  5 categories  :    7 expressions (  2.1%)
+  6 categories  :    2 expressions (  0.6%)
 
-  Total with multiple categories:  222 expressions ( 69.6%)
+  Total with multiple categories:  226 expressions ( 68.7%)
 
 ============================================================
 
@@ -41,5 +42,20 @@ Expressions by Number of Categories:
 Total unique categories: 8
 ============================================================
 
+============================================================
+Loopback Statistics:
+============================================================
 
-Execution time: 0 seconds
+Total programs: 492
+Average attempts: 1.73
+Max attempts: 3
+Programs reaching limit (3): 161 (32.7%)
+
+Distribution by attempts:
+  1 attempt : 296 programs (60.2%)
+  2 attempts: 35 programs (7.1%)
+  3 attempts: 161 programs (32.7%)
+
+============================================================
+
+Execution time: 8455 seconds

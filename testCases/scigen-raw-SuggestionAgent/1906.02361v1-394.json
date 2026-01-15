@@ -34,7 +34,7 @@
     },
     {
       "expression": "\"90%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

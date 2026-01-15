@@ -6,13 +6,13 @@
       "value": "The experiment results are presented in Table 2. The "
     },
     {
-      "expression": "\"best performances\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of our configurations are highlighted in red, which are "
+      "value": " performances of our configurations are highlighted in red, which are "
     },
     {
       "expression": "\"8.37\"",
@@ -57,10 +57,28 @@
     },
     {
       "type": "literal",
-      "value": " under word level. From these results we can see that our model outperforms VDCNN on AG News for the official error rate, and is very close to VDCNN's performance on Sogou News. If we set VCDNN with the same input sequence length (256) in word-level, the performance of our proposed model is obviously "
+      "value": " under word level. From these results we can see that our model "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " VDCNN on AG News for the official error rate, and is very close to VDCNN's performance on Sogou News. If we set VCDNN with the same input sequence length ("
+    },
+    {
+      "expression": "\"256\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") in word-level, the performance of our proposed model is "
+    },
+    {
+      "expression": "\"obviously better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -75,7 +93,16 @@
     },
     {
       "type": "literal",
-      "value": " than using the abstract.  SeMemNN can still work on a few-shot learning Table 2 shows that although we have greatly shrank the scale of the training set, our proposed method can still outperform VDCNN. After shrinking the scale of the data, the performance of VDCNN has been greatly decreased, especially for Sogou news, VDCNN has been unable to learn from the training samples."
+      "value": " than using the abstract.  SeMemNN can still work on a few-shot learning Table 2 shows that although we have greatly shrank the scale of the training set, our proposed method can still "
+    },
+    {
+      "expression": "\"outperform\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " VDCNN. After shrinking the scale of the data, the performance of VDCNN has been greatly decreased, especially for Sogou news, VDCNN has been unable to learn from the training samples."
     }
   ],
   "variables": {},

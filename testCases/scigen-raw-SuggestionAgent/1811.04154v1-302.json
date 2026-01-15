@@ -1,92 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Entity linking accuracies on the LORELEI dataset are shown in Table 2. "
-    },
-    {
-      "expression": "\"PBEL\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " has "
-    },
-    {
-      "expression": "\"considerably higher\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " accuracy than the other methods. However, we see "
-    },
-    {
-      "expression": "\"relatively lower improvement\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in accuracy with "
-    },
-    {
-      "expression": "\"Somali-Oromo\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than "
-    },
-    {
-      "expression": "\"Amharic-Tigrinya\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  the supervised "
-    },
-    {
-      "expression": "\"TRANS model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", which uses Wikipedia parallel data in the LRL itself as a lexicon, does not perform "
-    },
-    {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than the zero-shot "
-    },
-    {
-      "expression": "\"PBEL\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  The "
-    },
-    {
-      "expression": "\"PBEL model results\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for our test set with each input representation are presented in Table 3."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Entity linking accuracies on the LORELEI dataset are shown in Table 2. PBEL has considerably higher accuracy than the other methods. However, we see relatively lower improvement in accuracy with Somali-Oromo than Amharic-Tigrinya.  the supervised TRANS model, which uses Wikipedia parallel data in the LRL itself as a lexicon, does not perform better than the zero-shot PBEL.  The PBEL model results for our test set with each input representation are presented in Table 3."
+  }],
   "variables": {},
   "imports": [
     "scigen",

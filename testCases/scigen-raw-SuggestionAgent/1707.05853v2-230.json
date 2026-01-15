@@ -48,7 +48,19 @@
     },
     {
       "type": "literal",
-      "value": " with which we obtain the highest result overall, improving the joint goals accuracy by "
+      "value": " with which we obtain the "
+    },
+    {
+      "expression": "\"highest\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " result overall, improving the joint goals accuracy by "
     },
     {
       "expression": "\"1.6 percentage points\"",
@@ -66,16 +78,7 @@
     },
     {
       "type": "literal",
-      "value": " cnet models trained with different random seeds also outperforms an ensemble of "
-    },
-    {
-      "expression": "\"ten\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " baseline models.  Our ensemble models outperform Mrksic et al. (2017) for the joint requests but are "
+      "value": " cnet models trained with different random seeds also outperforms an ensemble of ten baseline models.  Our ensemble models outperform Mrksic et al. (2017) for the joint requests but are "
     },
     {
       "expression": "\"a bit worse\"",

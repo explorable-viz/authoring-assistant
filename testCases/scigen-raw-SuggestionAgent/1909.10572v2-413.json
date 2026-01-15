@@ -3,43 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Similarly, Table 7 shows the results on the two domain-specific tasks of "
+      "value": "Similarly, Table 7 shows the results on the "
     },
     {
-      "expression": "\"music\"",
+      "expression": "\"two\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"medical\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " domain corpora. "
-    },
-    {
-      "expression": "\"SPON\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " outperforms the "
-    },
-    {
-      "expression": "\"SOTA systems\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " in all tasks except for the medical domain in which it achieves "
+      "value": " domain-specific tasks of music and medical domain corpora. SPON outperforms the SOTA systems in all tasks except for the medical domain in which it achieves "
     },
     {
       "expression": "\"comparable\"",

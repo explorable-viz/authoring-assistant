@@ -1,9 +1,38 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "We show the experiment results in Table 2.  our method consistently performs better than all baselines in all settings.  our method is also better than LOF (Softmax).  we observe that on the ATIS dataset, the performance of unknown intent detection dramatically drops as the known intent increases."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We show the experiment results in Table 2. our method consistently performs "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than all baselines in all settings. our method is also "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"LOF (Softmax)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". we observe that on the ATIS dataset, the performance of unknown intent detection dramatically drops as the known intent increases."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

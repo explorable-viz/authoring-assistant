@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "F1 scores for all propositions and each type are reported in Table 5. CNN performs "
+      "value": "F1 scores for all propositions and each type are reported in Table 5.  CNN performs "
     },
     {
       "expression": "\"better\"",
@@ -16,7 +16,10 @@
     },
     {
       "expression": "\"best\"",
-      "categories": ["rank"],
+      "categories": [
+        "min-max",
+        "rank"
+      ],
       "type": "expression"
     },
     {

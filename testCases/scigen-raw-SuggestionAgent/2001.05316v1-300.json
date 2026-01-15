@@ -3,34 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Various subsets of "
+      "value": "Various subsets of authors were chosen and the dataset was truncated to each author having the same number of samples. with and without pre-training character level embedding and comparing the proposed architectures on the held-out dataset. To illustrate the need of pre-trained character embeddings, we see from "
     },
     {
-      "expression": "\"authors\"",
+      "expression": "\"III\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " were chosen and the dataset was truncated to each "
-    },
-    {
-      "expression": "\"author\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " having the same number of samples.  with and without pre-training character level embedding and "
-    },
-    {
-      "expression": "\"comparing\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the proposed architectures on the held-out dataset.  To illustrate the need of pre-trained character embeddings, we see from III that using a pre-trained embedding increases the accuracy across datasets and the different number of authors, regardless of the amount of data for each author.  "
+      "value": " that using a pre-trained embedding increases the accuracy across datasets and the different number of authors, regardless of the amount of data for each author. "
     },
     {
       "expression": "\"increase\"",
@@ -43,19 +25,16 @@
     },
     {
       "expression": "\"a few degrees\"",
-      "categories": ["difference"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".  we analyzed the importance of pretrained character embedding for author attribution and showed that pre-training can result in "
+      "value": ". we analyzed the importance of pretrained character embedding for author attribution and showed that pre-training can result in "
     },
     {
       "expression": "\"better performances\"",
-      "categories": [
-        "comparison",
-        "average"
-      ],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

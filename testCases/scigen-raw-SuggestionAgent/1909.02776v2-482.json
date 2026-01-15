@@ -6,13 +6,13 @@
       "value": "Table 1 shows and "
     },
     {
-      "expression": "\"compares MSE and R2\"",
+      "expression": "\"compares\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " reported from these experiments. The results show that in "
+      "value": " MSE and R2 reported from these experiments. The results show that in "
     },
     {
       "expression": "\"experiment 2\"",
@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": ", the "
-    },
-    {
-      "expression": "\"mean squared error\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
+      "value": ", the mean squared error is "
     },
     {
       "expression": "\"reduced\"",
@@ -39,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " and the "
-    },
-    {
-      "expression": "\"r2 score\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is "
+      "value": " and the r2 score is "
     },
     {
       "expression": "\"increased\"",

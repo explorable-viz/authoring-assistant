@@ -6,13 +6,13 @@
       "value": "Table 2 shows the classification results on the discussion forum dataset. Although a vast majority of the context posts contain "
     },
     {
-      "expression": "\"3-4 sentences\"",
+      "expression": "\"3-4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", around "
+      "value": " sentences, around "
     },
     {
       "expression": "\"100\"",
@@ -24,34 +24,31 @@
       "value": " context posts have "
     },
     {
-      "expression": "\"more than ten sentences\"",
+      "expression": "\"more than ten\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and thus we set a cutoff to a "
+      "value": " sentences and thus we set a cutoff to a "
     },
     {
-      "expression": "\"maximum of ten sentences\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
+      "expression": "\"maximum of ten\"",
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for context modeling. For the reply r we considered the entire reply.  The SV Mbl models that are based on discrete features did not perform very well, and adding context actually hurt the performance. Regarding the performance of the neural network models, we observe that modeling context improves the performance using all types of LSTM architectures that read both context (c) and reply (r)  The "
+      "value": " sentences for context modeling. For the reply r we considered the entire reply. The SV Mbl models that are based on discrete features did not perform very well, and adding context actually hurt the performance. Regarding the performance of the neural network models, we observe that modeling context improves the performance using all types of LSTM architectures that read both context (c) and reply (r) The "
     },
     {
-      "expression": "\"highest performance\"",
+      "expression": "\"highest\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " when considering both the S and  S classes is achieved by the LSTMconditional model ("
+      "value": " performance when considering both the S and  S classes is achieved by the LSTMconditional model ("
     },
     {
       "expression": "\"73.32%\"",
@@ -73,10 +70,7 @@
     },
     {
       "expression": "\"6%\"",
-      "categories": [
-        "comparison",
-        "difference"
-      ],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -85,10 +79,7 @@
     },
     {
       "expression": "\"3%\"",
-      "categories": [
-        "comparison",
-        "difference"
-      ],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -96,16 +87,13 @@
       "value": " improvement over LSTMr for S and  S classes, respectively). The LSTM model with sentence-level attentions on both context and reply (LSTMcas +LSTMras ) gives the "
     },
     {
-      "expression": "\"best F1 score\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
+      "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of "
+      "value": " F1 score of "
     },
     {
       "expression": "\"73.7%\"",
@@ -114,7 +102,7 @@
     },
     {
       "type": "literal",
-      "value": " for the S class. For the  S class, while we notice an improvement in precision we notice a drop in recall when compared to the LSTM model with sentence level attention only on reply (LSTMras ).  We observe the performance ("
+      "value": " for the S class. For the  S class, while we notice an improvement in precision we notice a drop in recall when compared to the LSTM model with sentence level attention only on reply (LSTMras ). We observe the performance ("
     },
     {
       "expression": "\"69.88%\"",
@@ -127,7 +115,7 @@
     },
     {
       "expression": "\"deteriorates\"",
-      "categories": ["comparison"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {

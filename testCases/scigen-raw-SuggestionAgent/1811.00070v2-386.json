@@ -1,9 +1,29 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Table 3 suggests that the combined model does make progress here, in that the largest gains, across all relevant datasets, tend to be for the smallest categories."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 3 suggests that the combined model does make progress here, in that the "
+    },
+    {
+      "expression": "\"largest gains\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " , across all relevant datasets, tend to be for the "
+    },
+    {
+      "expression": "\"smallest categories\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

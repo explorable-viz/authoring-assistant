@@ -6,16 +6,7 @@
       "value": "We choose "
     },
     {
-      "expression": "\"different\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " teacher size "
-    },
-    {
-      "expression": "\"K\"",
+      "expression": "\"different teacher size K\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -34,7 +25,10 @@
     },
     {
       "expression": "\"best\"",
-      "categories": ["rank"],
+      "categories": [
+        "min-max",
+        "rank"
+      ],
       "type": "expression"
     },
     {

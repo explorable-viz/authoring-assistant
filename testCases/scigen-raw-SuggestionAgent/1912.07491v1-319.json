@@ -3,16 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The ablation test results are reported in Table 7. From the results, we can observe that the performance of TransDG drops sharply when we discard the question representation module and the knowledge selection module transferred from KBQA. Response guiding attention also has "
+      "value": "The ablation test results are reported in Table 7. From the results, we can observe that the performance of TransDG drops sharply when we discard "
     },
     {
-      "expression": "\"noticeable impact\"",
+      "expression": "\"the question representation module\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the performance of TransDG, especially on BLEU scores. In addition, the "
+      "value": " and the "
+    },
+    {
+      "expression": "\"knowledge selection module transferred from KBQA\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Response guiding attention also has noticeable impact on the performance of TransDG, especially on "
+    },
+    {
+      "expression": "\"BLEU scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". In addition, the "
     },
     {
       "expression": "\"second-step decoder\"",

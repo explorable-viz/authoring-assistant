@@ -15,31 +15,22 @@
       "value": ". We notice that "
     },
     {
-      "expression": "\"M.1\"",
+      "expression": "\"M.1 (Bag-of-words + Logistic Regression)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (Bag-of-words + Logistic Regression) and "
+      "value": " and "
     },
     {
-      "expression": "\"M.2\"",
+      "expression": "\"M.2 (BiLSTM)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (BiLSTM) show a statistically significant "
-    },
-    {
-      "expression": "\"difference\"",
-      "categories": ["difference"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " between the two genders, with "
+      "value": " show a statistically significant difference between the two genders, with "
     },
     {
       "expression": "\"higher\"",
@@ -51,13 +42,13 @@
       "value": " predicted positive class probabilities for sentences with female nouns. On the contrary, "
     },
     {
-      "expression": "\"M.3\"",
+      "expression": "\"M.3 (BERT)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " (BERT) shows that sentences with male nouns have a statistically significant "
+      "value": " shows that sentences with male nouns have a statistically significant "
     },
     {
       "expression": "\"higher\"",

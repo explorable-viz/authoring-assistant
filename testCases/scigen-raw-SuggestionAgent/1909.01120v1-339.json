@@ -3,10 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We report the quality results in Table 2, where each number represents the fraction of tests passed. While on "
+      "value": "We report the quality results in Table 2, where each number represents the fraction of tests passed. While "
     },
     {
-      "expression": "\"average\"",
+      "expression": "\"on average\"",
       "categories": ["average"],
       "type": "expression"
     },
@@ -21,16 +21,25 @@
     },
     {
       "type": "literal",
-      "value": " are largely "
+      "value": " are "
     },
     {
-      "expression": "\"superior\"",
+      "expression": "\"largely superior to\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " to the baseline, our solution is beaten once for "
+      "value": " the baseline, our solution is beaten "
+    },
+    {
+      "expression": "\"once\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for "
     },
     {
       "expression": "\"MA\"",

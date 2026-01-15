@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 6 (morphosyntactic attribute tagging micro-F1). In morphosyntactic tagging, "
-    },
-    {
-      "expression": "\"gains\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " are apparent for "
+      "value": "Table 6 (morphosyntactic attribute tagging micro-F1). In morphosyntactic tagging, gains are apparent for "
     },
     {
       "expression": "\"Slavic languages\"",
@@ -30,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": ", but also for "
-    },
-    {
-      "expression": "\"agglutinative languages\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " \u2014 especially "
+      "value": ", but also for agglutinative languages \u2014 especially "
     },
     {
       "expression": "\"Tamil\"",

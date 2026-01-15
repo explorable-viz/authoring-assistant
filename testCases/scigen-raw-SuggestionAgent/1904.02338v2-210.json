@@ -1,38 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "We see that models trained with agreement perform "
-    },
-    {
-      "expression": "\"comparably\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " to Pivot, "
-    },
-    {
-      "expression": "\"outperforming\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " it in some cases, e.g., when the target is Russian, perhaps because it is quite different linguistically from the English pivot. unlike Dual-0, Agree maintains high performance in the supervised directions (within "
-    },
-    {
-      "expression": "\"1 BLEU point\"",
-      "categories": ["difference"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " compared to Basic),"
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We see that models trained with agreement perform comparably to Pivot, outperforming it in some cases, e.g., when the target is Russian, perhaps because it is quite different linguistically from the English pivot.  unlike Dual-0, Agree maintains high performance in the supervised directions (within 1 BLEU point compared to Basic),"
+  }],
   "variables": {},
   "imports": [
     "scigen",

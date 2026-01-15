@@ -7,7 +7,7 @@
     },
     {
       "expression": "\"half\"",
-      "categories": ["ratio"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

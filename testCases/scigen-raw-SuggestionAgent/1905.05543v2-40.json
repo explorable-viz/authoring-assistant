@@ -6,7 +6,16 @@
       "value": "Table 1 presents our results. The self-distance f the eBay, Legal Onion and Illegal Onion corpora lies between "
     },
     {
-      "expression": "\"0.40 to 0.45\"",
+      "expression": "\"0.40\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"0.45\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -15,7 +24,16 @@
       "value": " by the JensenShannon divergence, but the distance between each pair is "
     },
     {
-      "expression": "\"0.60 to 0.65\"",
+      "expression": "\"0.60\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"0.65\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

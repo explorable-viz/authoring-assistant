@@ -3,19 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For extractive sentence summarization, our method achieves good "
+      "value": "For extractive sentence summarization, our method achieves "
     },
     {
-      "expression": "\"compression rate\"",
+      "expression": "\"good compression rate\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and significantly "
+      "value": " and "
     },
     {
-      "expression": "\"raises\"",
+      "expression": "\"significantly raises\"",
       "categories": ["comparison"],
       "type": "expression"
     },

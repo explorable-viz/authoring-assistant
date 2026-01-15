@@ -21,16 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " between passage and question are furthermore given in Table 3. We can again observe two clear trends: from "
+      "value": " between passage and question are furthermore given in Table 3. We can again observe two clear trends: from weaker towards stronger models used in the annotation loop, the "
     },
     {
-      "expression": "\"weaker towards stronger models\"",
-      "categories": ["comparison"],
+      "expression": "\"average length of answers\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " used in the annotation loop, the average length of answers increases, and the largest n-gram overlap drops from "
+      "value": " increases, and the largest n-gram overlap drops from "
     },
     {
       "expression": "\"3\"",
@@ -42,13 +42,13 @@
       "value": " to "
     },
     {
-      "expression": "\"2 tokens\"",
+      "expression": "\"2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " tokens."
     }
   ],
   "variables": {},

@@ -3,25 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 5 reports the average numbers of types added/deleted by the relabeling function and the ratio of examples discarded by the filtering function. The HEAD examples have "
+      "value": "Table 5 reports the average numbers of types "
     },
     {
-      "expression": "\"more\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " general types added than the EL examples since the noisy HEAD labels are typically finer. Fine-grained types are added to both EL and HEAD examples "
-    },
-    {
-      "expression": "\"less frequently\"",
+      "expression": "\"added/deleted\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Ultra-fine examples are frequently added to both datasets, with more added to EL; The filtering function discards similar numbers of examples for the EL and HEAD data: "
+      "value": " by the relabeling function and the "
+    },
+    {
+      "expression": "\"ratio\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of examples discarded by the filtering function. The HEAD examples have "
+    },
+    {
+      "expression": "\"more general types added\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the EL examples since the noisy HEAD labels are typically finer. Fine-grained types are added to both EL and HEAD examples less frequently. Ultra-fine examples are frequently added to both datasets, with more added to EL; The filtering function discards "
+    },
+    {
+      "expression": "\"similar numbers of examples\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the EL and HEAD data: "
     },
     {
       "expression": "\"9.4%\"",

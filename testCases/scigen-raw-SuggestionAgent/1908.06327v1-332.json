@@ -21,52 +21,25 @@
     },
     {
       "type": "literal",
-      "value": " when used in the target task, i.e. the task currently being run. The third and fourth line of Table 3 report the results of our embedding when they were trained on all five tasks, and kept "
+      "value": " when used in the target task, i.e. the task currently being run. The third and fourth line of Table 3 report the results of our embedding when they were trained on all five tasks, and kept fixed or fine-tuned for the target task, respectively.  The results of line three and four demonstrate that our improved embedding tends to transfer "
     },
     {
-      "expression": "\"fixed\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " or fine-tuned for the target task, respectively. The results of line three and four demonstrate that our improved embedding tends to transfer better when applied with fine-tuning during the target task. We find similar trends in performance improvements across tasks: larger gains occur for image-sentence retrieval with "
+      "value": " when applied with fine-tuning during the target task. We find similar trends in performance improvements across tasks: larger gains occur for image-sentence retrieval with +7.9 "
     },
     {
-      "expression": "\"+7.9\"",
-      "categories": [
-        "data-retrieval",
-        "difference"
-      ],
+      "expression": "\"mean recall\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " mean recall for the Flickr30K dataset and "
-    },
-    {
-      "expression": "\"+6.3\"",
-      "categories": [
-        "data-retrieval",
-        "difference"
-      ],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for MSCOCO. All other tasks have performance improvements under one point, showing that while the vision-language tasks appear to transfer well without harming performance, they are leveraged most in image-sentence retrieval, with an exception of phrase grounding accuracy on ReferIt ("
-    },
-    {
-      "expression": "\"+2.36%\"",
-      "categories": [
-        "data-retrieval",
-        "difference"
-      ],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ")."
+      "value": " for the Flickr30K dataset and +6.3 for MSCOCO. All other tasks have performance improvements under one point, showing that while the vision-language tasks appear to transfer well without harming performance, they are leveraged most in image-sentence retrieval, with an exception of phrase grounding accuracy on ReferIt (+2.36%)."
     }
   ],
   "variables": {},

@@ -16,7 +16,7 @@
     },
     {
       "expression": "\"more easily deceived\"",
-      "categories": ["data-retrieval"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
@@ -24,13 +24,16 @@
       "value": ". Specifically, non-CS human judges fail at "
     },
     {
-      "expression": "\"more than half of the 1-to-1 sets\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"more than half\"",
+      "categories": [
+        "ratio",
+        "comparison"
+      ],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for the same titles, which suggests that most of our system generated abstracts follow correct grammar and consistent writing style. Domain experts fail on "
+      "value": " of the 1-to-1 sets for the same titles, which suggests that most of our system generated abstracts follow correct grammar and consistent writing style. Domain experts fail on "
     },
     {
       "expression": "\"1 or 2 sets\"",

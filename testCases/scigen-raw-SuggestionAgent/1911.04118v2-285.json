@@ -3,70 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table "
+      "value": "Table 3: Performance of different models on WikiQA dataset. Here "
     },
     {
-      "expression": "\"3\"",
+      "expression": "\"Comp-Agg + LM + LC\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ": Performance of different models on WikiQA dataset. Here Comp-Agg + LM + LC refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed by Yoon et al. (2019). TL(QNLI) refers to Transfer Learning from the QNLI corpus. "
+      "value": " refers to a CompareAggregate model with Language Modeling and Latent Clustering as proposed by Yoon et al. (2019). "
     },
     {
-      "expression": "\"L\"",
+      "expression": "\"TL(QNLI)\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"B\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " stand for Large and Base, respectively. Table "
-    },
-    {
-      "expression": "\"3\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " reports the "
-    },
-    {
-      "expression": "\"MAP\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"MRR\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of different pre-trained transformers models for two methods: standard fine-tuning ("
-    },
-    {
-      "expression": "\"FT\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") and TANDA. The latter takes two arguments that we indicate as transfer dataset → adapt dataset."
+      "value": " refers to Transfer Learning from the QNLI corpus. L and B stand for Large and Base, respectively.  Table 3 reports the MAP and MRR of different pre-trained transformers models for two methods: standard fine-tuning (FT) and TANDA. The latter takes two arguments that we indicate as transfer dataset → adapt dataset."
     }
   ],
   "variables": {},

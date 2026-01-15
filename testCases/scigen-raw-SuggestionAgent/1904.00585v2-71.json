@@ -15,22 +15,22 @@
       "value": " and "
     },
     {
-      "expression": "\"MIMIC-WetLab pairs\"",
+      "expression": "\"MIMIC-WetLab\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ") produce "
+      "value": " pairs) produce "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"better performance\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performance compare to the default setting (Table 6)."
+      "value": " compare to the default setting (Table 6)."
     }
   ],
   "variables": {},

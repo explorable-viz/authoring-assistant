@@ -1,9 +1,74 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Figure 4 shows the accuracy of two systems for different NER (named entity recognition) types. We consider four types: location (LOC), organization (ORG), person (PER), and miscellany (MICS). These types are given in CoNLL 2003 dataset, which was used as a basis for AIDA CoNLL. Our model is accurate for PER, achieving accuracy of about 97%, only 0.53% lower than the supervised model."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Figure 4 shows the accuracy of two systems for different NER (named entity recognition) types. We consider four types: location ("
+    },
+    {
+      "expression": "\"LOC\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), organization ("
+    },
+    {
+      "expression": "\"ORG\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), person ("
+    },
+    {
+      "expression": "\"PER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and miscellany ("
+    },
+    {
+      "expression": "\"MICS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). These types are given in CoNLL 2003 dataset, which was used as a basis for AIDA CoNLL. Our model is accurate for "
+    },
+    {
+      "expression": "\"PER\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", achieving accuracy of about "
+    },
+    {
+      "expression": "\"97%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", only "
+    },
+    {
+      "expression": "\"0.53%\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " lower than the supervised model."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

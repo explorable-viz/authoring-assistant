@@ -12,10 +12,10 @@
     },
     {
       "type": "literal",
-      "value": ". The analysis of the Static Memory approach amounts to an ablation study, the DMN+ is even "
+      "value": ". The analysis of the Static Memory approach amounts to an ablation study, the DMN+ is "
     },
     {
-      "expression": "\"outperformed\"",
+      "expression": "\"even outperformed\"",
       "categories": ["comparison"],
       "type": "expression"
     },

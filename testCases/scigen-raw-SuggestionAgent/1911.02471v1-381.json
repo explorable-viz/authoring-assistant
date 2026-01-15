@@ -12,25 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " bins using the full range of "
-    },
-    {
-      "expression": "\"ADR\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the dataset. The "
-    },
-    {
-      "expression": "\"ADR-based\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " bias measures (Tab. 2) follow the expected trend ("
+      "value": " bins using the full range of ADR of the dataset. The ADR-based bias measures (Tab. 2) follow the expected trend ("
     },
     {
       "expression": "\"model 1 appears more biased than models 2 and 3\"",
@@ -51,13 +33,12 @@
       "value": " Model 2's performance is "
     },
     {
-      "expression": "\"different\"",
-      "categories": ["comparison"],
+      "expression": "\"different across groups\"",
+      "categories": [
+        "comparison",
+        "difference"
+      ],
       "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " across groups"
     }
   ],
   "variables": {},

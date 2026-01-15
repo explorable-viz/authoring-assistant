@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The results are presented in Table 1 (top two subparts). As we can see, the "
+      "value": "The results are presented in "
     },
     {
-      "expression": "\"three\"",
+      "expression": "\"Table 1\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " decoding settings do not differ significantly in terms of the performance on selected downstream tasks, with "
+      "value": " (top two subparts). As we can see, the three decoding settings do not differ significantly in terms of the performance on selected downstream tasks, with "
     },
     {
       "expression": "\"RNN or CNN\"",
@@ -21,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " as the decoder.  The results are also presented in Table 1 (3rd and 4th subparts). The performance of the "
+      "value": " as the decoder. The results are also presented in "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (3rd and 4th subparts). The performance of the "
     },
     {
       "expression": "\"predict-allwords RNN decoder\"",
@@ -30,10 +39,10 @@
     },
     {
       "type": "literal",
-      "value": " does not significantly differ from that of any one of the "
+      "value": " does not significantly differ from that of any one of the autoregressive "
     },
     {
-      "expression": "\"autoregressive RNN decoders\"",
+      "expression": "\"RNN decoders\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -48,11 +57,20 @@
     },
     {
       "type": "literal",
-      "value": ".  In our proposed RNN-CNN model, we empirically show that the "
+      "value": ". In our proposed "
+    },
+    {
+      "expression": "\"RNN-CNN model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", we empirically show that the "
     },
     {
       "expression": "\"mean+max pooling\"",
-      "categories": ["sum"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -66,7 +84,16 @@
     },
     {
       "type": "literal",
-      "value": " does, and the results are presented in the last two sections of Table 1."
+      "value": " does, and the results are presented in the last two sections of "
+    },
+    {
+      "expression": "\"Table 1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

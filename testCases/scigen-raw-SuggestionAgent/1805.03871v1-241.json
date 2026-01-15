@@ -24,7 +24,16 @@
       "value": " ("
     },
     {
-      "expression": "\"5-7 epochs vs. 12-15\"",
+      "expression": "\"5-7 epochs\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " vs. "
+    },
+    {
+      "expression": "\"12-15\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

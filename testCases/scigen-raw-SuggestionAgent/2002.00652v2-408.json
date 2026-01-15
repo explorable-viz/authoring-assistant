@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Taking CONCAT as a representative, we compare the performance of our model with other models, as shown in Table 1. As illustrated, our model outperforms baselines by a large margin with or without BERT, achieving new "
+      "value": "Taking CONCAT as a representative, we compare the performance of our model with other models, as shown in Table 1. As illustrated, our model "
     },
     {
-      "expression": "\"SOTA\"",
-      "categories": ["rank"],
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performances on both datasets. Compared with the previous SOTA without BERT on SPARC, our model improves "
+      "value": " baselines by a large margin with or without BERT, achieving new SOTA performances on both datasets. Compared with the previous SOTA without BERT on SPARC, our model improves "
     },
     {
       "expression": "\"Ques.Match\"",
@@ -35,8 +35,8 @@
     {
       "expression": "\"10.6\"",
       "categories": [
-        "data-retrieval",
-        "difference"
+        "difference",
+        "data-retrieval"
       ],
       "type": "expression"
     },
@@ -47,8 +47,8 @@
     {
       "expression": "\"5.4 points\"",
       "categories": [
-        "data-retrieval",
-        "difference"
+        "difference",
+        "data-retrieval"
       ],
       "type": "expression"
     },

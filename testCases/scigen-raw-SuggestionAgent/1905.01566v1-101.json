@@ -1,9 +1,20 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach outperforms the concurrently-published Xiong et al. (2019);"
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the performance of all settings on the test set, with the same trend as the performance on the development set. Our approach "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the concurrently-published Xiong et al. (2019);"
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

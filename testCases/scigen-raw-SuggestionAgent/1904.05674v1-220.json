@@ -24,7 +24,16 @@
     },
     {
       "type": "literal",
-      "value": " results especially in F1 metric showing that cross-topic representations are semantically richer than single embeddings baseline ("
+      "value": " results especially in "
+    },
+    {
+      "expression": "\"F1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " metric showing that cross-topic representations are semantically richer than single embeddings baseline ("
     },
     {
       "expression": "\"Global-DSM\"",

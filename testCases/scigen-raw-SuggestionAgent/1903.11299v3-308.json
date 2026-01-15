@@ -21,20 +21,38 @@
     },
     {
       "type": "literal",
-      "value": " performance than MUSE for languages not seen previously. For example, with English-German BIVEC and a model trained only in English, and test on German, we obtain only "
+      "value": " performance than "
     },
     {
-      "expression": "\"22.96 %\"",
+      "expression": "\"MUSE\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " recall@10, where MUSE embeddings obtain "
+      "value": " for languages not seen previously. For example, with English-German BIVEC and a model trained only in English, and test on German, we obtain only "
+    },
+    {
+      "expression": "\"22.96 %\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " recall@10, where "
+    },
+    {
+      "expression": "\"MUSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embeddings obtain "
     },
     {
       "expression": "\"44.18 %\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -43,7 +61,7 @@
     },
     {
       "expression": "\"55.22 %\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
@@ -57,7 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " compared to MUSE. With German and English training, we have an increase of "
+      "value": " compared to "
+    },
+    {
+      "expression": "\"MUSE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". With German and English training, we have an increase of "
     },
     {
       "expression": "\"15.16 %\"",
@@ -70,7 +97,7 @@
     },
     {
       "expression": "\"61.44 %\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

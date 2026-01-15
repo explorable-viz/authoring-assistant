@@ -1,65 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "As can be seen from Table 2, the "
-    },
-    {
-      "expression": "\"DST accuracy\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " slightly "
-    },
-    {
-      "expression": "\"increases\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for the "
-    },
-    {
-      "expression": "\"higher-quality live ASR outputs\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". More importantly, the "
-    },
-    {
-      "expression": "\"DST performance\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " drastically "
-    },
-    {
-      "expression": "\"increases\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", when we evaluate on the "
-    },
-    {
-      "expression": "\"manual transcripts\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " that reflect the true user utterances nearly perfectly."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "As can be seen from Table 2, the DST accuracy slightly increases for the higher-quality live ASR outputs. More importantly, the DST performance drastically increases, when we evaluate on the manual transcripts that reflect the true user utterances nearly perfectly."
+  }],
   "variables": {},
   "imports": [
     "scigen",

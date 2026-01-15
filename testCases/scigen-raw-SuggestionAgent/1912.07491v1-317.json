@@ -6,13 +6,13 @@
       "value": "The BLEU values shown in Table 4 demonstrates the "
     },
     {
-      "expression": "\"comparison results\"",
+      "expression": "\"comparison\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " from word-level overlaps. TransDG tends to generate responses that are "
+      "value": " results from word-level overlaps. TransDG tends to generate responses that are "
     },
     {
       "expression": "\"more similar\"",

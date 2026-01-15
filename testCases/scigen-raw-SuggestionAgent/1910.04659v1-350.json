@@ -33,19 +33,19 @@
     },
     {
       "type": "literal",
-      "value": ", or slightly "
+      "value": ", or "
     },
     {
-      "expression": "\"worse\"",
+      "expression": "\"slightly worse\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " or slightly "
+      "value": " or "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"slightly better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -54,40 +54,40 @@
       "value": ". For instance, the exact match on the En-Fr dataset is "
     },
     {
-      "expression": "\"higher than\"",
+      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the exact match on the Fr-Fr dataset. We also observe that, in general, the exact match and F1-score are close together when the context is in Japanese whereas there is generally a larger gap for the other two languages.  the performance on Jap-En is "
+      "value": " than the exact match on the Fr-Fr dataset. We also observe that, in general, the exact match and F1-score are close together when the context is in Japanese whereas there is generally a larger gap for the other two languages.  the performance on Jap-En is "
     },
     {
-      "expression": "\"lower than\"",
+      "expression": "\"lower\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on Jap-Jap whereas the performance on En-Fr is "
+      "value": " than on Jap-Jap whereas the performance on En-Fr is "
     },
     {
-      "expression": "\"higher than\"",
+      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on Fr-Fr,  Results for the Jap-Jap dataset are "
+      "value": " than on Fr-Fr,  Results for the Jap-Jap dataset are "
     },
     {
-      "expression": "\"better than\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " results for the Jap-En dataset"
+      "value": " than results for the Jap-En dataset"
     }
   ],
   "variables": {},

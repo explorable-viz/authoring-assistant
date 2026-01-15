@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 gives "
-    },
-    {
-      "expression": "\"single model validation scores\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
+      "value": "Table 2 gives single model validation scores for "
     },
     {
       "expression": "\"es2en\"",
@@ -43,7 +34,7 @@
     },
     {
       "expression": "\"1-2 BLEU points\"",
-      "categories": ["data-retrieval"],
+      "categories": ["difference"],
       "type": "expression"
     },
     {

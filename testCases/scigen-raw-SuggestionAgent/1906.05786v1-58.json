@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We see small gains from using "
+      "value": "We see "
     },
     {
-      "expression": "\"BI with ensembles\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"small gains\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on most validation sets, but only on "
+      "value": " from using BI with ensembles on most validation sets, but only on "
     },
     {
       "expression": "\"en2es\"",
@@ -30,25 +30,25 @@
     },
     {
       "type": "literal",
-      "value": ", by contrast, uniform ensembling is consistently "
+      "value": ", by contrast, "
     },
     {
-      "expression": "\"better\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than oracles on the dev sets, and outperforms "
-    },
-    {
-      "expression": "\"BI\"",
+      "expression": "\"uniform ensembling\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the test data."
+      "value": " is "
+    },
+    {
+      "expression": "\"consistently better than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " oracles on the dev sets, and outperforms BI on the test data."
     }
   ],
   "variables": {},

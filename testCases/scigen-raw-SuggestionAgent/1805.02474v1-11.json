@@ -1,47 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively. As shown in Table 4, "
-    },
-    {
-      "expression": "\"S-LSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"BiLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " significantly, with a faster speed. "
-    },
-    {
-      "expression": "\"S-LSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " also gives highly competitive results when compared with existing methods in the literature."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "The final results on the movie review and rich text classification datasets are shown in Tables 4 and 5, respectively.  As shown in Table 4,  S-LSTM outperforms BiLSTM significantly, with a faster speed.  S-LSTM also gives highly competitive results when compared with existing methods in the literature."
+  }],
   "variables": {},
   "imports": [
     "scigen",

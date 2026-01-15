@@ -16,7 +16,10 @@
     },
     {
       "expression": "\"highest\"",
-      "categories": ["rank"],
+      "categories": [
+        "min-max",
+        "rank"
+      ],
       "type": "expression"
     },
     {

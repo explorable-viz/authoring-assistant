@@ -7,16 +7,16 @@
     },
     {
       "expression": "\"less than 15%\"",
-      "categories": ["comparison"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of tokens requiring normalization (SLG) to "
+      "value": " of tokens requiring normalization (SLG) to more than "
     },
     {
-      "expression": "\"more than 80%\"",
-      "categories": ["comparison"],
+      "expression": "\"80%\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -34,12 +34,12 @@
     },
     {
       "expression": "\"97%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " for most datasets, For the normalization systems, we observe "
+      "value": " for most datasets,  For the normalization systems, we observe "
     },
     {
       "expression": "\"significantly better\"",
@@ -48,34 +48,7 @@
     },
     {
       "type": "literal",
-      "value": " word accuracy with SMT than NMT on "
-    },
-    {
-      "expression": "\"four\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of the datasets, and "
-    },
-    {
-      "expression": "\"non-significant differences\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on five others. There is only one dataset ("
-    },
-    {
-      "expression": "\"DEA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") where the NMT system by Tang et al. (2018) gets "
+      "value": " word accuracy with SMT than NMT on four of the datasets, and non-significant differences on five others. There is only one dataset (DEA) where the NMT system by Tang et al. (2018) gets "
     },
     {
       "expression": "\"significantly better\"",
@@ -84,7 +57,7 @@
     },
     {
       "type": "literal",
-      "value": " word accuracy than other systems. Overall, the deep NMT model by Tang et al. (2018) consistently "
+      "value": " word accuracy than other systems.  Overall, the deep NMT model by Tang et al. (2018) consistently "
     },
     {
       "expression": "\"outperforms\"",
@@ -93,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": " the shallow one by Bollmann (2018). Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "
+      "value": " the shallow one by Bollmann (2018).  Finally, while Norma does produce competitive results on several datasets (particularly in the \"combined\" setting), it is generally "
     },
     {
       "expression": "\"significantly behind\"",

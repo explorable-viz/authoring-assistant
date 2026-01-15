@@ -12,11 +12,23 @@
     },
     {
       "type": "literal",
-      "value": " than the existing models. With 1-best trees, DEPTREE is "
+      "value": " than the existing models. With "
+    },
+    {
+      "expression": "\"1-best trees\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", DEPTREE is "
     },
     {
       "expression": "\"2.9 points better\"",
-      "categories": ["comparison"],
+      "categories": [
+        "comparison",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {

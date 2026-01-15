@@ -1,9 +1,65 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "noun comparatives is on RELATIVE (Bagherinezhad et al., 2016), presented in Table 5.  We report the results of the original work, where the best score used a combination of visual and textual signals, achieving 83.5% accuracy. We also tested the method by Yang et al. (2018) on this dataset.  The accuracy achieved by this method is 85.8%, surpassing the previous method by more than 2 points. We evaluated our method on this dataset, achieving a new state-of-the-art result of 87.7% accuracy with k = 10 as a filter method."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "noun comparatives is on RELATIVE (Bagherinezhad et al., 2016), presented in Table 5.  We report the results of the original work, where the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " score used a combination of visual and textual signals, achieving "
+    },
+    {
+      "expression": "\"83.5%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy. We also tested the method by Yang et al. (2018) on this dataset.  The accuracy achieved by this method is "
+    },
+    {
+      "expression": "\"85.8%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", surpassing the previous method by "
+    },
+    {
+      "expression": "\"more than 2 points\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We evaluated our method on this dataset, achieving a new state-of-the-art result of "
+    },
+    {
+      "expression": "\"87.7%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy with k = "
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as a filter method."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

@@ -12,10 +12,10 @@
     },
     {
       "type": "literal",
-      "value": " BLEU scores than almost all the comparisons. Especially, our models with separate decoder yield "
+      "value": " BLEU scores than almost all the comparisons. Especially, our models with separate decoder yield significantly "
     },
     {
-      "expression": "\"significantly higher\"",
+      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },

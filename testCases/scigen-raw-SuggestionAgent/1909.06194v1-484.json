@@ -3,25 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "the table, lexical model "
+      "value": "the table, lexical model consistently "
     },
     {
-      "expression": "\"consistently outperforms\"",
+      "expression": "\"outperforms\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the syntactic model across all the benchmark datasets. Moreover, combining the two representations further improves the performance results. Based on the observation, we realize that even if Syntactic-HAN achieves a comparable performance results combining it with Lexical-HAN, slightly improves the overall performance (Style-HAN). As shown in Table IV, the performance improvement in terms of accuracy is "
-    },
-    {
-      "expression": "\"consistent\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " across all the benchmark datasets ("
+      "value": " the syntactic model across all the benchmark datasets. Moreover, combining the two representations further improves the performance results. Based on the observation, we realize that even if Syntactic-HAN achieves a comparable performance results combining it with Lexical-HAN, slightly improves the overall performance (Style-HAN). As shown in Table IV, the performance improvement in terms of accuracy is consistent across all the benchmark datasets ("
     },
     {
       "expression": "\"4.54%\"",
@@ -30,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " in CCAT10, "
+      "value": " in "
+    },
+    {
+      "expression": "\"CCAT10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
     },
     {
       "expression": "\"2.85%\"",
@@ -39,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": " in CCAT50, "
+      "value": " in "
+    },
+    {
+      "expression": "\"CCAT50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
     },
     {
       "expression": "\"2.02%\"",
@@ -48,7 +57,16 @@
     },
     {
       "type": "literal",
-      "value": " in BLOGS10, "
+      "value": " in "
+    },
+    {
+      "expression": "\"BLOGS10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
     },
     {
       "expression": "\"1.42%\"",
@@ -57,7 +75,16 @@
     },
     {
       "type": "literal",
-      "value": " in BLOGS50)"
+      "value": " in "
+    },
+    {
+      "expression": "\"BLOGS50\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")"
     }
   ],
   "variables": {},

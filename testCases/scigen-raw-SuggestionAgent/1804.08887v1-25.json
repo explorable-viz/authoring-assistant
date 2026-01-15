@@ -21,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": " best performing models on the development datasets as well as the majority vote (mv) of 5 models for the final submission. The final results are shown in Table 3."
+      "value": " best performing models on the development datasets as well as the majority vote (mv) of "
+    },
+    {
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models for the final submission. The final results are shown in Table 3."
     }
   ],
   "variables": {},

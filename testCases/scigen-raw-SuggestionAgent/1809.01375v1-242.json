@@ -1,29 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Table 4 shows the f1-scores on the full clean datasets. For "
-    },
-    {
-      "expression": "\"polysemy between food and animals\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (Table 4), we observe that when trained on pure animal and food words and tested on polysemous animal and food words, the classifiers perform highly with a large "
-    },
-    {
-      "expression": "\"difference\"",
-      "categories": ["difference"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " to nearest neighbors."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 4 shows the f1-scores on the full clean datasets.  For polysemy between food and animals (Table 4), we observe that when trained on pure animal and food words and tested on polysemous animal and food words, the classifiers perform highly with a large difference to nearest neighbors."
+  }],
   "variables": {},
   "imports": [
     "scigen",

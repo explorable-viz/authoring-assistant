@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " than the 'left' or 'right'  windows of the same size, as they consider 10 words both to the left and to the right of the focus word. This is most likely why symmetric windows consistently "
+      "value": " than the 'left' or 'right'  windows of the same size, as they consider "
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " words both to the left and to the right of the focus word. This is most likely why symmetric windows consistently "
     },
     {
       "expression": "\"outperform\"",
@@ -39,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " 'single-sided' ones on the analogy task, as they are able to include twice as much contextual input. However, the "
+      "value": " 'single-sided' ones on the analogy task, as they are able to include "
+    },
+    {
+      "expression": "\"twice\"",
+      "categories": ["ratio"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as much contextual input. However, the "
     },
     {
       "expression": "\"average performance\"",
@@ -60,13 +78,13 @@
       "value": " than symmetric ones, but 'right' windows are "
     },
     {
-      "expression": "\"on par with\"",
+      "expression": "\"on par\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the symmetric windows for OpenSubtitles and only "
+      "value": " with the symmetric windows for OpenSubtitles and only "
     },
     {
       "expression": "\"one percent point behind\"",

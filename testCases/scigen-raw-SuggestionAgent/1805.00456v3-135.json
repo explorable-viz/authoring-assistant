@@ -3,64 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our "
+      "value": "Our plain BPE baseline ("
     },
     {
-      "expression": "\"plain\"",
+      "expression": "\"Table 4\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " BPE baseline (Table 4) "
+      "value": ") outperforms the current "
     },
     {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
+      "expression": "\"best\"",
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the current "
-    },
-    {
-      "expression": "\"best system\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " on WAT Ja-En, an "
-    },
-    {
-      "expression": "\"8-model ensemble\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ("
-    },
-    {
-      "expression": "\"Morishita et al.\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", "
-    },
-    {
-      "expression": "\"2017\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "). Our syntax models achieve similar results despite producing much longer sequences."
+      "value": " system on WAT Ja-En, an 8-model ensemble (Morishita et al., 2017). Our syntax models achieve similar results despite producing much longer sequences."
     }
   ],
   "variables": {},

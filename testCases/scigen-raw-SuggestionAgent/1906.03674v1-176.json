@@ -1,56 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "We present our results in Section 5 (Table 3)  In Table 3 we use the abbreviations \"baseline\" and \"emb. conc.\" for the two baseline models respectively.  We "
-    },
-    {
-      "expression": "\"compare\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the performance of the three proposed conditioning methods with the two baselines and the state-of-the-art in Table 3.  The results show that incorporating external knowledge in RNN-based architectures consistently improves performance "
-    },
-    {
-      "expression": "\"over\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the baseline for all datasets. Furthermore, feature-based gating improves upon baseline concatenation in the embedding layer across benchmarks, with the exception of PsychExp dataset.  For the Sent17 dataset we achieve state-ofthe-art F1 score using the feature-based gating method; we further improve performance when combining gating with the emb. conc. method. For SST-5, we observe a significant performance boost with combined attentional gating and embedding conditioning (gate + emb. conc.). For PsychExp, we "
-    },
-    {
-      "expression": "\"marginally outperform\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " the state-ofthe-art also with the combined method, while for Irony18, feature-based gating yields the "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " results. Finally, concatenation based conditioning is the "
-    },
-    {
-      "expression": "\"top\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " method for SCv1, and the combination method for SCv2."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "We present our results in Section 5 (Table 3)  In Table 3 we use the abbreviations \"baseline\" and \"emb. conc.\" for the two baseline models respectively.  We compare the performance of the three proposed conditioning methods with the two baselines and the state-of-the-art in Table 3.  The results show that incorporating external knowledge in RNN-based architectures consistently improves performance over the baseline for all datasets. Furthermore, feature-based gating improves upon baseline concatenation in the embedding layer across benchmarks, with the exception of PsychExp dataset.  For the Sent17 dataset we achieve state-ofthe-art F1 score using the feature-based gating method; we further improve performance when combining gating with the emb. conc. method. For SST-5, we observe a significant performance boost with combined attentional gating and embedding conditioning (gate + emb. conc.). For PsychExp, we marginally outperform the state-ofthe-art also with the combined method, while for Irony18, feature-based gating yields the best results. Finally, concatenation based conditioning is the top method for SCv1, and the combination method for SCv2."
+  }],
   "variables": {},
   "imports": [
     "scigen",

@@ -3,23 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows micro F1 scores on "
-    },
-    {
-      "expression": "\"5\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " out-domain test sets. Besides ours, only Cheng and Roth (2013) employs several mention relations. Mentnorm achieves the "
+      "value": "Table 2 shows micro F1 scores on 5 out-domain test sets. Besides ours, only Cheng and Roth (2013) employs several mention relations. Mentnorm achieves the "
     },
     {
       "expression": "\"highest\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -28,7 +16,10 @@
     },
     {
       "expression": "\"0.3%\"",
-      "categories": ["difference"],
+      "categories": [
+        "difference",
+        "average"
+      ],
       "type": "expression"
     },
     {
@@ -37,7 +28,10 @@
     },
     {
       "expression": "\"0.2%\"",
-      "categories": ["difference"],
+      "categories": [
+        "difference",
+        "average"
+      ],
       "type": "expression"
     },
     {
@@ -51,19 +45,34 @@
     },
     {
       "type": "literal",
-      "value": " than ment-norm on all other datasets. Our other three models, however, have lower average F1 scores compared to the "
+      "value": " than ment-norm on all other datasets. Our other three models, however, have "
     },
     {
-      "expression": "\"best\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " previous model. The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."
+      "value": " average F1 scores compared to the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " previous model.  The experimental results show that ment-norm "
+    },
+    {
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " rel-norm, and that mention padding plays an important role."
     }
   ],
   "variables": {},

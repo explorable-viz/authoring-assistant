@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " takes to decode an entire "
-    },
-    {
-      "expression": "\"dataset\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", given a set of "
+      "value": " takes to decode an entire dataset, given a set of "
     },
     {
       "expression": "\"scores\"",
@@ -30,16 +21,25 @@
     },
     {
       "type": "literal",
-      "value": ". "
+      "value": ". Score matrix entries are  We compare "
     },
     {
-      "expression": "\"Score matrix entries\"",
+      "expression": "\"Cython implementations\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are  We compare Cython implementations in Table 1 and Figure 1 over randomised score input. Note that our implementations are "
+      "value": " in Table 1 and Figure 1 over randomised "
+    },
+    {
+      "expression": "\"score input\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Note that our implementations are "
     },
     {
       "expression": "\"significantly faster\"",

@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We "
-    },
-    {
-      "expression": "\"classified\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " ellipsis examples which lead to errors in sentence-level translations by the type of error they cause. Results are provided in "
+      "value": "We classified ellipsis examples which lead to errors in sentence-level translations by the type of error they cause. Results are provided in "
     },
     {
       "expression": "\"Table 4\"",

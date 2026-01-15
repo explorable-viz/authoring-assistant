@@ -1,9 +1,65 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Since the loss, perplexity of syntree2vec is lower than word2vec, node2vec over most of the data sizes given below we say that the syntree2vec performs slightly better than both of them.  There is a clear margin of difference between the perplexity scores of node2vec and syntree2vec."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Since the "
+    },
+    {
+      "expression": "\"loss\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"perplexity\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of syntree2vec is "
+    },
+    {
+      "expression": "\"lower than\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " word2vec, "
+    },
+    {
+      "expression": "\"node2vec\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over most of the data sizes given below we say that the syntree2vec performs "
+    },
+    {
+      "expression": "\"slightly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than both of them. There is a clear margin of "
+    },
+    {
+      "expression": "\"difference\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " between the perplexity scores of node2vec and syntree2vec."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

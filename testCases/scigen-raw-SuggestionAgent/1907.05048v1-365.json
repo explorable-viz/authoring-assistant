@@ -1,9 +1,110 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "The results using the corrected rank eval  TransWeight, the composition model proposed in this paper, delivers consistent results, being the best performing model across all languages and phrase types. The difference in performance to the runner-up model, FullLex+, translates into more of the test phrases being close to the original repachieving a rank ≤ 5. This resentations, i.e. difference ranges from 8% of the test phrases in the German compounds dataset to less than 1% for English adjective-noun phrases. However, it is important to note the substantial difference in the number of parameters used by the two models: all TransWeight models use 100 transformations and have, therefore, a constant number of 12,020,200 parameters. In contrast the number of parameters used by FullLex+ increases with the size of the training vocabulary, reaching 739,320,200 parameters in the case of the English adjective-noun dataset. The most difficult task for all the composition models in any of the three languages is compound composition. We believe this difficulty can be mainly attributed to the complexity introduced by the position. For example in adjective-noun composition, the adjective always takes the first position, and the noun the second. However, in compounds the same noun can occur in both positions throughout different training examples. Consider for example the compounds boat house and house boat. In boat house \u2013 a house to store boats \u2013 the meaning of house is shifted towards shelter for an inanimate object, whereas house boat selects from house aspects related to human beings and their daily lives happening on the boat. These positionrelated differences can make it more challenging to create composed representations. that makes adverbadjective easier is the high dataset frequency of some of the adverbs/adjectives. For example, in the English and adjective-noun datasets Another aspect the  adjective-noun dataset a small subset of 52 adjectives like new, good, small, public, etc. are extremely frequent, occurring more than 500 times in the training portion of the adjective-noun sample dataset. Because the adjective is always the first element of the composition, the phrases that include these frequent adjectives amount to around 24.8% of the test dataset. Frequent constituents are more likely to be modeled correctly by composition \u2013 thus leading to better results.  The additive models (Addition, SAddition, VAddition) are the least competitive models in our evaluation, on all datasets. The results strongly argue for the point that additive models are too limited for composition. An adequate composed representation cannot be obtained simply as an (weighted) average of the input components.  The Matrix model clearly outperforms the additive models. However, its results are modest in comparison to models like WMask+, BiLinear, FullLex+ and TransWeight. This is to be expected: having a single affine transformation limits the model's capacity to adapt to all the possi  ble input vectors u and v. Because of its small number of parameters, the Matrix model can only capture the general trends in the data.  More interaction between u and v is promoted by the BiLinear model through the d bilinear forms in the tensor  ∈ Rn×d×n. This capacity to absorb more information from the training data translates into better results \u2014 the BiLinear model outperforms the Matrix model on all datasets.  In evaluating FullLex we tried to mitigate its treatment of unknown words. Instead of using unknown matrices to model composition of phrases not in the training data, we take a nearest neighbor approach to composition. Take for example the phrase sky-blue dress, where sky-blue does not occur in train. Our implementation, FullLex+, looks for the nearest neighbor of sky-blue that appears in train, blue and uses the matrix associated with it for building the composed representation. The same approach is also used for the WMask model, which is referred to as WMask+.  On this dataset WMask+ fares only slightly worse than FullLex+ (0.70%), an indication that FullLex+ suffers from data sparsity in such scenarios and cannot produce good results without an adequate amount of training data. By contrast, the gap between the two models increases considerably on datasets with more phrases per word \u2014 e.g. FullLex+ outperforms WMask+ with 8.07% on the English adjective-noun phrase dataset, which has 11.6 phrases per word."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The results using the corrected rank eval TransWeight, the composition model proposed in this paper, delivers consistent results, being "
+    },
+    {
+      "expression": "\"the best performing\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model across all languages and phrase types. The difference in performance to the runner-up model, FullLex+, translates into more of the test phrases being close to the original repachieving a rank ≤ 5. This resentations, i.e. difference ranges from "
+    },
+    {
+      "expression": "\"8%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the test phrases in the German compounds dataset to less than "
+    },
+    {
+      "expression": "\"1%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for English adjective-noun phrases. However, it is important to note the substantial difference in the number of parameters used by the two models: all TransWeight models use 100 transformations and have, therefore, a constant number of "
+    },
+    {
+      "expression": "\"12,020,200\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " parameters. In contrast the number of parameters used by FullLex+ increases with the size of the training vocabulary, reaching "
+    },
+    {
+      "expression": "\"739,320,200\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " parameters in the case of the English adjective-noun dataset. The most difficult task for all the composition models in any of the three languages is compound composition. We believe this difficulty can be mainly attributed to the complexity introduced by the position. For example in adjective-noun composition, the adjective always takes the first position, and the noun the second. However, in compounds the same noun can occur in both positions throughout different training examples. Consider for example the compounds boat house and house boat. In boat house \u2013 a house to store boats \u2013 the meaning of house is shifted towards shelter for an inanimate object, whereas house boat selects from house aspects related to human beings and their daily lives happening on the boat. These positionrelated differences can make it more challenging to create composed representations. that makes adverbadjective easier is the high dataset frequency of some of the adverbs/adjectives. For example, in the English and adjective-noun datasets Another aspect the  adjective-noun dataset a small subset of "
+    },
+    {
+      "expression": "\"52\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " adjectives like new, good, small, public, etc. are extremely frequent, occurring more than "
+    },
+    {
+      "expression": "\"500\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " times in the training portion of the adjective-noun sample dataset. Because the adjective is always the first element of the composition, the phrases that include these frequent adjectives amount to around "
+    },
+    {
+      "expression": "\"24.8%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the test dataset. Frequent constituents are more likely to be modeled correctly by composition \u2013 thus leading to better results.  The additive models (Addition, SAddition, VAddition) are the least competitive models in our evaluation, on all datasets. The results strongly argue for the point that additive models are too limited for composition. An adequate composed representation cannot be obtained simply as an (weighted) average of the input components.  The Matrix model clearly outperforms the additive models. However, its results are modest in comparison to models like WMask+, BiLinear, FullLex+ and TransWeight. This is to be expected: having a single affine transformation limits the model's capacity to adapt to all the possi  ble input vectors u and v. Because of its small number of parameters, the Matrix model can only capture the general trends in the data.  More interaction between u and v is promoted by the BiLinear model through the d bilinear forms in the tensor  ∈ Rn×d×n. This capacity to absorb more information from the training data translates into better results \u2014 the BiLinear model outperforms the Matrix model on all datasets.  In evaluating FullLex we tried to mitigate its treatment of unknown words. Instead of using unknown matrices to model composition of phrases not in the training data, we take a nearest neighbor approach to composition. Take for example the phrase sky-blue dress, where sky-blue does not occur in train. Our implementation, FullLex+, looks for the nearest neighbor of sky-blue that appears in train, blue and uses the matrix associated with it for building the composed representation. The same approach is also used for the WMask model, which is referred to as WMask+.  On this dataset WMask+ fares only slightly worse than FullLex+ ("
+    },
+    {
+      "expression": "\"0.70%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), an indication that FullLex+ suffers from data sparsity in such scenarios and cannot produce good results without an adequate amount of training data. By contrast, the gap between the two models increases considerably on datasets with more phrases per word \u2014 e.g. FullLex+ outperforms WMask+ with "
+    },
+    {
+      "expression": "\"8.07%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the English adjective-noun phrase dataset, which has "
+    },
+    {
+      "expression": "\"11.6\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " phrases per word."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

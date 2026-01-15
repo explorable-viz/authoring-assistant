@@ -12,16 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " tags for dependency parsing under zero-resource scenarios is summarized in Table 4 and Table 5. We then take the next logical step and remove the parallel data-grounded embeddings, replacing them with fully unsupervised MUSE embeddings. Table 5 summarizes these results. It can be observed that "
+      "value": " tags for dependency parsing under zero-resource scenarios is summarized in Table 4 and Table 5. We then take the next logical step and remove the parallel data-grounded embeddings, replacing them with fully unsupervised "
     },
     {
-      "expression": "\"POS signal\"",
+      "expression": "\"MUSE\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " improves performance greatly for all languages when using MUSE embeddings. Here we note a mixed result: whilst "
+      "value": " embeddings. Table 5 summarizes these results. It can be observed that "
+    },
+    {
+      "expression": "\"POS signal improves performance greatly\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for all languages when using MUSE embeddings. Here we note a mixed result: whilst "
     },
     {
       "expression": "\"de, sv, and it\"",
@@ -30,7 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " do benefit from POS information, the other languages do not, obtaining great improvements from MUSE embed dings instead. Finally, consider "
+      "value": " do benefit from POS information, the other languages do not, obtaining great improvements from MUSE embeddings instead. Finally, consider "
     },
     {
       "expression": "\"MUSE-CIPHER\"",

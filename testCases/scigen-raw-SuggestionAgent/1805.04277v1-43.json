@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 reports the results of supervised systems on the same dataset, taken from the two works that use the dataset  As "
+      "value": "Table 2 reports the results of "
     },
     {
-      "expression": "\"expected\"",
-      "categories": ["comparison"],
+      "expression": "\"supervised systems\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", supervised systems "
+      "value": " on the same dataset, taken from the two works that use the dataset  As expected, supervised systems "
     },
     {
       "expression": "\"outperform\"",

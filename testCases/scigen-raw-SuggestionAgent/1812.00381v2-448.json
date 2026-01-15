@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We label each reply into three categories: "
+      "value": "We label each reply into "
+    },
+    {
+      "expression": "\"three\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " categories: "
     },
     {
       "expression": "\"buy\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " and other. The distribution of reply types is highly dependant on the structure and rules of the forum as shown in Table III."
+      "value": " and "
+    },
+    {
+      "expression": "\"other\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". The distribution of reply types is highly dependant on the structure and rules of the forum as shown in Table III."
     }
   ],
   "variables": {},

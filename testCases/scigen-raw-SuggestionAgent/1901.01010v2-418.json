@@ -15,13 +15,22 @@
       "value": " of documents for each quality class are correctly classified, except for the "
     },
     {
-      "expression": "\"class where more documents\"",
-      "categories": ["comparison"],
+      "expression": "\"class\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " are misclassified into B."
+      "value": " where more documents are misclassified into "
+    },
+    {
+      "expression": "\"B\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

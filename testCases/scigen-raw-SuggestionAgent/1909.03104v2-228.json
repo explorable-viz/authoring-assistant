@@ -12,20 +12,11 @@
     },
     {
       "type": "literal",
-      "value": " results for the various models as reported in Kayal and Tsatsaronis (2019), in addition to the "
-    },
-    {
-      "expression": "\"best performance\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " of our model denoted as c. Note that the DCT-based model, DCT*, described in Kayal and Tsatsaronis (2019) performed "
+      "value": " results for the various models as reported in Kayal and Tsatsaronis (2019), in addition to the best performance of our model denoted as c. Note that the DCT-based model, DCT*, described in Kayal and Tsatsaronis (2019) performed "
     },
     {
       "expression": "\"relatively poorly\"",
-      "categories": ["comparison"],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -42,13 +33,13 @@
       "value": " p-means, ELMo, BERT, and EigenSent⊕Avg on both the 20-NG and R-8. On the other hand, both EigenSent⊕Avg and ELMo performed "
     },
     {
-      "expression": "\"better\"",
+      "expression": "\"better than\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than all other models on SST-5."
+      "value": " all other models on SST-5."
     }
   ],
   "variables": {},

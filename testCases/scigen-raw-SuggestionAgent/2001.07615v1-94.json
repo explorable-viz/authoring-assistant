@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "All results of these experiments are presented in Table 3 with the absolute improvement of the "
+      "value": "All results of these experiments are presented in Table 3 with the "
+    },
+    {
+      "expression": "\"absolute improvement\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the "
     },
     {
       "expression": "\"two\"",
@@ -12,19 +21,19 @@
     },
     {
       "type": "literal",
-      "value": " main measures "
+      "value": " "
     },
     {
-      "expression": "\"UAR\"",
+      "expression": "\"main measures\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
+      "value": " "
     },
     {
-      "expression": "\"eA\"",
+      "expression": "\"UAR and eA\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -33,13 +42,9 @@
       "value": " over the "
     },
     {
-      "expression": "\"SVM-based\"",
+      "expression": "\"SVM-based approach\"",
       "categories": ["data-retrieval"],
       "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " approach"
     }
   ],
   "variables": {},

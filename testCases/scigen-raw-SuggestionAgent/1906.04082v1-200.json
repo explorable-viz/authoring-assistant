@@ -12,25 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " than the scores of the same model on the standard dataset, due to the smaller sizes of the training datasets. Nevertheless, one can see, that our approach to word stress detection applies not only to the Russian language data, but also to the data in the Belarusian and Ukrainian languages; 2. cross-lingual setting (1): the Belarusian training dataset, being the "
+      "value": " than the scores of the same model on the standard dataset, due to the smaller sizes of the training datasets. Nevertheless, one can see, that our approach to word stress detection applies not only to the Russian language data, but also to the data in the Belarusian and Ukrainian languages; 2. cross-lingual setting (1): the Belarusian training dataset, being the smallest "
     },
     {
-      "expression": "\"smallest\"",
+      "expression": "\"one\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " among the three datasets, is not a good source for training word stress detection models in other languages, while the Ukrainian dataset stands "
+    },
+    {
+      "expression": "\"out as a good source\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " one among the three datasets, is not a good source for training word stress detection models in other languages, while the Ukrainian dataset stands "
-    },
-    {
-      "expression": "\"out\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " as a good source for training word stress detection systems both for the Russian and Belarusian languages; 3. cross-lingual setting (2): adding one or two datasets to the other languages improves the quality. For example, around "
+      "value": " for training word stress detection systems both for the Russian and Belarusian languages; 3. cross-lingual setting (2): adding one or two datasets to the other languages improves the quality. For example, around "
     },
     {
       "expression": "\"10%\"",

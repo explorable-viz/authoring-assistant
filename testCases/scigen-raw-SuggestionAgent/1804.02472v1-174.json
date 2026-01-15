@@ -12,25 +12,34 @@
     },
     {
       "type": "literal",
-      "value": " is closer to the "
+      "value": " is "
     },
     {
-      "expression": "\"true mean\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"closer to\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". This appears to arise in part because the T-biLSTM is less confident in its predictions \u2013 i.e. its "
+      "value": " the true "
     },
     {
-      "expression": "\"mean prediction\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"mean\"",
+      "categories": ["average"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " tends to be closer to "
+      "value": ". This appears to arise in part because the T-biLSTM is "
+    },
+    {
+      "expression": "\"less confident\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in its predictions \u2013 i.e. its mean prediction tends to be closer to "
     },
     {
       "expression": "\"0\"",
@@ -39,25 +48,25 @@
     },
     {
       "type": "literal",
-      "value": ". This results in the L-biLSTM being too confident in certain cases \u2013 e.g. in the case of the xcomp governing relation, where the T-biLSTM "
+      "value": ". This results in the L-biLSTM being too "
     },
     {
-      "expression": "\"mean prediction\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"confident\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is closer to the "
+      "value": " in certain cases \u2013 e.g. in the case of the xcomp governing relation, where the T-biLSTM mean prediction is "
     },
     {
-      "expression": "\"true mean\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"closer to\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " the true mean."
     }
   ],
   "variables": {},

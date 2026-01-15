@@ -21,16 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " higher than that for "
-    },
-    {
-      "expression": "\"ESIM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " higher than that for ESIM."
     }
   ],
   "variables": {},

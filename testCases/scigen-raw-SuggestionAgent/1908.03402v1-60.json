@@ -21,25 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " and the "
-    },
-    {
-      "expression": "\"synthetic data\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " as shown in Table 1.  Table 1 shows that there is a significant gap between the "
-    },
-    {
-      "expression": "\"synthetic eScape data set (Negri et al., 2018)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and the real-life data sets ("
+      "value": " and the synthetic data as shown in Table 1.  Table 1 shows that there is a significant gap between the synthetic eScape data set (Negri et al., 2018) and the real-life data sets ("
     },
     {
       "expression": "\"the development set\"",
@@ -48,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " and the original training set from posteditors),"
+      "value": " and the "
+    },
+    {
+      "expression": "\"original training set from posteditors\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "),"
     }
   ],
   "variables": {},

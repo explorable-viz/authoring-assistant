@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " testing data points) in Table 1. As shown in Table 1, the average performance increases from "
+      "value": " testing data points) in Table 1. As shown in Table 1, the average performance "
+    },
+    {
+      "expression": "\"increases\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " from "
     },
     {
       "expression": "\"RANDOM\"",

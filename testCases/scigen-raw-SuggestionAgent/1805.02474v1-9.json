@@ -1,9 +1,65 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Table 2 shows the development results of various S-LSTM settings,  Adding one additional sentence-level node  does not lead to accuracy improvements, although the number of parameters and decoding time increase accordingly.  The accuracies of S-LSTM increases as the hidden layer size for each node increases from 100 to 300, but does not further increase when the size increases beyond 300. We fix the hidden size to 300 accordingly. Without using (cid:104)s(cid:105) and (cid:104)/s(cid:105), the performance of S-LSTM drops from 82.64% to 82.36%, showing the effectiveness of having these additional nodes."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 2 shows the development results of various S-LSTM settings, Adding one additional sentence-level node does not lead to accuracy improvements, although the number of parameters and decoding time increase accordingly. The accuracies of S-LSTM increases as the hidden layer size for each node increases from "
+    },
+    {
+      "expression": "\"100\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"300\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", but does not further increase when the size increases beyond "
+    },
+    {
+      "expression": "\"300\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". We fix the hidden size to "
+    },
+    {
+      "expression": "\"300\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accordingly. Without using (cid:104)s(cid:105) and (cid:104)/s(cid:105), the performance of S-LSTM drops from "
+    },
+    {
+      "expression": "\"82.64%\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "expression": "\"82.36%\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", showing the effectiveness of having these additional nodes."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

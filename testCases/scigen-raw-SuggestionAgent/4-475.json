@@ -3,25 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The "
+      "value": "The automatic evaluation results on the test set of MSCOCO are shown in Table 1. Our model "
     },
     {
-      "expression": "\"automatic evaluation results\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the test set of MSCOCO are shown in Table 1. Our model outperforms all the compared approaches on all "
-    },
-    {
-      "expression": "\"automatic evaluation metrics\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". In particular, by benefiting from the retrieved captions, our model gets the "
+      "value": " all the compared approaches on all automatic evaluation metrics. In particular, by benefiting from the retrieved captions, our model gets the "
     },
     {
       "expression": "\"highest\"",

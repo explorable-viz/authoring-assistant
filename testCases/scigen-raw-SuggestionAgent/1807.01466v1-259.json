@@ -1,9 +1,191 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "of results the multimodal The experiments are shown in Table 3.  We find that EF>HF>TFN>LF.  4  Unlike Zadeh et al. (2017), here the EF model outperforms the TFN model. However, the TFN model achieved the best performance on the training and validation sets.  Compared to the feature concatenation used in EF, the Cartesian product used in TFN results in higher dimensionality of the multimodal input vector,5 which in turn increases the complexity of the model. Similarly, the HF model has worse performance than the EF model here, unlike in Tian et al. (2016).  In general, the multimodal models have better performance than the unimodal models.  In fact, the HF and LF models have better performance using single-task learning. For the TFN models, only the S+P model outperforms the S model, although the improvement is not significant.7 For the EF models, multi-task learning results in better performance.  Dimension of the EF input is 420, for TFN is 65,536. 6Except that the LF models often have worse performance than the verbal S+P model. p << 0.001 for TFN S+P and verbal S+P, p = 0.017 for verbal S+P and LF S. 7p = 0.105 for S TFN and S+P TFN. 8p = 0.888 for S EF and S+P EF, p = 0.029 for S EF and S+I EF, p = 0.009 for S EF and S+P+I EF."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "of results the multimodal The experiments are shown in Table 3.  We find that "
+    },
+    {
+      "expression": "\"EF>HF>TFN>LF\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  4  Unlike Zadeh et al. (2017), here the "
+    },
+    {
+      "expression": "\"EF model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms the "
+    },
+    {
+      "expression": "\"TFN model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, the "
+    },
+    {
+      "expression": "\"TFN model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " achieved the "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on the training and validation sets.  Compared to the feature concatenation used in EF, the Cartesian product used in TFN results in "
+    },
+    {
+      "expression": "\"higher dimensionality\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of the multimodal input vector,5 which in turn increases the complexity of the model. Similarly, the "
+    },
+    {
+      "expression": "\"HF model\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has "
+    },
+    {
+      "expression": "\"worse performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the EF model here, unlike in Tian et al. (2016).  In general, the multimodal models have "
+    },
+    {
+      "expression": "\"better performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the unimodal models.  In fact, the HF and LF models have "
+    },
+    {
+      "expression": "\"better performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " using single-task learning. For the TFN models, only the S+P model outperforms the S model, although the improvement is not significant.7 For the EF models, multi-task learning results in "
+    },
+    {
+      "expression": "\"better performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Dimension of the EF input is "
+    },
+    {
+      "expression": "\"420\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", for TFN is "
+    },
+    {
+      "expression": "\"65,536\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". 6Except that the LF models often have "
+    },
+    {
+      "expression": "\"worse performance\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the verbal S+P model. p << "
+    },
+    {
+      "expression": "\"0.001\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for TFN S+P and verbal S+P, p = "
+    },
+    {
+      "expression": "\"0.017\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for verbal S+P and LF S. 7p = "
+    },
+    {
+      "expression": "\"0.105\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for S TFN and S+P TFN. 8p = "
+    },
+    {
+      "expression": "\"0.888\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for S EF and S+P EF, p = "
+    },
+    {
+      "expression": "\"0.029\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for S EF and S+I EF, p = "
+    },
+    {
+      "expression": "\"0.009\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for S EF and S+P+I EF."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

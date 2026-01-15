@@ -30,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " BaseRNN."
+      "value": " "
+    },
+    {
+      "expression": "\"BaseRNN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
     }
   ],
   "variables": {},

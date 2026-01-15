@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "In "
+      "value": "In Table 3, we "
     },
     {
-      "expression": "\"Table 3\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"compare\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", we compare the combined distance measure with each of the two components used alone. The results show that combining the edit distance with the embedding similarity is "
+      "value": " the combined distance measure with each of the two components used alone. The results show that combining the edit distance with the embedding similarity is "
     },
     {
       "expression": "\"stronger\"",

@@ -16,10 +16,7 @@
     },
     {
       "expression": "\"most effective\"",
-      "categories": [
-        "comparison",
-        "rank"
-      ],
+      "categories": ["rank"],
       "type": "expression"
     },
     {

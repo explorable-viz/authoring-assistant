@@ -3,43 +3,55 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 shows the results for both evaluation settings for the textual baseline and the "
+      "value": "Table 4 shows the results for both "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"evaluation settings\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for the "
+    },
+    {
+      "expression": "\"textual baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"best multimodal variant\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " multimodal variant. For the context features, we see a slight "
+      "value": ". For the "
     },
     {
-      "expression": "\"improvement\"",
-      "categories": ["comparison"],
+      "expression": "\"context features\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in the "
+      "value": ", we see a slight improvement in the "
     },
     {
-      "expression": "\"best\"",
-      "categories": ["rank"],
+      "expression": "\"best variant of the speaker independent setup (text plus audio)\"",
+      "categories": [
+        "rank",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " variant of the speaker independent setup (text plus audio); however, in other models, there is no "
-    },
-    {
-      "expression": "\"improvement\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": "; however, in other models, there is no improvement."
     }
   ],
   "variables": {},

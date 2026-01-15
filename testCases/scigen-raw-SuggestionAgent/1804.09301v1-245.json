@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " majority gender ("
-    },
-    {
-      "expression": "\"BLS\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ") if "
+      "value": " majority gender (BLS) if "
     },
     {
       "expression": "\"OCCUPATION\"",

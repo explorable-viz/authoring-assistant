@@ -21,7 +21,25 @@
     },
     {
       "type": "literal",
-      "value": " our proposed SPON model to other supervised SOTA approaches for hypernym prediction task, namely Order Embeddings (OE) approach as introduced by (Vendrov et al. 2016), and Smoothed Box model as introduced by (Li et al. 2019)."
+      "value": " our proposed SPON model to other supervised SOTA approaches for hypernym prediction task, namely "
+    },
+    {
+      "expression": "\"Order Embeddings (OE)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " approach as introduced by (Vendrov et al. 2016), and "
+    },
+    {
+      "expression": "\"Smoothed Box\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " model as introduced by (Li et al. 2019)."
     }
   ],
   "variables": {},

@@ -1,20 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "The Vocabulary model correctly classified test items in "
-    },
-    {
-      "expression": "\"three\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " IC bands only (Table 5)."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "The Vocabulary model correctly classified test items in three IC bands only (Table 5)."
+  }],
   "variables": {},
   "imports": [
     "scigen",

@@ -21,7 +21,34 @@
     },
     {
       "type": "literal",
-      "value": ": there was no significant effect of surprisal on referring expression type.  In order to replicate their settings as closely as possible, we also included residualEntropy as a predictor in our model (see last predictor in "
+      "value": ": there was no significant effect of "
+    },
+    {
+      "expression": "\"surprisal\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on "
+    },
+    {
+      "expression": "\"referring expression type\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  In order to replicate their settings as closely as possible, we also included "
+    },
+    {
+      "expression": "\"residualEntropy\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " as a predictor in our model (see last predictor in "
     },
     {
       "expression": "\"Table 5\"",

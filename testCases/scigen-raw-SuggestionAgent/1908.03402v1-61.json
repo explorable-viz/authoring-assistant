@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Even the ensemble of 5 models did not result in significant "
+      "value": "Even the ensemble of "
     },
     {
-      "expression": "\"differences\"",
-      "categories": ["difference"],
+      "expression": "\"5\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " especially in "
+      "value": " models did not result in significant differences especially in "
     },
     {
       "expression": "\"BLEU scores\"",

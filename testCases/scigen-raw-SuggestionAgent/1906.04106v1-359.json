@@ -3,25 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We conduct an ablation study to further analyze our reinforcement learning algorithm. The results are reported in "
-    },
-    {
-      "expression": "\"Table 5\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". As seen in "
-    },
-    {
-      "expression": "\"Table 5\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", although the performance of "
+      "value": "We conduct an ablation study to further analyze our reinforcement learning algorithm. The results are reported in Table 5. As seen in Table 5, although the performance of "
     },
     {
       "expression": "\"catSeq-RF1\"",
@@ -33,13 +15,13 @@
       "value": " is "
     },
     {
-      "expression": "\"competitive to\"",
+      "expression": "\"competitive\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " "
+      "value": " to "
     },
     {
       "expression": "\"catSeq-2RF1\"",
@@ -48,10 +30,10 @@
     },
     {
       "type": "literal",
-      "value": " on predicting present keyphrases, it yields an "
+      "value": " on predicting present keyphrases, it yields an extremely "
     },
     {
-      "expression": "\"extremely poor performance\"",
+      "expression": "\"poor\"",
       "categories": [
         "min-max",
         "rank"
@@ -60,16 +42,7 @@
     },
     {
       "type": "literal",
-      "value": " on absent keyphrase prediction. By comparing the last two rows in "
-    },
-    {
-      "expression": "\"Table 5\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", we observe that our "
+      "value": " performance on absent keyphrase prediction. By comparing the last two rows in Table 5, we observe that our "
     },
     {
       "expression": "\"RF1 reward function\"",

@@ -16,7 +16,7 @@
     },
     {
       "expression": "\"55.1%\"",
-      "categories": ["min-max"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -30,11 +30,20 @@
     },
     {
       "type": "literal",
-      "value": ". For the initial question (POS1), however, it is behind DYNSP by "
+      "value": ". For the initial question (POS1), however, it is "
+    },
+    {
+      "expression": "\"behind\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " DYNSP by "
     },
     {
       "expression": "\"3.7%\"",
-      "categories": ["difference"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -43,7 +52,7 @@
     },
     {
       "expression": "\"20%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -52,7 +61,7 @@
     },
     {
       "expression": "\"28%\"",
-      "categories": ["ratio"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -61,7 +70,7 @@
     },
     {
       "expression": "\"45.1%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -70,7 +79,7 @@
     },
     {
       "expression": "\"55.1%\"",
-      "categories": ["min-max"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -79,7 +88,7 @@
     },
     {
       "expression": "\"2.7%\"",
-      "categories": ["difference"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -88,7 +97,7 @@
     },
     {
       "expression": "\"61.7%\"",
-      "categories": ["min-max"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

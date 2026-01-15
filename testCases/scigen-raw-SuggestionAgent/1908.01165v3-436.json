@@ -30,7 +30,34 @@
     },
     {
       "type": "literal",
-      "value": " method gives significant improvement in success rate in comparison with random baseline across all the NMT models. The number of replacement for Min-Grad is comparable with random.  Table IV shows that "
+      "value": " method gives "
+    },
+    {
+      "expression": "\"significant improvement\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in success rate in comparison with random baseline across all the NMT models. The number of replacement for "
+    },
+    {
+      "expression": "\"Min-Grad\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with random.  Table IV shows that "
     },
     {
       "expression": "\"Transformer\"",
@@ -48,25 +75,97 @@
     },
     {
       "type": "literal",
-      "value": ". This is because our proposed method has less number of replacements and lower success rate in case of Transformer than BLSTM for both the language pairs. Interestingly, HotFlip has "
+      "value": ". This is because our proposed method has "
     },
     {
-      "expression": "\"higher\"",
+      "expression": "\"less number of replacements\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " success rate and similar number of replacement in case for Transformer than BLSTM. Overall, as is evident from Table IV, our proposed method (Min-Grad + Soft-Att) achieves the "
+      "value": " and "
     },
     {
-      "expression": "\"highest\"",
+      "expression": "\"lower success rate\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in case of "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"BLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for both the language pairs. Interestingly, "
+    },
+    {
+      "expression": "\"HotFlip\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " has "
+    },
+    {
+      "expression": "\"higher success rate\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and similar number of replacement in case for "
+    },
+    {
+      "expression": "\"Transformer\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than "
+    },
+    {
+      "expression": "\"BLSTM\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Overall, as is evident from Table IV, our proposed method ("
+    },
+    {
+      "expression": "\"Min-Grad + Soft-Att\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") achieves the "
+    },
+    {
+      "expression": "\"highest success rate\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " success rate across the NMT models.  From Table IV, across all the NMT models, we can see that "
+      "value": " across the NMT models.  From Table IV, across all the NMT models, we can see that "
     },
     {
       "expression": "\"Soft-Att\"",
@@ -75,7 +174,16 @@
     },
     {
       "type": "literal",
-      "value": " significantly outperforms HotFlip both in terms of success rate and number of replacements."
+      "value": " significantly outperforms "
+    },
+    {
+      "expression": "\"HotFlip\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " both in terms of success rate and number of replacements."
     }
   ],
   "variables": {},

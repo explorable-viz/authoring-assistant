@@ -3,16 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 compares the development set performance of different variants of the proposed sentence retrieval method with the state of the art results on the FEVER dataset. The results indicate that both pointwise and pairwise BERT sentence retrieval improve the "
+      "value": "Table 1 compares the development set performance of different variants of the proposed sentence retrieval method with the state of the art results on the FEVER dataset. The results indicate that both "
     },
     {
-      "expression": "\"recall\"",
+      "expression": "\"pointwise\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". The UNC and DREAM precision scores are "
+      "value": " and "
+    },
+    {
+      "expression": "\"pairwise BERT sentence retrieval\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " improve the recall. The "
+    },
+    {
+      "expression": "\"UNC and DREAM precision scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " are "
     },
     {
       "expression": "\"better\"",
@@ -25,24 +43,12 @@
     },
     {
       "expression": "\"best\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " precision and "
-    },
-    {
-      "expression": "\"F1 scores\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " precision and F1 scores."
     }
   ],
   "variables": {},

@@ -12,10 +12,10 @@
     },
     {
       "type": "literal",
-      "value": " than the ME score of the classifier through most of the learning phase. Comparing the statistics of the datasets to the inductive biases in the classifiers, the ME score for the classifiers is substantially "
+      "value": " than the ME score of the classifier through most of the learning phase. Comparing the statistics of the datasets to the inductive biases in the classifiers, the ME score for the classifiers is "
     },
     {
-      "expression": "\"lower\"",
+      "expression": "\"substantially lower\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -33,22 +33,22 @@
       "value": " after about "
     },
     {
-      "expression": "\"8,960\"",
+      "expression": "\"8,960 images\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " images, while the approximate ME measure for the dataset shows that new classes are encountered at above this rate until at least "
+      "value": ", while the approximate ME measure for the dataset shows that new classes are encountered at above this rate until at least "
     },
     {
-      "expression": "\"111,000\"",
+      "expression": "\"111,000 images\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " images."
+      "value": "."
     }
   ],
   "variables": {},

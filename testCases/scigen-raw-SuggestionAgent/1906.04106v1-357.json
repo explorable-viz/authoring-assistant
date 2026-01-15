@@ -1,9 +1,29 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "The evaluation results of different models on predicting present keyphrases are shown in Table 2. We observe that our reinforcement learning algorithm catSeqTG-2 RF1 consistently improves the keyphrase extraction ability of all baseline generative models by a large margin."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The evaluation results of "
+    },
+    {
+      "expression": "\"different models\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on predicting present keyphrases are shown in Table 2. We observe that our reinforcement learning algorithm "
+    },
+    {
+      "expression": "\"catSeqTG-2  RF1\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " consistently improves the keyphrase extraction ability of all baseline generative models by a large margin."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

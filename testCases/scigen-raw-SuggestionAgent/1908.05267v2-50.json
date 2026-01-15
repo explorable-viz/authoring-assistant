@@ -3,11 +3,11 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 7 and Table 8 summarize the "
+      "value": "Table 7 and Table 8 summarize the top "
     },
     {
-      "expression": "\"top 10\"",
-      "categories": ["rank"],
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {

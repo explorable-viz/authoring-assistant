@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " all the baselines across all topics. Despite being modest, all the improvements of RCN over the baselines are statistically significant at "
-    },
-    {
-      "expression": "\"p < 0.05\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " with a two-tailed t-test. "
+      "value": " all the baselines across all topics. Despite being modest, all the improvements of RCN over the baselines are statistically significant at p < 0.05 with a two-tailed t-test. "
     },
     {
       "expression": "\"BiLSTM\"",
@@ -34,7 +25,10 @@
     },
     {
       "expression": "\"worst\"",
-      "categories": ["rank"],
+      "categories": [
+        "min-max",
+        "rank"
+      ],
       "type": "expression"
     },
     {
@@ -48,11 +42,23 @@
     },
     {
       "type": "literal",
-      "value": " performed similarly well; RCN performed the "
+      "value": " performed similarly well; "
+    },
+    {
+      "expression": "\"RCN\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performed the "
     },
     {
       "expression": "\"best\"",
-      "categories": ["rank"],
+      "categories": [
+        "min-max",
+        "rank"
+      ],
       "type": "expression"
     },
     {
@@ -61,10 +67,7 @@
     },
     {
       "expression": "\"2.1%\"",
-      "categories": [
-        "data-retrieval",
-        "difference"
-      ],
+      "categories": ["difference"],
       "type": "expression"
     },
     {
@@ -73,10 +76,7 @@
     },
     {
       "expression": "\"10.4%\"",
-      "categories": [
-        "data-retrieval",
-        "difference"
-      ],
+      "categories": ["difference"],
       "type": "expression"
     },
     {

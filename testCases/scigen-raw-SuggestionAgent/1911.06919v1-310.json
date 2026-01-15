@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We assess unigram ("
+      "value": "We assess "
+    },
+    {
+      "expression": "\"unigram\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"R-1\"",
@@ -12,7 +21,16 @@
     },
     {
       "type": "literal",
-      "value": "), bigram ("
+      "value": "), "
+    },
+    {
+      "expression": "\"bigram\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"R-2\"",
@@ -21,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": "), and longest-commonsubsequence ("
+      "value": "), and "
+    },
+    {
+      "expression": "\"longest-commonsubsequence\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"R-L\"",
@@ -39,7 +66,25 @@
     },
     {
       "type": "literal",
-      "value": ", recall and precision scores in Table 1. For the first baseline ("
+      "value": ", "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"precision\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " scores in Table 1. For the first baseline ("
     },
     {
       "expression": "\"PG\"",
@@ -48,7 +93,16 @@
     },
     {
       "type": "literal",
-      "value": "), we see that incorporating discourse features consistently improves recall and "
+      "value": "), we see that incorporating discourse features consistently improves "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
     },
     {
       "expression": "\"F1\"",
@@ -66,7 +120,34 @@
     },
     {
       "type": "literal",
-      "value": "): recall is generally improved at the expense of precision. Observing that our model generally has better recall (Table 1)"
+      "value": "): "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is generally improved at the expense of "
+    },
+    {
+      "expression": "\"precision\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". Observing that our model generally has better "
+    },
+    {
+      "expression": "\"recall\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (Table 1)"
     }
   ],
   "variables": {},

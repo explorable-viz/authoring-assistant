@@ -3,25 +3,70 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Discussion of Results Table 2 presents the WSD micro-F1 scores using raw WordNet similarities, "
+      "value": "Discussion of Results "
     },
     {
-      "expression": "\"300D\"",
+      "expression": "\"Table 2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " path2vec, DeepWalk and node2vec models, and the "
+      "value": " presents the WSD micro-F1 scores using raw WordNet similarities, 300D path2vec, DeepWalk and node2vec models, and the 128D FSE model. We evaluate on the following all-words English WSD test sets: "
     },
     {
-      "expression": "\"128D\"",
+      "expression": "\"Senseval-2\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " FSE model. We evaluate on the following all-words English WSD test sets:  Senseval-2 (Palmer et al., 2001), Senseval-3 (Mihalcea et al., 2004), and SemEval-15 Task 13 (Moro and Navigli, 2015). The raw WordNet similarities have a "
+      "value": " ("
+    },
+    {
+      "expression": "\"Palmer et al., 2001\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), "
+    },
+    {
+      "expression": "\"Senseval-3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"Mihalcea et al., 2004\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), and "
+    },
+    {
+      "expression": "\"SemEval-15 Task 13\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"Moro and Navigli, 2015\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). The raw WordNet similarities have a "
     },
     {
       "expression": "\"small edge\"",

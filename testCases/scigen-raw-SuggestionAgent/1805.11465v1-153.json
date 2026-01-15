@@ -1,47 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "Table 2 analyzes the performance of our two "
-    },
-    {
-      "expression": "\"best\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " systems (PD = projective, FTD = fixed-tree) in more detail, and compares them to Wang's, Flanigan's, and Damonte's AMR parsers on the "
-    },
-    {
-      "expression": "\"2015\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " set and , and "
-    },
-    {
-      "expression": "\"van Noord and Bos (2017b)\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for the "
-    },
-    {
-      "expression": "\"2017\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " dataset. The good scores we achieve on reentrancy identification,"
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "Table 2 analyzes the performance of our two best systems (PD = projective, FTD = fixed-tree) in more detail,  and compares them to Wang's, Flanigan's, and Damonte's AMR parsers on the 2015 set and , and van Noord and Bos (2017b) for the 2017 dataset.  The good scores we achieve on reentrancy identification,"
+  }],
   "variables": {},
   "imports": [
     "scigen",

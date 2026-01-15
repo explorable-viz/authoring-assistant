@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We conduct transfer learning on four different combinations of MedNLI, SNLI, and MNLI as it shown in the table 4 (line 4 to 7) and also add the results of general domain tasks (MNLI, SNLI) for "
-    },
-    {
-      "expression": "\"comparison\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ".  BERT performs "
+      "value": "We conduct transfer learning on four different combinations of MedNLI, SNLI, and MNLI as it shown in the table 4 (line 4 to 7) and also add the results of general domain tasks (MNLI, SNLI) for comparison.  BERT performs "
     },
     {
       "expression": "\"better\"",
@@ -33,31 +24,31 @@
       "value": " on MedNLI which is in the clinical domain.  positive transfer occurs on MedNLI.  even though BioBERT is finetuned on general domain tasks before MedNLI, transfer learning shows "
     },
     {
-      "expression": "\"better results\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than that fine-tuned on MedNLI directly.  the domain specific language representations from BioBERT are maintained while fine-tuning on general domain tasks by showing that the transfer learning results of MedNLI on BioBERT have "
-    },
-    {
-      "expression": "\"better performance\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " than the results on BERT (line 4 to 7).  the accuracy of MNLI and SNLI on BioBERT is "
-    },
-    {
-      "expression": "\"lower than\"",
+      "expression": "\"better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the accuracy on BERT.  The "
+      "value": " results than that fine-tuned on MedNLI directly.  the domain specific language representations from BioBERT are maintained while fine-tuning on general domain tasks by showing that the transfer learning results of MedNLI on BioBERT have "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance than the results on BERT (line 4 to 7).  the accuracy of MNLI and SNLI on BioBERT is "
+    },
+    {
+      "expression": "\"lower\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the accuracy on BERT.  The "
     },
     {
       "expression": "\"best combination\"",
@@ -69,13 +60,13 @@
       "value": " is SNLI → MNLI → MedNLI on BioBERT.  MedNLI (expanded) shows "
     },
     {
-      "expression": "\"better performance\"",
-      "categories": ["rank"],
+      "expression": "\"better\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " than MedNLI on BioBERT while MedNLI works "
+      "value": " performance than MedNLI on BioBERT while MedNLI works "
     },
     {
       "expression": "\"better\"",

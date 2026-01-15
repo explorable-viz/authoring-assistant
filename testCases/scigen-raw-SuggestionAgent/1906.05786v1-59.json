@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Consequently in Table 5 we experiment with BI ("
+      "value": "Consequently in Table 5 we experiment with "
+    },
+    {
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"α = 0.1\"",
@@ -12,16 +21,43 @@
     },
     {
       "type": "literal",
-      "value": "). In this case BI "
+      "value": "). In this case "
     },
     {
-      "expression": "\"matches or out-performs\"",
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " matches or "
+    },
+    {
+      "expression": "\"out-performs\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the uniform ensemble. Notably, for en2es, where BI ("
+      "value": " the uniform ensemble. Notably, for "
+    },
+    {
+      "expression": "\"en2es\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", where "
+    },
+    {
+      "expression": "\"BI\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
     },
     {
       "expression": "\"α = 0.5\"",
@@ -30,16 +66,16 @@
     },
     {
       "type": "literal",
-      "value": ") performed well, taking α = 0.1 does not "
+      "value": ") performed well, taking "
     },
     {
-      "expression": "\"harm performance\"",
-      "categories": ["difference"],
+      "expression": "\"α = 0.1\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": "."
+      "value": " does not harm performance."
     }
   ],
   "variables": {},

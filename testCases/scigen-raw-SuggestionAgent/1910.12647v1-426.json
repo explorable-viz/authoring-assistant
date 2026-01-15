@@ -7,7 +7,7 @@
     },
     {
       "expression": "\"transferring\"",
-      "categories": ["comparison"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -21,10 +21,10 @@
     },
     {
       "type": "literal",
-      "value": ". "
+      "value": ". Filler vectors learned from "
     },
     {
-      "expression": "\"Filler vectors learned from QQP\"",
+      "expression": "\"QQP\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -48,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": ". Surprisingly, transferring BERT parameters is hurting the results now even when "
+      "value": ". Surprisingly, transferring "
+    },
+    {
+      "expression": "\"BERT parameters\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is hurting the results now even when "
     },
     {
       "expression": "\"TPR\"",

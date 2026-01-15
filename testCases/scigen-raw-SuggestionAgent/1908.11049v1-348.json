@@ -3,25 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "When we jointly train each task on the three languages, the performance decreases in most cases, other than the target group classification tasks.  Yet, "
+      "value": "When we jointly train each task on the three languages, the performance decreases in most cases, other than the target group classification tasks.  Yet, multilingual training of the "
     },
     {
-      "expression": "\"multilingual training\"",
+      "expression": "\"target group classification\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of the "
+      "value": " task improves in all languages. Since the "
     },
     {
-      "expression": "\"target group classification task\"",
+      "expression": "\"target group classification\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " improves in all languages. Since the target group classification task involves "
+      "value": " task involves "
     },
     {
       "expression": "\"16 labels\"",

@@ -3,43 +3,52 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 7 presents the POS tagging improvements that "
+      "value": "Table 7 presents the POS tagging "
     },
     {
-      "expression": "\"MIMICK\"",
+      "expression": "\"improvements\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " achieves over the pre-trained "
+      "value": " that MIMICK achieves over the pre-trained Polyglot models, with and without CHAR→TAG concatenation, with "
     },
     {
-      "expression": "\"Polyglot models\"",
+      "expression": "\"10,000\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", with and without "
+      "value": " tokens of training data. We obtain statistically significant "
     },
     {
-      "expression": "\"CHAR→TAG concatenation\"",
+      "expression": "\"improvements\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", with "
+      "value": " in most languages, even when CHAR→TAG is included. These "
     },
     {
-      "expression": "\"10,000 tokens of training data\"",
+      "expression": "\"improvements\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". We obtain statistically significant improvements in most languages, even when CHAR→TAG is included. These improvements are particularly substantial for test-set tokens outside the UD training set, as shown in the right two columns. While test set OOVs are a strength of the CHAR→TAG model (Plank et al., 2016), in many languages there are still considerable improvements to be obtained from the application of MIMICK initialization."
+      "value": " are particularly substantial for test-set tokens outside the UD training set, as shown in the right two columns. While test set OOVs are a strength of the CHAR→TAG model (Plank et al., 2016), in many languages there are still considerable "
+    },
+    {
+      "expression": "\"improvements\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to be obtained from the application of MIMICK initialization."
     }
   ],
   "variables": {},

@@ -12,16 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " in the former case with negligible difference in "
+      "value": " in the former case with "
     },
     {
-      "expression": "\"BLEU scores\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"negligible difference\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ".  The inference times are of the various models are mentioned in Table 1."
+      "value": " in BLEU scores. The inference times are of the various models are mentioned in Table 1."
     }
   ],
   "variables": {},

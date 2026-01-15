@@ -1,9 +1,29 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "our model can stably generate adversarial samples without significant change in semantics with the same training setting for different models,"
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "our model can stably generate adversarial samples without significant change in semantics with the "
+    },
+    {
+      "expression": "\"same\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " training setting for "
+    },
+    {
+      "expression": "\"different\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " models,"
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

@@ -3,20 +3,20 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The answer is in Table II where we performed the same task, but this time we swapped our semantic segmentation network with the pixel-level ground-truth provided along with the data. This represents the "
+      "value": "The answer is in Table II where we performed the same task, but this time we swapped our semantic segmentation network with the "
     },
     {
-      "expression": "\"upper-bound performances\"",
-      "categories": ["rank"],
+      "expression": "\"pixel-level ground-truth\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " , as no tool will produce a better segmentation than the ground-truth. In this scenario our method performed at "
+      "value": " provided along with the data. This represents the upper-bound performances, as no tool will produce a better segmentation than the ground-truth. In this scenario our method performed at "
     },
     {
       "expression": "\"100%\"",
-      "categories": ["data-retrieval"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

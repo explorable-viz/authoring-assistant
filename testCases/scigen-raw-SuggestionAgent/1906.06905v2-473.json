@@ -24,13 +24,22 @@
       "value": " are overall able to "
     },
     {
-      "expression": "\"significantly (p < 0.025)\"",
+      "expression": "\"significantly\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"p < 0.025\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " increase and decrease the test's difficulty over "
+      "value": ") increase and decrease the test's difficulty over "
     },
     {
       "expression": "\"DEF\"",
@@ -48,16 +57,7 @@
     },
     {
       "type": "literal",
-      "value": ", the effect is also statistically significant "
-    },
-    {
-      "expression": "\"4\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for all individual text and strategy pairs."
+      "value": ", the effect is also statistically significant 4 for all individual text and strategy pairs."
     }
   ],
   "variables": {},

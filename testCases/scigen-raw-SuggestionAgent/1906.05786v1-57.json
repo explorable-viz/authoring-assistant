@@ -52,7 +52,7 @@
     },
     {
       "expression": "\"0.5-1.2 BLEU improvement\"",
-      "categories": ["difference"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -66,7 +66,16 @@
     },
     {
       "type": "literal",
-      "value": " on each validation domain.  For en2es uniform ensembling underperforms the health and bio oracle models on their validation sets, and the uniform ensemble slightly underperforms BI on the test data."
+      "value": " on each validation domain.  For en2es uniform ensembling underperforms the health and bio oracle models on their validation sets, and the uniform ensemble slightly "
+    },
+    {
+      "expression": "\"underperforms\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BI on the test data."
     }
   ],
   "variables": {},

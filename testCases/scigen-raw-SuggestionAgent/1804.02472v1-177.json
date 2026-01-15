@@ -3,56 +3,32 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 5 illustrates the influence of modals and negation on the factuality of the events they have direct scope over. The context with "
+      "value": "Table 5 illustrates the influence of modals and negation on the factuality of the events they have direct scope over. The context with the "
     },
     {
-      "expression": "\"the highest\"",
+      "expression": "\"highest\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " factuality "
+      "value": " factuality on average is no direct modal and no negation (first row); all other modal contexts have varying degrees of "
     },
     {
-      "expression": "\"on average\"",
-      "categories": ["average"],
+      "expression": "\"negative\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " is "
-    },
-    {
-      "expression": "\"no direct modal and no negation\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " (first row); all other modal contexts have varying degrees of "
-    },
-    {
-      "expression": "\"negative mean factuality scores\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", with "
-    },
-    {
-      "expression": "\"will\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " as the "
+      "value": " mean factuality scores, with will as the "
     },
     {
       "expression": "\"most negative\"",
-      "categories": ["rank"],
+      "categories": [
+        "comparison",
+        "rank"
+      ],
       "type": "expression"
     },
     {

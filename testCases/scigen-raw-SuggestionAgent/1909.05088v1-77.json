@@ -1,9 +1,20 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "An overview of the language pairs as well as the amount of annotated parallel sentences per language pair is given in Table 1. Overview of annotated parallel sentences per language pair"
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "An overview of the language pairs as well as the "
+    },
+    {
+      "expression": "\"amount\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of annotated parallel sentences per language pair is given in Table 1. Overview of annotated parallel sentences per language pair"
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

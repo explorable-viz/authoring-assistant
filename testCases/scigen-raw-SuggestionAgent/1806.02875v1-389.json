@@ -3,25 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The classification of "
-    },
-    {
-      "expression": "\"BR\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"US\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " datasets used the "
+      "value": "The classification of BR and US datasets used the "
     },
     {
       "expression": "\"60\"",
@@ -39,29 +21,11 @@
     },
     {
       "type": "literal",
-      "value": " most relevant features, respectively. The test accuracy for the "
-    },
-    {
-      "expression": "\"BR\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"US\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " datasets were "
+      "value": " most relevant features, respectively. The test accuracy for the BR and US datasets were "
     },
     {
       "expression": "\"85%\"",
-      "categories": ["min-max"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -70,7 +34,7 @@
     },
     {
       "expression": "\"72%\"",
-      "categories": ["min-max"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -79,34 +43,16 @@
     },
     {
       "expression": "\"50%\"",
-      "categories": ["min-max"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The combined dataset used a reduced set of features consisting of an intersection of the most relevant features observed in both "
-    },
-    {
-      "expression": "\"BR\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"US\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", achieving a test score of "
+      "value": ". The combined dataset used a reduced set of features consisting of an intersection of the most relevant features observed in both BR and US, achieving a test score of "
     },
     {
       "expression": "\"70%\"",
-      "categories": ["min-max"],
+      "categories": ["average"],
       "type": "expression"
     },
     {
@@ -120,7 +66,7 @@
     },
     {
       "type": "literal",
-      "value": " features. classes. We have shown that these features may be used to classify news articles in a language other than English."
+      "value": " features.  classes. We have shown that these features may be used to classify news articles in a language other than English."
     }
   ],
   "variables": {},

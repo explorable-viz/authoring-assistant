@@ -12,23 +12,20 @@
     },
     {
       "type": "literal",
-      "value": " GrOVLE across the five VL tasks. We provide results for a four and five multi-task trained embedding. The "
+      "value": " GrOVLE across the five VL tasks. We provide results for a "
     },
     {
-      "expression": "\"four\"",
+      "expression": "\"four and five\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " task experiments are performed with the final task embedding fixed to demonstrate how well the embeddings would generalize to new tasks. We also provide results for pretraining on five tasks with and without finetuning during the last task.  This multi-task variant is the "
+      "value": " multi-task trained embedding. The four task experiments are performed with the final task embedding fixed to demonstrate how well the embeddings would generalize to new tasks. We also provide results for pretraining on five tasks with and without finetuning during the last task.  This multi-task variant is the "
     },
     {
       "expression": "\"best performing\"",
-      "categories": [
-        "min-max",
-        "rank"
-      ],
+      "categories": ["rank"],
       "type": "expression"
     },
     {
@@ -51,7 +48,16 @@
     },
     {
       "type": "literal",
-      "value": " provides more models per task and demonstrates consistent results: embeddings can significantly affect performance and GrOVLE variants are still the best embedding overall. As we move down the table we find even larger performance improvements made by using the five-task pretrained GrOVLE with fine-tuning than in "
+      "value": " provides more models per task and demonstrates consistent results: embeddings can significantly affect performance and GrOVLE variants are still the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " embedding overall. As we move down the table we find even larger performance improvements made by using the five-task pretrained GrOVLE with fine-tuning than in "
     },
     {
       "expression": "\"Table 3\"",

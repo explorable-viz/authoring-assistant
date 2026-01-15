@@ -12,25 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " datasets. Our approach consistently outperforms "
+      "value": " datasets. Our approach consistently "
     },
     {
-      "expression": "\"Basic\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"outperforms\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " and "
-    },
-    {
-      "expression": "\"Dual-0\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", despite the latter being trained with additional monolingual data (Sestorain et al., 2018)."
+      "value": " Basic and Dual-0, despite the latter being trained with additional monolingual data (Sestorain et al., 2018)."
     }
   ],
   "variables": {},

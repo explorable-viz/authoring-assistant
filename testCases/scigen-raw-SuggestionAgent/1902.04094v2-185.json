@@ -3,7 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We present sample generations, quality results, and diversity results respectively in Tables 1, 2, 3. We find that, compared to GPT, the BERT generations are of "
+      "value": "We present sample generations, quality results, and diversity results respectively in Tables 1, 2, 3. We find that, compared to "
+    },
+    {
+      "expression": "\"GPT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", the "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " generations are of "
     },
     {
       "expression": "\"worse\"",
@@ -12,25 +30,43 @@
     },
     {
       "type": "literal",
-      "value": " quality, but are "
+      "value": " quality, but are more "
     },
     {
-      "expression": "\"more diverse\"",
+      "expression": "\"diverse\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". Surprisingly, the outside language model, which was trained on Wikipedia, is "
+      "value": ". Surprisingly, the outside language model, which was trained on Wikipedia, is less "
     },
     {
-      "expression": "\"less perplexed\"",
-      "categories": ["comparison"],
+      "expression": "\"perplexed\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " by the GPT generations than the BERT generations, even though GPT was only trained on romance novels and BERT was trained on romance novels and Wikipedia. On actual data from TBC, the outside language model is about as "
+      "value": " by the GPT generations than the BERT generations, even though "
+    },
+    {
+      "expression": "\"GPT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " was only trained on romance novels and "
+    },
+    {
+      "expression": "\"BERT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " was trained on romance novels and Wikipedia. On actual data from TBC, the outside language model is about as "
     },
     {
       "expression": "\"perplexed\"",
@@ -43,7 +79,7 @@
     },
     {
       "expression": "\"absurdly high\"",
-      "categories": ["data-retrieval"],
+      "categories": ["comparison"],
       "type": "expression"
     },
     {

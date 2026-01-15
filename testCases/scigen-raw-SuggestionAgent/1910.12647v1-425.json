@@ -12,16 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " shows the difference between Fine-tuned model's accuracy and Baseline's accuracy. For HUBERT (Transformer), we observe substantial gain across all "
+      "value": " shows the difference between Fine-tuned model's accuracy and Baseline's accuracy. For HUBERT (Transformer), we observe substantial "
     },
     {
-      "expression": "\"5\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"gain\"",
+      "categories": ["difference"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " target corpora after transfer. However, for BERT we have a drop for QNLI, QQP, and SST."
+      "value": " across all 5 target corpora after transfer. However, for BERT we have a "
+    },
+    {
+      "expression": "\"drop\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " for QNLI, QQP, and SST."
     }
   ],
   "variables": {},

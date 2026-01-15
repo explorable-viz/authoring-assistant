@@ -21,70 +21,25 @@
     },
     {
       "type": "literal",
-      "value": ". The general trend in the results is that the improvements of both models in the "
+      "value": ". The general trend in the results is that the improvements of both models in the OOV case are "
     },
     {
-      "expression": "\"OOV\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " case are "
-    },
-    {
-      "expression": "\"larger than\"",
+      "expression": "\"larger\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " in the "
+      "value": " than in the IV case, which means that the character composition models indeed alleviates the OOV problem. Also, CNN improves on seven languages in the IV case and eight languages in the OOV case, and it performs "
     },
     {
-      "expression": "\"IV\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " case, which means that the character composition models indeed alleviates the "
-    },
-    {
-      "expression": "\"OOV\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " problem. Also, CNN improves on seven languages in the "
-    },
-    {
-      "expression": "\"IV\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " case and eight languages in the "
-    },
-    {
-      "expression": "\"OOV\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " case, and it performs "
-    },
-    {
-      "expression": "\"consistently better than\"",
+      "expression": "\"consistently better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " LSTM in both cases."
+      "value": " than LSTM in both cases."
     }
   ],
   "variables": {},

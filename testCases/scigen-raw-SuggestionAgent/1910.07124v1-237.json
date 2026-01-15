@@ -70,7 +70,7 @@
     },
     {
       "expression": "\"stable\"",
-      "categories": ["comparison"],
+      "categories": ["min-max"],
       "type": "expression"
     },
     {

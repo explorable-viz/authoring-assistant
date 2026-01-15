@@ -3,16 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "For TOP n COS SIM AVG, the tuning data results (Table 2) are somewhat more varied: First, there is no single "
+      "value": "For TOP n COS SIM AVG, the tuning data results (Table 2) are somewhat "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"more varied\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ": First, there is no single "
+    },
+    {
+      "expression": "\"best performing\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " performing set of embeddings: Google yields the "
+      "value": " set of embeddings: Google yields the "
     },
     {
       "expression": "\"best\"",
@@ -30,7 +39,16 @@
     },
     {
       "type": "literal",
-      "value": "), while GloVe (though only barely) leads in the Description setting ("
+      "value": "), while GloVe (though only "
+    },
+    {
+      "expression": "\"barely\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") leads in the Description setting ("
     },
     {
       "expression": "\".912\"",
@@ -51,13 +69,13 @@
       "value": " F score in the Both setting, which is also the "
     },
     {
-      "expression": "\"best\"",
+      "expression": "\"best overall\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " overall tuning data F score for TOP n COS SIM AVG ("
+      "value": " tuning data F score for TOP n COS SIM AVG ("
     },
     {
       "expression": "\".954\"",

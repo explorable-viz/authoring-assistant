@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "The right-hand side of table 1 shows the performance of our "
+      "value": "The right-hand side of table 1 shows the "
+    },
+    {
+      "expression": "\"performance\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of our "
     },
     {
       "expression": "\"SVM\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": ". The results indicate that the "
+      "value": ". The "
+    },
+    {
+      "expression": "\"results\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " indicate that the "
     },
     {
       "expression": "\"SVM setup\"",

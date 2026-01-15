@@ -30,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": ". The "
-    },
-    {
-      "expression": "\"Transformer model\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " is accurate enough that oracle guessing does not help."
+      "value": ".  The Transformer model is accurate enough that oracle guessing does not help."
     }
   ],
   "variables": {},

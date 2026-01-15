@@ -3,19 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Our model "
+      "value": "Our model outperforms all other models in all the metrics. This improvement is "
     },
     {
-      "expression": "\"outperforms\"",
-      "categories": ["comparison"],
+      "expression": "\"consistent\"",
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " all other models in all the metrics. This improvement is consistent, around "
+      "value": " , "
     },
     {
-      "expression": "\"2%\"",
+      "expression": "\"around 2%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

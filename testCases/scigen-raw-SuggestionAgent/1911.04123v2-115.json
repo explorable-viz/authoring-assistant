@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the "
-    },
-    {
-      "expression": "\"previous state-of-the-art\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " and our baselines.  "
+      "value": "Table 2 shows the main comparison results on the BioCreative CPR testset, with comparisons to the previous state-of-the-art and our baselines. "
     },
     {
       "expression": "\"TEXTONLY\"",
@@ -21,25 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " gives a performance "
+      "value": " gives a performance comparable with "
     },
     {
-      "expression": "\"comparable with\"",
-      "categories": ["comparison"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " Bran. With "
-    },
-    {
-      "expression": "\"1-best dependency trees\"",
+      "expression": "\"Bran\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ", our DEPTREE baseline gives "
+      "value": ". With 1-best dependency trees, our "
+    },
+    {
+      "expression": "\"DEPTREE baseline\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " gives "
     },
     {
       "expression": "\"better performances\"",
@@ -48,10 +39,19 @@
     },
     {
       "type": "literal",
-      "value": " than the previous state of the art.  both KBESTEISNERPS and EDGEWISEPS obtain "
+      "value": " than the previous state of the art. both "
     },
     {
-      "expression": "\"significantly higher numbers\"",
+      "expression": "\"KBESTEISNERPS and EDGEWISEPS\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " obtain significantly "
+    },
+    {
+      "expression": "\"higher numbers\"",
       "categories": ["comparison"],
       "type": "expression"
     },

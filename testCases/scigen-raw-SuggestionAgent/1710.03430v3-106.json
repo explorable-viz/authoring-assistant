@@ -3,10 +3,28 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As Table 3 shows, our proposed "
+      "value": "As "
     },
     {
-      "expression": "\"HRDE and HRDE-LTC\"",
+      "expression": "\"Table 3\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " shows, our proposed "
+    },
+    {
+      "expression": "\"HRDE\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"HRDE-LTC\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -33,13 +51,13 @@
       "value": ". We also find that the "
     },
     {
-      "expression": "\"RDE-LTC\"",
+      "expression": "\"RDE-LTC model\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " model shows improvements from the baseline model, "
+      "value": " shows improvements from the baseline model, "
     },
     {
       "expression": "\"RDE\"",

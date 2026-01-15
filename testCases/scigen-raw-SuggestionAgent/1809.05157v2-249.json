@@ -1,9 +1,47 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Our datasets vary in size of entity and non-entity tokens, as shown in Table 1. The smallest, Farsi, has 4.5K entity and 50K non-entity tokens; the largest, English, has 29K entity and 170K nonentity tokens."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Our datasets vary in size of entity and non-entity tokens, as shown in Table 1. The smallest, Farsi, has "
+    },
+    {
+      "expression": "\"4.5K\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " entity and "
+    },
+    {
+      "expression": "\"50K\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " non-entity tokens; the largest, English, has "
+    },
+    {
+      "expression": "\"29K\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " entity and "
+    },
+    {
+      "expression": "\"170K\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " nonentity tokens."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

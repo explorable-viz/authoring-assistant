@@ -1,9 +1,122 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "We repeat these experiments for WMT EnRo (Table 4).  In this case, NoisedBT is actually harmful, lagging standard BT by -0.6 BLEU. TaggedBT closes this gap and passes standard BT by +0.4 BLEU, for a total gain of +1.0 BLEU over NoisedBT.  We further investigate the effects of TaggedBT by performing one round of iterative backtranslation (Cotterell and Kreutzer, 2018; Vu Cong Duy Hoang and Cohn, 2018; Niu et al., 2018), and find another difference between the different varieties of BT: NoisedBT and TaggedBT allow the model to bootstrap improvements from an improved reverse model, whereas standard BT does not.  SacreBLEU scores for all these models are displayed in Table 4.  We find that the iteration-3 BT models improve over their Iteration-1 counterparts only for NoisedBT (+1.0 BLEU, dev+test avg) and TaggedBT (+0.7 BLEU, dev+test avg), whereas the Iteration-3 BT model shows no improvement over its Iteration-1 counterpart (-0.1 BLEU, dev+test avg).  iteration-3 TaggedBT (Table 4),  Our best BLEU score of 33.4 BLEU, obtained using Iterative TaggedBT, shows a gain of +3.5 BLEU over the highest previously published result on this test-set that we are aware of.  We furthermore match or out-perform the highest published results we are aware of on WMT EnDe that use only back-translation, with higher or equal BLEU on five of seven test sets."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We repeat these experiments for WMT EnRo (Table 4).  In this case, "
+    },
+    {
+      "expression": "\"NoisedBT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is actually harmful, lagging standard BT by "
+    },
+    {
+      "expression": "\"-0.6 BLEU\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". TaggedBT closes this gap and passes standard BT by "
+    },
+    {
+      "expression": "\"+0.4 BLEU\"",
+      "categories": [
+        "ratio",
+        "comparison"
+      ],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", for a total gain of "
+    },
+    {
+      "expression": "\"+1.0 BLEU\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over NoisedBT.  We further investigate the effects of TaggedBT by performing one round of iterative backtranslation (Cotterell and Kreutzer, 2018; Vu Cong Duy Hoang and Cohn, 2018; Niu et al., 2018), and find another difference between the different varieties of BT: NoisedBT and TaggedBT allow the model to bootstrap improvements from an improved reverse model, whereas standard BT does not.  SacreBLEU scores for all these models are displayed in Table 4.  We find that the iteration-3 BT models improve over their Iteration-1 counterparts only for "
+    },
+    {
+      "expression": "\"NoisedBT\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " ("
+    },
+    {
+      "expression": "\"+1.0 BLEU, dev+test avg\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") and TaggedBT ("
+    },
+    {
+      "expression": "\"+0.7 BLEU, dev+test avg\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), whereas the Iteration-3 BT model shows no improvement over its Iteration-1 counterpart ("
+    },
+    {
+      "expression": "\"-0.1 BLEU, dev+test avg\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ").  iteration-3 TaggedBT (Table 4),  Our "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU score of "
+    },
+    {
+      "expression": "\"33.4 BLEU\"",
+      "categories": ["min-max"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", obtained using Iterative TaggedBT, shows a gain of "
+    },
+    {
+      "expression": "\"+3.5 BLEU\"",
+      "categories": ["difference"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " over the highest previously published result on this test-set that we are aware of.  We furthermore match or out-perform the highest published results we are aware of on WMT EnDe that use only back-translation, with "
+    },
+    {
+      "expression": "\"higher or equal\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " BLEU on five of seven test sets."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

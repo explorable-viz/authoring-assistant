@@ -1,9 +1,47 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "text of a story, and in combination. Results are shown in Table 2. The models based on the headline and text body give a similar F1 score. However, while the headline model performs poorly on precision, perhaps due to the short text, the model based on the text body performs poorly on recall. The model based on the full text of headline and body gives the best performance."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "text of a story, and in combination. Results are shown in Table 2. The models based on the headline and text body give "
+    },
+    {
+      "expression": "\"a similar F1 score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". However, while the headline model performs "
+    },
+    {
+      "expression": "\"poorly\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on precision, perhaps due to the short text, the model based on the text body performs "
+    },
+    {
+      "expression": "\"poorly\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " on recall. The model based on the full text of headline and body gives the "
+    },
+    {
+      "expression": "\"best performance\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

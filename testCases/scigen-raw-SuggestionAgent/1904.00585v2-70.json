@@ -3,28 +3,10 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We find that word vectors and LMs pretrained on "
+      "value": "We find that word vectors and LMs pretrained on small similar sources can achieve "
     },
     {
-      "expression": "\"small\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"similar\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " sources can achieve competitive or even "
-    },
-    {
-      "expression": "\"better\"",
+      "expression": "\"competitive or even better\"",
       "categories": ["comparison"],
       "type": "expression"
     },
@@ -57,25 +39,7 @@
     },
     {
       "type": "literal",
-      "value": ", LMs pretrained on the "
-    },
-    {
-      "expression": "\"small\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"similar\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " source perform "
+      "value": ", LMs pretrained on the small similar source perform "
     },
     {
       "expression": "\"better\"",
@@ -84,25 +48,7 @@
     },
     {
       "type": "literal",
-      "value": ", while word vectors pretrained on the "
-    },
-    {
-      "expression": "\"small\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " "
-    },
-    {
-      "expression": "\"similar\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " source perform "
+      "value": ", while word vectors pretrained on the small similar source perform "
     },
     {
       "expression": "\"better\"",

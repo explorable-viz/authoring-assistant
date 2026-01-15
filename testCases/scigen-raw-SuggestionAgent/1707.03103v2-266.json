@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " than the two other strategies, however at "
-    },
-    {
-      "expression": "\"95%\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " confidence we cannot assert that any of these methods is statistically different from one another. Another interesting result, as shown by Table 1 and Table 2, is that the model seemed to be insensitive to the usage of character embeddings,"
+      "value": " than the two other strategies, however at 95% confidence we cannot assert that any of these methods is statistically different from one another. Another interesting result, as shown by Table 1 and Table 2, is that the model seemed to be insensitive to the usage of character embeddings,"
     }
   ],
   "variables": {},

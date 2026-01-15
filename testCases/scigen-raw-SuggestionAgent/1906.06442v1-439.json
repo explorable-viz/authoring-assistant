@@ -3,10 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We first show that noising EnDe bitext sources does not seriously impact the translation quality of the transformer-base baseline.  Table 2 shows results for various values of p. Specifically, it presents the somewhat unexpected finding that even when noising "
+      "value": "We first show that "
     },
     {
-      "expression": "\"100%\"",
+      "expression": "\"noising\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " EnDe bitext sources does not seriously impact the translation quality of the transformer-base baseline. Table 2 shows results for various values of p. Specifically, it presents the somewhat unexpected finding that even when "
+    },
+    {
+      "expression": "\"noising 100%\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },

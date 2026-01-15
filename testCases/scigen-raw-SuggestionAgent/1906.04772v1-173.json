@@ -6,13 +6,16 @@
       "value": "Table 3 displays the "
     },
     {
-      "expression": "\"best performing\"",
-      "categories": ["rank"],
+      "expression": "\"best\"",
+      "categories": [
+        "min-max",
+        "rank"
+      ],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " DSM for each property. There is a preference to "
+      "value": " performing DSM for each property. There is a preference to "
     },
     {
       "expression": "\"word2vec\"",

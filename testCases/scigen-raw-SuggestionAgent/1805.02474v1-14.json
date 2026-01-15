@@ -12,11 +12,23 @@
     },
     {
       "type": "literal",
-      "value": " gives an F1-score of "
+      "value": " gives an "
+    },
+    {
+      "expression": "\"F1-score\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of "
     },
     {
       "expression": "\"91.57%\"",
-      "categories": ["data-retrieval"],
+      "categories": [
+        "min-max",
+        "data-retrieval"
+      ],
       "type": "expression"
     },
     {
@@ -30,16 +42,7 @@
     },
     {
       "type": "literal",
-      "value": " compared with "
-    },
-    {
-      "expression": "\"BiLSTMs\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". Stacking more layers of BiLSTMs leads to "
+      "value": " compared with BiLSTMs. Stacking more layers of BiLSTMs leads to "
     },
     {
       "expression": "\"slightly better\"",
@@ -48,7 +51,16 @@
     },
     {
       "type": "literal",
-      "value": " F1-scores compared with a single-layer BiLSTM. Our BiLSTM results are comparable to the results reported by Ma and Hovy (2016) and Lample et al. (2016),  In contrast, "
+      "value": " F1-scores compared with a single-layer BiLSTM. Our BiLSTM results are "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " to the results reported by Ma and Hovy (2016) and Lample et al. (2016),  In contrast, "
     },
     {
       "expression": "\"S-LSTM\"",
@@ -61,7 +73,10 @@
     },
     {
       "expression": "\"best\"",
-      "categories": ["rank"],
+      "categories": [
+        "min-max",
+        "rank"
+      ],
       "type": "expression"
     },
     {

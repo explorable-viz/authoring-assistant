@@ -3,7 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "See Table 3 for the averages across 10 scenarios. As we can see from Table 3, the perplexity scores are consistent with the accuracies: the script model again "
+      "value": "See Table 3 for the averages across "
+    },
+    {
+      "expression": "\"10\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " scenarios.  As we can see from Table 3, the perplexity scores are consistent with the accuracies: the script model again "
     },
     {
       "expression": "\"outperforms\"",

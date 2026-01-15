@@ -3,7 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 2 and 3 compare the accuracies of our models to the results reported by several representative studies in frame-semantic parsing. As can be seen from the tables, PAFIBERT "
+      "value": "Table 2 and 3 compare the accuracies of our models to the results reported by several representative studies in frame-semantic parsing.  As can be seen from the tables, PAFIBERT "
     },
     {
       "expression": "\"outperformed\"",
@@ -12,16 +12,7 @@
     },
     {
       "type": "literal",
-      "value": " other models on both the in-domain Das's test set and the out-of-domain YAGS test set, yielding new "
-    },
-    {
-      "expression": "\"state-of-the-art\"",
-      "categories": ["rank"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " results for frame identification. As expected, the results obtained with LU-based frame filtering were "
+      "value": " other models on both the in-domain Das's test set and the out-of-domain YAGS test set, yielding new state-of-the-art results for frame identification. As expected, the results obtained with LU-based frame filtering were "
     },
     {
       "expression": "\"slightly better\"",
@@ -30,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " than those produced using target-based frame filtering, suggesting that a realistic setup is crucial in measuring model performance more precisely. On Das's test set, for example, PAFIBERT achieved absolute improvements of "
+      "value": " than those produced using target-based frame filtering, suggesting that a realistic setup is crucial in measuring model performance more precisely.  On Das's test set, for example, PAFIBERT achieved absolute improvements of "
     },
     {
       "expression": "\"4-5%\"",

@@ -3,43 +3,34 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 presents results on "
+      "value": "Table 4 presents results on the "
     },
     {
-      "expression": "\"the second dataset\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " for "
-    },
-    {
-      "expression": "\"the best models\"",
+      "expression": "\"second\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " identified on "
+      "value": " dataset for the "
     },
     {
-      "expression": "\"the first dataset\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". The LDA-Frames yielded "
-    },
-    {
-      "expression": "\"the best results\"",
+      "expression": "\"best\"",
       "categories": ["rank"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " with our approach performing "
+      "value": " models identified on the first dataset. The LDA-Frames yielded the "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " results with our approach performing "
     },
     {
       "expression": "\"comparably\"",

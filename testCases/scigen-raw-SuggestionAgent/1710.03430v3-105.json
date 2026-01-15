@@ -1,20 +1,9 @@
 {
   "testing-variables": {},
-  "paragraph": [
-    {
-      "type": "literal",
-      "value": "we found that it still showed a limitation when we consider very large sequential length data such as "
-    },
-    {
-      "expression": "\"162 steps\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " average in the Ubuntu Dialogue Corpus dataset (see Table 1).  Table 1 shows properties of the Ubuntu dataset.  we generated ({question}, {answer}, flag) triples (see Table 1).  The maximum time step for calculating gradient of the RNN is determined according to the input data statistics in Table 1."
-    }
-  ],
+  "paragraph": [{
+    "type": "literal",
+    "value": "we found that it still showed a limitation when we consider very large sequential length data such as 162 steps average in the Ubuntu Dialogue Corpus dataset (see Table 1).  Table 1 shows properties of the Ubuntu dataset.  we generated ({question}, {answer}, flag) triples (see Table 1).  The maximum time step for calculating gradient of the RNN is determined according to the input data statistics in Table 1."
+  }],
   "variables": {},
   "imports": [
     "scigen",

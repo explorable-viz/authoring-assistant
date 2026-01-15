@@ -15,13 +15,13 @@
       "value": " for FAS and BUS compared to PGC. The length of the generated summaries appears to be unrelated to the number of errors. Instead, the "
     },
     {
-      "expression": "\"higher abstractiveness\"",
+      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " of summaries produced by FAS and BUS, as analyzed in their respective papers, seems to also increase the chance of introducing errors. In addition, we also observe that among the three systems correctness and ROUGE scores do not correlate, emphasizing one more time that a ROUGE based evaluation alone is far too limited to account for the full scope of the summarization task."
+      "value": " abstractiveness of summaries produced by FAS and BUS, as analyzed in their respective papers, seems to also increase the chance of introducing errors. In addition, we also observe that among the three systems correctness and ROUGE scores do not correlate, emphasizing one more time that a ROUGE based evaluation alone is far too limited to account for the full scope of the summarization task."
     }
   ],
   "variables": {},

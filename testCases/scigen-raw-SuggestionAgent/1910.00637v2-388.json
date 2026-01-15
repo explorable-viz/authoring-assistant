@@ -39,16 +39,7 @@
     },
     {
       "type": "literal",
-      "value": " precision due to conservative sentence alignment, "
-    },
-    {
-      "expression": "\"ESSENTIA\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " extracts significantly more paraphrases, improving the recall by "
+      "value": " precision due to conservative sentence alignment, ESSENTIA extracts significantly more paraphrases, improving the recall by "
     },
     {
       "expression": "\"460%\"",

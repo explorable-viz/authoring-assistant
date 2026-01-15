@@ -12,16 +12,25 @@
     },
     {
       "type": "literal",
-      "value": ". Cognate Morfessor "
+      "value": ". "
     },
     {
-      "expression": "\"outperforms\"",
+      "expression": "\"Cognate Morfessor\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " outperforms the "
+    },
+    {
+      "expression": "\"comparable\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " the comparable BPE system according to both measures for "
+      "value": " BPE system according to both measures for "
     },
     {
       "expression": "\"Estonian\"",

@@ -3,19 +3,19 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 4 lists the results on the OntoNotes test set following the adaptation setting of Choi et al. (2018).  denoising "
+      "value": "Table 4 lists the results on the OntoNotes test set following the adaptation setting of Choi et al. (2018). denoising significantly "
     },
     {
-      "expression": "\"significantly improves\"",
+      "expression": "\"improves over\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " over naive incorporation of distant data,  BERT still performs well but not "
+      "value": " naive incorporation of distant data, BERT still performs well but not as "
     },
     {
-      "expression": "\"as well\"",
+      "expression": "\"well\"",
       "categories": ["comparison"],
       "type": "expression"
     },

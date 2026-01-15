@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 contains the results on all four "
+      "value": "Table 1 contains the results on all four datasets. "
     },
     {
-      "expression": "\"datasets\"",
+      "expression": "\"SynST\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ". SynST achieves speedups of ∼ "
+      "value": " achieves speedups of ∼ "
     },
     {
       "expression": "\"4 − 5×\"",
@@ -30,16 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " nearly all of the SAT configurations. Quality-wise, SynST again significantly outperforms the SAT configurations at comparable speedups on all "
-    },
-    {
-      "expression": "\"datasets\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ". On WMT En-De, SynST improves by "
+      "value": " nearly all of the SAT configurations. Quality-wise, SynST again significantly outperforms the SAT configurations at comparable speedups on all datasets. On WMT En-De, SynST improves by "
     },
     {
       "expression": "\"1 BLEU\"",
@@ -51,22 +42,13 @@
       "value": " over LT ("
     },
     {
-      "expression": "\"20.74\"",
+      "expression": "\"20.74 vs LT's 19.8 without reranking\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " vs LT's "
-    },
-    {
-      "expression": "\"19.8\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " without reranking)."
+      "value": ")."
     }
   ],
   "variables": {},

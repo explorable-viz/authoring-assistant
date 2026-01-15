@@ -1,9 +1,29 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "Table 5: Model accuracy when noise is injected into WikiQA and TREC-QA datasets. ∗ indicates the target dataset for the second step of fine-tuning (adapt step).  Table 5 shows the MAP and MRR of BERTBase using FT and TANDA, also indicating the drop percentage (% ) in accuracy due to the injection of noise."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Table 5: Model accuracy when "
+    },
+    {
+      "expression": "\"noise\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is injected into WikiQA and TREC-QA datasets. ∗ indicates the target dataset for the second step of fine-tuning (adapt step).  Table 5 shows the MAP and MRR of BERTBase using FT and TANDA, also indicating the "
+    },
+    {
+      "expression": "\"drop percentage\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " (% ) in accuracy due to the injection of noise."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

@@ -7,7 +7,7 @@
     },
     {
       "expression": "\"verbs\"",
-      "categories": ["rank"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -16,7 +16,10 @@
     },
     {
       "expression": "\"largest\"",
-      "categories": ["min-max"],
+      "categories": [
+        "min-max",
+        "rank"
+      ],
       "type": "expression"
     },
     {

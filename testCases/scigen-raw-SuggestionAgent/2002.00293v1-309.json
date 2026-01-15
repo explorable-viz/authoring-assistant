@@ -3,16 +3,43 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "We select a randomly chosen validator's answer to each question and compute Exact Match (EM) and word overlap F1 scores with the original to calculate non-expert human performance; "
+      "value": "We select "
     },
     {
-      "expression": "\"Table 1\"",
+      "expression": "\"a randomly chosen validator's answer\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " shows the result. We observe a clear trend: the stronger the model in the loop used to construct the dataset, the harder the resulting questions become for humans."
+      "value": " to each question and compute "
+    },
+    {
+      "expression": "\"Exact Match (EM) and word overlap F1 scores\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " with the original to calculate non-expert human performance; Table 1 shows the result. We observe a clear trend: the "
+    },
+    {
+      "expression": "\"stronger\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the model in the loop used to construct the dataset, the "
+    },
+    {
+      "expression": "\"harder\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " the resulting questions become for humans."
     }
   ],
   "variables": {},

@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table 1 shows the Smatch scores (Cai and Knight, 2013) of our models, compared to a selection of previously published results.  The fixed-tree decoder seems to work well with either edge model, but performance of the projective decoder drops with the K&G edge scores.  As expected, the type-unaware baseline has "
+      "value": "Table 1 shows the Smatch scores (Cai and Knight, 2013) of our models, compared to a selection of previously published results. The fixed-tree decoder seems to work well with either edge model, but performance of the projective decoder drops with the K&G edge scores. As expected, the type-unaware baseline has low "
     },
     {
-      "expression": "\"low recall\"",
+      "expression": "\"recall\"",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": ",  The fact that our models outperform the JAMR-style baseline so clearly is an indication that"
+      "value": ", The fact that our models outperform the JAMR-style baseline so clearly is an indication that"
     }
   ],
   "variables": {},

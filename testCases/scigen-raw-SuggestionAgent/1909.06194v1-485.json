@@ -3,7 +3,25 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Table V reports the accuracy of the combined and the parallel fusion approaches. According to these results, training two parallel networks for lexical and syntax encoding achieves "
+      "value": "Table V reports the accuracy of the "
+    },
+    {
+      "expression": "\"combined\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and the "
+    },
+    {
+      "expression": "\"parallel fusion approaches\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ". According to these results, training two parallel networks for lexical and syntax encoding achieves "
     },
     {
       "expression": "\"higher\"",

@@ -1,9 +1,164 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "The entity linking accuracy on the Wikipedia test set are summarized in Table 1. On average, our proposed PBEL method performs significantly better than the baselines, with significant accuracy gains in all nine test languages.  The EXACT baseline, which is most often used for monolingual EL (Sil et al. 2017), performs reasonably only when the test language is in the same script as English (i.e., Javanese).  Similarly TRANS, the current state-of-the-art retrieval method in cross-lingual EL (Pan et al. 2017), fails when zero data is available in the test language, unless the HRL is very closely-related to the LRL (as with jv, mr and am). On the other hand, ENCODE presents relatively strong zero-shot transfer results.  PBEL offers stronger performance than ENCODE  As seen in the BEST-53 results, the HRL that performs best is closely-related to the respective test LRL  We also observe that using multiple pivot HRLs leads to better average accuracy, with considerable improvement for some languages.  In most cases, the MANUAL HRL is also the best performing in BEST-53. However, we see that the Dravidian Telugu (te) seems to obtain higher accuracy with Indo-Aryan HRLs \u2013 Punjabi (pa) or Hindi (hi).  We also see that the Ukrainian (uk) test set has better performance with another Cyrillic script language, Kazakh (kk), rather than Russian (ru)."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The entity linking accuracy on the Wikipedia test set are summarized in Table 1. On "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", our proposed PBEL method performs "
+    },
+    {
+      "expression": "\"significantly better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " than the baselines, with "
+    },
+    {
+      "expression": "\"significant\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy gains in all nine test languages. The EXACT baseline, which is most often used for monolingual EL (Sil et al. 2017), performs reasonably only when the test language is in the same script as English (i.e., Javanese). Similarly TRANS, the current state-of-the-art retrieval method in cross-lingual EL (Pan et al. 2017), fails when zero data is available in the test language, unless the HRL is very closely-related to the LRL (as with "
+    },
+    {
+      "expression": "\"jv\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ", "
+    },
+    {
+      "expression": "\"mr\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and "
+    },
+    {
+      "expression": "\"am\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). On the other hand, ENCODE presents relatively strong zero-shot transfer results. PBEL offers stronger performance than ENCODE As seen in the BEST-53 results, the HRL that performs "
+    },
+    {
+      "expression": "\"best\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " is closely-related to the respective test LRL We also observe that using multiple pivot HRLs leads to better "
+    },
+    {
+      "expression": "\"average\"",
+      "categories": ["average"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy, with considerable improvement for some languages. In most cases, the MANUAL HRL is also the "
+    },
+    {
+      "expression": "\"best performing\"",
+      "categories": ["rank"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " in BEST-53. However, we see that the Dravidian Telugu ("
+    },
+    {
+      "expression": "\"te\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") seems to obtain "
+    },
+    {
+      "expression": "\"higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " accuracy with Indo-Aryan HRLs \u2013 Punjabi ("
+    },
+    {
+      "expression": "\"pa\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") or Hindi ("
+    },
+    {
+      "expression": "\"hi\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). We also see that the Ukrainian ("
+    },
+    {
+      "expression": "\"uk\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ") test set has "
+    },
+    {
+      "expression": "\"better\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " performance with another Cyrillic script language, Kazakh ("
+    },
+    {
+      "expression": "\"kk\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), rather than Russian ("
+    },
+    {
+      "expression": "\"ru\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ")."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

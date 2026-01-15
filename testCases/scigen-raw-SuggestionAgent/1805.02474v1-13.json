@@ -3,16 +3,7 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "As can be seen in Table 6, "
-    },
-    {
-      "expression": "\"S-LSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " gives "
+      "value": "As can be seen in Table 6, S-LSTM gives "
     },
     {
       "expression": "\"significantly better\"",
@@ -21,52 +12,25 @@
     },
     {
       "type": "literal",
-      "value": " results compared with "
+      "value": " results compared with BiLSTM on the WSJ dataset. It also gives "
     },
     {
-      "expression": "\"BiLSTM\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"competitive accuracies\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " on the "
+      "value": " as compared with existing methods in the literature. Stacking two layers of BiLSTMs leads to "
     },
     {
-      "expression": "\"WSJ\"",
-      "categories": ["data-retrieval"],
+      "expression": "\"improved results\"",
+      "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " dataset. It also gives competitive accuracies as compared with existing methods in the literature. Stacking two layers of "
-    },
-    {
-      "expression": "\"BiLSTMs\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": " leads to improved results compared to one-layer "
-    },
-    {
-      "expression": "\"BiLSTM\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": ", but the accuracy does not further improve  with three layers of stacked "
-    },
-    {
-      "expression": "\"LSTMs\"",
-      "categories": ["data-retrieval"],
-      "type": "expression"
-    },
-    {
-      "type": "literal",
-      "value": "."
+      "value": " compared to one-layer BiLSTM, but the accuracy does not further improve  with three layers of stacked LSTMs."
     }
   ],
   "variables": {},

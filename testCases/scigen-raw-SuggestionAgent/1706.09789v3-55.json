@@ -1,9 +1,38 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "conduct ablation studies (Table 4),  To better understand how various components in our training procedure and model impact overall performance we conduct several ablation studies, as summarized in Table 4.  Results in Table 4(A) show that using human-annotated answers to generate questions leads to a significant performance boost over using answers from an answer generation module.  This supports the hypothesis that the answers humans choose to generate questions for provide important linguistic cues for finetuning the machine comprehension model.  To see how copying impacts performance, we explore using the entire paragraph to generate the question vs. only the two sentences before and one sentence after the answer span and report results in Table 4(B)."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "conduct ablation studies (Table 4),  To better understand how various components in our training procedure and model impact overall performance we conduct several ablation studies, as summarized in "
+    },
+    {
+      "expression": "\"Table 4\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": ".  Results in "
+    },
+    {
+      "expression": "\"Table 4(A)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " show that using human-annotated answers to generate questions leads to a significant performance boost over using answers from an answer generation module.  This supports the hypothesis that the answers humans choose to generate questions for provide important linguistic cues for finetuning the machine comprehension model.  To see how copying impacts performance, we explore using the entire paragraph to generate the question vs. only the two sentences before and one sentence after the answer span and report results in "
+    },
+    {
+      "expression": "\"Table 4(B)\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

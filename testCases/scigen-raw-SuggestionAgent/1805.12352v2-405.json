@@ -3,16 +3,16 @@
   "paragraph": [
     {
       "type": "literal",
-      "value": "Tables 1 and 2 show the performance of DialogWAE and baselines on the two datasets. DialogWAE outperforms the baselines in the majority of the experiments. In terms of BLEU scores, DialogWAE (with a Gaussian mixture prior network) generates "
+      "value": "Tables 1 and 2 show the performance of DialogWAE and baselines on the two datasets. DialogWAE "
     },
     {
-      "expression": "\"more relevant\"",
+      "expression": "\"outperforms\"",
       "categories": ["comparison"],
       "type": "expression"
     },
     {
       "type": "literal",
-      "value": " responses, with the average recall of "
+      "value": " the baselines in the majority of the experiments. In terms of BLEU scores, DialogWAE (with a Gaussian mixture prior network) generates more relevant responses, with the average recall of "
     },
     {
       "expression": "\"42.0%\"",
@@ -30,10 +30,10 @@
     },
     {
       "type": "literal",
-      "value": " on both of the datasets. These are "
+      "value": " on both of the datasets. These are significantly "
     },
     {
-      "expression": "\"significantly higher\"",
+      "expression": "\"higher\"",
       "categories": ["comparison"],
       "type": "expression"
     },

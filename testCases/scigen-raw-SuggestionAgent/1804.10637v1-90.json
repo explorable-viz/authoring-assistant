@@ -7,7 +7,7 @@
     },
     {
       "expression": "\"more than one relations\"",
-      "categories": ["comparison"],
+      "categories": ["data-retrieval"],
       "type": "expression"
     },
     {
@@ -21,7 +21,7 @@
     },
     {
       "type": "literal",
-      "value": " , "
+      "value": ", "
     },
     {
       "expression": "\"0.85%\"",
@@ -30,7 +30,7 @@
     },
     {
       "type": "literal",
-      "value": " higher than that of Ganea and Hofmann (2017).  The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."
+      "value": " higher than that of Ganea and Hofmann (2017). The experimental results show that ment-norm outperforms rel-norm, and that mention padding plays an important role."
     }
   ],
   "variables": {},

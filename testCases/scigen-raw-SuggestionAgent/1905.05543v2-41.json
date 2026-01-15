@@ -1,9 +1,56 @@
 {
   "testing-variables": {},
-  "paragraph": [{
-    "type": "literal",
-    "value": "each average. According to our results (Table 2), the Wikification success ratios of eBay and Illegal  Onion named entities is comparable and relatively low. However, sites selling legal drugs on Onion have a much higher Wikification percentage."
-  }],
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "each average. According to our results ("
+    },
+    {
+      "expression": "\"Table 2\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), the "
+    },
+    {
+      "expression": "\"Wikification success ratios\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " of eBay and Illegal Onion named entities is "
+    },
+    {
+      "expression": "\"comparable\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " and relatively low. However, sites selling legal drugs on Onion have a "
+    },
+    {
+      "expression": "\"much higher\"",
+      "categories": ["comparison"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": " "
+    },
+    {
+      "expression": "\"Wikification percentage\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "."
+    }
+  ],
   "variables": {},
   "imports": [
     "scigen",

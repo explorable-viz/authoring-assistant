@@ -12,7 +12,16 @@
     },
     {
       "type": "literal",
-      "value": " than the baseline across all metrics for both averaging approaches (AvgCD, AvgD), while the usage of dominant topics appears to have "
+      "value": " than the baseline across all metrics for both averaging approaches ("
+    },
+    {
+      "expression": "\"AvgCD, AvgD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "), while the usage of dominant topics appears to have "
     },
     {
       "expression": "\"lower\"",
@@ -21,7 +30,16 @@
     },
     {
       "type": "literal",
-      "value": " performance (MaxCD). Specifically, we get an improvement of "
+      "value": " performance ("
+    },
+    {
+      "expression": "\"MaxCD\"",
+      "categories": ["data-retrieval"],
+      "type": "expression"
+    },
+    {
+      "type": "literal",
+      "value": "). Specifically, we get an improvement of "
     },
     {
       "expression": "\"2 − 2.5%\"",

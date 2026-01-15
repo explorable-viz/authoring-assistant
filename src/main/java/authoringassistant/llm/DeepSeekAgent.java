@@ -6,8 +6,8 @@ import org.json.JSONObject;
 
 public class DeepSeekAgent extends OLLAMAEvaluatorAgent<Expression> {
 
-    public DeepSeekAgent(JSONObject setttings) {
-        super(setttings);
+    public DeepSeekAgent(JSONObject settings) {
+        super(settings);
         setModel("deepseek-coder:33b");
     }
 

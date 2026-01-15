@@ -1,6 +1,6 @@
 package authoringassistant;
 
-import authoringassistant.llm.LLMDummyAgent;
+import authoringassistant.llm.DummyAgent;
 import authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;
@@ -63,9 +63,8 @@ public class AuthoringAssistant {
                     results.add(new Pair<>(finalProgram, result));
                     problems = finalProgram.asIndividualProblems(templateProgram);
                 } catch (Exception e) {
-                    logger.severe("Error executing program edit: " + e.getMessage());
-                    logger.info("Returning partial results obtained so far: " + results.size() + " results");
-                    return results;
+                    logger.severe("Error executing program edit; aborting.\n" + e.getMessage());
+                    throw e;
                 }
             } while (!problems.isEmpty());
         finalProgram.toWebpage();
@@ -73,7 +72,7 @@ public class AuthoringAssistant {
     }
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
-        final int attemptLimit = llm instanceof LLMDummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
+        final int attemptLimit = llm instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
         // Add the input query to the KB that will be sent to the LLM
         int attempt;
         final long start = System.currentTimeMillis();
@@ -81,7 +80,7 @@ public class AuthoringAssistant {
         Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
-        int parseErrors=0, counterfactualFails=0, nullExpressions=0, onlyLiteralExpressions=0;
+        int parseErrors=0, counterfactualFails=0, missingResponses=0, literalResponses=0;
         final String info = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
         for (attempt = 1; attempt <= attemptLimit; attempt++) {
             boolean errors = false;
@@ -89,52 +88,49 @@ public class AuthoringAssistant {
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
             if(candidate == null) {
-                nullExpressions++;
-                sessionPrompts.addAssistantPrompt("NULL");
-                sessionPrompts.addUserPrompt("ExpressionError: Received a NULL expression instead of a valid expression. " +
-                        "Please provide a valid fluid expression that *evaluates to* the expected value.");
+                missingResponses++;
+                sessionPrompts.addAssistantPrompt("[No response received]");
+                sessionPrompts.addUserPrompt("No response received. Please try again.");
                 logger.fine(STR."\{info} Attempt #\{attempt}: retry");
-                continue;
-            }
-            if(candidate.getExpr() != null && candidate.getExpr().equals(expected.getValue())) {
-                onlyLiteralExpressions++;
-                sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
+            } else
+            if (candidate.getExpr().equals(expected.getValue())) {
+                literalResponses++;
+                sessionPrompts.addAssistantPrompt(candidate.getExpr());
                 sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
                         "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
                 logger.fine(STR."\{info} Attempt #\{attempt}: retry");
-                continue;
-            }
-            boolean firstTest = false;
-            for (Map<String, String> datasets : subProgram.getTest_datasets()) {
-                logger.fine(STR."\{info} Attempt #\{attempt}: received \{candidate.getExpr()}");
-                Optional<String> error = Program.validate(
-                        evaluateExpression(subProgram, datasets, candidate),
-                        new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
+            } else {
+                boolean firstTest = false;
+                for (Map<String, String> datasets : subProgram.getTest_datasets()) {
+                    logger.fine(STR."\{info} Attempt #\{attempt}: received \{candidate.getExpr()}");
+                    Optional<String> error = Program.validate(
+                            evaluateExpression(subProgram, datasets, candidate),
+                            new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
 
-                if (error.isPresent()) {
-                    sessionPrompts.addAssistantPrompt(candidate.getExpr() == null ? "NULL" : candidate.getExpr());
-                    sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
-                    errors = true;
-                    if(firstTest) {
-                        parseErrors++;
-                    } else {
-                        counterfactualFails++;
+                    if (error.isPresent()) {
+                        sessionPrompts.addAssistantPrompt(candidate.getExpr());
+                        sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
+                        errors = true;
+                        if (firstTest) {
+                            parseErrors++;
+                        } else {
+                            counterfactualFails++;
+                        }
+                        break;
                     }
-                    break;
+                    firstTest = true;
                 }
-                firstTest = true;
+                if (!errors) {
+                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
+                    sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+                    logger.info(STR."\{info} Expression validation succeeded");
+                    return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+                }
             }
-            if (!errors) {
-                sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
-                logger.info(STR."\{info} Expression validation succeeded");
-                return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
-            }
-
         }
         sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, nullExpressions, onlyLiteralExpressions);
+        return new QueryResult(null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {

@@ -16,15 +16,15 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.logging.Logger;
 
-public class FluidOpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
-    public static Logger logger = Logger.getLogger(FluidOpenAIGpt5Agent.class.getName());
+public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
+    public static Logger logger = Logger.getLogger(OpenAIGpt5Agent.class.getName());
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
     private final String token;
     private final double temperature;
     private final int ctx;
 
-    public FluidOpenAIGpt5Agent(JSONObject settings) {
+    public OpenAIGpt5Agent(JSONObject settings) {
         super(settings);
         this.token = settings.getString("openai-token");
         this.temperature = (double)settings.getFloat("temperature");
@@ -37,7 +37,7 @@ public class FluidOpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
 
     @Override
     public Expression evaluate(PromptList prompts, String grid) throws IOException {
-        logger.config("Execution of the FluidOpenAIGpt5Agent");
+        logger.config("Execution of the OpenAIGpt5Agent");
         
         try {
             JSONObject requestBody = buildRequestBody(prompts);
@@ -52,7 +52,7 @@ public class FluidOpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
     
     private JSONObject buildRequestBody(PromptList prompts) {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("model", "gpt-5");
+        requestBody.put("model", "gpt-5-mini");
         requestBody.put("temperature", this.temperature);
         requestBody.put("max_completion_tokens", this.ctx);
         

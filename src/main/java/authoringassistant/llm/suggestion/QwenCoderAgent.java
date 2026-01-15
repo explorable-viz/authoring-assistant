@@ -5,8 +5,8 @@ import org.json.JSONObject;
 
 public class QwenCoderAgent extends OLLAMAEvaluatorAgent<String> {
 
-    public QwenCoderAgent(JSONObject setttings) {
-        super(setttings);
+    public QwenCoderAgent(JSONObject settings) {
+        super(settings);
         setModel("qwen2.5-coder:32b");
     }
 

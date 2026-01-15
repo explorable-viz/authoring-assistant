@@ -1,5 +1,6 @@
 package authoringassistant;
 
+import authoringassistant.llm.DummyAgent;
 import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
 import authoringassistant.util.ThrowingConsumer;
@@ -12,7 +13,6 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static authoringassistant.Program.cleanWebsiteFolders;
@@ -34,7 +34,13 @@ public class Main {
             //Create directory for logs and json
             cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
             systemPrompt = SystemPrompt.load(Settings.SYSTEM_PROMPT_PATH);
+            logger.info("****************************************");
+            logger.info(STR."Validating test cases in \{Settings.getTestCaseFolder()}");
+            logger.info("****************************************");
             programs = Program.loadPrograms(Settings.getTestCaseFolder());
+            logger.info("****************************************");
+            logger.info(STR."Validated test cases in \{Settings.getTestCaseFolder()}");
+            logger.info("****************************************");
             if(suggestionAgent != null && interpretationAgent == null) {
                 generatePrograms(programs, suggestionAgent, "testCases/scigen-SuggestionAgent");
             }
@@ -57,10 +63,8 @@ public class Main {
                     allResults.addAll(results);
                 }
 
-                float accuracy = computeAccuracy(allResults);
                 generateLinks();
                 writeLog(allResults, interpretationAgent);
-                System.out.println(STR."Accuracy: \{accuracy}");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,7 +73,7 @@ public class Main {
     }
 
     private static boolean isTestMock(String interpretationAgent) {
-        return interpretationAgent.equals("authoringassistant.llm.LLMDummyAgent");
+        return interpretationAgent.equals(DummyAgent.class.getName());
     }
 
     private static void saveProgramToJson(Program program, String outputFolder) throws IOException {
@@ -160,50 +164,35 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "temperature", "num-token", "is-negative", "in-context-learning-size",
-                    "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "nullExpressions", "onlyLiteralExpressions"
+                    "runId", "test-case", "llm-agent", "is-negative", "in-context-learning-size",
+                    "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
                     .map(result -> {
-                        Program program = result.getFirst();
                         QueryResult queryResult = result.getSecond();
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
                                 interpretationAgent,
-                                String.valueOf(Settings.getTemperature()),
-                                String.valueOf(Settings.getNumContextToken()),
                                 String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
-                                //program.getParagraph().toFluidSyntax(),
-                                String.valueOf(queryResult.attempt()),
+                                String.valueOf(queryResult.attempts()),
                                 queryResult.correctResponse() != null ? "OK" : "KO",
-                                String.valueOf(Settings.isAddExpectedValueEnabled() ? 1 : 0),
+                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
-//                                queryResult.correctResponse() != null ? "generated" : "NULL",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",
                                 queryResult.expected().getValue(),
                                 queryResult.expected().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\""),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),
-                                String.valueOf(queryResult.nullExpressions()),
-                                String.valueOf(queryResult.onlyLiteralExpressions())
+                                String.valueOf(queryResult.missingResponses()),
+                                String.valueOf(queryResult.literalResponses())
                         };
                         return String.join(";", Arrays.stream(values).map(s -> STR."\"\{s}\"").toList());
                     })
                     .collect(Collectors.joining("\n"));
             out.println(content);
         }
-    }
-
-    private static float computeAccuracy(List<Pair<Program, QueryResult>> results) {
-        logger.config("Computing accuracy");
-        long count = IntStream.range(0, results.size()).filter(i -> {
-            QueryResult result = results.get(i).getSecond();
-            return result.correctResponse() != null
-                    && result.expected().getExpr().equals(result.correctResponse().getExpr());
-        }).count();
-        return (float) count / results.size();
     }
 
     private static ArrayList<Pair<Program, QueryResult>> execute(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> programs) throws Exception {

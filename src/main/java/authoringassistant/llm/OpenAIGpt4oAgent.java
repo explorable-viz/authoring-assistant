@@ -15,9 +15,9 @@ import org.json.JSONObject;
 import java.time.Duration;
 import java.util.Collections;
 
-public class FluidOpenAIGpt4oAgent extends OpenAIEvaluatorAgent<Expression> {
-    public FluidOpenAIGpt4oAgent(JSONObject setttings) {
-        super(setttings);
+public class OpenAIGpt4oAgent extends OpenAIEvaluatorAgent<Expression> {
+    public OpenAIGpt4oAgent(JSONObject settings) {
+        super(settings);
         setModel("gpt-4o");
     }
 

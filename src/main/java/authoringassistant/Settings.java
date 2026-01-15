@@ -9,13 +9,10 @@ import java.nio.file.Paths;
 import java.util.Map;
 
 public class Settings {
-
-    // Constants for unchanging configuration values
     public static final String LOG_FOLDER = "logs/";
     public static final String FLUID_TEMP_FOLDER = "./fluid-temp";
     public static final String BASE_PATH_LIBRARY = "node_modules/@explorable-viz/fluid/dist/fluid/fluid";
     public static final String FLUID_COMMON_FOLDER = "./testCases-aux";
-    public static final String LEARNING_CASE_FOLDER = "learningCases";
     public static final String SYSTEM_PROMPT_PATH = "system-prompt/interpretation-agent";
 
     private static Settings instance;
@@ -61,12 +58,7 @@ public class Settings {
         return getSettings().getInt("num-context-token");
     }
 
-    public static boolean isReasoningEnabled() {
-        return getSettings().getBoolean("enable-reasoning");
-    }
-    public static boolean isSplitMultipleTagEnabled() {
-        return getSettings().getBoolean("split-multiple-replace-tag");
-    }public static boolean isAddExpectedValueEnabled() {
+    public static boolean isAddExpectedValue() {
         return getSettings().getBoolean("add-expected-value");
     }
 
@@ -81,13 +73,6 @@ public class Settings {
 
     public static int numTestRuns() {
         return getSettings().getInt("num-test-runs");
-    }
-
-    public static boolean isEditorLoopEnabled() {
-        return getSettings().getBoolean("enable-editor-loop");
-    }
-    public static boolean isSuggestionAgentEnabled() {
-        return getSettings().getBoolean("enable-suggestion-agent");
     }
 
     public static String getSuggestionAgentName() {

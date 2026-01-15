@@ -1,12 +1,13 @@
 package authoringassistant.llm.suggestion;
 
-import it.unisa.cluelab.lllm.llm.agents.generic.OLLAMAEvaluatorAgent;
+import authoringassistant.Settings;
+import authoringassistant.llm.agents.generic.OllamaEvaluatorAgent;
 import org.json.JSONObject;
 
-public class QwenCoderAgent extends OLLAMAEvaluatorAgent<String> {
+public class QwenCoderAgent extends OllamaEvaluatorAgent<String> {
 
-    public QwenCoderAgent(JSONObject setttings) {
-        super(setttings);
+    public QwenCoderAgent(Settings settings) {
+        super(settings);
         setModel("qwen2.5-coder:32b");
     }
 

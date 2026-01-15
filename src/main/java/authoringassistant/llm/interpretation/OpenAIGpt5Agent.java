@@ -1,10 +1,11 @@
-package authoringassistant.llm;
+package authoringassistant.llm.interpretation;
 
+import authoringassistant.Settings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import authoringassistant.paragraph.Expression;
-import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
-import it.unisa.cluelab.lllm.llm.prompt.Prompt;
-import it.unisa.cluelab.lllm.llm.prompt.PromptList;
+import authoringassistant.llm.LLMEvaluatorAgent;
+import authoringassistant.llm.prompt.Prompt;
+import authoringassistant.llm.prompt.PromptList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -16,19 +17,18 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.logging.Logger;
 
-public class FluidOpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
-    public static Logger logger = Logger.getLogger(FluidOpenAIGpt5Agent.class.getName());
+public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
+    public static Logger logger = Logger.getLogger(OpenAIGpt5Agent.class.getName());
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
     private final String token;
     private final double temperature;
     private final int ctx;
 
-    public FluidOpenAIGpt5Agent(JSONObject settings) {
-        super(settings);
-        this.token = settings.getString("openai-token");
-        this.temperature = (double)settings.getFloat("temperature");
-        this.ctx = settings.getInt("num_ctx");
+    public OpenAIGpt5Agent(Settings settings) {
+        this.token = settings.getOpenAIToken();
+        this.temperature = settings.getTemperature();
+        this.ctx = settings.getNumContextToken();
         this.httpClient = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(30))
                 .build();
@@ -36,23 +36,23 @@ public class FluidOpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
     }
 
     @Override
-    public Expression evaluate(PromptList prompts, String grid) throws IOException {
-        logger.config("Execution of the FluidOpenAIGpt5Agent");
+    public Expression evaluate(PromptList prompts, String grid) throws IOException, InterruptedException {
+        logger.config("Execution of the OpenAIGpt5Agent");
         
         try {
             JSONObject requestBody = buildRequestBody(prompts);
             String response = makeHttpRequest(requestBody);
             return parseResponse(response);
             
-        } catch (Exception e) {
+        } catch (IOException | InterruptedException e) {
             logger.severe("Error calling GPT-5 API: " + e.getMessage());
-            return null;
+            throw e;
         }
     }
     
     private JSONObject buildRequestBody(PromptList prompts) {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("model", "gpt-5");
+        requestBody.put("model", "gpt-5-mini");
         requestBody.put("temperature", this.temperature);
         requestBody.put("max_completion_tokens", this.ctx);
         

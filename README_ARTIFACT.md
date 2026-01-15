@@ -69,7 +69,7 @@ Then open `settings.json` and set the property `authoring-agent-class`
 - FluidOpenAIGpt4oAgent, to run the assistant with Gpt4o
 - FluidOpenAIGpt5Agent.java, to run the assistant with Gpt5
 
-Remember to set the property `openai-token` with a valid OpenAI token.
+Set the environment variable `OPENAI_API_KEY` to a valid OpenAI secret key.
 
 Then run
 

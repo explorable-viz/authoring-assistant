@@ -16,7 +16,7 @@
     "pull-llama3-1": "./script/ollama-model-pull.sh llama3.1",
     "serve": "./script/serve.sh",
     "test-mock": "./script/test-mock.sh scigen-manual-old",
-    "test": "./script/authoring-assistant.sh test-case-folder=./testCases/ authoring-agent-class=authoringassistant.llm.FluidOpenAIGpt4oAgent",
+    "test": "./script/authoring-assistant.sh test-case-folder=scigen-manual-old authoring-agent-class=authoringassistant.llm.interpretation.OpenAIGpt5Agent",
     "suggestion-agent": "./script/suggestion-agent.sh suggestion-agent-class=authoringassistant.llm.suggestion.QwenCoderAgent",
     "zip-artifact" : "./script/zip-artifact.sh",
     "downsample-category": "./script/authoring-assistant.sh \"downsample=true expression-per-category=5 sample-size=30  test-case-folder=./testCases/scigen-SuggestionAgent\"",

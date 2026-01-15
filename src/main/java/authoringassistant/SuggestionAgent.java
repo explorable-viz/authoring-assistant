@@ -4,8 +4,8 @@ import authoringassistant.paragraph.Expression;
 import authoringassistant.paragraph.ExpressionCategory;
 import authoringassistant.paragraph.Literal;
 import authoringassistant.paragraph.Paragraph;
-import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
-import it.unisa.cluelab.lllm.llm.prompt.PromptList;
+import authoringassistant.llm.LLMEvaluatorAgent;
+import authoringassistant.llm.prompt.PromptList;
 import kotlin.Pair;
 import org.json.JSONObject;
 
@@ -178,8 +178,8 @@ public class SuggestionAgent {
         LLMEvaluatorAgent<String> llmAgent;
         Class<?> agentClass = Class.forName(agentClassName);
         llmAgent = (LLMEvaluatorAgent<String>) agentClass
-                .getDeclaredConstructor(JSONObject.class)
-                .newInstance(Settings.getSettings());
+                .getDeclaredConstructor(Settings.class)
+                .newInstance(Settings.getInstance());
 
         return llmAgent;
     }

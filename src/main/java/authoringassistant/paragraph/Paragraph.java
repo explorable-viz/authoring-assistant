@@ -17,7 +17,7 @@ public class Paragraph extends ArrayList<TextFragment> {
         return STR."\"\"\"\n\t\{stream().map(e -> {
             if (e instanceof Literal l) {
                 if (!onlyValue && l.getSelectedRegion() != null) {
-                    final String replace = Settings.isAddExpectedValueEnabled() ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
+                    final String replace = Settings.isAddExpectedValue() ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
                     return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{replace}]\{e.getValue().substring(l.getSelectedRegion().end())}";
                 }
                 else {
@@ -27,7 +27,7 @@ public class Paragraph extends ArrayList<TextFragment> {
             else if (e instanceof Expression e_) {
                 if (!onlyValue) {
                     return (STR."${\{e_.getExpr()}}");
-                } else if (Settings.isAddExpectedValueEnabled()) {
+                } else if (Settings.isAddExpectedValue()) {
                     return e.getValue();
                 } else {
                     return ("${?}");

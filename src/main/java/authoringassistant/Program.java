@@ -279,7 +279,7 @@ public class Program {
         object.put("imports", get_loadedImports());
         object.put("code", getCode());
         object.put("paragraph", getParagraph().toFluidSyntax(false));
-        if(Settings.isAddExpectedValueEnabled()) {
+        if(Settings.isAddExpectedValue()) {
             object.put("paragraphValue", getParagraph().toFluidSyntax(true));
         }
         return object.toString();
@@ -369,7 +369,7 @@ public class Program {
         return fluidFileName;
     }
 
-    public record QueryResult(Expression correctResponse, Expression expected, int attempt, long duration, int runId, int parseErrors, int counterfactualFails, int nullExpressions, int onlyLiteralExpressions) {
+    public record QueryResult(Expression correctResponse, Expression expected, int attempts, long duration, int runId, int parseErrors, int counterfactualFails, int missingResponses, int literalResponses) {
     }
 
     public void toWebpage() throws IOException {

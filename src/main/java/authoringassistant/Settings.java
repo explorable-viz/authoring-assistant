@@ -38,7 +38,7 @@ public class Settings {
         this.settings = new JSONObject(new String(Files.readAllBytes(Paths.get(new File(settingsPath).toURI()))));
     }
 
-    private static JSONObject getSettings() {
+    public static JSONObject getSettings() {
         return getInstance().settings;
     }
 

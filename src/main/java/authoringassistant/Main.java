@@ -12,7 +12,6 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static authoringassistant.Program.cleanWebsiteFolders;
@@ -63,10 +62,8 @@ public class Main {
                     allResults.addAll(results);
                 }
 
-                float accuracy = computeAccuracy(allResults);
                 generateLinks();
                 writeLog(allResults, interpretationAgent);
-                System.out.println(STR."Accuracy: \{accuracy}");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -172,7 +169,6 @@ public class Main {
             out.println(String.join(";", headers));
             String content = results.stream()
                     .map(result -> {
-                        Program program = result.getFirst();
                         QueryResult queryResult = result.getSecond();
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
@@ -183,7 +179,6 @@ public class Main {
                                 queryResult.correctResponse() != null ? "OK" : "KO",
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
-//                                queryResult.correctResponse() != null ? "generated" : "NULL",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",
                                 queryResult.expected().getValue(),
                                 queryResult.expected().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\""),
@@ -197,16 +192,6 @@ public class Main {
                     .collect(Collectors.joining("\n"));
             out.println(content);
         }
-    }
-
-    private static float computeAccuracy(List<Pair<Program, QueryResult>> results) {
-        logger.config("Computing accuracy");
-        long count = IntStream.range(0, results.size()).filter(i -> {
-            QueryResult result = results.get(i).getSecond();
-            return result.correctResponse() != null
-                    && result.expected().getExpr().equals(result.correctResponse().getExpr());
-        }).count();
-        return (float) count / results.size();
     }
 
     private static ArrayList<Pair<Program, QueryResult>> execute(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> programs) throws Exception {

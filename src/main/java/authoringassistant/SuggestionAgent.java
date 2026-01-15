@@ -59,6 +59,8 @@ public class SuggestionAgent {
             } catch (IllegalArgumentException ex) {
                 prompts.addUserPrompt(STR."Invalid category! Please use only the following categories: \{ExpressionCategory.values()}. Return ONLY the annotated paragraph with [REPLACE ...] tags, without any additional comments or explanations.");
                 continue;
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
         }
         

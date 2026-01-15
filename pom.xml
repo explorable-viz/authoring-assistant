@@ -31,7 +31,7 @@
             <version>0.0.2</version>
         </dependency>
         <dependency>
-            <groupId>it.unisa.cluelab</groupId>
+            <groupId>it.unisa.cluelab</groupId> <!-- TODO: replace by direct dependency on okhttp3  -->
             <artifactId>promptexecutorcli</artifactId>
             <version>0.9.4</version>
         </dependency>
@@ -56,9 +56,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version> <!-- O usa una versione aggiornata -->
+                <version>3.11.0</version>
                 <configuration>
-                    <source>22</source> <!-- Specifica la versione del JDK (ad esempio 21) -->
+                    <source>22</source>
                     <target>22</target>
                     <compilerArgs>
                         <arg>--enable-preview</arg>

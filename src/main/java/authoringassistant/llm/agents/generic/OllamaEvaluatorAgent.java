@@ -1,5 +1,6 @@
 package authoringassistant.llm.agents.generic;
 
+import authoringassistant.Settings;
 import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.prompt.Prompt;
 import authoringassistant.llm.prompt.PromptList;
@@ -25,17 +26,12 @@ public abstract class OllamaEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
     private OkHttpClient client;
     private static final String endPointGenerate = "/api/chat";
 
-    public OllamaEvaluatorAgent(JSONObject settings) {
-        super(settings);
-        this.urlLlama = settings.getString("ollama-url");
-        this.port = settings.getInt("ollama-port");
-        this.temperature = (double)settings.getFloat("temperature");
-        this.ctx = (double)settings.getInt("num_ctx");
-        if (settings.has("timeout") && !settings.isNull("timeout")) {
-            this.timeout = settings.getInt("timeout");
-        } else {
-            this.timeout = 600;
-        }
+    public OllamaEvaluatorAgent(Settings settings) {
+        this.urlLlama = settings.getOllamaURL();
+        this.port = settings.getOllamaPort();
+        this.temperature = settings.getTemperature();
+        this.ctx = settings.getNumContextToken();
+        this.timeout = settings.getTimeout() ;
 
         this.initClient();
     }

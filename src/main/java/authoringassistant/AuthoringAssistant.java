@@ -144,8 +144,8 @@ public class AuthoringAssistant {
         LLMEvaluatorAgent<Expression> llmAgent;
         Class<?> agentClass = Class.forName(agentClassName);
         llmAgent = (LLMEvaluatorAgent<Expression>) agentClass
-                .getDeclaredConstructor(JSONObject.class)
-                .newInstance(Settings.getSettings());
+                .getDeclaredConstructor(Settings.class)
+                .newInstance(Settings.getInstance());
 
         return llmAgent;
     }

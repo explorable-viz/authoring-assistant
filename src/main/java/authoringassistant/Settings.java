@@ -19,7 +19,7 @@ public class Settings {
     private final JSONObject settings;
     private static Map<String, String> commandLineArgs;
 
-    private static Settings getInstance() {
+    public static Settings getInstance() {
         if (instance == null) throw new AssertionError("You have to call init first");
         return instance;
     }
@@ -42,6 +42,18 @@ public class Settings {
         return getInstance().settings;
     }
 
+    public static String getOpenAIToken() {
+        return getSettings().getString("openai-token");
+    }
+
+    public static String getOllamaURL() {
+        return getSettings().getString("ollama-url");
+    }
+
+    public static int getOllamaPort() {
+        return getSettings().getInt("ollama-port");
+    }
+
     public static int getInterpretationAgentLoopbackLimit() {
         return getSettings().getInt("interpretation-agent-loopback-limit");
     }
@@ -52,6 +64,10 @@ public class Settings {
 
     public static float getTemperature() {
         return getSettings().getFloat("temperature");
+    }
+
+    public static int getTimeout() {
+        return getSettings().getInt("timeout");
     }
 
     public static int getNumContextToken() {

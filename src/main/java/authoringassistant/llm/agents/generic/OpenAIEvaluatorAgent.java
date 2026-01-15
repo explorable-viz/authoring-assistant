@@ -1,5 +1,6 @@
 package authoringassistant.llm.agents.generic;
 
+import authoringassistant.Settings;
 import com.theokanning.openai.completion.chat.ChatCompletionChoice;
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatFunction;
@@ -26,11 +27,10 @@ public abstract class OpenAIEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
     private final double temperature;
     private final int ctx;
 
-    public OpenAIEvaluatorAgent(JSONObject settings) {
-        super(settings);
-        this.token = settings.getString("openai-token");
-        this.temperature = (double)settings.getFloat("temperature");
-        this.ctx = settings.getInt("num_ctx");
+    public OpenAIEvaluatorAgent(Settings settings) {
+        this.token = settings.getOpenAIToken();
+        this.temperature = settings.getTemperature();
+        this.ctx = settings.getNumContextToken();
     }
 
     public void setModel(String model) {
@@ -44,7 +44,7 @@ public abstract class OpenAIEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
     public E evaluate(PromptList prompts, String grid) {
         OpenAiService service = new OpenAiService(this.getToken(), Duration.ofSeconds(90L));
         ChatMessage responseMessage = ((ChatCompletionChoice)service.createChatCompletion(this.getChatCompletionRequest(prompts)).getChoices().get(0)).getMessage();
-        ChatFunctionCall functionCall = responseMessage.getFunctionCall();
+        responseMessage.getFunctionCall();
         return (E)responseMessage.getContent();
     }
 

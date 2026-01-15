@@ -1,5 +1,6 @@
 package authoringassistant.llm.interpretation;
 
+import authoringassistant.Settings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import authoringassistant.paragraph.Expression;
 import authoringassistant.llm.LLMEvaluatorAgent;
@@ -24,11 +25,10 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
     private final double temperature;
     private final int ctx;
 
-    public OpenAIGpt5Agent(JSONObject settings) {
-        super(settings);
-        this.token = settings.getString("openai-token");
-        this.temperature = (double)settings.getFloat("temperature");
-        this.ctx = settings.getInt("num_ctx");
+    public OpenAIGpt5Agent(Settings settings) {
+        this.token = settings.getOpenAIToken();
+        this.temperature = settings.getTemperature();
+        this.ctx = settings.getNumContextToken();
         this.httpClient = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(30))
                 .build();

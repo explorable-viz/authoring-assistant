@@ -176,8 +176,8 @@ public class SuggestionAgent {
         LLMEvaluatorAgent<String> llmAgent;
         Class<?> agentClass = Class.forName(agentClassName);
         llmAgent = (LLMEvaluatorAgent<String>) agentClass
-                .getDeclaredConstructor(JSONObject.class)
-                .newInstance(Settings.getSettings());
+                .getDeclaredConstructor(Settings.class)
+                .newInstance(Settings.getInstance());
 
         return llmAgent;
     }

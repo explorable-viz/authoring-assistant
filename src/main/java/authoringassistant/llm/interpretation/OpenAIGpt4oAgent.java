@@ -1,5 +1,6 @@
 package authoringassistant.llm.interpretation;
 
+import authoringassistant.Settings;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.theokanning.openai.completion.chat.ChatFunction;
 import com.theokanning.openai.completion.chat.ChatFunctionCall;
@@ -16,11 +17,10 @@ import java.time.Duration;
 import java.util.Collections;
 
 public class OpenAIGpt4oAgent extends OpenAIEvaluatorAgent<Expression> {
-    public OpenAIGpt4oAgent(JSONObject settings) {
+    public OpenAIGpt4oAgent(Settings settings) {
         super(settings);
         setModel("gpt-4o");
     }
-
 
     public Expression evaluate(PromptList prompts, String grid) {
         OpenAiService service = new OpenAiService(getToken(), Duration.ofSeconds(90));

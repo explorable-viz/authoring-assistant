@@ -1,4 +1,4 @@
-package authoringassistant.llm;
+package authoringassistant.llm.interpretation;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import authoringassistant.paragraph.Expression;

@@ -1,6 +1,6 @@
 package authoringassistant;
 
-import authoringassistant.llm.DummyAgent;
+import authoringassistant.llm.interpretation.DummyAgent;
 import authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;
 import it.unisa.cluelab.lllm.llm.prompt.PromptList;

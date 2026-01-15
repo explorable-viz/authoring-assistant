@@ -1,4 +1,4 @@
-package authoringassistant.llm;
+package authoringassistant.llm.interpretation;
 
 import authoringassistant.paragraph.Expression;
 import it.unisa.cluelab.lllm.llm.LLMEvaluatorAgent;

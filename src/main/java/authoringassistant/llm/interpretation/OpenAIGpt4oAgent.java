@@ -1,4 +1,4 @@
-package authoringassistant.llm;
+package authoringassistant.llm.interpretation;
 
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.theokanning.openai.completion.chat.ChatFunction;

@@ -1,6 +1,6 @@
 package authoringassistant;
 
-import authoringassistant.llm.DummyAgent;
+import authoringassistant.llm.interpretation.DummyAgent;
 import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
 import authoringassistant.util.ThrowingConsumer;

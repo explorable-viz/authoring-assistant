@@ -27,8 +27,8 @@ public class SuggestionAgent {
     private static final Path SYSTEM_PROMPT_PATH = Path.of("system-prompt", "suggestion-agent", "system-prompt.txt");
     private final LLMEvaluatorAgent<String> llm;
 
-    public SuggestionAgent(String agent) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        llm = initialiseAgent(agent);
+    public SuggestionAgent(LLMEvaluatorAgent<String> llm) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        this.llm = llm;
     }
 
     public SuggestionAgentResult generateTemplateProgram(Program p) throws IOException {
@@ -174,8 +174,7 @@ public class SuggestionAgent {
                 .toList();
     }
 
-
-    private static LLMEvaluatorAgent<String> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public static LLMEvaluatorAgent<String> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         LLMEvaluatorAgent<String> llmAgent;
         Class<?> agentClass = Class.forName(agentClassName);
         llmAgent = (LLMEvaluatorAgent<String>) agentClass

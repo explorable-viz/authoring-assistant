@@ -33,7 +33,7 @@ public class AuthoringAssistant {
     public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
         this.prompts = systemPrompt.toPromptList();
         llm = initialiseAgent(agentClassName);
-        this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(suggestionAgentClassName) : null;
+        this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(SuggestionAgent.initialiseAgent(suggestionAgentClassName)) : null;
         this.templateProgram = templateProgram;
         this.runId = runId;
         this.jsonLogFolder = jsonLogFolder;

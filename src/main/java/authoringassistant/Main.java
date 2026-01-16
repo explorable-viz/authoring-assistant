@@ -261,7 +261,7 @@ public class Main {
                     .filter(r -> r.getSecond().correctResponse() != null)
                     .count();
                 n++;
-                logger.info(STR."[Run \{k} of \{numRuns}; test case \{n} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
+                logger.info(STR."[Run \{k + 1} of \{numRuns}][Test case \{n} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
                 allResults.addAll(results);
             }
         }

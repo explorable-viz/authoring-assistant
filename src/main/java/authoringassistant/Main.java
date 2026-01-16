@@ -210,7 +210,7 @@ public class Main {
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
                     "runId", "test-case", "llm-agent",
-                    "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
+                    "attempts", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
@@ -221,7 +221,6 @@ public class Main {
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
                                 queryResult.model(),
                                 String.valueOf(queryResult.attempts()),
-                                queryResult.correctResponse() != null ? "OK" : "KO",
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",

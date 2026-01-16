@@ -17,7 +17,7 @@
     "serve": "./script/serve.sh",
     "test-mock": "./script/authoring-assistant.sh config=test-mock",
     "test": "./script/authoring-assistant.sh config=test",
-    "test-benchmark": "./script/authoring-assistant.sh config=benchmark",
+    "benchmark": "./script/authoring-assistant.sh config=benchmark",
     "suggestion-agent": "./script/suggestion-agent.sh config=suggestion-agent",
     "zip-artifact" : "./script/zip-artifact.sh",
     "downsample-category": "./script/authoring-assistant.sh \"downsample=true expression-per-category=5 sample-size=30  test-case-folder=./testCases/scigen-SuggestionAgent\"",

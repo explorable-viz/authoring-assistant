@@ -62,7 +62,7 @@ public class Main {
                 for (boolean addExpectedValue : cases) {
                     Settings.setAddExpectedValue(addExpectedValue);
                     System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
-                    final ArrayList<Pair<Program, QueryResult>> results = execute(systemPrompt, interpretationAgent, suggestionAgent, programs);
+                    final ArrayList<Pair<Program, QueryResult>> results = runTestCases(systemPrompt, interpretationAgent, suggestionAgent, programs);
                     allResults.addAll(results);
                 }
 
@@ -240,7 +240,7 @@ public class Main {
         }
     }
 
-    private static ArrayList<Pair<Program, QueryResult>> execute(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> programs) throws Exception {
+    private static ArrayList<Pair<Program, QueryResult>> runTestCases(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> testCases) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
         final int numRuns = isTestMock(interpretationAgent) ? 1 : Settings.numTestRuns();
 
@@ -248,16 +248,16 @@ public class Main {
         {
             String jsonLogFolder = STR."\{Settings.LOG_FOLDER}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
             Files.createDirectories(Paths.get(jsonLogFolder));
-            int programCount = 0;
-            for (Program program : programs) {
-                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, program, suggestionAgent, k,jsonLogFolder);
+            int n = 0;
+            for (Program testCase : testCases) {
+                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, testCase, suggestionAgent, k,jsonLogFolder);
                 List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
 
                 long correct = results.stream()
                     .filter(r -> r.getSecond().correctResponse() != null)
                     .count();
-                programCount++;
-                logger.info(STR."[Test case \{programCount} of \{programs.size()}] \{correct} of \{results.size()} responses correct");
+                n++;
+                logger.info(STR."[Test case \{n} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
                 allResults.addAll(results);
             }
         }

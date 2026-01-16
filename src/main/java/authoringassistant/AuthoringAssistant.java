@@ -107,7 +107,7 @@ public class AuthoringAssistant {
 
                     if (error.isPresent()) {
                         sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                        sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
+                        sessionPrompts.addUserPrompt(loopBackMessage(candidate.getExpr(), error.get()));
                         errors = true;
                         if (firstTest) {
                             parseErrors++;
@@ -148,7 +148,7 @@ public class AuthoringAssistant {
         return llmAgent;
     }
 
-    private String generateLoopBackMessage(String response, String errorDetails) {
+    private String loopBackMessage(String response, String errorDetails) {
         String errorMessage;
         if (errorDetails.toLowerCase().contains("key") && errorDetails.toLowerCase().contains("not found")) {
             errorMessage = String.format(

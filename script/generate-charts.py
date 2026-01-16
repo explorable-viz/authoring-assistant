@@ -22,8 +22,8 @@ def count_problems_per_category(df):
     # This counts the actual expressions, not the test case files
     category_counts = (
         df_exploded
-            .drop_duplicates(["expression-type", "expected-expression", "target-value"])
-            .groupby("expression-type")
+            .drop_duplicates(["categories", "expected-expression", "target-value"])
+            .groupby("categories")
             .size()
     )
     return category_counts
@@ -51,15 +51,13 @@ def generate_aggregated_plot(df, plot, fig_dir):
     df_exploded = df.explode('expression-type')
     df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
 
-    # calcolo success_rate SEPARATAMENTE per target-value
     summary = (
-        df_exploded.groupby(["expression-type", "target-value"])
+        df_exploded.groupby(["categories", "target-value"])
         .agg(success_rate=("success", "mean"),
              count=("success", "size"))
         .reset_index()
     )
 
-    # etichette sull’asse x basate sul nome categoria
     plt.figure(figsize=(6,6))
     label_map = {
         1: "Present",
@@ -69,14 +67,13 @@ def generate_aggregated_plot(df, plot, fig_dir):
 
     ax = sns.barplot(
         data=summary,
-        x="expression-type",   # oppure "label"
+        x="categories",
         y="success_rate",
         hue="target_label",
         palette="Set2"
     )
     ax.legend(title="Target value")
 
-    # annotazioni sopra ogni barra
     for p in ax.patches:
         h = p.get_height()
         ax.annotate(f"{h:.2f}",
@@ -101,7 +98,7 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
     df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
 
     summary = (
-        df_exploded.groupby(["runId", "expression-type", "target-value"])
+        df_exploded.groupby(["runId", "categories", "target-value"])
         .agg(success_rate=("success", "mean"))
         .reset_index()
     )
@@ -116,7 +113,7 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
 
     ax = sns.boxplot(
         data=summary,
-        x="expression-type",
+        x="categories",
         y="success_rate",
         hue="target_label",
         palette="Set2",

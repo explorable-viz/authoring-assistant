@@ -62,7 +62,7 @@ public class Main {
                 for (boolean addExpectedValue : cases) {
                     Settings.setAddExpectedValue(addExpectedValue);
                     System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
-                    final ArrayList<Pair<Program, QueryResult>> results = execute(systemPrompt, interpretationAgent, suggestionAgent, programs);
+                    final ArrayList<Pair<Program, QueryResult>> results = runTestCases(systemPrompt, interpretationAgent, suggestionAgent, programs);
                     allResults.addAll(results);
                 }
 
@@ -209,7 +209,7 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "is-negative", "in-context-learning-size",
+                    "runId", "test-case", "llm-agent", "is-negative",
                     "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
@@ -240,24 +240,28 @@ public class Main {
         }
     }
 
-    private static ArrayList<Pair<Program, QueryResult>> execute(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> programs) throws Exception {
+    private static ArrayList<Pair<Program, QueryResult>> runTestCases(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> testCases) throws Exception {
         final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
         final int numRuns = isTestMock(interpretationAgent) ? 1 : Settings.numTestRuns();
+
+        if (Settings.getTruncateTestsAt() != -1) {
+            testCases = testCases.subList(0, Settings.getTruncateTestsAt());
+        }
 
         for(int k = 0; k < numRuns; k++)
         {
             String jsonLogFolder = STR."\{Settings.LOG_FOLDER}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
             Files.createDirectories(Paths.get(jsonLogFolder));
-            int programCount = 0;
-            for (Program program : programs) {
-                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, program, suggestionAgent, k,jsonLogFolder);
+            int n = 0;
+            for (Program testCase : testCases) {
+                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, testCase, suggestionAgent, k,jsonLogFolder);
                 List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
 
                 long correct = results.stream()
                     .filter(r -> r.getSecond().correctResponse() != null)
                     .count();
-                programCount++;
-                logger.info(STR."[Test case \{programCount} of \{programs.size()}] \{correct} of \{results.size()} responses correct");
+                n++;
+                logger.info(STR."[Run \{k + 1} of \{numRuns}][Test case \{n} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
                 allResults.addAll(results);
             }
         }

@@ -1,3 +1,6 @@
+import argparse
+from pathlib import Path
+import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,10 +20,12 @@ def count_problems_per_category(df):
     
     # Count unique (expected-expression, target-value) pairs per category
     # This counts the actual expressions, not the test case files
-    category_counts = df_exploded.groupby("expression-type").apply(
-        lambda x: x[['expected-expression', 'target-value']].drop_duplicates().shape[0]
+    category_counts = (
+        df_exploded
+            .drop_duplicates(["expression-type", "expected-expression", "target-value"])
+            .groupby("expression-type")
+            .size()
     )
-    
     return category_counts
 
 def generate_success_rate_test_case_plot(df, plot, fig_dir):
@@ -219,7 +224,6 @@ def process_csv_file(csv_file):
     df["success"] = df["generated-expression"].notna().astype(int)
     df["target-value"] = df["target-value"].astype(int)
     df["attempts"] = pd.to_numeric(df["attempts"], errors="coerce")
-    df["duration(ms)"] = pd.to_numeric(df["duration(ms)"], errors="coerce")
     df["test-case-short"] = df["test-case"].apply(
         lambda x: os.path.join(os.path.basename(os.path.dirname(str(x))), os.path.basename(str(x)))
     )
@@ -239,25 +243,41 @@ def process_csv_file(csv_file):
     
     print(f"Charts saved in {fig_dir}")
 
-def generate_charts():
-    """Find all CSV files in results directory and subdirectories, and generate charts for each."""
-    csv_files = glob.glob("results/**/*.csv", recursive=True)
-    
-    if not csv_files:
-        print("No CSV files found in results directory")
-        return
-    
-    print(f"Found {len(csv_files)} CSV file(s) to process")
-    
-    for csv_file in csv_files:
-        try:
-            process_csv_file(csv_file)
-        except Exception as e:
-            print(f"Error processing {csv_file}: {e}")
-            continue
-    
+def generate_charts(test_case_folder: str):
+    results_dir = Path("results")
+    csv_path = results_dir / test_case_folder / "results.csv"
+
+    if not csv_path.exists():
+        raise FileNotFoundError(f"CSV file not found: {csv_path}")
+
+    print(f"Processing CSV file: {csv_path}")
+    process_csv_file(str(csv_path))
+
     print(f"\n{'='*60}")
-    print("All charts generated successfully!")
+    print("Charts generated successfully.")
     print(f"{'='*60}")
 
-generate_charts()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Generate charts from test suite specified via settings file"
+    )
+    parser.add_argument(
+        "config",
+        help="Name of settings file (e.g. 'test-mock' loads settings/test-mock.json)"
+    )
+
+    args = parser.parse_args()
+    settings_file = Path("settings") / f"{args.config}.json"
+    prop = "test-case-folder"
+
+    try:
+        with open(settings_file, encoding="utf-8") as f:
+            settings = json.load(f)
+        test_case_folder = settings[prop]
+        generate_charts(test_case_folder)
+    except FileNotFoundError as e:
+        sys.exit(f"{e}")
+    except json.JSONDecodeError as e:
+        sys.exit(f"Error parsing JSON in {settings_file}: {e}")
+    except KeyError as e:
+        sys.exit(f"Error: key {e} not found")

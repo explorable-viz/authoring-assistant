@@ -33,7 +33,6 @@ jobs:
         run: |
           yarn install
           yarn test-mock
-          yarn generate-charts
           export PUPPETEER_CACHE_DIR=$GITHUB_WORKSPACE/
           # requires Puppeteer to be installed at same version as used in Fluid
           yarn puppeteer browsers install chrome

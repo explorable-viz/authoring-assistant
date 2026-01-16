@@ -5,7 +5,6 @@ import authoringassistant.paragraph.Expression;
 import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.prompt.PromptList;
 import kotlin.Pair;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -73,7 +72,6 @@ public class AuthoringAssistant {
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
         final int attemptLimit = llm instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
-        // Add the input query to the KB that will be sent to the LLM
         int attempt;
         final long start = System.currentTimeMillis();
         Program subProgram = test.getFirst();
@@ -109,7 +107,7 @@ public class AuthoringAssistant {
 
                     if (error.isPresent()) {
                         sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                        sessionPrompts.addUserPrompt(generateLoopBackMessage(candidate.getExpr(), error.get()));
+                        sessionPrompts.addUserPrompt(loopBackMessage(candidate.getExpr(), error.get()));
                         errors = true;
                         if (firstTest) {
                             parseErrors++;
@@ -150,7 +148,7 @@ public class AuthoringAssistant {
         return llmAgent;
     }
 
-    private String generateLoopBackMessage(String response, String errorDetails) {
+    private String loopBackMessage(String response, String errorDetails) {
         String errorMessage;
         if (errorDetails.toLowerCase().contains("key") && errorDetails.toLowerCase().contains("not found")) {
             errorMessage = String.format(

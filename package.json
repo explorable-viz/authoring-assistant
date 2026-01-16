@@ -15,10 +15,10 @@
     "pull-llama3": "./script/model-pull.sh llama3",
     "pull-llama3-1": "./script/ollama-model-pull.sh llama3.1",
     "serve": "./script/serve.sh",
-    "test-mock": "./script/authoring-assistant.sh config=test-mock",
-    "test": "./script/authoring-assistant.sh config=test",
-    "benchmark": "./script/authoring-assistant.sh config=benchmark",
+    "test-mock": "./script/test.sh test-mock",
+    "test": "./script/test.sh test",
     "suggestion-agent": "./script/suggestion-agent.sh config=suggestion-agent",
+    "benchmark": "./script/authoring-assistant.sh config=benchmark",
     "zip-artifact" : "./script/zip-artifact.sh",
     "downsample-category": "./script/authoring-assistant.sh \"downsample=true expression-per-category=5 sample-size=30 test-case-folder=./testCases/scigen-SuggestionAgent\"",
     "count-categories": "python ./script/count-categories.py "

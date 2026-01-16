@@ -26,11 +26,8 @@ public class Settings {
 
     public static Settings init(String settingsPath, Map<String, String> args) throws IOException {
         commandLineArgs = args;
-        
-        // Load default settings
+
         JSONObject defaultSettings = loadSettingsFile(settingsPath);
-        
-        // If config parameter is specified, merge with settings/<config>.json
         if (args != null && args.containsKey("config")) {
             String configFile = STR."settings/\{args.get("config")}.json";
             JSONObject specificSettings = loadSettingsFile(configFile);

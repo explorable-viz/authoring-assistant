@@ -209,8 +209,8 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent",
-                    "attempts", "target-value", "categories", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
+                    "runId", "test-case", "llm-agent", "attempts", "target-value", "categories", "generated-expression", "expected-value",
+                    "problem-no", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
@@ -225,6 +225,7 @@ public class Main {
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",
                                 queryResult.expected().getValue(),
+                                String.valueOf(queryResult.problemIndex()),
                                 queryResult.expected().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\""),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),

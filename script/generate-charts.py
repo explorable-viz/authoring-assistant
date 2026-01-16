@@ -17,11 +17,9 @@ def count_problems_per_category(df):
     df_exploded = df_exploded.explode('categories')
     df_exploded['categories'] = df_exploded['categories'].str.strip()
     
-    # Count unique (expected-expression, target-value) pairs per category
-    # This counts the actual expressions, not the test case files
     category_counts = (
         df_exploded
-            .drop_duplicates(["categories", "expected-expression", "target-value"])
+            .drop_duplicates(["test-case", "problem-no", "categories"])
             .groupby("categories")
             .size()
     )

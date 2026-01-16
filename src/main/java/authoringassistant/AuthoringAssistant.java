@@ -82,9 +82,7 @@ public class AuthoringAssistant {
         final String info = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
         for (attempt = 1; attempt <= attemptLimit; attempt++) {
             boolean errors = false;
-            // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
-            //Check each generated expressions
             if(candidate == null || candidate.getExpr() == null) {
                 missingResponses++;
                 sessionPrompts.addAssistantPrompt("[No response received]");

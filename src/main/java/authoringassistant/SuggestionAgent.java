@@ -7,7 +7,6 @@ import authoringassistant.paragraph.Paragraph;
 import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.prompt.PromptList;
 import kotlin.Pair;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -176,7 +175,7 @@ public class SuggestionAgent {
     }
 
 
-    private LLMEvaluatorAgent<String> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    private static LLMEvaluatorAgent<String> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         LLMEvaluatorAgent<String> llmAgent;
         Class<?> agentClass = Class.forName(agentClassName);
         llmAgent = (LLMEvaluatorAgent<String>) agentClass

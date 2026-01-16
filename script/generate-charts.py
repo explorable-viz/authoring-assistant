@@ -20,10 +20,12 @@ def count_problems_per_category(df):
     
     # Count unique (expected-expression, target-value) pairs per category
     # This counts the actual expressions, not the test case files
-    category_counts = df_exploded.groupby("expression-type").apply(
-        lambda x: x[['expected-expression', 'target-value']].drop_duplicates().shape[0]
+    category_counts = (
+        df_exploded
+            .drop_duplicates(["expression-type", "expected-expression", "target-value"])
+            .groupby("expression-type")
+            .size()
     )
-    
     return category_counts
 
 def generate_success_rate_test_case_plot(df, plot, fig_dir):

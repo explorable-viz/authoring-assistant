@@ -242,9 +242,9 @@ def process_csv_file(csv_file):
     
     print(f"Charts saved in {fig_dir}")
 
-def generate_charts(csv_filename: str):
+def generate_charts(test_case_folder: str):
     results_dir = Path("results")
-    csv_path = results_dir / (csv_filename + ".csv")
+    csv_path = results_dir / test_case_folder / "results.csv"
 
     if not csv_path.exists():
         raise FileNotFoundError(f"CSV file not found: {csv_path}")
@@ -278,5 +278,5 @@ if __name__ == "__main__":
         sys.exit(f"{e}")
     except json.JSONDecodeError as e:
         sys.exit(f"Error parsing JSON in {settings_file}: {e}")
-    except KeyError:
-        sys.exit(f"Error: '{prop}' not found in {settings_file}")
+    except KeyError as e:
+        sys.exit(f"Error: key {e} not found")

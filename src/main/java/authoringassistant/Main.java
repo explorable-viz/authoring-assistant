@@ -209,7 +209,7 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "is-negative",
+                    "runId", "test-case", "llm-agent",
                     "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
@@ -220,7 +220,6 @@ public class Main {
                                 String.valueOf(queryResult.runId()),
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
                                 queryResult.model(),
-                                String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
                                 String.valueOf(queryResult.attempts()),
                                 queryResult.correctResponse() != null ? "OK" : "KO",
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),

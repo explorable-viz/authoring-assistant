@@ -173,14 +173,4 @@ public class SuggestionAgent {
                 })
                 .toList();
     }
-
-    public static LLMEvaluatorAgent<String> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        LLMEvaluatorAgent<String> llmAgent;
-        Class<?> agentClass = Class.forName(agentClassName);
-        llmAgent = (LLMEvaluatorAgent<String>) agentClass
-                .getDeclaredConstructor(Settings.class)
-                .newInstance(Settings.getInstance());
-
-        return llmAgent;
-    }
 }

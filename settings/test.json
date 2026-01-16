@@ -1,0 +1,7 @@
+{
+  "interpretation-agent-loopback-limit": 2,
+  "suggestion-agent-loopback-limit": 2,
+  "num-test-runs": 1,
+  "authoring-agent-class": "authoringassistant.llm.interpretation.OpenAIGpt4oAgent",
+  "test-case-folder": "scigen-manual-old"
+}

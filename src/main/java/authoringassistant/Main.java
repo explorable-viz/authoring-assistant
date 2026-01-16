@@ -28,7 +28,10 @@ public class Main {
         final SystemPrompt systemPrompt;
 
         try {
-            Settings.init("settings.json", arguments);
+            Settings.init("settings/default.json", arguments);
+            logger.info("****************************************");
+            logger.info(STR."Settings:");
+            logger.info(Settings.getSettings().toString(2));
             final String interpretationAgent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json

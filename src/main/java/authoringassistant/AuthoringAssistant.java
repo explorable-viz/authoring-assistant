@@ -87,7 +87,7 @@ public class AuthoringAssistant {
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
-            if(candidate == null) {
+            if(candidate == null || candidate.getExpr() == null) {
                 missingResponses++;
                 sessionPrompts.addAssistantPrompt("[No response received]");
                 sessionPrompts.addUserPrompt("No response received. Please try again.");

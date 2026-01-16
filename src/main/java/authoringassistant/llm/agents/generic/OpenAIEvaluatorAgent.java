@@ -62,14 +62,15 @@ public abstract class OpenAIEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
         List<ChatMessage> messages = new ArrayList();
 
         for(int i = 0; i < prompts.size(); ++i) {
-            if (((Prompt)prompts.get(i)).getRole().equals("system")) {
-                ChatMessage systemMessage = new ChatMessage(ChatMessageRole.SYSTEM.value(), ((Prompt)prompts.get(i)).getContent());
+            final Prompt prompt = prompts.get(i);
+            if (prompt.getRole().equals("system")) {
+                ChatMessage systemMessage = new ChatMessage(ChatMessageRole.SYSTEM.value(), prompt.getContent());
                 messages.add(systemMessage);
-            } else if (((Prompt)prompts.get(i)).getRole().equals("user")) {
-                ChatMessage firstMsg = new ChatMessage(ChatMessageRole.USER.value(), ((Prompt)prompts.get(i)).getContent());
+            } else if (prompt.getRole().equals("user")) {
+                ChatMessage firstMsg = new ChatMessage(ChatMessageRole.USER.value(), prompt.getContent());
                 messages.add(firstMsg);
             } else {
-                ChatMessage firstMsg = new ChatMessage(ChatMessageRole.ASSISTANT.value(), ((Prompt)prompts.get(i)).getContent());
+                ChatMessage firstMsg = new ChatMessage(ChatMessageRole.ASSISTANT.value(), prompt.getContent());
                 messages.add(firstMsg);
             }
         }

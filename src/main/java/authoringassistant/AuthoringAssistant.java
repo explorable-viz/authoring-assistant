@@ -5,7 +5,6 @@ import authoringassistant.paragraph.Expression;
 import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.prompt.PromptList;
 import kotlin.Pair;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -86,7 +85,7 @@ public class AuthoringAssistant {
             // Send the program to the LLM to be processed
             Expression candidate = llm.evaluate(sessionPrompts, "");
             //Check each generated expressions
-            if(candidate == null) {
+            if(candidate == null || candidate.getExpr() == null) {
                 missingResponses++;
                 sessionPrompts.addAssistantPrompt("[No response received]");
                 sessionPrompts.addUserPrompt("No response received. Please try again.");

@@ -1,11 +1,11 @@
 {
   "datasets": [
-    "datasets/2002.04250v2-362.json"
+    "datasets/scigen/2002.04250v2-362.json"
   ],
   "imports": [
     "scigen",
     "util",
-    "datasets/_2002_04250v2_362"
+    "datasets/scigen/_2002_04250v2_362"
   ],
   "variables": {},
   "testing-variables": {},

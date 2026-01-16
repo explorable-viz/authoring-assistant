@@ -158,11 +158,11 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
 
         # Create test structure
         test = {
-            'datasets': [f"datasets/{dataset_name}.json"],
+            'datasets': [f"{datasets_dir.as_posix()}/{dataset_name}.json"],
             'imports': [
                 "scigen",
                 "util",
-                f"datasets/_{dataset_name.replace('-', '_').replace('.', '_')}"
+                f"{datasets_dir.as_posix()}/_{dataset_name.replace('-', '_').replace('.', '_')}"
             ],
             'variables': {},
             'testing-variables': {}
@@ -186,7 +186,7 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
             
         # Write .fld file with loadJson instruction
         fld_name = f"_{dataset_name.replace('-', '_').replace('.', '_')}"
-        fld_content = f'let tableData = loadJson "{datasets_dir}/{dataset_name}.json";'
+        fld_content = f'let tableData = loadJson "{datasets_dir.as_posix()}/{dataset_name}.json";'
         fld_file = datasets_path / f"{fld_name}.fld"
         with open(fld_file, 'w', encoding='utf-8') as f:
             f.write(fld_content)

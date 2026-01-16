@@ -49,10 +49,14 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
             throw e;
         }
     }
+
+    public String getModel() {
+        return "gpt-5-mini";
+    }
     
     private JSONObject buildRequestBody(PromptList prompts) {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("model", "gpt-5-mini");
+        requestBody.put("model", this.getModel());
         requestBody.put("temperature", this.temperature);
         requestBody.put("max_completion_tokens", this.ctx);
         

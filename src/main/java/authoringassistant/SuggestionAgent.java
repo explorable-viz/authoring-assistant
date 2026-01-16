@@ -7,7 +7,6 @@ import authoringassistant.paragraph.Paragraph;
 import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.prompt.PromptList;
 import kotlin.Pair;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -28,8 +27,8 @@ public class SuggestionAgent {
     private static final Path SYSTEM_PROMPT_PATH = Path.of("system-prompt", "suggestion-agent", "system-prompt.txt");
     private final LLMEvaluatorAgent<String> llm;
 
-    public SuggestionAgent(String agent) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        llm = initialiseAgent(agent);
+    public SuggestionAgent(LLMEvaluatorAgent<String> llm) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        this.llm = llm;
     }
 
     public SuggestionAgentResult generateTemplateProgram(Program p) throws IOException {
@@ -173,16 +172,5 @@ public class SuggestionAgent {
                     return new Pair<>(paragraph, expr);
                 })
                 .toList();
-    }
-
-
-    private LLMEvaluatorAgent<String> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        LLMEvaluatorAgent<String> llmAgent;
-        Class<?> agentClass = Class.forName(agentClassName);
-        llmAgent = (LLMEvaluatorAgent<String>) agentClass
-                .getDeclaredConstructor(Settings.class)
-                .newInstance(Settings.getInstance());
-
-        return llmAgent;
     }
 }

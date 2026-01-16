@@ -1,5 +1,6 @@
 package authoringassistant;
 
+import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.interpretation.DummyAgent;
 import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
@@ -67,7 +68,7 @@ public class Main {
                 }
 
                 generateLinks();
-                writeLog(allResults, interpretationAgent);
+                writeResults(allResults);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -97,7 +98,7 @@ public class Main {
     private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder)
             throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException,
             IllegalAccessException, IOException, InterruptedException {
-        SuggestionAgent sa = new SuggestionAgent(suggestionAgentClassName);
+        SuggestionAgent sa = new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName));
         List<Integer> attemptsList = new ArrayList<>();
         for (Program program : programs) {
             SuggestionAgent.SuggestionAgentResult result = sa.generateTemplateProgram(program);
@@ -105,7 +106,6 @@ public class Main {
             attemptsList.add(result.attempts());
         }
         
-        // Write loopback statistics
         writeLoopbackStats(attemptsList, outputFolder);
     }
     
@@ -205,7 +205,7 @@ public class Main {
         return result;
     }
 
-    private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String interpretationAgent) throws IOException {
+    private static void writeResults(ArrayList<Pair<Program, QueryResult>> results) throws IOException {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
@@ -219,7 +219,7 @@ public class Main {
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
-                                interpretationAgent,
+                                queryResult.model(),
                                 String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
                                 String.valueOf(queryResult.attempts()),
                                 queryResult.correctResponse() != null ? "OK" : "KO",

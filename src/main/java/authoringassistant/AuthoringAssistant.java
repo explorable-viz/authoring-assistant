@@ -7,7 +7,6 @@ import authoringassistant.llm.prompt.PromptList;
 import kotlin.Pair;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +23,7 @@ public class AuthoringAssistant {
 
     public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
     private final PromptList prompts;
-    private final LLMEvaluatorAgent<Expression> llm;
+    private final LLMEvaluatorAgent<Expression> interpretationAgent;
     private Program templateProgram;
     private final SuggestionAgent suggestionAgent;
     private final int runId;
@@ -32,8 +31,8 @@ public class AuthoringAssistant {
 
     public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
         this.prompts = systemPrompt.toPromptList();
-        llm = initialiseAgent(agentClassName);
-        this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(suggestionAgentClassName) : null;
+        this.interpretationAgent = LLMEvaluatorAgent.initialiseAgent(agentClassName);
+        this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName)) : null;
         this.templateProgram = templateProgram;
         this.runId = runId;
         this.jsonLogFolder = jsonLogFolder;
@@ -71,7 +70,7 @@ public class AuthoringAssistant {
     }
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
-        final int attemptLimit = llm instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
+        final int attemptLimit = interpretationAgent instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
         int attempt;
         final long start = System.currentTimeMillis();
         Program subProgram = test.getFirst();
@@ -82,9 +81,7 @@ public class AuthoringAssistant {
         final String info = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
         for (attempt = 1; attempt <= attemptLimit; attempt++) {
             boolean errors = false;
-            // Send the program to the LLM to be processed
-            Expression candidate = llm.evaluate(sessionPrompts, "");
-            //Check each generated expressions
+            Expression candidate = interpretationAgent.evaluate(sessionPrompts, "");
             if(candidate == null || candidate.getExpr() == null) {
                 missingResponses++;
                 sessionPrompts.addAssistantPrompt("[No response received]");
@@ -122,30 +119,19 @@ public class AuthoringAssistant {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
                     sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
-                    return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+                    return new QueryResult(interpretationAgent.getModel(), candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
         sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+        return new QueryResult(interpretationAgent.getModel(),null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {
         final FluidCLI fluidCLI = new FluidCLI();
         writeFluidFiles(Settings.FLUID_TEMP_FOLDER, Program.fluidFileName, expression.getExpr(), p.getDatasets(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
         return fluidCLI.evaluate(p.getFluidFileName());
-    }
-
-    private LLMEvaluatorAgent<Expression> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        logger.config(STR."Initializing agent: \{agentClassName}");
-        LLMEvaluatorAgent<Expression> llmAgent;
-        Class<?> agentClass = Class.forName(agentClassName);
-        llmAgent = (LLMEvaluatorAgent<Expression>) agentClass
-                .getDeclaredConstructor(Settings.class)
-                .newInstance(Settings.getInstance());
-
-        return llmAgent;
     }
 
     private String loopBackMessage(String response, String errorDetails) {

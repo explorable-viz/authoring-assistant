@@ -1,3 +1,6 @@
+import argparse
+from pathlib import Path
+import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -239,25 +242,41 @@ def process_csv_file(csv_file):
     
     print(f"Charts saved in {fig_dir}")
 
-def generate_charts():
-    """Find all CSV files in results directory and subdirectories, and generate charts for each."""
-    csv_files = glob.glob("results/**/*.csv", recursive=True)
-    
-    if not csv_files:
-        print("No CSV files found in results directory")
-        return
-    
-    print(f"Found {len(csv_files)} CSV file(s) to process")
-    
-    for csv_file in csv_files:
-        try:
-            process_csv_file(csv_file)
-        except Exception as e:
-            print(f"Error processing {csv_file}: {e}")
-            continue
-    
+def generate_charts(csv_filename: str):
+    results_dir = Path("results")
+    csv_path = results_dir / (csv_filename + ".csv")
+
+    if not csv_path.exists():
+        raise FileNotFoundError(f"CSV file not found: {csv_path}")
+
+    print(f"Processing CSV file: {csv_path}")
+    process_csv_file(str(csv_path))
+
     print(f"\n{'='*60}")
-    print("All charts generated successfully!")
+    print("Charts generated successfully.")
     print(f"{'='*60}")
 
-generate_charts()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Generate charts from test suite specified via settings file"
+    )
+    parser.add_argument(
+        "config",
+        help="Name of settings file (e.g. 'test-mock' loads settings/test-mock.json)"
+    )
+
+    args = parser.parse_args()
+    settings_file = Path("settings") / f"{args.config}.json"
+    prop = "test-case-folder"
+
+    try:
+        with open(settings_file, encoding="utf-8") as f:
+            settings = json.load(f)
+        test_case_folder = settings[prop]
+        generate_charts(test_case_folder)
+    except FileNotFoundError as e:
+        sys.exit(f"{e}")
+    except json.JSONDecodeError as e:
+        sys.exit(f"Error parsing JSON in {settings_file}: {e}")
+    except KeyError:
+        sys.exit(f"Error: '{prop}' not found in {settings_file}")

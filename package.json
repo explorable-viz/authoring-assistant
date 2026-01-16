@@ -15,7 +15,7 @@
     "pull-llama3": "./script/model-pull.sh llama3",
     "pull-llama3-1": "./script/ollama-model-pull.sh llama3.1",
     "serve": "./script/serve.sh",
-    "test-mock": "./script/authoring-assistant.sh config=test-mock",
+    "test-mock": "./script/test-mock.sh",
     "test": "./script/test.sh",
     "suggestion-agent": "./script/suggestion-agent.sh config=suggestion-agent",
     "benchmark": "./script/authoring-assistant.sh config=benchmark",

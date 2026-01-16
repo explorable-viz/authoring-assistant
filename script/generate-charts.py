@@ -10,13 +10,12 @@ import os
 import json
 
 def count_problems_per_category(df):
-    # Explode expression-type categories (format: "[Category1,Category2]")
+    # Explode categories categories (format: "[Category1,Category2]")
     df_exploded = df.copy()
-    # Convert to string and handle NaN values
-    df_exploded['expression-type'] = df_exploded['expression-type'].astype(str)
-    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip('[]').str.split(',')
-    df_exploded = df_exploded.explode('expression-type')
-    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
+    df_exploded['categories'] = df_exploded['categories'].astype(str)
+    df_exploded['categories'] = df_exploded['categories'].str.strip('[]').str.split(',')
+    df_exploded = df_exploded.explode('categories')
+    df_exploded['categories'] = df_exploded['categories'].str.strip()
     
     # Count unique (expected-expression, target-value) pairs per category
     # This counts the actual expressions, not the test case files
@@ -47,9 +46,9 @@ def generate_success_rate_test_case_plot(df, plot, fig_dir):
 
 def generate_aggregated_plot(df, plot, fig_dir):
     # esplodo le categorie
-    df['expression-type'] = df['expression-type'].astype(str).str.strip('[]').str.split(',')
-    df_exploded = df.explode('expression-type')
-    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
+    df['categories'] = df['categories'].astype(str).str.strip('[]').str.split(',')
+    df_exploded = df.explode('categories')
+    df_exploded['categories'] = df_exploded['categories'].str.strip()
 
     summary = (
         df_exploded.groupby(["categories", "target-value"])
@@ -93,9 +92,9 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
     # Use the reusable function to count problems per category BEFORE exploding df
     category_counts = count_problems_per_category(df)
     
-    df['expression-type'] = df['expression-type'].astype(str).str.strip('[]').str.split(',')
-    df_exploded = df.explode('expression-type')
-    df_exploded['expression-type'] = df_exploded['expression-type'].str.strip()
+    df['categories'] = df['categories'].astype(str).str.strip('[]').str.split(',')
+    df_exploded = df.explode('categories')
+    df_exploded['categories'] = df_exploded['categories'].str.strip()
 
     summary = (
         df_exploded.groupby(["runId", "categories", "target-value"])
@@ -117,12 +116,12 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
         y="success_rate",
         hue="target_label",
         palette="Set2",
-        order=sorted(summary['expression-type'].unique())
+        order=sorted(summary['categories'].unique())
     )
     ax.legend(title="Target value", loc='lower right', bbox_to_anchor=(1.0, -0.25))
 
     # Use categories from summary for iteration
-    categories = sorted(summary['expression-type'].unique())
+    categories = sorted(summary['categories'].unique())
     target_values = sorted(summary['target-value'].unique())
     
     for i, category in enumerate(categories):
@@ -135,7 +134,7 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
         
         for j, target_val in enumerate(target_values):
             x_offset = -0.2 if j == 0 else 0.2
-            mask = (summary['expression-type'] == category) & (summary['target-value'] == target_val)
+            mask = (summary['categories'] == category) & (summary['target-value'] == target_val)
             if mask.sum() > 0:
                 median_y = summary[mask]['success_rate'].median()
             else:
@@ -158,7 +157,7 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
 
 
 def generate_success_rate_by_category_count(df, plot, fig_dir):
-    df['category_count'] = df['expression-type'].str.len()
+    df['category_count'] = df['categories'].str.len()
 
     summary = (
         df.groupby(["category_count", "target-value"])

@@ -1,4 +1,4 @@
-runId;test-case;llm-agent;attempts;target-value;categories ;generated-expression;expected-value;expected-expression;parseErrors;counterfactualFails;missingResponses;literalResponses
+runId;test-case;llm-agent;attempts;target-value;categories;generated-expression;expected-value;expected-expression;parseErrors;counterfactualFails;missingResponses;literalResponses
 "0";"scigen-manual-old/1904.12550v1-6";"dummy";"3";"0";"[Data Retrieval]";"NULL";"0.92";"(findWhere (fun x -> (x.gong_et_al == ""AVG_COS_SIM"") `and` (x.topic_science == ""Both"")) tableData).f_818";"0";"2";"0";"0"
 "0";"scigen-manual-old/1904.12550v1-5";"dummy";"3";"0";"[Data Retrieval]";"NULL";"0.953";"(findWithKey_ ""concept_input____embeddings"" ""Google"" tableData).label___f";"0";"2";"0";"0"
 "0";"scigen-manual-old/1904.12550v1-5";"dummy";"3";"0";"[Data Retrieval]";"NULL";"0.843";"(findWithKey_ ""concept_input____embeddings"" ""GloVe"" tableData).description___f";"0";"2";"0";"0"
@@ -31,8 +31,8 @@ runId;test-case;llm-agent;attempts;target-value;categories ;generated-expression
 "0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Data Retrieval,Comparison]";"NULL";""shorter"";"trendWord (model_ ""S-LSTM"").time_s (model_ ""2 stacked BiLSTM"").time_s shorterLonger";"0";"2";"0";"0"
 "0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Data Retrieval]";"NULL";"60";"(model_ ""S-LSTM"").time_s";"0";"2";"0";"0"
 "0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Data Retrieval]";"NULL";""2 stacked CNN"";"(findWithKey_ ""time_s"" (minimum (map (fun y -> y.time_s) tableData)) tableData).model";"0";"2";"0";"0"
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Rank,Data Retrieval,Comparison]";"NULL";""7th-most efficient"";"rankLabel ""most efficient"" (findIndex ""model"" ""CNN"" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))";"0";"2";"0";"0"
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Rank,Data Retrieval,Comparison]";"NULL";""14th-smallest"";"rankLabel ""smallest"" (findIndex ""model"" ""CNN"" (insertionSort (fun a b -> a.param < b.param) tableData))";"0";"2";"0";"0"
+"0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Data Retrieval,Rank,Comparison]";"NULL";""7th-most efficient"";"rankLabel ""most efficient"" (findIndex ""model"" ""CNN"" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))";"0";"2";"0";"0"
+"0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Data Retrieval,Rank,Comparison]";"NULL";""14th-smallest"";"rankLabel ""smallest"" (findIndex ""model"" ""CNN"" (insertionSort (fun a b -> a.param < b.param) tableData))";"0";"2";"0";"0"
 "0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Data Retrieval]";"NULL";"85.3";"(model ""3 stacked CNN"" tableData)._acc";"0";"2";"0";"0"
 "0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Rank]";"NULL";""7th-lowest"";"rankLabel ""lowest"" (findIndex ""model"" ""CNN"" (insertionSort (fun a b -> a.time_s < b.time_s) tableData))";"0";"2";"0";"0"
 "0";"scigen-manual-old/1805.02474v1-10";"dummy";"3";"0";"[Data Retrieval,Comparison]";"NULL";""2nd-best"";"rankLabel ""best"" (findIndex ""model"" ""S-LSTM+Attention"" (insertionSort (fun a b -> b._acc < a._acc) tableData))";"0";"2";"0";"0"

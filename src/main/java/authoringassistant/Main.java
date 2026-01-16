@@ -29,6 +29,10 @@ public class Main {
 
         try {
             Settings.init("settings/default.json", arguments);
+            logger.info("****************************************");
+            logger.info(STR."Settings:");
+            logger.info(Settings.getSettings().toString(2));
+            logger.info("****************************************");
             final String interpretationAgent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json

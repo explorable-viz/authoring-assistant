@@ -32,7 +32,6 @@ public class Main {
             logger.info("****************************************");
             logger.info(STR."Settings:");
             logger.info(Settings.getSettings().toString(2));
-            logger.info("****************************************");
             final String interpretationAgent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
             //Create directory for logs and json

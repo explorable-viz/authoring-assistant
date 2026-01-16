@@ -222,7 +222,6 @@ def process_csv_file(csv_file):
     df["success"] = df["generated-expression"].notna().astype(int)
     df["target-value"] = df["target-value"].astype(int)
     df["attempts"] = pd.to_numeric(df["attempts"], errors="coerce")
-    df["duration(ms)"] = pd.to_numeric(df["duration(ms)"], errors="coerce")
     df["test-case-short"] = df["test-case"].apply(
         lambda x: os.path.join(os.path.basename(os.path.dirname(str(x))), os.path.basename(str(x)))
     )

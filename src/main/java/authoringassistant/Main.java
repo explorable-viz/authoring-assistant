@@ -244,6 +244,10 @@ public class Main {
         final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
         final int numRuns = isTestMock(interpretationAgent) ? 1 : Settings.numTestRuns();
 
+        if (Settings.getTruncateTestsAt() != -1) {
+            testCases = testCases.subList(0, Settings.getTruncateTestsAt());
+        }
+
         for(int k = 0; k < numRuns; k++)
         {
             String jsonLogFolder = STR."\{Settings.LOG_FOLDER}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
@@ -257,7 +261,7 @@ public class Main {
                     .filter(r -> r.getSecond().correctResponse() != null)
                     .count();
                 n++;
-                logger.info(STR."[Test case \{n} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
+                logger.info(STR."[Run \{k} of \{numRuns}; test case \{n} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
                 allResults.addAll(results);
             }
         }

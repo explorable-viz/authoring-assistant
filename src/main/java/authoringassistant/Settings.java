@@ -101,6 +101,11 @@ public class Settings {
         return getSettings().getInt("timeout");
     }
 
+    // Stop after this maany test cases, or -1 to run all.
+    public static int getTruncateTestsAt() {
+        return getSettings().getInt("truncate-tests-at");
+    }
+
     // TODO: rename property now all uses factor through this method
     public static int getNumContextToken() {
         return getSettings().getInt("num_ctx");

@@ -17,10 +17,12 @@ def count_problems_per_category(df):
     df_exploded = df_exploded.explode('categories')
     df_exploded['categories'] = df_exploded['categories'].str.strip()
     
-    return df_exploded
-        .drop_duplicates(["test-case", "problem-no", "categories"])
-        .groupby("categories")
-        .size()
+    return (
+        df_exploded
+            .drop_duplicates(["test-case", "problem-no", "categories"])
+            .groupby("categories")
+            .size()
+    )
 
 def generate_success_rate_test_case_plot(df, plot, fig_dir):
     summary = (

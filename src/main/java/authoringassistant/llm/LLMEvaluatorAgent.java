@@ -22,4 +22,6 @@ public abstract class LLMEvaluatorAgent<E> {
 
         return llmAgent;
     }
+
+    public abstract String getModel();
 }

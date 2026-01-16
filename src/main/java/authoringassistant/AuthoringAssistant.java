@@ -119,13 +119,13 @@ public class AuthoringAssistant {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
                     sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
-                    return new QueryResult(candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+                    return new QueryResult(interpretationAgent.getModel(), candidate, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
         sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+        return new QueryResult(interpretationAgent.getModel(),null, expected, attempt, System.currentTimeMillis() - start, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {

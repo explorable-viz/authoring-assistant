@@ -68,7 +68,7 @@ public class Main {
                 }
 
                 generateLinks();
-                writeResults(allResults, interpretationAgent);
+                writeResults(allResults);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -205,7 +205,7 @@ public class Main {
         return result;
     }
 
-    private static void writeResults(ArrayList<Pair<Program, QueryResult>> results, String interpretationAgent) throws IOException {
+    private static void writeResults(ArrayList<Pair<Program, QueryResult>> results) throws IOException {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
@@ -219,7 +219,7 @@ public class Main {
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
-                                interpretationAgent,
+                                queryResult.model(),
                                 String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
                                 String.valueOf(queryResult.attempts()),
                                 queryResult.correctResponse() != null ? "OK" : "KO",

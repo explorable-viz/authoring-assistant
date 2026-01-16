@@ -369,7 +369,7 @@ public class Program {
         return fluidFileName;
     }
 
-    public record QueryResult(Expression correctResponse, Expression expected, int attempts, long duration, int runId, int parseErrors, int counterfactualFails, int missingResponses, int literalResponses) {
+    public record QueryResult(String model, Expression correctResponse, Expression expected, int attempts, long duration, int runId, int parseErrors, int counterfactualFails, int missingResponses, int literalResponses) {
     }
 
     public void toWebpage() throws IOException {

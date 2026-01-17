@@ -11,7 +11,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Formatter;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,6 +24,7 @@ import static authoringassistant.Program.cleanWebsiteFolders;
 
 public class Main {
     public static Logger logger = Logger.getLogger(Main.class.getName());
+    private static FileHandler fileHandler;
 
     public static void main(String... args) {
         Map<String, String> arguments = parseArguments(args);
@@ -29,6 +35,7 @@ public class Main {
 
         try {
             Settings.init("settings/default.json", arguments);
+            setupFileLogger();
             logger.info("****************************************");
             logger.info(STR."Settings:");
             logger.info(Settings.getSettings().toString(2));
@@ -72,11 +79,35 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
+        } finally {
+            if (fileHandler != null) {
+                fileHandler.flush();
+                fileHandler.close();
+            }
         }
     }
 
     private static boolean isTestMock(String interpretationAgent) {
         return interpretationAgent.equals(DummyAgent.class.getName());
+    }
+    
+    private static void setupFileLogger() throws IOException {
+        String resultsPath = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}";
+        Files.createDirectories(Path.of(resultsPath));
+
+        Logger rootLogger = Logger.getLogger("");
+        rootLogger.setLevel(Level.FINE);
+
+        fileHandler = new FileHandler(STR."\{resultsPath}/log.txt");
+        fileHandler.setLevel(Level.FINE);
+        fileHandler.setFormatter(new Formatter() {
+            @Override
+            public String format(LogRecord record) {
+                Date d = new Date(record.getMillis());
+                return String.format("%1$tF %1$tT %2$s %3$s - %4$s%n", d, record.getLevel(), record.getLoggerName(), record.getMessage());
+            }
+        });
+        rootLogger.addHandler(fileHandler);
     }
 
     private static void saveProgramToJson(Program program, String outputFolder) throws IOException {
@@ -206,8 +237,9 @@ public class Main {
     }
 
     private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String interpretationAgent) throws IOException {
-        Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
-        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
+        String resultsPath = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}";
+        Files.createDirectories(Path.of(resultsPath));
+        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{resultsPath}/results.csv"))) {
             String[] headers = {
                     "runId", "test-case", "llm-agent", "is-negative",
                     "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
@@ -250,7 +282,7 @@ public class Main {
 
         for(int k = 0; k < numRuns; k++)
         {
-            String jsonLogFolder = STR."\{Settings.LOG_FOLDER}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
+            String jsonLogFolder = STR."\{Settings.LOG_FOLDER}\{Settings.getConfigName()}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
             Files.createDirectories(Paths.get(jsonLogFolder));
             int n = 0;
             for (Program testCase : testCases) {

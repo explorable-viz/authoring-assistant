@@ -18,6 +18,7 @@ public class Settings {
     private static Settings instance;
     private final JSONObject settings;
     private static Map<String, String> commandLineArgs;
+    private static String configName;
 
     public static Settings getInstance() {
         if (instance == null) throw new AssertionError("You have to call init first");
@@ -29,9 +30,12 @@ public class Settings {
 
         JSONObject defaultSettings = loadSettingsFile(settingsPath);
         if (args != null && args.containsKey("config")) {
-            String configFile = STR."settings/\{args.get("config")}.json";
+            configName = args.get("config");
+            String configFile = STR."settings/\{configName}.json";
             JSONObject specificSettings = loadSettingsFile(configFile);
             defaultSettings = rightBiasedUnion(defaultSettings, specificSettings);
+        } else {
+            configName = "default";
         }
         
         instance = new Settings(defaultSettings);
@@ -122,6 +126,10 @@ public class Settings {
 
     public static String getTestCaseFolder() {
         return getSettings().getString("test-case-folder");
+    }
+    
+    public static String getConfigName() {
+        return configName;
     }
 
     public static int numTestRuns() {

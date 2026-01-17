@@ -219,9 +219,9 @@ def process_csv_file(csv_file):
     
     print(f"Charts saved in {fig_dir}")
 
-def generate_charts(test_case_folder: str):
+def generate_charts(config_name: str, test_case_folder: str):
     results_dir = Path("results")
-    csv_path = results_dir / test_case_folder / "results.csv"
+    csv_path = results_dir / config_name / test_case_folder / "results.csv"
 
     if not csv_path.exists():
         raise FileNotFoundError(f"CSV file not found: {csv_path}")
@@ -250,7 +250,7 @@ if __name__ == "__main__":
         with open(settings_file, encoding="utf-8") as f:
             settings = json.load(f)
         test_case_folder = settings[prop]
-        generate_charts(test_case_folder)
+        generate_charts(args.config, test_case_folder)
     except FileNotFoundError as e:
         sys.exit(f"{e}")
     except json.JSONDecodeError as e:

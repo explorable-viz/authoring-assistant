@@ -13,7 +13,6 @@
 *.psc-ide-port
 *.synctex.gz
 *.synctex(busy)
-benchmark/
 dist/
 fluid-temp/
 logs/

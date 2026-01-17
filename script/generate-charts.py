@@ -77,7 +77,7 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
     df_exploded['categories'] = df_exploded['categories'].str.strip()
 
     summary = (
-        df_exploded.groupby(["runId", "categories", "target-value-present"])
+        df_exploded.groupby(["run", "categories", "target-value-present"])
         .agg(success_rate=("success", "mean"))
         .reset_index()
     )
@@ -172,7 +172,7 @@ def generate_success_rate_by_category_count(df, plot, fig_dir):
 
     #plt.title("Success Rate by Complexity")
     plt.xlabel("Complexity")
-    plt.ylabel(f"Average Success Rate over {df['runId'].nunique()} runs")
+    plt.ylabel(f"Average Success Rate over {df['run'].nunique()} runs")
     plt.xticks(rotation=45, ha="right")
     plt.ylim(0, 1.1)
     plt.tight_layout()

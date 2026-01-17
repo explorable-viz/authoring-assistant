@@ -68,10 +68,10 @@ public class Main {
                 cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
                 final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
                 boolean[] cases = isTestMock(interpretationAgent) ? new boolean[]{false} : new boolean[]{false, true};
-                // Run experiment for both add-expected-value settings
+                // Run experiment for both add-target-value settings
                 for (boolean addExpectedValue : cases) {
                     Settings.setAddExpectedValue(addExpectedValue);
-                    System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
+                    System.out.println(STR."Running experiment with add-target-value=\{addExpectedValue}");
                     final ArrayList<Pair<Program, QueryResult>> results = runTestCases(systemPrompt, interpretationAgent, suggestionAgent, programs);
                     allResults.addAll(results);
                 }
@@ -235,35 +235,39 @@ public class Main {
         return result;
     }
 
+    private static String quote(String s) {
+        return "\"" + s.replace("\"", "\"\"") + "\"";
+    }
+
     private static void writeResults(ArrayList<Pair<Program, QueryResult>> results) throws IOException {
         Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "attempts", "target-value", "categories", "generated-expression", "expected-value",
-                    "problem-no", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
+                    "run", "test-case", "problem-no", "llm-agent", "target-value-present", "categories",
+                    "fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
                     .map(result -> {
                         QueryResult queryResult = result.getSecond();
+
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
-                                STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
-                                queryResult.model(),
-                                String.valueOf(queryResult.attempts()),
-                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
-                                STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
-                                queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",
-                                queryResult.expected().getValue(),
+                                quote(STR."\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}"),
                                 String.valueOf(queryResult.problemIndex()),
+                                quote(queryResult.model()),
+                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
+                                quote("[" + queryResult.expected().getCategories().stream()
+                                        .map(cat -> cat.label)
+                                        .collect(Collectors.joining(",")) + "]"),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),
                                 String.valueOf(queryResult.missingResponses()),
                                 String.valueOf(queryResult.literalResponses())
                         };
-                        return String.join(";", Arrays.stream(values).map(s -> STR."\"\{s}\"").toList());
-                    })
-                    .collect(Collectors.joining("\n"));
+
+                        return String.join(";", values);
+                    }).collect(Collectors.joining("\n"));
             out.println(content);
         }
     }

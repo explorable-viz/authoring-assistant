@@ -374,7 +374,6 @@ public class Program {
         String model,
         Expression correctResponse,
         Expression expected,
-        int attempts,
         int runId,
         int parseErrors,
         int counterfactualFails,

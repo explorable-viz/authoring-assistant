@@ -205,33 +205,45 @@ public class Main {
         return result;
     }
 
+    private static String quote(String s) {
+        return "\"" + s.replace("\"", "\"\"") + "\"";
+    }
+
     private static void writeResults(ArrayList<Pair<Program, QueryResult>> results) throws IOException {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
                     "runId", "test-case", "llm-agent", "target-value-present", "categories", "generated-expression",
-                    "problem-no", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
+                    "problem-no", "fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
                     .map(result -> {
                         QueryResult queryResult = result.getSecond();
+
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
-                                STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
-                                queryResult.model(),
-                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
-                                STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
-                                queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",
+                                quote(STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/" +
+                                        STR."\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}"),
+                                quote(queryResult.model()),
+                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0), // numeric
+                                quote("[" + queryResult.expected().getCategories().stream()
+                                        .map(cat -> cat.label)
+                                        .collect(Collectors.joining(",")) + "]"),
+                                queryResult.correctResponse() != null
+                                        ? quote(queryResult.correctResponse()
+                                        .getExpr()
+                                        .replace("\n", "[NEWLINE]"))
+                                        : "NULL",
                                 String.valueOf(queryResult.problemIndex()),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),
                                 String.valueOf(queryResult.missingResponses()),
                                 String.valueOf(queryResult.literalResponses())
                         };
-                        return String.join(";", Arrays.stream(values).map(s -> STR."\"\{s}\"").toList());
-                    })
-                    .collect(Collectors.joining("\n"));
+
+                        return String.join(";", values);
+                    }).collect(Collectors.joining("\n"));
             out.println(content);
         }
     }

@@ -213,8 +213,8 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "run", "test-case", "llm-agent", "target-value-present", "categories",
-                    "problem-no", "fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"
+                    "run", "test-case", "problem-no", "llm-agent", "target-value-present", "categories",
+                    "fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
@@ -224,12 +224,12 @@ public class Main {
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
                                 quote(STR."\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}"),
+                                String.valueOf(queryResult.problemIndex()),
                                 quote(queryResult.model()),
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 quote("[" + queryResult.expected().getCategories().stream()
                                         .map(cat -> cat.label)
                                         .collect(Collectors.joining(",")) + "]"),
-                                String.valueOf(queryResult.problemIndex()),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),
                                 String.valueOf(queryResult.missingResponses()),

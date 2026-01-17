@@ -115,17 +115,18 @@ public class AuthoringAssistant {
                     }
                     firstTest = true;
                 }
+                // weird way to exit loop
                 if (!errors) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
                     sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
-                    return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, attempt, runId, parseErrors, counterfactualFails, parseErrors, counterfactualFails, missingResponses, literalResponses);
+                    return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
         sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, attempt, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+        return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {

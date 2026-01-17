@@ -209,7 +209,7 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "attempts", "target-value-present", "categories", "generated-expression",
+                    "runId", "test-case", "llm-agent", "target-value-present", "categories", "generated-expression",
                     "problem-no", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
@@ -220,7 +220,6 @@ public class Main {
                                 String.valueOf(queryResult.runId()),
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
                                 queryResult.model(),
-                                String.valueOf(queryResult.attempts()),
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",

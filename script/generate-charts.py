@@ -24,23 +24,6 @@ def count_problems_per_category(df):
             .size()
     )
 
-def generate_success_rate_test_case_plot(df, plot, fig_dir):
-    summary = (
-        df.groupby("test-case-short")
-        .agg(success_rate=("success", "mean"), avg_attempts=("attempts", "mean"), num_queries=("test-case-short", "count"))
-        .reset_index()
-    )
-    summary["y_label"] = summary["test-case-short"] + " (" + summary["num_queries"].astype(str) + " queries)"
-    plt.figure(figsize=(10, 6))
-    ax = sns.barplot(data=summary, x="success_rate", y="y_label")
-    plt.title("Success Rate per Test Case (Max attempts = 4)")
-    plt.xlabel("Success Rate")
-    plt.ylabel("Test Case")
-    plt.xlim(0, 1)
-    plt.tight_layout()
-    plt.savefig(f"{fig_dir}/success_rate_by_test_case.png")
-    plt.close()
-
 def generate_aggregated_plot(df, plot, fig_dir):
     # esplodo le categorie
     df['categories'] = df['categories'].astype(str).str.strip('[]').str.split(',')
@@ -214,7 +197,6 @@ def process_csv_file(csv_file):
     df = pd.read_csv(csv_file, delimiter=';', quotechar='"', encoding='utf-8')
     df["success"] = df["generated-expression"].notna().astype(int)
     df["target-value-present"] = df["target-value-present"].astype(int)
-    df["attempts"] = pd.to_numeric(df["attempts"], errors="coerce")
     df["test-case-short"] = df["test-case"].apply(
         lambda x: os.path.join(os.path.basename(os.path.dirname(str(x))), os.path.basename(str(x)))
     )
@@ -227,8 +209,6 @@ def process_csv_file(csv_file):
     print()
     
     sns.set_style("whitegrid")
-    generate_success_rate_test_case_plot(df, plt, fig_dir)
-    #generate_aggregat\ed_plot(df, plt, fig_dir)
     generate_aggregated_boxplot(df, plt, fig_dir)
     generate_success_rate_by_category_count(df, plt, fig_dir)
     

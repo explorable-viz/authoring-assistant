@@ -15,6 +15,7 @@ import java.util.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Formatter;
 import java.util.logging.Level;
+import java.util.logging.LogManager;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
@@ -29,6 +30,7 @@ public class Main {
 
     public static void main(String... args) {
         Map<String, String> arguments = parseArguments(args);
+        initLogging();
         logger.config("Arguments passed from command line");
         logger.config(arguments.toString().replace(",", "\n"));
         final ArrayList<Program> programs;
@@ -36,7 +38,7 @@ public class Main {
 
         try {
             Settings.init("settings/default.json", arguments);
-            setupFileLogger();
+            setupResultsFileLogger();
             logger.info("****************************************");
             logger.info(STR."Settings:");
             logger.info(Settings.getSettings().toString(2));
@@ -92,23 +94,20 @@ public class Main {
         return interpretationAgent.equals(DummyAgent.class.getName());
     }
     
-    private static void setupFileLogger() throws IOException {
+    private static void initLogging() {
+        try (FileInputStream in = new FileInputStream("logging.properties")) {
+            LogManager.getLogManager().readConfiguration(in);
+        } catch (IOException e) {
+            System.err.println("Could not load logging.properties: " + e.getMessage());
+        }
+    }
+
+    private static void setupResultsFileLogger() throws IOException {
         String resultsPath = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}";
         Files.createDirectories(Path.of(resultsPath));
-
-        Logger rootLogger = Logger.getLogger("");
-        rootLogger.setLevel(Level.FINE);
-
         fileHandler = new FileHandler(STR."\{resultsPath}/log.txt");
-        fileHandler.setLevel(Level.FINE);
-        fileHandler.setFormatter(new Formatter() {
-            @Override
-            public String format(LogRecord record) {
-                Date d = new Date(record.getMillis());
-                return String.format("%1$tF %1$tT %2$s %3$s - %4$s%n", d, record.getLevel(), record.getLoggerName(), record.getMessage());
-            }
-        });
-        rootLogger.addHandler(fileHandler);
+        fileHandler.setFormatter(new SimpleFormatter());
+        Logger.getLogger("").addHandler(fileHandler);
     }
 
     private static void saveProgramToJson(Program program, String outputFolder) throws IOException {

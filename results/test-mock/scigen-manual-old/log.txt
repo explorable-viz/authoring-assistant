@@ -1,6 +1,6 @@
-2026-01-17 12:34:00 INFO authoringassistant.Main - ****************************************
-2026-01-17 12:34:00 INFO authoringassistant.Main - Settings:
-2026-01-17 12:34:00 INFO authoringassistant.Main - {
+INFO: ****************************************
+INFO: Settings:
+INFO: {
   "suggestion-agent-loopback-limit": 2,
   "test-case-folder": "scigen-manual-old",
   "suggestion-agent-class": null,
@@ -19,106 +19,279 @@
   "gemini-projectId": "",
   "claude-token": ""
 }
-2026-01-17 12:34:22 INFO authoringassistant.Main - ****************************************
-2026-01-17 12:34:22 INFO authoringassistant.Main - Validating test cases in scigen-manual-old
-2026-01-17 12:34:22 INFO authoringassistant.Main - ****************************************
-2026-01-17 12:34:22 INFO authoringassistant.Program - [1 of 10] Loading testCases/scigen-manual-old\1002.0773.json
-2026-01-17 12:34:22 INFO authoringassistant.Program - datasets/scigen_manual_old/1002.0773.json
-2026-01-17 12:34:22 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 4356, dir: null, cmd: "cmd.exe"
-2026-01-17 12:35:40 INFO authoringassistant.Program - Matched expression value: 10
-2026-01-17 12:35:40 INFO authoringassistant.Program - [2 of 10] Loading testCases/scigen-manual-old\1003.0206.json
-2026-01-17 12:35:40 INFO authoringassistant.Program - datasets/scigen_manual_old/1003.0206.json
-2026-01-17 12:35:40 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 26224, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:28 INFO authoringassistant.Program - Matched expression value: 3.0625
-2026-01-17 12:36:28 INFO authoringassistant.Program - [3 of 10] Loading testCases/scigen-manual-old\ipcc.json
-2026-01-17 12:36:28 INFO authoringassistant.Program - datasets/scigen_manual_old/ipcc.json
-2026-01-17 12:36:28 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 32644, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:31 INFO authoringassistant.Program - Matched expression value: 0.86
-2026-01-17 12:36:31 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 40048, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:33 INFO authoringassistant.Program - Matched expression value: 0.85
-2026-01-17 12:36:33 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 35256, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:34 INFO authoringassistant.Program - Matched expression value: 0.88
-2026-01-17 12:36:34 INFO authoringassistant.Program - [4 of 10] Loading testCases/scigen-manual-old\1904.12550v1-5.json
-2026-01-17 12:36:34 INFO authoringassistant.Program - datasets/scigen_manual_old/1904.12550v1-5.json
-2026-01-17 12:36:34 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 17192, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:35 INFO authoringassistant.Program - Matched expression value: 0.953
-2026-01-17 12:36:35 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 19808, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:36 INFO authoringassistant.Program - Matched expression value: 0.843
-2026-01-17 12:36:36 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 916, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:37 INFO authoringassistant.Program - Matched expression value: 0.914
-2026-01-17 12:36:37 INFO authoringassistant.Program - [5 of 10] Loading testCases/scigen-manual-old\1904.12550v1-6.json
-2026-01-17 12:36:37 INFO authoringassistant.Program - datasets/scigen_manual_old/1904.12550v1-6.json
-2026-01-17 12:36:37 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 20752, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:39 INFO authoringassistant.Program - Matched expression value: 0.92
-2026-01-17 12:36:39 INFO authoringassistant.Program - [6 of 10] Loading testCases/scigen-manual-old\1110.3094.json
-2026-01-17 12:36:39 INFO authoringassistant.Program - datasets/scigen_manual_old/1110.3094.json
-2026-01-17 12:36:39 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 10368, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:40 INFO authoringassistant.Program - Matched expression value: "outperformed"
-2026-01-17 12:36:40 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 32256, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:41 INFO authoringassistant.Program - Matched expression value: "better"
-2026-01-17 12:36:41 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 41052, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:42 INFO authoringassistant.Program - Matched expression value: "better"
-2026-01-17 12:36:42 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 5708, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:43 INFO authoringassistant.Program - Matched expression value: 82
-2026-01-17 12:36:43 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 37280, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:43 INFO authoringassistant.Program - Matched expression value: 93.8
-2026-01-17 12:36:43 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 35144, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:44 INFO authoringassistant.Program - Matched expression value: 83.3
-2026-01-17 12:36:44 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 31568, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:45 INFO authoringassistant.Program - Matched expression value: 99
-2026-01-17 12:36:45 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 34748, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:46 INFO authoringassistant.Program - Matched expression value: 43.8
-2026-01-17 12:36:46 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 1280, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:46 INFO authoringassistant.Program - Matched expression value: 96.2
-2026-01-17 12:36:46 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 32412, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:47 INFO authoringassistant.Program - Matched expression value: 74.7
-2026-01-17 12:36:47 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 40912, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:48 INFO authoringassistant.Program - Matched expression value: 90.3
-2026-01-17 12:36:48 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 43804, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:48 INFO authoringassistant.Program - Matched expression value: "a reduced"
-2026-01-17 12:36:48 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 31148, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:49 INFO authoringassistant.Program - Matched expression value: "better"
-2026-01-17 12:36:49 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 33284, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:50 INFO authoringassistant.Program - Matched expression value: "unusually low"
-2026-01-17 12:36:50 INFO authoringassistant.Program - [7 of 10] Loading testCases/scigen-manual-old\1807.07279v3-23.json
-2026-01-17 12:36:50 INFO authoringassistant.Program - datasets/scigen_manual_old/1807.07279v3-23.json
-2026-01-17 12:36:50 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 35792, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:51 INFO authoringassistant.Program - Matched expression value: 13
-2026-01-17 12:36:51 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 35252, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:52 INFO authoringassistant.Program - Matched expression value: "outperformed"
-2026-01-17 12:36:52 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 35676, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:53 INFO authoringassistant.Program - Matched expression value: "unusually high"
-2026-01-17 12:36:53 INFO authoringassistant.Program - [8 of 10] Loading testCases/scigen-manual-old\1805.02474v1-10.json
-2026-01-17 12:36:53 INFO authoringassistant.Program - datasets/scigen_manual_old/1805.02474v1-10.json
-2026-01-17 12:36:53 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 41452, dir: null, cmd: "cmd.exe"
-2026-01-17 12:36:54 INFO authoringassistant.Program - Matched expression value: "better"
-2026-01-17 12:36:54 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 12208, dir: null, cmd: "cmd.exe"
-2026-01-17 12:37:18 INFO authoringassistant.Program - Matched expression value: "growing"
-2026-01-17 12:37:18 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 41596, dir: null, cmd: "cmd.exe"
-2026-01-17 12:37:31 INFO authoringassistant.Program - Matched expression value: 70
-2026-01-17 12:37:31 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 2656, dir: null, cmd: "cmd.exe"
-2026-01-17 12:37:34 INFO authoringassistant.Program - Matched expression value: 130
-2026-01-17 12:37:34 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 13812, dir: null, cmd: "cmd.exe"
-2026-01-17 12:37:38 INFO authoringassistant.Program - Matched expression value: "further improvements"
-2026-01-17 12:37:38 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 27936, dir: null, cmd: "cmd.exe"
-2026-01-17 12:37:40 INFO authoringassistant.Program - Matched expression value: "larger"
-2026-01-17 12:37:40 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 13760, dir: null, cmd: "cmd.exe"
-2026-01-17 12:37:41 INFO authoringassistant.Program - Matched expression value: 207
-2026-01-17 12:37:41 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 28688, dir: null, cmd: "cmd.exe"
-2026-01-17 12:37:43 INFO authoringassistant.Program - Matched expression value: "does not further improve"
-2026-01-17 12:37:43 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 6620, dir: null, cmd: "cmd.exe"
-2026-01-17 12:37:59 INFO authoringassistant.Program - Matched expression value: 82.64
-2026-01-17 12:37:59 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 31804, dir: null, cmd: "cmd.exe"
-2026-01-17 12:38:02 INFO authoringassistant.Program - Matched expression value: "better"
-2026-01-17 12:38:02 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 16912, dir: null, cmd: "cmd.exe"
-2026-01-17 12:38:03 INFO authoringassistant.Program - Matched expression value: "smaller"
-2026-01-17 12:38:03 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 39108, dir: null, cmd: "cmd.exe"
-2026-01-17 12:38:05 INFO authoringassistant.Program - Matched expression value: "shorter"
-2026-01-17 12:38:05 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 36264, dir: null, cmd: "cmd.exe"
-2026-01-17 12:38:07 INFO authoringassistant.Program - Matched expression value: 60
-2026-01-17 12:38:07 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 10368, dir: null, cmd: "cmd.exe"
-2026-01-17 12:38:09 INFO authoringassistant.Program - Matched expression value: "2 stacked CNN"
-2026-01-17 12:38:09 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 38844, dir: null, cmd: "cmd.exe"
-2026-01-17 12:38:35 INFO authoringassistant.Program - Matched expression value: "7th-most efficient"
-2026-01-17 12:38:35 FINE java.lang.ProcessBuilder - ProcessBuilder.start(): pid: 37388, dir: null, cmd: "cmd.exe"
-2026-01-17 12:38:35 FINE java.lang.Runtime - Runtime.exit() called with status: 130
+INFO: ****************************************
+INFO: Validating test cases in scigen-manual-old
+INFO: ****************************************
+INFO: [1 of 10] Loading testCases/scigen-manual-old/1002.0773.json
+INFO: datasets/scigen_manual_old/1002.0773.json
+INFO: Matched expression value: 10
+INFO: [2 of 10] Loading testCases/scigen-manual-old/ipcc.json
+INFO: datasets/scigen_manual_old/ipcc.json
+INFO: Matched expression value: 0.86
+INFO: Matched expression value: 0.85
+INFO: Matched expression value: 0.88
+INFO: [3 of 10] Loading testCases/scigen-manual-old/1904.12550v1-5.json
+INFO: datasets/scigen_manual_old/1904.12550v1-5.json
+INFO: Matched expression value: 0.953
+INFO: Matched expression value: 0.843
+INFO: Matched expression value: 0.914
+INFO: [4 of 10] Loading testCases/scigen-manual-old/1904.12550v1-6.json
+INFO: datasets/scigen_manual_old/1904.12550v1-6.json
+INFO: Matched expression value: 0.92
+INFO: [5 of 10] Loading testCases/scigen-manual-old/1906.02780v1-17.json
+INFO: datasets/scigen_manual_old/1906.02780v1-17.json
+INFO: Matched expression value: 0.6000000000000014
+INFO: Matched expression value: "3.6x"
+INFO: Matched expression value: "1.5x"
+INFO: Matched expression value: 1.0
+INFO: Matched expression value: "3.6x"
+INFO: Matched expression value: "3.2x"
+INFO: [6 of 10] Loading testCases/scigen-manual-old/1805.02474v1-10.json
+INFO: datasets/scigen_manual_old/1805.02474v1-10.json
+INFO: Matched expression value: "better"
+INFO: Matched expression value: "growing"
+INFO: Matched expression value: 70
+INFO: Matched expression value: 130
+INFO: Matched expression value: "further improvements"
+INFO: Matched expression value: "larger"
+INFO: Matched expression value: 207
+INFO: Matched expression value: "does not further improve"
+INFO: Matched expression value: 82.64
+INFO: Matched expression value: "better"
+INFO: Matched expression value: "smaller"
+INFO: Matched expression value: "shorter"
+INFO: Matched expression value: 60
+INFO: Matched expression value: "2 stacked CNN"
+INFO: Matched expression value: "7th-most efficient"
+INFO: Matched expression value: "14th-smallest"
+INFO: Matched expression value: 85.3
+INFO: Matched expression value: "7th-lowest"
+INFO: Matched expression value: "2nd-best"
+INFO: Matched expression value: "better"
+INFO: Matched expression value: "outperforming"
+INFO: [7 of 10] Loading testCases/scigen-manual-old/1807.07279v3-23.json
+INFO: datasets/scigen_manual_old/1807.07279v3-23.json
+INFO: Matched expression value: 13
+INFO: Matched expression value: "outperformed"
+INFO: Matched expression value: "unusually high"
+INFO: [8 of 10] Loading testCases/scigen-manual-old/1003.0206.json
+INFO: datasets/scigen_manual_old/1003.0206.json
+INFO: Matched expression value: 3.0625
+INFO: [9 of 10] Loading testCases/scigen-manual-old/1110.3094.json
+INFO: datasets/scigen_manual_old/1110.3094.json
+INFO: Matched expression value: "outperformed"
+INFO: Matched expression value: "better"
+INFO: Matched expression value: "better"
+INFO: Matched expression value: 82
+INFO: Matched expression value: 93.8
+INFO: Matched expression value: 83.3
+INFO: Matched expression value: 99
+INFO: Matched expression value: 43.8
+INFO: Matched expression value: 96.2
+INFO: Matched expression value: 74.7
+INFO: Matched expression value: 90.3
+INFO: Matched expression value: "a reduced"
+INFO: Matched expression value: "better"
+INFO: Matched expression value: "unusually low"
+INFO: [10 of 10] Loading testCases/scigen-manual-old/1805.02474v1-14.json
+INFO: datasets/scigen_manual_old/1805.02474v1-14.json
+INFO: Matched expression value: 91.63
+INFO: Matched expression value: 91.26
+INFO: ****************************************
+INFO: Validated test cases in scigen-manual-old
+INFO: ****************************************
+INFO: Mismatched expression value: "dummy" (expected 10)
+INFO: Mismatched expression value: "dummy" (expected 10)
+INFO: [Problem 1 of 1] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1002.0773/index.html
+INFO: [Run 1 of 1][Test case 1 of 10] 0 of 1 responses correct
+INFO: Mismatched expression value: "dummy" (expected 0.86)
+INFO: Mismatched expression value: "dummy" (expected 0.86)
+INFO: [Problem 1 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 0.85)
+INFO: Mismatched expression value: "dummy" (expected 0.85)
+INFO: [Problem 2 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 0.88)
+INFO: Mismatched expression value: "dummy" (expected 0.88)
+INFO: [Problem 3 of 3] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/ipcc/index.html
+INFO: [Run 1 of 1][Test case 2 of 10] 0 of 3 responses correct
+INFO: Mismatched expression value: "dummy" (expected 0.953)
+INFO: Mismatched expression value: "dummy" (expected 0.953)
+INFO: [Problem 1 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 0.843)
+INFO: Mismatched expression value: "dummy" (expected 0.843)
+INFO: [Problem 2 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 0.914)
+INFO: Mismatched expression value: "dummy" (expected 0.914)
+INFO: [Problem 3 of 3] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1904.12550v1-5/index.html
+INFO: [Run 1 of 1][Test case 3 of 10] 0 of 3 responses correct
+INFO: Mismatched expression value: "dummy" (expected 0.92)
+INFO: Mismatched expression value: "dummy" (expected 0.92)
+INFO: [Problem 1 of 1] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1904.12550v1-6/index.html
+INFO: [Run 1 of 1][Test case 4 of 10] 0 of 1 responses correct
+INFO: Mismatched expression value: "dummy" (expected 0.6000000000000014)
+INFO: Mismatched expression value: "dummy" (expected 0.6000000000000014)
+INFO: [Problem 1 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "3.6x")
+INFO: Mismatched expression value: "dummy" (expected "3.6x")
+INFO: [Problem 2 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "1.5x")
+INFO: Mismatched expression value: "dummy" (expected "1.5x")
+INFO: [Problem 3 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 1.0)
+INFO: Mismatched expression value: "dummy" (expected 1.0)
+INFO: [Problem 4 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "3.6x")
+INFO: Mismatched expression value: "dummy" (expected "3.6x")
+INFO: [Problem 5 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "3.2x")
+INFO: Mismatched expression value: "dummy" (expected "3.2x")
+INFO: [Problem 6 of 6] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1906.02780v1-17/index.html
+INFO: [Run 1 of 1][Test case 5 of 10] 0 of 6 responses correct
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: [Problem 1 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "growing")
+INFO: Mismatched expression value: "dummy" (expected "growing")
+INFO: [Problem 2 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 70)
+INFO: Mismatched expression value: "dummy" (expected 70)
+INFO: [Problem 3 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 130)
+INFO: Mismatched expression value: "dummy" (expected 130)
+INFO: [Problem 4 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "further improvements")
+INFO: Mismatched expression value: "dummy" (expected "further improvements")
+INFO: [Problem 5 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "larger")
+INFO: Mismatched expression value: "dummy" (expected "larger")
+INFO: [Problem 6 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 207)
+INFO: Mismatched expression value: "dummy" (expected 207)
+INFO: [Problem 7 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "does not further improve")
+INFO: Mismatched expression value: "dummy" (expected "does not further improve")
+INFO: [Problem 8 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 82.64)
+INFO: Mismatched expression value: "dummy" (expected 82.64)
+INFO: [Problem 9 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: [Problem 10 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "smaller")
+INFO: Mismatched expression value: "dummy" (expected "smaller")
+INFO: [Problem 11 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "shorter")
+INFO: Mismatched expression value: "dummy" (expected "shorter")
+INFO: [Problem 12 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 60)
+INFO: Mismatched expression value: "dummy" (expected 60)
+INFO: [Problem 13 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "2 stacked CNN")
+INFO: Mismatched expression value: "dummy" (expected "2 stacked CNN")
+INFO: [Problem 14 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "7th-most efficient")
+INFO: Mismatched expression value: "dummy" (expected "7th-most efficient")
+INFO: [Problem 15 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "14th-smallest")
+INFO: Mismatched expression value: "dummy" (expected "14th-smallest")
+INFO: [Problem 16 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 85.3)
+INFO: Mismatched expression value: "dummy" (expected 85.3)
+INFO: [Problem 17 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "7th-lowest")
+INFO: Mismatched expression value: "dummy" (expected "7th-lowest")
+INFO: [Problem 18 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "2nd-best")
+INFO: Mismatched expression value: "dummy" (expected "2nd-best")
+INFO: [Problem 19 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: [Problem 20 of 21] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "outperforming")
+INFO: Mismatched expression value: "dummy" (expected "outperforming")
+INFO: [Problem 21 of 21] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1805.02474v1-10/index.html
+INFO: [Run 1 of 1][Test case 6 of 10] 0 of 21 responses correct
+INFO: Mismatched expression value: "dummy" (expected 13)
+INFO: Mismatched expression value: "dummy" (expected 13)
+INFO: [Problem 1 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "outperformed")
+INFO: Mismatched expression value: "dummy" (expected "outperformed")
+INFO: [Problem 2 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "unusually high")
+INFO: Mismatched expression value: "dummy" (expected "unusually high")
+INFO: [Problem 3 of 3] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1807.07279v3-23/index.html
+INFO: [Run 1 of 1][Test case 7 of 10] 0 of 3 responses correct
+INFO: Mismatched expression value: "dummy" (expected 3.0625)
+INFO: Mismatched expression value: "dummy" (expected 3.0625)
+INFO: [Problem 1 of 1] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1003.0206/index.html
+INFO: [Run 1 of 1][Test case 8 of 10] 0 of 1 responses correct
+INFO: Mismatched expression value: "dummy" (expected "outperformed")
+INFO: Mismatched expression value: "dummy" (expected "outperformed")
+INFO: [Problem 1 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: [Problem 2 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: [Problem 3 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 82)
+INFO: Mismatched expression value: "dummy" (expected 82)
+INFO: [Problem 4 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 93.8)
+INFO: Mismatched expression value: "dummy" (expected 93.8)
+INFO: [Problem 5 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 83.3)
+INFO: Mismatched expression value: "dummy" (expected 83.3)
+INFO: [Problem 6 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 99)
+INFO: Mismatched expression value: "dummy" (expected 99)
+INFO: [Problem 7 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 43.8)
+INFO: Mismatched expression value: "dummy" (expected 43.8)
+INFO: [Problem 8 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 96.2)
+INFO: Mismatched expression value: "dummy" (expected 96.2)
+INFO: [Problem 9 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 74.7)
+INFO: Mismatched expression value: "dummy" (expected 74.7)
+INFO: [Problem 10 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 90.3)
+INFO: Mismatched expression value: "dummy" (expected 90.3)
+INFO: [Problem 11 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "a reduced")
+INFO: Mismatched expression value: "dummy" (expected "a reduced")
+INFO: [Problem 12 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: Mismatched expression value: "dummy" (expected "better")
+INFO: [Problem 13 of 14] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "unusually low")
+INFO: Mismatched expression value: "dummy" (expected "unusually low")
+INFO: [Problem 14 of 14] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1110.3094/index.html
+INFO: [Run 1 of 1][Test case 9 of 10] 0 of 14 responses correct
+INFO: Mismatched expression value: "dummy" (expected 91.63)
+INFO: Mismatched expression value: "dummy" (expected 91.63)
+INFO: [Problem 1 of 2] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 91.26)
+INFO: Mismatched expression value: "dummy" (expected 91.26)
+INFO: [Problem 2 of 2] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-old
+INFO: Generating website/authoring-assistant/scigen-manual-old/1805.02474v1-14/index.html
+INFO: [Run 1 of 1][Test case 10 of 10] 0 of 2 responses correct

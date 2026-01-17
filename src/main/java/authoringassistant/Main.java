@@ -59,10 +59,10 @@ public class Main {
                 cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
                 final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
                 boolean[] cases = isTestMock(interpretationAgent) ? new boolean[]{false} : new boolean[]{false, true};
-                // Run experiment for both add-expected-value settings
+                // Run experiment for both add-target-value settings
                 for (boolean addExpectedValue : cases) {
                     Settings.setAddExpectedValue(addExpectedValue);
-                    System.out.println(STR."Running experiment with add-expected-value=\{addExpectedValue}");
+                    System.out.println(STR."Running experiment with add-target-value=\{addExpectedValue}");
                     final ArrayList<Pair<Program, QueryResult>> results = runTestCases(systemPrompt, interpretationAgent, suggestionAgent, programs);
                     allResults.addAll(results);
                 }
@@ -209,7 +209,7 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "attempts", "target-value", "categories", "generated-expression", "expected-value",
+                    "runId", "test-case", "llm-agent", "attempts", "target-value-present", "categories", "generated-expression",
                     "problem-no", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
@@ -224,7 +224,6 @@ public class Main {
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",
-                                queryResult.expected().getValue(),
                                 String.valueOf(queryResult.problemIndex()),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),

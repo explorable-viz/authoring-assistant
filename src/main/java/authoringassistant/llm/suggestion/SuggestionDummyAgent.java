@@ -14,6 +14,10 @@ public class SuggestionDummyAgent extends LLMEvaluatorAgent<String> {
     public SuggestionDummyAgent(Settings settings) {
     }
 
+    public String getModel() {
+        return "dummy";
+    }
+
     @Override
     public String evaluate(PromptList list, String s) throws IOException {
         logger.config("Execution of the DummyAgent");

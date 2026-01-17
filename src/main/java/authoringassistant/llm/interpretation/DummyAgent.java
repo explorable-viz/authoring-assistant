@@ -15,6 +15,10 @@ public class DummyAgent extends LLMEvaluatorAgent<Expression> {
     public DummyAgent(Settings settings) {
     }
 
+    public String getModel() {
+        return "dummy";
+    }
+
     @Override
     public Expression evaluate(PromptList list, String s) throws IOException {
         logger.config("Execution of the DummyAgent");

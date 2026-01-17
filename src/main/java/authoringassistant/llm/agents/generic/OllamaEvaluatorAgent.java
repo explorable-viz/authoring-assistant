@@ -36,8 +36,13 @@ public abstract class OllamaEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
         this.initClient();
     }
 
+    // TODO: this assignment unnecessary, just override abstract method
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public String getModel() {
+        return this.model;
     }
 
     public E evaluate(PromptList prompts, String grid) throws IOException {

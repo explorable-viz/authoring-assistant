@@ -1,5 +1,6 @@
 package authoringassistant;
 
+import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.interpretation.DummyAgent;
 import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
@@ -74,7 +75,7 @@ public class Main {
                 }
 
                 generateLinks();
-                writeLog(allResults, interpretationAgent);
+                writeResults(allResults);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -128,7 +129,7 @@ public class Main {
     private static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder)
             throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException,
             IllegalAccessException, IOException, InterruptedException {
-        SuggestionAgent sa = new SuggestionAgent(suggestionAgentClassName);
+        SuggestionAgent sa = new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName));
         List<Integer> attemptsList = new ArrayList<>();
         for (Program program : programs) {
             SuggestionAgent.SuggestionAgentResult result = sa.generateTemplateProgram(program);
@@ -136,7 +137,6 @@ public class Main {
             attemptsList.add(result.attempts());
         }
         
-        // Write loopback statistics
         writeLoopbackStats(attemptsList, outputFolder);
     }
     
@@ -236,13 +236,12 @@ public class Main {
         return result;
     }
 
-    private static void writeLog(ArrayList<Pair<Program, QueryResult>> results, String interpretationAgent) throws IOException {
-        String resultsPath = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}";
-        Files.createDirectories(Path.of(resultsPath));
-        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."\{resultsPath}/results.csv"))) {
+    private static void writeResults(ArrayList<Pair<Program, QueryResult>> results) throws IOException {
+        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}"));
+        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "is-negative",
-                    "attempts", "result", "target-value", "expression-type", "generated-expression", "expected-value", "expected-expression", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
+                    "runId", "test-case", "llm-agent", "attempts", "target-value", "categories", "generated-expression", "expected-value",
+                    "problem-no", "parseErrors", "counterfactualFails", "missingResponses", "literalResponses"
             };
             out.println(String.join(";", headers));
             String content = results.stream()
@@ -251,15 +250,13 @@ public class Main {
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
                                 STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}",
-                                interpretationAgent,
-                                String.valueOf(result.getFirst().getTestCaseFileName().contains("negative")),
+                                queryResult.model(),
                                 String.valueOf(queryResult.attempts()),
-                                queryResult.correctResponse() != null ? "OK" : "KO",
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 STR."[\{queryResult.expected().getCategories().stream().map(cat -> cat.label).collect(Collectors.joining(","))}]",
                                 queryResult.correctResponse() != null ? queryResult.correctResponse().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\"") : "NULL",
                                 queryResult.expected().getValue(),
-                                queryResult.expected().getExpr().replaceAll("\n", "[NEWLINE]").replaceAll("\"", "\"\""),
+                                String.valueOf(queryResult.problemIndex()),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),
                                 String.valueOf(queryResult.missingResponses()),

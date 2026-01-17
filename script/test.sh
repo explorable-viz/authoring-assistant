@@ -2,8 +2,4 @@
 set -xe
 
 ./script/authoring-assistant.sh config=$1
-
-python3 -m venv .venv
-.venv/bin/python -m pip install -r script/requirements.txt \
-  --quiet --disable-pip-version-check
-.venv/bin/python script/generate-charts.py $1
+./script/generate-charts.sh $1

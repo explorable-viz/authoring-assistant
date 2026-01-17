@@ -226,7 +226,7 @@ public class Main {
                                 quote(STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/" +
                                         STR."\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}"),
                                 quote(queryResult.model()),
-                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0), // numeric
+                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 quote("[" + queryResult.expected().getCategories().stream()
                                         .map(cat -> cat.label)
                                         .collect(Collectors.joining(",")) + "]"),

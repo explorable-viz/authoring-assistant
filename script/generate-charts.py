@@ -195,7 +195,12 @@ def process_csv_file(csv_file):
     print(f"{'='*60}")
     
     df = pd.read_csv(csv_file, delimiter=';', quotechar='"', encoding='utf-8')
-    df["success"] = df["generated-expression"].notna().astype(int)
+    fail_cols = [
+        "fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"
+    ]
+
+    df["fails"] = df[fail_cols].sum(axis=1)
+    df["success"] = (df["fails"] == 0).astype(int)
     df["target-value-present"] = df["target-value-present"].astype(int)
     df["test-case-short"] = df["test-case"].apply(
         lambda x: os.path.join(os.path.basename(os.path.dirname(str(x))), os.path.basename(str(x)))

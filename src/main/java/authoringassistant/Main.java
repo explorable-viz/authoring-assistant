@@ -213,7 +213,7 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getTestCaseFolder()}/"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "runId", "test-case", "llm-agent", "target-value-present", "categories", "generated-expression",
+                    "runId", "test-case", "llm-agent", "target-value-present", "categories",
                     "problem-no", "fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"
             };
             out.println(String.join(";", headers));
@@ -223,18 +223,12 @@ public class Main {
 
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
-                                quote(STR."\{Path.of(result.getFirst().getTestCaseFileName()).getParent().getFileName()}/" +
-                                        STR."\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}"),
+                                quote(STR."\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}"),
                                 quote(queryResult.model()),
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
                                 quote("[" + queryResult.expected().getCategories().stream()
                                         .map(cat -> cat.label)
                                         .collect(Collectors.joining(",")) + "]"),
-                                queryResult.correctResponse() != null
-                                        ? quote(queryResult.correctResponse()
-                                        .getExpr()
-                                        .replace("\n", "[NEWLINE]"))
-                                        : "NULL",
                                 String.valueOf(queryResult.problemIndex()),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),

@@ -1,56 +1,56 @@
-runId;test-case;llm-agent;target-value-present;categories;generated-expression;problem-no;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
-"0";"scigen-manual-old/1904.12550v1-6";"dummy";0;"[Data Retrieval]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1904.12550v1-5";"dummy";0;"[Data Retrieval]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1904.12550v1-5";"dummy";0;"[Data Retrieval]";NULL;2;0;2;0;0
-"0";"scigen-manual-old/1904.12550v1-5";"dummy";0;"[Data Retrieval]";NULL;3;0;2;0;0
-"0";"scigen-manual-old/1002.0773";"dummy";0;"[Data Retrieval]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1003.0206";"dummy";0;"[Data Retrieval,Comparison]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1906.02780v1-17";"dummy";0;"[Data Retrieval]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1906.02780v1-17";"dummy";0;"[Data Retrieval]";NULL;2;0;2;0;0
-"0";"scigen-manual-old/1906.02780v1-17";"dummy";0;"[Data Retrieval]";NULL;3;0;2;0;0
-"0";"scigen-manual-old/1906.02780v1-17";"dummy";0;"[Data Retrieval,Difference]";NULL;4;0;2;0;0
-"0";"scigen-manual-old/1906.02780v1-17";"dummy";0;"[Data Retrieval]";NULL;5;0;2;0;0
-"0";"scigen-manual-old/1906.02780v1-17";"dummy";0;"[Data Retrieval]";NULL;6;0;2;0;0
-"0";"scigen-manual-old/ipcc";"dummy";0;"[Data Retrieval]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/ipcc";"dummy";0;"[Data Retrieval]";NULL;2;0;2;0;0
-"0";"scigen-manual-old/ipcc";"dummy";0;"[Data Retrieval]";NULL;3;0;2;0;0
-"0";"scigen-manual-old/1807.07279v3-23";"dummy";0;"[Sum]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1807.07279v3-23";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";NULL;2;0;2;0;0
-"0";"scigen-manual-old/1807.07279v3-23";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";NULL;3;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;2;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval]";NULL;3;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval]";NULL;4;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;5;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;6;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval]";NULL;7;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;8;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval]";NULL;9;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;10;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;11;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;12;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval]";NULL;13;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval]";NULL;14;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Rank,Data Retrieval,Comparison]";NULL;15;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Rank,Data Retrieval,Comparison]";NULL;16;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval]";NULL;17;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Rank]";NULL;18;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;19;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;20;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";NULL;21;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";NULL;2;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";NULL;3;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";NULL;4;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";NULL;5;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";NULL;6;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";NULL;7;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";NULL;8;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";NULL;9;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";NULL;10;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";NULL;11;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";NULL;12;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";NULL;13;0;2;0;0
-"0";"scigen-manual-old/1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";NULL;14;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-14";"dummy";0;"[Data Retrieval]";NULL;1;0;2;0;0
-"0";"scigen-manual-old/1805.02474v1-14";"dummy";0;"[Data Retrieval]";NULL;2;0;2;0;0
+runId;test-case;llm-agent;target-value-present;categories;problem-no;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";2;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";3;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";2;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";3;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Difference]";4;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";5;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";6;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";2;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";3;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Sum]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";2;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";3;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";2;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";3;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";4;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";5;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";6;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";7;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";8;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";9;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";10;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";11;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";12;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";13;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";14;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Rank,Data Retrieval,Comparison]";15;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Rank,Data Retrieval,Comparison]";16;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";17;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Rank]";18;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";19;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";20;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Comparison]";21;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";2;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";3;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Min/Max,Data Retrieval]";4;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Min/Max,Data Retrieval]";5;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Min/Max,Data Retrieval]";6;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Min/Max,Data Retrieval]";7;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Min/Max,Data Retrieval]";8;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Min/Max,Data Retrieval]";9;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Min/Max,Data Retrieval]";10;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Min/Max,Data Retrieval]";11;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";12;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";13;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";14;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";1;0;2;0;0
+0;"scigen-manual-old";"dummy";0;"[Data Retrieval]";2;0;2;0;0

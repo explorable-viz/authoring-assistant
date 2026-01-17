@@ -1,56 +1,56 @@
-runId;test-case;llm-agent;target-value-present;categories;problem-no;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
-0;"1904.12550v1-6";"dummy";0;"[Data Retrieval]";1;0;2;0;0
-0;"1904.12550v1-5";"dummy";0;"[Data Retrieval]";1;0;2;0;0
-0;"1904.12550v1-5";"dummy";0;"[Data Retrieval]";2;0;2;0;0
-0;"1904.12550v1-5";"dummy";0;"[Data Retrieval]";3;0;2;0;0
-0;"1002.0773";"dummy";0;"[Data Retrieval]";1;0;2;0;0
-0;"1003.0206";"dummy";0;"[Data Retrieval,Comparison]";1;0;2;0;0
-0;"1906.02780v1-17";"dummy";0;"[Data Retrieval]";1;0;2;0;0
-0;"1906.02780v1-17";"dummy";0;"[Data Retrieval]";2;0;2;0;0
-0;"1906.02780v1-17";"dummy";0;"[Data Retrieval]";3;0;2;0;0
-0;"1906.02780v1-17";"dummy";0;"[Data Retrieval,Difference]";4;0;2;0;0
-0;"1906.02780v1-17";"dummy";0;"[Data Retrieval]";5;0;2;0;0
-0;"1906.02780v1-17";"dummy";0;"[Data Retrieval]";6;0;2;0;0
-0;"ipcc";"dummy";0;"[Data Retrieval]";1;0;2;0;0
-0;"ipcc";"dummy";0;"[Data Retrieval]";2;0;2;0;0
-0;"ipcc";"dummy";0;"[Data Retrieval]";3;0;2;0;0
-0;"1807.07279v3-23";"dummy";0;"[Sum]";1;0;2;0;0
-0;"1807.07279v3-23";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";2;0;2;0;0
-0;"1807.07279v3-23";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";3;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";1;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";2;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval]";3;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval]";4;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";5;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";6;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval]";7;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";8;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval]";9;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";10;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";11;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";12;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval]";13;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval]";14;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Rank,Data Retrieval,Comparison]";15;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Rank,Data Retrieval,Comparison]";16;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval]";17;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Rank]";18;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";19;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";20;0;2;0;0
-0;"1805.02474v1-10";"dummy";0;"[Data Retrieval,Comparison]";21;0;2;0;0
-0;"1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";1;0;2;0;0
-0;"1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";2;0;2;0;0
-0;"1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";3;0;2;0;0
-0;"1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";4;0;2;0;0
-0;"1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";5;0;2;0;0
-0;"1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";6;0;2;0;0
-0;"1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";7;0;2;0;0
-0;"1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";8;0;2;0;0
-0;"1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";9;0;2;0;0
-0;"1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";10;0;2;0;0
-0;"1110.3094";"dummy";0;"[Min/Max,Data Retrieval]";11;0;2;0;0
-0;"1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";12;0;2;0;0
-0;"1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";13;0;2;0;0
-0;"1110.3094";"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";14;0;2;0;0
-0;"1805.02474v1-14";"dummy";0;"[Data Retrieval]";1;0;2;0;0
-0;"1805.02474v1-14";"dummy";0;"[Data Retrieval]";2;0;2;0;0
+run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
+0;"1904.12550v1-6";1;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1904.12550v1-5";1;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1904.12550v1-5";2;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1904.12550v1-5";3;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1002.0773";1;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1003.0206";1;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1906.02780v1-17";1;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";2;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";3;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";4;"dummy";0;"[Data Retrieval,Difference]";0;2;0;0
+0;"1906.02780v1-17";5;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";6;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"ipcc";1;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"ipcc";2;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"ipcc";3;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1807.07279v3-23";1;"dummy";0;"[Sum]";0;2;0;0
+0;"1807.07279v3-23";2;"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";0;2;0;0
+0;"1807.07279v3-23";3;"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";0;2;0;0
+0;"1805.02474v1-10";1;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";2;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";3;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";4;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";5;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";6;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";7;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";8;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";9;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";10;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";11;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";12;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";13;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";14;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";15;"dummy";0;"[Data Retrieval,Rank,Comparison]";0;2;0;0
+0;"1805.02474v1-10";16;"dummy";0;"[Data Retrieval,Rank,Comparison]";0;2;0;0
+0;"1805.02474v1-10";17;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";18;"dummy";0;"[Rank]";0;2;0;0
+0;"1805.02474v1-10";19;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";20;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";21;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1110.3094";1;"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";0;2;0;0
+0;"1110.3094";2;"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";0;2;0;0
+0;"1110.3094";3;"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";0;2;0;0
+0;"1110.3094";4;"dummy";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094";5;"dummy";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094";6;"dummy";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094";7;"dummy";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094";8;"dummy";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094";9;"dummy";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094";10;"dummy";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094";11;"dummy";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094";12;"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";0;2;0;0
+0;"1110.3094";13;"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";0;2;0;0
+0;"1110.3094";14;"dummy";0;"[Data Retrieval,Generalised Quantifier,Comparison]";0;2;0;0
+0;"1805.02474v1-14";1;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-14";2;"dummy";0;"[Data Retrieval]";0;2;0;0

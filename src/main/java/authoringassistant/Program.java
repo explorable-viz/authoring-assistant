@@ -39,15 +39,15 @@ public class Program {
     private final String code;
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
-    private final String testCaseFileName;
+    private final Path testCasePath;
     public static final String fluidFileName = "llmTest.fld";
 
-    public Program(Paragraph paragraph, Collection<String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
+    public Program(Paragraph paragraph, Collection<String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, Path testCasePath, ArrayList<Map<String, String>> test_datasets) throws IOException {
         this.datasets = datasets;
         this._loadedDatasets = loadedDataset;
         this.code = code;
         this.test_datasets = test_datasets;
-        this.testCaseFileName = testCaseFileName;
+        this.testCasePath = testCasePath;
         this.imports = imports;
         this._loadedImports = loadImports(imports);
         this.paragraph = paragraph;
@@ -197,7 +197,7 @@ public class Program {
                     imports,
                     replaceVariables(code, variables),
                     loadDatasetsFiles(datasets, expandVariables(tv, null)),
-                    casePath,
+                    Path.of(casePath),
                     test_configurations
             ));
         }
@@ -242,7 +242,7 @@ public class Program {
         List<Pair<Expression, Paragraph>> paragraphsToCompute = paragraph.getProblems(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for (Pair<Expression, Paragraph> p : paragraphsToCompute) {
-            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName, this.test_datasets), p.getFirst()));
+            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCasePath, this.test_datasets), p.getFirst()));
         }
         return programs;
     }
@@ -361,8 +361,8 @@ public class Program {
         return test_datasets;
     }
 
-    public String getTestCaseFileName() {
-        return testCaseFileName;
+    public Path getTestCasePath() {
+        return testCasePath;
     }
 
     public String getFluidFileName() {
@@ -384,11 +384,11 @@ public class Program {
 
     public void toWebpage() throws IOException {
         final String websitesRoot = "website/authoring-assistant/";
-        Path testCasePath = Path.of(this.testCaseFileName);
+        final Path fileName = testCasePath.getFileName();
         Path websiteName = testCasePath.getParent().getFileName();
         logger.info(STR."Adding page to website \{websiteName}");
         String websiteRoot = STR."\{websitesRoot}\{websiteName}/";
-        String page = STR."\{websiteRoot}\{testCasePath.getFileName()}";
+        String page = STR."\{websiteRoot}\{fileName}";
         Files.createDirectories(Path.of(page));
 
         String localFluidPath = "../fluid";
@@ -406,7 +406,7 @@ public class Program {
         html = html.replaceAll("##TITLE##", String.valueOf(websiteName));
         html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
-        html = html.replaceAll("##FLUID_FILE##", STR."\"\{localFluidPath}/\{testCasePath.getFileName()}.fld\"");
+        html = html.replaceAll("##FLUID_FILE##", STR."\"\{localFluidPath}/\{fileName}.fld\"");
         final String htmlFile = STR."\{page}/index.html";
         logger.info(STR."Generating \{htmlFile}");
         try (FileWriter file = new FileWriter(htmlFile)) {
@@ -416,7 +416,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{testCasePath.getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{fileName}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {
@@ -438,4 +438,18 @@ public class Program {
         }
     }
 
+    public void saveProgramToJson(String outputFolder) throws IOException {
+        String json = toJsonProgram().toString(2);
+        String fileName = STR."\{testCasePath.getFileName()}.json";
+        Path outputPath = Paths.get(outputFolder, fileName);
+        Files.createDirectories(outputPath.getParent());
+        Files.writeString(outputPath, json);
+        logger.fine(STR."Generated program saved to: \{outputPath}");
+
+        // Create empty .fld file with same name
+        String fldFileName = fileName.replace(".json", ".fld");
+        Path fldPath = Paths.get(outputFolder, fldFileName);
+        Files.writeString(fldPath, "");
+        logger.fine(STR."Empty .fld file created: \{fldPath}");
+    }
 }

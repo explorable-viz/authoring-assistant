@@ -72,8 +72,8 @@ public class AuthoringAssistant {
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
         final int attemptLimit = interpretationAgent instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
         int attempt;
-        final long start = System.currentTimeMillis();
         Program subProgram = test.getFirst();
+        final Path testCaseFileName = Path.of(subProgram.getTestCaseFileName()).getFileName();
         Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
@@ -118,13 +118,13 @@ public class AuthoringAssistant {
                 // weird way to exit loop
                 if (!errors) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+                    sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{testCaseFileName}_\{problemIndex}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
                     return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
-        sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+        sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{testCaseFileName}_\{problemIndex}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
         return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }

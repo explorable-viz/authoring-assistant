@@ -181,16 +181,23 @@ public class SuggestionAgent {
 
     public static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder)
             throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException,
-            IllegalAccessException, IOException, InterruptedException {
+            IllegalAccessException, IOException {
         SuggestionAgent sa = new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName));
         List<Integer> attemptsList = new ArrayList<>();
-        for (Program program : programs) {
+
+        logger.info("****************************************");
+        logger.info("Running SuggestionAgent");
+        for (int i = 0; i < programs.size(); ++i) {
+            Program program = programs.get(i);
             SuggestionAgent.SuggestionAgentResult result = sa.generateTemplateProgram(program);
             result.program().saveProgramToJson(outputFolder);
             attemptsList.add(result.attempts());
+            logger.info(STR."[Test case \{i} of \{programs.size()}] \{program.getTestCaseFileName()}");
         }
 
         writeLoopbackStats(attemptsList, outputFolder);
+        logger.info("SuggestionAgent complete");
+        logger.info("****************************************");
     }
 
     private static void writeLoopbackStats(List<Integer> attemptsList, String outputFolder) throws IOException {

@@ -444,7 +444,7 @@ public class Program {
         Path outputPath = Paths.get(outputFolder, fileName);
         Files.createDirectories(outputPath.getParent());
         Files.writeString(outputPath, json);
-        logger.info(STR."Generated program saved to: \{outputPath}");
+        logger.fine(STR."Generated program saved to: \{outputPath}");
 
         // Create empty .fld file with same name
         String fldFileName = fileName.replace(".json", ".fld");

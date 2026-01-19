@@ -75,8 +75,8 @@ public class AuthoringAssistant {
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
         final int attemptLimit = interpretationAgent instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
         int attempt;
-        final long start = System.currentTimeMillis();
         Program subProgram = test.getFirst();
+        final Path testCaseFileName = subProgram.getTestCasePath();
         Expression expected = test.getSecond();
         Files.createDirectories(Path.of(STR."results/\{this.configName}/\{this.testCaseFolder}/logs"));
         final PromptList sessionPrompts = (PromptList) prompts.clone();

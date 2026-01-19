@@ -1,4 +1,5 @@
 {
   "suggestion-agent-class": "authoringassistant.llm.suggestion.QwenCoderAgent",
+  "suggestion-agent-loopback-limit": 3,
   "test-case-folder": "scigen-raw"
 }

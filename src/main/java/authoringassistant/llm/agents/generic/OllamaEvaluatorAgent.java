@@ -71,7 +71,7 @@ public abstract class OllamaEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
         Response response = this.client.newCall(request).execute();
         if (response.body() != null) {
             String responseJson = response.body().string();
-            logger.info(responseJson);
+            logger.fine(responseJson);
             JSONObject resp = new JSONObject(responseJson);
             JSONObject message = (JSONObject)resp.get("message");
             prompts.addAssistantPrompt(message.get("content").toString());

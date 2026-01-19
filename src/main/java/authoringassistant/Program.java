@@ -438,4 +438,18 @@ public class Program {
         }
     }
 
+    public void saveProgramToJson(String outputFolder) throws IOException {
+        String json = toJsonProgram().toString(2);
+        String fileName = STR."\{Path.of(getTestCaseFileName()).getFileName()}.json";
+        Path outputPath = Paths.get(outputFolder, fileName);
+        Files.createDirectories(outputPath.getParent());
+        Files.writeString(outputPath, json);
+        logger.info(STR."Generated program saved to: \{outputPath}");
+
+        // Create empty .fld file with same name
+        String fldFileName = fileName.replace(".json", ".fld");
+        Path fldPath = Paths.get(outputFolder, fldFileName);
+        Files.writeString(fldPath, "");
+        logger.info(STR."Empty .fld file created: \{fldPath}");
+    }
 }

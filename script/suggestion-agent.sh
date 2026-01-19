@@ -12,8 +12,6 @@ folder=$(
   "$settings_file"
 )
 
-exit 0;
-
 if [[ $OSTYPE == 'darwin'* ]]; then
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-22.0.2.jdk/Contents/Home"
 fi

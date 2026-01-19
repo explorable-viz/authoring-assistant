@@ -13,13 +13,18 @@ import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class SuggestionAgent {
+    public static Logger logger = Logger.getLogger(SuggestionAgent.class.getName());
 
     public record SuggestionAgentResult(Program program, int attempts) {}
 
@@ -172,5 +177,55 @@ public class SuggestionAgent {
                     return new Pair<>(paragraph, expr);
                 })
                 .toList();
+    }
+
+    public static void generatePrograms(List<Program> programs, String suggestionAgentClassName, String outputFolder)
+            throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException,
+            IllegalAccessException, IOException, InterruptedException {
+        SuggestionAgent sa = new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName));
+        List<Integer> attemptsList = new ArrayList<>();
+        for (Program program : programs) {
+            SuggestionAgent.SuggestionAgentResult result = sa.generateTemplateProgram(program);
+            result.program().saveProgramToJson(outputFolder);
+            attemptsList.add(result.attempts());
+        }
+
+        writeLoopbackStats(attemptsList, outputFolder);
+    }
+
+    private static void writeLoopbackStats(List<Integer> attemptsList, String outputFolder) throws IOException {
+        Path statsFile = Paths.get(outputFolder, "loopback-stats.txt");
+
+        Map<Integer, Long> distribution = attemptsList.stream()
+                .collect(Collectors.groupingBy(a -> a, Collectors.counting()));
+
+        double average = attemptsList.stream().mapToInt(Integer::intValue).average().orElse(0.0);
+        int max = attemptsList.stream().mapToInt(Integer::intValue).max().orElse(0);
+        int maxLimit = Settings.getSuggestionAgentLoopbackLimit();
+        long reachedLimit = attemptsList.stream().filter(a -> a >= maxLimit).count();
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("============================================================\n");
+        sb.append("Loopback Statistics:\n");
+        sb.append("============================================================\n\n");
+        sb.append(STR."Total programs: \{attemptsList.size()}\n");
+        sb.append(STR."Average attempts: \{String.format("%.2f", average)}\n");
+        sb.append(STR."Max attempts: \{max}\n");
+        sb.append(STR."Programs reaching limit (\{maxLimit}): \{reachedLimit} (\{String.format("%.1f", (reachedLimit * 100.0 / attemptsList.size()))}%)\n\n");
+        sb.append("Distribution by attempts:\n");
+
+        distribution.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(entry -> {
+                    int attempts = entry.getKey();
+                    long count = entry.getValue();
+                    double percentage = count * 100.0 / attemptsList.size();
+                    sb.append(STR."  \{attempts} \{attempts == 1 ? "attempt " : "attempts"}: \{count} programs (\{String.format("%.1f", percentage)}%)\n");
+                });
+
+        sb.append("\n============================================================\n");
+
+        Files.writeString(statsFile, sb.toString());
+        logger.info(STR."Loopback statistics written to: \{statsFile}");
     }
 }

@@ -7,6 +7,7 @@ import authoringassistant.llm.prompt.PromptList;
 import kotlin.Pair;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,15 +28,17 @@ public class AuthoringAssistant {
     private Program templateProgram;
     private final SuggestionAgent suggestionAgent;
     private final int runId;
-    private final String jsonLogFolder;
+    private final String configName;
+    private final String testCaseFolder;
 
-    public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String jsonLogFolder) throws Exception {
+    public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String configName, String testCaseFolder) throws Exception {
         this.prompts = systemPrompt.toPromptList();
         this.interpretationAgent = LLMEvaluatorAgent.initialiseAgent(agentClassName);
         this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName)) : null;
         this.templateProgram = templateProgram;
         this.runId = runId;
-        this.jsonLogFolder = jsonLogFolder;
+        this.configName = configName;
+        this.testCaseFolder = testCaseFolder;
     }
 
     public List<Pair<Program, QueryResult>> runTestProblems() throws Exception {
@@ -75,6 +78,7 @@ public class AuthoringAssistant {
         final long start = System.currentTimeMillis();
         Program subProgram = test.getFirst();
         Expression expected = test.getSecond();
+        Files.createDirectories(Path.of(STR."results/\{this.configName}/\{this.testCaseFolder}/logs"));
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         int parseErrors=0, counterfactualFails=0, missingResponses=0, literalResponses=0;
@@ -118,13 +122,13 @@ public class AuthoringAssistant {
                 // weird way to exit loop
                 if (!errors) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+                    sessionPrompts.exportToJson(STR."results/\{this.configName}/\{this.testCaseFolder}/logs/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
                     return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
-        sessionPrompts.exportToJson(STR."\{this.jsonLogFolder}/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+        sessionPrompts.exportToJson(STR."results/\{this.configName}/\{this.testCaseFolder}/logs/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
         return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }

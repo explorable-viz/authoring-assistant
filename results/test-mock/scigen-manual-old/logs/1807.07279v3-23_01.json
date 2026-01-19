@@ -8,7 +8,133 @@
     "imports" : [ "let insert lt x [] = [x];\n    insert lt x (y : ys) =\n       if x `lt` y\n       then x : y : ys\n       else y : insert lt x ys;\n\nlet insertionSort lt lst =\n   let helper [] sorted = sorted;\n       helper (x : xs) sorted = helper xs (insert lt x sorted)\n   in helper lst [];\n\nlet findIndex fName x [] = -1;\n    findIndex fName x (y : ys) =\n       if y.[fName] == x then 1\n       else findIndex fName x ys + 1;\n\nlet findWithKey_ fName x table =\n   fromSome (findWithKey fName x table);\n\nlet findWhere pred table =\n   fromSome (find pred table);\n\nlet model m t = findWithKey_ \"model\" m t;\n\nlet maximumBy f [] = error \"Empty list!\";\n    maximumBy f (x : xs) =\n      let helper [] current = current;\n          helper (y : ys) current =\n            helper ys (if f y > f current then y else current)\n      in helper xs x;\n\nlet getColumn columnName = map (fun x -> x.[columnName]);\n\nlet mean xs = sum xs / length xs;\n\nlet standardDev avg xs =\n   (sum (map (fun x -> (x - avg) ** 2) xs) / length xs - 1) ** 0.5;\n\nlet stats xs =\n   let avg = mean xs\n   in [avg, standardDev avg xs];\n", "import util\n\nlet ordinalMap = [\n    { lastDigit: 1, suffix: \"st\" },\n    { lastDigit: 2, suffix: \"nd\" },\n    { lastDigit: 3, suffix: \"rd\" }\n];\n\nlet ordinal n =\n   if n <= 0 then error \"n <= 0 not supported\"\n   else if (n < 4) then\n      numToStr n ++ (findWithKey_ \"lastDigit\" n ordinalMap).suffix\n   else if (n >= 4) `and` (n <= 20) then numToStr n ++ \"th\"\n   else error \"n > 20 not supported\";\n\nlet rankLabel word n =\n   (if n == 1 then \"\" else ordinal n ++ \"-\") ++ word;\n\nlet countOrd e l g (EQ : xs) = countOrd (e + 1) l g xs;\n    countOrd e l g (LT : xs) = countOrd e (l + 1) g xs;\n    countOrd e l g (GT : xs) = countOrd e l (g + 1) xs;\n    countOrd e l g Nil = [e, l, g];\n\nlet overallComparison orders =\n    let [countEQ, countLT, countGT]  = countOrd 0 0 0 orders\n    in if (countEQ >= countLT) `and` (countEQ >= countGT) then EQ\n        else if countLT > countGT then LT\n        else GT;\n\nlet compareCols columnA columnB tableRow =\n   compare tableRow.[columnA] tableRow.[columnB];\n\nlet distributionOutlier val avg stdDev numOfDev =\n   if (avg - numOfDev * stdDev <= val) `and` (val <= avg + numOfDev * stdDev) then EQ\n   else if avg - numOfDev * stdDev > val then LT\n   else GT;\n\nlet trendWord n1 n2 compareWord =\n    compareWord (compare n1 n2);\n\nlet growShrink EQ = \"unchanging\";\n    growShrink LT = \"shrinking\";\n    growShrink GT = \"growing\";\n\nlet smallerHigher EQ = \"equal\";\n    smallerHigher LT = \"smaller\";\n    smallerHigher GT = \"larger\";\n\nlet improve EQ = \"does not further improve\";\n    improve LT = \"does not further improve\";\n    improve GT = \"further improves\";\n\nlet improvements EQ = \"no further improvements\";\n    improvements LT = \"no further improvements\";\n    improvements GT = \"further improvements\";\n\nlet shorterLonger EQ = \"identical\";\n    shorterLonger LT = \"shorter\";\n    shorterLonger GT = \"longer\";\n\nlet betterWorse EQ = \"equal\";\n    betterWorse LT = \"worse\";\n    betterWorse GT = \"better\";\n\nlet underOverPerforming EQ = \"performing the same as\";\n    underOverPerforming LT = \"performing worse than\";\n    underOverPerforming GT = \"outperforming\";\n\nlet unusuallyHighLow EQ = \"mostly equal\";\n    unusuallyHighLow LT = \"unusually low\";\n    unusuallyHighLow GT = \"unusually high\";\n\nlet aHigherLower EQ = \"an equivalent\";\n    aHigherLower LT = \"a lower\";\n    aHigherLower GT = \"a higher\";\n\nlet aReducedIncreased EQ = \"the same\";\n    aReducedIncreased LT = \"a reduced\";\n    aReducedIncreased GT = \"an increased\";\n\nlet underOverPerformed EQ = \"performed the same as\";\n    underOverPerformed LT = \"performed worse than\";\n    underOverPerformed GT = \"outperformed\";\n", "let tableData = loadJson \"datasets/scigen_manual_old/1807.07279v3-23.json\";\n" ],
     "code" : "",
     "datasets" : {
-      "datasets/scigen_manual_old/1807.07279v3-23.json" : "[\n    {\"dataset\": \"WS-353-ALL\", \"glo_ve\": 0.612, \"word_2_vec\": 0.7156, \"oiwe_ipg\": 0.634, \"sov\": 0.622, \"spine\": 0.173, \"word_2_sense\": 0.690, \"proposed\": 0.657},\n    {\"dataset\": \"SIMLEX-999\", \"glo_ve\": 0.359, \"word_2_vec\": 0.3939, \"oiwe_ipg\": 0.295, \"sov\": 0.355, \"spine\": 0.090, \"word_2_sense\": 0.380, \"proposed\": 0.381},\n    {\"dataset\": \"VERB-143\", \"glo_ve\": 0.326, \"word_2_vec\": 0.4430, \"oiwe_ipg\": 0.255, \"sov\": 0.271, \"spine\": 0.293, \"word_2_sense\": 0.271, \"proposed\": 0.348},\n    {\"dataset\": \"SimVerb-3500\", \"glo_ve\": 0.193, \"word_2_vec\": 0.2856, \"oiwe_ipg\": 0.184, \"sov\": 0.197, \"spine\": 0.035, \"word_2_sense\": 0.234, \"proposed\": 0.245},\n    {\"dataset\": \"WS-353-REL\", \"glo_ve\": 0.578, \"word_2_vec\": 0.6457, \"oiwe_ipg\": 0.595, \"sov\": 0.578, \"spine\": 0.134, \"word_2_sense\": 0.695, \"proposed\": 0.619},\n    {\"dataset\": \"RW-STANF.\", \"glo_ve\": 0.378, \"word_2_vec\": 0.4858, \"oiwe_ipg\": 0.316, \"sov\": 0.373, \"spine\": 0.122, \"word_2_sense\": 0.390, \"proposed\": 0.382},\n    {\"dataset\": \"YP-130\", \"glo_ve\": 0.524, \"word_2_vec\": 0.5211, \"oiwe_ipg\": 0.353, \"sov\": 0.482, \"spine\": 0.169, \"word_2_sense\": 0.420, \"proposed\": 0.589},\n    {\"dataset\": \"MEN-TR-3k\", \"glo_ve\": 0.710, \"word_2_vec\": 0.7528, \"oiwe_ipg\": 0.684, \"sov\": 0.696, \"spine\": 0.298, \"word_2_sense\": 0.769, \"proposed\": 0.725},\n    {\"dataset\": \"RG-65\", \"glo_ve\": 0.768, \"word_2_vec\": 0.8051, \"oiwe_ipg\": 0.736, \"sov\": 0.732, \"spine\": 0.338, \"word_2_sense\": 0.761, \"proposed\": 0.774},\n    {\"dataset\": \"MTurk-771\", \"glo_ve\": 0.650, \"word_2_vec\": 0.6712, \"oiwe_ipg\": 0.593, \"sov\": 0.623, \"spine\": 0.199, \"word_2_sense\": 0.665, \"proposed\": 0.671},\n    {\"dataset\": \"WS-353-SIM\", \"glo_ve\": 0.682, \"word_2_vec\": 0.7883, \"oiwe_ipg\": 0.713, \"sov\": 0.702, \"spine\": 0.220, \"word_2_sense\": 0.720, \"proposed\": 0.720},\n    {\"dataset\": \"MC-30\", \"glo_ve\": 0.749, \"word_2_vec\": 0.8112, \"oiwe_ipg\": 0.799, \"sov\": 0.726, \"spine\": 0.330, \"word_2_sense\": 0.735, \"proposed\": 0.776},\n    {\"dataset\": \"MTurk-287\", \"glo_ve\": 0.649, \"word_2_vec\": 0.6645, \"oiwe_ipg\": 0.591, \"sov\": 0.631, \"spine\": 0.295, \"word_2_sense\": 0.674, \"proposed\": 0.634},\n    {\"dataset\": \"Average\", \"glo_ve\": 0.552, \"word_2_vec\": 0.6141, \"oiwe_ipg\": 0.519, \"sov\": 0.538, \"spine\": 0.207, \"word_2_sense\": 0.570, \"proposed\": 0.579}\n]\n"
+      "datasets/scigen_manual_old/1807.07279v3-23.json" : [ {
+        "oiwe_ipg" : 0.634,
+        "proposed" : 0.657,
+        "word_2_sense" : 0.69,
+        "spine" : 0.173,
+        "sov" : 0.622,
+        "glo_ve" : 0.612,
+        "word_2_vec" : 0.7156,
+        "dataset" : "WS-353-ALL"
+      }, {
+        "oiwe_ipg" : 0.295,
+        "proposed" : 0.381,
+        "word_2_sense" : 0.38,
+        "spine" : 0.09,
+        "sov" : 0.355,
+        "glo_ve" : 0.359,
+        "word_2_vec" : 0.3939,
+        "dataset" : "SIMLEX-999"
+      }, {
+        "oiwe_ipg" : 0.255,
+        "proposed" : 0.348,
+        "word_2_sense" : 0.271,
+        "spine" : 0.293,
+        "sov" : 0.271,
+        "glo_ve" : 0.326,
+        "word_2_vec" : 0.443,
+        "dataset" : "VERB-143"
+      }, {
+        "oiwe_ipg" : 0.184,
+        "proposed" : 0.245,
+        "word_2_sense" : 0.234,
+        "spine" : 0.035,
+        "sov" : 0.197,
+        "glo_ve" : 0.193,
+        "word_2_vec" : 0.2856,
+        "dataset" : "SimVerb-3500"
+      }, {
+        "oiwe_ipg" : 0.595,
+        "proposed" : 0.619,
+        "word_2_sense" : 0.695,
+        "spine" : 0.134,
+        "sov" : 0.578,
+        "glo_ve" : 0.578,
+        "word_2_vec" : 0.6457,
+        "dataset" : "WS-353-REL"
+      }, {
+        "oiwe_ipg" : 0.316,
+        "proposed" : 0.382,
+        "word_2_sense" : 0.39,
+        "spine" : 0.122,
+        "sov" : 0.373,
+        "glo_ve" : 0.378,
+        "word_2_vec" : 0.4858,
+        "dataset" : "RW-STANF."
+      }, {
+        "oiwe_ipg" : 0.353,
+        "proposed" : 0.589,
+        "word_2_sense" : 0.42,
+        "spine" : 0.169,
+        "sov" : 0.482,
+        "glo_ve" : 0.524,
+        "word_2_vec" : 0.5211,
+        "dataset" : "YP-130"
+      }, {
+        "oiwe_ipg" : 0.684,
+        "proposed" : 0.725,
+        "word_2_sense" : 0.769,
+        "spine" : 0.298,
+        "sov" : 0.696,
+        "glo_ve" : 0.71,
+        "word_2_vec" : 0.7528,
+        "dataset" : "MEN-TR-3k"
+      }, {
+        "oiwe_ipg" : 0.736,
+        "proposed" : 0.774,
+        "word_2_sense" : 0.761,
+        "spine" : 0.338,
+        "sov" : 0.732,
+        "glo_ve" : 0.768,
+        "word_2_vec" : 0.8051,
+        "dataset" : "RG-65"
+      }, {
+        "oiwe_ipg" : 0.593,
+        "proposed" : 0.671,
+        "word_2_sense" : 0.665,
+        "spine" : 0.199,
+        "sov" : 0.623,
+        "glo_ve" : 0.65,
+        "word_2_vec" : 0.6712,
+        "dataset" : "MTurk-771"
+      }, {
+        "oiwe_ipg" : 0.713,
+        "proposed" : 0.72,
+        "word_2_sense" : 0.72,
+        "spine" : 0.22,
+        "sov" : 0.702,
+        "glo_ve" : 0.682,
+        "word_2_vec" : 0.7883,
+        "dataset" : "WS-353-SIM"
+      }, {
+        "oiwe_ipg" : 0.799,
+        "proposed" : 0.776,
+        "word_2_sense" : 0.735,
+        "spine" : 0.33,
+        "sov" : 0.726,
+        "glo_ve" : 0.749,
+        "word_2_vec" : 0.8112,
+        "dataset" : "MC-30"
+      }, {
+        "oiwe_ipg" : 0.591,
+        "proposed" : 0.634,
+        "word_2_sense" : 0.674,
+        "spine" : 0.295,
+        "sov" : 0.631,
+        "glo_ve" : 0.649,
+        "word_2_vec" : 0.6645,
+        "dataset" : "MTurk-287"
+      }, {
+        "oiwe_ipg" : 0.519,
+        "proposed" : 0.579,
+        "word_2_sense" : 0.57,
+        "spine" : 0.207,
+        "sov" : 0.538,
+        "glo_ve" : 0.552,
+        "word_2_vec" : 0.6141,
+        "dataset" : "Average"
+      } ]
     }
   }
 }, {

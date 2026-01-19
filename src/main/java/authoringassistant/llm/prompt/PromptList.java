@@ -68,6 +68,28 @@ public class PromptList extends ArrayList<Prompt> {
             try {
                 // Try parsing as JSONObject first
                 JSONObject jsonContent = new JSONObject(content);
+                // Recursively parse nested JSON strings in datasets
+                if (jsonContent.has("datasets")) {
+                    JSONObject datasets = jsonContent.getJSONObject("datasets");
+                    JSONObject parsedDatasets = new JSONObject();
+                    for (String key : datasets.keySet()) {
+                        String datasetValue = datasets.getString(key);
+                        try {
+                            // Try to parse the dataset value as JSON
+                            Object parsedValue = new JSONArray(datasetValue);
+                            parsedDatasets.put(key, parsedValue);
+                        } catch (Exception ex) {
+                            try {
+                                Object parsedValue = new JSONObject(datasetValue);
+                                parsedDatasets.put(key, parsedValue);
+                            } catch (Exception ex2) {
+                                // Keep as string if not valid JSON
+                                parsedDatasets.put(key, datasetValue);
+                            }
+                        }
+                    }
+                    jsonContent.put("datasets", parsedDatasets);
+                }
                 message.put("content", jsonContent);
             } catch (Exception e1) {
                 try {

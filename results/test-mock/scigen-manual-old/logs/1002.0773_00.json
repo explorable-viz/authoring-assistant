@@ -8,7 +8,37 @@
     "imports" : [ "let tableData = loadJson \"datasets/scigen_manual_old/1002.0773.json\";\n" ],
     "code" : "",
     "datasets" : {
-      "datasets/scigen_manual_old/1002.0773.json" : "[\n    {\"iteration\":10, \"wer\":17.4},\n    {\"iteration\":20, \"wer\":14.6},\n    {\"iteration\":30, \"wer\":13.3},\n    {\"iteration\":40, \"wer\":12.7},\n    {\"iteration\":50, \"wer\":12.5},\n    {\"iteration\":60, \"wer\":12.5},\n    {\"iteration\":70, \"wer\":12.4},\n    {\"iteration\":80, \"wer\":12.3},\n    {\"iteration\":90, \"wer\":12.3},\n    {\"iteration\":100, \"wer\":12.3}\n]\n"
+      "datasets/scigen_manual_old/1002.0773.json" : [ {
+        "wer" : 17.4,
+        "iteration" : 10
+      }, {
+        "wer" : 14.6,
+        "iteration" : 20
+      }, {
+        "wer" : 13.3,
+        "iteration" : 30
+      }, {
+        "wer" : 12.7,
+        "iteration" : 40
+      }, {
+        "wer" : 12.5,
+        "iteration" : 50
+      }, {
+        "wer" : 12.5,
+        "iteration" : 60
+      }, {
+        "wer" : 12.4,
+        "iteration" : 70
+      }, {
+        "wer" : 12.3,
+        "iteration" : 80
+      }, {
+        "wer" : 12.3,
+        "iteration" : 90
+      }, {
+        "wer" : 12.3,
+        "iteration" : 100
+      } ]
     }
   }
 }, {

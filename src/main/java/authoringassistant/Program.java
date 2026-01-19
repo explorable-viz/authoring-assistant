@@ -450,6 +450,6 @@ public class Program {
         String fldFileName = fileName.replace(".json", ".fld");
         Path fldPath = Paths.get(outputFolder, fldFileName);
         Files.writeString(fldPath, "");
-        logger.info(STR."Empty .fld file created: \{fldPath}");
+        logger.fine(STR."Empty .fld file created: \{fldPath}");
     }
 }

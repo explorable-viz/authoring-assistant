@@ -3,7 +3,16 @@ set -xe
 
 start_time=$(date +%s)
 
-folder="${2#*=}"
+# Bit grim having to parse argument and then parse config file
+arg=$1
+config="${arg#config=}"
+settings_file="settings/$config.json"
+folder=$(
+  python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["test-case-folder"])' \
+  "$settings_file"
+)
+
+exit 0;
 
 if [[ $OSTYPE == 'darwin'* ]]; then
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-22.0.2.jdk/Contents/Home"

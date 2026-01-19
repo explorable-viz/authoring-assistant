@@ -37,13 +37,7 @@ public class SuggestionAgent {
     }
 
     public SuggestionAgentResult generateTemplateProgram(Program p) throws IOException {
-        String text;
-        if(p.getTestCaseFileName().equals("web-case")) {
-            text = p.getParagraph().getFirst().getValue();
-        } else
-        {
-            text = extractText(p);
-        }
+        String text = extractText(p);
         PromptList prompts = buildPrompts(text);
         String result;
         int attempts = 0;

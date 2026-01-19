@@ -142,7 +142,7 @@ public class Main {
             int toTake = Math.min(expressionsPerCategory, shuffled.size());
             for (int i = 0; i < toTake; i++) {
                 ProgramExpression pe = shuffled.get(i);
-                selectedProgramsByTestFile.putIfAbsent(pe.program().getTestCaseFileName(), pe.program());
+                selectedProgramsByTestFile.putIfAbsent(pe.program().getTestCaseFileName().toString(), pe.program());
             }
         }
         Set<Program> downsampled = new HashSet<>(selectedProgramsByTestFile.values());
@@ -184,13 +184,13 @@ public class Main {
 
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
-                                quote(STR."\{Path.of(result.getFirst().getTestCaseFileName()).getFileName()}"),
+                                quote(STR."\{result.getFirst().getTestCaseFileName().getFileName()}"),
                                 String.valueOf(queryResult.problemIndex()),
                                 quote(queryResult.model()),
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
-                                quote("[" + queryResult.expected().getCategories().stream()
+                                quote(STR."[\{queryResult.expected().getCategories().stream()
                                         .map(cat -> cat.label)
-                                        .collect(Collectors.joining(",")) + "]"),
+                                        .collect(Collectors.joining(","))}]"),
                                 String.valueOf(queryResult.parseErrors()),
                                 String.valueOf(queryResult.counterfactualFails()),
                                 String.valueOf(queryResult.missingResponses()),

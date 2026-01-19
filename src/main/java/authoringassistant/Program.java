@@ -39,10 +39,10 @@ public class Program {
     private final String code;
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
-    private final String testCaseFileName;
+    private final Path testCaseFileName; // TODO: rename to testCasePath
     public static final String fluidFileName = "llmTest.fld";
 
-    public Program(Paragraph paragraph, Collection<String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, String testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
+    public Program(Paragraph paragraph, Collection<String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, Path testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
         this.datasets = datasets;
         this._loadedDatasets = loadedDataset;
         this.code = code;
@@ -197,7 +197,7 @@ public class Program {
                     imports,
                     replaceVariables(code, variables),
                     loadDatasetsFiles(datasets, expandVariables(tv, null)),
-                    casePath,
+                    Path.of(casePath),
                     test_configurations
             ));
         }
@@ -361,7 +361,7 @@ public class Program {
         return test_datasets;
     }
 
-    public String getTestCaseFileName() {
+    public Path getTestCaseFileName() {
         return testCaseFileName;
     }
 
@@ -384,11 +384,11 @@ public class Program {
 
     public void toWebpage() throws IOException {
         final String websitesRoot = "website/authoring-assistant/";
-        Path testCasePath = Path.of(this.testCaseFileName);
-        Path websiteName = testCasePath.getParent().getFileName();
+        final Path fileName = testCaseFileName.getFileName();
+        Path websiteName = testCaseFileName.getParent().getFileName();
         logger.info(STR."Adding page to website \{websiteName}");
         String websiteRoot = STR."\{websitesRoot}\{websiteName}/";
-        String page = STR."\{websiteRoot}\{testCasePath.getFileName()}";
+        String page = STR."\{websiteRoot}\{fileName}";
         Files.createDirectories(Path.of(page));
 
         String localFluidPath = "../fluid";
@@ -404,9 +404,9 @@ public class Program {
         /* html generation */
         String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{websitesRoot}/template.html").toURI())));
         html = html.replaceAll("##TITLE##", String.valueOf(websiteName));
-        html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
+        html = html.replaceAll("##TEST_NAME##", String.valueOf(testCaseFileName.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
-        html = html.replaceAll("##FLUID_FILE##", STR."\"\{localFluidPath}/\{testCasePath.getFileName()}.fld\"");
+        html = html.replaceAll("##FLUID_FILE##", STR."\"\{localFluidPath}/\{fileName}.fld\"");
         final String htmlFile = STR."\{page}/index.html";
         logger.info(STR."Generating \{htmlFile}");
         try (FileWriter file = new FileWriter(htmlFile)) {
@@ -416,7 +416,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{testCasePath.getFileName()}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{fileName}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) {
@@ -440,7 +440,7 @@ public class Program {
 
     public void saveProgramToJson(String outputFolder) throws IOException {
         String json = toJsonProgram().toString(2);
-        String fileName = STR."\{Path.of(getTestCaseFileName()).getFileName()}.json";
+        String fileName = STR."\{testCaseFileName.getFileName()}.json";
         Path outputPath = Paths.get(outputFolder, fileName);
         Files.createDirectories(outputPath.getParent());
         Files.writeString(outputPath, json);

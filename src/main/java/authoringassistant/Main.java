@@ -101,7 +101,7 @@ public class Main {
     private static void setupResultsFileLogger() throws IOException {
         String resultsPath = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}";
         Files.createDirectories(Path.of(resultsPath));
-        fileHandler = new FileHandler(STR."\{resultsPath}/log.txt");
+        fileHandler = new FileHandler(STR."\{resultsPath}/log.txt", /* append = */ false);
         fileHandler.setFormatter(new SimpleFormatter());
         Logger.getLogger("").addHandler(fileHandler);
     }

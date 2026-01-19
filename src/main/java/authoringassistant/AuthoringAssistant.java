@@ -122,13 +122,13 @@ public class AuthoringAssistant {
                 // weird way to exit loop
                 if (!errors) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.exportToJson(STR."results/\{this.configName}/\{this.testCaseFolder}/logs/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+                    sessionPrompts.exportToJson(STR."results/\{this.configName}/\{this.testCaseFolder}/logs/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
                     return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
-        sessionPrompts.exportToJson(STR."results/\{this.configName}/\{this.testCaseFolder}/logs/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{problemIndex}.json");
+        sessionPrompts.exportToJson(STR."results/\{this.configName}/\{this.testCaseFolder}/logs/\{Path.of(test.getFirst().getTestCaseFileName()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
         return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }

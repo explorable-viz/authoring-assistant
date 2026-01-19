@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 public class PromptList extends ArrayList<Prompt> {
     public static final String SYSTEM = "system";
     public static final String USER = "user";
@@ -59,11 +62,38 @@ public class PromptList extends ArrayList<Prompt> {
             Prompt p = (Prompt)this.get(i);
             JSONObject message = new JSONObject();
             message.put("role", p.getRole());
-            message.put("content", p.getContent());
+            
+            // Try to parse content as JSON, if it fails keep it as string
+            String content = p.getContent();
+            try {
+                // Try parsing as JSONObject first
+                JSONObject jsonContent = new JSONObject(content);
+                message.put("content", jsonContent);
+            } catch (Exception e1) {
+                try {
+                    // Try parsing as JSONArray
+                    JSONArray jsonContent = new JSONArray(content);
+                    message.put("content", jsonContent);
+                } catch (Exception e2) {
+                    // Not valid JSON, keep as string
+                    message.put("content", content);
+                }
+            }
+            
             messages.put(message);
         }
 
-        file_put_contents(filename, messages.toString(2));
+        // Use Jackson for proper nested indentation
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.enable(SerializationFeature.INDENT_OUTPUT);
+            Object json = mapper.readValue(messages.toString(), Object.class);
+            String prettyJson = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
+            file_put_contents(filename, prettyJson);
+        } catch (Exception e) {
+            // Fallback to org.json if Jackson fails
+            file_put_contents(filename, messages.toString(2));
+        }
     }
 
     public void importFromJson(String filename) throws IOException {

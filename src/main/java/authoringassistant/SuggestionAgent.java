@@ -53,7 +53,7 @@ public class SuggestionAgent {
                     prompts.addUserPrompt("Your response contains extra text outside the annotated paragraph. Please provide ONLY the original text with [REPLACE value=\"...\" categories=\"...\"] annotations inserted inline. Do not add any explanations, comments, markdown formatting, or other additional content.");
                     continue;
                 }
-                return new SuggestionAgentResult(new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCaseFileName(),p.getTest_datasets()), attempts);
+                return new SuggestionAgentResult(new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCasePath(),p.getTest_datasets()), attempts);
             } catch (IllegalArgumentException ex) {
                 prompts.addUserPrompt(STR."Invalid category! Please use only the following categories: \{ExpressionCategory.values()}. Return ONLY the annotated paragraph with [REPLACE ...] tags, without any additional comments or explanations.");
                 continue;
@@ -186,7 +186,7 @@ public class SuggestionAgent {
             SuggestionAgent.SuggestionAgentResult result = sa.generateTemplateProgram(program);
             result.program().saveProgramToJson(outputFolder);
             attemptsList.add(result.attempts());
-            logger.info(STR."[Test case \{i} of \{programs.size()}] \{program.getTestCaseFileName()}");
+            logger.info(STR."[Test case \{i} of \{programs.size()}] \{program.getTestCasePath().getFileName()}");
         }
 
         writeLoopbackStats(attemptsList, outputFolder);

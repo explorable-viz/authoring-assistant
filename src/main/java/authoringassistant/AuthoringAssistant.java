@@ -73,7 +73,7 @@ public class AuthoringAssistant {
         final int attemptLimit = interpretationAgent instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
         int attempt;
         Program subProgram = test.getFirst();
-        final Path testCaseFileName = subProgram.getTestCaseFileName();
+        final Path testCaseFileName = subProgram.getTestCasePath();
         Expression expected = test.getSecond();
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());

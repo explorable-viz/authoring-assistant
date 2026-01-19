@@ -1,6 +1,5 @@
 package authoringassistant;
 
-import authoringassistant.llm.LLMEvaluatorAgent;
 import authoringassistant.llm.interpretation.DummyAgent;
 import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
@@ -142,7 +141,7 @@ public class Main {
             int toTake = Math.min(expressionsPerCategory, shuffled.size());
             for (int i = 0; i < toTake; i++) {
                 ProgramExpression pe = shuffled.get(i);
-                selectedProgramsByTestFile.putIfAbsent(pe.program().getTestCaseFileName().toString(), pe.program());
+                selectedProgramsByTestFile.putIfAbsent(pe.program().getTestCasePath().toString(), pe.program());
             }
         }
         Set<Program> downsampled = new HashSet<>(selectedProgramsByTestFile.values());
@@ -184,7 +183,7 @@ public class Main {
 
                         String[] values = {
                                 String.valueOf(queryResult.runId()),
-                                quote(STR."\{result.getFirst().getTestCaseFileName().getFileName()}"),
+                                quote(STR."\{result.getFirst().getTestCasePath().getFileName()}"),
                                 String.valueOf(queryResult.problemIndex()),
                                 quote(queryResult.model()),
                                 String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),

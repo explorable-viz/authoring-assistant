@@ -39,15 +39,15 @@ public class Program {
     private final String code;
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
-    private final Path testCaseFileName; // TODO: rename to testCasePath
+    private final Path testCasePath;
     public static final String fluidFileName = "llmTest.fld";
 
-    public Program(Paragraph paragraph, Collection<String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, Path testCaseFileName, ArrayList<Map<String, String>> test_datasets) throws IOException {
+    public Program(Paragraph paragraph, Collection<String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, Path testCasePath, ArrayList<Map<String, String>> test_datasets) throws IOException {
         this.datasets = datasets;
         this._loadedDatasets = loadedDataset;
         this.code = code;
         this.test_datasets = test_datasets;
-        this.testCaseFileName = testCaseFileName;
+        this.testCasePath = testCasePath;
         this.imports = imports;
         this._loadedImports = loadImports(imports);
         this.paragraph = paragraph;
@@ -242,7 +242,7 @@ public class Program {
         List<Pair<Expression, Paragraph>> paragraphsToCompute = paragraph.getProblems(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for (Pair<Expression, Paragraph> p : paragraphsToCompute) {
-            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCaseFileName, this.test_datasets), p.getFirst()));
+            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCasePath, this.test_datasets), p.getFirst()));
         }
         return programs;
     }
@@ -361,8 +361,8 @@ public class Program {
         return test_datasets;
     }
 
-    public Path getTestCaseFileName() {
-        return testCaseFileName;
+    public Path getTestCasePath() {
+        return testCasePath;
     }
 
     public String getFluidFileName() {
@@ -384,8 +384,8 @@ public class Program {
 
     public void toWebpage() throws IOException {
         final String websitesRoot = "website/authoring-assistant/";
-        final Path fileName = testCaseFileName.getFileName();
-        Path websiteName = testCaseFileName.getParent().getFileName();
+        final Path fileName = testCasePath.getFileName();
+        Path websiteName = testCasePath.getParent().getFileName();
         logger.info(STR."Adding page to website \{websiteName}");
         String websiteRoot = STR."\{websitesRoot}\{websiteName}/";
         String page = STR."\{websiteRoot}\{fileName}";
@@ -404,7 +404,7 @@ public class Program {
         /* html generation */
         String html = new String(Files.readAllBytes(Paths.get(new File(STR."\{websitesRoot}/template.html").toURI())));
         html = html.replaceAll("##TITLE##", String.valueOf(websiteName));
-        html = html.replaceAll("##TEST_NAME##", String.valueOf(testCaseFileName.getFileName()));
+        html = html.replaceAll("##TEST_NAME##", String.valueOf(testCasePath.getFileName()));
         html = html.replaceAll("##JSON_SPEC##", jsonSpec);
         html = html.replaceAll("##FLUID_FILE##", STR."\"\{localFluidPath}/\{fileName}.fld\"");
         final String htmlFile = STR."\{page}/index.html";
@@ -440,7 +440,7 @@ public class Program {
 
     public void saveProgramToJson(String outputFolder) throws IOException {
         String json = toJsonProgram().toString(2);
-        String fileName = STR."\{testCaseFileName.getFileName()}.json";
+        String fileName = STR."\{testCasePath.getFileName()}.json";
         Path outputPath = Paths.get(outputFolder, fileName);
         Files.createDirectories(outputPath.getParent());
         Files.writeString(outputPath, json);

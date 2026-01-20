@@ -387,7 +387,6 @@ public class Program {
         final String websitesRoot = "website/authoring-assistant/";
         final Path fileName = testCasePath.getFileName();
         Path websiteName = testCasePath.getParent().getFileName();
-        logger.info(STR."Adding page to website \{websiteName}");
         String websiteRoot = STR."\{websitesRoot}\{websiteName}/";
         String page = STR."\{websiteRoot}\{fileName}";
         Files.createDirectories(Path.of(page));

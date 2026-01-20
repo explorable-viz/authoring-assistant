@@ -1,86 +1,86 @@
 [
   {
     "_1": "Transformer-word",
-    "avg_MT02_–_08_BLEU": 39.75,
-    "avg_MT02_–_08_HE": "",
-    "avg_MT02_–_08_chrF1": "",
-    "avg_MT02_–_08_RD": ""
+    "_Avg_MT02_–_08_BLEU": 39.75,
+    "_Avg_MT02_–_08_HE": "",
+    "_Avg_MT02_–_08_chrF1": "",
+    "_Avg_MT02_–_08_RD": ""
   },
   {
     "_1": "Search (0.2)",
-    "avg_MT02_–_08_BLEU": 32.42,
-    "avg_MT02_–_08_HE": 3.22,
-    "avg_MT02_–_08_chrF1": 0.82,
-    "avg_MT02_–_08_RD": 0.184
+    "_Avg_MT02_–_08_BLEU": 32.42,
+    "_Avg_MT02_–_08_HE": 3.22,
+    "_Avg_MT02_–_08_chrF1": 0.82,
+    "_Avg_MT02_–_08_RD": 0.184
   },
   {
     "_1": "Search (0.3)",
-    "avg_MT02_–_08_BLEU": 28.83,
-    "avg_MT02_–_08_HE": 2.45,
-    "avg_MT02_–_08_chrF1": 0.77,
-    "avg_MT02_–_08_RD": 0.275
+    "_Avg_MT02_–_08_BLEU": 28.83,
+    "_Avg_MT02_–_08_HE": 2.45,
+    "_Avg_MT02_–_08_chrF1": 0.77,
+    "_Avg_MT02_–_08_RD": 0.275
   },
   {
     "_1": "Ours",
-    "avg_MT02_–_08_BLEU": 33.28,
-    "avg_MT02_–_08_HE": 3.69,
-    "avg_MT02_–_08_chrF1": 0.8,
-    "avg_MT02_–_08_RD": 0.163
+    "_Avg_MT02_–_08_BLEU": 33.28,
+    "_Avg_MT02_–_08_HE": 3.69,
+    "_Avg_MT02_–_08_chrF1": 0.8,
+    "_Avg_MT02_–_08_RD": 0.163
   },
   {
     "_1": "Transformer-BPE",
-    "avg_MT02_–_08_BLEU": 43.38,
-    "avg_MT02_–_08_HE": "",
-    "avg_MT02_–_08_chrF1": "",
-    "avg_MT02_–_08_RD": ""
+    "_Avg_MT02_–_08_BLEU": 43.38,
+    "_Avg_MT02_–_08_HE": "",
+    "_Avg_MT02_–_08_chrF1": "",
+    "_Avg_MT02_–_08_RD": ""
   },
   {
     "_1": "Search (0.2)",
-    "avg_MT02_–_08_BLEU": 34.27,
-    "avg_MT02_–_08_HE": 3.87,
-    "avg_MT02_–_08_chrF1": 0.89,
-    "avg_MT02_–_08_RD": 0.21
+    "_Avg_MT02_–_08_BLEU": 34.27,
+    "_Avg_MT02_–_08_HE": 3.87,
+    "_Avg_MT02_–_08_chrF1": 0.89,
+    "_Avg_MT02_–_08_RD": 0.21
   },
   {
     "_1": "Search (0.4)",
-    "avg_MT02_–_08_BLEU": 27.27,
-    "avg_MT02_–_08_HE": 2.91,
-    "avg_MT02_–_08_chrF1": 0.8,
-    "avg_MT02_–_08_RD": 0.371
+    "_Avg_MT02_–_08_BLEU": 27.27,
+    "_Avg_MT02_–_08_HE": 2.91,
+    "_Avg_MT02_–_08_chrF1": 0.8,
+    "_Avg_MT02_–_08_RD": 0.371
   },
   {
     "_1": "Ours",
-    "avg_MT02_–_08_BLEU": 31.35,
-    "avg_MT02_–_08_HE": 3.66,
-    "avg_MT02_–_08_chrF1": 0.8,
-    "avg_MT02_–_08_RD": 0.277
+    "_Avg_MT02_–_08_BLEU": 31.35,
+    "_Avg_MT02_–_08_HE": 3.66,
+    "_Avg_MT02_–_08_chrF1": 0.8,
+    "_Avg_MT02_–_08_RD": 0.277
   },
   {
     "_1": "RNN-search-BPE",
-    "avg_MT02_–_08_BLEU": 39.38,
-    "avg_MT02_–_08_HE": "",
-    "avg_MT02_–_08_chrF1": "",
-    "avg_MT02_–_08_RD": ""
+    "_Avg_MT02_–_08_BLEU": 39.38,
+    "_Avg_MT02_–_08_HE": "",
+    "_Avg_MT02_–_08_chrF1": "",
+    "_Avg_MT02_–_08_RD": ""
   },
   {
     "_1": "Search (0.2)",
-    "avg_MT02_–_08_BLEU": 31.83,
-    "avg_MT02_–_08_HE": 3.83,
-    "avg_MT02_–_08_chrF1": 0.89,
-    "avg_MT02_–_08_RD": 0.192
+    "_Avg_MT02_–_08_BLEU": 31.83,
+    "_Avg_MT02_–_08_HE": 3.83,
+    "_Avg_MT02_–_08_chrF1": 0.89,
+    "_Avg_MT02_–_08_RD": 0.192
   },
   {
     "_1": "Search (0.4)",
-    "avg_MT02_–_08_BLEU": 26.13,
-    "avg_MT02_–_08_HE": 2.82,
-    "avg_MT02_–_08_chrF1": 0.79,
-    "avg_MT02_–_08_RD": 0.336
+    "_Avg_MT02_–_08_BLEU": 26.13,
+    "_Avg_MT02_–_08_HE": 2.82,
+    "_Avg_MT02_–_08_chrF1": 0.79,
+    "_Avg_MT02_–_08_RD": 0.336
   },
   {
     "_1": "Ours",
-    "avg_MT02_–_08_BLEU": 31.18,
-    "avg_MT02_–_08_HE": 3.6,
-    "avg_MT02_–_08_chrF1": 0.83,
-    "avg_MT02_–_08_RD": 0.208
+    "_Avg_MT02_–_08_BLEU": 31.18,
+    "_Avg_MT02_–_08_HE": 3.6,
+    "_Avg_MT02_–_08_chrF1": 0.83,
+    "_Avg_MT02_–_08_RD": 0.208
   }
 ]

@@ -52,10 +52,17 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 clean_key = strip_all_tags(keys[i])
                 clean_value = strip_all_tags(value[i])
 
+                clean_value = clean_value.strip()
+                clean_key = clean_key.strip()
+
                 # Clean key: replace spaces with underscores, remove [xxx] tags,
                 # ensure first character is lowercase
                 tmp_key = re.sub(r'\[\w+\]', 'key', clean_key.replace(' ', '_'))
-                cleaned_key = tmp_key[:1].lower() + tmp_key[1:]
+                # cleaned_key = tmp_key[:1].lower() + tmp_key[1:]
+                cleaned_key = tmp_key
+
+                if not tmp_key[:1].islower():
+                    cleaned_key = "_" + cleaned_key
 
                 # Replace parentheses by underscores (omitting underscore if already present)
                 cleaned_key = re.sub(r'(_)?\(([^)]*)\)(_)?', replace_parens, cleaned_key)
@@ -66,8 +73,8 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 # Replace special characters with underscore
                 cleaned_key = re.sub(r'[/\.\-\*→%,\:\;\\\'"+<>@&\|\!\?\$\^`~]', '_', cleaned_key)
 
-                # Remove leading/trailing underscores and collapse multiple underscores
-                cleaned_key = re.sub(r'_+', '_', cleaned_key).strip('_')
+                # Remove trailing underscores and collapse multiple underscores
+                cleaned_key = re.sub(r'_+', '_', cleaned_key).rstrip('_')
 
                 # If key is empty, assign a default name with counter
                 if not cleaned_key or cleaned_key.strip() == '':

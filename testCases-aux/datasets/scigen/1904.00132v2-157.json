@@ -1,66 +1,66 @@
 [
   {
     "_1": "SL",
-    "f1": "Dev",
-    "happy": 0.643,
-    "angry": 0.753,
-    "sad": 0.718,
-    "harm_Mean": 0.7016
+    "_F1": "Dev",
+    "_Happy": 0.643,
+    "_Angry": 0.753,
+    "_Sad": 0.718,
+    "_Harm_Mean": 0.7016
   },
   {
     "_1": "SL",
-    "f1": "Test",
-    "happy": 0.64,
-    "angry": 0.719,
-    "sad": 0.73,
-    "harm_Mean": 0.6939
+    "_F1": "Test",
+    "_Happy": 0.64,
+    "_Angry": 0.719,
+    "_Sad": 0.73,
+    "_Harm_Mean": 0.6939
   },
   {
     "_1": "SLD",
-    "f1": "Dev",
-    "happy": 0.647,
-    "angry": 0.761,
-    "sad": 0.736,
-    "harm_Mean": 0.7112
+    "_F1": "Dev",
+    "_Happy": 0.647,
+    "_Angry": 0.761,
+    "_Sad": 0.736,
+    "_Harm_Mean": 0.7112
   },
   {
     "_1": "SLD",
-    "f1": "Test",
-    "happy": 0.635,
-    "angry": 0.718,
-    "sad": 0.736,
-    "harm_Mean": 0.6934
+    "_F1": "Test",
+    "_Happy": 0.635,
+    "_Angry": 0.718,
+    "_Sad": 0.736,
+    "_Harm_Mean": 0.6934
   },
   {
     "_1": "HRLCE",
-    "f1": "Dev",
-    "happy": 0.746,
-    "angry": 0.759,
-    "sad": 0.81,
-    "harm_Mean": 0.7706
+    "_F1": "Dev",
+    "_Happy": 0.746,
+    "_Angry": 0.759,
+    "_Sad": 0.81,
+    "_Harm_Mean": 0.7706
   },
   {
     "_1": "HRLCE",
-    "f1": "Test",
-    "happy": 0.722,
-    "angry": 0.766,
-    "sad": 0.818,
-    "harm_Mean": 0.7666
+    "_F1": "Test",
+    "_Happy": 0.722,
+    "_Angry": 0.766,
+    "_Sad": 0.818,
+    "_Harm_Mean": 0.7666
   },
   {
     "_1": "BERT",
-    "f1": "Dev",
-    "happy": 0.7138,
-    "angry": 0.7736,
-    "sad": 0.8106,
-    "harm_Mean": 0.7638
+    "_F1": "Dev",
+    "_Happy": 0.7138,
+    "_Angry": 0.7736,
+    "_Sad": 0.8106,
+    "_Harm_Mean": 0.7638
   },
   {
     "_1": "BERT",
-    "f1": "Test",
-    "happy": 0.7151,
-    "angry": 0.7654,
-    "sad": 0.8157,
-    "harm_Mean": 0.7631
+    "_F1": "Test",
+    "_Happy": 0.7151,
+    "_Angry": 0.7654,
+    "_Sad": 0.8157,
+    "_Harm_Mean": 0.7631
   }
 ]

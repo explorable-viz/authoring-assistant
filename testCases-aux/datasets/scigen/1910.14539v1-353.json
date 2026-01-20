@@ -1,14 +1,14 @@
 [
   {
-    "model": "Wiseman et al. ( 2017 )",
-    "rotowire_test": 14.5
+    "_Model": "Wiseman et al. ( 2017 )",
+    "_Rotowire_test": 14.5
   },
   {
-    "model": "Puduppully et al. ( 2019 )",
-    "rotowire_test": 16.5
+    "_Model": "Puduppully et al. ( 2019 )",
+    "_Rotowire_test": 16.5
   },
   {
-    "model": "Ours (4-player)",
-    "rotowire_test": 22.2
+    "_Model": "Ours (4-player)",
+    "_Rotowire_test": 22.2
   }
 ]

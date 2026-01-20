@@ -1,27 +1,27 @@
 [
   {
-    "lang": "Exact",
-    "tigrinya": 0.0,
-    "oromo": 0.01
+    "_Lang": "Exact",
+    "_Tigrinya": 0.0,
+    "_Oromo": 0.01
   },
   {
-    "lang": "Trans Supervised",
-    "tigrinya": 0.21,
-    "oromo": 0.05
+    "_Lang": "Trans Supervised",
+    "_Tigrinya": 0.21,
+    "_Oromo": 0.05
   },
   {
-    "lang": "Trans Unsupervised",
-    "tigrinya": 0.21,
-    "oromo": 0.01
+    "_Lang": "Trans Unsupervised",
+    "_Tigrinya": 0.21,
+    "_Oromo": 0.01
   },
   {
-    "lang": "Encode",
-    "tigrinya": 0.16,
-    "oromo": 0.1
+    "_Lang": "Encode",
+    "_Tigrinya": 0.16,
+    "_Oromo": 0.1
   },
   {
-    "lang": "Pbel",
-    "tigrinya": 0.33,
-    "oromo": 0.11
+    "_Lang": "Pbel",
+    "_Tigrinya": 0.33,
+    "_Oromo": 0.11
   }
 ]

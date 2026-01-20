@@ -1,47 +1,47 @@
 [
   {
-    "model": "Zhou et al. ( 2017 )",
-    "bLEU_1": "-",
-    "bLEU_2": "-",
-    "bLEU_3": "-",
-    "bLEU_4": 13.29,
-    "mETEOR": "-",
-    "rOUGE_L": "-"
+    "_Model": "Zhou et al. ( 2017 )",
+    "_BLEU_1": "-",
+    "_BLEU_2": "-",
+    "_BLEU_3": "-",
+    "_BLEU_4": 13.29,
+    "_METEOR": "-",
+    "_ROUGE_L": "-"
   },
   {
-    "model": "Zhao et al. ( 2018 )*",
-    "bLEU_1": 45.69,
-    "bLEU_2": 29.58,
-    "bLEU_3": 22.16,
-    "bLEU_4": 16.85,
-    "mETEOR": 20.62,
-    "rOUGE_L": 44.99
+    "_Model": "Zhao et al. ( 2018 )*",
+    "_BLEU_1": 45.69,
+    "_BLEU_2": 29.58,
+    "_BLEU_3": 22.16,
+    "_BLEU_4": 16.85,
+    "_METEOR": 20.62,
+    "_ROUGE_L": 44.99
   },
   {
-    "model": "Kim et al. ( 2019 )",
-    "bLEU_1": "-",
-    "bLEU_2": "-",
-    "bLEU_3": "-",
-    "bLEU_4": 16.17,
-    "mETEOR": "-",
-    "rOUGE_L": "-"
+    "_Model": "Kim et al. ( 2019 )",
+    "_BLEU_1": "-",
+    "_BLEU_2": "-",
+    "_BLEU_3": "-",
+    "_BLEU_4": 16.17,
+    "_METEOR": "-",
+    "_ROUGE_L": "-"
   },
   {
-    "model": "Liu et al. ( 2019 )",
-    "bLEU_1": 46.58,
-    "bLEU_2": 30.9,
-    "bLEU_3": 22.82,
-    "bLEU_4": 17.55,
-    "mETEOR": 21.24,
-    "rOUGE_L": 44.53
+    "_Model": "Liu et al. ( 2019 )",
+    "_BLEU_1": 46.58,
+    "_BLEU_2": 30.9,
+    "_BLEU_3": 22.82,
+    "_BLEU_4": 17.55,
+    "_METEOR": 21.24,
+    "_ROUGE_L": 44.53
   },
   {
-    "model": " IWAQG",
-    "bLEU_1": 47.69,
-    "bLEU_2": 32.24,
-    "bLEU_3": 24.01,
-    "bLEU_4": 18.53,
-    "mETEOR": 22.33,
-    "rOUGE_L": 46.94
+    "_Model": "IWAQG",
+    "_BLEU_1": 47.69,
+    "_BLEU_2": 32.24,
+    "_BLEU_3": 24.01,
+    "_BLEU_4": 18.53,
+    "_METEOR": 22.33,
+    "_ROUGE_L": 46.94
   }
 ]

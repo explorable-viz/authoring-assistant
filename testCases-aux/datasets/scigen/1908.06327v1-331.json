@@ -1,42 +1,42 @@
 [
   {
-    "task_Additional_Models": "Metric",
-    "image_Sentence_Retrieval_SCAN": "Mean Recall",
-    "phrase_Grounding_QA_R_CNN": "Accuracy",
-    "text_to_Clip_TGN": "Average",
-    "image_Captioning_BUTD": "CIDEr",
-    "vQA_BAN": "Accuracy"
+    "_Task_Additional_Models": "Metric",
+    "_Image_Sentence_Retrieval_SCAN": "Mean Recall",
+    "_Phrase_Grounding_QA_R_CNN": "Accuracy",
+    "_Text_to_Clip_TGN": "Average",
+    "_Image_Captioning_BUTD": "CIDEr",
+    "_VQA_BAN": "Accuracy"
   },
   {
-    "task_Additional_Models": "Training from scratch",
-    "image_Sentence_Retrieval_SCAN": 83.2,
-    "phrase_Grounding_QA_R_CNN": 50.23,
-    "text_to_Clip_TGN": 43.91,
-    "image_Captioning_BUTD": 109.8,
-    "vQA_BAN": 68.98
+    "_Task_Additional_Models": "Training from scratch",
+    "_Image_Sentence_Retrieval_SCAN": 83.2,
+    "_Phrase_Grounding_QA_R_CNN": 50.23,
+    "_Text_to_Clip_TGN": 43.91,
+    "_Image_Captioning_BUTD": 109.8,
+    "_VQA_BAN": 68.98
   },
   {
-    "task_Additional_Models": "FastText + ft",
-    "image_Sentence_Retrieval_SCAN": 83.8,
-    "phrase_Grounding_QA_R_CNN": 53.01,
-    "text_to_Clip_TGN": 44.21,
-    "image_Captioning_BUTD": 110.3,
-    "vQA_BAN": 69.91
+    "_Task_Additional_Models": "FastText + ft",
+    "_Image_Sentence_Retrieval_SCAN": 83.8,
+    "_Phrase_Grounding_QA_R_CNN": 53.01,
+    "_Text_to_Clip_TGN": 44.21,
+    "_Image_Captioning_BUTD": 110.3,
+    "_VQA_BAN": 69.91
   },
   {
-    "task_Additional_Models": "GrOVLE (w/o multi-task pretraining) + ft",
-    "image_Sentence_Retrieval_SCAN": 84.1,
-    "phrase_Grounding_QA_R_CNN": 53.88,
-    "text_to_Clip_TGN": 45.26,
-    "image_Captioning_BUTD": 110.4,
-    "vQA_BAN": 69.36
+    "_Task_Additional_Models": "GrOVLE (w/o multi-task pretraining) + ft",
+    "_Image_Sentence_Retrieval_SCAN": 84.1,
+    "_Phrase_Grounding_QA_R_CNN": 53.88,
+    "_Text_to_Clip_TGN": 45.26,
+    "_Image_Captioning_BUTD": 110.4,
+    "_VQA_BAN": 69.36
   },
   {
-    "task_Additional_Models": "+ multi-task pretraining w/ target task + ft",
-    "image_Sentence_Retrieval_SCAN": 84.7,
-    "phrase_Grounding_QA_R_CNN": 54.1,
-    "text_to_Clip_TGN": 43.61,
-    "image_Captioning_BUTD": 111.6,
-    "vQA_BAN": 69.97
+    "_Task_Additional_Models": "+ multi-task pretraining w/ target task + ft",
+    "_Image_Sentence_Retrieval_SCAN": 84.7,
+    "_Phrase_Grounding_QA_R_CNN": 54.1,
+    "_Text_to_Clip_TGN": 43.61,
+    "_Image_Captioning_BUTD": 111.6,
+    "_VQA_BAN": 69.97
   }
 ]

@@ -1,37 +1,37 @@
 [
   {
-    "en⇒De": "Vanilla",
-    "params": 98700000.0,
-    "emb": 54500000.0,
-    "red": 0,
-    "bLEU": 27.62
+    "_En⇒De": "Vanilla",
+    "_Params": 98700000.0,
+    "_Emb": 54500000.0,
+    "_Red": 0,
+    "_BLEU": 27.62
   },
   {
-    "en⇒De": "Direct bridging",
-    "params": 98900000.0,
-    "emb": 54500000.0,
-    "red": 0,
-    "bLEU": 27.79
+    "_En⇒De": "Direct bridging",
+    "_Params": 98900000.0,
+    "_Emb": 54500000.0,
+    "_Red": 0,
+    "_BLEU": 27.79
   },
   {
-    "en⇒De": "Decoder WT",
-    "params": 80400000.0,
-    "emb": 36200000.0,
-    "red": 33.6,
-    "bLEU": 27.51
+    "_En⇒De": "Decoder WT",
+    "_Params": 80400000.0,
+    "_Emb": 36200000.0,
+    "_Red": 33.6,
+    "_BLEU": 27.51
   },
   {
-    "en⇒De": "Three-way WT",
-    "params": 63100000.0,
-    "emb": 18900000.0,
-    "red": 65.3,
-    "bLEU": 27.39
+    "_En⇒De": "Three-way WT",
+    "_Params": 63100000.0,
+    "_Emb": 18900000.0,
+    "_Red": 65.3,
+    "_BLEU": 27.39
   },
   {
-    "en⇒De": " Shared-private",
-    "params": 65000000.0,
-    "emb": 20900000.0,
-    "red": 63.1,
-    "bLEU": 28.06
+    "_En⇒De": "Shared-private",
+    "_Params": 65000000.0,
+    "_Emb": 20900000.0,
+    "_Red": 63.1,
+    "_BLEU": 28.06
   }
 ]

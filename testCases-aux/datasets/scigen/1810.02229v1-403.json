@@ -1,50 +1,50 @@
 [
   {
-    "class": "OCCURRENCE",
-    "training": 9041,
-    "dev": 162,
-    "test": 1949
+    "_Class": "OCCURRENCE",
+    "_Training": 9041,
+    "_Dev": 162,
+    "_Test": 1949
   },
   {
-    "class": "ASPECTUAL",
-    "training": 446,
-    "dev": 14,
-    "test": 107
+    "_Class": "ASPECTUAL",
+    "_Training": 446,
+    "_Dev": 14,
+    "_Test": 107
   },
   {
-    "class": "I_STATE",
-    "training": 1599,
-    "dev": 29,
-    "test": 355
+    "_Class": "I_STATE",
+    "_Training": 1599,
+    "_Dev": 29,
+    "_Test": 355
   },
   {
-    "class": "I_ACTION",
-    "training": 1476,
-    "dev": 25,
-    "test": 357
+    "_Class": "I_ACTION",
+    "_Training": 1476,
+    "_Dev": 25,
+    "_Test": 357
   },
   {
-    "class": "PERCEPTION",
-    "training": 162,
-    "dev": 2,
-    "test": 37
+    "_Class": "PERCEPTION",
+    "_Training": 162,
+    "_Dev": 2,
+    "_Test": 37
   },
   {
-    "class": "REPORTING",
-    "training": 714,
-    "dev": 8,
-    "test": 149
+    "_Class": "REPORTING",
+    "_Training": 714,
+    "_Dev": 8,
+    "_Test": 149
   },
   {
-    "class": "STATE",
-    "training": 4090,
-    "dev": 61,
-    "test": 843
+    "_Class": "STATE",
+    "_Training": 4090,
+    "_Dev": 61,
+    "_Test": 843
   },
   {
-    "class": "Overall Events",
-    "training": 17528,
-    "dev": 301,
-    "test": 3798
+    "_Class": "Overall Events",
+    "_Training": 17528,
+    "_Dev": 301,
+    "_Test": 3798
   }
 ]

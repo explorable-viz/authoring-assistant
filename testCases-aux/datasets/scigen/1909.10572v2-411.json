@@ -1,14 +1,14 @@
 [
   {
-    "method": "OE ",
-    "average_Precision": 0.761
+    "_Method": "OE",
+    "_Average_Precision": 0.761
   },
   {
-    "method": "Smoothed Box ",
-    "average_Precision": 0.795
+    "_Method": "Smoothed Box",
+    "_Average_Precision": 0.795
   },
   {
-    "method": "SPON (Our Approach)",
-    "average_Precision": 0.811
+    "_Method": "SPON (Our Approach)",
+    "_Average_Precision": 0.811
   }
 ]

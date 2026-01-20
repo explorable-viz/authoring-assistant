@@ -1,7 +1,7 @@
 [
   {
-    "BLSTM": " en-de",
-    "Method": "random + HotFlip",
+    "_BLSTM": "en-de",
+    "_Method": "random + HotFlip",
     "src": 57.09,
     "l1": 71.35,
     "l2": 48.84,
@@ -9,8 +9,8 @@
     "ltrans2": 49.42
   },
   {
-    "BLSTM": " en-de",
-    "Method": "Min-Grad + HotFlip",
+    "_BLSTM": "en-de",
+    "_Method": "Min-Grad + HotFlip",
     "src": 59.28,
     "l1": 75.55,
     "l2": 50.38,
@@ -18,8 +18,8 @@
     "ltrans2": 52.26
   },
   {
-    "BLSTM": " en-de",
-    "Method": "random + Soft-Att",
+    "_BLSTM": "en-de",
+    "_Method": "random + Soft-Att",
     "src": 13.77,
     "l1": 87.14,
     "l2": 19.2,
@@ -27,8 +27,8 @@
     "ltrans2": 21.62
   },
   {
-    "BLSTM": " en-de",
-    "Method": "Min-Grad + Soft-Att",
+    "_BLSTM": "en-de",
+    "_Method": "Min-Grad + Soft-Att",
     "src": 14.49,
     "l1": 89.86,
     "l2": 19.74,
@@ -36,8 +36,8 @@
     "ltrans2": 21.98
   },
   {
-    "BLSTM": " en-fr",
-    "Method": "random + HotFlip",
+    "_BLSTM": "en-fr",
+    "_Method": "random + HotFlip",
     "src": 60.87,
     "l1": 79.62,
     "l2": 39.28,
@@ -45,8 +45,8 @@
     "ltrans2": 41.73
   },
   {
-    "BLSTM": " en-fr",
-    "Method": "Min-Grad + HotFlip",
+    "_BLSTM": "en-fr",
+    "_Method": "Min-Grad + HotFlip",
     "src": 63.97,
     "l1": 84.87,
     "l2": 41.16,
@@ -54,8 +54,8 @@
     "ltrans2": 44.94
   },
   {
-    "BLSTM": " en-fr",
-    "Method": "random + Soft-Att",
+    "_BLSTM": "en-fr",
+    "_Method": "random + Soft-Att",
     "src": 12.99,
     "l1": 92.44,
     "l2": 10.62,
@@ -63,8 +63,8 @@
     "ltrans2": 12.12
   },
   {
-    "BLSTM": " en-fr",
-    "Method": "Min-Grad + Soft-Att",
+    "_BLSTM": "en-fr",
+    "_Method": "Min-Grad + Soft-Att",
     "src": 12.66,
     "l1": 93.87,
     "l2": 9.95,

@@ -1,128 +1,128 @@
 [
   {
-    "total_triples_millions": "Triples with semantic annotations",
-    "oPIEC_341_0": 166.3,
-    "oPIEC": "(49%)",
-    "oPIEC_Clean_104_0": 51.46,
-    "oPIEC_Clean": "(49%)",
-    "oPIEC_Linked_5_8": 3.37,
-    "oPIEC_Linked": "(58%)"
+    "_Total_triples_millions": "Triples with semantic annotations",
+    "_OPIEC_341_0": 166.3,
+    "_OPIEC": "(49%)",
+    "_OPIEC_Clean_104_0": 51.46,
+    "_OPIEC_Clean": "(49%)",
+    "_OPIEC_Linked_5_8": 3.37,
+    "_OPIEC_Linked": "(58%)"
   },
   {
-    "total_triples_millions": "negative polarity",
-    "oPIEC_341_0": 5.3,
-    "oPIEC": "(2%)",
-    "oPIEC_Clean_104_0": 1.33,
-    "oPIEC_Clean": "(1%)",
-    "oPIEC_Linked_5_8": 0.01,
-    "oPIEC_Linked": "(0%)"
+    "_Total_triples_millions": "negative polarity",
+    "_OPIEC_341_0": 5.3,
+    "_OPIEC": "(2%)",
+    "_OPIEC_Clean_104_0": 1.33,
+    "_OPIEC_Clean": "(1%)",
+    "_OPIEC_Linked_5_8": 0.01,
+    "_OPIEC_Linked": "(0%)"
   },
   {
-    "total_triples_millions": "possibility modality",
-    "oPIEC_341_0": 13.9,
-    "oPIEC": "(4%)",
-    "oPIEC_Clean_104_0": 3.27,
-    "oPIEC_Clean": "(3%)",
-    "oPIEC_Linked_5_8": 0.04,
-    "oPIEC_Linked": "(1%)"
+    "_Total_triples_millions": "possibility modality",
+    "_OPIEC_341_0": 13.9,
+    "_OPIEC": "(4%)",
+    "_OPIEC_Clean_104_0": 3.27,
+    "_OPIEC_Clean": "(3%)",
+    "_OPIEC_Linked_5_8": 0.04,
+    "_OPIEC_Linked": "(1%)"
   },
   {
-    "total_triples_millions": "quantities",
-    "oPIEC_341_0": 59.4,
-    "oPIEC": "(17%)",
-    "oPIEC_Clean_104_0": 15.91,
-    "oPIEC_Clean": "(15%)",
-    "oPIEC_Linked_5_8": 0.45,
-    "oPIEC_Linked": "(8%)"
+    "_Total_triples_millions": "quantities",
+    "_OPIEC_341_0": 59.4,
+    "_OPIEC": "(17%)",
+    "_OPIEC_Clean_104_0": 15.91,
+    "_OPIEC_Clean": "(15%)",
+    "_OPIEC_Linked_5_8": 0.45,
+    "_OPIEC_Linked": "(8%)"
   },
   {
-    "total_triples_millions": "attribution",
-    "oPIEC_341_0": 6.4,
-    "oPIEC": "(2%)",
-    "oPIEC_Clean_104_0": 1.44,
-    "oPIEC_Clean": "(1%)",
-    "oPIEC_Linked_5_8": 0.01,
-    "oPIEC_Linked": "(0%)"
+    "_Total_triples_millions": "attribution",
+    "_OPIEC_341_0": 6.4,
+    "_OPIEC": "(2%)",
+    "_OPIEC_Clean_104_0": 1.44,
+    "_OPIEC_Clean": "(1%)",
+    "_OPIEC_Linked_5_8": 0.01,
+    "_OPIEC_Linked": "(0%)"
   },
   {
-    "total_triples_millions": "time",
-    "oPIEC_341_0": 65.3,
-    "oPIEC": "(19%)",
-    "oPIEC_Clean_104_0": 19.66,
-    "oPIEC_Clean": "(19%)",
-    "oPIEC_Linked_5_8": 0.58,
-    "oPIEC_Linked": "(1%)"
+    "_Total_triples_millions": "time",
+    "_OPIEC_341_0": 65.3,
+    "_OPIEC": "(19%)",
+    "_OPIEC_Clean_104_0": 19.66,
+    "_OPIEC_Clean": "(19%)",
+    "_OPIEC_Linked_5_8": 0.58,
+    "_OPIEC_Linked": "(1%)"
   },
   {
-    "total_triples_millions": "space",
-    "oPIEC_341_0": 61.5,
-    "oPIEC": "(18%)",
-    "oPIEC_Clean_104_0": 22.11,
-    "oPIEC_Clean": "(21%)",
-    "oPIEC_Linked_5_8": 2.64,
-    "oPIEC_Linked": "(45%)"
+    "_Total_triples_millions": "space",
+    "_OPIEC_341_0": 61.5,
+    "_OPIEC": "(18%)",
+    "_OPIEC_Clean_104_0": 22.11,
+    "_OPIEC_Clean": "(21%)",
+    "_OPIEC_Linked_5_8": 2.64,
+    "_OPIEC_Linked": "(45%)"
   },
   {
-    "total_triples_millions": "space OR time",
-    "oPIEC_341_0": 111.3,
-    "oPIEC": "(33%)",
-    "oPIEC_Clean_104_0": 37.22,
-    "oPIEC_Clean": "(36%)",
-    "oPIEC_Linked_5_8": 3.01,
-    "oPIEC_Linked": "(52%)"
+    "_Total_triples_millions": "space OR time",
+    "_OPIEC_341_0": 111.3,
+    "_OPIEC": "(33%)",
+    "_OPIEC_Clean_104_0": 37.22,
+    "_OPIEC_Clean": "(36%)",
+    "_OPIEC_Linked_5_8": 3.01,
+    "_OPIEC_Linked": "(52%)"
   },
   {
-    "total_triples_millions": "space AND time",
-    "oPIEC_341_0": 15.4,
-    "oPIEC": "(5%)",
-    "oPIEC_Clean_104_0": 4.54,
-    "oPIEC_Clean": "(4%)",
-    "oPIEC_Linked_5_8": 0.2,
-    "oPIEC_Linked": "(4%)"
+    "_Total_triples_millions": "space AND time",
+    "_OPIEC_341_0": 15.4,
+    "_OPIEC": "(5%)",
+    "_OPIEC_Clean_104_0": 4.54,
+    "_OPIEC_Clean": "(4%)",
+    "_OPIEC_Linked_5_8": 0.2,
+    "_OPIEC_Linked": "(4%)"
   },
   {
-    "total_triples_millions": "Triple length in tokens (  μ±  σ)",
-    "oPIEC_341_0": 7.66,
-    "oPIEC": 7.66,
-    "oPIEC_Clean_104_0": 6.06,
-    "oPIEC_Clean": 6.06,
-    "oPIEC_Linked_5_8": 6.45,
-    "oPIEC_Linked": 6.45
+    "_Total_triples_millions": "Triple length in tokens (  μ±  σ)",
+    "_OPIEC_341_0": 7.66,
+    "_OPIEC": 7.66,
+    "_OPIEC_Clean_104_0": 6.06,
+    "_OPIEC_Clean": 6.06,
+    "_OPIEC_Linked_5_8": 6.45,
+    "_OPIEC_Linked": 6.45
   },
   {
-    "total_triples_millions": "subject (  μ±  σ)",
-    "oPIEC_341_0": 2.12,
-    "oPIEC": 2.12,
-    "oPIEC_Clean_104_0": 1.48,
-    "oPIEC_Clean": 1.48,
-    "oPIEC_Linked_5_8": 1.92,
-    "oPIEC_Linked": 1.92
+    "_Total_triples_millions": "subject (  μ±  σ)",
+    "_OPIEC_341_0": 2.12,
+    "_OPIEC": 2.12,
+    "_OPIEC_Clean_104_0": 1.48,
+    "_OPIEC_Clean": 1.48,
+    "_OPIEC_Linked_5_8": 1.92,
+    "_OPIEC_Linked": 1.92
   },
   {
-    "total_triples_millions": "relation (  μ±  σ)",
-    "oPIEC_341_0": 3.01,
-    "oPIEC": 3.01,
-    "oPIEC_Clean_104_0": 3.1,
-    "oPIEC_Clean": 3.1,
-    "oPIEC_Linked_5_8": 2.77,
-    "oPIEC_Linked": 2.77
+    "_Total_triples_millions": "relation (  μ±  σ)",
+    "_OPIEC_341_0": 3.01,
+    "_OPIEC": 3.01,
+    "_OPIEC_Clean_104_0": 3.1,
+    "_OPIEC_Clean": 3.1,
+    "_OPIEC_Linked_5_8": 2.77,
+    "_OPIEC_Linked": 2.77
   },
   {
-    "total_triples_millions": "object (  μ±  σ)",
-    "oPIEC_341_0": 2.52,
-    "oPIEC": 2.52,
-    "oPIEC_Clean_104_0": 1.48,
-    "oPIEC_Clean": 1.48,
-    "oPIEC_Linked_5_8": 1.76,
-    "oPIEC_Linked": 1.76
+    "_Total_triples_millions": "object (  μ±  σ)",
+    "_OPIEC_341_0": 2.52,
+    "_OPIEC": 2.52,
+    "_OPIEC_Clean_104_0": 1.48,
+    "_OPIEC_Clean": 1.48,
+    "_OPIEC_Linked_5_8": 1.76,
+    "_OPIEC_Linked": 1.76
   },
   {
-    "total_triples_millions": "Confidence score (  μ±  σ)",
-    "oPIEC_341_0": 0.53,
-    "oPIEC": 0.53,
-    "oPIEC_Clean_104_0": 0.59,
-    "oPIEC_Clean": 0.59,
-    "oPIEC_Linked_5_8": 0.61,
-    "oPIEC_Linked": 0.61
+    "_Total_triples_millions": "Confidence score (  μ±  σ)",
+    "_OPIEC_341_0": 0.53,
+    "_OPIEC": 0.53,
+    "_OPIEC_Clean_104_0": 0.59,
+    "_OPIEC_Clean": 0.59,
+    "_OPIEC_Linked_5_8": 0.61,
+    "_OPIEC_Linked": 0.61
   }
 ]

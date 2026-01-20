@@ -1,26 +1,26 @@
 [
   {
-    "model": "PGC See17",
-    "incorrect": 8,
-    "rOUGE_1": 39.49,
-    "rOUGE_2": 17.24,
-    "rOUGE_L": 36.35,
-    "length": 59.7
+    "_Model": "PGC See17",
+    "_Incorrect": 8,
+    "_ROUGE_1": 39.49,
+    "_ROUGE_2": 17.24,
+    "_ROUGE_L": 36.35,
+    "_Length": 59.7
   },
   {
-    "model": "FAS Chen18",
-    "incorrect": 26,
-    "rOUGE_1": 40.88,
-    "rOUGE_2": 17.8,
-    "rOUGE_L": 38.53,
-    "length": 72.1
+    "_Model": "FAS Chen18",
+    "_Incorrect": 26,
+    "_ROUGE_1": 40.88,
+    "_ROUGE_2": 17.8,
+    "_ROUGE_L": 38.53,
+    "_Length": 72.1
   },
   {
-    "model": "BUS Gehrmann18",
-    "incorrect": 25,
-    "rOUGE_1": 41.52,
-    "rOUGE_2": 18.76,
-    "rOUGE_L": 38.6,
-    "length": 54.4
+    "_Model": "BUS Gehrmann18",
+    "_Incorrect": 25,
+    "_ROUGE_1": 41.52,
+    "_ROUGE_2": 18.76,
+    "_ROUGE_L": 38.6,
+    "_Length": 54.4
   }
 ]

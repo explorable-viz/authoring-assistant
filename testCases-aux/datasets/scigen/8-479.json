@@ -1,38 +1,38 @@
 [
   {
     "_1": "",
-    "setup_Full_DBLESS": "GL",
-    "setup_Full_WBLESS": "GL",
-    "setup_Full_BIBLESS": "GL",
-    "setup_Disjoint_DBLESS": "GL",
-    "setup_Disjoint_WBLESS": "GL",
-    "setup_Disjoint_BIBLESS": "GL"
+    "_Setup_Full_DBLESS": "GL",
+    "_Setup_Full_WBLESS": "GL",
+    "_Setup_Full_BIBLESS": "GL",
+    "_Setup_Disjoint_DBLESS": "GL",
+    "_Setup_Disjoint_WBLESS": "GL",
+    "_Setup_Disjoint_BIBLESS": "GL"
   },
   {
     "_1": "lear [Vulic:2018naaclps]",
-    "setup_Full_DBLESS": 0.955,
-    "setup_Full_WBLESS": 0.91,
-    "setup_Full_BIBLESS": 0.875,
-    "setup_Disjoint_DBLESS": 0.531,
-    "setup_Disjoint_WBLESS": 0.529,
-    "setup_Disjoint_BIBLESS": 0.389
+    "_Setup_Full_DBLESS": 0.955,
+    "_Setup_Full_WBLESS": 0.91,
+    "_Setup_Full_BIBLESS": 0.875,
+    "_Setup_Disjoint_DBLESS": 0.531,
+    "_Setup_Disjoint_WBLESS": 0.529,
+    "_Setup_Disjoint_BIBLESS": 0.389
   },
   {
     "_1": "postle dffn",
-    "setup_Full_DBLESS": 0.955,
-    "setup_Full_WBLESS": 0.91,
-    "setup_Full_BIBLESS": 0.875,
-    "setup_Disjoint_DBLESS": 0.825,
-    "setup_Disjoint_WBLESS": 0.746,
-    "setup_Disjoint_BIBLESS": 0.677
+    "_Setup_Full_DBLESS": 0.955,
+    "_Setup_Full_WBLESS": 0.91,
+    "_Setup_Full_BIBLESS": 0.875,
+    "_Setup_Disjoint_DBLESS": 0.825,
+    "_Setup_Disjoint_WBLESS": 0.746,
+    "_Setup_Disjoint_BIBLESS": 0.677
   },
   {
     "_1": "postle adv",
-    "setup_Full_DBLESS": 0.955,
-    "setup_Full_WBLESS": 0.91,
-    "setup_Full_BIBLESS": 0.875,
-    "setup_Disjoint_DBLESS": 0.888,
-    "setup_Disjoint_WBLESS": 0.766,
-    "setup_Disjoint_BIBLESS": 0.69
+    "_Setup_Full_DBLESS": 0.955,
+    "_Setup_Full_WBLESS": 0.91,
+    "_Setup_Full_BIBLESS": 0.875,
+    "_Setup_Disjoint_DBLESS": 0.888,
+    "_Setup_Disjoint_WBLESS": 0.766,
+    "_Setup_Disjoint_BIBLESS": 0.69
   }
 ]

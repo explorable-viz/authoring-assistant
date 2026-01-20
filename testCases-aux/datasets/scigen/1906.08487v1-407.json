@@ -1,37 +1,37 @@
 [
   {
     "_1": "Gold",
-    "bLEU": "-",
-    "empathy": 3.651,
-    "relevance": 3.752,
-    "fluency": 3.718
+    "_BLEU": "-",
+    "_Empathy": 3.651,
+    "_Relevance": 3.752,
+    "_Fluency": 3.718
   },
   {
     "_1": "Seq2Seq",
-    "bLEU": 2.29,
-    "empathy": 3.013,
-    "relevance": 3.173,
-    "fluency": 2.967
+    "_BLEU": 2.29,
+    "_Empathy": 3.013,
+    "_Relevance": 3.173,
+    "_Fluency": 2.967
   },
   {
     "_1": "MultiSeq",
-    "bLEU": 2.45,
-    "empathy": 2.979,
-    "relevance": 3.25,
-    "fluency": 2.952
+    "_BLEU": 2.45,
+    "_Empathy": 2.979,
+    "_Relevance": 3.25,
+    "_Fluency": 2.952
   },
   {
     "_1": "RL Current",
-    "bLEU": 2.31,
-    "empathy": 3.18,
-    "relevance": 3.187,
-    "fluency": 3.14
+    "_BLEU": 2.31,
+    "_Empathy": 3.18,
+    "_Relevance": 3.187,
+    "_Fluency": 3.14
   },
   {
     "_1": "RL Look-ahead",
-    "bLEU": 2.32,
-    "empathy": 3.327,
-    "relevance": 3.593,
-    "fluency": 3.327
+    "_BLEU": 2.32,
+    "_Empathy": 3.327,
+    "_Relevance": 3.593,
+    "_Fluency": 3.327
   }
 ]

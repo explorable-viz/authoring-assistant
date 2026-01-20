@@ -1,38 +1,38 @@
 [
   {
-    "Model": "Frequency",
-    "Sentiment": 0.332,
-    "Stance": 0.397,
-    "Hate": 0.057
+    "_Model": "Frequency",
+    "_Sentiment": 0.332,
+    "_Stance": 0.397,
+    "_Hate": 0.057
   },
   {
-    "Model": "LING",
-    "Sentiment": 0.676,
-    "Stance": 0.569,
-    "Hate": 0.624
+    "_Model": "LING",
+    "_Sentiment": 0.676,
+    "_Stance": 0.569,
+    "_Hate": 0.624
   },
   {
-    "Model": "LING+random",
-    "Sentiment": 0.657,
-    "Stance": 0.571,
-    "Hate": 0.6
+    "_Model": "LING+random",
+    "_Sentiment": 0.657,
+    "_Stance": 0.571,
+    "_Hate": 0.6
   },
   {
-    "Model": "LING+PV",
-    "Sentiment": 0.671,
-    "Stance": 0.601,
-    "Hate": 0.667
+    "_Model": "LING+PV",
+    "_Sentiment": 0.671,
+    "_Stance": 0.601,
+    "_Hate": 0.667
   },
   {
-    "Model": "LING+N2V",
-    "Sentiment": 0.672,
-    "Stance": 0.629,
-    "Hate": 0.656
+    "_Model": "LING+N2V",
+    "_Sentiment": 0.672,
+    "_Stance": 0.629,
+    "_Hate": 0.656
   },
   {
-    "Model": "LING+GAT",
-    "Sentiment": 0.666,
-    "Stance": 0.64,
-    "Hate": 0.674
+    "_Model": "LING+GAT",
+    "_Sentiment": 0.666,
+    "_Stance": 0.64,
+    "_Hate": 0.674
   }
 ]

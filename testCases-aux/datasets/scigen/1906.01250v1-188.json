@@ -1,18 +1,18 @@
 [
   {
-    "model": "Our model",
-    "aIDA_A": 88.05
+    "_Model": "Our model",
+    "_AIDA_A": 88.05
   },
   {
-    "model": "without local",
-    "aIDA_A": 82.41
+    "_Model": "without local",
+    "_AIDA_A": 82.41
   },
   {
-    "model": "without attention",
-    "aIDA_A": 86.82
+    "_Model": "without attention",
+    "_AIDA_A": 86.82
   },
   {
-    "model": "No disambiguation model (  sc)",
-    "aIDA_A": 86.42
+    "_Model": "No disambiguation model (  sc)",
+    "_AIDA_A": 86.42
   }
 ]

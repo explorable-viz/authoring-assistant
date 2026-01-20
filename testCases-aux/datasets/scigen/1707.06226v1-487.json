@@ -1,74 +1,74 @@
 [
   {
-    "experiment": "SVM  rbl",
-    "S_P": 65.55,
-    "S_R": 66.67,
-    "S_F1": 66.1,
-    "NS_P": 66.1,
-    "NS_R": 64.96,
-    "NS_F1": 65.52
+    "_Experiment": "SVM  rbl",
+    "_S_P": 65.55,
+    "_S_R": 66.67,
+    "_S_F1": 66.1,
+    "_NS_P": 66.1,
+    "_NS_R": 64.96,
+    "_NS_F1": 65.52
   },
   {
-    "experiment": "SVM  c+  rbl",
-    "S_P": 63.32,
-    "S_R": 61.97,
-    "S_F1": 62.63,
-    "NS_P": 62.77,
-    "NS_R": 64.1,
-    "NS_F1": 63.5
+    "_Experiment": "SVM  c+  rbl",
+    "_S_P": 63.32,
+    "_S_R": 61.97,
+    "_S_F1": 62.63,
+    "_NS_P": 62.77,
+    "_NS_R": 64.1,
+    "_NS_F1": 63.5
   },
   {
-    "experiment": "LSTM  r",
-    "S_P": 67.9,
-    "S_R": 66.23,
-    "S_F1": 67.1,
-    "NS_P": 67.08,
-    "NS_R": 68.8,
-    "NS_F1": 67.93
+    "_Experiment": "LSTM  r",
+    "_S_P": 67.9,
+    "_S_R": 66.23,
+    "_S_F1": 67.1,
+    "_NS_P": 67.08,
+    "_NS_R": 68.8,
+    "_NS_F1": 67.93
   },
   {
-    "experiment": "LSTM  c+LSTM  r",
-    "S_P": 66.19,
-    "S_R": 79.49,
-    "S_F1": 72.23,
-    "NS_P": 74.33,
-    "NS_R": 59.4,
-    "NS_F1": 66.03
+    "_Experiment": "LSTM  c+LSTM  r",
+    "_S_P": 66.19,
+    "_S_R": 79.49,
+    "_S_F1": 72.23,
+    "_NS_P": 74.33,
+    "_NS_R": 59.4,
+    "_NS_F1": 66.03
   },
   {
-    "experiment": "LSTM  conditional",
-    "S_P": 70.03,
-    "S_R": 76.92,
-    "S_F1": 73.32,
-    "NS_P": 74.41,
-    "NS_R": 67.1,
-    "NS_F1": 70.56
+    "_Experiment": "LSTM  conditional",
+    "_S_P": 70.03,
+    "_S_R": 76.92,
+    "_S_F1": 73.32,
+    "_NS_P": 74.41,
+    "_NS_R": 67.1,
+    "_NS_F1": 70.56
   },
   {
-    "experiment": "LSTM  ras",
-    "S_P": 69.45,
-    "S_R": 70.94,
-    "S_F1": 70.19,
-    "NS_P": 70.3,
-    "NS_R": 68.8,
-    "NS_F1": 69.45
+    "_Experiment": "LSTM  ras",
+    "_S_P": 69.45,
+    "_S_R": 70.94,
+    "_S_F1": 70.19,
+    "_NS_P": 70.3,
+    "_NS_R": 68.8,
+    "_NS_F1": 69.45
   },
   {
-    "experiment": "LSTM  cas+LSTM  ras",
-    "S_P": 66.9,
-    "S_R": 82.05,
-    "S_F1": 73.7,
-    "NS_P": 76.8,
-    "NS_R": 59.4,
-    "NS_F1": 66.99
+    "_Experiment": "LSTM  cas+LSTM  ras",
+    "_S_P": 66.9,
+    "_S_R": 82.05,
+    "_S_F1": 73.7,
+    "_NS_P": 76.8,
+    "_NS_R": 59.4,
+    "_NS_F1": 66.99
   },
   {
-    "experiment": "LSTM  caw+  s+LSTM  raw+  s",
-    "S_P": 65.9,
-    "S_R": 74.35,
-    "S_F1": 69.88,
-    "NS_P": 70.59,
-    "NS_R": 61.53,
-    "NS_F1": 65.75
+    "_Experiment": "LSTM  caw+  s+LSTM  raw+  s",
+    "_S_P": 65.9,
+    "_S_R": 74.35,
+    "_S_F1": 69.88,
+    "_NS_P": 70.59,
+    "_NS_R": 61.53,
+    "_NS_F1": 65.75
   }
 ]

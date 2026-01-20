@@ -1,37 +1,37 @@
 [
   {
-    "top_synset": "of domain",
-    "size": "#syns.",
-    "max": "depth",
-    "num_basic": "level",
+    "_Top_synset": "of domain",
+    "_Size": "#syns.",
+    "_Max": "depth",
+    "_num_basic": "level",
     "κ": ""
   },
   {
-    "top_synset": "Hand tool",
-    "size": 157,
-    "max": 6,
-    "num_basic": 30,
+    "_Top_synset": "Hand tool",
+    "_Size": 157,
+    "_Max": 6,
+    "_num_basic": 30,
     "κ": 0.73
   },
   {
-    "top_synset": "Edible fruit",
-    "size": 197,
-    "max": 5,
-    "num_basic": 77,
+    "_Top_synset": "Edible fruit",
+    "_Size": 197,
+    "_Max": 5,
+    "_num_basic": 77,
     "κ": 0.78
   },
   {
-    "top_synset": "Musical Instr.",
-    "size": 164,
-    "max": 7,
-    "num_basic": 54,
+    "_Top_synset": "Musical Instr.",
+    "_Size": 164,
+    "_Max": 7,
+    "_num_basic": 54,
     "κ": 0.64
   },
   {
-    "top_synset": "All",
-    "size": 518,
-    "max": 7,
-    "num_basic": 161,
+    "_Top_synset": "All",
+    "_Size": 518,
+    "_Max": 7,
+    "_num_basic": 161,
     "κ": 0.73
   }
 ]

@@ -1,79 +1,79 @@
 [
   {
-    "model": "Model",
-    "K": " K",
-    "iMDb": "IMDb",
-    "aG’s": "News",
-    "sNLI": "SNLI"
+    "_Model": "Model",
+    "_K": "K",
+    "_IMDb": "IMDb",
+    "_AG’s": "News",
+    "_SNLI": "SNLI"
   },
   {
-    "model": "BERTSDV",
-    "K": 1,
-    "iMDb": 5.39,
-    "aG’s": 5.38,
-    "sNLI": 91.2
+    "_Model": "BERTSDV",
+    "_K": 1,
+    "_IMDb": 5.39,
+    "_AG’s": 5.38,
+    "_SNLI": 91.2
   },
   {
-    "model": "BERTSDV",
-    "K": 2,
-    "iMDb": 5.44,
-    "aG’s": 5.39,
-    "sNLI": 91.1
+    "_Model": "BERTSDV",
+    "_K": 2,
+    "_IMDb": 5.44,
+    "_AG’s": 5.39,
+    "_SNLI": 91.1
   },
   {
-    "model": "BERTSDV",
-    "K": 3,
-    "iMDb": 5.4,
-    "aG’s": 5.5,
-    "sNLI": 91.2
+    "_Model": "BERTSDV",
+    "_K": 3,
+    "_IMDb": 5.4,
+    "_AG’s": 5.5,
+    "_SNLI": 91.2
   },
   {
-    "model": "BERTSDV",
-    "K": 4,
-    "iMDb": 5.47,
-    "aG’s": 5.49,
-    "sNLI": 91.2
+    "_Model": "BERTSDV",
+    "_K": 4,
+    "_IMDb": 5.47,
+    "_AG’s": 5.49,
+    "_SNLI": 91.2
   },
   {
-    "model": "",
-    "K": 5,
-    "iMDb": 5.35,
-    "aG’s": 5.55,
-    "sNLI": 91.1
+    "_Model": "",
+    "_K": 5,
+    "_IMDb": 5.35,
+    "_AG’s": 5.55,
+    "_SNLI": 91.1
   },
   {
-    "model": "BERTSDA",
-    "K": " T−1",
-    "iMDb": 5.41,
-    "aG’s": 5.29,
-    "sNLI": 91.0
+    "_Model": "BERTSDA",
+    "_K": "T−1",
+    "_IMDb": 5.41,
+    "_AG’s": 5.29,
+    "_SNLI": 91.0
   },
   {
-    "model": "BERTSDA",
-    "K": 2,
-    "iMDb": 5.46,
-    "aG’s": 5.49,
-    "sNLI": 91.2
+    "_Model": "BERTSDA",
+    "_K": 2,
+    "_IMDb": 5.46,
+    "_AG’s": 5.49,
+    "_SNLI": 91.2
   },
   {
-    "model": "BERTSDA",
-    "K": 3,
-    "iMDb": 5.48,
-    "aG’s": 5.55,
-    "sNLI": 91.1
+    "_Model": "BERTSDA",
+    "_K": 3,
+    "_IMDb": 5.48,
+    "_AG’s": 5.55,
+    "_SNLI": 91.1
   },
   {
-    "model": "BERTSDA",
-    "K": 4,
-    "iMDb": 5.44,
-    "aG’s": 5.52,
-    "sNLI": 91.1
+    "_Model": "BERTSDA",
+    "_K": 4,
+    "_IMDb": 5.44,
+    "_AG’s": 5.52,
+    "_SNLI": 91.1
   },
   {
-    "model": "",
-    "K": 5,
-    "iMDb": 5.29,
-    "aG’s": 5.41,
-    "sNLI": 91.1
+    "_Model": "",
+    "_K": 5,
+    "_IMDb": 5.29,
+    "_AG’s": 5.41,
+    "_SNLI": 91.1
   }
 ]

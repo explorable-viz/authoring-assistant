@@ -1,62 +1,62 @@
 [
   {
-    "dataset": "Chatzakou:2017:MBD:3091478.3091487",
-    "num_Tweets": 9484,
-    "labels": "aggressive, bullying, spam, normal",
-    "annotators_Tweet": 5
+    "_Dataset": "Chatzakou:2017:MBD:3091478.3091487",
+    "_num_Tweets": 9484,
+    "_Labels": "aggressive, bullying, spam, normal",
+    "_Annotators_Tweet": 5
   },
   {
-    "dataset": "DBLP:conf/naacl/WaseemH16",
-    "num_Tweets": "16, 914",
-    "labels": "racist, sexist, normal",
-    "annotators_Tweet": 1
+    "_Dataset": "DBLP:conf/naacl/WaseemH16",
+    "_num_Tweets": "16, 914",
+    "_Labels": "racist, sexist, normal",
+    "_Annotators_Tweet": 1
   },
   {
-    "dataset": "DavidsonWMW17",
-    "num_Tweets": "24, 802",
-    "labels": "hateful, offensive (but not hateful), neither",
-    "annotators_Tweet": "3 or more"
+    "_Dataset": "DavidsonWMW17",
+    "_num_Tweets": "24, 802",
+    "_Labels": "hateful, offensive (but not hateful), neither",
+    "_Annotators_Tweet": "3 or more"
   },
   {
-    "dataset": "Golbeck2017",
-    "num_Tweets": 35000,
-    "labels": "the worst, threats, hate speech, direct",
-    "annotators_Tweet": "2 to 3"
+    "_Dataset": "Golbeck2017",
+    "_num_Tweets": 35000,
+    "_Labels": "the worst, threats, hate speech, direct",
+    "_Annotators_Tweet": "2 to 3"
   },
   {
-    "dataset": "Golbeck2017",
-    "num_Tweets": 35000,
-    "labels": "harassment, potentially offensive, non-harassment",
-    "annotators_Tweet": "2 to 3"
+    "_Dataset": "Golbeck2017",
+    "_num_Tweets": 35000,
+    "_Labels": "harassment, potentially offensive, non-harassment",
+    "_Annotators_Tweet": "2 to 3"
   },
   {
-    "dataset": "FountaDCLBSVSK18",
-    "num_Tweets": "80, 000",
-    "labels": "offensive, abusive, hateful speech,",
-    "annotators_Tweet": "5 to 20"
+    "_Dataset": "FountaDCLBSVSK18",
+    "_num_Tweets": "80, 000",
+    "_Labels": "offensive, abusive, hateful speech,",
+    "_Annotators_Tweet": "5 to 20"
   },
   {
-    "dataset": "FountaDCLBSVSK18",
-    "num_Tweets": "80, 000",
-    "labels": "aggressive, cyberbullying, spam, normal",
-    "annotators_Tweet": "5 to 20"
+    "_Dataset": "FountaDCLBSVSK18",
+    "_num_Tweets": "80, 000",
+    "_Labels": "aggressive, cyberbullying, spam, normal",
+    "_Annotators_Tweet": "5 to 20"
   },
   {
-    "dataset": "hatelingo",
-    "num_Tweets": 28608,
-    "labels": "directed, generalized + target = archaic, class, disability,",
-    "annotators_Tweet": 3
+    "_Dataset": "hatelingo",
+    "_num_Tweets": 28608,
+    "_Labels": "directed, generalized + target = archaic, class, disability,",
+    "_Annotators_Tweet": 3
   },
   {
-    "dataset": "hatelingo",
-    "num_Tweets": 28608,
-    "labels": "ethnicity, gender, nationality, religion, sexual orientation",
-    "annotators_Tweet": 3
+    "_Dataset": "hatelingo",
+    "_num_Tweets": 28608,
+    "_Labels": "ethnicity, gender, nationality, religion, sexual orientation",
+    "_Annotators_Tweet": 3
   },
   {
-    "dataset": "Ours",
-    "num_Tweets": 13000,
-    "labels": "Labels for five different aspects",
-    "annotators_Tweet": 5
+    "_Dataset": "Ours",
+    "_num_Tweets": 13000,
+    "_Labels": "Labels for five different aspects",
+    "_Annotators_Tweet": 5
   }
 ]

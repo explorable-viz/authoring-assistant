@@ -1,8 +1,8 @@
 [
   {
-    "dataset": " Stack Overflow",
+    "dataset": "Stack Overflow",
     "tool": "SentiStrength",
-    "num_correct_prediction": 1043,
+    "_num_correct_prediction": 1043,
     "positive_precision": 0.2,
     "positive_recall": 0.359,
     "positive_F1": 0.257,
@@ -16,7 +16,7 @@
   {
     "dataset": "positive: 178",
     "tool": "NLTK",
-    "num_correct_prediction": 1168,
+    "_num_correct_prediction": 1168,
     "positive_precision": 0.317,
     "positive_recall": 0.244,
     "positive_F1": 0.276,
@@ -30,7 +30,7 @@
   {
     "dataset": "neutral: 1191",
     "tool": "Standford CoreNLP",
-    "num_correct_prediction": 604,
+    "_num_correct_prediction": 604,
     "positive_precision": 0.231,
     "positive_recall": 0.344,
     "positive_F1": 0.276,
@@ -44,7 +44,7 @@
   {
     "dataset": "negative: 131",
     "tool": "SentiStrength-SE",
-    "num_correct_prediction": 1170,
+    "_num_correct_prediction": 1170,
     "positive_precision": 0.312,
     "positive_recall": 0.221,
     "positive_F1": 0.259,
@@ -58,7 +58,7 @@
   {
     "dataset": "sum: 1500",
     "tool": "Stanford CoreNLP SO",
-    "num_correct_prediction": 1139,
+    "_num_correct_prediction": 1139,
     "positive_precision": 0.317,
     "positive_recall": 0.145,
     "positive_F1": 0.199,
@@ -72,7 +72,7 @@
   {
     "dataset": "",
     "tool": "N-gram auto-sklearn",
-    "num_correct_prediction": 1317,
+    "_num_correct_prediction": 1317,
     "positive_precision": 0.667,
     "positive_recall": 0.316,
     "positive_F1": 0.418,
@@ -86,7 +86,7 @@
   {
     "dataset": "",
     "tool": "N-gram auto-sklearn with SMOTE†",
-    "num_correct_prediction": "-",
+    "_num_correct_prediction": "-",
     "positive_precision": 0.68,
     "positive_recall": 0.005,
     "positive_F1": 0.009,
@@ -98,9 +98,9 @@
     "negative_F1": 0.251
   },
   {
-    "dataset": " App reviews",
+    "dataset": "App reviews",
     "tool": "SentiStrength",
-    "num_correct_prediction": 213,
+    "_num_correct_prediction": 213,
     "positive_precision": 0.745,
     "positive_recall": 0.866,
     "positive_F1": 0.801,
@@ -114,7 +114,7 @@
   {
     "dataset": "positive: 186",
     "tool": "NLTK",
-    "num_correct_prediction": 184,
+    "_num_correct_prediction": 184,
     "positive_precision": 0.751,
     "positive_recall": 0.812,
     "positive_F1": 0.78,
@@ -128,7 +128,7 @@
   {
     "dataset": "neutral: 25",
     "tool": "Standford CoreNLP",
-    "num_correct_prediction": 237,
+    "_num_correct_prediction": 237,
     "positive_precision": 0.831,
     "positive_recall": 0.715,
     "positive_F1": 0.769,
@@ -142,7 +142,7 @@
   {
     "dataset": "negative: 130",
     "tool": "SentiStrength-SE",
-    "num_correct_prediction": 201,
+    "_num_correct_prediction": 201,
     "positive_precision": 0.741,
     "positive_recall": 0.817,
     "positive_F1": 0.777,
@@ -156,7 +156,7 @@
   {
     "dataset": "sum: 341",
     "tool": "Stanford CoreNLP SO",
-    "num_correct_prediction": 142,
+    "_num_correct_prediction": 142,
     "positive_precision": 0.77,
     "positive_recall": 0.253,
     "positive_F1": 0.381,
@@ -170,7 +170,7 @@
   {
     "dataset": "",
     "tool": "N-gram auto-sklearn",
-    "num_correct_prediction": 293,
+    "_num_correct_prediction": 293,
     "positive_precision": 0.822,
     "positive_recall": 0.894,
     "positive_F1": 0.853,
@@ -184,7 +184,7 @@
   {
     "dataset": "",
     "tool": "N-gram auto-sklearn with SMOTE†",
-    "num_correct_prediction": "-",
+    "_num_correct_prediction": "-",
     "positive_precision": 0.52,
     "positive_recall": 0.885,
     "positive_F1": 0.641,
@@ -196,9 +196,9 @@
     "negative_F1": 0.607
   },
   {
-    "dataset": " Jira issues",
+    "dataset": "Jira issues",
     "tool": "SentiStrength",
-    "num_correct_prediction": 714,
+    "_num_correct_prediction": 714,
     "positive_precision": 0.85,
     "positive_recall": 0.921,
     "positive_F1": 0.884,
@@ -212,7 +212,7 @@
   {
     "dataset": "positive: 290",
     "tool": "NLTK",
-    "num_correct_prediction": 276,
+    "_num_correct_prediction": 276,
     "positive_precision": 0.84,
     "positive_recall": 0.362,
     "positive_F1": 0.506,
@@ -226,7 +226,7 @@
   {
     "dataset": "neutral: 0",
     "tool": "Standford CoreNLP",
-    "num_correct_prediction": 626,
+    "_num_correct_prediction": 626,
     "positive_precision": 0.726,
     "positive_recall": 0.621,
     "positive_F1": 0.669,
@@ -240,7 +240,7 @@
   {
     "dataset": "negative: 636",
     "tool": "SentiStrength-SE",
-    "num_correct_prediction": 704,
+    "_num_correct_prediction": 704,
     "positive_precision": 0.948,
     "positive_recall": 0.883,
     "positive_F1": 0.914,
@@ -254,7 +254,7 @@
   {
     "dataset": "sum: 926",
     "tool": "Stanford CoreNLP SO",
-    "num_correct_prediction": 333,
+    "_num_correct_prediction": 333,
     "positive_precision": 0.635,
     "positive_recall": 0.252,
     "positive_F1": 0.361,
@@ -268,7 +268,7 @@
   {
     "dataset": "",
     "tool": "N-gram auto-sklearn",
-    "num_correct_prediction": 884,
+    "_num_correct_prediction": 884,
     "positive_precision": 0.96,
     "positive_recall": 0.839,
     "positive_F1": 0.893,
@@ -282,7 +282,7 @@
   {
     "dataset": "",
     "tool": "N-gram auto-sklearn with SMOTE†",
-    "num_correct_prediction": "-",
+    "_num_correct_prediction": "-",
     "positive_precision": 0.986,
     "positive_recall": 0.704,
     "positive_F1": 0.809,
@@ -296,7 +296,7 @@
   {
     "dataset": "† Applying SMOTE, a oversampling technique, for our method.",
     "tool": "† Applying SMOTE, a oversampling technique, for our method.",
-    "num_correct_prediction": "† Applying SMOTE, a oversampling technique, for our method.",
+    "_num_correct_prediction": "† Applying SMOTE, a oversampling technique, for our method.",
     "positive_precision": "† Applying SMOTE, a oversampling technique, for our method.",
     "positive_recall": "† Applying SMOTE, a oversampling technique, for our method.",
     "positive_F1": "† Applying SMOTE, a oversampling technique, for our method.",

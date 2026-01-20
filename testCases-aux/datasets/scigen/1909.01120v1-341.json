@@ -1,26 +1,26 @@
 [
   {
     "_1": "Movie",
-    "unsupervised_Basic": 0,
-    "unsupervised_Glove": 0.43,
-    "unsupervised_EmbDI": 0.78,
-    "supervised_DeepER_P": 0.82,
-    "supervised_DeepER_L": 0.88
+    "_Unsupervised_Basic": 0,
+    "_Unsupervised_Glove": 0.43,
+    "_Unsupervised_EmbDI": 0.78,
+    "_Supervised_DeepER_P": 0.82,
+    "_Supervised_DeepER_L": 0.88
   },
   {
     "_1": "RefS",
-    "unsupervised_Basic": 0,
-    "unsupervised_Glove": 0.84,
-    "unsupervised_EmbDI": 0.95,
-    "supervised_DeepER_P": 0.84,
-    "supervised_DeepER_L": 0.89
+    "_Unsupervised_Basic": 0,
+    "_Unsupervised_Glove": 0.84,
+    "_Unsupervised_EmbDI": 0.95,
+    "_Supervised_DeepER_P": 0.84,
+    "_Supervised_DeepER_L": 0.89
   },
   {
     "_1": "RefL",
-    "unsupervised_Basic": 0,
-    "unsupervised_Glove": 0.73,
-    "unsupervised_EmbDI": 0.8,
-    "supervised_DeepER_P": 0.8,
-    "supervised_DeepER_L": 0.87
+    "_Unsupervised_Basic": 0,
+    "_Unsupervised_Glove": 0.73,
+    "_Unsupervised_EmbDI": 0.8,
+    "_Supervised_DeepER_P": 0.8,
+    "_Supervised_DeepER_L": 0.87
   }
 ]

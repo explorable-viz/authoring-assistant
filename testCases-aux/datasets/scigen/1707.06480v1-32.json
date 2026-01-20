@@ -1,23 +1,23 @@
 [
   {
-    "model": "RHN-Char-CNN",
+    "_Model": "RHN-Char-CNN",
     "depth": 8,
     "dLM": 650,
-    "size": 20000000.0,
-    "pPL": 67.6
+    "_Size": 20000000.0,
+    "_PPL": 67.6
   },
   {
-    "model": "RHN-Syl-Concat",
+    "_Model": "RHN-Syl-Concat",
     "depth": 8,
     "dLM": 439,
-    "size": 13000000.0,
-    "pPL": 72.0
+    "_Size": 13000000.0,
+    "_PPL": 72.0
   },
   {
-    "model": "RHN-Syl-Concat",
+    "_Model": "RHN-Syl-Concat",
     "depth": 8,
     "dLM": 650,
-    "size": 20000000.0,
-    "pPL": 69.4
+    "_Size": 20000000.0,
+    "_PPL": 69.4
   }
 ]

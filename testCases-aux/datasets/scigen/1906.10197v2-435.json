@@ -1,23 +1,23 @@
 [
   {
-    "Score": 0.2,
-    "omniglot": 24304,
-    "omniglot_Classifier": 2144,
-    "imagenet": 1280,
-    "imagenet_Classifier": 2048
+    "_Score": 0.2,
+    "_Omniglot": 24304,
+    "_Omniglot_Classifier": 2144,
+    "_Imagenet": 1280,
+    "_Imagenet_Classifier": 2048
   },
   {
-    "Score": 0.1,
-    "omniglot": 99248,
-    "omniglot_Classifier": 22912,
-    "imagenet": 8448,
-    "imagenet_Classifier": 3072
+    "_Score": 0.1,
+    "_Omniglot": 99248,
+    "_Omniglot_Classifier": 22912,
+    "_Imagenet": 8448,
+    "_Imagenet_Classifier": 3072
   },
   {
-    "Score": 0.05,
-    "omniglot": 160608,
-    "omniglot_Classifier": 43328,
-    "imagenet": 111872,
-    "imagenet_Classifier": 8960
+    "_Score": 0.05,
+    "_Omniglot": 160608,
+    "_Omniglot_Classifier": 43328,
+    "_Imagenet": 111872,
+    "_Imagenet_Classifier": 8960
   }
 ]

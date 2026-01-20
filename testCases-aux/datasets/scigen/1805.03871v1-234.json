@@ -1,6 +1,6 @@
 [
   {
-    "Gold_Class": "None",
+    "_Gold_Class": "None",
     "bilstm_P": 0.95,
     "bilstm_R": 0.91,
     "bilstm_F1": 0.93,
@@ -19,7 +19,7 @@
     "h_bilstm_att_AUC": 0.99
   },
   {
-    "Gold_Class": "Obligation",
+    "_Gold_Class": "Obligation",
     "bilstm_P": 0.75,
     "bilstm_R": 0.85,
     "bilstm_F1": 0.79,
@@ -38,7 +38,7 @@
     "h_bilstm_att_AUC": 0.96
   },
   {
-    "Gold_Class": "Prohibition",
+    "_Gold_Class": "Prohibition",
     "bilstm_P": 0.67,
     "bilstm_R": 0.62,
     "bilstm_F1": 0.64,
@@ -57,7 +57,7 @@
     "h_bilstm_att_AUC": 0.9
   },
   {
-    "Gold_Class": "Obl. List Begin",
+    "_Gold_Class": "Obl. List Begin",
     "bilstm_P": 0.7,
     "bilstm_R": 0.86,
     "bilstm_F1": 0.77,
@@ -76,7 +76,7 @@
     "h_bilstm_att_AUC": 0.93
   },
   {
-    "Gold_Class": "Obl. List Item",
+    "_Gold_Class": "Obl. List Item",
     "bilstm_P": 0.53,
     "bilstm_R": 0.66,
     "bilstm_F1": 0.59,
@@ -95,7 +95,7 @@
     "h_bilstm_att_AUC": 0.94
   },
   {
-    "Gold_Class": "Proh. List Item",
+    "_Gold_Class": "Proh. List Item",
     "bilstm_P": 0.59,
     "bilstm_R": 0.35,
     "bilstm_F1": 0.43,
@@ -114,7 +114,7 @@
     "h_bilstm_att_AUC": 0.92
   },
   {
-    "Gold_Class": " Macro-average",
+    "_Gold_Class": "Macro-average",
     "bilstm_P": 0.7,
     "bilstm_R": 0.7,
     "bilstm_F1": 0.7,
@@ -133,7 +133,7 @@
     "h_bilstm_att_AUC": 0.94
   },
   {
-    "Gold_Class": " Micro-average",
+    "_Gold_Class": "Micro-average",
     "bilstm_P": 0.9,
     "bilstm_R": 0.88,
     "bilstm_F1": 0.88,

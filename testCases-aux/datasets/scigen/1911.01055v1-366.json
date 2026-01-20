@@ -1,146 +1,146 @@
 [
   {
-    "Model": " CNN",
-    "P": " CNN",
-    "R": " CNN",
-    "F1": " CNN"
+    "_Model": "CNN",
+    "_P": "CNN",
+    "_R": "CNN",
+    "_F1": "CNN"
   },
   {
-    "Model": "+   ENT-ONLY",
-    "P": 52.7,
-    "R": 43.1,
-    "F1": 47.4
+    "_Model": "+   ENT-ONLY",
+    "_P": 52.7,
+    "_R": 43.1,
+    "_F1": 47.4
   },
   {
-    "Model": "+   ENT-SENT",
-    "P": 75.8,
-    "R": 60.7,
-    "F1": 67.3
+    "_Model": "+   ENT-SENT",
+    "_P": 75.8,
+    "_R": 60.7,
+    "_F1": 67.3
   },
   {
-    "Model": "+   ENT-DYM",
-    "P": 66.5,
-    "R": 70.6,
-    "F1": 68.5
+    "_Model": "+   ENT-DYM",
+    "_P": 66.5,
+    "_R": 70.6,
+    "_F1": 68.5
   },
   {
-    "Model": "+   ENT-DEP0",
-    "P": 59.8,
-    "R": 61.5,
-    "F1": 60.6
+    "_Model": "+   ENT-DEP0",
+    "_P": 59.8,
+    "_R": 61.5,
+    "_F1": 60.6
   },
   {
-    "Model": "+   ENT-DEP1",
-    "P": 67.6,
-    "R": 65.1,
-    "F1": 66.3
+    "_Model": "+   ENT-DEP1",
+    "_P": 67.6,
+    "_R": 65.1,
+    "_F1": 66.3
   },
   {
-    "Model": " BiLSTM",
-    "P": " BiLSTM",
-    "R": " BiLSTM",
-    "F1": " BiLSTM"
+    "_Model": "BiLSTM",
+    "_P": "BiLSTM",
+    "_R": "BiLSTM",
+    "_F1": "BiLSTM"
   },
   {
-    "Model": "+   ENT-ONLY",
-    "P": 74.0,
-    "R": 69.4,
-    "F1": 71.6
+    "_Model": "+   ENT-ONLY",
+    "_P": 74.0,
+    "_R": 69.4,
+    "_F1": 71.6
   },
   {
-    "Model": "+   ENT-SENT",
-    "P": 74.8,
-    "R": 71.7,
-    "F1": 73.1
+    "_Model": "+   ENT-SENT",
+    "_P": 74.8,
+    "_R": 71.7,
+    "_F1": 73.1
   },
   {
-    "Model": "+   ENT-DYM",
-    "P": 71.5,
-    "R": 73.4,
-    "F1": 72.4
+    "_Model": "+   ENT-DYM",
+    "_P": 71.5,
+    "_R": 73.4,
+    "_F1": 72.4
   },
   {
-    "Model": "+   ENT-DEP0",
-    "P": 72.8,
-    "R": 69.4,
-    "F1": 71.1
+    "_Model": "+   ENT-DEP0",
+    "_P": 72.8,
+    "_R": 69.4,
+    "_F1": 71.1
   },
   {
-    "Model": "+   ENT-DEP1",
-    "P": 71.6,
-    "R": 76.4,
-    "F1": 73.9
+    "_Model": "+   ENT-DEP1",
+    "_P": 71.6,
+    "_R": 76.4,
+    "_F1": 73.9
   },
   {
-    "Model": " BiLSTM-CNN",
-    "P": " BiLSTM-CNN",
-    "R": " BiLSTM-CNN",
-    "F1": " BiLSTM-CNN"
+    "_Model": "BiLSTM-CNN",
+    "_P": "BiLSTM-CNN",
+    "_R": "BiLSTM-CNN",
+    "_F1": "BiLSTM-CNN"
   },
   {
-    "Model": "+   ENT-ONLY",
-    "P": 69.6,
-    "R": 72.3,
-    "F1": 70.9
+    "_Model": "+   ENT-ONLY",
+    "_P": 69.6,
+    "_R": 72.3,
+    "_F1": 70.9
   },
   {
-    "Model": "+   ENT-SENT",
-    "P": 69.4,
-    "R": 74.9,
-    "F1": 72.0
+    "_Model": "+   ENT-SENT",
+    "_P": 69.4,
+    "_R": 74.9,
+    "_F1": 72.0
   },
   {
-    "Model": "+   ENT-DYM",
-    "P": 71.0,
-    "R": 69.7,
-    "F1": 71.8
+    "_Model": "+   ENT-DYM",
+    "_P": 71.0,
+    "_R": 69.7,
+    "_F1": 71.8
   },
   {
-    "Model": "+   ENT-DEP0",
-    "P": 72.2,
-    "R": 69.5,
-    "F1": 70.8
+    "_Model": "+   ENT-DEP0",
+    "_P": 72.2,
+    "_R": 69.5,
+    "_F1": 70.8
   },
   {
-    "Model": "+   ENT-DEP1",
-    "P": 71.0,
-    "R": 74.3,
-    "F1": 72.6
+    "_Model": "+   ENT-DEP1",
+    "_P": 71.0,
+    "_R": 74.3,
+    "_F1": 72.6
   },
   {
-    "Model": " BiLSTM-GCNN",
-    "P": " BiLSTM-GCNN",
-    "R": " BiLSTM-GCNN",
-    "F1": " BiLSTM-GCNN"
+    "_Model": "BiLSTM-GCNN",
+    "_P": "BiLSTM-GCNN",
+    "_R": "BiLSTM-GCNN",
+    "_F1": "BiLSTM-GCNN"
   },
   {
-    "Model": "+   ENT-ONLY",
-    "P": 69.3,
-    "R": 71.4,
-    "F1": 70.4
+    "_Model": "+   ENT-ONLY",
+    "_P": 69.3,
+    "_R": 71.4,
+    "_F1": 70.4
   },
   {
-    "Model": "+   ENT-SENT",
-    "P": 72.2,
-    "R": 71.9,
-    "F1": 72.0
+    "_Model": "+   ENT-SENT",
+    "_P": 72.2,
+    "_R": 71.9,
+    "_F1": 72.0
   },
   {
-    "Model": "+   ENT-DYM",
-    "P": 69.7,
-    "R": 73.9,
-    "F1": 71.7
+    "_Model": "+   ENT-DYM",
+    "_P": 69.7,
+    "_R": 73.9,
+    "_F1": 71.7
   },
   {
-    "Model": "+   ENT-DEP0",
-    "P": 70.1,
-    "R": 71.1,
-    "F1": 70.6
+    "_Model": "+   ENT-DEP0",
+    "_P": 70.1,
+    "_R": 71.1,
+    "_F1": 70.6
   },
   {
-    "Model": "+   ENT-DEP1",
-    "P": 72.7,
-    "R": 72.9,
-    "F1": 72.8
+    "_Model": "+   ENT-DEP1",
+    "_P": 72.7,
+    "_R": 72.9,
+    "_F1": 72.8
   }
 ]

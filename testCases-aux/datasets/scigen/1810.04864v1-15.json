@@ -1,52 +1,52 @@
 [
   {
     "system": "challenge",
-    "bLEU": "challenge",
-    "rOUGE_L": "challenge"
+    "_BLEU": "challenge",
+    "_ROUGE_L": "challenge"
   },
   {
     "system": "baseline",
-    "bLEU": 65.9,
-    "rOUGE_L": 68.5
+    "_BLEU": 65.9,
+    "_ROUGE_L": 68.5
   },
   {
     "system": "Thomson Reuters (np 3)",
-    "bLEU": 68.1,
-    "rOUGE_L": 69.3
+    "_BLEU": 68.1,
+    "_ROUGE_L": 69.3
   },
   {
     "system": "Thomson Reuters (np 4)",
-    "bLEU": 67.4,
-    "rOUGE_L": 69.8
+    "_BLEU": 67.4,
+    "_ROUGE_L": 69.8
   },
   {
     "system": "HarvardNLP & H. Elder",
-    "bLEU": 67.4,
-    "rOUGE_L": 70.8
+    "_BLEU": 67.4,
+    "_ROUGE_L": 70.8
   },
   {
     "system": "own",
-    "bLEU": "own",
-    "rOUGE_L": "own"
+    "_BLEU": "own",
+    "_ROUGE_L": "own"
   },
   {
     "system": "word",
-    "bLEU": 67.8,
-    "rOUGE_L": 70.4
+    "_BLEU": 67.8,
+    "_ROUGE_L": 70.4
   },
   {
     "system": "character",
-    "bLEU": 64.6,
-    "rOUGE_L": 67.9
+    "_BLEU": 64.6,
+    "_ROUGE_L": 67.9
   },
   {
     "system": "word (best on dev.)",
-    "bLEU": 67.8,
-    "rOUGE_L": 70.2
+    "_BLEU": 67.8,
+    "_ROUGE_L": 70.2
   },
   {
     "system": "char. (best on dev.)",
-    "bLEU": 67.6,
-    "rOUGE_L": 70.4
+    "_BLEU": 67.6,
+    "_ROUGE_L": 70.4
   }
 ]

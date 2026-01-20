@@ -1,96 +1,96 @@
 [
   {
-    "model": "Coherence",
+    "_Model": "Coherence",
     "disagr": "Coherence",
     "un": "Coherence",
     "agr": "Coherence"
   },
   {
-    "model": "Human",
+    "_Model": "Human",
     "disagr": 17.4,
     "un": 20.8,
     "agr": 61.8
   },
   {
-    "model": "AR",
+    "_Model": "AR",
     "disagr": 28.6,
     "un": 29.5,
     "agr": 41.9
   },
   {
-    "model": "AR+MMI",
+    "_Model": "AR+MMI",
     "disagr": 25.3,
     "un": 27.9,
     "agr": 46.8
   },
   {
-    "model": "AR+MMI+diverse",
+    "_Model": "AR+MMI+diverse",
     "disagr": 24.8,
     "un": 27.8,
     "agr": 47.4
   },
   {
-    "model": "AR+MMI+RL",
+    "_Model": "AR+MMI+RL",
     "disagr": 24.1,
     "un": 26.5,
     "agr": 49.4
   },
   {
-    "model": "nonAR",
+    "_Model": "nonAR",
     "disagr": 29.9,
     "un": 28.7,
     "agr": 41.4
   },
   {
-    "model": "nonAR+MMI",
+    "_Model": "nonAR+MMI",
     "disagr": 23.1,
     "un": 24.0,
     "agr": 52.9
   },
   {
-    "model": "Content Richness",
+    "_Model": "Content Richness",
     "disagr": "Content Richness",
     "un": "Content Richness",
     "agr": "Content Richness"
   },
   {
-    "model": "Human",
+    "_Model": "Human",
     "disagr": 14.0,
     "un": 16.6,
     "agr": 69.4
   },
   {
-    "model": "AR",
+    "_Model": "AR",
     "disagr": 38.2,
     "un": 30.4,
     "agr": 31.4
   },
   {
-    "model": "AR+MMI",
+    "_Model": "AR+MMI",
     "disagr": 30.6,
     "un": 26.2,
     "agr": 43.2
   },
   {
-    "model": "AR+MMI+diverse",
+    "_Model": "AR+MMI+diverse",
     "disagr": 23.9,
     "un": 21.3,
     "agr": 54.8
   },
   {
-    "model": "AR+MMI+RL",
+    "_Model": "AR+MMI+RL",
     "disagr": 26.4,
     "un": 24.9,
     "agr": 48.7
   },
   {
-    "model": "NonAR",
+    "_Model": "NonAR",
     "disagr": 31.4,
     "un": 25.0,
     "agr": 44.6
   },
   {
-    "model": "NonAR+MMI",
+    "_Model": "NonAR+MMI",
     "disagr": 24.2,
     "un": 20.5,
     "agr": 55.3

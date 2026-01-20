@@ -1,30 +1,30 @@
 [
   {
-    "nE_Tag": "date, time, duration, set (temporal)",
-    "frequency": 54.28
+    "_NE_Tag": "date, time, duration, set (temporal)",
+    "_Frequency": 54.28
   },
   {
-    "nE_Tag": "number",
-    "frequency": 40.13
+    "_NE_Tag": "number",
+    "_Frequency": 40.13
   },
   {
-    "nE_Tag": "  Relation cardinality",
-    "frequency": 18.86
+    "_NE_Tag": "Relation cardinality",
+    "_Frequency": 18.86
   },
   {
-    "nE_Tag": "percent",
-    "frequency": 2.92
+    "_NE_Tag": "percent",
+    "_Frequency": 2.92
   },
   {
-    "nE_Tag": "money",
-    "frequency": 2.25
+    "_NE_Tag": "money",
+    "_Frequency": 2.25
   },
   {
-    "nE_Tag": "person, location, organization",
-    "frequency": 0.26
+    "_NE_Tag": "person, location, organization",
+    "_Frequency": 0.26
   },
   {
-    "nE_Tag": "ordinal",
-    "frequency": 0.16
+    "_NE_Tag": "ordinal",
+    "_Frequency": 0.16
   }
 ]

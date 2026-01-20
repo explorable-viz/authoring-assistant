@@ -1,17 +1,17 @@
 [
   {
-    "Dataset": "+PMC",
-    "Accuracy_dev": 80.5,
-    "Accuracy_test": 78.97
+    "_Dataset": "+PMC",
+    "_Accuracy_dev": 80.5,
+    "_Accuracy_test": 78.97
   },
   {
-    "Dataset": "+PubMedd",
-    "Accuracy_dev": 81.14,
-    "Accuracy_test": 78.83
+    "_Dataset": "+PubMedd",
+    "_Accuracy_dev": 81.14,
+    "_Accuracy_test": 78.83
   },
   {
-    "Dataset": "+PubMed+PMC",
-    "Accuracy_dev": 82.15,
-    "Accuracy_test": 79.04
+    "_Dataset": "+PubMed+PMC",
+    "_Accuracy_dev": 82.15,
+    "_Accuracy_test": 79.04
   }
 ]

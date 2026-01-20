@@ -1,26 +1,26 @@
 [
   {
-    "model": "BO-LSTM (Lamurias et al.,  2019 )†",
-    "f1_score": 52.3
+    "_Model": "BO-LSTM (Lamurias et al.,  2019 )†",
+    "_F1_score": 52.3
   },
   {
-    "model": "BioBERT (Lee et al.,  2019 )†",
-    "f1_score": 67.2
+    "_Model": "BioBERT (Lee et al.,  2019 )†",
+    "_F1_score": 67.2
   },
   {
-    "model": "TextOnly",
-    "f1_score": 76.0
+    "_Model": "TextOnly",
+    "_F1_score": 76.0
   },
   {
-    "model": "DepTree",
-    "f1_score": 78.9
+    "_Model": "DepTree",
+    "_F1_score": 78.9
   },
   {
-    "model": "KBestEisnerPS",
-    "f1_score": 83.6
+    "_Model": "KBestEisnerPS",
+    "_F1_score": 83.6
   },
   {
-    "model": "EdgewisePS",
-    "f1_score": "**  85.7"
+    "_Model": "EdgewisePS",
+    "_F1_score": "**  85.7"
   }
 ]

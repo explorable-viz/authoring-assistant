@@ -1,125 +1,125 @@
 [
   {
-    "model_word2vec": "Glove",
+    "_Model_word2vec": "Glove",
     "noun_0_41": 0.4,
     "verb_0_28": 0.22,
     "adjective_0_44": 0.53,
     "overall_0_38": 0.37
   },
   {
-    "model_word2vec": "D-embedding",
+    "_Model_word2vec": "D-embedding",
     "noun_0_41": 0.41,
     "verb_0_28": 0.27,
     "adjective_0_44": 0.38,
     "overall_0_38": 0.36
   },
   {
-    "model_word2vec": "h",
+    "_Model_word2vec": "h",
     "noun_0_41": 0.46,
     "verb_0_28": 0.29,
     "adjective_0_44": 0.54,
     "overall_0_38": 0.43
   },
   {
-    "model_word2vec": "t",
+    "_Model_word2vec": "t",
     "noun_0_41": 0.45,
     "verb_0_28": 0.25,
     "adjective_0_44": 0.48,
     "overall_0_38": 0.4
   },
   {
-    "model_word2vec": "h+t",
+    "_Model_word2vec": "h+t",
     "noun_0_41": 0.44,
     "verb_0_28": 0.23,
     "adjective_0_44": 0.5,
     "overall_0_38": 0.4
   },
   {
-    "model_word2vec": "[h,t]",
+    "_Model_word2vec": "[h,t]",
     "noun_0_41": 0.47,
     "verb_0_28": 0.27,
     "adjective_0_44": 0.51,
     "overall_0_38": 0.42
   },
   {
-    "model_word2vec": "h",
+    "_Model_word2vec": "h",
     "noun_0_41": 0.46,
     "verb_0_28": 0.27,
     "adjective_0_44": 0.45,
     "overall_0_38": 0.41
   },
   {
-    "model_word2vec": "t",
+    "_Model_word2vec": "t",
     "noun_0_41": 0.45,
     "verb_0_28": 0.23,
     "adjective_0_44": 0.46,
     "overall_0_38": 0.4
   },
   {
-    "model_word2vec": "h+t",
+    "_Model_word2vec": "h+t",
     "noun_0_41": 0.45,
     "verb_0_28": 0.2,
     "adjective_0_44": 0.45,
     "overall_0_38": 0.38
   },
   {
-    "model_word2vec": "[h,t]",
+    "_Model_word2vec": "[h,t]",
     "noun_0_41": 0.46,
     "verb_0_28": 0.25,
     "adjective_0_44": 0.48,
     "overall_0_38": 0.42
   },
   {
-    "model_word2vec": "h",
+    "_Model_word2vec": "h",
     "noun_0_41": 0.47,
     "verb_0_28": 0.25,
     "adjective_0_44": 0.52,
     "overall_0_38": 0.37
   },
   {
-    "model_word2vec": "t",
+    "_Model_word2vec": "t",
     "noun_0_41": 0.46,
     "verb_0_28": 0.24,
     "adjective_0_44": 0.5,
     "overall_0_38": 0.38
   },
   {
-    "model_word2vec": "h+t",
+    "_Model_word2vec": "h+t",
     "noun_0_41": 0.46,
     "verb_0_28": 0.24,
     "adjective_0_44": 0.52,
     "overall_0_38": 0.38
   },
   {
-    "model_word2vec": "[h,t]",
+    "_Model_word2vec": "[h,t]",
     "noun_0_41": 0.47,
     "verb_0_28": 0.26,
     "adjective_0_44": 0.52,
     "overall_0_38": 0.38
   },
   {
-    "model_word2vec": "h",
+    "_Model_word2vec": "h",
     "noun_0_41": 0.51,
     "verb_0_28": 0.33,
     "adjective_0_44": 0.57,
     "overall_0_38": 0.48
   },
   {
-    "model_word2vec": "t",
+    "_Model_word2vec": "t",
     "noun_0_41": 0.51,
     "verb_0_28": 0.3,
     "adjective_0_44": 0.56,
     "overall_0_38": 0.47
   },
   {
-    "model_word2vec": "h+t",
+    "_Model_word2vec": "h+t",
     "noun_0_41": 0.52,
     "verb_0_28": 0.31,
     "adjective_0_44": 0.54,
     "overall_0_38": 0.46
   },
   {
-    "model_word2vec": "[h,t]",
+    "_Model_word2vec": "[h,t]",
     "noun_0_41": 0.51,
     "verb_0_28": 0.32,
     "adjective_0_44": 0.57,

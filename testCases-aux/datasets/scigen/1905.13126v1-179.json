@@ -1,58 +1,58 @@
 [
   {
     "_1": "Local",
-    "metric": "SwitchP",
-    "amazon": 0.9077,
-    "newsgroups": 0.8737,
-    "new_York_Times": 0.7022
+    "_Metric": "SwitchP",
+    "_Amazon": 0.9077,
+    "_Newsgroups": 0.8737,
+    "_New_York_Times": 0.7022
   },
   {
     "_1": "Local",
-    "metric": "SwitchVI",
-    "amazon": 0.8485,
-    "newsgroups": 0.8181,
-    "new_York_Times": 0.6977
+    "_Metric": "SwitchVI",
+    "_Amazon": 0.8485,
+    "_Newsgroups": 0.8181,
+    "_New_York_Times": 0.6977
   },
   {
     "_1": "Local",
-    "metric": "AvgRank",
-    "amazon": 0.5103,
-    "newsgroups": 0.5089,
-    "new_York_Times": 0.4473
+    "_Metric": "AvgRank",
+    "_Amazon": 0.5103,
+    "_Newsgroups": 0.5089,
+    "_New_York_Times": 0.4473
   },
   {
     "_1": "Local",
-    "metric": "Window",
-    "amazon": 0.4884,
-    "newsgroups": 0.3024,
-    "new_York_Times": 0.1127
+    "_Metric": "Window",
+    "_Amazon": 0.4884,
+    "_Newsgroups": 0.3024,
+    "_New_York_Times": 0.1127
   },
   {
     "_1": "Local",
-    "metric": "WordDiv",
-    "amazon": 0.3112,
-    "newsgroups": 0.2197,
-    "new_York_Times": 0.0836
+    "_Metric": "WordDiv",
+    "_Amazon": 0.3112,
+    "_Newsgroups": 0.2197,
+    "_New_York_Times": 0.0836
   },
   {
     "_1": "Global",
-    "metric": "SigVac",
-    "amazon": 0.696,
-    "newsgroups": 0.6081,
-    "new_York_Times": 0.6063
+    "_Metric": "SigVac",
+    "_Amazon": 0.696,
+    "_Newsgroups": 0.6081,
+    "_New_York_Times": 0.6063
   },
   {
     "_1": "Global",
-    "metric": "SigUni",
-    "amazon": 0.631,
-    "newsgroups": 0.4839,
-    "new_York_Times": 0.4935
+    "_Metric": "SigUni",
+    "_Amazon": 0.631,
+    "_Newsgroups": 0.4839,
+    "_New_York_Times": 0.4935
   },
   {
     "_1": "Global",
-    "metric": "Coherence",
-    "amazon": 0.4907,
-    "newsgroups": 0.4463,
-    "new_York_Times": 0.3799
+    "_Metric": "Coherence",
+    "_Amazon": 0.4907,
+    "_Newsgroups": 0.4463,
+    "_New_York_Times": 0.3799
   }
 ]

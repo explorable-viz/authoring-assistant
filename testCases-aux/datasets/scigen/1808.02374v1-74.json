@@ -1,74 +1,74 @@
 [
   {
-    "model": " With specialized resources:",
-    "p": "",
-    "r": "",
-    "f": ""
+    "_Model": "With specialized resources:",
+    "_P": "",
+    "_R": "",
+    "_F": ""
   },
   {
-    "model": "Best Clinical TempEval (2016)",
-    "p": 58.8,
-    "r": 55.9,
-    "f": 57.3
+    "_Model": "Best Clinical TempEval (2016)",
+    "_P": 58.8,
+    "_R": 55.9,
+    "_F": 57.3
   },
   {
-    "model": "Lin et al. (2016)",
-    "p": 66.9,
-    "r": 53.4,
-    "f": 59.4
+    "_Model": "Lin et al. (2016)",
+    "_P": 66.9,
+    "_R": 53.4,
+    "_F": 59.4
   },
   {
-    "model": "Leeuwenberg et al. (2017)",
-    "p": "-",
-    "r": "-",
-    "f": 60.8
+    "_Model": "Leeuwenberg et al. (2017)",
+    "_P": "-",
+    "_R": "-",
+    "_F": 60.8
   },
   {
-    "model": "Tourille et al. (2017)",
-    "p": 65.7,
-    "r": 57.5,
-    "f": 61.3
+    "_Model": "Tourille et al. (2017)",
+    "_P": 65.7,
+    "_R": 57.5,
+    "_F": 61.3
   },
   {
-    "model": "Lin et al. (2017)",
-    "p": 66.2,
-    "r": 58.5,
-    "f": 62.1
+    "_Model": "Lin et al. (2017)",
+    "_P": 66.2,
+    "_R": 58.5,
+    "_F": 62.1
   },
   {
-    "model": " No specialized resources:",
-    "p": "",
-    "r": "",
-    "f": ""
+    "_Model": "No specialized resources:",
+    "_P": "",
+    "_R": "",
+    "_F": ""
   },
   {
-    "model": "RC (random initialization)",
-    "p": 67.9,
-    "r": 52.1,
-    "f": 58.9
+    "_Model": "RC (random initialization)",
+    "_P": 67.9,
+    "_R": 52.1,
+    "_F": 58.9
   },
   {
-    "model": "RC (SG initialization)",
-    "p": 71.2,
-    "r": 52.0,
-    "f": 60.0
+    "_Model": "RC (SG initialization)",
+    "_P": 71.2,
+    "_R": 52.0,
+    "_F": 60.0
   },
   {
-    "model": "RC (SG fixed)",
-    "p": 68.9,
-    "r": 54.6,
-    "f": 60.9
+    "_Model": "RC (SG fixed)",
+    "_P": 68.9,
+    "_R": 54.6,
+    "_F": 60.9
   },
   {
-    "model": "RC + SG",
-    "p": 66.2,
-    "r": 59.7,
-    "f": 62.8
+    "_Model": "RC + SG",
+    "_P": 66.2,
+    "_R": 59.7,
+    "_F": 62.8
   },
   {
-    "model": "RC + SGLR",
-    "p": 68.7,
-    "r": 57.5,
-    "f": 62.5
+    "_Model": "RC + SGLR",
+    "_P": 68.7,
+    "_R": 57.5,
+    "_F": 62.5
   }
 ]

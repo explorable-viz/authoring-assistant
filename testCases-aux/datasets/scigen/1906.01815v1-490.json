@@ -1,79 +1,79 @@
 [
   {
-    "algorithm": "Majority",
-    "modality": "-",
-    "precision": 32.8,
-    "recall": 57.3,
-    "f_Score": 41.7
+    "_Algorithm": "Majority",
+    "_Modality": "-",
+    "_Precision": 32.8,
+    "_Recall": 57.3,
+    "_F_Score": 41.7
   },
   {
-    "algorithm": "Random",
-    "modality": "-",
-    "precision": 51.1,
-    "recall": 50.2,
-    "f_Score": 50.4
+    "_Algorithm": "Random",
+    "_Modality": "-",
+    "_Precision": 51.1,
+    "_Recall": 50.2,
+    "_F_Score": 50.4
   },
   {
-    "algorithm": "SVM",
-    "modality": "T",
-    "precision": 60.9,
-    "recall": 59.6,
-    "f_Score": 59.8
+    "_Algorithm": "SVM",
+    "_Modality": "T",
+    "_Precision": 60.9,
+    "_Recall": 59.6,
+    "_F_Score": 59.8
   },
   {
-    "algorithm": "SVM",
-    "modality": "A",
-    "precision": 65.1,
-    "recall": 62.6,
-    "f_Score": 62.7
+    "_Algorithm": "SVM",
+    "_Modality": "A",
+    "_Precision": 65.1,
+    "_Recall": 62.6,
+    "_F_Score": 62.7
   },
   {
-    "algorithm": "SVM",
-    "modality": "V",
-    "precision": 54.9,
-    "recall": 53.4,
-    "f_Score": 53.6
+    "_Algorithm": "SVM",
+    "_Modality": "V",
+    "_Precision": 54.9,
+    "_Recall": 53.4,
+    "_F_Score": 53.6
   },
   {
-    "algorithm": "SVM",
-    "modality": "T+A",
-    "precision": 64.7,
-    "recall": 62.9,
-    "f_Score": 63.1
+    "_Algorithm": "SVM",
+    "_Modality": "T+A",
+    "_Precision": 64.7,
+    "_Recall": 62.9,
+    "_F_Score": 63.1
   },
   {
-    "algorithm": "SVM",
-    "modality": "T+V",
-    "precision": 62.2,
-    "recall": 61.5,
-    "f_Score": 61.7
+    "_Algorithm": "SVM",
+    "_Modality": "T+V",
+    "_Precision": 62.2,
+    "_Recall": 61.5,
+    "_F_Score": 61.7
   },
   {
-    "algorithm": "SVM",
-    "modality": "A+V",
-    "precision": 64.1,
-    "recall": 61.8,
-    "f_Score": 61.9
+    "_Algorithm": "SVM",
+    "_Modality": "A+V",
+    "_Precision": 64.1,
+    "_Recall": 61.8,
+    "_F_Score": 61.9
   },
   {
-    "algorithm": "SVM",
-    "modality": "T+A+V",
-    "precision": 64.3,
-    "recall": 62.6,
-    "f_Score": 62.8
+    "_Algorithm": "SVM",
+    "_Modality": "T+A+V",
+    "_Precision": 64.3,
+    "_Recall": 62.6,
+    "_F_Score": 62.8
   },
   {
-    "algorithm": "Δ  multi−  unimodal",
-    "modality": "",
-    "precision": "↓0.4",
-    "recall": "↑0.3",
-    "f_Score": "↑0.4"
+    "_Algorithm": "Δ  multi−  unimodal",
+    "_Modality": "",
+    "_Precision": "↓0.4",
+    "_Recall": "↑0.3",
+    "_F_Score": "↑0.4"
   },
   {
-    "algorithm": "Error rate reduction",
-    "modality": "",
-    "precision": "↓1.1",
-    "recall": "↑0.8",
-    "f_Score": "↑1.1"
+    "_Algorithm": "Error rate reduction",
+    "_Modality": "",
+    "_Precision": "↓1.1",
+    "_Recall": "↑0.8",
+    "_F_Score": "↑1.1"
   }
 ]

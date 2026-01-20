@@ -1,34 +1,34 @@
 [
   {
-    "attribute": "Grammatical error present, incl. run-ons",
-    "num": 16
+    "_Attribute": "Grammatical error present, incl. run-ons",
+    "_num": 16
   },
   {
-    "attribute": "Is an auxiliary or light verb",
-    "num": 14
+    "_Attribute": "Is an auxiliary or light verb",
+    "_num": 14
   },
   {
-    "attribute": "Annotation is incorrect",
-    "num": 13
+    "_Attribute": "Annotation is incorrect",
+    "_num": 13
   },
   {
-    "attribute": "Future event",
-    "num": 12
+    "_Attribute": "Future event",
+    "_num": 12
   },
   {
-    "attribute": "Is a question",
-    "num": 5
+    "_Attribute": "Is a question",
+    "_num": 5
   },
   {
-    "attribute": "Is an imperative",
-    "num": 3
+    "_Attribute": "Is an imperative",
+    "_num": 3
   },
   {
-    "attribute": "Is not an event or state",
-    "num": 2
+    "_Attribute": "Is not an event or state",
+    "_num": 2
   },
   {
-    "attribute": "One or more of the above",
-    "num": 43
+    "_Attribute": "One or more of the above",
+    "_num": 43
   }
 ]

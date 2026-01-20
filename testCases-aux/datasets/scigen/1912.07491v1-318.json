@@ -1,38 +1,38 @@
 [
   {
-    "model": "Seq2Seq",
-    "fluency": 1.67,
-    "relevance": 0.68,
-    "correctness": 0.8
+    "_Model": "Seq2Seq",
+    "_Fluency": 1.67,
+    "_Relevance": 0.68,
+    "_Correctness": 0.8
   },
   {
-    "model": "MemNet",
-    "fluency": 1.83,
-    "relevance": 0.89,
-    "correctness": 1.32
+    "_Model": "MemNet",
+    "_Fluency": 1.83,
+    "_Relevance": 0.89,
+    "_Correctness": 1.32
   },
   {
-    "model": "CopyNet",
-    "fluency": 2.36,
-    "relevance": 1.13,
-    "correctness": 1.08
+    "_Model": "CopyNet",
+    "_Fluency": 2.36,
+    "_Relevance": 1.13,
+    "_Correctness": 1.08
   },
   {
-    "model": "CCM",
-    "fluency": 2.27,
-    "relevance": 1.35,
-    "correctness": 1.22
+    "_Model": "CCM",
+    "_Fluency": 2.27,
+    "_Relevance": 1.35,
+    "_Correctness": 1.22
   },
   {
-    "model": "PostKS",
-    "fluency": 2.32,
-    "relevance": 1.36,
-    "correctness": 1.31
+    "_Model": "PostKS",
+    "_Fluency": 2.32,
+    "_Relevance": 1.36,
+    "_Correctness": 1.31
   },
   {
-    "model": "TransDG",
-    "fluency": 2.41,
-    "relevance": 1.52,
-    "correctness": 1.34
+    "_Model": "TransDG",
+    "_Fluency": 2.41,
+    "_Relevance": 1.52,
+    "_Correctness": 1.34
   }
 ]

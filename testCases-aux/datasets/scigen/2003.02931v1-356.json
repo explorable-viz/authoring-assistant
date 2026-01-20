@@ -1,58 +1,58 @@
 [
   {
-    "dev": "Majority",
-    "all": 44.4,
-    "pER": 61.8,
-    "lOC": 0.0,
-    "oRG": 0.0,
-    "mISC": "—"
+    "_Dev": "Majority",
+    "_All": 44.4,
+    "_PER": 61.8,
+    "_LOC": 0.0,
+    "_ORG": 0.0,
+    "_MISC": "—"
   },
   {
-    "dev": "DKIE",
-    "all": 58.9,
-    "pER": 68.9,
-    "lOC": 63.6,
-    "oRG": 23.3,
-    "mISC": "—"
+    "_Dev": "DKIE",
+    "_All": 58.9,
+    "_PER": 68.9,
+    "_LOC": 63.6,
+    "_ORG": 23.3,
+    "_MISC": "—"
   },
   {
-    "dev": "Polyglot",
-    "all": 64.5,
-    "pER": 73.7,
-    "lOC": 73.4,
-    "oRG": 36.8,
-    "mISC": "—"
+    "_Dev": "Polyglot",
+    "_All": 64.5,
+    "_PER": 73.7,
+    "_LOC": 73.4,
+    "_ORG": 36.8,
+    "_MISC": "—"
   },
   {
-    "dev": "Bilstm",
-    "all": 70.8,
-    "pER": 83.3,
-    "lOC": 71.8,
-    "oRG": 60.0,
-    "mISC": 23.9
+    "_Dev": "Bilstm",
+    "_All": 70.8,
+    "_PER": 83.3,
+    "_LOC": 71.8,
+    "_ORG": 60.0,
+    "_MISC": 23.9
   },
   {
-    "dev": "Test",
-    "all": "All",
-    "pER": "PER",
-    "lOC": "LOC",
-    "oRG": "ORG",
-    "mISC": "MISC"
+    "_Dev": "Test",
+    "_All": "All",
+    "_PER": "PER",
+    "_LOC": "LOC",
+    "_ORG": "ORG",
+    "_MISC": "MISC"
   },
   {
-    "dev": "Polyglot",
-    "all": 61.6,
-    "pER": 78.4,
-    "lOC": 69.7,
-    "oRG": 24.7,
-    "mISC": "—"
+    "_Dev": "Polyglot",
+    "_All": 61.6,
+    "_PER": 78.4,
+    "_LOC": 69.7,
+    "_ORG": 24.7,
+    "_MISC": "—"
   },
   {
-    "dev": "Bilstm",
-    "all": 66.0,
-    "pER": 86.6,
-    "lOC": 63.6,
-    "oRG": 42.5,
-    "mISC": 24.8
+    "_Dev": "Bilstm",
+    "_All": 66.0,
+    "_PER": 86.6,
+    "_LOC": 63.6,
+    "_ORG": 42.5,
+    "_MISC": 24.8
   }
 ]

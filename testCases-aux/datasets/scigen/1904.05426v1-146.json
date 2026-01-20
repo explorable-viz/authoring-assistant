@@ -1,6 +1,6 @@
 [
   {
-    "test_Tags": "gold",
+    "_Test_Tags": "gold",
     "de_UAS": 65.57,
     "de_LAS": 52.37,
     "fr_UAS": 71.27,
@@ -15,7 +15,7 @@
     "sv_LAS": 64.9
   },
   {
-    "test_Tags": "none",
+    "_Test_Tags": "none",
     "de_UAS": 40.9,
     "de_LAS": 18.61,
     "fr_UAS": 51.14,
@@ -30,7 +30,7 @@
     "sv_LAS": 17.96
   },
   {
-    "test_Tags": "cipher (this work)",
+    "_Test_Tags": "cipher (this work)",
     "de_UAS": 38.31,
     "de_LAS": 24.72,
     "fr_UAS": 54.46,

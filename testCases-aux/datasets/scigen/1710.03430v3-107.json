@@ -1,79 +1,79 @@
 [
   {
-    "Model": "LSTM ",
-    "Ubuntu_v2_1_in_2R_1": 0.869,
-    "Ubuntu_v2_1_in_10R_1": 0.552,
-    "Ubuntu_v2_1_in_10R_2": 0.721,
-    "Ubuntu_v2_1_in_10R_5": 0.924
+    "_Model": "LSTM",
+    "_Ubuntu_v2_1_in_2R_1": 0.869,
+    "_Ubuntu_v2_1_in_10R_1": 0.552,
+    "_Ubuntu_v2_1_in_10R_2": 0.721,
+    "_Ubuntu_v2_1_in_10R_5": 0.924
   },
   {
-    "Model": "RNN ",
-    "Ubuntu_v2_1_in_2R_1": 0.907,
-    "Ubuntu_v2_1_in_10R_1": 0.664,
-    "Ubuntu_v2_1_in_10R_2": 0.799,
-    "Ubuntu_v2_1_in_10R_5": 0.951
+    "_Model": "RNN",
+    "_Ubuntu_v2_1_in_2R_1": 0.907,
+    "_Ubuntu_v2_1_in_10R_1": 0.664,
+    "_Ubuntu_v2_1_in_10R_2": 0.799,
+    "_Ubuntu_v2_1_in_10R_5": 0.951
   },
   {
-    "Model": "CNN ",
-    "Ubuntu_v2_1_in_2R_1": 0.863,
-    "Ubuntu_v2_1_in_10R_1": 0.587,
-    "Ubuntu_v2_1_in_10R_2": 0.721,
-    "Ubuntu_v2_1_in_10R_5": 0.907
+    "_Model": "CNN",
+    "_Ubuntu_v2_1_in_2R_1": 0.863,
+    "_Ubuntu_v2_1_in_10R_1": 0.587,
+    "_Ubuntu_v2_1_in_10R_2": 0.721,
+    "_Ubuntu_v2_1_in_10R_5": 0.907
   },
   {
-    "Model": "RNN-CNN ",
-    "Ubuntu_v2_1_in_2R_1": 0.911,
-    "Ubuntu_v2_1_in_10R_1": 0.672,
-    "Ubuntu_v2_1_in_10R_2": 0.809,
-    "Ubuntu_v2_1_in_10R_5": 0.956
+    "_Model": "RNN-CNN",
+    "_Ubuntu_v2_1_in_2R_1": 0.911,
+    "_Ubuntu_v2_1_in_10R_1": 0.672,
+    "_Ubuntu_v2_1_in_10R_2": 0.809,
+    "_Ubuntu_v2_1_in_10R_5": 0.956
   },
   {
-    "Model": "Attention \\scriptsize{}(RNN-CNN)",
-    "Ubuntu_v2_1_in_2R_1": 0.903,
-    "Ubuntu_v2_1_in_10R_1": 0.653,
-    "Ubuntu_v2_1_in_10R_2": 0.788,
-    "Ubuntu_v2_1_in_10R_5": 0.945
+    "_Model": "Attention \\scriptsize{}(RNN-CNN)",
+    "_Ubuntu_v2_1_in_2R_1": 0.903,
+    "_Ubuntu_v2_1_in_10R_1": 0.653,
+    "_Ubuntu_v2_1_in_10R_2": 0.788,
+    "_Ubuntu_v2_1_in_10R_5": 0.945
   },
   {
-    "Model": "CompAgg ",
-    "Ubuntu_v2_1_in_2R_1": 0.895,
-    "Ubuntu_v2_1_in_10R_1": 0.641,
-    "Ubuntu_v2_1_in_10R_2": 0.776,
-    "Ubuntu_v2_1_in_10R_5": 0.937
+    "_Model": "CompAgg",
+    "_Ubuntu_v2_1_in_2R_1": 0.895,
+    "_Ubuntu_v2_1_in_10R_1": 0.641,
+    "_Ubuntu_v2_1_in_10R_2": 0.776,
+    "_Ubuntu_v2_1_in_10R_5": 0.937
   },
   {
-    "Model": "BiMPM ",
-    "Ubuntu_v2_1_in_2R_1": 0.877,
-    "Ubuntu_v2_1_in_10R_1": 0.611,
-    "Ubuntu_v2_1_in_10R_2": 0.747,
-    "Ubuntu_v2_1_in_10R_5": 0.921
+    "_Model": "BiMPM",
+    "_Ubuntu_v2_1_in_2R_1": 0.877,
+    "_Ubuntu_v2_1_in_10R_1": 0.611,
+    "_Ubuntu_v2_1_in_10R_2": 0.747,
+    "_Ubuntu_v2_1_in_10R_5": 0.921
   },
   {
-    "Model": "RDE",
-    "Ubuntu_v2_1_in_2R_1": 0.894,
-    "Ubuntu_v2_1_in_10R_1": 0.61,
-    "Ubuntu_v2_1_in_10R_2": 0.776,
-    "Ubuntu_v2_1_in_10R_5": 0.947
+    "_Model": "RDE",
+    "_Ubuntu_v2_1_in_2R_1": 0.894,
+    "_Ubuntu_v2_1_in_10R_1": 0.61,
+    "_Ubuntu_v2_1_in_10R_2": 0.776,
+    "_Ubuntu_v2_1_in_10R_5": 0.947
   },
   {
-    "Model": "RDE-LTC",
-    "Ubuntu_v2_1_in_2R_1": 0.899,
-    "Ubuntu_v2_1_in_10R_1": 0.625,
-    "Ubuntu_v2_1_in_10R_2": 0.788,
-    "Ubuntu_v2_1_in_10R_5": 0.951
+    "_Model": "RDE-LTC",
+    "_Ubuntu_v2_1_in_2R_1": 0.899,
+    "_Ubuntu_v2_1_in_10R_1": 0.625,
+    "_Ubuntu_v2_1_in_10R_2": 0.788,
+    "_Ubuntu_v2_1_in_10R_5": 0.951
   },
   {
-    "Model": "HRDE",
-    "Ubuntu_v2_1_in_2R_1": 0.914,
-    "Ubuntu_v2_1_in_10R_1": 0.649,
-    "Ubuntu_v2_1_in_10R_2": 0.813,
-    "Ubuntu_v2_1_in_10R_5": 0.964
+    "_Model": "HRDE",
+    "_Ubuntu_v2_1_in_2R_1": 0.914,
+    "_Ubuntu_v2_1_in_10R_1": 0.649,
+    "_Ubuntu_v2_1_in_10R_2": 0.813,
+    "_Ubuntu_v2_1_in_10R_5": 0.964
   },
   {
-    "Model": "HRDE-LTC",
-    "Ubuntu_v2_1_in_2R_1": 0.915,
-    "Ubuntu_v2_1_in_10R_1": 0.652,
-    "Ubuntu_v2_1_in_10R_2": 0.815,
-    "Ubuntu_v2_1_in_10R_5": 0.966
+    "_Model": "HRDE-LTC",
+    "_Ubuntu_v2_1_in_2R_1": 0.915,
+    "_Ubuntu_v2_1_in_10R_1": 0.652,
+    "_Ubuntu_v2_1_in_10R_2": 0.815,
+    "_Ubuntu_v2_1_in_10R_5": 0.966
   }
 ]

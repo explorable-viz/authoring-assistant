@@ -1,92 +1,92 @@
 [
   {
-    "methods": "milne2008learning",
-    "mSNBC": 78,
-    "aQUAINT": 85,
-    "aCE2004": 81,
-    "cWEB": 64.1,
-    "wIKI": 81.7,
-    "avg": 77.96
+    "_Methods": "milne2008learning",
+    "_MSNBC": 78,
+    "_AQUAINT": 85,
+    "_ACE2004": 81,
+    "_CWEB": 64.1,
+    "_WIKI": 81.7,
+    "_Avg": 77.96
   },
   {
-    "methods": "D11-1072",
-    "mSNBC": 79,
-    "aQUAINT": 56,
-    "aCE2004": 80,
-    "cWEB": 58.6,
-    "wIKI": 63,
-    "avg": 67.32
+    "_Methods": "D11-1072",
+    "_MSNBC": 79,
+    "_AQUAINT": 56,
+    "_ACE2004": 80,
+    "_CWEB": 58.6,
+    "_WIKI": 63,
+    "_Avg": 67.32
   },
   {
-    "methods": "P11-1138",
-    "mSNBC": 75,
-    "aQUAINT": 83,
-    "aCE2004": 82,
-    "cWEB": 56.2,
-    "wIKI": 67.2,
-    "avg": 72.68
+    "_Methods": "P11-1138",
+    "_MSNBC": 75,
+    "_AQUAINT": 83,
+    "_ACE2004": 82,
+    "_CWEB": 56.2,
+    "_WIKI": 67.2,
+    "_Avg": 72.68
   },
   {
-    "methods": "cheng-roth:2013:EMNLP",
-    "mSNBC": 90,
-    "aQUAINT": 90,
-    "aCE2004": 86,
-    "cWEB": 67.5,
-    "wIKI": 73.4,
-    "avg": 81.38
+    "_Methods": "cheng-roth:2013:EMNLP",
+    "_MSNBC": 90,
+    "_AQUAINT": 90,
+    "_ACE2004": 86,
+    "_CWEB": 67.5,
+    "_WIKI": 73.4,
+    "_Avg": 81.38
   },
   {
-    "methods": "guorobust",
-    "mSNBC": 92,
-    "aQUAINT": 87,
-    "aCE2004": 88,
-    "cWEB": 77,
-    "wIKI": 84.5,
-    "avg": 85.7
+    "_Methods": "guorobust",
+    "_MSNBC": 92,
+    "_AQUAINT": 87,
+    "_ACE2004": 88,
+    "_CWEB": 77,
+    "_WIKI": 84.5,
+    "_Avg": 85.7
   },
   {
-    "methods": "D17-1276",
-    "mSNBC": 93.7,
-    "aQUAINT": 88.5,
-    "aCE2004": 88.5,
-    "cWEB": 77.9,
-    "wIKI": 77.5,
-    "avg": 85.22
+    "_Methods": "D17-1276",
+    "_MSNBC": 93.7,
+    "_AQUAINT": 88.5,
+    "_ACE2004": 88.5,
+    "_CWEB": 77.9,
+    "_WIKI": 77.5,
+    "_Avg": 85.22
   },
   {
-    "methods": "rel-norm",
-    "mSNBC": 92.2,
-    "aQUAINT": 86.7,
-    "aCE2004": 87.9,
-    "cWEB": 75.2,
-    "wIKI": 76.4,
-    "avg": 83.67
+    "_Methods": "rel-norm",
+    "_MSNBC": 92.2,
+    "_AQUAINT": 86.7,
+    "_ACE2004": 87.9,
+    "_CWEB": 75.2,
+    "_WIKI": 76.4,
+    "_Avg": 83.67
   },
   {
-    "methods": "ment-norm",
-    "mSNBC": 93.9,
-    "aQUAINT": 88.3,
-    "aCE2004": 89.9,
-    "cWEB": 77.5,
-    "wIKI": 78.0,
-    "avg": 85.51
+    "_Methods": "ment-norm",
+    "_MSNBC": 93.9,
+    "_AQUAINT": 88.3,
+    "_ACE2004": 89.9,
+    "_CWEB": 77.5,
+    "_WIKI": 78.0,
+    "_Avg": 85.51
   },
   {
-    "methods": "ment-norm (  K=1)",
-    "mSNBC": 93.2,
-    "aQUAINT": 88.4,
-    "aCE2004": 88.9,
-    "cWEB": 77.0,
-    "wIKI": 77.2,
-    "avg": 84.94
+    "_Methods": "ment-norm (  K=1)",
+    "_MSNBC": 93.2,
+    "_AQUAINT": 88.4,
+    "_ACE2004": 88.9,
+    "_CWEB": 77.0,
+    "_WIKI": 77.2,
+    "_Avg": 84.94
   },
   {
-    "methods": "ment-norm (no pad)",
-    "mSNBC": 93.6,
-    "aQUAINT": 87.8,
-    "aCE2004": 90.0,
-    "cWEB": 77.0,
-    "wIKI": 77.3,
-    "avg": 85.13
+    "_Methods": "ment-norm (no pad)",
+    "_MSNBC": 93.6,
+    "_AQUAINT": 87.8,
+    "_ACE2004": 90.0,
+    "_CWEB": 77.0,
+    "_WIKI": 77.3,
+    "_Avg": 85.13
   }
 ]

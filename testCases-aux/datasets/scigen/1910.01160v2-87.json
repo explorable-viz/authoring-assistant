@@ -1,20 +1,20 @@
 [
   {
-    "Model": "Headline only",
-    "P": 0.46,
-    "R": 0.89,
-    "F1": 0.61
+    "_Model": "Headline only",
+    "_P": 0.46,
+    "_R": 0.89,
+    "_F1": 0.61
   },
   {
-    "Model": "Text body only",
-    "P": 0.78,
-    "R": 0.52,
-    "F1": 0.62
+    "_Model": "Text body only",
+    "_P": 0.78,
+    "_R": 0.52,
+    "_F1": 0.62
   },
   {
-    "Model": "Headline + text body",
-    "P": 0.81,
-    "R": 0.75,
-    "F1": 0.78
+    "_Model": "Headline + text body",
+    "_P": 0.81,
+    "_R": 0.75,
+    "_F1": 0.78
   }
 ]

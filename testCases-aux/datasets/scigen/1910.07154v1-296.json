@@ -1,12 +1,12 @@
 [
   {
-    "Model": "HexaF - UCL",
-    "Label_Accuracy_ϕ_=_0_76": 80.18,
-    "Label_Accuracy_ϕ_=_0_67": 80.18
+    "_Model": "HexaF - UCL",
+    "_Label_Accuracy_ϕ_=_0_76": 80.18,
+    "_Label_Accuracy_ϕ_=_0_67": 80.18
   },
   {
-    "Model": "Our Model (BERT)",
-    "Label_Accuracy_ϕ_=_0_76": 80.2,
-    "Label_Accuracy_ϕ_=_0_67": 86.7
+    "_Model": "Our Model (BERT)",
+    "_Label_Accuracy_ϕ_=_0_76": 80.2,
+    "_Label_Accuracy_ϕ_=_0_67": 86.7
   }
 ]

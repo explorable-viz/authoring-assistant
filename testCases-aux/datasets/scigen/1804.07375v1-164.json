@@ -1,32 +1,32 @@
 [
   {
-    "Spoken_bc_conv": "bc.news",
-    "Spoken_137_223": 244425,
-    "Written_news": "bible",
-    "Written_68_6455": 243040
+    "_Spoken_bc_conv": "bc.news",
+    "_Spoken_137_223": 244425,
+    "_Written_news": "bible",
+    "_Written_68_6455": 243040
   },
   {
-    "Spoken_bc_conv": "phone",
-    "Spoken_137_223": 110132,
-    "Written_news": "trans.",
-    "Written_68_6455": 98143
+    "_Spoken_bc_conv": "phone",
+    "_Spoken_137_223": 110132,
+    "_Written_news": "trans.",
+    "_Written_68_6455": 98143
   },
   {
-    "Spoken_bc_conv": "",
-    "Spoken_137_223": "",
-    "Written_news": "web",
-    "Written_68_6455": 71467
+    "_Spoken_bc_conv": "",
+    "_Spoken_137_223": "",
+    "_Written_news": "web",
+    "_Written_68_6455": 71467
   },
   {
-    "Spoken_bc_conv": " total",
-    "Spoken_137_223": 491780,
-    "Written_news": " total",
-    "Written_68_6455": 1099105
+    "_Spoken_bc_conv": "total",
+    "_Spoken_137_223": 491780,
+    "_Written_news": "total",
+    "_Written_68_6455": 1099105
   },
   {
-    "Spoken_bc_conv": " total 1590885",
-    "Spoken_137_223": " total 1590885",
-    "Written_news": " total 1590885",
-    "Written_68_6455": " total 1590885"
+    "_Spoken_bc_conv": "total 1590885",
+    "_Spoken_137_223": "total 1590885",
+    "_Written_news": "total 1590885",
+    "_Written_68_6455": "total 1590885"
   }
 ]

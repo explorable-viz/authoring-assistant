@@ -1,56 +1,56 @@
 [
   {
-    "Languages_EN–BG": " EN–CS",
-    "num_sents_306_380": 491848,
-    "Languages_EN–IT": " EN–LT",
-    "num_sents_1_297_635": 481570
+    "_Languages_EN–BG": "EN–CS",
+    "_num_sents_306_380": 491848,
+    "_Languages_EN–IT": "EN–LT",
+    "_num_sents_1_297_635": 481570
   },
   {
-    "Languages_EN–BG": " EN–DA",
-    "num_sents_306_380": 1421197,
-    "Languages_EN–IT": " EN–LV",
-    "num_sents_1_297_635": 487287
+    "_Languages_EN–BG": "EN–DA",
+    "_num_sents_306_380": 1421197,
+    "_Languages_EN–IT": "EN–LV",
+    "_num_sents_1_297_635": 487287
   },
   {
-    "Languages_EN–BG": " EN–DE",
-    "num_sents_306_380": 1296843,
-    "Languages_EN–IT": " EN–NL",
-    "num_sents_1_297_635": 1419359
+    "_Languages_EN–BG": "EN–DE",
+    "_num_sents_306_380": 1296843,
+    "_Languages_EN–IT": "EN–NL",
+    "_num_sents_1_297_635": 1419359
   },
   {
-    "Languages_EN–BG": " EN–EL",
-    "num_sents_306_380": 921540,
-    "Languages_EN–IT": " EN–PL",
-    "num_sents_1_297_635": 478008
+    "_Languages_EN–BG": "EN–EL",
+    "_num_sents_306_380": 921540,
+    "_Languages_EN–IT": "EN–PL",
+    "_num_sents_1_297_635": 478008
   },
   {
-    "Languages_EN–BG": " EN–ES",
-    "num_sents_306_380": 1419507,
-    "Languages_EN–IT": " EN–PT",
-    "num_sents_1_297_635": 1426043
+    "_Languages_EN–BG": "EN–ES",
+    "_num_sents_306_380": 1419507,
+    "_Languages_EN–IT": "EN–PT",
+    "_num_sents_1_297_635": 1426043
   },
   {
-    "Languages_EN–BG": " EN–ET",
-    "num_sents_306_380": 494645,
-    "Languages_EN–IT": " EN–RO",
-    "num_sents_1_297_635": 303396
+    "_Languages_EN–BG": "EN–ET",
+    "_num_sents_306_380": 494645,
+    "_Languages_EN–IT": "EN–RO",
+    "_num_sents_1_297_635": 303396
   },
   {
-    "Languages_EN–BG": " EN–FI",
-    "num_sents_306_380": 1393572,
-    "Languages_EN–IT": " EN–SK",
-    "num_sents_1_297_635": 488351
+    "_Languages_EN–BG": "EN–FI",
+    "_num_sents_306_380": 1393572,
+    "_Languages_EN–IT": "EN–SK",
+    "_num_sents_1_297_635": 488351
   },
   {
-    "Languages_EN–BG": " EN–FR",
-    "num_sents_306_380": 1440620,
-    "Languages_EN–IT": " EN–SL",
-    "num_sents_1_297_635": 479313
+    "_Languages_EN–BG": "EN–FR",
+    "_num_sents_306_380": 1440620,
+    "_Languages_EN–IT": "EN–SL",
+    "_num_sents_1_297_635": 479313
   },
   {
-    "Languages_EN–BG": " EN–HU",
-    "num_sents_306_380": 251833,
-    "Languages_EN–IT": " EN–SV",
-    "num_sents_1_297_635": 1349472
+    "_Languages_EN–BG": "EN–HU",
+    "_num_sents_306_380": 251833,
+    "_Languages_EN–IT": "EN–SV",
+    "_num_sents_1_297_635": 1349472
   }
 ]

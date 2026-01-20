@@ -1,18 +1,18 @@
 [
   {
-    "method_Data": "Indian Annotators",
-    "mass": 0.61,
-    "length": 0.79,
-    "speed": 0.77,
-    "currency": 0.58,
-    "all": 0.69
+    "_Method_Data": "Indian Annotators",
+    "_Mass": 0.61,
+    "_Length": 0.79,
+    "_Speed": 0.77,
+    "_Currency": 0.58,
+    "_All": 0.69
   },
   {
-    "method_Data": "US Annotators",
-    "mass": "-",
-    "length": "-",
-    "speed": "-",
-    "currency": 0.76,
-    "all": "-"
+    "_Method_Data": "US Annotators",
+    "_Mass": "-",
+    "_Length": "-",
+    "_Speed": "-",
+    "_Currency": 0.76,
+    "_All": "-"
   }
 ]

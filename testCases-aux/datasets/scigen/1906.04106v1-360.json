@@ -1,47 +1,47 @@
 [
   {
-    "Model": " Model",
-    "Present_F1_M": "new",
-    "Absent_F1_M": "new"
+    "_Model": "Model",
+    "_Present_F1_M": "new",
+    "_Absent_F1_M": "new"
   },
   {
-    "Model": "catSeq",
-    "Present_F1_M": 0.376,
-    "Absent_F1_M": 0.034
+    "_Model": "catSeq",
+    "_Present_F1_M": 0.376,
+    "_Absent_F1_M": 0.034
   },
   {
-    "Model": "catSeqD",
-    "Present_F1_M": 0.372,
-    "Absent_F1_M": 0.033
+    "_Model": "catSeqD",
+    "_Present_F1_M": 0.372,
+    "_Absent_F1_M": 0.033
   },
   {
-    "Model": "catSeqCorr",
-    "Present_F1_M": 0.375,
-    "Absent_F1_M": 0.034
+    "_Model": "catSeqCorr",
+    "_Present_F1_M": 0.375,
+    "_Absent_F1_M": 0.034
   },
   {
-    "Model": "catSeqTG",
-    "Present_F1_M": 0.374,
-    "Absent_F1_M": 0.033
+    "_Model": "catSeqTG",
+    "_Present_F1_M": 0.374,
+    "_Absent_F1_M": 0.033
   },
   {
-    "Model": "catSeq-2  RF1",
-    "Present_F1_M": 0.396,
-    "Absent_F1_M": 0.054
+    "_Model": "catSeq-2  RF1",
+    "_Present_F1_M": 0.396,
+    "_Absent_F1_M": 0.054
   },
   {
-    "Model": "catSeqD-2  RF1",
-    "Present_F1_M": 0.39,
-    "Absent_F1_M": 0.052
+    "_Model": "catSeqD-2  RF1",
+    "_Present_F1_M": 0.39,
+    "_Absent_F1_M": 0.052
   },
   {
-    "Model": "catSeqCorr-2  RF1",
-    "Present_F1_M": 0.393,
-    "Absent_F1_M": 0.051
+    "_Model": "catSeqCorr-2  RF1",
+    "_Present_F1_M": 0.393,
+    "_Absent_F1_M": 0.051
   },
   {
-    "Model": "catSeqTG-2  RF1",
-    "Present_F1_M": 0.398,
-    "Absent_F1_M": 0.056
+    "_Model": "catSeqTG-2  RF1",
+    "_Present_F1_M": 0.398,
+    "_Absent_F1_M": 0.056
   }
 ]

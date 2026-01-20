@@ -1,44 +1,44 @@
 [
   {
-    "model": "Model",
-    "self_BLEU_↓": "Self-BLEU (↓)",
-    "Unique_n_grams_↑_Self": "n=4",
-    "Unique_n_grams_↑_WT103": "n=4",
-    "Unique_n_grams_↑_TBC": "n=4"
+    "_Model": "Model",
+    "_Self_BLEU_↓": "Self-BLEU (↓)",
+    "_Unique_n_grams_↑_Self": "n=4",
+    "_Unique_n_grams_↑_WT103": "n=4",
+    "_Unique_n_grams_↑_TBC": "n=4"
   },
   {
-    "model": "BERT (large)",
-    "self_BLEU_↓": 9.43,
-    "Unique_n_grams_↑_Self": 98.01,
-    "Unique_n_grams_↑_WT103": 98.43,
-    "Unique_n_grams_↑_TBC": 98.59
+    "_Model": "BERT (large)",
+    "_Self_BLEU_↓": 9.43,
+    "_Unique_n_grams_↑_Self": 98.01,
+    "_Unique_n_grams_↑_WT103": 98.43,
+    "_Unique_n_grams_↑_TBC": 98.59
   },
   {
-    "model": "BERT (base)",
-    "self_BLEU_↓": 10.06,
-    "Unique_n_grams_↑_Self": 98.14,
-    "Unique_n_grams_↑_WT103": 98.55,
-    "Unique_n_grams_↑_TBC": 98.56
+    "_Model": "BERT (base)",
+    "_Self_BLEU_↓": 10.06,
+    "_Unique_n_grams_↑_Self": 98.14,
+    "_Unique_n_grams_↑_WT103": 98.55,
+    "_Unique_n_grams_↑_TBC": 98.56
   },
   {
-    "model": "GPT",
-    "self_BLEU_↓": 40.02,
-    "Unique_n_grams_↑_Self": 87.28,
-    "Unique_n_grams_↑_WT103": 91.12,
-    "Unique_n_grams_↑_TBC": 88.42
+    "_Model": "GPT",
+    "_Self_BLEU_↓": 40.02,
+    "_Unique_n_grams_↑_Self": 87.28,
+    "_Unique_n_grams_↑_WT103": 91.12,
+    "_Unique_n_grams_↑_TBC": 88.42
   },
   {
-    "model": "WT103",
-    "self_BLEU_↓": 9.8,
-    "Unique_n_grams_↑_Self": 99.05,
-    "Unique_n_grams_↑_WT103": 97.44,
-    "Unique_n_grams_↑_TBC": 99.23
+    "_Model": "WT103",
+    "_Self_BLEU_↓": 9.8,
+    "_Unique_n_grams_↑_Self": 99.05,
+    "_Unique_n_grams_↑_WT103": 97.44,
+    "_Unique_n_grams_↑_TBC": 99.23
   },
   {
-    "model": "TBC",
-    "self_BLEU_↓": 12.51,
-    "Unique_n_grams_↑_Self": 98.73,
-    "Unique_n_grams_↑_WT103": 98.81,
-    "Unique_n_grams_↑_TBC": 96.31
+    "_Model": "TBC",
+    "_Self_BLEU_↓": 12.51,
+    "_Unique_n_grams_↑_Self": 98.73,
+    "_Unique_n_grams_↑_WT103": 98.81,
+    "_Unique_n_grams_↑_TBC": 96.31
   }
 ]

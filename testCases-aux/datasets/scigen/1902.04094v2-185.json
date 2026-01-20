@@ -1,32 +1,32 @@
 [
   {
-    "model": "BERT (large)",
-    "corpus_BLEU_↑_WT103": 5.05,
-    "corpus_BLEU_↑_TBC": 7.6,
-    "pPL_↓": 331.47
+    "_Model": "BERT (large)",
+    "_Corpus_BLEU_↑_WT103": 5.05,
+    "_Corpus_BLEU_↑_TBC": 7.6,
+    "_PPL_↓": 331.47
   },
   {
-    "model": "BERT (base)",
-    "corpus_BLEU_↑_WT103": 7.8,
-    "corpus_BLEU_↑_TBC": 7.06,
-    "pPL_↓": 279.1
+    "_Model": "BERT (base)",
+    "_Corpus_BLEU_↑_WT103": 7.8,
+    "_Corpus_BLEU_↑_TBC": 7.06,
+    "_PPL_↓": 279.1
   },
   {
-    "model": "GPT",
-    "corpus_BLEU_↑_WT103": 10.81,
-    "corpus_BLEU_↑_TBC": 30.75,
-    "pPL_↓": 154.29
+    "_Model": "GPT",
+    "_Corpus_BLEU_↑_WT103": 10.81,
+    "_Corpus_BLEU_↑_TBC": 30.75,
+    "_PPL_↓": 154.29
   },
   {
-    "model": "WT103",
-    "corpus_BLEU_↑_WT103": 17.48,
-    "corpus_BLEU_↑_TBC": 6.57,
-    "pPL_↓": 54.0
+    "_Model": "WT103",
+    "_Corpus_BLEU_↑_WT103": 17.48,
+    "_Corpus_BLEU_↑_TBC": 6.57,
+    "_PPL_↓": 54.0
   },
   {
-    "model": "TBC",
-    "corpus_BLEU_↑_WT103": 10.05,
-    "corpus_BLEU_↑_TBC": 23.05,
-    "pPL_↓": 314.28
+    "_Model": "TBC",
+    "_Corpus_BLEU_↑_WT103": 10.05,
+    "_Corpus_BLEU_↑_TBC": 23.05,
+    "_PPL_↓": 314.28
   }
 ]

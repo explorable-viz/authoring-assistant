@@ -1,38 +1,38 @@
 [
   {
-    "model": "Only QG*",
-    "what": 82.24,
-    "which": 0.29,
-    "where": 51.9,
-    "when": 60.82,
-    "who": 68.34,
-    "why": 12.66,
-    "how": 60.62,
-    "others": 2.13,
-    "total": 68.29
+    "_Model": "Only QG*",
+    "_What": 82.24,
+    "_Which": 0.29,
+    "_Where": 51.9,
+    "_When": 60.82,
+    "_Who": 68.34,
+    "_Why": 12.66,
+    "_How": 60.62,
+    "_Others": 2.13,
+    "_Total": 68.29
   },
   {
-    "model": "IWAQG",
-    "what": 87.66,
-    "which": 1.46,
-    "where": 66.24,
-    "when": 49.41,
-    "who": 76.41,
-    "why": 50.63,
-    "how": 70.26,
-    "others": 14.89,
-    "total": 74.1
+    "_Model": "IWAQG",
+    "_What": 87.66,
+    "_Which": 1.46,
+    "_Where": 66.24,
+    "_When": 49.41,
+    "_Who": 76.41,
+    "_Why": 50.63,
+    "_How": 70.26,
+    "_Others": 14.89,
+    "_Total": 74.1
   },
   {
-    "model": "Upper Bound",
-    "what": 99.87,
-    "which": 99.71,
-    "where": 100.0,
-    "when": 99.71,
-    "who": 99.84,
-    "why": 98.73,
-    "how": 99.67,
-    "others": 89.36,
-    "total": 99.72
+    "_Model": "Upper Bound",
+    "_What": 99.87,
+    "_Which": 99.71,
+    "_Where": 100.0,
+    "_When": 99.71,
+    "_Who": 99.84,
+    "_Why": 98.73,
+    "_How": 99.67,
+    "_Others": 89.36,
+    "_Total": 99.72
   }
 ]

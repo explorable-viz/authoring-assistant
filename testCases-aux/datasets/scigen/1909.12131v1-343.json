@@ -1,20 +1,20 @@
 [
   {
     "_1": "Complex",
-    "num_T_S": 30.75,
-    "num_S_C": 1.18,
-    "SAME": 100,
-    "lDSC": 0.0,
-    "sAMSA": 0.36,
-    "sAMSAabl": 0.94
+    "_num_T_S": 30.75,
+    "_num_S_C": 1.18,
+    "_SAME": 100,
+    "_LDSC": 0.0,
+    "_SAMSA": 0.36,
+    "_SAMSAabl": 0.94
   },
   {
     "_1": "MinWikiSplit",
-    "num_T_S": 12.12,
-    "num_S_C": 3.84,
-    "SAME": 0.0,
-    "lDSC": 17.73,
-    "sAMSA": 0.4,
-    "sAMSAabl": 0.48
+    "_num_T_S": 12.12,
+    "_num_S_C": 3.84,
+    "_SAME": 0.0,
+    "_LDSC": 17.73,
+    "_SAMSA": 0.4,
+    "_SAMSAabl": 0.48
   }
 ]

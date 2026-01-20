@@ -1,80 +1,80 @@
 [
   {
-    "method": "SA",
-    "feature": "w2v",
-    "accuracy": 78.73,
-    "std_Deviation": 1.56
+    "_Method": "SA",
+    "_Feature": "w2v",
+    "_Accuracy": 78.73,
+    "_Std_Deviation": 1.56
   },
   {
-    "method": "MSM",
-    "feature": "w2v",
-    "accuracy": 90.62,
-    "std_Deviation": 0.42
+    "_Method": "MSM",
+    "_Feature": "w2v",
+    "_Accuracy": 90.62,
+    "_Std_Deviation": 0.42
   },
   {
-    "method": "TF-MSM",
-    "feature": "w2v",
-    "accuracy": 92.01,
-    "std_Deviation": 0.3
+    "_Method": "TF-MSM",
+    "_Feature": "w2v",
+    "_Accuracy": 92.01,
+    "_Std_Deviation": 0.3
   },
   {
-    "method": "MVB",
-    "feature": "binBOW",
-    "accuracy": 62.7,
-    "std_Deviation": 0.69
+    "_Method": "MVB",
+    "_Feature": "binBOW",
+    "_Accuracy": 62.7,
+    "_Std_Deviation": 0.69
   },
   {
-    "method": "MNB",
-    "feature": "tfBOW",
-    "accuracy": 91.47,
-    "std_Deviation": 0.37
+    "_Method": "MNB",
+    "_Feature": "tfBOW",
+    "_Accuracy": 91.47,
+    "_Std_Deviation": 0.37
   },
   {
-    "method": "LSA",
-    "feature": "w2v",
-    "accuracy": 34.58,
-    "std_Deviation": 0.4
+    "_Method": "LSA",
+    "_Feature": "w2v",
+    "_Accuracy": 34.58,
+    "_Std_Deviation": 0.4
   },
   {
-    "method": "LSA",
-    "feature": "binBOW",
-    "accuracy": 86.92,
-    "std_Deviation": 0.74
+    "_Method": "LSA",
+    "_Feature": "binBOW",
+    "_Accuracy": 86.92,
+    "_Std_Deviation": 0.74
   },
   {
-    "method": "LSA",
-    "feature": "tfBOW",
-    "accuracy": 86.23,
-    "std_Deviation": 0.96
+    "_Method": "LSA",
+    "_Feature": "tfBOW",
+    "_Accuracy": 86.23,
+    "_Std_Deviation": 0.96
   },
   {
-    "method": "LSA",
-    "feature": "tfidfBOW",
-    "accuracy": 86.35,
-    "std_Deviation": 1.03
+    "_Method": "LSA",
+    "_Feature": "tfidfBOW",
+    "_Accuracy": 86.35,
+    "_Std_Deviation": 1.03
   },
   {
-    "method": "SVM",
-    "feature": "w2v",
-    "accuracy": 26.61,
-    "std_Deviation": 0.3
+    "_Method": "SVM",
+    "_Feature": "w2v",
+    "_Accuracy": 26.61,
+    "_Std_Deviation": 0.3
   },
   {
-    "method": "SVM",
-    "feature": "binBOW",
-    "accuracy": 89.23,
-    "std_Deviation": 0.24
+    "_Method": "SVM",
+    "_Feature": "binBOW",
+    "_Accuracy": 89.23,
+    "_Std_Deviation": 0.24
   },
   {
-    "method": "SVM",
-    "feature": "tfBOW",
-    "accuracy": 89.1,
-    "std_Deviation": 0.29
+    "_Method": "SVM",
+    "_Feature": "tfBOW",
+    "_Accuracy": 89.1,
+    "_Std_Deviation": 0.29
   },
   {
-    "method": "SVM",
-    "feature": "tfidfBOW",
-    "accuracy": 88.78,
-    "std_Deviation": 0.4
+    "_Method": "SVM",
+    "_Feature": "tfidfBOW",
+    "_Accuracy": 88.78,
+    "_Std_Deviation": 0.4
   }
 ]

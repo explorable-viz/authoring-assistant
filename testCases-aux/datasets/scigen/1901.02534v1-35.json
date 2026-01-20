@@ -1,22 +1,22 @@
 [
   {
-    "system": "FEVER Baseline (TFIDF)",
-    "retrieval": 66.1
+    "_System": "FEVER Baseline (TFIDF)",
+    "_Retrieval": 66.1
   },
   {
-    "system": "+ Titles in TFIDF",
-    "retrieval": 68.3
+    "_System": "+ Titles in TFIDF",
+    "_Retrieval": 68.3
   },
   {
-    "system": "+ Titles + NE",
-    "retrieval": 80.8
+    "_System": "+ Titles + NE",
+    "_Retrieval": 80.8
   },
   {
-    "system": "+ Titles + NE + Film",
-    "retrieval": 81.2
+    "_System": "+ Titles + NE + Film",
+    "_Retrieval": 81.2
   },
   {
-    "system": "Entire Articles + NE + Film",
-    "retrieval": 90.1
+    "_System": "Entire Articles + NE + Film",
+    "_Retrieval": 90.1
   }
 ]

@@ -1,27 +1,27 @@
 [
   {
-    "variants": "H1047R",
-    "diseases": "Color. Neop.",
-    "drugs": "Lapatinib"
+    "_Variants": "H1047R",
+    "_Diseases": "Color. Neop.",
+    "_Drugs": "Lapatinib"
   },
   {
-    "variants": "V600E",
-    "diseases": "Liposarcoma",
-    "drugs": "Mitomycin"
+    "_Variants": "V600E",
+    "_Diseases": "Liposarcoma",
+    "_Drugs": "Mitomycin"
   },
   {
-    "variants": "T790M",
-    "diseases": "Adenocarcin.",
-    "drugs": "Linsitinib"
+    "_Variants": "T790M",
+    "_Diseases": "Adenocarcin.",
+    "_Drugs": "Linsitinib"
   },
   {
-    "variants": "E545K",
-    "diseases": "Glioblastoma",
-    "drugs": "Dactolisib"
+    "_Variants": "E545K",
+    "_Diseases": "Glioblastoma",
+    "_Drugs": "Dactolisib"
   },
   {
-    "variants": "E542K",
-    "diseases": "Stomach Neop.",
-    "drugs": "Pictrelisib"
+    "_Variants": "E542K",
+    "_Diseases": "Stomach Neop.",
+    "_Drugs": "Pictrelisib"
   }
 ]

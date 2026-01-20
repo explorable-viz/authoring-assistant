@@ -1,30 +1,30 @@
 [
   {
-    "BERT_Base": "FT QNLI",
-    "WikiQA_MAP": 0.76,
-    "WikiQA_MRR": 0.766,
-    "TREC_QA_MAP": 0.82,
-    "TREC_QA_MRR": 0.89
+    "_BERT_Base": "FT QNLI",
+    "_WikiQA_MAP": 0.76,
+    "_WikiQA_MRR": 0.766,
+    "_TREC_QA_MAP": 0.82,
+    "_TREC_QA_MRR": 0.89
   },
   {
-    "BERT_Base": "FT ASNQ",
-    "WikiQA_MAP": 0.884,
-    "WikiQA_MRR": 0.898,
-    "TREC_QA_MAP": 0.823,
-    "TREC_QA_MRR": 0.872
+    "_BERT_Base": "FT ASNQ",
+    "_WikiQA_MAP": 0.884,
+    "_WikiQA_MRR": 0.898,
+    "_TREC_QA_MAP": 0.823,
+    "_TREC_QA_MRR": 0.872
   },
   {
-    "BERT_Base": "TandA (QNLI →)",
-    "WikiQA_MAP": 0.832,
-    "WikiQA_MRR": 0.852,
-    "TREC_QA_MAP": 0.863,
-    "TREC_QA_MRR": 0.906
+    "_BERT_Base": "TandA (QNLI →)",
+    "_WikiQA_MAP": 0.832,
+    "_WikiQA_MRR": 0.852,
+    "_TREC_QA_MAP": 0.863,
+    "_TREC_QA_MRR": 0.906
   },
   {
-    "BERT_Base": "TandA (ASNQ →)",
-    "WikiQA_MAP": 0.893,
-    "WikiQA_MRR": 0.903,
-    "TREC_QA_MAP": 0.912,
-    "TREC_QA_MRR": 0.951
+    "_BERT_Base": "TandA (ASNQ →)",
+    "_WikiQA_MAP": 0.893,
+    "_WikiQA_MRR": 0.903,
+    "_TREC_QA_MAP": 0.912,
+    "_TREC_QA_MRR": 0.951
   }
 ]

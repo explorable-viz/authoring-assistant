@@ -1,7 +1,7 @@
 [
   {
-    "embeddings": "guo",
-    "test_Tags": "gold",
+    "_Embeddings": "guo",
+    "_Test_Tags": "gold",
     "de_UAS": 65.57,
     "de_LAS": 52.37,
     "fr_UAS": 71.27,
@@ -16,8 +16,8 @@
     "sv_LAS": 64.9
   },
   {
-    "embeddings": "muse",
-    "test_Tags": "gold",
+    "_Embeddings": "muse",
+    "_Test_Tags": "gold",
     "de_UAS": 66.19,
     "de_LAS": 56.28,
     "fr_UAS": 80.86,
@@ -32,8 +32,8 @@
     "sv_LAS": 61.71
   },
   {
-    "embeddings": "muse",
-    "test_Tags": "none",
+    "_Embeddings": "muse",
+    "_Test_Tags": "none",
     "de_UAS": 57.26,
     "de_LAS": 45.1,
     "fr_UAS": 73.84,
@@ -48,8 +48,8 @@
     "sv_LAS": 45.25
   },
   {
-    "embeddings": "muse",
-    "test_Tags": "cipher",
+    "_Embeddings": "muse",
+    "_Test_Tags": "cipher",
     "de_UAS": 48.56,
     "de_LAS": 37.13,
     "fr_UAS": 69.94,

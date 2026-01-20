@@ -1,27 +1,27 @@
 [
   {
-    "model": "Random baseline",
-    "intent_Detection": 2.67,
-    "slot_Filling": 7.32
+    "_Model": "Random baseline",
+    "_Intent_Detection": 2.67,
+    "_Slot_Filling": 7.32
   },
   {
-    "model": "Majority baseline",
-    "intent_Detection": 6.34,
-    "slot_Filling": 64.96
+    "_Model": "Majority baseline",
+    "_Intent_Detection": 6.34,
+    "_Slot_Filling": 64.96
   },
   {
-    "model": "HMM",
-    "intent_Detection": "-",
-    "slot_Filling": 87.2
+    "_Model": "HMM",
+    "_Intent_Detection": "-",
+    "_Slot_Filling": 87.2
   },
   {
-    "model": "SVM",
-    "intent_Detection": 94.98,
-    "slot_Filling": "-"
+    "_Model": "SVM",
+    "_Intent_Detection": 94.98,
+    "_Slot_Filling": "-"
   },
   {
-    "model": "GolVe-based",
-    "intent_Detection": 92.22,
-    "slot_Filling": 98.45
+    "_Model": "GolVe-based",
+    "_Intent_Detection": 92.22,
+    "_Slot_Filling": 98.45
   }
 ]

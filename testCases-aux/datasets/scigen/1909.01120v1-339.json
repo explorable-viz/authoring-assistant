@@ -1,35 +1,35 @@
 [
   {
     "_1": "Movie",
-    "basic_no_walks_MA": 0.8,
-    "basic_no_walks_MR": 0.54,
-    "basic_no_walks_MC": 0.41,
-    "basic_no_walks_Avg": 0.59,
-    "embDI_walks_MA": 0.55,
-    "embDI_walks_MR": 0.8,
-    "embDI_walks_MC": 0.9,
-    "embDI_walks_Avg": 0.75
+    "_Basic_no_walks_MA": 0.8,
+    "_Basic_no_walks_MR": 0.54,
+    "_Basic_no_walks_MC": 0.41,
+    "_Basic_no_walks_Avg": 0.59,
+    "_EmbDI_walks_MA": 0.55,
+    "_EmbDI_walks_MR": 0.8,
+    "_EmbDI_walks_MC": 0.9,
+    "_EmbDI_walks_Avg": 0.75
   },
   {
     "_1": "RefS",
-    "basic_no_walks_MA": 0.39,
-    "basic_no_walks_MR": 0.4,
-    "basic_no_walks_MC": 0.24,
-    "basic_no_walks_Avg": 0.34,
-    "embDI_walks_MA": 0.9,
-    "embDI_walks_MR": 0.59,
-    "embDI_walks_MC": 0.62,
-    "embDI_walks_Avg": 0.7
+    "_Basic_no_walks_MA": 0.39,
+    "_Basic_no_walks_MR": 0.4,
+    "_Basic_no_walks_MC": 0.24,
+    "_Basic_no_walks_Avg": 0.34,
+    "_EmbDI_walks_MA": 0.9,
+    "_EmbDI_walks_MR": 0.59,
+    "_EmbDI_walks_MC": 0.62,
+    "_EmbDI_walks_Avg": 0.7
   },
   {
     "_1": "RefL",
-    "basic_no_walks_MA": 0.63,
-    "basic_no_walks_MR": 0.5,
-    "basic_no_walks_MC": 0.29,
-    "basic_no_walks_Avg": 0.47,
-    "embDI_walks_MA": 0.63,
-    "embDI_walks_MR": 0.69,
-    "embDI_walks_MC": 0.78,
-    "embDI_walks_Avg": 0.7
+    "_Basic_no_walks_MA": 0.63,
+    "_Basic_no_walks_MR": 0.5,
+    "_Basic_no_walks_MC": 0.29,
+    "_Basic_no_walks_Avg": 0.47,
+    "_EmbDI_walks_MA": 0.63,
+    "_EmbDI_walks_MR": 0.69,
+    "_EmbDI_walks_MC": 0.78,
+    "_EmbDI_walks_Avg": 0.7
   }
 ]

@@ -1,74 +1,74 @@
 [
   {
-    "model": "baseline",
-    "sST_5": 43.5,
-    "sent17": 68.3,
-    "phychExp": 53.2,
-    "irony18": 46.3,
-    "sCv1": 64.1,
-    "sCv2": 74.0
+    "_Model": "baseline",
+    "_SST_5": 43.5,
+    "_Sent17": 68.3,
+    "_PhychExp": 53.2,
+    "_Irony18": 46.3,
+    "_SCv1": 64.1,
+    "_SCv2": 74.0
   },
   {
-    "model": "emb. conc.",
-    "sST_5": 43.3,
-    "sent17": 68.4,
-    "phychExp": 57.1,
-    "irony18": 48.1,
-    "sCv1": 64.2,
-    "sCv2": 74.2
+    "_Model": "emb. conc.",
+    "_SST_5": 43.3,
+    "_Sent17": 68.4,
+    "_PhychExp": 57.1,
+    "_Irony18": 48.1,
+    "_SCv1": 64.2,
+    "_SCv2": 74.2
   },
   {
-    "model": "conc.",
-    "sST_5": 44.0,
-    "sent17": 68.6,
-    "phychExp": 54.3,
-    "irony18": 47.4,
-    "sCv1": 65.1,
-    "sCv2": 74.3
+    "_Model": "conc.",
+    "_SST_5": 44.0,
+    "_Sent17": 68.6,
+    "_PhychExp": 54.3,
+    "_Irony18": 47.4,
+    "_SCv1": 65.1,
+    "_SCv2": 74.3
   },
   {
-    "model": "gate",
-    "sST_5": 44.2,
-    "sent17": 68.7,
-    "phychExp": 53.4,
-    "irony18": 48.5,
-    "sCv1": 64.7,
-    "sCv2": 74.3
+    "_Model": "gate",
+    "_SST_5": 44.2,
+    "_Sent17": 68.7,
+    "_PhychExp": 53.4,
+    "_Irony18": 48.5,
+    "_SCv1": 64.7,
+    "_SCv2": 74.3
   },
   {
-    "model": "affine",
-    "sST_5": 43.2,
-    "sent17": 68.5,
-    "phychExp": 53.1,
-    "irony18": 45.3,
-    "sCv1": 60.3,
-    "sCv2": 74.0
+    "_Model": "affine",
+    "_SST_5": 43.2,
+    "_Sent17": 68.5,
+    "_PhychExp": 53.1,
+    "_Irony18": 45.3,
+    "_SCv1": 60.3,
+    "_SCv2": 74.0
   },
   {
-    "model": "gate+emb.conc.",
-    "sST_5": 46.2,
-    "sent17": 68.9,
-    "phychExp": 57.2,
-    "irony18": 48.4,
-    "sCv1": 64.9,
-    "sCv2": 74.4
+    "_Model": "gate+emb.conc.",
+    "_SST_5": 46.2,
+    "_Sent17": 68.9,
+    "_PhychExp": 57.2,
+    "_Irony18": 48.4,
+    "_SCv1": 64.9,
+    "_SCv2": 74.4
   },
   {
-    "model": "state-of-the-art",
-    "sST_5": 51.7,
-    "sent17": 68.5,
-    "phychExp": 57.0,
-    "irony18": 53.6,
-    "sCv1": 69.0,
-    "sCv2": 76.0
+    "_Model": "state-of-the-art",
+    "_SST_5": 51.7,
+    "_Sent17": 68.5,
+    "_PhychExp": 57.0,
+    "_Irony18": 53.6,
+    "_SCv1": 69.0,
+    "_SCv2": 76.0
   },
   {
-    "model": "state-of-the-art",
-    "sST_5": "Shen et al. ( 2018 )",
-    "sent17": "Cliche ( 2017 )",
-    "phychExp": "Felbo et al. ( 2017 )",
-    "irony18": "Baziotis et al. ( 2018 )",
-    "sCv1": "Felbo et al. ( 2017 )",
-    "sCv2": "Ilić et al. ( 2018 )"
+    "_Model": "state-of-the-art",
+    "_SST_5": "Shen et al. ( 2018 )",
+    "_Sent17": "Cliche ( 2017 )",
+    "_PhychExp": "Felbo et al. ( 2017 )",
+    "_Irony18": "Baziotis et al. ( 2018 )",
+    "_SCv1": "Felbo et al. ( 2017 )",
+    "_SCv2": "Ilić et al. ( 2018 )"
   }
 ]

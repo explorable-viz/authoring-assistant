@@ -1,12 +1,12 @@
 [
   {
-    "system": " Mnewsqa",
-    "eM": 46.3,
-    "f1": 60.8
+    "_System": "Mnewsqa",
+    "_EM": 46.3,
+    "_F1": 60.8
   },
   {
-    "system": " Mnewsqa +   Snet",
-    "eM": 47.9,
-    "f1": 61.5
+    "_System": "Mnewsqa +   Snet",
+    "_EM": 47.9,
+    "_F1": 61.5
   }
 ]

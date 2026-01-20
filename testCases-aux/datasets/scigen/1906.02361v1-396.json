@@ -1,22 +1,22 @@
 [
   {
-    "Method": "CoS-E-selected w/o ques",
-    "Accuracy": 53.0
+    "_Method": "CoS-E-selected w/o ques",
+    "_Accuracy": 53.0
   },
   {
-    "Method": "CoS-E-limited-open-ended",
-    "Accuracy": 67.6
+    "_Method": "CoS-E-limited-open-ended",
+    "_Accuracy": 67.6
   },
   {
-    "Method": "CoS-E-selected",
-    "Accuracy": 70.0
+    "_Method": "CoS-E-selected",
+    "_Accuracy": 70.0
   },
   {
-    "Method": "CoS-E-open-ended w/o ques",
-    "Accuracy": 84.5
+    "_Method": "CoS-E-open-ended w/o ques",
+    "_Accuracy": 84.5
   },
   {
-    "Method": "CoS-E-open-ended*",
-    "Accuracy": 89.8
+    "_Method": "CoS-E-open-ended*",
+    "_Accuracy": 89.8
   }
 ]

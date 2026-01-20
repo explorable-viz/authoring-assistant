@@ -1,30 +1,30 @@
 [
   {
-    "Training": "AG18",
-    "unsupported": 82,
-    "missing": 45,
-    "repeated": 12,
-    "correct": "26/119 (22%)"
+    "_Training": "AG18",
+    "_Unsupported": 82,
+    "_Missing": 45,
+    "_Repeated": 12,
+    "_Correct": "26/119 (22%)"
   },
   {
-    "Training": "WebSplit",
-    "unsupported": 58,
-    "missing": 47,
-    "repeated": 13,
-    "correct": "32/100 (32%)"
+    "_Training": "WebSplit",
+    "_Unsupported": 58,
+    "_Missing": 47,
+    "_Repeated": 13,
+    "_Correct": "32/100 (32%)"
   },
   {
-    "Training": "WikiSplit",
-    "unsupported": 8,
-    "missing": 5,
-    "repeated": 0,
-    "correct": "91/100 (91%)"
+    "_Training": "WikiSplit",
+    "_Unsupported": 8,
+    "_Missing": 5,
+    "_Repeated": 0,
+    "_Correct": "91/100 (91%)"
   },
   {
-    "Training": "Both",
-    "unsupported": 4,
-    "missing": 4,
-    "repeated": 0,
-    "correct": " 95/100 (95%)"
+    "_Training": "Both",
+    "_Unsupported": 4,
+    "_Missing": 4,
+    "_Repeated": 0,
+    "_Correct": "95/100 (95%)"
   }
 ]

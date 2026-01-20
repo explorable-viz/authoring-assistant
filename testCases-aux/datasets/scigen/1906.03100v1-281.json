@@ -1,58 +1,58 @@
 [
   {
-    "zh_En": "Vanilla",
+    "_Zh_En": "Vanilla",
     "λlm": "-",
     "λwf": "-",
     "λur": "-",
-    "emb": 46100000.0,
-    "bLEU": 41.37
+    "_Emb": 46100000.0,
+    "_BLEU": 41.37
   },
   {
-    "zh_En": "Decoder WT",
+    "_Zh_En": "Decoder WT",
     "λlm": 0,
     "λwf": 0,
     "λur": 0,
-    "emb": 30700000.0,
-    "bLEU": 41.9
+    "_Emb": 30700000.0,
+    "_BLEU": 41.9
   },
   {
-    "zh_En": " Shared-private",
+    "_Zh_En": "Shared-private",
     "λlm": 0.5,
     "λwf": 0.7,
     "λur": 0.9,
-    "emb": 21200000.0,
-    "bLEU": 41.98
+    "_Emb": 21200000.0,
+    "_BLEU": 41.98
   },
   {
-    "zh_En": " Shared-private",
+    "_Zh_En": "Shared-private",
     "λlm": 0.5,
     "λwf": 0.5,
     "λur": 0.5,
-    "emb": 23000000.0,
-    "bLEU": 42.26
+    "_Emb": 23000000.0,
+    "_BLEU": 42.26
   },
   {
-    "zh_En": " Shared-private",
+    "_Zh_En": "Shared-private",
     "λlm": 0.9,
     "λwf": 0.7,
     "λur": 0,
-    "emb": 21000000.0,
-    "bLEU": 42.27
+    "_Emb": 21000000.0,
+    "_BLEU": 42.27
   },
   {
-    "zh_En": " Shared-private",
+    "_Zh_En": "Shared-private",
     "λlm": 1,
     "λwf": 1,
     "λur": 1,
-    "emb": 15300000.0,
-    "bLEU": 42.36
+    "_Emb": 15300000.0,
+    "_BLEU": 42.36
   },
   {
-    "zh_En": " Shared-private",
+    "_Zh_En": "Shared-private",
     "λlm": 0.9,
     "λwf": 0.7,
     "λur": 0.5,
-    "emb": 18700000.0,
-    "bLEU": 42.57
+    "_Emb": 18700000.0,
+    "_BLEU": 42.57
   }
 ]

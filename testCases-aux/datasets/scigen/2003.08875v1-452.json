@@ -1,23 +1,23 @@
 [
   {
     "_1": "Bokaei and Mahmoudi Bokaei and Mahmoudi ( 2018 )",
-    "arman_word": 81.5,
-    "arman_phrase": 76.79,
-    "peyma_word": "-",
-    "peyma_phrase": "-"
+    "_Arman_word": 81.5,
+    "_Arman_phrase": 76.79,
+    "_Peyma_word": "-",
+    "_Peyma_phrase": "-"
   },
   {
     "_1": "Shahshahani et al.Shahshahani et al. ( 2018 )",
-    "arman_word": "-",
-    "arman_phrase": "-",
-    "peyma_word": 80.0,
-    "peyma_phrase": "-"
+    "_Arman_word": "-",
+    "_Arman_phrase": "-",
+    "_Peyma_word": 80.0,
+    "_Peyma_phrase": "-"
   },
   {
     "_1": "Beheshti-NER (Our Model)",
-    "arman_word": 84.03,
-    "arman_phrase": 79.93,
-    "peyma_word": 90.59,
-    "peyma_phrase": 87.62
+    "_Arman_word": 84.03,
+    "_Arman_phrase": 79.93,
+    "_Peyma_word": 90.59,
+    "_Peyma_phrase": 87.62
   }
 ]

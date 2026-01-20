@@ -1,56 +1,56 @@
 [
   {
     "_1": "unique sents.",
-    "e2E_human": 866.3,
-    "e2E_word": 203.5,
-    "e2E_character": 366.8,
-    "webNLG_human": 1185.0,
-    "webNLG_word": 603.7,
-    "webNLG_character": 875.4
+    "_E2E_human": 866.3,
+    "_E2E_word": 203.5,
+    "_E2E_character": 366.8,
+    "_WebNLG_human": 1185.0,
+    "_WebNLG_word": 603.7,
+    "_WebNLG_character": 875.4
   },
   {
     "_1": "unique words",
-    "e2E_human": 419.7,
-    "e2E_word": 64.4,
-    "e2E_character": 73.1,
-    "webNLG_human": 1447.3,
-    "webNLG_word": 620.3,
-    "webNLG_character": 881.5
+    "_E2E_human": 419.7,
+    "_E2E_word": 64.4,
+    "_E2E_character": 73.1,
+    "_WebNLG_human": 1447.3,
+    "_WebNLG_word": 620.3,
+    "_WebNLG_character": 881.5
   },
   {
     "_1": "word E",
-    "e2E_human": 6.5,
-    "e2E_word": 5.1,
-    "e2E_character": 5.5,
-    "webNLG_human": 7.1,
-    "webNLG_word": 6.3,
-    "webNLG_character": 6.6
+    "_E2E_human": 6.5,
+    "_E2E_word": 5.1,
+    "_E2E_character": 5.5,
+    "_WebNLG_human": 7.1,
+    "_WebNLG_word": 6.3,
+    "_WebNLG_character": 6.6
   },
   {
     "_1": "1-3-grams E",
-    "e2E_human": 10.4,
-    "e2E_word": 7.7,
-    "e2E_character": 8.2,
-    "webNLG_human": 11.6,
-    "webNLG_word": 10.1,
-    "webNLG_character": 10.5
+    "_E2E_human": 10.4,
+    "_E2E_word": 7.7,
+    "_E2E_character": 8.2,
+    "_WebNLG_human": 11.6,
+    "_WebNLG_word": 10.1,
+    "_WebNLG_character": 10.5
   },
   {
     "_1": "% new texts",
-    "e2E_human": 99.7,
-    "e2E_word": 98.2,
-    "e2E_character": 98.8,
-    "webNLG_human": 91.1,
-    "webNLG_word": 69.8,
-    "webNLG_character": 87.5
+    "_E2E_human": 99.7,
+    "_E2E_word": 98.2,
+    "_E2E_character": 98.8,
+    "_WebNLG_human": 91.1,
+    "_WebNLG_word": 69.8,
+    "_WebNLG_character": 87.5
   },
   {
     "_1": "% new sents.",
-    "e2E_human": 85.1,
-    "e2E_word": 61.8,
-    "e2E_character": 71.4,
-    "webNLG_human": 87.4,
-    "webNLG_word": 57.2,
-    "webNLG_character": 82.1
+    "_E2E_human": 85.1,
+    "_E2E_word": 61.8,
+    "_E2E_character": 71.4,
+    "_WebNLG_human": 87.4,
+    "_WebNLG_word": 57.2,
+    "_WebNLG_character": 82.1
   }
 ]

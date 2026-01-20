@@ -1,117 +1,117 @@
 [
   {
-    "method": "Liu et al. ( 2015a )",
-    "avgSimC": 67.3,
-    "maxSimC": 68.1
+    "_Method": "Liu et al. ( 2015a )",
+    "_AvgSimC": 67.3,
+    "_MaxSimC": 68.1
   },
   {
-    "method": "Liu et al. ( 2015b )",
-    "avgSimC": 69.5,
-    "maxSimC": 67.9
+    "_Method": "Liu et al. ( 2015b )",
+    "_AvgSimC": 69.5,
+    "_MaxSimC": 67.9
   },
   {
-    "method": "Amiri et al. ( 2016 )",
-    "avgSimC": 70.9,
-    "maxSimC": "-"
+    "_Method": "Amiri et al. ( 2016 )",
+    "_AvgSimC": 70.9,
+    "_MaxSimC": "-"
   },
   {
-    "method": "Lee and Chen ( 2017 )",
-    "avgSimC": 68.7,
-    "maxSimC": 67.9
+    "_Method": "Lee and Chen ( 2017 )",
+    "_AvgSimC": 68.7,
+    "_MaxSimC": 67.9
   },
   {
-    "method": "Guo et al. ( 2018 )",
-    "avgSimC": 69.3,
-    "maxSimC": 68.2
+    "_Method": "Guo et al. ( 2018 )",
+    "_AvgSimC": 69.3,
+    "_MaxSimC": 68.2
   },
   {
-    "method": " 300-dimensions",
-    "avgSimC": " 300-dimensions",
-    "maxSimC": " 300-dimensions"
+    "_Method": "300-dimensions",
+    "_AvgSimC": "300-dimensions",
+    "_MaxSimC": "300-dimensions"
   },
   {
-    "method": "Global-DSM",
-    "avgSimC": 67.1,
-    "maxSimC": 67.1
+    "_Method": "Global-DSM",
+    "_AvgSimC": 67.1,
+    "_MaxSimC": 67.1
   },
   {
-    "method": "UTDSM Random",
-    "avgSimC": 69.1,
-    "maxSimC": 66.4
+    "_Method": "UTDSM Random",
+    "_AvgSimC": 69.1,
+    "_MaxSimC": 66.4
   },
   {
-    "method": "UTDSM",
-    "avgSimC": 69.6,
-    "maxSimC": 67.1
+    "_Method": "UTDSM",
+    "_AvgSimC": 69.6,
+    "_MaxSimC": 67.1
   },
   {
-    "method": "UTDSM + GMM (1)",
-    "avgSimC": 67.4,
-    "maxSimC": 67.4
+    "_Method": "UTDSM + GMM (1)",
+    "_AvgSimC": 67.4,
+    "_MaxSimC": 67.4
   },
   {
-    "method": "UTDSM + GMM (2)",
-    "avgSimC": 68.4,
-    "maxSimC": 68.3
+    "_Method": "UTDSM + GMM (2)",
+    "_AvgSimC": 68.4,
+    "_MaxSimC": 68.3
   },
   {
-    "method": "UTDSM + GMM (3)",
-    "avgSimC": 68.9,
-    "maxSimC": 68.3
+    "_Method": "UTDSM + GMM (3)",
+    "_AvgSimC": 68.9,
+    "_MaxSimC": 68.3
   },
   {
-    "method": "UTDSM + GMM (8)",
-    "avgSimC": 69.1,
-    "maxSimC": 68.0
+    "_Method": "UTDSM + GMM (8)",
+    "_AvgSimC": 69.1,
+    "_MaxSimC": 68.0
   },
   {
-    "method": "UTDSM + GMM (10)",
-    "avgSimC": 69.0,
-    "maxSimC": 67.8
+    "_Method": "UTDSM + GMM (10)",
+    "_AvgSimC": 69.0,
+    "_MaxSimC": 67.8
   },
   {
-    "method": " 500-dimensions",
-    "avgSimC": " 500-dimensions",
-    "maxSimC": " 500-dimensions"
+    "_Method": "500-dimensions",
+    "_AvgSimC": "500-dimensions",
+    "_MaxSimC": "500-dimensions"
   },
   {
-    "method": "Global-DSM",
-    "avgSimC": 67.6,
-    "maxSimC": 67.6
+    "_Method": "Global-DSM",
+    "_AvgSimC": 67.6,
+    "_MaxSimC": 67.6
   },
   {
-    "method": "UTDSM Random",
-    "avgSimC": 69.4,
-    "maxSimC": 66.5
+    "_Method": "UTDSM Random",
+    "_AvgSimC": 69.4,
+    "_MaxSimC": 66.5
   },
   {
-    "method": "UTDSM",
-    "avgSimC": 70.2,
-    "maxSimC": 68.0
+    "_Method": "UTDSM",
+    "_AvgSimC": 70.2,
+    "_MaxSimC": 68.0
   },
   {
-    "method": "UTDSM + GMM (1)",
-    "avgSimC": 67.6,
-    "maxSimC": 67.6
+    "_Method": "UTDSM + GMM (1)",
+    "_AvgSimC": 67.6,
+    "_MaxSimC": 67.6
   },
   {
-    "method": "UTDSM + GMM (2)",
-    "avgSimC": 68.8,
-    "maxSimC": 68.6
+    "_Method": "UTDSM + GMM (2)",
+    "_AvgSimC": 68.8,
+    "_MaxSimC": 68.6
   },
   {
-    "method": "UTDSM + GMM (3)",
-    "avgSimC": 69.0,
-    "maxSimC": 68.5
+    "_Method": "UTDSM + GMM (3)",
+    "_AvgSimC": 69.0,
+    "_MaxSimC": 68.5
   },
   {
-    "method": "UTDSM + GMM (8)",
-    "avgSimC": 69.5,
-    "maxSimC": 68.5
+    "_Method": "UTDSM + GMM (8)",
+    "_AvgSimC": 69.5,
+    "_MaxSimC": 68.5
   },
   {
-    "method": "UTDSM + GMM (10)",
-    "avgSimC": 69.2,
-    "maxSimC": 68.0
+    "_Method": "UTDSM + GMM (10)",
+    "_AvgSimC": 69.2,
+    "_MaxSimC": 68.0
   }
 ]

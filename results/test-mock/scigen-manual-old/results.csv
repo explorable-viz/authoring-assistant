@@ -11,9 +11,6 @@ run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpr
 0;"1906.02780v1-17";4;"dummy";0;"[Data Retrieval,Difference]";0;2;0;0
 0;"1906.02780v1-17";5;"dummy";0;"[Data Retrieval]";0;2;0;0
 0;"1906.02780v1-17";6;"dummy";0;"[Data Retrieval]";0;2;0;0
-0;"ipcc";1;"dummy";0;"[Data Retrieval]";0;2;0;0
-0;"ipcc";2;"dummy";0;"[Data Retrieval]";0;2;0;0
-0;"ipcc";3;"dummy";0;"[Data Retrieval]";0;2;0;0
 0;"1807.07279v3-23";1;"dummy";0;"[Sum]";0;2;0;0
 0;"1807.07279v3-23";2;"dummy";0;"[Data Retrieval,Comparison,Generalised Quantifier]";0;2;0;0
 0;"1807.07279v3-23";3;"dummy";0;"[Data Retrieval,Comparison,Generalised Quantifier]";0;2;0;0

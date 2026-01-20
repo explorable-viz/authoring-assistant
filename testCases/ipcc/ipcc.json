@@ -1,0 +1,39 @@
+{
+  "imports": [ "datasets/ipcc/ipcc_" ],
+  "datasets": [ "datasets/ipcc/ipcc.json" ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "A further two datasets, Berkeley Earth (Rohde et al., 2013) and that of the Japan Meteorological Agency (JMA), are provided in Table 1.1. This working definition provides an updated estimate of"
+    },
+    {
+      "type": "expression",
+      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Average\") tableData))",
+      "categories": ["data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "°C for the warming over the period 1880 - 2012 based on a linear trend. This quantity was quoted as"
+    },
+    {
+      "type": "expression",
+      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"NOAAGlobalTemp\") tableData))",
+      "categories": ["data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "°C in the AR5. Hence the inclusion of the Cowtan-Way dataset ("
+    },
+    {
+      "type": "expression",
+      "expression": "head (map (fun x -> x.trend_1880_2012) (filter (fun x -> x.dataset == \"Cowtan-Way\") tableData))",
+      "categories": ["data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": ") does not introduce any inconsistency with the AR5."
+    }
+  ]
+}

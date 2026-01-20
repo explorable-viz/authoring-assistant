@@ -1,56 +1,56 @@
 [
   {
-    "quality": "FA",
-    "fA": 397,
-    "gA": 83,
-    "b": 20,
-    "c": 0,
-    "start": 0,
-    "stub": 0
+    "_Quality": "FA",
+    "_FA": 397,
+    "_GA": 83,
+    "_B": 20,
+    "_C": 0,
+    "_Start": 0,
+    "_Stub": 0
   },
   {
-    "quality": "GA",
-    "fA": 112,
-    "gA": 299,
-    "b": 65,
-    "c": 22,
-    "start": 2,
-    "stub": 0
+    "_Quality": "GA",
+    "_FA": 112,
+    "_GA": 299,
+    "_B": 65,
+    "_C": 22,
+    "_Start": 2,
+    "_Stub": 0
   },
   {
-    "quality": "B",
-    "fA": 23,
-    "gA": 53,
-    "b": 253,
-    "c": 75,
-    "start": 44,
-    "stub": 7
+    "_Quality": "B",
+    "_FA": 23,
+    "_GA": 53,
+    "_B": 253,
+    "_C": 75,
+    "_Start": 44,
+    "_Stub": 7
   },
   {
-    "quality": "C",
-    "fA": 5,
-    "gA": 33,
-    "b": 193,
-    "c": 124,
-    "start": 100,
-    "stub": 12
+    "_Quality": "C",
+    "_FA": 5,
+    "_GA": 33,
+    "_B": 193,
+    "_C": 124,
+    "_Start": 100,
+    "_Stub": 12
   },
   {
-    "quality": "Start",
-    "fA": 1,
-    "gA": 6,
-    "b": 36,
-    "c": 85,
-    "start": 239,
-    "stub": 84
+    "_Quality": "Start",
+    "_FA": 1,
+    "_GA": 6,
+    "_B": 36,
+    "_C": 85,
+    "_Start": 239,
+    "_Stub": 84
   },
   {
-    "quality": "Stub",
-    "fA": 0,
-    "gA": 0,
-    "b": 6,
-    "c": 7,
-    "start": 63,
-    "stub": 345
+    "_Quality": "Stub",
+    "_FA": 0,
+    "_GA": 0,
+    "_B": 6,
+    "_C": 7,
+    "_Start": 63,
+    "_Stub": 345
   }
 ]

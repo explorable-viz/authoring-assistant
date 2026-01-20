@@ -1,21 +1,21 @@
 [
   {
-    "test_data": " train on transcripts + batch ASR (baseline)",
-    "goals": " train on transcripts + batch ASR (baseline)",
-    "requests": " train on transcripts + batch ASR (baseline)"
+    "test_data": "train on transcripts + batch ASR (baseline)",
+    "goals": "train on transcripts + batch ASR (baseline)",
+    "requests": "train on transcripts + batch ASR (baseline)"
   },
   {
-    "test_data": " batch ASR",
+    "test_data": "batch ASR",
     "goals": 63.6,
     "requests": 96.8
   },
   {
-    "test_data": " train on transcripts + live ASR",
-    "goals": " train on transcripts + live ASR",
-    "requests": " train on transcripts + live ASR"
+    "test_data": "train on transcripts + live ASR",
+    "goals": "train on transcripts + live ASR",
+    "requests": "train on transcripts + live ASR"
   },
   {
-    "test_data": " live ASR",
+    "test_data": "live ASR",
     "goals": 63.8,
     "requests": 97.5
   },

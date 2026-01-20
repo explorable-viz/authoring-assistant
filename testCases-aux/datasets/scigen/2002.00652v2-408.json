@@ -1,44 +1,44 @@
 [
   {
-    "Model": "SyntaxSQL-con",
-    "SParC_Ques_Match": 18.5,
-    "SParC_Int_Match": 4.3,
-    "CoSQL_Ques_Match": 15.1,
-    "CoSQL_Int_Match": 2.7
+    "_Model": "SyntaxSQL-con",
+    "_SParC_Ques_Match": 18.5,
+    "_SParC_Int_Match": 4.3,
+    "_CoSQL_Ques_Match": 15.1,
+    "_CoSQL_Int_Match": 2.7
   },
   {
-    "Model": "CD-Seq2Seq",
-    "SParC_Ques_Match": 21.9,
-    "SParC_Int_Match": 8.1,
-    "CoSQL_Ques_Match": 13.8,
-    "CoSQL_Int_Match": 2.1
+    "_Model": "CD-Seq2Seq",
+    "_SParC_Ques_Match": 21.9,
+    "_SParC_Int_Match": 8.1,
+    "_CoSQL_Ques_Match": 13.8,
+    "_CoSQL_Int_Match": 2.1
   },
   {
-    "Model": "EditSQL",
-    "SParC_Ques_Match": 33.0,
-    "SParC_Int_Match": 16.4,
-    "CoSQL_Ques_Match": 22.2,
-    "CoSQL_Int_Match": 5.8
+    "_Model": "EditSQL",
+    "_SParC_Ques_Match": 33.0,
+    "_SParC_Int_Match": 16.4,
+    "_CoSQL_Ques_Match": 22.2,
+    "_CoSQL_Int_Match": 5.8
   },
   {
-    "Model": "Ours",
-    "SParC_Ques_Match": 41.8,
-    "SParC_Int_Match": 20.6,
-    "CoSQL_Ques_Match": 33.5,
-    "CoSQL_Int_Match": 9.6
+    "_Model": "Ours",
+    "_SParC_Ques_Match": 41.8,
+    "_SParC_Int_Match": 20.6,
+    "_CoSQL_Ques_Match": 33.5,
+    "_CoSQL_Int_Match": 9.6
   },
   {
-    "Model": "EditSQL + BERT",
-    "SParC_Ques_Match": 47.2,
-    "SParC_Int_Match": 29.5,
-    "CoSQL_Ques_Match": 40.0,
-    "CoSQL_Int_Match": 11.0
+    "_Model": "EditSQL + BERT",
+    "_SParC_Ques_Match": 47.2,
+    "_SParC_Int_Match": 29.5,
+    "_CoSQL_Ques_Match": 40.0,
+    "_CoSQL_Int_Match": 11.0
   },
   {
-    "Model": "Ours + BERT",
-    "SParC_Ques_Match": 52.6,
-    "SParC_Int_Match": 29.9,
-    "CoSQL_Ques_Match": 41.0,
-    "CoSQL_Int_Match": 14.0
+    "_Model": "Ours + BERT",
+    "_SParC_Ques_Match": 52.6,
+    "_SParC_Int_Match": 29.9,
+    "_CoSQL_Ques_Match": 41.0,
+    "_CoSQL_Int_Match": 14.0
   }
 ]

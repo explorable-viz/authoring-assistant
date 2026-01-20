@@ -1,202 +1,202 @@
 [
   {
-    "Type_Model": " Hosseini, et.al.",
-    "AI2": 77.7,
-    "CC": "–",
-    "IL": "–",
-    "MAWPS": "–",
-    "Average": 77.7
+    "_Type_Model": "Hosseini, et.al.",
+    "_AI2": 77.7,
+    "_CC": "–",
+    "_IL": "–",
+    "_MAWPS": "–",
+    "_Average": 77.7
   },
   {
-    "Type_Model": " Kushman, et.al.",
-    "AI2": 64.0,
-    "CC": 73.7,
-    "IL": 2.3,
-    "MAWPS": "–",
-    "Average": 46.7
+    "_Type_Model": "Kushman, et.al.",
+    "_AI2": 64.0,
+    "_CC": 73.7,
+    "_IL": 2.3,
+    "_MAWPS": "–",
+    "_Average": 46.7
   },
   {
-    "Type_Model": " Roy, et.al.",
-    "AI2": "–",
-    "CC": "–",
-    "IL": 52.7,
-    "MAWPS": "–",
-    "Average": 52.7
+    "_Type_Model": "Roy, et.al.",
+    "_AI2": "–",
+    "_CC": "–",
+    "_IL": 52.7,
+    "_MAWPS": "–",
+    "_Average": 52.7
   },
   {
-    "Type_Model": " Robaidek, et.al.",
-    "AI2": "–",
-    "CC": "–",
-    "IL": "–",
-    "MAWPS": 62.8,
-    "Average": 62.8
+    "_Type_Model": "Robaidek, et.al.",
+    "_AI2": "–",
+    "_CC": "–",
+    "_IL": "–",
+    "_MAWPS": 62.8,
+    "_Average": 62.8
   },
   {
-    "Type_Model": " Wang, et.al.",
-    "AI2": 78.5,
-    "CC": 75.5,
-    "IL": 73.3,
-    "MAWPS": "–",
-    "Average": 75.4
+    "_Type_Model": "Wang, et.al.",
+    "_AI2": 78.5,
+    "_CC": 75.5,
+    "_IL": 73.3,
+    "_MAWPS": "–",
+    "_Average": 75.4
   },
   {
-    "Type_Model": " Pre-trained",
-    "AI2": "",
-    "CC": "",
-    "IL": "",
-    "MAWPS": "",
-    "Average": ""
+    "_Type_Model": "Pre-trained",
+    "_AI2": "",
+    "_CC": "",
+    "_IL": "",
+    "_MAWPS": "",
+    "_Average": ""
   },
   {
-    "Type_Model": "(1) Prefix-Transformer",
-    "AI2": 70.2,
-    "CC": 91.1,
-    "IL": 95.2,
-    "MAWPS": 82.4,
-    "Average": 84.7
+    "_Type_Model": "(1) Prefix-Transformer",
+    "_AI2": 70.2,
+    "_CC": 91.1,
+    "_IL": 95.2,
+    "_MAWPS": 82.4,
+    "_Average": 84.7
   },
   {
-    "Type_Model": "(1) Postfix-Transformer",
-    "AI2": 68.4,
-    "CC": 90.0,
-    "IL": 92.9,
-    "MAWPS": 82.7,
-    "Average": 83.5
+    "_Type_Model": "(1) Postfix-Transformer",
+    "_AI2": 68.4,
+    "_CC": 90.0,
+    "_IL": 92.9,
+    "_MAWPS": 82.7,
+    "_Average": 83.5
   },
   {
-    "Type_Model": "(1) Infix-Transformer",
-    "AI2": 75.4,
-    "CC": 74.4,
-    "IL": 64.3,
-    "MAWPS": 56.4,
-    "Average": 67.6
+    "_Type_Model": "(1) Infix-Transformer",
+    "_AI2": 75.4,
+    "_CC": 74.4,
+    "_IL": 64.3,
+    "_MAWPS": 56.4,
+    "_Average": 67.6
   },
   {
-    "Type_Model": "(2) Prefix-Transformer",
-    "AI2": 66.7,
-    "CC": 91.1,
-    "IL": 96.4,
-    "MAWPS": 82.1,
-    "Average": 84.1
+    "_Type_Model": "(2) Prefix-Transformer",
+    "_AI2": 66.7,
+    "_CC": 91.1,
+    "_IL": 96.4,
+    "_MAWPS": 82.1,
+    "_Average": 84.1
   },
   {
-    "Type_Model": "(2) Postfix-Transformer",
-    "AI2": 73.7,
-    "CC": 93.3,
-    "IL": 94.1,
-    "MAWPS": 82.4,
-    "Average": 85.9
+    "_Type_Model": "(2) Postfix-Transformer",
+    "_AI2": 73.7,
+    "_CC": 93.3,
+    "_IL": 94.1,
+    "_MAWPS": 82.4,
+    "_Average": 85.9
   },
   {
-    "Type_Model": "(2) Infix-Transformer",
-    "AI2": 75.4,
-    "CC": 75.6,
-    "IL": 66.7,
-    "MAWPS": 59.0,
-    "Average": 69.2
+    "_Type_Model": "(2) Infix-Transformer",
+    "_AI2": 75.4,
+    "_CC": 75.6,
+    "_IL": 66.7,
+    "_MAWPS": 59.0,
+    "_Average": 69.2
   },
   {
-    "Type_Model": "(3) Prefix-Transformer",
-    "AI2": 70.2,
-    "CC": 91.1,
-    "IL": 95.2,
-    "MAWPS": 82.4,
-    "Average": 84.7
+    "_Type_Model": "(3) Prefix-Transformer",
+    "_AI2": 70.2,
+    "_CC": 91.1,
+    "_IL": 95.2,
+    "_MAWPS": 82.4,
+    "_Average": 84.7
   },
   {
-    "Type_Model": "(3) Postfix-Transformer",
-    "AI2": 73.7,
-    "CC": 92.2,
-    "IL": 94.1,
-    "MAWPS": 82.1,
-    "Average": 85.5
+    "_Type_Model": "(3) Postfix-Transformer",
+    "_AI2": 73.7,
+    "_CC": 92.2,
+    "_IL": 94.1,
+    "_MAWPS": 82.1,
+    "_Average": 85.5
   },
   {
-    "Type_Model": "(3) Infix-Transformer",
-    "AI2": 75.4,
-    "CC": 75.6,
-    "IL": 64.3,
-    "MAWPS": 58.7,
-    "Average": 68.5
+    "_Type_Model": "(3) Infix-Transformer",
+    "_AI2": 75.4,
+    "_CC": 75.6,
+    "_IL": 64.3,
+    "_MAWPS": 58.7,
+    "_Average": 68.5
   },
   {
-    "Type_Model": " Non-pre-trained",
-    "AI2": "",
-    "CC": "",
-    "IL": "",
-    "MAWPS": "",
-    "Average": ""
+    "_Type_Model": "Non-pre-trained",
+    "_AI2": "",
+    "_CC": "",
+    "_IL": "",
+    "_MAWPS": "",
+    "_Average": ""
   },
   {
-    "Type_Model": "(1) Prefix-Transformer",
-    "AI2": 71.9,
-    "CC": 94.4,
-    "IL": 95.2,
-    "MAWPS": 83.4,
-    "Average": 86.3
+    "_Type_Model": "(1) Prefix-Transformer",
+    "_AI2": 71.9,
+    "_CC": 94.4,
+    "_IL": 95.2,
+    "_MAWPS": 83.4,
+    "_Average": 86.3
   },
   {
-    "Type_Model": "(1) Postfix-Transformer",
-    "AI2": 73.7,
-    "CC": 81.1,
-    "IL": 92.9,
-    "MAWPS": 75.7,
-    "Average": 80.8
+    "_Type_Model": "(1) Postfix-Transformer",
+    "_AI2": 73.7,
+    "_CC": 81.1,
+    "_IL": 92.9,
+    "_MAWPS": 75.7,
+    "_Average": 80.8
   },
   {
-    "Type_Model": "(1) Infix-Transformer",
-    "AI2": 77.2,
-    "CC": 73.3,
-    "IL": 61.9,
-    "MAWPS": 56.8,
-    "Average": 67.3
+    "_Type_Model": "(1) Infix-Transformer",
+    "_AI2": 77.2,
+    "_CC": 73.3,
+    "_IL": 61.9,
+    "_MAWPS": 56.8,
+    "_Average": 67.3
   },
   {
-    "Type_Model": "(2) Prefix-Transformer",
-    "AI2": 71.9,
-    "CC": 94.4,
-    "IL": 94.1,
-    "MAWPS": 84.7,
-    "Average": 86.3
+    "_Type_Model": "(2) Prefix-Transformer",
+    "_AI2": 71.9,
+    "_CC": 94.4,
+    "_IL": 94.1,
+    "_MAWPS": 84.7,
+    "_Average": 86.3
   },
   {
-    "Type_Model": "(2) Postfix-Transformer",
-    "AI2": 77.2,
-    "CC": 94.4,
-    "IL": 94.1,
-    "MAWPS": 83.1,
-    "Average": 87.2
+    "_Type_Model": "(2) Postfix-Transformer",
+    "_AI2": 77.2,
+    "_CC": 94.4,
+    "_IL": 94.1,
+    "_MAWPS": 83.1,
+    "_Average": 87.2
   },
   {
-    "Type_Model": "(2) Infix-Transformer",
-    "AI2": 77.2,
-    "CC": 76.7,
-    "IL": 66.7,
-    "MAWPS": 61.5,
-    "Average": 70.5
+    "_Type_Model": "(2) Infix-Transformer",
+    "_AI2": 77.2,
+    "_CC": 76.7,
+    "_IL": 66.7,
+    "_MAWPS": 61.5,
+    "_Average": 70.5
   },
   {
-    "Type_Model": "(3) Prefix-Transformer",
-    "AI2": 71.9,
-    "CC": 93.3,
-    "IL": 95.2,
-    "MAWPS": 84.1,
-    "Average": 86.2
+    "_Type_Model": "(3) Prefix-Transformer",
+    "_AI2": 71.9,
+    "_CC": 93.3,
+    "_IL": 95.2,
+    "_MAWPS": 84.1,
+    "_Average": 86.2
   },
   {
-    "Type_Model": "(3) Postfix-Transformer",
-    "AI2": 77.2,
-    "CC": 94.4,
-    "IL": 94.1,
-    "MAWPS": 82.4,
-    "Average": 87.0
+    "_Type_Model": "(3) Postfix-Transformer",
+    "_AI2": 77.2,
+    "_CC": 94.4,
+    "_IL": 94.1,
+    "_MAWPS": 82.4,
+    "_Average": 87.0
   },
   {
-    "Type_Model": "(3) Infix-Transformer",
-    "AI2": 77.2,
-    "CC": 76.7,
-    "IL": 66.7,
-    "MAWPS": 62.4,
-    "Average": 70.7
+    "_Type_Model": "(3) Infix-Transformer",
+    "_AI2": 77.2,
+    "_CC": 76.7,
+    "_IL": 66.7,
+    "_MAWPS": 62.4,
+    "_Average": 70.7
   }
 ]

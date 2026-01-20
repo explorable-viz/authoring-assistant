@@ -1,22 +1,22 @@
 [
   {
-    "method": "No attention",
-    "ioU": 45.63
+    "_Method": "No attention",
+    "_IoU": 45.63
   },
   {
-    "method": "Word attention",
-    "ioU": 47.01
+    "_Method": "Word attention",
+    "_IoU": 47.01
   },
   {
-    "method": "Pixel attention",
-    "ioU": 47.84
+    "_Method": "Pixel attention",
+    "_IoU": 47.84
   },
   {
-    "method": "Word-pixel pair attention",
-    "ioU": 47.57
+    "_Method": "Word-pixel pair attention",
+    "_IoU": 47.57
   },
   {
-    "method": "Cross-modal self-attention",
-    "ioU": 50.12
+    "_Method": "Cross-modal self-attention",
+    "_IoU": 50.12
   }
 ]

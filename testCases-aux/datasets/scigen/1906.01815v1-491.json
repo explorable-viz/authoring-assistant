@@ -1,86 +1,86 @@
 [
   {
-    "setup": "Speaker Dependent",
-    "features": "T",
-    "precision": 65.1,
-    "recall": 64.6,
-    "f_Score": 64.6
+    "_Setup": "Speaker Dependent",
+    "_Features": "T",
+    "_Precision": 65.1,
+    "_Recall": 64.6,
+    "_F_Score": 64.6
   },
   {
-    "setup": "Speaker Dependent",
-    "features": "+ context",
-    "precision": 65.5,
-    "recall": 65.1,
-    "f_Score": 65.0
+    "_Setup": "Speaker Dependent",
+    "_Features": "+ context",
+    "_Precision": 65.5,
+    "_Recall": 65.1,
+    "_F_Score": 65.0
   },
   {
-    "setup": "Speaker Dependent",
-    "features": "+ speaker",
-    "precision": 67.7,
-    "recall": 67.2,
-    "f_Score": 67.3
+    "_Setup": "Speaker Dependent",
+    "_Features": "+ speaker",
+    "_Precision": 67.7,
+    "_Recall": 67.2,
+    "_F_Score": 67.3
   },
   {
-    "setup": "Speaker Dependent",
-    "features": "Best (T + V)",
-    "precision": 72.0,
-    "recall": 71.6,
-    "f_Score": 71.8
+    "_Setup": "Speaker Dependent",
+    "_Features": "Best (T + V)",
+    "_Precision": 72.0,
+    "_Recall": 71.6,
+    "_F_Score": 71.8
   },
   {
-    "setup": "Speaker Dependent",
-    "features": "+ context",
-    "precision": 71.9,
-    "recall": 71.4,
-    "f_Score": 71.5
+    "_Setup": "Speaker Dependent",
+    "_Features": "+ context",
+    "_Precision": 71.9,
+    "_Recall": 71.4,
+    "_F_Score": 71.5
   },
   {
-    "setup": "Speaker Dependent",
-    "features": "+ speaker",
-    "precision": 72.1,
-    "recall": 71.7,
-    "f_Score": 71.8
+    "_Setup": "Speaker Dependent",
+    "_Features": "+ speaker",
+    "_Precision": 72.1,
+    "_Recall": 71.7,
+    "_F_Score": 71.8
   },
   {
-    "setup": "Speaker Independent",
-    "features": "T",
-    "precision": 60.9,
-    "recall": 59.6,
-    "f_Score": 59.8
+    "_Setup": "Speaker Independent",
+    "_Features": "T",
+    "_Precision": 60.9,
+    "_Recall": 59.6,
+    "_F_Score": 59.8
   },
   {
-    "setup": "Speaker Independent",
-    "features": "+ context",
-    "precision": 57.9,
-    "recall": 54.5,
-    "f_Score": 54.1
+    "_Setup": "Speaker Independent",
+    "_Features": "+ context",
+    "_Precision": 57.9,
+    "_Recall": 54.5,
+    "_F_Score": 54.1
   },
   {
-    "setup": "Speaker Independent",
-    "features": "+ speaker",
-    "precision": 60.7,
-    "recall": 60.7,
-    "f_Score": 60.7
+    "_Setup": "Speaker Independent",
+    "_Features": "+ speaker",
+    "_Precision": 60.7,
+    "_Recall": 60.7,
+    "_F_Score": 60.7
   },
   {
-    "setup": "Speaker Independent",
-    "features": "Best (T + A)",
-    "precision": 64.7,
-    "recall": 62.9,
-    "f_Score": 63.1
+    "_Setup": "Speaker Independent",
+    "_Features": "Best (T + A)",
+    "_Precision": 64.7,
+    "_Recall": 62.9,
+    "_F_Score": 63.1
   },
   {
-    "setup": "Speaker Independent",
-    "features": "+ context",
-    "precision": 65.2,
-    "recall": 62.9,
-    "f_Score": 63.0
+    "_Setup": "Speaker Independent",
+    "_Features": "+ context",
+    "_Precision": 65.2,
+    "_Recall": 62.9,
+    "_F_Score": 63.0
   },
   {
-    "setup": "Speaker Independent",
-    "features": "+ speaker",
-    "precision": 64.7,
-    "recall": 62.9,
-    "f_Score": 63.1
+    "_Setup": "Speaker Independent",
+    "_Features": "+ speaker",
+    "_Precision": 64.7,
+    "_Recall": 62.9,
+    "_F_Score": 63.1
   }
 ]

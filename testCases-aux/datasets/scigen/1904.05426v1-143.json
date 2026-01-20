@@ -1,6 +1,6 @@
 [
   {
-    "seq_Tagger": "brown",
+    "_Seq_Tagger": "brown",
     "en": 81.37,
     "de": 81.28,
     "fr": 84.81,
@@ -9,7 +9,7 @@
     "sw": 87.35
   },
   {
-    "seq_Tagger": "marlin",
+    "_Seq_Tagger": "marlin",
     "en": 81.53,
     "de": 81.25,
     "fr": 85.4,
@@ -18,7 +18,7 @@
     "sw": 88.81
   },
   {
-    "seq_Tagger": "a-hmm",
+    "_Seq_Tagger": "a-hmm",
     "en": 77.12,
     "de": 74.85,
     "fr": 81.48,
@@ -27,7 +27,7 @@
     "sw": 76.69
   },
   {
-    "seq_Tagger": "e-kmeans",
+    "_Seq_Tagger": "e-kmeans",
     "en": 63.01,
     "de": 65.14,
     "fr": 68.68,

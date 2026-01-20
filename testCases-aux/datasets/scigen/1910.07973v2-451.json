@@ -1,134 +1,134 @@
 [
   {
-    "Dataset_Model_WikiPassageQA": "BM25",
-    "Metrics_MAP": 53.7,
-    "Metrics_P_5": 19.5,
-    "Metrics_P_10": 11.5
+    "_Dataset_Model_WikiPassageQA": "BM25",
+    "_Metrics_MAP": 53.7,
+    "_Metrics_P_5": 19.5,
+    "_Metrics_P_10": 11.5
   },
   {
-    "Dataset_Model_WikiPassageQA": "Memory-CNN-LSTM Cohen2018",
-    "Metrics_MAP": 56.1,
-    "Metrics_P_5": 20.8,
-    "Metrics_P_10": 12.3
+    "_Dataset_Model_WikiPassageQA": "Memory-CNN-LSTM Cohen2018",
+    "_Metrics_MAP": 56.1,
+    "_Metrics_P_5": 20.8,
+    "_Metrics_P_10": 12.3
   },
   {
-    "Dataset_Model_WikiPassageQA": "Pre-trained BERT Embedding",
-    "Metrics_MAP": 55.0,
-    "Metrics_P_5": 21.6,
-    "Metrics_P_10": 13.7
+    "_Dataset_Model_WikiPassageQA": "Pre-trained BERT Embedding",
+    "_Metrics_MAP": 55.0,
+    "_Metrics_P_5": 21.6,
+    "_Metrics_P_10": 13.7
   },
   {
-    "Dataset_Model_WikiPassageQA": "SNLI Fine-tuned BERT Embedding",
-    "Metrics_MAP": 52.5,
-    "Metrics_P_5": 20.6,
-    "Metrics_P_10": 12.8
+    "_Dataset_Model_WikiPassageQA": "SNLI Fine-tuned BERT Embedding",
+    "_Metrics_MAP": 52.5,
+    "_Metrics_P_5": 20.6,
+    "_Metrics_P_10": 12.8
   },
   {
-    "Dataset_Model_WikiPassageQA": "In-domain Fine-tuned BERT",
-    "Metrics_MAP": 74.9,
-    "Metrics_P_5": 27.2,
-    "Metrics_P_10": 15.2
+    "_Dataset_Model_WikiPassageQA": "In-domain Fine-tuned BERT",
+    "_Metrics_MAP": 74.9,
+    "_Metrics_P_5": 27.2,
+    "_Metrics_P_10": 15.2
   },
   {
-    "Dataset_Model_WikiPassageQA": " InsuranceQA",
-    "Metrics_MAP": " P@1",
-    "Metrics_P_5": " P@5",
-    "Metrics_P_10": " P@10"
+    "_Dataset_Model_WikiPassageQA": "InsuranceQA",
+    "_Metrics_MAP": "P@1",
+    "_Metrics_P_5": "P@5",
+    "_Metrics_P_10": "P@10"
   },
   {
-    "Dataset_Model_WikiPassageQA": "BM25",
-    "Metrics_MAP": 60.2,
-    "Metrics_P_5": 19.5,
-    "Metrics_P_10": 10.9
+    "_Dataset_Model_WikiPassageQA": "BM25",
+    "_Metrics_MAP": 60.2,
+    "_Metrics_P_5": 19.5,
+    "_Metrics_P_10": 10.9
   },
   {
-    "Dataset_Model_WikiPassageQA": "SUBMULT+NN Wang2016g",
-    "Metrics_MAP": 75.6,
-    "Metrics_P_5": "-",
-    "Metrics_P_10": "-"
+    "_Dataset_Model_WikiPassageQA": "SUBMULT+NN Wang2016g",
+    "_Metrics_MAP": 75.6,
+    "_Metrics_P_5": "-",
+    "_Metrics_P_10": "-"
   },
   {
-    "Dataset_Model_WikiPassageQA": "DSSM Huang2013a",
-    "Metrics_MAP": 30.3,
-    "Metrics_P_5": "-",
-    "Metrics_P_10": "-"
+    "_Dataset_Model_WikiPassageQA": "DSSM Huang2013a",
+    "_Metrics_MAP": 30.3,
+    "_Metrics_P_5": "-",
+    "_Metrics_P_10": "-"
   },
   {
-    "Dataset_Model_WikiPassageQA": "Pre-trained BERT Embedding",
-    "Metrics_MAP": 44.9,
-    "Metrics_P_5": 17.6,
-    "Metrics_P_10": 10.6
+    "_Dataset_Model_WikiPassageQA": "Pre-trained BERT Embedding",
+    "_Metrics_MAP": 44.9,
+    "_Metrics_P_5": 17.6,
+    "_Metrics_P_10": 10.6
   },
   {
-    "Dataset_Model_WikiPassageQA": "SNLI Fine-tuned BERT Embedding",
-    "Metrics_MAP": 48.0,
-    "Metrics_P_5": 18.5,
-    "Metrics_P_10": 11.0
+    "_Dataset_Model_WikiPassageQA": "SNLI Fine-tuned BERT Embedding",
+    "_Metrics_MAP": 48.0,
+    "_Metrics_P_5": 18.5,
+    "_Metrics_P_10": 11.0
   },
   {
-    "Dataset_Model_WikiPassageQA": "In-domain Fine-tuned BERT",
-    "Metrics_MAP": 78.3,
-    "Metrics_P_5": 25.4,
-    "Metrics_P_10": 13.7
+    "_Dataset_Model_WikiPassageQA": "In-domain Fine-tuned BERT",
+    "_Metrics_MAP": 78.3,
+    "_Metrics_P_5": 25.4,
+    "_Metrics_P_10": 13.7
   },
   {
-    "Dataset_Model_WikiPassageQA": " Quasar-t",
-    "Metrics_MAP": " R@1",
-    "Metrics_P_5": " R@5",
-    "Metrics_P_10": " R@10"
+    "_Dataset_Model_WikiPassageQA": "Quasar-t",
+    "_Metrics_MAP": "R@1",
+    "_Metrics_P_5": "R@5",
+    "_Metrics_P_10": "R@10"
   },
   {
-    "Dataset_Model_WikiPassageQA": "BM25",
-    "Metrics_MAP": 38.7,
-    "Metrics_P_5": 59.2,
-    "Metrics_P_10": 66.0
+    "_Dataset_Model_WikiPassageQA": "BM25",
+    "_Metrics_MAP": 38.7,
+    "_Metrics_P_5": 59.2,
+    "_Metrics_P_10": 66.0
   },
   {
-    "Dataset_Model_WikiPassageQA": "Pre-trained BERT Embedding",
-    "Metrics_MAP": 48.6,
-    "Metrics_P_5": 66.6,
-    "Metrics_P_10": 71.7
+    "_Dataset_Model_WikiPassageQA": "Pre-trained BERT Embedding",
+    "_Metrics_MAP": 48.6,
+    "_Metrics_P_5": 66.6,
+    "_Metrics_P_10": 71.7
   },
   {
-    "Dataset_Model_WikiPassageQA": "SNLI Fine-tuned BERT Embedding",
-    "Metrics_MAP": 49.3,
-    "Metrics_P_5": 66.1,
-    "Metrics_P_10": 71.0
+    "_Dataset_Model_WikiPassageQA": "SNLI Fine-tuned BERT Embedding",
+    "_Metrics_MAP": 49.3,
+    "_Metrics_P_5": 66.1,
+    "_Metrics_P_10": 71.0
   },
   {
-    "Dataset_Model_WikiPassageQA": "In-domain Fine-tuned BERT",
-    "Metrics_MAP": 59.5,
-    "Metrics_P_5": 70.9,
-    "Metrics_P_10": 74.6
+    "_Dataset_Model_WikiPassageQA": "In-domain Fine-tuned BERT",
+    "_Metrics_MAP": 59.5,
+    "_Metrics_P_5": 70.9,
+    "_Metrics_P_10": 74.6
   },
   {
-    "Dataset_Model_WikiPassageQA": " SearchQA",
-    "Metrics_MAP": " R@1",
-    "Metrics_P_5": " R@5",
-    "Metrics_P_10": " R@10"
+    "_Dataset_Model_WikiPassageQA": "SearchQA",
+    "_Metrics_MAP": "R@1",
+    "_Metrics_P_5": "R@5",
+    "_Metrics_P_10": "R@10"
   },
   {
-    "Dataset_Model_WikiPassageQA": "BM25",
-    "Metrics_MAP": 50.5,
-    "Metrics_P_5": 83.3,
-    "Metrics_P_10": 90.9
+    "_Dataset_Model_WikiPassageQA": "BM25",
+    "_Metrics_MAP": 50.5,
+    "_Metrics_P_5": 83.3,
+    "_Metrics_P_10": 90.9
   },
   {
-    "Dataset_Model_WikiPassageQA": "Pre-trained BERT Embedding",
-    "Metrics_MAP": 66.2,
-    "Metrics_P_5": 89.7,
-    "Metrics_P_10": 95.0
+    "_Dataset_Model_WikiPassageQA": "Pre-trained BERT Embedding",
+    "_Metrics_MAP": 66.2,
+    "_Metrics_P_5": 89.7,
+    "_Metrics_P_10": 95.0
   },
   {
-    "Dataset_Model_WikiPassageQA": "SNLI Fine-tuned BERT Embedding",
-    "Metrics_MAP": 66.8,
-    "Metrics_P_5": 90.0,
-    "Metrics_P_10": 95.1
+    "_Dataset_Model_WikiPassageQA": "SNLI Fine-tuned BERT Embedding",
+    "_Metrics_MAP": 66.8,
+    "_Metrics_P_5": 90.0,
+    "_Metrics_P_10": 95.1
   },
   {
-    "Dataset_Model_WikiPassageQA": "In-domain Fine-tuned BERT",
-    "Metrics_MAP": 76.3,
-    "Metrics_P_5": 93.0,
-    "Metrics_P_10": 96.7
+    "_Dataset_Model_WikiPassageQA": "In-domain Fine-tuned BERT",
+    "_Metrics_MAP": 76.3,
+    "_Metrics_P_5": 93.0,
+    "_Metrics_P_10": 96.7
   }
 ]

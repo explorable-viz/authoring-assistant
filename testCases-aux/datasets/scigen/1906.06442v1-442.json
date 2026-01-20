@@ -1,38 +1,38 @@
 [
   {
-    "model": "Bitext baseline",
-    "aSR0": 0.31,
-    "aSR_x": 10.21,
-    "H": 0.504
+    "_Model": "Bitext baseline",
+    "_ASR0": 0.31,
+    "_ASR_x": 10.21,
+    "_H": 0.504
   },
   {
-    "model": "BT",
-    "aSR0": 0.28,
-    "aSR_x": 10.98,
-    "H": 0.455
+    "_Model": "BT",
+    "_ASR0": 0.28,
+    "_ASR_x": 10.98,
+    "_H": 0.455
   },
   {
-    "model": "P3BT",
-    "aSR0": 0.37,
-    "aSR_x": 7.66,
-    "H": 0.558
+    "_Model": "P3BT",
+    "_ASR0": 0.37,
+    "_ASR_x": 7.66,
+    "_H": 0.558
   },
   {
-    "model": "NoisedBT",
-    "aSR0": 1.01,
-    "aSR_x": 3.96,
-    "H": 0.619
+    "_Model": "NoisedBT",
+    "_ASR0": 1.01,
+    "_ASR_x": 3.96,
+    "_H": 0.619
   },
   {
-    "model": "TaggedBT",
-    "aSR0": 5.31,
-    "aSR_x": 5.31,
-    "H": 0.597
+    "_Model": "TaggedBT",
+    "_ASR0": 5.31,
+    "_ASR_x": 5.31,
+    "_H": 0.597
   },
   {
-    "model": "TaggedNoisedBT",
-    "aSR0": 7.33,
-    "aSR_x": 7.33,
-    "H": 0.491
+    "_Model": "TaggedNoisedBT",
+    "_ASR0": 7.33,
+    "_ASR_x": 7.33,
+    "_H": 0.491
   }
 ]

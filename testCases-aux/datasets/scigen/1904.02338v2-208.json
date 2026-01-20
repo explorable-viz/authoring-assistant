@@ -1,74 +1,74 @@
 [
   {
     "_1": "\\En → \\Es",
-    "sestorain_et_al_2018_†_PBSMT": 61.26,
-    "sestorain_et_al_2018_†_NMT_0": 51.93,
-    "sestorain_et_al_2018_†_Dual_0": "—",
-    "our_baselines_Basic": 56.58,
-    "our_baselines_Pivot": 56.58,
-    "agree": 56.36
+    "_Sestorain_et_al_2018_†_PBSMT": 61.26,
+    "_Sestorain_et_al_2018_†_NMT_0": 51.93,
+    "_Sestorain_et_al_2018_†_Dual_0": "—",
+    "_Our_baselines_Basic": 56.58,
+    "_Our_baselines_Pivot": 56.58,
+    "_Agree": 56.36
   },
   {
     "_1": "\\En → \\Fr",
-    "sestorain_et_al_2018_†_PBSMT": 50.09,
-    "sestorain_et_al_2018_†_NMT_0": 40.56,
-    "sestorain_et_al_2018_†_Dual_0": "—",
-    "our_baselines_Basic": 44.27,
-    "our_baselines_Pivot": 44.27,
-    "agree": 44.8
+    "_Sestorain_et_al_2018_†_PBSMT": 50.09,
+    "_Sestorain_et_al_2018_†_NMT_0": 40.56,
+    "_Sestorain_et_al_2018_†_Dual_0": "—",
+    "_Our_baselines_Basic": 44.27,
+    "_Our_baselines_Pivot": 44.27,
+    "_Agree": 44.8
   },
   {
     "_1": "\\Es → \\En",
-    "sestorain_et_al_2018_†_PBSMT": 59.89,
-    "sestorain_et_al_2018_†_NMT_0": 51.58,
-    "sestorain_et_al_2018_†_Dual_0": "—",
-    "our_baselines_Basic": 55.7,
-    "our_baselines_Pivot": 55.7,
-    "agree": 55.24
+    "_Sestorain_et_al_2018_†_PBSMT": 59.89,
+    "_Sestorain_et_al_2018_†_NMT_0": 51.58,
+    "_Sestorain_et_al_2018_†_Dual_0": "—",
+    "_Our_baselines_Basic": 55.7,
+    "_Our_baselines_Pivot": 55.7,
+    "_Agree": 55.24
   },
   {
     "_1": "\\Fr → \\En",
-    "sestorain_et_al_2018_†_PBSMT": 52.22,
-    "sestorain_et_al_2018_†_NMT_0": 43.33,
-    "sestorain_et_al_2018_†_Dual_0": "—",
-    "our_baselines_Basic": 46.46,
-    "our_baselines_Pivot": 46.46,
-    "agree": 46.17
+    "_Sestorain_et_al_2018_†_PBSMT": 52.22,
+    "_Sestorain_et_al_2018_†_NMT_0": 43.33,
+    "_Sestorain_et_al_2018_†_Dual_0": "—",
+    "_Our_baselines_Basic": 46.46,
+    "_Our_baselines_Pivot": 46.46,
+    "_Agree": 46.17
   },
   {
     "_1": "Supervised (avg.)",
-    "sestorain_et_al_2018_†_PBSMT": 55.87,
-    "sestorain_et_al_2018_†_NMT_0": 46.85,
-    "sestorain_et_al_2018_†_Dual_0": "—",
-    "our_baselines_Basic": 50.75,
-    "our_baselines_Pivot": 50.75,
-    "agree": 50.64
+    "_Sestorain_et_al_2018_†_PBSMT": 55.87,
+    "_Sestorain_et_al_2018_†_NMT_0": 46.85,
+    "_Sestorain_et_al_2018_†_Dual_0": "—",
+    "_Our_baselines_Basic": 50.75,
+    "_Our_baselines_Pivot": 50.75,
+    "_Agree": 50.64
   },
   {
     "_1": "\\Es → \\Fr",
-    "sestorain_et_al_2018_†_PBSMT": 52.44,
-    "sestorain_et_al_2018_†_NMT_0": 20.29,
-    "sestorain_et_al_2018_†_Dual_0": 36.68,
-    "our_baselines_Basic": 34.75,
-    "our_baselines_Pivot": 38.1,
-    "agree": 37.54
+    "_Sestorain_et_al_2018_†_PBSMT": 52.44,
+    "_Sestorain_et_al_2018_†_NMT_0": 20.29,
+    "_Sestorain_et_al_2018_†_Dual_0": 36.68,
+    "_Our_baselines_Basic": 34.75,
+    "_Our_baselines_Pivot": 38.1,
+    "_Agree": 37.54
   },
   {
     "_1": "\\Fr → \\Es",
-    "sestorain_et_al_2018_†_PBSMT": 49.79,
-    "sestorain_et_al_2018_†_NMT_0": 19.01,
-    "sestorain_et_al_2018_†_Dual_0": 39.19,
-    "our_baselines_Basic": 37.67,
-    "our_baselines_Pivot": 40.84,
-    "agree": 40.02
+    "_Sestorain_et_al_2018_†_PBSMT": 49.79,
+    "_Sestorain_et_al_2018_†_NMT_0": 19.01,
+    "_Sestorain_et_al_2018_†_Dual_0": 39.19,
+    "_Our_baselines_Basic": 37.67,
+    "_Our_baselines_Pivot": 40.84,
+    "_Agree": 40.02
   },
   {
     "_1": "Zero-shot (avg.)",
-    "sestorain_et_al_2018_†_PBSMT": 51.11,
-    "sestorain_et_al_2018_†_NMT_0": 19.69,
-    "sestorain_et_al_2018_†_Dual_0": 37.93,
-    "our_baselines_Basic": 36.21,
-    "our_baselines_Pivot": 39.47,
-    "agree": 38.78
+    "_Sestorain_et_al_2018_†_PBSMT": 51.11,
+    "_Sestorain_et_al_2018_†_NMT_0": 19.69,
+    "_Sestorain_et_al_2018_†_Dual_0": 37.93,
+    "_Our_baselines_Basic": 36.21,
+    "_Our_baselines_Pivot": 39.47,
+    "_Agree": 38.78
   }
 ]

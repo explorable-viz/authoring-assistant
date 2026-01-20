@@ -1,6 +1,6 @@
 [
   {
-    "metrics": "nDCG@10",
+    "_Metrics": "nDCG@10",
     "rocchio": 0.232,
     "relevance_model": 0.274,
     "auto_ref": 0.195,
@@ -8,7 +8,7 @@
     "auto_ref_rocchio_relevance": 0.464
   },
   {
-    "metrics": "nDCG@100",
+    "_Metrics": "nDCG@100",
     "rocchio": 0.36,
     "relevance_model": 0.397,
     "auto_ref": 0.329,
@@ -16,7 +16,7 @@
     "auto_ref_rocchio_relevance": 0.536
   },
   {
-    "metrics": "MAP",
+    "_Metrics": "MAP",
     "rocchio": 0.182,
     "relevance_model": 0.223,
     "auto_ref": 0.156,

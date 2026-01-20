@@ -1,22 +1,22 @@
 [
   {
-    "random": "Distributional",
-    "target_Spanish_498": 0.362,
-    "target_French_515": 0.387
+    "_Random": "Distributional",
+    "_Target_Spanish_498": 0.362,
+    "_Target_French_515": 0.387
   },
   {
-    "random": "",
-    "target_Spanish_498": "Sm",
-    "target_French_515": "Sm"
+    "_Random": "",
+    "_Target_Spanish_498": "Sm",
+    "_Target_French_515": "Sm"
   },
   {
-    "random": "postle dffn",
-    "target_Spanish_498": 0.728,
-    "target_French_515": 0.742
+    "_Random": "postle dffn",
+    "_Target_Spanish_498": 0.728,
+    "_Target_French_515": 0.742
   },
   {
-    "random": "postle adv",
-    "target_Spanish_498": 0.782,
-    "target_French_515": 0.786
+    "_Random": "postle adv",
+    "_Target_Spanish_498": 0.782,
+    "_Target_French_515": 0.786
   }
 ]

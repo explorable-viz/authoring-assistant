@@ -1,106 +1,106 @@
 [
   {
-    "modal": "none",
-    "negated": "no",
-    "mean_Label": 1.0,
-    "linear_MAE": 0.93,
-    "tree_MAE": 1.03,
-    "num": 2244
+    "_Modal": "none",
+    "_Negated": "no",
+    "_Mean_Label": 1.0,
+    "_Linear_MAE": 0.93,
+    "_Tree_MAE": 1.03,
+    "_num": 2244
   },
   {
-    "modal": "none",
-    "negated": "yes",
-    "mean_Label": -0.19,
-    "linear_MAE": 1.4,
-    "tree_MAE": 1.69,
-    "num": 98
+    "_Modal": "none",
+    "_Negated": "yes",
+    "_Mean_Label": -0.19,
+    "_Linear_MAE": 1.4,
+    "_Tree_MAE": 1.69,
+    "_num": 98
   },
   {
-    "modal": "may",
-    "negated": "no",
-    "mean_Label": -0.38,
-    "linear_MAE": 1.0,
-    "tree_MAE": 0.99,
-    "num": 14
+    "_Modal": "may",
+    "_Negated": "no",
+    "_Mean_Label": -0.38,
+    "_Linear_MAE": 1.0,
+    "_Tree_MAE": 0.99,
+    "_num": 14
   },
   {
-    "modal": "would",
-    "negated": "no",
-    "mean_Label": -0.61,
-    "linear_MAE": 0.85,
-    "tree_MAE": 0.99,
-    "num": 39
+    "_Modal": "would",
+    "_Negated": "no",
+    "_Mean_Label": -0.61,
+    "_Linear_MAE": 0.85,
+    "_Tree_MAE": 0.99,
+    "_num": 39
   },
   {
-    "modal": "ca(n’t)",
-    "negated": "yes",
-    "mean_Label": -0.72,
-    "linear_MAE": 1.28,
-    "tree_MAE": 1.55,
-    "num": 11
+    "_Modal": "ca(n’t)",
+    "_Negated": "yes",
+    "_Mean_Label": -0.72,
+    "_Linear_MAE": 1.28,
+    "_Tree_MAE": 1.55,
+    "_num": 11
   },
   {
-    "modal": "can",
-    "negated": "yes",
-    "mean_Label": -0.75,
-    "linear_MAE": 0.99,
-    "tree_MAE": 0.86,
-    "num": 6
+    "_Modal": "can",
+    "_Negated": "yes",
+    "_Mean_Label": -0.75,
+    "_Linear_MAE": 0.99,
+    "_Tree_MAE": 0.86,
+    "_num": 6
   },
   {
-    "modal": "(wi)’ll",
-    "negated": "no",
-    "mean_Label": -0.94,
-    "linear_MAE": 1.47,
-    "tree_MAE": 1.14,
-    "num": 8
+    "_Modal": "(wi)’ll",
+    "_Negated": "no",
+    "_Mean_Label": -0.94,
+    "_Linear_MAE": 1.47,
+    "_Tree_MAE": 1.14,
+    "_num": 8
   },
   {
-    "modal": "could",
-    "negated": "no",
-    "mean_Label": -1.03,
-    "linear_MAE": 0.97,
-    "tree_MAE": 1.32,
-    "num": 20
+    "_Modal": "could",
+    "_Negated": "no",
+    "_Mean_Label": -1.03,
+    "_Linear_MAE": 0.97,
+    "_Tree_MAE": 1.32,
+    "_num": 20
   },
   {
-    "modal": "can",
-    "negated": "no",
-    "mean_Label": -1.25,
-    "linear_MAE": 1.02,
-    "tree_MAE": 1.21,
-    "num": 73
+    "_Modal": "can",
+    "_Negated": "no",
+    "_Mean_Label": -1.25,
+    "_Linear_MAE": 1.02,
+    "_Tree_MAE": 1.21,
+    "_num": 73
   },
   {
-    "modal": "might",
-    "negated": "no",
-    "mean_Label": -1.25,
-    "linear_MAE": 0.66,
-    "tree_MAE": 1.06,
-    "num": 6
+    "_Modal": "might",
+    "_Negated": "no",
+    "_Mean_Label": -1.25,
+    "_Linear_MAE": 0.66,
+    "_Tree_MAE": 1.06,
+    "_num": 6
   },
   {
-    "modal": "would",
-    "negated": "yes",
-    "mean_Label": -1.27,
-    "linear_MAE": 0.4,
-    "tree_MAE": 0.86,
-    "num": 5
+    "_Modal": "would",
+    "_Negated": "yes",
+    "_Mean_Label": -1.27,
+    "_Linear_MAE": 0.4,
+    "_Tree_MAE": 0.86,
+    "_num": 5
   },
   {
-    "modal": "should",
-    "negated": "no",
-    "mean_Label": -1.31,
-    "linear_MAE": 1.2,
-    "tree_MAE": 1.01,
-    "num": 22
+    "_Modal": "should",
+    "_Negated": "no",
+    "_Mean_Label": -1.31,
+    "_Linear_MAE": 1.2,
+    "_Tree_MAE": 1.01,
+    "_num": 22
   },
   {
-    "modal": "will",
-    "negated": "no",
-    "mean_Label": -1.88,
-    "linear_MAE": 0.75,
-    "tree_MAE": 0.86,
-    "num": 75
+    "_Modal": "will",
+    "_Negated": "no",
+    "_Mean_Label": -1.88,
+    "_Linear_MAE": 0.75,
+    "_Tree_MAE": 0.86,
+    "_num": 75
   }
 ]

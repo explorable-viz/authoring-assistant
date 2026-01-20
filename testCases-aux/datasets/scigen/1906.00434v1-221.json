@@ -1,37 +1,37 @@
 [
   {
-    "of_known_intents": "MSP",
-    "sNIPS_25": 0.0,
-    "50": 15.3,
-    "75": 17.2,
-    "aTIS_25": 8.1
+    "_of_known_intents": "MSP",
+    "_SNIPS_25": 0.0,
+    "_50": 15.3,
+    "_75": 17.2,
+    "_ATIS_25": 8.1
   },
   {
-    "of_known_intents": "DOC",
-    "sNIPS_25": 72.5,
-    "50": 62.8,
-    "75": 37.7,
-    "aTIS_25": 61.6
+    "_of_known_intents": "DOC",
+    "_SNIPS_25": 72.5,
+    "_50": 62.8,
+    "_75": 37.7,
+    "_ATIS_25": 61.6
   },
   {
-    "of_known_intents": "DOC (Softmax)",
-    "sNIPS_25": 72.8,
-    "50": 63.3,
-    "75": 38.7,
-    "aTIS_25": 63.6
+    "_of_known_intents": "DOC (Softmax)",
+    "_SNIPS_25": 72.8,
+    "_50": 63.3,
+    "_75": 38.7,
+    "_ATIS_25": 63.6
   },
   {
-    "of_known_intents": "LOF (Softmax)",
-    "sNIPS_25": 76.0,
-    "50": 61.8,
-    "75": 38.9,
-    "aTIS_25": 67.3
+    "_of_known_intents": "LOF (Softmax)",
+    "_SNIPS_25": 76.0,
+    "_50": 61.8,
+    "_75": 38.9,
+    "_ATIS_25": 67.3
   },
   {
-    "of_known_intents": "LOF (LMCL)",
-    "sNIPS_25": 79.2,
-    "50": 63.4,
-    "75": 39.6,
-    "aTIS_25": 69.6
+    "_of_known_intents": "LOF (LMCL)",
+    "_SNIPS_25": 79.2,
+    "_50": 63.4,
+    "_75": 39.6,
+    "_ATIS_25": 69.6
   }
 ]

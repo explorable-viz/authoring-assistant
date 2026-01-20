@@ -1,65 +1,65 @@
 [
   {
-    "model": "Human",
-    "bLEU": "-",
+    "_Model": "Human",
+    "_BLEU": "-",
     "distinct_1": 16.8,
     "distinct_2": 58.1,
-    "avg_length": 14.2,
-    "stopword": 69.8,
+    "_Avg_length": 14.2,
+    "_Stopword": 69.8,
     "adv_succ": ""
   },
   {
-    "model": "AR",
-    "bLEU": 1.64,
+    "_Model": "AR",
+    "_BLEU": 1.64,
     "distinct_1": 3.7,
     "distinct_2": 9.5,
-    "avg_length": 6.4,
-    "stopword": 82.3,
+    "_Avg_length": 6.4,
+    "_Stopword": 82.3,
     "adv_succ": 2.7
   },
   {
-    "model": "AR+MMI",
-    "bLEU": 2.1,
+    "_Model": "AR+MMI",
+    "_BLEU": 2.1,
     "distinct_1": 10.6,
     "distinct_2": 20.5,
-    "avg_length": 7.2,
-    "stopword": 76.4,
+    "_Avg_length": 7.2,
+    "_Stopword": 76.4,
     "adv_succ": 6.3
   },
   {
-    "model": "AR+MMI+diverse",
-    "bLEU": 2.16,
+    "_Model": "AR+MMI+diverse",
+    "_BLEU": 2.16,
     "distinct_1": 16.0,
     "distinct_2": 27.3,
-    "avg_length": 7.5,
-    "stopword": 72.1,
+    "_Avg_length": 7.5,
+    "_Stopword": 72.1,
     "adv_succ": 6.4
   },
   {
-    "model": "AR+MMI+RL",
-    "bLEU": 2.34,
+    "_Model": "AR+MMI+RL",
+    "_BLEU": 2.34,
     "distinct_1": 13.7,
     "distinct_2": 25.2,
-    "avg_length": 7.3,
-    "stopword": 73.0,
+    "_Avg_length": 7.3,
+    "_Stopword": 73.0,
     "adv_succ": 8.0
   },
   {
-    "model": "NonAR",
-    "bLEU": 1.54,
+    "_Model": "NonAR",
+    "_BLEU": 1.54,
     "distinct_1": 8.9,
     "distinct_2": 14.6,
-    "avg_length": 7.1,
-    "stopword": 77.9,
+    "_Avg_length": 7.1,
+    "_Stopword": 77.9,
     "adv_succ": 2.4
   },
   {
-    "model": "NonAR+MMI",
-    "bLEU": 2.68,
+    "_Model": "NonAR+MMI",
+    "_BLEU": 2.68,
     "distinct_1": 15.9,
     "distinct_2": 27.0,
-    "avg_length": 7.4,
-    "stopword": 71.9,
+    "_Avg_length": 7.4,
+    "_Stopword": 71.9,
     "adv_succ": 9.2
   }
 ]

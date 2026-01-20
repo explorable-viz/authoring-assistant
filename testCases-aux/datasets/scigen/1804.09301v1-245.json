@@ -1,38 +1,38 @@
 [
   {
-    "system": "Rule",
-    "“Gotcha”": "no",
-    "female": 38.3,
-    "male": 51.7
+    "_System": "Rule",
+    "_“Gotcha”": "no",
+    "_Female": 38.3,
+    "_Male": 51.7
   },
   {
-    "system": "Rule",
-    "“Gotcha”": "CBCEFByes",
-    "female": "CBCEFB10.0",
-    "male": "CBCEFB37.5"
+    "_System": "Rule",
+    "_“Gotcha”": "CBCEFByes",
+    "_Female": "CBCEFB10.0",
+    "_Male": "CBCEFB37.5"
   },
   {
-    "system": "Stat",
-    "“Gotcha”": "no",
-    "female": 50.8,
-    "male": 61.7
+    "_System": "Stat",
+    "_“Gotcha”": "no",
+    "_Female": 50.8,
+    "_Male": 61.7
   },
   {
-    "system": "Stat",
-    "“Gotcha”": "CBCEFByes",
-    "female": "CBCEFB45.8",
-    "male": "CBCEFB40.0"
+    "_System": "Stat",
+    "_“Gotcha”": "CBCEFByes",
+    "_Female": "CBCEFB45.8",
+    "_Male": "CBCEFB40.0"
   },
   {
-    "system": "Neural",
-    "“Gotcha”": "no",
-    "female": 50.8,
-    "male": 49.2
+    "_System": "Neural",
+    "_“Gotcha”": "no",
+    "_Female": 50.8,
+    "_Male": 49.2
   },
   {
-    "system": "Neural",
-    "“Gotcha”": "CBCEFByes",
-    "female": "CBCEFB36.7",
-    "male": "CBCEFB46.7"
+    "_System": "Neural",
+    "_“Gotcha”": "CBCEFByes",
+    "_Female": "CBCEFB36.7",
+    "_Male": "CBCEFB46.7"
   }
 ]

@@ -1,30 +1,30 @@
 [
   {
-    "language": "EnFr",
-    "tokenized_BLEU_BPE": 38.8,
-    "tokenized_BLEU_Char": 39.2,
-    "tokenized_BLEU_Delta": 0.4,
-    "sacreBLEU_Char": 38.1
+    "_Language": "EnFr",
+    "_Tokenized_BLEU_BPE": 38.8,
+    "_Tokenized_BLEU_Char": 39.2,
+    "_Tokenized_BLEU_Delta": 0.4,
+    "_SacreBLEU_Char": 38.1
   },
   {
-    "language": "CsEn",
-    "tokenized_BLEU_BPE": 24.8,
-    "tokenized_BLEU_Char": 25.9,
-    "tokenized_BLEU_Delta": 1.1,
-    "sacreBLEU_Char": 25.6
+    "_Language": "CsEn",
+    "_Tokenized_BLEU_BPE": 24.8,
+    "_Tokenized_BLEU_Char": 25.9,
+    "_Tokenized_BLEU_Delta": 1.1,
+    "_SacreBLEU_Char": 25.6
   },
   {
-    "language": "DeEn",
-    "tokenized_BLEU_BPE": 29.7,
-    "tokenized_BLEU_Char": 31.6,
-    "tokenized_BLEU_Delta": 1.9,
-    "sacreBLEU_Char": 31.6
+    "_Language": "DeEn",
+    "_Tokenized_BLEU_BPE": 29.7,
+    "_Tokenized_BLEU_Char": 31.6,
+    "_Tokenized_BLEU_Delta": 1.9,
+    "_SacreBLEU_Char": 31.6
   },
   {
-    "language": "FiEn",
-    "tokenized_BLEU_BPE": 17.5,
-    "tokenized_BLEU_Char": 19.3,
-    "tokenized_BLEU_Delta": 1.8,
-    "sacreBLEU_Char": 19.5
+    "_Language": "FiEn",
+    "_Tokenized_BLEU_BPE": 17.5,
+    "_Tokenized_BLEU_Char": 19.3,
+    "_Tokenized_BLEU_Delta": 1.8,
+    "_SacreBLEU_Char": 19.5
   }
 ]

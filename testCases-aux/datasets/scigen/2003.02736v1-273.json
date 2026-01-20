@@ -1,6 +1,6 @@
 [
   {
-    "method": "Zubiaga et al.  2017",
+    "_Method": "Zubiaga et al.  2017",
     "μP": 0.667,
     "μR": 0.556,
     "μF1": 0.607,
@@ -9,7 +9,7 @@
     "eF1": "-"
   },
   {
-    "method": "BiLSTM",
+    "_Method": "BiLSTM",
     "μP": 0.623,
     "μR": 0.564,
     "μF1": 0.59,
@@ -18,7 +18,7 @@
     "eF1": "-"
   },
   {
-    "method": "BERT",
+    "_Method": "BERT",
     "μP": 0.699,
     "μR": 0.608,
     "μF1": 0.65,
@@ -27,7 +27,7 @@
     "eF1": 0.663
   },
   {
-    "method": "BERT + Wiki",
+    "_Method": "BERT + Wiki",
     "μP": 0.693,
     "μR": 0.614,
     "μF1": 0.651,
@@ -36,7 +36,7 @@
     "eF1": 0.662
   },
   {
-    "method": "BERT + Wiki + PU",
+    "_Method": "BERT + Wiki + PU",
     "μP": 0.699,
     "μR": 0.625,
     "μF1": 0.66,
@@ -45,7 +45,7 @@
     "eF1": 0.682
   },
   {
-    "method": "BERT + Wiki +   PUC",
+    "_Method": "BERT + Wiki +   PUC",
     "μP": 0.701,
     "μR": 0.618,
     "μF1": 0.657,

@@ -1,44 +1,44 @@
 [
   {
     "_1": "",
-    "Memory_to_Context_BLEU": "Et→En",
-    "Memory_to_Context_METEOR": "Et→En",
-    "Memory_to_Output_BLEU": "Et→En",
-    "Memory_to_Output_METEOR": "Et→En"
+    "_Memory_to_Context_BLEU": "Et→En",
+    "_Memory_to_Context_METEOR": "Et→En",
+    "_Memory_to_Output_BLEU": "Et→En",
+    "_Memory_to_Output_METEOR": "Et→En"
   },
   {
     "_1": "",
-    "Memory_to_Context_BLEU": "",
-    "Memory_to_Context_METEOR": "",
-    "Memory_to_Output_BLEU": "",
-    "Memory_to_Output_METEOR": ""
+    "_Memory_to_Context_BLEU": "",
+    "_Memory_to_Context_METEOR": "",
+    "_Memory_to_Output_BLEU": "",
+    "_Memory_to_Output_METEOR": ""
   },
   {
-    "_1": " S-NMT",
-    "Memory_to_Context_BLEU": 20.42,
-    "Memory_to_Context_METEOR": 24.65,
-    "Memory_to_Output_BLEU": 20.42,
-    "Memory_to_Output_METEOR": 24.65
+    "_1": "S-NMT",
+    "_Memory_to_Context_BLEU": 20.42,
+    "_Memory_to_Context_METEOR": 24.65,
+    "_Memory_to_Output_BLEU": 20.42,
+    "_Memory_to_Output_METEOR": 24.65
   },
   {
-    "_1": "  +src",
-    "Memory_to_Context_BLEU": 22.1,
-    "Memory_to_Context_METEOR": 25.92,
-    "Memory_to_Output_BLEU": 21.5,
-    "Memory_to_Output_METEOR": 25.44
+    "_1": "+src",
+    "_Memory_to_Context_BLEU": 22.1,
+    "_Memory_to_Context_METEOR": 25.92,
+    "_Memory_to_Output_BLEU": 21.5,
+    "_Memory_to_Output_METEOR": 25.44
   },
   {
-    "_1": "  +trg",
-    "Memory_to_Context_BLEU": 21.94,
-    "Memory_to_Context_METEOR": 25.89,
-    "Memory_to_Output_BLEU": 21.82,
-    "Memory_to_Output_METEOR": 25.93
+    "_1": "+trg",
+    "_Memory_to_Context_BLEU": 21.94,
+    "_Memory_to_Context_METEOR": 25.89,
+    "_Memory_to_Output_BLEU": 21.82,
+    "_Memory_to_Output_METEOR": 25.93
   },
   {
-    "_1": "  +both",
-    "Memory_to_Context_BLEU": 22.32,
-    "Memory_to_Context_METEOR": 26.34,
-    "Memory_to_Output_BLEU": 22.2,
-    "Memory_to_Output_METEOR": 26.1
+    "_1": "+both",
+    "_Memory_to_Context_BLEU": 22.32,
+    "_Memory_to_Context_METEOR": 26.34,
+    "_Memory_to_Output_BLEU": 22.2,
+    "_Memory_to_Output_METEOR": 26.1
   }
 ]

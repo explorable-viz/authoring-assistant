@@ -1,37 +1,37 @@
 [
   {
-    "external_representation": "Plain BPE",
-    "internal_representation": "Plain BPE",
-    "test_BLEU": 29.2
+    "_External_representation": "Plain BPE",
+    "_Internal_representation": "Plain BPE",
+    "_Test_BLEU": 29.2
   },
   {
-    "external_representation": "Linearized derivation",
-    "internal_representation": "Linearized derivation",
-    "test_BLEU": 28.8
+    "_External_representation": "Linearized derivation",
+    "_Internal_representation": "Linearized derivation",
+    "_Test_BLEU": 28.8
   },
   {
-    "external_representation": "Linearized tree",
-    "internal_representation": "Plain BPE",
-    "test_BLEU": 28.9
+    "_External_representation": "Linearized tree",
+    "_Internal_representation": "Plain BPE",
+    "_Test_BLEU": 28.9
   },
   {
-    "external_representation": "Plain BPE",
-    "internal_representation": "Linearized derivation",
-    "test_BLEU": 28.8
+    "_External_representation": "Plain BPE",
+    "_Internal_representation": "Linearized derivation",
+    "_Test_BLEU": 28.8
   },
   {
-    "external_representation": "Linearized derivation",
-    "internal_representation": "Plain BPE",
-    "test_BLEU": 29.4
+    "_External_representation": "Linearized derivation",
+    "_Internal_representation": "Plain BPE",
+    "_Test_BLEU": 29.4
   },
   {
-    "external_representation": "POS/BPE",
-    "internal_representation": "Plain BPE",
-    "test_BLEU": 29.3
+    "_External_representation": "POS/BPE",
+    "_Internal_representation": "Plain BPE",
+    "_Test_BLEU": 29.3
   },
   {
-    "external_representation": "Plain BPE",
-    "internal_representation": "POS/BPE",
-    "test_BLEU": 29.4
+    "_External_representation": "Plain BPE",
+    "_Internal_representation": "POS/BPE",
+    "_Test_BLEU": 29.4
   }
 ]

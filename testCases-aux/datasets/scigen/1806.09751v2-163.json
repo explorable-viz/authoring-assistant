@@ -1,66 +1,66 @@
 [
   {
-    "Dataset_Name": " Dataset Name",
-    "Entity_Class": " Entity Class",
-    "EAL_1_0_F": "% cut",
-    "EAA_Annotation_Mode_FA": " F-Score (percentage cut)",
-    "EAA_Annotation_Mode_HFA": " F-Score (percentage cut)",
-    "EAA_Annotation_Mode_UFA": " F-Score (percentage cut)"
+    "_Dataset_Name": "Dataset Name",
+    "_Entity_Class": "Entity Class",
+    "_EAL_1_0_F": "% cut",
+    "_EAA_Annotation_Mode_FA": "F-Score (percentage cut)",
+    "_EAA_Annotation_Mode_HFA": "F-Score (percentage cut)",
+    "_EAA_Annotation_Mode_UFA": "F-Score (percentage cut)"
   },
   {
-    "Dataset_Name": "CoNLL-2003",
-    "Entity_Class": "Location",
-    "EAL_1_0_F": 55,
-    "EAA_Annotation_Mode_FA": 0.99,
-    "EAA_Annotation_Mode_HFA": 0.93,
-    "EAA_Annotation_Mode_UFA": 0.82
+    "_Dataset_Name": "CoNLL-2003",
+    "_Entity_Class": "Location",
+    "_EAL_1_0_F": 55,
+    "_EAA_Annotation_Mode_FA": 0.99,
+    "_EAA_Annotation_Mode_HFA": 0.93,
+    "_EAA_Annotation_Mode_UFA": 0.82
   },
   {
-    "Dataset_Name": "CoNLL-2003",
-    "Entity_Class": "Person",
-    "EAL_1_0_F": 59,
-    "EAA_Annotation_Mode_FA": 0.99,
-    "EAA_Annotation_Mode_HFA": 0.95,
-    "EAA_Annotation_Mode_UFA": 0.85
+    "_Dataset_Name": "CoNLL-2003",
+    "_Entity_Class": "Person",
+    "_EAL_1_0_F": 59,
+    "_EAA_Annotation_Mode_FA": 0.99,
+    "_EAA_Annotation_Mode_HFA": 0.95,
+    "_EAA_Annotation_Mode_UFA": 0.85
   },
   {
-    "Dataset_Name": "BioCreAtIvE II",
-    "Entity_Class": "Gene",
-    "EAL_1_0_F": 35,
-    "EAA_Annotation_Mode_FA": 1.0,
-    "EAA_Annotation_Mode_HFA": 0.96,
-    "EAA_Annotation_Mode_UFA": 0.89
+    "_Dataset_Name": "BioCreAtIvE II",
+    "_Entity_Class": "Gene",
+    "_EAL_1_0_F": 35,
+    "_EAA_Annotation_Mode_FA": 1.0,
+    "_EAA_Annotation_Mode_HFA": 0.96,
+    "_EAA_Annotation_Mode_UFA": 0.89
   },
   {
-    "Dataset_Name": "GENIA 3.02",
-    "Entity_Class": "Protein Molecule",
-    "EAL_1_0_F": 33,
-    "EAA_Annotation_Mode_FA": 0.98,
-    "EAA_Annotation_Mode_HFA": 0.87,
-    "EAA_Annotation_Mode_UFA": 0.74
+    "_Dataset_Name": "GENIA 3.02",
+    "_Entity_Class": "Protein Molecule",
+    "_EAL_1_0_F": 33,
+    "_EAA_Annotation_Mode_FA": 0.98,
+    "_EAA_Annotation_Mode_HFA": 0.87,
+    "_EAA_Annotation_Mode_UFA": 0.74
   },
   {
-    "Dataset_Name": "GENIA 3.02",
-    "Entity_Class": "Cell Type",
-    "EAL_1_0_F": 62,
-    "EAA_Annotation_Mode_FA": 0.94,
-    "EAA_Annotation_Mode_HFA": 0.82,
-    "EAA_Annotation_Mode_UFA": 0.74
+    "_Dataset_Name": "GENIA 3.02",
+    "_Entity_Class": "Cell Type",
+    "_EAL_1_0_F": 62,
+    "_EAA_Annotation_Mode_FA": 0.94,
+    "_EAA_Annotation_Mode_HFA": 0.82,
+    "_EAA_Annotation_Mode_UFA": 0.74
   },
   {
-    "Dataset_Name": "GENIA 3.02",
-    "Entity_Class": "Virus",
-    "EAL_1_0_F": 24,
-    "EAA_Annotation_Mode_FA": 0.97,
-    "EAA_Annotation_Mode_HFA": 0.89,
-    "EAA_Annotation_Mode_UFA": 0.84
+    "_Dataset_Name": "GENIA 3.02",
+    "_Entity_Class": "Virus",
+    "_EAL_1_0_F": 24,
+    "_EAA_Annotation_Mode_FA": 0.97,
+    "_EAA_Annotation_Mode_HFA": 0.89,
+    "_EAA_Annotation_Mode_UFA": 0.84
   },
   {
-    "Dataset_Name": " Average",
-    "Entity_Class": " Average",
-    "EAL_1_0_F": 45,
-    "EAA_Annotation_Mode_FA": 0.98,
-    "EAA_Annotation_Mode_HFA": 0.9,
-    "EAA_Annotation_Mode_UFA": 0.81
+    "_Dataset_Name": "Average",
+    "_Entity_Class": "Average",
+    "_EAL_1_0_F": 45,
+    "_EAA_Annotation_Mode_FA": 0.98,
+    "_EAA_Annotation_Mode_HFA": 0.9,
+    "_EAA_Annotation_Mode_UFA": 0.81
   }
 ]

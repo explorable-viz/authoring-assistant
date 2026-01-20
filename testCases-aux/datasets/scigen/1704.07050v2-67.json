@@ -1,22 +1,22 @@
 [
   {
-    "method": "Baseline",
-    "max_F1": 55.08,
-    "11_point_IAP": 51.35
+    "_Method": "Baseline",
+    "_Max_F1": 55.08,
+    "_11_point_IAP": 51.35
   },
   {
-    "method": "RR",
-    "max_F1": 60.88,
-    "11_point_IAP": 58.79
+    "_Method": "RR",
+    "_Max_F1": 60.88,
+    "_11_point_IAP": 58.79
   },
   {
-    "method": "RR_FR_1step",
-    "max_F1": 65.87,
-    "11_point_IAP": 63.55
+    "_Method": "RR_FR_1step",
+    "_Max_F1": 65.87,
+    "_11_point_IAP": 63.55
   },
   {
-    "method": "RR_FR_2step",
-    "max_F1": 65.76,
-    "11_point_IAP": 65.26
+    "_Method": "RR_FR_2step",
+    "_Max_F1": 65.76,
+    "_11_point_IAP": 65.26
   }
 ]

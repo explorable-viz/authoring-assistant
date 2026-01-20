@@ -1,17 +1,17 @@
 [
   {
-    "Annotators": "Questions",
-    "Ao": 0.73,
+    "_Annotators": "Questions",
+    "_Ao": 0.73,
     "κ": 0.63
   },
   {
-    "Annotators": "Features",
-    "Ao": 0.9,
+    "_Annotators": "Features",
+    "_Ao": 0.9,
     "κ": 0.67
   },
   {
-    "Annotators": "Answers",
-    "Ao": 0.59,
+    "_Annotators": "Answers",
+    "_Ao": 0.59,
     "κ": 0.49
   }
 ]

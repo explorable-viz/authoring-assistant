@@ -1,42 +1,42 @@
 [
   {
-    "class": "What",
-    "recall": 87.7,
-    "precision": 76.0
+    "_Class": "What",
+    "_Recall": 87.7,
+    "_Precision": 76.0
   },
   {
-    "class": "Which",
-    "recall": 1.4,
-    "precision": 38.0
+    "_Class": "Which",
+    "_Recall": 1.4,
+    "_Precision": 38.0
   },
   {
-    "class": "Where",
-    "recall": 65.9,
-    "precision": 55.8
+    "_Class": "Where",
+    "_Recall": 65.9,
+    "_Precision": 55.8
   },
   {
-    "class": "When",
-    "recall": 49.2,
-    "precision": 69.8
+    "_Class": "When",
+    "_Recall": 49.2,
+    "_Precision": 69.8
   },
   {
-    "class": "Who",
-    "recall": 76.9,
-    "precision": 66.7
+    "_Class": "Who",
+    "_Recall": 76.9,
+    "_Precision": 66.7
   },
   {
-    "class": "Why",
-    "recall": 50.1,
-    "precision": 74.1
+    "_Class": "Why",
+    "_Recall": 50.1,
+    "_Precision": 74.1
   },
   {
-    "class": "How",
-    "recall": 70.5,
-    "precision": 79.0
+    "_Class": "How",
+    "_Recall": 70.5,
+    "_Precision": 79.0
   },
   {
-    "class": "Others",
-    "recall": 10.5,
-    "precision": 57.0
+    "_Class": "Others",
+    "_Recall": 10.5,
+    "_Precision": 57.0
   }
 ]

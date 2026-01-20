@@ -1,22 +1,22 @@
 [
   {
     "model": "baseline (1.5m)",
-    "BLEU": 29.1
+    "_BLEU": 29.1
   },
   {
     "model": "baseline (6m)",
-    "BLEU": 32.4
+    "_BLEU": 32.4
   },
   {
     "model": "concat",
-    "BLEU": 31.56
+    "_BLEU": 31.56
   },
   {
     "model": "s-hier-to-2.tied",
-    "BLEU": 26.68
+    "_BLEU": 26.68
   },
   {
     "model": "CADec",
-    "BLEU": 32.38
+    "_BLEU": 32.38
   }
 ]

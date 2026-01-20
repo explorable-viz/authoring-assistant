@@ -1,21 +1,21 @@
 [
   {
-    "Method": " mean",
+    "_Method": "mean",
     "w_o_chars": 71.3,
     "w_chars": 71.3
   },
   {
-    "Method": " sum",
+    "_Method": "sum",
     "w_o_chars": 70.7,
     "w_chars": 70.9
   },
   {
-    "Method": " last",
+    "_Method": "last",
     "w_o_chars": 70.9,
     "w_chars": 71.0
   },
   {
-    "Method": " max",
+    "_Method": "max",
     "w_o_chars": 70.6,
     "w_chars": 71.0
   }

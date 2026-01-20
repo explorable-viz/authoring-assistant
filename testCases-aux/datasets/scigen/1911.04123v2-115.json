@@ -1,26 +1,26 @@
 [
   {
-    "model": "GRU+Attn (Liu et al.,  2017 )†",
-    "f1_score": 49.5
+    "_Model": "GRU+Attn (Liu et al.,  2017 )†",
+    "_F1_score": 49.5
   },
   {
-    "model": "Bran (Verga et al.,  2018 )†",
-    "f1_score": 50.8
+    "_Model": "Bran (Verga et al.,  2018 )†",
+    "_F1_score": 50.8
   },
   {
-    "model": "TextOnly",
-    "f1_score": 50.6
+    "_Model": "TextOnly",
+    "_F1_score": 50.6
   },
   {
-    "model": "DepTree",
-    "f1_score": 51.4
+    "_Model": "DepTree",
+    "_F1_score": 51.4
   },
   {
-    "model": "KBestEisnerPS",
-    "f1_score": 52.4
+    "_Model": "KBestEisnerPS",
+    "_F1_score": 52.4
   },
   {
-    "model": "EdgewisePS",
-    "f1_score": "**  53.4"
+    "_Model": "EdgewisePS",
+    "_F1_score": "**  53.4"
   }
 ]

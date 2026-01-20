@@ -1,23 +1,23 @@
 [
   {
-    "model": "NSMN",
-    "fEVER_Dev_base": 81.8,
-    "fEVER_Dev_r_w": "-",
-    "generated_base": 58.7,
-    "generated_r_w": "-"
+    "_Model": "NSMN",
+    "_FEVER_Dev_base": 81.8,
+    "_FEVER_Dev_r_w": "-",
+    "_Generated_base": 58.7,
+    "_Generated_r_w": "-"
   },
   {
-    "model": "ESIM",
-    "fEVER_Dev_base": 80.8,
-    "fEVER_Dev_r_w": 76.0,
-    "generated_base": 55.9,
-    "generated_r_w": 59.3
+    "_Model": "ESIM",
+    "_FEVER_Dev_base": 80.8,
+    "_FEVER_Dev_r_w": 76.0,
+    "_Generated_base": 55.9,
+    "_Generated_r_w": 59.3
   },
   {
-    "model": "BERT",
-    "fEVER_Dev_base": 86.2,
-    "fEVER_Dev_r_w": 84.6,
-    "generated_base": 58.3,
-    "generated_r_w": 61.6
+    "_Model": "BERT",
+    "_FEVER_Dev_base": 86.2,
+    "_FEVER_Dev_r_w": 84.6,
+    "_Generated_base": 58.3,
+    "_Generated_r_w": 61.6
   }
 ]

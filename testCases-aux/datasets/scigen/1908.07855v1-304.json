@@ -1,62 +1,62 @@
 [
   {
     "_1": "IR",
-    "textbooks": 25.24,
-    "wikipedia": 25.14
+    "_Textbooks": 25.24,
+    "_Wikipedia": 25.14
   },
   {
     "_1": "PMI",
-    "textbooks": 26.22,
-    "wikipedia": 25.19
+    "_Textbooks": 26.22,
+    "_Wikipedia": 25.19
   },
   {
     "_1": "ESIM w/o scenario",
-    "textbooks": 25.85,
-    "wikipedia": 25.41
+    "_Textbooks": 25.85,
+    "_Wikipedia": 25.41
   },
   {
     "_1": "ESIM w/ scenario",
-    "textbooks": 24.34,
-    "wikipedia": 24.41
+    "_Textbooks": 24.34,
+    "_Wikipedia": 24.41
   },
   {
     "_1": "DIIN w/o scenario",
-    "textbooks": 24.15,
-    "wikipedia": 25.2
+    "_Textbooks": 24.15,
+    "_Wikipedia": 25.2
   },
   {
     "_1": "DIIN w/ scenario",
-    "textbooks": 25.11,
-    "wikipedia": 24.89
+    "_Textbooks": 25.11,
+    "_Wikipedia": 24.89
   },
   {
     "_1": "BERT  NLI w/o scenario",
-    "textbooks": 24.29,
-    "wikipedia": 24.17
+    "_Textbooks": 24.29,
+    "_Wikipedia": 24.17
   },
   {
     "_1": "BERT  NLI w/ scenario",
-    "textbooks": 24.97,
-    "wikipedia": 24.68
+    "_Textbooks": 24.97,
+    "_Wikipedia": 24.68
   },
   {
     "_1": "BiMPM w/o scenario",
-    "textbooks": 24.13,
-    "wikipedia": 24.51
+    "_Textbooks": 24.13,
+    "_Wikipedia": 24.51
   },
   {
     "_1": "BiMPM w/ scenario",
-    "textbooks": 24.76,
-    "wikipedia": 23.81
+    "_Textbooks": 24.76,
+    "_Wikipedia": 23.81
   },
   {
     "_1": "BERT  RC w/o scenario",
-    "textbooks": 24.81,
-    "wikipedia": 24.78
+    "_Textbooks": 24.81,
+    "_Wikipedia": 24.78
   },
   {
     "_1": "BERT  RC w/ scenario",
-    "textbooks": 23.66,
-    "wikipedia": 23.01
+    "_Textbooks": 23.66,
+    "_Wikipedia": 23.01
   }
 ]

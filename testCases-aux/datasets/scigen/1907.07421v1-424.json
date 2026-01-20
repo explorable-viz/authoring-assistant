@@ -1,18 +1,18 @@
 [
   {
-    "model": "Benchmark baseline",
-    "joint_Accuracy": 0.2583
+    "_Model": "Benchmark baseline",
+    "_Joint_Accuracy": 0.2583
   },
   {
-    "model": "GLAD Zhong et al. ( 2018 )",
-    "joint_Accuracy": 0.3557
+    "_Model": "GLAD Zhong et al. ( 2018 )",
+    "_Joint_Accuracy": 0.3557
   },
   {
-    "model": "GCE Nouri and Hosseini-Asl ( 2018 )",
-    "joint_Accuracy": 0.3558
+    "_Model": "GCE Nouri and Hosseini-Asl ( 2018 )",
+    "_Joint_Accuracy": 0.3558
   },
   {
-    "model": "SUMBT",
-    "joint_Accuracy": 0.424
+    "_Model": "SUMBT",
+    "_Joint_Accuracy": 0.424
   }
 ]

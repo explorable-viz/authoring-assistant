@@ -1,51 +1,51 @@
 [
   {
-    "Task": "Semantic Similarity",
+    "_Task": "Semantic Similarity",
     "_1": 34.1,
-    "Mean": 84.5,
-    "Max": 80.7,
+    "_Mean": 84.5,
+    "_Max": 80.7,
     "_2": 13.0
   },
   {
-    "Task": "Text Classification",
+    "_Task": "Text Classification",
     "_1": 90.7,
-    "Mean": 95.4,
-    "Max": 89.7,
+    "_Mean": 95.4,
+    "_Max": 89.7,
     "_2": 88.9
   },
   {
-    "Task": "Entailment",
+    "_Task": "Entailment",
     "_1": 72.4,
-    "Mean": 89.3,
-    "Max": 87.1,
+    "_Mean": 89.3,
+    "_Max": 87.1,
     "_2": 66.1
   },
   {
-    "Task": "Surface Information",
+    "_Task": "Surface Information",
     "_1": 45.6,
-    "Mean": 78.9,
-    "Max": 47.3,
+    "_Mean": 78.9,
+    "_Max": 47.3,
     "_2": 42.8
   },
   {
-    "Task": "Syntactic Information",
+    "_Task": "Syntactic Information",
     "_1": 78.2,
-    "Mean": 86.0,
-    "Max": 75.7,
+    "_Mean": 86.0,
+    "_Max": 75.7,
     "_2": 72.2
   },
   {
-    "Task": "Semantic Information",
+    "_Task": "Semantic Information",
     "_1": 90.3,
-    "Mean": 93.7,
-    "Max": 89.5,
+    "_Mean": 93.7,
+    "_Max": 89.5,
     "_2": 86.7
   },
   {
-    "Task": "Average Score",
+    "_Task": "Average Score",
     "_1": 68.6,
-    "Mean": 88.0,
-    "Max": 78.3,
+    "_Mean": 88.0,
+    "_Max": 78.3,
     "_2": 61.6
   }
 ]

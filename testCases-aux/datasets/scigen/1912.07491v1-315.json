@@ -1,50 +1,50 @@
 [
   {
-    "model": "Seq2Seq",
-    "overall": 47.02,
-    "high": 42.41,
-    "medium": 47.25,
-    "low": 48.61,
-    "oOV": 49.96
+    "_Model": "Seq2Seq",
+    "_Overall": 47.02,
+    "_High": 42.41,
+    "_Medium": 47.25,
+    "_Low": 48.61,
+    "_OOV": 49.96
   },
   {
-    "model": "MemNet",
-    "overall": 46.85,
-    "high": 41.93,
-    "medium": 47.32,
-    "low": 48.86,
-    "oOV": 49.52
+    "_Model": "MemNet",
+    "_Overall": 46.85,
+    "_High": 41.93,
+    "_Medium": 47.32,
+    "_Low": 48.86,
+    "_OOV": 49.52
   },
   {
-    "model": "CopyNet",
-    "overall": 40.27,
-    "high": 36.26,
-    "medium": 40.99,
-    "low": 42.09,
-    "oOV": 42.24
+    "_Model": "CopyNet",
+    "_Overall": 40.27,
+    "_High": 36.26,
+    "_Medium": 40.99,
+    "_Low": 42.09,
+    "_OOV": 42.24
   },
   {
-    "model": "CCM",
-    "overall": 39.18,
-    "high": 35.36,
-    "medium": 39.64,
-    "low": 40.67,
-    "oOV": 40.87
+    "_Model": "CCM",
+    "_Overall": 39.18,
+    "_High": 35.36,
+    "_Medium": 39.64,
+    "_Low": 40.67,
+    "_OOV": 40.87
   },
   {
-    "model": "PostKS",
-    "overall": 43.56,
-    "high": 40.65,
-    "medium": 44.06,
-    "low": 46.36,
-    "oOV": 49.32
+    "_Model": "PostKS",
+    "_Overall": 43.56,
+    "_High": 40.65,
+    "_Medium": 44.06,
+    "_Low": 46.36,
+    "_OOV": 49.32
   },
   {
-    "model": "TransDG",
-    "overall": 37.53,
-    "high": 32.18,
-    "medium": 36.12,
-    "low": 38.46,
-    "oOV": 40.75
+    "_Model": "TransDG",
+    "_Overall": 37.53,
+    "_High": 32.18,
+    "_Medium": 36.12,
+    "_Low": 38.46,
+    "_OOV": 40.75
   }
 ]

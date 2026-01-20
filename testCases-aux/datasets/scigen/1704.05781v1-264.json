@@ -1,22 +1,22 @@
 [
   {
-    "Cross_sentential": "OS False",
-    "SimLex999": 0.44,
-    "Analogies": 0.34
+    "_Cross_sentential": "OS False",
+    "_SimLex999": 0.44,
+    "_Analogies": 0.34
   },
   {
-    "Cross_sentential": "OS True",
-    "SimLex999": 0.4,
-    "Analogies": 0.43
+    "_Cross_sentential": "OS True",
+    "_SimLex999": 0.4,
+    "_Analogies": 0.43
   },
   {
-    "Cross_sentential": "GW False",
-    "SimLex999": 0.44,
-    "Analogies": 0.66
+    "_Cross_sentential": "GW False",
+    "_SimLex999": 0.44,
+    "_Analogies": 0.66
   },
   {
-    "Cross_sentential": "GW True",
-    "SimLex999": 0.44,
-    "Analogies": 0.65
+    "_Cross_sentential": "GW True",
+    "_SimLex999": 0.44,
+    "_Analogies": 0.65
   }
 ]

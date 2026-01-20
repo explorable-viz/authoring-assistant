@@ -1,37 +1,37 @@
 [
   {
-    "model_Dataset": "Majority",
-    "f_C_Clean_Dev": 0.54,
-    "f_C_Clean_Test": 0.57,
-    "new_Data_Dev": 0.51,
-    "new_Data_Test": 0.5
+    "_Model_Dataset": "Majority",
+    "_F_C_Clean_Dev": 0.54,
+    "_F_C_Clean_Test": 0.57,
+    "_New_Data_Dev": 0.51,
+    "_New_Data_Test": 0.5
   },
   {
-    "model_Dataset": "Yang et al. (PCE LSTM)",
-    "f_C_Clean_Dev": 0.86,
-    "f_C_Clean_Test": 0.87,
-    "new_Data_Dev": 0.6,
-    "new_Data_Test": 0.57
+    "_Model_Dataset": "Yang et al. (PCE LSTM)",
+    "_F_C_Clean_Dev": 0.86,
+    "_F_C_Clean_Test": 0.87,
+    "_New_Data_Dev": 0.6,
+    "_New_Data_Test": 0.57
   },
   {
-    "model_Dataset": "DoQ",
-    "f_C_Clean_Dev": 0.78,
-    "f_C_Clean_Test": 0.77,
-    "new_Data_Dev": 0.62,
-    "new_Data_Test": 0.62
+    "_Model_Dataset": "DoQ",
+    "_F_C_Clean_Dev": 0.78,
+    "_F_C_Clean_Test": 0.77,
+    "_New_Data_Dev": 0.62,
+    "_New_Data_Test": 0.62
   },
   {
-    "model_Dataset": "DoQ + 10-distance",
-    "f_C_Clean_Dev": 0.78,
-    "f_C_Clean_Test": 0.77,
-    "new_Data_Dev": 0.62,
-    "new_Data_Test": 0.62
+    "_Model_Dataset": "DoQ + 10-distance",
+    "_F_C_Clean_Dev": 0.78,
+    "_F_C_Clean_Test": 0.77,
+    "_New_Data_Dev": 0.62,
+    "_New_Data_Test": 0.62
   },
   {
-    "model_Dataset": "DoQ + 3-distance",
-    "f_C_Clean_Dev": 0.81,
-    "f_C_Clean_Test": 0.8,
-    "new_Data_Dev": 0.62,
-    "new_Data_Test": 0.61
+    "_Model_Dataset": "DoQ + 3-distance",
+    "_F_C_Clean_Dev": 0.81,
+    "_F_C_Clean_Test": 0.8,
+    "_New_Data_Dev": 0.62,
+    "_New_Data_Test": 0.61
   }
 ]

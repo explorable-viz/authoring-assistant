@@ -1,44 +1,44 @@
 [
   {
-    "model": "TransDG",
-    "perplexity": 37.53,
-    "entity": 1.207,
-    "bLEU_1": 0.1807,
-    "bLEU_2": 0.0178
+    "_Model": "TransDG",
+    "_Perplexity": 37.53,
+    "_Entity": 1.207,
+    "_BLEU_1": 0.1807,
+    "_BLEU_2": 0.0178
   },
   {
-    "model": "w/o QRT",
-    "perplexity": 42.17,
-    "entity": 1.076,
-    "bLEU_1": 0.1604,
-    "bLEU_2": 0.0171
+    "_Model": "w/o QRT",
+    "_Perplexity": 42.17,
+    "_Entity": 1.076,
+    "_BLEU_1": 0.1604,
+    "_BLEU_2": 0.0171
   },
   {
-    "model": "w/o KST",
-    "perplexity": 43.05,
-    "entity": 0.774,
-    "bLEU_1": 0.1643,
-    "bLEU_2": 0.0158
+    "_Model": "w/o KST",
+    "_Perplexity": 43.05,
+    "_Entity": 0.774,
+    "_BLEU_1": 0.1643,
+    "_BLEU_2": 0.0158
   },
   {
-    "model": "w/o QRT+KST",
-    "perplexity": 44.15,
-    "entity": 0.772,
-    "bLEU_1": 0.1612,
-    "bLEU_2": 0.017
+    "_Model": "w/o QRT+KST",
+    "_Perplexity": 44.15,
+    "_Entity": 0.772,
+    "_BLEU_1": 0.1612,
+    "_BLEU_2": 0.017
   },
   {
-    "model": "w/o RGA",
-    "perplexity": 38.62,
-    "entity": 1.106,
-    "bLEU_1": 0.1712,
-    "bLEU_2": 0.017
+    "_Model": "w/o RGA",
+    "_Perplexity": 38.62,
+    "_Entity": 1.106,
+    "_BLEU_1": 0.1712,
+    "_BLEU_2": 0.017
   },
   {
-    "model": "w/o SSD",
-    "perplexity": 38.18,
-    "entity": 1.114,
-    "bLEU_1": 0.1804,
-    "bLEU_2": 0.0178
+    "_Model": "w/o SSD",
+    "_Perplexity": 38.18,
+    "_Entity": 1.114,
+    "_BLEU_1": 0.1804,
+    "_BLEU_2": 0.0178
   }
 ]

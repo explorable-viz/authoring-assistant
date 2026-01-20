@@ -241,5 +241,5 @@ if __name__ == "__main__":
         tests_dir=tests_dir,
         tests_aux_dir=tests_aux_dir,
         datasets_dir=datasets_dir,
-        paper_ids=[ "1002.0773" ]
+        paper_ids=[ "1002.0773", "1003.0206", "1110.3094", "1807.07279v3" ]
     )

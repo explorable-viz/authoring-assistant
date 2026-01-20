@@ -1,0 +1,47 @@
+[
+  {
+    "iteration": "mle",
+    "_WER": 28.3
+  },
+  {
+    "iteration": 10,
+    "_WER": 17.4
+  },
+  {
+    "iteration": 20,
+    "_WER": 14.6
+  },
+  {
+    "iteration": 30,
+    "_WER": 13.3
+  },
+  {
+    "iteration": 40,
+    "_WER": 12.7
+  },
+  {
+    "iteration": 50,
+    "_WER": 12.5
+  },
+  {
+    "iteration": 60,
+    "_WER": 12.5
+  },
+  {
+    "iteration": 70,
+    "_WER": 12.4
+  },
+  {
+    "iteration": 80,
+    "_WER": 12.3
+  },
+  {
+    "iteration": 90,
+    "_WER": 12.3
+  },
+  {
+    "iteration": 100,
+    "_WER": 12.3
+  }
+]
+

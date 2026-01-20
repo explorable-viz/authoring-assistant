@@ -2,5 +2,5 @@
   "interpretation-agent-loopback-limit": 2,
   "num-test-runs": 1,
   "authoring-agent-class": "authoringassistant.llm.interpretation.DummyAgent",
-  "test-case-folder": "scigen-manual"
+  "test-case-folder": "scigen-manual-old"
 }

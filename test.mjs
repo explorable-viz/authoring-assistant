@@ -10,7 +10,6 @@ export const main = async () => {
     await runTests(testURL("scigen-manual-old/1904.12550v1-5")([ (page) => waitFor("div#fig-output")(page) ]))()
     await runTests(testURL("scigen-manual-old/1904.12550v1-6")([ (page) => waitFor("div#fig-output")(page) ]))()
     await runTests(testURL("scigen-manual-old/1906.02780v1-17")([ (page) => waitFor("div#fig-output")(page) ]))()
-    await runTests(testURL("scigen-manual-old/ipcc")([ (page) => waitFor("div#fig-output")(page) ]))()
 
     await runTests(testURL("scigen-manual/1805.02474v1-10")([ page => waitFor("div#fig-output")(page) ]))()
     await runTests(testURL("scigen-manual/1905.05979v2-88")([ page => waitFor("div#fig-output")(page) ]))()

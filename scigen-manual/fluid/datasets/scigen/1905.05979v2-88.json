@@ -1,8 +1,8 @@
 [
   {
-    "_1": " deixis",
-    "total": " deixis",
-    "latest_relevant_context_1st": " deixis",
+    "_1": "deixis",
+    "total": "deixis",
+    "latest_relevant_context_1st": "deixis",
     "latest_relevant_context_2nd": "",
     "latest_relevant_context_3rd": ""
   },
@@ -35,9 +35,9 @@
     "latest_relevant_context_3rd": 75.9
   },
   {
-    "_1": " lexical cohesion",
-    "total": " lexical cohesion",
-    "latest_relevant_context_1st": " lexical cohesion",
+    "_1": "lexical cohesion",
+    "total": "lexical cohesion",
+    "latest_relevant_context_1st": "lexical cohesion",
     "latest_relevant_context_2nd": "",
     "latest_relevant_context_3rd": ""
   },
@@ -70,3 +70,4 @@
     "latest_relevant_context_3rd": 56.7
   }
 ]
+

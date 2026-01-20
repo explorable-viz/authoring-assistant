@@ -1,0 +1,18 @@
+{
+  "datasets": [
+    "datasets/scigen/1002.0773-8586.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1002_0773_8586"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "In this experiment we regenerate the phone-marked word lattices between each iteration of extended Baum-Welch. Thus at iteration k+1 we are using pθ(w∣x;κ,Vθk,Rθk) as the model selection criterion when we estimate the parameters θk+1. Starting from the mle, we run extended Baum-Welch 100 times. We observe the following: The logarithm of the approximate MMI criterion, logpθk(w∣x;κ,Vθk,Rθk), increases for the first 30 iterations and then starts to oscillate. It reaches its peak value after 50 iterations and then continues its oscillation. The WER on the test set steadily decreases for the first 25 iterations, then continues to decrease but with oscillation. After 36 iterations the WER reaches its minimum value, 10.1%, and then oscillates from 10.1% to various values ranging from 10.4% to 10.9%. See When we when measure the WER on the training data to three significant figures it steadily decreases and in fact appears to converge to 12.3%. However, when we measure this WER to four significant digits, there is a small oscillation of ±0.05%. But the difference in the relative reduction in the WERs 17.7→11.6=34% versus 17.7→10.1=43% are similar. Perhaps the improvement that we are seeing is artifact of the inherent noise in WERs obtained using simple models on small test sets."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "datasets": [
+    "datasets/scigen/1003.0206-7622.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1003_0206_7622"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Here is a simple experiment to test whether or not MMI is capable of recovering from more complicated score mismatches. We use pseudo training data simulated from the model and numerator and denominator lattices created from this data with κ=1. We run extended Baum-Welch and recognition on the lattices, the latter by finding the best path through the merged numerator and denominator lattices. However, we shall multiply the acoustic score of each phone arc by a phone dependent scale. We shall try three types of scales: No mismatch, with all scales = 1. Uniform mismatch, all scales = 1/16. Variable mismatch with three phone dependent scales. Silence and vowels have scale = 1. Half of the remaining phones have scale = 0.8 while the other half have scale 0.6. We have seen cases (a) and (b) before, but not in the context of lattice re-scoring. MMI is remarkably good at compensating for these very simple scalings. the scores at x = 0 are after the initial scaling, and the subsequent labels along the x-axis give the extended Baum-Welch pass. Even though it may not be obvious from inspection, all of the scores get worse as extended Baum-Welch progresses, even the scores from phones that were unscaled. However, as it is clear from inspection, the scores from the phones with scale = 0.6 move the most. It is worth noting that even though extended Baum-Welch does not restore the scores from the phones with scale 0.6 and 0.8 to anywhere near their original values, the WER nearly returns to it original value."
+    }
+  ]
+}

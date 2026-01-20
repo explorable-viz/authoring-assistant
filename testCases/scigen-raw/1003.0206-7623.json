@@ -1,0 +1,18 @@
+{
+  "datasets": [
+    "datasets/scigen/1003.0206-7623.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1003_0206_7623"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "To try to determine how much of this correlation is due to speaker effects, we re-use the lists of scores, but randomize them and compute the coefficient of correlation relative to the total mean of the scores in all of the lists. The scores are quite correlated across the state regions and the correlation coefficient is relatively constant across speakers. On the other hand, the amount of speaker dependent correlation varies widely across speakers, with only three speakers showing any significant degree of correlation. The largest correlation coefficient is 0.205 which is weak. Also, there is no clear connection between this speaker dependent correlation and the corresponding word error rate."
+    }
+  ]
+}

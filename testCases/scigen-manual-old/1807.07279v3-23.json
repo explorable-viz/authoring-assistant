@@ -1,6 +1,6 @@
 {
-  "datasets": [ "datasets/scigen_manual_old/1807.07279v3-23.json" ],
-  "imports": ["util", "scigen", "datasets/scigen_manual_old/_1807_07279v3_23"],
+  "datasets": [ "datasets/scigen/1807.07279v3-23.json" ],
+  "imports": ["util", "scigen", "datasets/_1807_07279v3_23"],
   "variables": {},
   "testing-variables": {},
   "paragraph": [

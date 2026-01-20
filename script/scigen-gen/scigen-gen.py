@@ -36,14 +36,12 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir, paper_ids):
     with open(raw_file, 'r', encoding='utf-8') as f:
         datas = json.load(f)
 
-    k = 0
-    for data in datas.values():
+    for k, data in datas.items():
         if paper_ids is not None and data.get("paper_id") not in paper_ids:
             continue
 
         dataset = []
-        dataset_name = f"{data['paper_id']}-{k}"
-        k += 1
+        dataset_name = f"{data['paper_id']}-{int(k)}"
 
         keys = data['table_column_names']
         values = data['table_content_values']

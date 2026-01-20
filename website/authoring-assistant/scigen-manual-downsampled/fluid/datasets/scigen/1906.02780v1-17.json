@@ -1,0 +1,39 @@
+[
+  {
+    "_num_Layers": 1,
+    "_Max_Chunk_Size": "k=6",
+    "_Speedup": 3.8,
+    "_BLEU": 23.82
+  },
+  {
+    "_num_Layers": 2,
+    "_Max_Chunk_Size": "k=6",
+    "_Speedup": 2.8,
+    "_BLEU": 23.98
+  },
+  {
+    "_num_Layers": 3,
+    "_Max_Chunk_Size": "k=6",
+    "_Speedup": 2.2,
+    "_BLEU": 24.54
+  },
+  {
+    "_num_Layers": 4,
+    "_Max_Chunk_Size": "k=6",
+    "_Speedup": 1.8,
+    "_BLEU": 24.04
+  },
+  {
+    "_num_Layers": 5,
+    "_Max_Chunk_Size": "k=6",
+    "_Speedup": 1.4,
+    "_BLEU": 24.34
+  },
+  {
+    "_num_Layers": 1,
+    "_Max_Chunk_Size": "k∈{1…6}",
+    "_Speedup": 3.1,
+    "_BLEU": 25.31
+  }
+]
+

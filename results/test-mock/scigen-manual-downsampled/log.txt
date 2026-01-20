@@ -44,4 +44,51 @@ INFO: Matched expression value: 3.1
 INFO: ****************************************
 INFO: Validated test cases in scigen-manual-downsampled
 INFO: ****************************************
-INFO: Error during clean of website folder
+INFO: Mismatched expression value: "dummy" (expected 0.926)
+INFO: Mismatched expression value: "dummy" (expected 0.926)
+INFO: [Problem 1 of 1] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-downsampled
+INFO: Generating website/authoring-assistant/scigen-manual-downsampled/1904.12550v1-6/index.html
+INFO: [Run 1 of 1][Test case 1 of 4] 0 of 1 responses correct
+INFO: Mismatched expression value: "dummy" (expected 0.953)
+INFO: Mismatched expression value: "dummy" (expected 0.953)
+INFO: [Problem 1 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 0.843)
+INFO: Mismatched expression value: "dummy" (expected 0.843)
+INFO: [Problem 2 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 0.914)
+INFO: Mismatched expression value: "dummy" (expected 0.914)
+INFO: [Problem 3 of 3] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-downsampled
+INFO: Generating website/authoring-assistant/scigen-manual-downsampled/1904.12550v1-5/index.html
+INFO: [Run 1 of 1][Test case 2 of 4] 0 of 3 responses correct
+INFO: Mismatched expression value: "dummy" (expected 91.57)
+INFO: Mismatched expression value: "dummy" (expected 91.57)
+INFO: [Problem 1 of 2] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 91.26)
+INFO: Mismatched expression value: "dummy" (expected 91.26)
+INFO: [Problem 2 of 2] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-downsampled
+INFO: Generating website/authoring-assistant/scigen-manual-downsampled/1805.02474v1-14/index.html
+INFO: [Run 1 of 1][Test case 3 of 4] 0 of 2 responses correct
+INFO: Mismatched expression value: "dummy" (expected 0.5199999999999996)
+INFO: Mismatched expression value: "dummy" (expected 0.5199999999999996)
+INFO: [Problem 1 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 3.8)
+INFO: Mismatched expression value: "dummy" (expected 3.8)
+INFO: [Problem 2 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 1.4)
+INFO: Mismatched expression value: "dummy" (expected 1.4)
+INFO: [Problem 3 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 1.4899999999999984)
+INFO: Mismatched expression value: "dummy" (expected 1.4899999999999984)
+INFO: [Problem 4 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 3.8)
+INFO: Mismatched expression value: "dummy" (expected 3.8)
+INFO: [Problem 5 of 6] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected 3.1)
+INFO: Mismatched expression value: "dummy" (expected 3.1)
+INFO: [Problem 6 of 6] Expression validation failed after 2 attempts
+INFO: Adding page to website scigen-manual-downsampled
+INFO: Generating website/authoring-assistant/scigen-manual-downsampled/1906.02780v1-17/index.html
+INFO: [Run 1 of 1][Test case 4 of 4] 0 of 6 responses correct

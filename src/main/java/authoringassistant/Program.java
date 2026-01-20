@@ -26,6 +26,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static authoringassistant.variable.Variables.Flat.expandVariables;
 
@@ -419,22 +420,22 @@ public class Program {
         writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{fileName}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
     }
 
-    public static void cleanWebsiteFolders(String path) {
+    public static void cleanWebsiteFolders(String path) throws IOException {
         Path directoryPath = Paths.get(path);
 
-        try (var paths = Files.walk(directoryPath)) {
+        if (Files.notExists(directoryPath)) {
+            Files.createDirectories(directoryPath);
+        } else {
+            final Stream<Path> paths = Files.walk(directoryPath);
             paths.filter(p -> !p.equals(directoryPath) && Files.isDirectory(p) && !Files.isSymbolicLink(p))
-                    .forEach(dir -> {
-                        try {
-                            FileUtils.deleteDirectory(dir.toFile());
-                        } catch (IOException e) {
-                            logger.info("Error during clean of website folder");
-                            throw new RuntimeException(e);
-                        }
-                    });
-        } catch (IOException e) {
-            logger.info("Error during clean of website folder");
-            throw new RuntimeException(e);
+                 .forEach(dir -> {
+                     try {
+                         FileUtils.deleteDirectory(dir.toFile());
+                     } catch (IOException e) {
+                         logger.info("Error during clean of website folder");
+                         throw new RuntimeException(e);
+                     }
+                 });
         }
     }
 

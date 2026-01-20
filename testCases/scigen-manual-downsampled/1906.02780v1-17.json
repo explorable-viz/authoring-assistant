@@ -6,7 +6,7 @@
       "value": "Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only"
     },
     {
-      "expression": "last (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 5) `and` (x.max_chunk_size == \"k=6\")) tableData)) - head (map (fun x -> x.bleu) (filter (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData))",
+      "expression": "last (map (fun x -> x._BLEU) (filter (fun x -> (x._num_Layers == 5) `and` (x._Max_Chunk_Size == \"k=6\")) tableData)) - head (map (fun x -> x._BLEU) (filter (fun x -> (x._num_Layers == 1) `and` (x._Max_Chunk_Size == \"k=6\")) tableData))",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -15,7 +15,7 @@
       "value": ", while the speedup drops from"
     },
     {
-      "expression": "(findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).speedup",
+      "expression": "(findWhere (fun x -> (x._num_Layers == 1) `and` (x._Max_Chunk_Size == \"k=6\")) tableData)._Speedup",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -24,7 +24,7 @@
       "value": "to"
     },
     {
-      "expression": "(findWhere (fun x -> (x.layers == 5)) tableData).speedup",
+      "expression": "(findWhere (fun x -> (x._num_Layers == 5)) tableData)._Speedup",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -33,7 +33,7 @@
       "value": ". The final row of Table 4 shows that exposing the parse decoder to multiple possible chunking of the same sentence during training allows it to choose a sequence of chunks that has a higher likelihood at test time, improving BLEU by"
     },
     {
-      "expression": "(findWithKey_ \"max_chunk_size\" \"k in {1...6}\" tableData).bleu - (findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).bleu",
+      "expression": "(findWithKey_ \"_Max_Chunk_Size\" \"k∈{1…6}\" tableData)._BLEU - (findWhere (fun x -> (x._num_Layers == 1) `and` (x._Max_Chunk_Size == \"k=6\")) tableData)._BLEU",
       "categories": [
         "difference",
         "data-retrieval"
@@ -45,7 +45,7 @@
       "value": "while decreasing the speedup from"
     },
     {
-      "expression": "(findWhere (fun x -> (x.layers == 1) `and` (x.max_chunk_size == \"k=6\")) tableData).speedup",
+      "expression": "(findWhere (fun x -> (x._num_Layers == 1) `and` (x._Max_Chunk_Size == \"k=6\")) tableData)._Speedup",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -54,7 +54,7 @@
       "value": "to"
     },
     {
-      "expression": "(findWithKey_ \"max_chunk_size\" \"k in {1...6}\" tableData).speedup",
+      "expression": "(findWithKey_ \"_Max_Chunk_Size\" \"k∈{1…6}\" tableData)._Speedup",
       "categories": ["data-retrieval"],
       "type": "expression"
     }
@@ -63,7 +63,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen_manual/_1906_02780v1_17"
+    "datasets/scigen/_1906_02780v1_17"
   ],
-  "datasets": ["datasets/scigen_manual/1906.02780v1-17.json"]
+  "datasets": ["datasets/scigen/1906.02780v1-17.json"]
 }

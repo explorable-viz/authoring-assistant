@@ -34,3 +34,14 @@ INFO: datasets/scigen/1805.02474v1-14.json
 INFO: Matched expression value: 91.57
 INFO: Matched expression value: 91.26
 INFO: [4 of 4] Loading testCases/scigen-manual-downsampled/1906.02780v1-17.json
+INFO: datasets/scigen/1906.02780v1-17.json
+INFO: Matched expression value: 0.5199999999999996
+INFO: Matched expression value: 3.8
+INFO: Matched expression value: 1.4
+INFO: Matched expression value: 1.4899999999999984
+INFO: Matched expression value: 3.8
+INFO: Matched expression value: 3.1
+INFO: ****************************************
+INFO: Validated test cases in scigen-manual-downsampled
+INFO: ****************************************
+INFO: Error during clean of website folder

@@ -2,12 +2,7 @@
   "datasets": [ "datasets/scigen/1002.0773-11.json" ],
   "imports": [ "datasets/scigen/_1002_0773_11" ],
   "variables": {},
-  "testing-variables": {
-    "peak_wer": [12.5, 12.5, 12.5, 12.5, 12.5],
-    "final_wer": [12.3, 12.3, 12.3, 12.3, 12.3],
-    "initial_wer": [17.4, 17.4, 17.4, 17.4, 17.4],
-    "mid_wer": [13.3, 13.3, 13.3, 13.3, 13.3]
-  },
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -15,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "(foldr (fun x acc -> if x.wer > acc.wer then x else acc) (head tableData) tableData).iteration",
+      "expression": "(foldr (fun x acc -> if x._WER > acc._WER then x else acc) (head tableData) tableData).iteration",
       "categories": ["data-retrieval"]
     },
     {

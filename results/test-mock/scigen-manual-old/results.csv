@@ -1,5 +1,5 @@
 run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
-0;"1002.0773";1;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1002.0773-11";1;"dummy";0;"[Data Retrieval]";0;2;0;0
 0;"1003.0206";1;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
 0;"1807.07279v3-23";1;"dummy";0;"[Sum]";0;2;0;0
 0;"1807.07279v3-23";2;"dummy";0;"[Data Retrieval,Comparison,Generalised Quantifier]";0;2;0;0

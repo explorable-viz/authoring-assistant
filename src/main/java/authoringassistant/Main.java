@@ -216,7 +216,7 @@ public class Main {
             Files.createDirectories(Paths.get(jsonLogFolder));
             int n = 0;
             for (Program testCase : testCases) {
-                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, testCase, suggestionAgent, k, Settings.getConfigName(), Settings.getTestCaseFolder());
+                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, testCase, suggestionAgent, k);
                 List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
 
                 long correct = results.stream()

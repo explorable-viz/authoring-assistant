@@ -28,17 +28,13 @@ public class AuthoringAssistant {
     private Program templateProgram;
     private final SuggestionAgent suggestionAgent;
     private final int runId;
-    private final String configName;
-    private final String testCaseFolder;
 
-    public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId, String configName, String testCaseFolder) throws Exception {
+    public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId) throws Exception {
         this.prompts = systemPrompt.toPromptList();
         this.interpretationAgent = LLMEvaluatorAgent.initialiseAgent(agentClassName);
         this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName)) : null;
         this.templateProgram = templateProgram;
         this.runId = runId;
-        this.configName = configName;
-        this.testCaseFolder = testCaseFolder;
     }
 
     public List<Pair<Program, QueryResult>> runTestProblems() throws Exception {
@@ -78,7 +74,7 @@ public class AuthoringAssistant {
         Program subProgram = test.getFirst();
         final Path testCaseFileName = subProgram.getTestCasePath();
         Expression expected = test.getSecond();
-        Files.createDirectories(Path.of(STR."results/\{this.configName}/\{this.testCaseFolder}/logs"));
+        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs"));
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         int parseErrors=0, counterfactualFails=0, missingResponses=0, literalResponses=0;
@@ -122,13 +118,13 @@ public class AuthoringAssistant {
                 // weird way to exit loop
                 if (!errors) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.exportToJson(STR."results/\{this.configName}/\{this.testCaseFolder}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
+                    sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
                     return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
-        sessionPrompts.exportToJson(STR."results/\{this.configName}/\{this.testCaseFolder}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
+        sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
         return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }

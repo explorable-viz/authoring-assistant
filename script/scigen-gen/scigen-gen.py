@@ -19,7 +19,7 @@ def replace_parens(match):
 
     return f"{before}{lead}{content}{trail}{after}"
 
-def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
+def main(raw_file, tests_dir, tests_aux_dir, datasets_dir, paper_ids=None):
     # Read input JSON file
     with open(raw_file, 'r', encoding='utf-8') as f:
         datas = json.load(f)
@@ -36,6 +36,9 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
 
     k = 0
     for data in datas.values():
+        if paper_ids is not None and data.get("paper_id") not in paper_ids:
+            continue
+
         dataset = []
         dataset_name = f"{data['paper_id']}-{k}"
         k += 1

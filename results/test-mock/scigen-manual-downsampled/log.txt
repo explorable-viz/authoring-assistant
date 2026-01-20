@@ -1,0 +1,36 @@
+INFO: ****************************************
+INFO: Settings:
+INFO: {
+  "test-case-folder": "scigen-manual-downsampled",
+  "suggestion-agent-class": null,
+  "gemini-location": "",
+  "timeout": 1800,
+  "num_ctx": 4096,
+  "authoring-agent-class": "authoringassistant.llm.interpretation.DummyAgent",
+  "num-test-runs": 1,
+  "ollama-url": "https://fire.cluelab.di.unisa.it",
+  "truncate-tests-at": -1,
+  "temperature": 1,
+  "add-expected-value": true,
+  "interpretation-agent-loopback-limit": 2,
+  "gemini-token": "",
+  "ollama-port": 8430,
+  "gemini-projectId": "",
+  "claude-token": ""
+}
+INFO: ****************************************
+INFO: Validating test cases in scigen-manual-downsampled
+INFO: ****************************************
+INFO: [1 of 4] Loading testCases/scigen-manual-downsampled/1904.12550v1-6.json
+INFO: datasets/scigen/1904.12550v1-6.json
+INFO: Matched expression value: 0.926
+INFO: [2 of 4] Loading testCases/scigen-manual-downsampled/1904.12550v1-5.json
+INFO: datasets/scigen/1904.12550v1-5.json
+INFO: Matched expression value: 0.953
+INFO: Matched expression value: 0.843
+INFO: Matched expression value: 0.914
+INFO: [3 of 4] Loading testCases/scigen-manual-downsampled/1805.02474v1-14.json
+INFO: datasets/scigen/1805.02474v1-14.json
+INFO: Matched expression value: 91.57
+INFO: Matched expression value: 91.26
+INFO: [4 of 4] Loading testCases/scigen-manual-downsampled/1906.02780v1-17.json

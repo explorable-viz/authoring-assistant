@@ -34,6 +34,6 @@
     }
   ],
   "variables": {},
-  "imports": ["datasets/scigen_manual/ipcc_"],
-  "datasets": ["datasets/scigen_manual/ipcc.json"]
+  "imports": ["datasets/ipcc/ipcc_"],
+  "datasets": ["datasets/ipcc/ipcc.json"]
 }

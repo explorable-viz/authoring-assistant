@@ -1,12 +1,12 @@
 [
   {
-    "_Decoder": " auto-regressive RNN as decoder",
-    "_SICK_R": " auto-regressive RNN as decoder",
-    "_SICK_E": " auto-regressive RNN as decoder",
-    "_STS14": " auto-regressive RNN as decoder",
-    "_MSRP_Acc_F1": " auto-regressive RNN as decoder",
-    "_SST": " auto-regressive RNN as decoder",
-    "_TREC": " auto-regressive RNN as decoder"
+    "_Decoder": "auto-regressive RNN as decoder",
+    "_SICK_R": "auto-regressive RNN as decoder",
+    "_SICK_E": "auto-regressive RNN as decoder",
+    "_STS14": "auto-regressive RNN as decoder",
+    "_MSRP_Acc_F1": "auto-regressive RNN as decoder",
+    "_SST": "auto-regressive RNN as decoder",
+    "_TREC": "auto-regressive RNN as decoder"
   },
   {
     "_Decoder": "Teacher-Forcing",
@@ -36,13 +36,13 @@
     "_TREC": 87.4
   },
   {
-    "_Decoder": " auto-regressive CNN as decoder",
-    "_SICK_R": " auto-regressive CNN as decoder",
-    "_SICK_E": " auto-regressive CNN as decoder",
-    "_STS14": " auto-regressive CNN as decoder",
-    "_MSRP_Acc_F1": " auto-regressive CNN as decoder",
-    "_SST": " auto-regressive CNN as decoder",
-    "_TREC": " auto-regressive CNN as decoder"
+    "_Decoder": "auto-regressive CNN as decoder",
+    "_SICK_R": "auto-regressive CNN as decoder",
+    "_SICK_E": "auto-regressive CNN as decoder",
+    "_STS14": "auto-regressive CNN as decoder",
+    "_MSRP_Acc_F1": "auto-regressive CNN as decoder",
+    "_SST": "auto-regressive CNN as decoder",
+    "_TREC": "auto-regressive CNN as decoder"
   },
   {
     "_Decoder": "Teacher-Forcing",
@@ -72,13 +72,13 @@
     "_TREC": 88.4
   },
   {
-    "_Decoder": " predict-all-words RNN as decoder",
-    "_SICK_R": " predict-all-words RNN as decoder",
-    "_SICK_E": " predict-all-words RNN as decoder",
-    "_STS14": " predict-all-words RNN as decoder",
-    "_MSRP_Acc_F1": " predict-all-words RNN as decoder",
-    "_SST": " predict-all-words RNN as decoder",
-    "_TREC": " predict-all-words RNN as decoder"
+    "_Decoder": "predict-all-words RNN as decoder",
+    "_SICK_R": "predict-all-words RNN as decoder",
+    "_SICK_E": "predict-all-words RNN as decoder",
+    "_STS14": "predict-all-words RNN as decoder",
+    "_MSRP_Acc_F1": "predict-all-words RNN as decoder",
+    "_SST": "predict-all-words RNN as decoder",
+    "_TREC": "predict-all-words RNN as decoder"
   },
   {
     "_Decoder": "RNN",
@@ -90,13 +90,13 @@
     "_TREC": 88.8
   },
   {
-    "_Decoder": " predict-all-words CNN as decoder",
-    "_SICK_R": " predict-all-words CNN as decoder",
-    "_SICK_E": " predict-all-words CNN as decoder",
-    "_STS14": " predict-all-words CNN as decoder",
-    "_MSRP_Acc_F1": " predict-all-words CNN as decoder",
-    "_SST": " predict-all-words CNN as decoder",
-    "_TREC": " predict-all-words CNN as decoder"
+    "_Decoder": "predict-all-words CNN as decoder",
+    "_SICK_R": "predict-all-words CNN as decoder",
+    "_SICK_E": "predict-all-words CNN as decoder",
+    "_STS14": "predict-all-words CNN as decoder",
+    "_MSRP_Acc_F1": "predict-all-words CNN as decoder",
+    "_SST": "predict-all-words CNN as decoder",
+    "_TREC": "predict-all-words CNN as decoder"
   },
   {
     "_Decoder": "CNN",

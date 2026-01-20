@@ -1,6 +1,6 @@
 [
   {
-    "_Data_set": " - our model",
+    "_Data_set": "- our model",
     "_AG": "",
     "_Sogou": "",
     "_AG_5k": "",
@@ -49,56 +49,56 @@
     "_Sogou_10k": 7.89
   },
   {
-    "_Data_set": " - related studies",
+    "_Data_set": "- related studies",
     "_AG": "",
     "_Sogou": "",
     "_AG_5k": "",
     "_Sogou_10k": ""
   },
   {
-    "_Data_set": "Bow ",
+    "_Data_set": "Bow",
     "_AG": 11.19,
     "_Sogou": 7.15,
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "Bow TFIDF ",
+    "_Data_set": "Bow TFIDF",
     "_AG": 10.36,
     "_Sogou": 6.55,
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "ngrams TFIDF ",
+    "_Data_set": "ngrams TFIDF",
     "_AG": 7.64,
     "_Sogou": 2.81,
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "Bag-of-means ",
+    "_Data_set": "Bag-of-means",
     "_AG": 16.91,
     "_Sogou": 10.79,
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "LSTM ",
+    "_Data_set": "LSTM",
     "_AG": 13.94,
     "_Sogou": 4.82,
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "char-CNN ",
+    "_Data_set": "char-CNN",
     "_AG": 9.51,
     "_Sogou": 4.39,
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "VDCNN ",
+    "_Data_set": "VDCNN",
     "_AG": 8.67,
     "_Sogou": 3.18,
     "_AG_5k": "-",
@@ -112,28 +112,28 @@
     "_Sogou_10k": "unable"
   },
   {
-    "_Data_set": "XLNet ",
+    "_Data_set": "XLNet",
     "_AG": 4.49,
     "_Sogou": "-",
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "ULMFiT ",
+    "_Data_set": "ULMFiT",
     "_AG": 5.01,
     "_Sogou": "-",
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "CNN ",
+    "_Data_set": "CNN",
     "_AG": 6.57,
     "_Sogou": "-",
     "_AG_5k": "-",
     "_Sogou_10k": "-"
   },
   {
-    "_Data_set": "DPCNN ",
+    "_Data_set": "DPCNN",
     "_AG": 6.87,
     "_Sogou": 1.84,
     "_AG_5k": "-",

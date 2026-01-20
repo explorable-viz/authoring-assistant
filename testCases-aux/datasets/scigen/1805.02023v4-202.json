@@ -17,6 +17,6 @@
   {
     "_Parameter_char_emb_size": "learning rate   lr",
     "_Value_50": 0.05,
-    "_Parameter_bigram_emb_size": " lr decay"
+    "_Parameter_bigram_emb_size": "lr decay"
   }
 ]

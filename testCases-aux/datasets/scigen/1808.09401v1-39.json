@@ -1,6 +1,6 @@
 [
   {
-    "_Model": " Indirect:   O(  n2)",
+    "_Model": "Indirect:   O(  n2)",
     "_TE3‡_P": "",
     "_TE3‡_R": "",
     "_TE3‡_F": "",
@@ -45,7 +45,7 @@
     "_TD‡_F": 62.3
   },
   {
-    "_Model": " Direct:   O(  n)",
+    "_Model": "Direct:   O(  n)",
     "_TE3‡_P": "",
     "_TE3‡_R": "",
     "_TE3‡_F": "",

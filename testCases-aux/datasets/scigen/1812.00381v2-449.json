@@ -1,34 +1,34 @@
 [
   {
-    "_1": " Model",
+    "_1": "Model",
     "_Antichat_Product": "F1",
     "_Antichat_Reply": "F1",
     "_Hack_Forums_Product": "F1",
     "_Hack_Forums_Reply": "F1"
   },
   {
-    "_1": " FastText",
+    "_1": "FastText",
     "_Antichat_Product": 0.764,
     "_Antichat_Reply": 0.45,
     "_Hack_Forums_Product": 0.627,
     "_Hack_Forums_Reply": 0.539
   },
   {
-    "_1": " Logistic Regression",
+    "_1": "Logistic Regression",
     "_Antichat_Product": 0.753,
     "_Antichat_Reply": 0.381,
     "_Hack_Forums_Product": 0.617,
     "_Hack_Forums_Reply": 0.492
   },
   {
-    "_1": " SVM",
+    "_1": "SVM",
     "_Antichat_Product": 0.767,
     "_Antichat_Reply": 0.301,
     "_Hack_Forums_Product": 0.614,
     "_Hack_Forums_Reply": 0.44
   },
   {
-    "_1": " XGBoost",
+    "_1": "XGBoost",
     "_Antichat_Product": 0.729,
     "_Antichat_Reply": 0.328,
     "_Hack_Forums_Product": 0.627,

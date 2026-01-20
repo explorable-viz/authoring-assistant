@@ -1,6 +1,6 @@
 [
   {
-    "_BLSTM": " en-de",
+    "_BLSTM": "en-de",
     "_Method": "random + HotFlip",
     "src": 57.09,
     "l1": 71.35,
@@ -9,7 +9,7 @@
     "ltrans2": 49.42
   },
   {
-    "_BLSTM": " en-de",
+    "_BLSTM": "en-de",
     "_Method": "Min-Grad + HotFlip",
     "src": 59.28,
     "l1": 75.55,
@@ -18,7 +18,7 @@
     "ltrans2": 52.26
   },
   {
-    "_BLSTM": " en-de",
+    "_BLSTM": "en-de",
     "_Method": "random + Soft-Att",
     "src": 13.77,
     "l1": 87.14,
@@ -27,7 +27,7 @@
     "ltrans2": 21.62
   },
   {
-    "_BLSTM": " en-de",
+    "_BLSTM": "en-de",
     "_Method": "Min-Grad + Soft-Att",
     "src": 14.49,
     "l1": 89.86,
@@ -36,7 +36,7 @@
     "ltrans2": 21.98
   },
   {
-    "_BLSTM": " en-fr",
+    "_BLSTM": "en-fr",
     "_Method": "random + HotFlip",
     "src": 60.87,
     "l1": 79.62,
@@ -45,7 +45,7 @@
     "ltrans2": 41.73
   },
   {
-    "_BLSTM": " en-fr",
+    "_BLSTM": "en-fr",
     "_Method": "Min-Grad + HotFlip",
     "src": 63.97,
     "l1": 84.87,
@@ -54,7 +54,7 @@
     "ltrans2": 44.94
   },
   {
-    "_BLSTM": " en-fr",
+    "_BLSTM": "en-fr",
     "_Method": "random + Soft-Att",
     "src": 12.99,
     "l1": 92.44,
@@ -63,7 +63,7 @@
     "ltrans2": 12.12
   },
   {
-    "_BLSTM": " en-fr",
+    "_BLSTM": "en-fr",
     "_Method": "Min-Grad + Soft-Att",
     "src": 12.66,
     "l1": 93.87,

@@ -1,6 +1,6 @@
 [
   {
-    "_Methods": " Wikipedia",
+    "_Methods": "Wikipedia",
     "_AIDA_B": "",
     "_MSNBC": "",
     "_AQUAINT": "",
@@ -60,7 +60,7 @@
     "_Avg": "-"
   },
   {
-    "_Methods": " Wiki + unlab",
+    "_Methods": "Wiki + unlab",
     "_AIDA_B": "",
     "_MSNBC": "",
     "_AQUAINT": "",
@@ -90,7 +90,7 @@
     "_Avg": 86.18
   },
   {
-    "_Methods": " Wiki + Extra supervision",
+    "_Methods": "Wiki + Extra supervision",
     "_AIDA_B": "",
     "_MSNBC": "",
     "_AQUAINT": "",
@@ -110,7 +110,7 @@
     "_Avg": "-"
   },
   {
-    "_Methods": " Fully-supervised (Wiki +",
+    "_Methods": "Fully-supervised (Wiki +",
     "_AIDA_B": "",
     "_MSNBC": "",
     "_AQUAINT": "",
@@ -120,7 +120,7 @@
     "_Avg": ""
   },
   {
-    "_Methods": " AIDA CoNLL train)",
+    "_Methods": "AIDA CoNLL train)",
     "_AIDA_B": "",
     "_MSNBC": "",
     "_AQUAINT": "",

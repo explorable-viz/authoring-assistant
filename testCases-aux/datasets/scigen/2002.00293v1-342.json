@@ -2,22 +2,22 @@
   {
     "_Model": "",
     "_Training_Dataset": "",
-    "_Evaluation_Test_Dataset_DSQuAD": " F1",
-    "_Evaluation_Test_Dataset_DBiDAF": " F1",
-    "_Evaluation_Test_Dataset_DBERT": " F1",
-    "_Evaluation_Test_Dataset_DRoBERTa": " F1"
+    "_Evaluation_Test_Dataset_DSQuAD": "F1",
+    "_Evaluation_Test_Dataset_DBiDAF": "F1",
+    "_Evaluation_Test_Dataset_DBERT": "F1",
+    "_Evaluation_Test_Dataset_DRoBERTa": "F1"
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD",
+    "_Training_Dataset": "DSQuAD",
     "_Evaluation_Test_Dataset_DSQuAD": 71.9,
     "_Evaluation_Test_Dataset_DBiDAF": 5.5,
     "_Evaluation_Test_Dataset_DBERT": 17.6,
     "_Evaluation_Test_Dataset_DRoBERTa": 17.0
   },
   {
-    "_Model": " BiDAF",
-    "_Training_Dataset": " DSQuAD + DBiDAF",
+    "_Model": "BiDAF",
+    "_Training_Dataset": "DSQuAD + DBiDAF",
     "_Evaluation_Test_Dataset_DSQuAD": 70.6,
     "_Evaluation_Test_Dataset_DBiDAF": 25.8,
     "_Evaluation_Test_Dataset_DBERT": 25.5,
@@ -25,7 +25,7 @@
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD + DBERT",
+    "_Training_Dataset": "DSQuAD + DBERT",
     "_Evaluation_Test_Dataset_DSQuAD": 70.4,
     "_Evaluation_Test_Dataset_DBiDAF": 26.5,
     "_Evaluation_Test_Dataset_DBERT": 24.1,
@@ -33,7 +33,7 @@
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD + DRoBERTa",
+    "_Training_Dataset": "DSQuAD + DRoBERTa",
     "_Evaluation_Test_Dataset_DSQuAD": 69.6,
     "_Evaluation_Test_Dataset_DBiDAF": 25.6,
     "_Evaluation_Test_Dataset_DBERT": 26.2,
@@ -41,15 +41,15 @@
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD",
+    "_Training_Dataset": "DSQuAD",
     "_Evaluation_Test_Dataset_DSQuAD": 84.0,
     "_Evaluation_Test_Dataset_DBiDAF": 50.2,
     "_Evaluation_Test_Dataset_DBERT": 5.3,
     "_Evaluation_Test_Dataset_DRoBERTa": 25.8
   },
   {
-    "_Model": " BERT",
-    "_Training_Dataset": " DSQuAD + DBiDAF",
+    "_Model": "BERT",
+    "_Training_Dataset": "DSQuAD + DBiDAF",
     "_Evaluation_Test_Dataset_DSQuAD": 85.9,
     "_Evaluation_Test_Dataset_DBiDAF": 61.1,
     "_Evaluation_Test_Dataset_DBERT": 43.6,
@@ -57,7 +57,7 @@
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD + DBERT",
+    "_Training_Dataset": "DSQuAD + DBERT",
     "_Evaluation_Test_Dataset_DSQuAD": 85.8,
     "_Evaluation_Test_Dataset_DBiDAF": 61.1,
     "_Evaluation_Test_Dataset_DBERT": 47.3,
@@ -65,7 +65,7 @@
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD + DRoBERTa",
+    "_Training_Dataset": "DSQuAD + DRoBERTa",
     "_Evaluation_Test_Dataset_DSQuAD": 85.2,
     "_Evaluation_Test_Dataset_DBiDAF": 60.5,
     "_Evaluation_Test_Dataset_DBERT": 46.2,
@@ -73,15 +73,15 @@
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD",
+    "_Training_Dataset": "DSQuAD",
     "_Evaluation_Test_Dataset_DSQuAD": 86.8,
     "_Evaluation_Test_Dataset_DBiDAF": 64.9,
     "_Evaluation_Test_Dataset_DBERT": 44.1,
     "_Evaluation_Test_Dataset_DRoBERTa": 5.9
   },
   {
-    "_Model": " RoBERTa",
-    "_Training_Dataset": " DSQuAD + DBiDAF",
+    "_Model": "RoBERTa",
+    "_Training_Dataset": "DSQuAD + DBiDAF",
     "_Evaluation_Test_Dataset_DSQuAD": 87.6,
     "_Evaluation_Test_Dataset_DBiDAF": 71.2,
     "_Evaluation_Test_Dataset_DBERT": 58.0,
@@ -89,7 +89,7 @@
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD + DBERT",
+    "_Training_Dataset": "DSQuAD + DBERT",
     "_Evaluation_Test_Dataset_DSQuAD": 88.0,
     "_Evaluation_Test_Dataset_DBiDAF": 70.8,
     "_Evaluation_Test_Dataset_DBERT": 58.2,
@@ -97,7 +97,7 @@
   },
   {
     "_Model": "",
-    "_Training_Dataset": " DSQuAD + DRoBERTa",
+    "_Training_Dataset": "DSQuAD + DRoBERTa",
     "_Evaluation_Test_Dataset_DSQuAD": 87.5,
     "_Evaluation_Test_Dataset_DBiDAF": 73.2,
     "_Evaluation_Test_Dataset_DBERT": 62.7,

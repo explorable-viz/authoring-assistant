@@ -49,11 +49,11 @@
   },
   {
     "_Test_Condition": "",
-    "_Cosine_Similarity_±_SD_↑_RGB": " Delta-E ± SD  (↓)",
-    "_Cosine_Similarity_±_SD_↑_WM18": " Delta-E ± SD  (↓)",
-    "_Cosine_Similarity_±_SD_↑_HSV": " Delta-E ± SD  (↓)",
-    "_Cosine_Similarity_±_SD_↑_Ensemble": " Delta-E ± SD  (↓)",
-    "_Cosine_Similarity_±_SD_↑_WM18∗": " Delta-E ± SD  (↓)"
+    "_Cosine_Similarity_±_SD_↑_RGB": "Delta-E ± SD  (↓)",
+    "_Cosine_Similarity_±_SD_↑_WM18": "Delta-E ± SD  (↓)",
+    "_Cosine_Similarity_±_SD_↑_HSV": "Delta-E ± SD  (↓)",
+    "_Cosine_Similarity_±_SD_↑_Ensemble": "Delta-E ± SD  (↓)",
+    "_Cosine_Similarity_±_SD_↑_WM18∗": "Delta-E ± SD  (↓)"
   },
   {
     "_Test_Condition": "Test Condition",

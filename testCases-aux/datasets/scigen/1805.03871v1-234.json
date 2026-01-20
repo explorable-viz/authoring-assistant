@@ -114,7 +114,7 @@
     "h_bilstm_att_AUC": 0.92
   },
   {
-    "_Gold_Class": " Macro-average",
+    "_Gold_Class": "Macro-average",
     "bilstm_P": 0.7,
     "bilstm_R": 0.7,
     "bilstm_F1": 0.7,
@@ -133,7 +133,7 @@
     "h_bilstm_att_AUC": 0.94
   },
   {
-    "_Gold_Class": " Micro-average",
+    "_Gold_Class": "Micro-average",
     "bilstm_P": 0.9,
     "bilstm_R": 0.88,
     "bilstm_F1": 0.88,

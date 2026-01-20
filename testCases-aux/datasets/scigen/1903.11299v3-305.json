@@ -1,13 +1,13 @@
 [
   {
-    "_Embedding": "vse ",
+    "_Embedding": "vse",
     "lang": "en",
     "r_1": 64.6,
     "r_5": "∅",
     "r_10": 95.7
   },
   {
-    "_Embedding": "dsve ",
+    "_Embedding": "dsve",
     "lang": "en",
     "r_1": 69.8,
     "r_5": 91.9,

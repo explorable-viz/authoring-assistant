@@ -1,10 +1,10 @@
 [
   {
-    "_1": " Baseline",
-    "_Standard_Decoder_MRR": " Baseline",
-    "_Standard_Decoder_P_1": " Baseline",
-    "_Our_Decoder_MRR": " Baseline",
-    "_Our_Decoder_P_1": " Baseline"
+    "_1": "Baseline",
+    "_Standard_Decoder_MRR": "Baseline",
+    "_Standard_Decoder_P_1": "Baseline",
+    "_Our_Decoder_MRR": "Baseline",
+    "_Our_Decoder_P_1": "Baseline"
   },
   {
     "_1": "Retrieval",
@@ -14,11 +14,11 @@
     "_Our_Decoder_P_1": "-"
   },
   {
-    "_1": " Comparisons",
-    "_Standard_Decoder_MRR": " Comparisons",
-    "_Standard_Decoder_P_1": " Comparisons",
-    "_Our_Decoder_MRR": " Comparisons",
-    "_Our_Decoder_P_1": " Comparisons"
+    "_1": "Comparisons",
+    "_Standard_Decoder_MRR": "Comparisons",
+    "_Standard_Decoder_P_1": "Comparisons",
+    "_Our_Decoder_MRR": "Comparisons",
+    "_Our_Decoder_P_1": "Comparisons"
   },
   {
     "_1": "Seq2seq",
@@ -35,11 +35,11 @@
     "_Our_Decoder_P_1": 78.76
   },
   {
-    "_1": " Our Models",
-    "_Standard_Decoder_MRR": " Our Models",
-    "_Standard_Decoder_P_1": " Our Models",
-    "_Our_Decoder_MRR": " Our Models",
-    "_Our_Decoder_P_1": " Our Models"
+    "_1": "Our Models",
+    "_Standard_Decoder_MRR": "Our Models",
+    "_Standard_Decoder_P_1": "Our Models",
+    "_Our_Decoder_MRR": "Our Models",
+    "_Our_Decoder_P_1": "Our Models"
   },
   {
     "_1": "Dec-shared",

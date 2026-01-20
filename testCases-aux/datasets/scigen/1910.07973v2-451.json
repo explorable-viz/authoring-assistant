@@ -30,10 +30,10 @@
     "_Metrics_P_10": 15.2
   },
   {
-    "_Dataset_Model_WikiPassageQA": " InsuranceQA",
-    "_Metrics_MAP": " P@1",
-    "_Metrics_P_5": " P@5",
-    "_Metrics_P_10": " P@10"
+    "_Dataset_Model_WikiPassageQA": "InsuranceQA",
+    "_Metrics_MAP": "P@1",
+    "_Metrics_P_5": "P@5",
+    "_Metrics_P_10": "P@10"
   },
   {
     "_Dataset_Model_WikiPassageQA": "BM25",
@@ -72,10 +72,10 @@
     "_Metrics_P_10": 13.7
   },
   {
-    "_Dataset_Model_WikiPassageQA": " Quasar-t",
-    "_Metrics_MAP": " R@1",
-    "_Metrics_P_5": " R@5",
-    "_Metrics_P_10": " R@10"
+    "_Dataset_Model_WikiPassageQA": "Quasar-t",
+    "_Metrics_MAP": "R@1",
+    "_Metrics_P_5": "R@5",
+    "_Metrics_P_10": "R@10"
   },
   {
     "_Dataset_Model_WikiPassageQA": "BM25",
@@ -102,10 +102,10 @@
     "_Metrics_P_10": 74.6
   },
   {
-    "_Dataset_Model_WikiPassageQA": " SearchQA",
-    "_Metrics_MAP": " R@1",
-    "_Metrics_P_5": " R@5",
-    "_Metrics_P_10": " R@10"
+    "_Dataset_Model_WikiPassageQA": "SearchQA",
+    "_Metrics_MAP": "R@1",
+    "_Metrics_P_5": "R@5",
+    "_Metrics_P_10": "R@10"
   },
   {
     "_Dataset_Model_WikiPassageQA": "BM25",

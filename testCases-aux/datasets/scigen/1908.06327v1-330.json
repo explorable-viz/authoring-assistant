@@ -22,8 +22,8 @@
     "_VQA": "Accuracy"
   },
   {
-    "_1": " (a)",
-    "_Task_Dataset": " Word2Vec + wn ",
+    "_1": "(a)",
+    "_Task_Dataset": "Word2Vec + wn",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",
@@ -66,8 +66,8 @@
     "_VQA": 61.06
   },
   {
-    "_1": " (b)",
-    "_Task_Dataset": " GrOVLE",
+    "_1": "(b)",
+    "_Task_Dataset": "GrOVLE",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",
@@ -110,8 +110,8 @@
     "_VQA": 61.22
   },
   {
-    "_1": " (c)",
-    "_Task_Dataset": " Visual Word2Vec ",
+    "_1": "(c)",
+    "_Task_Dataset": "Visual Word2Vec",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",
@@ -154,8 +154,8 @@
     "_VQA": 61.15
   },
   {
-    "_1": " (d)",
-    "_Task_Dataset": " HGLMM (300-D) ",
+    "_1": "(d)",
+    "_Task_Dataset": "HGLMM (300-D)",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",
@@ -198,8 +198,8 @@
     "_VQA": 61.44
   },
   {
-    "_1": " (e)",
-    "_Task_Dataset": " HGLMM (6K-D) ",
+    "_1": "(e)",
+    "_Task_Dataset": "HGLMM (6K-D)",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",

@@ -16,7 +16,7 @@
     "_Accuracy": 73.3
   },
   {
-    "_Classifier": " CLS + AT + NER",
+    "_Classifier": "CLS + AT + NER",
     "_Accuracy": 73.8
   }
 ]

@@ -8,11 +8,11 @@
     "_Accuracy": 73.1
   },
   {
-    "_Model": " BioELMo Jin et al. ( 2019 )",
+    "_Model": "BioELMo Jin et al. ( 2019 )",
     "_Accuracy": 78.2
   },
   {
-    "_Model": " ESIMw/  K Lu et al. ( 2019 )",
+    "_Model": "ESIMw/  K Lu et al. ( 2019 )",
     "_Accuracy": 77.8
   },
   {
@@ -28,7 +28,7 @@
     "_Accuracy": 78.76
   },
   {
-    "_Model": " BioELMo w/ KG+Sentiment",
+    "_Model": "BioELMo w/ KG+Sentiment",
     "_Accuracy": 79.04
   }
 ]

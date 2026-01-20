@@ -1,16 +1,16 @@
 [
   {
-    "_Training_Strategy": " λ = 1",
+    "_Training_Strategy": "λ = 1",
     "_Averaged_SPA": 0.762,
     "_Overall_WS": 0.476
   },
   {
-    "_Training_Strategy": " λ = 0",
+    "_Training_Strategy": "λ = 0",
     "_Averaged_SPA": 0.073,
     "_Overall_WS": 0.018
   },
   {
-    "_Training_Strategy": " λ = 0.5",
+    "_Training_Strategy": "λ = 0.5",
     "_Averaged_SPA": 0.493,
     "_Overall_WS": 0.323
   },

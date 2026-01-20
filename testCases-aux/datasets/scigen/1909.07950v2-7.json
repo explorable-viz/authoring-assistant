@@ -1,15 +1,15 @@
 [
   {
     "_Model": "Baseline (BL)",
-    "_CNN_full": " full: 19.7 dict: 56.0",
-    "_CNN_dict": " full: 19.7 dict: 56.0",
-    "_CNN_list": " full: 19.7 dict: 56.0",
-    "_CNN_k": " full: 19.7 dict: 56.0",
-    "_CNN_MRR": " full: 19.7 dict: 56.0",
-    "_LSTM_full": " full: 17.9",
-    "_LSTM_list": " full: 17.9",
-    "_LSTM_k": " full: 17.9",
-    "_LSTM_MRR": " full: 17.9"
+    "_CNN_full": "full: 19.7 dict: 56.0",
+    "_CNN_dict": "full: 19.7 dict: 56.0",
+    "_CNN_list": "full: 19.7 dict: 56.0",
+    "_CNN_k": "full: 19.7 dict: 56.0",
+    "_CNN_MRR": "full: 19.7 dict: 56.0",
+    "_LSTM_full": "full: 17.9",
+    "_LSTM_list": "full: 17.9",
+    "_LSTM_k": "full: 17.9",
+    "_LSTM_MRR": "full: 17.9"
   },
   {
     "_Model": "BL+ Glove (Jeffrey:14)",

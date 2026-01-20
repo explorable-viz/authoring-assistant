@@ -1,12 +1,12 @@
 [
   {
-    "_1": " Baseline",
-    "w_System_Retrieval_BLEU": " Baseline",
-    "w_System_Retrieval_MTR": " Baseline",
-    "w_System_Retrieval_Len": " Baseline",
-    "w_Oracle_Retrieval_BLEU": " Baseline",
-    "w_Oracle_Retrieval_MTR": " Baseline",
-    "w_Oracle_Retrieval_Len": " Baseline"
+    "_1": "Baseline",
+    "w_System_Retrieval_BLEU": "Baseline",
+    "w_System_Retrieval_MTR": "Baseline",
+    "w_System_Retrieval_Len": "Baseline",
+    "w_Oracle_Retrieval_BLEU": "Baseline",
+    "w_Oracle_Retrieval_MTR": "Baseline",
+    "w_Oracle_Retrieval_Len": "Baseline"
   },
   {
     "_1": "Retrieval",
@@ -18,13 +18,13 @@
     "w_Oracle_Retrieval_Len": 132.7
   },
   {
-    "_1": " Comparisons",
-    "w_System_Retrieval_BLEU": " Comparisons",
-    "w_System_Retrieval_MTR": " Comparisons",
-    "w_System_Retrieval_Len": " Comparisons",
-    "w_Oracle_Retrieval_BLEU": " Comparisons",
-    "w_Oracle_Retrieval_MTR": " Comparisons",
-    "w_Oracle_Retrieval_Len": " Comparisons"
+    "_1": "Comparisons",
+    "w_System_Retrieval_BLEU": "Comparisons",
+    "w_System_Retrieval_MTR": "Comparisons",
+    "w_System_Retrieval_Len": "Comparisons",
+    "w_Oracle_Retrieval_BLEU": "Comparisons",
+    "w_Oracle_Retrieval_MTR": "Comparisons",
+    "w_Oracle_Retrieval_Len": "Comparisons"
   },
   {
     "_1": "Seq2seq",
@@ -54,13 +54,13 @@
     "w_Oracle_Retrieval_Len": 78.2
   },
   {
-    "_1": " Our Models",
-    "w_System_Retrieval_BLEU": " Our Models",
-    "w_System_Retrieval_MTR": " Our Models",
-    "w_System_Retrieval_Len": " Our Models",
-    "w_Oracle_Retrieval_BLEU": " Our Models",
-    "w_Oracle_Retrieval_MTR": " Our Models",
-    "w_Oracle_Retrieval_Len": " Our Models"
+    "_1": "Our Models",
+    "w_System_Retrieval_BLEU": "Our Models",
+    "w_System_Retrieval_MTR": "Our Models",
+    "w_System_Retrieval_Len": "Our Models",
+    "w_Oracle_Retrieval_BLEU": "Our Models",
+    "w_Oracle_Retrieval_MTR": "Our Models",
+    "w_Oracle_Retrieval_Len": "Our Models"
   },
   {
     "_1": "Dec-shared",

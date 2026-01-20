@@ -1,16 +1,16 @@
 [
   {
-    "_Encoder_type": " Dimension of Sentence Representation: 1200",
-    "_Encoder_dim": " Dimension of Sentence Representation: 1200",
-    "_Decoder_type": " Dimension of Sentence Representation: 1200",
-    "_Decoder_dim": " Dimension of Sentence Representation: 1200",
-    "_Hrs": " Dimension of Sentence Representation: 1200",
-    "_SICK_R": " Dimension of Sentence Representation: 1200",
-    "_SICK_E": " Dimension of Sentence Representation: 1200",
-    "_STS14": " Dimension of Sentence Representation: 1200",
-    "_MSRP_Acc_F1": " Dimension of Sentence Representation: 1200",
-    "_SST": " Dimension of Sentence Representation: 1200",
-    "_TREC": " Dimension of Sentence Representation: 1200"
+    "_Encoder_type": "Dimension of Sentence Representation: 1200",
+    "_Encoder_dim": "Dimension of Sentence Representation: 1200",
+    "_Decoder_type": "Dimension of Sentence Representation: 1200",
+    "_Decoder_dim": "Dimension of Sentence Representation: 1200",
+    "_Hrs": "Dimension of Sentence Representation: 1200",
+    "_SICK_R": "Dimension of Sentence Representation: 1200",
+    "_SICK_E": "Dimension of Sentence Representation: 1200",
+    "_STS14": "Dimension of Sentence Representation: 1200",
+    "_MSRP_Acc_F1": "Dimension of Sentence Representation: 1200",
+    "_SST": "Dimension of Sentence Representation: 1200",
+    "_TREC": "Dimension of Sentence Representation: 1200"
   },
   {
     "_Encoder_type": "RNN",
@@ -117,17 +117,17 @@
     "_TREC": 89.0
   },
   {
-    "_Encoder_type": " Dimension of Sentence Representation: 2400",
-    "_Encoder_dim": " Dimension of Sentence Representation: 2400",
-    "_Decoder_type": " Dimension of Sentence Representation: 2400",
-    "_Decoder_dim": " Dimension of Sentence Representation: 2400",
-    "_Hrs": " Dimension of Sentence Representation: 2400",
-    "_SICK_R": " Dimension of Sentence Representation: 2400",
-    "_SICK_E": " Dimension of Sentence Representation: 2400",
-    "_STS14": " Dimension of Sentence Representation: 2400",
-    "_MSRP_Acc_F1": " Dimension of Sentence Representation: 2400",
-    "_SST": " Dimension of Sentence Representation: 2400",
-    "_TREC": " Dimension of Sentence Representation: 2400"
+    "_Encoder_type": "Dimension of Sentence Representation: 2400",
+    "_Encoder_dim": "Dimension of Sentence Representation: 2400",
+    "_Decoder_type": "Dimension of Sentence Representation: 2400",
+    "_Decoder_dim": "Dimension of Sentence Representation: 2400",
+    "_Hrs": "Dimension of Sentence Representation: 2400",
+    "_SICK_R": "Dimension of Sentence Representation: 2400",
+    "_SICK_E": "Dimension of Sentence Representation: 2400",
+    "_STS14": "Dimension of Sentence Representation: 2400",
+    "_MSRP_Acc_F1": "Dimension of Sentence Representation: 2400",
+    "_SST": "Dimension of Sentence Representation: 2400",
+    "_TREC": "Dimension of Sentence Representation: 2400"
   },
   {
     "_Encoder_type": "RNN",
@@ -169,17 +169,17 @@
     "_TREC": 86.6
   },
   {
-    "_Encoder_type": " Dimension of Sentence Representation: 4800",
-    "_Encoder_dim": " Dimension of Sentence Representation: 4800",
-    "_Decoder_type": " Dimension of Sentence Representation: 4800",
-    "_Decoder_dim": " Dimension of Sentence Representation: 4800",
-    "_Hrs": " Dimension of Sentence Representation: 4800",
-    "_SICK_R": " Dimension of Sentence Representation: 4800",
-    "_SICK_E": " Dimension of Sentence Representation: 4800",
-    "_STS14": " Dimension of Sentence Representation: 4800",
-    "_MSRP_Acc_F1": " Dimension of Sentence Representation: 4800",
-    "_SST": " Dimension of Sentence Representation: 4800",
-    "_TREC": " Dimension of Sentence Representation: 4800"
+    "_Encoder_type": "Dimension of Sentence Representation: 4800",
+    "_Encoder_dim": "Dimension of Sentence Representation: 4800",
+    "_Decoder_type": "Dimension of Sentence Representation: 4800",
+    "_Decoder_dim": "Dimension of Sentence Representation: 4800",
+    "_Hrs": "Dimension of Sentence Representation: 4800",
+    "_SICK_R": "Dimension of Sentence Representation: 4800",
+    "_SICK_E": "Dimension of Sentence Representation: 4800",
+    "_STS14": "Dimension of Sentence Representation: 4800",
+    "_MSRP_Acc_F1": "Dimension of Sentence Representation: 4800",
+    "_SST": "Dimension of Sentence Representation: 4800",
+    "_TREC": "Dimension of Sentence Representation: 4800"
   },
   {
     "_Encoder_type": "RNN",

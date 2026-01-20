@@ -1,16 +1,16 @@
 [
   {
-    "_Model": "UNC ",
+    "_Model": "UNC",
     "_FEVER_Score": 66.14,
     "_Label_Accuracy": 69.6
   },
   {
-    "_Model": "UCL ",
+    "_Model": "UCL",
     "_FEVER_Score": 65.41,
     "_Label_Accuracy": 69.66
   },
   {
-    "_Model": "UKP-Athene ",
+    "_Model": "UKP-Athene",
     "_FEVER_Score": 64.74,
     "_Label_Accuracy": "-"
   },

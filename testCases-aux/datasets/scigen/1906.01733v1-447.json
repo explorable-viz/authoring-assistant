@@ -1,6 +1,6 @@
 [
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "Felice et al. ( 2014 ) †",
     "_ERRANT_P": "-",
     "_ERRANT_R": "-",
@@ -10,7 +10,7 @@
     "_M2_F0_5": 37.33
   },
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "Yannakoudakis et al. ( 2017 )",
     "_ERRANT_P": "-",
     "_ERRANT_R": "-",
@@ -20,7 +20,7 @@
     "_M2_F0_5": 49.66
   },
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "Chollampatt and Ng ( 2017 )",
     "_ERRANT_P": "-",
     "_ERRANT_R": "-",
@@ -30,7 +30,7 @@
     "_M2_F0_5": 53.14
   },
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "Chollampatt and Ng ( 2018 )",
     "_ERRANT_P": "-",
     "_ERRANT_R": "-",
@@ -40,7 +40,7 @@
     "_M2_F0_5": 54.79
   },
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "Ge et al. ( 2018 )",
     "_ERRANT_P": "-",
     "_ERRANT_R": "-",
@@ -50,7 +50,7 @@
     "_M2_F0_5": 61.34
   },
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "Bryant and Briscoe ( 2018 )",
     "_ERRANT_P": 36.62,
     "_ERRANT_R": 19.93,
@@ -60,7 +60,7 @@
     "_M2_F0_5": 34.09
   },
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "BERT",
     "_ERRANT_P": 33.27,
     "_ERRANT_R": 27.14,
@@ -70,7 +70,7 @@
     "_M2_F0_5": 33.83
   },
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "GPT-1",
     "_ERRANT_P": 49.58,
     "_ERRANT_R": 27.06,
@@ -80,7 +80,7 @@
     "_M2_F0_5": 43.57
   },
   {
-    "_Dataset": " CoNLL-2014",
+    "_Dataset": "CoNLL-2014",
     "_System": "GPT-2",
     "_ERRANT_P": 57.73,
     "_ERRANT_R": 24.75,
@@ -90,7 +90,7 @@
     "_M2_F0_5": 46.08
   },
   {
-    "_Dataset": " FCE",
+    "_Dataset": "FCE",
     "_System": "Yannakoudakis et al. ( 2017 )",
     "_ERRANT_P": "-",
     "_ERRANT_R": "-",
@@ -100,7 +100,7 @@
     "_M2_F0_5": 54.15
   },
   {
-    "_Dataset": " FCE",
+    "_Dataset": "FCE",
     "_System": "Bryant and Briscoe ( 2018 )",
     "_ERRANT_P": 41.92,
     "_ERRANT_R": 13.62,
@@ -110,7 +110,7 @@
     "_M2_F0_5": 31.22
   },
   {
-    "_Dataset": " FCE",
+    "_Dataset": "FCE",
     "_System": "BERT",
     "_ERRANT_P": 29.56,
     "_ERRANT_R": 34.67,
@@ -120,7 +120,7 @@
     "_M2_F0_5": 32.53
   },
   {
-    "_Dataset": " FCE",
+    "_Dataset": "FCE",
     "_System": "GPT-1",
     "_ERRANT_P": 62.75,
     "_ERRANT_R": 32.19,
@@ -130,7 +130,7 @@
     "_M2_F0_5": 53.52
   },
   {
-    "_Dataset": " FCE",
+    "_Dataset": "FCE",
     "_System": "GPT-2",
     "_ERRANT_P": 61.91,
     "_ERRANT_R": 33.47,

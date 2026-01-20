@@ -36,7 +36,7 @@
     "_ROUGE_L": 44.53
   },
   {
-    "_Model": " IWAQG",
+    "_Model": "IWAQG",
     "_BLEU_1": 47.69,
     "_BLEU_2": 32.24,
     "_BLEU_3": 24.01,

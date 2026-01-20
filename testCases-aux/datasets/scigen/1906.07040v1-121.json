@@ -6,10 +6,10 @@
     "_SemEval_15": 0.393
   },
   {
-    "_Model": " Graph-based vs vector-based measures",
-    "_Senseval2": " Graph-based vs vector-based measures",
-    "_Senseval3": " Graph-based vs vector-based measures",
-    "_SemEval_15": " Graph-based vs vector-based measures"
+    "_Model": "Graph-based vs vector-based measures",
+    "_Senseval2": "Graph-based vs vector-based measures",
+    "_Senseval3": "Graph-based vs vector-based measures",
+    "_SemEval_15": "Graph-based vs vector-based measures"
   },
   {
     "_Model": "LCH (WordNet)",
@@ -48,10 +48,10 @@
     "_SemEval_15": 0.545
   },
   {
-    "_Model": " Various baseline graph embeddings trained on WordNet",
-    "_Senseval2": " Various baseline graph embeddings trained on WordNet",
-    "_Senseval3": " Various baseline graph embeddings trained on WordNet",
-    "_SemEval_15": " Various baseline graph embeddings trained on WordNet"
+    "_Model": "Various baseline graph embeddings trained on WordNet",
+    "_Senseval2": "Various baseline graph embeddings trained on WordNet",
+    "_Senseval3": "Various baseline graph embeddings trained on WordNet",
+    "_SemEval_15": "Various baseline graph embeddings trained on WordNet"
   },
   {
     "_Model": "TransR",

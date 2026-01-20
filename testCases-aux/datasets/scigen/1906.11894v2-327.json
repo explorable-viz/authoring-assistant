@@ -1,21 +1,21 @@
 [
   {
-    "_Method": "wavelength ",
+    "_Method": "wavelength",
     "_Line_iu": 68.58,
     "_Pixel_iu": 79.13
   },
   {
-    "_Method": "Brigham Young University ",
+    "_Method": "Brigham Young University",
     "_Line_iu": 81.5,
     "_Pixel_iu": 83.07
   },
   {
-    "_Method": "CITlab Argus LineDetect ",
+    "_Method": "CITlab Argus LineDetect",
     "_Line_iu": 96.99,
     "_Pixel_iu": 93.01
   },
   {
-    "_Method": "wavelength* (tight polygons) ",
+    "_Method": "wavelength* (tight polygons)",
     "_Line_iu": 97.86,
     "_Pixel_iu": 97.05
   },

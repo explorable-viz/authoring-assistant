@@ -2,24 +2,24 @@
   {
     "_1": "",
     "_Task_Dataset": "Dataset",
-    "_Image_Sentence_Retrieval_Flickr30K": "Flickr30K ",
-    "_Image_Sentence_Retrieval_MSCOCO": "MSCOCO ",
-    "_Phrase_Grounding_Flickr30K": "Entities ",
-    "_Phrase_Grounding_ReferIt": "ReferIt ",
-    "_Text_to_Clip_DiDeMo": "DiDeMo ",
+    "_Image_Sentence_Retrieval_Flickr30K": "Flickr30K",
+    "_Image_Sentence_Retrieval_MSCOCO": "MSCOCO",
+    "_Phrase_Grounding_Flickr30K": "Entities",
+    "_Phrase_Grounding_ReferIt": "ReferIt",
+    "_Text_to_Clip_DiDeMo": "DiDeMo",
     "_Image_Captioning_MSCOCO": "",
-    "_VQA_VQA": "VQA "
+    "_VQA_VQA": "VQA"
   },
   {
     "_1": "",
     "_Task_Dataset": "Method",
-    "_Image_Sentence_Retrieval_Flickr30K": "Embedding Network ",
-    "_Image_Sentence_Retrieval_MSCOCO": "Embedding Network ",
-    "_Phrase_Grounding_Flickr30K": "CITE ",
-    "_Phrase_Grounding_ReferIt": "CITE ",
-    "_Text_to_Clip_DiDeMo": "CITE ",
-    "_Image_Captioning_MSCOCO": "ARNet ",
-    "_VQA_VQA": "EtEMN "
+    "_Image_Sentence_Retrieval_Flickr30K": "Embedding Network",
+    "_Image_Sentence_Retrieval_MSCOCO": "Embedding Network",
+    "_Phrase_Grounding_Flickr30K": "CITE",
+    "_Phrase_Grounding_ReferIt": "CITE",
+    "_Text_to_Clip_DiDeMo": "CITE",
+    "_Image_Captioning_MSCOCO": "ARNet",
+    "_VQA_VQA": "EtEMN"
   },
   {
     "_1": "",
@@ -33,8 +33,8 @@
     "_VQA_VQA": "Accuracy"
   },
   {
-    "_1": " (a)",
-    "_Task_Dataset": " Training from scratch",
+    "_1": "(a)",
+    "_Task_Dataset": "Training from scratch",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",
@@ -77,8 +77,8 @@
     "_VQA_VQA": 60.95
   },
   {
-    "_1": " (b)",
-    "_Task_Dataset": " Word2Vec ",
+    "_1": "(b)",
+    "_Task_Dataset": "Word2Vec",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",
@@ -154,8 +154,8 @@
     "_VQA_VQA": 61.35
   },
   {
-    "_1": " (c)",
-    "_Task_Dataset": " FastText ",
+    "_1": "(c)",
+    "_Task_Dataset": "FastText",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",
@@ -231,8 +231,8 @@
     "_VQA_VQA": 61.66
   },
   {
-    "_1": " (d)",
-    "_Task_Dataset": " Sentence-Level",
+    "_1": "(d)",
+    "_Task_Dataset": "Sentence-Level",
     "_Image_Sentence_Retrieval_Flickr30K": "",
     "_Image_Sentence_Retrieval_MSCOCO": "",
     "_Phrase_Grounding_Flickr30K": "",
@@ -243,7 +243,7 @@
   },
   {
     "_1": "",
-    "_Task_Dataset": "InferSent ",
+    "_Task_Dataset": "InferSent",
     "_Image_Sentence_Retrieval_Flickr30K": 71.2,
     "_Image_Sentence_Retrieval_MSCOCO": 76.4,
     "_Phrase_Grounding_Flickr30K": 57.83,
@@ -254,7 +254,7 @@
   },
   {
     "_1": "",
-    "_Task_Dataset": "BERT ",
+    "_Task_Dataset": "BERT",
     "_Image_Sentence_Retrieval_Flickr30K": 71.8,
     "_Image_Sentence_Retrieval_MSCOCO": 75.4,
     "_Phrase_Grounding_Flickr30K": 69.38,

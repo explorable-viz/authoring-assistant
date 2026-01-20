@@ -1,34 +1,34 @@
 [
   {
-    "_Model": "TF-IDF ",
+    "_Model": "TF-IDF",
     "_Ubuntu_v1_1_in_2R_1": 0.659,
     "_Ubuntu_v1_1_in_10R_1": 0.41,
     "_Ubuntu_v1_1_in_10R_2": 0.545,
     "_Ubuntu_v1_1_in_10R_5": 0.708
   },
   {
-    "_Model": "CNN ",
+    "_Model": "CNN",
     "_Ubuntu_v1_1_in_2R_1": 0.848,
     "_Ubuntu_v1_1_in_10R_1": 0.549,
     "_Ubuntu_v1_1_in_10R_2": 0.684,
     "_Ubuntu_v1_1_in_10R_5": 0.896
   },
   {
-    "_Model": "LSTM ",
+    "_Model": "LSTM",
     "_Ubuntu_v1_1_in_2R_1": 0.901,
     "_Ubuntu_v1_1_in_10R_1": 0.638,
     "_Ubuntu_v1_1_in_10R_2": 0.784,
     "_Ubuntu_v1_1_in_10R_5": 0.949
   },
   {
-    "_Model": "CompAgg ",
+    "_Model": "CompAgg",
     "_Ubuntu_v1_1_in_2R_1": 0.884,
     "_Ubuntu_v1_1_in_10R_1": 0.631,
     "_Ubuntu_v1_1_in_10R_2": 0.753,
     "_Ubuntu_v1_1_in_10R_5": 0.927
   },
   {
-    "_Model": "BiMPM ",
+    "_Model": "BiMPM",
     "_Ubuntu_v1_1_in_2R_1": 0.897,
     "_Ubuntu_v1_1_in_10R_1": 0.665,
     "_Ubuntu_v1_1_in_10R_2": 0.786,

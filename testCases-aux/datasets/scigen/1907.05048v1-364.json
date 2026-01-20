@@ -1,7 +1,7 @@
 [
   {
     "_Model": "TransWeight-feat",
-    "_W_param": " n+  n",
+    "_W_param": "n+  n",
     "_Cos_d": 0.344,
     "_Q1": 2,
     "_Q2": 5,
@@ -10,7 +10,7 @@
   },
   {
     "_Model": "TransWeight-trans",
-    "_W_param": " t+  n",
+    "_W_param": "t+  n",
     "_Cos_d": 0.338,
     "_Q1": 2,
     "_Q2": 5,
@@ -19,7 +19,7 @@
   },
   {
     "_Model": "TransWeight-mat",
-    "_W_param": " tn+  n",
+    "_W_param": "tn+  n",
     "_Cos_d": 0.338,
     "_Q1": 2,
     "_Q2": 5,
@@ -27,8 +27,8 @@
     "_≤_5": 53.24
   },
   {
-    "_Model": " TransWeight",
-    "_W_param": " tn2+  n",
+    "_Model": "TransWeight",
+    "_W_param": "tn2+  n",
     "_Cos_d": 0.31,
     "_Q1": 1,
     "_Q2": 3,

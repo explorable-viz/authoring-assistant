@@ -1,6 +1,6 @@
 [
   {
-    "_Task": " CoLA",
+    "_Task": "CoLA",
     "_Avg": 0.86,
     "_CoLA": 1.0,
     "_SST": "",
@@ -10,7 +10,7 @@
     "_QNLI": ""
   },
   {
-    "_Task": " SST",
+    "_Task": "SST",
     "_Avg": 0.6,
     "_CoLA": 0.25,
     "_SST": 1.0,
@@ -20,7 +20,7 @@
     "_QNLI": ""
   },
   {
-    "_Task": " MRPC",
+    "_Task": "MRPC",
     "_Avg": 0.39,
     "_CoLA": 0.21,
     "_SST": 0.34,
@@ -30,7 +30,7 @@
     "_QNLI": ""
   },
   {
-    "_Task": " STS",
+    "_Task": "STS",
     "_Avg": -0.36,
     "_CoLA": -0.6,
     "_SST": 0.01,
@@ -40,7 +40,7 @@
     "_QNLI": ""
   },
   {
-    "_Task": " QQP",
+    "_Task": "QQP",
     "_Avg": 0.61,
     "_CoLA": 0.61,
     "_SST": 0.27,
@@ -50,7 +50,7 @@
     "_QNLI": ""
   },
   {
-    "_Task": " MNLI",
+    "_Task": "MNLI",
     "_Avg": 0.54,
     "_CoLA": 0.16,
     "_SST": 0.66,
@@ -60,7 +60,7 @@
     "_QNLI": ""
   },
   {
-    "_Task": " QNLI",
+    "_Task": "QNLI",
     "_Avg": 0.43,
     "_CoLA": 0.13,
     "_SST": 0.26,
@@ -70,7 +70,7 @@
     "_QNLI": 1.0
   },
   {
-    "_Task": " RTE",
+    "_Task": "RTE",
     "_Avg": 0.34,
     "_CoLA": 0.08,
     "_SST": 0.16,
@@ -80,7 +80,7 @@
     "_QNLI": 0.32
   },
   {
-    "_Task": " WNLI",
+    "_Task": "WNLI",
     "_Avg": -0.21,
     "_CoLA": -0.21,
     "_SST": -0.37,

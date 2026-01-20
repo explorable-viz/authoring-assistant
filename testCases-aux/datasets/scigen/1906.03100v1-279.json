@@ -28,7 +28,7 @@
     "_BLEU": 27.39
   },
   {
-    "_En⇒De": " Shared-private",
+    "_En⇒De": "Shared-private",
     "_Params": 65000000.0,
     "_Emb": 20900000.0,
     "_Red": 63.1,

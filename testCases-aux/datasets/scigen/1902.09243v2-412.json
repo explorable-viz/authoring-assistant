@@ -10,12 +10,12 @@
     "_R_2": 21.6
   },
   {
-    "_Model": "Full ",
+    "_Model": "Full",
     "_R_1": 42.2,
     "_R_2": 24.9
   },
   {
-    "_Model": "ML+RL+intra-attn ",
+    "_Model": "ML+RL+intra-attn",
     "_R_1": 42.94,
     "_R_2": 26.02
   },

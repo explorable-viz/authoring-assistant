@@ -1,10 +1,10 @@
 [
   {
-    "_Approach": " Approach",
-    "_Easy": " Easy",
-    "_Medium": " Medium",
-    "_Hard": " Hard",
-    "_Extra": " Hard"
+    "_Approach": "Approach",
+    "_Easy": "Easy",
+    "_Medium": "Medium",
+    "_Hard": "Hard",
+    "_Extra": "Hard"
   },
   {
     "_Approach": "SyntaxSQLNet",
@@ -28,14 +28,14 @@
     "_Extra": 8.6
   },
   {
-    "_Approach": " IRNet",
+    "_Approach": "IRNet",
     "_Easy": 70.1,
     "_Medium": 49.2,
     "_Hard": 39.5,
     "_Extra": 19.1
   },
   {
-    "_Approach": " IRNet(BERT)",
+    "_Approach": "IRNet(BERT)",
     "_Easy": 77.2,
     "_Medium": 58.7,
     "_Hard": 48.1,

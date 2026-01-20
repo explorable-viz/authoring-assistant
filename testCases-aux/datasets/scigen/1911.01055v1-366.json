@@ -1,9 +1,9 @@
 [
   {
-    "_Model": " CNN",
-    "_P": " CNN",
-    "_R": " CNN",
-    "_F1": " CNN"
+    "_Model": "CNN",
+    "_P": "CNN",
+    "_R": "CNN",
+    "_F1": "CNN"
   },
   {
     "_Model": "+   ENT-ONLY",
@@ -36,10 +36,10 @@
     "_F1": 66.3
   },
   {
-    "_Model": " BiLSTM",
-    "_P": " BiLSTM",
-    "_R": " BiLSTM",
-    "_F1": " BiLSTM"
+    "_Model": "BiLSTM",
+    "_P": "BiLSTM",
+    "_R": "BiLSTM",
+    "_F1": "BiLSTM"
   },
   {
     "_Model": "+   ENT-ONLY",
@@ -72,10 +72,10 @@
     "_F1": 73.9
   },
   {
-    "_Model": " BiLSTM-CNN",
-    "_P": " BiLSTM-CNN",
-    "_R": " BiLSTM-CNN",
-    "_F1": " BiLSTM-CNN"
+    "_Model": "BiLSTM-CNN",
+    "_P": "BiLSTM-CNN",
+    "_R": "BiLSTM-CNN",
+    "_F1": "BiLSTM-CNN"
   },
   {
     "_Model": "+   ENT-ONLY",
@@ -108,10 +108,10 @@
     "_F1": 72.6
   },
   {
-    "_Model": " BiLSTM-GCNN",
-    "_P": " BiLSTM-GCNN",
-    "_R": " BiLSTM-GCNN",
-    "_F1": " BiLSTM-GCNN"
+    "_Model": "BiLSTM-GCNN",
+    "_P": "BiLSTM-GCNN",
+    "_R": "BiLSTM-GCNN",
+    "_F1": "BiLSTM-GCNN"
   },
   {
     "_Model": "+   ENT-ONLY",

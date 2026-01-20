@@ -1,11 +1,11 @@
 [
   {
-    "_System": " Mnewsqa",
+    "_System": "Mnewsqa",
     "_EM": 46.3,
     "_F1": 60.8
   },
   {
-    "_System": " Mnewsqa +   Snet",
+    "_System": "Mnewsqa +   Snet",
     "_EM": 47.9,
     "_F1": 61.5
   }

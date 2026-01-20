@@ -1,6 +1,6 @@
 [
   {
-    "_Method": " One2One",
+    "_Method": "One2One",
     "_Inspec_Avg=7_8_F1_5": 0.244,
     "_Inspec_Avg=7_8_F1_10": 0.289,
     "_Krapivin_Avg=3_4_F1_5": 0.305,
@@ -13,7 +13,7 @@
     "_Average_F1_10": 0.306
   },
   {
-    "_Method": " Random",
+    "_Method": "Random",
     "_Inspec_Avg=7_8_F1_5": 0.283,
     "_Inspec_Avg=7_8_F1_10": 0.206,
     "_Krapivin_Avg=3_4_F1_5": 0.288,
@@ -26,7 +26,7 @@
     "_Average_F1_10": 0.211
   },
   {
-    "_Method": " Length",
+    "_Method": "Length",
     "_Inspec_Avg=7_8_F1_5": 0.298,
     "_Inspec_Avg=7_8_F1_10": 0.224,
     "_Krapivin_Avg=3_4_F1_5": 0.321,
@@ -39,7 +39,7 @@
     "_Average_F1_10": 0.228
   },
   {
-    "_Method": " No-Sort",
+    "_Method": "No-Sort",
     "_Inspec_Avg=7_8_F1_5": 0.323,
     "_Inspec_Avg=7_8_F1_10": 0.253,
     "_Krapivin_Avg=3_4_F1_5": 0.317,
@@ -52,7 +52,7 @@
     "_Average_F1_10": 0.243
   },
   {
-    "_Method": " Alpha",
+    "_Method": "Alpha",
     "_Inspec_Avg=7_8_F1_5": 0.319,
     "_Inspec_Avg=7_8_F1_10": 0.283,
     "_Krapivin_Avg=3_4_F1_5": 0.329,
@@ -65,7 +65,7 @@
     "_Average_F1_10": 0.269
   },
   {
-    "_Method": " Appear-Pre",
+    "_Method": "Appear-Pre",
     "_Inspec_Avg=7_8_F1_5": 0.32,
     "_Inspec_Avg=7_8_F1_10": 0.307,
     "_Krapivin_Avg=3_4_F1_5": 0.322,
@@ -78,7 +78,7 @@
     "_Average_F1_10": 0.286
   },
   {
-    "_Method": " Appear-Ap",
+    "_Method": "Appear-Ap",
     "_Inspec_Avg=7_8_F1_5": 0.344,
     "_Inspec_Avg=7_8_F1_10": 0.333,
     "_Krapivin_Avg=3_4_F1_5": 0.32,

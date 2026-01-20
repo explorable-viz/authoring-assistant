@@ -57,7 +57,7 @@
     "_Transfer_Role": "True",
     "_Baseline_Acc": 88.32,
     "_Fine_tuned_Acc": 90.55,
-    "_Gain": " + 2.23"
+    "_Gain": "+ 2.23"
   },
   {
     "_Model": "HUBERT (Transformer)",
@@ -67,7 +67,7 @@
     "_Transfer_Role": "True",
     "_Baseline_Acc": 84.3,
     "_Fine_tuned_Acc": 85.24,
-    "_Gain": " + 0.94"
+    "_Gain": "+ 0.94"
   },
   {
     "_Model": "HUBERT (Transformer)",
@@ -77,7 +77,7 @@
     "_Transfer_Role": "False",
     "_Baseline_Acc": 61.73,
     "_Fine_tuned_Acc": 65.7,
-    "_Gain": " + 3.97"
+    "_Gain": "+ 3.97"
   },
   {
     "_Model": "HUBERT (Transformer)",
@@ -87,7 +87,7 @@
     "_Transfer_Role": "True",
     "_Baseline_Acc": 90.63,
     "_Fine_tuned_Acc": 91.2,
-    "_Gain": " + 0.57"
+    "_Gain": "+ 0.57"
   },
   {
     "_Model": "HUBERT (Transformer)",
@@ -97,6 +97,6 @@
     "_Transfer_Role": "True",
     "_Baseline_Acc": 86.12,
     "_Fine_tuned_Acc": 91.06,
-    "_Gain": " + 4.94"
+    "_Gain": "+ 4.94"
   }
 ]

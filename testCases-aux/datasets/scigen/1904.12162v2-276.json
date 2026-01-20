@@ -1,6 +1,6 @@
 [
   {
-    "dataset": " Stack Overflow",
+    "dataset": "Stack Overflow",
     "tool": "SentiStrength",
     "_num_correct_prediction": 1043,
     "positive_precision": 0.2,
@@ -98,7 +98,7 @@
     "negative_F1": 0.251
   },
   {
-    "dataset": " App reviews",
+    "dataset": "App reviews",
     "tool": "SentiStrength",
     "_num_correct_prediction": 213,
     "positive_precision": 0.745,
@@ -196,7 +196,7 @@
     "negative_F1": 0.607
   },
   {
-    "dataset": " Jira issues",
+    "dataset": "Jira issues",
     "tool": "SentiStrength",
     "_num_correct_prediction": 714,
     "positive_precision": 0.85,

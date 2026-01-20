@@ -52,6 +52,7 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
                 clean_key = strip_all_tags(keys[i])
                 clean_value = strip_all_tags(value[i])
 
+                clean_value = clean_value.strip()
                 clean_key = clean_key.strip()
 
                 # Clean key: replace spaces with underscores, remove [xxx] tags,

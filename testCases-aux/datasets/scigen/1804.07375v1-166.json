@@ -20,14 +20,14 @@
     "agreement_strict": 71
   },
   {
-    "genre_written": " total written",
+    "genre_written": "total written",
     "agreement_notional": 27.66,
     "agreement_strict": 1611
   },
   {
-    "genre_written": " spoken",
-    "agreement_notional": " % notional",
-    "agreement_strict": " strict"
+    "genre_written": "spoken",
+    "agreement_notional": "% notional",
+    "agreement_strict": "strict"
   },
   {
     "genre_written": "bc.conv",
@@ -45,7 +45,7 @@
     "agreement_strict": 89
   },
   {
-    "genre_written": " total spoken",
+    "genre_written": "total spoken",
     "agreement_notional": 47.02,
     "agreement_strict": 668
   }

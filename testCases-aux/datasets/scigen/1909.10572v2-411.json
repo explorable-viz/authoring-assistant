@@ -1,10 +1,10 @@
 [
   {
-    "_Method": "OE ",
+    "_Method": "OE",
     "_Average_Precision": 0.761
   },
   {
-    "_Method": "Smoothed Box ",
+    "_Method": "Smoothed Box",
     "_Average_Precision": 0.795
   },
   {

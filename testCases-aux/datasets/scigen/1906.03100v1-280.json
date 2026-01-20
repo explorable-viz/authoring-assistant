@@ -8,7 +8,7 @@
   },
   {
     "_1": "Ar⇒ En",
-    "_Model": " Shared-private",
+    "_Model": "Shared-private",
     "_Emb": 11800000.0,
     "_Red": 50,
     "_BLEU": 29.71
@@ -22,7 +22,7 @@
   },
   {
     "_1": "Ja⇒ En",
-    "_Model": " Shared-private",
+    "_Model": "Shared-private",
     "_Emb": 13300000.0,
     "_Red": 48.0,
     "_BLEU": 12.35
@@ -36,7 +36,7 @@
   },
   {
     "_1": "Ko⇒ En",
-    "_Model": " Shared-private",
+    "_Model": "Shared-private",
     "_Emb": 13200000.0,
     "_Red": 47.4,
     "_BLEU": 17.84
@@ -50,7 +50,7 @@
   },
   {
     "_1": "Zh⇒ En",
-    "_Model": " Shared-private",
+    "_Model": "Shared-private",
     "_Emb": 13800000.0,
     "_Red": 49.6,
     "_BLEU": 21.0

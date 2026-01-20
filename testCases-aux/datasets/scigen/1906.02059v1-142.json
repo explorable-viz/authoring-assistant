@@ -12,10 +12,10 @@
     "_F1": 49.1
   },
   {
-    "_1": " Non-Anonymized",
-    "_P": " Non-Anonymized",
-    "_R": " Non-Anonymized",
-    "_F1": " Non-Anonymized"
+    "_1": "Non-Anonymized",
+    "_P": "Non-Anonymized",
+    "_R": "Non-Anonymized",
+    "_F1": "Non-Anonymized"
   },
   {
     "_1": "bow-svm",
@@ -48,10 +48,10 @@
     "_F1": 82.0
   },
   {
-    "_1": " Anonymized",
-    "_P": " Anonymized",
-    "_R": " Anonymized",
-    "_F1": " Anonymized"
+    "_1": "Anonymized",
+    "_P": "Anonymized",
+    "_R": "Anonymized",
+    "_F1": "Anonymized"
   },
   {
     "_1": "bow-svm",

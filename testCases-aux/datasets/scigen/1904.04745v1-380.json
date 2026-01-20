@@ -1,6 +1,6 @@
 [
   {
-    "_Method": "RMI-LSTM ",
+    "_Method": "RMI-LSTM",
     "prec_0_5": 42.99,
     "prec_0_6": 33.24,
     "prec_0_7": 22.75,

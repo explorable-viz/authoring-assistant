@@ -135,7 +135,7 @@
     "_Time_s_221_16_1": 459
   },
   {
-    "_Dataset_Camera": " Average",
+    "_Dataset_Camera": "Average",
     "_SLSTM_90_02": 85.38,
     "_Time_s_50_2_85": 47.3,
     "_BiLSTM_87_05": 84.01,

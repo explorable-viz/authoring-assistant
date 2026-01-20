@@ -1,6 +1,6 @@
 [
   {
-    "_Method": " Identity",
+    "_Method": "Identity",
     "_Dataset_DEA": 30.63,
     "_Dataset_DER": 44.36,
     "_Dataset_EN": 75.29,
@@ -13,7 +13,7 @@
     "_Dataset_SV": 58.59
   },
   {
-    "_Method": " Maximum",
+    "_Method": "Maximum",
     "_Dataset_DEA": 94.64,
     "_Dataset_DER": 96.46,
     "_Dataset_EN": 98.57,

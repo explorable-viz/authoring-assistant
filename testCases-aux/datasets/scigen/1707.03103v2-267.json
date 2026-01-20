@@ -60,7 +60,7 @@
     "_InnerAtt": 69.5
   },
   {
-    "_Genre": " MultiNLI Overall",
+    "_Genre": "MultiNLI Overall",
     "_CBOW": 64.7,
     "_ESIM": 72.2,
     "_InnerAtt": 72.3

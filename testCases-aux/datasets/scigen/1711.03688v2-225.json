@@ -14,28 +14,28 @@
     "_Memory_to_Output_METEOR": ""
   },
   {
-    "_1": " S-NMT",
+    "_1": "S-NMT",
     "_Memory_to_Context_BLEU": 20.42,
     "_Memory_to_Context_METEOR": 24.65,
     "_Memory_to_Output_BLEU": 20.42,
     "_Memory_to_Output_METEOR": 24.65
   },
   {
-    "_1": "  +src",
+    "_1": "+src",
     "_Memory_to_Context_BLEU": 22.1,
     "_Memory_to_Context_METEOR": 25.92,
     "_Memory_to_Output_BLEU": 21.5,
     "_Memory_to_Output_METEOR": 25.44
   },
   {
-    "_1": "  +trg",
+    "_1": "+trg",
     "_Memory_to_Context_BLEU": 21.94,
     "_Memory_to_Context_METEOR": 25.89,
     "_Memory_to_Output_BLEU": 21.82,
     "_Memory_to_Output_METEOR": 25.93
   },
   {
-    "_1": "  +both",
+    "_1": "+both",
     "_Memory_to_Context_BLEU": 22.32,
     "_Memory_to_Context_METEOR": 26.34,
     "_Memory_to_Output_BLEU": 22.2,

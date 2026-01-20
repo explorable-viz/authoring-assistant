@@ -97,8 +97,8 @@
   },
   {
     "_Method": "AdaBERT",
-    "_num_Params": " 6.4M 9.5M",
-    "_Inference": " 12.7x 29.3x",
+    "_num_Params": "6.4M 9.5M",
+    "_Inference": "12.7x 29.3x",
     "_SST_2": 91.8,
     "_MRPC": 85.1,
     "_QQP": 70.7,

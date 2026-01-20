@@ -1,7 +1,7 @@
 [
   {
     "_Model": "Model",
-    "_K": " K",
+    "_K": "K",
     "_IMDb": "IMDb",
     "_AG’s": "News",
     "_SNLI": "SNLI"
@@ -43,7 +43,7 @@
   },
   {
     "_Model": "BERTSDA",
-    "_K": " T−1",
+    "_K": "T−1",
     "_IMDb": 5.41,
     "_AG’s": 5.29,
     "_SNLI": 91.0

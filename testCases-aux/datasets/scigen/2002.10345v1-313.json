@@ -11,7 +11,7 @@
     "_MNLI_m_mm": "Accuracy (%)"
   },
   {
-    "_Model": "ULMFiT ",
+    "_Model": "ULMFiT",
     "_IMDb": 4.6,
     "_AG’s_News": 5.01,
     "_DBPedia": 0.8,

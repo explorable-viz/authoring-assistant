@@ -35,12 +35,12 @@
     "_Test": 27.2
   },
   {
-    "_Approach": " IRNet",
+    "_Approach": "IRNet",
     "_Dev": 53.2,
     "_Test": 46.7
   },
   {
-    "_Approach": " BERT",
+    "_Approach": "BERT",
     "_Dev": "",
     "_Test": ""
   },
@@ -50,7 +50,7 @@
     "_Test": 25.4
   },
   {
-    "_Approach": " IRNet(BERT)",
+    "_Approach": "IRNet(BERT)",
     "_Dev": 61.9,
     "_Test": 54.7
   }

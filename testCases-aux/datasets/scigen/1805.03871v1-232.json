@@ -36,7 +36,7 @@
     "_Test": 19
   },
   {
-    "_Gold_Class": " Total",
+    "_Gold_Class": "Total",
     "_Train": 31545,
     "_Dev": 8036,
     "_Test": 5563

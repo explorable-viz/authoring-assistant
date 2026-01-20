@@ -65,7 +65,7 @@
     "_Semantic_CoordInv": 52.33
   },
   {
-    "_Model": " c",
+    "_Model": "c",
     "_Surface_SentLen": 98.67,
     "_Surface_WC": 91.11,
     "_Syntactic_TreeDepth": 38.6,
@@ -78,7 +78,7 @@
     "_Semantic_CoordInv": 55
   },
   {
-    "_Model": " c[0:1]",
+    "_Model": "c[0:1]",
     "_Surface_SentLen": 97.18,
     "_Surface_WC": 89.16,
     "_Syntactic_TreeDepth": 40.41,
@@ -91,7 +91,7 @@
     "_Semantic_CoordInv": 70.42
   },
   {
-    "_Model": " c[0:2]",
+    "_Model": "c[0:2]",
     "_Surface_SentLen": 95.84,
     "_Surface_WC": 86.77,
     "_Syntactic_TreeDepth": 43.01,
@@ -104,7 +104,7 @@
     "_Semantic_CoordInv": 71.87
   },
   {
-    "_Model": " c[0:3]",
+    "_Model": "c[0:3]",
     "_Surface_SentLen": 94.63,
     "_Surface_WC": 84.96,
     "_Syntactic_TreeDepth": 43.35,
@@ -117,7 +117,7 @@
     "_Semantic_CoordInv": 72.01
   },
   {
-    "_Model": " c[0:4]",
+    "_Model": "c[0:4]",
     "_Surface_SentLen": 93.25,
     "_Surface_WC": 83.24,
     "_Syntactic_TreeDepth": 43.26,
@@ -130,7 +130,7 @@
     "_Semantic_CoordInv": 71.91
   },
   {
-    "_Model": " c[0:5]",
+    "_Model": "c[0:5]",
     "_Surface_SentLen": 92.29,
     "_Surface_WC": 81.84,
     "_Syntactic_TreeDepth": 42.75,
@@ -143,7 +143,7 @@
     "_Semantic_CoordInv": 70.96
   },
   {
-    "_Model": " c[0:6]",
+    "_Model": "c[0:6]",
     "_Surface_SentLen": 91.56,
     "_Surface_WC": 79.83,
     "_Syntactic_TreeDepth": 43.05,

@@ -42,18 +42,18 @@
     "_5_Way_5_Shot_On_2_0": 67.44
   },
   {
-    "_Model": " Model",
-    "_5_Way_1_Shot_On_1_0": " 10-Way 1-Shot",
-    "_5_Way_1_Shot_On_2_0": " 10-Way 1-Shot",
-    "_5_Way_5_Shot_On_1_0": " 10-Way 5-Shot",
-    "_5_Way_5_Shot_On_2_0": " 10-Way 5-Shot"
+    "_Model": "Model",
+    "_5_Way_1_Shot_On_1_0": "10-Way 1-Shot",
+    "_5_Way_1_Shot_On_2_0": "10-Way 1-Shot",
+    "_5_Way_5_Shot_On_1_0": "10-Way 5-Shot",
+    "_5_Way_5_Shot_On_2_0": "10-Way 5-Shot"
   },
   {
-    "_Model": " Model",
-    "_5_Way_1_Shot_On_1_0": " On 1.0",
-    "_5_Way_1_Shot_On_2_0": " On 2.0",
-    "_5_Way_5_Shot_On_1_0": " On 1.0",
-    "_5_Way_5_Shot_On_2_0": " On 2.0"
+    "_Model": "Model",
+    "_5_Way_1_Shot_On_1_0": "On 1.0",
+    "_5_Way_1_Shot_On_2_0": "On 2.0",
+    "_5_Way_5_Shot_On_1_0": "On 1.0",
+    "_5_Way_5_Shot_On_2_0": "On 2.0"
   },
   {
     "_Model": "GNN (CNN)",

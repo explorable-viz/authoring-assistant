@@ -1,11 +1,11 @@
 [
   {
-    "_Dataset_Name": " Dataset Name",
-    "_Entity_Class": " Entity Class",
+    "_Dataset_Name": "Dataset Name",
+    "_Entity_Class": "Entity Class",
     "_EAL_1_0_F": "% cut",
-    "_EAA_Annotation_Mode_FA": " F-Score (percentage cut)",
-    "_EAA_Annotation_Mode_HFA": " F-Score (percentage cut)",
-    "_EAA_Annotation_Mode_UFA": " F-Score (percentage cut)"
+    "_EAA_Annotation_Mode_FA": "F-Score (percentage cut)",
+    "_EAA_Annotation_Mode_HFA": "F-Score (percentage cut)",
+    "_EAA_Annotation_Mode_UFA": "F-Score (percentage cut)"
   },
   {
     "_Dataset_Name": "CoNLL-2003",
@@ -56,8 +56,8 @@
     "_EAA_Annotation_Mode_UFA": 0.84
   },
   {
-    "_Dataset_Name": " Average",
-    "_Entity_Class": " Average",
+    "_Dataset_Name": "Average",
+    "_Entity_Class": "Average",
     "_EAL_1_0_F": 45,
     "_EAA_Annotation_Mode_FA": 0.98,
     "_EAA_Annotation_Mode_HFA": 0.9,

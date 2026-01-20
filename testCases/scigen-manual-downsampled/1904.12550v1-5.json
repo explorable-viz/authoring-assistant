@@ -6,7 +6,7 @@
       "value": "For TOP n COS SIM AVG, the tuning data results (Table 2) are somewhat more varied: First, there is no single best performing set of embeddings: Google yields the best F score for the Label setting ("
     },
     {
-      "expression": "(findWithKey_ \"concept_input____embeddings\" \"Google\" tableData).label___f",
+      "expression": "(findWithKey_ \"_Concept_Input_Embeddings\" \"Google\" tableData).label___f",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -15,7 +15,7 @@
       "value": "), while GloVe (though only barely) leads in the Description setting ("
     },
     {
-      "expression": "(findWithKey_ \"concept_input____embeddings\" \"GloVe\" tableData).description___f",
+      "expression": "(findWithKey_ \"_Concept_Input_Embeddings\" \"GloVe\" tableData).description___f",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -24,7 +24,7 @@
       "value": "). This time, it is fastText which produces the best F score in the Both setting, which is also the best overall tuning data F score for TOP n COS SIM AVG ("
     },
     {
-      "expression": "(findWithKey_ \"concept_input____embeddings\" \"fastText\" tableData).both___f",
+      "expression": "(findWithKey_ \"_Concept_Input_Embeddings\" \"fastText\" tableData).both___f",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -37,7 +37,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen_manual/_1904_12550v1_5"
+    "datasets/scigen/_1904_12550v1_5"
   ],
-  "datasets": ["datasets/scigen_manual/1904.12550v1-5.json"]
+  "datasets": ["datasets/scigen/1904.12550v1-5.json"]
 }

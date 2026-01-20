@@ -1,0 +1,128 @@
+[
+  {
+    "_Speaker": 440,
+    "_Count": 8867,
+    "key_ρ_Between": 0.581,
+    "key_ρ_Speaker": 0.00455,
+    "_WER": 14.3
+  },
+  {
+    "_Speaker": 441,
+    "_Count": 8824,
+    "key_ρ_Between": 0.643,
+    "key_ρ_Speaker": 0.145,
+    "_WER": 22.3
+  },
+  {
+    "_Speaker": 442,
+    "_Count": 9733,
+    "key_ρ_Between": 0.615,
+    "key_ρ_Speaker": 0.0277,
+    "_WER": 15.9
+  },
+  {
+    "_Speaker": 443,
+    "_Count": 9692,
+    "key_ρ_Between": 0.63,
+    "key_ρ_Speaker": 0.0416,
+    "_WER": 10.6
+  },
+  {
+    "_Speaker": 444,
+    "_Count": 10094,
+    "key_ρ_Between": 0.572,
+    "key_ρ_Speaker": 0.00495,
+    "_WER": 19.5
+  },
+  {
+    "_Speaker": 445,
+    "_Count": 7795,
+    "key_ρ_Between": 0.62,
+    "key_ρ_Speaker": 0.0287,
+    "_WER": 14.1
+  },
+  {
+    "_Speaker": 446,
+    "_Count": 9311,
+    "key_ρ_Between": 0.638,
+    "key_ρ_Speaker": 0.0261,
+    "_WER": 9.6
+  },
+  {
+    "_Speaker": 447,
+    "_Count": 8987,
+    "key_ρ_Between": 0.569,
+    "key_ρ_Speaker": 0.00857,
+    "_WER": 18.9
+  },
+  {
+    "_Speaker": "4k0",
+    "_Count": 5481,
+    "key_ρ_Between": 0.569,
+    "key_ρ_Speaker": 0.0248,
+    "_WER": 22.5
+  },
+  {
+    "_Speaker": "4k1",
+    "_Count": 5583,
+    "key_ρ_Between": 0.634,
+    "key_ρ_Speaker": 0.0539,
+    "_WER": 30.0
+  },
+  {
+    "_Speaker": "4k2",
+    "_Count": 6181,
+    "key_ρ_Between": 0.637,
+    "key_ρ_Speaker": 0.0178,
+    "_WER": 12.8
+  },
+  {
+    "_Speaker": "4k3",
+    "_Count": 5762,
+    "key_ρ_Between": 0.598,
+    "key_ρ_Speaker": 0.0301,
+    "_WER": 17.3
+  },
+  {
+    "_Speaker": "4k4",
+    "_Count": 4846,
+    "key_ρ_Between": 0.53,
+    "key_ρ_Speaker": 0.205,
+    "_WER": 17.2
+  },
+  {
+    "_Speaker": "4k6",
+    "_Count": 5547,
+    "key_ρ_Between": 0.641,
+    "key_ρ_Speaker": 0.012,
+    "_WER": 21.3
+  },
+  {
+    "_Speaker": "4k7",
+    "_Count": 5873,
+    "key_ρ_Between": 0.64,
+    "key_ρ_Speaker": 0.0452,
+    "_WER": 21.3
+  },
+  {
+    "_Speaker": "4k8",
+    "_Count": 5492,
+    "key_ρ_Between": 0.575,
+    "key_ρ_Speaker": 0.0478,
+    "_WER": 10.7
+  },
+  {
+    "_Speaker": "4k9",
+    "_Count": 5193,
+    "key_ρ_Between": 0.614,
+    "key_ρ_Speaker": 0.00882,
+    "_WER": 23.9
+  },
+  {
+    "_Speaker": "4ka",
+    "_Count": 5046,
+    "key_ρ_Between": 0.614,
+    "key_ρ_Speaker": 0.181,
+    "_WER": 28.4
+  }
+]

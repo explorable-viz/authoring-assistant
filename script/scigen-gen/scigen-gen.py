@@ -19,12 +19,7 @@ def replace_parens(match):
 
     return f"{before}{lead}{content}{trail}{after}"
 
-def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
-    # Read input JSON file
-    with open(raw_file, 'r', encoding='utf-8') as f:
-        datas = json.load(f)
-
-    # Clean target directories
+def clean_target_directories(tests_dir, tests_aux_dir, datasets_dir):
     datasets_path = tests_aux_dir / datasets_dir
     if datasets_path.exists():
         shutil.rmtree(datasets_path)
@@ -34,11 +29,19 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
         shutil.rmtree(tests_dir)
     tests_dir.mkdir()
 
-    k = 0
-    for data in datas.values():
+def main(raw_file, tests_dir, tests_aux_dir, datasets_dir, paper_ids):
+    datasets_path = tests_aux_dir / datasets_dir
+
+    # Read input JSON file
+    with open(raw_file, 'r', encoding='utf-8') as f:
+        datas = json.load(f)
+
+    for k, data in datas.items():
+        if paper_ids is not None and data.get("paper_id") not in paper_ids:
+            continue
+
         dataset = []
-        dataset_name = f"{data['paper_id']}-{k}"
-        k += 1
+        dataset_name = f"{data['paper_id']}-{int(k)}"
 
         keys = data['table_column_names']
         values = data['table_content_values']
@@ -105,7 +108,6 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
 
                 # Reduce "n / m / k", "n | m | k", or "n, m, k" to "n"
                 # Exclude some files from this rule
-                print(dataset_name)
                 if dataset_name not in ["1707.03103v2-267", "1906.11565v2-387", "1908.11049v1-345"]:
                     cleaned_value = re.sub(
                         r'^\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(?:\s*[/|,]\s*-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)*\s*$',
@@ -208,13 +210,34 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
             f.write("")
 
         print(f"Generated: {dataset_name}")
+    print(raw_file)
+    print("****************************************")
 
 
 if __name__ == "__main__":
     # Run from root of repo
+    tests_dir = Path("testCases/scigen-raw")
+    tests_aux_dir = Path("testCases-aux")
+    datasets_dir = Path("datasets/scigen")
+
+    clean_target_directories(
+        tests_dir=tests_dir,
+        tests_aux_dir=tests_aux_dir,
+        datasets_dir=datasets_dir
+    )
+
     main(
-      raw_file=Path("script/scigen-gen/raw/scigen.json"),
-      tests_dir=Path("testCases/scigen-raw"),
-      tests_aux_dir=Path("testCases-aux"),
-      datasets_dir=Path("datasets/scigen")
+        raw_file=Path("script/scigen-gen/raw/dataset/test/test-CL.json"),
+        tests_dir=tests_dir,
+        tests_aux_dir=tests_aux_dir,
+        datasets_dir=datasets_dir,
+        paper_ids=None
+    )
+
+    main(
+        raw_file=Path("script/scigen-gen/raw/dataset/train/medium/train.json"),
+        tests_dir=tests_dir,
+        tests_aux_dir=tests_aux_dir,
+        datasets_dir=datasets_dir,
+        paper_ids=[ "1002.0773", "1003.0206", "1110.3094", "1807.07279v3" ]
     )

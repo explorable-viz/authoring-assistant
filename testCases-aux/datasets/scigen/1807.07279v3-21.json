@@ -1,0 +1,51 @@
+[
+  {
+    "_Methods": "GloVe",
+    "_num_dims": 300,
+    "_Analg_sem": 78.94,
+    "_Analg_syn": 64.12,
+    "_Total": 70.99
+  },
+  {
+    "_Methods": "Word2Vec",
+    "_num_dims": 300,
+    "_Analg_sem": 81.03,
+    "_Analg_syn": 66.11,
+    "_Total": 73.03
+  },
+  {
+    "_Methods": "OIWE-IPG",
+    "_num_dims": 300,
+    "_Analg_sem": 19.99,
+    "_Analg_syn": 23.44,
+    "_Total": 21.84
+  },
+  {
+    "_Methods": "SOV",
+    "_num_dims": 3000,
+    "_Analg_sem": 64.09,
+    "_Analg_syn": 46.26,
+    "_Total": 54.53
+  },
+  {
+    "_Methods": "SPINE",
+    "_num_dims": 1000,
+    "_Analg_sem": 17.07,
+    "_Analg_syn": 8.68,
+    "_Total": 12.57
+  },
+  {
+    "_Methods": "Word2Sense",
+    "_num_dims": 2250,
+    "_Analg_sem": 12.94,
+    "_Analg_syn": 19.44,
+    "_Total": 5.84
+  },
+  {
+    "_Methods": "Proposed",
+    "_num_dims": 300,
+    "_Analg_sem": 79.96,
+    "_Analg_syn": 63.52,
+    "_Total": 71.15
+  }
+]

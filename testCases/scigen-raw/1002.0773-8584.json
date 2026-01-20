@@ -1,0 +1,18 @@
+{
+  "datasets": [
+    "datasets/scigen/1002.0773-8584.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1002_0773_8584"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Notice that the sequence of WERs are both slowing decreasing over this range. The only possible explanation for why these distributions are different is: by restricting the relevant sum in the definition of pθk(⋅∣x;κ,Vmle,Rk) to Vmle leads to ignoring transcriptions in W∖Vmle that have zero probability under θmle but non-trivial probability under θk."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "datasets": [ "datasets/scigen/1110.3094-5931.json" ],
+  "imports": [ "scigen", "util", "datasets/scigen/_1110_3094_5931" ],
+  "variables": {},
+  "testing-variables": {
+    "resp__SVM1_Precision": [85.4, 85.9, 83.2, 82.0, 93.8],
+    "gast__Naive_Bayes_Recall": [75.5, 74.7, 76.1, 90.3, 82.4],
+    "neur_svm2_f1": [86.9, 83.4, 66.7, 76.5, 85.4],
+    "hem__SVM1_Recall": [58.3, 50.0, 43.8, 60.0, 55.0]
+  },
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Overall the SVM with polynomial degree 1 kernel"
+    },
+    {
+      "type": "expression",
+      "expression": "underOverPerformed (overallComparison [overallComparison (map (compareCols \"_SVM1_P\" col) tableData) | col <- [\"_Naive_Bayes_P\", \"_SVM2_P\", \"_SVM3_P\", \"_SVM_key_R_P\"]])",
+      "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " all other kernels with other kernels generally offering"
+    },
+    {
+      "type": "expression",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols \"_SVM1_P\" col) tableData) | col <- [\"_Naive_Bayes_P\", \"_SVM2_P\", \"_SVM3_P\", \"_SVM_key_R_P\"]])",
+      "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " precision at a "
+    },
+    {
+      "type": "expression",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"_SVM1_R\" ) tableData) | col <- [\"_Naive_Bayes_R\", \"_SVM2_R\", \"_SVM3_R\", \"_SVM_key_R_R\"]])",
+      "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " cost to recall. Precision (Positive predictive) values ranged from "
+    },
+    {
+      "type": "expression",
+      "expression": "minimum (getColumn \"_SVM1_P\" tableData)",
+      "categories": ["min-max", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "type": "expression",
+      "expression": "maximum (getColumn \"_SVM1_P\" tableData)",
+      "categories": ["min-max", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "for SVM (polynomial degree 1) and from"
+    },
+    {
+      "type": "expression",
+      "expression": "minimum (getColumn \"_Naive_Bayes_P\" tableData)",
+      "categories": ["min-max", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "type": "expression",
+      "expression": "maximum (getColumn \"_Naive_Bayes_P\" tableData)",
+      "categories": ["min-max", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "for NB. Recall (sensitivity) values ranged from"
+    },
+    {
+      "type": "expression",
+      "expression": "minimum (getColumn \"_SVM1_R\" tableData)",
+      "categories": ["min-max", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "type": "expression",
+      "expression": "maximum (getColumn \"_SVM1_R\" tableData)",
+      "categories": ["min-max", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": "for SVM (polynomial degree 1) and from "
+    },
+    {
+      "type": "expression",
+      "expression": "minimum (getColumn \"_Naive_Bayes_R\" tableData)",
+      "categories": ["min-max", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " to "
+    },
+    {
+      "type": "expression",
+      "expression": "maximum (getColumn \"_Naive_Bayes_R\" tableData)",
+      "categories": ["min-max", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " for NB. SVM tended to offer "
+    },
+    {
+      "type": "expression",
+      "expression": "aReducedIncreased (overallComparison [overallComparison (map (compareCols col \"_Naive_Bayes_P\" ) tableData) | col <- [\"_SVM1_P\", \"_SVM2_P\", \"_SVM3_P\", \"_SVM_key_R_P\"]])",
+      "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " level of precision but "
+    },
+    {
+      "type": "expression",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"_Naive_Bayes_R\" ) tableData) | col <- [\"_SVM1_R\", \"_SVM2_R\", \"_SVM3_R\", \"_SVM_key_R_R\"]])",
+      "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " recall. In the case of one syndrome (Hemorrhagic) we noticed an "
+    },
+    {
+      "type": "expression",
+      "expression": "unusuallyHighLow (overallComparison [compareCols col \"_Naive_Bayes_R\" (findWithKey_ \"_Synd\" \"Hem.\" tableData) | col <- [\"_SVM1_R\", \"_SVM2_R\", \"_SVM3_R\", \"_SVM_key_R_R\"]]) ",
+      "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
+    },
+    {
+      "type": "literal",
+      "value": " level of recall for SVM but not for NB."
+    }
+  ]
+}

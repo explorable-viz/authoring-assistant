@@ -1,4 +1,0 @@
-[
- {"creation_method":"simulation", "number_of_errors_39_features":$sim_errors_39$, "number_of_errors_13_features":$sim_errors_13$},
- {"creation_method":"resampling", "number_of_errors_39_features":$resamp_errors_39$, "number_of_errors_13_features":$resamp_errors_13$}
-]

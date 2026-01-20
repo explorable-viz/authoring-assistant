@@ -2,21 +2,22 @@
   {
     "_1": "baseline",
     "ellipsis_infl": 53.0,
-    "ellipsis_vp": 28.4
+    "ellipsis_VP": 28.4
   },
   {
     "_1": "concat",
     "ellipsis_infl": 76.2,
-    "ellipsis_vp": 76.6
+    "ellipsis_VP": 76.6
   },
   {
     "_1": "s-hier-to-2.tied",
     "ellipsis_infl": 66.4,
-    "ellipsis_vp": 65.6
+    "ellipsis_VP": 65.6
   },
   {
     "_1": "CADec",
     "ellipsis_infl": 72.2,
-    "ellipsis_vp": 80.0
+    "ellipsis_VP": 80.0
   }
 ]
+

@@ -1,26 +1,27 @@
 [
   {
-    "reply_type": "Buy",
-    "description": "Someone wants to buy or bought a product.",
-    "antichat": 8,
-    "hackforums": 12
+    "_Reply_Type": "Buy",
+    "_Description": "Someone wants to buy or bought a product.",
+    "_Antichat": 8,
+    "_Hackforums": 12
   },
   {
-    "reply_type": "Sell",
-    "description": "Someone making a sale offer to the original poster of a thread.",
-    "antichat": 8,
-    "hackforums": 2
+    "_Reply_Type": "Sell",
+    "_Description": "Someone making a sale offer to the original poster of a thread.",
+    "_Antichat": 8,
+    "_Hackforums": 2
   },
   {
-    "reply_type": "Other",
-    "description": "Anything that didn’t fall into the previous categories.",
-    "antichat": 84,
-    "hackforums": 86
+    "_Reply_Type": "Other",
+    "_Description": "Anything that didn’t fall into the previous categories.",
+    "_Antichat": 84,
+    "_Hackforums": 86
   },
   {
-    "reply_type": "TOTAL",
-    "description": "",
-    "antichat": 9992,
-    "hackforums": 5898
+    "_Reply_Type": "TOTAL",
+    "_Description": "",
+    "_Antichat": 9992,
+    "_Hackforums": 5898
   }
 ]
+

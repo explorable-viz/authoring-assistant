@@ -1,0 +1,25 @@
+run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
+0;"1805.02474v1-10";1;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";2;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";3;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";4;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";5;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";6;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";7;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";8;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";9;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";10;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";11;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";12;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";13;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";14;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";15;"dummy";0;"[Data Retrieval,Comparison,Rank]";0;2;0;0
+0;"1805.02474v1-10";16;"dummy";0;"[Data Retrieval,Comparison,Rank]";0;2;0;0
+0;"1805.02474v1-10";17;"dummy";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";18;"dummy";0;"[Rank]";0;2;0;0
+0;"1805.02474v1-10";19;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";20;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1805.02474v1-10";21;"dummy";0;"[Data Retrieval,Comparison]";0;2;0;0
+0;"1905.05979v2-88";1;"dummy";0;"[Data Retrieval,Difference]";0;2;0;0
+0;"1905.05979v2-88";2;"dummy";0;"[Data Retrieval,Difference]";0;2;0;0
+0;"1905.05979v2-88";3;"dummy";0;"[Data Retrieval]";0;2;0;0

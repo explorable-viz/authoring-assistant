@@ -6,7 +6,7 @@
       "value": "The results can be found in Table 3. For comparison, the two top rows provide the best results of Gong et al. (2018). The first interesting finding is that the AVG COS SIM measure again performs very well: In all three settings, it beats both the system based on general-purpose embeddings (topic wiki) and the one that is adapted to the science domain (topic science), with again the Both setting yielding the best overall result ("
     },
     {
-      "expression": "(findWhere (fun x -> (x.gong_et_al == \"AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData).f_818",
+      "expression": "(findWhere (fun x -> (x._Gong_et_al_2018 == \" AVG_COS_SIM\") `and` (x.topic_science == \"Both\")) tableData)._F_818",
       "categories": ["data-retrieval"],
       "type": "expression"
     },
@@ -19,7 +19,7 @@
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen_manual/_1904_12550v1_6"
+    "datasets/scigen/_1904_12550v1_6"
   ],
-  "datasets": ["datasets/scigen_manual/1904.12550v1-6.json"]
+  "datasets": ["datasets/scigen/1904.12550v1-6.json"]
 }

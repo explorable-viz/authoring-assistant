@@ -1,6 +1,0 @@
-import datasets.scigen._1002_0773_11
-
-
-"""
-	In this experiment we regenerate the phone-marked word lattices between each iteration of extended Baum-Welch. Thus at iteration k+1 we are using p(wx;Vk,Rk) as the model selection criterion when we estimate the parameters k+1. Starting from the mle, we run extended Baum-Welch 100 times. We observe the following: The logarithm of the approximate MMI criterion, logpk(wx;Vk,Rk), reaches its peak value after ${(foldr (fun x acc -> if x._WER > acc._WER then x else acc) (head tableData) tableData).iteration} iterations and then continues its oscillation.
-"""

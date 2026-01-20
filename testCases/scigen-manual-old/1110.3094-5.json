@@ -1,12 +1,12 @@
 {
-  "datasets": [ "datasets/scigen_manual_old/1110.3094.json" ],
-  "imports": ["scigen", "util", "datasets/scigen_manual_old/_1110_3094"],
+  "datasets": [ "datasets/scigen/1110.3094-5.json" ],
+  "imports": [ "scigen", "util", "datasets/scigen/_1110_3094_5" ],
   "variables": {},
   "testing-variables": {
-    "resp_svm1_precision": [85.4, 85.9, 83.2, 82.0, 93.8],
-    "gast_naive_bayes_recall": [75.5, 74.7, 76.1, 90.3, 82.4],
+    "resp__SVM1_Precision": [85.4, 85.9, 83.2, 82.0, 93.8],
+    "gast__Naive_Bayes_Recall": [75.5, 74.7, 76.1, 90.3, 82.4],
     "neur_svm2_f1": [86.9, 83.4, 66.7, 76.5, 85.4],
-    "hem_svm1_recall": [58.3, 50.0, 43.8, 60.0, 55.0]
+    "hem__SVM1_Recall": [58.3, 50.0, 43.8, 60.0, 55.0]
   },
   "paragraph": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "type": "expression",
-      "expression": "underOverPerformed (overallComparison [overallComparison (map (compareCols \"svm1_p\" col) tableData) | col <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "expression": "underOverPerformed (overallComparison [overallComparison (map (compareCols \"_SVM1_P\" col) tableData) | col <- [\"_Naive_Bayes_P\", \"_SVM2_P\", \"_SVM3_P\", \"_SVM_key_R_P\"]])",
       "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols \"svm1_p\" col) tableData) | col <- [\"naive_bayes_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols \"_SVM1_P\" col) tableData) | col <- [\"_Naive_Bayes_P\", \"_SVM2_P\", \"_SVM3_P\", \"_SVM_key_R_P\"]])",
       "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"svm1_r\" ) tableData) | col <- [\"naive_bayes_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"_SVM1_R\" ) tableData) | col <- [\"_Naive_Bayes_R\", \"_SVM2_R\", \"_SVM3_R\", \"_SVM_key_R_R\"]])",
       "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "type": "expression",
-      "expression": "minimum (getColumn \"svm1_p\" tableData)",
+      "expression": "minimum (getColumn \"_SVM1_P\" tableData)",
       "categories": ["min-max", "data-retrieval"]
     },
     {
@@ -51,7 +51,7 @@
     },
     {
       "type": "expression",
-      "expression": "maximum (getColumn \"svm1_p\" tableData)",
+      "expression": "maximum (getColumn \"_SVM1_P\" tableData)",
       "categories": ["min-max", "data-retrieval"]
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "type": "expression",
-      "expression": "minimum (getColumn \"naive_bayes_p\" tableData)",
+      "expression": "minimum (getColumn \"_Naive_Bayes_P\" tableData)",
       "categories": ["min-max", "data-retrieval"]
     },
     {
@@ -69,7 +69,7 @@
     },
     {
       "type": "expression",
-      "expression": "maximum (getColumn \"naive_bayes_p\" tableData)",
+      "expression": "maximum (getColumn \"_Naive_Bayes_P\" tableData)",
       "categories": ["min-max", "data-retrieval"]
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "type": "expression",
-      "expression": "minimum (getColumn \"svm1_r\" tableData)",
+      "expression": "minimum (getColumn \"_SVM1_R\" tableData)",
       "categories": ["min-max", "data-retrieval"]
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "type": "expression",
-      "expression": "maximum (getColumn \"svm1_r\" tableData)",
+      "expression": "maximum (getColumn \"_SVM1_R\" tableData)",
       "categories": ["min-max", "data-retrieval"]
     },
     {
@@ -96,7 +96,7 @@
     },
     {
       "type": "expression",
-      "expression": "minimum (getColumn \"naive_bayes_r\" tableData)",
+      "expression": "minimum (getColumn \"_Naive_Bayes_R\" tableData)",
       "categories": ["min-max", "data-retrieval"]
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "type": "expression",
-      "expression": "maximum (getColumn \"naive_bayes_r\" tableData)",
+      "expression": "maximum (getColumn \"_Naive_Bayes_R\" tableData)",
       "categories": ["min-max", "data-retrieval"]
     },
     {
@@ -114,7 +114,7 @@
     },
     {
       "type": "expression",
-      "expression": "aReducedIncreased (overallComparison [overallComparison (map (compareCols col \"naive_bayes_p\" ) tableData) | col <- [\"svm1_p\", \"svm2_p\", \"svm3_p\", \"svmr_p\"]])",
+      "expression": "aReducedIncreased (overallComparison [overallComparison (map (compareCols col \"_Naive_Bayes_P\" ) tableData) | col <- [\"_SVM1_P\", \"_SVM2_P\", \"_SVM3_P\", \"_SVM_key_R_P\"]])",
       "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "type": "expression",
-      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"naive_bayes_r\" ) tableData) | col <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]])",
+      "expression": "betterWorse (overallComparison [overallComparison (map (compareCols col \"_Naive_Bayes_R\" ) tableData) | col <- [\"_SVM1_R\", \"_SVM2_R\", \"_SVM3_R\", \"_SVM_key_R_R\"]])",
       "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
     },
     {
@@ -132,7 +132,7 @@
     },
     {
       "type": "expression",
-      "expression": "unusuallyHighLow (overallComparison [compareCols col \"naive_bayes_r\" (findWithKey_ \"synd\" \"Hem.\" tableData) | col <- [\"svm1_r\", \"svm2_r\", \"svm3_r\", \"svmr_r\"]]) ",
+      "expression": "unusuallyHighLow (overallComparison [compareCols col \"_Naive_Bayes_R\" (findWithKey_ \"_Synd\" \"Hem.\" tableData) | col <- [\"_SVM1_R\", \"_SVM2_R\", \"_SVM3_R\", \"_SVM_key_R_R\"]]) ",
       "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
     },
     {

@@ -1,13 +1,13 @@
 [
   {
     "_Model": "LSTM",
-    "_Time_s": $time_lstm$,
+    "_Time_s": 67,
     "_Acc": 80.72,
     "_num_Param": 5977
   },
   {
     "_Model": "BiLSTM",
-    "_Time_s": $time_bilstm$,
+    "_Time_s": 106,
     "_Acc": 81.73,
     "_num_Param": 7059
   },
@@ -31,15 +31,15 @@
   },
   {
     "_Model": "S-LSTM",
-    "_Time_s": $time_slstm$,
+    "_Time_s": 65,
     "_Acc": 82.64,
     "_num_Param": 8768
   },
   {
     "_Model": "CNN",
-    "_Time_s": $time_cnn$,
+    "_Time_s": 34,
     "_Acc": 80.35,
-    "_num_Param": $param_cnn$
+    "_num_Param": 5637
   },
   {
     "_Model": "2 stacked CNN",
@@ -50,7 +50,7 @@
   {
     "_Model": "3 stacked CNN",
     "_Time_s": 47,
-    "_Acc": $acc_3cnn$,
+    "_Acc": 81.46,
     "_num_Param": 5808
   },
   {
@@ -86,7 +86,7 @@
   {
     "_Model": "S-LSTM+Attention",
     "_Time_s": 87,
-    "_Acc": $acc_slstm_attention$,
+    "_Acc": 83.07,
     "_num_Param": 8858
   }
 ]

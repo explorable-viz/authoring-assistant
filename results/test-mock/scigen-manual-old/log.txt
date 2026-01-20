@@ -21,19 +21,8 @@ INFO: {
 INFO: ****************************************
 INFO: Validating test cases in scigen-manual-old
 INFO: ****************************************
-INFO: [1 of 4] Loading testCases/scigen-manual-old/1002.0773-11.json
-INFO: datasets/scigen/1002.0773-11.json
-INFO: Matched expression value: "mle"
-INFO: [2 of 4] Loading testCases/scigen-manual-old/1003.0206-8.json
-INFO: datasets/scigen/1003.0206-8.json
-INFO: Matched expression value: 1.0
-INFO: [3 of 4] Loading testCases/scigen-manual-old/1807.07279v3-23.json
-INFO: datasets/scigen_manual_old/1807.07279v3-23.json
-INFO: Matched expression value: 13
-INFO: Matched expression value: "outperformed"
-INFO: Matched expression value: "unusually high"
-INFO: [4 of 4] Loading testCases/scigen-manual-old/1110.3094.json
-INFO: datasets/scigen_manual_old/1110.3094.json
+INFO: [1 of 2] Loading testCases/scigen-manual-old/1110.3094-5.json
+INFO: datasets/scigen/1110.3094-5.json
 INFO: Matched expression value: "outperformed"
 INFO: Matched expression value: "better"
 INFO: Matched expression value: "better"
@@ -41,37 +30,21 @@ INFO: Matched expression value: 82
 INFO: Matched expression value: 93.8
 INFO: Matched expression value: 83.3
 INFO: Matched expression value: 99
-INFO: Matched expression value: 43.8
+INFO: Matched expression value: 58.3
 INFO: Matched expression value: 96.2
 INFO: Matched expression value: 74.7
 INFO: Matched expression value: 90.3
 INFO: Matched expression value: "a reduced"
 INFO: Matched expression value: "better"
 INFO: Matched expression value: "unusually low"
+INFO: [2 of 2] Loading testCases/scigen-manual-old/1807.07279v3-23.json
+INFO: datasets/scigen_manual_old/1807.07279v3-23.json
+INFO: Matched expression value: 13
+INFO: Matched expression value: "outperformed"
+INFO: Matched expression value: "unusually high"
 INFO: ****************************************
 INFO: Validated test cases in scigen-manual-old
 INFO: ****************************************
-INFO: Mismatched expression value: "dummy" (expected "mle")
-INFO: Mismatched expression value: "dummy" (expected "mle")
-INFO: [Problem 1 of 1] Expression validation failed after 2 attempts
-INFO: Generating website/authoring-assistant/scigen-manual-old/1002.0773-11/index.html
-INFO: [Run 1 of 1][Test case 1 of 4] 0 of 1 responses correct
-INFO: Mismatched expression value: "dummy" (expected 1.0)
-INFO: Mismatched expression value: "dummy" (expected 1.0)
-INFO: [Problem 1 of 1] Expression validation failed after 2 attempts
-INFO: Generating website/authoring-assistant/scigen-manual-old/1003.0206-8/index.html
-INFO: [Run 1 of 1][Test case 2 of 4] 0 of 1 responses correct
-INFO: Mismatched expression value: "dummy" (expected 13)
-INFO: Mismatched expression value: "dummy" (expected 13)
-INFO: [Problem 1 of 3] Expression validation failed after 2 attempts
-INFO: Mismatched expression value: "dummy" (expected "outperformed")
-INFO: Mismatched expression value: "dummy" (expected "outperformed")
-INFO: [Problem 2 of 3] Expression validation failed after 2 attempts
-INFO: Mismatched expression value: "dummy" (expected "unusually high")
-INFO: Mismatched expression value: "dummy" (expected "unusually high")
-INFO: [Problem 3 of 3] Expression validation failed after 2 attempts
-INFO: Generating website/authoring-assistant/scigen-manual-old/1807.07279v3-23/index.html
-INFO: [Run 1 of 1][Test case 3 of 4] 0 of 3 responses correct
 INFO: Mismatched expression value: "dummy" (expected "outperformed")
 INFO: Mismatched expression value: "dummy" (expected "outperformed")
 INFO: [Problem 1 of 14] Expression validation failed after 2 attempts
@@ -93,8 +66,8 @@ INFO: [Problem 6 of 14] Expression validation failed after 2 attempts
 INFO: Mismatched expression value: "dummy" (expected 99)
 INFO: Mismatched expression value: "dummy" (expected 99)
 INFO: [Problem 7 of 14] Expression validation failed after 2 attempts
-INFO: Mismatched expression value: "dummy" (expected 43.8)
-INFO: Mismatched expression value: "dummy" (expected 43.8)
+INFO: Mismatched expression value: "dummy" (expected 58.3)
+INFO: Mismatched expression value: "dummy" (expected 58.3)
 INFO: [Problem 8 of 14] Expression validation failed after 2 attempts
 INFO: Mismatched expression value: "dummy" (expected 96.2)
 INFO: Mismatched expression value: "dummy" (expected 96.2)
@@ -114,5 +87,16 @@ INFO: [Problem 13 of 14] Expression validation failed after 2 attempts
 INFO: Mismatched expression value: "dummy" (expected "unusually low")
 INFO: Mismatched expression value: "dummy" (expected "unusually low")
 INFO: [Problem 14 of 14] Expression validation failed after 2 attempts
-INFO: Generating website/authoring-assistant/scigen-manual-old/1110.3094/index.html
-INFO: [Run 1 of 1][Test case 4 of 4] 0 of 14 responses correct
+INFO: Generating website/authoring-assistant/scigen-manual-old/1110.3094-5/index.html
+INFO: [Run 1 of 1][Test case 1 of 2] 0 of 14 responses correct
+INFO: Mismatched expression value: "dummy" (expected 13)
+INFO: Mismatched expression value: "dummy" (expected 13)
+INFO: [Problem 1 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "outperformed")
+INFO: Mismatched expression value: "dummy" (expected "outperformed")
+INFO: [Problem 2 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "unusually high")
+INFO: Mismatched expression value: "dummy" (expected "unusually high")
+INFO: [Problem 3 of 3] Expression validation failed after 2 attempts
+INFO: Generating website/authoring-assistant/scigen-manual-old/1807.07279v3-23/index.html
+INFO: [Run 1 of 1][Test case 2 of 2] 0 of 3 responses correct

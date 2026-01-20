@@ -1,20 +1,18 @@
 run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
-0;"1002.0773-11";1;"dummy";0;"[Data Retrieval]";0;2;0;0
-0;"1003.0206-8";1;"dummy";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1110.3094-5";1;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0
+0;"1110.3094-5";2;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0
+0;"1110.3094-5";3;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0
+0;"1110.3094-5";4;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
+0;"1110.3094-5";5;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
+0;"1110.3094-5";6;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
+0;"1110.3094-5";7;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
+0;"1110.3094-5";8;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
+0;"1110.3094-5";9;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
+0;"1110.3094-5";10;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
+0;"1110.3094-5";11;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
+0;"1110.3094-5";12;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0
+0;"1110.3094-5";13;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0
+0;"1110.3094-5";14;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0
 0;"1807.07279v3-23";1;"dummy";0;"[Sum]";0;2;0;0
-0;"1807.07279v3-23";2;"dummy";0;"[Comparison,Data Retrieval,Generalised Quantifier]";0;2;0;0
-0;"1807.07279v3-23";3;"dummy";0;"[Comparison,Data Retrieval,Generalised Quantifier]";0;2;0;0
-0;"1110.3094";1;"dummy";0;"[Comparison,Data Retrieval,Generalised Quantifier]";0;2;0;0
-0;"1110.3094";2;"dummy";0;"[Comparison,Data Retrieval,Generalised Quantifier]";0;2;0;0
-0;"1110.3094";3;"dummy";0;"[Comparison,Data Retrieval,Generalised Quantifier]";0;2;0;0
-0;"1110.3094";4;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
-0;"1110.3094";5;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
-0;"1110.3094";6;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
-0;"1110.3094";7;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
-0;"1110.3094";8;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
-0;"1110.3094";9;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
-0;"1110.3094";10;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
-0;"1110.3094";11;"dummy";0;"[Data Retrieval,Min/Max]";0;2;0;0
-0;"1110.3094";12;"dummy";0;"[Comparison,Data Retrieval,Generalised Quantifier]";0;2;0;0
-0;"1110.3094";13;"dummy";0;"[Comparison,Data Retrieval,Generalised Quantifier]";0;2;0;0
-0;"1110.3094";14;"dummy";0;"[Comparison,Data Retrieval,Generalised Quantifier]";0;2;0;0
+0;"1807.07279v3-23";2;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0
+0;"1807.07279v3-23";3;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0

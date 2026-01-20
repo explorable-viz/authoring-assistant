@@ -62,60 +62,11 @@ public class PromptList extends ArrayList<Prompt> {
             Prompt p = (Prompt)this.get(i);
             JSONObject message = new JSONObject();
             message.put("role", p.getRole());
-            
-            // Try to parse content as JSON, if it fails keep it as string
-            String content = p.getContent();
-            try {
-                // Try parsing as JSONObject first
-                JSONObject jsonContent = new JSONObject(content);
-                // Recursively parse nested JSON strings in datasets
-                if (jsonContent.has("datasets")) {
-                    JSONObject datasets = jsonContent.getJSONObject("datasets");
-                    JSONObject parsedDatasets = new JSONObject();
-                    for (String key : datasets.keySet()) {
-                        String datasetValue = datasets.getString(key);
-                        try {
-                            // Try to parse the dataset value as JSON
-                            Object parsedValue = new JSONArray(datasetValue);
-                            parsedDatasets.put(key, parsedValue);
-                        } catch (Exception ex) {
-                            try {
-                                Object parsedValue = new JSONObject(datasetValue);
-                                parsedDatasets.put(key, parsedValue);
-                            } catch (Exception ex2) {
-                                // Keep as string if not valid JSON
-                                parsedDatasets.put(key, datasetValue);
-                            }
-                        }
-                    }
-                    jsonContent.put("datasets", parsedDatasets);
-                }
-                message.put("content", jsonContent);
-            } catch (Exception e1) {
-                try {
-                    // Try parsing as JSONArray
-                    JSONArray jsonContent = new JSONArray(content);
-                    message.put("content", jsonContent);
-                } catch (Exception e2) {
-                    // Not valid JSON, keep as string
-                    message.put("content", content);
-                }
-            }
-            
+            message.put("content", p.getContent());
             messages.put(message);
         }
 
-        // Use Jackson for proper nested indentation
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.enable(SerializationFeature.INDENT_OUTPUT);
-            Object json = mapper.readValue(messages.toString(), Object.class);
-            String prettyJson = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
-            file_put_contents(filename, prettyJson);
-        } catch (Exception e) {
-            // Fallback to org.json if Jackson fails
-            file_put_contents(filename, messages.toString(2));
-        }
+        file_put_contents(filename, messages.toString(2));
     }
 
     public void importFromJson(String filename) throws IOException {

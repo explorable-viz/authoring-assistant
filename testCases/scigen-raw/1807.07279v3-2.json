@@ -1,0 +1,18 @@
+{
+  "datasets": [
+    "datasets/scigen/1807.07279v3-2.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1807_07279v3_2"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "The correlation scores for 13 different similarity test sets and their averages are reported in Table VI. We observe that, let alone a reduction in performance, the obtained scores indicate an almost uniform improvement in the correlation values for the proposed algorithm, outperforming all the alternatives except Word2Vec baseline on average. Although Word2Sense performed slightly better on some of the test sets, it should be noted that it is trained on a significantly larger corpus. Categories from Roget's thesaurus are groupings of words that are similar in some sense which the original embedding algorithm may fail to capture. These test results signify that the semantic information injected into the algorithm by the additional cost term is significant enough to result in a measurable improvement. It should also be noted that scores obtained by SPINE is unacceptably low on almost all tests indicating that it has achieved its interpretability performance at the cost of losing its semantic functions."
+    }
+  ]
+}

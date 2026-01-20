@@ -1,0 +1,18 @@
+{
+  "datasets": [
+    "datasets/scigen/1807.07279v3-4.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1807_07279v3_4"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "Classification accuracies are presented in Table IX. The proposed method outperforms the original embeddings and performs on par with the SOV. Pretrained Word2Sense embeddings outperform our method, however it has the advantage of training on a larger corpus. This result along with the intrinsic evaluations show that the proposed imparting method can significantly improve interpretability without a drop in performance."
+    }
+  ]
+}

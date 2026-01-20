@@ -1,0 +1,57 @@
+[
+  {
+    "iteration": "mle",
+    "_Method_A": 28.3,
+    "_Method_C": 28.3
+  },
+  {
+    "iteration": 10,
+    "_Method_A": 17.3,
+    "_Method_C": 15.1
+  },
+  {
+    "iteration": 20,
+    "_Method_A": 14.7,
+    "_Method_C": 11.0
+  },
+  {
+    "iteration": 30,
+    "_Method_A": 13.3,
+    "_Method_C": 9.1
+  },
+  {
+    "iteration": 40,
+    "_Method_A": 12.8,
+    "_Method_C": 8.1
+  },
+  {
+    "iteration": 50,
+    "_Method_A": 12.7,
+    "_Method_C": 7.7
+  },
+  {
+    "iteration": 60,
+    "_Method_A": 12.6,
+    "_Method_C": 7.3
+  },
+  {
+    "iteration": 70,
+    "_Method_A": 12.4,
+    "_Method_C": 7.0
+  },
+  {
+    "iteration": 80,
+    "_Method_A": 12.4,
+    "_Method_C": 6.8
+  },
+  {
+    "iteration": 90,
+    "_Method_A": 12.3,
+    "_Method_C": 6.6
+  },
+  {
+    "iteration": 100,
+    "_Method_A": 12.2,
+    "_Method_C": 6.4
+  }
+]

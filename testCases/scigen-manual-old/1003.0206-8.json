@@ -1,15 +1,8 @@
 {
-  "datasets": [ "datasets/scigen_manual_old/1003.0206.json" ],
-  "imports": ["scigen", "util", "datasets/scigen_manual_old/_1003_0206"],
+  "datasets": [ "datasets/scigen/1003.0206-8.json" ],
+  "imports": [ "scigen", "util", "datasets/scigen/_1003_0206_8" ],
   "variables": {},
-  "testing-variables": {
-    "sim_errors_39": [16, 16, 16, 16, 16],
-    "sim_errors_13": [49, 49, 49, 49, 49],
-    "resamp_errors_39": [52, 52, 52, 52, 52],
-    "resamp_errors_13": [133, 133, 133, 133, 133],
-    "sim_factor": [3.06, 3.06, 3.06, 3.06, 3.06],
-    "resamp_factor": [2.56, 2.56, 2.56, 2.56, 2.56]
-  },
+  "testing-variables": {},
   "paragraph": [
     {
       "type": "literal",
@@ -17,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "a.number_of_errors_13_features / a.number_of_errors_39_features",
+      "expression": "a._Number_of_errors_13_features / a._Number_of_errors_13_features",
       "categories": ["data-retrieval", "data-retrieval", "comparison"]
     },
     {

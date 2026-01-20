@@ -1,0 +1,68 @@
+[
+  {
+    "pass": 0,
+    "no_scale": 0.84,
+    "scale_=1_16": 4.58,
+    "three_scales": 32.4
+  },
+  {
+    "pass": 10,
+    "no_scale": 0.84,
+    "scale_=1_16": 2.6,
+    "three_scales": 3.81
+  },
+  {
+    "pass": 20,
+    "no_scale": 0.84,
+    "scale_=1_16": 2.04,
+    "three_scales": 1.96
+  },
+  {
+    "pass": 30,
+    "no_scale": 0.84,
+    "scale_=1_16": 1.77,
+    "three_scales": 1.41
+  },
+  {
+    "pass": 40,
+    "no_scale": 0.84,
+    "scale_=1_16": 1.61,
+    "three_scales": 1.25
+  },
+  {
+    "pass": 50,
+    "no_scale": 0.84,
+    "scale_=1_16": 1.47,
+    "three_scales": 1.16
+  },
+  {
+    "pass": 60,
+    "no_scale": 0.84,
+    "scale_=1_16": 1.38,
+    "three_scales": 1.07
+  },
+  {
+    "pass": 70,
+    "no_scale": 0.84,
+    "scale_=1_16": 1.31,
+    "three_scales": 1.02
+  },
+  {
+    "pass": 80,
+    "no_scale": 0.84,
+    "scale_=1_16": 1.25,
+    "three_scales": 0.99
+  },
+  {
+    "pass": 90,
+    "no_scale": 0.84,
+    "scale_=1_16": 1.2,
+    "three_scales": 0.96
+  },
+  {
+    "pass": 100,
+    "no_scale": 0.84,
+    "scale_=1_16": 1.16,
+    "three_scales": 0.93
+  }
+]

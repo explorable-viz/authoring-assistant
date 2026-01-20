@@ -24,9 +24,9 @@ INFO: ****************************************
 INFO: [1 of 4] Loading testCases/scigen-manual-old/1002.0773-11.json
 INFO: datasets/scigen/1002.0773-11.json
 INFO: Matched expression value: "mle"
-INFO: [2 of 4] Loading testCases/scigen-manual-old/1003.0206.json
-INFO: datasets/scigen_manual_old/1003.0206.json
-INFO: Matched expression value: 3.0625
+INFO: [2 of 4] Loading testCases/scigen-manual-old/1003.0206-8.json
+INFO: datasets/scigen/1003.0206-8.json
+INFO: Matched expression value: 1.0
 INFO: [3 of 4] Loading testCases/scigen-manual-old/1807.07279v3-23.json
 INFO: datasets/scigen_manual_old/1807.07279v3-23.json
 INFO: Matched expression value: 13
@@ -56,10 +56,10 @@ INFO: Mismatched expression value: "dummy" (expected "mle")
 INFO: [Problem 1 of 1] Expression validation failed after 2 attempts
 INFO: Generating website/authoring-assistant/scigen-manual-old/1002.0773-11/index.html
 INFO: [Run 1 of 1][Test case 1 of 4] 0 of 1 responses correct
-INFO: Mismatched expression value: "dummy" (expected 3.0625)
-INFO: Mismatched expression value: "dummy" (expected 3.0625)
+INFO: Mismatched expression value: "dummy" (expected 1.0)
+INFO: Mismatched expression value: "dummy" (expected 1.0)
 INFO: [Problem 1 of 1] Expression validation failed after 2 attempts
-INFO: Generating website/authoring-assistant/scigen-manual-old/1003.0206/index.html
+INFO: Generating website/authoring-assistant/scigen-manual-old/1003.0206-8/index.html
 INFO: [Run 1 of 1][Test case 2 of 4] 0 of 1 responses correct
 INFO: Mismatched expression value: "dummy" (expected 13)
 INFO: Mismatched expression value: "dummy" (expected 13)

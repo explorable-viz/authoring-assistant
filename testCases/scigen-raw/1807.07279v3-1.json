@@ -1,0 +1,18 @@
+{
+  "datasets": [
+    "datasets/scigen/1807.07279v3-1.json"
+  ],
+  "imports": [
+    "scigen",
+    "util",
+    "datasets/scigen/_1807_07279v3_1"
+  ],
+  "variables": {},
+  "testing-variables": {},
+  "paragraph": [
+    {
+      "type": "literal",
+      "value": "We apply the test on five participants. Results tabulated at Table V shows that our proposed method significantly improves the interpretability by increasing the average true answer percentage from ∼ 28% for baseline to ∼ 71% for our method."
+    }
+  ]
+}

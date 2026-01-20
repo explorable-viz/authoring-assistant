@@ -1,0 +1,142 @@
+[
+  {
+    "_Dataset_EN": "WS-353-ALL",
+    "_GloVe": 0.612,
+    "_Word2Vec": 0.7156,
+    "_OIWE_IPG": 0.634,
+    "_SOV": 0.622,
+    "_SPINE": 0.173,
+    "_Word2Sense": 0.69,
+    "_Proposed": 0.657
+  },
+  {
+    "_Dataset_EN": "SIMLEX-999",
+    "_GloVe": 0.359,
+    "_Word2Vec": 0.3939,
+    "_OIWE_IPG": 0.295,
+    "_SOV": 0.355,
+    "_SPINE": 0.09,
+    "_Word2Sense": 0.38,
+    "_Proposed": 0.381
+  },
+  {
+    "_Dataset_EN": "VERB-143",
+    "_GloVe": 0.326,
+    "_Word2Vec": 0.443,
+    "_OIWE_IPG": 0.255,
+    "_SOV": 0.271,
+    "_SPINE": 0.293,
+    "_Word2Sense": 0.271,
+    "_Proposed": 0.348
+  },
+  {
+    "_Dataset_EN": "SimVerb-3500",
+    "_GloVe": 0.193,
+    "_Word2Vec": 0.2856,
+    "_OIWE_IPG": 0.184,
+    "_SOV": 0.197,
+    "_SPINE": 0.035,
+    "_Word2Sense": 0.234,
+    "_Proposed": 0.245
+  },
+  {
+    "_Dataset_EN": "WS-353-REL",
+    "_GloVe": 0.578,
+    "_Word2Vec": 0.6457,
+    "_OIWE_IPG": 0.595,
+    "_SOV": 0.578,
+    "_SPINE": 0.134,
+    "_Word2Sense": 0.695,
+    "_Proposed": 0.619
+  },
+  {
+    "_Dataset_EN": "RW-STANF.",
+    "_GloVe": 0.378,
+    "_Word2Vec": 0.4858,
+    "_OIWE_IPG": 0.316,
+    "_SOV": 0.373,
+    "_SPINE": 0.122,
+    "_Word2Sense": 0.39,
+    "_Proposed": 0.382
+  },
+  {
+    "_Dataset_EN": "YP-130",
+    "_GloVe": 0.524,
+    "_Word2Vec": 0.5211,
+    "_OIWE_IPG": 0.353,
+    "_SOV": 0.482,
+    "_SPINE": 0.169,
+    "_Word2Sense": 0.42,
+    "_Proposed": 0.589
+  },
+  {
+    "_Dataset_EN": "MEN-TR-3k",
+    "_GloVe": 0.71,
+    "_Word2Vec": 0.7528,
+    "_OIWE_IPG": 0.684,
+    "_SOV": 0.696,
+    "_SPINE": 0.298,
+    "_Word2Sense": 0.769,
+    "_Proposed": 0.725
+  },
+  {
+    "_Dataset_EN": "RG-65",
+    "_GloVe": 0.768,
+    "_Word2Vec": 0.8051,
+    "_OIWE_IPG": 0.736,
+    "_SOV": 0.732,
+    "_SPINE": 0.338,
+    "_Word2Sense": 0.761,
+    "_Proposed": 0.774
+  },
+  {
+    "_Dataset_EN": "MTurk-771",
+    "_GloVe": 0.65,
+    "_Word2Vec": 0.6712,
+    "_OIWE_IPG": 0.593,
+    "_SOV": 0.623,
+    "_SPINE": 0.199,
+    "_Word2Sense": 0.665,
+    "_Proposed": 0.671
+  },
+  {
+    "_Dataset_EN": "WS-353-SIM",
+    "_GloVe": 0.682,
+    "_Word2Vec": 0.7883,
+    "_OIWE_IPG": 0.713,
+    "_SOV": 0.702,
+    "_SPINE": 0.22,
+    "_Word2Sense": 0.72,
+    "_Proposed": 0.72
+  },
+  {
+    "_Dataset_EN": "MC-30",
+    "_GloVe": 0.749,
+    "_Word2Vec": 0.8112,
+    "_OIWE_IPG": 0.799,
+    "_SOV": 0.726,
+    "_SPINE": 0.33,
+    "_Word2Sense": 0.735,
+    "_Proposed": 0.776
+  },
+  {
+    "_Dataset_EN": "MTurk-287",
+    "_GloVe": 0.649,
+    "_Word2Vec": 0.6645,
+    "_OIWE_IPG": 0.591,
+    "_SOV": 0.631,
+    "_SPINE": 0.295,
+    "_Word2Sense": 0.674,
+    "_Proposed": 0.634
+  },
+  {
+    "_Dataset_EN": "Average",
+    "_GloVe": 0.552,
+    "_Word2Vec": 0.6141,
+    "_OIWE_IPG": 0.519,
+    "_SOV": 0.538,
+    "_SPINE": 0.207,
+    "_Word2Sense": 0.57,
+    "_Proposed": 0.579
+  }
+]

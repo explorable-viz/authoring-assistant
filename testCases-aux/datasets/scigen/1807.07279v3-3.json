@@ -1,0 +1,30 @@
+[
+  {
+    "_Questions_Subset": "All",
+    "_num_of_Questions_Seen": 8783,
+    "_GloVe": 78.94,
+    "_Word2Vec": 81.03,
+    "_Proposed": 79.96
+  },
+  {
+    "_Questions_Subset": "At least one",
+    "_num_of_Questions_Seen": 1635,
+    "_GloVe": 67.58,
+    "_Word2Vec": 70.89,
+    "_Proposed": 67.89
+  },
+  {
+    "_Questions_Subset": "concept word",
+    "_num_of_Questions_Seen": 1635,
+    "_GloVe": 67.58,
+    "_Word2Vec": 70.89,
+    "_Proposed": 67.89
+  },
+  {
+    "_Questions_Subset": "All concept words",
+    "_num_of_Questions_Seen": 110,
+    "_GloVe": 77.27,
+    "_Word2Vec": 89.09,
+    "_Proposed": 83.64
+  }
+]

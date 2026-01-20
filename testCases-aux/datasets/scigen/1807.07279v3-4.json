@@ -1,0 +1,11 @@
+[
+  {
+    "_GloVe": 77.34,
+    "_Word2Vec": 77.91,
+    "_OIWE_IPG": 74.27,
+    "_SOV": 78.43,
+    "_SPINE": 74.13,
+    "_Word2Sense": 81.21,
+    "_Proposed": 78.26
+  }
+]

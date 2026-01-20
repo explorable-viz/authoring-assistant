@@ -1,6 +1,6 @@
 {
   "datasets": [ "datasets/scigen/1807.07279v3-23.json" ],
-  "imports": ["util", "scigen", "datasets/_1807_07279v3_23"],
+  "imports": [ "util", "scigen", "datasets/scigen/_1807_07279v3_23" ],
   "variables": {},
   "testing-variables": {},
   "paragraph": [
@@ -10,7 +10,7 @@
     },
     {
       "type": "expression",
-      "expression": "length (filter (fun x -> x.dataset /= \"Average\") tableData)",
+      "expression": "length (filter (fun x -> x._Dataset_EN /= \"Average\") tableData)",
       "categories": ["sum"]
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "type": "expression",
-      "expression": "underOverPerformed (overallComparison [ compareCols \"proposed\" col (findWithKey_ \"dataset\" \"Average\" tableData) | col <- [\"glo_ve\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\"]])",
+      "expression": "underOverPerformed (overallComparison [ compareCols \"_Proposed\" col (findWithKey_ \"_Dataset_EN\" \"Average\" tableData) | col <- [\"_GloVe\", \"_OIWE_IPG\", \"_SOV\", \"_SPINE\", \"_Word2Sense\"]])",
       "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "type": "expression",
-      "expression": "let [avg, dev] = stats [(findWithKey_ \"dataset\" \"Average\" tableData).[col] | col <- [\"glo_ve\", \"word_2_vec\", \"oiwe_ipg\", \"sov\", \"spine\", \"word_2_sense\", \"proposed\"]] in unusuallyHighLow (overallComparison ( map (fun val -> distributionOutlier val avg dev 2) (getColumn \"spine\" tableData)))",
+      "expression": "let [avg, dev] = stats [(findWithKey_ \"_Dataset_EN\" \"Average\" tableData).[col] | col <- [\"_GloVe\", \"_Word2Vec\", \"_OIWE_IPG\", \"_SOV\", \"_SPINE\", \"_Word2Sense\", \"_Proposed\"]] in unusuallyHighLow (overallComparison ( map (fun val -> distributionOutlier val avg dev 2) (getColumn \"_SPINE\" tableData)))",
       "categories": ["generalised-quantifier", "comparison", "data-retrieval"]
     },
     {

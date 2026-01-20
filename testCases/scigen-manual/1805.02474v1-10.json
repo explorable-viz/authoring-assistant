@@ -1,9 +1,9 @@
 {
-  "datasets": [ "datasets/scigen-counterfactual/1805.02474v1-10.json" ],
+  "datasets": [ "datasets/scigen/1805.02474v1-10.json" ],
   "imports": [
     "scigen",
     "util",
-    "datasets/scigen-counterfactual/_1805_02474v1_10"
+    "datasets/scigen/_1805_02474v1_10"
   ],
   "testing-variables": {
     "time_lstm": [

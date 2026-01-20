@@ -1,6 +1,6 @@
 {
-  "datasets": [ "datasets/scigen/1003.0206-8.json" ],
-  "imports": [ "scigen", "util", "datasets/scigen/_1003_0206_8" ],
+  "datasets": [ "datasets/scigen/1003.0206-7624.json" ],
+  "imports": [ "scigen", "util", "datasets/scigen/_1003_0206_7624" ],
   "variables": {},
   "testing-variables": {},
   "paragraph": [

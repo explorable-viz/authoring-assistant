@@ -23,3 +23,20 @@ INFO: Validating test cases in scigen-manual-old
 INFO: ****************************************
 INFO: [1 of 1] Loading testCases/scigen-manual-old/1807.07279v3-23.json
 INFO: datasets/scigen/1807.07279v3-23.json
+INFO: Matched expression value: 13
+INFO: Matched expression value: "outperformed"
+INFO: Matched expression value: "unusually high"
+INFO: ****************************************
+INFO: Validated test cases in scigen-manual-old
+INFO: ****************************************
+INFO: Mismatched expression value: "dummy" (expected 13)
+INFO: Mismatched expression value: "dummy" (expected 13)
+INFO: [Problem 1 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "outperformed")
+INFO: Mismatched expression value: "dummy" (expected "outperformed")
+INFO: [Problem 2 of 3] Expression validation failed after 2 attempts
+INFO: Mismatched expression value: "dummy" (expected "unusually high")
+INFO: Mismatched expression value: "dummy" (expected "unusually high")
+INFO: [Problem 3 of 3] Expression validation failed after 2 attempts
+INFO: Generating website/authoring-assistant/scigen-manual-old/1807.07279v3-23/index.html
+INFO: [Run 1 of 1][Test case 1 of 1] 0 of 3 responses correct

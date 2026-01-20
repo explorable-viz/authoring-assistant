@@ -213,7 +213,7 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir):
 if __name__ == "__main__":
     # Run from root of repo
     main(
-      raw_file=Path("script/scigen-gen/raw/scigen.json"),
+      raw_file=Path("script/scigen-gen/raw/dataset/test/test-CL.json"),
       tests_dir=Path("testCases/scigen-raw"),
       tests_aux_dir=Path("testCases-aux"),
       datasets_dir=Path("datasets/scigen")

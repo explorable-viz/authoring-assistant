@@ -56,7 +56,7 @@ public class PromptList extends ArrayList<Prompt> {
         JSONArray messages = new JSONArray();
 
         for(int i = 0; i < this.size(); ++i) {
-            Prompt p = (Prompt)this.get(i);
+            Prompt p = this.get(i);
             JSONObject message = new JSONObject();
             message.put("role", p.getRole());
             message.put("content", p.getContent());

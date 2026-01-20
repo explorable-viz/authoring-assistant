@@ -1,6 +1,6 @@
 [
   {
-    "model": "Cap.",
+    "_Model": "Cap.",
     "amh": "",
     "ara": "",
     "ben": "",
@@ -17,7 +17,7 @@
     "avg": ""
   },
   {
-    "model": "SRILM",
+    "_Model": "SRILM",
     "amh": 43.9,
     "ara": 30.9,
     "ben": 59.8,
@@ -34,7 +34,7 @@
     "avg": 53.1
   },
   {
-    "model": "Skip-gram",
+    "_Model": "Skip-gram",
     "amh": 25.9,
     "ara": 10.5,
     "ben": 20.4,
@@ -51,7 +51,7 @@
     "avg": 28.9
   },
   {
-    "model": "CBOW",
+    "_Model": "CBOW",
     "amh": "",
     "ara": "",
     "ben": "",
@@ -68,7 +68,7 @@
     "avg": ""
   },
   {
-    "model": "BiLSTM",
+    "_Model": "BiLSTM",
     "amh": "",
     "ara": "",
     "ben": "",

@@ -1,38 +1,38 @@
 [
   {
-    "model": "SVM (original)",
-    "original_data_ρ": 0.5,
-    "original_data_rmse": 0.23,
-    "original_data_qwκ": 0.44,
-    "new_data_ρ": "–",
-    "new_data_rmse": "–",
-    "new_data_qwκ": "–"
+    "_Model": "SVM (original)",
+    "_Original_data_ρ": 0.5,
+    "_Original_data_rmse": 0.23,
+    "_Original_data_qwκ": 0.44,
+    "_New_data_ρ": "–",
+    "_New_data_rmse": "–",
+    "_New_data_qwκ": "–"
   },
   {
-    "model": "SVM (reproduced)",
-    "original_data_ρ": 0.49,
-    "original_data_rmse": 0.24,
-    "original_data_qwκ": 0.47,
-    "new_data_ρ": 0.5,
-    "new_data_rmse": 0.21,
-    "new_data_qwκ": 0.39
+    "_Model": "SVM (reproduced)",
+    "_Original_data_ρ": 0.49,
+    "_Original_data_rmse": 0.24,
+    "_Original_data_qwκ": 0.47,
+    "_New_data_ρ": 0.5,
+    "_New_data_rmse": 0.21,
+    "_New_data_qwκ": 0.39
   },
   {
-    "model": "MLP",
-    "original_data_ρ": 0.42,
-    "original_data_rmse": 0.25,
-    "original_data_qwκ": 0.31,
-    "new_data_ρ": 0.41,
-    "new_data_rmse": 0.22,
-    "new_data_qwκ": 0.25
+    "_Model": "MLP",
+    "_Original_data_ρ": 0.42,
+    "_Original_data_rmse": 0.25,
+    "_Original_data_qwκ": 0.31,
+    "_New_data_ρ": 0.41,
+    "_New_data_rmse": 0.22,
+    "_New_data_qwκ": 0.25
   },
   {
-    "model": "BiLSTM",
-    "original_data_ρ": 0.49,
-    "original_data_rmse": 0.24,
-    "original_data_qwκ": 0.35,
-    "new_data_ρ": 0.39,
-    "new_data_rmse": 0.24,
-    "new_data_qwκ": 0.27
+    "_Model": "BiLSTM",
+    "_Original_data_ρ": 0.49,
+    "_Original_data_rmse": 0.24,
+    "_Original_data_qwκ": 0.35,
+    "_New_data_ρ": 0.39,
+    "_New_data_rmse": 0.24,
+    "_New_data_qwκ": 0.27
   }
 ]

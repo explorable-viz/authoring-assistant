@@ -1,50 +1,50 @@
 [
   {
-    "model": "Ours + GloVe w/o augmentation",
-    "p": 47.6,
-    "r": 23.3,
-    "f1": 31.3
+    "_Model": "Ours + GloVe w/o augmentation",
+    "_P": 47.6,
+    "_R": 23.3,
+    "_F1": 31.3
   },
   {
-    "model": "Ours + ELMo w/o augmentation",
-    "p": 55.8,
-    "r": 27.7,
-    "f1": 37.0
+    "_Model": "Ours + ELMo w/o augmentation",
+    "_P": 55.8,
+    "_R": 27.7,
+    "_F1": 37.0
   },
   {
-    "model": "Ours + ELMo w augmentation",
-    "p": 55.5,
-    "r": 26.3,
-    "f1": 35.7
+    "_Model": "Ours + ELMo w augmentation",
+    "_P": 55.5,
+    "_R": 26.3,
+    "_F1": 35.7
   },
   {
-    "model": "Ours + ELMo w augmentation",
-    "p": 51.5,
-    "r": 33.0,
-    "f1": 40.2
+    "_Model": "Ours + ELMo w augmentation",
+    "_P": 51.5,
+    "_R": 33.0,
+    "_F1": 40.2
   },
   {
-    "model": "+ filter & relabel",
-    "p": "",
-    "r": "",
-    "f1": ""
+    "_Model": "+ filter & relabel",
+    "_P": "",
+    "_R": "",
+    "_F1": ""
   },
   {
-    "model": "BERT-Base, Uncased",
-    "p": 51.6,
-    "r": 33.0,
-    "f1": 40.2
+    "_Model": "BERT-Base, Uncased",
+    "_P": 51.6,
+    "_R": 33.0,
+    "_F1": 40.2
   },
   {
-    "model": "Choi et al. ( 2018 ) w augmentation",
-    "p": 47.1,
-    "r": 24.2,
-    "f1": 32.0
+    "_Model": "Choi et al. ( 2018 ) w augmentation",
+    "_P": 47.1,
+    "_R": 24.2,
+    "_F1": 32.0
   },
   {
-    "model": "LabelGCN Xiong et al. ( 2019 )",
-    "p": 50.3,
-    "r": 29.2,
-    "f1": 36.9
+    "_Model": "LabelGCN Xiong et al. ( 2019 )",
+    "_P": 50.3,
+    "_R": 29.2,
+    "_F1": 36.9
   }
 ]

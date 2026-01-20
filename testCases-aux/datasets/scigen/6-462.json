@@ -1,6 +1,6 @@
 [
   {
-    "eN": "DE",
-    "agent_≺_Cause_Instrument_Experiencer_≺_Pivot_≺_Theme_≺_Patient_≺_Material_Source_Asset_≺_Product_≺_Recipient_Beneficiary_Destination_Location_≺_Value_Stimulus_Topic_Result_Predicate_Goal_InitialLocation_Attribute_Extent": "Agent ≺ Experiencer ≺ Stimulus/Pivot ≺ Cause ≺ Theme ≺ Patient ≺ Topic ≺ Instrument ≺ Beneficiary/InitialLocation ≺ Result ≺ Product/Goal ≺ Destination/Attribute ≺ Recipient ≺ Value/Time/CoAgent/Locus/Manner/Source/Trajectory/Location/Duration/Path/Extent"
+    "_EN": "DE",
+    "_Agent_≺_Cause_Instrument_Experiencer_≺_Pivot_≺_Theme_≺_Patient_≺_Material_Source_Asset_≺_Product_≺_Recipient_Beneficiary_Destination_Location_≺_Value_Stimulus_Topic_Result_Predicate_Goal_InitialLocation_Attribute_Extent": "Agent ≺ Experiencer ≺ Stimulus/Pivot ≺ Cause ≺ Theme ≺ Patient ≺ Topic ≺ Instrument ≺ Beneficiary/InitialLocation ≺ Result ≺ Product/Goal ≺ Destination/Attribute ≺ Recipient ≺ Value/Time/CoAgent/Locus/Manner/Source/Trajectory/Location/Duration/Path/Extent"
   }
 ]

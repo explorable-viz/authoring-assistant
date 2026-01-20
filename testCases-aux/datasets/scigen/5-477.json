@@ -1,74 +1,74 @@
 [
   {
-    "split": "Val",
-    "nLI_Model": "Original",
-    "incor": 42.1,
-    "δ": "",
-    "↑": "",
-    "↓": ""
+    "_Split": "Val",
+    "_NLI_Model": "Original",
+    "_Incor": 42.1,
+    "_Δ": "",
+    "_↑": "",
+    "_↓": ""
   },
   {
-    "split": "Val",
-    "nLI_Model": "Random",
-    "incor": 50.7,
-    "δ": 8.6,
-    "↑": 16,
-    "↓": 26
+    "_Split": "Val",
+    "_NLI_Model": "Random",
+    "_Incor": 50.7,
+    "_Δ": 8.6,
+    "_↑": 16,
+    "_↓": 26
   },
   {
-    "split": "Val",
-    "nLI_Model": "DA",
-    "incor": 51.4,
-    "δ": 9.3,
-    "↑": 13,
-    "↓": 23
+    "_Split": "Val",
+    "_NLI_Model": "DA",
+    "_Incor": 51.4,
+    "_Δ": 9.3,
+    "_↑": 13,
+    "_↓": 23
   },
   {
-    "split": "Val",
-    "nLI_Model": "SSE",
-    "incor": 45.8,
-    "δ": 3.7,
-    "↑": 18,
-    "↓": 22
+    "_Split": "Val",
+    "_NLI_Model": "SSE",
+    "_Incor": 45.8,
+    "_Δ": 3.7,
+    "_↑": 18,
+    "_↓": 22
   },
   {
-    "split": "Val",
-    "nLI_Model": "ESIM",
-    "incor": 39.3,
-    "δ": -2.8,
-    "↑": 23,
-    "↓": 20
+    "_Split": "Val",
+    "_NLI_Model": "ESIM",
+    "_Incor": 39.3,
+    "_Δ": -2.8,
+    "_↑": 23,
+    "_↓": 20
   },
   {
-    "split": "Val",
-    "nLI_Model": "InferSent",
-    "incor": 38.3,
-    "δ": -3.8,
-    "↑": 24,
-    "↓": 20
+    "_Split": "Val",
+    "_NLI_Model": "InferSent",
+    "_Incor": 38.3,
+    "_Δ": -3.8,
+    "_↑": 24,
+    "_↓": 20
   },
   {
-    "split": "",
-    "nLI_Model": "BERT",
-    "incor": 28.0,
-    "δ": -14.1,
-    "↑": 25,
-    "↓": 10
+    "_Split": "",
+    "_NLI_Model": "BERT",
+    "_Incor": 28.0,
+    "_Δ": -14.1,
+    "_↑": 25,
+    "_↓": 10
   },
   {
-    "split": "Test",
-    "nLI_Model": "Original",
-    "incor": 26.0,
-    "δ": "",
-    "↑": "",
-    "↓": ""
+    "_Split": "Test",
+    "_NLI_Model": "Original",
+    "_Incor": 26.0,
+    "_Δ": "",
+    "_↑": "",
+    "_↓": ""
   },
   {
-    "split": "Test",
-    "nLI_Model": "ESIM",
-    "incor": 29.0,
-    "δ": 3.0,
-    "↑": 11,
-    "↓": 14
+    "_Split": "Test",
+    "_NLI_Model": "ESIM",
+    "_Incor": 29.0,
+    "_Δ": 3.0,
+    "_↑": 11,
+    "_↓": 14
   }
 ]

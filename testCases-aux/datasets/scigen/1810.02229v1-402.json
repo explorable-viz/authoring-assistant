@@ -1,32 +1,32 @@
 [
   {
-    "pOS": "Noun",
-    "training": 6710,
-    "dev": 111,
-    "test": 1499
+    "_POS": "Noun",
+    "_Training": 6710,
+    "_Dev": 111,
+    "_Test": 1499
   },
   {
-    "pOS": "Verb",
-    "training": 11269,
-    "dev": 193,
-    "test": 2426
+    "_POS": "Verb",
+    "_Training": 11269,
+    "_Dev": 193,
+    "_Test": 2426
   },
   {
-    "pOS": "Adjective",
-    "training": 610,
-    "dev": 9,
-    "test": 118
+    "_POS": "Adjective",
+    "_Training": 610,
+    "_Dev": 9,
+    "_Test": 118
   },
   {
-    "pOS": "Preposition",
-    "training": 146,
-    "dev": 1,
-    "test": 25
+    "_POS": "Preposition",
+    "_Training": 146,
+    "_Dev": 1,
+    "_Test": 25
   },
   {
-    "pOS": "Overall Event Tokens",
-    "training": 18735,
-    "dev": 314,
-    "test": 4068
+    "_POS": "Overall Event Tokens",
+    "_Training": 18735,
+    "_Dev": 314,
+    "_Test": 4068
   }
 ]

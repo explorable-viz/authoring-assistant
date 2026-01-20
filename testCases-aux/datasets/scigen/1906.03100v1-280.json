@@ -1,58 +1,58 @@
 [
   {
     "_1": "Ar⇒ En",
-    "model": "Vanilla",
-    "emb": 23600000.0,
-    "red": 0,
-    "bLEU": 28.36
+    "_Model": "Vanilla",
+    "_Emb": 23600000.0,
+    "_Red": 0,
+    "_BLEU": 28.36
   },
   {
     "_1": "Ar⇒ En",
-    "model": " Shared-private",
-    "emb": 11800000.0,
-    "red": 50,
-    "bLEU": 29.71
+    "_Model": " Shared-private",
+    "_Emb": 11800000.0,
+    "_Red": 50,
+    "_BLEU": 29.71
   },
   {
     "_1": "Ja⇒ En",
-    "model": "Vanilla",
-    "emb": 25600000.0,
-    "red": 0,
-    "bLEU": 10.94
+    "_Model": "Vanilla",
+    "_Emb": 25600000.0,
+    "_Red": 0,
+    "_BLEU": 10.94
   },
   {
     "_1": "Ja⇒ En",
-    "model": " Shared-private",
-    "emb": 13300000.0,
-    "red": 48.0,
-    "bLEU": 12.35
+    "_Model": " Shared-private",
+    "_Emb": 13300000.0,
+    "_Red": 48.0,
+    "_BLEU": 12.35
   },
   {
     "_1": "Ko⇒ En",
-    "model": "Vanilla",
-    "emb": 25100000.0,
-    "red": 0,
-    "bLEU": 16.48
+    "_Model": "Vanilla",
+    "_Emb": 25100000.0,
+    "_Red": 0,
+    "_BLEU": 16.48
   },
   {
     "_1": "Ko⇒ En",
-    "model": " Shared-private",
-    "emb": 13200000.0,
-    "red": 47.4,
-    "bLEU": 17.84
+    "_Model": " Shared-private",
+    "_Emb": 13200000.0,
+    "_Red": 47.4,
+    "_BLEU": 17.84
   },
   {
     "_1": "Zh⇒ En",
-    "model": "Vanilla",
-    "emb": 27400000.0,
-    "red": 0,
-    "bLEU": 19.36
+    "_Model": "Vanilla",
+    "_Emb": 27400000.0,
+    "_Red": 0,
+    "_BLEU": 19.36
   },
   {
     "_1": "Zh⇒ En",
-    "model": " Shared-private",
-    "emb": 13800000.0,
-    "red": 49.6,
-    "bLEU": 21.0
+    "_Model": " Shared-private",
+    "_Emb": 13800000.0,
+    "_Red": 49.6,
+    "_BLEU": 21.0
   }
 ]

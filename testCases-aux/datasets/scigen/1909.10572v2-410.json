@@ -1,23 +1,23 @@
 [
   {
     "_1": " RELU+  Residual",
-    "bLESS": 0.81,
-    "eVAL": 0.5,
-    "lEDS": 0.91,
-    "wBLESS": 0.98
+    "_BLESS": 0.81,
+    "_EVAL": 0.5,
+    "_LEDS": 0.91,
+    "_WBLESS": 0.98
   },
   {
     "_1": " RELU Only",
-    "bLESS": 0.73,
-    "eVAL": 0.49,
-    "lEDS": 0.82,
-    "wBLESS": 0.96
+    "_BLESS": 0.73,
+    "_EVAL": 0.49,
+    "_LEDS": 0.82,
+    "_WBLESS": 0.96
   },
   {
     "_1": " Tanh+  Residual",
-    "bLESS": 0.79,
-    "eVAL": 0.49,
-    "lEDS": 0.9,
-    "wBLESS": 0.98
+    "_BLESS": 0.79,
+    "_EVAL": 0.49,
+    "_LEDS": 0.9,
+    "_WBLESS": 0.98
   }
 ]

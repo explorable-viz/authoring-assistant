@@ -1,128 +1,128 @@
 [
   {
     "_1": "\\En → \\Es",
-    "sestorain_et_al_2018_PBSMT": 61.26,
-    "sestorain_et_al_2018_NMT_0": 47.51,
-    "sestorain_et_al_2018_Dual_0": 44.3,
-    "our_baselines_Basic": 55.15,
-    "our_baselines_Pivot": 55.15,
-    "agree": 54.3
+    "_Sestorain_et_al_2018_PBSMT": 61.26,
+    "_Sestorain_et_al_2018_NMT_0": 47.51,
+    "_Sestorain_et_al_2018_Dual_0": 44.3,
+    "_Our_baselines_Basic": 55.15,
+    "_Our_baselines_Pivot": 55.15,
+    "_Agree": 54.3
   },
   {
     "_1": "\\En → \\Fr",
-    "sestorain_et_al_2018_PBSMT": 50.09,
-    "sestorain_et_al_2018_NMT_0": 36.7,
-    "sestorain_et_al_2018_Dual_0": 34.34,
-    "our_baselines_Basic": 43.42,
-    "our_baselines_Pivot": 43.42,
-    "agree": 42.57
+    "_Sestorain_et_al_2018_PBSMT": 50.09,
+    "_Sestorain_et_al_2018_NMT_0": 36.7,
+    "_Sestorain_et_al_2018_Dual_0": 34.34,
+    "_Our_baselines_Basic": 43.42,
+    "_Our_baselines_Pivot": 43.42,
+    "_Agree": 42.57
   },
   {
     "_1": "\\En → \\Ru",
-    "sestorain_et_al_2018_PBSMT": 43.25,
-    "sestorain_et_al_2018_NMT_0": 30.45,
-    "sestorain_et_al_2018_Dual_0": 29.47,
-    "our_baselines_Basic": 36.26,
-    "our_baselines_Pivot": 36.26,
-    "agree": 35.89
+    "_Sestorain_et_al_2018_PBSMT": 43.25,
+    "_Sestorain_et_al_2018_NMT_0": 30.45,
+    "_Sestorain_et_al_2018_Dual_0": 29.47,
+    "_Our_baselines_Basic": 36.26,
+    "_Our_baselines_Pivot": 36.26,
+    "_Agree": 35.89
   },
   {
     "_1": "\\Es → \\En",
-    "sestorain_et_al_2018_PBSMT": 59.89,
-    "sestorain_et_al_2018_NMT_0": 48.56,
-    "sestorain_et_al_2018_Dual_0": 45.55,
-    "our_baselines_Basic": 54.35,
-    "our_baselines_Pivot": 54.35,
-    "agree": 54.33
+    "_Sestorain_et_al_2018_PBSMT": 59.89,
+    "_Sestorain_et_al_2018_NMT_0": 48.56,
+    "_Sestorain_et_al_2018_Dual_0": 45.55,
+    "_Our_baselines_Basic": 54.35,
+    "_Our_baselines_Pivot": 54.35,
+    "_Agree": 54.33
   },
   {
     "_1": "\\Fr → \\En",
-    "sestorain_et_al_2018_PBSMT": 52.22,
-    "sestorain_et_al_2018_NMT_0": 40.75,
-    "sestorain_et_al_2018_Dual_0": 37.75,
-    "our_baselines_Basic": 45.55,
-    "our_baselines_Pivot": 45.55,
-    "agree": 45.87
+    "_Sestorain_et_al_2018_PBSMT": 52.22,
+    "_Sestorain_et_al_2018_NMT_0": 40.75,
+    "_Sestorain_et_al_2018_Dual_0": 37.75,
+    "_Our_baselines_Basic": 45.55,
+    "_Our_baselines_Pivot": 45.55,
+    "_Agree": 45.87
   },
   {
     "_1": "\\Ru → \\En",
-    "sestorain_et_al_2018_PBSMT": 52.59,
-    "sestorain_et_al_2018_NMT_0": 39.35,
-    "sestorain_et_al_2018_Dual_0": 37.96,
-    "our_baselines_Basic": 45.52,
-    "our_baselines_Pivot": 45.52,
-    "agree": 44.67
+    "_Sestorain_et_al_2018_PBSMT": 52.59,
+    "_Sestorain_et_al_2018_NMT_0": 39.35,
+    "_Sestorain_et_al_2018_Dual_0": 37.96,
+    "_Our_baselines_Basic": 45.52,
+    "_Our_baselines_Pivot": 45.52,
+    "_Agree": 44.67
   },
   {
     "_1": "Supervised (avg.)",
-    "sestorain_et_al_2018_PBSMT": 53.22,
-    "sestorain_et_al_2018_NMT_0": 40.55,
-    "sestorain_et_al_2018_Dual_0": 36.74,
-    "our_baselines_Basic": 46.71,
-    "our_baselines_Pivot": 46.71,
-    "agree": 46.27
+    "_Sestorain_et_al_2018_PBSMT": 53.22,
+    "_Sestorain_et_al_2018_NMT_0": 40.55,
+    "_Sestorain_et_al_2018_Dual_0": 36.74,
+    "_Our_baselines_Basic": 46.71,
+    "_Our_baselines_Pivot": 46.71,
+    "_Agree": 46.27
   },
   {
     "_1": "\\Es → \\Fr",
-    "sestorain_et_al_2018_PBSMT": 52.44,
-    "sestorain_et_al_2018_NMT_0": 25.85,
-    "sestorain_et_al_2018_Dual_0": 34.51,
-    "our_baselines_Basic": 34.73,
-    "our_baselines_Pivot": 35.93,
-    "agree": 36.02
+    "_Sestorain_et_al_2018_PBSMT": 52.44,
+    "_Sestorain_et_al_2018_NMT_0": 25.85,
+    "_Sestorain_et_al_2018_Dual_0": 34.51,
+    "_Our_baselines_Basic": 34.73,
+    "_Our_baselines_Pivot": 35.93,
+    "_Agree": 36.02
   },
   {
     "_1": "\\Fr → \\Es",
-    "sestorain_et_al_2018_PBSMT": 49.79,
-    "sestorain_et_al_2018_NMT_0": 22.68,
-    "sestorain_et_al_2018_Dual_0": 37.71,
-    "our_baselines_Basic": 38.2,
-    "our_baselines_Pivot": 39.51,
-    "agree": 39.94
+    "_Sestorain_et_al_2018_PBSMT": 49.79,
+    "_Sestorain_et_al_2018_NMT_0": 22.68,
+    "_Sestorain_et_al_2018_Dual_0": 37.71,
+    "_Our_baselines_Basic": 38.2,
+    "_Our_baselines_Pivot": 39.51,
+    "_Agree": 39.94
   },
   {
     "_1": "\\Es → \\Ru",
-    "sestorain_et_al_2018_PBSMT": 39.69,
-    "sestorain_et_al_2018_NMT_0": 9.36,
-    "sestorain_et_al_2018_Dual_0": 24.55,
-    "our_baselines_Basic": 26.29,
-    "our_baselines_Pivot": 27.15,
-    "agree": 28.08
+    "_Sestorain_et_al_2018_PBSMT": 39.69,
+    "_Sestorain_et_al_2018_NMT_0": 9.36,
+    "_Sestorain_et_al_2018_Dual_0": 24.55,
+    "_Our_baselines_Basic": 26.29,
+    "_Our_baselines_Pivot": 27.15,
+    "_Agree": 28.08
   },
   {
     "_1": "\\Ru → \\Es",
-    "sestorain_et_al_2018_PBSMT": 49.61,
-    "sestorain_et_al_2018_NMT_0": 26.26,
-    "sestorain_et_al_2018_Dual_0": 33.23,
-    "our_baselines_Basic": 33.43,
-    "our_baselines_Pivot": 37.17,
-    "agree": 35.01
+    "_Sestorain_et_al_2018_PBSMT": 49.61,
+    "_Sestorain_et_al_2018_NMT_0": 26.26,
+    "_Sestorain_et_al_2018_Dual_0": 33.23,
+    "_Our_baselines_Basic": 33.43,
+    "_Our_baselines_Pivot": 37.17,
+    "_Agree": 35.01
   },
   {
     "_1": "\\Fr → \\Ru",
-    "sestorain_et_al_2018_PBSMT": 36.48,
-    "sestorain_et_al_2018_NMT_0": 9.35,
-    "sestorain_et_al_2018_Dual_0": 22.76,
-    "our_baselines_Basic": 23.88,
-    "our_baselines_Pivot": 24.99,
-    "agree": 25.13
+    "_Sestorain_et_al_2018_PBSMT": 36.48,
+    "_Sestorain_et_al_2018_NMT_0": 9.35,
+    "_Sestorain_et_al_2018_Dual_0": 22.76,
+    "_Our_baselines_Basic": 23.88,
+    "_Our_baselines_Pivot": 24.99,
+    "_Agree": 25.13
   },
   {
     "_1": "\\Ru → \\Fr",
-    "sestorain_et_al_2018_PBSMT": 43.37,
-    "sestorain_et_al_2018_NMT_0": 22.43,
-    "sestorain_et_al_2018_Dual_0": 26.49,
-    "our_baselines_Basic": 28.52,
-    "our_baselines_Pivot": 30.06,
-    "agree": 29.53
+    "_Sestorain_et_al_2018_PBSMT": 43.37,
+    "_Sestorain_et_al_2018_NMT_0": 22.43,
+    "_Sestorain_et_al_2018_Dual_0": 26.49,
+    "_Our_baselines_Basic": 28.52,
+    "_Our_baselines_Pivot": 30.06,
+    "_Agree": 29.53
   },
   {
     "_1": "Zero-shot (avg.)",
-    "sestorain_et_al_2018_PBSMT": 45.23,
-    "sestorain_et_al_2018_NMT_0": 26.26,
-    "sestorain_et_al_2018_Dual_0": 29.88,
-    "our_baselines_Basic": 30.84,
-    "our_baselines_Pivot": 32.47,
-    "agree": 32.29
+    "_Sestorain_et_al_2018_PBSMT": 45.23,
+    "_Sestorain_et_al_2018_NMT_0": 26.26,
+    "_Sestorain_et_al_2018_Dual_0": 29.88,
+    "_Our_baselines_Basic": 30.84,
+    "_Our_baselines_Pivot": 32.47,
+    "_Agree": 32.29
   }
 ]

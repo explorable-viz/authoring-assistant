@@ -1,22 +1,22 @@
 [
   {
-    "data": "EL",
-    "general_Add": 0.87,
-    "general_Del": 0.01,
-    "fine_Add": 0.36,
-    "fine_Del": 0.17,
-    "ultra_Fine_Add": 2.03,
-    "ultra_Fine_Del": 0.12,
-    "filter": 9.4
+    "_Data": "EL",
+    "_General_Add": 0.87,
+    "_General_Del": 0.01,
+    "_Fine_Add": 0.36,
+    "_Fine_Del": 0.17,
+    "_Ultra_Fine_Add": 2.03,
+    "_Ultra_Fine_Del": 0.12,
+    "_Filter": 9.4
   },
   {
-    "data": "HEAD",
-    "general_Add": 1.18,
-    "general_Del": 0.0,
-    "fine_Add": 0.51,
-    "fine_Del": 0.01,
-    "ultra_Fine_Add": 1.15,
-    "ultra_Fine_Del": 0.16,
-    "filter": 10.0
+    "_Data": "HEAD",
+    "_General_Add": 1.18,
+    "_General_Del": 0.0,
+    "_Fine_Add": 0.51,
+    "_Fine_Del": 0.01,
+    "_Ultra_Fine_Add": 1.15,
+    "_Ultra_Fine_Del": 0.16,
+    "_Filter": 10.0
   }
 ]

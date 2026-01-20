@@ -1,23 +1,23 @@
 [
   {
     "_1": "Question length",
-    "dSQuAD": 10.3,
-    "dBiDAF": 9.8,
-    "dBERT": 9.8,
-    "dRoBERTa": 10.0
+    "_DSQuAD": 10.3,
+    "_DBiDAF": 9.8,
+    "_DBERT": 9.8,
+    "_DRoBERTa": 10.0
   },
   {
     "_1": "Answer length",
-    "dSQuAD": 2.6,
-    "dBiDAF": 2.9,
-    "dBERT": 3.0,
-    "dRoBERTa": 3.2
+    "_DSQuAD": 2.6,
+    "_DBiDAF": 2.9,
+    "_DBERT": 3.0,
+    "_DRoBERTa": 3.2
   },
   {
     "_1": "N-gram overlap",
-    "dSQuAD": 3.0,
-    "dBiDAF": 2.2,
-    "dBERT": 2.1,
-    "dRoBERTa": 2.0
+    "_DSQuAD": 3.0,
+    "_DBiDAF": 2.2,
+    "_DBERT": 2.1,
+    "_DRoBERTa": 2.0
   }
 ]

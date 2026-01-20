@@ -1,38 +1,38 @@
 [
   {
     "_1": "CRIM",
-    "Music_MAP": 40.97,
-    "Music_MRR": 60.93,
-    "Music_P_5": 41.31
+    "_Music_MAP": 40.97,
+    "_Music_MRR": 60.93,
+    "_Music_P_5": 41.31
   },
   {
     "_1": "SPON",
-    "Music_MAP": 54.7,
-    "Music_MRR": 71.2,
-    "Music_P_5": 56.3
+    "_Music_MAP": 54.7,
+    "_Music_MRR": 71.2,
+    "_Music_P_5": 56.3
   },
   {
     "_1": "",
-    "Music_MAP": " Medical",
-    "Music_MRR": " Medical",
-    "Music_P_5": " Medical"
+    "_Music_MAP": " Medical",
+    "_Music_MRR": " Medical",
+    "_Music_P_5": " Medical"
   },
   {
     "_1": "",
-    "Music_MAP": "MAP",
-    "Music_MRR": "MRR",
-    "Music_P_5": "P@5"
+    "_Music_MAP": "MAP",
+    "_Music_MRR": "MRR",
+    "_Music_P_5": "P@5"
   },
   {
     "_1": "CRIM",
-    "Music_MAP": 34.05,
-    "Music_MRR": 54.64,
-    "Music_P_5": 36.77
+    "_Music_MAP": 34.05,
+    "_Music_MRR": 54.64,
+    "_Music_P_5": 36.77
   },
   {
     "_1": "SPON",
-    "Music_MAP": 33.5,
-    "Music_MRR": 50.6,
-    "Music_P_5": 35.1
+    "_Music_MAP": 33.5,
+    "_Music_MRR": 50.6,
+    "_Music_P_5": 35.1
   }
 ]

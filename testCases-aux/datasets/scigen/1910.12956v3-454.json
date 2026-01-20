@@ -1,170 +1,170 @@
 [
   {
-    "medical_Device_Term": "root",
-    "medical_Device_Score": 0.8802,
-    "medical_Robot_Term": "stroke",
-    "medical_Robot_Score": 0.919,
-    "sports_Rehab_Machine_Term": "kingdom",
-    "sports_Rehab_Machine_Score": 0.907
+    "_Medical_Device_Term": "root",
+    "_Medical_Device_Score": 0.8802,
+    "_Medical_Robot_Term": "stroke",
+    "_Medical_Robot_Score": 0.919,
+    "_Sports_Rehab_Machine_Term": "kingdom",
+    "_Sports_Rehab_Machine_Score": 0.907
   },
   {
-    "medical_Device_Term": "mouse",
-    "medical_Device_Score": 0.8633,
-    "medical_Robot_Term": "kingdom",
-    "medical_Robot_Score": 0.893,
-    "sports_Rehab_Machine_Term": "stroke",
-    "sports_Rehab_Machine_Score": 0.8495
+    "_Medical_Device_Term": "mouse",
+    "_Medical_Device_Score": 0.8633,
+    "_Medical_Robot_Term": "kingdom",
+    "_Medical_Robot_Score": 0.893,
+    "_Sports_Rehab_Machine_Term": "stroke",
+    "_Sports_Rehab_Machine_Score": 0.8495
   },
   {
-    "medical_Device_Term": "kingdom",
-    "medical_Device_Score": 0.8383,
-    "medical_Robot_Term": "vessel",
-    "medical_Robot_Score": 0.8651,
-    "sports_Rehab_Machine_Term": "progressive",
-    "sports_Rehab_Machine_Score": 0.8414
+    "_Medical_Device_Term": "kingdom",
+    "_Medical_Device_Score": 0.8383,
+    "_Medical_Robot_Term": "vessel",
+    "_Medical_Robot_Score": 0.8651,
+    "_Sports_Rehab_Machine_Term": "progressive",
+    "_Sports_Rehab_Machine_Score": 0.8414
   },
   {
-    "medical_Device_Term": "iron",
-    "medical_Device_Score": 0.8381,
-    "medical_Robot_Term": "thread",
-    "medical_Robot_Score": 0.8385,
-    "sports_Rehab_Machine_Term": "net",
-    "sports_Rehab_Machine_Score": 0.8334
+    "_Medical_Device_Term": "iron",
+    "_Medical_Device_Score": 0.8381,
+    "_Medical_Robot_Term": "thread",
+    "_Medical_Robot_Score": 0.8385,
+    "_Sports_Rehab_Machine_Term": "net",
+    "_Sports_Rehab_Machine_Score": 0.8334
   },
   {
-    "medical_Device_Term": "internal",
-    "medical_Device_Score": 0.8043,
-    "medical_Robot_Term": "floating",
-    "medical_Robot_Score": 0.8045,
-    "sports_Rehab_Machine_Term": "suspension",
-    "sports_Rehab_Machine_Score": 0.8322
+    "_Medical_Device_Term": "internal",
+    "_Medical_Device_Score": 0.8043,
+    "_Medical_Robot_Term": "floating",
+    "_Medical_Robot_Score": 0.8045,
+    "_Sports_Rehab_Machine_Term": "suspension",
+    "_Sports_Rehab_Machine_Score": 0.8322
   },
   {
-    "medical_Device_Term": "progressive",
-    "medical_Device_Score": 0.7957,
-    "medical_Robot_Term": "strain",
-    "medical_Robot_Score": 0.8018,
-    "sports_Rehab_Machine_Term": "induction",
-    "sports_Rehab_Machine_Score": 0.8244
+    "_Medical_Device_Term": "progressive",
+    "_Medical_Device_Score": 0.7957,
+    "_Medical_Robot_Term": "strain",
+    "_Medical_Robot_Score": 0.8018,
+    "_Sports_Rehab_Machine_Term": "induction",
+    "_Sports_Rehab_Machine_Score": 0.8244
   },
   {
-    "medical_Device_Term": "agent",
-    "medical_Device_Score": 0.7875,
-    "medical_Robot_Term": "mouse",
-    "medical_Robot_Score": 0.7997,
-    "sports_Rehab_Machine_Term": "thread",
-    "sports_Rehab_Machine_Score": 0.8236
+    "_Medical_Device_Term": "agent",
+    "_Medical_Device_Score": 0.7875,
+    "_Medical_Robot_Term": "mouse",
+    "_Medical_Robot_Score": 0.7997,
+    "_Sports_Rehab_Machine_Term": "thread",
+    "_Sports_Rehab_Machine_Score": 0.8236
   },
   {
-    "medical_Device_Term": "express",
-    "medical_Device_Score": 0.7733,
-    "medical_Robot_Term": "progressive",
-    "medical_Robot_Score": 0.7983,
-    "sports_Rehab_Machine_Term": "root",
-    "sports_Rehab_Machine_Score": 0.8093
+    "_Medical_Device_Term": "express",
+    "_Medical_Device_Score": 0.7733,
+    "_Medical_Robot_Term": "progressive",
+    "_Medical_Robot_Score": 0.7983,
+    "_Sports_Rehab_Machine_Term": "root",
+    "_Sports_Rehab_Machine_Score": 0.8093
   },
   {
-    "medical_Device_Term": "plasma",
-    "medical_Device_Score": 0.7685,
-    "medical_Robot_Term": "die",
-    "medical_Robot_Score": 0.787,
-    "sports_Rehab_Machine_Term": "transmission",
-    "sports_Rehab_Machine_Score": 0.7871
+    "_Medical_Device_Term": "plasma",
+    "_Medical_Device_Score": 0.7685,
+    "_Medical_Robot_Term": "die",
+    "_Medical_Robot_Score": 0.787,
+    "_Sports_Rehab_Machine_Term": "transmission",
+    "_Sports_Rehab_Machine_Score": 0.7871
   },
   {
-    "medical_Device_Term": "net",
-    "medical_Device_Score": 0.7678,
-    "medical_Robot_Term": "secondary",
-    "medical_Robot_Score": 0.786,
-    "sports_Rehab_Machine_Term": "die",
-    "sports_Rehab_Machine_Score": 0.7821
+    "_Medical_Device_Term": "net",
+    "_Medical_Device_Score": 0.7678,
+    "_Medical_Robot_Term": "secondary",
+    "_Medical_Robot_Score": 0.786,
+    "_Sports_Rehab_Machine_Term": "die",
+    "_Sports_Rehab_Machine_Score": 0.7821
   },
   {
-    "medical_Device_Term": "⋮",
-    "medical_Device_Score": "⋮",
-    "medical_Robot_Term": "⋮",
-    "medical_Robot_Score": "⋮",
-    "sports_Rehab_Machine_Term": "⋮",
-    "sports_Rehab_Machine_Score": "⋮"
+    "_Medical_Device_Term": "⋮",
+    "_Medical_Device_Score": "⋮",
+    "_Medical_Robot_Term": "⋮",
+    "_Medical_Robot_Score": "⋮",
+    "_Sports_Rehab_Machine_Term": "⋮",
+    "_Sports_Rehab_Machine_Score": "⋮"
   },
   {
-    "medical_Device_Term": "argued",
-    "medical_Device_Score": 0.1631,
-    "medical_Robot_Term": "corresponding",
-    "medical_Robot_Score": 0.1695,
-    "sports_Rehab_Machine_Term": "corresponding",
-    "sports_Rehab_Machine_Score": 0.196
+    "_Medical_Device_Term": "argued",
+    "_Medical_Device_Score": 0.1631,
+    "_Medical_Robot_Term": "corresponding",
+    "_Medical_Robot_Score": 0.1695,
+    "_Sports_Rehab_Machine_Term": "corresponding",
+    "_Sports_Rehab_Machine_Score": 0.196
   },
   {
-    "medical_Device_Term": "richard",
-    "medical_Device_Score": 0.1608,
-    "medical_Robot_Term": "corresponds",
-    "medical_Robot_Score": 0.1693,
-    "sports_Rehab_Machine_Term": "told",
-    "sports_Rehab_Machine_Score": 0.1958
+    "_Medical_Device_Term": "richard",
+    "_Medical_Device_Score": 0.1608,
+    "_Medical_Robot_Term": "corresponds",
+    "_Medical_Robot_Score": 0.1693,
+    "_Sports_Rehab_Machine_Term": "told",
+    "_Sports_Rehab_Machine_Score": 0.1958
   },
   {
-    "medical_Device_Term": "authority",
-    "medical_Device_Score": 0.1606,
-    "medical_Robot_Term": "feel",
-    "medical_Robot_Score": 0.167,
-    "sports_Rehab_Machine_Term": "joseph",
-    "sports_Rehab_Machine_Score": 0.1956
+    "_Medical_Device_Term": "authority",
+    "_Medical_Device_Score": 0.1606,
+    "_Medical_Robot_Term": "feel",
+    "_Medical_Robot_Score": 0.167,
+    "_Sports_Rehab_Machine_Term": "joseph",
+    "_Sports_Rehab_Machine_Score": 0.1956
   },
   {
-    "medical_Device_Term": "michael",
-    "medical_Device_Score": 0.1569,
-    "medical_Robot_Term": "coating",
-    "medical_Robot_Score": 0.1666,
-    "sports_Rehab_Machine_Term": "understanding",
-    "sports_Rehab_Machine_Score": 0.1953
+    "_Medical_Device_Term": "michael",
+    "_Medical_Device_Score": 0.1569,
+    "_Medical_Robot_Term": "coating",
+    "_Medical_Robot_Score": 0.1666,
+    "_Sports_Rehab_Machine_Term": "understanding",
+    "_Sports_Rehab_Machine_Score": 0.1953
   },
   {
-    "medical_Device_Term": "required",
-    "medical_Device_Score": 0.154,
-    "medical_Robot_Term": "wife",
-    "medical_Robot_Score": 0.1603,
-    "sports_Rehab_Machine_Term": "love",
-    "sports_Rehab_Machine_Score": 0.1902
+    "_Medical_Device_Term": "required",
+    "_Medical_Device_Score": 0.154,
+    "_Medical_Robot_Term": "wife",
+    "_Medical_Robot_Score": 0.1603,
+    "_Sports_Rehab_Machine_Term": "love",
+    "_Sports_Rehab_Machine_Score": 0.1902
   },
   {
-    "medical_Device_Term": "peter",
-    "medical_Device_Score": 0.1388,
-    "medical_Robot_Term": "michael",
-    "medical_Robot_Score": 0.159,
-    "sports_Rehab_Machine_Term": "economic",
-    "sports_Rehab_Machine_Score": 0.1902
+    "_Medical_Device_Term": "peter",
+    "_Medical_Device_Score": 0.1388,
+    "_Medical_Robot_Term": "michael",
+    "_Medical_Robot_Score": 0.159,
+    "_Sports_Rehab_Machine_Term": "economic",
+    "_Sports_Rehab_Machine_Score": 0.1902
   },
   {
-    "medical_Device_Term": "robert",
-    "medical_Device_Score": 0.1381,
-    "medical_Robot_Term": "authority",
-    "medical_Robot_Score": 0.156,
-    "sports_Rehab_Machine_Term": "coating",
-    "sports_Rehab_Machine_Score": 0.1892
+    "_Medical_Device_Term": "robert",
+    "_Medical_Device_Score": 0.1381,
+    "_Medical_Robot_Term": "authority",
+    "_Medical_Robot_Score": 0.156,
+    "_Sports_Rehab_Machine_Term": "coating",
+    "_Sports_Rehab_Machine_Score": 0.1892
   },
   {
-    "medical_Device_Term": "david",
-    "medical_Device_Score": 0.1201,
-    "medical_Robot_Term": "peter",
-    "medical_Robot_Score": 0.1437,
-    "sports_Rehab_Machine_Term": "pay",
-    "sports_Rehab_Machine_Score": 0.1856
+    "_Medical_Device_Term": "david",
+    "_Medical_Device_Score": 0.1201,
+    "_Medical_Robot_Term": "peter",
+    "_Medical_Robot_Score": 0.1437,
+    "_Sports_Rehab_Machine_Term": "pay",
+    "_Sports_Rehab_Machine_Score": 0.1856
   },
   {
-    "medical_Device_Term": "james",
-    "medical_Device_Score": 0.1188,
-    "medical_Robot_Term": "david",
-    "medical_Robot_Score": 0.1412,
-    "sports_Rehab_Machine_Term": "authority",
-    "sports_Rehab_Machine_Score": 0.1838
+    "_Medical_Device_Term": "james",
+    "_Medical_Device_Score": 0.1188,
+    "_Medical_Robot_Term": "david",
+    "_Medical_Robot_Score": 0.1412,
+    "_Sports_Rehab_Machine_Term": "authority",
+    "_Sports_Rehab_Machine_Score": 0.1838
   },
   {
-    "medical_Device_Term": "charles",
-    "medical_Device_Score": 0.1157,
-    "medical_Robot_Term": "required",
-    "medical_Robot_Score": 0.1382,
-    "sports_Rehab_Machine_Term": "causing",
-    "sports_Rehab_Machine_Score": 0.1822
+    "_Medical_Device_Term": "charles",
+    "_Medical_Device_Score": 0.1157,
+    "_Medical_Robot_Term": "required",
+    "_Medical_Robot_Score": 0.1382,
+    "_Sports_Rehab_Machine_Term": "causing",
+    "_Sports_Rehab_Machine_Score": 0.1822
   }
 ]

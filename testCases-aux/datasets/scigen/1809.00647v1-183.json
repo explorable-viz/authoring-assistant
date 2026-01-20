@@ -2,55 +2,55 @@
   {
     "attack": "arrest",
     "kill": "charge",
-    "Word2Vec_0_69": 0.53,
-    "KCE_0_3": 0.3
+    "_Word2Vec_0_69": 0.53,
+    "_KCE_0_3": 0.3
   },
   {
     "attack": "USA (E)",
     "kill": "war",
-    "Word2Vec_0_69": 0.46,
-    "KCE_0_3": 0.3
+    "_Word2Vec_0_69": 0.46,
+    "_KCE_0_3": 0.3
   },
   {
     "attack": "911 attack (E)",
     "kill": "attack",
-    "Word2Vec_0_69": 0.72,
-    "KCE_0_3": 0.3
+    "_Word2Vec_0_69": 0.72,
+    "_KCE_0_3": 0.3
   },
   {
     "attack": "attack",
     "kill": "trade",
-    "Word2Vec_0_69": 0.42,
-    "KCE_0_3": 0.9
+    "_Word2Vec_0_69": 0.42,
+    "_KCE_0_3": 0.9
   },
   {
     "attack": "hotel (E)",
     "kill": "travel",
-    "Word2Vec_0_69": 0.49,
-    "KCE_0_3": 0.9
+    "_Word2Vec_0_69": 0.49,
+    "_KCE_0_3": 0.9
   },
   {
     "attack": "charge",
     "kill": "murder",
-    "Word2Vec_0_69": 0.49,
-    "KCE_0_3": 0.7
+    "_Word2Vec_0_69": 0.49,
+    "_KCE_0_3": 0.7
   },
   {
     "attack": "business (E)",
     "kill": "increase",
-    "Word2Vec_0_69": 0.43,
-    "KCE_0_3": 0.7
+    "_Word2Vec_0_69": 0.43,
+    "_KCE_0_3": 0.7
   },
   {
     "attack": "attack",
     "kill": "walk",
-    "Word2Vec_0_69": 0.44,
-    "KCE_0_3": -0.3
+    "_Word2Vec_0_69": 0.44,
+    "_KCE_0_3": -0.3
   },
   {
     "attack": "people (E)",
     "kill": "work",
-    "Word2Vec_0_69": 0.4,
-    "KCE_0_3": -0.3
+    "_Word2Vec_0_69": 0.4,
+    "_KCE_0_3": -0.3
   }
 ]

@@ -1,50 +1,50 @@
 [
   {
-    "model": "Seq2Seq",
-    "overall": 0.717,
-    "high": 0.713,
-    "medium": 0.74,
-    "low": 0.721,
-    "oOV": 0.669
+    "_Model": "Seq2Seq",
+    "_Overall": 0.717,
+    "_High": 0.713,
+    "_Medium": 0.74,
+    "_Low": 0.721,
+    "_OOV": 0.669
   },
   {
-    "model": "MemNet",
-    "overall": 0.761,
-    "high": 0.764,
-    "medium": 0.788,
-    "low": 0.76,
-    "oOV": 0.706
+    "_Model": "MemNet",
+    "_Overall": 0.761,
+    "_High": 0.764,
+    "_Medium": 0.788,
+    "_Low": 0.76,
+    "_OOV": 0.706
   },
   {
-    "model": "CopyNet",
-    "overall": 0.96,
-    "high": 0.91,
-    "medium": 0.97,
-    "low": 0.96,
-    "oOV": 0.96
+    "_Model": "CopyNet",
+    "_Overall": 0.96,
+    "_High": 0.91,
+    "_Medium": 0.97,
+    "_Low": 0.96,
+    "_OOV": 0.96
   },
   {
-    "model": "CCM",
-    "overall": 1.18,
-    "high": 1.156,
-    "medium": 1.191,
-    "low": 1.196,
-    "oOV": 1.162
+    "_Model": "CCM",
+    "_Overall": 1.18,
+    "_High": 1.156,
+    "_Medium": 1.191,
+    "_Low": 1.196,
+    "_OOV": 1.162
   },
   {
-    "model": "PostKS",
-    "overall": 1.041,
-    "high": 1.007,
-    "medium": 1.028,
-    "low": 0.993,
-    "oOV": 0.978
+    "_Model": "PostKS",
+    "_Overall": 1.041,
+    "_High": 1.007,
+    "_Medium": 1.028,
+    "_Low": 0.993,
+    "_OOV": 0.978
   },
   {
-    "model": "TransDG",
-    "overall": 1.207,
-    "high": 1.195,
-    "medium": 1.204,
-    "low": 1.232,
-    "oOV": 1.182
+    "_Model": "TransDG",
+    "_Overall": 1.207,
+    "_High": 1.195,
+    "_Medium": 1.204,
+    "_Low": 1.232,
+    "_OOV": 1.182
   }
 ]

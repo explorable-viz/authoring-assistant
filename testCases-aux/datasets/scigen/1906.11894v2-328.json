@@ -1,17 +1,17 @@
 [
   {
-    "method_from_gt": "wavelength ",
-    "line_iu": 66.44,
-    "pixel_iu": 81.52
+    "_Method_from_gt": "wavelength ",
+    "_Line_iu": 66.44,
+    "_Pixel_iu": 81.52
   },
   {
-    "method_from_gt": "wavelength (tight polygons) ",
-    "line_iu": 99.25,
-    "pixel_iu": 98.95
+    "_Method_from_gt": "wavelength (tight polygons) ",
+    "_Line_iu": 99.25,
+    "_Pixel_iu": 98.95
   },
   {
-    "method_from_gt": "proposed method",
-    "line_iu": 100.0,
-    "pixel_iu": 97.22
+    "_Method_from_gt": "proposed method",
+    "_Line_iu": 100.0,
+    "_Pixel_iu": 97.22
   }
 ]

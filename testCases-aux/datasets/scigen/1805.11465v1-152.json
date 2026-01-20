@@ -1,77 +1,77 @@
 [
   {
-    "Model": "Ours",
-    "2015": "",
-    "2017": ""
+    "_Model": "Ours",
+    "_2015": "",
+    "_2017": ""
   },
   {
-    "Model": "local edge + projective decoder",
-    "2015": 70.2,
-    "2017": 71.0
+    "_Model": "local edge + projective decoder",
+    "_2015": 70.2,
+    "_2017": 71.0
   },
   {
-    "Model": "local edge + fixed-tree decoder",
-    "2015": 69.4,
-    "2017": 70.2
+    "_Model": "local edge + fixed-tree decoder",
+    "_2015": 69.4,
+    "_2017": 70.2
   },
   {
-    "Model": "K&G edge + projective decoder",
-    "2015": 68.6,
-    "2017": 69.4
+    "_Model": "K&G edge + projective decoder",
+    "_2015": 68.6,
+    "_2017": 69.4
   },
   {
-    "Model": "K&G edge + fixed-tree decoder",
-    "2015": 69.6,
-    "2017": 69.9
+    "_Model": "K&G edge + fixed-tree decoder",
+    "_2015": 69.6,
+    "_2017": 69.9
   },
   {
-    "Model": "Baselines",
-    "2015": "",
-    "2017": ""
+    "_Model": "Baselines",
+    "_2015": "",
+    "_2017": ""
   },
   {
-    "Model": "fixed-tree (type-unaware)",
-    "2015": 26.0,
-    "2017": 27.9
+    "_Model": "fixed-tree (type-unaware)",
+    "_2015": 26.0,
+    "_2017": 27.9
   },
   {
-    "Model": "JAMR-style",
-    "2015": 66.1,
-    "2017": 66.2
+    "_Model": "JAMR-style",
+    "_2015": 66.1,
+    "_2017": 66.2
   },
   {
-    "Model": "Previous work",
-    "2015": "",
-    "2017": ""
+    "_Model": "Previous work",
+    "_2015": "",
+    "_2017": ""
   },
   {
-    "Model": "CAMR Wang et al. ( 2015 )",
-    "2015": 66.5,
-    "2017": "-"
+    "_Model": "CAMR Wang et al. ( 2015 )",
+    "_2015": 66.5,
+    "_2017": "-"
   },
   {
-    "Model": "JAMR Flanigan et al. ( 2016 )",
-    "2015": 67,
-    "2017": "-"
+    "_Model": "JAMR Flanigan et al. ( 2016 )",
+    "_2015": 67,
+    "_2017": "-"
   },
   {
-    "Model": "E17-1051",
-    "2015": 64,
-    "2017": "-"
+    "_Model": "E17-1051",
+    "_2015": 64,
+    "_2017": "-"
   },
   {
-    "Model": "van2017neural",
-    "2015": 68.5,
-    "2017": 71.0
+    "_Model": "van2017neural",
+    "_2015": 68.5,
+    "_2017": 71.0
   },
   {
-    "Model": "foland2017abstract",
-    "2015": 70.7,
-    "2017": "-"
+    "_Model": "foland2017abstract",
+    "_2015": 70.7,
+    "_2017": "-"
   },
   {
-    "Model": "buys2017oxford",
-    "2015": "-",
-    "2017": 61.9
+    "_Model": "buys2017oxford",
+    "_2015": "-",
+    "_2017": 61.9
   }
 ]

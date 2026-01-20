@@ -1,32 +1,32 @@
 [
   {
-    "Window_position": "OS left",
-    "SimLex999": 0.4,
-    "Analogies": 0.35
+    "_Window_position": "OS left",
+    "_SimLex999": 0.4,
+    "_Analogies": 0.35
   },
   {
-    "Window_position": "OS right",
-    "SimLex999": 0.43,
-    "Analogies": 0.35
+    "_Window_position": "OS right",
+    "_SimLex999": 0.43,
+    "_Analogies": 0.35
   },
   {
-    "Window_position": "OS symmetric",
-    "SimLex999": 0.43,
-    "Analogies": 0.45
+    "_Window_position": "OS symmetric",
+    "_SimLex999": 0.43,
+    "_Analogies": 0.45
   },
   {
-    "Window_position": "GW left",
-    "SimLex999": 0.43,
-    "Analogies": 0.64
+    "_Window_position": "GW left",
+    "_SimLex999": 0.43,
+    "_Analogies": 0.64
   },
   {
-    "Window_position": "GW right",
-    "SimLex999": 0.44,
-    "Analogies": 0.65
+    "_Window_position": "GW right",
+    "_SimLex999": 0.44,
+    "_Analogies": 0.65
   },
   {
-    "Window_position": "GW symmetric",
-    "SimLex999": 0.45,
-    "Analogies": 0.68
+    "_Window_position": "GW symmetric",
+    "_SimLex999": 0.45,
+    "_Analogies": 0.68
   }
 ]

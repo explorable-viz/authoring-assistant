@@ -1,38 +1,38 @@
 [
   {
-    "Dataset_Friends": "Friends",
-    "Dataset_Training": "Test",
-    "num_Dialogues_num_Utterances_4_000_58_012": "240 / 3296",
-    "num_Avg_utterances_per_dialogue_14_50": 13.73,
-    "num_Avg_length_of_dialogues_160_92": 156.38,
-    "neutral_45_0": 31.4,
-    "joy_11_8": 15.3,
-    "sadness_3_4": 3.7,
-    "anger_5_2": 4.3,
-    "out_Of_Domain_34_6": 45.3
+    "_Dataset_Friends": "Friends",
+    "_Dataset_Training": "Test",
+    "_num_Dialogues_num_Utterances_4_000_58_012": "240 / 3296",
+    "_num_Avg_utterances_per_dialogue_14_50": 13.73,
+    "_num_Avg_length_of_dialogues_160_92": 156.38,
+    "_Neutral_45_0": 31.4,
+    "_Joy_11_8": 15.3,
+    "_Sadness_3_4": 3.7,
+    "_Anger_5_2": 4.3,
+    "_Out_Of_Domain_34_6": 45.3
   },
   {
-    "Dataset_Friends": "EmotionPush",
-    "Dataset_Training": "Training",
-    "num_Dialogues_num_Utterances_4_000_58_012": "4000 / 58968",
-    "num_Avg_utterances_per_dialogue_14_50": 14.74,
-    "num_Avg_length_of_dialogues_160_92": 114.96,
-    "neutral_45_0": 66.8,
-    "joy_11_8": 14.2,
-    "sadness_3_4": 3.5,
-    "anger_5_2": 0.9,
-    "out_Of_Domain_34_6": 14.6
+    "_Dataset_Friends": "EmotionPush",
+    "_Dataset_Training": "Training",
+    "_num_Dialogues_num_Utterances_4_000_58_012": "4000 / 58968",
+    "_num_Avg_utterances_per_dialogue_14_50": 14.74,
+    "_num_Avg_length_of_dialogues_160_92": 114.96,
+    "_Neutral_45_0": 66.8,
+    "_Joy_11_8": 14.2,
+    "_Sadness_3_4": 3.5,
+    "_Anger_5_2": 0.9,
+    "_Out_Of_Domain_34_6": 14.6
   },
   {
-    "Dataset_Friends": "EmotionPush",
-    "Dataset_Training": "Test",
-    "num_Dialogues_num_Utterances_4_000_58_012": "240 / 3536",
-    "num_Avg_utterances_per_dialogue_14_50": 14.73,
-    "num_Avg_length_of_dialogues_160_92": 92.43,
-    "neutral_45_0": 60.7,
-    "joy_11_8": 17.0,
-    "sadness_3_4": 3.1,
-    "anger_5_2": 0.8,
-    "out_Of_Domain_34_6": 18.4
+    "_Dataset_Friends": "EmotionPush",
+    "_Dataset_Training": "Test",
+    "_num_Dialogues_num_Utterances_4_000_58_012": "240 / 3536",
+    "_num_Avg_utterances_per_dialogue_14_50": 14.73,
+    "_num_Avg_length_of_dialogues_160_92": 92.43,
+    "_Neutral_45_0": 60.7,
+    "_Joy_11_8": 17.0,
+    "_Sadness_3_4": 3.1,
+    "_Anger_5_2": 0.8,
+    "_Out_Of_Domain_34_6": 18.4
   }
 ]

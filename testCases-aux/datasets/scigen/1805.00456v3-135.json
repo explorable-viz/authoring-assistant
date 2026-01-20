@@ -1,44 +1,44 @@
 [
   {
-    "architecture": "Seq2seq (8-model ensemble)",
-    "representation": "Best WAT17 result Morishita et al. ( 2017 )",
-    "dev_BLEU": "-",
-    "test_BLEU": 28.4
+    "_Architecture": "Seq2seq (8-model ensemble)",
+    "_Representation": "Best WAT17 result Morishita et al. ( 2017 )",
+    "_Dev_BLEU": "-",
+    "_Test_BLEU": 28.4
   },
   {
-    "architecture": "Seq2seq",
-    "representation": "Plain BPE",
-    "dev_BLEU": 21.6,
-    "test_BLEU": 21.2
+    "_Architecture": "Seq2seq",
+    "_Representation": "Plain BPE",
+    "_Dev_BLEU": 21.6,
+    "_Test_BLEU": 21.2
   },
   {
-    "architecture": "Seq2seq",
-    "representation": "Linearized derivation",
-    "dev_BLEU": 21.9,
-    "test_BLEU": 21.2
+    "_Architecture": "Seq2seq",
+    "_Representation": "Linearized derivation",
+    "_Dev_BLEU": 21.9,
+    "_Test_BLEU": 21.2
   },
   {
-    "architecture": "Transformer",
-    "representation": "Plain BPE",
-    "dev_BLEU": 28.0,
-    "test_BLEU": 28.9
+    "_Architecture": "Transformer",
+    "_Representation": "Plain BPE",
+    "_Dev_BLEU": 28.0,
+    "_Test_BLEU": 28.9
   },
   {
-    "architecture": "Transformer",
-    "representation": "Linearized tree",
-    "dev_BLEU": 28.2,
-    "test_BLEU": 28.4
+    "_Architecture": "Transformer",
+    "_Representation": "Linearized tree",
+    "_Dev_BLEU": 28.2,
+    "_Test_BLEU": 28.4
   },
   {
-    "architecture": "Transformer",
-    "representation": "Linearized derivation",
-    "dev_BLEU": 28.5,
-    "test_BLEU": 28.7
+    "_Architecture": "Transformer",
+    "_Representation": "Linearized derivation",
+    "_Dev_BLEU": 28.5,
+    "_Test_BLEU": 28.7
   },
   {
-    "architecture": "Transformer",
-    "representation": "POS/BPE",
-    "dev_BLEU": 28.5,
-    "test_BLEU": 29.1
+    "_Architecture": "Transformer",
+    "_Representation": "POS/BPE",
+    "_Dev_BLEU": 28.5,
+    "_Test_BLEU": 29.1
   }
 ]

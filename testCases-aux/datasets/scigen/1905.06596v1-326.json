@@ -1,56 +1,56 @@
 [
   {
-    "model": "vaswani2017transformer",
-    "wMT’14_EN_DE": 28.4,
-    "wMT’14_EN_FR": 41.0,
-    "iWSLT’14_DE_EN": 34.4
+    "_Model": "vaswani2017transformer",
+    "_WMT’14_EN_DE": 28.4,
+    "_WMT’14_EN_FR": 41.0,
+    "_IWSLT’14_DE_EN": 34.4
   },
   {
-    "model": "ahmed2018weighted",
-    "wMT’14_EN_DE": 28.9,
-    "wMT’14_EN_FR": 41.4,
-    "iWSLT’14_DE_EN": "-"
+    "_Model": "ahmed2018weighted",
+    "_WMT’14_EN_DE": 28.9,
+    "_WMT’14_EN_FR": 41.4,
+    "_IWSLT’14_DE_EN": "-"
   },
   {
-    "model": "chen2018combining",
-    "wMT’14_EN_DE": 28.5,
-    "wMT’14_EN_FR": 41.0,
-    "iWSLT’14_DE_EN": "-"
+    "_Model": "chen2018combining",
+    "_WMT’14_EN_DE": 28.5,
+    "_WMT’14_EN_FR": 41.0,
+    "_IWSLT’14_DE_EN": "-"
   },
   {
-    "model": "shaw2018relative",
-    "wMT’14_EN_DE": 29.2,
-    "wMT’14_EN_FR": 41.5,
-    "iWSLT’14_DE_EN": "-"
+    "_Model": "shaw2018relative",
+    "_WMT’14_EN_DE": 29.2,
+    "_WMT’14_EN_FR": 41.5,
+    "_IWSLT’14_DE_EN": "-"
   },
   {
-    "model": "ott2018scaling",
-    "wMT’14_EN_DE": 29.3,
-    "wMT’14_EN_FR": 43.2,
-    "iWSLT’14_DE_EN": "-"
+    "_Model": "ott2018scaling",
+    "_WMT’14_EN_DE": 29.3,
+    "_WMT’14_EN_FR": 43.2,
+    "_IWSLT’14_DE_EN": "-"
   },
   {
-    "model": "wu2018dynconv",
-    "wMT’14_EN_DE": 29.7,
-    "wMT’14_EN_FR": 43.2,
-    "iWSLT’14_DE_EN": 35.2
+    "_Model": "wu2018dynconv",
+    "_WMT’14_EN_DE": 29.7,
+    "_WMT’14_EN_FR": 43.2,
+    "_IWSLT’14_DE_EN": 35.2
   },
   {
-    "model": "he2018layerwise",
-    "wMT’14_EN_DE": 29.0,
-    "wMT’14_EN_FR": "-",
-    "iWSLT’14_DE_EN": 35.1
+    "_Model": "he2018layerwise",
+    "_WMT’14_EN_DE": 29.0,
+    "_WMT’14_EN_FR": "-",
+    "_IWSLT’14_DE_EN": 35.1
   },
   {
-    "model": "Joint Self-attention",
-    "wMT’14_EN_DE": 29.7,
-    "wMT’14_EN_FR": 43.2,
-    "iWSLT’14_DE_EN": 35.3
+    "_Model": "Joint Self-attention",
+    "_WMT’14_EN_DE": 29.7,
+    "_WMT’14_EN_FR": 43.2,
+    "_IWSLT’14_DE_EN": 35.3
   },
   {
-    "model": "Local Joint Self-attention",
-    "wMT’14_EN_DE": 29.7,
-    "wMT’14_EN_FR": 43.3,
-    "iWSLT’14_DE_EN": 35.7
+    "_Model": "Local Joint Self-attention",
+    "_WMT’14_EN_DE": 29.7,
+    "_WMT’14_EN_FR": 43.3,
+    "_IWSLT’14_DE_EN": 35.7
   }
 ]

@@ -1,32 +1,32 @@
 [
   {
-    "search_Strategy": "Greedy Search",
-    "bLEU": 31.67,
-    "bLEU_Target_len≥25": 23.86
+    "_Search_Strategy": "Greedy Search",
+    "_BLEU": 31.67,
+    "_BLEU_Target_len≥25": 23.86
   },
   {
-    "search_Strategy": "2-LA",
-    "bLEU": 32.07,
-    "bLEU_Target_len≥25": 21.5
+    "_Search_Strategy": "2-LA",
+    "_BLEU": 32.07,
+    "_BLEU_Target_len≥25": 21.5
   },
   {
-    "search_Strategy": "3-LA",
-    "bLEU": 32.2,
-    "bLEU_Target_len≥25": 22.78
+    "_Search_Strategy": "3-LA",
+    "_BLEU": 32.2,
+    "_BLEU_Target_len≥25": 22.78
   },
   {
-    "search_Strategy": "4-LA",
-    "bLEU": 32.42,
-    "bLEU_Target_len≥25": 22.45
+    "_Search_Strategy": "4-LA",
+    "_BLEU": 32.42,
+    "_BLEU_Target_len≥25": 22.45
   },
   {
-    "search_Strategy": "5-LA",
-    "bLEU": 32.41,
-    "bLEU_Target_len≥25": 23.3
+    "_Search_Strategy": "5-LA",
+    "_BLEU": 32.41,
+    "_BLEU_Target_len≥25": 23.3
   },
   {
-    "search_Strategy": "Beam Search (B=10)",
-    "bLEU": 33.83,
-    "bLEU_Target_len≥25": 22.45
+    "_Search_Strategy": "Beam Search (B=10)",
+    "_BLEU": 33.83,
+    "_BLEU_Target_len≥25": 22.45
   }
 ]

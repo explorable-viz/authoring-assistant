@@ -1,67 +1,67 @@
 [
   {
-    "Model": "UNC ",
-    "FEVER_Score": 66.14,
-    "Label_Accuracy": 69.6
+    "_Model": "UNC ",
+    "_FEVER_Score": 66.14,
+    "_Label_Accuracy": 69.6
   },
   {
-    "Model": "UCL ",
-    "FEVER_Score": 65.41,
-    "Label_Accuracy": 69.66
+    "_Model": "UCL ",
+    "_FEVER_Score": 65.41,
+    "_Label_Accuracy": 69.66
   },
   {
-    "Model": "UKP-Athene ",
-    "FEVER_Score": 64.74,
-    "Label_Accuracy": "-"
+    "_Model": "UKP-Athene ",
+    "_FEVER_Score": 64.74,
+    "_Label_Accuracy": "-"
   },
   {
-    "Model": "BERT & UKP-Athene",
-    "FEVER_Score": 69.79,
-    "Label_Accuracy": 71.7
+    "_Model": "BERT & UKP-Athene",
+    "_FEVER_Score": 69.79,
+    "_Label_Accuracy": 71.7
   },
   {
-    "Model": "BERT Large & UKP-Athene",
-    "FEVER_Score": 70.64,
-    "Label_Accuracy": 72.72
+    "_Model": "BERT Large & UKP-Athene",
+    "_FEVER_Score": 70.64,
+    "_Label_Accuracy": 72.72
   },
   {
-    "Model": "BERT & BERT (Pointwise)",
-    "FEVER_Score": 71.38,
-    "Label_Accuracy": 73.51
+    "_Model": "BERT & BERT (Pointwise)",
+    "_FEVER_Score": 71.38,
+    "_Label_Accuracy": 73.51
   },
   {
-    "Model": "BERT & BERT (Pointwise + HNM)",
-    "FEVER_Score": 71.33,
-    "Label_Accuracy": 73.54
+    "_Model": "BERT & BERT (Pointwise + HNM)",
+    "_FEVER_Score": 71.33,
+    "_Label_Accuracy": 73.54
   },
   {
-    "Model": "BERT (Large) & BERT (Pointwise)",
-    "FEVER_Score": 72.42,
-    "Label_Accuracy": 74.58
+    "_Model": "BERT (Large) & BERT (Pointwise)",
+    "_FEVER_Score": 72.42,
+    "_Label_Accuracy": 74.58
   },
   {
-    "Model": "BERT (Large) & BERT (Pointwise + HNM)",
-    "FEVER_Score": 72.42,
-    "Label_Accuracy": 74.59
+    "_Model": "BERT (Large) & BERT (Pointwise + HNM)",
+    "_FEVER_Score": 72.42,
+    "_Label_Accuracy": 74.59
   },
   {
-    "Model": "BERT & BERT (Pairwise Ranknet)",
-    "FEVER_Score": 71.02,
-    "Label_Accuracy": 73.22
+    "_Model": "BERT & BERT (Pairwise Ranknet)",
+    "_FEVER_Score": 71.02,
+    "_Label_Accuracy": 73.22
   },
   {
-    "Model": "BERT & BERT (Pairwise Ranknet + HNM)",
-    "FEVER_Score": 70.99,
-    "Label_Accuracy": 73.02
+    "_Model": "BERT & BERT (Pairwise Ranknet + HNM)",
+    "_FEVER_Score": 70.99,
+    "_Label_Accuracy": 73.02
   },
   {
-    "Model": "BERT & BERT (Pairwise Hinge)",
-    "FEVER_Score": 71.6,
-    "Label_Accuracy": 72.74
+    "_Model": "BERT & BERT (Pairwise Hinge)",
+    "_FEVER_Score": 71.6,
+    "_Label_Accuracy": 72.74
   },
   {
-    "Model": "BERT & BERT (Pairwise Hinge + HNM)",
-    "FEVER_Score": 70.7,
-    "Label_Accuracy": 72.76
+    "_Model": "BERT & BERT (Pairwise Hinge + HNM)",
+    "_FEVER_Score": 70.7,
+    "_Label_Accuracy": 72.76
   }
 ]

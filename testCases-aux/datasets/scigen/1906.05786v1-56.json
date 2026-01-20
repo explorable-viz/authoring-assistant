@@ -1,6 +1,6 @@
 [
   {
-    "Transfer_learning_schedule": "Health",
+    "_Transfer_learning_schedule": "Health",
     "es2en_Khresmoi": 45.1,
     "es2en_Health": 35.7,
     "es2en_Bio": 34.0,
@@ -9,7 +9,7 @@
     "en2es_Bio": 36.1
   },
   {
-    "Transfer_learning_schedule": "All-biomed",
+    "_Transfer_learning_schedule": "All-biomed",
     "es2en_Khresmoi": 49.8,
     "es2en_Health": 35.4,
     "es2en_Bio": 35.7,
@@ -18,7 +18,7 @@
     "en2es_Bio": 37.5
   },
   {
-    "Transfer_learning_schedule": "All-biomed → Health",
+    "_Transfer_learning_schedule": "All-biomed → Health",
     "es2en_Khresmoi": 48.9,
     "es2en_Health": 36.4,
     "es2en_Bio": 35.9,
@@ -27,7 +27,7 @@
     "en2es_Bio": 38.0
   },
   {
-    "Transfer_learning_schedule": "All-biomed → Bio",
+    "_Transfer_learning_schedule": "All-biomed → Bio",
     "es2en_Khresmoi": 48.0,
     "es2en_Health": 34.6,
     "es2en_Bio": 37.2,
@@ -36,7 +36,7 @@
     "en2es_Bio": 40.5
   },
   {
-    "Transfer_learning_schedule": "Health → All-biomed",
+    "_Transfer_learning_schedule": "Health → All-biomed",
     "es2en_Khresmoi": 52.1,
     "es2en_Health": 36.7,
     "es2en_Bio": 37.0,
@@ -45,7 +45,7 @@
     "en2es_Bio": 39.0
   },
   {
-    "Transfer_learning_schedule": "Health → All-biomed → Health",
+    "_Transfer_learning_schedule": "Health → All-biomed → Health",
     "es2en_Khresmoi": 51.1,
     "es2en_Health": 37.0,
     "es2en_Bio": 37.2,
@@ -54,7 +54,7 @@
     "en2es_Bio": 39.5
   },
   {
-    "Transfer_learning_schedule": "Health → All-biomed → Bio",
+    "_Transfer_learning_schedule": "Health → All-biomed → Bio",
     "es2en_Khresmoi": 50.6,
     "es2en_Health": 36.0,
     "es2en_Bio": 38.0,

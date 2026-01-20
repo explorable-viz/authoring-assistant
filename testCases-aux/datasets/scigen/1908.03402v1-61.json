@@ -1,22 +1,22 @@
 [
   {
-    "models": "MT as PE",
-    "tER": 16.84,
-    "bLEU": 74.73
+    "_Models": "MT as PE",
+    "_TER": 16.84,
+    "_BLEU": 74.73
   },
   {
-    "models": "Gaussian",
-    "tER": 16.79,
-    "bLEU": 75.03
+    "_Models": "Gaussian",
+    "_TER": 16.79,
+    "_BLEU": 75.03
   },
   {
-    "models": "Uniform",
-    "tER": 16.8,
-    "bLEU": 75.03
+    "_Models": "Uniform",
+    "_TER": 16.8,
+    "_BLEU": 75.03
   },
   {
-    "models": "Ensemble x5",
-    "tER": 16.77,
-    "bLEU": 75.03
+    "_Models": "Ensemble x5",
+    "_TER": 16.77,
+    "_BLEU": 75.03
   }
 ]

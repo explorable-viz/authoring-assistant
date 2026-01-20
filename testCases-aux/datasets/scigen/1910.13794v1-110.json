@@ -1,65 +1,65 @@
 [
   {
-    "accuracy": " Only QG*",
-    "bLEU_1": 45.63,
-    "bLEU_2": 30.43,
-    "bLEU_3": 22.51,
-    "bLEU_4": 17.3,
-    "mETEOR": 21.06,
-    "rOUGE_L": 45.42
+    "_Accuracy": " Only QG*",
+    "_BLEU_1": 45.63,
+    "_BLEU_2": 30.43,
+    "_BLEU_3": 22.51,
+    "_BLEU_4": 17.3,
+    "_METEOR": 21.06,
+    "_ROUGE_L": 45.42
   },
   {
-    "accuracy": 60,
-    "bLEU_1": 45.8,
-    "bLEU_2": 30.61,
-    "bLEU_3": 22.57,
-    "bLEU_4": 17.3,
-    "mETEOR": 21.47,
-    "rOUGE_L": 44.7
+    "_Accuracy": 60,
+    "_BLEU_1": 45.8,
+    "_BLEU_2": 30.61,
+    "_BLEU_3": 22.57,
+    "_BLEU_4": 17.3,
+    "_METEOR": 21.47,
+    "_ROUGE_L": 44.7
   },
   {
-    "accuracy": 70,
-    "bLEU_1": 47.05,
-    "bLEU_2": 31.62,
-    "bLEU_3": 23.46,
-    "bLEU_4": 18.05,
-    "mETEOR": 22.0,
-    "rOUGE_L": 45.88
+    "_Accuracy": 70,
+    "_BLEU_1": 47.05,
+    "_BLEU_2": 31.62,
+    "_BLEU_3": 23.46,
+    "_BLEU_4": 18.05,
+    "_METEOR": 22.0,
+    "_ROUGE_L": 45.88
   },
   {
-    "accuracy": " IWAQG (73.8%)",
-    "bLEU_1": 47.69,
-    "bLEU_2": 32.24,
-    "bLEU_3": 24.01,
-    "bLEU_4": 18.53,
-    "mETEOR": 22.33,
-    "rOUGE_L": 46.94
+    "_Accuracy": " IWAQG (73.8%)",
+    "_BLEU_1": 47.69,
+    "_BLEU_2": 32.24,
+    "_BLEU_3": 24.01,
+    "_BLEU_4": 18.53,
+    "_METEOR": 22.33,
+    "_ROUGE_L": 46.94
   },
   {
-    "accuracy": 80,
-    "bLEU_1": 48.11,
-    "bLEU_2": 32.36,
-    "bLEU_3": 24.0,
-    "bLEU_4": 18.42,
-    "mETEOR": 22.43,
-    "rOUGE_L": 47.22
+    "_Accuracy": 80,
+    "_BLEU_1": 48.11,
+    "_BLEU_2": 32.36,
+    "_BLEU_3": 24.0,
+    "_BLEU_4": 18.42,
+    "_METEOR": 22.43,
+    "_ROUGE_L": 47.22
   },
   {
-    "accuracy": 90,
-    "bLEU_1": 49.33,
-    "bLEU_2": 33.43,
-    "bLEU_3": 24.91,
-    "bLEU_4": 19.2,
-    "mETEOR": 22.98,
-    "rOUGE_L": 48.41
+    "_Accuracy": 90,
+    "_BLEU_1": 49.33,
+    "_BLEU_2": 33.43,
+    "_BLEU_3": 24.91,
+    "_BLEU_4": 19.2,
+    "_METEOR": 22.98,
+    "_ROUGE_L": 48.41
   },
   {
-    "accuracy": " Upper Bound (100%)",
-    "bLEU_1": 50.51,
-    "bLEU_2": 34.28,
-    "bLEU_3": 25.6,
-    "bLEU_4": 19.75,
-    "mETEOR": 23.45,
-    "rOUGE_L": 49.65
+    "_Accuracy": " Upper Bound (100%)",
+    "_BLEU_1": 50.51,
+    "_BLEU_2": 34.28,
+    "_BLEU_3": 25.6,
+    "_BLEU_4": 19.75,
+    "_METEOR": 23.45,
+    "_ROUGE_L": 49.65
   }
 ]

@@ -1,17 +1,17 @@
 [
   {
-    "Type_of_Set": "Training Set",
-    "Label_Accuracy_ϕ_=_0_76": 81.52,
-    "Label_Accuracy_ϕ_=_0_67": 88.05
+    "_Type_of_Set": "Training Set",
+    "_Label_Accuracy_ϕ_=_0_76": 81.52,
+    "_Label_Accuracy_ϕ_=_0_67": 88.05
   },
   {
-    "Type_of_Set": "Development Set",
-    "Label_Accuracy_ϕ_=_0_76": 80.2,
-    "Label_Accuracy_ϕ_=_0_67": 86.7
+    "_Type_of_Set": "Development Set",
+    "_Label_Accuracy_ϕ_=_0_76": 80.2,
+    "_Label_Accuracy_ϕ_=_0_67": 86.7
   },
   {
-    "Type_of_Set": "Test Set",
-    "Label_Accuracy_ϕ_=_0_76": 80.25,
-    "Label_Accuracy_ϕ_=_0_67": 87.04
+    "_Type_of_Set": "Test Set",
+    "_Label_Accuracy_ϕ_=_0_76": 80.25,
+    "_Label_Accuracy_ϕ_=_0_67": 87.04
   }
 ]

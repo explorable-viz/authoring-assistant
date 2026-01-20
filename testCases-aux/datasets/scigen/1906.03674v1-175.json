@@ -1,38 +1,38 @@
 [
   {
-    "lexicons": "LIWC",
-    "annotations": "psycho-linguistic",
-    "num_dim": 73,
-    "num_words": 18504
+    "_Lexicons": "LIWC",
+    "_Annotations": "psycho-linguistic",
+    "_num_dim": 73,
+    "_num_words": 18504
   },
   {
-    "lexicons": "Bing Liu",
-    "annotations": "valence",
-    "num_dim": 1,
-    "num_words": 2477
+    "_Lexicons": "Bing Liu",
+    "_Annotations": "valence",
+    "_num_dim": 1,
+    "_num_words": 2477
   },
   {
-    "lexicons": "AFINN",
-    "annotations": "sentiment",
-    "num_dim": 1,
-    "num_words": 6786
+    "_Lexicons": "AFINN",
+    "_Annotations": "sentiment",
+    "_num_dim": 1,
+    "_num_words": 6786
   },
   {
-    "lexicons": "MPQA",
-    "annotations": "sentiment",
-    "num_dim": 4,
-    "num_words": 6886
+    "_Lexicons": "MPQA",
+    "_Annotations": "sentiment",
+    "_num_dim": 4,
+    "_num_words": 6886
   },
   {
-    "lexicons": "SemEval15",
-    "annotations": "sentiment",
-    "num_dim": 1,
-    "num_words": 1515
+    "_Lexicons": "SemEval15",
+    "_Annotations": "sentiment",
+    "_num_dim": 1,
+    "_num_words": 1515
   },
   {
-    "lexicons": "Emolex",
-    "annotations": "emotion",
-    "num_dim": 19,
-    "num_words": 14182
+    "_Lexicons": "Emolex",
+    "_Annotations": "emotion",
+    "_num_dim": 19,
+    "_num_words": 14182
   }
 ]

@@ -1,100 +1,100 @@
 [
   {
-    "Model": " Das’s Test Set ",
-    "FrameNet_1_5_All": " Das’s Test Set ",
-    "FrameNet_1_5_Ambiguous": " Das’s Test Set ",
-    "FrameNet_1_7_All": " Das’s Test Set ",
-    "FrameNet_1_7_Ambiguous": " Das’s Test Set "
+    "_Model": " Das’s Test Set ",
+    "_FrameNet_1_5_All": " Das’s Test Set ",
+    "_FrameNet_1_5_Ambiguous": " Das’s Test Set ",
+    "_FrameNet_1_7_All": " Das’s Test Set ",
+    "_FrameNet_1_7_Ambiguous": " Das’s Test Set "
   },
   {
-    "Model": "SEMAFOR ",
-    "FrameNet_1_5_All": 83.6,
-    "FrameNet_1_5_Ambiguous": 69.19,
-    "FrameNet_1_7_All": "-",
-    "FrameNet_1_7_Ambiguous": "-"
+    "_Model": "SEMAFOR ",
+    "_FrameNet_1_5_All": 83.6,
+    "_FrameNet_1_5_Ambiguous": 69.19,
+    "_FrameNet_1_7_All": "-",
+    "_FrameNet_1_7_Ambiguous": "-"
   },
   {
-    "Model": "Hermann et al. ",
-    "FrameNet_1_5_All": 88.73,
-    "FrameNet_1_5_Ambiguous": 73.67,
-    "FrameNet_1_7_All": "-",
-    "FrameNet_1_7_Ambiguous": "-"
+    "_Model": "Hermann et al. ",
+    "_FrameNet_1_5_All": 88.73,
+    "_FrameNet_1_5_Ambiguous": 73.67,
+    "_FrameNet_1_7_All": "-",
+    "_FrameNet_1_7_Ambiguous": "-"
   },
   {
-    "Model": "Yang and Mitchell ",
-    "FrameNet_1_5_All": 88.2,
-    "FrameNet_1_5_Ambiguous": 75.7,
-    "FrameNet_1_7_All": "-",
-    "FrameNet_1_7_Ambiguous": "-"
+    "_Model": "Yang and Mitchell ",
+    "_FrameNet_1_5_All": 88.2,
+    "_FrameNet_1_5_Ambiguous": 75.7,
+    "_FrameNet_1_7_All": "-",
+    "_FrameNet_1_7_Ambiguous": "-"
   },
   {
-    "Model": "Hartmann et al. ",
-    "FrameNet_1_5_All": 87.63,
-    "FrameNet_1_5_Ambiguous": 73.8,
-    "FrameNet_1_7_All": "-",
-    "FrameNet_1_7_Ambiguous": "-"
+    "_Model": "Hartmann et al. ",
+    "_FrameNet_1_5_All": 87.63,
+    "_FrameNet_1_5_Ambiguous": 73.8,
+    "_FrameNet_1_7_All": "-",
+    "_FrameNet_1_7_Ambiguous": "-"
   },
   {
-    "Model": "Botschen et al. ",
-    "FrameNet_1_5_All": 88.82,
-    "FrameNet_1_5_Ambiguous": 75.28,
-    "FrameNet_1_7_All": "-",
-    "FrameNet_1_7_Ambiguous": "-"
+    "_Model": "Botschen et al. ",
+    "_FrameNet_1_5_All": 88.82,
+    "_FrameNet_1_5_Ambiguous": 75.28,
+    "_FrameNet_1_7_All": "-",
+    "_FrameNet_1_7_Ambiguous": "-"
   },
   {
-    "Model": "Peng et al. ",
-    "FrameNet_1_5_All": 90.0,
-    "FrameNet_1_5_Ambiguous": 78.0,
-    "FrameNet_1_7_All": 89.1,
-    "FrameNet_1_7_Ambiguous": 77.5
+    "_Model": "Peng et al. ",
+    "_FrameNet_1_5_All": 90.0,
+    "_FrameNet_1_5_Ambiguous": 78.0,
+    "_FrameNet_1_7_All": 89.1,
+    "_FrameNet_1_7_Ambiguous": 77.5
   },
   {
-    "Model": " PAFIBERT - Filtered by LUs",
-    "FrameNet_1_5_All": 92.22,
-    "FrameNet_1_5_Ambiguous": 82.9,
-    "FrameNet_1_7_All": 91.44,
-    "FrameNet_1_7_Ambiguous": 82.55
+    "_Model": " PAFIBERT - Filtered by LUs",
+    "_FrameNet_1_5_All": 92.22,
+    "_FrameNet_1_5_Ambiguous": 82.9,
+    "_FrameNet_1_7_All": 91.44,
+    "_FrameNet_1_7_Ambiguous": 82.55
   },
   {
-    "Model": " PAFIBERT - Filtered by Targets",
-    "FrameNet_1_5_All": 91.39,
-    "FrameNet_1_5_Ambiguous": 82.8,
-    "FrameNet_1_7_All": 90.15,
-    "FrameNet_1_7_Ambiguous": 81.92
+    "_Model": " PAFIBERT - Filtered by Targets",
+    "_FrameNet_1_5_All": 91.39,
+    "_FrameNet_1_5_Ambiguous": 82.8,
+    "_FrameNet_1_7_All": 90.15,
+    "_FrameNet_1_7_Ambiguous": 81.92
   },
   {
-    "Model": " YAGS Test Set ",
-    "FrameNet_1_5_All": " YAGS Test Set ",
-    "FrameNet_1_5_Ambiguous": " YAGS Test Set ",
-    "FrameNet_1_7_All": " YAGS Test Set ",
-    "FrameNet_1_7_Ambiguous": " YAGS Test Set "
+    "_Model": " YAGS Test Set ",
+    "_FrameNet_1_5_All": " YAGS Test Set ",
+    "_FrameNet_1_5_Ambiguous": " YAGS Test Set ",
+    "_FrameNet_1_7_All": " YAGS Test Set ",
+    "_FrameNet_1_7_Ambiguous": " YAGS Test Set "
   },
   {
-    "Model": "SEMAFOR (Reported by )",
-    "FrameNet_1_5_All": 60.01,
-    "FrameNet_1_5_Ambiguous": "-",
-    "FrameNet_1_7_All": "-",
-    "FrameNet_1_7_Ambiguous": "-"
+    "_Model": "SEMAFOR (Reported by )",
+    "_FrameNet_1_5_All": 60.01,
+    "_FrameNet_1_5_Ambiguous": "-",
+    "_FrameNet_1_7_All": "-",
+    "_FrameNet_1_7_Ambiguous": "-"
   },
   {
-    "Model": "Hartmann et al. ",
-    "FrameNet_1_5_All": 62.51,
-    "FrameNet_1_5_Ambiguous": "-",
-    "FrameNet_1_7_All": "-",
-    "FrameNet_1_7_Ambiguous": "-"
+    "_Model": "Hartmann et al. ",
+    "_FrameNet_1_5_All": 62.51,
+    "_FrameNet_1_5_Ambiguous": "-",
+    "_FrameNet_1_7_All": "-",
+    "_FrameNet_1_7_Ambiguous": "-"
   },
   {
-    "Model": " PAFIBERT - Filtered by LUs",
-    "FrameNet_1_5_All": 75.06,
-    "FrameNet_1_5_Ambiguous": 69.07,
-    "FrameNet_1_7_All": " -",
-    "FrameNet_1_7_Ambiguous": " -"
+    "_Model": " PAFIBERT - Filtered by LUs",
+    "_FrameNet_1_5_All": 75.06,
+    "_FrameNet_1_5_Ambiguous": 69.07,
+    "_FrameNet_1_7_All": " -",
+    "_FrameNet_1_7_Ambiguous": " -"
   },
   {
-    "Model": " PAFIBERT - Filtered by Targets",
-    "FrameNet_1_5_All": 75.01,
-    "FrameNet_1_5_Ambiguous": 69.07,
-    "FrameNet_1_7_All": " -",
-    "FrameNet_1_7_Ambiguous": " -"
+    "_Model": " PAFIBERT - Filtered by Targets",
+    "_FrameNet_1_5_All": 75.01,
+    "_FrameNet_1_5_Ambiguous": 69.07,
+    "_FrameNet_1_7_All": " -",
+    "_FrameNet_1_7_Ambiguous": " -"
   }
 ]

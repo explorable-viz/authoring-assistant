@@ -1,7 +1,7 @@
 [
   {
     "_1": "zero-shot",
-    "tnT": "—",
+    "_TnT": "—",
     "neural_in_lang_plain": "—",
     "neural_in_lang_Poly": "—",
     "neural_transfer_Medium_src": 58.29,
@@ -10,7 +10,7 @@
   },
   {
     "_1": "Tiny",
-    "tnT": 37.48,
+    "_TnT": 37.48,
     "neural_in_lang_plain": 36.17,
     "neural_in_lang_Poly": 56.05,
     "neural_transfer_Medium_src": 67.14,
@@ -19,7 +19,7 @@
   },
   {
     "_1": "Small",
-    "tnT": 44.3,
+    "_TnT": 44.3,
     "neural_in_lang_plain": 51.9,
     "neural_in_lang_Poly": 67.18,
     "neural_transfer_Medium_src": 70.82,

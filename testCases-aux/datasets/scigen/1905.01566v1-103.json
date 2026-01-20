@@ -1,74 +1,74 @@
 [
   {
-    "model": "Ours + ELMo w/o augmentation",
-    "acc": 42.7,
-    "ma_F1": 72.7,
-    "mi_F1": 66.7
+    "_Model": "Ours + ELMo w/o augmentation",
+    "_Acc": 42.7,
+    "_Ma_F1": 72.7,
+    "_Mi_F1": 66.7
   },
   {
-    "model": "Ours + ELMo w augmentation",
-    "acc": 59.3,
-    "ma_F1": 76.5,
-    "mi_F1": 70.7
+    "_Model": "Ours + ELMo w augmentation",
+    "_Acc": 59.3,
+    "_Ma_F1": 76.5,
+    "_Mi_F1": 70.7
   },
   {
-    "model": "Ours + ELMo w augmentation",
-    "acc": 63.9,
-    "ma_F1": 84.5,
-    "mi_F1": 78.9
+    "_Model": "Ours + ELMo w augmentation",
+    "_Acc": 63.9,
+    "_Ma_F1": 84.5,
+    "_Mi_F1": 78.9
   },
   {
-    "model": "+ filter & relabel",
-    "acc": "",
-    "ma_F1": "",
-    "mi_F1": ""
+    "_Model": "+ filter & relabel",
+    "_Acc": "",
+    "_Ma_F1": "",
+    "_Mi_F1": ""
   },
   {
-    "model": "Ours + ELMo w augmentation",
-    "acc": 64.9,
-    "ma_F1": 84.5,
-    "mi_F1": 79.2
+    "_Model": "Ours + ELMo w augmentation",
+    "_Acc": 64.9,
+    "_Ma_F1": 84.5,
+    "_Mi_F1": 79.2
   },
   {
-    "model": "by Choi et al. ( 2018 )",
-    "acc": "",
-    "ma_F1": "",
-    "mi_F1": ""
+    "_Model": "by Choi et al. ( 2018 )",
+    "_Acc": "",
+    "_Ma_F1": "",
+    "_Mi_F1": ""
   },
   {
-    "model": "BERT-Base, Uncased",
-    "acc": 51.8,
-    "ma_F1": 76.6,
-    "mi_F1": 69.1
+    "_Model": "BERT-Base, Uncased",
+    "_Acc": 51.8,
+    "_Ma_F1": 76.6,
+    "_Mi_F1": 69.1
   },
   {
-    "model": "Shimaoka et al. ( 2017 )",
-    "acc": 51.7,
-    "ma_F1": 70.9,
-    "mi_F1": 64.9
+    "_Model": "Shimaoka et al. ( 2017 )",
+    "_Acc": 51.7,
+    "_Ma_F1": 70.9,
+    "_Mi_F1": 64.9
   },
   {
-    "model": "AFET Ren et al. ( 2016a )",
-    "acc": 55.1,
-    "ma_F1": 71.1,
-    "mi_F1": 64.7
+    "_Model": "AFET Ren et al. ( 2016a )",
+    "_Acc": 55.1,
+    "_Ma_F1": 71.1,
+    "_Mi_F1": 64.7
   },
   {
-    "model": "PLE Ren et al. ( 2016b )",
-    "acc": 57.2,
-    "ma_F1": 71.5,
-    "mi_F1": 66.1
+    "_Model": "PLE Ren et al. ( 2016b )",
+    "_Acc": 57.2,
+    "_Ma_F1": 71.5,
+    "_Mi_F1": 66.1
   },
   {
-    "model": "Choi et al. ( 2018 )",
-    "acc": 59.5,
-    "ma_F1": 76.8,
-    "mi_F1": 71.8
+    "_Model": "Choi et al. ( 2018 )",
+    "_Acc": 59.5,
+    "_Ma_F1": 76.8,
+    "_Mi_F1": 71.8
   },
   {
-    "model": "LabelGCN Xiong et al. ( 2019 )",
-    "acc": 59.6,
-    "ma_F1": 77.8,
-    "mi_F1": 72.2
+    "_Model": "LabelGCN Xiong et al. ( 2019 )",
+    "_Acc": 59.6,
+    "_Ma_F1": 77.8,
+    "_Mi_F1": 72.2
   }
 ]

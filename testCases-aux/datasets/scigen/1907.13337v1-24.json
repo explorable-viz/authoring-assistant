@@ -1,6 +1,6 @@
 [
   {
-    "models": "CS + cat",
+    "_Models": "CS + cat",
     "abstractive_R1": 26.48,
     "abstractive_R2": 10.05,
     "abstractive_RL": 24.41,
@@ -8,7 +8,7 @@
     "extractive_CR": 0.38
   },
   {
-    "models": "CS + avg",
+    "_Models": "CS + avg",
     "abstractive_R1": 26.34,
     "abstractive_R2": 9.79,
     "abstractive_RL": 24.23,
@@ -16,7 +16,7 @@
     "extractive_CR": 0.38
   },
   {
-    "models": "CS + top",
+    "_Models": "CS + top",
     "abstractive_R1": 26.21,
     "abstractive_R2": 9.69,
     "abstractive_RL": 24.14,
@@ -24,7 +24,7 @@
     "extractive_CR": 0.34
   },
   {
-    "models": "CS + mid",
+    "_Models": "CS + mid",
     "abstractive_R1": 25.46,
     "abstractive_R2": 9.39,
     "abstractive_RL": 23.34,
@@ -32,7 +32,7 @@
     "extractive_CR": 0.4
   },
   {
-    "models": "CS + bot",
+    "_Models": "CS + bot",
     "abstractive_R1": 15.29,
     "abstractive_R2": 3.95,
     "abstractive_RL": 14.06,
@@ -40,7 +40,7 @@
     "extractive_CR": 0.23
   },
   {
-    "models": "TEMP5 + cat",
+    "_Models": "TEMP5 + cat",
     "abstractive_R1": 26.31,
     "abstractive_R2": 9.38,
     "abstractive_RL": 23.6,
@@ -48,7 +48,7 @@
     "extractive_CR": 0.43
   },
   {
-    "models": "TEMP10 + cat",
+    "_Models": "TEMP10 + cat",
     "abstractive_R1": 25.63,
     "abstractive_R2": 8.82,
     "abstractive_RL": 22.86,
@@ -56,7 +56,7 @@
     "extractive_CR": 0.47
   },
   {
-    "models": "NA + cat",
+    "_Models": "NA + cat",
     "abstractive_R1": 24.81,
     "abstractive_R2": 8.89,
     "abstractive_RL": 22.87,

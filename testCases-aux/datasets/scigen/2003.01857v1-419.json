@@ -1,30 +1,30 @@
 [
   {
-    "data_set": "AG news",
-    "train": 120,
-    "test": 7.6,
+    "_Data_set": "AG news",
+    "_Train": 120,
+    "_Test": 7.6,
     "classes": 4,
-    "task": "English news categorization"
+    "_Task": "English news categorization"
   },
   {
-    "data_set": "AG news",
-    "train": 5,
-    "test": 7.6,
+    "_Data_set": "AG news",
+    "_Train": 5,
+    "_Test": 7.6,
     "classes": 4,
-    "task": "English news categorization"
+    "_Task": "English news categorization"
   },
   {
-    "data_set": "Sogou news",
-    "train": 450,
-    "test": 60,
+    "_Data_set": "Sogou news",
+    "_Train": 450,
+    "_Test": 60,
     "classes": 5,
-    "task": "Chinese news categorization"
+    "_Task": "Chinese news categorization"
   },
   {
-    "data_set": "Sogou news",
-    "train": 10,
-    "test": 60,
+    "_Data_set": "Sogou news",
+    "_Train": 10,
+    "_Test": 60,
     "classes": 5,
-    "task": "Chinese news categorization"
+    "_Task": "Chinese news categorization"
   }
 ]

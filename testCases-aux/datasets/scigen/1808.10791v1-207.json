@@ -2,51 +2,51 @@
   {
     "_1": "en-et",
     "chrF_1_0": "dev",
-    "bLEU": "dev"
+    "_BLEU": "dev"
   },
   {
     "_1": "BPE",
     "chrF_1_0": 56.52,
-    "bLEU": 17.93
+    "_BLEU": 17.93
   },
   {
     "_1": "monolingual",
     "chrF_1_0": 53.44,
-    "bLEU": 15.82
+    "_BLEU": 15.82
   },
   {
     "_1": "Cognate Morfessor",
     "chrF_1_0": 57.05,
-    "bLEU": 18.4
+    "_BLEU": 18.4
   },
   {
     "_1": "+finetuned",
     "chrF_1_0": 57.23,
-    "bLEU": 18.45
+    "_BLEU": 18.45
   },
   {
     "_1": "+ensemble-of-5",
     "chrF_1_0": 57.75,
-    "bLEU": 19.09
+    "_BLEU": 19.09
   },
   {
     "_1": "+ensemble-of-3",
     "chrF_1_0": 57.64,
-    "bLEU": 18.96
+    "_BLEU": 18.96
   },
   {
     "_1": "+linked embeddings",
     "chrF_1_0": 56.2,
-    "bLEU": 17.48
+    "_BLEU": 17.48
   },
   {
     "_1": "−LM filtering",
     "chrF_1_0": 52.94,
-    "bLEU": 14.65
+    "_BLEU": 14.65
   },
   {
     "_1": "6+6 layers",
     "chrF_1_0": 57.35,
-    "bLEU": 18.84
+    "_BLEU": 18.84
   }
 ]

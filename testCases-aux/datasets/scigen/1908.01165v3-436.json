@@ -1,63 +1,63 @@
 [
   {
-    "Model": "BLSTM",
-    "Method": "random + HotFlip",
+    "_Model": "BLSTM",
+    "_Method": "random + HotFlip",
     "en_de_Success_Rate": 25.4,
     "en_de_NOR": 0.23,
     "en_fr_Success_Rate": 28.2,
     "en_fr_NOR": 0.21
   },
   {
-    "Model": "BLSTM",
-    "Method": "Min-Grad + HotFlip",
+    "_Model": "BLSTM",
+    "_Method": "Min-Grad + HotFlip",
     "en_de_Success_Rate": 31.8,
     "en_de_NOR": 0.22,
     "en_fr_Success_Rate": 40.2,
     "en_fr_NOR": 0.19
   },
   {
-    "Model": "BLSTM",
-    "Method": "random + Soft-Att",
+    "_Model": "BLSTM",
+    "_Method": "random + Soft-Att",
     "en_de_Success_Rate": 61.2,
     "en_de_NOR": 0.58,
     "en_fr_Success_Rate": 64.6,
     "en_fr_NOR": 0.62
   },
   {
-    "Model": "BLSTM",
-    "Method": "Min-Grad + Soft-Att",
+    "_Model": "BLSTM",
+    "_Method": "Min-Grad + Soft-Att",
     "en_de_Success_Rate": 67.8,
     "en_de_NOR": 0.58,
     "en_fr_Success_Rate": 70.8,
     "en_fr_NOR": 0.61
   },
   {
-    "Model": "Transformer",
-    "Method": "random + HotFlip",
+    "_Model": "Transformer",
+    "_Method": "random + HotFlip",
     "en_de_Success_Rate": 35.0,
     "en_de_NOR": 0.26,
     "en_fr_Success_Rate": 40.6,
     "en_fr_NOR": 0.24
   },
   {
-    "Model": "Transformer",
-    "Method": "Min-Grad + HotFlip",
+    "_Model": "Transformer",
+    "_Method": "Min-Grad + HotFlip",
     "en_de_Success_Rate": 45.0,
     "en_de_NOR": 0.26,
     "en_fr_Success_Rate": 44.0,
     "en_fr_NOR": 0.23
   },
   {
-    "Model": "Transformer",
-    "Method": "random + Soft-Att",
+    "_Model": "Transformer",
+    "_Method": "random + Soft-Att",
     "en_de_Success_Rate": 50.2,
     "en_de_NOR": 0.4,
     "en_fr_Success_Rate": 59.0,
     "en_fr_NOR": 0.37
   },
   {
-    "Model": "Transformer",
-    "Method": "Min-Grad + Soft-Att",
+    "_Model": "Transformer",
+    "_Method": "Min-Grad + Soft-Att",
     "en_de_Success_Rate": 61.6,
     "en_de_NOR": 0.41,
     "en_fr_Success_Rate": 64.8,

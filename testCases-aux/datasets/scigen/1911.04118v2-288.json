@@ -1,37 +1,37 @@
 [
   {
-    "model": "Neg: 1 Pos: 4",
-    "wikiQA_MAP": 0.87,
-    "wikiQA_MRR": 0.88,
-    "tREC_QA_MAP": 0.808,
-    "tREC_QA_MRR": 0.847
+    "_Model": "Neg: 1 Pos: 4",
+    "_WikiQA_MAP": 0.87,
+    "_WikiQA_MRR": 0.88,
+    "_TREC_QA_MAP": 0.808,
+    "_TREC_QA_MRR": 0.847
   },
   {
-    "model": "Neg: 2 Pos: 4",
-    "wikiQA_MAP": 0.751,
-    "wikiQA_MRR": 0.763,
-    "tREC_QA_MAP": 0.662,
-    "tREC_QA_MRR": 0.751
+    "_Model": "Neg: 2 Pos: 4",
+    "_WikiQA_MAP": 0.751,
+    "_WikiQA_MRR": 0.763,
+    "_TREC_QA_MAP": 0.662,
+    "_TREC_QA_MRR": 0.751
   },
   {
-    "model": "Neg: 3 Pos: 4",
-    "wikiQA_MAP": 0.881,
-    "wikiQA_MRR": 0.895,
-    "tREC_QA_MAP": 0.821,
-    "tREC_QA_MRR": 0.869
+    "_Model": "Neg: 3 Pos: 4",
+    "_WikiQA_MAP": 0.881,
+    "_WikiQA_MRR": 0.895,
+    "_TREC_QA_MAP": 0.821,
+    "_TREC_QA_MRR": 0.869
   },
   {
-    "model": "Neg: 23 Pos: 4",
-    "wikiQA_MAP": 0.883,
-    "wikiQA_MRR": 0.898,
-    "tREC_QA_MAP": 0.823,
-    "tREC_QA_MRR": 0.871
+    "_Model": "Neg: 23 Pos: 4",
+    "_WikiQA_MAP": 0.883,
+    "_WikiQA_MRR": 0.898,
+    "_TREC_QA_MAP": 0.823,
+    "_TREC_QA_MRR": 0.871
   },
   {
-    "model": "Neg: 123 Pos: 4",
-    "wikiQA_MAP": 0.884,
-    "wikiQA_MRR": 0.898,
-    "tREC_QA_MAP": 0.823,
-    "tREC_QA_MRR": 0.872
+    "_Model": "Neg: 123 Pos: 4",
+    "_WikiQA_MAP": 0.884,
+    "_WikiQA_MRR": 0.898,
+    "_TREC_QA_MAP": 0.823,
+    "_TREC_QA_MRR": 0.872
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
-    "test": "EGFR",
-    "metric": "MAP",
+    "_Test": "EGFR",
+    "_Metric": "MAP",
     "tf_idf": 0.289,
     "bm25": 0.632,
     "emb": 0.31,
@@ -12,8 +12,8 @@
     "auto_rank_feat": 0.699
   },
   {
-    "test": "EGFR",
-    "metric": "nDCG",
+    "_Test": "EGFR",
+    "_Metric": "nDCG",
     "tf_idf": 0.424,
     "bm25": 0.728,
     "emb": 0.46,
@@ -24,8 +24,8 @@
     "auto_rank_feat": 0.81
   },
   {
-    "test": "KRAS",
-    "metric": "MAP",
+    "_Test": "KRAS",
+    "_Metric": "MAP",
     "tf_idf": 0.327,
     "bm25": 0.61,
     "emb": 0.466,
@@ -36,8 +36,8 @@
     "auto_rank_feat": 0.82
   },
   {
-    "test": "KRAS",
-    "metric": "nDCG",
+    "_Test": "KRAS",
+    "_Metric": "nDCG",
     "tf_idf": 0.456,
     "bm25": 0.723,
     "emb": 0.592,
@@ -48,8 +48,8 @@
     "auto_rank_feat": 0.914
   },
   {
-    "test": "BRAF",
-    "metric": "MAP",
+    "_Test": "BRAF",
+    "_Metric": "MAP",
     "tf_idf": 0.342,
     "bm25": 0.656,
     "emb": 0.427,
@@ -60,8 +60,8 @@
     "auto_rank_feat": 0.812
   },
   {
-    "test": "BRAF",
-    "metric": "nDCG",
+    "_Test": "BRAF",
+    "_Metric": "nDCG",
     "tf_idf": 0.48,
     "bm25": 0.751,
     "emb": 0.572,
@@ -72,8 +72,8 @@
     "auto_rank_feat": 0.901
   },
   {
-    "test": "PIK3CA",
-    "metric": "MAP",
+    "_Test": "PIK3CA",
+    "_Metric": "MAP",
     "tf_idf": 0.341,
     "bm25": 0.633,
     "emb": 0.486,
@@ -84,8 +84,8 @@
     "auto_rank_feat": 0.81
   },
   {
-    "test": "PIK3CA",
-    "metric": "nDCG",
+    "_Test": "PIK3CA",
+    "_Metric": "nDCG",
     "tf_idf": 0.473,
     "bm25": 0.729,
     "emb": 0.617,

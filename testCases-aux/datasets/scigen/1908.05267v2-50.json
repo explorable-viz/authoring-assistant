@@ -1,72 +1,72 @@
 [
   {
-    "Bigram": "united states",
-    "Train_LMI_⋅10−6": 271,
-    "Train_p_l_w": 0.64,
-    "Development_LMI_⋅10−6": 268,
-    "Development_p_l_w": 0.44
+    "_Bigram": "united states",
+    "_Train_LMI_⋅10−6": 271,
+    "_Train_p_l_w": 0.64,
+    "_Development_LMI_⋅10−6": 268,
+    "_Development_p_l_w": 0.44
   },
   {
-    "Bigram": "least one",
-    "Train_LMI_⋅10−6": 269,
-    "Train_p_l_w": 0.9,
-    "Development_LMI_⋅10−6": 267,
-    "Development_p_l_w": 0.77
+    "_Bigram": "least one",
+    "_Train_LMI_⋅10−6": 269,
+    "_Train_p_l_w": 0.9,
+    "_Development_LMI_⋅10−6": 267,
+    "_Development_p_l_w": 0.77
   },
   {
-    "Bigram": "at least",
-    "Train_LMI_⋅10−6": 256,
-    "Train_p_l_w": 0.72,
-    "Development_LMI_⋅10−6": 163,
-    "Development_p_l_w": 0.48
+    "_Bigram": "at least",
+    "_Train_LMI_⋅10−6": 256,
+    "_Train_p_l_w": 0.72,
+    "_Development_LMI_⋅10−6": 163,
+    "_Development_p_l_w": 0.48
   },
   {
-    "Bigram": "person who",
-    "Train_LMI_⋅10−6": 162,
-    "Train_p_l_w": 0.9,
-    "Development_LMI_⋅10−6": 135,
-    "Development_p_l_w": 0.61
+    "_Bigram": "person who",
+    "_Train_LMI_⋅10−6": 162,
+    "_Train_p_l_w": 0.9,
+    "_Development_LMI_⋅10−6": 135,
+    "_Development_p_l_w": 0.61
   },
   {
-    "Bigram": "stars actor",
-    "Train_LMI_⋅10−6": 143,
-    "Train_p_l_w": 0.86,
-    "Development_LMI_⋅10−6": 111,
-    "Development_p_l_w": 0.71
+    "_Bigram": "stars actor",
+    "_Train_LMI_⋅10−6": 143,
+    "_Train_p_l_w": 0.86,
+    "_Development_LMI_⋅10−6": 111,
+    "_Development_p_l_w": 0.71
   },
   {
-    "Bigram": "won award",
-    "Train_LMI_⋅10−6": 133,
-    "Train_p_l_w": 0.8,
-    "Development_LMI_⋅10−6": 50,
-    "Development_p_l_w": 0.56
+    "_Bigram": "won award",
+    "_Train_LMI_⋅10−6": 133,
+    "_Train_p_l_w": 0.8,
+    "_Development_LMI_⋅10−6": 50,
+    "_Development_p_l_w": 0.56
   },
   {
-    "Bigram": "american actor",
-    "Train_LMI_⋅10−6": 126,
-    "Train_p_l_w": 0.79,
-    "Development_LMI_⋅10−6": 55,
-    "Development_p_l_w": 0.45
+    "_Bigram": "american actor",
+    "_Train_LMI_⋅10−6": 126,
+    "_Train_p_l_w": 0.79,
+    "_Development_LMI_⋅10−6": 55,
+    "_Development_p_l_w": 0.45
   },
   {
-    "Bigram": "starred movie",
-    "Train_LMI_⋅10−6": 100,
-    "Train_p_l_w": 0.88,
-    "Development_LMI_⋅10−6": 34,
-    "Development_p_l_w": 0.8
+    "_Bigram": "starred movie",
+    "_Train_LMI_⋅10−6": 100,
+    "_Train_p_l_w": 0.88,
+    "_Development_LMI_⋅10−6": 34,
+    "_Development_p_l_w": 0.8
   },
   {
-    "Bigram": "from united",
-    "Train_LMI_⋅10−6": 100,
-    "Train_p_l_w": 0.82,
-    "Development_LMI_⋅10−6": 108,
-    "Development_p_l_w": 0.67
+    "_Bigram": "from united",
+    "_Train_LMI_⋅10−6": 100,
+    "_Train_p_l_w": 0.82,
+    "_Development_LMI_⋅10−6": 108,
+    "_Development_p_l_w": 0.67
   },
   {
-    "Bigram": "from america",
-    "Train_LMI_⋅10−6": 96,
-    "Train_p_l_w": 0.89,
-    "Development_LMI_⋅10−6": 108,
-    "Development_p_l_w": 0.74
+    "_Bigram": "from america",
+    "_Train_LMI_⋅10−6": 96,
+    "_Train_p_l_w": 0.89,
+    "_Development_LMI_⋅10−6": 108,
+    "_Development_p_l_w": 0.74
   }
 ]

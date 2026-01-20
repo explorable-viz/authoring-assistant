@@ -1,27 +1,27 @@
 [
   {
-    "model": "F&A Unsupervised",
-    "f1": 52.3,
-    "cR": "-"
+    "_Model": "F&A Unsupervised",
+    "_F1": 52.3,
+    "_CR": "-"
   },
   {
-    "model": "Contextual Match",
-    "f1": 60.9,
-    "cR": 0.38
+    "_Model": "Contextual Match",
+    "_F1": 60.9,
+    "_CR": 0.38
   },
   {
-    "model": "Filippova et al. ( 2015 )",
-    "f1": 82.0,
-    "cR": 0.38
+    "_Model": "Filippova et al. ( 2015 )",
+    "_F1": 82.0,
+    "_CR": 0.38
   },
   {
-    "model": "Zhao et al. ( 2018 )",
-    "f1": 85.1,
-    "cR": 0.39
+    "_Model": "Zhao et al. ( 2018 )",
+    "_F1": 85.1,
+    "_CR": 0.39
   },
   {
-    "model": "Contextual Oracle",
-    "f1": 82.1,
-    "cR": 0.39
+    "_Model": "Contextual Oracle",
+    "_F1": 82.1,
+    "_CR": 0.39
   }
 ]

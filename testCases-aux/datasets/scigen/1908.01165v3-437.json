@@ -1,7 +1,7 @@
 [
   {
-    "Transformer": " en-de",
-    "Method": "random + HotFlip",
+    "_Transformer": " en-de",
+    "_Method": "random + HotFlip",
     "src": 51.04,
     "l1": 80.49,
     "l2": 47.53,
@@ -9,8 +9,8 @@
     "lblstm2": 43.66
   },
   {
-    "Transformer": " en-de",
-    "Method": "Min-Grad + HotFlip",
+    "_Transformer": " en-de",
+    "_Method": "Min-Grad + HotFlip",
     "src": 53.23,
     "l1": 83.13,
     "l2": 49.15,
@@ -18,8 +18,8 @@
     "lblstm2": 44.76
   },
   {
-    "Transformer": " en-de",
-    "Method": "random + Soft-Att",
+    "_Transformer": " en-de",
+    "_Method": "random + Soft-Att",
     "src": 32.01,
     "l1": 84.79,
     "l2": 29.72,
@@ -27,8 +27,8 @@
     "lblstm2": 27.85
   },
   {
-    "Transformer": " en-de",
-    "Method": "Min-Grad + Soft-Att",
+    "_Transformer": " en-de",
+    "_Method": "Min-Grad + Soft-Att",
     "src": 31.17,
     "l1": 88.55,
     "l2": 31.09,
@@ -36,8 +36,8 @@
     "lblstm2": 27.43
   },
   {
-    "Transformer": " en-fr",
-    "Method": "random + HotFlip",
+    "_Transformer": " en-fr",
+    "_Method": "random + HotFlip",
     "src": 55.51,
     "l1": 85.18,
     "l2": 40.35,
@@ -45,8 +45,8 @@
     "lblstm2": 36.18
   },
   {
-    "Transformer": " en-fr",
-    "Method": "Min-Grad + HotFlip",
+    "_Transformer": " en-fr",
+    "_Method": "Min-Grad + HotFlip",
     "src": 57.92,
     "l1": 88.4,
     "l2": 41.98,
@@ -54,8 +54,8 @@
     "lblstm2": 37.68
   },
   {
-    "Transformer": " en-fr",
-    "Method": "random + Soft-Att",
+    "_Transformer": " en-fr",
+    "_Method": "random + Soft-Att",
     "src": 33.61,
     "l1": 89.77,
     "l2": 21.59,
@@ -63,8 +63,8 @@
     "lblstm2": 19.09
   },
   {
-    "Transformer": " en-fr",
-    "Method": "Min-Grad + Soft-Att",
+    "_Transformer": " en-fr",
+    "_Method": "Min-Grad + Soft-Att",
     "src": 35.4,
     "l1": 91.99,
     "l2": 23.28,

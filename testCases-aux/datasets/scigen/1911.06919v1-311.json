@@ -1,52 +1,52 @@
 [
   {
-    "Model": "CNN w/ GloVe",
-    "MAE": 1.16,
-    "MAPE": 14.38
+    "_Model": "CNN w/ GloVe",
+    "_MAE": 1.16,
+    "_MAPE": 14.38
   },
   {
-    "Model": "+ M1-latent",
-    "MAE": 1.15,
-    "MAPE": 14.66
+    "_Model": "+ M1-latent",
+    "_MAE": 1.15,
+    "_MAPE": 14.66
   },
   {
-    "Model": "+ M1-shallow",
-    "MAE": " 1.12(1) 14.19",
-    "MAPE": ""
+    "_Model": "+ M1-shallow",
+    "_MAE": " 1.12(1) 14.19",
+    "_MAPE": ""
   },
   {
-    "Model": "Bi-LSTM w/ GloVe",
-    "MAE": 1.14,
-    "MAPE": 14.57
+    "_Model": "Bi-LSTM w/ GloVe",
+    "_MAE": 1.14,
+    "_MAPE": 14.57
   },
   {
-    "Model": "+ M1-latent",
-    "MAE": 1.13,
-    "MAPE": 14.39
+    "_Model": "+ M1-latent",
+    "_MAE": 1.13,
+    "_MAPE": 14.39
   },
   {
-    "Model": "+ M1-shallow",
-    "MAE": 1.13,
-    "MAPE": 14.25
+    "_Model": "+ M1-shallow",
+    "_MAE": 1.13,
+    "_MAPE": 14.25
   },
   {
-    "Model": "+ M2-latent",
-    "MAE": 1.12,
-    "MAPE": 14.02
+    "_Model": "+ M2-latent",
+    "_MAE": 1.12,
+    "_MAPE": 14.02
   },
   {
-    "Model": "+ M2-shallow",
-    "MAE": 1.13,
-    "MAPE": 14.2
+    "_Model": "+ M2-shallow",
+    "_MAE": 1.13,
+    "_MAPE": 14.2
   },
   {
-    "Model": "Bi-LSTM w/ latent",
-    "MAE": " 1.11(2) 13.91",
-    "MAPE": ""
+    "_Model": "Bi-LSTM w/ latent",
+    "_MAE": " 1.11(2) 13.91",
+    "_MAPE": ""
   },
   {
-    "Model": "Bi-LSTM w/ shallow",
-    "MAE": 1.15,
-    "MAPE": 14.67
+    "_Model": "Bi-LSTM w/ shallow",
+    "_MAE": 1.15,
+    "_MAPE": 14.67
   }
 ]

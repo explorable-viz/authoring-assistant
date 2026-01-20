@@ -1,26 +1,26 @@
 [
   {
-    "num_of_Authors": "#of samples/class",
-    "6": 1100,
-    "8": 931,
-    "10": 849,
-    "12": 562,
-    "14": 469
+    "_num_of_Authors": "#of samples/class",
+    "_6": 1100,
+    "_8": 931,
+    "_10": 849,
+    "_12": 562,
+    "_14": 469
   },
   {
-    "num_of_Authors": "Pretrained Embedding",
-    "6": 96,
-    "8": 92,
-    "10": 86,
-    "12": 75,
-    "14": 69
+    "_num_of_Authors": "Pretrained Embedding",
+    "_6": 96,
+    "_8": 92,
+    "_10": 86,
+    "_12": 75,
+    "_14": 69
   },
   {
-    "num_of_Authors": "Not pretrained",
-    "6": 95,
-    "8": 82,
-    "10": 83,
-    "12": 66,
-    "14": 59.5
+    "_num_of_Authors": "Not pretrained",
+    "_6": 95,
+    "_8": 82,
+    "_10": 83,
+    "_12": 66,
+    "_14": 59.5
   }
 ]

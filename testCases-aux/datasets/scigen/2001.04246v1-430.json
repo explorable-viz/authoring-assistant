@@ -1,65 +1,65 @@
 [
   {
-    "structureTask": "AdaBERT-SST-2",
-    "sST_2": 91.9,
-    "mRPC": 78.1,
-    "qQP": 58.6,
-    "mNLI": 64.0,
-    "qNLI": 74.1,
-    "rTE": 53.8
+    "_StructureTask": "AdaBERT-SST-2",
+    "_SST_2": 91.9,
+    "_MRPC": 78.1,
+    "_QQP": 58.6,
+    "_MNLI": 64.0,
+    "_QNLI": 74.1,
+    "_RTE": 53.8
   },
   {
-    "structureTask": "AdaBERT-MRPC",
-    "sST_2": 81.5,
-    "mRPC": 84.7,
-    "qQP": 68.9,
-    "mNLI": 75.9,
-    "qNLI": 82.2,
-    "rTE": 60.3
+    "_StructureTask": "AdaBERT-MRPC",
+    "_SST_2": 81.5,
+    "_MRPC": 84.7,
+    "_QQP": 68.9,
+    "_MNLI": 75.9,
+    "_QNLI": 82.2,
+    "_RTE": 60.3
   },
   {
-    "structureTask": "AdaBERT-QQP",
-    "sST_2": 81.9,
-    "mRPC": 84.1,
-    "qQP": 70.5,
-    "mNLI": 76.3,
-    "qNLI": 82.5,
-    "rTE": 60.5
+    "_StructureTask": "AdaBERT-QQP",
+    "_SST_2": 81.9,
+    "_MRPC": 84.1,
+    "_QQP": 70.5,
+    "_MNLI": 76.3,
+    "_QNLI": 82.5,
+    "_RTE": 60.5
   },
   {
-    "structureTask": "AdaBERT-MNLI",
-    "sST_2": 82.1,
-    "mRPC": 81.5,
-    "qQP": 66.8,
-    "mNLI": 81.3,
-    "qNLI": 86.1,
-    "rTE": 63.2
+    "_StructureTask": "AdaBERT-MNLI",
+    "_SST_2": 82.1,
+    "_MRPC": 81.5,
+    "_QQP": 66.8,
+    "_MNLI": 81.3,
+    "_QNLI": 86.1,
+    "_RTE": 63.2
   },
   {
-    "structureTask": "AdaBERT-QNLI",
-    "sST_2": 81.6,
-    "mRPC": 82.3,
-    "qQP": 67.7,
-    "mNLI": 79.2,
-    "qNLI": 87.2,
-    "rTE": 62.9
+    "_StructureTask": "AdaBERT-QNLI",
+    "_SST_2": 81.6,
+    "_MRPC": 82.3,
+    "_QQP": 67.7,
+    "_MNLI": 79.2,
+    "_QNLI": 87.2,
+    "_RTE": 62.9
   },
   {
-    "structureTask": "AdaBERT-RTE",
-    "sST_2": 82.9,
-    "mRPC": 81.1,
-    "qQP": 66.5,
-    "mNLI": 79.8,
-    "qNLI": 86.0,
-    "rTE": 64.1
+    "_StructureTask": "AdaBERT-RTE",
+    "_SST_2": 82.9,
+    "_MRPC": 81.1,
+    "_QQP": 66.5,
+    "_MNLI": 79.8,
+    "_QNLI": 86.0,
+    "_RTE": 64.1
   },
   {
-    "structureTask": "Random",
-    "sST_2": 80.4,
-    "mRPC": 79.2,
-    "qQP": 61.8,
-    "mNLI": 69.7,
-    "qNLI": 78.2,
-    "rTE": 55.3
+    "_StructureTask": "Random",
+    "_SST_2": 80.4,
+    "_MRPC": 79.2,
+    "_QQP": 61.8,
+    "_MNLI": 69.7,
+    "_QNLI": 78.2,
+    "_RTE": 55.3
   }
 ]

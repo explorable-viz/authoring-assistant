@@ -1,44 +1,44 @@
 [
   {
-    "Model": "Proto (CNN)*",
-    "5_Way_1_Shot_0_NOTA": 74.52,
-    "5_Way_1_Shot_15_NOTA": 62.18,
-    "5_Way_1_Shot_30_NOTA": 53.38,
-    "5_Way_1_Shot_50_NOTA": 37.26
+    "_Model": "Proto (CNN)*",
+    "_5_Way_1_Shot_0_NOTA": 74.52,
+    "_5_Way_1_Shot_15_NOTA": 62.18,
+    "_5_Way_1_Shot_30_NOTA": 53.38,
+    "_5_Way_1_Shot_50_NOTA": 37.26
   },
   {
-    "Model": "Proto (CNN)",
-    "5_Way_1_Shot_0_NOTA": 69.17,
-    "5_Way_1_Shot_15_NOTA": 60.59,
-    "5_Way_1_Shot_30_NOTA": 53.18,
-    "5_Way_1_Shot_50_NOTA": 40.0
+    "_Model": "Proto (CNN)",
+    "_5_Way_1_Shot_0_NOTA": 69.17,
+    "_5_Way_1_Shot_15_NOTA": 60.59,
+    "_5_Way_1_Shot_30_NOTA": 53.18,
+    "_5_Way_1_Shot_50_NOTA": 40.0
   },
   {
-    "Model": "Proto (BERT)*",
-    "5_Way_1_Shot_0_NOTA": 80.68,
-    "5_Way_1_Shot_15_NOTA": 67.92,
-    "5_Way_1_Shot_30_NOTA": 58.22,
-    "5_Way_1_Shot_50_NOTA": 40.64
+    "_Model": "Proto (BERT)*",
+    "_5_Way_1_Shot_0_NOTA": 80.68,
+    "_5_Way_1_Shot_15_NOTA": 67.92,
+    "_5_Way_1_Shot_30_NOTA": 58.22,
+    "_5_Way_1_Shot_50_NOTA": 40.64
   },
   {
-    "Model": "Proto (BERT)",
-    "5_Way_1_Shot_0_NOTA": 81.65,
-    "5_Way_1_Shot_15_NOTA": 70.02,
-    "5_Way_1_Shot_30_NOTA": 61.08,
-    "5_Way_1_Shot_50_NOTA": 45.94
+    "_Model": "Proto (BERT)",
+    "_5_Way_1_Shot_0_NOTA": 81.65,
+    "_5_Way_1_Shot_15_NOTA": 70.02,
+    "_5_Way_1_Shot_30_NOTA": 61.08,
+    "_5_Way_1_Shot_50_NOTA": 45.94
   },
   {
-    "Model": "BERT-PAIR*",
-    "5_Way_1_Shot_0_NOTA": 88.32,
-    "5_Way_1_Shot_15_NOTA": 73.6,
-    "5_Way_1_Shot_30_NOTA": 63.0,
-    "5_Way_1_Shot_50_NOTA": 43.99
+    "_Model": "BERT-PAIR*",
+    "_5_Way_1_Shot_0_NOTA": 88.32,
+    "_5_Way_1_Shot_15_NOTA": 73.6,
+    "_5_Way_1_Shot_30_NOTA": 63.0,
+    "_5_Way_1_Shot_50_NOTA": 43.99
   },
   {
-    "Model": "BERT-PAIR",
-    "5_Way_1_Shot_0_NOTA": 76.73,
-    "5_Way_1_Shot_15_NOTA": 77.67,
-    "5_Way_1_Shot_30_NOTA": 78.49,
-    "5_Way_1_Shot_50_NOTA": 80.31
+    "_Model": "BERT-PAIR",
+    "_5_Way_1_Shot_0_NOTA": 76.73,
+    "_5_Way_1_Shot_15_NOTA": 77.67,
+    "_5_Way_1_Shot_30_NOTA": 78.49,
+    "_5_Way_1_Shot_50_NOTA": 80.31
   }
 ]

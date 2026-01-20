@@ -1,17 +1,17 @@
 [
   {
-    "Test_domain": "WSJ",
-    "Training_Data_WSJ": 65.78,
-    "Training_Data_WSJ_Giga": 83.42
+    "_Test_domain": "WSJ",
+    "_Training_Data_WSJ": 65.78,
+    "_Training_Data_WSJ_Giga": 83.42
   },
   {
-    "Test_domain": "Brown",
-    "Training_Data_WSJ": 45.0,
-    "Training_Data_WSJ_Giga": 76.99
+    "_Test_domain": "Brown",
+    "_Training_Data_WSJ": 45.0,
+    "_Training_Data_WSJ_Giga": 76.99
   },
   {
-    "Test_domain": "Wikipedia",
-    "Training_Data_WSJ": 35.9,
-    "Training_Data_WSJ_Giga": 62.26
+    "_Test_domain": "Wikipedia",
+    "_Training_Data_WSJ": 35.9,
+    "_Training_Data_WSJ_Giga": 62.26
   }
 ]

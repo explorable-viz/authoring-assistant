@@ -1,22 +1,22 @@
 [
   {
     "_1": "TVC",
-    "Word_vectors": 0.454,
-    "LMs": 0.666
+    "_Word_vectors": 0.454,
+    "_LMs": 0.666
   },
   {
     "_1": "TVcC",
-    "Word_vectors": 0.469,
-    "LMs": 0.739
+    "_Word_vectors": 0.469,
+    "_LMs": 0.739
   },
   {
     "_1": "PPL",
-    "Word_vectors": -0.398,
-    "LMs": -0.618
+    "_Word_vectors": -0.398,
+    "_LMs": -0.618
   },
   {
     "_1": "WVV",
-    "Word_vectors": -0.406,
-    "LMs": -0.747
+    "_Word_vectors": -0.406,
+    "_LMs": -0.747
   }
 ]

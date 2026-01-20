@@ -1,27 +1,27 @@
 [
   {
-    "method": "wavelength ",
-    "line_iu": 68.58,
-    "pixel_iu": 79.13
+    "_Method": "wavelength ",
+    "_Line_iu": 68.58,
+    "_Pixel_iu": 79.13
   },
   {
-    "method": "Brigham Young University ",
-    "line_iu": 81.5,
-    "pixel_iu": 83.07
+    "_Method": "Brigham Young University ",
+    "_Line_iu": 81.5,
+    "_Pixel_iu": 83.07
   },
   {
-    "method": "CITlab Argus LineDetect ",
-    "line_iu": 96.99,
-    "pixel_iu": 93.01
+    "_Method": "CITlab Argus LineDetect ",
+    "_Line_iu": 96.99,
+    "_Pixel_iu": 93.01
   },
   {
-    "method": "wavelength* (tight polygons) ",
-    "line_iu": 97.86,
-    "pixel_iu": 97.05
+    "_Method": "wavelength* (tight polygons) ",
+    "_Line_iu": 97.86,
+    "_Pixel_iu": 97.05
   },
   {
-    "method": "proposed method*",
-    "line_iu": 99.42,
-    "pixel_iu": 96.11
+    "_Method": "proposed method*",
+    "_Line_iu": 99.42,
+    "_Pixel_iu": 96.11
   }
 ]

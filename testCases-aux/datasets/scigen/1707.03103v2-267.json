@@ -1,68 +1,68 @@
 [
   {
-    "Genre": "Fiction",
-    "CBOW": 67.5,
-    "ESIM": 73.0,
-    "InnerAtt": 73.2
+    "_Genre": "Fiction",
+    "_CBOW": 67.5,
+    "_ESIM": 73.0,
+    "_InnerAtt": 73.2
   },
   {
-    "Genre": "Government",
-    "CBOW": 67.5,
-    "ESIM": 74.8,
-    "InnerAtt": 75.2
+    "_Genre": "Government",
+    "_CBOW": 67.5,
+    "_ESIM": 74.8,
+    "_InnerAtt": 75.2
   },
   {
-    "Genre": "Slate",
-    "CBOW": 60.6,
-    "ESIM": 67.9,
-    "InnerAtt": 67.2
+    "_Genre": "Slate",
+    "_CBOW": 60.6,
+    "_ESIM": 67.9,
+    "_InnerAtt": 67.2
   },
   {
-    "Genre": "Telephone",
-    "CBOW": 63.7,
-    "ESIM": 72.2,
-    "InnerAtt": 73.0
+    "_Genre": "Telephone",
+    "_CBOW": 63.7,
+    "_ESIM": 72.2,
+    "_InnerAtt": 73.0
   },
   {
-    "Genre": "Travel",
-    "CBOW": 64.6,
-    "ESIM": 73.7,
-    "InnerAtt": 72.8
+    "_Genre": "Travel",
+    "_CBOW": 64.6,
+    "_ESIM": 73.7,
+    "_InnerAtt": 72.8
   },
   {
-    "Genre": "9/11",
-    "CBOW": 63.2,
-    "ESIM": 71.9,
-    "InnerAtt": 70.5
+    "_Genre": "9/11",
+    "_CBOW": 63.2,
+    "_ESIM": 71.9,
+    "_InnerAtt": 70.5
   },
   {
-    "Genre": "Face-to-face",
-    "CBOW": 66.3,
-    "ESIM": 71.2,
-    "InnerAtt": 74.5
+    "_Genre": "Face-to-face",
+    "_CBOW": 66.3,
+    "_ESIM": 71.2,
+    "_InnerAtt": 74.5
   },
   {
-    "Genre": "Letters",
-    "CBOW": 68.3,
-    "ESIM": 74.7,
-    "InnerAtt": 75.4
+    "_Genre": "Letters",
+    "_CBOW": 68.3,
+    "_ESIM": 74.7,
+    "_InnerAtt": 75.4
   },
   {
-    "Genre": "Oup",
-    "CBOW": 62.8,
-    "ESIM": 71.7,
-    "InnerAtt": 71.5
+    "_Genre": "Oup",
+    "_CBOW": 62.8,
+    "_ESIM": 71.7,
+    "_InnerAtt": 71.5
   },
   {
-    "Genre": "Verbatim",
-    "CBOW": 62.7,
-    "ESIM": 71.9,
-    "InnerAtt": 69.5
+    "_Genre": "Verbatim",
+    "_CBOW": 62.7,
+    "_ESIM": 71.9,
+    "_InnerAtt": 69.5
   },
   {
-    "Genre": " MultiNLI Overall",
-    "CBOW": 64.7,
-    "ESIM": 72.2,
-    "InnerAtt": 72.3
+    "_Genre": " MultiNLI Overall",
+    "_CBOW": 64.7,
+    "_ESIM": 72.2,
+    "_InnerAtt": 72.3
   }
 ]

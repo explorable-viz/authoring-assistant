@@ -1,58 +1,58 @@
 [
   {
     "_1": "",
-    "emb": "dim",
-    "vocab": "size",
-    "polyglot": "in-vocab",
-    "all": "pairs"
+    "_Emb": "dim",
+    "_Vocab": "size",
+    "_Polyglot": "in-vocab",
+    "_All": "pairs"
   },
   {
     "_1": "",
-    "emb": "",
-    "vocab": "",
-    "polyglot": " N=862",
-    "all": " N=2034"
+    "_Emb": "",
+    "_Vocab": "",
+    "_Polyglot": " N=862",
+    "_All": " N=2034"
   },
   {
     "_1": "VarEmbed",
-    "emb": 128,
-    "vocab": 100,
-    "polyglot": 41.9,
-    "all": 25.5
+    "_Emb": 128,
+    "_Vocab": 100,
+    "_Polyglot": 41.9,
+    "_All": 25.5
   },
   {
     "_1": "Polyglot",
-    "emb": 64,
-    "vocab": 100,
-    "polyglot": 40.8,
-    "all": 8.7
+    "_Emb": 64,
+    "_Vocab": 100,
+    "_Polyglot": 40.8,
+    "_All": 8.7
   },
   {
     "_1": "mimick",
-    "emb": 64,
-    "vocab": 0,
-    "polyglot": 17.9,
-    "all": 17.5
+    "_Emb": 64,
+    "_Vocab": 0,
+    "_Polyglot": 17.9,
+    "_All": 17.5
   },
   {
     "_1": "Polyglot",
-    "emb": 64,
-    "vocab": 100,
-    "polyglot": 40.8,
-    "all": 27.0
+    "_Emb": 64,
+    "_Vocab": 100,
+    "_Polyglot": 40.8,
+    "_All": 27.0
   },
   {
     "_1": "+mimick",
-    "emb": 64,
-    "vocab": 100,
-    "polyglot": 40.8,
-    "all": 27.0
+    "_Emb": 64,
+    "_Vocab": 100,
+    "_Polyglot": 40.8,
+    "_All": 27.0
   },
   {
     "_1": "Fasttext",
-    "emb": 300,
-    "vocab": 2510000.0,
-    "polyglot": "",
-    "all": 47.3
+    "_Emb": 300,
+    "_Vocab": 2510000.0,
+    "_Polyglot": "",
+    "_All": 47.3
   }
 ]

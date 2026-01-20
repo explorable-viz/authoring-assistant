@@ -1,26 +1,26 @@
 [
   {
-    "models": "MT as PE",
-    "bLEU": 76.76
+    "_Models": "MT as PE",
+    "_BLEU": 76.76
   },
   {
-    "models": "Processed MT",
-    "bLEU": 76.61
+    "_Models": "Processed MT",
+    "_BLEU": 76.61
   },
   {
-    "models": "Base",
-    "bLEU": 76.91
+    "_Models": "Base",
+    "_BLEU": 76.91
   },
   {
-    "models": "Gaussian",
-    "bLEU": 76.94
+    "_Models": "Gaussian",
+    "_BLEU": 76.94
   },
   {
-    "models": "Uniform",
-    "bLEU": 77.01
+    "_Models": "Uniform",
+    "_BLEU": 77.01
   },
   {
-    "models": "Ensemble x5",
-    "bLEU": 77.22
+    "_Models": "Ensemble x5",
+    "_BLEU": 77.22
   }
 ]

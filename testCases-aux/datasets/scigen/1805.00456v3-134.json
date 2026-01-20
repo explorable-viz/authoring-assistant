@@ -1,38 +1,38 @@
 [
   {
-    "representation": "Plain BPE",
-    "batches_update": 1,
-    "learning_rate": 0.025,
-    "test_BLEU": 27.5
+    "_Representation": "Plain BPE",
+    "_Batches_update": 1,
+    "_Learning_rate": 0.025,
+    "_Test_BLEU": 27.5
   },
   {
-    "representation": "Plain BPE",
-    "batches_update": 1,
-    "learning_rate": 0.2,
-    "test_BLEU": 27.2
+    "_Representation": "Plain BPE",
+    "_Batches_update": 1,
+    "_Learning_rate": 0.2,
+    "_Test_BLEU": 27.2
   },
   {
-    "representation": "Plain BPE",
-    "batches_update": 8,
-    "learning_rate": 0.2,
-    "test_BLEU": 28.9
+    "_Representation": "Plain BPE",
+    "_Batches_update": 8,
+    "_Learning_rate": 0.2,
+    "_Test_BLEU": 28.9
   },
   {
-    "representation": "Linearized derivation",
-    "batches_update": 1,
-    "learning_rate": 0.025,
-    "test_BLEU": 25.6
+    "_Representation": "Linearized derivation",
+    "_Batches_update": 1,
+    "_Learning_rate": 0.025,
+    "_Test_BLEU": 25.6
   },
   {
-    "representation": "Linearized derivation",
-    "batches_update": 1,
-    "learning_rate": 0.2,
-    "test_BLEU": 25.6
+    "_Representation": "Linearized derivation",
+    "_Batches_update": 1,
+    "_Learning_rate": 0.2,
+    "_Test_BLEU": 25.6
   },
   {
-    "representation": "Linearized derivation",
-    "batches_update": 8,
-    "learning_rate": 0.2,
-    "test_BLEU": 28.7
+    "_Representation": "Linearized derivation",
+    "_Batches_update": 8,
+    "_Learning_rate": 0.2,
+    "_Test_BLEU": 28.7
   }
 ]

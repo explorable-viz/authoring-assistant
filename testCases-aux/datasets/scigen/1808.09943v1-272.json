@@ -1,68 +1,68 @@
 [
   {
-    "encoder": "BiLSTM",
-    "bPE_Size": "Char",
-    "bLEU": 31.6,
-    "comp": 1.0
+    "_Encoder": "BiLSTM",
+    "_BPE_Size": "Char",
+    "_BLEU": 31.6,
+    "_Comp": 1.0
   },
   {
-    "encoder": "BiLSTM",
-    "bPE_Size": 1,
-    "bLEU": 30.5,
-    "comp": 0.44
+    "_Encoder": "BiLSTM",
+    "_BPE_Size": 1,
+    "_BLEU": 30.5,
+    "_Comp": 0.44
   },
   {
-    "encoder": "BiLSTM",
-    "bPE_Size": 2,
-    "bLEU": 30.4,
-    "comp": 0.35
+    "_Encoder": "BiLSTM",
+    "_BPE_Size": 2,
+    "_BLEU": 30.4,
+    "_Comp": 0.35
   },
   {
-    "encoder": "BiLSTM",
-    "bPE_Size": 4,
-    "bLEU": 30.0,
-    "comp": 0.29
+    "_Encoder": "BiLSTM",
+    "_BPE_Size": 4,
+    "_BLEU": 30.0,
+    "_Comp": 0.29
   },
   {
-    "encoder": "BiLSTM",
-    "bPE_Size": 8,
-    "bLEU": 29.6,
-    "comp": 0.25
+    "_Encoder": "BiLSTM",
+    "_BPE_Size": 8,
+    "_BLEU": 29.6,
+    "_Comp": 0.25
   },
   {
-    "encoder": "BiLSTM",
-    "bPE_Size": 16,
-    "bLEU": 30.0,
-    "comp": 0.22
+    "_Encoder": "BiLSTM",
+    "_BPE_Size": 16,
+    "_BLEU": 30.0,
+    "_Comp": 0.22
   },
   {
-    "encoder": "BiLSTM",
-    "bPE_Size": 32,
-    "bLEU": 29.7,
-    "comp": 0.2
+    "_Encoder": "BiLSTM",
+    "_BPE_Size": 32,
+    "_BLEU": 29.7,
+    "_Comp": 0.2
   },
   {
-    "encoder": "Lee et. al. reimpl",
-    "bPE_Size": "Char",
-    "bLEU": 28.0,
-    "comp": 0.2
+    "_Encoder": "Lee et. al. reimpl",
+    "_BPE_Size": "Char",
+    "_BLEU": 28.0,
+    "_Comp": 0.2
   },
   {
-    "encoder": "BiLSTM + pooling",
-    "bPE_Size": "Char",
-    "bLEU": 30.0,
-    "comp": 0.47
+    "_Encoder": "BiLSTM + pooling",
+    "_BPE_Size": "Char",
+    "_BLEU": 30.0,
+    "_Comp": 0.47
   },
   {
-    "encoder": "HM, 3-layer",
-    "bPE_Size": "Char",
-    "bLEU": 31.2,
-    "comp": 0.77
+    "_Encoder": "HM, 3-layer",
+    "_BPE_Size": "Char",
+    "_BLEU": 31.2,
+    "_Comp": 0.77
   },
   {
-    "encoder": "HM, 2-layer",
-    "bPE_Size": "Char",
-    "bLEU": 30.9,
-    "comp": 0.89
+    "_Encoder": "HM, 2-layer",
+    "_BPE_Size": "Char",
+    "_BLEU": 30.9,
+    "_Comp": 0.89
   }
 ]

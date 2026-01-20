@@ -1,72 +1,72 @@
 [
   {
     "_1": " Baseline",
-    "Standard_Decoder_MRR": " Baseline",
-    "Standard_Decoder_P_1": " Baseline",
-    "Our_Decoder_MRR": " Baseline",
-    "Our_Decoder_P_1": " Baseline"
+    "_Standard_Decoder_MRR": " Baseline",
+    "_Standard_Decoder_P_1": " Baseline",
+    "_Our_Decoder_MRR": " Baseline",
+    "_Our_Decoder_P_1": " Baseline"
   },
   {
     "_1": "Retrieval",
-    "Standard_Decoder_MRR": 81.08,
-    "Standard_Decoder_P_1": 65.45,
-    "Our_Decoder_MRR": "-",
-    "Our_Decoder_P_1": "-"
+    "_Standard_Decoder_MRR": 81.08,
+    "_Standard_Decoder_P_1": 65.45,
+    "_Our_Decoder_MRR": "-",
+    "_Our_Decoder_P_1": "-"
   },
   {
     "_1": " Comparisons",
-    "Standard_Decoder_MRR": " Comparisons",
-    "Standard_Decoder_P_1": " Comparisons",
-    "Our_Decoder_MRR": " Comparisons",
-    "Our_Decoder_P_1": " Comparisons"
+    "_Standard_Decoder_MRR": " Comparisons",
+    "_Standard_Decoder_P_1": " Comparisons",
+    "_Our_Decoder_MRR": " Comparisons",
+    "_Our_Decoder_P_1": " Comparisons"
   },
   {
     "_1": "Seq2seq",
-    "Standard_Decoder_MRR": 75.29,
-    "Standard_Decoder_P_1": 58.85,
-    "Our_Decoder_MRR": 74.46,
-    "Our_Decoder_P_1": 57.06
+    "_Standard_Decoder_MRR": 75.29,
+    "_Standard_Decoder_P_1": 58.85,
+    "_Our_Decoder_MRR": 74.46,
+    "_Our_Decoder_P_1": 57.06
   },
   {
     "_1": "+   encode evd",
-    "Standard_Decoder_MRR": 83.73,
-    "Standard_Decoder_P_1": 71.59,
-    "Our_Decoder_MRR": 88.24,
-    "Our_Decoder_P_1": 78.76
+    "_Standard_Decoder_MRR": 83.73,
+    "_Standard_Decoder_P_1": 71.59,
+    "_Our_Decoder_MRR": 88.24,
+    "_Our_Decoder_P_1": 78.76
   },
   {
     "_1": " Our Models",
-    "Standard_Decoder_MRR": " Our Models",
-    "Standard_Decoder_P_1": " Our Models",
-    "Our_Decoder_MRR": " Our Models",
-    "Our_Decoder_P_1": " Our Models"
+    "_Standard_Decoder_MRR": " Our Models",
+    "_Standard_Decoder_P_1": " Our Models",
+    "_Our_Decoder_MRR": " Our Models",
+    "_Our_Decoder_P_1": " Our Models"
   },
   {
     "_1": "Dec-shared",
-    "Standard_Decoder_MRR": 79.8,
-    "Standard_Decoder_P_1": 65.57,
-    "Our_Decoder_MRR": 95.18,
-    "Our_Decoder_P_1": 90.91
+    "_Standard_Decoder_MRR": 79.8,
+    "_Standard_Decoder_P_1": 65.57,
+    "_Our_Decoder_MRR": 95.18,
+    "_Our_Decoder_P_1": 90.91
   },
   {
     "_1": "+   attend KP",
-    "Standard_Decoder_MRR": 94.33,
-    "Standard_Decoder_P_1": 89.76,
-    "Our_Decoder_MRR": 93.48,
-    "Our_Decoder_P_1": 87.91
+    "_Standard_Decoder_MRR": 94.33,
+    "_Standard_Decoder_P_1": 89.76,
+    "_Our_Decoder_MRR": 93.48,
+    "_Our_Decoder_P_1": 87.91
   },
   {
     "_1": "Dec-separate",
-    "Standard_Decoder_MRR": 86.85,
-    "Standard_Decoder_P_1": 76.74,
-    "Our_Decoder_MRR": 91.7,
-    "Our_Decoder_P_1": 84.72
+    "_Standard_Decoder_MRR": 86.85,
+    "_Standard_Decoder_P_1": 76.74,
+    "_Our_Decoder_MRR": 91.7,
+    "_Our_Decoder_P_1": 84.72
   },
   {
     "_1": "+   attend KP",
-    "Standard_Decoder_MRR": 88.53,
-    "Standard_Decoder_P_1": 79.05,
-    "Our_Decoder_MRR": 92.77,
-    "Our_Decoder_P_1": 86.46
+    "_Standard_Decoder_MRR": 88.53,
+    "_Standard_Decoder_P_1": 79.05,
+    "_Our_Decoder_MRR": 92.77,
+    "_Our_Decoder_P_1": 86.46
   }
 ]

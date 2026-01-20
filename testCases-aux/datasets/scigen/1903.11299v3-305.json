@@ -1,69 +1,69 @@
 [
   {
-    "embedding": "vse ",
+    "_Embedding": "vse ",
     "lang": "en",
     "r_1": 64.6,
     "r_5": "∅",
     "r_10": 95.7
   },
   {
-    "embedding": "dsve ",
+    "_Embedding": "dsve ",
     "lang": "en",
     "r_1": 69.8,
     "r_5": 91.9,
     "r_10": 96.6
   },
   {
-    "embedding": "dsve w/ w2v",
+    "_Embedding": "dsve w/ w2v",
     "lang": "en",
     "r_1": 63.48,
     "r_5": 89.48,
     "r_10": 95.64
   },
   {
-    "embedding": "dsve w/ FastText",
+    "_Embedding": "dsve w/ FastText",
     "lang": "en",
     "r_1": 66.08,
     "r_5": 90.7,
     "r_10": 96.2
   },
   {
-    "embedding": "Ours w/ bv",
+    "_Embedding": "Ours w/ bv",
     "lang": "en",
     "r_1": 65.58,
     "r_5": 90.52,
     "r_10": 96.1
   },
   {
-    "embedding": "",
+    "_Embedding": "",
     "lang": "en+fr",
     "r_1": 67.78,
     "r_5": 91.58,
     "r_10": 96.92
   },
   {
-    "embedding": "Ours w/ muse",
+    "_Embedding": "Ours w/ muse",
     "lang": "en",
     "r_1": 63.1,
     "r_5": 89.58,
     "r_10": 95.56
   },
   {
-    "embedding": "",
+    "_Embedding": "",
     "lang": "en+fr",
     "r_1": 63.88,
     "r_5": 89.2,
     "r_10": 95.24
   },
   {
-    "embedding": "",
+    "_Embedding": "",
     "lang": "en+fr+de",
     "r_1": 62.4,
     "r_5": 89.18,
     "r_10": 95.16
   },
   {
-    "embedding": "",
+    "_Embedding": "",
     "lang": "all",
     "r_1": 63.28,
     "r_5": 88.3,

@@ -1,37 +1,37 @@
 [
   {
-    "system": "TSP-gen",
-    "dev": 21.12,
-    "test": 22.44
+    "_System": "TSP-gen",
+    "_Dev": 21.12,
+    "_Test": 22.44
   },
   {
-    "system": "JAMR-gen",
-    "dev": 23.0,
-    "test": 23.0
+    "_System": "JAMR-gen",
+    "_Dev": 23.0,
+    "_Test": 23.0
   },
   {
-    "system": "All",
-    "dev": 25.24,
-    "test": 25.62
+    "_System": "All",
+    "_Dev": 25.24,
+    "_Test": 25.62
   },
   {
-    "system": "NoInducedRule",
-    "dev": 16.75,
-    "test": 17.43
+    "_System": "NoInducedRule",
+    "_Dev": 16.75,
+    "_Test": 17.43
   },
   {
-    "system": "NoConceptRule",
-    "dev": 23.99,
-    "test": 24.86
+    "_System": "NoConceptRule",
+    "_Dev": 23.99,
+    "_Test": 24.86
   },
   {
-    "system": "NoMovingDistance",
-    "dev": 23.48,
-    "test": 24.06
+    "_System": "NoMovingDistance",
+    "_Dev": 23.48,
+    "_Test": 24.06
   },
   {
-    "system": "NoReorderModel",
-    "dev": 25.09,
-    "test": 25.43
+    "_System": "NoReorderModel",
+    "_Dev": 25.09,
+    "_Test": 25.43
   }
 ]

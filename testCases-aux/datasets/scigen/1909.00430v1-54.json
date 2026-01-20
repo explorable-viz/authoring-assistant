@@ -1,90 +1,90 @@
 [
   {
-    "data": "A",
-    "method": "TDLSTM+ATT Tang et al. ( 2016a )",
-    "semEval_15_Acc": 77.1,
-    "semEval_15_Macro_F1": 59.46,
-    "semEval_16_Acc": 83.11,
-    "semEval_16_Macro_F1": 57.53
+    "_Data": "A",
+    "_Method": "TDLSTM+ATT Tang et al. ( 2016a )",
+    "_SemEval_15_Acc": 77.1,
+    "_SemEval_15_Macro_F1": 59.46,
+    "_SemEval_16_Acc": 83.11,
+    "_SemEval_16_Macro_F1": 57.53
   },
   {
-    "data": "A",
-    "method": "ATAE-LSTM Wang et al. ( 2016 )",
-    "semEval_15_Acc": 78.48,
-    "semEval_15_Macro_F1": 62.84,
-    "semEval_16_Acc": 83.77,
-    "semEval_16_Macro_F1": 61.71
+    "_Data": "A",
+    "_Method": "ATAE-LSTM Wang et al. ( 2016 )",
+    "_SemEval_15_Acc": 78.48,
+    "_SemEval_15_Macro_F1": 62.84,
+    "_SemEval_16_Acc": 83.77,
+    "_SemEval_16_Macro_F1": 61.71
   },
   {
-    "data": "A",
-    "method": "MM Tang et al. ( 2016b )",
-    "semEval_15_Acc": 77.89,
-    "semEval_15_Macro_F1": 59.52,
-    "semEval_16_Acc": 83.04,
-    "semEval_16_Macro_F1": 57.91
+    "_Data": "A",
+    "_Method": "MM Tang et al. ( 2016b )",
+    "_SemEval_15_Acc": 77.89,
+    "_SemEval_15_Macro_F1": 59.52,
+    "_SemEval_16_Acc": 83.04,
+    "_SemEval_16_Macro_F1": 57.91
   },
   {
-    "data": "A",
-    "method": "RAM Chen et al. ( 2017 )",
-    "semEval_15_Acc": 79.98,
-    "semEval_15_Macro_F1": 60.57,
-    "semEval_16_Acc": 83.88,
-    "semEval_16_Macro_F1": 62.14
+    "_Data": "A",
+    "_Method": "RAM Chen et al. ( 2017 )",
+    "_SemEval_15_Acc": 79.98,
+    "_SemEval_15_Macro_F1": 60.57,
+    "_SemEval_16_Acc": 83.88,
+    "_SemEval_16_Macro_F1": 62.14
   },
   {
-    "data": "A",
-    "method": "LSTM+SynATT+TarRep He et al. ( 2018a )",
-    "semEval_15_Acc": 81.67,
-    "semEval_15_Macro_F1": 66.05,
-    "semEval_16_Acc": 84.61,
-    "semEval_16_Macro_F1": 67.45
+    "_Data": "A",
+    "_Method": "LSTM+SynATT+TarRep He et al. ( 2018a )",
+    "_SemEval_15_Acc": 81.67,
+    "_SemEval_15_Macro_F1": 66.05,
+    "_SemEval_16_Acc": 84.61,
+    "_SemEval_16_Macro_F1": 67.45
   },
   {
-    "data": "S+A",
-    "method": "Semisupervised He et al. ( 2018b )",
-    "semEval_15_Acc": 81.3,
-    "semEval_15_Macro_F1": 68.74,
-    "semEval_16_Acc": 85.58,
-    "semEval_16_Macro_F1": 69.76
+    "_Data": "S+A",
+    "_Method": "Semisupervised He et al. ( 2018b )",
+    "_SemEval_15_Acc": 81.3,
+    "_SemEval_15_Macro_F1": 68.74,
+    "_SemEval_16_Acc": 85.58,
+    "_SemEval_16_Macro_F1": 69.76
   },
   {
-    "data": "S",
-    "method": "BiLSTM-104 Sentence Training",
-    "semEval_15_Acc": 80.24,
-    "semEval_15_Macro_F1": 61.89,
-    "semEval_16_Acc": 80.89,
-    "semEval_16_Macro_F1": 61.4
+    "_Data": "S",
+    "_Method": "BiLSTM-104 Sentence Training",
+    "_SemEval_15_Acc": 80.24,
+    "_SemEval_15_Macro_F1": 61.89,
+    "_SemEval_16_Acc": 80.89,
+    "_SemEval_16_Macro_F1": 61.4
   },
   {
-    "data": "S+A",
-    "method": "BiLSTM-104 Sentence Training →Aspect Based Finetuning",
-    "semEval_15_Acc": 77.75,
-    "semEval_15_Macro_F1": 60.83,
-    "semEval_16_Acc": 84.87,
-    "semEval_16_Macro_F1": 61.87
+    "_Data": "S+A",
+    "_Method": "BiLSTM-104 Sentence Training →Aspect Based Finetuning",
+    "_SemEval_15_Acc": 77.75,
+    "_SemEval_15_Macro_F1": 60.83,
+    "_SemEval_16_Acc": 84.87,
+    "_SemEval_16_Macro_F1": 61.87
   },
   {
-    "data": "N",
-    "method": "BiLSTM-XR-Dev Estimation",
-    "semEval_15_Acc": 83.31,
-    "semEval_15_Macro_F1": 62.24,
-    "semEval_16_Acc": 87.68,
-    "semEval_16_Macro_F1": 63.23
+    "_Data": "N",
+    "_Method": "BiLSTM-XR-Dev Estimation",
+    "_SemEval_15_Acc": 83.31,
+    "_SemEval_15_Macro_F1": 62.24,
+    "_SemEval_16_Acc": 87.68,
+    "_SemEval_16_Macro_F1": 63.23
   },
   {
-    "data": "N",
-    "method": "BiLSTM-XR",
-    "semEval_15_Acc": 83.31,
-    "semEval_15_Macro_F1": 64.42,
-    "semEval_16_Acc": 88.12,
-    "semEval_16_Macro_F1": 68.6
+    "_Data": "N",
+    "_Method": "BiLSTM-XR",
+    "_SemEval_15_Acc": 83.31,
+    "_SemEval_15_Macro_F1": 64.42,
+    "_SemEval_16_Acc": 88.12,
+    "_SemEval_16_Macro_F1": 68.6
   },
   {
-    "data": "N+A",
-    "method": "BiLSTM-XR →Aspect Based Finetuning",
-    "semEval_15_Acc": 83.44,
-    "semEval_15_Macro_F1": 67.23,
-    "semEval_16_Acc": 87.66,
-    "semEval_16_Macro_F1": 71.19
+    "_Data": "N+A",
+    "_Method": "BiLSTM-XR →Aspect Based Finetuning",
+    "_SemEval_15_Acc": 83.44,
+    "_SemEval_15_Macro_F1": 67.23,
+    "_SemEval_16_Acc": 87.66,
+    "_SemEval_16_Macro_F1": 71.19
   }
 ]

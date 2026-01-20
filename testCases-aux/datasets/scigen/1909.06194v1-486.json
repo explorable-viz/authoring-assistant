@@ -1,44 +1,44 @@
 [
   {
-    "Model": "SVM-affix-punctuation 3-grams",
-    "CCAT10": 78.8,
-    "CCAT50": 69.3,
-    "BLOGS10": "#",
-    "BLOGS50": "#"
+    "_Model": "SVM-affix-punctuation 3-grams",
+    "_CCAT10": 78.8,
+    "_CCAT50": 69.3,
+    "_BLOGS10": "#",
+    "_BLOGS50": "#"
   },
   {
-    "Model": "CNN-char",
-    "CCAT10": "#",
-    "CCAT50": "#",
-    "BLOGS10": 61.2,
-    "BLOGS50": 49.4
+    "_Model": "CNN-char",
+    "_CCAT10": "#",
+    "_CCAT50": "#",
+    "_BLOGS10": 61.2,
+    "_BLOGS50": 49.4
   },
   {
-    "Model": "Continuous n-gram",
-    "CCAT10": 74.8,
-    "CCAT50": 72.6,
-    "BLOGS10": 61.34,
-    "BLOGS50": 52.82
+    "_Model": "Continuous n-gram",
+    "_CCAT10": 74.8,
+    "_CCAT50": 72.6,
+    "_BLOGS10": 61.34,
+    "_BLOGS50": 52.82
   },
   {
-    "Model": "N-gram CNN",
-    "CCAT10": 86.8,
-    "CCAT50": 76.5,
-    "BLOGS10": 63.74,
-    "BLOGS50": 53.09
+    "_Model": "N-gram CNN",
+    "_CCAT10": 86.8,
+    "_CCAT50": 76.5,
+    "_BLOGS10": 63.74,
+    "_BLOGS50": 53.09
   },
   {
-    "Model": "Syntax-CNN",
-    "CCAT10": 88.2,
-    "CCAT50": 81.0,
-    "BLOGS10": 64.1,
-    "BLOGS50": 56.73
+    "_Model": "Syntax-CNN",
+    "_CCAT10": 88.2,
+    "_CCAT50": 81.0,
+    "_BLOGS10": 64.1,
+    "_BLOGS50": 56.73
   },
   {
-    "Model": "Style-HAN",
-    "CCAT10": 90.58,
-    "CCAT50": 82.35,
-    "BLOGS10": 72.83,
-    "BLOGS50": 61.19
+    "_Model": "Style-HAN",
+    "_CCAT10": 90.58,
+    "_CCAT50": 82.35,
+    "_BLOGS10": 72.83,
+    "_BLOGS50": 61.19
   }
 ]

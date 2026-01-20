@@ -1,27 +1,27 @@
 [
   {
-    "↓train_eval": "Source",
-    "webSplit_1_0": 58.0,
-    "wikiSplit": 73.4
+    "_↓train_eval": "Source",
+    "_WebSplit_1_0": 58.0,
+    "_WikiSplit": 73.4
   },
   {
-    "↓train_eval": "SplitHalf",
-    "webSplit_1_0": 54.9,
-    "wikiSplit": 71.7
+    "_↓train_eval": "SplitHalf",
+    "_WebSplit_1_0": 54.9,
+    "_WikiSplit": 71.7
   },
   {
-    "↓train_eval": "WebSplit",
-    "webSplit_1_0": 35.3,
-    "wikiSplit": 4.2
+    "_↓train_eval": "WebSplit",
+    "_WebSplit_1_0": 35.3,
+    "_WikiSplit": 4.2
   },
   {
-    "↓train_eval": "WikiSplit",
-    "webSplit_1_0": 59.4,
-    "wikiSplit": 76.0
+    "_↓train_eval": "WikiSplit",
+    "_WebSplit_1_0": 59.4,
+    "_WikiSplit": 76.0
   },
   {
-    "↓train_eval": "Both",
-    "webSplit_1_0": 61.4,
-    "wikiSplit": 76.1
+    "_↓train_eval": "Both",
+    "_WebSplit_1_0": 61.4,
+    "_WikiSplit": 76.1
   }
 ]

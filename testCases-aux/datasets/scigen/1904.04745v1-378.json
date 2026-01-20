@@ -2,49 +2,49 @@
   {
     "_1": "LSTM-CNN ",
     "val": "-",
-    "uNC_testA": "-",
+    "_UNC_testA": "-",
     "testB": "-",
-    "g_Ref_val": 28.14,
-    "referIt_test": 48.03
+    "_G_Ref_val": 28.14,
+    "_ReferIt_test": 48.03
   },
   {
     "_1": "RMI ",
     "val": 29.86,
-    "uNC_testA": 30.48,
+    "_UNC_testA": 30.48,
     "testB": 29.5,
-    "g_Ref_val": 34.52,
-    "referIt_test": 58.73
+    "_G_Ref_val": 34.52,
+    "_ReferIt_test": 58.73
   },
   {
     "_1": "DMN ",
     "val": 38.88,
-    "uNC_testA": 44.22,
+    "_UNC_testA": 44.22,
     "testB": 32.29,
-    "g_Ref_val": 36.76,
-    "referIt_test": 52.81
+    "_G_Ref_val": 36.76,
+    "_ReferIt_test": 52.81
   },
   {
     "_1": "KWA ",
     "val": "-",
-    "uNC_testA": "-",
+    "_UNC_testA": "-",
     "testB": "-",
-    "g_Ref_val": 36.92,
-    "referIt_test": 59.09
+    "_G_Ref_val": 36.92,
+    "_ReferIt_test": 59.09
   },
   {
     "_1": "RRN ",
     "val": 39.75,
-    "uNC_testA": 42.15,
+    "_UNC_testA": 42.15,
     "testB": 36.11,
-    "g_Ref_val": 36.45,
-    "referIt_test": 63.63
+    "_G_Ref_val": 36.45,
+    "_ReferIt_test": 63.63
   },
   {
     "_1": "Ours",
     "val": 43.76,
-    "uNC_testA": 47.6,
+    "_UNC_testA": 47.6,
     "testB": 37.89,
-    "g_Ref_val": 39.98,
-    "referIt_test": 63.8
+    "_G_Ref_val": 39.98,
+    "_ReferIt_test": 63.8
   }
 ]

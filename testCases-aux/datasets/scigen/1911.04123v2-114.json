@@ -1,56 +1,56 @@
 [
   {
     "γ": 0.05,
-    "num_Edge_num_Node": 2.09,
-    "lAS": 92.5,
-    "conn_Ratio": 100.0
+    "_num_Edge_num_Node": 2.09,
+    "_LAS": 92.5,
+    "_Conn_Ratio": 100.0
   },
   {
     "γ": 0.1,
-    "num_Edge_num_Node": 1.57,
-    "lAS": 91.2,
-    "conn_Ratio": 99.5
+    "_num_Edge_num_Node": 1.57,
+    "_LAS": 91.2,
+    "_Conn_Ratio": 99.5
   },
   {
     "γ": 0.2,
-    "num_Edge_num_Node": 1.34,
-    "lAS": 90.5,
-    "conn_Ratio": 94.2
+    "_num_Edge_num_Node": 1.34,
+    "_LAS": 90.5,
+    "_Conn_Ratio": 94.2
   },
   {
     "γ": 0.3,
-    "num_Edge_num_Node": 1.04,
-    "lAS": 88.0,
-    "conn_Ratio": 77.6
+    "_num_Edge_num_Node": 1.04,
+    "_LAS": 88.0,
+    "_Conn_Ratio": 77.6
   },
   {
     "γ": " K",
-    "num_Edge_num_Node": "#Edge/#Node",
-    "lAS": "LAS",
-    "conn_Ratio": "Conn. Ratio(%)"
+    "_num_Edge_num_Node": "#Edge/#Node",
+    "_LAS": "LAS",
+    "_Conn_Ratio": "Conn. Ratio(%)"
   },
   {
     "γ": 1,
-    "num_Edge_num_Node": 1.0,
-    "lAS": 86.4,
-    "conn_Ratio": 100.0
+    "_num_Edge_num_Node": 1.0,
+    "_LAS": 86.4,
+    "_Conn_Ratio": 100.0
   },
   {
     "γ": 2,
-    "num_Edge_num_Node": 1.03,
-    "lAS": 87.3,
-    "conn_Ratio": 100.0
+    "_num_Edge_num_Node": 1.03,
+    "_LAS": 87.3,
+    "_Conn_Ratio": 100.0
   },
   {
     "γ": 5,
-    "num_Edge_num_Node": 1.09,
-    "lAS": 89.1,
-    "conn_Ratio": 100.0
+    "_num_Edge_num_Node": 1.09,
+    "_LAS": 89.1,
+    "_Conn_Ratio": 100.0
   },
   {
     "γ": 10,
-    "num_Edge_num_Node": 1.14,
-    "lAS": 89.8,
-    "conn_Ratio": 100.0
+    "_num_Edge_num_Node": 1.14,
+    "_LAS": 89.8,
+    "_Conn_Ratio": 100.0
   }
 ]

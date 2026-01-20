@@ -1,12 +1,12 @@
 [
   {
-    "Method": "BERT",
-    "SWAG": 84.2,
-    "Story_Cloze": 89.8
+    "_Method": "BERT",
+    "_SWAG": 84.2,
+    "_Story_Cloze": 89.8
   },
   {
-    "Method": "+ expl transfer",
-    "SWAG": 83.6,
-    "Story_Cloze": 89.5
+    "_Method": "+ expl transfer",
+    "_SWAG": 83.6,
+    "_Story_Cloze": 89.5
   }
 ]

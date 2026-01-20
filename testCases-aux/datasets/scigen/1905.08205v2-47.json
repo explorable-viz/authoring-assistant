@@ -1,44 +1,44 @@
 [
   {
-    "Approach": " Approach",
-    "Easy": " Easy",
-    "Medium": " Medium",
-    "Hard": " Hard",
-    "Extra": " Hard"
+    "_Approach": " Approach",
+    "_Easy": " Easy",
+    "_Medium": " Medium",
+    "_Hard": " Hard",
+    "_Extra": " Hard"
   },
   {
-    "Approach": "SyntaxSQLNet",
-    "Easy": 38.6,
-    "Medium": 17.6,
-    "Hard": 16.3,
-    "Extra": 4.9
+    "_Approach": "SyntaxSQLNet",
+    "_Easy": 38.6,
+    "_Medium": 17.6,
+    "_Hard": 16.3,
+    "_Extra": 4.9
   },
   {
-    "Approach": "SyntaxSQLNet",
-    "Easy": 42.9,
-    "Medium": 24.9,
-    "Hard": 21.9,
-    "Extra": 8.6
+    "_Approach": "SyntaxSQLNet",
+    "_Easy": 42.9,
+    "_Medium": 24.9,
+    "_Hard": 21.9,
+    "_Extra": 8.6
   },
   {
-    "Approach": "(BERT)",
-    "Easy": 42.9,
-    "Medium": 24.9,
-    "Hard": 21.9,
-    "Extra": 8.6
+    "_Approach": "(BERT)",
+    "_Easy": 42.9,
+    "_Medium": 24.9,
+    "_Hard": 21.9,
+    "_Extra": 8.6
   },
   {
-    "Approach": " IRNet",
-    "Easy": 70.1,
-    "Medium": 49.2,
-    "Hard": 39.5,
-    "Extra": 19.1
+    "_Approach": " IRNet",
+    "_Easy": 70.1,
+    "_Medium": 49.2,
+    "_Hard": 39.5,
+    "_Extra": 19.1
   },
   {
-    "Approach": " IRNet(BERT)",
-    "Easy": 77.2,
-    "Medium": 58.7,
-    "Hard": 48.1,
-    "Extra": 25.3
+    "_Approach": " IRNet(BERT)",
+    "_Easy": 77.2,
+    "_Medium": 58.7,
+    "_Hard": 48.1,
+    "_Extra": 25.3
   }
 ]

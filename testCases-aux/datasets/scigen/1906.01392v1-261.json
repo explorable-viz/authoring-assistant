@@ -1,44 +1,44 @@
 [
   {
-    "topic": "CC",
-    "biLSTM": 68.1,
-    "deAT": 70.9,
-    "biMPM": 71.5,
-    "rCN_Our": 73.0
+    "_Topic": "CC",
+    "_BiLSTM": 68.1,
+    "_DeAT": 70.9,
+    "_BiMPM": 71.5,
+    "_RCN_Our": 73.0
   },
   {
-    "topic": "HC",
-    "biLSTM": 52.5,
-    "deAT": 56.9,
-    "biMPM": 56.4,
-    "rCN_Our": 58.6
+    "_Topic": "HC",
+    "_BiLSTM": 52.5,
+    "_DeAT": 56.9,
+    "_BiMPM": 56.4,
+    "_RCN_Our": 58.6
   },
   {
-    "topic": "FM",
-    "biLSTM": 58.3,
-    "deAT": 60.6,
-    "biMPM": 59.8,
-    "rCN_Our": 64.4
+    "_Topic": "FM",
+    "_BiLSTM": 58.3,
+    "_DeAT": 60.6,
+    "_BiMPM": 59.8,
+    "_RCN_Our": 64.4
   },
   {
-    "topic": "AT",
-    "biLSTM": 67.5,
-    "deAT": 69.5,
-    "biMPM": 70.3,
-    "rCN_Our": 72.2
+    "_Topic": "AT",
+    "_BiLSTM": 67.5,
+    "_DeAT": 69.5,
+    "_BiMPM": 70.3,
+    "_RCN_Our": 72.2
   },
   {
-    "topic": "LA",
-    "biLSTM": 61.3,
-    "deAT": 63.2,
-    "biMPM": 62.4,
-    "rCN_Our": 64.5
+    "_Topic": "LA",
+    "_BiLSTM": 61.3,
+    "_DeAT": 63.2,
+    "_BiMPM": 62.4,
+    "_RCN_Our": 64.5
   },
   {
-    "topic": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "biLSTM": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "deAT": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "biMPM": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
-    "rCN_Our": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05"
+    "_Topic": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+    "_BiLSTM": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+    "_DeAT": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+    "_BiMPM": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05",
+    "_RCN_Our": "Two tailed t-test: ∗∗   p<0.01; ∗   p<0.05"
   }
 ]

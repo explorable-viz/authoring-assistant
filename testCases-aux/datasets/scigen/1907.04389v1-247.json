@@ -1,20 +1,20 @@
 [
   {
-    "model": "Baseline",
-    "val": 84.25,
-    "test": 84.22,
-    "hard": 68.02
+    "_Model": "Baseline",
+    "_Val": 84.25,
+    "_Test": 84.22,
+    "_Hard": 68.02
   },
   {
-    "model": "AdvCls",
-    "val": 84.58,
-    "test": 83.56,
-    "hard": 66.27
+    "_Model": "AdvCls",
+    "_Val": 84.58,
+    "_Test": 83.56,
+    "_Hard": 66.27
   },
   {
-    "model": "AdvDat",
-    "val": 78.45,
-    "test": 78.3,
-    "hard": 55.6
+    "_Model": "AdvDat",
+    "_Val": 78.45,
+    "_Test": 78.3,
+    "_Hard": 55.6
   }
 ]

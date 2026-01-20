@@ -1,22 +1,22 @@
 [
   {
-    "Type_of_Context": "No context (Base Model)",
-    "BLEU": 24.74
+    "_Type_of_Context": "No context (Base Model)",
+    "_BLEU": 24.74
   },
   {
-    "Type_of_Context": "Current Turn",
-    "BLEU": 26.39
+    "_Type_of_Context": "Current Turn",
+    "_BLEU": 26.39
   },
   {
-    "Type_of_Context": "Current Language from Previous Turns",
-    "BLEU": 26.21
+    "_Type_of_Context": "Current Language from Previous Turns",
+    "_BLEU": 26.21
   },
   {
-    "Type_of_Context": "Other Language from Previous Turns",
-    "BLEU": 26.32
+    "_Type_of_Context": "Other Language from Previous Turns",
+    "_BLEU": 26.32
   },
   {
-    "Type_of_Context": "Complete Context",
-    "BLEU": 26.49
+    "_Type_of_Context": "Complete Context",
+    "_BLEU": 26.49
   }
 ]

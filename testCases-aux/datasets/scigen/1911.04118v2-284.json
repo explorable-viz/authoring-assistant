@@ -1,30 +1,30 @@
 [
   {
-    "label": 1,
-    "s_∈_LA": "No",
-    "sA_∈_S": "No",
-    "num_Train": 19446120,
-    "num_Dev": 870404
+    "_Label": 1,
+    "_S_∈_LA": "No",
+    "_SA_∈_S": "No",
+    "_num_Train": 19446120,
+    "_num_Dev": 870404
   },
   {
-    "label": 2,
-    "s_∈_LA": "No",
-    "sA_∈_S": "Yes",
-    "num_Train": 428122,
-    "num_Dev": 25814
+    "_Label": 2,
+    "_S_∈_LA": "No",
+    "_SA_∈_S": "Yes",
+    "_num_Train": 428122,
+    "_num_Dev": 25814
   },
   {
-    "label": 3,
-    "s_∈_LA": "Yes",
-    "sA_∈_S": "No",
-    "num_Train": 442140,
-    "num_Dev": 29558
+    "_Label": 3,
+    "_S_∈_LA": "Yes",
+    "_SA_∈_S": "No",
+    "_num_Train": 442140,
+    "_num_Dev": 29558
   },
   {
-    "label": 4,
-    "s_∈_LA": "Yes",
-    "sA_∈_S": "Yes",
-    "num_Train": 61186,
-    "num_Dev": 4286
+    "_Label": 4,
+    "_S_∈_LA": "Yes",
+    "_SA_∈_S": "Yes",
+    "_num_Train": 61186,
+    "_num_Dev": 4286
   }
 ]

@@ -1,66 +1,66 @@
 [
   {
-    "ru": "✓",
-    "ja": "✓",
-    "en": "✓",
-    "num_sent": 913,
-    "usage_test": 600,
-    "usage_development": 313
+    "_Ru": "✓",
+    "_Ja": "✓",
+    "_En": "✓",
+    "_num_sent": 913,
+    "_Usage_test": 600,
+    "_Usage_development": 313
   },
   {
-    "ru": "✓",
-    "ja": "✓",
-    "en": "",
-    "num_sent": 173,
-    "usage_test": "-",
-    "usage_development": 173
+    "_Ru": "✓",
+    "_Ja": "✓",
+    "_En": "",
+    "_num_sent": 173,
+    "_Usage_test": "-",
+    "_Usage_development": 173
   },
   {
-    "ru": "",
-    "ja": "✓",
-    "en": "✓",
-    "num_sent": 276,
-    "usage_test": "-",
-    "usage_development": 276
+    "_Ru": "",
+    "_Ja": "✓",
+    "_En": "✓",
+    "_num_sent": 276,
+    "_Usage_test": "-",
+    "_Usage_development": 276
   },
   {
-    "ru": "✓",
-    "ja": "",
-    "en": "✓",
-    "num_sent": 0,
-    "usage_test": "-",
-    "usage_development": "-"
+    "_Ru": "✓",
+    "_Ja": "",
+    "_En": "✓",
+    "_num_sent": 0,
+    "_Usage_test": "-",
+    "_Usage_development": "-"
   },
   {
-    "ru": "✓",
-    "ja": "",
-    "en": "",
-    "num_sent": 4,
-    "usage_test": "-",
-    "usage_development": "-"
+    "_Ru": "✓",
+    "_Ja": "",
+    "_En": "",
+    "_num_sent": 4,
+    "_Usage_test": "-",
+    "_Usage_development": "-"
   },
   {
-    "ru": "",
-    "ja": "✓",
-    "en": "",
-    "num_sent": 287,
-    "usage_test": "-",
-    "usage_development": "-"
+    "_Ru": "",
+    "_Ja": "✓",
+    "_En": "",
+    "_num_sent": 287,
+    "_Usage_test": "-",
+    "_Usage_development": "-"
   },
   {
-    "ru": "",
-    "ja": "",
-    "en": "✓",
-    "num_sent": 1,
-    "usage_test": "-",
-    "usage_development": "-"
+    "_Ru": "",
+    "_Ja": "",
+    "_En": "✓",
+    "_num_sent": 1,
+    "_Usage_test": "-",
+    "_Usage_development": "-"
   },
   {
-    "ru": "Total",
-    "ja": "Total",
-    "en": "Total",
-    "num_sent": 1654,
-    "usage_test": "-",
-    "usage_development": "-"
+    "_Ru": "Total",
+    "_Ja": "Total",
+    "_En": "Total",
+    "_num_sent": 1654,
+    "_Usage_test": "-",
+    "_Usage_development": "-"
   }
 ]

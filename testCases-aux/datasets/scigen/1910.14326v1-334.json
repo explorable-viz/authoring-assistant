@@ -1,74 +1,74 @@
 [
   {
-    "Method": "Seq2seq",
-    "Perplexity": 37.9,
-    "C_Score": -0.16,
-    "BLEU": 1.29,
-    "Distinct_1": 0.0018,
-    "Diff_Score": 0.0,
-    "δ_Score": 0.0
+    "_Method": "Seq2seq",
+    "_Perplexity": 37.9,
+    "_C_Score": -0.16,
+    "_BLEU": 1.29,
+    "_Distinct_1": 0.0018,
+    "_Diff_Score": 0.0,
+    "_Δ_Score": 0.0
   },
   {
-    "Method": "Seq2seq-F",
-    "Perplexity": 34.42,
-    "C_Score": -0.13,
-    "BLEU": 1.47,
-    "Distinct_1": 0.0033,
-    "Diff_Score": 63.44,
-    "δ_Score": 32.73
+    "_Method": "Seq2seq-F",
+    "_Perplexity": 34.42,
+    "_C_Score": -0.13,
+    "_BLEU": 1.47,
+    "_Distinct_1": 0.0033,
+    "_Diff_Score": 63.44,
+    "_Δ_Score": 32.73
   },
   {
-    "Method": "Speaker",
-    "Perplexity": 40.17,
-    "C_Score": -0.14,
-    "BLEU": 1.14,
-    "Distinct_1": 0.0039,
-    "Diff_Score": 0.0,
-    "δ_Score": 0.0
+    "_Method": "Speaker",
+    "_Perplexity": 40.17,
+    "_C_Score": -0.14,
+    "_BLEU": 1.14,
+    "_Distinct_1": 0.0039,
+    "_Diff_Score": 0.0,
+    "_Δ_Score": 0.0
   },
   {
-    "Method": "Speaker-F",
-    "Perplexity": 36.33,
-    "C_Score": -0.05,
-    "BLEU": 1.36,
-    "Distinct_1": 0.0048,
-    "Diff_Score": 53.36,
-    "δ_Score": 27.92
+    "_Method": "Speaker-F",
+    "_Perplexity": 36.33,
+    "_C_Score": -0.05,
+    "_BLEU": 1.36,
+    "_Distinct_1": 0.0048,
+    "_Diff_Score": 53.36,
+    "_Δ_Score": 27.92
   },
   {
-    "Method": "PAML",
-    "Perplexity": 37.6,
-    "C_Score": 0.07,
-    "BLEU": 1.52,
-    "Distinct_1": 0.0067,
-    "Diff_Score": 36.59,
-    "δ_Score": 37.36
+    "_Method": "PAML",
+    "_Perplexity": 37.6,
+    "_C_Score": 0.07,
+    "_BLEU": 1.52,
+    "_Distinct_1": 0.0067,
+    "_Diff_Score": 36.59,
+    "_Δ_Score": 37.36
   },
   {
-    "Method": "ATAML",
-    "Perplexity": 40.27,
-    "C_Score": 0.12,
-    "BLEU": 0.52,
-    "Distinct_1": 0.0074,
-    "Diff_Score": 105.87,
-    "δ_Score": 50.35
+    "_Method": "ATAML",
+    "_Perplexity": 40.27,
+    "_C_Score": 0.12,
+    "_BLEU": 0.52,
+    "_Distinct_1": 0.0074,
+    "_Diff_Score": 105.87,
+    "_Δ_Score": 50.35
   },
   {
-    "Method": "CMAML−",
-    "Perplexity": 37.41,
-    "C_Score": 0.13,
-    "BLEU": 1.59,
-    "Distinct_1": 0.0076,
-    "Diff_Score": 379.72,
-    "δ_Score": 193.23
+    "_Method": "CMAML−",
+    "_Perplexity": 37.41,
+    "_C_Score": 0.13,
+    "_BLEU": 1.59,
+    "_Distinct_1": 0.0076,
+    "_Diff_Score": 379.72,
+    "_Δ_Score": 193.23
   },
   {
-    "Method": "CMAML",
-    "Perplexity": 35.88,
-    "C_Score": 0.12,
-    "BLEU": 1.57,
-    "Distinct_1": 0.0089,
-    "Diff_Score": 412.77,
-    "δ_Score": 210.07
+    "_Method": "CMAML",
+    "_Perplexity": 35.88,
+    "_C_Score": 0.12,
+    "_BLEU": 1.57,
+    "_Distinct_1": 0.0089,
+    "_Diff_Score": 412.77,
+    "_Δ_Score": 210.07
   }
 ]

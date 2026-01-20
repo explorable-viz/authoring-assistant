@@ -1,26 +1,26 @@
 [
   {
-    "our_model": "weakly-supervised",
-    "aIDA_A": 88.05,
-    "aIDA_B": 89.66,
-    "avg": 86.18
+    "_Our_model": "weakly-supervised",
+    "_AIDA_A": 88.05,
+    "_AIDA_B": 89.66,
+    "_Avg": 86.18
   },
   {
-    "our_model": "fully-supervised",
-    "aIDA_A": "",
-    "aIDA_B": "",
-    "avg": ""
+    "_Our_model": "fully-supervised",
+    "_AIDA_A": "",
+    "_AIDA_B": "",
+    "_Avg": ""
   },
   {
-    "our_model": "on Wikipedia",
-    "aIDA_A": 87.23,
-    "aIDA_B": 87.83,
-    "avg": 85.84
+    "_Our_model": "on Wikipedia",
+    "_AIDA_A": 87.23,
+    "_AIDA_B": 87.83,
+    "_Avg": 85.84
   },
   {
-    "our_model": "on AIDA CoNLL",
-    "aIDA_A": 91.34,
-    "aIDA_B": 91.87,
-    "avg": 84.55
+    "_Our_model": "on AIDA CoNLL",
+    "_AIDA_A": 91.34,
+    "_AIDA_B": 91.87,
+    "_Avg": 84.55
   }
 ]

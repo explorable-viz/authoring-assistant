@@ -1,68 +1,68 @@
 [
   {
-    "Model": "manning2011part",
-    "Accuracy": 97.28,
-    "Train_s": "–",
-    "Test_s": "–"
+    "_Model": "manning2011part",
+    "_Accuracy": 97.28,
+    "_Train_s": "–",
+    "_Test_s": "–"
   },
   {
-    "Model": "collobert2011natural",
-    "Accuracy": 97.29,
-    "Train_s": "–",
-    "Test_s": "–"
+    "_Model": "collobert2011natural",
+    "_Accuracy": 97.29,
+    "_Train_s": "–",
+    "_Test_s": "–"
   },
   {
-    "Model": "sun2014structure",
-    "Accuracy": 97.36,
-    "Train_s": "–",
-    "Test_s": "–"
+    "_Model": "sun2014structure",
+    "_Accuracy": 97.36,
+    "_Train_s": "–",
+    "_Test_s": "–"
   },
   {
-    "Model": "sogaard2011semisupervised",
-    "Accuracy": 97.5,
-    "Train_s": "–",
-    "Test_s": "–"
+    "_Model": "sogaard2011semisupervised",
+    "_Accuracy": 97.5,
+    "_Train_s": "–",
+    "_Test_s": "–"
   },
   {
-    "Model": "huang2015bidirectional",
-    "Accuracy": 97.55,
-    "Train_s": "–",
-    "Test_s": "–"
+    "_Model": "huang2015bidirectional",
+    "_Accuracy": 97.55,
+    "_Train_s": "–",
+    "_Test_s": "–"
   },
   {
-    "Model": "ma2016end",
-    "Accuracy": 97.55,
-    "Train_s": "–",
-    "Test_s": "–"
+    "_Model": "ma2016end",
+    "_Accuracy": 97.55,
+    "_Train_s": "–",
+    "_Test_s": "–"
   },
   {
-    "Model": "yang2017transfer",
-    "Accuracy": 97.55,
-    "Train_s": "–",
-    "Test_s": "–"
+    "_Model": "yang2017transfer",
+    "_Accuracy": 97.55,
+    "_Train_s": "–",
+    "_Test_s": "–"
   },
   {
-    "Model": "BiLSTM",
-    "Accuracy": 97.35,
-    "Train_s": 254,
-    "Test_s": 22.5
+    "_Model": "BiLSTM",
+    "_Accuracy": 97.35,
+    "_Train_s": 254,
+    "_Test_s": 22.5
   },
   {
-    "Model": "2 stacked BiLSTM",
-    "Accuracy": 97.41,
-    "Train_s": 501,
-    "Test_s": 43.99
+    "_Model": "2 stacked BiLSTM",
+    "_Accuracy": 97.41,
+    "_Train_s": 501,
+    "_Test_s": 43.99
   },
   {
-    "Model": "3 stacked BiLSTM",
-    "Accuracy": 97.4,
-    "Train_s": 746,
-    "Test_s": 64.96
+    "_Model": "3 stacked BiLSTM",
+    "_Accuracy": 97.4,
+    "_Train_s": 746,
+    "_Test_s": 64.96
   },
   {
-    "Model": "S-LSTM",
-    "Accuracy": 97.55,
-    "Train_s": 237,
-    "Test_s": 22.16
+    "_Model": "S-LSTM",
+    "_Accuracy": 97.55,
+    "_Train_s": 237,
+    "_Test_s": 22.16
   }
 ]

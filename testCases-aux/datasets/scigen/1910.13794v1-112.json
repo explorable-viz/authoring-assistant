@@ -1,22 +1,22 @@
 [
   {
-    "classifier": "CLS",
-    "accuracy": 56.0
+    "_Classifier": "CLS",
+    "_Accuracy": 56.0
   },
   {
-    "classifier": "CLS + NER",
-    "accuracy": 56.6
+    "_Classifier": "CLS + NER",
+    "_Accuracy": 56.6
   },
   {
-    "classifier": "CLS + AE",
-    "accuracy": 70.3
+    "_Classifier": "CLS + AE",
+    "_Accuracy": 70.3
   },
   {
-    "classifier": "CLS + AT",
-    "accuracy": 73.3
+    "_Classifier": "CLS + AT",
+    "_Accuracy": 73.3
   },
   {
-    "classifier": " CLS + AT + NER",
-    "accuracy": 73.8
+    "_Classifier": " CLS + AT + NER",
+    "_Accuracy": 73.8
   }
 ]

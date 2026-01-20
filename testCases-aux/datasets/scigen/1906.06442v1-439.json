@@ -1,22 +1,22 @@
 [
   {
-    "noised": 0,
-    "sacreBleu_Newstest_’12": 22.4,
-    "sacreBleu_Newstest_’17": 28.1
+    "_noised": 0,
+    "_SacreBleu_Newstest_’12": 22.4,
+    "_SacreBleu_Newstest_’17": 28.1
   },
   {
-    "noised": 20,
-    "sacreBleu_Newstest_’12": 22.4,
-    "sacreBleu_Newstest_’17": 27.9
+    "_noised": 20,
+    "_SacreBleu_Newstest_’12": 22.4,
+    "_SacreBleu_Newstest_’17": 27.9
   },
   {
-    "noised": 80,
-    "sacreBleu_Newstest_’12": 21.5,
-    "sacreBleu_Newstest_’17": 27.0
+    "_noised": 80,
+    "_SacreBleu_Newstest_’12": 21.5,
+    "_SacreBleu_Newstest_’17": 27.0
   },
   {
-    "noised": 100,
-    "sacreBleu_Newstest_’12": 21.2,
-    "sacreBleu_Newstest_’17": 25.6
+    "_noised": 100,
+    "_SacreBleu_Newstest_’12": 21.2,
+    "_SacreBleu_Newstest_’17": 25.6
   }
 ]

@@ -2,22 +2,22 @@
   {
     "_1": "Actual",
     "_2": "Sg",
-    "predicted_Sg": 222,
-    "predicted_Pl": 39,
-    "total": 261
+    "_Predicted_Sg": 222,
+    "_Predicted_Pl": 39,
+    "_Total": 261
   },
   {
     "_1": "Actual",
     "_2": "Pl",
-    "predicted_Sg": 7,
-    "predicted_Pl": 81,
-    "total": 88
+    "_Predicted_Sg": 7,
+    "_Predicted_Pl": 81,
+    "_Total": 88
   },
   {
     "_1": "",
     "_2": "Total",
-    "predicted_Sg": 229,
-    "predicted_Pl": 120,
-    "total": 349
+    "_Predicted_Sg": 229,
+    "_Predicted_Pl": 120,
+    "_Total": 349
   }
 ]

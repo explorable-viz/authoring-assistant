@@ -1,32 +1,32 @@
 [
   {
-    "Method": "DBLP:conf/acl/NguyenTFB15",
-    "Schema_Matching_P": 41.5,
-    "Schema_Matching_R": 53.4,
-    "Schema_Matching_F1": 46.7
+    "_Method": "DBLP:conf/acl/NguyenTFB15",
+    "_Schema_Matching_P": 41.5,
+    "_Schema_Matching_R": 53.4,
+    "_Schema_Matching_F1": 46.7
   },
   {
-    "Method": "Clustering",
-    "Schema_Matching_P": 41.2,
-    "Schema_Matching_R": 50.6,
-    "Schema_Matching_F1": 45.4
+    "_Method": "Clustering",
+    "_Schema_Matching_P": 41.2,
+    "_Schema_Matching_R": 50.6,
+    "_Schema_Matching_F1": 45.4
   },
   {
-    "Method": "ODEE-F",
-    "Schema_Matching_P": 41.7,
-    "Schema_Matching_R": 53.2,
-    "Schema_Matching_F1": 46.8
+    "_Method": "ODEE-F",
+    "_Schema_Matching_P": 41.7,
+    "_Schema_Matching_R": 53.2,
+    "_Schema_Matching_F1": 46.8
   },
   {
-    "Method": "ODEE-FE",
-    "Schema_Matching_P": 42.4,
-    "Schema_Matching_R": 56.1,
-    "Schema_Matching_F1": 48.3
+    "_Method": "ODEE-FE",
+    "_Schema_Matching_P": 42.4,
+    "_Schema_Matching_R": 56.1,
+    "_Schema_Matching_F1": 48.3
   },
   {
-    "Method": "ODEE-FER",
-    "Schema_Matching_P": 43.4,
-    "Schema_Matching_R": 58.3,
-    "Schema_Matching_F1": 49.8
+    "_Method": "ODEE-FER",
+    "_Schema_Matching_P": 43.4,
+    "_Schema_Matching_R": 58.3,
+    "_Schema_Matching_F1": 49.8
   }
 ]

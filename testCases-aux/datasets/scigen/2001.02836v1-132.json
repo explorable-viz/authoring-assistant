@@ -1,20 +1,20 @@
 [
   {
-    "model": "ELMo",
-    "wS": 0.434,
-    "dimension": 512,
-    "training_Time": "≈40"
+    "_Model": "ELMo",
+    "_WS": 0.434,
+    "_Dimension": 512,
+    "_Training_Time": "≈40"
   },
   {
-    "model": "BERT",
-    "wS": 0.486,
-    "dimension": 768,
-    "training_Time": "≈300"
+    "_Model": "BERT",
+    "_WS": 0.486,
+    "_Dimension": 768,
+    "_Training_Time": "≈300"
   },
   {
-    "model": "MWE",
-    "wS": 0.476,
-    "dimension": 300,
-    "training_Time": 4.17
+    "_Model": "MWE",
+    "_WS": 0.476,
+    "_Dimension": 300,
+    "_Training_Time": 4.17
   }
 ]

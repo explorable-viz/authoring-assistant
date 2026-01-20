@@ -1,52 +1,52 @@
 [
   {
-    "model": "Baseline (3 players, sorted)",
-    "valid": 22.7,
-    "test": 20.4
+    "_Model": "Baseline (3 players, sorted)",
+    "_Valid": 22.7,
+    "_Test": 20.4
   },
   {
-    "model": "No player",
-    "valid": 20.1,
-    "test": 18.8
+    "_Model": "No player",
+    "_Valid": 20.1,
+    "_Test": 18.8
   },
   {
-    "model": "All players, sorted",
-    "valid": 22.7,
-    "test": 20.9
+    "_Model": "All players, sorted",
+    "_Valid": 22.7,
+    "_Test": 20.9
   },
   {
-    "model": "All players, shuffled",
-    "valid": 22.0,
-    "test": 20.0
+    "_Model": "All players, shuffled",
+    "_Valid": 22.0,
+    "_Test": 20.0
   },
   {
-    "model": "(1) No next game",
-    "valid": 22.0,
-    "test": 19.9
+    "_Model": "(1) No next game",
+    "_Valid": 22.0,
+    "_Test": 19.9
   },
   {
-    "model": "(2) No week day",
-    "valid": 22.2,
-    "test": 20.5
+    "_Model": "(2) No week day",
+    "_Valid": 22.2,
+    "_Test": 20.5
   },
   {
-    "model": "(3) No player position",
-    "valid": 22.6,
-    "test": 20.5
+    "_Model": "(3) No player position",
+    "_Valid": 22.6,
+    "_Test": 20.5
   },
   {
-    "model": "(4) No team-level sums",
-    "valid": 22.5,
-    "test": 20.5
+    "_Model": "(4) No team-level sums",
+    "_Valid": 22.5,
+    "_Test": 20.5
   },
   {
-    "model": "(5) Remove most tags",
-    "valid": 22.6,
-    "test": 20.8
+    "_Model": "(5) Remove most tags",
+    "_Valid": 22.6,
+    "_Test": 20.8
   },
   {
-    "model": "(1) to (5)",
-    "valid": 21.3,
-    "test": 19.7
+    "_Model": "(1) to (5)",
+    "_Valid": 21.3,
+    "_Test": 19.7
   }
 ]

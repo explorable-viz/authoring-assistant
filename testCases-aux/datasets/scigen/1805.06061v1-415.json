@@ -1,56 +1,56 @@
 [
   {
-    "Model": " Hard",
-    "ROC": 62.2,
-    "SST": 75.5,
-    "Amazon": 88.5
+    "_Model": " Hard",
+    "_ROC": 62.2,
+    "_SST": 75.5,
+    "_Amazon": 88.5
   },
   {
-    "Model": " DAN",
-    "ROC": 64.3,
-    "SST": 83.1,
-    "Amazon": 85.4
+    "_Model": " DAN",
+    "_ROC": 64.3,
+    "_SST": 83.1,
+    "_Amazon": 85.4
   },
   {
-    "Model": " BiLSTM",
-    "ROC": 65.2,
-    "SST": 84.8,
-    "Amazon": 90.8
+    "_Model": " BiLSTM",
+    "_ROC": 65.2,
+    "_SST": 84.8,
+    "_Amazon": 90.8
   },
   {
-    "Model": " CNN",
-    "ROC": 64.3,
-    "SST": 82.2,
-    "Amazon": 90.2
+    "_Model": " CNN",
+    "_ROC": 64.3,
+    "_SST": 82.2,
+    "_Amazon": 90.2
   },
   {
-    "Model": " SoPa",
-    "ROC": 66.5,
-    "SST": 85.6,
-    "Amazon": 90.5
+    "_Model": " SoPa",
+    "_ROC": 66.5,
+    "_SST": 85.6,
+    "_Amazon": 90.5
   },
   {
-    "Model": " SoPa  ms1",
-    "ROC": 64.4,
-    "SST": 84.8,
-    "Amazon": 90.0
+    "_Model": " SoPa  ms1",
+    "_ROC": 64.4,
+    "_SST": 84.8,
+    "_Amazon": 90.0
   },
   {
-    "Model": " SoPa  ms1∖{  sl}",
-    "ROC": 63.2,
-    "SST": 84.6,
-    "Amazon": 89.8
+    "_Model": " SoPa  ms1∖{  sl}",
+    "_ROC": 63.2,
+    "_SST": 84.6,
+    "_Amazon": 89.8
   },
   {
-    "Model": " SoPa  ms1∖{  ϵ}",
-    "ROC": 64.3,
-    "SST": 83.6,
-    "Amazon": 89.7
+    "_Model": " SoPa  ms1∖{  ϵ}",
+    "_ROC": 64.3,
+    "_SST": 83.6,
+    "_Amazon": 89.7
   },
   {
-    "Model": " SoPa  ms1∖{  sl,  ϵ}",
-    "ROC": 64.0,
-    "SST": 85.0,
-    "Amazon": 89.5
+    "_Model": " SoPa  ms1∖{  sl,  ϵ}",
+    "_ROC": 64.0,
+    "_SST": 85.0,
+    "_Amazon": 89.5
   }
 ]

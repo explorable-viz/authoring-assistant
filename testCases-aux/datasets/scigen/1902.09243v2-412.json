@@ -1,27 +1,27 @@
 [
   {
-    "model": "First sentences",
-    "r_1": 28.6,
-    "r_2": 17.3
+    "_Model": "First sentences",
+    "_R_1": 28.6,
+    "_R_2": 17.3
   },
   {
-    "model": "First   k words",
-    "r_1": 35.7,
-    "r_2": 21.6
+    "_Model": "First   k words",
+    "_R_1": 35.7,
+    "_R_2": 21.6
   },
   {
-    "model": "Full ",
-    "r_1": 42.2,
-    "r_2": 24.9
+    "_Model": "Full ",
+    "_R_1": 42.2,
+    "_R_2": 24.9
   },
   {
-    "model": "ML+RL+intra-attn ",
-    "r_1": 42.94,
-    "r_2": 26.02
+    "_Model": "ML+RL+intra-attn ",
+    "_R_1": 42.94,
+    "_R_2": 26.02
   },
   {
-    "model": "Two-Stage + RL (Ours)",
-    "r_1": 45.33,
-    "r_2": 26.53
+    "_Model": "Two-Stage + RL (Ours)",
+    "_R_1": 45.33,
+    "_R_2": 26.53
   }
 ]

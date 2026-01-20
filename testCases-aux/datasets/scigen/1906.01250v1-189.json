@@ -1,27 +1,27 @@
 [
   {
-    "type": "",
-    "our_model": "",
-    "fully_supervised_learning": "on AIDA CoNLL"
+    "_Type": "",
+    "_Our_model": "",
+    "_Fully_supervised_learning": "on AIDA CoNLL"
   },
   {
-    "type": "LOC",
-    "our_model": 85.53,
-    "fully_supervised_learning": 89.41
+    "_Type": "LOC",
+    "_Our_model": 85.53,
+    "_Fully_supervised_learning": 89.41
   },
   {
-    "type": "MISC",
-    "our_model": 75.71,
-    "fully_supervised_learning": 83.27
+    "_Type": "MISC",
+    "_Our_model": 75.71,
+    "_Fully_supervised_learning": 83.27
   },
   {
-    "type": "ORG",
-    "our_model": 89.51,
-    "fully_supervised_learning": 92.7
+    "_Type": "ORG",
+    "_Our_model": 89.51,
+    "_Fully_supervised_learning": 92.7
   },
   {
-    "type": "PER",
-    "our_model": 97.2,
-    "fully_supervised_learning": 97.73
+    "_Type": "PER",
+    "_Our_model": 97.2,
+    "_Fully_supervised_learning": 97.73
   }
 ]

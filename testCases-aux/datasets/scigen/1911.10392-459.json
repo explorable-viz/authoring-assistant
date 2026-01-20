@@ -1,72 +1,72 @@
 [
   {
     "_1": "was able to “understand” my questions",
-    "1_strongly_agree": 16.7,
-    "2_agree": 50.0,
-    "3_disagree": 33.3,
-    "4_strongly_disagree": 0.0
+    "_1_strongly_agree": 16.7,
+    "_2_agree": 50.0,
+    "_3_disagree": 33.3,
+    "_4_strongly_disagree": 0.0
   },
   {
     "_1": "was able to provide answers to my questions",
-    "1_strongly_agree": 0.0,
-    "2_agree": 50.0,
-    "3_disagree": 50.0,
-    "4_strongly_disagree": 0.0
+    "_1_strongly_agree": 0.0,
+    "_2_agree": 50.0,
+    "_3_disagree": 50.0,
+    "_4_strongly_disagree": 0.0
   },
   {
     "_1": "I was satisfied with the informativeness of the answers provided by",
-    "1_strongly_agree": 33.3,
-    "2_agree": 33.3,
-    "3_disagree": 0.0,
-    "4_strongly_disagree": 33.3
+    "_1_strongly_agree": 33.3,
+    "_2_agree": 33.3,
+    "_3_disagree": 0.0,
+    "_4_strongly_disagree": 33.3
   },
   {
     "_1": "I was satisfied with the fluency of the answers provided by",
-    "1_strongly_agree": 16.7,
-    "2_agree": 50.0,
-    "3_disagree": 16.7,
-    "4_strongly_disagree": 16.7
+    "_1_strongly_agree": 16.7,
+    "_2_agree": 50.0,
+    "_3_disagree": 16.7,
+    "_4_strongly_disagree": 16.7
   },
   {
     "_1": "could respond in a reasonable time",
-    "1_strongly_agree": 50.0,
-    "2_agree": 33.3,
-    "3_disagree": 16.7,
-    "4_strongly_disagree": 0.0
+    "_1_strongly_agree": 50.0,
+    "_2_agree": 33.3,
+    "_3_disagree": 16.7,
+    "_4_strongly_disagree": 0.0
   },
   {
     "_1": "The GUI of was suitable for reading the provided answers",
-    "1_strongly_agree": 50.0,
-    "2_agree": 0.0,
-    "3_disagree": 33.3,
-    "4_strongly_disagree": 16.7
+    "_1_strongly_agree": 50.0,
+    "_2_agree": 0.0,
+    "_3_disagree": 33.3,
+    "_4_strongly_disagree": 16.7
   },
   {
     "_1": "reduces my need to google a specific information",
-    "1_strongly_agree": 16.7,
-    "2_agree": 66.7,
-    "3_disagree": 0.0,
-    "4_strongly_disagree": 16.7
+    "_1_strongly_agree": 16.7,
+    "_2_agree": 66.7,
+    "_3_disagree": 0.0,
+    "_4_strongly_disagree": 16.7
   },
   {
     "_1": "would help me save some time in my work",
-    "1_strongly_agree": 33.3,
-    "2_agree": 33.3,
-    "3_disagree": 33.3,
-    "4_strongly_disagree": 0.0
+    "_1_strongly_agree": 33.3,
+    "_2_agree": 33.3,
+    "_3_disagree": 33.3,
+    "_4_strongly_disagree": 0.0
   },
   {
     "_1": "I would like to use in the future on a daily basis",
-    "1_strongly_agree": 0.0,
-    "2_agree": 66.7,
-    "3_disagree": 0.0,
-    "4_strongly_disagree": 33.3
+    "_1_strongly_agree": 0.0,
+    "_2_agree": 66.7,
+    "_3_disagree": 0.0,
+    "_4_strongly_disagree": 33.3
   },
   {
     "_1": "I will use to plan for my next conference",
-    "1_strongly_agree": 16.7,
-    "2_agree": 16.7,
-    "3_disagree": 33.3,
-    "4_strongly_disagree": 33.3
+    "_1_strongly_agree": 16.7,
+    "_2_agree": 16.7,
+    "_3_disagree": 33.3,
+    "_4_strongly_disagree": 33.3
   }
 ]

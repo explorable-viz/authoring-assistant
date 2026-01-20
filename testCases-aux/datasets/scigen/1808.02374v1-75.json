@@ -1,32 +1,32 @@
 [
   {
-    "error_Type": "Cross-Clause Relations (CCR)",
-    "rC_SG": 42,
-    "rC_SG_fixed": 39,
-    "rC_SG_init": 36
+    "_Error_Type": "Cross-Clause Relations (CCR)",
+    "_RC_SG": 42,
+    "_RC_SG_fixed": 39,
+    "_RC_SG_init": 36
   },
   {
-    "error_Type": "Infrequent Arguments (<10)",
-    "rC_SG": 11,
-    "rC_SG_fixed": 15,
-    "rC_SG_init": 26
+    "_Error_Type": "Infrequent Arguments (<10)",
+    "_RC_SG": 11,
+    "_RC_SG_fixed": 15,
+    "_RC_SG_init": 26
   },
   {
-    "error_Type": "Frequent Arguments (>250)",
-    "rC_SG": 37,
-    "rC_SG_fixed": 50,
-    "rC_SG_init": 40
+    "_Error_Type": "Frequent Arguments (>250)",
+    "_RC_SG": 37,
+    "_RC_SG_fixed": 50,
+    "_RC_SG_init": 40
   },
   {
-    "error_Type": "Mistake in Ground-Truth",
-    "rC_SG": 10,
-    "rC_SG_fixed": 8,
-    "rC_SG_init": 5
+    "_Error_Type": "Mistake in Ground-Truth",
+    "_RC_SG": 10,
+    "_RC_SG_fixed": 8,
+    "_RC_SG_init": 5
   },
   {
-    "error_Type": "Other",
-    "rC_SG": 21,
-    "rC_SG_fixed": 15,
-    "rC_SG_init": 28
+    "_Error_Type": "Other",
+    "_RC_SG": 21,
+    "_RC_SG_fixed": 15,
+    "_RC_SG_init": 28
   }
 ]

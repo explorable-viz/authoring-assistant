@@ -10,9 +10,6 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-
 public class PromptList extends ArrayList<Prompt> {
     public static final String SYSTEM = "system";
     public static final String USER = "user";
@@ -44,15 +41,6 @@ public class PromptList extends ArrayList<Prompt> {
 
     public void addAssistantPrompt(String content) {
         this.addPrompt("assistant", content);
-    }
-
-    public void addPairPrompt(String user, String assistant) {
-        this.addUserPrompt(user);
-        this.addAssistantPrompt(assistant);
-    }
-
-    public void replaceTag(String tag, String value) {
-        this.forEach((p) -> p.setContent(p.getContent().replace(tag, value)));
     }
 
     public void exportToJson(String filename) throws FileNotFoundException {

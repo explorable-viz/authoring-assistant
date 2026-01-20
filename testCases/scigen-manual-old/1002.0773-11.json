@@ -1,6 +1,6 @@
 {
-  "datasets": [ "datasets/scigen_manual_old/1002.0773.json" ],
-  "imports": ["datasets/scigen_manual_old/_1002_0773"],
+  "datasets": [ "datasets/scigen/1002.0773-11.json" ],
+  "imports": [ "datasets/scigen/_1002_0773_11" ],
   "variables": {},
   "testing-variables": {
     "peak_wer": [12.5, 12.5, 12.5, 12.5, 12.5],

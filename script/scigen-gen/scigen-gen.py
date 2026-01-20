@@ -1,3 +1,4 @@
+import argparse
 import json
 import re
 import sys
@@ -19,7 +20,7 @@ def replace_parens(match):
 
     return f"{before}{lead}{content}{trail}{after}"
 
-def main(raw_file, tests_dir, tests_aux_dir, datasets_dir, paper_ids=None):
+def main(raw_file, tests_dir, tests_aux_dir, datasets_dir, paper_ids):
     # Read input JSON file
     with open(raw_file, 'r', encoding='utf-8') as f:
         datas = json.load(f)
@@ -214,10 +215,24 @@ def main(raw_file, tests_dir, tests_aux_dir, datasets_dir, paper_ids=None):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--paper-ids",
+        help="Comma-separated list of paper_id values to include (e.g. 1911.00225v1,1906.11565v2)",
+        default=None
+    )
+
+    args = parser.parse_args()
+
+    paper_ids = None
+    if args.paper_ids:
+        paper_ids = {pid.strip() for pid in args.paper_ids.split(",")}
+
     # Run from root of repo
     main(
       raw_file=Path("script/scigen-gen/raw/dataset/test/test-CL.json"),
       tests_dir=Path("testCases/scigen-raw"),
       tests_aux_dir=Path("testCases-aux"),
-      datasets_dir=Path("datasets/scigen")
+      datasets_dir=Path("datasets/scigen"),
+      paper_ids=paper_ids
     )

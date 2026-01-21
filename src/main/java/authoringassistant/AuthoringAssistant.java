@@ -124,8 +124,10 @@ public class AuthoringAssistant {
             if (candidate.getExpr().equals(expected.getValue())) {
                 literalResponses++;
                 sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
-                        "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
+                sessionPrompts.addUserPrompt("""
+                    This is just the target string as a literal. Try again, but produce a Fluid expression that *computes* 
+                    the target string as a query over the dataset, using the supplied library functions if necessary.
+                    """);
                 logger.fine(STR."\{info} Attempt #\{attempt}: retry");
             } else {
                 boolean firstTest = false;

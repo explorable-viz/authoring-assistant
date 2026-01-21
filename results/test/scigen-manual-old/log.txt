@@ -1,0 +1,23 @@
+INFO: ****************************************
+INFO: Settings:
+INFO: {
+  "test-case-folder": "scigen-manual-old",
+  "suggestion-agent-class": null,
+  "gemini-location": "",
+  "timeout": 1800,
+  "num_ctx": 4096,
+  "authoring-agent-class": "authoringassistant.llm.interpretation.OpenAIGpt5Agent",
+  "num-test-runs": 1,
+  "ollama-url": "https://fire.cluelab.di.unisa.it",
+  "truncate-tests-at": 2,
+  "temperature": 1,
+  "add-expected-value": true,
+  "interpretation-agent-loopback-limit": 2,
+  "gemini-token": "",
+  "ollama-port": 8430,
+  "gemini-projectId": "",
+  "claude-token": ""
+}
+INFO: ****************************************
+INFO: Validating test cases in scigen-manual-old
+INFO: ****************************************

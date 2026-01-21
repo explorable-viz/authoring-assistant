@@ -89,18 +89,16 @@ public class Program {
         return outputLines[FluidCLI.isWindows() ? 2 : 1];
     }
 
+    // Return loopback message or nothing if expression evaluates to expected string
     public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
         String value = extractValue(commandLineResponse);
         if (commandLineResponse.contains("Error: ")) {
-            logger.info(STR."Interpreter error: \{value}");
-            return Optional.of(value);
+            return Optional.of(STR."The Fluid interpreter didn't like that expression. Here's what it said:\n\{value}Try again.");
         }
         if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
-            logger.info(STR."Matched expression value: \{value}");
             return Optional.empty();
         } else {
-            logger.info(STR."Mismatched expression value: \{value} (expected \{expectedExpression.getValue()})");
-            return Optional.of(value);
+            return Optional.of(STR."That expression evaluates to \{value}, rather than \{expectedExpression.getValue()}. Try again.");
         }
     }
 
@@ -224,7 +222,7 @@ public class Program {
                 );
                 paragraph.add(candidate);
                 validate(commandLineResult, candidate).ifPresent(error -> {
-                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test exception\{error}");
+                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test\n\{error}");
                 });
             }
         }

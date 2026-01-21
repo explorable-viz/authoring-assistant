@@ -1,0 +1,53 @@
+[
+  {
+    "system": "challenge",
+    "_BLEU": "challenge",
+    "_ROUGE_L": "challenge"
+  },
+  {
+    "system": "baseline",
+    "_BLEU": 65.9,
+    "_ROUGE_L": 68.5
+  },
+  {
+    "system": "Thomson Reuters (np 3)",
+    "_BLEU": 68.1,
+    "_ROUGE_L": 69.3
+  },
+  {
+    "system": "Thomson Reuters (np 4)",
+    "_BLEU": 67.4,
+    "_ROUGE_L": 69.8
+  },
+  {
+    "system": "HarvardNLP & H. Elder",
+    "_BLEU": 67.4,
+    "_ROUGE_L": 70.8
+  },
+  {
+    "system": "own",
+    "_BLEU": "own",
+    "_ROUGE_L": "own"
+  },
+  {
+    "system": "word",
+    "_BLEU": 67.8,
+    "_ROUGE_L": 70.4
+  },
+  {
+    "system": "character",
+    "_BLEU": 64.6,
+    "_ROUGE_L": 67.9
+  },
+  {
+    "system": "word (best on dev.)",
+    "_BLEU": 67.8,
+    "_ROUGE_L": 70.2
+  },
+  {
+    "system": "char. (best on dev.)",
+    "_BLEU": 67.6,
+    "_ROUGE_L": 70.4
+  }
+]
+

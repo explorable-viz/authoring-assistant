@@ -1,0 +1,27 @@
+[
+  {
+    "_Search_Strategy": "Greedy Search",
+    "_BLEU": 27.5
+  },
+  {
+    "_Search_Strategy": "2-LA",
+    "_BLEU": 27.71
+  },
+  {
+    "_Search_Strategy": "3-LA",
+    "_BLEU": 27.62
+  },
+  {
+    "_Search_Strategy": "4-LA",
+    "_BLEU": 27.56
+  },
+  {
+    "_Search_Strategy": "5-LA",
+    "_BLEU": 27.35
+  },
+  {
+    "_Search_Strategy": "Beam Search (B=10)",
+    "_BLEU": 28.21
+  }
+]
+

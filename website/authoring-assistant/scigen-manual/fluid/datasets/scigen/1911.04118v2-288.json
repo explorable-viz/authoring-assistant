@@ -1,0 +1,38 @@
+[
+  {
+    "_Model": "Neg: 1 Pos: 4",
+    "_WikiQA_MAP": 0.87,
+    "_WikiQA_MRR": 0.88,
+    "_TREC_QA_MAP": 0.808,
+    "_TREC_QA_MRR": 0.847
+  },
+  {
+    "_Model": "Neg: 2 Pos: 4",
+    "_WikiQA_MAP": 0.751,
+    "_WikiQA_MRR": 0.763,
+    "_TREC_QA_MAP": 0.662,
+    "_TREC_QA_MRR": 0.751
+  },
+  {
+    "_Model": "Neg: 3 Pos: 4",
+    "_WikiQA_MAP": 0.881,
+    "_WikiQA_MRR": 0.895,
+    "_TREC_QA_MAP": 0.821,
+    "_TREC_QA_MRR": 0.869
+  },
+  {
+    "_Model": "Neg: 23 Pos: 4",
+    "_WikiQA_MAP": 0.883,
+    "_WikiQA_MRR": 0.898,
+    "_TREC_QA_MAP": 0.823,
+    "_TREC_QA_MRR": 0.871
+  },
+  {
+    "_Model": "Neg: 123 Pos: 4",
+    "_WikiQA_MAP": 0.884,
+    "_WikiQA_MRR": 0.898,
+    "_TREC_QA_MAP": 0.823,
+    "_TREC_QA_MRR": 0.872
+  }
+]
+

@@ -3,7 +3,7 @@ package authoringassistant;
 import authoringassistant.llm.interpretation.DummyAgent;
 import authoringassistant.paragraph.Expression;
 import authoringassistant.llm.LLMEvaluatorAgent;
-import authoringassistant.llm.prompt.PromptList;
+import authoringassistant.llm.prompt.Prompt;
 import kotlin.Pair;
 
 import java.io.IOException;
@@ -23,14 +23,14 @@ import static authoringassistant.Program.writeFluidFiles;
 public class AuthoringAssistant {
 
     public static final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
-    private final PromptList prompts;
+    private final Prompt initialPrompt;
     private final LLMEvaluatorAgent<Expression> interpretationAgent;
     private Program templateProgram;
     private final SuggestionAgent suggestionAgent;
     private final int runId;
 
     public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId) throws Exception {
-        this.prompts = systemPrompt.toPromptList();
+        this.initialPrompt = systemPrompt.toPrompt();
         this.interpretationAgent = LLMEvaluatorAgent.initialiseAgent(agentClassName);
         this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName)) : null;
         this.templateProgram = templateProgram;
@@ -107,8 +107,8 @@ public class AuthoringAssistant {
         Expression expected = test.getSecond();
         final Path testCasePath = test.getFirst().getTestCasePath();
         Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{ testCasePath }/logs"));
-        final PromptList sessionPrompts = (PromptList) prompts.clone();
-        sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
+        final Prompt prompt = (Prompt) initialPrompt.clone();
+        prompt.addUserMessage(subProgram.toUserPrompt());
         int interpreterErrors = 0, counterfactualFails = 0, missingResponses = 0, literalResponses = 0;
         final String progress = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
         final String logfile = STR."results/\{Settings.getConfigName()}/\{ testCasePath }/logs/\{ testCasePath.getFileName()}_\{String.format("%02d", problemIndex)}.json";
@@ -116,22 +116,25 @@ public class AuthoringAssistant {
         Expression solution = null;
         int attempt = 1;
         while (attempt <= attemptLimit) {
-            Expression candidate = interpretationAgent.evaluate(sessionPrompts, "");
+            final String progressAttempt = STR."\{progress}[Attempt \{attempt}]";
+            Expression candidate = interpretationAgent.evaluate(prompt, "");
             if (candidate == null || candidate.getExpr() == null) {
                 missingResponses++;
-                sessionPrompts.addAssistantPrompt("[No response received]");
-                sessionPrompts.addUserPrompt("No response received. Please try again.");
-                logger.fine(STR."\{progress} Attempt #\{attempt}: retry");
+                prompt.addAssistantMessage("[No response received]");
+                final String loopbackMessage = "No response received. Please try again.";
+                prompt.addUserMessage(loopbackMessage);
+                logger.info(STR."\{progressAttempt} Sent \"\{loopbackMessage}\"");
             } else {
-                logger.info(STR."\{progress}[Attempt #\{attempt}] Received \{candidate.getExpr()}");
+                logger.info(STR."\{progressAttempt} Received \{candidate.getExpr()}");
                 if (candidate.getExpr().equals(expected.getValue())) {
                     literalResponses++;
-                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.addUserPrompt("""
-                            This is just the target string as a literal. Try again, but produce a Fluid expression that *computes* 
-                            the target string as a query over the dataset, using the supplied library functions if necessary.
-                            """);
-                    logger.fine(STR."\{progress} Attempt #\{attempt}: retry");
+                    prompt.addAssistantMessage(candidate.getExpr());
+                    final String loopbackMessage = """
+                        This is just the target string as a literal. Try again, but produce a Fluid expression that *computes* 
+                        the target string as a query over the dataset, using the supplied library functions if necessary.
+                        """;
+                    prompt.addUserMessage(loopbackMessage);
+                    logger.info(STR."\{progressAttempt} Sent:\n\{loopbackMessage}");
                 } else {
                     Map<String, String> datasets = subProgram.getDatasetsVariants().get(0);
                     //              Ignore for now
@@ -140,13 +143,16 @@ public class AuthoringAssistant {
                             evaluateExpression(subProgram, datasets, candidate),
                             new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories())
                     );
-                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
+                    prompt.addAssistantMessage(candidate.getExpr());
                     if (error.isPresent()) {
-                        sessionPrompts.addUserPrompt(loopBackMessage(candidate.getExpr(), error.get()));
+                        final String loopbackMessage = error.get();
+                        prompt.addUserMessage(loopbackMessage);
+                        logger.info(STR."\{progressAttempt} Sent:\n\{loopbackMessage}");
                         errors.add(error.get());
                         interpreterErrors++;
                     } else {
                         solution = candidate;
+                        logger.info(STR."\{progressAttempt} Solution accepted");
                         break;
                     }
                 }
@@ -159,7 +165,7 @@ public class AuthoringAssistant {
         } else {
             logger.info(STR."\{progress} Expression generation succeeded");
         }
-        sessionPrompts.exportToJson(logfile);
+        prompt.exportToJson(logfile);
         return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), solution, expected, runId, interpreterErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
@@ -167,29 +173,5 @@ public class AuthoringAssistant {
         final FluidCLI fluidCLI = new FluidCLI();
         writeFluidFiles(Settings.INTERPRETER_TEMP_FOLDER, Program.INTERPRETER_TEMP_FILE, expression.getExpr(), p.getDatasetFilenames(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
         return fluidCLI.evaluate(Program.INTERPRETER_TEMP_FILE);
-    }
-
-    private String loopBackMessage(String response, String errorDetails) {
-        String errorMessage;
-        if (errorDetails.toLowerCase().contains("key") && errorDetails.toLowerCase().contains("not found")) {
-            errorMessage = String.format(
-                    "KeyNotFound Error. The generated expression %s is trying to access a key that does not exist. " +
-                            "Check the code and regenerate the expression. Remember: reply only with the expression, without any other comment.",
-                    response
-            );
-        } else if (errorDetails.toLowerCase().contains("parseerror") || errorDetails.toLowerCase().contains("error:")) {
-            errorMessage = String.format(
-                    "SyntacticError. The generated expression %s caused the following error: \n%s. " +
-                            "Check the code, the parenthesis and regenerate the expression. Remember: reply only with the expression, without any other comment.",
-                    response, errorDetails
-            );
-        } else {
-            errorMessage = String.format(
-                    "ValueMismatchError. The generated expression %s produced an unexpected value. " +
-                            "Check the code and regenerate the expression. Remember: reply only with the expression, without any other comment.",
-                    response
-            );
-        }
-        return errorMessage;
     }
 }

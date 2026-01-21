@@ -103,7 +103,6 @@ public class AuthoringAssistant {
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
         final int attemptLimit = interpretationAgent instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
-        int attempt;
         Program subProgram = test.getFirst();
         Expression expected = test.getSecond();
         Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs"));
@@ -112,7 +111,10 @@ public class AuthoringAssistant {
         int interpreterErrors = 0, counterfactualFails = 0, missingResponses = 0, literalResponses = 0;
         final String progress = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
         final String logfile = STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json";
-        for (attempt = 1; attempt <= attemptLimit; attempt++) {
+        final List<String> errors = new ArrayList<>();
+        Expression solution = null;
+        int attempt = 1;
+        while (attempt <= attemptLimit) {
             Expression candidate = interpretationAgent.evaluate(sessionPrompts, "");
             if (candidate == null || candidate.getExpr() == null) {
                 missingResponses++;
@@ -137,21 +139,26 @@ public class AuthoringAssistant {
                     evaluateExpression(subProgram, datasets, candidate),
                     new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories())
                 );
+                sessionPrompts.addAssistantPrompt(candidate.getExpr());
                 if (error.isPresent()) {
-                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
                     sessionPrompts.addUserPrompt(loopBackMessage(candidate.getExpr(), error.get()));
+                    errors.add(error.get());
                     interpreterErrors++;
                 } else {
-                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.exportToJson(logfile);
-                    logger.info(STR."\{progress} Expression validation succeeded");
-                    return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, interpreterErrors, counterfactualFails, missingResponses, literalResponses);
+                    solution = candidate;
+                    break;
                 }
             }
+            attempt++;
+        }
+        if (solution == null) {
+            assert attempt == attemptLimit + 1;
+            logger.info(STR."\{progress} Expression validation failed after \{attemptLimit} attempts");
+        } else {
+            logger.info(STR."\{progress} Expression validation succeeded");
         }
         sessionPrompts.exportToJson(logfile);
-        logger.info(STR."\{progress} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, interpreterErrors, counterfactualFails, missingResponses, literalResponses);
+        return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), solution, expected, runId, interpreterErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {

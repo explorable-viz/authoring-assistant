@@ -41,7 +41,7 @@ public class Program {
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
     private final Path testCasePath;
-    public static final String fluidFileName = "llmTest.fld";
+    public static final String INTERPRETER_TEMP_FILE = "llmTest.fld";
 
     public Program(Paragraph paragraph, Collection<String> datasetFilenames, List<String> imports, String code, Map<String, String> loadedDataset, Path testCasePath, ArrayList<Map<String, String>> test_datasets) throws IOException {
         this.datasetFilenames = datasetFilenames;
@@ -215,8 +215,8 @@ public class Program {
                 paragraph.add(new Literal(json_paragraph.getJSONObject(i).getString("value"), null));
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
-                writeFluidFiles(Settings.FLUID_TEMP_FOLDER, fluidFileName, expression, datasets, loadDatasetFiles(datasets, testVariables), imports, loadImports(imports), code);
-                String commandLineResult = new FluidCLI().evaluate(fluidFileName);
+                writeFluidFiles(Settings.INTERPRETER_TEMP_FOLDER, INTERPRETER_TEMP_FILE, expression, datasets, loadDatasetFiles(datasets, testVariables), imports, loadImports(imports), code);
+                String commandLineResult = new FluidCLI().evaluate(INTERPRETER_TEMP_FILE);
                 Expression candidate = new Expression(
                     expression,
                     extractValue(commandLineResult),
@@ -251,7 +251,16 @@ public class Program {
         return programs;
     }
 
-    public static void writeFluidFiles(String basePath, String fluidFileName, String response, Collection<String> datasets, Map<String, String> loadedDatasets, List<String> imports, List<String> loadedImports, String code) throws IOException {
+    public static void writeFluidFiles(
+        String basePath,
+        String fluidFileName,
+        String response,
+        Collection<String> datasets,
+        Map<String, String> loadedDatasets,
+        List<String> imports,
+        List<String> loadedImports,
+        String code
+    ) throws IOException {
         Files.createDirectories(Paths.get(basePath));
         Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}").getParent());
 
@@ -367,10 +376,6 @@ public class Program {
 
     public Path getTestCasePath() {
         return testCasePath;
-    }
-
-    public String getFluidFileName() {
-        return fluidFileName;
     }
 
     public record QueryResult(

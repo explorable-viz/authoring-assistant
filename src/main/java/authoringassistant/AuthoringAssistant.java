@@ -111,7 +111,7 @@ public class AuthoringAssistant {
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         int parseErrors=0, counterfactualFails=0, missingResponses=0, literalResponses=0;
-        final String info = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
+        final String progress = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
         for (attempt = 1; attempt <= attemptLimit; attempt++) {
             boolean errors = false;
             Expression candidate = interpretationAgent.evaluate(sessionPrompts, "");
@@ -119,7 +119,7 @@ public class AuthoringAssistant {
                 missingResponses++;
                 sessionPrompts.addAssistantPrompt("[No response received]");
                 sessionPrompts.addUserPrompt("No response received. Please try again.");
-                logger.fine(STR."\{info} Attempt #\{attempt}: retry");
+                logger.fine(STR."\{progress} Attempt #\{attempt}: retry");
             } else
             if (candidate.getExpr().equals(expected.getValue())) {
                 literalResponses++;
@@ -128,14 +128,15 @@ public class AuthoringAssistant {
                     This is just the target string as a literal. Try again, but produce a Fluid expression that *computes* 
                     the target string as a query over the dataset, using the supplied library functions if necessary.
                     """);
-                logger.fine(STR."\{info} Attempt #\{attempt}: retry");
+                logger.fine(STR."\{progress} Attempt #\{attempt}: retry");
             } else {
                 boolean firstTest = false;
                 for (Map<String, String> datasets : subProgram.getTest_datasets()) {
-                    logger.fine(STR."\{info} Attempt #\{attempt}: received \{candidate.getExpr()}");
+                    logger.fine(STR."\{progress} Attempt #\{attempt}: received \{candidate.getExpr()}");
                     Optional<String> error = Program.validate(
-                            evaluateExpression(subProgram, datasets, candidate),
-                            new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
+                        evaluateExpression(subProgram, datasets, candidate),
+                        new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories())
+                    );
 
                     if (error.isPresent()) {
                         sessionPrompts.addAssistantPrompt(candidate.getExpr());
@@ -154,20 +155,20 @@ public class AuthoringAssistant {
                 if (!errors) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
                     sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
-                    logger.info(STR."\{info} Expression validation succeeded");
+                    logger.info(STR."\{progress} Expression validation succeeded");
                     return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
         sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
-        logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
+        logger.info(STR."\{progress} Expression validation failed after \{attemptLimit} attempts");
         return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {
         final FluidCLI fluidCLI = new FluidCLI();
-        writeFluidFiles(Settings.FLUID_TEMP_FOLDER, Program.fluidFileName, expression.getExpr(), p.getDatasetFilenames(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
-        return fluidCLI.evaluate(p.getFluidFileName());
+        writeFluidFiles(Settings.INTERPRETER_TEMP_FOLDER, Program.INTERPRETER_TEMP_FILE, expression.getExpr(), p.getDatasetFilenames(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
+        return fluidCLI.evaluate(Program.INTERPRETER_TEMP_FILE);
     }
 
     private String loopBackMessage(String response, String errorDetails) {

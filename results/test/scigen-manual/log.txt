@@ -9,7 +9,7 @@ INFO: {
   "authoring-agent-class": "authoringassistant.llm.interpretation.OpenAIGpt5Agent",
   "num-test-runs": 1,
   "ollama-url": "https://fire.cluelab.di.unisa.it",
-  "truncate-tests-at": 4,
+  "truncate-tests-at": 12,
   "temperature": 1,
   "add-expected-value": true,
   "interpretation-agent-loopback-limit": 2,
@@ -81,80 +81,97 @@ INFO: ****************************************
 INFO: Validated test cases in scigen-manual
 INFO: ****************************************
 INFO: Generating website/authoring-assistant/scigen-manual/1906.05218v1-251/index.html
-INFO: [Run 1 of 1][Test case 1 of 4] 0 of 0 responses correct
+INFO: [Run 1 of 1][Test case 1 of 12] 0 of 0 responses correct
 INFO: Generating website/authoring-assistant/scigen-manual/2002.00652v2-408/index.html
-INFO: [Run 1 of 1][Test case 2 of 4] 0 of 0 responses correct
+INFO: [Run 1 of 1][Test case 2 of 12] 0 of 0 responses correct
 INFO: [Problem 1 of 3][Attempt 1] Received "Google"
 INFO: [Problem 1 of 3][Attempt 1] Sent:
-That expression evaluates to "Google", rather than 0.953. Try again.
-INFO: [Problem 1 of 3][Attempt 2] Received numToStr ((findWithKey_ "_Concept_Input_Embeddings" "Google" tableData).["_Label_F"])
-INFO: [Problem 1 of 3][Attempt 2] Sent:
-That expression evaluates to "0.953", rather than 0.953. Try again.
-INFO: [Problem 1 of 3] Expression generation failed after 2 attempts
-INFO: [Problem 2 of 3][Attempt 1] Received numToStr ((maximumBy (fun x -> x._Description_F) tableData)._Description_F)
+That expression evaluates to "Google", rather than "0.953". Try again.
+INFO: [Problem 1 of 3][Attempt 2] Received "0.953"
+INFO: [Problem 1 of 3][Attempt 2] Solution accepted
+INFO: [Problem 1 of 3] Expression generation succeeded
+INFO: [Problem 2 of 3][Attempt 1] Received "0.912"
 INFO: [Problem 2 of 3][Attempt 1] Sent:
-That expression evaluates to "0.912", rather than 0.843. Try again.
-INFO: [Problem 2 of 3][Attempt 2] Received numToStr ((findWithKey_ "_Concept_Input_Embeddings" "GloVe" tableData)._Description_F)
-INFO: [Problem 2 of 3][Attempt 2] Sent:
-That expression evaluates to "0.843", rather than 0.843. Try again.
-INFO: [Problem 2 of 3] Expression generation failed after 2 attempts
-INFO: [Problem 3 of 3][Attempt 1] Received numToStr ((maximumBy (fun x -> x._Both_F) tableData)._Both_F)
+That expression evaluates to "0.912", rather than "0.843". Try again.
+INFO: [Problem 2 of 3][Attempt 2] Received numToStr ((findWhere (fun x -> (x._Concept_Input_Embeddings == "GloVe") `and` (x._Concept_Input_TF == "+") `and` (x._Concept_Input_IDF == "-")) tableData).["_Description_F"] )
+INFO: [Problem 2 of 3][Attempt 2] Solution accepted
+INFO: [Problem 2 of 3] Expression generation succeeded
+INFO: [Problem 3 of 3][Attempt 1] Received numToStr ((maximumBy (fun x -> x.["_Both_F"]) tableData).[_"_Both_F" ])
 INFO: [Problem 3 of 3][Attempt 1] Sent:
-That expression evaluates to "0.954", rather than 0.914. Try again.
-INFO: [Problem 3 of 3][Attempt 2] Received numToStr ((findWithKey_ "_Concept_Input_Embeddings" "fastText" tableData)._Both_F)
-INFO: [Problem 3 of 3][Attempt 2] Sent:
-That expression evaluates to "0.914", rather than 0.914. Try again.
+The Fluid interpreter didn't like that expression. Here's what it said:
+Error: Key "_" exists in mapTry again.
+INFO: [Problem 3 of 3][Attempt 2] Received numToStr ((maximumBy (fun x -> x.["_Both_F"]) tableData).["_Both_F"])
+INFO: [Problem 3 of 3][Attempt 2] Aborted with:
+That expression evaluates to "0.954", rather than "0.914". Try again.
 INFO: [Problem 3 of 3] Expression generation failed after 2 attempts
 INFO: Generating website/authoring-assistant/scigen-manual/1904.12550v1-5/index.html
-INFO: [Run 1 of 1][Test case 3 of 4] 0 of 3 responses correct
-INFO: [Problem 1 of 1][Attempt 1] Received let row = findWhere (fun x -> x._Gong_et_al_2018 == "AVG_COS_SIM" `and` x.topic_science == "Both") tableData in "F = " ++ numToStr row._F_818
+INFO: [Run 1 of 1][Test case 3 of 12] 2 of 3 responses correct
+INFO: [Problem 1 of 1][Attempt 1] Received let row = findWhere (fun r -> r._Gong_et_al_2018 == "AVG_COS_SIM" `and` r.topic_science == "Both") tableData in "F = " ++ numToStr row._F_818
 INFO: [Problem 1 of 1][Attempt 1] Sent:
 The Fluid interpreter didn't like that expression. Here's what it said:
 Error: Int, Float or Str expected; got cl ([== -> ==,Try again.
-INFO: [Problem 1 of 1][Attempt 2] Received let row = findWhere (fun x -> (x._Gong_et_al_2018 == "AVG_COS_SIM") `and` (x.topic_science == "Both")) tableData in "F = " ++ numToStr row.["_F_818"] ++ " " ++ row.["_F_±_028"]
-INFO: [Problem 1 of 1][Attempt 2] Sent:
-That expression evaluates to "F = 0.926 ±.038", rather than 0.926. Try again.
+INFO: [Problem 1 of 1][Attempt 2] Received let row = findWhere (fun r -> (r._Gong_et_al_2018 == "AVG_COS_SIM") `and` (r.topic_science == "Both")) tableData in "F = " ++ numToStr row._F_818
+INFO: [Problem 1 of 1][Attempt 2] Aborted with:
+That expression evaluates to "F = 0.926", rather than "0.926". Try again.
 INFO: [Problem 1 of 1] Expression generation failed after 2 attempts
 INFO: Generating website/authoring-assistant/scigen-manual/1904.12550v1-6/index.html
-INFO: [Run 1 of 1][Test case 4 of 4] 0 of 1 responses correct
-INFO: Total number of test problems: 4
-INFO: Generating website/authoring-assistant/scigen-manual/1906.05218v1-251/index.html
-INFO: [Run 1 of 1][Test case 1 of 4] 0 of 0 responses correct
-INFO: Generating website/authoring-assistant/scigen-manual/2002.00652v2-408/index.html
-INFO: [Run 1 of 1][Test case 2 of 4] 0 of 0 responses correct
-INFO: [Problem 1 of 3][Attempt 1] Received "0.953"
+INFO: [Run 1 of 1][Test case 4 of 12] 0 of 1 responses correct
+INFO: Generating website/authoring-assistant/scigen-manual/1905.13126v1-178/index.html
+INFO: [Run 1 of 1][Test case 5 of 12] 0 of 0 responses correct
+INFO: Generating website/authoring-assistant/scigen-manual/1906.07854v1-260/index.html
+INFO: [Run 1 of 1][Test case 6 of 12] 0 of 0 responses correct
+INFO: Generating website/authoring-assistant/scigen-manual/2003.03716v1-324/index.html
+INFO: [Run 1 of 1][Test case 7 of 12] 0 of 0 responses correct
+INFO: [Problem 1 of 3][Attempt 1] Received numToStr (length tableData) ++ " " 
 INFO: [Problem 1 of 3][Attempt 1] Sent:
-That expression evaluates to "0.953", rather than 0.953. Try again.
-INFO: [Problem 1 of 3][Attempt 2] Received numToStr 0.953
-INFO: [Problem 1 of 3][Attempt 2] Sent:
-That expression evaluates to "0.953", rather than 0.953. Try again.
+That expression evaluates to "14 ", rather than "13". Try again.
+INFO: [Problem 1 of 3][Attempt 2] Received numToStr (length tableData - 1) ++ " "
+INFO: [Problem 1 of 3][Attempt 2] Aborted with:
+That expression evaluates to "13 ", rather than "13". Try again.
 INFO: [Problem 1 of 3] Expression generation failed after 2 attempts
-INFO: [Problem 2 of 3][Attempt 1] Received numToStr ((findWithKey_ "_Concept_Input_Embeddings" "GloVe" tableData)._Description_F)
+INFO: [Problem 2 of 3][Attempt 1] Received "increase "
 INFO: [Problem 2 of 3][Attempt 1] Sent:
-That expression evaluates to "0.843", rather than 0.843. Try again.
-INFO: [Problem 2 of 3][Attempt 2] Received numToStr ((findWithKey_ "_Concept_Input_Embeddings" "GloVe" tableData)._Description_F)
-INFO: [Problem 2 of 3][Attempt 2] Sent:
-That expression evaluates to "0.843", rather than 0.843. Try again.
-INFO: [Problem 2 of 3] Expression generation failed after 2 attempts
-INFO: [Problem 3 of 3][Attempt 1] Received "0.914"
-INFO: [Problem 3 of 3][Attempt 1] Sent:
-That expression evaluates to "0.914", rather than 0.914. Try again.
-INFO: [Problem 3 of 3][Attempt 2] Received 0.914
-INFO: [Problem 3 of 3][Attempt 2] Sent:
+That expression evaluates to "increase ", rather than "outperformed". Try again.
+INFO: [Problem 2 of 3][Attempt 2] Received "outperformed"
+INFO: [Problem 2 of 3][Attempt 2] Aborted with:
 This is just the target string as a literal. Try again, but produce a Fluid expression that *computes*
 the target string as a query over the dataset, using the supplied library functions if necessary.
 
-INFO: [Problem 3 of 3] Expression generation failed after 2 attempts
-INFO: Generating website/authoring-assistant/scigen-manual/1904.12550v1-5/index.html
-INFO: [Run 1 of 1][Test case 3 of 4] 0 of 3 responses correct
-INFO: [Problem 1 of 1][Attempt 1] Received numToStr ((findWhere (fun x -> x.["_Gong_et_al_2018"] == "AVG_COS_SIM" `and` x.["topic_science"] == "Both") tableData).["_F_818"] )
-INFO: [Problem 1 of 1][Attempt 1] Sent:
-The Fluid interpreter didn't like that expression. Here's what it said:
-Error: Int, Float or Str expected; got cl ([== -> ==,Try again.
-INFO: [Problem 1 of 1][Attempt 2] Received "0.926"
-INFO: [Problem 1 of 1][Attempt 2] Sent:
-That expression evaluates to "0.926", rather than 0.926. Try again.
-INFO: [Problem 1 of 1] Expression generation failed after 2 attempts
-INFO: Generating website/authoring-assistant/scigen-manual/1904.12550v1-6/index.html
-INFO: [Run 1 of 1][Test case 4 of 4] 0 of 1 responses correct
-INFO: Total number of test problems: 4
+INFO: [Problem 2 of 3] Expression generation failed after 2 attempts
+INFO: [Problem 3 of 3][Attempt 1] Received "unusually low"
+INFO: [Problem 3 of 3][Attempt 1] Sent:
+That expression evaluates to "unusually low", rather than "unusually high". Try again.
+INFO: [Problem 3 of 3][Attempt 2] Received unusuallyHighLow GT
+INFO: [Problem 3 of 3][Attempt 2] Solution accepted
+INFO: [Problem 3 of 3] Expression generation succeeded
+INFO: Generating website/authoring-assistant/scigen-manual/1807.07279v3-23/index.html
+INFO: [Run 1 of 1][Test case 8 of 12] 1 of 3 responses correct
+INFO: [Problem 1 of 21][Attempt 1] Received "better"
+INFO: [Problem 1 of 21][Attempt 1] Sent:
+This is just the target string as a literal. Try again, but produce a Fluid expression that *computes*
+the target string as a query over the dataset, using the supplied library functions if necessary.
+
+INFO: [Problem 1 of 21][Attempt 2] Received betterWorse (compare (model_ "BiLSTM")._Acc (model_ "LSTM")._Acc)
+INFO: [Problem 1 of 21][Attempt 2] Solution accepted
+INFO: [Problem 1 of 21] Expression generation succeeded
+INFO: [Problem 2 of 21][Attempt 1] Received shorterLonger (compare (model_ "BiLSTM")._Time_s (model_ "LSTM")._Time_s)
+INFO: [Problem 2 of 21][Attempt 1] Sent:
+That expression evaluates to "longer", rather than "growing". Try again.
+INFO: [Problem 2 of 21][Attempt 2] Received growShrink (compare (model_ "BiLSTM")._Time_s (model_ "LSTM")._Time_s)
+INFO: [Problem 2 of 21][Attempt 2] Solution accepted
+INFO: [Problem 2 of 21] Expression generation succeeded
+INFO: [Problem 3 of 21][Attempt 1] Received numToStr ((model_ "LSTM")._Time_s) ++ " "
+INFO: [Problem 3 of 21][Attempt 1] Sent:
+That expression evaluates to "67 ", rather than "67". Try again.
+INFO: [Problem 3 of 21][Attempt 2] Received numToStr ((model_ "LSTM")._Time_s)
+INFO: [Problem 3 of 21][Attempt 2] Solution accepted
+INFO: [Problem 3 of 21] Expression generation succeeded
+INFO: [Problem 4 of 21][Attempt 1] Received numToStr ((model_ "BiLSTM")._Time_s)
+INFO: [Problem 4 of 21][Attempt 1] Solution accepted
+INFO: [Problem 4 of 21] Expression generation succeeded
+INFO: [Problem 5 of 21][Attempt 1] Received improvements (compare (model_ "2 stacked BiLSTM")._Acc (model_ "BiLSTM")._Acc)
+INFO: [Problem 5 of 21][Attempt 1] Solution accepted
+INFO: [Problem 5 of 21] Expression generation succeeded
+INFO: [Problem 6 of 21][Attempt 1] Received shorterLonger (compare (model_ "2 stacked BiLSTM")._Time_s (model_ "BiLSTM")._Time_s)
+INFO: [Problem 6 of 21][Attempt 1] Sent:
+That expression evaluates to "longer", rather than "larger". Try again.

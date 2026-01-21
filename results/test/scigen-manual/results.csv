@@ -1,9 +1,0 @@
-run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
-0;"1904.12550v1-5";1;"gpt-5-mini";1;"[Data Retrieval]";2;0;0;0
-0;"1904.12550v1-5";2;"gpt-5-mini";1;"[Data Retrieval]";2;0;0;0
-0;"1904.12550v1-5";3;"gpt-5-mini";1;"[Data Retrieval]";2;0;0;0
-0;"1904.12550v1-6";1;"gpt-5-mini";1;"[Data Retrieval]";2;0;0;0
-0;"1904.12550v1-5";1;"gpt-5-mini";1;"[Data Retrieval]";2;0;0;0
-0;"1904.12550v1-5";2;"gpt-5-mini";1;"[Data Retrieval]";2;0;0;0
-0;"1904.12550v1-5";3;"gpt-5-mini";1;"[Data Retrieval]";1;0;0;1
-0;"1904.12550v1-6";1;"gpt-5-mini";1;"[Data Retrieval]";2;0;0;0

@@ -106,35 +106,34 @@ public class AuthoringAssistant {
         Program subProgram = test.getFirst();
         Expression expected = test.getSecond();
         final Path testCasePath = test.getFirst().getTestCasePath();
-        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{ testCasePath }/logs"));
+        final String logFolder = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}/\{ testCasePath.getFileName() }/logs";
+        Files.createDirectories(Path.of(logFolder));
         final Prompt prompt = (Prompt) initialPrompt.clone();
         prompt.addUserMessage(subProgram.toUserPrompt());
         int interpreterErrors = 0, counterfactualFails = 0, missingResponses = 0, literalResponses = 0;
         final String progress = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
-        final String logfile = STR."results/\{Settings.getConfigName()}/\{ testCasePath }/logs/\{ testCasePath.getFileName()}_\{String.format("%02d", problemIndex)}.json";
+        final String logfile = STR."\{logFolder}/\{ testCasePath.getFileName()}_\{String.format("%02d", problemIndex)}.json";
         final List<String> errors = new ArrayList<>();
         Expression solution = null;
-        int attempt = 1;
-        while (attempt <= attemptLimit) {
+        int attempt = 0;
+        while (true) {
+            attempt++;
             final String progressAttempt = STR."\{progress}[Attempt \{attempt}]";
             Expression candidate = interpretationAgent.evaluate(prompt, "");
+            String loopbackMessage = null;
             if (candidate == null || candidate.getExpr() == null) {
                 missingResponses++;
                 prompt.addAssistantMessage("[No response received]");
-                final String loopbackMessage = "No response received. Please try again.";
-                prompt.addUserMessage(loopbackMessage);
-                logger.info(STR."\{progressAttempt} Sent \"\{loopbackMessage}\"");
+                loopbackMessage = "No response received. Please try again.";
             } else {
                 logger.info(STR."\{progressAttempt} Received \{candidate.getExpr()}");
                 if (candidate.getExpr().equals(expected.getValue())) {
                     literalResponses++;
                     prompt.addAssistantMessage(candidate.getExpr());
-                    final String loopbackMessage = """
+                    loopbackMessage = """
                         This is just the target string as a literal. Try again, but produce a Fluid expression that *computes* 
                         the target string as a query over the dataset, using the supplied library functions if necessary.
                         """;
-                    prompt.addUserMessage(loopbackMessage);
-                    logger.info(STR."\{progressAttempt} Sent:\n\{loopbackMessage}");
                 } else {
                     Map<String, String> datasets = subProgram.getDatasetsVariants().get(0);
                     //              Ignore for now
@@ -145,25 +144,27 @@ public class AuthoringAssistant {
                     );
                     prompt.addAssistantMessage(candidate.getExpr());
                     if (error.isPresent()) {
-                        final String loopbackMessage = error.get();
-                        prompt.addUserMessage(loopbackMessage);
-                        logger.info(STR."\{progressAttempt} Sent:\n\{loopbackMessage}");
                         errors.add(error.get());
                         interpreterErrors++;
-                    } else {
-                        solution = candidate;
-                        logger.info(STR."\{progressAttempt} Solution accepted");
-                        break;
+                        loopbackMessage = error.get();
                     }
                 }
             }
-            attempt++;
-        }
-        if (solution == null) {
-            assert attempt == attemptLimit + 1;
-            logger.info(STR."\{progress} Expression generation failed after \{attemptLimit} attempts");
-        } else {
-            logger.info(STR."\{progress} Expression generation succeeded");
+            if (loopbackMessage != null) {
+                if (attempt == attemptLimit) {
+                    logger.info(STR."\{progressAttempt} Aborted with:\n\{loopbackMessage}");
+                    logger.info(STR."\{progress} Expression generation failed after \{attemptLimit} attempts");
+                    break;
+                } else {
+                    prompt.addUserMessage(loopbackMessage);
+                    logger.info(STR."\{progressAttempt} Sent:\n\{loopbackMessage}");
+                }
+            } else {
+                solution = candidate;
+                logger.info(STR."\{progressAttempt} Solution accepted");
+                logger.info(STR."\{progress} Expression generation succeeded");
+                break;
+            }
         }
         prompt.exportToJson(logfile);
         return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), solution, expected, runId, interpreterErrors, counterfactualFails, missingResponses, literalResponses);

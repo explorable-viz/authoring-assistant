@@ -3,5 +3,5 @@
   "num-test-runs": 1,
   "authoring-agent-class": "authoringassistant.llm.interpretation.OpenAIGpt5Agent",
   "test-case-folder": "scigen-manual",
-  "truncate-tests-at": 4
+  "truncate-tests-at": 12
 }

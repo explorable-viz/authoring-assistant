@@ -90,16 +90,26 @@ public class Program {
     }
 
     // Return loopback message or nothing if expression evaluates to expected string
-    public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
+    public static Optional<String> validate(String commandLineResponse, Expression expected) {
         String value = extractValue(commandLineResponse);
         if (commandLineResponse.contains("Error: ")) {
-            return Optional.of(STR."The Fluid interpreter didn't like that expression. Here's what it said:\n\{value}Try again.");
+            return Optional.of(STR."The Fluid interpreter didn't like that expression. Here's what it said:\n\{value}\nTry again.");
         }
-        if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
+        String expectedValue = expected.getValue();
+        if (value.equals(expectedValue) || roundedEquals(value, expectedValue)) {
             return Optional.empty();
-        } else {
-            return Optional.of(STR."That expression evaluates to \{value}, rather than \{expectedExpression.getValue()}. Try again.");
         }
+        try {
+            // Fluid integer or float literals are acceptable as they will convert automatically to string
+            Double.parseDouble(expectedValue.trim());
+            expectedValue = STR."\"\{expectedValue}\"";
+        } catch (NumberFormatException e) {
+            // keep expectedValue as is
+        }
+        if (value.equals(expectedValue)) {
+            return Optional.empty();
+        }
+        return Optional.of(STR."That expression evaluates to \{value}, rather than \{ expectedValue }. Try again.");
     }
 
     private static boolean roundedEquals(String generated, String expected) {
@@ -299,19 +309,10 @@ public class Program {
     public JSONObject toJsonProgram() {
         JSONObject object = new JSONObject();
 
-        // Add datasets (file names only, not content)
         object.put("datasets", new JSONArray(datasetFilenames.stream().toList()));
-
-        // Add imports
         object.put("imports", new JSONArray(imports));
-
-        // Add testing-variables (empty object for now)
         object.put("testing-variables", new JSONObject());
-
-        // Add variables (empty object for now)
         object.put("variables", new JSONObject());
-
-        // Add paragraph
         JSONArray paragraphArray = new JSONArray(
             paragraph.stream()
                 .map(fragment -> {
@@ -335,7 +336,6 @@ public class Program {
                 .toList()
         );
         object.put("paragraph", paragraphArray);
-
         return object;
     }
 

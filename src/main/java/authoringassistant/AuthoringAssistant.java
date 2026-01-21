@@ -75,7 +75,8 @@ public class AuthoringAssistant {
         Program subProgram = test.getFirst();
         final Path testCaseFileName = subProgram.getTestCasePath();
         Expression expected = test.getSecond();
-        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getClass().getSimpleName()}/\{Settings.getTestCaseFolder()}/logs"));
+        final String resultsPathPrefix = STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getClass().getSimpleName()}/\{Settings.getTestCaseFolder()}/logs/\{test.getFirst().getTestCasePath().getFileName()}_";
+        Files.createDirectories(Path.of(resultsPathPrefix).getParent());
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         int parseErrors=0, counterfactualFails=0, missingResponses=0, literalResponses=0;
@@ -119,13 +120,13 @@ public class AuthoringAssistant {
                 // weird way to exit loop
                 if (!errors) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getClass().getSimpleName()}/\{Settings.getTestCaseFolder()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
+                    sessionPrompts.exportToJson(STR."\{resultsPathPrefix}\{String.format("%02d", problemIndex)}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
                     return new QueryResult(problemIndex + 1, interpretationAgent.getClass().getSimpleName(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
-        sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getClass().getSimpleName()}/\{Settings.getTestCaseFolder()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
+        sessionPrompts.exportToJson(STR."\{resultsPathPrefix}\{String.format("%02d", problemIndex)}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
         return new QueryResult(problemIndex + 1, interpretationAgent.getClass().getSimpleName(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }

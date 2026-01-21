@@ -181,7 +181,7 @@ def generate_success_rate_by_category_count(df, plot, fig_dir):
 
 def process_csv_file(csv_file):
     """Process a single CSV file and generate charts in the corresponding subdirectory."""
-    # Get the subdirectory name (e.g., "scigen-manual" from "results/scigen-manual/file.csv")
+    # Get the subdirectory name (e.g., "config/model/test-suite" from "results/config/model/test-suite/file.csv")
     rel_path = os.path.relpath(csv_file, "results")
     subdir = os.path.dirname(rel_path)
     
@@ -221,17 +221,28 @@ def process_csv_file(csv_file):
 
 def generate_charts(config_name: str, test_case_folder: str):
     results_dir = Path("results")
-    csv_path = results_dir / config_name / test_case_folder / "results.csv"
-
-    if not csv_path.exists():
-        raise FileNotFoundError(f"CSV file not found: {csv_path}")
-
-    print(f"Processing CSV file: {csv_path}")
-    process_csv_file(str(csv_path))
-
-    print(f"\n{'='*60}")
-    print("Charts generated successfully.")
-    print(f"{'='*60}")
+    config_dir = results_dir / config_name
+    
+    # Find the model directory by scanning subdirectories
+    if not config_dir.exists():
+        raise FileNotFoundError(f"Configuration directory not found: {config_dir}")
+    
+    model_dirs = [d for d in config_dir.iterdir() if d.is_dir()]
+    if not model_dirs:
+        raise FileNotFoundError(f"No model directories found in {config_dir}")
+    
+    # Use the first model directory found (or you could search for one with test_case_folder)
+    for model_dir in model_dirs:
+        csv_path = model_dir / test_case_folder / "results.csv"
+        if csv_path.exists():
+            print(f"Processing CSV file: {csv_path}")
+            process_csv_file(str(csv_path))
+            print(f"\n{'='*60}")
+            print("Charts generated successfully.")
+            print(f"{'='*60}")
+            return
+    
+    raise FileNotFoundError(f"No results.csv found for test case folder: {test_case_folder}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -244,12 +255,11 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     settings_file = Path("settings") / f"{args.config}.json"
-    prop = "test-case-folder"
 
     try:
         with open(settings_file, encoding="utf-8") as f:
             settings = json.load(f)
-        test_case_folder = settings[prop]
+        test_case_folder = settings["test-case-folder"]
         generate_charts(args.config, test_case_folder)
     except FileNotFoundError as e:
         sys.exit(f"{e}")

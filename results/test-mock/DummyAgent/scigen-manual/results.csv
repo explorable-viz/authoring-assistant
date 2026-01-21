@@ -1,0 +1,56 @@
+run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
+0;"1904.12550v1-6";1;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";1;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";2;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";3;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";4;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";5;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";6;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";7;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";8;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";9;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";10;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";11;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";12;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";13;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";14;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";15;"DummyAgent";0;"[Comparison,Rank,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";16;"DummyAgent";0;"[Comparison,Rank,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";17;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";18;"DummyAgent";0;"[Rank]";0;2;0;0
+0;"1805.02474v1-10";19;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";20;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1805.02474v1-10";21;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1807.07279v3-23";1;"DummyAgent";0;"[Sum]";0;2;0;0
+0;"1807.07279v3-23";2;"DummyAgent";0;"[Comparison,Generalised Quantifier,Data Retrieval]";0;2;0;0
+0;"1807.07279v3-23";3;"DummyAgent";0;"[Comparison,Generalised Quantifier,Data Retrieval]";0;2;0;0
+0;"1904.12550v1-5";1;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1904.12550v1-5";2;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1904.12550v1-5";3;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1905.05979v2-88";1;"DummyAgent";0;"[Difference,Data Retrieval]";0;2;0;0
+0;"1905.05979v2-88";2;"DummyAgent";0;"[Difference,Data Retrieval]";0;2;0;0
+0;"1905.05979v2-88";3;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-14";1;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1805.02474v1-14";2;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1002.0773-8586";1;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1003.0206-7624";1;"DummyAgent";0;"[Comparison,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";1;"DummyAgent";0;"[Comparison,Generalised Quantifier,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";2;"DummyAgent";0;"[Comparison,Generalised Quantifier,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";3;"DummyAgent";0;"[Comparison,Generalised Quantifier,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";4;"DummyAgent";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";5;"DummyAgent";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";6;"DummyAgent";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";7;"DummyAgent";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";8;"DummyAgent";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";9;"DummyAgent";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";10;"DummyAgent";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";11;"DummyAgent";0;"[Min/Max,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";12;"DummyAgent";0;"[Comparison,Generalised Quantifier,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";13;"DummyAgent";0;"[Comparison,Generalised Quantifier,Data Retrieval]";0;2;0;0
+0;"1110.3094-5931";14;"DummyAgent";0;"[Comparison,Generalised Quantifier,Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";1;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";2;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";3;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";4;"DummyAgent";0;"[Difference,Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";5;"DummyAgent";0;"[Data Retrieval]";0;2;0;0
+0;"1906.02780v1-17";6;"DummyAgent";0;"[Data Retrieval]";0;2;0;0

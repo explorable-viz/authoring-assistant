@@ -75,7 +75,7 @@ public class AuthoringAssistant {
         Program subProgram = test.getFirst();
         final Path testCaseFileName = subProgram.getTestCasePath();
         Expression expected = test.getSecond();
-        final String resultsPathPrefix = STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getClass().getSimpleName()}/\{Settings.getTestCaseFolder()}/logs/\{test.getFirst().getTestCasePath().getFileName()}_";
+        final String resultsPathPrefix = STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getModel()}/\{Settings.getTestCaseFolder()}/logs/\{test.getFirst().getTestCasePath().getFileName()}_";
         Files.createDirectories(Path.of(resultsPathPrefix).getParent());
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
@@ -122,13 +122,13 @@ public class AuthoringAssistant {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
                     sessionPrompts.exportToJson(STR."\{resultsPathPrefix}\{String.format("%02d", problemIndex)}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
-                    return new QueryResult(problemIndex + 1, interpretationAgent.getClass().getSimpleName(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+                    return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
         sessionPrompts.exportToJson(STR."\{resultsPathPrefix}\{String.format("%02d", problemIndex)}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(problemIndex + 1, interpretationAgent.getClass().getSimpleName(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+        return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {

@@ -97,10 +97,10 @@ public class Main {
         }
     }
 
-    private static void setupResultsFileLogger() throws IOException {
+    private static void setupResultsFileLogger() throws Exception {
         String interpretationAgent = Settings.getAuthoringAgentName();
         String modelName = interpretationAgent != null ? 
-            interpretationAgent.substring(interpretationAgent.lastIndexOf('.') + 1) : "unknown";
+            authoringassistant.llm.LLMEvaluatorAgent.initialiseAgent(interpretationAgent).getModel() : "unknown";
         String resultsPath = STR."results/\{Settings.getConfigName()}/\{modelName}/\{Settings.getTestCaseFolder()}";
         Files.createDirectories(Path.of(resultsPath));
         fileHandler = new FileHandler(STR."\{resultsPath}/log.txt", /* append = */ false);

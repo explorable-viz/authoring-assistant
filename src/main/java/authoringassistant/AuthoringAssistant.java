@@ -106,7 +106,7 @@ public class AuthoringAssistant {
         Program subProgram = test.getFirst();
         Expression expected = test.getSecond();
         final Path testCasePath = test.getFirst().getTestCasePath();
-        final String logFolder = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}/\{ testCasePath.getFileName() }/logs";
+        final String logFolder = STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getModel()}/\{Settings.getTestCaseFolder()}/\{ testCasePath.getFileName() }/logs";
         Files.createDirectories(Path.of(logFolder));
         final Prompt prompt = (Prompt) initialPrompt.clone();
         prompt.addUserMessage(subProgram.toUserPrompt());

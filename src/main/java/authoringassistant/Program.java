@@ -34,7 +34,7 @@ public class Program {
 
     public final static Logger logger = Logger.getLogger(Program.class.getName());
     private final Collection<String> datasetFilenames;
-    private final ArrayList<Map<String, String>> test_datasets;
+    private final ArrayList<Map<String, String>> datasetsVariants;
     private final List<String> imports;
     private final ArrayList<String> _loadedImports;
     private final String code;
@@ -47,7 +47,7 @@ public class Program {
         this.datasetFilenames = datasetFilenames;
         this._loadedDatasets = loadedDataset;
         this.code = code;
-        this.test_datasets = test_datasets;
+        this.datasetsVariants = test_datasets;
         this.testCasePath = testCasePath;
         this.imports = imports;
         this._loadedImports = loadImports(imports);
@@ -246,7 +246,7 @@ public class Program {
         List<Pair<Expression, Paragraph>> paragraphsToCompute = paragraph.getProblems(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for (Pair<Expression, Paragraph> p : paragraphsToCompute) {
-            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasetFilenames(), this.getImports(), this.code, this._loadedDatasets, this.testCasePath, this.test_datasets), p.getFirst()));
+            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasetFilenames(), this.getImports(), this.code, this._loadedDatasets, this.testCasePath, this.datasetsVariants), p.getFirst()));
         }
         return programs;
     }
@@ -370,8 +370,8 @@ public class Program {
         this.paragraph.addAll(paragraph);
     }
 
-    public ArrayList<Map<String, String>> getTest_datasets() {
-        return test_datasets;
+    public ArrayList<Map<String, String>> getDatasetsVariants() {
+        return datasetsVariants;
     }
 
     public Path getTestCasePath() {

@@ -39,7 +39,6 @@ public class Main {
             logger.info(Settings.getSettings().toString(2));
             final String interpretationAgent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
-            //Create directory for logs and json
             systemPrompt = SystemPrompt.load(Settings.SYSTEM_PROMPT_PATH);
             logger.info("****************************************");
             logger.info(STR."Validating test cases in \{Settings.getTestCaseFolder()}");
@@ -212,8 +211,6 @@ public class Main {
 
         for(int k = 0; k < numRuns; k++)
         {
-            String jsonLogFolder = STR."\{Settings.LOG_FOLDER}\{Settings.getConfigName()}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
-            Files.createDirectories(Paths.get(jsonLogFolder));
             int n = 0;
             for (Program testCase : testCases) {
                 AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, testCase, suggestionAgent, k);

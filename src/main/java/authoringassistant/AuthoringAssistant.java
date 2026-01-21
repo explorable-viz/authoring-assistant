@@ -122,41 +122,42 @@ public class AuthoringAssistant {
                 sessionPrompts.addAssistantPrompt("[No response received]");
                 sessionPrompts.addUserPrompt("No response received. Please try again.");
                 logger.fine(STR."\{progress} Attempt #\{attempt}: retry");
-            } else
-            if (candidate.getExpr().equals(expected.getValue())) {
-                literalResponses++;
-                sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                sessionPrompts.addUserPrompt("""
-                    This is just the target string as a literal. Try again, but produce a Fluid expression that *computes* 
-                    the target string as a query over the dataset, using the supplied library functions if necessary.
-                    """);
-                logger.fine(STR."\{progress} Attempt #\{attempt}: retry");
             } else {
-                Map<String, String> datasets = subProgram.getDatasetsVariants().get(0);
-//              Ignore for now
-//              List<Map<String, String>> counterfactualDatasets = subProgram.getDatasetsVariants().subList(1, subProgram.getDatasetsVariants().size());
-                logger.fine(STR."\{progress} Attempt #\{attempt}: received \{candidate.getExpr()}");
-                Optional<String> error = Program.validate(
-                    evaluateExpression(subProgram, datasets, candidate),
-                    new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories())
-                );
-                sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                if (error.isPresent()) {
-                    sessionPrompts.addUserPrompt(loopBackMessage(candidate.getExpr(), error.get()));
-                    errors.add(error.get());
-                    interpreterErrors++;
+                logger.info(STR."\{progress}[Attempt #\{attempt}] Received \{candidate.getExpr()}");
+                if (candidate.getExpr().equals(expected.getValue())) {
+                    literalResponses++;
+                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
+                    sessionPrompts.addUserPrompt("""
+                            This is just the target string as a literal. Try again, but produce a Fluid expression that *computes* 
+                            the target string as a query over the dataset, using the supplied library functions if necessary.
+                            """);
+                    logger.fine(STR."\{progress} Attempt #\{attempt}: retry");
                 } else {
-                    solution = candidate;
-                    break;
+                    Map<String, String> datasets = subProgram.getDatasetsVariants().get(0);
+                    //              Ignore for now
+                    //              List<Map<String, String>> counterfactualDatasets = subProgram.getDatasetsVariants().subList(1, subProgram.getDatasetsVariants().size());
+                    Optional<String> error = Program.validate(
+                            evaluateExpression(subProgram, datasets, candidate),
+                            new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories())
+                    );
+                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
+                    if (error.isPresent()) {
+                        sessionPrompts.addUserPrompt(loopBackMessage(candidate.getExpr(), error.get()));
+                        errors.add(error.get());
+                        interpreterErrors++;
+                    } else {
+                        solution = candidate;
+                        break;
+                    }
                 }
             }
             attempt++;
         }
         if (solution == null) {
             assert attempt == attemptLimit + 1;
-            logger.info(STR."\{progress} Expression validation failed after \{attemptLimit} attempts");
+            logger.info(STR."\{progress} Expression generation failed after \{attemptLimit} attempts");
         } else {
-            logger.info(STR."\{progress} Expression validation succeeded");
+            logger.info(STR."\{progress} Expression generation succeeded");
         }
         sessionPrompts.exportToJson(logfile);
         return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), solution, expected, runId, interpreterErrors, counterfactualFails, missingResponses, literalResponses);

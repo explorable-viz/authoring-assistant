@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 import authoringassistant.Program.QueryResult;
 
 import static authoringassistant.Program.extractValue;
+import static authoringassistant.Program.logger;
 import static authoringassistant.Program.writeFluidFiles;
 
 public class AuthoringAssistant {
@@ -74,7 +75,7 @@ public class AuthoringAssistant {
         Program subProgram = test.getFirst();
         final Path testCaseFileName = subProgram.getTestCasePath();
         Expression expected = test.getSecond();
-        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs"));
+        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getClass().getSimpleName()}/\{Settings.getTestCaseFolder()}/logs"));
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         int parseErrors=0, counterfactualFails=0, missingResponses=0, literalResponses=0;
@@ -118,15 +119,15 @@ public class AuthoringAssistant {
                 // weird way to exit loop
                 if (!errors) {
                     sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
+                    sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getClass().getSimpleName()}/\{Settings.getTestCaseFolder()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
                     logger.info(STR."\{info} Expression validation succeeded");
-                    return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+                    return new QueryResult(problemIndex + 1, interpretationAgent.getClass().getSimpleName(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
         }
-        sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
+        sessionPrompts.exportToJson(STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getClass().getSimpleName()}/\{Settings.getTestCaseFolder()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json");
         logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+        return new QueryResult(problemIndex + 1, interpretationAgent.getClass().getSimpleName(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {

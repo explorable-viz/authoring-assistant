@@ -98,7 +98,10 @@ public class Main {
     }
 
     private static void setupResultsFileLogger() throws IOException {
-        String resultsPath = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}";
+        String interpretationAgent = Settings.getAuthoringAgentName();
+        String modelName = interpretationAgent != null ? 
+            interpretationAgent.substring(interpretationAgent.lastIndexOf('.') + 1) : "unknown";
+        String resultsPath = STR."results/\{Settings.getConfigName()}/\{modelName}/\{Settings.getTestCaseFolder()}";
         Files.createDirectories(Path.of(resultsPath));
         fileHandler = new FileHandler(STR."\{resultsPath}/log.txt", /* append = */ false);
         fileHandler.setFormatter(new SimpleFormatter());
@@ -170,8 +173,13 @@ public class Main {
     }
 
     private static void writeResults(ArrayList<Pair<Program, QueryResult>> results) throws IOException {
-        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}"));
-        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}/results.csv"))) {
+        if (results.isEmpty()) {
+            logger.warning("No results to write");
+            return;
+        }
+        String modelName = results.get(0).getSecond().model();
+        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{modelName}/\{Settings.getTestCaseFolder()}"));
+        try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getConfigName()}/\{modelName}/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
                     "run", "test-case", "problem-no", "llm-agent", "target-value-present", "categories",
                     "fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"

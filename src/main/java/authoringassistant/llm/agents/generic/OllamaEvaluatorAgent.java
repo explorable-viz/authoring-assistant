@@ -2,8 +2,8 @@ package authoringassistant.llm.agents.generic;
 
 import authoringassistant.Settings;
 import authoringassistant.llm.LLMEvaluatorAgent;
+import authoringassistant.llm.prompt.Message;
 import authoringassistant.llm.prompt.Prompt;
-import authoringassistant.llm.prompt.PromptList;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -45,7 +45,7 @@ public abstract class OllamaEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
         return this.model;
     }
 
-    public E evaluate(PromptList prompts, String grid) throws IOException {
+    public E evaluate(Prompt prompts, String grid) throws IOException {
         MediaType mediaType = MediaType.parse("application/json");
         JSONObject prompt = new JSONObject();
         JSONObject options = new JSONObject();
@@ -53,13 +53,13 @@ public abstract class OllamaEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
         options.put("temperature", this.temperature);
         options.put("num_ctx", this.ctx);
         prompt.put("options", options);
-        prompt.put("system", ((Prompt)prompts.get(0)).getContent());
+        prompt.put("system", ((Message)prompts.get(0)).getContent());
         prompt.put("stream", false);
         JSONArray messages = new JSONArray();
         prompt.put("messages", messages);
 
         for(int i = 0; i < prompts.size(); ++i) {
-            Prompt p = (Prompt)prompts.get(i);
+            Message p = (Message)prompts.get(i);
             JSONObject message = new JSONObject();
             message.put("role", p.getRole());
             message.put("content", p.getContent());
@@ -74,7 +74,7 @@ public abstract class OllamaEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
             logger.fine(responseJson);
             JSONObject resp = new JSONObject(responseJson);
             JSONObject message = (JSONObject)resp.get("message");
-            prompts.addAssistantPrompt(message.get("content").toString());
+            prompts.addAssistantMessage(message.get("content").toString());
             return (E)this.parse((String)message.get("content"));
         } else {
             System.out.println("null-response");

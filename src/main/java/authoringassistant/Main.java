@@ -39,7 +39,6 @@ public class Main {
             logger.info(Settings.getSettings().toString(2));
             final String interpretationAgent = Settings.getAuthoringAgentName();
             final String suggestionAgent = Settings.getSuggestionAgentName();
-            //Create directory for logs and json
             systemPrompt = SystemPrompt.load(Settings.SYSTEM_PROMPT_PATH);
             logger.info("****************************************");
             logger.info(STR."Validating test cases in \{Settings.getTestCaseFolder()}");
@@ -62,12 +61,12 @@ public class Main {
             {
                 cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
                 final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
-                boolean[] cases = isTestMock(interpretationAgent) ? new boolean[]{false} : new boolean[]{false, true};
+                boolean[] cases = AuthoringAssistant.isTestMock(interpretationAgent) ? new boolean[]{false} : new boolean[]{false, true};
                 // Run experiment for both add-target-value settings
                 for (boolean addExpectedValue : cases) {
                     Settings.setAddExpectedValue(addExpectedValue);
                     System.out.println(STR."Running experiment with add-target-value=\{addExpectedValue}");
-                    final ArrayList<Pair<Program, QueryResult>> results = runTestCases(systemPrompt, interpretationAgent, suggestionAgent, programs);
+                    final ArrayList<Pair<Program, QueryResult>> results = AuthoringAssistant.runTestCases(systemPrompt, interpretationAgent, suggestionAgent, programs);
                     allResults.addAll(results);
                 }
 
@@ -85,10 +84,6 @@ public class Main {
         }
     }
 
-    private static boolean isTestMock(String interpretationAgent) {
-        return interpretationAgent.equals(DummyAgent.class.getName());
-    }
-    
     private static void initLogging() {
         try (FileInputStream in = new FileInputStream("logging.properties")) {
             LogManager.getLogManager().readConfiguration(in);
@@ -200,34 +195,6 @@ public class Main {
                     }).collect(Collectors.joining("\n"));
             out.println(content);
         }
-    }
-
-    private static ArrayList<Pair<Program, QueryResult>> runTestCases(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> testCases) throws Exception {
-        final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
-        final int numRuns = isTestMock(interpretationAgent) ? 1 : Settings.numTestRuns();
-
-        if (Settings.getTruncateTestsAt() != -1) {
-            testCases = testCases.subList(0, Settings.getTruncateTestsAt());
-        }
-
-        for(int k = 0; k < numRuns; k++)
-        {
-            String jsonLogFolder = STR."\{Settings.LOG_FOLDER}\{Settings.getConfigName()}/json_\{interpretationAgent}_\{k}_\{System.currentTimeMillis()}/";
-            Files.createDirectories(Paths.get(jsonLogFolder));
-            int n = 0;
-            for (Program testCase : testCases) {
-                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, testCase, suggestionAgent, k);
-                List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
-
-                long correct = results.stream()
-                    .filter(r -> r.getSecond().correctResponse() != null)
-                    .count();
-                n++;
-                logger.info(STR."[Run \{k + 1} of \{numRuns}][Test case \{n} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
-                allResults.addAll(results);
-            }
-        }
-        return allResults;
     }
 
     public static Map<String, String> parseArguments(String[] args) {

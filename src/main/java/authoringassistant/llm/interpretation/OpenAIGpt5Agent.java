@@ -4,8 +4,8 @@ import authoringassistant.Settings;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import authoringassistant.paragraph.Expression;
 import authoringassistant.llm.LLMEvaluatorAgent;
+import authoringassistant.llm.prompt.Message;
 import authoringassistant.llm.prompt.Prompt;
-import authoringassistant.llm.prompt.PromptList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -36,7 +36,7 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
     }
 
     @Override
-    public Expression evaluate(PromptList prompts, String grid) throws IOException, InterruptedException {
+    public Expression evaluate(Prompt prompts, String grid) throws IOException, InterruptedException {
         logger.config("Execution of the OpenAIGpt5Agent");
         
         try {
@@ -54,7 +54,7 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
         return "gpt-5-mini";
     }
     
-    private JSONObject buildRequestBody(PromptList prompts) {
+    private JSONObject buildRequestBody(Prompt prompts) {
         JSONObject requestBody = new JSONObject();
         requestBody.put("model", this.getModel());
         requestBody.put("temperature", this.temperature);
@@ -66,7 +66,7 @@ public class OpenAIGpt5Agent extends LLMEvaluatorAgent<Expression> {
         systemMessage.put("content", "You are an expert in Fluid programming language. Generate valid Fluid expressions based on the given context.");
         messages.put(systemMessage);
         
-        for (Prompt prompt : prompts) {
+        for (Message prompt : prompts) {
             JSONObject message = new JSONObject();
             message.put("role", "user");
             message.put("content", prompt.getContent());

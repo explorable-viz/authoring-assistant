@@ -3,8 +3,7 @@ package authoringassistant.llm.interpretation;
 import authoringassistant.Settings;
 import authoringassistant.paragraph.Expression;
 import authoringassistant.llm.LLMEvaluatorAgent;
-import authoringassistant.llm.prompt.PromptList;
-import org.json.JSONObject;
+import authoringassistant.llm.prompt.Prompt;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -20,7 +19,7 @@ public class DummyAgent extends LLMEvaluatorAgent<Expression> {
     }
 
     @Override
-    public Expression evaluate(PromptList list, String s) throws IOException {
+    public Expression evaluate(Prompt list, String s) throws IOException {
         logger.config("Execution of the DummyAgent");
         return new Expression("\"dummy\"", null, null);
     }

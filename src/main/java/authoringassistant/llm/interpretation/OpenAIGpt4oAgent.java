@@ -9,9 +9,8 @@ import com.theokanning.openai.service.FunctionExecutor;
 import com.theokanning.openai.service.OpenAiService;
 import authoringassistant.paragraph.Expression;
 import authoringassistant.llm.agents.generic.OpenAIEvaluatorAgent;
-import authoringassistant.llm.prompt.PromptList;
+import authoringassistant.llm.prompt.Prompt;
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONObject;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -22,7 +21,7 @@ public class OpenAIGpt4oAgent extends OpenAIEvaluatorAgent<Expression> {
         setModel("gpt-4o");
     }
 
-    public Expression evaluate(PromptList prompts, String grid) {
+    public Expression evaluate(Prompt prompts, String grid) {
         OpenAiService service = new OpenAiService(getToken(), Duration.ofSeconds(90));
         ChatMessage responseMessage = service.createChatCompletion(getChatCompletionRequest(prompts)).getChoices().get(0).getMessage();
         ChatFunctionCall functionCall = responseMessage.getFunctionCall();

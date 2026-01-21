@@ -2,8 +2,7 @@ package authoringassistant.llm.suggestion;
 
 import authoringassistant.Settings;
 import authoringassistant.llm.LLMEvaluatorAgent;
-import authoringassistant.llm.prompt.PromptList;
-import org.json.JSONObject;
+import authoringassistant.llm.prompt.Prompt;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -19,7 +18,7 @@ public class SuggestionDummyAgent extends LLMEvaluatorAgent<String> {
     }
 
     @Override
-    public String evaluate(PromptList list, String s) throws IOException {
+    public String evaluate(Prompt list, String s) throws IOException {
         logger.config("Execution of the DummyAgent");
         list.addSystemPrompt("dummy");
         return null;

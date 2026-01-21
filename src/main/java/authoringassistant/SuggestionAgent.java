@@ -5,7 +5,7 @@ import authoringassistant.paragraph.ExpressionCategory;
 import authoringassistant.paragraph.Literal;
 import authoringassistant.paragraph.Paragraph;
 import authoringassistant.llm.LLMEvaluatorAgent;
-import authoringassistant.llm.prompt.PromptList;
+import authoringassistant.llm.prompt.Prompt;
 import kotlin.Pair;
 
 import java.io.IOException;
@@ -38,7 +38,7 @@ public class SuggestionAgent {
 
     public SuggestionAgentResult generateTemplateProgram(Program p) throws IOException {
         String text = extractText(p);
-        PromptList prompts = buildPrompts(text);
+        Prompt prompts = buildPrompts(text);
         String result;
         int attempts = 0;
         while(attempts < Settings.getSuggestionAgentLoopbackLimit()) {
@@ -50,12 +50,12 @@ public class SuggestionAgent {
                 }
                 Paragraph paragraph = parseParagraph(result);
                 if(!p.getParagraph().equals(paragraph)) {
-                    prompts.addUserPrompt("Your response contains extra text outside the annotated paragraph. Please provide ONLY the original text with [REPLACE value=\"...\" categories=\"...\"] annotations inserted inline. Do not add any explanations, comments, markdown formatting, or other additional content.");
+                    prompts.addUserMessage("Your response contains extra text outside the annotated paragraph. Please provide ONLY the original text with [REPLACE value=\"...\" categories=\"...\"] annotations inserted inline. Do not add any explanations, comments, markdown formatting, or other additional content.");
                     continue;
                 }
-                return new SuggestionAgentResult(new Program(paragraph, p.getDatasets(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCasePath(),p.getTest_datasets()), attempts);
+                return new SuggestionAgentResult(new Program(paragraph, p.getDatasetFilenames(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCasePath(),p.getDatasetsVariants()), attempts);
             } catch (IllegalArgumentException ex) {
-                prompts.addUserPrompt(STR."Invalid category! Please use only the following categories: \{ExpressionCategory.values()}. Return ONLY the annotated paragraph with [REPLACE ...] tags, without any additional comments or explanations.");
+                prompts.addUserMessage(STR."Invalid category! Please use only the following categories: \{ExpressionCategory.values()}. Return ONLY the annotated paragraph with [REPLACE ...] tags, without any additional comments or explanations.");
                 continue;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -108,11 +108,11 @@ public class SuggestionAgent {
                 .getValue() : p.getParagraph().getFirst().getValue();
     }
 
-    private static PromptList buildPrompts(String userText) throws IOException {
-        PromptList prompts = new PromptList();
+    private static Prompt buildPrompts(String userText) throws IOException {
+        Prompt prompts = new Prompt();
         String systemPrompt = Files.readString(SuggestionAgent.SYSTEM_PROMPT_PATH, StandardCharsets.UTF_8);
         prompts.addSystemPrompt(systemPrompt);
-        prompts.addUserPrompt(userText);
+        prompts.addUserMessage(userText);
         return prompts;
     }
 

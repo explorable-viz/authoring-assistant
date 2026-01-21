@@ -3,7 +3,7 @@ package authoringassistant;
 import authoringassistant.llm.interpretation.DummyAgent;
 import authoringassistant.paragraph.Expression;
 import authoringassistant.llm.LLMEvaluatorAgent;
-import authoringassistant.llm.prompt.PromptList;
+import authoringassistant.llm.prompt.Prompt;
 import kotlin.Pair;
 
 import java.io.IOException;
@@ -18,24 +18,56 @@ import java.util.logging.Logger;
 import authoringassistant.Program.QueryResult;
 
 import static authoringassistant.Program.extractValue;
-import static authoringassistant.Program.logger;
 import static authoringassistant.Program.writeFluidFiles;
 
 public class AuthoringAssistant {
 
-    public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
-    private final PromptList prompts;
+    public static final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
+    private final Prompt initialPrompt;
     private final LLMEvaluatorAgent<Expression> interpretationAgent;
     private Program templateProgram;
     private final SuggestionAgent suggestionAgent;
     private final int runId;
 
     public AuthoringAssistant(SystemPrompt systemPrompt, String agentClassName, Program templateProgram, String suggestionAgentClassName, int runId) throws Exception {
-        this.prompts = systemPrompt.toPromptList();
+        this.initialPrompt = systemPrompt.toPrompt();
         this.interpretationAgent = LLMEvaluatorAgent.initialiseAgent(agentClassName);
         this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName)) : null;
         this.templateProgram = templateProgram;
         this.runId = runId;
+    }
+
+    public static boolean isTestMock(String interpretationAgent) {
+        return interpretationAgent.equals(DummyAgent.class.getName());
+    }
+
+    public static ArrayList<Pair<Program, QueryResult>> runTestCases(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> testCases) throws Exception {
+        final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
+        final int numRuns = isTestMock(interpretationAgent) ? 1 : Settings.numTestRuns();
+
+        if (Settings.getTruncateTestsAt() != -1) {
+            testCases = testCases.subList(0, Settings.getTruncateTestsAt());
+        }
+
+        for(int k = 0; k < numRuns; k++)
+        {
+            long nProblems = 0;
+            int nCases = 0;
+            for (Program testCase : testCases) {
+                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, testCase, suggestionAgent, k);
+                List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
+
+                nProblems += results.size();
+                long correct = results.stream()
+                        .filter(r -> r.getSecond().correctResponse() != null)
+                        .count();
+                nCases++;
+                logger.info(STR."[Run \{k + 1} of \{numRuns}][Test case \{nCases} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
+                allResults.addAll(results);
+            }
+            logger.info(STR."Total number of test problems: \{nProblems}");
+        }
+        return allResults;
     }
 
     public List<Pair<Program, QueryResult>> runTestProblems() throws Exception {
@@ -71,93 +103,76 @@ public class AuthoringAssistant {
 
     public QueryResult runProblem(Pair<Program, Expression> test, int problemIndex) throws Exception {
         final int attemptLimit = interpretationAgent instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
-        int attempt;
         Program subProgram = test.getFirst();
-        final Path testCaseFileName = subProgram.getTestCasePath();
         Expression expected = test.getSecond();
-        final String resultsPathPrefix = STR."results/\{Settings.getConfigName()}/\{interpretationAgent.getModel()}/\{Settings.getTestCaseFolder()}/logs/\{test.getFirst().getTestCasePath().getFileName()}_";
-        Files.createDirectories(Path.of(resultsPathPrefix).getParent());
-        final PromptList sessionPrompts = (PromptList) prompts.clone();
-        sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
-        int parseErrors=0, counterfactualFails=0, missingResponses=0, literalResponses=0;
-        final String info = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
-        for (attempt = 1; attempt <= attemptLimit; attempt++) {
-            boolean errors = false;
-            Expression candidate = interpretationAgent.evaluate(sessionPrompts, "");
-            if(candidate == null || candidate.getExpr() == null) {
+        final Path testCasePath = test.getFirst().getTestCasePath();
+        final String logFolder = STR."results/\{Settings.getConfigName()}/\{Settings.getTestCaseFolder()}/\{ testCasePath.getFileName() }/logs";
+        Files.createDirectories(Path.of(logFolder));
+        final Prompt prompt = (Prompt) initialPrompt.clone();
+        prompt.addUserMessage(subProgram.toUserPrompt());
+        int interpreterErrors = 0, counterfactualFails = 0, missingResponses = 0, literalResponses = 0;
+        final String progress = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
+        final String logfile = STR."\{logFolder}/\{ testCasePath.getFileName()}_\{String.format("%02d", problemIndex)}.json";
+        final List<String> errors = new ArrayList<>();
+        Expression solution = null;
+        int attempt = 0;
+        while (true) {
+            attempt++;
+            final String progressAttempt = STR."\{progress}[Attempt \{attempt}]";
+            Expression candidate = interpretationAgent.evaluate(prompt, "");
+            String loopbackMessage = null;
+            if (candidate == null || candidate.getExpr() == null) {
                 missingResponses++;
-                sessionPrompts.addAssistantPrompt("[No response received]");
-                sessionPrompts.addUserPrompt("No response received. Please try again.");
-                logger.fine(STR."\{info} Attempt #\{attempt}: retry");
-            } else
-            if (candidate.getExpr().equals(expected.getValue())) {
-                literalResponses++;
-                sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                sessionPrompts.addUserPrompt("ExpressionError: Received a static value instead of a dynamic expression. " +
-                        "Please provide a valid fluid expression that *evaluates to* the expected value, rather than the value itself.");
-                logger.fine(STR."\{info} Attempt #\{attempt}: retry");
+                prompt.addAssistantMessage("[No response received]");
+                loopbackMessage = "No response received. Please try again.";
             } else {
-                boolean firstTest = false;
-                for (Map<String, String> datasets : subProgram.getTest_datasets()) {
-                    logger.fine(STR."\{info} Attempt #\{attempt}: received \{candidate.getExpr()}");
+                logger.info(STR."\{progressAttempt} Received \{candidate.getExpr()}");
+                if (candidate.getExpr().equals(expected.getValue())) {
+                    literalResponses++;
+                    prompt.addAssistantMessage(candidate.getExpr());
+                    loopbackMessage = """
+                        This is just the target string as a literal. Try again, but produce a Fluid expression that *computes* 
+                        the target string as a query over the dataset, using the supplied library functions if necessary.
+                        """;
+                } else {
+                    Map<String, String> datasets = subProgram.getDatasetsVariants().get(0);
+                    //              Ignore for now
+                    //              List<Map<String, String>> counterfactualDatasets = subProgram.getDatasetsVariants().subList(1, subProgram.getDatasetsVariants().size());
                     Optional<String> error = Program.validate(
                             evaluateExpression(subProgram, datasets, candidate),
-                            new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories()));
-
+                            new Expression(expected.getExpr(), extractValue(evaluateExpression(subProgram, datasets, expected)), expected.getCategories())
+                    );
+                    prompt.addAssistantMessage(candidate.getExpr());
                     if (error.isPresent()) {
-                        sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                        sessionPrompts.addUserPrompt(loopBackMessage(candidate.getExpr(), error.get()));
-                        errors = true;
-                        if (firstTest) {
-                            parseErrors++;
-                        } else {
-                            counterfactualFails++;
-                        }
-                        break;
+                        errors.add(error.get());
+                        interpreterErrors++;
+                        loopbackMessage = error.get();
                     }
-                    firstTest = true;
-                }
-                // weird way to exit loop
-                if (!errors) {
-                    sessionPrompts.addAssistantPrompt(candidate.getExpr());
-                    sessionPrompts.exportToJson(STR."\{resultsPathPrefix}\{String.format("%02d", problemIndex)}.json");
-                    logger.info(STR."\{info} Expression validation succeeded");
-                    return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), candidate, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
                 }
             }
+            if (loopbackMessage != null) {
+                if (attempt == attemptLimit) {
+                    logger.info(STR."\{progressAttempt} Aborted with:\n\{loopbackMessage}");
+                    logger.info(STR."\{progress} Expression generation failed after \{attemptLimit} attempts");
+                    break;
+                } else {
+                    prompt.addUserMessage(loopbackMessage);
+                    logger.info(STR."\{progressAttempt} Sent:\n\{loopbackMessage}");
+                }
+            } else {
+                solution = candidate;
+                logger.info(STR."\{progressAttempt} Solution accepted");
+                logger.info(STR."\{progress} Expression generation succeeded");
+                break;
+            }
         }
-        sessionPrompts.exportToJson(STR."\{resultsPathPrefix}\{String.format("%02d", problemIndex)}.json");
-        logger.info(STR."\{info} Expression validation failed after \{attemptLimit} attempts");
-        return new QueryResult(problemIndex + 1, interpretationAgent.getModel(),null, expected, runId, parseErrors, counterfactualFails, missingResponses, literalResponses);
+        prompt.exportToJson(logfile);
+        return new QueryResult(problemIndex + 1, interpretationAgent.getModel(), solution, expected, runId, interpreterErrors, counterfactualFails, missingResponses, literalResponses);
     }
 
     private static String evaluateExpression(Program p, Map<String, String> datasets, Expression expression) throws IOException {
         final FluidCLI fluidCLI = new FluidCLI();
-        writeFluidFiles(Settings.FLUID_TEMP_FOLDER, Program.fluidFileName, expression.getExpr(), p.getDatasets(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
-        return fluidCLI.evaluate(p.getFluidFileName());
-    }
-
-    private String loopBackMessage(String response, String errorDetails) {
-        String errorMessage;
-        if (errorDetails.toLowerCase().contains("key") && errorDetails.toLowerCase().contains("not found")) {
-            errorMessage = String.format(
-                    "KeyNotFound Error. The generated expression %s is trying to access a key that does not exist. " +
-                            "Check the code and regenerate the expression. Remember: reply only with the expression, without any other comment.",
-                    response
-            );
-        } else if (errorDetails.toLowerCase().contains("parseerror") || errorDetails.toLowerCase().contains("error:")) {
-            errorMessage = String.format(
-                    "SyntacticError. The generated expression %s caused the following error: \n%s. " +
-                            "Check the code, the parenthesis and regenerate the expression. Remember: reply only with the expression, without any other comment.",
-                    response, errorDetails
-            );
-        } else {
-            errorMessage = String.format(
-                    "ValueMismatchError. The generated expression %s produced an unexpected value. " +
-                            "Check the code and regenerate the expression. Remember: reply only with the expression, without any other comment.",
-                    response
-            );
-        }
-        return errorMessage;
+        writeFluidFiles(Settings.INTERPRETER_TEMP_FOLDER, Program.INTERPRETER_TEMP_FILE, expression.getExpr(), p.getDatasetFilenames(), datasets, p.getImports(), p.get_loadedImports(), p.getCode());
+        return fluidCLI.evaluate(Program.INTERPRETER_TEMP_FILE);
     }
 }

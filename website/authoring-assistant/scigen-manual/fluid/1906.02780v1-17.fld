@@ -1,7 +1,0 @@
-import scigen
-import util
-import datasets.scigen._1906_02780v1_17
-
-"""
-	Table 4 shows that increasing the number of layers from 1 to 5 results in a BLEU increase of only ${last (map (fun x -> x._BLEU) (filter (fun x -> (x._num_Layers == 5) `and` (x._Max_Chunk_Size == "k=6")) tableData)) - head (map (fun x -> x._BLEU) (filter (fun x -> (x._num_Layers == 1) `and` (x._Max_Chunk_Size == "k=6")) tableData))} , while the speedup drops from ${(findWhere (fun x -> (x._num_Layers == 1) `and` (x._Max_Chunk_Size == "k=6")) tableData)._Speedup} to ${(findWhere (fun x -> (x._num_Layers == 5)) tableData)._Speedup} . The final row of Table 4 shows that exposing the parse decoder to multiple possible chunking of the same sentence during training allows it to choose a sequence of chunks that has a higher likelihood at test time, improving BLEU by ${(findWithKey_ "_Max_Chunk_Size" "k∈{1…6}" tableData)._BLEU - (findWhere (fun x -> (x._num_Layers == 1) `and` (x._Max_Chunk_Size == "k=6")) tableData)._BLEU} while decreasing the speedup from ${(findWhere (fun x -> (x._num_Layers == 1) `and` (x._Max_Chunk_Size == "k=6")) tableData)._Speedup} to ${(findWithKey_ "_Max_Chunk_Size" "k∈{1…6}" tableData)._Speedup}
-"""

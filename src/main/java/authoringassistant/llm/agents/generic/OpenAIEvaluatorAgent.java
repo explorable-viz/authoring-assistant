@@ -10,8 +10,8 @@ import com.theokanning.openai.completion.chat.ChatCompletionRequest.ChatCompleti
 import com.theokanning.openai.service.FunctionExecutor;
 import com.theokanning.openai.service.OpenAiService;
 import authoringassistant.llm.LLMEvaluatorAgent;
+import authoringassistant.llm.prompt.Message;
 import authoringassistant.llm.prompt.Prompt;
-import authoringassistant.llm.prompt.PromptList;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,14 +39,14 @@ public abstract class OpenAIEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
         return "auto";
     }
 
-    public E evaluate(PromptList prompts, String grid) {
+    public E evaluate(Prompt prompts, String grid) {
         OpenAiService service = new OpenAiService(this.getToken(), Duration.ofSeconds(90L));
         ChatMessage responseMessage = ((ChatCompletionChoice)service.createChatCompletion(this.getChatCompletionRequest(prompts)).getChoices().get(0)).getMessage();
         responseMessage.getFunctionCall();
         return (E)responseMessage.getContent();
     }
 
-    public ChatCompletionRequest getChatCompletionRequest(List<Prompt> prompts) {
+    public ChatCompletionRequest getChatCompletionRequest(List<Message> prompts) {
         return ChatCompletionRequest.builder().model(this.model).temperature(this.temperature).messages(toChatMessages(prompts)).functions(this.getFunctionExecutor().getFunctions()).functionCall(ChatCompletionRequestFunctionCall.of(this.functionName())).n(1).maxTokens(this.ctx).logitBias(new HashMap()).build();
     }
 
@@ -56,11 +56,11 @@ public abstract class OpenAIEvaluatorAgent<E> extends LLMEvaluatorAgent<E> {
     }
 
     @NotNull
-    private static List<ChatMessage> toChatMessages(List<Prompt> prompts) {
+    private static List<ChatMessage> toChatMessages(List<Message> prompts) {
         List<ChatMessage> messages = new ArrayList();
 
         for(int i = 0; i < prompts.size(); ++i) {
-            final Prompt prompt = prompts.get(i);
+            final Message prompt = prompts.get(i);
             if (prompt.getRole().equals("system")) {
                 ChatMessage systemMessage = new ChatMessage(ChatMessageRole.SYSTEM.value(), prompt.getContent());
                 messages.add(systemMessage);

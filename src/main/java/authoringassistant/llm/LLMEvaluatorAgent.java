@@ -1,8 +1,7 @@
 package authoringassistant.llm;
 
 import authoringassistant.Settings;
-import authoringassistant.llm.prompt.PromptList;
-import authoringassistant.paragraph.Expression;
+import authoringassistant.llm.prompt.Prompt;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -11,7 +10,7 @@ public abstract class LLMEvaluatorAgent<E> {
     public LLMEvaluatorAgent() {
     }
 
-    public abstract E evaluate(PromptList var1, String var2) throws IOException, InterruptedException;
+    public abstract E evaluate(Prompt var1, String var2) throws IOException, InterruptedException;
 
     public static <E> LLMEvaluatorAgent<E> initialiseAgent(String agentClassName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         LLMEvaluatorAgent<E> llmAgent;

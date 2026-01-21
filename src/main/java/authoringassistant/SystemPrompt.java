@@ -1,6 +1,6 @@
 package authoringassistant;
 
-import authoringassistant.llm.prompt.PromptList;
+import authoringassistant.llm.prompt.Prompt;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,10 +21,10 @@ public class SystemPrompt {
         return new SystemPrompt(loadSystemPrompt(systemPromptPath));
     }
 
-    public PromptList toPromptList() {
-        PromptList promptList = new PromptList();
-        promptList.addSystemPrompt(this.systemPrompt);
-        return promptList;
+    public Prompt toPrompt() {
+        Prompt prompt = new Prompt();
+        prompt.addSystemPrompt(this.systemPrompt);
+        return prompt;
     }
 
     private static String loadSystemPrompt(String directoryPath) throws IOException {

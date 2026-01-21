@@ -33,36 +33,36 @@ import static authoringassistant.variable.Variables.Flat.expandVariables;
 public class Program {
 
     public final static Logger logger = Logger.getLogger(Program.class.getName());
-    private final Collection<String> datasets;
-    private final ArrayList<Map<String, String>> test_datasets;
+    private final Collection<String> datasetFilenames;
+    private final ArrayList<Map<String, String>> datasetsVariants;
     private final List<String> imports;
     private final ArrayList<String> _loadedImports;
     private final String code;
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
     private final Path testCasePath;
-    public static final String fluidFileName = "llmTest.fld";
+    public static final String INTERPRETER_TEMP_FILE = "llmTest.fld";
 
-    public Program(Paragraph paragraph, Collection<String> datasets, List<String> imports, String code, Map<String, String> loadedDataset, Path testCasePath, ArrayList<Map<String, String>> test_datasets) throws IOException {
-        this.datasets = datasets;
+    public Program(Paragraph paragraph, Collection<String> datasetFilenames, List<String> imports, String code, Map<String, String> loadedDataset, Path testCasePath, ArrayList<Map<String, String>> test_datasets) throws IOException {
+        this.datasetFilenames = datasetFilenames;
         this._loadedDatasets = loadedDataset;
         this.code = code;
-        this.test_datasets = test_datasets;
+        this.datasetsVariants = test_datasets;
         this.testCasePath = testCasePath;
         this.imports = imports;
         this._loadedImports = loadImports(imports);
         this.paragraph = paragraph;
     }
 
-    public static HashMap<String, String> loadDatasetsFiles(Collection<String> datasets, Variables variables) throws IOException {
+    public static HashMap<String, String> loadDatasetFiles(Collection<String> datasetFilenames, Variables variables) throws IOException {
         HashMap<String, String> loadedDatasets = new HashMap<>();
-        for (String dataset : datasets) {
-            loadedDatasets.put(dataset, replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.FLUID_COMMON_FOLDER}/\{dataset}").toURI()))), variables));
+        for (String filename : datasetFilenames) {
+            loadedDatasets.put(filename, replaceVariables(new String(Files.readAllBytes(Paths.get(new File(STR."\{Settings.TEST_CASES_AUX_FOLDER}/\{filename}").toURI()))), variables));
         }
         return loadedDatasets;
     }
 
-    private static Collection<String> datasets(JSONArray files) {
+    private static Collection<String> datasetFilenames(JSONArray files) {
         return IntStream.range(0, files.length())
                .mapToObj(i -> files.getString(i))
                .collect(Collectors.toList());
@@ -71,7 +71,7 @@ public class Program {
     private static ArrayList<String> loadImports(List<String> imports) throws IOException {
         ArrayList<String> loadedImports = new ArrayList<>();
         for (String path : imports) {
-            File importLib = new File(STR."\{Settings.FLUID_COMMON_FOLDER}/\{path}.fld");
+            File importLib = new File(STR."\{Settings.TEST_CASES_AUX_FOLDER}/\{path}.fld");
             if (importLib.exists()) {
                 loadedImports.add(new String(Files.readAllBytes(importLib.toPath())));
             } else {
@@ -89,19 +89,27 @@ public class Program {
         return outputLines[FluidCLI.isWindows() ? 2 : 1];
     }
 
-    public static Optional<String> validate(String commandLineResponse, Expression expectedExpression) {
+    // Return loopback message or nothing if expression evaluates to expected string
+    public static Optional<String> validate(String commandLineResponse, Expression expected) {
         String value = extractValue(commandLineResponse);
         if (commandLineResponse.contains("Error: ")) {
-            logger.info(STR."Interpreter error: \{value}");
-            return Optional.of(value);
+            return Optional.of(STR."The Fluid interpreter didn't like that expression. Here's what it said:\n\{value}\nTry again.");
         }
-        if (value.equals(expectedExpression.getValue()) || roundedEquals(value, expectedExpression.getValue())) {
-            logger.info(STR."Matched expression value: \{value}");
+        String expectedValue = expected.getValue();
+        if (value.equals(expectedValue) || roundedEquals(value, expectedValue)) {
             return Optional.empty();
-        } else {
-            logger.info(STR."Mismatched expression value: \{value} (expected \{expectedExpression.getValue()})");
-            return Optional.of(value);
         }
+        try {
+            // Fluid integer or float literals are acceptable as they will convert automatically to string
+            Double.parseDouble(expectedValue.trim());
+            expectedValue = STR."\"\{expectedValue}\"";
+        } catch (NumberFormatException e) {
+            // keep expectedValue as is
+        }
+        if (value.equals(expectedValue)) {
+            return Optional.empty();
+        }
+        return Optional.of(STR."That expression evaluates to \{value}, rather than \{ expectedValue }. Try again.");
     }
 
     private static boolean roundedEquals(String generated, String expected) {
@@ -129,7 +137,7 @@ public class Program {
         usedVars.addAll(extractVariables(code, pattern));
         for (String dataset : datasets) {
             logger.info(dataset);
-            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.FLUID_COMMON_FOLDER, dataset)), pattern));
+            usedVars.addAll(extractVariables(Files.readString(Paths.get(Settings.TEST_CASES_AUX_FOLDER, dataset)), pattern));
         }
         for (Map.Entry<String, ValueOptions> variable : variables.entrySet()) {
             if (!usedVars.contains(variable.getKey())) {
@@ -167,8 +175,7 @@ public class Program {
             JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
             JSONArray json_imports = testCase.getJSONArray("imports");
             logger.info(STR."[\{i + 1} of \{caseList.size()}] Loading \{shortCasePath}.json");
-            Collection<String> datasets = datasets(testCase.getJSONArray("datasets"));
-            ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
+            Collection<String> datasets = datasetFilenames(testCase.getJSONArray("datasets"));
             String code = Files.readString(Path.of(STR."\{casePath}.fld"));
             try {
                 isValidTestCase(jsonContent, code, datasets, variables);
@@ -184,10 +191,14 @@ public class Program {
                     maxVariants = Math.max(maxVariants, values.get().size());
                 }
             }
+
+            // list of maps from dataset filenames to loaded datasets with instantiated variables -- turn into a class
+            ArrayList<Map<String, String>> test_configurations = new ArrayList<>();
             Variables.Flat testVariables = expandVariables(tv, new SplittableRandom(0));
             for (int n = 0; n < maxVariants; n++) {
-                test_configurations.add(loadDatasetsFiles(datasets, expandVariables(tv, new SplittableRandom(n))));
+                test_configurations.add(loadDatasetFiles(datasets, expandVariables(tv, new SplittableRandom(n))));
             }
+
             List<String> imports = IntStream.range(0, json_imports.length())
                     .mapToObj(json_imports::getString)
                     .toList();
@@ -197,7 +208,7 @@ public class Program {
                     datasets,
                     imports,
                     replaceVariables(code, variables),
-                    loadDatasetsFiles(datasets, expandVariables(tv, null)),
+                    loadDatasetFiles(datasets, expandVariables(tv, null)),
                     Path.of(casePath),
                     test_configurations
             ));
@@ -212,8 +223,8 @@ public class Program {
                 paragraph.add(new Literal(json_paragraph.getJSONObject(i).getString("value"), null));
             } else {
                 String expression = json_paragraph.getJSONObject(i).getString("expression");
-                writeFluidFiles(Settings.FLUID_TEMP_FOLDER, fluidFileName, expression, datasets, loadDatasetsFiles(datasets, testVariables), imports, loadImports(imports), code);
-                String commandLineResult = new FluidCLI().evaluate(fluidFileName);
+                writeFluidFiles(Settings.INTERPRETER_TEMP_FOLDER, INTERPRETER_TEMP_FILE, expression, datasets, loadDatasetFiles(datasets, testVariables), imports, loadImports(imports), code);
+                String commandLineResult = new FluidCLI().evaluate(INTERPRETER_TEMP_FILE);
                 Expression candidate = new Expression(
                     expression,
                     extractValue(commandLineResult),
@@ -221,7 +232,7 @@ public class Program {
                 );
                 paragraph.add(candidate);
                 validate(commandLineResult, candidate).ifPresent(error -> {
-                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test exception\{error}");
+                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test\n\{error}");
                 });
             }
         }
@@ -243,12 +254,21 @@ public class Program {
         List<Pair<Expression, Paragraph>> paragraphsToCompute = paragraph.getProblems(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for (Pair<Expression, Paragraph> p : paragraphsToCompute) {
-            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasets(), this.getImports(), this.code, this._loadedDatasets, this.testCasePath, this.test_datasets), p.getFirst()));
+            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasetFilenames(), this.getImports(), this.code, this._loadedDatasets, this.testCasePath, this.datasetsVariants), p.getFirst()));
         }
         return programs;
     }
 
-    public static void writeFluidFiles(String basePath, String fluidFileName, String response, Collection<String> datasets, Map<String, String> loadedDatasets, List<String> imports, List<String> loadedImports, String code) throws IOException {
+    public static void writeFluidFiles(
+        String basePath,
+        String fluidFileName,
+        String response,
+        Collection<String> datasets,
+        Map<String, String> loadedDatasets,
+        List<String> imports,
+        List<String> loadedImports,
+        String code
+    ) throws IOException {
         Files.createDirectories(Paths.get(basePath));
         Files.createDirectories(Paths.get(STR."\{basePath}/\{fluidFileName}").getParent());
 
@@ -289,19 +309,10 @@ public class Program {
     public JSONObject toJsonProgram() {
         JSONObject object = new JSONObject();
 
-        // Add datasets (file names only, not content)
-        object.put("datasets", new JSONArray(datasets.stream().toList()));
-
-        // Add imports
+        object.put("datasets", new JSONArray(datasetFilenames.stream().toList()));
         object.put("imports", new JSONArray(imports));
-
-        // Add testing-variables (empty object for now)
         object.put("testing-variables", new JSONObject());
-
-        // Add variables (empty object for now)
         object.put("variables", new JSONObject());
-
-        // Add paragraph
         JSONArray paragraphArray = new JSONArray(
             paragraph.stream()
                 .map(fragment -> {
@@ -325,7 +336,6 @@ public class Program {
                 .toList()
         );
         object.put("paragraph", paragraphArray);
-
         return object;
     }
 
@@ -341,8 +351,8 @@ public class Program {
         return code;
     }
 
-    public Collection<String> getDatasets() {
-        return datasets;
+    public Collection<String> getDatasetFilenames() {
+        return datasetFilenames;
     }
 
     public List<String> getImports() {
@@ -358,16 +368,12 @@ public class Program {
         this.paragraph.addAll(paragraph);
     }
 
-    public ArrayList<Map<String, String>> getTest_datasets() {
-        return test_datasets;
+    public ArrayList<Map<String, String>> getDatasetsVariants() {
+        return datasetsVariants;
     }
 
     public Path getTestCasePath() {
         return testCasePath;
-    }
-
-    public String getFluidFileName() {
-        return fluidFileName;
     }
 
     public record QueryResult(
@@ -416,7 +422,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{fileName}.fld", paragraph.toFluidSyntax(false), datasets, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{fileName}.fld", paragraph.toFluidSyntax(false), datasetFilenames, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) throws IOException {

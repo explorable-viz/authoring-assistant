@@ -356,3 +356,4 @@ INFO: Mismatched expression value: "dummy" (expected 31.599999999999994)
 INFO: [Problem 3 of 3] Expression validation failed after 2 attempts
 INFO: Generating website/authoring-assistant/scigen-manual/1905.05979v2-88/index.html
 INFO: [Run 1 of 1][Test case 28 of 28] 0 of 3 responses correct
+INFO: Total number of test problems: 55

@@ -22,7 +22,7 @@ import static authoringassistant.Program.writeFluidFiles;
 
 public class AuthoringAssistant {
 
-    public final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
+    public static final Logger logger = Logger.getLogger(AuthoringAssistant.class.getName());
     private final PromptList prompts;
     private final LLMEvaluatorAgent<Expression> interpretationAgent;
     private Program templateProgram;
@@ -35,6 +35,39 @@ public class AuthoringAssistant {
         this.suggestionAgent = suggestionAgentClassName != null ? new SuggestionAgent(LLMEvaluatorAgent.initialiseAgent(suggestionAgentClassName)) : null;
         this.templateProgram = templateProgram;
         this.runId = runId;
+    }
+
+    public static boolean isTestMock(String interpretationAgent) {
+        return interpretationAgent.equals(DummyAgent.class.getName());
+    }
+
+    public static ArrayList<Pair<Program, QueryResult>> runTestCases(SystemPrompt systemPrompt, String interpretationAgent, String suggestionAgent, List<Program> testCases) throws Exception {
+        final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
+        final int numRuns = isTestMock(interpretationAgent) ? 1 : Settings.numTestRuns();
+
+        if (Settings.getTruncateTestsAt() != -1) {
+            testCases = testCases.subList(0, Settings.getTruncateTestsAt());
+        }
+
+        for(int k = 0; k < numRuns; k++)
+        {
+            long nProblems = 0;
+            int nCases = 0;
+            for (Program testCase : testCases) {
+                AuthoringAssistant authoringAssistant = new AuthoringAssistant(systemPrompt, interpretationAgent, testCase, suggestionAgent, k);
+                List<Pair<Program, QueryResult>> results = authoringAssistant.runTestProblems();
+
+                nProblems += results.size();
+                long correct = results.stream()
+                        .filter(r -> r.getSecond().correctResponse() != null)
+                        .count();
+                nCases++;
+                logger.info(STR."[Run \{k + 1} of \{numRuns}][Test case \{nCases} of \{testCases.size()}] \{correct} of \{results.size()} responses correct");
+                allResults.addAll(results);
+            }
+            logger.info(STR."Total number of test problems: \{nProblems}");
+        }
+        return allResults;
     }
 
     public List<Pair<Program, QueryResult>> runTestProblems() throws Exception {

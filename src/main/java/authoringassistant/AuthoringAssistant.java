@@ -105,12 +105,13 @@ public class AuthoringAssistant {
         final int attemptLimit = interpretationAgent instanceof DummyAgent ? 2 : Settings.getInterpretationAgentLoopbackLimit();
         Program subProgram = test.getFirst();
         Expression expected = test.getSecond();
-        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs"));
+        final Path testCasePath = test.getFirst().getTestCasePath();
+        Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{ testCasePath }/logs"));
         final PromptList sessionPrompts = (PromptList) prompts.clone();
         sessionPrompts.addUserPrompt(subProgram.toUserPrompt());
         int interpreterErrors = 0, counterfactualFails = 0, missingResponses = 0, literalResponses = 0;
         final String progress = STR."[Problem \{problemIndex + 1} of \{templateProgram.getParagraph().countExpressions()}]";
-        final String logfile = STR."results/\{Settings.getConfigName()}/\{test.getFirst().getTestCasePath()}/logs/\{(test.getFirst().getTestCasePath()).getFileName()}_\{String.format("%02d", problemIndex)}.json";
+        final String logfile = STR."results/\{Settings.getConfigName()}/\{ testCasePath }/logs/\{ testCasePath.getFileName()}_\{String.format("%02d", problemIndex)}.json";
         final List<String> errors = new ArrayList<>();
         Expression solution = null;
         int attempt = 1;

@@ -8,8 +8,9 @@
   "claude-token": "",
   "ollama-url": "https://fire.cluelab.di.unisa.it",
   "ollama-port": 8430,
-  "add-expected-value": true,
   "authoring-agent-class": null,
   "suggestion-agent-class": null,
-  "truncate-tests-at": -1
+  "truncate-tests-at": -1,
+  "ablate-target-value": false
+
 }

@@ -1,6 +1,5 @@
 package authoringassistant;
 
-import authoringassistant.llm.interpretation.DummyAgent;
 import kotlin.Pair;
 import authoringassistant.Program.QueryResult;
 import authoringassistant.util.ThrowingConsumer;
@@ -60,18 +59,9 @@ public class Main {
             else
             {
                 cleanWebsiteFolders(STR."website/authoring-assistant/\{Settings.getTestCaseFolder()}/");
-                final ArrayList<Pair<Program, QueryResult>> allResults = new ArrayList<>();
-                boolean[] cases = AuthoringAssistant.isTestMock(interpretationAgent) ? new boolean[]{false} : new boolean[]{false, true};
-                // Run experiment for both add-target-value settings
-                for (boolean addExpectedValue : cases) {
-                    Settings.setAddExpectedValue(addExpectedValue);
-                    System.out.println(STR."Running experiment with add-target-value=\{addExpectedValue}");
-                    final ArrayList<Pair<Program, QueryResult>> results = AuthoringAssistant.runTestCases(systemPrompt, interpretationAgent, suggestionAgent, programs);
-                    allResults.addAll(results);
-                }
-
+                final ArrayList<Pair<Program, QueryResult>> results = AuthoringAssistant.runTestCases(systemPrompt, interpretationAgent, suggestionAgent, programs);
                 generateLinks();
-                writeResults(allResults);
+                writeResults(results);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -88,7 +78,7 @@ public class Main {
         try (FileInputStream in = new FileInputStream("logging.properties")) {
             LogManager.getLogManager().readConfiguration(in);
         } catch (IOException e) {
-            System.err.println("Could not load logging.properties: " + e.getMessage());
+            System.err.println(STR."Could not load logging.properties: \{e.getMessage()}");
         }
     }
 
@@ -189,7 +179,7 @@ public class Main {
                                 quote(STR."\{result.getFirst().getTestCasePath().getFileName()}"),
                                 String.valueOf(queryResult.problemIndex()),
                                 quote(queryResult.model()),
-                                String.valueOf(Settings.isAddExpectedValue() ? 1 : 0),
+                                String.valueOf(result.getFirst().hasTargetValue() ? 1 : 0),
                                 quote(STR."[\{queryResult.expected().getCategories().stream()
                                         .map(cat -> cat.label)
                                         .collect(Collectors.joining(","))}]"),

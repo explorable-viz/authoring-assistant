@@ -13,11 +13,11 @@ public class Paragraph extends ArrayList<TextFragment> {
     public Paragraph() {
     }
 
-    public String toFluidSyntax(boolean onlyValue) {
-        return STR."\"\"\"\n\t\{stream().map(e -> {
+    public String toFluidSyntax(boolean addExpectedValue) {
+        return STR."f\"\"\"\n\t\{stream().map(e -> {
             if (e instanceof Literal l) {
-                if (!onlyValue && l.getSelectedRegion() != null) {
-                    final String replace = Settings.isAddExpectedValue() ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
+                if (l.getSelectedRegion() != null) {
+                    final String replace = addExpectedValue ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
                     return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{replace}]\{e.getValue().substring(l.getSelectedRegion().end())}";
                 }
                 else {
@@ -25,9 +25,20 @@ public class Paragraph extends ArrayList<TextFragment> {
                 }
             }
             else if (e instanceof Expression e_) {
-                if (!onlyValue) {
-                    return (STR."${\{e_.getExpr()}}");
-                } else if (Settings.isAddExpectedValue()) {
+                return (STR."${\{e_.getExpr()}}");
+            } else {
+                throw new RuntimeException("Literal or expression expected.");
+            }
+        }).collect(Collectors.joining(" "))}\n\"\"\"";
+    }
+
+    public String toParagraphValue(boolean addExpectedValue) {
+        return STR."f\"\"\"\n\t\{stream().map(e -> {
+            if (e instanceof Literal l) {
+                return e.getValue();
+            }
+            else if (e instanceof Expression e_) {
+                if (addExpectedValue) {
                     return e.getValue();
                 } else {
                     return ("${?}");

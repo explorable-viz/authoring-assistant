@@ -41,9 +41,10 @@ public class Program {
     private final Paragraph paragraph;
     private final Map<String, String> _loadedDatasets;
     private final Path testCasePath;
+    private final boolean targetValue;
     public static final String INTERPRETER_TEMP_FILE = "llmTest.fld";
 
-    public Program(Paragraph paragraph, Collection<String> datasetFilenames, List<String> imports, String code, Map<String, String> loadedDataset, Path testCasePath, ArrayList<Map<String, String>> test_datasets) throws IOException {
+    public Program(Paragraph paragraph, Collection<String> datasetFilenames, List<String> imports, String code, Map<String, String> loadedDataset, Path testCasePath, ArrayList<Map<String, String>> test_datasets, boolean targetValue) throws IOException {
         this.datasetFilenames = datasetFilenames;
         this._loadedDatasets = loadedDataset;
         this.code = code;
@@ -52,6 +53,7 @@ public class Program {
         this.imports = imports;
         this._loadedImports = loadImports(imports);
         this.paragraph = paragraph;
+        this.targetValue = targetValue;
     }
 
     public static HashMap<String, String> loadDatasetFiles(Collection<String> datasetFilenames, Variables variables) throws IOException {
@@ -168,8 +170,8 @@ public class Program {
 
         List<String> caseList = new ArrayList<>(casePaths);
         for (int i = 0; i < caseList.size(); ++i) {
-            String casePath = caseList.get(i);
-            String shortCasePath = STR."\{casesFolder}\{Path.of(casePath).toString().substring(Path.of(casesFolder).toAbsolutePath().toString().length())}";
+            Path casePath = Path.of(caseList.get(i));
+            String shortCasePath = STR."\{casesFolder}\{ (casePath).toString().substring(Path.of(casesFolder).toAbsolutePath().toString().length())}";
             String jsonContent = Files.readString(Path.of(STR."\{casePath}.json"));
             Variables.Flat variables = expandVariables(Variables.fromJSON(new JSONObject(jsonContent).getJSONObject("variables")), new SplittableRandom(0));
             JSONObject testCase = new JSONObject(replaceVariables(jsonContent, variables));
@@ -203,20 +205,45 @@ public class Program {
                     .mapToObj(json_imports::getString)
                     .toList();
 
-            programs.add(new Program(
-                    paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath),
-                    datasets,
-                    imports,
-                    replaceVariables(code, variables),
-                    loadDatasetFiles(datasets, expandVariables(tv, null)),
-                    Path.of(casePath),
-                    test_configurations
-            ));
+            if (Settings.isAblateTargetValue()) {
+                // Generate two versions: with and without expected value
+                programs.add(new Program(
+                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath, true),
+                        datasets,
+                        imports,
+                        replaceVariables(code, variables),
+                        loadDatasetFiles(datasets, expandVariables(tv, null)),
+                        casePath,
+                        test_configurations,
+                        true
+                ));
+                programs.add(new Program(
+                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath, false),
+                        datasets,
+                        imports,
+                        replaceVariables(code, variables),
+                        loadDatasetFiles(datasets, expandVariables(tv, null)),
+                        casePath,
+                        test_configurations,
+                        false
+                ));
+            } else {
+                programs.add(new Program(
+                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath, false),
+                        datasets,
+                        imports,
+                        replaceVariables(code, variables),
+                        loadDatasetFiles(datasets, expandVariables(tv, null)),
+                        casePath,
+                        test_configurations,
+                        false
+                ));
+            }
         }
         return programs;
     }
 
-    private static Paragraph paragraphFromJSON(JSONArray json_paragraph, Collection<String> datasets, Variables.Flat testVariables, List<String> imports, String code, String casePath) throws IOException {
+    private static Paragraph paragraphFromJSON(JSONArray json_paragraph, Collection<String> datasets, Variables.Flat testVariables, List<String> imports, String code, Path casePath, boolean targetValue) throws IOException {
         Paragraph paragraph = new Paragraph();
         for (int i = 0; i < json_paragraph.length(); i++) {
             if (json_paragraph.getJSONObject(i).getString("type").equals("literal")) {
@@ -232,7 +259,7 @@ public class Program {
                 );
                 paragraph.add(candidate);
                 validate(commandLineResult, candidate).ifPresent(error -> {
-                    throw new RuntimeException(STR."[testCaseFile=\{casePath}] Invalid test\n\{error}");
+                    throw new RuntimeException(STR."[testCaseFile=\{casePath.toString()}] Invalid test\n\{error}");
                 });
             }
         }
@@ -254,7 +281,7 @@ public class Program {
         List<Pair<Expression, Paragraph>> paragraphsToCompute = paragraph.getProblems(template.paragraph);
         List<Pair<Program, Expression>> programs = new ArrayList<>();
         for (Pair<Expression, Paragraph> p : paragraphsToCompute) {
-            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasetFilenames(), this.getImports(), this.code, this._loadedDatasets, this.testCasePath, this.datasetsVariants), p.getFirst()));
+            programs.add(new Pair<>(new Program(p.getSecond(), this.getDatasetFilenames(), this.getImports(), this.code, this._loadedDatasets, this.testCasePath, this.datasetsVariants, this.targetValue), p.getFirst()));
         }
         return programs;
     }
@@ -299,16 +326,13 @@ public class Program {
         object.put("datasets", get_loadedDatasets());
         object.put("imports", get_loadedImports());
         object.put("code", getCode());
-        object.put("paragraph", getParagraph().toFluidSyntax(false));
-        if(Settings.isAddExpectedValue()) {
-            object.put("paragraphValue", getParagraph().toFluidSyntax(true));
-        }
+        object.put("paragraph", getParagraph().toFluidSyntax(targetValue));
+        object.put("paragraphValue", getParagraph().toParagraphValue(targetValue));
         return object.toString();
     }
 
     public JSONObject toJsonProgram() {
         JSONObject object = new JSONObject();
-
         object.put("datasets", new JSONArray(datasetFilenames.stream().toList()));
         object.put("imports", new JSONArray(imports));
         object.put("testing-variables", new JSONObject());
@@ -376,6 +400,10 @@ public class Program {
         return testCasePath;
     }
 
+    public boolean hasTargetValue() {
+        return targetValue;
+    }
+
     public record QueryResult(
         int problemIndex,
         String model,
@@ -422,7 +450,7 @@ public class Program {
             e.printStackTrace();
         }
         /* copy datasets  & lib */
-        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{fileName}.fld", paragraph.toFluidSyntax(false), datasetFilenames, _loadedDatasets, imports, _loadedImports, code);
+        writeFluidFiles(STR."\{websiteRoot}fluid/", STR."\{fileName}.fld", paragraph.toFluidSyntax(targetValue), datasetFilenames, _loadedDatasets, imports, _loadedImports, code);
     }
 
     public static void cleanWebsiteFolders(String path) throws IOException {

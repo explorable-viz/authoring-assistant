@@ -14,7 +14,7 @@ public class Paragraph extends ArrayList<TextFragment> {
     }
 
     public String toFluidSyntax(boolean addExpectedValue) {
-        return STR."f\"\"\"\n\t\{stream().map(e -> {
+        return STR."\"\"\"\n\t\{stream().map(e -> {
             if (e instanceof Literal l) {
                 if (l.getSelectedRegion() != null) {
                     final String replace = addExpectedValue ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
@@ -33,7 +33,7 @@ public class Paragraph extends ArrayList<TextFragment> {
     }
 
     public String toParagraphValue(boolean addExpectedValue) {
-        return STR."f\"\"\"\n\t\{stream().map(e -> {
+        return STR."\"\"\"\n\t\{stream().map(e -> {
             if (e instanceof Literal l) {
                 return e.getValue();
             }

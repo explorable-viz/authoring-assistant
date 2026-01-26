@@ -43,27 +43,24 @@ modifications of the test data, based on expected query results specific to each
 
 \subsection{Results}
 
-\paragraph{Interpretation Accuracy across Linguistic Idioms and Complexity.} To evaluate RQ1, we used a sample
-of the \SciGen dataset~\citep{moosavi2021}, an open source dataset consisting of tables from scientific articles
-and their corresponding descriptions. We aggregated the results according to the linguistic categories from
-Table~\ref{tab:natural-language-forms}. Figure~\ref{fig:success_rate_by_category} illustrates the success rate
-for each category, both with and without target-value sharing.
+\paragraph{Interpretation Accuracy across Query Categories and Complexity.} To evaluate RQ1, we used a sample of the
+\SciGen dataset~\citep{moosavi2021}, an open source dataset consisting of tables from scientific articles and their
+corresponding descriptions. \todo{Table summarising overall results first, without disaggregation, including ablation
+studies} The results show that \emph{the system is robust when provided with sufficient guidance but degrades when
+underspecified \todo{Revisit}.} Overall, the InterpretationAgent produced correct Fluid expressions in 74.9\% (S.D.
+3.0\%) of cases, but performance dropped to 57.1\% when the target was withheld. \todo{Generate these summary numbers
+into a LaTeX file, or we'll forever be updating the document}
 
-The results show that \emph{the system is robust when provided with sufficient guidance but degrades when
-underspecified.} With the target-value sharing, the InterpretationAgent produced correct Fluid expressions in
-74.9\%  (S.D. 3.0\%) of cases, but performance dropped to 57.1\% when the target was withheld. This highlights
-the system's reliance on explicit cues when resolving ambiguous fragments.
+Performance also varied across the linguistic categories in Table~\ref{tab:natural-language-forms};
+Figure~\ref{fig:success_rate_by_category} disaggregates by category, under both ablation studies. Success rates exceeded
+68\% for comparison, 77.3\% for data retrieval, and 97\% for min/max search tasks. In contrast, accuracy decreased
+significantly for expressions requiring differences (20\%) and for ranking tasks (0\%).
 
-\emph{Performance also varied across linguistic categories.} Success rates exceeded 68\% for comparison,
-77.3\% for data retrieval, and 97\% for min/max search tasks. In contrast, accuracy decreased significantly
-for expressions requiring differences (20\%) and for ranking tasks (0\%).
-
-The trend for compositional complexity is more nuanced as shown in
-Figure~\ref{fig:success_rate_by_complexity}, which reports the success rate as a function of the number of
-categories assigned to each expression: success rates are 62\% for single-category expressions, increase to
-91\% when two categories are combined, but collapse to 0\% when three categories are involved. This suggests
-that \emph{moderate composition can actually aid performance, perhaps by giving the model clearer structural
-cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
+The trend for compositional complexity is more nuanced as shown in Figure~\ref{fig:success_rate_by_complexity}, which
+reports the success rate as a function of the number of categories assigned to each expression: success rates are 62\%
+for single-category expressions, increase to 91\% when two categories are combined, but collapse to 0\% when three
+categories are involved. This suggests that \emph{moderate composition can actually aid performance, perhaps by giving
+the model clearer structural cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
 
 \paragraph{Generalisability and Robustness.} As a preliminary attempt to address RQ2, we carried out
 \emph{counterfactual testing} to evaluate the robustness of generated expressions under changes to the

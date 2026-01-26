@@ -2,47 +2,54 @@
 \label{sec:authoring-workflow}
 
 Our authoring tool is composed of two LLM-based agents. A \textbf{\SuggestionAgent} identifies text fragments
-potentially computable from data, and an \textbf{\InterpretationAgent}, given a text fragment provided by the
-SuggestionAgent or by the author, attempts to synthesise a Fluid expression which computes the target
-fragment. The main components of the workflow are as follows:
+potentially computable from data, and an \textbf{\InterpretationAgent}, given a candidate fragment identified by the
+\SuggestionAgent or by the author, attempts to synthesise a Fluid expression which computes the target fragment. The
+main components of the workflow are as follows:
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.8\linewidth]{fig/interpretation-agent}
+    \caption{Human-in-the-Loop workflow (states requiring human intervention in grey)}
+    \label{fig:interpretation-agent}
+\end{figure*}
 
 \begin{enumerate}
 
-\item \textbf{Initial configuration.} The author imports the target text and accompanying data into the system
-to create a programmatic representation of the target document. Initially this is simply equivalent to the
-target text, taking the form of a string literal \kw{"""..."""}, where the triple quotes are Fluid syntax for
-a Python or JavaScript-style \emph{interpolated string}, i.e.~a literal where expressions of the form
-\kw{\{$e$\}} are permitted within the string. The \SuggestionAgent analyses the target text and identifies any
-fragments which are candidates for being computed instead of remaining as literal substrings.
+\item \textbf{Initial configuration.} The author imports the target text and accompanying data into the system to create
+a syntactic representation of the target document. Initially this is simply equivalent to the target text, taking the
+form of a string literal \kw{f"""..."""}, where the triple quotes are Fluid syntax for a Python-style \emph{interpolated
+string}, i.e.~a literal where expressions of the form \kw{\{$e$\}} are permitted within the string. The \SuggestionAgent
+analyses the target text and identifies any fragments which are candidates for being computed instead of remaining as
+literal substrings.
 
-\item \textbf{High-level Authoring workflow.} The system then enters the human-in-the loop authoring workflow
-shown in Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The
-system waits for the author to select a fragment of text $s$ to interpret (perhaps previously highlighted by
-the \SuggestionAgent). The system then attempts to generate a candidate Fluid expression $e$ using the
-closed-loop synthesis step (3) below. If code synthesis succeeds with an expression $e$, the system proceeds
-to the manual validation step (4) below. If the synthesis step fails with no expression, no remedial action is
-possible; this is considered an unsuccessful path through the workflow and returns the system to the entry
-state. Otherwise the synthesis step produces an expression $e$ which evaluates to a mismatched string $s' \neq
-s$ outcome, and the user can choose to manually abort and return to the entry state, or optionally to
-\emph{revise the goal}, replacing $s$ with $s'$ in the target document and retaining $e$ as the candidate
-expression. This is intended to cover the situation where the author has made a claim which is
-\emph{incorrect}, and the dataset and surrounding natural language have led the LLM to synthesise an
-expression which generates a different value from the one specified by the user.
+\item \textbf{High-level Authoring workflow.} \todo{Perhaps define $\textbf{SynthOutcome} ::= \textbf{Match}(e) \mid
+\textbf{NoMatch}(e,s) \mid \textbf{NoExpr}$?} The system then enters the human-in-the loop authoring workflow shown in
+Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The system waits for
+the author to select a fragment of text $s$ to interpret (perhaps previously highlighted by the \SuggestionAgent). The
+system then attempts to generate a candidate Fluid expression $e$ using the closed-loop synthesis step (3) below. If
+code synthesis succeeds with an expression $e$, the system proceeds to the manual validation step (4) below. If the
+synthesis step fails with no expression, no remedial action is possible; this is considered an unsuccessful path through
+the workflow and returns the system to the entry state. Otherwise the synthesis step produces an expression $e$ which
+evaluates to a mismatched string $s' \neq s$ outcome, and the user can choose to manually abort and return to the entry
+state, or optionally to \emph{revise the goal}, replacing $s$ with $s'$ in the target document and retaining $e$ as the
+candidate expression. This is intended to cover the situation where the author has made a claim which is
+\emph{incorrect}, and the dataset and surrounding natural language have led the LLM to synthesise an expression which
+generates a different value from the one specified by the user.
 
 \item \textbf{Code synthesis step.} The expression synthesis step is an error-guided iterative prompting
-loop~\citep{skreta2023}, beginning with an initial prompt sent to the LLM (see \emph{Prompt design} below)
-requesting the generation of an expression $e$. Using the Fluid command-line interface, the expression is
-validated to check that it evaluates without error, produces a value coercible to a string $s'$, and finally
-that $s'$ is equal to the target fragment $s$. Any failure triggers prompt augmentation with the appropriate
-error message and the system retries generation. If code synthesis loop is able to yield an expression which
-computes $s$ within a maximum number of retries, the synthesis step succeeds with $e$. If the last generated
-$e$ was invalid (resulting in an error), the code synthesis step fails with no expression. Otherwise, code
-synthesis produces an expression $e$ but with a mismatched string outcome $s' \neq s$.
+loop~\citep{skreta2023}, beginning with an initial prompt sent to the LLM (see \emph{Prompt design} below) requesting
+the generation of an expression $e$. Using the Fluid command-line interface, the expression is validated to check that
+it evaluates without error, produces a value coercible to a string $s'$, and finally that $s'$ is equal to the target
+fragment $s$. Any failure triggers prompt augmentation with the appropriate error message and the system retries
+generation. If, without exceeding a retry limit, code synthesis yields an expression $e$ which computes $s$, the
+synthesis step succeeds with $e$. Otherwise there are two further possibilities: either the last generated $e$ was
+invalid (resulted in an error), in which case code synthesis fails with no expression, or code synthesis produces an
+expression $e$ but with a mismatched string outcome $s' \neq s$.
 
 \item \textbf{Manual validation step.} Once a candidate expression has been generated, the system replaces the
 selected substring $s$ with the interpolation expression \kw{\{$e$\}}, creating a new (but only tentative)
 document configuration. The author can republish the web page hosting the document and interact with the
-proposed revision. As shown in \secref{evaluation}, this is an important validation step that can reveal
+proposed revision. As shown in \Secref{evaluation}, this is an important validation step that can reveal
 errors in the generated expression. If the interactions look reasonable, the author can approve the new
 document state; this is the primary successful path through the workflow and returns the system to the entry
 state where it is waiting for another top-level interaction from the author. Otherwise, the author rejects the
@@ -53,38 +60,15 @@ proposed change and returns to the entry state without any change to the documen
 This human-in-the-loop design combines automated synthesis with validation and author oversight, providing a
 substantial level of automation, but requiring the author to intervene at key steps to ensure correctness.
 
-\begin{figure*}
-    \centering
-    \includegraphics[width=0.8\linewidth]{fig/interpretation-agent}
-    \caption{Human-in-the-Loop workflow (states requiring human intervention in grey)}
-    \label{fig:interpretation-agent}
-\end{figure*}
-
 \paragraph{\InterpretationAgent prompt design.}
 
-The \InterpretationAgent is guided by a structured system prompt that frames code generation as a precise
-replacement task. The model receives the imported datasets, helper modules, and the current Fluid
-representation of the paragraph, in which a text fragment is marked with the tag \kw{[REPLACE …]}. The task is
-to substitute this placeholder with a Fluid expression that evaluates exactly to the target string,
-reconstructing quantitative or comparative claims as data queries. To ensure integration with the workflow,
-the output must consist solely of a syntactically valid Fluid expression, with no additional commentary. The
-full prompt is given in~\appref{system-prompt:interpretation-agent}.
-
-%\paragraph{System Prompt.}
-%For the Interpretation Assistant, the system prompt guides the LLM in replacing placeholder tags in the
-%supplied paragraph with executable Fluid expressions. It includes the following information about the document
-%under construction, the exact task to perform, and constraints on the expected output. The full system prompt
-%is given in \appref{system-prompt:interpretation-agent}.
-
-%\begin{itemize}
-%\item \textbf{Input structure:} summarises the imported datasets, modules, auxililiary definitions in scope in
-%the current file, the current Fluid representation of the target paragraph with \kw{[REPLACE …]} tag
-%indicating the text fragment to replace, plus the full text for the paragraph.
-%\item \textbf{Task description:} description of the LLM task, namely to identify \kw{[REPLACE …]} placeholder
-%and generate Fluid expression that produces target string using supplied dataset and definitions in scope.
-%\item \textbf{Output constraints:} specify that the LLM should return a syntactically valid Fluid expression,
-%with no extraneous content (such as comments).
-%\end{itemize}
+The \InterpretationAgent is guided by a system prompt that frames code generation as a precise replacement task
+\todo{rehash}. The model receives the imported datasets, helper modules, and the current Fluid representation of the
+paragraph, in which a text fragment is marked with the tag \kw{[REPLACE …]}. The task is to substitute this placeholder
+with a Fluid expression that evaluates exactly to the target string, reconstructing quantitative or comparative claims
+as data queries. To ensure integration with the workflow, the output must consist solely of a syntactically valid Fluid
+expression, with no additional commentary. The full system prompt is given
+in~\appref{system-prompt:interpretation-agent}.
 
 \begin{figure*}[t]
     \centering
@@ -101,6 +85,5 @@ full prompt is given in~\appref{system-prompt:interpretation-agent}.
         \label{fig:dataflow-error}
     \end{subfigure}
     \caption{Two possible paths through editing loop, with interactive verification of generated code}
-%  (natural language mentions accuracy, while interaction reveals use of timing data).
     \label{fig:overall-architecture}
 \end{figure*}

@@ -3,29 +3,25 @@
 
 \subsection{Research questions}
 
-Our evaluation tests the ability of the \InterpretationAgent to translate quantitative and semi-quantitative
-expressions from scholarly natural language into executable queries that operate on the underlying dataset.
-Beyond raw accuracy, we are also concerned with how performance varies with task complexity, and whether the
-generated expressions are robust under changes to data or in the presence of ambiguity or other low data
-quality issues. These are captured in two research questions:
+Our evaluation tests the ability of the \InterpretationAgent to translate quantitative and semi-quantitative expressions
+from scholarly natural language into executable queries that operate on data. Beyond raw accuracy, we are also concerned
+with how performance varies with task complexity, and whether the generated expressions are robust under changes to data
+or in the presence of ambiguity or other low data quality issues. These are captured in two research questions:
 
-\paragraph{RQ1. Interpretation Accuracy across Linguistic Idioms and Complexity.}
+\paragraph{RQ1. Interpretation Accuracy across Query Categories and Complexity.}
 
-To what extent can LLMs accurately interpret quantitative and semi-quantitative claims in scholarly text as
-data queries? We examine performance across a range of linguistic idioms (e.g. averages, percentages, min/max,
-ranks, as summarised in Table~\ref{tab:natural-language-forms}) and investigate how accuracy varies with task
-complexity, measured (somewhat crudely) by the number of query sub-expressions (e.g. retrieval, aggregation,
-or arithmetic) present in the gold solution.
+To what extent can LLMs accurately interpret quantitative and semi-quantitative claims in scholarly text as data
+queries? We examine performance across the various ``query categories'' summarised in
+Table~\ref{tab:natural-language-forms} (namely averages, percentages, min/max, rank, etc), and investigate how accuracy
+varies with task complexity --- measured, somewhat crudely, by the cardinality of the multiset of query categories
+present in the gold solution. \todo{Two ablation studies to mention here}
 
 \paragraph{RQ2. Generalisability and Robustness.}
 
-How well do the generated expressions generalise when the underlying data changes, or when the input contains
-misleading or ill-specified information? We test whether generated queries continue to produce correct outputs
-under a set of hand-generated counterfactual modifications of the dataset, based on expected query results
-specific to each test case, and also how counterfactual performance is impacted by the presence of misleading
-or adversarial phrasing. Table~\ref{tab:problematic_cases} shows some of cases we deem problematic in this
-sense; in these cases, producing a valid expression is likely to be challenging because of ambiguities in the
-input data or accompanying natural language.
+As well as the missing or degraded information explored by the ablation studies, also pertinent to our application
+domain is how well the generated expressions generalise when the underlying data changes or when the input contains
+incorrect or intentionally misleading information. We test this using a set of hand-generated counterfactual
+modifications of the test data, based on expected query results specific to each test case. \todo{Revisit}
 
 \begin{figure*}
     \centering
@@ -41,74 +37,48 @@ input data or accompanying natural language.
         \caption{Success rate by Complexity}
         \label{fig:success_rate_by_complexity}
     \end{subfigure}
-    \caption{Success rate of the proposed system, measured over 5 runs with \gptfour}
+    \caption{Success rate of the proposed system, measured over 5 runs with \gptfour \todo{fix figs}}
     \label{fig:success_rate_comparison}
 \end{figure*}
 
 \subsection{Results}
 
-\paragraph{Interpretation Accuracy across Linguistic Idioms and Complexity.} To evaluate RQ1, we used a sample
-of the \SciGen dataset~\citep{moosavi2021}, an open source dataset consisting of tables from scientific articles
-and their corresponding descriptions. We aggregated the results according to the linguistic categories from
-Table~\ref{tab:natural-language-forms}. Figure~\ref{fig:success_rate_by_category} illustrates the success rate
-for each category, both with and without target-value sharing.
+\paragraph{Interpretation Accuracy across Query Categories and Complexity.} To evaluate RQ1, we used a sample of the
+\SciGen dataset~\citep{moosavi2021}, an open source dataset consisting of tables from scientific articles and their
+corresponding descriptions. \todo{Table summarising overall results first, without disaggregation, including ablation
+studies} The results show that \emph{the system is robust when provided with sufficient guidance but degrades when
+underspecified \todo{Revisit}.} Overall, the InterpretationAgent produced correct Fluid expressions in 74.9\% (S.D.
+3.0\%) of cases, but performance dropped to 57.1\% when the target was withheld. \todo{Generate these summary numbers
+into a LaTeX file, or we'll forever be updating the document}
 
-The results show that \emph{the system is robust when provided with sufficient guidance but degrades when
-underspecified.} With the target-value sharing, the InterpretationAgent produced correct Fluid expressions in
-74.9\%  (S.D. 3.0\%) of cases, but performance dropped to 57.1\% when the target was withheld. This highlights
-the system's reliance on explicit cues when resolving ambiguous fragments.
+Performance also varied across the linguistic categories in Table~\ref{tab:natural-language-forms};
+Figure~\ref{fig:success_rate_by_category} disaggregates by category, under both ablation studies. Success rates exceeded
+68\% for comparison, 77.3\% for data retrieval, and 97\% for min/max search tasks. In contrast, accuracy decreased
+significantly for expressions requiring differences (20\%) and for ranking tasks (0\%).
 
-\emph{Performance also varied across linguistic categories.} Success rates exceeded 68\% for comparison,
-77.3\% for data retrieval, and 97\% for min/max search tasks. In contrast, accuracy decreased significantly
-for expressions requiring differences (20\%) and for ranking tasks (0\%).
-
-The trend for compositional complexity is more nuanced as shown in
-Figure~\ref{fig:success_rate_by_complexity}, which reports the success rate as a function of the number of
-categories assigned to each expression: success rates are 62\% for single-category expressions, increase to
-91\% when two categories are combined, but collapse to 0\% when three categories are involved. This suggests
-that \emph{moderate composition can actually aid performance, perhaps by giving the model clearer structural
-cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
+The trend for compositional complexity is more nuanced as shown in Figure~\ref{fig:success_rate_by_complexity}, which
+reports the success rate as a function of the number of categories assigned to each expression: success rates are 62\%
+for single-category expressions, increase to 91\% when two categories are combined, but collapse to 0\% when three
+categories are involved. This suggests that \emph{moderate composition can actually aid performance, perhaps by giving
+the model clearer structural cues, but that complexity beyond a certain threshold overwhelms the synthesis process
+\todo{revisit}}.
 
 \paragraph{Generalisability and Robustness.} As a preliminary attempt to address RQ2, we carried out
-\emph{counterfactual testing} to evaluate the robustness of generated expressions under changes to the
-underlying data. In this setup, the input tables were modified according to hand-craft test specifications,
-and both the expected and generated expressions were re-executed to check whether the behaviours remained
-consistent. Across 300 test executions, 121 contained at least one counterfactual error (an average of 3.8 per
-case), of which 42 ultimately still succeeded. These tests highlight cases where an expression may
-coincidentally yield the correct output on the original data but fails to be extensionally equivalent more
-generally (i.e.~under perturbation). For example, in one test the system generated
+\emph{counterfactual testing} to evaluate the robustness of generated expressions under changes to the underlying data.
+In this setup, the input tables were modified according to hand-crafted test specifications, and both the expected and
+generated expressions were re-executed to check whether the behaviours remained consistent. Across 300 test executions,
+121 contained at least one counterfactual error (an average of 3.8 per case), of which 42 ultimately still succeeded
+\todo{revisit -- not sure what this means}. These tests highlight cases where an expression may coincidentally yield the
+correct output on the original data but fails to be extensionally equivalent more generally (i.e.~under perturbation).
+For example, in one test the system generated
 
 \hspace{3mm} \kw{(findWithKey\_ "model" "LSTM2" tableData).time\_s}
 
-intended to retrieve the execution time of the \texttt{LSTM} model, but incorrectly referred to \texttt{LSTM2}.
+intended to retrieve the execution time of the \kw{LSTM} model, but incorrectly referred to \kw{LSTM2}.
 Counterfactual testing exposed this mismatch, which would otherwise have gone undetected.
 
-At present, counterfactual tests are used only as an evaluation device, not as part of the authoring workflow
-itself. For future work (\secref{conclusion}), we plan to investigate automatic generation of counterfactual
-tests, allowing these additional robustness checks to be integrated into the document authoring workflow.
+At present, counterfactual tests are used only as an evaluation device, not as part of the authoring workflow itself.
+For future work (\Secref{conclusion}), we plan to investigate automatic synthesis of counterfactual tests, allowing
+these additional robustness checks to be integrated into the document authoring workflow.
 
-
-\begin{table*}[t]
-    \centering
-    \small
-    \begin{tabular}{l p{6cm} p{4cm}}
-        \hline
-        \textbf{Problem Type} & \textbf{Example} & \textbf{Explanation} \\
-        \hline
-        false comparison &
-        BiLSTM is \hl{the most efficient} among all models compared, with the highest model size &
-        BiLSTM is not the most efficient, nor does it have the largest size. \\
-
-        wrong numerical value &
-        LSTM is the fastest model with overall time taken being \hl{90} seconds &
-        It is not 90 but 106. \\
-
-        ambiguous referent &
-        LSTM is the fastest model with overall time taken being \hl{90} seconds &
-        There are two type of time in the dataset (training\_time, execution\_time), both with a value of 90 seconds. \\
-
-        \hline
-    \end{tabular}
-    \caption{Categories of problematic example}
-    \label{tab:problematic_cases}
-\end{table*}
+% \input{fig/adversarial-problem-types}

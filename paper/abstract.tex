@@ -2,15 +2,15 @@
 \todo{Bit long?} We introduce \emph{transparent documents}, interactive web-based scholarly articles which allow readers
 to explore the relationship to the underlying data by hovering over fragments of text, and present an LLM-based tool for
 authoring transparent documents, building on recent developments in data provenance for general-purpose programming
-languages. As a target platform, our implementation uses Fluid, an open source programming language with a
-provenance-tracking runtime. Our agent-based tool supports a human author during the creation of transparent documents,
-identifying fragments of text which can be computed from data, such as numerical values selected from records or
-computed by aggregations like sum and mean, comparatives and superlatives like ``better than'' and ``largest'',
-trend-adjectives like ``growing'', and similar quantitative or semi-quantitative phrases, and then attempts to
-synthesise a suitable Fluid query over the data which generates the target string. The resulting expression is inserted
-into the article's web page, turning the static text fragment into an interactable data-driven element able to reveal
-the data that underwrites the natural language claim. We evaluate our approach on a subset of SciGen, an open source
-dataset consisting of tables from scientific articles and their corresponding descriptions, which we extend with
-hand-generated counterfactual test cases to evaluate how well machine-generated expressions generalise. Our results show
-that gpt4o is often able to synthesise compound expressions extensionally compatible with our gold solutions.
+languages. Our implementation uses Fluid, an open source programming language with a provenance-tracking runtime. Our
+agent-based tool supports a human author during the creation of transparent documents, identifying fragments of text
+which can be computed from data, such as numerical values selected from records or computed by aggregations like sum and
+mean, comparatives and superlatives like ``better than'' and ``largest'', trend-adjectives like ``growing'', and similar
+quantitative or semi-quantitative phrases, and then attempts to synthesise a suitable Fluid query over the data which
+generates the target string. The resulting expression is inserted into the article's web page, turning the static text
+fragment into an interactable data-driven element able to reveal the data that underwrites the natural language claim.
+We evaluate our approach on a subset of SciGen, an open source dataset consisting of tables from scientific articles and
+their corresponding descriptions, which we extend with hand-generated counterfactual test cases to evaluate how well
+machine-generated expressions generalise. Our results show that gpt4o is often able to synthesise compound expressions
+extensionally compatible with our gold solutions.
 \end{abstract}

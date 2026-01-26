@@ -205,7 +205,7 @@ public class Program {
                     .mapToObj(json_imports::getString)
                     .toList();
             
-            boolean[] targetValues = Settings.isAblateTargetValue() ? new boolean[]{true, false} : new boolean[]{true};
+            boolean[] targetValues = Settings.hasTargetValue() ? new boolean[]{true} : new boolean[]{true, false};
             for (boolean targetValue : targetValues) {
                 programs.add(new Program(
                     paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath, targetValue),

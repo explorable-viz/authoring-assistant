@@ -114,8 +114,8 @@ public class Settings {
         return getSettings().getInt("num_ctx");
     }
 
-    public static boolean isAblateTargetValue() {
-        return getSettings().getBoolean("ablate-target-value");
+    public static boolean hasTargetValue() {
+        return getSettings().getBoolean("target-value");
     }
 
     public static String getTestCaseFolder() {

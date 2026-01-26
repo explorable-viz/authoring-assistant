@@ -11,6 +11,6 @@
   "authoring-agent-class": null,
   "suggestion-agent-class": null,
   "truncate-tests-at": -1,
-  "ablate-target-value": false
+  "target-value": false
 
 }

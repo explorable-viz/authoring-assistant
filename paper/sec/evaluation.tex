@@ -65,7 +65,7 @@ the model clearer structural cues, but that complexity beyond a certain threshol
 
 \paragraph{Generalisability and Robustness.} As a preliminary attempt to address RQ2, we carried out
 \emph{counterfactual testing} to evaluate the robustness of generated expressions under changes to the underlying data.
-In this setup, the input tables were modified according to hand-craft test specifications, and both the expected and
+In this setup, the input tables were modified according to hand-crafted test specifications, and both the expected and
 generated expressions were re-executed to check whether the behaviours remained consistent. Across 300 test executions,
 121 contained at least one counterfactual error (an average of 3.8 per case), of which 42 ultimately still succeeded
 \todo{revisit -- not sure what this means}. These tests highlight cases where an expression may coincidentally yield the
@@ -77,8 +77,8 @@ For example, in one test the system generated
 intended to retrieve the execution time of the \kw{LSTM} model, but incorrectly referred to \kw{LSTM2}.
 Counterfactual testing exposed this mismatch, which would otherwise have gone undetected.
 
-At present, counterfactual tests are used only as an evaluation device, not as part of the authoring workflow
-itself. For future work (\Secref{conclusion}), we plan to investigate automatic generation of counterfactual
-tests, allowing these additional robustness checks to be integrated into the document authoring workflow.
+At present, counterfactual tests are used only as an evaluation device, not as part of the authoring workflow itself.
+For future work (\Secref{conclusion}), we plan to investigate automatic synthesis of counterfactual tests, allowing
+these additional robustness checks to be integrated into the document authoring workflow.
 
 % \input{fig/adversarial-problem-types}

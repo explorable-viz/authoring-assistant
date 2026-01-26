@@ -23,9 +23,7 @@ How well do the generated expressions generalise when the underlying data change
 misleading or ill-specified information? We test whether generated queries continue to produce correct outputs
 under a set of hand-generated counterfactual modifications of the dataset, based on expected query results
 specific to each test case, and also how counterfactual performance is impacted by the presence of misleading
-or adversarial phrasing. Table~\ref{tab:problematic_cases} shows some of cases we deem problematic in this
-sense; in these cases, producing a valid expression is likely to be challenging because of ambiguities in the
-input data or accompanying natural language.
+or adversarial phrasing.
 
 \begin{figure*}
     \centering
@@ -87,28 +85,4 @@ At present, counterfactual tests are used only as an evaluation device, not as p
 itself. For future work (\Secref{conclusion}), we plan to investigate automatic generation of counterfactual
 tests, allowing these additional robustness checks to be integrated into the document authoring workflow.
 
-
-\begin{table*}[t]
-    \centering
-    \small
-    \begin{tabular}{l p{6cm} p{4cm}}
-        \hline
-        \textbf{Problem Type} & \textbf{Example} & \textbf{Explanation} \\
-        \hline
-        false comparison &
-        BiLSTM is \hl{the most efficient} among all models compared, with the highest model size &
-        BiLSTM is not the most efficient, nor does it have the largest size. \\
-
-        wrong numerical value &
-        LSTM is the fastest model with overall time taken being \hl{90} seconds &
-        It is not 90 but 106. \\
-
-        ambiguous referent &
-        LSTM is the fastest model with overall time taken being \hl{90} seconds &
-        There are two type of time in the dataset (training\_time, execution\_time), both with a value of 90 seconds. \\
-
-        \hline
-    \end{tabular}
-    \caption{Categories of problematic example}
-    \label{tab:problematic_cases}
-\end{table*}
+% \input{fig/adversarial-problem-types}

@@ -1,0 +1,24 @@
+\begin{table*}[t]
+    \centering
+    \small
+    \begin{tabular}{l p{6cm} p{4cm}}
+        \hline
+        \textbf{Problem Type} & \textbf{Example} & \textbf{Explanation} \\
+        \hline
+        false comparison &
+        BiLSTM is \hl{the most efficient} among all models compared, with the highest model size &
+        BiLSTM is not the most efficient, nor does it have the largest size. \\
+
+        wrong numerical value &
+        LSTM is the fastest model with overall time taken being \hl{90} seconds &
+        It is not 90 but 106. \\
+
+        ambiguous referent &
+        LSTM is the fastest model with overall time taken being \hl{90} seconds &
+        There are two type of time in the dataset (training\_time, execution\_time), both with a value of 90 seconds. \\
+
+        \hline
+    \end{tabular}
+    \caption{Categories of problematic example}
+    \label{tab:problematic_cases}
+\end{table*}

@@ -1,27 +1,28 @@
 \section{Conclusions and Future Work}
 \label{sec:conclusion}
 
-We introduced a proof-of-concept system for authoring transparent, data-driven documents by combining LLM-based code synthesis with Fluid's provenance-tracking runtime. Our evaluation on SciGen shows that the approach can reliably link natural language claims to their underlying data, while also revealing common failure modes such as ambiguity and misleading input.
+We introduced a proof-of-concept system for authoring transparent, data-driven documents by combining LLM-based code
+synthesis with Fluid's provenance-tracking runtime. Our evaluation on SciGen shows that the approach can reliably link
+natural language claims to their underlying data, while also \todo{revisit} revealing common failure modes such as
+ambiguity and misleading input.
 
 %\subsection{Future Work}
 %\label{sec:conclusion:future-work}
 
-Future work includes reducing reliance on predefined helper functions such as \kw{growShrink} and
-\kw{trendWord}. While there is an advantage in using a predefined set of helpers (in that they offer a uniform
-framework for interpreting a given scholarly document), we also aim to enable the system to operate in their
-absence, for instance by turning ``definition not found'' errors into augmented prompts that trigger automatic
-generation of missing definitions. We also plan to broaden the scope of supported artifacts, extending
-interpretation to visualisations and intermediate datasets derived from cleansing or aggregation, and to cover
-additional idioms such as cardinals, multiplicatives, rounding, and graded adjectives.
+Future work includes \todo{user study to go first here} reducing reliance on predefined helper functions such as
+\kw{growShrink} and \kw{trendWord} \todo{connection to second ablation study}. While there is an advantage in using a
+predefined set of helpers (in that they offer a uniform framework for interpreting a given scholarly document), we also
+aim to enable the system to operate in their absence, for instance by turning ``definition not found'' errors into
+augmented prompts that trigger automatic generation of missing definitions. We also plan to broaden the scope of
+supported artifacts, extending interpretation to visualisations and intermediate datasets derived from cleansing or
+aggregation, and to cover additional idioms such as cardinals, multiplicatives, rounding, and graded adjectives.
 
-Another priority is improving integration and validation. Embedding
-the system into developer and authoring environments such as VSCode or
-Cursor would make the workflow more seamless, while automatic
-generation of counterfactual test cases could strengthen validation at
-authoring time. Finally, distinguishing between \emph{referential terms} with
-fixed denotations and queries with data-dependent values may help in
-repairing false or inconsistent statements, ensuring that generated
-expressions remain aligned with both the data and the author's intent.
+Another priority is improving integration and validation. Embedding the system into developer and authoring environments
+such as VSCode or Cursor would make the workflow more seamless \todo{move this bit to user study discussion}, while
+automatic generation of counterfactual test cases could strengthen validation at authoring time. Finally, distinguishing
+between \emph{referential terms} with fixed denotations and queries with data-dependent values may help in repairing
+false or inconsistent statements, ensuring that generated expressions remain aligned with both the data and the author's
+intent \todo{obscure -- replace by discussion on ``standard'' NLP tasks that relate to our goals}.
 
 \section*{Reproducibility Statement}
 To facilitate reproducibility, we provide a zip archive in the supplementary materials containing the complete source code,

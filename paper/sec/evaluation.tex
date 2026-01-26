@@ -60,20 +60,21 @@ The trend for compositional complexity is more nuanced as shown in Figure~\ref{f
 reports the success rate as a function of the number of categories assigned to each expression: success rates are 62\%
 for single-category expressions, increase to 91\% when two categories are combined, but collapse to 0\% when three
 categories are involved. This suggests that \emph{moderate composition can actually aid performance, perhaps by giving
-the model clearer structural cues, but that complexity beyond a certain threshold overwhelms the synthesis process}.
+the model clearer structural cues, but that complexity beyond a certain threshold overwhelms the synthesis process
+\todo{revisit}}.
 
 \paragraph{Generalisability and Robustness.} As a preliminary attempt to address RQ2, we carried out
-\emph{counterfactual testing} to evaluate the robustness of generated expressions under changes to the
-underlying data. In this setup, the input tables were modified according to hand-craft test specifications,
-and both the expected and generated expressions were re-executed to check whether the behaviours remained
-consistent. Across 300 test executions, 121 contained at least one counterfactual error (an average of 3.8 per
-case), of which 42 ultimately still succeeded. These tests highlight cases where an expression may
-coincidentally yield the correct output on the original data but fails to be extensionally equivalent more
-generally (i.e.~under perturbation). For example, in one test the system generated
+\emph{counterfactual testing} to evaluate the robustness of generated expressions under changes to the underlying data.
+In this setup, the input tables were modified according to hand-craft test specifications, and both the expected and
+generated expressions were re-executed to check whether the behaviours remained consistent. Across 300 test executions,
+121 contained at least one counterfactual error (an average of 3.8 per case), of which 42 ultimately still succeeded
+\todo{revisit -- not sure what this means}. These tests highlight cases where an expression may coincidentally yield the
+correct output on the original data but fails to be extensionally equivalent more generally (i.e.~under perturbation).
+For example, in one test the system generated
 
 \hspace{3mm} \kw{(findWithKey\_ "model" "LSTM2" tableData).time\_s}
 
-intended to retrieve the execution time of the \texttt{LSTM} model, but incorrectly referred to \texttt{LSTM2}.
+intended to retrieve the execution time of the \kw{LSTM} model, but incorrectly referred to \kw{LSTM2}.
 Counterfactual testing exposed this mismatch, which would otherwise have gone undetected.
 
 At present, counterfactual tests are used only as an evaluation device, not as part of the authoring workflow

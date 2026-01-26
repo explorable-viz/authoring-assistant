@@ -23,28 +23,6 @@ fixed denotations and queries with data-dependent values may help in
 repairing false or inconsistent statements, ensuring that generated
 expressions remain aligned with both the data and the author's intent.
 
-%Another important direction is to broaden the scope of the artifacts than can be referred to and the natural
-%language forms that can be used to refer to them. For example, many claims in scholarly writing refer to
-%visualisations and intermediate datasets derived via cleansing, imputation or aggregation. These should also
-%be made available to the LLM (for visualisations, as structured data rather than as static bitmaps), enabling
-%interpretation of natural language in terms of visual information and other intermediate analyses. Extending
-%coverage to additional idioms beyond those considered in Table~\ref{tab:natural-language-forms}, such as
-%cardinals and multiplicatives (\textfrag{three} and \textfrag{three times}), rounding (\textfrag{about 2
-%degrees warmer}) and graded adjectives \textfrag{extremely likely}, would also expand the expressivity of the
-%assistant.
-
-%Consider the false statement \textfrag{The population of France is the largest in the EU}. There are at least
-%two ways to repair this statement so that it comes out true: treat the subject (France) as fixed, but adjust
-%the predicate so that it matches the facts (\textfrag{second largest}), or treat the predicate as fixed, but
-%keep adjust the subject to match (\textfrag{Germany}). To make these sorts of (pragmatically important)
-%distinctions, we may need to introduce the idea of \emph{referential terms} that have fixed denotations, in
-%contrast to queries, whose values are contingent on data.
-
-%Finally, integration into developer and authoring environments such as VSCode or Cursor would make the
-%workflow more seamless for authors. Automatic generation of the counterfactual test cases discussed in
-%\Secref{validation-with-counterfactual-data} could further strengthen validation at authoring-time, improving
-%the trustability of interpreted claims.
-
 \section*{Reproducibility Statement.}
 To facilitate reproducibility, we provide a zip archive in the supplementary materials containing the complete source code,
 the datasets used in our experiments, and a README file with detailed instructions for running the scripts.

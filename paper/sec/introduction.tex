@@ -18,6 +18,16 @@ these approaches are limited to outputs computed from data, such as visualisatio
 these ``direct interrogation'' features to the natural language accompanying such figures, where the main claims of most
 scholarly articles are actually made.
 
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-with-pointer.png}
+    \vspace{1mm}
+    \hrule
+    \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-counterfactual-with-pointer.png}
+    \caption{Two versions of a transparent document, showing text fragments linked to data}
+    \label{fig:scigen-example-website}
+\end{figure*}
+
 In this paper \todo{clarify: necessary precursor to user study}, we address this gap by combining two complementary
 approaches: the ability of LLMs to interpret technical natural language as queries over data, plus the
 provenance-tracking infrastructure of an open source programming language called Fluid\footnote{
@@ -39,16 +49,6 @@ fragments (e.g. \textfrag{better than}, \textfrag{further improvements}) that re
 allowing the reader to explore supporting and contrasting evidence. The lower section shows a counterfactual situation
 where the authors' experiments had produced different results: here the phrase \textfrag{does not further improve} is
 replaced by \textfrag{further improves}.
-
-\begin{figure*}%[h]
-    \centering
-    \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-with-pointer.png}
-    \vspace{1mm}
-    \hrule
-    \includegraphics[width=\linewidth]{fig/scigen-1805.02474v1-10-counterfactual-with-pointer.png}
-    \caption{Two versions of a transparent document, showing text fragments linked to data}
-    \label{fig:scigen-example-website}
-\end{figure*}
 
 This transparent version of the document was implemented in Fluid. The source code is shown in
 \figref{fluid-example-paragraph}, and makes use of several helper functions, a representative subset of which

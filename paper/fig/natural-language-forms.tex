@@ -2,7 +2,7 @@
     \centering
     \footnotesize
     \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{>{\raggedright\arraybackslash}p{1.4cm} >{\raggedright\arraybackslash}p{5cm} >{\raggedright\arraybackslash}p{6.3cm}}
+    \begin{tabular}{>{\raggedright\arraybackslash}p{1.4cm} >{\raggedright\arraybackslash}p{7.0cm} >{\raggedright\arraybackslash}p{6.6cm}}
         \hline
         \textbf{Label}                & \textbf{Example} & \textbf{Gold Solution for Example} \\
         \rowcolor{gray!20}
@@ -21,7 +21,6 @@
 (getByCategory "Energy Sector" year).emissions /
   sum (map (fun x -> x.emissions)
     (getByYear year)) * 100
-
         \end{lstlisting}  \\
         \rowcolor{gray!20}
 %        \multicolumn{3}{>{\raggedright\arraybackslash}l}{\textbf{Aggregation}} \\
@@ -61,7 +60,7 @@ trendWord
   (model_ "LSTM" tableData).time_s
   growShrink
         \end{lstlisting} \\
-        Generalised quantifiers
+        Generalised quantifier
         & In the case of one syndrome (Hemorrhagic) we noticed an \hl{unusually low} level of recall for SVM but not for NB. &
         \begin{lstlisting}[language=Fluid,numbers=none,aboveskip=-7pt,belowskip=-8.5pt]
 unusuallyHighLow (overallComparison [

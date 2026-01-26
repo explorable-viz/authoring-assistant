@@ -14,15 +14,14 @@ To what extent can LLMs accurately interpret quantitative and semi-quantitative 
 queries? We examine performance across the various ``query categories'' summarised in
 Table~\ref{tab:natural-language-forms} (namely averages, percentages, min/max, rank, etc), and investigate how accuracy
 varies with task complexity --- measured, somewhat crudely, by the cardinality of the multiset of query categories
-present in the gold solution.
+present in the gold solution. \todo{Two ablation studies to mention here}
 
 \paragraph{RQ2. Generalisability and Robustness.}
 
-How well do the generated expressions generalise when the underlying data changes, or when the input contains
-misleading or ill-specified information? We test whether generated queries continue to produce correct outputs
-under a set of hand-generated counterfactual modifications of the dataset, based on expected query results
-specific to each test case, and also how counterfactual performance is impacted by the presence of misleading
-or adversarial phrasing.
+As well as the missing or degraded information explored by the ablation studies, also pertinent to our application
+domain is how well the generated expressions generalise when the underlying data changes or when the input contains
+incorrect or intentionally misleading information. We test this using a set of hand-generated counterfactual
+modifications of the test data, based on expected query results specific to each test case. \todo{Revisit}
 
 \begin{figure*}
     \centering

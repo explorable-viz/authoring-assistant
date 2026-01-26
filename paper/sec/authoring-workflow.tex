@@ -62,13 +62,13 @@ substantial level of automation, but requiring the author to intervene at key st
 
 \paragraph{\InterpretationAgent prompt design.}
 
-The \InterpretationAgent is guided by a structured system prompt that frames code generation as a precise
-replacement task. The model receives the imported datasets, helper modules, and the current Fluid
-representation of the paragraph, in which a text fragment is marked with the tag \kw{[REPLACE …]}. The task is
-to substitute this placeholder with a Fluid expression that evaluates exactly to the target string,
-reconstructing quantitative or comparative claims as data queries. To ensure integration with the workflow,
-the output must consist solely of a syntactically valid Fluid expression, with no additional commentary. The
-full prompt is given in~\appref{system-prompt:interpretation-agent}.
+The \InterpretationAgent is guided by a system prompt that frames code generation as a precise replacement task
+\todo{rehash}. The model receives the imported datasets, helper modules, and the current Fluid representation of the
+paragraph, in which a text fragment is marked with the tag \kw{[REPLACE …]}. The task is to substitute this placeholder
+with a Fluid expression that evaluates exactly to the target string, reconstructing quantitative or comparative claims
+as data queries. To ensure integration with the workflow, the output must consist solely of a syntactically valid Fluid
+expression, with no additional commentary. The full system prompt is given
+in~\appref{system-prompt:interpretation-agent}.
 
 \begin{figure*}[t]
     \centering

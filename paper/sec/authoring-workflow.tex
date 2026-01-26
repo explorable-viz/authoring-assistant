@@ -15,19 +15,19 @@ string}, i.e.~a literal where expressions of the form \kw{\{$e$\}} are permitted
 analyses the target text and identifies any fragments which are candidates for being computed instead of remaining as
 literal substrings.
 
-\item \textbf{High-level Authoring workflow.} The system then enters the human-in-the loop authoring workflow
-shown in Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The
-system waits for the author to select a fragment of text $s$ to interpret (perhaps previously highlighted by
-the \SuggestionAgent). The system then attempts to generate a candidate Fluid expression $e$ using the
-closed-loop synthesis step (3) below. If code synthesis succeeds with an expression $e$, the system proceeds
-to the manual validation step (4) below. If the synthesis step fails with no expression, no remedial action is
-possible; this is considered an unsuccessful path through the workflow and returns the system to the entry
-state. Otherwise the synthesis step produces an expression $e$ which evaluates to a mismatched string $s' \neq
-s$ outcome, and the user can choose to manually abort and return to the entry state, or optionally to
-\emph{revise the goal}, replacing $s$ with $s'$ in the target document and retaining $e$ as the candidate
-expression. This is intended to cover the situation where the author has made a claim which is
-\emph{incorrect}, and the dataset and surrounding natural language have led the LLM to synthesise an
-expression which generates a different value from the one specified by the user.
+\item \textbf{High-level Authoring workflow.} \todo{Perhaps define $\textbf{SynthOutcome} ::= \textbf{Match}(e) \mid
+\textbf{NoMatch}(e,s) \mid \textbf{NoExpr}$?} The system then enters the human-in-the loop authoring workflow shown in
+Figure~\ref{fig:interpretation-agent}, where the author interacts with the \InterpretationAgent. The system waits for
+the author to select a fragment of text $s$ to interpret (perhaps previously highlighted by the \SuggestionAgent). The
+system then attempts to generate a candidate Fluid expression $e$ using the closed-loop synthesis step (3) below. If
+code synthesis succeeds with an expression $e$, the system proceeds to the manual validation step (4) below. If the
+synthesis step fails with no expression, no remedial action is possible; this is considered an unsuccessful path through
+the workflow and returns the system to the entry state. Otherwise the synthesis step produces an expression $e$ which
+evaluates to a mismatched string $s' \neq s$ outcome, and the user can choose to manually abort and return to the entry
+state, or optionally to \emph{revise the goal}, replacing $s$ with $s'$ in the target document and retaining $e$ as the
+candidate expression. This is intended to cover the situation where the author has made a claim which is
+\emph{incorrect}, and the dataset and surrounding natural language have led the LLM to synthesise an expression which
+generates a different value from the one specified by the user.
 
 \item \textbf{Code synthesis step.} The expression synthesis step is an error-guided iterative prompting
 loop~\citep{skreta2023}, beginning with an initial prompt sent to the LLM (see \emph{Prompt design} below)

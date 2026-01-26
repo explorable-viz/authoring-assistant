@@ -204,39 +204,18 @@ public class Program {
             List<String> imports = IntStream.range(0, json_imports.length())
                     .mapToObj(json_imports::getString)
                     .toList();
-
-            if (Settings.isAblateTargetValue()) {
-                // Generate two versions: with and without expected value
+            
+            boolean[] targetValues = Settings.isAblateTargetValue() ? new boolean[]{true, false} : new boolean[]{true};
+            for (boolean targetValue : targetValues) {
                 programs.add(new Program(
-                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath, true),
-                        datasets,
-                        imports,
-                        replaceVariables(code, variables),
-                        loadDatasetFiles(datasets, expandVariables(tv, null)),
-                        casePath,
-                        test_configurations,
-                        true
-                ));
-                programs.add(new Program(
-                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath, false),
-                        datasets,
-                        imports,
-                        replaceVariables(code, variables),
-                        loadDatasetFiles(datasets, expandVariables(tv, null)),
-                        casePath,
-                        test_configurations,
-                        false
-                ));
-            } else {
-                programs.add(new Program(
-                        paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath, false),
-                        datasets,
-                        imports,
-                        replaceVariables(code, variables),
-                        loadDatasetFiles(datasets, expandVariables(tv, null)),
-                        casePath,
-                        test_configurations,
-                        false
+                    paragraphFromJSON(testCase.getJSONArray("paragraph"), datasets, testVariables, imports, replaceVariables(code, variables), casePath, targetValue),
+                    datasets,
+                    imports,
+                    replaceVariables(code, variables),
+                    loadDatasetFiles(datasets, expandVariables(tv, null)),
+                    casePath,
+                    test_configurations,
+                    targetValue
                 ));
             }
         }

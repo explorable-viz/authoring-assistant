@@ -179,7 +179,7 @@ public class Main {
                                 quote(STR."\{result.getFirst().getTestCasePath().getFileName()}"),
                                 String.valueOf(queryResult.problemIndex()),
                                 quote(queryResult.model()),
-                                String.valueOf(result.getFirst().hasTargetValue() ? 1 : 0),
+                                String.valueOf(result.getFirst().isAblateTargetValue() ? 1 : 0),
                                 quote(STR."[\{queryResult.expected().getCategories().stream()
                                         .map(cat -> cat.label)
                                         .collect(Collectors.joining(","))}]"),

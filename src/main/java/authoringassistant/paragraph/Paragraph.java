@@ -13,11 +13,11 @@ public class Paragraph extends ArrayList<TextFragment> {
     public Paragraph() {
     }
 
-    public String toFluidSyntax(boolean addExpectedValue) {
+    public String toFluidSyntax(boolean ablateExpectedValue) {
         return STR."\"\"\"\n\t\{stream().map(e -> {
             if (e instanceof Literal l) {
                 if (l.getSelectedRegion() != null) {
-                    final String replace = addExpectedValue ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
+                    final String replace = !ablateExpectedValue ? STR."value=\"\{e.getValue().substring(l.getSelectedRegion().start(), l.getSelectedRegion().end())}\"" : "";
                     return STR."\{e.getValue().substring(0, l.getSelectedRegion().start())} [REPLACE \{replace}]\{e.getValue().substring(l.getSelectedRegion().end())}";
                 }
                 else {
@@ -32,16 +32,16 @@ public class Paragraph extends ArrayList<TextFragment> {
         }).collect(Collectors.joining(" "))}\n\"\"\"";
     }
 
-    public String toParagraphValue(boolean addExpectedValue) {
+    public String toParagraphValue(boolean ablateExpectedValue) {
         return STR."\"\"\"\n\t\{stream().map(e -> {
             if (e instanceof Literal l) {
                 return e.getValue();
             }
             else if (e instanceof Expression e_) {
-                if (addExpectedValue) {
-                    return e.getValue();
-                } else {
+                if (ablateExpectedValue) {
                     return ("${?}");
+                } else {
+                    return e.getValue();
                 }
             } else {
                 throw new RuntimeException("Literal or expression expected.");

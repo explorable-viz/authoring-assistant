@@ -166,7 +166,7 @@ public class Main {
         Files.createDirectories(Path.of(STR."results/\{Settings.getConfigName()}/\{modelName}/\{Settings.getTestCaseFolder()}"));
         try (PrintWriter out = new PrintWriter(new FileOutputStream(STR."results/\{Settings.getConfigName()}/\{modelName}/\{Settings.getTestCaseFolder()}/results.csv"))) {
             String[] headers = {
-                    "run", "test-case", "problem-no", "llm-agent", "target-value-present", "categories",
+                    "run", "test-case", "problem-no", "llm-agent", "ablate-target-value", "categories",
                     "fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"
             };
             out.println(String.join(";", headers));

@@ -31,7 +31,7 @@ def generate_aggregated_plot(df, plot, fig_dir):
     df_exploded['categories'] = df_exploded['categories'].str.strip()
 
     summary = (
-        df_exploded.groupby(["categories", "target-value-present"])
+        df_exploded.groupby(["categories", "ablate-target-value"])
         .agg(success_rate=("success", "mean"),
              count=("success", "size"))
         .reset_index()
@@ -42,7 +42,7 @@ def generate_aggregated_plot(df, plot, fig_dir):
         1: "Present",
         0: "Absent"
     }
-    summary["target_label"] = summary["target-value-present"].map(label_map)
+    summary["target_label"] = summary["ablate-target-value"].map(label_map)
 
     ax = sns.barplot(
         data=summary,
@@ -77,18 +77,18 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
     df_exploded['categories'] = df_exploded['categories'].str.strip()
 
     summary = (
-        df_exploded.groupby(["run", "categories", "target-value-present"])
+        df_exploded.groupby(["run", "categories", "ablate-target-value"])
         .agg(success_rate=("success", "mean"))
         .reset_index()
     )
     
-    # labels for  target-value-present
+    # labels for  ablate-target-value
     plt.figure(figsize=(8,6))
     label_map = {
         1: "Present",
         0: "Absent"
     }
-    summary["target_label"] = summary["target-value-present"].map(label_map)
+    summary["target_label"] = summary["ablate-target-value"].map(label_map)
 
     ax = sns.boxplot(
         data=summary,
@@ -102,7 +102,7 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
 
     # Use categories from summary for iteration
     categories = sorted(summary['categories'].unique())
-    target_values = sorted(summary['target-value-present'].unique())
+    target_values = sorted(summary['ablate-target-value'].unique())
     
     for i, category in enumerate(categories):
         # Get problem count for this category from category_counts
@@ -114,7 +114,7 @@ def generate_aggregated_boxplot(df, plot, fig_dir):
         
         for j, target_val in enumerate(target_values):
             x_offset = -0.2 if j == 0 else 0.2
-            mask = (summary['categories'] == category) & (summary['target-value-present'] == target_val)
+            mask = (summary['categories'] == category) & (summary['ablate-target-value'] == target_val)
             if mask.sum() > 0:
                 median_y = summary[mask]['success_rate'].median()
             else:
@@ -140,7 +140,7 @@ def generate_success_rate_by_category_count(df, plot, fig_dir):
     df['category_count'] = df['categories'].str.len()
 
     summary = (
-        df.groupby(["category_count", "target-value-present"])
+        df.groupby(["category_count", "ablate-target-value"])
         .agg(
             success_rate=("success", "mean"),
             count=("success", "size")
@@ -155,7 +155,7 @@ def generate_success_rate_by_category_count(df, plot, fig_dir):
         1: "Present",
         0: "Absent"
     }
-    summary["target_label"] = summary["target-value-present"].map(label_map)
+    summary["target_label"] = summary["ablate-target-value"].map(label_map)
 
     ax = sns.barplot(
         data=summary,
@@ -201,7 +201,7 @@ def process_csv_file(csv_file):
 
     df["fails"] = df[fail_cols].sum(axis=1)
     df["success"] = (df["fails"] == 0).astype(int)
-    df["target-value-present"] = df["target-value-present"].astype(int)
+    df["ablate-target-value"] = df["ablate-target-value"].astype(int)
     df["test-case-short"] = df["test-case"].apply(
         lambda x: os.path.join(os.path.basename(os.path.dirname(str(x))), os.path.basename(str(x)))
     )

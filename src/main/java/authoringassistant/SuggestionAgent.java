@@ -53,7 +53,7 @@ public class SuggestionAgent {
                     prompts.addUserMessage("Your response contains extra text outside the annotated paragraph. Please provide ONLY the original text with [REPLACE value=\"...\" categories=\"...\"] annotations inserted inline. Do not add any explanations, comments, markdown formatting, or other additional content.");
                     continue;
                 }
-                return new SuggestionAgentResult(new Program(paragraph, p.getDatasetFilenames(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCasePath(),p.getDatasetsVariants(), true), attempts);
+                return new SuggestionAgentResult(new Program(paragraph, p.getDatasetFilenames(),p.getImports(),p.getCode(),p.get_loadedDatasets(),p.getTestCasePath(),p.getDatasetsVariants(), false), attempts);
             } catch (IllegalArgumentException ex) {
                 prompts.addUserMessage(STR."Invalid category! Please use only the following categories: \{ExpressionCategory.values()}. Return ONLY the annotated paragraph with [REPLACE ...] tags, without any additional comments or explanations.");
                 continue;

@@ -185,8 +185,13 @@ def process_csv_file(csv_file):
     rel_path = os.path.relpath(csv_file, "results")
     subdir = os.path.dirname(rel_path)
     
-    # Create output directory
-    fig_dir = os.path.join("paper", "fig", subdir)
+    # Create output directory in results/config/dataset/fig
+    path_parts = subdir.split('/')
+    if len(path_parts) >= 2:
+        config_dataset = os.path.join(path_parts[0], path_parts[1])  # e.g., "test-mock/dataset"
+    else:
+        config_dataset = path_parts[0]
+    fig_dir = os.path.join("results", config_dataset, "fig")
     os.makedirs(fig_dir, exist_ok=True)
     
     print(f"\n{'='*60}")

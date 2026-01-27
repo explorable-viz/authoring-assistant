@@ -1,0 +1,35 @@
+run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
+0;"1904.12550v1-6";1;"gpt-5-mini";0;"[Data Retrieval]";1;0;0;0
+0;"1805.02474v1-10";1;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;1
+0;"1805.02474v1-10";2;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";3;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";4;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";5;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";6;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";7;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";8;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";9;"gpt-5-mini";0;"[Data Retrieval]";1;0;0;0
+0;"1805.02474v1-10";10;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";11;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";12;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";13;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";14;"gpt-5-mini";0;"[Data Retrieval]";1;0;0;1
+0;"1805.02474v1-10";15;"gpt-5-mini";0;"[Comparison,Rank,Data Retrieval]";0;0;0;1
+0;"1805.02474v1-10";16;"gpt-5-mini";0;"[Comparison,Rank,Data Retrieval]";1;0;0;0
+0;"1805.02474v1-10";17;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1805.02474v1-10";18;"gpt-5-mini";0;"[Rank]";0;0;0;1
+0;"1805.02474v1-10";19;"gpt-5-mini";0;"[Comparison,Data Retrieval]";1;0;0;1
+0;"1805.02474v1-10";20;"gpt-5-mini";0;"[Comparison,Data Retrieval]";1;0;0;1
+0;"1805.02474v1-10";21;"gpt-5-mini";0;"[Comparison,Data Retrieval]";0;0;0;0
+0;"1807.07279v3-23";1;"gpt-5-mini";0;"[Sum]";0;0;0;0
+0;"1807.07279v3-23";2;"gpt-5-mini";0;"[Generalised Quantifier,Comparison,Data Retrieval]";1;0;0;1
+0;"1807.07279v3-23";3;"gpt-5-mini";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;0;0;0
+0;"1904.12550v1-5";1;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1904.12550v1-5";2;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1904.12550v1-5";3;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1905.05979v2-88";1;"gpt-5-mini";0;"[Difference,Data Retrieval]";0;0;0;0
+0;"1905.05979v2-88";2;"gpt-5-mini";0;"[Difference,Data Retrieval]";0;0;0;0
+0;"1905.05979v2-88";3;"gpt-5-mini";0;"[Data Retrieval]";2;0;0;0
+0;"1805.02474v1-14";1;"gpt-5-mini";0;"[Data Retrieval]";1;0;0;0
+0;"1805.02474v1-14";2;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;0
+0;"1002.0773-8586";1;"gpt-5-mini";0;"[Data Retrieval]";0;0;0;1

@@ -114,13 +114,8 @@ public class Settings {
         return getSettings().getInt("num_ctx");
     }
 
-    public static boolean isAddExpectedValue() {
-        return getSettings().getBoolean("add-expected-value");
-    }
-
-    // TODO: don't treat as a "setting"
-    public static void setAddExpectedValue(boolean value) {
-        getSettings().put("add-expected-value", value);
+    public static boolean isAblateTargetValue() {
+        return getSettings().getBoolean("ablate-target-value");
     }
 
     public static String getTestCaseFolder() {

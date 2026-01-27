@@ -1,4 +1,0 @@
-run;test-case;problem-no;llm-agent;target-value-present;categories;fails-interpreter;fails-counterfactual;fails-no-response;fails-literal
-0;"1807.07279v3-23";1;"dummy";0;"[Sum]";0;2;0;0
-0;"1807.07279v3-23";2;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0
-0;"1807.07279v3-23";3;"dummy";0;"[Generalised Quantifier,Comparison,Data Retrieval]";0;2;0;0

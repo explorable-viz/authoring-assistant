@@ -27,46 +27,44 @@ def generate_summary_table(config_name: str, test_case_folder: str):
     if not model_dirs:
         raise FileNotFoundError(f"No model directories found in {config_dir}")
     
-    all_results = []
+    # Generate table for each model separately
+    table_files = []
     
     for model_dir in model_dirs:
         csv_path = model_dir / test_case_folder / "results.csv"
         if csv_path.exists():
             df = pd.read_csv(csv_path, delimiter=';', quotechar='"', encoding='utf-8')
             
-            # Add model name to dataframe
-            df['model'] = model_dir.name
-            
             # Calculate success rate
             fail_cols = ["fails-interpreter", "fails-counterfactual", "fails-no-response", "fails-literal"]
             df['total_fails'] = df[fail_cols].sum(axis=1)
             df['success'] = (df['total_fails'] == 0).astype(int)
             
-            all_results.append(df)
-    
-    if not all_results:
-        raise FileNotFoundError(f"No results.csv found for test case folder: {test_case_folder}")
-    
-    # Combine all results
-    combined_df = pd.concat(all_results, ignore_index=True)
-    
-    # Check if we have ablation studies (different ablate-target-value values)
-    has_ablation = len(combined_df['ablate-target-value'].unique()) > 1
-    
-    # Create output directory
-    path_parts = [config_name, test_case_folder]
-    fig_dir = os.path.join("results", *path_parts, "fig")
-    os.makedirs(fig_dir, exist_ok=True)
-    
-    # Generate LaTeX table
-    latex_table = generate_latex_table(combined_df, config_name, has_ablation)
-    
-    # Write LaTeX table to file
-    table_file = os.path.join(fig_dir, "summary_table.tex")
-    with open(table_file, 'w', encoding='utf-8') as f:
-        f.write(latex_table)
+            # Add model name to dataframe
+            df['model'] = model_dir.name
+            
+            # Check if we have ablation studies
+            has_ablation = len(df['ablate-target-value'].unique()) > 1
+            
+            # Create output directory for this model
+            fig_dir = os.path.join("results", config_name, model_dir.name, test_case_folder, "fig")
+            os.makedirs(fig_dir, exist_ok=True)
+            
+            # Generate LaTeX table
+            latex_table = generate_latex_table(df, config_name, has_ablation)
+            
+            # Write LaTeX table to file
+            table_file = os.path.join(fig_dir, "summary_table.tex")
+            with open(table_file, 'w', encoding='utf-8') as f:
+                f.write(latex_table)
+            
+            table_files.append(table_file)
+            
+            print(f"\n{'='*60}")
+            print(f"LaTeX table generated: {table_file}")
+            print(f"{'='*60}")
 
-    return table_file
+    return table_files
 
 def generate_latex_table(df, config_name, has_ablation):
     """Generate the LaTeX table string."""
